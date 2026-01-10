@@ -20,23 +20,23 @@ Document loaders serve as the bridge between raw, diverse data sources and AI sy
 
 ## Why Use Document Loaders?
 
-<strong>Standardization</strong>- Harmonizes data from countless formats, encodings, and layouts
+**Standardization**- Harmonizes data from countless formats, encodings, and layouts
 - Converts PDFs, HTML, CSVs, JSON into consistent schema
 - Eliminates custom parsing logic for each source
 
-<strong>Automation</strong>- Eliminates boilerplate extraction and parsing scripts
+**Automation**- Eliminates boilerplate extraction and parsing scripts
 - Provides reusable, well-tested tools
 - Minimizes development overhead and maintenance
 
-<strong>Context Preservation</strong>- Attaches vital metadata (source location, page numbers, timestamps)
+**Context Preservation**- Attaches vital metadata (source location, page numbers, timestamps)
 - Enables traceability, compliance, and fine-grained retrieval
 - Preserves relationships between content and its origin
 
-<strong>Scalability</strong>- Handles large-scale ingestion scenarios
+**Scalability**- Handles large-scale ingestion scenarios
 - Supports batch processing and streaming
 - Optimizes for performance and memory efficiency via lazy loading
 
-<strong>Plug-and-Play Integration</strong>- Works seamlessly with frameworks like LangChain
+**Plug-and-Play Integration**- Works seamlessly with frameworks like LangChain
 - Provides standard interfaces for vector databases
 - Ensures connectivity across AI pipelines
 
@@ -44,20 +44,20 @@ Document loaders serve as the bridge between raw, diverse data sources and AI sy
 
 When a document loader processes a data source, it produces a Document object—the atomic unit for LLM pipelines, vector store ingestion, and RAG systems.
 
-<strong>Core Fields:</strong>
+**Core Fields:**
 
-<strong>page_content (String)</strong>- Primary text or content extracted from source
+**page_content (String)**- Primary text or content extracted from source
 - Cleaned, decoded, and pre-processed for downstream tasks
 - Examples: PDF page text, CSV row data, HTML paragraph content
 
-<strong>metadata (Dictionary)</strong>- Contextual, descriptive, and source-related key-value pairs
+**metadata (Dictionary)**- Contextual, descriptive, and source-related key-value pairs
 - Common fields: source, page, row, title, filetype, created_at, last_modified, category, section
 - Enriches content with information needed for retrieval and filtering
 
-<strong>id (Optional String)</strong>- Unique identifier for the document
+**id (Optional String)**- Unique identifier for the document
 - Essential for deduplication, cross-referencing, and database indexing
 
-<strong>Example in Python:</strong>```python
+**Example in Python:**```python
 from langchain_core.documents import Document
 
 doc = Document(
@@ -99,25 +99,17 @@ doc = Document(
 
 ### By Data Source
 
-**Local File System Loaders**- Read files from disk using file paths or directory patterns
-
-**Web URL Loaders**- Scrape or download content from web pages
+**Local File System Loaders**- Read files from disk using file paths or directory patterns**Web URL Loaders**- Scrape or download content from web pages
 - Examples: WebBaseLoader, SitemapLoader, RecursiveURLLoader
 
 **Cloud Storage Loaders**- Fetch documents from AWS S3, Azure Blob, Google Drive
 - Example: S3DirectoryLoader
 
-**APIs & Third-Party Platforms**- Ingest data from services like YouTube, Wikipedia, Notion, Slack, GitHub
-
-**Database Loaders**- Extract rows or records from SQL or NoSQL databases
+**APIs & Third-Party Platforms**- Ingest data from services like YouTube, Wikipedia, Notion, Slack, GitHub**Database Loaders**- Extract rows or records from SQL or NoSQL databases
 
 ### Specialized Loaders
 
-**DirectoryLoader:**Recursively loads all files matching patterns from a directory
-
-**Recursive Loaders:**Traverse deep folder structures or crawl entire websites
-
-**Custom Loaders:**Extendable base classes for proprietary or uncommon data sources
+**DirectoryLoader:**Recursively loads all files matching patterns from a directory**Recursive Loaders:**Traverse deep folder structures or crawl entire websites**Custom Loaders:**Extendable base classes for proprietary or uncommon data sources
 
 ## Standard Interfaces
 

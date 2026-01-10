@@ -24,9 +24,7 @@ Pinecone operates as a serverless, cloud-native service on AWS, GCP, and Azure, 
 
 Embeddings are dense vectors—arrays of floating-point numbers—created by AI models to represent the semantics of data. A sentence processed by BERT or OpenAI models might produce a 768-dimensional embedding. Similar sentences yield vectors that are close together in this high-dimensional space, enabling semantic similarity search.
 
-<strong>Generation:</strong>Models such as BERT, OpenAI, CLIP, or custom neural networks transform text, images, or other data into vector representations.
-
-<strong>Applications:</strong>Semantic search, recommendations, anomaly detection, generative AI memory, and content discovery.
+**Generation:**Models such as BERT, OpenAI, CLIP, or custom neural networks transform text, images, or other data into vector representations.**Applications:**Semantic search, recommendations, anomaly detection, generative AI memory, and content discovery.
 
 ### Chunks
 
@@ -52,11 +50,7 @@ Metadata consists of key-value pairs attached to each vector, such as document t
 
 Pinecone uses Approximate Nearest Neighbor (ANN) algorithms to efficiently find the closest vectors to a query according to a specified metric:
 
-<strong>Cosine Similarity:</strong>Measures angle between vectors, popular for text data where direction matters more than magnitude.
-
-<strong>Euclidean Distance:</strong>Measures straight-line distance, common for image and audio embeddings.
-
-<strong>Dot Product:</strong>Used in some ML applications for projection similarity and recommendation systems.
+**Cosine Similarity:**Measures angle between vectors, popular for text data where direction matters more than magnitude.**Euclidean Distance:**Measures straight-line distance, common for image and audio embeddings.**Dot Product:**Used in some ML applications for projection similarity and recommendation systems.
 
 ANN algorithms provide near-optimal results orders of magnitude faster than exact search, making billion-scale vector search practical.
 
@@ -66,65 +60,31 @@ ANN algorithms provide near-optimal results orders of magnitude faster than exac
 
 Pinecone's architecture is designed for high throughput, reliability, and automatic scaling:
 
-<strong>API Gateway:</strong>Receives and authenticates all API requests, routing them to either the control plane for management operations or data plane for reads and writes.
-
-<strong>Control Plane:</strong>Manages projects, indexes, billing, and coordinates multi-region operations and configuration.
-
-<strong>Data Plane:</strong>Handles all read/write operations to vector indexes within a specific cloud region, optimized for low latency.
-
-<strong>Object Storage:</strong>Stores records in immutable, distributed slabs for unlimited scalability and high availability.
-
-<strong>Write Path:</strong>Ensures every write is logged and made durable with a unique sequence number (LSN) for consistency.
-
-<strong>Index Builder:</strong>Manages in-memory and persistent storage, optimizing for both fresh data ingestion and query performance.
-
-<strong>Read Path:</strong>Queries check the in-memory structure first for the freshest results, then persistent storage for completeness, ensuring real-time data availability.
+**API Gateway:**Receives and authenticates all API requests, routing them to either the control plane for management operations or data plane for reads and writes.**Control Plane:**Manages projects, indexes, billing, and coordinates multi-region operations and configuration.**Data Plane:**Handles all read/write operations to vector indexes within a specific cloud region, optimized for low latency.**Object Storage:**Stores records in immutable, distributed slabs for unlimited scalability and high availability.**Write Path:**Ensures every write is logged and made durable with a unique sequence number (LSN) for consistency.**Index Builder:**Manages in-memory and persistent storage, optimizing for both fresh data ingestion and query performance.**Read Path:**Queries check the in-memory structure first for the freshest results, then persistent storage for completeness, ensuring real-time data availability.
 
 ## Key Features
 
-<strong>Sub-millisecond Search</strong>Returns results in milliseconds, even across billions of vectors, enabling real-time applications like chatbots and live recommendations.
-
-<strong>Serverless Scaling</strong>Resources scale automatically based on usage; no manual sharding or provisioning required, reducing operational overhead.
-
-<strong>Real-Time Data Ingestion</strong>New vectors are searchable immediately after upsert, supporting dynamic applications that require fresh data.
-
-<strong>Hybrid Search</strong>Supports both dense (vector) and sparse (keyword) searches, combining semantic understanding with traditional keyword matching.
-
-<strong>Advanced Filtering</strong>Combine similarity with metadata filters for precise results, such as finding semantically similar documents within a specific date range or category.
-
-<strong>Multitenancy</strong>Namespaces keep customer or team data isolated while sharing infrastructure, enabling efficient multi-tenant applications.
-
-<strong>Security and Compliance</strong>SOC 2, GDPR, ISO 27001, HIPAA certified. Data encrypted at rest and in transit with hierarchical encryption keys and private networking options.
+**Sub-millisecond Search**Returns results in milliseconds, even across billions of vectors, enabling real-time applications like chatbots and live recommendations.**Serverless Scaling**Resources scale automatically based on usage; no manual sharding or provisioning required, reducing operational overhead.**Real-Time Data Ingestion**New vectors are searchable immediately after upsert, supporting dynamic applications that require fresh data.**Hybrid Search**Supports both dense (vector) and sparse (keyword) searches, combining semantic understanding with traditional keyword matching.**Advanced Filtering**Combine similarity with metadata filters for precise results, such as finding semantically similar documents within a specific date range or category.**Multitenancy**Namespaces keep customer or team data isolated while sharing infrastructure, enabling efficient multi-tenant applications.**Security and Compliance**SOC 2, GDPR, ISO 27001, HIPAA certified. Data encrypted at rest and in transit with hierarchical encryption keys and private networking options.
 
 ## How Pinecone Works: Development Workflow
 
 ### Basic Workflow
 
-<strong>1. Sign Up and API Key</strong>Register at pinecone.io and generate API credentials for authentication.
-
-<strong>2. Install Client SDK</strong>```bash
+**1. Sign Up and API Key**Register at pinecone.io and generate API credentials for authentication.**2. Install Client SDK**```bash
 pip install pinecone
-```
-
-**3. Initialize Client and Create Index**```python
+```**3. Initialize Client and Create Index**```python
 from pinecone import Pinecone
 pc = Pinecone(api_key="YOUR_API_KEY")
 pc.create_index("my-index", dimension=768, metric="cosine")
-```
-
-<strong>4. Generate Embeddings</strong>```python
+```**4. Generate Embeddings**```python
 from sentence_transformers import SentenceTransformer
 model = SentenceTransformer('all-MiniLM-L6-v2')
 embedding = model.encode("Sample text to embed").tolist()
-```
-
-**5. Upsert Vectors with Metadata**```python
+```**5. Upsert Vectors with Metadata**```python
 pc.Index("my-index").upsert(vectors=[
     ("doc1", embedding, {"category": "news"})
 ], namespace="projectA")
-```
-
-<strong>6. Query for Similarity and Filter</strong>```python
+```**6. Query for Similarity and Filter**```python
 query_embedding = model.encode("What are the latest news?").tolist()
 results = pc.Index("my-index").query(
     vector=query_embedding,
@@ -189,25 +149,11 @@ Partitions vector space into regions and searches only within the most promising
 
 ## Advanced Features
 
-**Hybrid Search**Combine dense vector embeddings with sparse keyword search for maximum relevance, leveraging both semantic understanding and traditional keyword matching.
-
-**Rerankers**Apply advanced models to rerank top results for improved precision, refining initial retrieval results with more sophisticated scoring.
-
-**Real-Time Freshness Layer**Newly ingested data is immediately queryable, supporting applications requiring up-to-the-second data availability.
-
-**Serverless Operation**No manual hardware or cluster management required; resources scale automatically based on usage patterns.
-
-**Wide Ecosystem Integration**Compatible with LangChain, LlamaIndex, Hugging Face, cloud object stores, and major ML frameworks for seamless workflow integration.
+**Hybrid Search**Combine dense vector embeddings with sparse keyword search for maximum relevance, leveraging both semantic understanding and traditional keyword matching.**Rerankers**Apply advanced models to rerank top results for improved precision, refining initial retrieval results with more sophisticated scoring.**Real-Time Freshness Layer**Newly ingested data is immediately queryable, supporting applications requiring up-to-the-second data availability.**Serverless Operation**No manual hardware or cluster management required; resources scale automatically based on usage patterns.**Wide Ecosystem Integration**Compatible with LangChain, LlamaIndex, Hugging Face, cloud object stores, and major ML frameworks for seamless workflow integration.
 
 ## Frequently Asked Questions
 
-**What makes Pinecone different from FAISS or standalone vector libraries?**Pinecone is a fully managed, production-grade database with real-time updates, metadata filtering, access control, multitenancy, and serverless scaling. Libraries like FAISS are powerful for local vector search but lack database features, cloud-native reliability, and operational management.
-
-**What data can I store?**Any data that can be embedded as a vector: text, images, audio, user events, time series, product catalogs, and more.
-
-**How does Pinecone ensure security and compliance?**Data is encrypted at rest and in transit with hierarchical encryption keys and private networking. Pinecone holds SOC 2, GDPR, ISO 27001, and HIPAA certifications.
-
-**Can Pinecone be used with relational or document databases?**Yes. Pinecone typically complements SQL/NoSQL stores, handling unstructured, high-dimensional search while structured or transactional data remains in traditional systems.
+**What makes Pinecone different from FAISS or standalone vector libraries?**Pinecone is a fully managed, production-grade database with real-time updates, metadata filtering, access control, multitenancy, and serverless scaling. Libraries like FAISS are powerful for local vector search but lack database features, cloud-native reliability, and operational management.**What data can I store?**Any data that can be embedded as a vector: text, images, audio, user events, time series, product catalogs, and more.**How does Pinecone ensure security and compliance?**Data is encrypted at rest and in transit with hierarchical encryption keys and private networking. Pinecone holds SOC 2, GDPR, ISO 27001, and HIPAA certifications.**Can Pinecone be used with relational or document databases?**Yes. Pinecone typically complements SQL/NoSQL stores, handling unstructured, high-dimensional search while structured or transactional data remains in traditional systems.
 
 ## References
 

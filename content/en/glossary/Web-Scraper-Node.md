@@ -16,13 +16,9 @@ A Web Scraper Node is a modular, reusable component designed to fetch and extrac
 
 These components operate as self-contained units within workflow automation frameworks, accepting URLs as input, fetching HTML or other web content via HTTP requests, extracting relevant data using CSS selectors, XPath expressions, or AI-powered prompts, and returning structured data for downstream processing. The modular architecture allows scraper nodes to integrate seamlessly with broader automation ecosystems including chatbots, data pipelines, monitoring systems, and business intelligence platforms.
 
-<strong>Common Implementation Types:</strong>
+**Common Implementation Types:**
 
-<strong>Code-Based Nodes</strong>– Custom implementations using libraries like Puppeteer, Cheerio, and Axios in Node.js environments providing maximum flexibility and control
-
-<strong>Visual/Low-Code Nodes</strong>– Platform-integrated components in systems like n8n or Firecrawl offering drag-and-drop configuration for non-technical users
-
-<strong>API-Powered Nodes</strong>– Managed services like ZenRows and ScrapingBee handling complex scenarios including anti-bot measures and dynamic content rendering
+**Code-Based Nodes**– Custom implementations using libraries like Puppeteer, Cheerio, and Axios in Node.js environments providing maximum flexibility and control**Visual/Low-Code Nodes**– Platform-integrated components in systems like n8n or Firecrawl offering drag-and-drop configuration for non-technical users**API-Powered Nodes**– Managed services like ZenRows and ScrapingBee handling complex scenarios including anti-bot measures and dynamic content rendering
 
 ## Core Technologies and Architecture
 
@@ -30,29 +26,19 @@ These components operate as self-contained units within workflow automation fram
 
 Modern web scraper nodes leverage specialized HTTP clients optimized for data extraction:
 
-<strong>Axios</strong>provides promise-based HTTP requests with automatic JSON transformation, request/response interceptors, and comprehensive error handling. Its lightweight architecture makes it ideal for simple static content retrieval with minimal overhead.
-
-<strong>Node-Fetch</strong>implements the standard Fetch API in Node.js environments, offering familiar browser-like syntax for HTTP operations. It excels in scenarios requiring streaming responses or integration with existing browser-based code.
+**Axios**provides promise-based HTTP requests with automatic JSON transformation, request/response interceptors, and comprehensive error handling. Its lightweight architecture makes it ideal for simple static content retrieval with minimal overhead.**Node-Fetch**implements the standard Fetch API in Node.js environments, offering familiar browser-like syntax for HTTP operations. It excels in scenarios requiring streaming responses or integration with existing browser-based code.
 
 ### HTML Parsing and Extraction
 
-<strong>Cheerio</strong>implements jQuery-style selectors for server-side HTML parsing without browser overhead. Its fast, flexible API enables efficient data extraction from static HTML using familiar CSS selector syntax, making it the standard choice for parsing pre-rendered content.
-
-<strong>jsdom</strong>provides complete DOM implementation in Node.js, enabling execution of embedded JavaScript and manipulation of dynamic content. While more resource-intensive than Cheerio, jsdom accurately replicates browser environments for complex parsing scenarios.
+**Cheerio**implements jQuery-style selectors for server-side HTML parsing without browser overhead. Its fast, flexible API enables efficient data extraction from static HTML using familiar CSS selector syntax, making it the standard choice for parsing pre-rendered content.**jsdom**provides complete DOM implementation in Node.js, enabling execution of embedded JavaScript and manipulation of dynamic content. While more resource-intensive than Cheerio, jsdom accurately replicates browser environments for complex parsing scenarios.
 
 ### Headless Browser Integration
 
-<strong>Puppeteer</strong>controls headless Chrome or Chromium through DevTools Protocol, enabling full browser automation including JavaScript execution, screenshot capture, PDF generation, and user interaction simulation. Puppeteer excels at scraping JavaScript-heavy single-page applications requiring client-side rendering.
-
-<strong>Playwright</strong>extends browser automation across Chrome, Firefox, and WebKit with enhanced reliability features including auto-waiting, network interception, and mobile device emulation. Its cross-browser support and robust API make it ideal for comprehensive testing and scraping scenarios.
-
-<strong>Selenium WebDriver</strong>provides language-agnostic browser automation supporting extensive browser and platform combinations. While more verbose than modern alternatives, Selenium remains valuable for legacy systems and cross-language implementations.
+**Puppeteer**controls headless Chrome or Chromium through DevTools Protocol, enabling full browser automation including JavaScript execution, screenshot capture, PDF generation, and user interaction simulation. Puppeteer excels at scraping JavaScript-heavy single-page applications requiring client-side rendering.**Playwright**extends browser automation across Chrome, Firefox, and WebKit with enhanced reliability features including auto-waiting, network interception, and mobile device emulation. Its cross-browser support and robust API make it ideal for comprehensive testing and scraping scenarios.**Selenium WebDriver**provides language-agnostic browser automation supporting extensive browser and platform combinations. While more verbose than modern alternatives, Selenium remains valuable for legacy systems and cross-language implementations.
 
 ### Framework Solutions
 
-<strong>nodejs-web-scraper</strong>offers high-level abstraction for building production scraping systems with built-in pagination handling, data transformation pipelines, and result management. It simplifies complex multi-page scraping workflows through declarative configuration.
-
-<strong>Crawler</strong>provides queue-based crawling with rate limiting, retry logic, and concurrent request management. Its mature architecture handles large-scale scraping operations requiring sophisticated request orchestration.
+**nodejs-web-scraper**offers high-level abstraction for building production scraping systems with built-in pagination handling, data transformation pipelines, and result management. It simplifies complex multi-page scraping workflows through declarative configuration.**Crawler**provides queue-based crawling with rate limiting, retry logic, and concurrent request management. Its mature architecture handles large-scale scraping operations requiring sophisticated request orchestration.
 
 ## Operational Workflow
 
@@ -148,50 +134,26 @@ Validation systems cross-reference internal data against external authoritative 
 
 ### Ethical and Legal Compliance
 
-<strong>Respect robots.txt</strong>– Review and honor website crawling policies specifying allowed/disallowed paths and crawl rates
-
-<strong>Implement Rate Limiting</strong>– Prevent server overload through request throttling, typically 1-10 requests per second depending on target capacity
-
-<strong>Honor Terms of Service</strong>– Review website terms explicitly prohibiting automated access or data extraction
-
-<strong>Extract Public Data Only</strong>– Avoid scraping personal information, proprietary content, or data behind authentication without explicit permission
-
-<strong>Comply with Privacy Regulations</strong>– Ensure GDPR, CCPA, and regional privacy law compliance when handling scraped data
+**Respect robots.txt**– Review and honor website crawling policies specifying allowed/disallowed paths and crawl rates**Implement Rate Limiting**– Prevent server overload through request throttling, typically 1-10 requests per second depending on target capacity**Honor Terms of Service**– Review website terms explicitly prohibiting automated access or data extraction**Extract Public Data Only**– Avoid scraping personal information, proprietary content, or data behind authentication without explicit permission**Comply with Privacy Regulations**– Ensure GDPR, CCPA, and regional privacy law compliance when handling scraped data
 
 ### Technical Implementation
 
-<strong>Graceful Error Handling</strong>– Implement comprehensive try-catch blocks handling network failures, timeout errors, selector mismatches, and parsing exceptions
-
-<strong>Pagination Management</strong>– Detect and follow "next page" links, handle infinite scroll, and implement depth limits preventing runaway crawls
-
-<strong>Dynamic Content Handling</strong>– Use headless browsers for JavaScript-rendered sites, implement wait strategies for async content, and handle AJAX-loaded data
-
-<strong>Proxy Rotation</strong>– Distribute requests across multiple IP addresses preventing blocks during high-volume scraping operations
-
-<strong>Data Validation</strong>– Clean extracted data removing HTML artifacts, validate field formats, deduplicate records, and handle missing values
-
-<strong>Session Management</strong>– Maintain cookies, handle authentication flows, and preserve session state for multi-step scraping workflows
+**Graceful Error Handling**– Implement comprehensive try-catch blocks handling network failures, timeout errors, selector mismatches, and parsing exceptions**Pagination Management**– Detect and follow "next page" links, handle infinite scroll, and implement depth limits preventing runaway crawls**Dynamic Content Handling**– Use headless browsers for JavaScript-rendered sites, implement wait strategies for async content, and handle AJAX-loaded data**Proxy Rotation**– Distribute requests across multiple IP addresses preventing blocks during high-volume scraping operations**Data Validation**– Clean extracted data removing HTML artifacts, validate field formats, deduplicate records, and handle missing values**Session Management**– Maintain cookies, handle authentication flows, and preserve session state for multi-step scraping workflows
 
 ### Performance Optimization
 
-<strong>Concurrent Processing</strong>– Parallelize independent requests while respecting rate limits maximizing throughput
-
-<strong>Caching Strategy</strong>– Store frequently accessed content reducing redundant requests and improving response times
-
-<strong>Resource Monitoring</strong>– Track memory usage, CPU consumption, and network bandwidth preventing resource exhaustion
-
-<strong>Selective Loading</strong>– Disable images, CSS, and fonts when unnecessary reducing bandwidth and processing time
+**Concurrent Processing**– Parallelize independent requests while respecting rate limits maximizing throughput**Caching Strategy**– Store frequently accessed content reducing redundant requests and improving response times**Resource Monitoring**– Track memory usage, CPU consumption, and network bandwidth preventing resource exhaustion**Selective Loading**– Disable images, CSS, and fonts when unnecessary reducing bandwidth and processing time
 
 ## Challenges and Solutions
 
 | Challenge | Impact | Solution |
 |-----------|--------|----------|
-| <strong>Site Structure Changes</strong>| Scrapers break when HTML/CSS updates | Implement flexible selectors, use AI-powered extraction, maintain fallback strategies |
-| <strong>Anti-Scraping Measures</strong>| CAPTCHAs, rate limiting, IP blocking | Use CAPTCHA solving services, implement proxy rotation, add human-like delays |
-| <strong>Dynamic Content</strong>| JavaScript-rendered content invisible to simple scrapers | Deploy headless browsers, implement wait strategies, handle AJAX responses |
-| <strong>Legal Risks</strong>| Terms violations, copyright infringement | Review legal compliance, respect robots.txt, obtain necessary permissions |
-| <strong>Performance Overhead</strong>| Headless browsers consume significant resources | Use selective rendering, implement caching, optimize concurrent operations |
-| <strong>Data Quality</strong>| Inconsistent formats, missing fields, duplicate records | Implement robust validation, normalization pipelines, deduplication logic |
+| **Site Structure Changes**| Scrapers break when HTML/CSS updates | Implement flexible selectors, use AI-powered extraction, maintain fallback strategies |
+| **Anti-Scraping Measures**| CAPTCHAs, rate limiting, IP blocking | Use CAPTCHA solving services, implement proxy rotation, add human-like delays |
+| **Dynamic Content**| JavaScript-rendered content invisible to simple scrapers | Deploy headless browsers, implement wait strategies, handle AJAX responses |
+| **Legal Risks**| Terms violations, copyright infringement | Review legal compliance, respect robots.txt, obtain necessary permissions |
+| **Performance Overhead**| Headless browsers consume significant resources | Use selective rendering, implement caching, optimize concurrent operations |
+| **Data Quality**| Inconsistent formats, missing fields, duplicate records | Implement robust validation, normalization pipelines, deduplication logic |
 
 ## Integration Workflows
 
@@ -217,31 +179,11 @@ Scraped data flows into analytics platforms, dashboards, and reporting systems. 
 
 ## Security and Data Protection
 
-<strong>Secure Credential Storage</strong>– Store API keys, authentication tokens, and proxy credentials in environment variables or secure vaults never hardcoding in source
-
-<strong>HTTPS Enforcement</strong>– Always use encrypted connections preventing man-in-the-middle attacks and data interception
-
-<strong>Data Encryption</strong>– Encrypt sensitive scraped data at rest and in transit protecting against unauthorized access
-
-<strong>Access Control</strong>– Implement role-based permissions restricting scraper configuration and data access to authorized personnel
-
-<strong>Audit Logging</strong>– Maintain comprehensive logs of scraping activities, data access, and configuration changes enabling security monitoring
-
-<strong>Input Validation</strong>– Sanitize all inputs preventing injection attacks and validating URL patterns preventing unintended target access
+**Secure Credential Storage**– Store API keys, authentication tokens, and proxy credentials in environment variables or secure vaults never hardcoding in source**HTTPS Enforcement**– Always use encrypted connections preventing man-in-the-middle attacks and data interception**Data Encryption**– Encrypt sensitive scraped data at rest and in transit protecting against unauthorized access**Access Control**– Implement role-based permissions restricting scraper configuration and data access to authorized personnel**Audit Logging**– Maintain comprehensive logs of scraping activities, data access, and configuration changes enabling security monitoring**Input Validation**– Sanitize all inputs preventing injection attacks and validating URL patterns preventing unintended target access
 
 ## Frequently Asked Questions
 
-<strong>How does a web scraper node differ from a standard HTTP request node?</strong>Web scraper nodes include specialized parsing engines, selector configuration, data extraction logic, and structured output formatting, whereas HTTP nodes return raw response content requiring manual processing.
-
-<strong>Can web scraper nodes handle JavaScript-heavy single-page applications?</strong>Yes, when integrated with headless browsers like Puppeteer or Playwright, scraper nodes fully render JavaScript content accessing dynamically generated data.
-
-<strong>What happens when target websites change their structure?</strong>Scrapers using fixed selectors break requiring updates. Mitigation strategies include flexible selector patterns, AI-powered extraction adapting to changes, and monitoring systems alerting to extraction failures.
-
-<strong>Are there legal restrictions on web scraping?</strong>Yes, legal considerations include website terms of service, copyright law, data protection regulations (GDPR, CCPA), and computer fraud statutes. Always consult legal counsel for compliance verification.
-
-<strong>Can web scraper nodes operate in real-time?</strong>Yes, nodes can be triggered on-demand via webhooks, scheduled at intervals, or activated by workflow conditions enabling real-time data extraction and processing.
-
-<strong>How do anti-scraping measures affect web scraper nodes?</strong>Modern websites deploy CAPTCHAs, rate limiting, IP blocking, and bot detection. Advanced scraper implementations use CAPTCHA solving services, proxy networks, and human-like behavior patterns circumventing restrictions.
+**How does a web scraper node differ from a standard HTTP request node?**Web scraper nodes include specialized parsing engines, selector configuration, data extraction logic, and structured output formatting, whereas HTTP nodes return raw response content requiring manual processing.**Can web scraper nodes handle JavaScript-heavy single-page applications?**Yes, when integrated with headless browsers like Puppeteer or Playwright, scraper nodes fully render JavaScript content accessing dynamically generated data.**What happens when target websites change their structure?**Scrapers using fixed selectors break requiring updates. Mitigation strategies include flexible selector patterns, AI-powered extraction adapting to changes, and monitoring systems alerting to extraction failures.**Are there legal restrictions on web scraping?**Yes, legal considerations include website terms of service, copyright law, data protection regulations (GDPR, CCPA), and computer fraud statutes. Always consult legal counsel for compliance verification.**Can web scraper nodes operate in real-time?**Yes, nodes can be triggered on-demand via webhooks, scheduled at intervals, or activated by workflow conditions enabling real-time data extraction and processing.**How do anti-scraping measures affect web scraper nodes?**Modern websites deploy CAPTCHAs, rate limiting, IP blocking, and bot detection. Advanced scraper implementations use CAPTCHA solving services, proxy networks, and human-like behavior patterns circumventing restrictions.
 
 ## References
 

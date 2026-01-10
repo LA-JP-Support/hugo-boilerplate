@@ -12,9 +12,7 @@ draft: false
 
 ## What Is Honorific Language Support?
 
-Honorific language support refers to the capability—human or automated—to identify, generate, and appropriately use Japanese polite expressions, known as <strong>keigo (敬語)</strong>. This encompasses understanding which forms to use, and when, in accordance with hierarchical, social, and cultural context. In AI and automation, machines must parse relational cues and dynamically select the correct honorific level, mimicking the complex etiquette of native speakers.
-
-<strong>Core Components:</strong>- Linguistic structure with specialized verbs, noun forms, honorific suffixes/prefixes, sentence patterns
+Honorific language support refers to the capability—human or automated—to identify, generate, and appropriately use Japanese polite expressions, known as **keigo (敬語)**. This encompasses understanding which forms to use, and when, in accordance with hierarchical, social, and cultural context. In AI and automation, machines must parse relational cues and dynamically select the correct honorific level, mimicking the complex etiquette of native speakers.**Core Components:**- Linguistic structure with specialized verbs, noun forms, honorific suffixes/prefixes, sentence patterns
 - Cultural sensitivity to age, status, group belonging, situational formality
 - Practical implementation in customer service bots, translation platforms, email automation, educational software
 
@@ -24,9 +22,9 @@ Honorific language support refers to the capability—human or automated—to id
 
 | Type | Japanese | Purpose | When to Use |
 |------|----------|---------|-------------|
-| <strong>Sonkeigo (尊敬語)</strong>| Respectful Language | Elevate others' actions | Addressing superiors, clients, guests |
-| <strong>Kenjōgo (謙譲語)</strong>| Humble Language | Lower own/in-group actions | Talking about self to outsiders |
-| <strong>Teineigo (丁寧語)</strong>| Polite Language | General politeness | Default formal register |
+| **Sonkeigo (尊敬語)**| Respectful Language | Elevate others' actions | Addressing superiors, clients, guests |
+| **Kenjōgo (謙譲語)**| Humble Language | Lower own/in-group actions | Talking about self to outsiders |
+| **Teineigo (丁寧語)**| Polite Language | General politeness | Default formal register |
 
 ## Sonkeigo (Respectful Language)
 
@@ -36,7 +34,7 @@ Elevates the listener or third party, particularly superiors, clients, or guests
 
 ### Grammatical Features
 
-<strong>Key Transformations:</strong>| Plain Form | Polite | Sonkeigo (Respectful) |
+**Key Transformations:**| Plain Form | Polite | Sonkeigo (Respectful) |
 |------------|--------|----------------------|
 | 行く (iku - to go) | 行きます (ikimasu) | いらっしゃる (irassharu) |
 | 来る (kuru - to come) | 来ます (kimasu) | いらっしゃる (irassharu) |
@@ -48,23 +46,19 @@ Elevates the listener or third party, particularly superiors, clients, or guests
 
 ### Construction Patterns
 
-<strong>Pattern 1: Special Respectful Verbs</strong>```
+**Pattern 1: Special Respectful Verbs**```
 Standard: 社長が来ます (shachō ga kimasu)
 → The president is coming
 
 Respectful: 社長がいらっしゃいます (shachō ga irasshaimasu)
 → The president is coming (respectful)
-```
-
-**Pattern 2: お + Verb Stem + になる**```
+```**Pattern 2: お + Verb Stem + になる**```
 Standard: 読みます (yomimasu - reads)
 → Respectful: お読みになります (oyomi ni narimasu)
 
 Standard: 書きます (kakimasu - writes)
 → Respectful: お書きになります (okaki ni narimasu)
-```
-
-<strong>Pattern 3: Honorific Prefix + Noun</strong>```
+```**Pattern 3: Honorific Prefix + Noun**```
 お名前 (onamae) - your name (polite)
 ご意見 (goiken) - your opinion (polite)
 ```
@@ -89,7 +83,7 @@ Expresses humility by lowering the speaker's or in-group's actions relative to t
 
 ### Grammatical Features
 
-<strong>Key Transformations:</strong>| Plain Form | Polite | Kenjōgo (Humble) |
+**Key Transformations:**| Plain Form | Polite | Kenjōgo (Humble) |
 |------------|--------|------------------|
 | 行く/来る (iku/kuru) | 行きます/来ます | 参る (mairu) |
 | 言う (iu - to say) | 言います (iimasu) | 申す (mōsu), 申し上げる (mōshiageru) |
@@ -102,15 +96,13 @@ Expresses humility by lowering the speaker's or in-group's actions relative to t
 
 ### Construction Patterns
 
-<strong>Pattern 1: Special Humble Verbs</strong>```
+**Pattern 1: Special Humble Verbs**```
 Standard: 私が言います (watashi ga iimasu)
 → I will say
 
 Humble: 私が申し上げます (watashi ga mōshiagemasu)
 → I will say (humble)
-```
-
-**Pattern 2: お + Verb Stem + する**```
+```**Pattern 2: お + Verb Stem + する**```
 Standard: 案内します (annai shimasu - guide)
 → Humble: ご案内します (goannai shimasu)
 
@@ -120,7 +112,7 @@ Standard: 連絡します (renraku shimasu - contact)
 
 ### Usage Examples
 
-<strong>Business Context:</strong>```
+**Business Context:**```
 田中と申します。
 (Tanaka to mōshimasu.)
 My name is Tanaka. (humble)
@@ -183,9 +175,7 @@ I ate yesterday.
 | Prefix | Kanji | Usage | Examples |
 |--------|-------|-------|----------|
 | **o-**| お | Native Japanese words | お茶 (ocha - tea), お名前 (onamae - name) |
-| **go-**| ご | Sino-Japanese words | ご家族 (gokazoku - family), ご意見 (goiken - opinion) |
-
-**Critical Rule:**Never use honorifics for yourself—always for others.
+| **go-**| ご | Sino-Japanese words | ご家族 (gokazoku - family), ご意見 (goiken - opinion) |**Critical Rule:**Never use honorifics for yourself—always for others.
 
 ## Cultural Context: Uchi-Soto Dynamics
 
@@ -213,26 +203,24 @@ Correct: 社長が参ります
 
 ### Social Hierarchy Factors
 
-<strong>Determining Honorific Level:</strong>| Factor | Higher Status | Lower Status |
+**Determining Honorific Level:**| Factor | Higher Status | Lower Status |
 |--------|---------------|--------------|
-| <strong>Age</strong>| Older | Younger |
-| <strong>Position</strong>| Manager, senior | Junior, new employee |
-| <strong>Experience</strong>| Veteran | Novice |
-| <strong>Customer</strong>| Client, customer | Service provider |
-| <strong>Situation</strong>| Formal event | Casual setting |
+| **Age**| Older | Younger |
+| **Position**| Manager, senior | Junior, new employee |
+| **Experience**| Veteran | Novice |
+| **Customer**| Client, customer | Service provider |
+| **Situation**| Formal event | Casual setting |
 
 ## Application in AI and Automation
 
 ### AI Chatbot Implementation
 
-<strong>Requirements:</strong>| Component | Description |
+**Requirements:**| Component | Description |
 |-----------|-------------|
-| <strong>Context Recognition</strong>| Identify user status, relationship, formality level |
-| <strong>Dynamic Selection</strong>| Choose appropriate keigo type based on context |
-| <strong>Consistency Maintenance</strong>| Maintain register throughout conversation |
-| <strong>Escalation Handling</strong>| Adjust formality when context changes |
-
-<strong>Example Workflow:</strong>```
+| **Context Recognition**| Identify user status, relationship, formality level |
+| **Dynamic Selection**| Choose appropriate keigo type based on context |
+| **Consistency Maintenance**| Maintain register throughout conversation |
+| **Escalation Handling**| Adjust formality when context changes |**Example Workflow:**```
 User Query Analysis
     ↓
 Identify Relationship (customer, employee, general)
@@ -255,9 +243,7 @@ Validate Consistency
 |----------|-------------|-----------------|
 | **To Customer**| Sonkeigo + Teineigo | お客様、お世話になっております |
 | **Internal Memo**| Teineigo | 各位、お疲れ様です |
-| **To Superior**| Sonkeigo + Teineigo | 部長、お忙しいところ恐れ入ります |
-
-**Customer Support Automation:**```python
+| **To Superior**| Sonkeigo + Teineigo | 部長、お忙しいところ恐れ入ります |**Customer Support Automation:**```python
 def generate_greeting(user_type):
     if user_type == "customer":
         return "お客様、いらっしゃいませ。" # Respectful
@@ -277,13 +263,13 @@ def describe_customer_action(action):
 
 ### Language Learning Applications
 
-<strong>Features:</strong>| Feature | Implementation |
+**Features:**| Feature | Implementation |
 |---------|----------------|
-| <strong>Context Scenarios</strong>| Simulated business calls, social encounters |
-| <strong>Real-Time Feedback</strong>| Immediate keigo error correction |
-| <strong>Level Progression</strong>| Gradual introduction of complexity |
-| <strong>Cultural Notes</strong>| Explanations of social context |
-| <strong>Practice Exercises</strong>| Role-play with different status relationships |
+| **Context Scenarios**| Simulated business calls, social encounters |
+| **Real-Time Feedback**| Immediate keigo error correction |
+| **Level Progression**| Gradual introduction of complexity |
+| **Cultural Notes**| Explanations of social context |
+| **Practice Exercises**| Role-play with different status relationships |
 
 ## Common Implementation Challenges
 
@@ -291,33 +277,31 @@ def describe_customer_action(action):
 
 | Error Type | Description | Example |
 |------------|-------------|---------|
-| <strong>Self-Elevation</strong>| Using respectful forms for self | 私がいらっしゃいます (wrong) |
-| <strong>Insufficient Respect</strong>| Using plain/humble for customers | お客様が参ります (wrong) |
-| <strong>Register Mixing</strong>| Inconsistent honorific levels | Starting respectful, ending casual |
-| <strong>Overuse</strong>| Excessive keigo sounding insincere | Every word with honorific prefix |
+| **Self-Elevation**| Using respectful forms for self | 私がいらっしゃいます (wrong) |
+| **Insufficient Respect**| Using plain/humble for customers | お客様が参ります (wrong) |
+| **Register Mixing**| Inconsistent honorific levels | Starting respectful, ending casual |
+| **Overuse**| Excessive keigo sounding insincere | Every word with honorific prefix |
 
 ### AI-Specific Challenges
 
-<strong>Context Detection:</strong>- Difficulty identifying subtle status cues
+**Context Detection:**- Difficulty identifying subtle status cues
 - Ambiguous user relationships
 - Missing historical interaction context
 - Cultural nuance interpretation
 
-<strong>Dynamic Adaptation:</strong>- Relationship changes mid-conversation
+**Dynamic Adaptation:**- Relationship changes mid-conversation
 - Formality level shifts
 - Group membership changes
 - Situational formality variations
 
 ### Mitigation Strategies
 
-<strong>Technical Solutions:</strong>| Challenge | Solution |
+**Technical Solutions:**| Challenge | Solution |
 |-----------|----------|
-| <strong>Context Ambiguity</strong>| Default to safer polite forms (teineigo) |
-| <strong>Status Uncertainty</strong>| Use -san suffix universally |
-| <strong>Register Consistency</strong>| Conversation state tracking |
-| <strong>Error Recovery</strong>| Graceful fallback to standard polite |
-
-<strong>Process Solutions:</strong>- Human review for high-stakes interactions
+| **Context Ambiguity**| Default to safer polite forms (teineigo) |
+| **Status Uncertainty**| Use -san suffix universally |
+| **Register Consistency**| Conversation state tracking |
+| **Error Recovery**| Graceful fallback to standard polite |**Process Solutions:**- Human review for high-stakes interactions
 - Customer feedback mechanisms
 - Continuous model training
 - Cultural expert consultation
@@ -346,13 +330,13 @@ def describe_customer_action(action):
 
 ### For AI Developers
 
-<strong>Design Principles:</strong>1. Default to safer polite forms when uncertain
+**Design Principles:**1. Default to safer polite forms when uncertain
 2. Implement context tracking across conversation
 3. Provide override mechanisms for edge cases
 4. Log honorific usage for quality improvement
 5. Enable cultural expert review workflows
 
-<strong>Testing Requirements:</strong>- Multi-persona scenario testing
+**Testing Requirements:**- Multi-persona scenario testing
 - Cultural appropriateness validation
 - Edge case handling verification
 - Consistency across conversation flows
@@ -360,16 +344,16 @@ def describe_customer_action(action):
 
 ### For Business Users
 
-<strong>Deployment Guidelines:</strong>| Use Case | Recommended Approach |
+**Deployment Guidelines:**| Use Case | Recommended Approach |
 |----------|---------------------|
-| <strong>Customer Service</strong>| Sonkeigo + Teineigo, human escalation available |
-| <strong>Internal Tools</strong>| Teineigo default, contextual adaptation |
-| <strong>B2B Communication</strong>| Conservative honorifics, expert review |
-| <strong>Learning Applications</strong>| All levels with explicit instruction |
+| **Customer Service**| Sonkeigo + Teineigo, human escalation available |
+| **Internal Tools**| Teineigo default, contextual adaptation |
+| **B2B Communication**| Conservative honorifics, expert review |
+| **Learning Applications**| All levels with explicit instruction |
 
 ### For Language Learners
 
-<strong>Learning Path:</strong>```
+**Learning Path:**```
 Level 1: Master Teineigo (Polite Forms)
     ↓
 Level 2: Learn Sonkeigo Basics (Common Respectful Verbs)
@@ -400,21 +384,11 @@ Level 6: Master Advanced Forms and Nuance
 | **Older (60+)**| Strict adherence, traditional forms |
 | **Middle-aged (30-60)**| Business-appropriate, flexible social |
 | **Younger (20-30)**| Casual among peers, formal in business |
-| **Youth (<20)**| Minimal honorifics in casual settings |
-
-**Business Context:**Traditional keigo remains essential regardless of generation.
+| **Youth (<20)**| Minimal honorifics in casual settings |**Business Context:**Traditional keigo remains essential regardless of generation.
 
 ## Frequently Asked Questions
 
-**Q: What's the safest honorific approach when uncertain?**A: Use teineigo (polite -masu/-desu forms) with -san suffix. This is neutral and appropriate in most situations.
-
-**Q: Can AI perfectly replicate native keigo usage?**A: Current AI can handle standard patterns well but may struggle with subtle cultural nuances requiring deep contextual understanding. Human review recommended for high-stakes interactions.
-
-**Q: How important is keigo for foreigners?**A: Essential in business settings. Native speakers are forgiving of learner errors but appreciate effort. Proper keigo significantly impacts professional credibility.
-
-**Q: What happens if I use wrong keigo?**A: Minor errors are usually forgiven, especially for non-natives. Major errors (e.g., using respectful forms for yourself) can seem rude or comical.
-
-**Q: How do I know when to switch keigo levels?**A: Follow the other person's lead, consider the setting (business vs. social), and when in doubt, maintain formal politeness.
+**Q: What's the safest honorific approach when uncertain?**A: Use teineigo (polite -masu/-desu forms) with -san suffix. This is neutral and appropriate in most situations.**Q: Can AI perfectly replicate native keigo usage?**A: Current AI can handle standard patterns well but may struggle with subtle cultural nuances requiring deep contextual understanding. Human review recommended for high-stakes interactions.**Q: How important is keigo for foreigners?**A: Essential in business settings. Native speakers are forgiving of learner errors but appreciate effort. Proper keigo significantly impacts professional credibility.**Q: What happens if I use wrong keigo?**A: Minor errors are usually forgiven, especially for non-natives. Major errors (e.g., using respectful forms for yourself) can seem rude or comical.**Q: How do I know when to switch keigo levels?**A: Follow the other person's lead, consider the setting (business vs. social), and when in doubt, maintain formal politeness.
 
 ## References
 

@@ -18,35 +18,13 @@ This automation approach replaces error-prone manual configuration with repeatab
 
 ## Key Concepts
 
-<strong>Idempotency:</strong>Applying the same IaC configuration repeatedly produces the same system state, regardless of how many times it is run. Idempotency ensures safe, predictable updates.
-
-<strong>Version Control:</strong>All infrastructure code is managed in version control systems (such as Git). This enables collaboration, code reviews, traceability, and the ability to roll back to previous states.
-
-<strong>Modularity and Reusability:</strong>IaC encourages breaking infrastructure definitions into reusable modules, roles, or stacks. Modularity reduces duplication and increases maintainability.
-
-<strong>Automation:</strong>Automation is central to IaC. Tools read configuration files and provision, update, or tear down infrastructure as required, eliminating manual intervention.
-
-<strong>Declarative vs Imperative Models:</strong>- <strong>Declarative</strong>– Specify the desired state; the tool figures out the steps needed
-- <strong>Imperative</strong>– Specify the exact sequence of commands or steps needed
-
-<strong>Mutable vs Immutable Infrastructure:</strong>- <strong>Mutable</strong>– Resources are modified in place
-- <strong>Immutable</strong>– New resources are created for changes; old ones are destroyed, reducing drift
+**Idempotency:**Applying the same IaC configuration repeatedly produces the same system state, regardless of how many times it is run. Idempotency ensures safe, predictable updates.**Version Control:**All infrastructure code is managed in version control systems (such as Git). This enables collaboration, code reviews, traceability, and the ability to roll back to previous states.**Modularity and Reusability:**IaC encourages breaking infrastructure definitions into reusable modules, roles, or stacks. Modularity reduces duplication and increases maintainability.**Automation:**Automation is central to IaC. Tools read configuration files and provision, update, or tear down infrastructure as required, eliminating manual intervention.**Declarative vs Imperative Models:**-**Declarative**– Specify the desired state; the tool figures out the steps needed
+- **Imperative**– Specify the exact sequence of commands or steps needed**Mutable vs Immutable Infrastructure:**-**Mutable**– Resources are modified in place
+- **Immutable**– New resources are created for changes; old ones are destroyed, reducing drift
 
 ## Benefits
 
-<strong>Consistency and Repeatability:</strong>Every environment can be provisioned identically, eliminating "snowflake" servers.
-
-<strong>Error Reduction:</strong>Automation and code reviews reduce manual errors and configuration drift.
-
-<strong>Speed and Agility:</strong>Entire environments can be created, updated, or destroyed in minutes.
-
-<strong>Cost Optimization:</strong>Automation reduces labor and cloud resource waste.
-
-<strong>Auditability:</strong>All changes are tracked in version control, supporting compliance.
-
-<strong>Disaster Recovery:</strong>Environments can be rebuilt quickly from code.
-
-<strong>Collaboration:</strong>Code-based infrastructure enables teams to work together, review changes, and manage complex systems at scale.
+**Consistency and Repeatability:**Every environment can be provisioned identically, eliminating "snowflake" servers.**Error Reduction:**Automation and code reviews reduce manual errors and configuration drift.**Speed and Agility:**Entire environments can be created, updated, or destroyed in minutes.**Cost Optimization:**Automation reduces labor and cloud resource waste.**Auditability:**All changes are tracked in version control, supporting compliance.**Disaster Recovery:**Environments can be rebuilt quickly from code.**Collaboration:**Code-based infrastructure enables teams to work together, review changes, and manage complex systems at scale.
 
 ## Methodologies
 
@@ -56,14 +34,12 @@ This automation approach replaces error-prone manual configuration with repeatab
 | Execution | Tool figures out the actions | User controls the process |
 | Examples | Terraform, CloudFormation, Kubernetes | Bash scripts, Ansible ad-hoc, Chef |
 
-<strong>Example — Declarative (Terraform):</strong>```hcl
+**Example — Declarative (Terraform):**```hcl
 resource "aws_instance" "web" {
   ami           = "ami-123"
   instance_type = "t2.micro"
 }
-```
-
-**Example — Imperative (Bash):**```bash
+```**Example — Imperative (Bash):**```bash
 aws ec2 run-instances --image-id ami-123 --instance-type t2.micro
 ```
 
@@ -71,39 +47,29 @@ Declarative models are generally preferred for their simplicity, maintainability
 
 ## Infrastructure Lifecycle
 
-<strong>Write:</strong>Define infrastructure in configuration files (YAML, JSON, HCL, etc.).
-
-<strong>Version:</strong>Store code in VCS (e.g., Git). Use branches, pull requests, and commit history.
-
-<strong>Plan/Validate:</strong>Preview changes before applying them (e.g., `terraform plan`). Automated tests check syntax, security, and policy compliance.
-
-<strong>Provision:</strong>Automation engines (Terraform, CloudFormation, etc.) read configuration and create or update infrastructure.
-
-<strong>Deploy:</strong>CI/CD pipelines trigger infrastructure deployments alongside application code.
-
-<strong>Destroy:</strong>Automatically decommission infrastructure when no longer needed.
+**Write:**Define infrastructure in configuration files (YAML, JSON, HCL, etc.).**Version:**Store code in VCS (e.g., Git). Use branches, pull requests, and commit history.**Plan/Validate:**Preview changes before applying them (e.g., `terraform plan`). Automated tests check syntax, security, and policy compliance.**Provision:**Automation engines (Terraform, CloudFormation, etc.) read configuration and create or update infrastructure.**Deploy:**CI/CD pipelines trigger infrastructure deployments alongside application code.**Destroy:**Automatically decommission infrastructure when no longer needed.
 
 ## Major Tools
 
 ### Infrastructure Provisioning Tools
 
-- <strong>Terraform</strong>– Cloud-agnostic, uses HCL, supports AWS, Azure, GCP, and others
-- <strong>AWS CloudFormation</strong>– Native to AWS, uses YAML or JSON
-- <strong>Azure Resource Manager (ARM) Templates</strong>– For Azure, uses JSON
-- <strong>Google Cloud Deployment Manager</strong>– For GCP, uses YAML/Python/Jinja2
-- <strong>Pulumi</strong>– Uses general-purpose languages (Python, Go, TypeScript, etc.)
+- **Terraform**– Cloud-agnostic, uses HCL, supports AWS, Azure, GCP, and others
+- **AWS CloudFormation**– Native to AWS, uses YAML or JSON
+- **Azure Resource Manager (ARM) Templates**– For Azure, uses JSON
+- **Google Cloud Deployment Manager**– For GCP, uses YAML/Python/Jinja2
+- **Pulumi**– Uses general-purpose languages (Python, Go, TypeScript, etc.)
 
 ### Configuration Management Tools
 
-- <strong>Ansible</strong>– Agentless, YAML playbooks
-- <strong>Puppet</strong>– Declarative, agent-based
-- <strong>Chef</strong>– Ruby DSL, agent-based
-- <strong>SaltStack/Salt</strong>– Event-driven, scalable
+- **Ansible**– Agentless, YAML playbooks
+- **Puppet**– Declarative, agent-based
+- **Chef**– Ruby DSL, agent-based
+- **SaltStack/Salt**– Event-driven, scalable
 
 ### Container Orchestration Tools
 
-- <strong>Kubernetes</strong>– Declarative management of container workloads
-- <strong>Docker Compose</strong>– YAML-based, for multi-container applications
+- **Kubernetes**– Declarative management of container workloads
+- **Docker Compose**– YAML-based, for multi-container applications
 
 ### Tool Comparison
 
@@ -118,61 +84,15 @@ Declarative models are generally preferred for their simplicity, maintainability
 
 ## Use Cases
 
-<strong>Cloud Provisioning:</strong>Automate deployment of cloud environments (AWS, Azure, GCP).
-
-<strong>Automated Application Deployment:</strong>Provision complete application stacks via code.
-
-<strong>CI/CD Integration:</strong>Automatically create, test, and destroy infrastructure during software delivery.
-
-<strong>Disaster Recovery:</strong>Recreate entire environments from code in alternate regions after failures.
-
-<strong>Multicloud & Hybrid Management:</strong>Manage resources across multiple clouds and on-premises environments.
-
-<strong>Security and Compliance:</strong>Embed security and compliance policies directly in IaC templates.
-
-<strong>Networking Automation:</strong>Automate creation of networks, subnets, and security groups.
-
-<strong>Big Data & AI Infrastructure:</strong>Provision Hadoop, Spark, or AI/ML clusters on demand.
+**Cloud Provisioning:**Automate deployment of cloud environments (AWS, Azure, GCP).**Automated Application Deployment:**Provision complete application stacks via code.**CI/CD Integration:**Automatically create, test, and destroy infrastructure during software delivery.**Disaster Recovery:**Recreate entire environments from code in alternate regions after failures.**Multicloud & Hybrid Management:**Manage resources across multiple clouds and on-premises environments.**Security and Compliance:**Embed security and compliance policies directly in IaC templates.**Networking Automation:**Automate creation of networks, subnets, and security groups.**Big Data & AI Infrastructure:**Provision Hadoop, Spark, or AI/ML clusters on demand.
 
 ## Best Practices
 
-<strong>Store Code in Version Control:</strong>Enables collaboration, traceability, and rollback.
-
-<strong>Use Modular, Reusable Code:</strong>Create small, composable modules for maintainability.
-
-<strong>Automate Testing:</strong>Integrate automated syntax, security, and compliance checks.
-
-<strong>Prefer Immutable Infrastructure:</strong>Replace over in-place modification to avoid drift.
-
-<strong>Peer Review:</strong>Establish workflows for code review and approvals.
-
-<strong>Document Thoroughly:</strong>Make the codebase self-documenting where possible.
-
-<strong>Manage Secrets Securely:</strong>Use dedicated secrets management systems.
-
-<strong>Automated Validation:</strong>Use linters and static analysis tools.
-
-<strong>Consistent Naming and Tagging:</strong>Enforce strict naming/tagging conventions for resources.
+**Store Code in Version Control:**Enables collaboration, traceability, and rollback.**Use Modular, Reusable Code:**Create small, composable modules for maintainability.**Automate Testing:**Integrate automated syntax, security, and compliance checks.**Prefer Immutable Infrastructure:**Replace over in-place modification to avoid drift.**Peer Review:**Establish workflows for code review and approvals.**Document Thoroughly:**Make the codebase self-documenting where possible.**Manage Secrets Securely:**Use dedicated secrets management systems.**Automated Validation:**Use linters and static analysis tools.**Consistent Naming and Tagging:**Enforce strict naming/tagging conventions for resources.
 
 ## Challenges
 
-<strong>Learning Curve:</strong>Teams must learn new tools and paradigms.
-
-<strong>State Management:</strong>State files (e.g., Terraform) must be protected and backed up.
-
-<strong>Configuration Drift:</strong>Manual changes outside of IaC can cause inconsistencies.
-
-<strong>Tooling Complexity:</strong>Multiple tools may be required; integration can be complex.
-
-<strong>Security Risks:</strong>Hardcoded secrets, misconfigurations can lead to vulnerabilities.
-
-<strong>Debugging:</strong>Automated errors can be less intuitive than manual processes.
-
-<strong>Organizational Change:</strong>Cultural resistance may slow adoption.
-
-<strong>Legacy Integration:</strong>Migrating existing systems can be complex.
-
-<strong>Mitigation Strategies:</strong>- Adopt IaC incrementally
+**Learning Curve:**Teams must learn new tools and paradigms.**State Management:**State files (e.g., Terraform) must be protected and backed up.**Configuration Drift:**Manual changes outside of IaC can cause inconsistencies.**Tooling Complexity:**Multiple tools may be required; integration can be complex.**Security Risks:**Hardcoded secrets, misconfigurations can lead to vulnerabilities.**Debugging:**Automated errors can be less intuitive than manual processes.**Organizational Change:**Cultural resistance may slow adoption.**Legacy Integration:**Migrating existing systems can be complex.**Mitigation Strategies:**- Adopt IaC incrementally
 - Provide training and documentation
 - Automate testing and validation
 - Enforce strict change management

@@ -18,17 +18,15 @@ Global variables enable data sharing across modules, maintaining user session da
 
 ## Scope and Accessibility
 
-<strong>Global Scope:</strong>Variables defined in global scope are accessible from every function, node, or topic in the application after declaration.
-
-<strong>Local vs Global Comparison:</strong>- <strong>Local variables</strong>– Confined to function, block, or node where declared
-- <strong>Global variables</strong>– Accessible anywhere in code after declaration
-- <strong>Shadowing</strong>– Local variables with same name can shadow global variables within their scope
+**Global Scope:**Variables defined in global scope are accessible from every function, node, or topic in the application after declaration.**Local vs Global Comparison:**-**Local variables**– Confined to function, block, or node where declared
+- **Global variables**– Accessible anywhere in code after declaration
+- **Shadowing**– Local variables with same name can shadow global variables within their scope
 
 ## Programming Language Examples
 
 ### Python
 
-<strong>Defining and Accessing:</strong>```python
+**Defining and Accessing:**```python
 x = "awesome"  # Global variable
 
 def myfunc():
@@ -36,9 +34,7 @@ def myfunc():
 
 myfunc()
 print("Python is " + x)
-```
-
-**Modifying Global Variables:**```python
+```**Modifying Global Variables:**```python
 x = "awesome"
 
 def myfunc():
@@ -53,7 +49,7 @@ The `global` keyword is necessary to modify global variables from within functio
 
 ### C Language
 
-<strong>Declaration and Use:</strong>```c
+**Declaration and Use:**```c
 #include <stdio.h>
 int x = 5; // global variable
 
@@ -62,9 +58,7 @@ int main() {
     printf("%d", x + y); // x accessible here
     return 0;
 }
-```
-
-**Multiple Function Access:**```c
+```**Multiple Function Access:**```c
 #include <stdio.h>
 int a, b; // global variables
 
@@ -86,16 +80,16 @@ C global variables are initialized to zero by default if not explicitly initiali
 
 ### Microsoft Copilot Studio
 
-<strong>Creating Global Variables:</strong>1. Create a variable in the variable panel
+**Creating Global Variables:**1. Create a variable in the variable panel
 2. Set scope to "Global (any topic can access)"
 3. Variable receives prefix (e.g., `Global.UserName`)
 4. Accessible and modifiable across all topics and automation nodes
 
-<strong>Using Global Variables:</strong>- Access via variable picker or type prefixed name
+**Using Global Variables:**- Access via variable picker or type prefixed name
 - Set values from user input, API calls, or query strings
 - Initialize from external sources via URL parameters
 
-<strong>Example URL Initialization:</strong>```
+**Example URL Initialization:**```
 https://web.powerva.microsoft.com/webchat/bots/12345?UserName=Ana
 ```
 
@@ -105,35 +99,21 @@ This sets `Global.UserName` to "Ana" before session starts.
 
 ### ServiceNow
 
-**Catalog Item Variables:**Setting variable as global makes it available across multiple workflows or catalog items.
-
-**Caution:**Improper use can cause resource usage spikes and data integrity issues through accidental overwrites.
+**Catalog Item Variables:**Setting variable as global makes it available across multiple workflows or catalog items.**Caution:**Improper use can cause resource usage spikes and data integrity issues through accidental overwrites.
 
 ## Lifecycle and Persistence
 
-**Lifetime:**- **Programs**– Entire runtime duration
+**Lifetime:**-**Programs**– Entire runtime duration
 - **Chatbot sessions**– Duration of user session
-- **Cross-session**– Requires external storage (database)
-
-**Initialization:**- **C**– Uninitialized globals default to zero
+- **Cross-session**– Requires external storage (database)**Initialization:**-**C**– Uninitialized globals default to zero
 - **Python**– Must be assigned before use
-- **Chatbot platforms**– Initialized at conversation start or from external parameters
-
-**Persistence:**- Standard global variables reset when application/session ends
+- **Chatbot platforms**– Initialized at conversation start or from external parameters**Persistence:**- Standard global variables reset when application/session ends
 - Cross-session persistence requires database or external storage
 - Platform-specific mechanisms for long-term data retention
 
 ## Common Use Cases
 
-**User Data Persistence:**Store user information (name, email, preferences) once and reuse across topics without repeated prompts.
-
-**Session Management:**Maintain state or session attributes throughout conversation or workflow execution.
-
-**Configuration Settings:**Hold feature flags or environment settings accessed by multiple flows or modules.
-
-**Context Sharing:**Pass data between subflows, scripts, or branches for coordinated workflows.
-
-**External Integration:**Accept initial context or session data from external systems or web applications.
+**User Data Persistence:**Store user information (name, email, preferences) once and reuse across topics without repeated prompts.**Session Management:**Maintain state or session attributes throughout conversation or workflow execution.**Configuration Settings:**Hold feature flags or environment settings accessed by multiple flows or modules.**Context Sharing:**Pass data between subflows, scripts, or branches for coordinated workflows.**External Integration:**Accept initial context or session data from external systems or web applications.
 
 ## Advantages and Disadvantages
 
@@ -154,19 +134,7 @@ This sets `Global.UserName` to "Ana" before session starts.
 
 ## Best Practices
 
-**Limit Use:**Use global variables sparingly. Prefer local variables for non-shared data.
-
-**Unique Naming:**Use clear, unique names with prefixes (e.g., `Global.`, `bot.`) to avoid conflicts.
-
-**Controlled Modification:**Limit places where global variables can be changed. Document all modification points.
-
-**Always Initialize:**Set default values to avoid undefined states and unexpected behavior.
-
-**Document Usage:**Clearly document which flows or modules use each global variable for maintenance.
-
-**Reset Appropriately:**Provide mechanisms to reset globals at appropriate points (session end, logout).
-
-**Security Considerations:**Avoid storing sensitive data in global variables unless properly protected with encryption.
+**Limit Use:**Use global variables sparingly. Prefer local variables for non-shared data.**Unique Naming:**Use clear, unique names with prefixes (e.g., `Global.`, `bot.`) to avoid conflicts.**Controlled Modification:**Limit places where global variables can be changed. Document all modification points.**Always Initialize:**Set default values to avoid undefined states and unexpected behavior.**Document Usage:**Clearly document which flows or modules use each global variable for maintenance.**Reset Appropriately:**Provide mechanisms to reset globals at appropriate points (session end, logout).**Security Considerations:**Avoid storing sensitive data in global variables unless properly protected with encryption.
 
 ## Platform-Specific Features
 
@@ -186,15 +154,7 @@ This sets `Global.UserName` to "Ana" before session starts.
 
 ## Related Concepts
 
-**Local Variables:**Confined to specific function, node, or topic scope.
-
-**Session Variables:**Persist only for session duration, often equivalent to globals in chatbot contexts.
-
-**Environment Variables:**System or environment-level settings, typically for configuration.
-
-**Constants:**Variables with unchangeable values, often implemented as globals.
-
-**State Management:**Techniques for managing application state using both local and global variables.
+**Local Variables:**Confined to specific function, node, or topic scope.**Session Variables:**Persist only for session duration, often equivalent to globals in chatbot contexts.**Environment Variables:**System or environment-level settings, typically for configuration.**Constants:**Variables with unchangeable values, often implemented as globals.**State Management:**Techniques for managing application state using both local and global variables.
 
 ## References
 

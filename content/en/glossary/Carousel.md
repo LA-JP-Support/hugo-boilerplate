@@ -18,31 +18,13 @@ In AI chatbots and automation, carousel components surface multiple options or r
 
 ## Core Components and Features
 
-<strong>Slides (Items/Cards)</strong>Individual content units—images, cards, messages—displayed in the carousel's viewport. Each slide should be self-contained and actionable.
-
-<strong>Navigation Controls</strong>- <strong>Arrows/Chevrons:</strong>Enable movement to previous/next slides
-- <strong>Pagination Indicators:</strong>Visualize number of slides and current position—labeled tabs or thumbnails preferred over generic dots for better usability
-- <strong>Swipe Controls:</strong>Enable horizontal navigation on touch devices
-
-<strong>Container</strong>Bounding element holding all carousel content and controls, managing overflow and visual boundaries.
-
-<strong>Auto-Rotation (Optional)</strong>Automatically advances slides after set intervals. Should always be user-controllable and pausable for accessibility.
-
-<strong>Looping (Optional)</strong>Allows carousel to wrap from last slide back to first, enabling continuous navigation.
-
-<strong>Accessibility Requirements</strong>All controls must be keyboard-navigable. Carousel state must communicate to assistive technologies. Users must be able to pause auto-rotation. Controls require sufficient size, contrast, and touch-friendly dimensions.
+**Slides (Items/Cards)**Individual content units—images, cards, messages—displayed in the carousel's viewport. Each slide should be self-contained and actionable.**Navigation Controls**-**Arrows/Chevrons:**Enable movement to previous/next slides
+- **Pagination Indicators:**Visualize number of slides and current position—labeled tabs or thumbnails preferred over generic dots for better usability
+- **Swipe Controls:**Enable horizontal navigation on touch devices**Container**Bounding element holding all carousel content and controls, managing overflow and visual boundaries.**Auto-Rotation (Optional)**Automatically advances slides after set intervals. Should always be user-controllable and pausable for accessibility.**Looping (Optional)**Allows carousel to wrap from last slide back to first, enabling continuous navigation.**Accessibility Requirements**All controls must be keyboard-navigable. Carousel state must communicate to assistive technologies. Users must be able to pause auto-rotation. Controls require sufficient size, contrast, and touch-friendly dimensions.
 
 ## Common Use Cases
 
-<strong>Image Galleries</strong>E-commerce product photos, portfolio artwork, case study showcases. Users swipe through different angles or variations of featured items.
-
-<strong>Product Catalogs</strong>Online stores display featured items, best-sellers, or categories. Chatbots suggest products or services in conversational flows.
-
-<strong>Onboarding and Tutorials</strong>Apps walk new users step-by-step through features. Process walkthroughs break down complex flows into digestible cards.
-
-<strong>Navigation and Dashboards</strong>Home screens categorize content with swipeable cards. Dashboards summarize metrics, alerts, or key updates in rotating panels.
-
-<strong>Promotional Banners</strong>Website homepages rotate promotions, announcements, or hero images to showcase multiple messages in limited space.
+**Image Galleries**E-commerce product photos, portfolio artwork, case study showcases. Users swipe through different angles or variations of featured items.**Product Catalogs**Online stores display featured items, best-sellers, or categories. Chatbots suggest products or services in conversational flows.**Onboarding and Tutorials**Apps walk new users step-by-step through features. Process walkthroughs break down complex flows into digestible cards.**Navigation and Dashboards**Home screens categorize content with swipeable cards. Dashboards summarize metrics, alerts, or key updates in rotating panels.**Promotional Banners**Website homepages rotate promotions, announcements, or hero images to showcase multiple messages in limited space.
 
 ### Critical Engagement Insight
 Usability studies consistently show most users interact only with the first slide—only 1% of users click carousel toggles, and 84% interact only once, rarely making it past the first slide. Critical information should never be hidden in later slides.
@@ -50,39 +32,29 @@ Usability studies consistently show most users interact only with the first slid
 ## Benefits and Limitations
 
 ### Benefits
-- <strong>Space Efficiency:</strong>Multiple items occupy single UI region, maximizing limited screen space
-- <strong>Visual Engagement:</strong>Animations and transitions capture attention for featured content
-- <strong>Content Variety:</strong>Surfaces range of options in compact module
-- <strong>User Control:</strong>Users browse at own pace with clear, accessible navigation
-- <strong>Storytelling:</strong>Guides users through sequences in ordered fashion
+- **Space Efficiency:**Multiple items occupy single UI region, maximizing limited screen space
+- **Visual Engagement:**Animations and transitions capture attention for featured content
+- **Content Variety:**Surfaces range of options in compact module
+- **User Control:**Users browse at own pace with clear, accessible navigation
+- **Storytelling:**Guides users through sequences in ordered fashion
 
 ### Limitations
-- <strong>Low Engagement Beyond First Slide:</strong>Most users ignore or never see slides after the first; vital content placed later is often missed
-- <strong>Distraction and Cognitive Load:</strong>Auto-rotating carousels distract, disrupt reading, and lead to banner blindness
-- <strong>Hidden Content:</strong>Only one or few items visible at a time; users may not realize there's more
-- <strong>Slower Decision-Making:</strong>Users must click/swipe or wait for rotation to view options
-- <strong>Accessibility Issues:</strong>Many carousels are difficult for screen readers and keyboard users unless specifically designed for accessibility
-- <strong>Banner Blindness:</strong>Rotating elements are often ignored, especially when styled like ads
+- **Low Engagement Beyond First Slide:**Most users ignore or never see slides after the first; vital content placed later is often missed
+- **Distraction and Cognitive Load:**Auto-rotating carousels distract, disrupt reading, and lead to banner blindness
+- **Hidden Content:**Only one or few items visible at a time; users may not realize there's more
+- **Slower Decision-Making:**Users must click/swipe or wait for rotation to view options
+- **Accessibility Issues:**Many carousels are difficult for screen readers and keyboard users unless specifically designed for accessibility
+- **Banner Blindness:**Rotating elements are often ignored, especially when styled like ads
 
 ## Design Best Practices
 
-<strong>Limit Slide Count</strong>Optimal: 3-5 slides. Engagement drops sharply after first few. Never place critical information beyond first slide.
-
-<strong>Optimize Readability</strong>Use high-resolution images and large, legible fonts. Avoid overloading cards with information; keep text concise and focused.
-
-<strong>Provide Clear Navigation</strong>Use visible, intuitive arrows or swipe prompts. Prefer labeled tabs or thumbnails over generic dots for slide navigation, especially on desktop.
-
-<strong>Manual Over Auto-Rotation</strong>Manual navigation is strongly preferred. If auto-rotation is used, provide pause control and make interval long enough (3-5 seconds minimum). Never auto-rotate on mobile where users scroll quickly.
-
-<strong>Ensure Accessibility</strong>- All controls and slides must be focusable via keyboard
+**Limit Slide Count**Optimal: 3-5 slides. Engagement drops sharply after first few. Never place critical information beyond first slide.**Optimize Readability**Use high-resolution images and large, legible fonts. Avoid overloading cards with information; keep text concise and focused.**Provide Clear Navigation**Use visible, intuitive arrows or swipe prompts. Prefer labeled tabs or thumbnails over generic dots for slide navigation, especially on desktop.**Manual Over Auto-Rotation**Manual navigation is strongly preferred. If auto-rotation is used, provide pause control and make interval long enough (3-5 seconds minimum). Never auto-rotate on mobile where users scroll quickly.**Ensure Accessibility**- All controls and slides must be focusable via keyboard
 - Provide descriptive alt text for images
 - Use ARIA roles and aria-live regions to announce changes
 - Allow pausing of movement or animations
 - Ensure controls are large, high contrast, and touch-friendly
 
-<strong>Responsive Design</strong>Carousels must adapt seamlessly between desktop and mobile layouts. On mobile, favor swipe gestures over small navigation elements.
-
-<strong>Maintain Consistency</strong>Match carousel style to brand and UI. Ensure all slides are relevant—avoid filler content.
+**Responsive Design**Carousels must adapt seamlessly between desktop and mobile layouts. On mobile, favor swipe gestures over small navigation elements.**Maintain Consistency**Match carousel style to brand and UI. Ensure all slides are relevant—avoid filler content.
 
 ## Implementation Options
 
@@ -105,13 +77,7 @@ Use semantic HTML with proper ARIA labels. Implement keyboard navigation and foc
 
 ## Alternatives to Consider
 
-<strong>Grids</strong>Display many items simultaneously for high discoverability and easy comparison. Requires more screen space but eliminates hidden content issues.
-
-<strong>Tabs</strong>Instant switching between distinct categories or sections with clear overview. Not scalable for many categories.
-
-<strong>Lists</strong>Natural navigation for sequential or scrollable content, especially mobile-friendly. Less compact than carousels but highly skimmable.
-
-<strong>Accordions</strong>Ideal for text-heavy, sectioned information like FAQs or policies. Reduces clutter but not suitable for visual galleries.
+**Grids**Display many items simultaneously for high discoverability and easy comparison. Requires more screen space but eliminates hidden content issues.**Tabs**Instant switching between distinct categories or sections with clear overview. Not scalable for many categories.**Lists**Natural navigation for sequential or scrollable content, especially mobile-friendly. Less compact than carousels but highly skimmable.**Accordions**Ideal for text-heavy, sectioned information like FAQs or policies. Reduces clutter but not suitable for visual galleries.
 
 ## Critical Considerations
 

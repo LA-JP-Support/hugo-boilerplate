@@ -28,15 +28,15 @@ url: "/ja/glossary/State-Machine/"
 
 状態は、特定の瞬間におけるシステムのスナップショットです。チャットボットでは、状態には`GREETING`、`ASK_FOR_INFORMATION`、`PROCESSING`、`PROVIDE_SOLUTION`、`GOODBYE`などが含まれる場合があります。システムは常に任意の時点で正確に1つの状態にあります。
 
-<strong>例:</strong>- <strong>注文処理:</strong>`Pending`、`Shipped`、`Delivered`、`Returned`
-- <strong>チャットボット会話:</strong>`GREETING`、`ASK_FOR_ISSUE`、`PROCESS_ISSUE`、`PROVIDE_SOLUTION`、`GOODBYE`
-- <strong>音楽プレーヤー:</strong>`Paused`、`Playing`、`Stopped`
+**例:**-**注文処理:**`Pending`、`Shipped`、`Delivered`、`Returned`
+- **チャットボット会話:**`GREETING`、`ASK_FOR_ISSUE`、`PROCESS_ISSUE`、`PROVIDE_SOLUTION`、`GOODBYE`
+- **音楽プレーヤー:**`Paused`、`Playing`、`Stopped`
 
 ### イベント
 
 イベントは、状態遷移を促すトリガー(入力、アクション、または発生)です。イベントは、ユーザーメッセージ、システムアクション、タイマー、または外部信号である可能性があります。
 
-<strong>例:</strong>- `user says hello`
+**例:**- `user says hello`
 - `item shipped`
 - `play button pressed`
 - `timeout occurred`
@@ -45,7 +45,7 @@ url: "/ja/glossary/State-Machine/"
 
 遷移は、イベントによってトリガーされる、ある状態から別の状態への移動を定義します。遷移は方向性があり、多くの場合トリガーとなるイベントでラベル付けされます。
 
-<strong>例:</strong>`Pending`(状態)から、`item shipped`(イベント)で、`Shipped`(状態)へ:  
+**例:**`Pending`(状態)から、`item shipped`(イベント)で、`Shipped`(状態)へ:  
 `Pending` + `item shipped` → `Shipped`
 
 ステートマシンは、多くの場合、円(状態)を矢印(遷移)で接続したものとして視覚化され、各矢印は遷移を引き起こすイベントでラベル付けされます。
@@ -60,13 +60,11 @@ url: "/ja/glossary/State-Machine/"
 
 階層型ステートマシン(ステートチャートとも呼ばれる)は、状態のネストを可能にします。親状態は複数の子状態をカプセル化でき、大規模システムの複雑さを軽減します。
 
-<strong>例:</strong>`Booking`親状態には、サブ状態として`FlightBooking`、`HotelBooking`、`CarBooking`が含まれる場合があります。
+**例:**`Booking`親状態には、サブ状態として`FlightBooking`、`HotelBooking`、`CarBooking`が含まれる場合があります。
 
 ### 決定論的 vs 非決定論的
 
-<strong>決定論的:</strong>状態と入力の各組み合わせは、正確に1つの可能な次の状態につながります。
-
-<strong>非決定論的:</strong>特定の状態と入力に対して複数の遷移が可能な場合があります。理論モデルやパターン認識でより一般的に使用されます。
+**決定論的:**状態と入力の各組み合わせは、正確に1つの可能な次の状態につながります。**非決定論的:**特定の状態と入力に対して複数の遷移が可能な場合があります。理論モデルやパターン認識でより一般的に使用されます。
 
 ## ステートマシンの使用方法
 
@@ -74,7 +72,7 @@ url: "/ja/glossary/State-Machine/"
 
 ステートマシンは、チャットボット会話の「メモリ」とフローを管理します。各会話状態は、独自の段階(挨拶、問題詳細の収集、処理、解決策の提供など)を反映します。イベント(通常はユーザー入力)が遷移をトリガーします。
 
-<strong>例:</strong>カスタマーサポートチャットボットは、ユーザーの挨拶を受け取ると、`GREETING`から`ASK_FOR_ISSUE`に遷移する場合があります。
+**例:**カスタマーサポートチャットボットは、ユーザーの挨拶を受け取ると、`GREETING`から`ASK_FOR_ISSUE`に遷移する場合があります。
 
 ### 自動化とワークフロー管理
 
@@ -82,27 +80,19 @@ url: "/ja/glossary/State-Machine/"
 
 ### その他のドメイン
 
-<strong>ゲームAI:</strong>NPCの動作をモデル化(idle、patrol、chase、attack)
-
-<strong>ロボティクス:</strong>シーケンスを制御(move、pick、place、recharge)
-
-<strong>ビジネスプロセス自動化:</strong>承認、エスカレーション、タスクルーティングを管理
+**ゲームAI:**NPCの動作をモデル化(idle、patrol、chase、attack)**ロボティクス:**シーケンスを制御(move、pick、place、recharge)**ビジネスプロセス自動化:**承認、エスカレーション、タスクルーティングを管理
 
 ## 実践例
 
 ### 例1: 注文処理
 
-<strong>状態:</strong>`Pending` → `Shipped` → `Delivered` → `Returned`
-
-<strong>遷移:</strong>- `Pending` + `item shipped` → `Shipped`
+**状態:**`Pending` → `Shipped` → `Delivered` → `Returned`**遷移:**- `Pending` + `item shipped` → `Shipped`
 - `Shipped` + `item delivered` → `Delivered`
 - `Delivered` + `item returned` → `Returned`
 
 ### 例2: チャットボット会話
 
-<strong>状態:</strong>`GREETING` → `ASK_FOR_ISSUE` → `PROCESS_ISSUE` → `PROVIDE_SOLUTION` → `FOLLOW_UP` → `GOODBYE`
-
-<strong>サンプルPython実装:</strong>```python
+**状態:**`GREETING` → `ASK_FOR_ISSUE` → `PROCESS_ISSUE` → `PROVIDE_SOLUTION` → `FOLLOW_UP` → `GOODBYE`**サンプルPython実装:**```python
 class ChatbotFSM:
     def __init__(self):
         self.state = 'GREETING'
@@ -138,15 +128,11 @@ class ChatbotFSM:
 
 ### モジュラー設計
 
-**関心の分離:**保守性のために、各状態を個別の関数またはクラスとして実装します。
-
-**状態ハンドラーのマッピング:**辞書またはオブジェクトを使用して、状態をハンドラー関数にマップします。
+**関心の分離:**保守性のために、各状態を個別の関数またはクラスとして実装します。**状態ハンドラーのマッピング:**辞書またはオブジェクトを使用して、状態をハンドラー関数にマップします。
 
 ### 状態とコンテキストの永続化
 
-**セッション管理:**インメモリストレージまたはデータベースを使用して、現在の状態とコンテキスト(ユーザー入力、会話履歴など)を保存します。
-
-**例:**```python
+**セッション管理:**インメモリストレージまたはデータベースを使用して、現在の状態とコンテキスト(ユーザー入力、会話履歴など)を保存します。**例:**```python
 user_sessions = {
     user_id: {
         'state': 'PROCESS_ISSUE',
@@ -157,17 +143,11 @@ user_sessions = {
 
 ### ツールとライブラリ
 
-<strong>XState:</strong>ステートマシンとステートチャート用のJavaScript/TypeScriptライブラリ
-
-<strong>Stately Editor:</strong>ステートマシンを設計およびエクスポートするためのビジュアルエディター
-
-<strong>Mermaid:</strong>ステートチャート用のダイアグラムツール
-
-<strong>言語固有のライブラリ</strong>Python、Javaなど
+**XState:**ステートマシンとステートチャート用のJavaScript/TypeScriptライブラリ**Stately Editor:**ステートマシンを設計およびエクスポートするためのビジュアルエディター**Mermaid:**ステートチャート用のダイアグラムツール**言語固有のライブラリ**Python、Javaなど
 
 ### サンプルコードスニペット
 
-<strong>Python FSMスケルトン:</strong>```python
+**Python FSMスケルトン:**```python
 class StateMachine:
     def __init__(self, initial_state):
         self.state = initial_state
@@ -182,9 +162,7 @@ class StateMachine:
             self.state = self.transitions[self.state][event]
         else:
             print("Invalid transition")
-```
-
-**XStateの例:**```javascript
+```**XStateの例:**```javascript
 import { createMachine } from 'xstate';
 
 const orderMachine = createMachine({
@@ -200,29 +178,11 @@ const orderMachine = createMachine({
 
 ## ステートマシンの利点
 
-<strong>明確性:</strong>状態図はロジックを視覚化し、コミュニケーションを改善します
-
-<strong>一貫性:</strong>明示的な状態と遷移の定義により、予期しない動作を防ぎます
-
-<strong>モジュール性:</strong>各状態のロジックが分離され、保守とスケーラビリティが容易になります
-
-<strong>網羅的なテスト:</strong>すべてのパスを列挙してテストできます
-
-<strong>明示的なコンテキスト:</strong>会話またはワークフローの状態を確実に維持します
-
-<strong>予測可能性:</strong>決定論的な遷移により、定義された結果が保証されます
+**明確性:**状態図はロジックを視覚化し、コミュニケーションを改善します**一貫性:**明示的な状態と遷移の定義により、予期しない動作を防ぎます**モジュール性:**各状態のロジックが分離され、保守とスケーラビリティが容易になります**網羅的なテスト:**すべてのパスを列挙してテストできます**明示的なコンテキスト:**会話またはワークフローの状態を確実に維持します**予測可能性:**決定論的な遷移により、定義された結果が保証されます
 
 ## 課題と制限
 
-<strong>複雑性:</strong>多数の状態と遷移は状態爆発につながり、図の管理が困難になる可能性があります
-
-<strong>スケーラビリティ:</strong>オープンエンドまたは高度に動的なシステムでは、階層型または構成型のステートマシンが必要になる場合があります
-
-<strong>柔軟性:</strong>厳格な状態モデルは硬直的である可能性があり、創造的または非線形のフローをキャプチャするのが難しい場合があります
-
-<strong>統合:</strong>データベース、API、または外部サービスとの組み合わせは複雑さを増します
-
-<strong>コンテキストの制限:</strong>LLM駆動のボットでは、コンテキストウィンドウサイズが状態の想起を制限する可能性があります。明示的なコンテキスト管理が不可欠です
+**複雑性:**多数の状態と遷移は状態爆発につながり、図の管理が困難になる可能性があります**スケーラビリティ:**オープンエンドまたは高度に動的なシステムでは、階層型または構成型のステートマシンが必要になる場合があります**柔軟性:**厳格な状態モデルは硬直的である可能性があり、創造的または非線形のフローをキャプチャするのが難しい場合があります**統合:**データベース、API、または外部サービスとの組み合わせは複雑さを増します**コンテキストの制限:**LLM駆動のボットでは、コンテキストウィンドウサイズが状態の想起を制限する可能性があります。明示的なコンテキスト管理が不可欠です
 
 ### 緩和戦略
 
@@ -238,11 +198,7 @@ const orderMachine = createMachine({
 
 ### 機械学習との統合
 
-<strong>ハイブリッドモデル:</strong>適応的な遷移のためにステートマシンとMLモデルを組み合わせます(例:MLがユーザーの意図を分類し、ステートマシンが会話フローを管理)
-
-<strong>強化学習:</strong>エージェントは経験から最適な遷移を学習できます
-
-<strong>動的遷移ロジック:</strong>MLモデルは豊富なコンテキストに基づいて次の状態を予測できます
+**ハイブリッドモデル:**適応的な遷移のためにステートマシンとMLモデルを組み合わせます(例:MLがユーザーの意図を分類し、ステートマシンが会話フローを管理)**強化学習:**エージェントは経験から最適な遷移を学習できます**動的遷移ロジック:**MLモデルは豊富なコンテキストに基づいて次の状態を予測できます
 
 ### 動的ペルソナ生成
 
@@ -250,15 +206,7 @@ const orderMachine = createMachine({
 
 ## ベストプラクティス
 
-<strong>シンプルに始める:</strong>階層的な複雑さを追加する前に、基本的なFSMから始めます
-
-<strong>徹底的に文書化する:</strong>状態、イベント、遷移の明確なドキュメントを維持します
-
-<strong>厳密にテストする:</strong>すべての可能な状態遷移とエッジケースを検証します
-
-<strong>パフォーマンスを監視する:</strong>状態遷移を追跡し、ボトルネックを特定します
-
-<strong>継続的に反復する:</strong>実際の使用状況に基づいてステートマシン設計を改善します
+**シンプルに始める:**階層的な複雑さを追加する前に、基本的なFSMから始めます**徹底的に文書化する:**状態、イベント、遷移の明確なドキュメントを維持します**厳密にテストする:**すべての可能な状態遷移とエッジケースを検証します**パフォーマンスを監視する:**状態遷移を追跡し、ボトルネックを特定します**継続的に反復する:**実際の使用状況に基づいてステートマシン設計を改善します
 
 ## ユースケースシナリオ
 

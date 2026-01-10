@@ -14,7 +14,7 @@ draft: false
 
 Cosine similarity is a quantitative metric that calculates the cosine of the angle between two non-zero vectors in an inner product space. This metric is widely used in data mining, machine learning, and artificial intelligence to assess how similar two vectors are, based exclusively on their orientation rather than their magnitude. Its fundamental advantage is the focus on direction, making it ideal for high-dimensional representations such as document embeddings or feature vectors.
 
-<strong>Formula:</strong>\[
+**Formula:**\[
 \text{Cosine Similarity} = \cos(\theta) = \frac{\mathbf{A} \cdot \mathbf{B}}{\|\mathbf{A}\| \times \|\mathbf{B}\|}
 \]
 
@@ -23,9 +23,9 @@ Where:
 - \(\|\mathbf{A}\|\), \(\|\mathbf{B}\|\): Euclidean norm (magnitude) of each vector
 - \(\theta\): Angle between the vectors
 
-<strong>Interpretation:</strong>- Score of <strong>1</strong>: Vectors point in the same direction (perfect similarity)
-- Score of <strong>0</strong>: Vectors are orthogonal (no similarity)
-- Score of <strong>-1</strong>: Vectors point in opposite directions (maximal dissimilarity)
+**Interpretation:**- Score of**1**: Vectors point in the same direction (perfect similarity)
+- Score of **0**: Vectors are orthogonal (no similarity)
+- Score of **-1**: Vectors point in opposite directions (maximal dissimilarity)
 
 Most practical applications (text mining, embeddings) use non-negative vectors, so cosine similarity scores typically range from 0 to 1.
 
@@ -41,18 +41,18 @@ Given two non-zero vectors:
 \mathbf{B} = [b_1, b_2, \ldots, b_n]
 \]
 
-<strong>1. Dot Product:</strong>\[
+**1. Dot Product:**\[
 \mathbf{A} \cdot \mathbf{B} = \sum_{i=1}^{n} a_i b_i
 \]
 
-<strong>2. Magnitude (Euclidean Norm):</strong>\[
+**2. Magnitude (Euclidean Norm):**\[
 \|\mathbf{A}\| = \sqrt{\sum_{i=1}^{n} a_i^2}
 \]
 \[
 \|\mathbf{B}\| = \sqrt{\sum_{i=1}^{n} b_i^2}
 \]
 
-<strong>3. Cosine Similarity:</strong>\[
+**3. Cosine Similarity:**\[
 \cos(\theta) = \frac{\mathbf{A} \cdot \mathbf{B}}{\|\mathbf{A}\| \times \|\mathbf{B}\|}
 \]
 
@@ -65,29 +65,21 @@ Let \(\mathbf{A} = [3, 2, 0, 5]\), \(\mathbf{B} = [1, 0, 0, 0]\).
 - Magnitude of B: \(\sqrt{1^2 + 0^2 + 0^2 + 0^2} = 1\)
 - Cosine Similarity: \(3 / (6.16 * 1) \approx 0.49\)
 
-<strong>Cosine Dissimilarity:</strong>Often, the dissimilarity is calculated as \(1 - \text{Cosine Similarity}\). For the above example, \(D_C(\mathbf{A}, \mathbf{B}) = 1 - 0.49 = 0.51\).
+**Cosine Dissimilarity:**Often, the dissimilarity is calculated as \(1 - \text{Cosine Similarity}\). For the above example, \(D_C(\mathbf{A}, \mathbf{B}) = 1 - 0.49 = 0.51\).
 
 ## Visual Intuition
 
 Imagine two arrows starting from the same origin in a multi-dimensional space:
 
-- <strong>0° (Cosine = 1):</strong>Arrows overlap, indicating identical direction
-- <strong>90° (Cosine = 0):</strong>Arrows are at right angles, showing no relation
-- <strong>180° (Cosine = -1):</strong>Arrows are in opposite directions, indicating total dissimilarity
+- **0° (Cosine = 1):**Arrows overlap, indicating identical direction
+- **90° (Cosine = 0):**Arrows are at right angles, showing no relation
+- **180° (Cosine = -1):**Arrows are in opposite directions, indicating total dissimilarity
 
 ## Practical Implementation
 
 ### Popular Libraries
 
-<strong>NumPy</strong>Efficient for vectorized operations.
-
-<strong>scikit-learn</strong>`sklearn.metrics.pairwise.cosine_similarity` for pairwise similarity matrices.
-
-<strong>TensorFlow</strong>Built-in CosineSimilarity loss.
-
-<strong>PyTorch</strong>`torch.nn.CosineSimilarity`.
-
-<strong>Vector Databases</strong>Extensions like pgvector for PostgreSQL.
+**NumPy**Efficient for vectorized operations.**scikit-learn**`sklearn.metrics.pairwise.cosine_similarity` for pairwise similarity matrices.**TensorFlow**Built-in CosineSimilarity loss.**PyTorch**`torch.nn.CosineSimilarity`.**Vector Databases**Extensions like pgvector for PostgreSQL.
 
 ### Python Example (NumPy)
 
@@ -124,51 +116,23 @@ Multi-dimensional transaction vectors are compared to flag abnormal patterns usi
 
 ### Advantages
 
-<strong>Insensitive to Magnitude</strong>Only direction matters; vectors of different lengths can still be highly similar.
-
-<strong>High-dimensional Robustness</strong>Works well in sparse, high-dimensional datasets (e.g., text analysis, embeddings).
-
-<strong>Computational Efficiency</strong>Calculation is straightforward and optimized in major machine learning libraries.
-
-<strong>Normalization Built-in</strong>No need to explicitly normalize input vectors.
+**Insensitive to Magnitude**Only direction matters; vectors of different lengths can still be highly similar.**High-dimensional Robustness**Works well in sparse, high-dimensional datasets (e.g., text analysis, embeddings).**Computational Efficiency**Calculation is straightforward and optimized in major machine learning libraries.**Normalization Built-in**No need to explicitly normalize input vectors.
 
 ### Limitations
 
-<strong>Ignores Magnitude</strong>Cannot distinguish between a small and large vector pointing in the same direction.
-
-<strong>Undefined for Zero Vectors</strong>Cosine similarity is not defined if either vector is the zero vector.
-
-<strong>Symmetry</strong>\(\text{CosineSimilarity}(A, B) = \text{CosineSimilarity}(B, A)\); does not account for directionality of comparison.
-
-<strong>Sensitive to Sparsity</strong>May perform poorly with extremely sparse data where non-zero elements overlap little.
+**Ignores Magnitude**Cannot distinguish between a small and large vector pointing in the same direction.**Undefined for Zero Vectors**Cosine similarity is not defined if either vector is the zero vector.**Symmetry**\(\text{CosineSimilarity}(A, B) = \text{CosineSimilarity}(B, A)\); does not account for directionality of comparison.**Sensitive to Sparsity**May perform poorly with extremely sparse data where non-zero elements overlap little.
 
 ## Comparison with Other Similarity Metrics
 
 | Metric | Focus | Sensitive to Magnitude | Best For |
 |--------|-------|------------------------|----------|
-| <strong>Cosine Similarity</strong>| Direction | No | Text, embeddings |
-| <strong>Euclidean Distance</strong>| Position | Yes | Numeric, physical data |
-| <strong>Jaccard Similarity</strong>| Overlap/Set | No | Sets, binary attributes |
-
-<strong>Euclidean Distance:</strong>Measures straight-line distance; affected by both direction and magnitude. Useful when absolute differences matter.
-
-<strong>Jaccard Similarity:</strong>Measures overlap between sets; ideal for categorical or binary features (e.g., shared tags).
-
-<strong>Dot Product:</strong>Includes magnitude; can be misleading if scales differ.
+| **Cosine Similarity**| Direction | No | Text, embeddings |
+| **Euclidean Distance**| Position | Yes | Numeric, physical data |
+| **Jaccard Similarity**| Overlap/Set | No | Sets, binary attributes |**Euclidean Distance:**Measures straight-line distance; affected by both direction and magnitude. Useful when absolute differences matter.**Jaccard Similarity:**Measures overlap between sets; ideal for categorical or binary features (e.g., shared tags).**Dot Product:**Includes magnitude; can be misleading if scales differ.
 
 ## Best Practices and Practical Tips
 
-<strong>1. Normalize Data</strong>Remove zero vectors and ensure all vectors are non-zero to prevent undefined results.
-
-<strong>2. Sparse Data Handling</strong>Use libraries optimized for sparse matrices when working with high-dimensional, sparse data.
-
-<strong>3. Combine Metrics</strong>For richer similarity analysis, combine cosine similarity with other metrics as model features.
-
-<strong>4. Consistent Preprocessing</strong>Ensure that all vectors are generated from the same process/model and have the same dimensionality.
-
-<strong>5. Interpret Carefully</strong>High cosine similarity does not always imply semantic equivalence; context and domain knowledge are essential.
-
-<strong>6. Leverage Robust Libraries</strong>Use built-in functions from NumPy, scikit-learn, TensorFlow, or pgvector.
+**1. Normalize Data**Remove zero vectors and ensure all vectors are non-zero to prevent undefined results.**2. Sparse Data Handling**Use libraries optimized for sparse matrices when working with high-dimensional, sparse data.**3. Combine Metrics**For richer similarity analysis, combine cosine similarity with other metrics as model features.**4. Consistent Preprocessing**Ensure that all vectors are generated from the same process/model and have the same dimensionality.**5. Interpret Carefully**High cosine similarity does not always imply semantic equivalence; context and domain knowledge are essential.**6. Leverage Robust Libraries**Use built-in functions from NumPy, scikit-learn, TensorFlow, or pgvector.
 
 ## References
 

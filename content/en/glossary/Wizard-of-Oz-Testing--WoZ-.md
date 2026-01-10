@@ -16,39 +16,23 @@ Wizard of Oz Testing (WoZ) is a user research and prototyping methodology enabli
 
 The technique derives its name from L. Frank Baum's novel where the seemingly powerful wizard proves to be an ordinary person manipulating perceptions from behind a curtain. Similarly, WoZ testing positions human operators behind interfaces, allowing design teams to study user expectations, mental models, and interaction patterns without investing months or years developing complex AI systems that might ultimately fail to meet user needs. This approach proves particularly valuable when prototyping conversational interfaces, voice experiences, or any system where intelligence and adaptability are core value propositions yet technically challenging or expensive to implement.
 
-<strong>Historical Context and Evolution:</strong>The methodology's documented origins trace to 1973 when Don Norman and Allen Munro simulated an airport information system to study user interactions before such technology existed. Jeff Kelley formalized the term "Wizard of Oz" in 1983 through his dissertation on natural language interfaces. Since then, the approach has become foundational in UX research, human-computer interaction, and AI system design, evolving from simple paper prototypes to sophisticated digital simulations incorporating voice synthesis, animation, and multi-modal interactions.
+**Historical Context and Evolution:**The methodology's documented origins trace to 1973 when Don Norman and Allen Munro simulated an airport information system to study user interactions before such technology existed. Jeff Kelley formalized the term "Wizard of Oz" in 1983 through his dissertation on natural language interfaces. Since then, the approach has become foundational in UX research, human-computer interaction, and AI system design, evolving from simple paper prototypes to sophisticated digital simulations incorporating voice synthesis, animation, and multi-modal interactions.
 
 ## Core Components and Methodology
 
 ### Essential Elements
 
-<strong>Participant (User)</strong>– Interacts naturally with the prototype believing it functions autonomously, providing authentic behavioral data and linguistic patterns
-
-<strong>Wizard (Hidden Operator)</strong>– Controls all system responses from a concealed location, either following prepared scripts or improvising based on training and understanding of intended system capabilities
-
-<strong>Facilitator (Optional)</strong>– Guides sessions, introduces scenarios, observes interactions, and manages recording equipment without revealing the wizard's presence
-
-<strong>Prototype Interface</strong>– Ranges from low-fidelity paper mockups through medium-fidelity digital wireframes to high-fidelity simulations incorporating synthesized voice, animations, and realistic UI elements
-
-<strong>Communication Infrastructure</strong>– Technical setup enabling wizard to receive user inputs and transmit responses without detection, often involving separate rooms, one-way mirrors, remote connection tools, or hidden control interfaces
+**Participant (User)**– Interacts naturally with the prototype believing it functions autonomously, providing authentic behavioral data and linguistic patterns**Wizard (Hidden Operator)**– Controls all system responses from a concealed location, either following prepared scripts or improvising based on training and understanding of intended system capabilities**Facilitator (Optional)**– Guides sessions, introduces scenarios, observes interactions, and manages recording equipment without revealing the wizard's presence**Prototype Interface**– Ranges from low-fidelity paper mockups through medium-fidelity digital wireframes to high-fidelity simulations incorporating synthesized voice, animations, and realistic UI elements**Communication Infrastructure**– Technical setup enabling wizard to receive user inputs and transmit responses without detection, often involving separate rooms, one-way mirrors, remote connection tools, or hidden control interfaces
 
 ### Fidelity Spectrum
 
-<strong>Low-Fidelity Implementations</strong>Paper interfaces, basic digital mockups, or simple clickable prototypes where wizards manually update screens or advance slides. Optimal for early concept exploration, rapid iteration, and fundamental flow validation. Requires minimal investment while maximizing learning velocity.
-
-<strong>Medium-Fidelity Implementations</strong>Interactive digital prototypes built in tools like Figma, Axure, or custom web interfaces where wizards type responses, select from prepared options, or trigger pre-built animations. Balances realism with flexibility, enabling testing of more nuanced interactions while maintaining modification speed.
-
-<strong>High-Fidelity Implementations</strong>Near-production interfaces with polished graphics, realistic animations, synthesized voices, and sophisticated interactions. Wizard controls remain hidden but logic and content generation remain human-driven. Appropriate for final validation before development investment or when testing subtle experiential qualities like voice personality or visual polish.
+**Low-Fidelity Implementations**Paper interfaces, basic digital mockups, or simple clickable prototypes where wizards manually update screens or advance slides. Optimal for early concept exploration, rapid iteration, and fundamental flow validation. Requires minimal investment while maximizing learning velocity.**Medium-Fidelity Implementations**Interactive digital prototypes built in tools like Figma, Axure, or custom web interfaces where wizards type responses, select from prepared options, or trigger pre-built animations. Balances realism with flexibility, enabling testing of more nuanced interactions while maintaining modification speed.**High-Fidelity Implementations**Near-production interfaces with polished graphics, realistic animations, synthesized voices, and sophisticated interactions. Wizard controls remain hidden but logic and content generation remain human-driven. Appropriate for final validation before development investment or when testing subtle experiential qualities like voice personality or visual polish.
 
 ### Wizard Role and Responsibilities
 
 Effective wizards maintain the illusion of system autonomy through prompt, contextually appropriate, and technically feasible responses. Training requirements include deep understanding of intended system capabilities, technical constraints preventing impossible promises, conversational design principles, and rapid decision-making under observation pressure. Script preparation varies by approach:
 
-<strong>Closed Script Approach</strong>– Wizard selects from pre-written response library organized by intent, context, or conversation flow. Provides consistency and speed but limits naturalistic adaptation to unexpected inputs.
-
-<strong>Open Script Approach</strong>– Wizard crafts original responses dynamically based on training and system understanding. Maximizes naturalness and flexibility but demands higher skill, creates consistency challenges, and risks promising undeliverable capabilities.
-
-<strong>Hybrid Approach</strong>– Combines scripted responses for common scenarios with improvisation flexibility for edge cases, balancing efficiency with adaptability through wizard judgment.
+**Closed Script Approach**– Wizard selects from pre-written response library organized by intent, context, or conversation flow. Provides consistency and speed but limits naturalistic adaptation to unexpected inputs.**Open Script Approach**– Wizard crafts original responses dynamically based on training and system understanding. Maximizes naturalness and flexibility but demands higher skill, creates consistency challenges, and risks promising undeliverable capabilities.**Hybrid Approach**– Combines scripted responses for common scenarios with improvisation flexibility for edge cases, balancing efficiency with adaptability through wizard judgment.
 
 ## Strategic Applications
 
@@ -62,7 +46,7 @@ WoZ testing proves foundational for chatbot and virtual assistant design by reve
 - Escalation trigger identification
 - Training data collection for machine learning models
 
-<strong>Example Implementation:</strong>Customer support chatbot simulation where wizard responds to service inquiries reveals users frequently bundle multiple issues in single messages, expect proactive suggestions rather than reactive answers, and interpret certain phrases as urgency indicators requiring immediate human escalation.
+**Example Implementation:**Customer support chatbot simulation where wizard responds to service inquiries reveals users frequently bundle multiple issues in single messages, expect proactive suggestions rather than reactive answers, and interpret certain phrases as urgency indicators requiring immediate human escalation.
 
 ### Voice Assistant Experiences
 
@@ -74,7 +58,7 @@ Natural language voice interfaces benefit particularly from WoZ methodology give
 - Voice personality and emotional resonance
 - Multi-turn dialogue management
 
-<strong>Example Implementation:</strong>Participant speaks to disguised device while remote wizard listens and responds through text-to-speech synthesis, enabling evaluation of voice interaction flows, command phrasing preferences, and system response naturalness before committing to specific speech technology stacks.
+**Example Implementation:**Participant speaks to disguised device while remote wizard listens and responds through text-to-speech synthesis, enabling evaluation of voice interaction flows, command phrasing preferences, and system response naturalness before committing to specific speech technology stacks.
 
 ### Recommendation and Personalization Systems
 
@@ -86,117 +70,55 @@ WoZ simulates intelligent recommendation engines by having wizards manually sele
 - Trust-building mechanisms
 - Privacy comfort boundaries
 
-<strong>Example Implementation:</strong>Retail experience where wizard observes browsing behavior and strategically surfaces product recommendations, testing user receptivity to different personalization levels, recommendation timing, and explanation formats.
+**Example Implementation:**Retail experience where wizard observes browsing behavior and strategically surfaces product recommendations, testing user receptivity to different personalization levels, recommendation timing, and explanation formats.
 
 ## Implementation Guide
 
 ### Phase 1: Research Design
 
-<strong>Define Learning Objectives</strong>– Specify questions to answer: user expectations, interaction patterns, language preferences, mental models, feature priorities, or error recovery behaviors
-
-<strong>Identify Target Scenarios</strong>– Select representative tasks or use cases providing insight into critical design decisions while remaining achievable within wizard capabilities
-
-<strong>Determine Appropriate Fidelity</strong>– Match prototype sophistication to research questions and available resources, recognizing higher fidelity increases credibility but reduces iteration speed
+**Define Learning Objectives**– Specify questions to answer: user expectations, interaction patterns, language preferences, mental models, feature priorities, or error recovery behaviors**Identify Target Scenarios**– Select representative tasks or use cases providing insight into critical design decisions while remaining achievable within wizard capabilities**Determine Appropriate Fidelity**– Match prototype sophistication to research questions and available resources, recognizing higher fidelity increases credibility but reduces iteration speed
 
 ### Phase 2: Prototype Development
 
-<strong>Select Technology Stack</strong>– Choose tools enabling rapid updates between sessions while supporting required fidelity level (paper, presentation software, design tools, web prototypes, custom applications)
-
-<strong>Design Wizard Interface</strong>– Create control system enabling wizard to receive inputs, reference scripts or guidelines, and transmit responses efficiently without revealing presence
-
-<strong>Prepare Response Materials</strong>– Develop scripts, response libraries, decision trees, or improvisation guidelines based on intended system capabilities and technical constraints
+**Select Technology Stack**– Choose tools enabling rapid updates between sessions while supporting required fidelity level (paper, presentation software, design tools, web prototypes, custom applications)**Design Wizard Interface**– Create control system enabling wizard to receive inputs, reference scripts or guidelines, and transmit responses efficiently without revealing presence**Prepare Response Materials**– Develop scripts, response libraries, decision trees, or improvisation guidelines based on intended system capabilities and technical constraints
 
 ### Phase 3: Wizard Training
 
-<strong>System Knowledge Transfer</strong>– Brief wizards on product vision, intended capabilities, technical limitations, business constraints, and user research objectives
-
-<strong>Practice Sessions</strong>– Conduct internal rehearsals with team members acting as participants to refine wizard responses, timing, and issue handling
-
-<strong>Contingency Planning</strong>– Define protocols for technical failures, unexpected user behaviors, wizard uncertainty situations, and premature illusion detection
+**System Knowledge Transfer**– Brief wizards on product vision, intended capabilities, technical limitations, business constraints, and user research objectives**Practice Sessions**– Conduct internal rehearsals with team members acting as participants to refine wizard responses, timing, and issue handling**Contingency Planning**– Define protocols for technical failures, unexpected user behaviors, wizard uncertainty situations, and premature illusion detection
 
 ### Phase 4: Study Protocol Development
 
-<strong>Participant Recruitment</strong>– Identify representative users matching target demographic, usage context, and experience level
-
-<strong>Session Structure Design</strong>– Outline introduction approach, task presentation, observation methods, intervention protocols, and debrief procedures
-
-<strong>Recording and Documentation</strong>– Establish methods capturing user behaviors, wizard responses, technical issues, and qualitative observations while maintaining wizard concealment
+**Participant Recruitment**– Identify representative users matching target demographic, usage context, and experience level**Session Structure Design**– Outline introduction approach, task presentation, observation methods, intervention protocols, and debrief procedures**Recording and Documentation**– Establish methods capturing user behaviors, wizard responses, technical issues, and qualitative observations while maintaining wizard concealment
 
 ### Phase 5: Pilot Testing
 
-<strong>Internal Validation</strong>– Test complete setup with colleagues identifying technical issues, timing problems, script gaps, and wizard training needs
-
-<strong>Protocol Refinement</strong>– Adjust based on pilot findings including script updates, wizard training enhancements, technical fixes, and procedural improvements
+**Internal Validation**– Test complete setup with colleagues identifying technical issues, timing problems, script gaps, and wizard training needs**Protocol Refinement**– Adjust based on pilot findings including script updates, wizard training enhancements, technical fixes, and procedural improvements
 
 ### Phase 6: Study Execution
 
-<strong>Environment Preparation</strong>– Establish physical or virtual setup maintaining wizard concealment through separate rooms, one-way mirrors, remote tools, or screenshare arrangements
-
-<strong>Session Facilitation</strong>– Guide participants through scenarios while maintaining natural interaction and avoiding cues revealing wizard presence
-
-<strong>Real-Time Observation</strong>– Monitor sessions for emerging patterns, unexpected behaviors, technical issues, and adjustment opportunities
+**Environment Preparation**– Establish physical or virtual setup maintaining wizard concealment through separate rooms, one-way mirrors, remote tools, or screenshare arrangements**Session Facilitation**– Guide participants through scenarios while maintaining natural interaction and avoiding cues revealing wizard presence**Real-Time Observation**– Monitor sessions for emerging patterns, unexpected behaviors, technical issues, and adjustment opportunities
 
 ### Phase 7: Ethical Debriefing
 
-<strong>Deception Disclosure</strong>– Explain wizard methodology, rationale for approach, and research value in honest, respectful manner
-
-<strong>Consent Confirmation</strong>– Verify continued participation consent and offer data withdrawal option
-
-<strong>Feedback Collection</strong>– Gather meta-observations about experience including suspicions, comfort level, and suggestion quality
+**Deception Disclosure**– Explain wizard methodology, rationale for approach, and research value in honest, respectful manner**Consent Confirmation**– Verify continued participation consent and offer data withdrawal option**Feedback Collection**– Gather meta-observations about experience including suspicions, comfort level, and suggestion quality
 
 ### Phase 8: Analysis and Iteration
 
-<strong>Pattern Identification</strong>– Analyze transcripts for language patterns, intent categories, error triggers, expectation mismatches, and feature priorities
-
-<strong>Design Implications</strong>– Translate findings into specific design recommendations, technical requirements, and development priorities
-
-<strong>Iteration Planning</strong>– Determine whether additional sessions with refined prototypes or scripts would provide valuable additional insights
+**Pattern Identification**– Analyze transcripts for language patterns, intent categories, error triggers, expectation mismatches, and feature priorities**Design Implications**– Translate findings into specific design recommendations, technical requirements, and development priorities**Iteration Planning**– Determine whether additional sessions with refined prototypes or scripts would provide valuable additional insights
 
 ## Benefits and Limitations
 
 ### Key Advantages
 
-<strong>Cost-Effective Validation</strong>– Tests design concepts without backend development, AI training, or infrastructure investment enabling early-stage risk reduction
-
-<strong>Authentic Behavioral Data</strong>– Captures natural user language and interaction patterns impossible to simulate through surveys or interviews
-
-<strong>Rapid Iteration Velocity</strong>– Scripts and prototypes update quickly between sessions enabling responsive design refinement
-
-<strong>Technical Risk Mitigation</strong>– Identifies fundamental concept flaws before substantial engineering investment
-
-<strong>Training Data Generation</strong>– Conversation transcripts provide high-quality examples for machine learning model training and natural language processing system development
-
-<strong>Stakeholder Alignment</strong>– Concrete prototypes facilitate shared understanding among team members with diverse backgrounds and perspectives
+**Cost-Effective Validation**– Tests design concepts without backend development, AI training, or infrastructure investment enabling early-stage risk reduction**Authentic Behavioral Data**– Captures natural user language and interaction patterns impossible to simulate through surveys or interviews**Rapid Iteration Velocity**– Scripts and prototypes update quickly between sessions enabling responsive design refinement**Technical Risk Mitigation**– Identifies fundamental concept flaws before substantial engineering investment**Training Data Generation**– Conversation transcripts provide high-quality examples for machine learning model training and natural language processing system development**Stakeholder Alignment**– Concrete prototypes facilitate shared understanding among team members with diverse backgrounds and perspectives
 
 ### Critical Limitations
 
-<strong>Scalability Constraints</strong>– Manual wizard operation limits practical study size making large-scale quantitative validation impractical
-
-<strong>Wizard Variability</strong>– Response consistency challenges when multiple wizards participate or single wizard experiences fatigue over extended sessions
-
-<strong>Illusion Fragility</strong>– User suspicion of human involvement can alter behavior compromising data authenticity
-
-<strong>Technical Validation Gap</strong>– Cannot assess actual system performance characteristics including response latency, accuracy rates, error handling robustness, or scalability
-
-<strong>Skill Dependencies</strong>– Effective wizard operation demands specialized training, domain knowledge, and improvisational capabilities not universally available
-
-<strong>Ethical Complexity</strong>– Deception-based research requires careful institutional review, informed consent processes, and debriefing protocols
+**Scalability Constraints**– Manual wizard operation limits practical study size making large-scale quantitative validation impractical**Wizard Variability**– Response consistency challenges when multiple wizards participate or single wizard experiences fatigue over extended sessions**Illusion Fragility**– User suspicion of human involvement can alter behavior compromising data authenticity**Technical Validation Gap**– Cannot assess actual system performance characteristics including response latency, accuracy rates, error handling robustness, or scalability**Skill Dependencies**– Effective wizard operation demands specialized training, domain knowledge, and improvisational capabilities not universally available**Ethical Complexity**– Deception-based research requires careful institutional review, informed consent processes, and debriefing protocols
 
 ## Best Practices
 
-<strong>Maintain Separation Rigorously</strong>– Use physical barriers, remote tools, or one-way observation ensuring wizard remains completely invisible to participants
-
-<strong>Standardize Where Appropriate</strong>– Balance script consistency with improvisation flexibility based on research objectives and wizard capabilities
-
-<strong>Limit Session Duration</strong>– Prevent wizard fatigue through reasonable session lengths (typically 30-60 minutes) with adequate rest intervals
-
-<strong>Record Comprehensively</strong>– Capture audio, video, screen recordings, wizard inputs, and facilitator notes enabling thorough post-session analysis
-
-<strong>Debrief Ethically</strong>– Always explain methodology post-session, ensure continued consent, and offer data withdrawal options respecting participant autonomy
-
-<strong>Engineer Involvement</strong>– Include technical team members in script development preventing design of impossible features
-
-<strong>Iterative Refinement</strong>– Treat early sessions as pilot studies refining wizard training, scripts, and protocols based on emerging patterns
+**Maintain Separation Rigorously**– Use physical barriers, remote tools, or one-way observation ensuring wizard remains completely invisible to participants**Standardize Where Appropriate**– Balance script consistency with improvisation flexibility based on research objectives and wizard capabilities**Limit Session Duration**– Prevent wizard fatigue through reasonable session lengths (typically 30-60 minutes) with adequate rest intervals**Record Comprehensively**– Capture audio, video, screen recordings, wizard inputs, and facilitator notes enabling thorough post-session analysis**Debrief Ethically**– Always explain methodology post-session, ensure continued consent, and offer data withdrawal options respecting participant autonomy**Engineer Involvement**– Include technical team members in script development preventing design of impossible features**Iterative Refinement**– Treat early sessions as pilot studies refining wizard training, scripts, and protocols based on emerging patterns
 
 ## Ethical Considerations
 
@@ -213,15 +135,7 @@ Additional ethical responsibilities include confidential data handling, privacy 
 
 ## Frequently Asked Questions
 
-<strong>Is WoZ testing limited to conversational AI?</strong>No, the methodology applies to any system where intelligence or adaptability proves difficult to prototype including recommendation engines, adaptive interfaces, predictive systems, and autonomous services.
-
-<strong>What if participants suspect human involvement?</strong>Most sessions yield valuable insights regardless. Encourage participants to interact naturally and always explain methodology during debriefing even when suspicion exists.
-
-<strong>Can WoZ data train production AI systems?</strong>Yes, conversation transcripts, user language patterns, and interaction flows provide high-quality training data for natural language processing, intent classification, and entity extraction models.
-
-<strong>How many sessions prove sufficient?</strong>Qualitative research typically requires 5-8 participants per user segment for pattern identification, though complex scenarios may require additional sessions for comprehensive coverage.
-
-<strong>Should wizards know they're being evaluated?</strong>Wizards should focus on authentic system simulation rather than personal performance. However, assessing wizard effectiveness helps improve training and script development.
+**Is WoZ testing limited to conversational AI?**No, the methodology applies to any system where intelligence or adaptability proves difficult to prototype including recommendation engines, adaptive interfaces, predictive systems, and autonomous services.**What if participants suspect human involvement?**Most sessions yield valuable insights regardless. Encourage participants to interact naturally and always explain methodology during debriefing even when suspicion exists.**Can WoZ data train production AI systems?**Yes, conversation transcripts, user language patterns, and interaction flows provide high-quality training data for natural language processing, intent classification, and entity extraction models.**How many sessions prove sufficient?**Qualitative research typically requires 5-8 participants per user segment for pattern identification, though complex scenarios may require additional sessions for comprehensive coverage.**Should wizards know they're being evaluated?**Wizards should focus on authentic system simulation rather than personal performance. However, assessing wizard effectiveness helps improve training and script development.
 
 ## References
 

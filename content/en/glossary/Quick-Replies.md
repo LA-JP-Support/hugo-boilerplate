@@ -22,31 +22,19 @@ These interface elements are typically limited to 3–13 options per message (pl
 
 ### User Experience Flow
 
-<strong>Display:</strong>The chatbot surfaces quick replies below or above the keyboard/input area as a row of chips or bubbles
-
-<strong>Selection:</strong>Tapping a quick reply sends that option's payload to the chatbot instantly, often accompanied by a visible message in the chat window
-
-<strong>Disappearance:</strong>Once a reply is chosen, all quick replies for that prompt vanish, keeping the UI tidy
-
-<strong>Fallback:</strong>The user can ignore the options and type a custom response if they wish
+**Display:**The chatbot surfaces quick replies below or above the keyboard/input area as a row of chips or bubbles**Selection:**Tapping a quick reply sends that option's payload to the chatbot instantly, often accompanied by a visible message in the chat window**Disappearance:**Once a reply is chosen, all quick replies for that prompt vanish, keeping the UI tidy**Fallback:**The user can ignore the options and type a custom response if they wish
 
 ### Platform Implementation
 
-<strong>Placement:</strong>Always directly adjacent to the prompting message, above or below the chat input field
-
-<strong>Ephemerality:</strong>Disappearing after use reduces user confusion and interface overload
-
-<strong>Accessibility:</strong>Designed for one-tap activation on mobile and desktop chat, with character and option count limits to fit small screens
-
-<strong>Dynamic Use:</strong>Some platforms allow insertion of dynamic variables, such as names or context-specific data
+**Placement:**Always directly adjacent to the prompting message, above or below the chat input field**Ephemerality:**Disappearing after use reduces user confusion and interface overload**Accessibility:**Designed for one-tap activation on mobile and desktop chat, with character and option count limits to fit small screens**Dynamic Use:**Some platforms allow insertion of dynamic variables, such as names or context-specific data
 
 ### Platform-Specific Limits
 
-- <strong>Facebook Messenger/Telegram:</strong>Up to 13 quick replies
-- <strong>WhatsApp:</strong>Maximum 3 per message (excess triggers a list picker UI)
-- <strong>SendPulse:</strong>Up to 10, 20 characters each
-- <strong>Apple Messages for Business:</strong>Up to 5, more triggers a list picker
-- <strong>LivePerson Conversational Cloud:</strong>1–24 chips per message, 25 characters per chip
+- **Facebook Messenger/Telegram:**Up to 13 quick replies
+- **WhatsApp:**Maximum 3 per message (excess triggers a list picker UI)
+- **SendPulse:**Up to 10, 20 characters each
+- **Apple Messages for Business:**Up to 5, more triggers a list picker
+- **LivePerson Conversational Cloud:**1–24 chips per message, 25 characters per chip
 
 ## Key Benefits
 
@@ -54,31 +42,31 @@ These interface elements are typically limited to 3–13 options per message (pl
 
 Quick Replies minimize typing, lower friction, and allow users to quickly select a next step or provide structured input.
 
-<strong>Example:</strong>"Would you like to confirm your appointment?" [Yes] [No]
+**Example:**"Would you like to confirm your appointment?" [Yes] [No]
 
 ### Consistency
 
 They guarantee uniform input, streamline data collection, and reduce the risk of user misunderstanding.
 
-<strong>Example:</strong>"How can I help you today?" [Order Status] [Product Info] [Connect to Agent]
+**Example:**"How can I help you today?" [Order Status] [Product Info] [Connect to Agent]
 
 ### Time-Saving
 
 By presenting pre-defined actions, Quick Replies dramatically reduce the time required to complete common tasks.
 
-<strong>Example:</strong>"What would you like to do next?" [Track Order] [Return Item] [Cancel Order]
+**Example:**"What would you like to do next?" [Track Order] [Return Item] [Cancel Order]
 
 ### Enhanced Customer Experience
 
 A responsive, intuitive chat interface with Quick Replies improves user satisfaction and lowers drop-offs.
 
-<strong>Example:</strong>"Choose a topic for help:" [Billing] [Technical Support] [Account Management]
+**Example:**"Choose a topic for help:" [Billing] [Technical Support] [Account Management]
 
 ### Personalization
 
 Quick Replies can be dynamically personalized with user context.
 
-<strong>Example:</strong>"Good morning, Alex! Ready to check your recent orders?" [View Orders] [Contact Support]
+**Example:**"Good morning, Alex! Ready to check your recent orders?" [View Orders] [Contact Support]
 
 ### Routing & Intent Capture
 
@@ -110,35 +98,19 @@ Quick Replies help bots accurately identify user intent, enabling precise routin
 
 | Feature | Quick Replies | Buttons |
 |---------|--------------|---------|
-| <strong>Persistence</strong>| Disappear after selection | Remain visible until manually removed |
-| <strong>Max Options</strong>| Up to 13 (Messenger/Telegram), 3 (WhatsApp) | Typically 3–5 (varies by platform) |
-| <strong>Best for</strong>| Simple, one-off responses, user input collection | Navigation, triggering actions, links, payments |
-| <strong>Text Length</strong>| Usually up to 20–25 characters | Up to 20–25 characters |
-| <strong>Supports Dynamic Values</strong>| Yes (on some platforms) | Mostly static text |
-| <strong>UI Location</strong>| Above/below input field (ephemeral chips/bubbles) | Below message or as persistent menu items |
-| <strong>User Experience</strong>| Lightweight, uncluttered, focused conversation | Multi-step navigation, persistent options |
-
-<strong>Recommendation:</strong>Use Quick Replies for guided, quick user input; use Buttons for navigation or persistent menus.
+| **Persistence**| Disappear after selection | Remain visible until manually removed |
+| **Max Options**| Up to 13 (Messenger/Telegram), 3 (WhatsApp) | Typically 3–5 (varies by platform) |
+| **Best for**| Simple, one-off responses, user input collection | Navigation, triggering actions, links, payments |
+| **Text Length**| Usually up to 20–25 characters | Up to 20–25 characters |
+| **Supports Dynamic Values**| Yes (on some platforms) | Mostly static text |
+| **UI Location**| Above/below input field (ephemeral chips/bubbles) | Below message or as persistent menu items |
+| **User Experience**| Lightweight, uncluttered, focused conversation | Multi-step navigation, persistent options |**Recommendation:**Use Quick Replies for guided, quick user input; use Buttons for navigation or persistent menus.
 
 ## Best Practices
 
 ### Implementation Guidelines
 
-<strong>Identify key conversation junctures</strong>that benefit from guided user choices
-
-<strong>Limit the number of options</strong>to 3–5 per message for clarity and usability
-
-<strong>Use concise, action-oriented labels</strong>, ideally under 20 characters
-
-<strong>Personalize using dynamic variables</strong>(e.g., `{{user_name}}`) where supported
-
-<strong>Always allow fallback to free text entry</strong>for unexpected needs or accessibility
-
-<strong>Test for accessibility</strong>on various devices and screen sizes
-
-<strong>Track analytics</strong>(option usage, drop-off rates) to optimize your flows
-
-<strong>Iterate and update</strong>options based on feedback and behavioral data
+**Identify key conversation junctures**that benefit from guided user choices**Limit the number of options**to 3–5 per message for clarity and usability**Use concise, action-oriented labels**, ideally under 20 characters**Personalize using dynamic variables**(e.g., `{{user_name}}`) where supported**Always allow fallback to free text entry**for unexpected needs or accessibility**Test for accessibility**on various devices and screen sizes**Track analytics**(option usage, drop-off rates) to optimize your flows**Iterate and update**options based on feedback and behavioral data
 
 ### Implementation Checklist
 
@@ -149,13 +121,7 @@ Quick Replies help bots accurately identify user intent, enabling precise routin
 
 ### Common Pitfalls
 
-<strong>Overloading with options:</strong>Too many choices cause decision fatigue
-
-<strong>Vague/long text:</strong>Reduces clarity and increases error risk
-
-<strong>Unmapped replies:</strong>Every reply should trigger a clear conversational branch
-
-<strong>Ignoring platform constraints:</strong>Exceeding limits may break the UI or trigger fallback behaviors
+**Overloading with options:**Too many choices cause decision fatigue**Vague/long text:**Reduces clarity and increases error risk**Unmapped replies:**Every reply should trigger a clear conversational branch**Ignoring platform constraints:**Exceeding limits may break the UI or trigger fallback behaviors
 
 ## Developer Implementation
 
@@ -181,27 +147,11 @@ Add quick replies via the Message editing panel, up to 10 per message, supportin
 
 ## Usage Examples
 
-<strong>"How can I assist you today?"</strong>[Track Order] [Contact Support] [Product Info]
-
-<strong>"Would you like to confirm your booking for 3 PM?"</strong>[Yes, Confirm] [Reschedule] [Cancel]
-
-<strong>"Choose a payment method:"</strong>[Credit Card] [PayPal] [Bank Transfer]
-
-<strong>"Please select a topic:"</strong>[Billing] [Technical Support] [Sales Inquiry]
-
-<strong>"Are you satisfied with our service?"</strong>[Very Satisfied] [Satisfied] [Neutral] [Dissatisfied] [Very Dissatisfied]
+**"How can I assist you today?"**[Track Order] [Contact Support] [Product Info]**"Would you like to confirm your booking for 3 PM?"**[Yes, Confirm] [Reschedule] [Cancel]**"Choose a payment method:"**[Credit Card] [PayPal] [Bank Transfer]**"Please select a topic:"**[Billing] [Technical Support] [Sales Inquiry]**"Are you satisfied with our service?"**[Very Satisfied] [Satisfied] [Neutral] [Dissatisfied] [Very Dissatisfied]
 
 ## Frequently Asked Questions
 
-<strong>Can I create my own Quick Reply templates?</strong>Yes. Most chatbot platforms let you define and customize Quick Replies with your own text, actions, and even dynamic data.
-
-<strong>How can I measure the effectiveness of Quick Replies?</strong>Track response rates, analytics, and user feedback to see which Quick Replies are used most and optimize flows accordingly.
-
-<strong>Are Quick Replies suitable for all industries?</strong>Yes. They are used in e-commerce, healthcare, banking, customer support, and surveys for structured, rapid user input.
-
-<strong>What happens if I exceed the Quick Reply limit on a platform?</strong>Excess options may be ignored, hidden, or transformed into a list picker (e.g., WhatsApp). Always test on your target platform.
-
-<strong>Can users skip Quick Replies and type their own response?</strong>Most implementations allow users to ignore Quick Replies and enter a custom message, ensuring flexibility.
+**Can I create my own Quick Reply templates?**Yes. Most chatbot platforms let you define and customize Quick Replies with your own text, actions, and even dynamic data.**How can I measure the effectiveness of Quick Replies?**Track response rates, analytics, and user feedback to see which Quick Replies are used most and optimize flows accordingly.**Are Quick Replies suitable for all industries?**Yes. They are used in e-commerce, healthcare, banking, customer support, and surveys for structured, rapid user input.**What happens if I exceed the Quick Reply limit on a platform?**Excess options may be ignored, hidden, or transformed into a list picker (e.g., WhatsApp). Always test on your target platform.**Can users skip Quick Replies and type their own response?**Most implementations allow users to ignore Quick Replies and enter a custom message, ensuring flexibility.
 
 ## Technical Considerations
 

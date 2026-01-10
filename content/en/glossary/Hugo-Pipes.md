@@ -24,39 +24,37 @@ Hugo Pipes supports a wide range of asset types and processing operations, from 
 
 ## Core Asset Processing Components
 
-- <strong>Resource Management</strong>: Hugo Pipes treats all assets as resources that can be retrieved from various sources including the assets directory, static files, or remote URLs. Resources maintain metadata about their content type, size, and processing history, enabling intelligent caching and optimization decisions.
+- **Resource Management**: Hugo Pipes treats all assets as resources that can be retrieved from various sources including the assets directory, static files, or remote URLs. Resources maintain metadata about their content type, size, and processing history, enabling intelligent caching and optimization decisions.
 
-- <strong>Transformation Pipeline</strong>: The core of Hugo Pipes consists of chainable transformation functions that modify resources in sequence. Each transformation creates a new resource while preserving the original, allowing for complex processing workflows without data loss.
+- **Transformation Pipeline**: The core of Hugo Pipes consists of chainable transformation functions that modify resources in sequence. Each transformation creates a new resource while preserving the original, allowing for complex processing workflows without data loss.
 
-- <strong>SCSS/SASS Processing</strong>: Native support for SCSS and SASS compilation enables developers to write modular stylesheets with variables, mixins, and imports. The processor handles dependency resolution and provides detailed error reporting for debugging.
+- **SCSS/SASS Processing**: Native support for SCSS and SASS compilation enables developers to write modular stylesheets with variables, mixins, and imports. The processor handles dependency resolution and provides detailed error reporting for debugging.
 
-- <strong>JavaScript Bundling</strong>: Built-in JavaScript processing capabilities include ES6 module bundling, minification, and source map generation. The system can handle complex dependency graphs and provides tree-shaking for optimal bundle sizes.
+- **JavaScript Bundling**: Built-in JavaScript processing capabilities include ES6 module bundling, minification, and source map generation. The system can handle complex dependency graphs and provides tree-shaking for optimal bundle sizes.
 
-- <strong>PostCSS Integration</strong>: Advanced CSS processing through PostCSS plugins allows for autoprefixing, CSS Grid polyfills, and custom transformations. The integration supports both built-in and custom PostCSS configurations.
+- **PostCSS Integration**: Advanced CSS processing through PostCSS plugins allows for autoprefixing, CSS Grid polyfills, and custom transformations. The integration supports both built-in and custom PostCSS configurations.
 
-- <strong>Image Optimization</strong>: Comprehensive image processing features include resizing, format conversion, quality adjustment, and responsive image generation. The system supports multiple output formats and can generate WebP alternatives automatically.
+- **Image Optimization**: Comprehensive image processing features include resizing, format conversion, quality adjustment, and responsive image generation. The system supports multiple output formats and can generate WebP alternatives automatically.
 
-- <strong>Fingerprinting and Caching</strong>: Automatic content-based fingerprinting generates unique filenames for assets, enabling aggressive browser caching while ensuring cache invalidation when content changes.
+- **Fingerprinting and Caching**: Automatic content-based fingerprinting generates unique filenames for assets, enabling aggressive browser caching while ensuring cache invalidation when content changes.
 
 ## How Hugo Pipes Works
 
 The Hugo Pipes workflow follows a systematic approach to asset processing:
 
-1. <strong>Resource Discovery</strong>: Hugo scans the assets directory and identifies available resources based on file extensions and content types. Resources can also be loaded from remote URLs or generated dynamically within templates.
+1. **Resource Discovery**: Hugo scans the assets directory and identifies available resources based on file extensions and content types. Resources can also be loaded from remote URLs or generated dynamically within templates.
 
-2. <strong>Pipeline Definition</strong>: Developers define processing pipelines within Hugo templates using pipe operators to chain transformation functions. Each function in the chain receives the output of the previous function as input.
+2. **Pipeline Definition**: Developers define processing pipelines within Hugo templates using pipe operators to chain transformation functions. Each function in the chain receives the output of the previous function as input.
 
-3. <strong>Dependency Resolution</strong>: For assets with dependencies (like SCSS imports or JavaScript modules), Hugo automatically resolves and includes required files, building a complete dependency graph for efficient processing.
+3. **Dependency Resolution**: For assets with dependencies (like SCSS imports or JavaScript modules), Hugo automatically resolves and includes required files, building a complete dependency graph for efficient processing.
 
-4. <strong>Transformation Execution</strong>: Hugo executes the defined transformations in sequence, applying each function to the resource and generating intermediate results. The system optimizes this process by caching unchanged resources.
+4. **Transformation Execution**: Hugo executes the defined transformations in sequence, applying each function to the resource and generating intermediate results. The system optimizes this process by caching unchanged resources.
 
-5. <strong>Optimization Application</strong>: Final optimization steps include minification, compression, and fingerprinting. These operations prepare assets for production deployment while maintaining development-friendly source maps.
+5. **Optimization Application**: Final optimization steps include minification, compression, and fingerprinting. These operations prepare assets for production deployment while maintaining development-friendly source maps.
 
-6. <strong>Output Generation</strong>: Processed assets are written to the public directory with appropriate directory structures and filenames. Hugo maintains a manifest of processed assets for reference by templates.
+6. **Output Generation**: Processed assets are written to the public directory with appropriate directory structures and filenames. Hugo maintains a manifest of processed assets for reference by templates.
 
-7. <strong>Template Integration</strong>: Processed assets are made available to templates through resource variables, enabling dynamic inclusion of optimized assets in HTML output with proper cache-busting parameters.
-
-<strong>Example Workflow</strong>:
+7. **Template Integration**: Processed assets are made available to templates through resource variables, enabling dynamic inclusion of optimized assets in HTML output with proper cache-busting parameters.**Example Workflow**:
 ```
 {{ $scss := resources.Get "scss/main.scss" }}
 {{ $css := $scss | resources.ToCSS | resources.Minify | resources.Fingerprint }}
@@ -65,130 +63,130 @@ The Hugo Pipes workflow follows a systematic approach to asset processing:
 
 ## Key Benefits
 
-- <strong>Simplified Toolchain</strong>: Eliminates the need for separate build tools and complex configuration files, reducing project complexity and maintenance overhead while providing professional-grade asset processing capabilities.
+- **Simplified Toolchain**: Eliminates the need for separate build tools and complex configuration files, reducing project complexity and maintenance overhead while providing professional-grade asset processing capabilities.
 
-- <strong>Integrated Development Experience</strong>: Asset processing becomes part of the Hugo template system, enabling developers to manage assets and content within a single, cohesive workflow without context switching.
+- **Integrated Development Experience**: Asset processing becomes part of the Hugo template system, enabling developers to manage assets and content within a single, cohesive workflow without context switching.
 
-- <strong>Performance Optimization</strong>: Built-in optimization features including minification, compression, and fingerprinting ensure optimal asset delivery without requiring additional tools or manual configuration steps.
+- **Performance Optimization**: Built-in optimization features including minification, compression, and fingerprinting ensure optimal asset delivery without requiring additional tools or manual configuration steps.
 
-- <strong>Fast Processing Speed</strong>: Leverages Hugo's high-performance engine to deliver rapid asset compilation, making it suitable for large projects and development workflows requiring quick iteration cycles.
+- **Fast Processing Speed**: Leverages Hugo's high-performance engine to deliver rapid asset compilation, making it suitable for large projects and development workflows requiring quick iteration cycles.
 
-- <strong>Intelligent Caching</strong>: Automatic caching of processed assets based on content hashes ensures that only changed assets are reprocessed, significantly improving build times for large projects.
+- **Intelligent Caching**: Automatic caching of processed assets based on content hashes ensures that only changed assets are reprocessed, significantly improving build times for large projects.
 
-- <strong>Zero Configuration</strong>: Works out of the box with sensible defaults while providing extensive customization options for advanced use cases, making it accessible to developers of all skill levels.
+- **Zero Configuration**: Works out of the box with sensible defaults while providing extensive customization options for advanced use cases, making it accessible to developers of all skill levels.
 
-- <strong>Source Map Support</strong>: Generates accurate source maps for debugging processed assets in development environments, maintaining developer productivity while using optimized assets.
+- **Source Map Support**: Generates accurate source maps for debugging processed assets in development environments, maintaining developer productivity while using optimized assets.
 
-- <strong>Dependency Management</strong>: Automatically handles complex dependency relationships between assets, ensuring that changes propagate correctly through the processing pipeline without manual intervention.
+- **Dependency Management**: Automatically handles complex dependency relationships between assets, ensuring that changes propagate correctly through the processing pipeline without manual intervention.
 
-- <strong>Cross-Platform Compatibility</strong>: Provides consistent behavior across different operating systems and development environments, eliminating platform-specific build issues and configuration differences.
+- **Cross-Platform Compatibility**: Provides consistent behavior across different operating systems and development environments, eliminating platform-specific build issues and configuration differences.
 
-- <strong>Memory Efficiency</strong>: Processes assets in memory without creating unnecessary temporary files, reducing disk I/O and improving overall build performance, especially on systems with fast memory but slower storage.
+- **Memory Efficiency**: Processes assets in memory without creating unnecessary temporary files, reducing disk I/O and improving overall build performance, especially on systems with fast memory but slower storage.
 
 ## Common Use Cases
 
-- <strong>SCSS Compilation</strong>: Converting SCSS stylesheets to CSS with automatic dependency resolution, variable processing, and mixin expansion for maintainable stylesheet architectures.
+- **SCSS Compilation**: Converting SCSS stylesheets to CSS with automatic dependency resolution, variable processing, and mixin expansion for maintainable stylesheet architectures.
 
-- <strong>JavaScript Bundling</strong>: Combining multiple JavaScript files into optimized bundles with tree-shaking and minification for improved loading performance and reduced HTTP requests.
+- **JavaScript Bundling**: Combining multiple JavaScript files into optimized bundles with tree-shaking and minification for improved loading performance and reduced HTTP requests.
 
-- <strong>Image Processing</strong>: Resizing, optimizing, and converting images to multiple formats and sizes for responsive web design and performance optimization across different devices.
+- **Image Processing**: Resizing, optimizing, and converting images to multiple formats and sizes for responsive web design and performance optimization across different devices.
 
-- <strong>CSS Framework Integration</strong>: Processing and customizing CSS frameworks like Bootstrap or Tailwind CSS with project-specific variables and component overrides.
+- **CSS Framework Integration**: Processing and customizing CSS frameworks like Bootstrap or Tailwind CSS with project-specific variables and component overrides.
 
-- <strong>Font Optimization</strong>: Processing and optimizing web fonts including subsetting, format conversion, and preload hint generation for improved typography loading performance.
+- **Font Optimization**: Processing and optimizing web fonts including subsetting, format conversion, and preload hint generation for improved typography loading performance.
 
-- <strong>Icon System Management</strong>: Processing SVG icons into sprite sheets or individual optimized files with automatic symbol generation and CSS class creation for scalable icon systems.
+- **Icon System Management**: Processing SVG icons into sprite sheets or individual optimized files with automatic symbol generation and CSS class creation for scalable icon systems.
 
-- <strong>Critical CSS Generation</strong>: Extracting and inlining critical CSS for above-the-fold content to improve perceived loading performance and Core Web Vitals scores.
+- **Critical CSS Generation**: Extracting and inlining critical CSS for above-the-fold content to improve perceived loading performance and Core Web Vitals scores.
 
-- <strong>Asset Versioning</strong>: Implementing content-based asset versioning with fingerprinting to enable aggressive browser caching while ensuring proper cache invalidation during updates.
+- **Asset Versioning**: Implementing content-based asset versioning with fingerprinting to enable aggressive browser caching while ensuring proper cache invalidation during updates.
 
-- <strong>Development vs Production Builds</strong>: Creating different asset processing pipelines for development and production environments with appropriate optimization levels and debugging features.
+- **Development vs Production Builds**: Creating different asset processing pipelines for development and production environments with appropriate optimization levels and debugging features.
 
-- <strong>Third-Party Library Integration</strong>: Processing and bundling third-party CSS and JavaScript libraries with project assets while maintaining proper dependency order and compatibility.
+- **Third-Party Library Integration**: Processing and bundling third-party CSS and JavaScript libraries with project assets while maintaining proper dependency order and compatibility.
 
 ## Asset Processing Comparison
 
 | Feature | Hugo Pipes | Webpack | Gulp | Parcel |
 |---------|------------|---------|------|--------|
-| <strong>Configuration</strong>| Template-based | Config files | Gulpfile.js | Zero-config |
-| <strong>Learning Curve</strong>| Low | High | Medium | Low |
-| <strong>Processing Speed</strong>| Very Fast | Medium | Medium | Fast |
-| <strong>Built-in Optimizations</strong>| Extensive | Plugin-based | Plugin-based | Built-in |
-| <strong>Dependency Management</strong>| Automatic | Manual/Loaders | Manual | Automatic |
-| <strong>Integration Complexity</strong>| Native | External | External | External |
+| **Configuration**| Template-based | Config files | Gulpfile.js | Zero-config |
+| **Learning Curve**| Low | High | Medium | Low |
+| **Processing Speed**| Very Fast | Medium | Medium | Fast |
+| **Built-in Optimizations**| Extensive | Plugin-based | Plugin-based | Built-in |
+| **Dependency Management**| Automatic | Manual/Loaders | Manual | Automatic |
+| **Integration Complexity**| Native | External | External | External |
 
 ## Challenges and Considerations
 
-- <strong>Limited JavaScript Ecosystem</strong>: While Hugo Pipes handles basic JavaScript processing well, it lacks the extensive plugin ecosystem available in dedicated bundlers like Webpack for complex JavaScript applications.
+- **Limited JavaScript Ecosystem**: While Hugo Pipes handles basic JavaScript processing well, it lacks the extensive plugin ecosystem available in dedicated bundlers like Webpack for complex JavaScript applications.
 
-- <strong>Learning Template Syntax</strong>: Developers must learn Hugo's template syntax and pipe operators to effectively use Hugo Pipes, which may present a learning curve for those unfamiliar with Go templates.
+- **Learning Template Syntax**: Developers must learn Hugo's template syntax and pipe operators to effectively use Hugo Pipes, which may present a learning curve for those unfamiliar with Go templates.
 
-- <strong>Processing Limitations</strong>: Some advanced asset processing operations may not be available natively, requiring workarounds or external tools for specialized use cases like advanced image filters or custom transformations.
+- **Processing Limitations**: Some advanced asset processing operations may not be available natively, requiring workarounds or external tools for specialized use cases like advanced image filters or custom transformations.
 
-- <strong>Debugging Complexity</strong>: Troubleshooting asset processing issues can be challenging when pipelines become complex, as error messages may not always clearly indicate the source of problems in multi-step transformations.
+- **Debugging Complexity**: Troubleshooting asset processing issues can be challenging when pipelines become complex, as error messages may not always clearly indicate the source of problems in multi-step transformations.
 
-- <strong>Version Compatibility</strong>: Hugo Pipes features and capabilities depend on the Hugo version being used, potentially creating compatibility issues when upgrading or working across different environments.
+- **Version Compatibility**: Hugo Pipes features and capabilities depend on the Hugo version being used, potentially creating compatibility issues when upgrading or working across different environments.
 
-- <strong>Memory Usage</strong>: Large asset processing operations can consume significant memory, particularly when processing many high-resolution images or large JavaScript bundles simultaneously.
+- **Memory Usage**: Large asset processing operations can consume significant memory, particularly when processing many high-resolution images or large JavaScript bundles simultaneously.
 
-- <strong>Platform Dependencies</strong>: Some processing features require external tools to be installed on the system, such as PostCSS or Babel, which can complicate deployment and development environment setup.
+- **Platform Dependencies**: Some processing features require external tools to be installed on the system, such as PostCSS or Babel, which can complicate deployment and development environment setup.
 
-- <strong>Limited Hot Reloading</strong>: While Hugo provides live reload functionality, complex asset processing pipelines may not always trigger appropriate reloads, requiring manual browser refreshes during development.
+- **Limited Hot Reloading**: While Hugo provides live reload functionality, complex asset processing pipelines may not always trigger appropriate reloads, requiring manual browser refreshes during development.
 
-- <strong>Documentation Gaps</strong>: Advanced Hugo Pipes features may lack comprehensive documentation or examples, making it difficult to implement sophisticated asset processing workflows without extensive experimentation.
+- **Documentation Gaps**: Advanced Hugo Pipes features may lack comprehensive documentation or examples, making it difficult to implement sophisticated asset processing workflows without extensive experimentation.
 
-- <strong>Performance Monitoring</strong>: Limited built-in tools for monitoring and profiling asset processing performance can make it difficult to identify bottlenecks in complex processing pipelines.
+- **Performance Monitoring**: Limited built-in tools for monitoring and profiling asset processing performance can make it difficult to identify bottlenecks in complex processing pipelines.
 
 ## Implementation Best Practices
 
-- <strong>Organize Assets Logically</strong>: Structure the assets directory with clear hierarchies separating different asset types and maintaining consistent naming conventions for improved maintainability and team collaboration.
+- **Organize Assets Logically**: Structure the assets directory with clear hierarchies separating different asset types and maintaining consistent naming conventions for improved maintainability and team collaboration.
 
-- <strong>Use Conditional Processing</strong>: Implement different processing pipelines for development and production environments using Hugo's environment detection to optimize build times and debugging capabilities.
+- **Use Conditional Processing**: Implement different processing pipelines for development and production environments using Hugo's environment detection to optimize build times and debugging capabilities.
 
-- <strong>Leverage Partial Templates</strong>: Create reusable partial templates for common asset processing patterns to maintain consistency across the site and reduce code duplication in templates.
+- **Leverage Partial Templates**: Create reusable partial templates for common asset processing patterns to maintain consistency across the site and reduce code duplication in templates.
 
-- <strong>Implement Error Handling</strong>: Add proper error checking and fallback mechanisms in asset processing pipelines to gracefully handle missing files or processing failures without breaking site builds.
+- **Implement Error Handling**: Add proper error checking and fallback mechanisms in asset processing pipelines to gracefully handle missing files or processing failures without breaking site builds.
 
-- <strong>Optimize Processing Order</strong>: Arrange transformation functions in logical order to minimize processing overhead and ensure that expensive operations like minification occur last in the pipeline.
+- **Optimize Processing Order**: Arrange transformation functions in logical order to minimize processing overhead and ensure that expensive operations like minification occur last in the pipeline.
 
-- <strong>Cache Processed Assets</strong>: Utilize Hugo's built-in caching mechanisms effectively by structuring asset processing to maximize cache hits and minimize unnecessary reprocessing during development.
+- **Cache Processed Assets**: Utilize Hugo's built-in caching mechanisms effectively by structuring asset processing to maximize cache hits and minimize unnecessary reprocessing during development.
 
-- <strong>Monitor Asset Sizes</strong>: Regularly audit processed asset sizes and implement appropriate optimization strategies to maintain optimal loading performance across different network conditions.
+- **Monitor Asset Sizes**: Regularly audit processed asset sizes and implement appropriate optimization strategies to maintain optimal loading performance across different network conditions.
 
-- <strong>Document Processing Pipelines</strong>: Maintain clear documentation of asset processing workflows and dependencies to facilitate team collaboration and future maintenance efforts.
+- **Document Processing Pipelines**: Maintain clear documentation of asset processing workflows and dependencies to facilitate team collaboration and future maintenance efforts.
 
-- <strong>Test Across Environments</strong>: Verify that asset processing works consistently across different development environments and deployment targets to prevent environment-specific issues.
+- **Test Across Environments**: Verify that asset processing works consistently across different development environments and deployment targets to prevent environment-specific issues.
 
-- <strong>Version Control Configuration</strong>: Include all necessary configuration files and dependencies in version control while excluding generated assets to ensure reproducible builds across team members and deployment environments.
+- **Version Control Configuration**: Include all necessary configuration files and dependencies in version control while excluding generated assets to ensure reproducible builds across team members and deployment environments.
 
 ## Advanced Techniques
 
-- <strong>Custom Resource Functions</strong>: Develop custom Hugo functions for specialized asset processing tasks that aren't covered by built-in pipes, extending the system's capabilities for project-specific requirements.
+- **Custom Resource Functions**: Develop custom Hugo functions for specialized asset processing tasks that aren't covered by built-in pipes, extending the system's capabilities for project-specific requirements.
 
-- <strong>Dynamic Asset Generation</strong>: Create assets programmatically within templates based on site data or configuration, enabling data-driven styling and dynamic resource creation for complex applications.
+- **Dynamic Asset Generation**: Create assets programmatically within templates based on site data or configuration, enabling data-driven styling and dynamic resource creation for complex applications.
 
-- <strong>Multi-Stage Processing</strong>: Implement complex processing workflows that combine multiple transformation stages with intermediate caching and conditional logic for sophisticated asset optimization strategies.
+- **Multi-Stage Processing**: Implement complex processing workflows that combine multiple transformation stages with intermediate caching and conditional logic for sophisticated asset optimization strategies.
 
-- <strong>Resource Bundling Strategies</strong>: Develop advanced bundling strategies that optimize asset delivery based on page requirements, user behavior patterns, and performance metrics for maximum efficiency.
+- **Resource Bundling Strategies**: Develop advanced bundling strategies that optimize asset delivery based on page requirements, user behavior patterns, and performance metrics for maximum efficiency.
 
-- <strong>Integration with External APIs</strong>: Connect Hugo Pipes with external services for advanced processing capabilities like cloud-based image optimization or CDN integration for enhanced performance.
+- **Integration with External APIs**: Connect Hugo Pipes with external services for advanced processing capabilities like cloud-based image optimization or CDN integration for enhanced performance.
 
-- <strong>Performance Profiling</strong>: Implement custom profiling and monitoring solutions to track asset processing performance and identify optimization opportunities in complex processing pipelines.
+- **Performance Profiling**: Implement custom profiling and monitoring solutions to track asset processing performance and identify optimization opportunities in complex processing pipelines.
 
 ## Future Directions
 
-- <strong>Enhanced JavaScript Support</strong>: Continued development of JavaScript processing capabilities including better ES6+ support, improved tree-shaking, and integration with modern JavaScript frameworks and build tools.
+- **Enhanced JavaScript Support**: Continued development of JavaScript processing capabilities including better ES6+ support, improved tree-shaking, and integration with modern JavaScript frameworks and build tools.
 
-- <strong>Advanced Image Processing</strong>: Expansion of image processing features including AI-powered optimization, advanced format support, and integration with modern image delivery techniques like responsive images and lazy loading.
+- **Advanced Image Processing**: Expansion of image processing features including AI-powered optimization, advanced format support, and integration with modern image delivery techniques like responsive images and lazy loading.
 
-- <strong>Cloud Integration</strong>: Development of cloud-based processing capabilities that leverage external services for computationally intensive operations while maintaining the simplicity of the Hugo Pipes interface.
+- **Cloud Integration**: Development of cloud-based processing capabilities that leverage external services for computationally intensive operations while maintaining the simplicity of the Hugo Pipes interface.
 
-- <strong>Performance Analytics</strong>: Integration of performance monitoring and analytics tools to provide insights into asset processing efficiency and optimization opportunities for continuous improvement.
+- **Performance Analytics**: Integration of performance monitoring and analytics tools to provide insights into asset processing efficiency and optimization opportunities for continuous improvement.
 
-- <strong>Extended Plugin System</strong>: Development of a more extensive plugin architecture that allows third-party developers to create custom processing functions while maintaining Hugo's performance characteristics.
+- **Extended Plugin System**: Development of a more extensive plugin architecture that allows third-party developers to create custom processing functions while maintaining Hugo's performance characteristics.
 
-- <strong>Automated Optimization</strong>: Implementation of machine learning-driven optimization that automatically adjusts processing parameters based on content analysis and performance metrics for optimal results.
+- **Automated Optimization**: Implementation of machine learning-driven optimization that automatically adjusts processing parameters based on content analysis and performance metrics for optimal results.
 
 ## References
 

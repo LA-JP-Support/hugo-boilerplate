@@ -20,19 +20,7 @@ This capability bridges unstructured text and structured data, enabling applicat
 
 ## Core Applications
 
-<strong>Search Engines & Semantic Search</strong>Entity linking improves search relevance by disambiguating queries and documents. When a user searches "Paris," the system can prioritize results about the city rather than Paris Hilton if the query context suggests travel or geography.
-
-<strong>Content Recommendation & Personalization</strong>Recommendations become more accurate by aligning user interests and content topics through linked entities. Distinguishing between "Jaguar" the car brand and the animal prevents irrelevant suggestions and improves user experience.
-
-<strong>Knowledge Graph Construction</strong>Entity linking automates knowledge graph population and enrichment, extracting facts and relationships from text and connecting them to existing entities in the graph.
-
-<strong>Information Extraction & Data Integration</strong>Organizations convert unstructured documents into structured data for business intelligence and analytics, enabling data-driven decision-making at scale.
-
-<strong>SEO & Structured Data</strong>Content creators enhance discoverability by marking up pages with entity links using Schema.org, helping search engines better understand and rank content.
-
-<strong>AI Assistants & Chatbots</strong>Virtual assistants use entity linking to understand user queries precisely and generate contextually appropriate responses based on linked knowledge.
-
-<strong>Multilingual Support</strong>Systems handle entity references across languages and regions, ensuring "football" links to soccer in Europe but American football in the US.
+**Search Engines & Semantic Search**Entity linking improves search relevance by disambiguating queries and documents. When a user searches "Paris," the system can prioritize results about the city rather than Paris Hilton if the query context suggests travel or geography.**Content Recommendation & Personalization**Recommendations become more accurate by aligning user interests and content topics through linked entities. Distinguishing between "Jaguar" the car brand and the animal prevents irrelevant suggestions and improves user experience.**Knowledge Graph Construction**Entity linking automates knowledge graph population and enrichment, extracting facts and relationships from text and connecting them to existing entities in the graph.**Information Extraction & Data Integration**Organizations convert unstructured documents into structured data for business intelligence and analytics, enabling data-driven decision-making at scale.**SEO & Structured Data**Content creators enhance discoverability by marking up pages with entity links using Schema.org, helping search engines better understand and rank content.**AI Assistants & Chatbots**Virtual assistants use entity linking to understand user queries precisely and generate contextually appropriate responses based on linked knowledge.**Multilingual Support**Systems handle entity references across languages and regions, ensuring "football" links to soccer in Europe but American football in the US.
 
 ## Entity Linking Process
 
@@ -54,27 +42,11 @@ The final step connects the mention to a unique KB identifier (e.g., Wikidata Q3
 
 ## Technical Approaches
 
-<strong>Rule-Based Methods</strong>Early systems used hand-crafted rules and heuristics, often domain-specific. While interpretable, these approaches lack scalability and struggle with ambiguity.
-
-<strong>Classical Machine Learning</strong>Feature engineering on context, string similarity, and entity types fed models like Support Vector Machines and Random Forests. These methods required significant manual effort but improved over rules alone.
-
-<strong>Transformer-Based Deep Learning</strong>Modern systems leverage contextual embeddings from transformers (BERT, RoBERTa) that encode both mention context and candidate entity descriptions. Examples include Ontotext CEEL, Amazon ReFinED, and Facebook GENRE. These models handle ambiguity effectively and support zero-shot linking to previously unseen entities.
-
-<strong>Knowledge Graph Integration</strong>Graph neural networks and embeddings enhance disambiguation by capturing entity attributes, types, and relationships, enabling more sophisticated reasoning about entity connections.
+**Rule-Based Methods**Early systems used hand-crafted rules and heuristics, often domain-specific. While interpretable, these approaches lack scalability and struggle with ambiguity.**Classical Machine Learning**Feature engineering on context, string similarity, and entity types fed models like Support Vector Machines and Random Forests. These methods required significant manual effort but improved over rules alone.**Transformer-Based Deep Learning**Modern systems leverage contextual embeddings from transformers (BERT, RoBERTa) that encode both mention context and candidate entity descriptions. Examples include Ontotext CEEL, Amazon ReFinED, and Facebook GENRE. These models handle ambiguity effectively and support zero-shot linking to previously unseen entities.**Knowledge Graph Integration**Graph neural networks and embeddings enhance disambiguation by capturing entity attributes, types, and relationships, enabling more sophisticated reasoning about entity connections.
 
 ## Key Challenges
 
-<strong>Ambiguity</strong>Many terms have multiple possible referents (e.g., "Jaguar" as car brand or animal), requiring sophisticated context analysis.
-
-<strong>Name Variations</strong>Entities appear as aliases, abbreviations, nicknames, or misspellings ("NYC" and "Big Apple" both refer to New York City), complicating matching.
-
-<strong>Scalability</strong>Large knowledge bases like Wikidata contain millions of entities, making real-time linking computationally intensive.
-
-<strong>Zero-Shot Capability</strong>Systems must link to entities not seen during training, requiring generalization from type and description information.
-
-<strong>Multilingual Handling</strong>Entity names and context vary across languages, necessitating language-agnostic or multilingual approaches.
-
-<strong>Knowledge Base Evolution</strong>New entities and facts constantly emerge, requiring systems to adapt without frequent retraining.
+**Ambiguity**Many terms have multiple possible referents (e.g., "Jaguar" as car brand or animal), requiring sophisticated context analysis.**Name Variations**Entities appear as aliases, abbreviations, nicknames, or misspellings ("NYC" and "Big Apple" both refer to New York City), complicating matching.**Scalability**Large knowledge bases like Wikidata contain millions of entities, making real-time linking computationally intensive.**Zero-Shot Capability**Systems must link to entities not seen during training, requiring generalization from type and description information.**Multilingual Handling**Entity names and context vary across languages, necessitating language-agnostic or multilingual approaches.**Knowledge Base Evolution**New entities and facts constantly emerge, requiring systems to adapt without frequent retraining.
 
 ## Leading Tools & Platforms
 
@@ -88,19 +60,11 @@ The final step connects the mention to a unique KB identifier (e.g., Wikidata Q3
 
 ## Practical Use Cases
 
-<strong>Healthcare Search Optimization</strong>Entity linking on physician profile pages increased click-through rates by 32% by clearly identifying referenced doctors, specialties, and clinics.
-
-<strong>Location-Based SEO</strong>Adding entity links for business locations increased impressions by 46% and clicks by 42% for non-branded search queries.
-
-<strong>E-commerce Product Disambiguation</strong>Retailers ensure "Apple" product listings link to Apple Inc. rather than the fruit, improving search relevance and conversion rates.
-
-<strong>Multilingual News Aggregation</strong>News services unify references to the same person or event across articles in different languages through entity linking.
-
-<strong>Business Intelligence</strong>Organizations extract insights from news, research, and market data by linking entities to their knowledge graphs for automated analysis.
+**Healthcare Search Optimization**Entity linking on physician profile pages increased click-through rates by 32% by clearly identifying referenced doctors, specialties, and clinics.**Location-Based SEO**Adding entity links for business locations increased impressions by 46% and clicks by 42% for non-branded search queries.**E-commerce Product Disambiguation**Retailers ensure "Apple" product listings link to Apple Inc. rather than the fruit, improving search relevance and conversion rates.**Multilingual News Aggregation**News services unify references to the same person or event across articles in different languages through entity linking.**Business Intelligence**Organizations extract insights from news, research, and market data by linking entities to their knowledge graphs for automated analysis.
 
 ## Implementation Integration
 
-<strong>Schema.org Markup</strong>JSON-LD example for entity linking:
+**Schema.org Markup**JSON-LD example for entity linking:
 
 ```json
 {
@@ -116,35 +80,15 @@ The final step connects the mention to a unique KB identifier (e.g., Wikidata Q3
 
 This markup clarifies "Jaguar" refers to the car brand, not the animal.
 
-<strong>API Integration</strong>Modern tools provide REST APIs, SDKs, and GraphDB integration for seamless incorporation into existing systems. Cloud services offer managed solutions while open-source options enable on-premise deployment.
+**API Integration**Modern tools provide REST APIs, SDKs, and GraphDB integration for seamless incorporation into existing systems. Cloud services offer managed solutions while open-source options enable on-premise deployment.
 
 ## Best Practices
 
-<strong>Use High-Quality Knowledge Bases</strong>Select authoritative, well-maintained KBs appropriate for your domain, whether public (Wikidata, DBpedia) or proprietary.
-
-<strong>Implement Complete Pipeline</strong>Combine NER, candidate generation, and disambiguation rather than relying on single-stage approaches.
-
-<strong>Leverage Transformer Models</strong>Modern contextual embeddings significantly outperform classical methods for disambiguation accuracy.
-
-<strong>Evaluate on Domain Benchmarks</strong>Test performance on data representative of your use case rather than generic benchmarks alone.
-
-<strong>Deploy Schema Markup for SEO</strong>Use Schema.org's `sameAs` property to link content to authoritative entity sources for improved search visibility.
-
-<strong>Maintain Internal Knowledge Graphs</strong>Organizations with proprietary entities should build and maintain custom knowledge bases for accurate linking.
+**Use High-Quality Knowledge Bases**Select authoritative, well-maintained KBs appropriate for your domain, whether public (Wikidata, DBpedia) or proprietary.**Implement Complete Pipeline**Combine NER, candidate generation, and disambiguation rather than relying on single-stage approaches.**Leverage Transformer Models**Modern contextual embeddings significantly outperform classical methods for disambiguation accuracy.**Evaluate on Domain Benchmarks**Test performance on data representative of your use case rather than generic benchmarks alone.**Deploy Schema Markup for SEO**Use Schema.org's `sameAs` property to link content to authoritative entity sources for improved search visibility.**Maintain Internal Knowledge Graphs**Organizations with proprietary entities should build and maintain custom knowledge bases for accurate linking.
 
 ## Related Concepts
 
-<strong>Entity Disambiguation</strong>distinguishes between entities with similar names, forming a core component of the linking process.
-
-<strong>Knowledge Bases</strong>are structured repositories of facts and entities like Wikidata, DBpedia, or domain-specific databases.
-
-<strong>Named Entity Recognition</strong>detects entity mentions in text as the first step before linking.
-
-<strong>Knowledge Graphs</strong>are graph-structured knowledge bases with entities as nodes and relationships as edges.
-
-<strong>Semantic Annotation</strong>tags content with machine-readable entity references for enhanced processing.
-
-<strong>Reconciliation Services</strong>map and merge equivalent entities across different datasets.
+**Entity Disambiguation**distinguishes between entities with similar names, forming a core component of the linking process.**Knowledge Bases**are structured repositories of facts and entities like Wikidata, DBpedia, or domain-specific databases.**Named Entity Recognition**detects entity mentions in text as the first step before linking.**Knowledge Graphs**are graph-structured knowledge bases with entities as nodes and relationships as edges.**Semantic Annotation**tags content with machine-readable entity references for enhanced processing.**Reconciliation Services**map and merge equivalent entities across different datasets.
 
 ## Summary
 

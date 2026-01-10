@@ -12,7 +12,7 @@ draft: false
 
 ## What Is a Note in an Internal Ticketing System?
 
-A <strong>note</strong>in an internal ticketing system is an internal-only annotation attached to a support or service ticket, visible exclusively to authorized staff (technicians, support agents, managers). Customers and external users have no access to these notes. The core function of a ticket note is to chronologically record actions, decisions, troubleshooting steps, communications, research, and contextual information relevant to the ticket’s lifecycle. Notes are essential for ensuring continuity, transparency, and accountability throughout the support process.
+A **note**in an internal ticketing system is an internal-only annotation attached to a support or service ticket, visible exclusively to authorized staff (technicians, support agents, managers). Customers and external users have no access to these notes. The core function of a ticket note is to chronologically record actions, decisions, troubleshooting steps, communications, research, and contextual information relevant to the ticket’s lifecycle. Notes are essential for ensuring continuity, transparency, and accountability throughout the support process.
 
 For Managed Service Providers (MSPs), IT departments, and IT Service Management (ITSM) teams, internal notes are a foundation for operational excellence and are increasingly leveraged by AI and automation features to streamline workflows, enhance compliance, and facilitate knowledge transfer.  
 ## How Is a Note Used in a Ticketing System?
@@ -28,7 +28,7 @@ Every action, observation, and decision made during ticket handling should be lo
 - Approvals (e.g., “Password reset authorized by John Smith.”)
 - Reference to documentation (e.g., “Followed procedure in KB12345 [Microsoft].”)
 
-<strong>Best Practice:</strong>Never record passwords or sensitive credentials directly. Reference secure credential management solutions (e.g., [IT Glue](https://www.itglue.com/)) instead.
+**Best Practice:**Never record passwords or sensitive credentials directly. Reference secure credential management solutions (e.g., [IT Glue](https://www.itglue.com/)) instead.
 ### 2. Knowledge Transfer and Collaboration
 
 Internal notes serve as the institutional memory of the help desk. They allow:
@@ -50,17 +50,17 @@ Notes are crucial for audits, dispute resolution, and performance reviews.
 
 Well-structured notes are mined by AI systems to enable:
 
-- <strong>AI-generated ticket summaries:</strong>Concise overviews for triage and reporting ([example from Zendesk](https://www.zendesk.com/blog/ai-powered-ticketing/)).
-- <strong>Intent detection and routing:</strong>AI analyzes note content to classify and route tickets automatically.
-- <strong>Knowledge base improvement:</strong>Recurring issues and solutions captured in notes feed KB article recommendations and automation triggers.
+- **AI-generated ticket summaries:**Concise overviews for triage and reporting ([example from Zendesk](https://www.zendesk.com/blog/ai-powered-ticketing/)).
+- **Intent detection and routing:**AI analyzes note content to classify and route tickets automatically.
+- **Knowledge base improvement:**Recurring issues and solutions captured in notes feed KB article recommendations and automation triggers.
 ## Essential Elements of a High-Quality Note
 
 A well-written note is:
 
-- <strong>Detailed and specific:</strong>Explains what was done, why, and how, avoiding vague statements.
-- <strong>Chronological:</strong>Records actions in the order performed.
-- <strong>Action-oriented:</strong>States both completed and pending actions.
-- <strong>Compliant:</strong>Excludes sensitive data, instead referencing secure storage.
+- **Detailed and specific:**Explains what was done, why, and how, avoiding vague statements.
+- **Chronological:**Records actions in the order performed.
+- **Action-oriented:**States both completed and pending actions.
+- **Compliant:**Excludes sensitive data, instead referencing secure storage.
 
 | Vague Note                                 | Specific Note                                                                                 |
 |---------------------------------------------|----------------------------------------------------------------------------------------------|
@@ -69,7 +69,7 @@ A well-written note is:
 | Logged in using domain admin password.      | Logged in as acme\itadmin. Password reference: IT Glue. Action: reset user account.          |
 | Fixed issue.                               | Uninstalled/reinstalled printer driver. Tested with user. Issue confirmed resolved.           |
 
-<strong>Do Not Include:</strong>- Passwords or credentials
+**Do Not Include:**- Passwords or credentials
 - Sensitive client documents
 - Credit card or financial information
 ## Best Practices for Writing Notes
@@ -94,12 +94,10 @@ A well-written note is:
 
 End each ticket with a standardized summary line:
 
-- <strong>TICKET RESOLVED</strong>– No further action required.
-- <strong>NEXT STEPS [description]</strong>– Further actions planned and scheduled.
-- <strong>WAITING FOR [person/action]</strong>– Awaiting external input.
-- <strong>ESCALATION REQUIRED</strong>– Needs reassignment or higher-level intervention.
-
-<strong>Example:</strong>```
+- **TICKET RESOLVED**– No further action required.
+- **NEXT STEPS [description]**– Further actions planned and scheduled.
+- **WAITING FOR [person/action]**– Awaiting external input.
+- **ESCALATION REQUIRED**– Needs reassignment or higher-level intervention.**Example:**```
 - Called client. No answer. Left VM.
 - Emailed client troubleshooting steps.
 - Logged into server via RMM. Restarted print spooler.

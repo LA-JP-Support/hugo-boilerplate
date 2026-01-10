@@ -20,152 +20,128 @@ An API endpoint is like the marked, guarded entrance to a secure building. Endpo
 
 ## Why API Endpoint Configuration Matters
 
-<strong>Integration</strong>- APIs expose functions and data to other systems, enabling integration across platforms, devices, and organizations
-
-<strong>Automation</strong>- APIs let workflows, chatbots, and business processes be triggered or manipulated by code—key for modern automation
-
-<strong>Security</strong>- Misconfigured endpoints are a leading cause of data breaches
+**Integration**- APIs expose functions and data to other systems, enabling integration across platforms, devices, and organizations**Automation**- APIs let workflows, chatbots, and business processes be triggered or manipulated by code—key for modern automation**Security**- Misconfigured endpoints are a leading cause of data breaches
 - Proper configuration controls access and protects data
 
-<strong>Scalability</strong>- Well-structured endpoints support millions of users and requests without bottlenecks
-
-<strong>Maintainability</strong>- Clear, versioned, documented endpoints are easier to evolve without breaking clients
-
-<strong>Reliability</strong>- Monitoring, rate limiting, and input validation help prevent downtime and abuse
+**Scalability**- Well-structured endpoints support millions of users and requests without bottlenecks**Maintainability**- Clear, versioned, documented endpoints are easier to evolve without breaking clients**Reliability**- Monitoring, rate limiting, and input validation help prevent downtime and abuse
 
 ## How API Endpoint Configuration Works
 
-<strong>Defining and Exposing the Workflow</strong>- URL path: Unique web address like `/api/v1/users` or `/api/v1/chat/send`
+**Defining and Exposing the Workflow**- URL path: Unique web address like `/api/v1/users` or `/api/v1/chat/send`
 - Methods: HTTP verbs (GET retrieve, POST create, PUT/PATCH update, DELETE remove)
 - Input parameters: Data required from caller (query parameters, headers, JSON bodies)
 - Response structure: What the API returns, usually JSON
 
-<strong>Configuring Security and Access</strong>- Authentication: API keys, OAuth 2.0, JWTs, or mutual TLS to verify identities
+**Configuring Security and Access**- Authentication: API keys, OAuth 2.0, JWTs, or mutual TLS to verify identities
 - Authorization: Role-based access controls, scopes, and permissions
 - Rate limiting: Restricting request frequency to prevent abuse
 
-<strong>Documenting the Endpoint</strong>- API documentation details every endpoint's purpose, parameters, request/response examples, error codes
+**Documenting the Endpoint**- API documentation details every endpoint's purpose, parameters, request/response examples, error codes
 - Tools: OpenAPI/Swagger, Postman for interactive, machine-readable documentation
 
-<strong>Monitoring and Logging</strong>- Usage tracking: Collect metrics on calls, errors, latency
+**Monitoring and Logging**- Usage tracking: Collect metrics on calls, errors, latency
 - Alerting: Notify admins if error rates spike or abnormal patterns occur
 
 ## Core Components
 
 | Component | Description | Example |
 |-----------|-------------|---------|
-| <strong>Endpoint URL</strong>| Digital address of the API resource | `/api/v1/users/{userId}/messages` |
-| <strong>HTTP Methods</strong>| Allowed actions (GET, POST, PUT, DELETE, PATCH) | `POST /api/v1/chat/send` |
-| <strong>Query Parameters</strong>| Optional filters/modifiers in URL | `/users?active=true&role=admin` |
-| <strong>Request Body</strong>| Data sent in POST/PUT requests | `{ "message": "Hello" }` |
-| <strong>Headers</strong>| Metadata (authentication tokens, content types) | `Authorization: Bearer <token>` |
-| <strong>Versioning</strong>| Managing changes without breaking clients | `/api/v1/...` or `?version=2` |
-| <strong>Input Validation</strong>| Ensuring incoming data is correct and safe | Check for valid email, no SQL injection |
-| <strong>Authentication</strong>| Verifying identity | Require API key in header |
-| <strong>Rate Limiting</strong>| Preventing abuse by capping requests | 1000 requests per hour per user |
-| <strong>Monitoring</strong>| Tracking uptime, errors, usage | Alert if error rate exceeds threshold |
+| **Endpoint URL**| Digital address of the API resource | `/api/v1/users/{userId}/messages` |
+| **HTTP Methods**| Allowed actions (GET, POST, PUT, DELETE, PATCH) | `POST /api/v1/chat/send` |
+| **Query Parameters**| Optional filters/modifiers in URL | `/users?active=true&role=admin` |
+| **Request Body**| Data sent in POST/PUT requests | `{ "message": "Hello" }` |
+| **Headers**| Metadata (authentication tokens, content types) | `Authorization: Bearer <token>` |
+| **Versioning**| Managing changes without breaking clients | `/api/v1/...` or `?version=2` |
+| **Input Validation**| Ensuring incoming data is correct and safe | Check for valid email, no SQL injection |
+| **Authentication**| Verifying identity | Require API key in header |
+| **Rate Limiting**| Preventing abuse by capping requests | 1000 requests per hour per user |
+| **Monitoring**| Tracking uptime, errors, usage | Alert if error rate exceeds threshold |
 
 ## Design Best Practices
 
-<strong>Use Resource-Oriented, Predictable URLs</strong>- Nouns not verbs: `/users`, `/orders/123` (not `/getUser` or `/createOrder`)
+**Use Resource-Oriented, Predictable URLs**- Nouns not verbs: `/users`, `/orders/123` (not `/getUser` or `/createOrder`)
 - Plural nouns for collections: `/users`, `/messages`
 - Hierarchical structure: `/users/{userId}/orders/{orderId}`
 
-<strong>Version Your Endpoints</strong>- In the path: `/api/v1/`
+**Version Your Endpoints**- In the path: `/api/v1/`
 - Via query parameter: `/api/resource?version=2`
 - Via header: `Accepts-version: 2.0`
 
-<strong>Set Clear Input and Output Schemas</strong>- Use JSON as the standard format
+**Set Clear Input and Output Schemas**- Use JSON as the standard format
 - Validate input: Enforce types, required fields, length constraints, allowed values
 - Document all error codes: Use standard HTTP status codes (200, 400, 401, 404, 500)
 
-<strong>Pagination, Filtering, Sorting</strong>- For collections, support `limit`, `offset`, or `page` parameters
+**Pagination, Filtering, Sorting**- For collections, support `limit`, `offset`, or `page` parameters
 - Allow query parameters for search and sort (`/orders?status=shipped&sort=desc`)
 
-<strong>Error Handling</strong>- Standard status codes: 200 OK, 400 Bad Request, 401 Unauthorized, 404 Not Found, 500 Server Error
+**Error Handling**- Standard status codes: 200 OK, 400 Bad Request, 401 Unauthorized, 404 Not Found, 500 Server Error
 - Helpful error messages: Provide enough information for troubleshooting without leaking sensitive details
 
 ## Security Best Practices
 
-<strong>Why Security Is Critical</strong>- APIs are a top attack vector
+**Why Security Is Critical**- APIs are a top attack vector
 - High-profile breaches have stemmed from misconfigured endpoints
 - In 2021, there were 5.4 million API attacks (up 42% YoY)
 
-<strong>Key Security Principles</strong>
+**Key Security Principles**
 
-<strong>Always Use a Gateway</strong>- Centralize traffic control, rate limiting, logging, and threat blocking
-
-<strong>Authentication & Authorization</strong>- Use strong, unique tokens (OAuth 2.0, JWTs, API keys)
+**Always Use a Gateway**- Centralize traffic control, rate limiting, logging, and threat blocking**Authentication & Authorization**- Use strong, unique tokens (OAuth 2.0, JWTs, API keys)
 - Centralize OAuth server for issuing tokens
 - Use role-based access controls
 
-<strong>TLS/SSL Encryption</strong>- Enforce HTTPS
+**TLS/SSL Encryption**- Enforce HTTPS
 - Never expose endpoints over plain HTTP
 
-<strong>Input Validation & Sanitization</strong>- Prevent SQL injection, XSS, command injection
+**Input Validation & Sanitization**- Prevent SQL injection, XSS, command injection
 - Validate types, patterns, length
 
-<strong>Rate Limiting & Throttling</strong>- Control request rates to prevent DDoS and brute-force attacks
+**Rate Limiting & Throttling**- Control request rates to prevent DDoS and brute-force attacks
 - Tailor limits per endpoint or user role
 
-<strong>Monitoring & Auditing</strong>- Log all access, errors, and anomalies
+**Monitoring & Auditing**- Log all access, errors, and anomalies
 - Detect and alert on suspicious activity
 - Conduct regular security audits and penetration testing
 
-<strong>Token Handling</strong>- Use JWTs internally, opaque tokens externally
+**Token Handling**- Use JWTs internally, opaque tokens externally
 - Use token exchange flows for service-to-service calls
 
-<strong>Patch & Update</strong>- Keep all API versions patched against known vulnerabilities
+**Patch & Update**- Keep all API versions patched against known vulnerabilities
 
 ## Monitoring and Testing
 
-<strong>Why Monitor?</strong>- Detect abnormal API usage, brute-force attempts, or data exfiltration
+**Why Monitor?**- Detect abnormal API usage, brute-force attempts, or data exfiltration
 - Identify "shadow" or "zombie" APIs (unmonitored, forgotten endpoints)
 - Prove compliance and audit trails
 
-<strong>Monitoring Best Practices</strong>- Baseline activity: Understand normal traffic patterns to detect anomalies
+**Monitoring Best Practices**- Baseline activity: Understand normal traffic patterns to detect anomalies
 - Centralize logging: Aggregate logs from all APIs into a single platform
 - Integrate with security operations: Link monitoring tools with incident response
 - Monitor third-party integrations: Watch for compromise in dependencies
 - CI/CD integration: Scan for vulnerabilities before deployment
 - Patch management: Update and maintain all API components
 
-<strong>Testing API Endpoints</strong>- Functional testing: Does the endpoint return expected results for valid/invalid inputs?
+**Testing API Endpoints**- Functional testing: Does the endpoint return expected results for valid/invalid inputs?
 - Load testing: Can it handle high traffic without performance degradation?
 - Security testing: Is it resilient to injection, spoofing, and other attacks?
 - Synthetic monitoring: Automated uptime checks from multiple locations
 
 ## Documentation Essentials
 
-<strong>Purpose</strong>- Explains what each endpoint does
-
-<strong>Parameters</strong>- Lists required/optional query/body/header parameters with types and constraints
-
-<strong>Sample Requests/Responses</strong>- Includes real-world examples
-
-<strong>Error Codes</strong>- Documents all possible error responses
-
-<strong>Authentication Requirements</strong>- Clarifies which endpoints require what auth
-
-<strong>Tools</strong>- OpenAPI/Swagger: Machine-readable specs, interactive docs, SDK generation
+**Purpose**- Explains what each endpoint does**Parameters**- Lists required/optional query/body/header parameters with types and constraints**Sample Requests/Responses**- Includes real-world examples**Error Codes**- Documents all possible error responses**Authentication Requirements**- Clarifies which endpoints require what auth**Tools**- OpenAPI/Swagger: Machine-readable specs, interactive docs, SDK generation
 - Postman: Collections for testing and sharing
 
 ## Real-World Examples
 
-<strong>AI Chatbot Endpoint</strong>```http
+**AI Chatbot Endpoint**```http
 POST https://api.chatbotplatform.com/v1/conversation/send
 {
   "sessionId": "abc123",
   "message": "What's the weather?"
 }
-```
-
-**Twitter API Endpoint**```
+```**Twitter API Endpoint**```
 GET https://api.twitter.com/2/tweets/{id}
 Authorization: Bearer <token>
-```
-
-<strong>AWS API Gateway Endpoint Types</strong>```json
+```**AWS API Gateway Endpoint Types**```json
 {
   "types": ["REGIONAL"],
   "ipAddressType": "dualstack"
@@ -174,13 +150,7 @@ Authorization: Bearer <token>
 
 ## Common Use Cases
 
-**CRM Integration**- Chatbot updates Salesforce via `POST /api/v1/leads/update`
-
-**Triggering Automation**- Support system triggers workflow via `POST /api/v1/automation/start`
-
-**Social Media Bots**- Scheduled posts via Twitter endpoints
-
-**Unified Chatbots**- Multi-channel bots using a single `/api/v1/chat/send`
+**CRM Integration**- Chatbot updates Salesforce via `POST /api/v1/leads/update`**Triggering Automation**- Support system triggers workflow via `POST /api/v1/automation/start`**Social Media Bots**- Scheduled posts via Twitter endpoints**Unified Chatbots**- Multi-channel bots using a single `/api/v1/chat/send`
 
 ## References
 

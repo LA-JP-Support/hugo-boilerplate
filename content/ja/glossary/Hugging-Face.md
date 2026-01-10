@@ -21,33 +21,13 @@ url: "/ja/glossary/Hugging-Face/"
 
 Hugging Faceは、機械学習と人工知能の民主化に焦点を当てたオープンソースのAIプラットフォームおよびグローバルコミュニティです。自然言語処理(NLP)、コンピュータビジョン、音声、マルチモーダルAIなどの領域にわたって、機械学習モデル、データセット、アプリケーションの共有、発見、デプロイのための統合されたエコシステムを提供しています。
 
-<strong>ミッション:</strong>AIをすべての人にとってアクセス可能で透明性のあるものにする。
-
-<strong>アプローチ:</strong>オープンソースライブラリ、協調的なモデルとデータセットの共有、シームレスなデプロイツール。
-
-<strong>インパクト:</strong>数百万人のユーザーをサポートし、200万以上のモデル、50万以上のデータセット、100万以上のデモアプリケーション(「Spaces」)を提供。これらのリソースは、研究者、開発者、企業が最先端のAIソリューションを構築・デプロイするのを支援しています。
+**ミッション:**AIをすべての人にとってアクセス可能で透明性のあるものにする。**アプローチ:**オープンソースライブラリ、協調的なモデルとデータセットの共有、シームレスなデプロイツール。**インパクト:**数百万人のユーザーをサポートし、200万以上のモデル、50万以上のデータセット、100万以上のデモアプリケーション(「Spaces」)を提供。これらのリソースは、研究者、開発者、企業が最先端のAIソリューションを構築・デプロイするのを支援しています。
 
 Hugging Faceは「AIのためのGitHub」として機能し、誰もが事前学習済みモデルやデータを協力、貢献、活用して高度なAIアプリケーションを構築できます。
 
 ## 主要用語
 
-<strong>モデル:</strong>特定のタスク(テキスト分類、画像認識、音声テキスト変換)を実行するために訓練された機械学習の成果物。モデルは事前学習済みまたはファインチューニング済みの場合があります。
-
-<strong>Model Hub:</strong>機械学習モデルの保存、共有、発見のための集中リポジトリ。モデルカード(ドキュメント)、バージョン管理、ライブデモ、主要なMLライブラリとの統合をサポートします。
-
-<strong>データセット:</strong>機械学習モデルの訓練、評価、ベンチマークのためのデータサンプル(テキスト、画像、音声)の構造化されたコレクション。
-
-<strong>Datasets Hub:</strong>キュレーションされたデータセットのリポジトリで、データセットカード、バージョン管理、メタデータ、Datasetsライブラリを介したプログラマティックアクセスを提供します。
-
-<strong>Transformers:</strong>「Attention is All You Need」論文(Vaswani et al., 2017)で導入された、自己注意機構に基づくニューラルネットワークアーキテクチャ。NLPで広く使用され、ビジョン、音声、マルチモーダルタスクでも増加傾向にあります。
-
-<strong>Transformersライブラリ:</strong>Transformerベースのモデル(BERT、GPT、T5)への簡単なアクセス、トークン化、訓練、推論のためのユーティリティを提供するPythonライブラリ。
-
-<strong>Space:</strong>インタラクティブなデモ、プロトタイプ、ML駆動アプリケーションのためのHugging Face上でホストされるWebアプリケーション。Gradio、Streamlit、カスタムフレームワークをサポートします。
-
-<strong>LLM(大規模言語モデル):</strong>数億から数十億のパラメータを持つTransformerベースのモデルで、高度なテキスト生成、理解、翻訳、推論が可能です。
-
-<strong>ZeroGPU:</strong>ユーザーが専用GPUインスタンスを設定または支払う必要なく、SpacesでGPUアクセスを可能にする機能。
+**モデル:**特定のタスク(テキスト分類、画像認識、音声テキスト変換)を実行するために訓練された機械学習の成果物。モデルは事前学習済みまたはファインチューニング済みの場合があります。**Model Hub:**機械学習モデルの保存、共有、発見のための集中リポジトリ。モデルカード(ドキュメント)、バージョン管理、ライブデモ、主要なMLライブラリとの統合をサポートします。**データセット:**機械学習モデルの訓練、評価、ベンチマークのためのデータサンプル(テキスト、画像、音声)の構造化されたコレクション。**Datasets Hub:**キュレーションされたデータセットのリポジトリで、データセットカード、バージョン管理、メタデータ、Datasetsライブラリを介したプログラマティックアクセスを提供します。**Transformers:**「Attention is All You Need」論文(Vaswani et al., 2017)で導入された、自己注意機構に基づくニューラルネットワークアーキテクチャ。NLPで広く使用され、ビジョン、音声、マルチモーダルタスクでも増加傾向にあります。**Transformersライブラリ:**Transformerベースのモデル(BERT、GPT、T5)への簡単なアクセス、トークン化、訓練、推論のためのユーティリティを提供するPythonライブラリ。**Space:**インタラクティブなデモ、プロトタイプ、ML駆動アプリケーションのためのHugging Face上でホストされるWebアプリケーション。Gradio、Streamlit、カスタムフレームワークをサポートします。**LLM(大規模言語モデル):**数億から数十億のパラメータを持つTransformerベースのモデルで、高度なテキスト生成、理解、翻訳、推論が可能です。**ZeroGPU:**ユーザーが専用GPUインスタンスを設定または支払う必要なく、SpacesでGPUアクセスを可能にする機能。
 
 ## コアプラットフォームコンポーネント
 
@@ -55,20 +35,18 @@ Hugging Faceは「AIのためのGitHub」として機能し、誰もが事前学
 
 機械学習モデルの共有、発見、使用のための中心的なプラットフォーム。高品質なモデルをすべての人にアクセス可能にし、研究、開発、本番デプロイを加速するように設計されています。
 
-<strong>主要機能:</strong>- タスク(テキスト生成、分類)、アーキテクチャ(BERT、GPT)、データセット、言語でモデルを検索・フィルタリング
+**主要機能:**- タスク(テキスト生成、分類)、アーキテクチャ(BERT、GPT)、データセット、言語でモデルを検索・フィルタリング
 - モデルカード: 使用目的、訓練データ、制限事項、バイアス、ライセンスをカバーする充実したドキュメント
 - バージョン管理: すべてのモデル更新を追跡し、再現性、ロールバック、コラボレーションをサポート
 - 主要なMLライブラリ(Transformers、PyTorch、TensorFlow、Flax、JAX)との統合
 - インタラクティブな推論とライブデモンストレーションのためのブラウザ内モデルウィジェット
 - エコシステムの洞察のためのダウンロード統計、タグ、メタデータ
 
-<strong>メリット:</strong>- 事前学習済みモデルを活用することで、ゼロからの訓練の必要性を削減
+**メリット:**- 事前学習済みモデルを活用することで、ゼロからの訓練の必要性を削減
 - プロトタイピングと本番デプロイを加速
 - 透明性のあるドキュメントを通じて責任あるAIと倫理的なAIを促進
 
-<strong>人気のモデル:</strong>BERT、RoBERTa、GPT-2、GPT-3、GPT-4(NLP)、Stable Diffusion、DeepSeek、Z-Image-Turbo(ビジョン/マルチモーダル)、Whisper(音声)
-
-<strong>使用例:</strong>```python
+**人気のモデル:**BERT、RoBERTa、GPT-2、GPT-3、GPT-4(NLP)、Stable Diffusion、DeepSeek、Z-Image-Turbo(ビジョン/マルチモーダル)、Whisper(音声)**使用例:**```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 model = AutoModelForCausalLM.from_pretrained("gpt2")
 tokenizer = AutoTokenizer.from_pretrained("gpt2")
@@ -85,11 +63,7 @@ tokenizer = AutoTokenizer.from_pretrained("gpt2")
 - Data Studio: ブラウザベースのインタラクティブなデータセット探索
 - 大規模MLのためのストリーミングとオンザフライのデータ処理
 
-**統合:**高速でプログラマティックなアクセスと効率的なデータ処理のためのHugging Face Datasetsライブラリ。複数のデータフォーマット(CSV、JSON、Parquet、画像、音声、動画)をサポートします。
-
-**人気のデータセット:**Common Crawl、OpenWebText(Web規模のLLM訓練)、SQuAD、MNLI、GLUE(NLPベンチマーク)
-
-**使用例:**```python
+**統合:**高速でプログラマティックなアクセスと効率的なデータ処理のためのHugging Face Datasetsライブラリ。複数のデータフォーマット(CSV、JSON、Parquet、画像、音声、動画)をサポートします。**人気のデータセット:**Common Crawl、OpenWebText(Web規模のLLM訓練)、SQuAD、MNLI、GLUE(NLPベンチマーク)**使用例:**```python
 from datasets import load_dataset
 dataset = load_dataset("squad")
 print(dataset["train"][0])
@@ -99,14 +73,14 @@ print(dataset["train"][0])
 
 機械学習アプリケーションとインタラクティブなWebアプリのホスティング、共有、デモのためのプラットフォーム。個人やチームがバックエンドやインフラストラクチャの手間なしにモデルや実験を紹介できるようにします。
 
-<strong>機能:</strong>- Gradio、Streamlit、静的HTML/JS、Dockerで構築されたインタラクティブなアプリをホスト
+**機能:**- Gradio、Streamlit、静的HTML/JS、Dockerで構築されたインタラクティブなアプリをホスト
 - Hubのモデルとデータセットとの直接統合
 - 計算集約的なデモのためのZeroGPUによるGPUアクセラレーション
 - データ保持が必要なアプリのための永続ストレージオプション
 - ライブ開発とデバッグのためのSpaces Dev Mode
 - いいね、タグ、共有を通じたコミュニティエンゲージメント
 
-<strong>メリット:</strong>- 研究、デモ、プロトタイプをグローバルな視聴者に紹介
+**メリット:**- 研究、デモ、プロトタイプをグローバルな視聴者に紹介
 - フィードバックを収集し、コラボレーションを促進
 - プロフェッショナルなポートフォリオを構築または学習リソースを共有
 
@@ -114,12 +88,12 @@ print(dataset["train"][0])
 
 管理されたクラウドインフラストラクチャ上でHugging Faceモデルのスケーラブルでサーバーレスなデプロイを可能にします。ハードウェア、スケーリング、システム信頼性の複雑さを抽象化します。
 
-<strong>仕組み:</strong>- Hubからモデルを選択
+**仕組み:**- Hubからモデルを選択
 - 推論プロバイダー(SambaNova、Replicate、Together AI)を選択
 - 自動スケーリングと監視を備えたREST APIエンドポイント経由でモデルをデプロイ・提供
 - 従量課金制の価格設定またはProサブスクリプションでの無料クォータ
 
-<strong>例:</strong>```python
+**例:**```python
 from huggingface_hub import InferenceClient
 
 client = InferenceClient()
@@ -129,9 +103,7 @@ print(result.generated_text)
 
 ### コアライブラリ
 
-**Transformers:**ドメイン全体でTransformerモデルを扱うためのフラッグシップオープンソースPythonパッケージ。PyTorch、TensorFlow、JAX/Flax互換性を持つ数百のモデルアーキテクチャをロード、ファインチューニング、デプロイします。
-
-**その他の注目すべきライブラリ:**- **Datasets**– 高速でメモリ効率の良いデータロードと処理
+**Transformers:**ドメイン全体でTransformerモデルを扱うためのフラッグシップオープンソースPythonパッケージ。PyTorch、TensorFlow、JAX/Flax互換性を持つ数百のモデルアーキテクチャをロード、ファインチューニング、デプロイします。**その他の注目すべきライブラリ:**-**Datasets**– 高速でメモリ効率の良いデータロードと処理
 - **Tokenizers**– 高速でカスタマイズ可能なテキストトークン化
 - **Diffusers**– 生成AIのための最先端の拡散モデル
 - **Safetensors**– 安全で高性能なモデル重みストレージ
@@ -159,9 +131,7 @@ from transformers import pipeline
 generator = pipeline("text-generation", model="gpt2")
 result = generator("Hugging Face is", max_length=30)
 print(result[0]['generated_text'])
-```
-
-<strong>感情分析のためのファインチューニング:</strong>```python
+```**感情分析のためのファインチューニング:**```python
 from transformers import Trainer, TrainingArguments, AutoModelForSequenceClassification, AutoTokenizer
 from datasets import load_dataset
 
@@ -189,35 +159,23 @@ trainer = Trainer(
     eval_dataset=tokenized_dataset["test"],
 )
 trainer.train()
-```
-
-**デモアプリの構築:**- モデルを使用してGradioまたはStreamlitアプリを開発
+```**デモアプリの構築:**- モデルを使用してGradioまたはStreamlitアプリを開発
 - コードと要件をSpaceにアップロード
 - 公開URLを介してアプリケーションを共有
 
 ## ユースケース
 
-**研究開発:**事前学習済みモデルによる迅速なプロトタイピング。標準化されたデータセットでのベンチマーク。モデル改善での協力。
-
-**本番デプロイ:**推論エンドポイント経由でモデルを提供。Web/モバイル/バックエンドシステムへの統合。クラウドインフラストラクチャでのスケーリング。
-
-**教育と学習:**チュートリアル、コース、ドキュメントへのアクセス。最先端モデルでの実験。ポートフォリオプロジェクトの構築。
-
-**ビジネスアプリケーション:**AI駆動のチャットボット、推薦システム、検索エンジンの構築。独自データでのモデルのファインチューニング。プライベートモデルでの安全なデプロイ。
+**研究開発:**事前学習済みモデルによる迅速なプロトタイピング。標準化されたデータセットでのベンチマーク。モデル改善での協力。**本番デプロイ:**推論エンドポイント経由でモデルを提供。Web/モバイル/バックエンドシステムへの統合。クラウドインフラストラクチャでのスケーリング。**教育と学習:**チュートリアル、コース、ドキュメントへのアクセス。最先端モデルでの実験。ポートフォリオプロジェクトの構築。**ビジネスアプリケーション:**AI駆動のチャットボット、推薦システム、検索エンジンの構築。独自データでのモデルのファインチューニング。プライベートモデルでの安全なデプロイ。
 
 ## はじめに
 
-**サインアップ:**huggingface.co/joinで無料アカウントを作成
-
-**探索:**- Model Hubを閲覧: huggingface.co/models
+**サインアップ:**huggingface.co/joinで無料アカウントを作成**探索:**- Model Hubを閲覧: huggingface.co/models
 - Datasets Hubを閲覧: huggingface.co/datasets
 - Spacesを閲覧: huggingface.co/spaces
 
 **ライブラリのインストール:**```bash
 pip install transformers datasets gradio
-```
-
-<strong>最初のモデルを実行:</strong>```python
+```**最初のモデルを実行:**```python
 from transformers import pipeline
 classifier = pipeline("sentiment-analysis")
 result = classifier("Hugging Face is amazing!")

@@ -48,31 +48,11 @@ Individual micro-frontends compose into the overall application at runtime, crea
 
 ## Key Benefits
 
-<strong>Incremental Modernization:</strong>Enable "strangler fig" pattern—incrementally replacing legacy sections with new micro-frontends, reducing migration risk compared to big-bang rewrites.
-
-<strong>Simpler Codebases:</strong>Each micro-frontend is smaller and more focused, reducing cognitive load and error rates for developers. Easier to understand, test, and maintain.
-
-<strong>Independent Deployment:</strong>Teams deploy micro-frontends independently, enabling faster release cycles and reduced coordination overhead. Fixes or features don't require global redeployment.
-
-<strong>Team Scalability:</strong>Multiple teams develop and ship features in parallel, accelerating delivery and scaling development capacity—vital for large organizations with complex products.
-
-<strong>Technology Flexibility:</strong>Teams can experiment with new frameworks or languages without impacting entire application. Easier to adopt emerging technologies incrementally.
-
-<strong>Improved Resilience:</strong>Failure in one micro-frontend is isolated, minimizing user impact. Lazy loading improves initial load performance by delivering only required components per route.
+**Incremental Modernization:**Enable "strangler fig" pattern—incrementally replacing legacy sections with new micro-frontends, reducing migration risk compared to big-bang rewrites.**Simpler Codebases:**Each micro-frontend is smaller and more focused, reducing cognitive load and error rates for developers. Easier to understand, test, and maintain.**Independent Deployment:**Teams deploy micro-frontends independently, enabling faster release cycles and reduced coordination overhead. Fixes or features don't require global redeployment.**Team Scalability:**Multiple teams develop and ship features in parallel, accelerating delivery and scaling development capacity—vital for large organizations with complex products.**Technology Flexibility:**Teams can experiment with new frameworks or languages without impacting entire application. Easier to adopt emerging technologies incrementally.**Improved Resilience:**Failure in one micro-frontend is isolated, minimizing user impact. Lazy loading improves initial load performance by delivering only required components per route.
 
 ## Challenges and Trade-offs
 
-<strong>Operational Complexity:</strong>Managing multiple deployment pipelines, versioning, and monitoring introduces overhead. Coordinating cross-team changes can become complex.
-
-<strong>Bundle Size Concerns:</strong>Different library versions can increase bundle size through dependency duplication, resulting in slower load times. Requires careful dependency management.
-
-<strong>Governance Balance:</strong>Too much technology freedom can lead to "framework anarchy," making consistent user experience difficult and increasing maintenance costs. Need governance without excessive constraints.
-
-<strong>CSS and Namespace Management:</strong>Without isolation (CSS modules, Shadow DOM, strict conventions), styles and global variables can leak between micro-frontends causing bugs and visual inconsistencies.
-
-<strong>Communication Complexity:</strong>Defining robust, decoupled communication mechanisms between micro-frontends is non-trivial, especially for complex workflows requiring coordination.
-
-<strong>Testing Requirements:</strong>Ensuring end-to-end quality when application assembles from independently deployed parts requires effective integration and regression testing strategies.
+**Operational Complexity:**Managing multiple deployment pipelines, versioning, and monitoring introduces overhead. Coordinating cross-team changes can become complex.**Bundle Size Concerns:**Different library versions can increase bundle size through dependency duplication, resulting in slower load times. Requires careful dependency management.**Governance Balance:**Too much technology freedom can lead to "framework anarchy," making consistent user experience difficult and increasing maintenance costs. Need governance without excessive constraints.**CSS and Namespace Management:**Without isolation (CSS modules, Shadow DOM, strict conventions), styles and global variables can leak between micro-frontends causing bugs and visual inconsistencies.**Communication Complexity:**Defining robust, decoupled communication mechanisms between micro-frontends is non-trivial, especially for complex workflows requiring coordination.**Testing Requirements:**Ensuring end-to-end quality when application assembles from independently deployed parts requires effective integration and regression testing strategies.
 
 ## Integration Patterns
 
@@ -80,35 +60,29 @@ Individual micro-frontends compose into the overall application at runtime, crea
 
 Server assembles final HTML page from fragments served by each micro-frontend.
 
-<strong>Advantages:</strong>Strong isolation, universal rendering, minimal client-side JavaScript.
-
-<strong>Disadvantages:</strong>Limited interactivity, coarse updates, slower for dynamic UIs.
-
-<strong>Example:</strong>Nginx SSI (Server Side Includes).
+**Advantages:**Strong isolation, universal rendering, minimal client-side JavaScript.**Disadvantages:**Limited interactivity, coarse updates, slower for dynamic UIs.**Example:**Nginx SSI (Server Side Includes).
 
 ### Build-Time Integration
 
 Micro-frontends published as libraries (npm packages) and imported by container application at build time.
 
-<strong>Advantages:</strong>Deduplicated dependencies, optimized bundles.
-
-<strong>Disadvantages:</strong>Loses independent deployment, requires coordinated releases.
+**Advantages:**Deduplicated dependencies, optimized bundles.**Disadvantages:**Loses independent deployment, requires coordinated releases.
 
 ### Run-Time Integration
 
-<strong>Iframes:</strong>Each micro-frontend loads in iframe, with container managing visibility.
+**Iframes:**Each micro-frontend loads in iframe, with container managing visibility.
 - Pros: Maximum isolation, security
 - Cons: Clumsy navigation, poor communication, performance overhead
 
-<strong>JavaScript Entry Points:</strong>Each micro-frontend exposes global render function called by container.
+**JavaScript Entry Points:**Each micro-frontend exposes global render function called by container.
 - Pros: Flexible, independent deployments
 - Cons: Namespace collisions, dependency management challenges
 
-<strong>Web Components:</strong>Distributed as custom HTML elements leveraging Shadow DOM for encapsulation.
+**Web Components:**Distributed as custom HTML elements leveraging Shadow DOM for encapsulation.
 - Pros: Strong encapsulation, tech stack agnostic, native browser support
 - Cons: Advanced communication complexity
 
-<strong>Module Federation (Webpack 5+):</strong>Runtime loading and sharing of code between separately built applications.
+**Module Federation (Webpack 5+):**Runtime loading and sharing of code between separately built applications.
 - Pros: Dynamic loading, fine-grained sharing
 - Cons: Requires careful configuration and operational discipline
 
@@ -116,15 +90,11 @@ Micro-frontends published as libraries (npm packages) and imported by container 
 
 ### Food Delivery Application Architecture
 
-<strong>Domain Decomposition:</strong>- Browse Restaurants: Search and filter functionality
+**Domain Decomposition:**- Browse Restaurants: Search and filter functionality
 - Order Page: Menu selection, customization, checkout
 - User Profile: Account settings, order history
 
-<strong>Team Structure:</strong>Each page is a micro-frontend owned by dedicated team.
-
-<strong>Integration:</strong>Container app provides global layout, navigation, shared services. Micro-frontends load dynamically as users navigate.
-
-<strong>Web Components Implementation:</strong>```javascript
+**Team Structure:**Each page is a micro-frontend owned by dedicated team.**Integration:**Container app provides global layout, navigation, shared services. Micro-frontends load dynamically as users navigate.**Web Components Implementation:**```javascript
 class BrowseRestaurants extends HTMLElement {
   connectedCallback() {
     this.innerHTML = '<div>Restaurant browsing interface</div>';
@@ -138,79 +108,57 @@ class OrderFood extends HTMLElement {
   }
 }
 window.customElements.define('order-food', OrderFood);
-```
-
-**Container Composition:**```html
+```**Container Composition:**```html
 <div id="main">
   <browse-restaurants></browse-restaurants>
   <!-- Dynamically swap components based on routing -->
 </div>
-```
-
-<strong>Communication:</strong>Use browser-native CustomEvent, local storage, or event bus for cross-micro-frontend interactions maintaining decoupling.
+```**Communication:**Use browser-native CustomEvent, local storage, or event bus for cross-micro-frontend interactions maintaining decoupling.
 
 ## Best Practices
 
-<strong>Technology Agnosticism:</strong>Enable teams to choose and upgrade stacks independently. Use browser standards (Custom Elements) for integration boundaries.
-
-<strong>Code Isolation:</strong>Avoid shared globals and runtime dependencies. Namespace CSS, events, and storage preventing collisions.
-
-<strong>Robustness:</strong>Support universal/server-side rendering and progressive enhancement for resilience and performance.
-
-<strong>Communication Patterns:</strong>Favor native browser events over custom APIs for decoupled communication between micro-frontends.
-
-<strong>Shared Component Libraries:</strong>Use central libraries for visual consistency, but ensure encapsulation preventing conflicts.
-
-<strong>Framework Governance:</strong>Align on minimal set of frameworks and conventions avoiding fragmentation, while supporting team flexibility.
-
-<strong>Performance Monitoring:</strong>Track bundle sizes, loading times, and runtime performance across micro-frontends identifying optimization opportunities.
+**Technology Agnosticism:**Enable teams to choose and upgrade stacks independently. Use browser standards (Custom Elements) for integration boundaries.**Code Isolation:**Avoid shared globals and runtime dependencies. Namespace CSS, events, and storage preventing collisions.**Robustness:**Support universal/server-side rendering and progressive enhancement for resilience and performance.**Communication Patterns:**Favor native browser events over custom APIs for decoupled communication between micro-frontends.**Shared Component Libraries:**Use central libraries for visual consistency, but ensure encapsulation preventing conflicts.**Framework Governance:**Align on minimal set of frameworks and conventions avoiding fragmentation, while supporting team flexibility.**Performance Monitoring:**Track bundle sizes, loading times, and runtime performance across micro-frontends identifying optimization opportunities.
 
 ## Repository Organization
 
-<strong>Monorepo:</strong>All micro-frontends in single repository.
+**Monorepo:**All micro-frontends in single repository.
 - Pros: Easier code sharing, atomic commits, unified CI/CD
 - Cons: Can become unwieldy, risk of coupling, slower builds
 
-<strong>Multirepo:</strong>Each micro-frontend in own repository.
+**Multirepo:**Each micro-frontend in own repository.
 - Pros: Strong autonomy, independent pipelines
 - Cons: Harder to share code, coordinate cross-repo changes
 
-<strong>Metarepo:</strong>Hybrid approach with multiple repos plus meta-repo for coordination.
+**Metarepo:**Hybrid approach with multiple repos plus meta-repo for coordination.
 - Pros: Balance of autonomy and shared governance
 - Cons: Requires additional tooling and coordination
 
 ## When to Use
 
-<strong>Appropriate Scenarios:</strong>- Large, complex web apps with distinct business domains
+**Appropriate Scenarios:**- Large, complex web apps with distinct business domains
 - Multiple teams needing independent delivery cycles
 - Incremental migration from legacy monoliths
 - Long-term maintainability and feature evolution requirements
 
-<strong>Inappropriate Scenarios:</strong>- Small or single-team applications
+**Inappropriate Scenarios:**- Small or single-team applications
 - Unstable or rapidly evolving business domains
 - Organizational overhead outweighs modularity benefits
 - Rapid prototyping or startups with shifting requirements
 
 ## Use Cases
 
-<strong>E-Commerce:</strong>Product catalog, cart, and account as separate micro-frontends enabling specialized teams for each domain.
-
-<strong>Food Delivery:</strong>Browsing, ordering, user profile as individual micro-frontends optimized for specific workflows.
-
-<strong>Enterprise Portals:</strong>Dashboard, analytics, admin modules built and deployed independently supporting different release cycles.
-
-<strong>SaaS Platforms:</strong>Integrating independently developed features into single product while maintaining team autonomy.
+**E-Commerce:**Product catalog, cart, and account as separate micro-frontends enabling specialized teams for each domain.**Food Delivery:**Browsing, ordering, user profile as individual micro-frontends optimized for specific workflows.**Enterprise Portals:**Dashboard, analytics, admin modules built and deployed independently supporting different release cycles.**SaaS Platforms:**Integrating independently developed features into single product while maintaining team autonomy.
 
 ## Architecture Comparison
 
 | Aspect | Monolithic Frontend | Micro-Frontend Architecture |
 |--------|--------------------|-----------------------------|
-| <strong>Codebase</strong>| Single, large, tightly coupled | Multiple, smaller, decoupled |
-| <strong>Deployment</strong>| All-or-nothing releases | Independent, incremental releases |
-| <strong>Team Structure</strong>| Centralized, cross-team coupling | Decentralized, vertical ownership |
-| <strong>Tech Stack</strong>| One stack for all | Flexible per micro-frontend |
-| <strong>Scaling</strong>| Difficult for teams/features | Teams/features scale independently |
-| <strong>Migration</strong>| High risk, hard | Incremental, low risk |
+| **Codebase**| Single, large, tightly coupled | Multiple, smaller, decoupled |
+| **Deployment**| All-or-nothing releases | Independent, incremental releases |
+| **Team Structure**| Centralized, cross-team coupling | Decentralized, vertical ownership |
+| **Tech Stack**| One stack for all | Flexible per micro-frontend |
+| **Scaling**| Difficult for teams/features | Teams/features scale independently |
+| **Migration**| High risk, hard | Incremental, low risk |
 
 ## References
 

@@ -16,7 +16,7 @@ JSON Path is a query language designed for navigating, extracting, and evaluatin
 
 JSON Path was standardized in RFC 9535 by the IETF, providing uniform syntax and semantics for query expressions. The language has implementations across numerous programming environments including JavaScript, Python, Java, PHP, and SQL databases. Common applications span API testing and validation, ETL processes, database JSON column queries, configuration management, and chatbot data parsing.
 
-<strong>Example Query:</strong>```json
+**Example Query:**```json
 {
   "user": {
     "id": 123,
@@ -40,9 +40,7 @@ JSON Path dramatically simplifies extracting or validating data within deeply ne
 
 ### Root and Path Operators
 
-**Root Object (`$`)**Denotes the root of the JSON document. All paths start with `$`.
-
-**Child Access**- Dot notation: `$.user.name` (simple properties)
+**Root Object (`$`)**Denotes the root of the JSON document. All paths start with `$`.**Child Access**- Dot notation: `$.user.name` (simple properties)
 - Bracket notation: `$['user']['profile']` (special characters, spaces, reserved words)
 - Brackets always use single quotes
 
@@ -158,29 +156,19 @@ Sample JSON for demonstrations:
 **All Book Titles:**```jsonpath
 $.store.book[*].title
 // ["Sayings of the Century", "Sword of Honour", "Moby Dick", "The Lord of the Rings"]
-```
-
-<strong>Fiction Authors:</strong>```jsonpath
+```**Fiction Authors:**```jsonpath
 $.store.book[?(@.category == 'fiction')].author
 // ["Evelyn Waugh", "Herman Melville", "J. R. R. Tolkien"]
-```
-
-**Books Under $10:**```jsonpath
+```**Books Under $10:**```jsonpath
 $.store.book[?(@.price < 10)]
 // Returns two book objects
-```
-
-<strong>All Prices (Recursive):</strong>```jsonpath
+```**All Prices (Recursive):**```jsonpath
 $..price
 // [8.95, 12.99, 8.99, 22.99, 19.95]
-```
-
-**First Two Book Titles:**```jsonpath
+```**First Two Book Titles:**```jsonpath
 $.store.book[0:2].title
 // ["Sayings of the Century", "Sword of Honour"]
-```
-
-<strong>All ISBN Numbers:</strong>```jsonpath
+```**All ISBN Numbers:**```jsonpath
 $.store.book[*].isbn
 // ["0-553-21311-3", "0-395-19395-8"]
 ```
@@ -299,15 +287,13 @@ WHERE JSON_VALUE(value, '$.price') < 10;
 
 ### API Testing and Automation
 
-<strong>Postman Example:</strong>```javascript
+**Postman Example:**```javascript
 // Test response contains expected value
 pm.test("User email is correct", function() {
     const email = jsonpath.query(pm.response.json(), '$.user.email')[0];
     pm.expect(email).to.eql("test@example.com");
 });
-```
-
-**Rest-Assured (Java):**```java
+```**Rest-Assured (Java):**```java
 given()
     .when().get("/api/users")
     .then()
@@ -316,7 +302,7 @@ given()
 
 ### Data Transformation (ETL)
 
-<strong>Extract Errors from Logs:</strong>```python
+**Extract Errors from Logs:**```python
 from jsonpath_ng import parse
 
 errors = [match.value 
@@ -333,7 +319,7 @@ WHERE data @> '{"active": true}';
 
 ### Configuration Management
 
-<strong>Update Config Values:</strong>```javascript
+**Update Config Values:**```javascript
 const config = require('./config.json');
 jsonpath.value(config, '$.database.port', 5432);
 fs.writeFileSync('config.json', JSON.stringify(config, null, 2));
@@ -343,9 +329,7 @@ fs.writeFileSync('config.json', JSON.stringify(config, null, 2));
 
 **Extract User Messages:**```jsonpath
 $.conversation[*].user_message
-```
-
-<strong>Filter by Intent:</strong>```jsonpath
+```**Filter by Intent:**```jsonpath
 $.messages[?(@.intent == 'purchase')].text
 ```
 

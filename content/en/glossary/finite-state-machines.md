@@ -19,42 +19,36 @@ draft: false
 
 A finite state machine (FSM) is a computational model consisting of a finite number of states, transitions between those states, and rules determining state changes based on inputs. FSMs provide a mathematical framework for modeling sequential logic in systems where behavior depends on event sequences or specific conditions.
 
-<strong>Core Principles:</strong>- System exists in exactly one state at any given time
+**Core Principles:**- System exists in exactly one state at any given time
 - Inputs trigger transitions between states
 - Rules define valid state changes
 - Outputs may depend on states and/or inputs
 
-<strong>Analogy:</strong>A door lock operates as a simple FSM with two states: `locked` and `unlocked`. A correct key transitions the lock from `locked` to `unlocked`, while an incorrect key maintains the current state. The lock's behavior is entirely predictable based on its current state and input received.
+**Analogy:**A door lock operates as a simple FSM with two states: `locked` and `unlocked`. A correct key transitions the lock from `locked` to `unlocked`, while an incorrect key maintains the current state. The lock's behavior is entirely predictable based on its current state and input received.
 
 ## Core Components
 
 ### States
 
-<strong>Definition:</strong>Distinct configurations or modes in which a system can exist.
-
-<strong>Characteristics:</strong>- System occupies exactly one state at any moment
+**Definition:**Distinct configurations or modes in which a system can exist.**Characteristics:**- System occupies exactly one state at any moment
 - States represent meaningful operational modes
 - Each state may have associated outputs or behaviors
 - Number of states is finite and predetermined
 
-<strong>Examples:</strong>- <strong>Vending machine states:</strong>Idle, Waiting for Selection, Dispensing Item, Out of Service
-- <strong>Network connection states:</strong>Disconnected, Connecting, Connected, Error
-- <strong>Game character states:</strong>Idle, Walking, Running, Jumping, Attacking
+**Examples:**-**Vending machine states:**Idle, Waiting for Selection, Dispensing Item, Out of Service
+- **Network connection states:**Disconnected, Connecting, Connected, Error
+- **Game character states:**Idle, Walking, Running, Jumping, Attacking
 
 ### Transitions
 
-<strong>Definition:</strong>Rules governing movement from one state to another based on input conditions.
-
-<strong>Key Properties:</strong>- Triggered by specific inputs or events
+**Definition:**Rules governing movement from one state to another based on input conditions.**Key Properties:**- Triggered by specific inputs or events
 - Instantaneous (no intermediate states)
 - May include guard conditions
 - Can trigger actions during execution
 
-<strong>Transition Notation:</strong>```
+**Transition Notation:**```
 Current_State + Input → Next_State [/ Action]
-```
-
-**Example:**```
+```**Example:**```
 Idle + "Insert Coin" → Waiting_for_Selection / "Display Menu"
 ```
 
@@ -62,23 +56,19 @@ Idle + "Insert Coin" → Waiting_for_Selection / "Display Menu"
 
 | Component | Description | Examples |
 |-----------|-------------|----------|
-| <strong>Inputs</strong>| External signals triggering transitions | Button presses, sensor readings, timer events, network packets |
-| <strong>Outputs</strong>| Actions or signals produced by FSM | Display updates, motor controls, network responses, status indicators |
-
-<strong>Output Types:</strong>- <strong>Mealy Machine:</strong>Outputs depend on current state AND input
-- <strong>Moore Machine:</strong>Outputs depend ONLY on current state
+| **Inputs**| External signals triggering transitions | Button presses, sensor readings, timer events, network packets |
+| **Outputs**| Actions or signals produced by FSM | Display updates, motor controls, network responses, status indicators |**Output Types:**-**Mealy Machine:**Outputs depend on current state AND input
+- **Moore Machine:**Outputs depend ONLY on current state
 
 ### State Diagrams
 
 State diagrams provide visual representation of FSM structure and behavior.
 
-<strong>Visual Elements:</strong>- <strong>Circles/Nodes:</strong>Represent states
-- <strong>Arrows/Edges:</strong>Represent transitions
-- <strong>Labels:</strong>Show triggering inputs and outputs
-- <strong>Initial State:</strong>Arrow from nowhere pointing to starting state
-- <strong>Final States:</strong>Double circles (in accepting automata)
-
-<strong>Example State Diagram Elements:</strong>```
+**Visual Elements:**-**Circles/Nodes:**Represent states
+- **Arrows/Edges:**Represent transitions
+- **Labels:**Show triggering inputs and outputs
+- **Initial State:**Arrow from nowhere pointing to starting state
+- **Final States:**Double circles (in accepting automata)**Example State Diagram Elements:**```
 [State A] --input/output--> [State B]
     |                           |
     +--input/output-------------+
@@ -88,9 +78,7 @@ State diagrams provide visual representation of FSM structure and behavior.
 
 ### 1. Deterministic Finite State Machine (DFSM/DFA)
 
-**Definition:**FSM where each state/input combination leads to exactly one next state—no ambiguity exists.
-
-**Characteristics:**- Predictable behavior guaranteed
+**Definition:**FSM where each state/input combination leads to exactly one next state—no ambiguity exists.**Characteristics:**- Predictable behavior guaranteed
 - Single transition per state/input pair
 - Easier to implement and debug
 - Lower computational complexity
@@ -113,51 +101,43 @@ Accept: q0 (strings with even number of 1s)
 
 ### 2. Non-Deterministic Finite State Machine (NDFSM/NFA)
 
-<strong>Definition:</strong>FSM allowing multiple possible next states for the same state/input combination.
-
-<strong>Key Features:</strong>- Multiple transition options per state/input
+**Definition:**FSM allowing multiple possible next states for the same state/input combination.**Key Features:**- Multiple transition options per state/input
 - Epsilon (ε) transitions possible (state changes without input)
 - Useful for pattern matching
 - Can be converted to equivalent DFA
 
-<strong>Advantages:</strong>- More compact representation
+**Advantages:**- More compact representation
 - Easier initial design for complex patterns
 - Natural for certain problem types
 
-<strong>Applications:</strong>- Regular expression engines
+**Applications:**- Regular expression engines
 - Pattern matching algorithms
 - Parallel state exploration
 - Ambiguous language recognition
 
 ### 3. Mealy Machine
 
-<strong>Output Generation:</strong>Based on current state AND input.
-
-<strong>Characteristics:</strong>| Aspect | Details |
+**Output Generation:**Based on current state AND input.**Characteristics:**| Aspect | Details |
 |--------|---------|
 | Response Time | Immediate (outputs change with inputs) |
 | State Count | Generally fewer states needed |
 | Output Stability | Less stable (changes during transitions) |
 | Hardware | More combinational logic required |
 
-<strong>Example - Turnstile Controller:</strong>```
+**Example - Turnstile Controller:**```
 State: Locked
 Input: Coin → Output: Unlock → Next State: Unlocked
 
 State: Unlocked  
 Input: Push → Output: Lock → Next State: Locked
-```
-
-**Use Cases:**- Systems requiring immediate responses
+```**Use Cases:**- Systems requiring immediate responses
 - Communication protocols
 - Control systems with feedback
 - Event-driven applications
 
 ### 4. Moore Machine
 
-**Output Generation:**Based ONLY on current state.
-
-**Characteristics:**| Aspect | Details |
+**Output Generation:**Based ONLY on current state.**Characteristics:**| Aspect | Details |
 |--------|---------|
 | Response Time | One cycle delay (outputs change on state transitions) |
 | State Count | Generally more states needed |
@@ -168,9 +148,7 @@ Input: Push → Output: Lock → Next State: Locked
 State: Red → Output: STOP (constant)
 State: Yellow → Output: CAUTION (constant)
 State: Green → Output: GO (constant)
-```
-
-<strong>Use Cases:</strong>- Sequential systems
+```**Use Cases:**- Sequential systems
 - Safety-critical applications
 - Timing-sensitive circuits
 - Systems prioritizing output stability
@@ -191,25 +169,23 @@ State: Green → Output: GO (constant)
 
 ### FSM Construction Workflow
 
-<strong>1. State Identification</strong>- List all distinct operational modes
+**1. State Identification**- List all distinct operational modes
 - Define meaningful state names
 - Identify initial and final states (if applicable)
 - Ensure states are mutually exclusive
 
-<strong>2. Input Definition</strong>- Enumerate all possible inputs/events
+**2. Input Definition**- Enumerate all possible inputs/events
 - Define input alphabet or event types
 - Consider edge cases and invalid inputs
 - Document input format and ranges
 
-<strong>3. Transition Mapping</strong>```
+**3. Transition Mapping**```
 For each state:
   For each possible input:
     Define next_state
     Define action (if any)
     Add guard conditions (if needed)
-```
-
-**4. State Table Creation**| Current State | Input | Next State | Output/Action |
+```**4. State Table Creation**| Current State | Input | Next State | Output/Action |
 |--------------|-------|------------|---------------|
 | State_A | Input_1 | State_B | Action_1 |
 | State_A | Input_2 | State_A | Action_2 |
@@ -235,8 +211,7 @@ Loop:
 
 ### Example 1: Traffic Light Controller (Python)
 
-<strong>States:</strong>Green, Yellow, Red  
-<strong>Trigger:</strong>Timer expiration
+**States:**Green, Yellow, Red**Trigger:**Timer expiration
 
 ```python
 class TrafficLight:
@@ -270,7 +245,7 @@ for _ in range(6):
 
 ### Example 2: String Parser (JavaScript)
 
-<strong>Task:</strong>Validate strings ending with "01"
+**Task:**Validate strings ending with "01"
 
 ```javascript
 class StringParser {
@@ -380,28 +355,26 @@ public:
 
 ### Software Engineering
 
-<strong>UI Event Handling</strong>- Widget states: Idle, Hovered, Focused, Pressed, Dragging
+**UI Event Handling**- Widget states: Idle, Hovered, Focused, Pressed, Dragging
 - Transitions based on mouse/touch events
 - Output: Visual feedback, callbacks
 
-<strong>Network Protocols</strong>- TCP connection states: CLOSED, LISTEN, SYN_SENT, ESTABLISHED, FIN_WAIT
+**Network Protocols**- TCP connection states: CLOSED, LISTEN, SYN_SENT, ESTABLISHED, FIN_WAIT
 - Transitions on packet reception
 - Ensures reliable communication
 
-<strong>Compiler Lexical Analysis</strong>- Token recognition through state traversal
+**Compiler Lexical Analysis**- Token recognition through state traversal
 - Each character input triggers transitions
 - Accept states indicate valid tokens
 
 ### Hardware and Digital Systems
 
-<strong>Application Areas:</strong>| Domain | FSM Usage |
+**Application Areas:**| Domain | FSM Usage |
 |--------|-----------|
-| <strong>Digital Circuits</strong>| Counters, timers, sequence detectors, control units |
-| <strong>Embedded Systems</strong>| Device controllers, power management, mode switching |
-| <strong>FPGA/ASIC Design</strong>| Protocol controllers, data path control, synchronization |
-| <strong>Microcontrollers</strong>| Interrupt handling, peripheral management, state monitoring |
-
-<strong>Example - Elevator Controller:</strong>```
+| **Digital Circuits**| Counters, timers, sequence detectors, control units |
+| **Embedded Systems**| Device controllers, power management, mode switching |
+| **FPGA/ASIC Design**| Protocol controllers, data path control, synchronization |
+| **Microcontrollers**| Interrupt handling, peripheral management, state monitoring |**Example - Elevator Controller:**```
 States: Idle, Moving_Up, Moving_Down, Door_Open
 Inputs: Call_Button, Floor_Sensor, Door_Sensor, Timer
 Outputs: Motor_Control, Door_Control, Display
@@ -418,23 +391,19 @@ Security System FSM:
 States: Disarmed, Armed_Stay, Armed_Away, Alarm_Triggered
 Inputs: User_Command, Sensor_Events, Timer
 Outputs: Status_Display, Alarm_Sound, Notifications
-```
-
-<strong>Process Automation:</strong>- Workflow states representing process stages
+```**Process Automation:**- Workflow states representing process stages
 - Transitions on task completion or approval
 - Integration with business systems
 
 ### Game Development
 
-<strong>Character AI Behaviors:</strong>| State | Triggers | Actions |
+**Character AI Behaviors:**| State | Triggers | Actions |
 |-------|----------|---------|
-| <strong>Idle</strong>| No player detected | Patrol waypoints |
-| <strong>Alert</strong>| Player spotted | Face player, play alert sound |
-| <strong>Chase</strong>| Player in range | Move toward player |
-| <strong>Attack</strong>| In attack range | Execute attack animation |
-| <strong>Retreat</strong>| Health low | Move away, seek cover |
-
-<strong>Game Flow Management:</strong>```
+| **Idle**| No player detected | Patrol waypoints |
+| **Alert**| Player spotted | Face player, play alert sound |
+| **Chase**| Player in range | Move toward player |
+| **Attack**| In attack range | Execute attack animation |
+| **Retreat**| Health low | Move away, seek cover |**Game Flow Management:**```
 Menu → Loading → Playing ⇄ Paused → Game_Over → Menu
 ```
 
@@ -442,9 +411,7 @@ Menu → Loading → Playing ⇄ Paused → Game_Over → Menu
 
 ### Hierarchical State Machines (HSM)
 
-**Concept:**States contain nested sub-FSMs, enabling complex behavior composition.
-
-**Benefits:**- Reduced state explosion
+**Concept:**States contain nested sub-FSMs, enabling complex behavior composition.**Benefits:**- Reduced state explosion
 - Better organization of complex systems
 - Reusable sub-behaviors
 - Clearer logical structure
@@ -461,13 +428,11 @@ Menu → Loading → Playing ⇄ Paused → Game_Over → Menu
 
 ### Parallel State Machines
 
-<strong>Concept:</strong>Multiple independent FSMs running simultaneously.
-
-<strong>Use Cases:</strong>- Separate concerns (e.g., movement FSM + animation FSM)
+**Concept:**Multiple independent FSMs running simultaneously.**Use Cases:**- Separate concerns (e.g., movement FSM + animation FSM)
 - Independent subsystem control
 - Concurrent behavior modeling
 
-<strong>Example - Game Character:</strong>```
+**Example - Game Character:**```
 Movement_FSM: Standing, Walking, Running, Jumping
 Animation_FSM: Idle_Anim, Walk_Anim, Run_Anim, Jump_Anim
 Combat_FSM: Unarmed, Armed, Attacking, Reloading
@@ -475,9 +440,7 @@ Combat_FSM: Unarmed, Armed, Attacking, Reloading
 
 ### State Explosion Problem
 
-**Challenge:**State count grows exponentially with system complexity.
-
-**Mitigation Strategies:**| Strategy | Description |
+**Challenge:**State count grows exponentially with system complexity.**Mitigation Strategies:**| Strategy | Description |
 |----------|-------------|
 | **Hierarchical FSM**| Group related states into super-states |
 | **State Variables**| Use variables to capture dimensions independently |
@@ -487,9 +450,7 @@ Combat_FSM: Unarmed, Armed, Attacking, Reloading
 
 ### State Pattern (OOP)
 
-**Concept:**Encapsulate state-specific behavior in separate classes.
-
-**Structure:**```python
+**Concept:**Encapsulate state-specific behavior in separate classes.**Structure:**```python
 class State:
     def handle(self, context): pass
 
@@ -504,9 +465,7 @@ class Context:
     
     def request(self):
         self.state.handle(self)
-```
-
-<strong>Benefits:</strong>- Open/closed principle compliance
+```**Benefits:**- Open/closed principle compliance
 - Easy to add new states
 - Clear separation of concerns
 - Eliminates complex conditionals
@@ -517,24 +476,22 @@ class Context:
 
 | Benefit | Description |
 |---------|-------------|
-| <strong>Clarity</strong>| Visual and conceptual clarity of system behavior |
-| <strong>Predictability</strong>| Deterministic behavior with defined transitions |
-| <strong>Maintainability</strong>| Easy to modify and extend |
-| <strong>Testability</strong>| Clear test cases for each state/transition |
-| <strong>Documentation</strong>| State diagrams serve as living documentation |
-| <strong>Efficiency</strong>| Minimal computational overhead |
-| <strong>Verification</strong>| Formal methods applicable for correctness proofs |
+| **Clarity**| Visual and conceptual clarity of system behavior |
+| **Predictability**| Deterministic behavior with defined transitions |
+| **Maintainability**| Easy to modify and extend |
+| **Testability**| Clear test cases for each state/transition |
+| **Documentation**| State diagrams serve as living documentation |
+| **Efficiency**| Minimal computational overhead |
+| **Verification**| Formal methods applicable for correctness proofs |
 
 ### Limitations
 
 | Limitation | Impact | Mitigation |
 |------------|--------|------------|
-| <strong>State Explosion</strong>| Too many states become unmanageable | Use hierarchical or parallel FSMs |
-| <strong>Limited Memory</strong>| No memory beyond current state | Add state variables or use pushdown automata |
-| <strong>Expressiveness</strong>| Can only model regular languages | Use more powerful models (Turing machines) for complex grammars |
-| <strong>Scalability</strong>| Large systems become complex | Decompose into smaller FSMs |
-
-<strong>Not Suitable For:</strong>- Problems requiring unbounded memory (e.g., matching nested parentheses)
+| **State Explosion**| Too many states become unmanageable | Use hierarchical or parallel FSMs |
+| **Limited Memory**| No memory beyond current state | Add state variables or use pushdown automata |
+| **Expressiveness**| Can only model regular languages | Use more powerful models (Turing machines) for complex grammars |
+| **Scalability**| Large systems become complex | Decompose into smaller FSMs |**Not Suitable For:**- Problems requiring unbounded memory (e.g., matching nested parentheses)
 - Systems with continuous state spaces
 - Highly adaptive or learning systems
 - Problems outside regular language class
@@ -543,45 +500,45 @@ class Context:
 
 ### Design Guidelines
 
-<strong>State Design:</strong>- Keep states meaningful and distinct
+**State Design:**- Keep states meaningful and distinct
 - Minimize state count while maintaining clarity
 - Name states descriptively (verb-noun or adjective-noun)
 - Ensure mutual exclusivity
 
-<strong>Transition Design:</strong>- Make transitions explicit and well-defined
+**Transition Design:**- Make transitions explicit and well-defined
 - Handle all inputs for all states (or define error states)
 - Avoid circular dependencies without progress
 - Document guard conditions clearly
 
-<strong>Implementation:</strong>- Choose appropriate representation (table, switch, pattern)
+**Implementation:**- Choose appropriate representation (table, switch, pattern)
 - Validate inputs before processing
 - Log state transitions for debugging
 - Implement timeout mechanisms where needed
 
 ### Testing Strategies
 
-<strong>Coverage Types:</strong>| Test Type | Target |
+**Coverage Types:**| Test Type | Target |
 |-----------|--------|
-| <strong>State Coverage</strong>| Exercise every state at least once |
-| <strong>Transition Coverage</strong>| Test every transition |
-| <strong>Path Coverage</strong>| Test common state sequences |
-| <strong>Boundary Testing</strong>| Test edge cases and limits |
-| <strong>Error Handling</strong>| Invalid inputs and unexpected conditions |
+| **State Coverage**| Exercise every state at least once |
+| **Transition Coverage**| Test every transition |
+| **Path Coverage**| Test common state sequences |
+| **Boundary Testing**| Test edge cases and limits |
+| **Error Handling**| Invalid inputs and unexpected conditions |
 
 ## Key Terminology
 
-- <strong>Finite State Machine (FSM):</strong>Computational model with finite states and defined transitions
-- <strong>State:</strong>Distinct configuration or mode of operation
-- <strong>Transition:</strong>Movement from one state to another based on input
-- <strong>Input Alphabet:</strong>Set of all possible inputs
-- <strong>Output:</strong>Actions or signals produced by FSM
-- <strong>Deterministic FSM:</strong>Each state/input pair has exactly one next state
-- <strong>Non-Deterministic FSM:</strong>State/input pair may have multiple next states
-- <strong>Mealy Machine:</strong>Output depends on state and input
-- <strong>Moore Machine:</strong>Output depends only on state
-- <strong>State Diagram:</strong>Graphical representation of FSM
-- <strong>Transition Table:</strong>Tabular representation of all transitions
-- <strong>Accept State:</strong>State indicating valid input sequence (in automata)
+- **Finite State Machine (FSM):**Computational model with finite states and defined transitions
+- **State:**Distinct configuration or mode of operation
+- **Transition:**Movement from one state to another based on input
+- **Input Alphabet:**Set of all possible inputs
+- **Output:**Actions or signals produced by FSM
+- **Deterministic FSM:**Each state/input pair has exactly one next state
+- **Non-Deterministic FSM:**State/input pair may have multiple next states
+- **Mealy Machine:**Output depends on state and input
+- **Moore Machine:**Output depends only on state
+- **State Diagram:**Graphical representation of FSM
+- **Transition Table:**Tabular representation of all transitions
+- **Accept State:**State indicating valid input sequence (in automata)
 
 ## References
 

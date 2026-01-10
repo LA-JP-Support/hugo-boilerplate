@@ -26,23 +26,18 @@ Classification evaluation begins with the confusion matrix, which tabulates actu
 
 |                     | Predicted Positive | Predicted Negative |
 |---------------------|-------------------|-------------------|
-| <strong>Actual Positive</strong>| True Positive (TP) | False Negative (FN) |
-| <strong>Actual Negative</strong>| False Positive (FP) | True Negative (TN) |
-
-<strong>True Positive (TP):</strong>Correctly predicted positive instances  
-<strong>False Positive (FP):</strong>Incorrectly predicted negative instances as positive  
-<strong>False Negative (FN):</strong>Incorrectly predicted positive instances as negative  
-<strong>True Negative (TN):</strong>Correctly predicted negative instances
+| **Actual Positive**| True Positive (TP) | False Negative (FN) |
+| **Actual Negative**| False Positive (FP) | True Negative (TN) |**True Positive (TP):**Correctly predicted positive instances**False Positive (FP):**Incorrectly predicted negative instances as positive**False Negative (FN):**Incorrectly predicted positive instances as negative**True Negative (TN):**Correctly predicted negative instances
 
 ### Precision and Recall
 
-<strong>Precision</strong>measures correctness of positive predictions:
+**Precision**measures correctness of positive predictions:
 
 Formula: Precision = TP / (TP + FP)
 
 Interpretation: Of all predicted positives, what fraction are actually positive? High precision means few false alarms.
 
-<strong>Recall</strong>(sensitivity, true positive rate) measures completeness of positive detection:
+**Recall**(sensitivity, true positive rate) measures completeness of positive detection:
 
 Formula: Recall = TP / (TP + FN)
 
@@ -66,7 +61,7 @@ Alternative formulation using confusion matrix directly:
 
 F1 = (2 × TP) / (2 × TP + FP + FN)
 
-<strong>Example Calculation:</strong>Given Precision = 0.8 and Recall = 0.6:
+**Example Calculation:**Given Precision = 0.8 and Recall = 0.6:
 
 F1 = 2 × (0.8 × 0.6) / (0.8 + 0.6) = 2 × 0.48 / 1.4 ≈ 0.686
 
@@ -78,9 +73,7 @@ The F-beta score generalizes F1 by weighting precision and recall differently:
 
 F_β = (1 + β²) × (Precision × Recall) / (β² × Precision + Recall)
 
-<strong>β = 1:</strong>Equal weight (standard F1)  
-<strong>β > 1:</strong>Emphasizes recall (e.g., F2 for medical screening)  
-<strong>β < 1:</strong>Emphasizes precision (e.g., F0.5 for spam detection)
+**β = 1:**Equal weight (standard F1)**β > 1:**Emphasizes recall (e.g., F2 for medical screening)**β < 1:**Emphasizes precision (e.g., F0.5 for spam detection)
 
 Use cases vary by domain. Medical diagnostics often prioritize recall (catch all diseases even with some false positives), while spam filtering may prioritize precision (avoid blocking legitimate emails).
 
@@ -88,13 +81,7 @@ Use cases vary by domain. Medical diagnostics often prioritize recall (catch all
 
 For problems with multiple classes, several aggregation strategies exist:
 
-<strong>Macro-average:</strong>Compute F1 per class, then average. Treats all classes equally regardless of size.
-
-<strong>Micro-average:</strong>Aggregate TP, FP, FN across classes, then compute global F1. Weights by class frequency.
-
-<strong>Weighted-average:</strong>Average per-class F1 scores weighted by class support (number of true instances).
-
-<strong>Per-class:</strong>Report F1 for each class without aggregation, providing maximum detail.
+**Macro-average:**Compute F1 per class, then average. Treats all classes equally regardless of size.**Micro-average:**Aggregate TP, FP, FN across classes, then compute global F1. Weights by class frequency.**Weighted-average:**Average per-class F1 scores weighted by class support (number of true instances).**Per-class:**Report F1 for each class without aggregation, providing maximum detail.
 
 Strategy selection depends on whether all classes matter equally (macro) or whether performance on frequent classes matters more (micro/weighted).
 
@@ -172,32 +159,15 @@ F1 assesses LLM accuracy in structured extraction tasks, measuring how well mode
 
 ### F1 Limitations
 
-<strong>Equal Weighting Assumption</strong>F1 treats precision and recall equally. When one matters significantly more, F-beta or individual metrics provide better evaluation.
-
-<strong>True Negative Insensitivity</strong>F1 ignores TN, making it less informative when negative class performance matters significantly.
-
-<strong>Interpretation Complexity</strong>Identical F1 scores arise from vastly different precision/recall combinations. Always examine both underlying metrics.
-
-<strong>Severe Imbalance Inadequacy</strong>With extremely rare positives, even poor models achieve reasonable F1 scores. Consider precision-recall curves or ROC-AUC instead.
+**Equal Weighting Assumption**F1 treats precision and recall equally. When one matters significantly more, F-beta or individual metrics provide better evaluation.**True Negative Insensitivity**F1 ignores TN, making it less informative when negative class performance matters significantly.**Interpretation Complexity**Identical F1 scores arise from vastly different precision/recall combinations. Always examine both underlying metrics.**Severe Imbalance Inadequacy**With extremely rare positives, even poor models achieve reasonable F1 scores. Consider precision-recall curves or ROC-AUC instead.
 
 ### Alternative Metrics
 
-<strong>Prioritizing Recall:</strong>Use recall directly or F2 score  
-<strong>Prioritizing Precision:</strong>Use precision directly or F0.5 score  
-<strong>Ranking Evaluation:</strong>Use ROC-AUC or Precision-Recall AUC  
-<strong>Cost-Sensitive Applications:</strong>Use custom cost matrices reflecting business impact
+**Prioritizing Recall:**Use recall directly or F2 score**Prioritizing Precision:**Use precision directly or F0.5 score**Ranking Evaluation:**Use ROC-AUC or Precision-Recall AUC**Cost-Sensitive Applications:**Use custom cost matrices reflecting business impact
 
 ## Best Practices
 
-<strong>Domain Context Matters</strong>Understand business costs of false positives versus false negatives before selecting metrics. F1 works when both matter roughly equally.
-
-<strong>Examine Components</strong>Always review precision and recall alongside F1. Identical F1 scores can hide important performance differences.
-
-<strong>Consider Multiple Metrics</strong>Use F1 with other metrics (accuracy, ROC-AUC, precision-recall curves) for comprehensive evaluation.
-
-<strong>Threshold Analysis</strong>For probability-based classifiers, analyze how F1 varies across classification thresholds to find optimal operating points.
-
-<strong>Cross-Validation</strong>Compute F1 across multiple data splits to assess performance stability and avoid overfitting to specific test sets.
+**Domain Context Matters**Understand business costs of false positives versus false negatives before selecting metrics. F1 works when both matter roughly equally.**Examine Components**Always review precision and recall alongside F1. Identical F1 scores can hide important performance differences.**Consider Multiple Metrics**Use F1 with other metrics (accuracy, ROC-AUC, precision-recall curves) for comprehensive evaluation.**Threshold Analysis**For probability-based classifiers, analyze how F1 varies across classification thresholds to find optimal operating points.**Cross-Validation**Compute F1 across multiple data splits to assess performance stability and avoid overfitting to specific test sets.
 
 ## Key Takeaways
 

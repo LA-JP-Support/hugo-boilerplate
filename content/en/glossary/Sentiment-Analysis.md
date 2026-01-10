@@ -31,45 +31,25 @@ The technical workflow of sentiment analysis consists of several key stages:
 
 Preprocessing is essential for cleaning and preparing raw text data. These steps ensure higher accuracy and efficiency in subsequent analysis:
 
-<strong>Tokenization:</strong>Dividing text into discrete units such as words or sentences
-
-<strong>Lowercasing:</strong>Converting all characters to lowercase to standardize input and minimize duplicate tokens
-
-<strong>Stop-word Removal:</strong>Eliminating common words (the, and, is) that do not contribute significant meaning
-
-<strong>Stemming/Lemmatization:</strong>Reducing words to their base or root forms (e.g., "running" to "run")
-
-<strong>Named Entity Recognition (NER):</strong>Identifying mentions of brands, products, organizations, or people
-
-<strong>Noise Reduction:</strong>Removing HTML tags, URLs, special characters, or other irrelevant elements
+**Tokenization:**Dividing text into discrete units such as words or sentences**Lowercasing:**Converting all characters to lowercase to standardize input and minimize duplicate tokens**Stop-word Removal:**Eliminating common words (the, and, is) that do not contribute significant meaning**Stemming/Lemmatization:**Reducing words to their base or root forms (e.g., "running" to "run")**Named Entity Recognition (NER):**Identifying mentions of brands, products, organizations, or people**Noise Reduction:**Removing HTML tags, URLs, special characters, or other irrelevant elements
 
 ### Feature Extraction
 
 Transforming text into numerical vectors so machine learning algorithms can process it:
 
-<strong>Bag of Words (BoW):</strong>Represents documents by word frequency, ignoring grammar and word order
-
-<strong>TF-IDF (Term Frequency-Inverse Document Frequency):</strong>Highlights words that are important in a specific document but rare across the corpus
-
-<strong>Word Embeddings:</strong>Captures semantic meaning and context via vector representations of words (e.g., Word2Vec, GloVe, FastText, BERT)
+**Bag of Words (BoW):**Represents documents by word frequency, ignoring grammar and word order**TF-IDF (Term Frequency-Inverse Document Frequency):**Highlights words that are important in a specific document but rare across the corpus**Word Embeddings:**Captures semantic meaning and context via vector representations of words (e.g., Word2Vec, GloVe, FastText, BERT)
 
 ### Sentiment Classification
 
 After preprocessing and feature extraction, text is classified using one of three primary approaches:
 
-<strong>Rule-Based Models:</strong>Use sentiment lexicons and pre-defined linguistic rules
-
-<strong>Traditional Machine Learning Models:</strong>Algorithms like Naive Bayes, Support Vector Machines (SVM), and Logistic Regression
-
-<strong>Neural Networks:</strong>Deep learning models (LSTM, CNN, Transformer-based models like BERT) that learn complex language patterns
+**Rule-Based Models:**Use sentiment lexicons and pre-defined linguistic rules**Traditional Machine Learning Models:**Algorithms like Naive Bayes, Support Vector Machines (SVM), and Logistic Regression**Neural Networks:**Deep learning models (LSTM, CNN, Transformer-based models like BERT) that learn complex language patterns
 
 ### Sentiment Scoring
 
 Assigning a sentiment label or a quantitative score:
 
-<strong>Discrete Labels:</strong>Categories such as positive, negative, neutral, or more granular (very positive, positive, neutral, negative, very negative)
-
-<strong>Continuous Scores:</strong>Numeric scales (e.g., -1 to +1 or 0 to 100) that measure sentiment intensity or polarity
+**Discrete Labels:**Categories such as positive, negative, neutral, or more granular (very positive, positive, neutral, negative, very negative)**Continuous Scores:**Numeric scales (e.g., -1 to +1 or 0 to 100) that measure sentiment intensity or polarity
 
 ## Types of Sentiment Analysis
 
@@ -77,7 +57,7 @@ Assigning a sentiment label or a quantitative score:
 
 Breaks down sentiment into multiple levels, not just positive/negative/neutral, but includes gradations such as "very positive" or "very negative." This enables businesses to track degrees of satisfaction and dissatisfaction with greater precision.
 
-<strong>Example:</strong>- "Absolutely love this camera!" → Very Positive
+**Example:**- "Absolutely love this camera!" → Very Positive
 - "It's okay, nothing special." → Neutral
 - "Really disappointed with the battery life." → Very Negative
 
@@ -85,7 +65,7 @@ Breaks down sentiment into multiple levels, not just positive/negative/neutral, 
 
 Pinpoints sentiment related to specific attributes or "aspects" within a text.
 
-<strong>Example:</strong>- "The laptop's battery life is great, but the screen is dim."
+**Example:**- "The laptop's battery life is great, but the screen is dim."
   - Battery Life → Positive
   - Screen → Negative
 
@@ -95,7 +75,7 @@ This approach is crucial for product feedback, highlighting which features are p
 
 Goes beyond polarity to categorize specific emotions such as joy, anger, surprise, or sadness.
 
-<strong>Example:</strong>- "I'm thrilled with the new update!" → Joy
+**Example:**- "I'm thrilled with the new update!" → Joy
 - "This makes me so frustrated." → Anger
 
 Modern systems often use emotion lexicons or deep learning to detect subtle emotional cues.
@@ -104,7 +84,7 @@ Modern systems often use emotion lexicons or deep learning to detect subtle emot
 
 Detects the underlying intent (e.g., purchase, cancellation, complaint, inquiry) behind a message, not just its sentiment.
 
-<strong>Example:</strong>- "How can I upgrade my plan?" → Purchase/Upgrade Intent
+**Example:**- "How can I upgrade my plan?" → Purchase/Upgrade Intent
 - "I'm considering canceling my subscription." → Cancellation Intent
 
 ### Multilingual Sentiment Analysis
@@ -117,49 +97,39 @@ Analyzes sentiment in texts written in different languages and dialects, requiri
 
 Uses manually crafted rules and sentiment dictionaries to assign polarity.
 
-<strong>Process:</strong>1. Tokenization
+**Process:**1. Tokenization
 2. Lexicon lookup (assigning scores to tokens)
 3. Rule application (handling negations, intensifiers)
 4. Score aggregation
 
-<strong>Strengths:</strong>Transparent and easy to interpret; no need for labeled training data
-
-<strong>Limitations:</strong>Inflexible, struggles with sarcasm, irony, and evolving language; labor-intensive maintenance
-
-<strong>Example:</strong>"Not bad at all." ("bad" is negative, but "not" negates, making overall sentiment positive)
+**Strengths:**Transparent and easy to interpret; no need for labeled training data**Limitations:**Inflexible, struggles with sarcasm, irony, and evolving language; labor-intensive maintenance**Example:**"Not bad at all." ("bad" is negative, but "not" negates, making overall sentiment positive)
 
 ### Machine Learning Methods
 
 Relies on supervised learning with labeled datasets to train classifiers.
 
-<strong>Process:</strong>1. Preprocessing
+**Process:**1. Preprocessing
 2. Feature extraction
 3. Model training (e.g., SVM, Naive Bayes)
 4. Prediction
 
-<strong>Strengths:</strong>Learns context and new language patterns; adaptable to various domains
-
-<strong>Limitations:</strong>Requires large, high-quality training data; may not generalize well to new domains without retraining
-
-<strong>Example:</strong>"The new interface is a breath of fresh air." → Positive (learned from annotated data)
+**Strengths:**Learns context and new language patterns; adaptable to various domains**Limitations:**Requires large, high-quality training data; may not generalize well to new domains without retraining**Example:**"The new interface is a breath of fresh air." → Positive (learned from annotated data)
 
 ### Neural Network Methods
 
 Applies deep learning models (LSTMs, CNNs, Transformers like BERT) for advanced semantic understanding.
 
-<strong>Strengths:</strong>Superior at handling context, irony, and complex sentiment; processes longer texts and intricate structures
-
-<strong>Limitations:</strong>Demands significant computational resources; requires large-scale annotated datasets
+**Strengths:**Superior at handling context, irony, and complex sentiment; processes longer texts and intricate structures**Limitations:**Demands significant computational resources; requires large-scale annotated datasets
 
 ### Hybrid Approaches
 
 Combines rule-based and machine learning methods for greater flexibility and accuracy.
 
-<strong>Process:</strong>- Rules and lexicons for clear sentiment cues
+**Process:**- Rules and lexicons for clear sentiment cues
 - ML models for nuanced, implicit expressions
 - Fusion via ensemble or weighting techniques
 
-<strong>Strengths:</strong>Handles domain-specific and subtle sentiment; increased robustness
+**Strengths:**Handles domain-specific and subtle sentiment; increased robustness
 
 ## Business Applications
 
@@ -185,74 +155,44 @@ Measures organizational climate via internal surveys and feedback channels. Anal
 
 ## Key Benefits
 
-<strong>Objectivity:</strong>Consistent, bias-free analysis of subjective text
-
-<strong>Scalability:</strong>Ability to process millions of messages in real-time
-
-<strong>Real-Time Insights:</strong>Immediate detection of emerging threats or opportunities
-
-<strong>Actionable Intelligence:</strong>Directs product, marketing, and CX strategies
-
-<strong>Cost Efficiency:</strong>Automates analysis, reducing manual labor
+**Objectivity:**Consistent, bias-free analysis of subjective text**Scalability:**Ability to process millions of messages in real-time**Real-Time Insights:**Immediate detection of emerging threats or opportunities**Actionable Intelligence:**Directs product, marketing, and CX strategies**Cost Efficiency:**Automates analysis, reducing manual labor
 
 ## Challenges in Sentiment Analysis
 
-<strong>Sarcasm and Irony:</strong>Hard for algorithms to detect non-literal language
+**Sarcasm and Irony:**Hard for algorithms to detect non-literal language
 - Example: "Just what I needed—another software crash. Great." (actually negative)
 
-<strong>Negation:</strong>Negating words can invert sentiment
+**Negation:**Negating words can invert sentiment
 - Example: "Not bad." (positive, despite "bad")
 
-<strong>Multipolarity:</strong>Multiple sentiments in a single sentence
+**Multipolarity:**Multiple sentiments in a single sentence
 - Example: "Love the design, hate the performance."
 
-<strong>Subjectivity and Ambiguity:</strong>Different interpretations by individuals
-
-<strong>Domain and Culture Dependency:</strong>Language varies by context and region
-
-<strong>Data Quality:</strong>Noisy, incomplete, or biased data impairs accuracy
-
-<strong>Language and Dialect Diversity:</strong>Multilingual analysis requires specialized models
+**Subjectivity and Ambiguity:**Different interpretations by individuals**Domain and Culture Dependency:**Language varies by context and region**Data Quality:**Noisy, incomplete, or biased data impairs accuracy**Language and Dialect Diversity:**Multilingual analysis requires specialized models
 
 ## Implementation Best Practices
 
-<strong>1. Define Objectives:</strong>Decide if you need overall, aspect-based, or emotion/intent sentiment
-
-<strong>2. Choose Data Sources:</strong>Use reviews, social media, surveys, support tickets, etc.
-
-<strong>3. Ensure Data Quality:</strong>Cleanse and preprocess to remove noise
-
-<strong>4. Select the Right Approach:</strong>- Rule-based for small, interpretable tasks
+**1. Define Objectives:**Decide if you need overall, aspect-based, or emotion/intent sentiment**2. Choose Data Sources:**Use reviews, social media, surveys, support tickets, etc.**3. Ensure Data Quality:**Cleanse and preprocess to remove noise**4. Select the Right Approach:**- Rule-based for small, interpretable tasks
 - ML/Neural for complex, large-scale needs
 - Hybrid for nuanced, domain-specific cases
 
-<strong>5. Train and Validate:</strong>Use diverse, labeled datasets; validate with new data
-
-<strong>6. Monitor and Update:</strong>Update lexicons/models as language evolves
-
-<strong>7. Integrate with Workflows:</strong>Dashboards and alerts for real-time action
-
-<strong>8. Respect Privacy:</strong>Ensure compliance with data protection regulations
+**5. Train and Validate:**Use diverse, labeled datasets; validate with new data**6. Monitor and Update:**Update lexicons/models as language evolves**7. Integrate with Workflows:**Dashboards and alerts for real-time action**8. Respect Privacy:**Ensure compliance with data protection regulations
 
 ## Practical Examples
 
 ### Customer Review Analysis
 
-<strong>Review:</strong>"Gets the job done, but it's not cheap!"
-
-<strong>Aspect-based Sentiment:</strong>- Functionality: Positive ("gets the job done")
+**Review:**"Gets the job done, but it's not cheap!"**Aspect-based Sentiment:**- Functionality: Positive ("gets the job done")
 - Price: Negative ("not cheap")
 
-<strong>Fine-Grained Sentiment:</strong>Neutral/Mixed
+**Fine-Grained Sentiment:**Neutral/Mixed
 
 ### Social Media Monitoring
 
-<strong>Tweet:</strong>"Absolutely love the new features, but the app crashes too often."
-
-<strong>Analysis:</strong>- Features: Very Positive
+**Tweet:**"Absolutely love the new features, but the app crashes too often."**Analysis:**- Features: Very Positive
 - Stability: Negative
 
-<strong>Action:</strong>Engineering prioritizes bug fixes; marketing highlights positive comments
+**Action:**Engineering prioritizes bug fixes; marketing highlights positive comments
 
 ### Brand Reputation Management
 

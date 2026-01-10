@@ -16,19 +16,13 @@ Lemmatization is a core text normalization technique in computational linguistic
 
 Languages are morphologically rich: words change form based on tense, number, gender, case, or degree. Lemmatization allows algorithms to recognize these variations as the same underlying idea, producing more reliable and meaningful results in NLP and AI systems. Unlike simple pattern-matching approaches, lemmatization uses linguistic knowledge to ensure the resulting base form is always a valid dictionary word.
 
-<strong>Core Value Proposition:</strong>Lemmatization groups different word forms to their linguistic root using context and dictionaries, producing more accurate and semantically meaningful results than simpler normalization techniques. It is fundamental for high-precision NLP tasks requiring deep understanding of language structure and meaning.
+**Core Value Proposition:**Lemmatization groups different word forms to their linguistic root using context and dictionaries, producing more accurate and semantically meaningful results than simpler normalization techniques. It is fundamental for high-precision NLP tasks requiring deep understanding of language structure and meaning.
 
 ## How Lemmatization Works
 
 ### Process Steps
 
-<strong>Tokenization:</strong>Input text is split into tokens (words or phrases), preparing it for further analysis. Modern tokenizers handle contractions, punctuation, and special characters.
-
-<strong>Part-of-Speech (POS) Tagging:</strong>Each word is assigned a grammatical role (noun, verb, adjective, adverb). This step is crucial because the lemma depends on a word's POS. For example, "meeting" as a noun ("let's schedule a meeting") lemmatizes differently than as a verb ("they are meeting").
-
-<strong>Morphological Analysis:</strong>The system examines internal structure of words (roots, prefixes, suffixes) to understand their base forms and grammatical features. This analysis accounts for irregular forms and language-specific morphological rules.
-
-<strong>Dictionary Lookup or Rule Application:</strong>The algorithm references a lexicon (like WordNet) or applies linguistic rules to map the word to its lemma. For irregular words (e.g., "went" → "go", "better" → "good"), dictionaries are essential. Regular forms may use rule-based transformations.
+**Tokenization:**Input text is split into tokens (words or phrases), preparing it for further analysis. Modern tokenizers handle contractions, punctuation, and special characters.**Part-of-Speech (POS) Tagging:**Each word is assigned a grammatical role (noun, verb, adjective, adverb). This step is crucial because the lemma depends on a word's POS. For example, "meeting" as a noun ("let's schedule a meeting") lemmatizes differently than as a verb ("they are meeting").**Morphological Analysis:**The system examines internal structure of words (roots, prefixes, suffixes) to understand their base forms and grammatical features. This analysis accounts for irregular forms and language-specific morphological rules.**Dictionary Lookup or Rule Application:**The algorithm references a lexicon (like WordNet) or applies linguistic rules to map the word to its lemma. For irregular words (e.g., "went" → "go", "better" → "good"), dictionaries are essential. Regular forms may use rule-based transformations.
 
 ### Examples
 
@@ -48,31 +42,19 @@ Languages are morphologically rich: words change form based on tense, number, ge
 
 Applies language-specific grammatical rules to strip inflections and derive base forms. Effective for regular words but often fails for irregular forms. Rules typically pattern-match suffixes and apply transformations.
 
-<strong>Example rule:</strong>Remove "-ed" for regular verbs ("walked" → "walk"). However, this approach fails for "went" → "go" or "better" → "good".
-
-<strong>Advantages:</strong>Fast execution, no external dependencies, transparent logic.
-
-<strong>Disadvantages:</strong>Cannot handle irregular forms, requires extensive rule development per language, brittle to exceptions.
+**Example rule:**Remove "-ed" for regular verbs ("walked" → "walk"). However, this approach fails for "went" → "go" or "better" → "good".**Advantages:**Fast execution, no external dependencies, transparent logic.**Disadvantages:**Cannot handle irregular forms, requires extensive rule development per language, brittle to exceptions.
 
 ### Dictionary-Based Lemmatization
 
 Utilizes comprehensive lexicon (e.g., WordNet) mapping words to their lemmas, handling irregular words. Dictionary lookup ensures correct lemma even for exceptional cases.
 
-<strong>Example:</strong>"better" → "good"; "went" → "go"; "teeth" → "tooth".
-
-<strong>Advantages:</strong>Handles irregular forms correctly, produces valid dictionary words, linguistically accurate.
-
-<strong>Disadvantages:</strong>Requires large lexical resources, limited to known words, doesn't handle neologisms.
+**Example:**"better" → "good"; "went" → "go"; "teeth" → "tooth".**Advantages:**Handles irregular forms correctly, produces valid dictionary words, linguistically accurate.**Disadvantages:**Requires large lexical resources, limited to known words, doesn't handle neologisms.
 
 ### Machine Learning-Based Lemmatization
 
 Uses trained models on annotated corpora to predict lemmas, adapting to complex languages and irregularities. Especially useful for languages with rich morphology or limited lexical resources.
 
-<strong>Example:</strong>Model learns "happier" → "happy" based on training data patterns across thousands of similar adjective forms.
-
-<strong>Advantages:</strong>Adapts to language-specific patterns, handles unknown words through generalization, can incorporate context.
-
-<strong>Disadvantages:</strong>Requires annotated training data, computationally intensive, may produce errors on rare forms.
+**Example:**Model learns "happier" → "happy" based on training data patterns across thousands of similar adjective forms.**Advantages:**Adapts to language-specific patterns, handles unknown words through generalization, can incorporate context.**Disadvantages:**Requires annotated training data, computationally intensive, may produce errors on rare forms.
 
 ## Lemmatization vs. Stemming
 
@@ -90,9 +72,7 @@ Both are text normalization techniques, but they differ fundamentally in approac
 
 ### Key Differences
 
-<strong>Stemming</strong>removes word endings based on mechanical rules, sometimes producing non-words and always ignoring context. The Porter Stemmer, for example, would convert "university" to "univers" and "universe" to "univers"—both invalid words but the same stem.
-
-<strong>Lemmatization</strong>analyzes meaning and context, always producing valid words and correctly handling irregular forms. "Universities" becomes "university", a valid dictionary word that preserves semantic meaning.
+**Stemming**removes word endings based on mechanical rules, sometimes producing non-words and always ignoring context. The Porter Stemmer, for example, would convert "university" to "univers" and "universe" to "univers"—both invalid words but the same stem.**Lemmatization**analyzes meaning and context, always producing valid words and correctly handling irregular forms. "Universities" becomes "university", a valid dictionary word that preserves semantic meaning.
 
 ### Comparative Examples
 
@@ -138,27 +118,11 @@ Reduces vocabulary size, focusing models on conceptual units rather than surface
 
 ### Advantages
 
-<strong>Linguistic Accuracy:</strong>Produces linguistically correct base forms, enhancing downstream model performance and semantic understanding.
-
-<strong>Context Sensitivity:</strong>Handles word meaning and POS, reducing errors from ambiguous forms. "Meeting" as noun vs. verb produces different lemmas.
-
-<strong>Standardization:</strong>Groups word variants, lowering redundancy and dimensionality in text data. Reduces feature space by 30-50% in typical applications.
-
-<strong>Improved Retrieval:</strong>Matches user queries with relevant content more effectively. Search recall improves by 20-40% with lemmatization.
-
-<strong>Semantic Understanding:</strong>Essential for deep semantic tasks like conversational AI and advanced sentiment analysis where word meaning matters.
+**Linguistic Accuracy:**Produces linguistically correct base forms, enhancing downstream model performance and semantic understanding.**Context Sensitivity:**Handles word meaning and POS, reducing errors from ambiguous forms. "Meeting" as noun vs. verb produces different lemmas.**Standardization:**Groups word variants, lowering redundancy and dimensionality in text data. Reduces feature space by 30-50% in typical applications.**Improved Retrieval:**Matches user queries with relevant content more effectively. Search recall improves by 20-40% with lemmatization.**Semantic Understanding:**Essential for deep semantic tasks like conversational AI and advanced sentiment analysis where word meaning matters.
 
 ### Disadvantages
 
-<strong>Computational Cost:</strong>Requires more processing time for POS tagging and dictionary lookups. Typically 5-10× slower than stemming.
-
-<strong>Slower Processing:</strong>May be unsuitable for real-time, large-scale applications without optimization. Processing 1 million documents might take hours vs. minutes for stemming.
-
-<strong>Language Dependence:</strong>Effectiveness varies significantly with language complexity. Works excellently for English, reasonably for Romance languages, but struggles with agglutinative languages.
-
-<strong>Resource Requirements:</strong>Needs extensive lexical resources or annotated training data. Not all languages have comprehensive lexical databases like WordNet.
-
-<strong>Limited Context Window:</strong>Typically operates at sentence or phrase level. Cannot disambiguate across document-level context.
+**Computational Cost:**Requires more processing time for POS tagging and dictionary lookups. Typically 5-10× slower than stemming.**Slower Processing:**May be unsuitable for real-time, large-scale applications without optimization. Processing 1 million documents might take hours vs. minutes for stemming.**Language Dependence:**Effectiveness varies significantly with language complexity. Works excellently for English, reasonably for Romance languages, but struggles with agglutinative languages.**Resource Requirements:**Needs extensive lexical resources or annotated training data. Not all languages have comprehensive lexical databases like WordNet.**Limited Context Window:**Typically operates at sentence or phrase level. Cannot disambiguate across document-level context.
 
 ## Implementation Examples
 
@@ -199,7 +163,7 @@ print(lemmatized_words)
 # Output: ['The', 'child', 'be', 'run', 'towards', 'a', 'good', 'place', '.']
 ```
 
-<strong>Key transformations:</strong>"children" → "child", "running" → "run", "better" → "good"
+**Key transformations:**"children" → "child", "running" → "run", "better" → "good"
 
 ### spaCy Implementation
 
@@ -213,7 +177,7 @@ for token in doc:
     print(f"{token.text} --> {token.lemma_}")
 ```
 
-<strong>Sample Output:</strong>```
+**Sample Output:**```
 children --> child
 were --> be
 running --> run
@@ -242,45 +206,19 @@ Stemming is faster but less accurate, producing stems that may not be valid word
 
 ### Choose Lemmatization When:
 
-**Accuracy is Critical:**Chatbots, sentiment analysis, question answering, or translation where word meaning matters.
-
-**Semantic Tasks:**Applications requiring deep language understanding like document summarization or content recommendation.
-
-**Data Analysis:**Reducing noise and dimensionality for machine learning models where feature interpretability is important.
-
-**Complex Languages:**Languages with rich morphology where stemming produces too many invalid forms.
+**Accuracy is Critical:**Chatbots, sentiment analysis, question answering, or translation where word meaning matters.**Semantic Tasks:**Applications requiring deep language understanding like document summarization or content recommendation.**Data Analysis:**Reducing noise and dimensionality for machine learning models where feature interpretability is important.**Complex Languages:**Languages with rich morphology where stemming produces too many invalid forms.
 
 ### Choose Stemming When:
 
-**Speed Over Accuracy:**Quick, large-scale indexing for search engines where some imprecision is acceptable.
-
-**Preliminary Normalization:**Initial text preprocessing when linguistic correctness is not essential.
-
-**Resource Constraints:**Limited computational power or real-time processing requirements.
-
-**Information Retrieval:**Search applications where recall is more important than precision.
+**Speed Over Accuracy:**Quick, large-scale indexing for search engines where some imprecision is acceptable.**Preliminary Normalization:**Initial text preprocessing when linguistic correctness is not essential.**Resource Constraints:**Limited computational power or real-time processing requirements.**Information Retrieval:**Search applications where recall is more important than precision.
 
 ## Best Practices
 
-**Always Use POS Tagging:**Lemmatization without POS context produces inferior results. POS-aware lemmatization improves accuracy by 15-20%.
-
-**Choose Appropriate Library:**spaCy for production systems, NLTK for research and experimentation. spaCy is typically 3-5× faster.
-
-**Cache Results:**Lemmatization is expensive; cache results for repeated processing of same texts.
-
-**Validate Output:**Manually inspect lemmatization results on sample data to catch systematic errors.
-
-**Language-Specific Models:**Use language-appropriate models and lexicons. English WordNet doesn't help with French lemmatization.
-
-**Consider Hybrid Approaches:**Use lemmatization for important fields (titles, queries) and stemming for less critical text.
+**Always Use POS Tagging:**Lemmatization without POS context produces inferior results. POS-aware lemmatization improves accuracy by 15-20%.**Choose Appropriate Library:**spaCy for production systems, NLTK for research and experimentation. spaCy is typically 3-5× faster.**Cache Results:**Lemmatization is expensive; cache results for repeated processing of same texts.**Validate Output:**Manually inspect lemmatization results on sample data to catch systematic errors.**Language-Specific Models:**Use language-appropriate models and lexicons. English WordNet doesn't help with French lemmatization.**Consider Hybrid Approaches:**Use lemmatization for important fields (titles, queries) and stemming for less critical text.
 
 ## Performance Considerations
 
-**Processing Speed:**Lemmatization processes approximately 10,000-50,000 words per second on modern hardware (spaCy). Stemming is 5-10× faster but less accurate.
-
-**Memory Requirements:**Dictionary-based lemmatization requires loading lexical databases (50-200 MB). Stemming requires minimal memory.
-
-**Accuracy Metrics:**Lemmatization achieves 95-98% accuracy on standard English text with proper POS tagging. Stemming accuracy is typically 60-70%.
+**Processing Speed:**Lemmatization processes approximately 10,000-50,000 words per second on modern hardware (spaCy). Stemming is 5-10× faster but less accurate.**Memory Requirements:**Dictionary-based lemmatization requires loading lexical databases (50-200 MB). Stemming requires minimal memory.**Accuracy Metrics:**Lemmatization achieves 95-98% accuracy on standard English text with proper POS tagging. Stemming accuracy is typically 60-70%.
 
 ## References
 

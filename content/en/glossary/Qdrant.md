@@ -24,17 +24,15 @@ Traditional databases (relational or NoSQL) excel at storing structured data but
 
 A vector is an ordered list of numeric values, typically floats, representing the semantic features of an object as produced by an embedding model (e.g., OpenAI, HuggingFace, CLIP). Each number is a coordinate in a high-dimensional space. The vector "encodes" meaning or context, allowing for mathematical comparison.
 
-<strong>Types:</strong>- <strong>Dense vectors:</strong>Most elements are non-zero; typically from transformer models
-- <strong>Sparse vectors:</strong>Most elements are zero; common in keyword-based (BM25) search
-
-<strong>Examples:</strong>768-dimensional vector for a sentence, 1536-dimensional vector for a product description
+**Types:**-**Dense vectors:**Most elements are non-zero; typically from transformer models
+- **Sparse vectors:**Most elements are zero; common in keyword-based (BM25) search**Examples:**768-dimensional vector for a sentence, 1536-dimensional vector for a product description
 
 ### Point
 
 The atomic unit of data in Qdrant, each point consists of:
-- <strong>ID:</strong>Unique key (integer or UUID)
-- <strong>Vector:</strong>High-dimensional embedding
-- <strong>Payload:</strong>Optional, schema-less JSON metadata
+- **ID:**Unique key (integer or UUID)
+- **Vector:**High-dimensional embedding
+- **Payload:**Optional, schema-less JSON metadata
 
 Points support filtering and faceted search via their payloads, analogous to a "row" in SQL but with vectors as primary data.
 
@@ -46,13 +44,7 @@ A named set of points (vectors + payloads) sharing the same dimensionality and d
 
 A function that measures the "similarity" between two vectors:
 
-<strong>Cosine similarity:</strong>Measures the angle between vectors; common for text embeddings
-
-<strong>Dot product:</strong>Sensitive to both direction and magnitude; used in recommendations
-
-<strong>Euclidean distance:</strong>Straight-line distance; useful for image or sensor embeddings
-
-<strong>Manhattan distance:</strong>Sum of absolute differences; sometimes used for sparse data
+**Cosine similarity:**Measures the angle between vectors; common for text embeddings**Dot product:**Sensitive to both direction and magnitude; used in recommendations**Euclidean distance:**Straight-line distance; useful for image or sensor embeddings**Manhattan distance:**Sum of absolute differences; sometimes used for sparse data
 
 ### Payload
 
@@ -60,11 +52,7 @@ A flexible JSON object attached to each point, storing structured metadata such 
 
 ### Storage Options
 
-<strong>RAM Storage:</strong>Vectors stored in memory; fastest for datasets that fit in available RAM
-
-<strong>Memmap (On-Disk) Storage:</strong>Vectors stored on disk and memory-mapped for efficient access, crucial for large datasets exceeding RAM
-
-<strong>Quantized Storage:</strong>Vectors compressed to use fewer bits (e.g., 8-bit, 2-bit), enabling much larger datasets at some trade-off in precision
+**RAM Storage:**Vectors stored in memory; fastest for datasets that fit in available RAM**Memmap (On-Disk) Storage:**Vectors stored on disk and memory-mapped for efficient access, crucial for large datasets exceeding RAM**Quantized Storage:**Vectors compressed to use fewer bits (e.g., 8-bit, 2-bit), enabling much larger datasets at some trade-off in precision
 
 ## Indexing and Search
 
@@ -94,17 +82,7 @@ Compresses vectors by representing them with fewer bits per value, allowing more
 
 ## Key Features
 
-<strong>Sub-millisecond Search:</strong>Returns results in milliseconds, even across billions of vectors, enabling real-time applications
-
-<strong>Serverless Scaling:</strong>Resources scale automatically based on usage; no manual sharding or provisioning required
-
-<strong>Real-Time Data Ingestion:</strong>New vectors are searchable immediately after upsert, supporting dynamic applications
-
-<strong>Advanced Filtering:</strong>Combine similarity with metadata filters for precise results
-
-<strong>Multitenancy:</strong>Namespaces keep customer or team data isolated while sharing infrastructure
-
-<strong>Security and Compliance:</strong>SOC 2, GDPR, ISO 27001, HIPAA certified with data encrypted at rest and in transit
+**Sub-millisecond Search:**Returns results in milliseconds, even across billions of vectors, enabling real-time applications**Serverless Scaling:**Resources scale automatically based on usage; no manual sharding or provisioning required**Real-Time Data Ingestion:**New vectors are searchable immediately after upsert, supporting dynamic applications**Advanced Filtering:**Combine similarity with metadata filters for precise results**Multitenancy:**Namespaces keep customer or team data isolated while sharing infrastructure**Security and Compliance:**SOC 2, GDPR, ISO 27001, HIPAA certified with data encrypted at rest and in transit
 
 ## Common Use Cases
 
@@ -112,13 +90,13 @@ Compresses vectors by representing them with fewer bits per value, allowing more
 
 Enable users to search vast document collections by meaning, not just keywords. Store vector embeddings for all items, embed user queries, and search for vectors with high similarity using cosine or other metrics.
 
-<strong>Example:</strong>"Find FAQs semantically similar to this support ticket"
+**Example:**"Find FAQs semantically similar to this support ticket"
 
 ### Recommendation Systems
 
 Deliver highly personalized recommendations by matching user behavior and preferences as vectors. Store embeddings for both users and items, using dot product or cosine similarity to find best matches.
 
-<strong>Example:</strong>"Recommend movies similar to what this user has watched"
+**Example:**"Recommend movies similar to what this user has watched"
 
 ### Retrieval-Augmented Generation (RAG)
 
@@ -189,21 +167,11 @@ Fully managed, enterprise-grade Qdrant hosting providing automatic scaling, zero
 
 ## Best Practices
 
-<strong>Choose Appropriate Distance Metrics:</strong>Select cosine for text, dot product for recommendations, or Euclidean for images based on your data characteristics
-
-<strong>Optimize Storage:</strong>Use RAM for speed, memmap for large datasets, and quantization for maximum capacity
-
-<strong>Index Payloads Strategically:</strong>Index frequently filtered fields for performance while avoiding over-indexing
-
-<strong>Tune HNSW Parameters:</strong>Adjust `m`, `ef`, and `ef_construct` to balance search accuracy and speed
-
-<strong>Implement Multitenancy Properly:</strong>Use single collection with tenant field in payload and filter all operations by tenant ID
-
-<strong>Monitor Performance:</strong>Track query latency, throughput, and resource utilization to optimize configuration
+**Choose Appropriate Distance Metrics:**Select cosine for text, dot product for recommendations, or Euclidean for images based on your data characteristics**Optimize Storage:**Use RAM for speed, memmap for large datasets, and quantization for maximum capacity**Index Payloads Strategically:**Index frequently filtered fields for performance while avoiding over-indexing**Tune HNSW Parameters:**Adjust `m`, `ef`, and `ef_construct` to balance search accuracy and speed**Implement Multitenancy Properly:**Use single collection with tenant field in payload and filter all operations by tenant ID**Monitor Performance:**Track query latency, throughput, and resource utilization to optimize configuration
 
 ## Supported Languages
 
-<strong>Client SDKs available for:</strong>- Python
+**Client SDKs available for:**- Python
 - Go
 - Rust
 - JavaScript/TypeScript
@@ -212,13 +180,7 @@ Fully managed, enterprise-grade Qdrant hosting providing automatic scaling, zero
 
 ## Frequently Asked Questions
 
-<strong>What makes Qdrant different from FAISS or standalone vector libraries?</strong>Qdrant is a fully managed, production-grade database with real-time updates, metadata filtering, access control, multitenancy, and serverless scaling. Libraries like FAISS are powerful for local vector search but lack database features, cloud-native reliability, and operational management.
-
-<strong>What data can I store?</strong>Any data that can be embedded as a vector: text, images, audio, user events, time series, product catalogs, and more.
-
-<strong>How does Qdrant ensure security and compliance?</strong>Data is encrypted at rest and in transit with hierarchical encryption keys and private networking. Qdrant holds SOC 2, GDPR, ISO 27001, and HIPAA certifications.
-
-<strong>Can Qdrant be used with relational or document databases?</strong>Yes. Qdrant typically complements SQL/NoSQL stores, handling unstructured, high-dimensional search while structured or transactional data remains in traditional systems.
+**What makes Qdrant different from FAISS or standalone vector libraries?**Qdrant is a fully managed, production-grade database with real-time updates, metadata filtering, access control, multitenancy, and serverless scaling. Libraries like FAISS are powerful for local vector search but lack database features, cloud-native reliability, and operational management.**What data can I store?**Any data that can be embedded as a vector: text, images, audio, user events, time series, product catalogs, and more.**How does Qdrant ensure security and compliance?**Data is encrypted at rest and in transit with hierarchical encryption keys and private networking. Qdrant holds SOC 2, GDPR, ISO 27001, and HIPAA certifications.**Can Qdrant be used with relational or document databases?**Yes. Qdrant typically complements SQL/NoSQL stores, handling unstructured, high-dimensional search while structured or transactional data remains in traditional systems.
 
 ## References
 

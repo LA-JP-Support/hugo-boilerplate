@@ -16,21 +16,17 @@ Dify is an open-source LLM (Large Language Model) app development platform that 
 
 Dify is designed for both technical and non-technical teams and combines a visual workflow builder with powerful backend operations, allowing organizations to create sophisticated AI solutions—such as chatbots, autonomous agents, and document Q&A systems—without deep software engineering or MLOps expertise.
 
-<strong>Core Concept:</strong>Dify is categorized as an LLMOps platform, providing an end-to-end environment for defining, deploying, and operating AI applications. It handles workflow design (no-code/low-code), model orchestration (multi-LLM), data retrieval and RAG pipelines, observability and monitoring, and backend services (user management, APIs, scaling).
-
-<strong>Name Origin:</strong>"Dify" = "Define + Modify"—reflecting rapid iteration and continuous improvement for AI apps.
-
-<strong>Community Traction:</strong>- 130,000+ AI apps built on Dify Cloud (as of mid-2024)
+**Core Concept:**Dify is categorized as an LLMOps platform, providing an end-to-end environment for defining, deploying, and operating AI applications. It handles workflow design (no-code/low-code), model orchestration (multi-LLM), data retrieval and RAG pipelines, observability and monitoring, and backend services (user management, APIs, scaling).**Name Origin:**"Dify" = "Define + Modify"—reflecting rapid iteration and continuous improvement for AI apps.**Community Traction:**- 130,000+ AI apps built on Dify Cloud (as of mid-2024)
 - 34,800+ GitHub stars
 - Active developer and enterprise adoption
 
-<strong>Core Value:</strong>Empowers teams to build, iterate, and operate AI-powered workflows and agents with minimal code, high security, and full data control.
+**Core Value:**Empowers teams to build, iterate, and operate AI-powered workflows and agents with minimal code, high security, and full data control.
 
 ## How Dify Is Used
 
 Dify is used to develop, deploy, and manage AI-native applications and workflows that leverage large language models. It targets business/product teams (design AI chatbots, automate processes, build customer-facing AI services with intuitive drag-and-drop tools), developers (prototype agentic workflows, integrate with proprietary data, extend with plugins/APIs), and enterprise IT & data teams (deploy production-grade AI solutions with observability, security, and compliance—on cloud or self-hosted infrastructure).
 
-<strong>In Practice:</strong>- A product manager builds a document Q&A bot sourcing company policies
+**In Practice:**- A product manager builds a document Q&A bot sourcing company policies
 - A support manager automates FAQ escalation
 - A developer constructs a multi-step agent that retrieves API data, summarizes, and notifies users
 
@@ -38,84 +34,53 @@ Dify is used to develop, deploy, and manage AI-native applications and workflows
 
 ### Visual Workflow Builder
 
-<strong>Drag-and-drop studio:</strong>Construct AI workflows visually—link input prompts, LLM calls, data retrieval, conditional branches, and outputs.  
-<strong>No-code/low-code:</strong>Non-developers design and iterate logic. Developers can inject custom code or API calls.  
-<strong>Version control & debugging:</strong>Each workflow run is logged; trace data through every node; revert versions.
-
-<strong>Example:</strong>An HR manager creates a candidate screening bot: (1) User uploads resume, (2) LLM parses resume, (3) Bot retrieves job requirements from internal docs (RAG), (4) LLM compares applicant to requirements, (5) Bot generates summary for recruiters.
+**Drag-and-drop studio:**Construct AI workflows visually—link input prompts, LLM calls, data retrieval, conditional branches, and outputs.**No-code/low-code:**Non-developers design and iterate logic. Developers can inject custom code or API calls.**Version control & debugging:**Each workflow run is logged; trace data through every node; revert versions.**Example:**An HR manager creates a candidate screening bot: (1) User uploads resume, (2) LLM parses resume, (3) Bot retrieves job requirements from internal docs (RAG), (4) LLM compares applicant to requirements, (5) Bot generates summary for recruiters.
 
 ### Multi-LLM Integration
 
-<strong>Model flexibility:</strong>Instantly connect OpenAI (GPT-3.5/4), Anthropic (Claude), Meta Llama 2, Azure OpenAI, Hugging Face, etc.  
-<strong>Switch and compare:</strong>Test/swap models with a click; optimize for cost, speed, or compliance.  
-<strong>Avoid vendor lock-in:</strong>Use multiple models in one workflow; migrate as needed.
-
-<strong>Example:</strong>A FinTech startup uses OpenAI for English chat, then adds a local Llama 2 model for data privacy.
+**Model flexibility:**Instantly connect OpenAI (GPT-3.5/4), Anthropic (Claude), Meta Llama 2, Azure OpenAI, Hugging Face, etc.**Switch and compare:**Test/swap models with a click; optimize for cost, speed, or compliance.**Avoid vendor lock-in:**Use multiple models in one workflow; migrate as needed.**Example:**A FinTech startup uses OpenAI for English chat, then adds a local Llama 2 model for data privacy.
 
 ### Retrieval-Augmented Generation (RAG) Pipelines
 
-<strong>Knowledge grounding:</strong>Upload proprietary docs, connect DBs, sync web data. Dify indexes data in a vector database (e.g., Weaviate).  
-<strong>RAG node:</strong>LLM combines training knowledge with real-time, company-specific data.  
-<strong>Multi-format support:</strong>Ingest PDFs, DOCs, PPTs, TXT, etc.
-
-<strong>Example:</strong>A legal team builds a "policy assistant" that answers compliance questions using uploaded PDFs, not just the LLM's training data.
+**Knowledge grounding:**Upload proprietary docs, connect DBs, sync web data. Dify indexes data in a vector database (e.g., Weaviate).**RAG node:**LLM combines training knowledge with real-time, company-specific data.**Multi-format support:**Ingest PDFs, DOCs, PPTs, TXT, etc.**Example:**A legal team builds a "policy assistant" that answers compliance questions using uploaded PDFs, not just the LLM's training data.
 
 ### Agentic Workflows & Plugins
 
-<strong>Autonomous agents:</strong>Design AI systems that reason, call tools, and perform multi-step processes.  
-<strong>Plugin/tool integration:</strong>Extend with marketplace plugins (web search, calculators, APIs), or custom code.  
-<strong>Automation:</strong>Trigger workflows on events, schedules, or external calls.
-
-<strong>Example:</strong>An operations team creates an agent monitoring inventory, querying ERP, and auto-generating restock requests.
+**Autonomous agents:**Design AI systems that reason, call tools, and perform multi-step processes.**Plugin/tool integration:**Extend with marketplace plugins (web search, calculators, APIs), or custom code.**Automation:**Trigger workflows on events, schedules, or external calls.**Example:**An operations team creates an agent monitoring inventory, querying ERP, and auto-generating restock requests.
 
 ### Backend as a Service (BaaS)
 
-<strong>User/workspace management:</strong>Handle multi-user collaboration, access control, project separation.  
-<strong>API endpoints:</strong>Expose workflows as REST APIs for integration with web apps, CRMs, etc.  
-<strong>Deployment:</strong>One-click deploy as chatbot, business tool, or API; cloud and on-prem support.
-
-<strong>Example:</strong>A SaaS provider embeds a Dify-powered help widget using Dify's API.
+**User/workspace management:**Handle multi-user collaboration, access control, project separation.**API endpoints:**Expose workflows as REST APIs for integration with web apps, CRMs, etc.**Deployment:**One-click deploy as chatbot, business tool, or API; cloud and on-prem support.**Example:**A SaaS provider embeds a Dify-powered help widget using Dify's API.
 
 ### Observability & Monitoring
 
-<strong>Logging:</strong>Every request, response, and workflow transition is logged.  
-<strong>Performance tracking:</strong>Monitor usage, model costs, user satisfaction.  
-<strong>Experiment management:</strong>Track prompt/workflow changes, compare results, roll back, optimize.
-
-<strong>Example:</strong>A compliance officer audits chatbot logs for data leaks.
+**Logging:**Every request, response, and workflow transition is logged.**Performance tracking:**Monitor usage, model costs, user satisfaction.**Experiment management:**Track prompt/workflow changes, compare results, roll back, optimize.**Example:**A compliance officer audits chatbot logs for data leaks.
 
 ### Security & Compliance
 
-<strong>Enterprise-grade security:</strong>Sandbox AI execution, restrict plugins/code, support secure deployments.  
-<strong>Data control:</strong>Choose cloud or self-hosting for data sovereignty.  
-<strong>Role-based access:</strong>Assign permissions by team, project, or function.
+**Enterprise-grade security:**Sandbox AI execution, restrict plugins/code, support secure deployments.**Data control:**Choose cloud or self-hosting for data sovereignty.**Role-based access:**Assign permissions by team, project, or function.
 
 ## Practical Examples & Use Cases
 
 ### 1. Internal Knowledge Q&A Bots
 
-<strong>Scenario:</strong>Telecom uploads internal docs, builds agentic support bot for staff queries.  
-<strong>Value:</strong>Reduces onboarding time and support tickets, ensures accurate answers.
+**Scenario:**Telecom uploads internal docs, builds agentic support bot for staff queries.**Value:**Reduces onboarding time and support tickets, ensures accurate answers.
 
 ### 2. Automated Customer Support
 
-<strong>Scenario:</strong>E-commerce builds chatbot for order tracking, FAQs, and escalation.  
-<strong>Value:</strong>24/7 support, improved satisfaction, reduced workload.
+**Scenario:**E-commerce builds chatbot for order tracking, FAQs, and escalation.**Value:**24/7 support, improved satisfaction, reduced workload.
 
 ### 3. Document Summarization & Compliance
 
-<strong>Scenario:</strong>Compliance team automates legal doc review for key risks.  
-<strong>Value:</strong>Faster reviews, consistent risk assessments, better compliance.
+**Scenario:**Compliance team automates legal doc review for key risks.**Value:**Faster reviews, consistent risk assessments, better compliance.
 
 ### 4. Marketing Automation & Content Generation
 
-<strong>Scenario:</strong>Marketing team analyzes customer sentiment, generates emails, schedules campaigns via workflow.  
-<strong>Value:</strong>Rapid campaign iteration, data-driven content.
+**Scenario:**Marketing team analyzes customer sentiment, generates emails, schedules campaigns via workflow.**Value:**Rapid campaign iteration, data-driven content.
 
 ### 5. Multi-step Data Processing Agents
 
-<strong>Scenario:</strong>Ops manager extracts/validates data from emails, enters into ERP, notifies teams.  
-<strong>Value:</strong>Automates tedious workflows, reduces errors.
+**Scenario:**Ops manager extracts/validates data from emails, enters into ERP, notifies teams.**Value:**Automates tedious workflows, reduces errors.
 
 ## Dify vs. Competitors
 
@@ -123,75 +88,52 @@ Dify is used to develop, deploy, and manage AI-native applications and workflows
 
 | Criteria | Dify | LangChain |
 |----------|------|-----------|
-| <strong>Interface</strong>| Visual, no-code/low-code | Code library (Python/JS), dev centric |
-| <strong>Target User</strong>| Product, business, developers (broad) | Developers, ML engineers |
-| <strong>Flexibility</strong>| Fast prototyping, built-in ops | Ultimate flexibility, needs coding |
-| <strong>Extensibility</strong>| Plugins, custom nodes, API integration | Deep code-level customization |
-| <strong>Debugging</strong>| Visual logs, versioning | Manual logging/debugging |
-| <strong>Best For</strong>| Rapid deployment, collaboration | Custom, complex LLM apps |
-
-<strong>Summary:</strong>LangChain is a toolbox; Dify is a scaffolding system with structure. Dify gets you running fast; LangChain offers ultimate code control.
+| **Interface**| Visual, no-code/low-code | Code library (Python/JS), dev centric |
+| **Target User**| Product, business, developers (broad) | Developers, ML engineers |
+| **Flexibility**| Fast prototyping, built-in ops | Ultimate flexibility, needs coding |
+| **Extensibility**| Plugins, custom nodes, API integration | Deep code-level customization |
+| **Debugging**| Visual logs, versioning | Manual logging/debugging |
+| **Best For**| Rapid deployment, collaboration | Custom, complex LLM apps |**Summary:**LangChain is a toolbox; Dify is a scaffolding system with structure. Dify gets you running fast; LangChain offers ultimate code control.
 
 ### Dify vs Flowise
 
 | Criteria | Dify | Flowise |
 |----------|------|---------|
-| <strong>Interface</strong>| Clean, modern, intuitive | Developer playground, modular |
-| <strong>Debugging</strong>| Advanced trace, versioning | Basic, less robust |
-| <strong>Scalability</strong>| Enterprise/team focus | Scalable, more technical setup |
-| <strong>Use Cases</strong>| Business, startups, enterprise | Developers, tech teams |
+| **Interface**| Clean, modern, intuitive | Developer playground, modular |
+| **Debugging**| Advanced trace, versioning | Basic, less robust |
+| **Scalability**| Enterprise/team focus | Scalable, more technical setup |
+| **Use Cases**| Business, startups, enterprise | Developers, tech teams |
 
 ### Dify vs GPTBots
 
 | Criteria | Dify | GPTBots |
 |----------|------|---------|
-| <strong>Breadth</strong>| General AI app/workflow builder | Enterprise-focused, specialized agents |
-| <strong>Customization</strong>| Visual, plugins, code nodes | Deep customization, expert support |
-| <strong>Integration</strong>| APIs, plugins, connectors | WhatsApp, Slack, Telegram, enterprise platforms |
-| <strong>Best For</strong>| Diverse AI apps, Q&A bots, RAG | Enterprise agents, multi-platform, human handoff |
-
-<strong>Summary:</strong>Choose Dify for rapid, visual AI app development and workflow automation. Choose GPTBots for highly customized, enterprise-grade AI agents.
+| **Breadth**| General AI app/workflow builder | Enterprise-focused, specialized agents |
+| **Customization**| Visual, plugins, code nodes | Deep customization, expert support |
+| **Integration**| APIs, plugins, connectors | WhatsApp, Slack, Telegram, enterprise platforms |
+| **Best For**| Diverse AI apps, Q&A bots, RAG | Enterprise agents, multi-platform, human handoff |**Summary:**Choose Dify for rapid, visual AI app development and workflow automation. Choose GPTBots for highly customized, enterprise-grade AI agents.
 
 ## Deployment & Integration
 
 Dify offers flexible deployment and integration options:
 
-<strong>Cloud-hosted (Dify Cloud):</strong>Fastest for teams, no infra overhead.  
-<strong>Self-hosted:</strong>Docker Compose, Kubernetes for full data control and compliance.  
-<strong>API Integration:</strong>Expose workflows as REST endpoints for use in web apps, CRMs, etc.  
-<strong>Plugin Ecosystem:</strong>Add features, models, integrations via plugins.
-
-<strong>Supported Integrations:</strong>- <strong>LLM APIs:</strong>OpenAI, Anthropic, Azure, HuggingFace, Meta, Qwen, etc.
-- <strong>Vector Stores:</strong>Weaviate (default), others via plugin
-- <strong>External Systems:</strong>Databases, web services, internal APIs (MCP protocol)
-
-<strong>Example:</strong>A healthcare provider self-hosts Dify for HIPAA compliance, connects to internal DBs, exposes chatbot APIs securely.
+**Cloud-hosted (Dify Cloud):**Fastest for teams, no infra overhead.**Self-hosted:**Docker Compose, Kubernetes for full data control and compliance.**API Integration:**Expose workflows as REST endpoints for use in web apps, CRMs, etc.**Plugin Ecosystem:**Add features, models, integrations via plugins.**Supported Integrations:**-**LLM APIs:**OpenAI, Anthropic, Azure, HuggingFace, Meta, Qwen, etc.
+- **Vector Stores:**Weaviate (default), others via plugin
+- **External Systems:**Databases, web services, internal APIs (MCP protocol)**Example:**A healthcare provider self-hosts Dify for HIPAA compliance, connects to internal DBs, exposes chatbot APIs securely.
 
 ## Limitations & Roadmap
 
-<strong>Known Limitations:</strong>- <strong>Metadata filtering in RAG:</strong>Fine-grained search (date/category) is limited, but workarounds exist via API; full support on roadmap
-- <strong>Advanced agent autonomy:</strong>Some multi-agent orchestration is still maturing
-- <strong>Plugin ecosystem:</strong>Expanding, not as extensive as some competitors—more integrations planned
-- <strong>UI customization:</strong>Visual builder is opinionated; advanced UI may require API/external dev
-
-<strong>Roadmap Highlights:</strong>- Enhanced RAG controls
+**Known Limitations:**-**Metadata filtering in RAG:**Fine-grained search (date/category) is limited, but workarounds exist via API; full support on roadmap
+- **Advanced agent autonomy:**Some multi-agent orchestration is still maturing
+- **Plugin ecosystem:**Expanding, not as extensive as some competitors—more integrations planned
+- **UI customization:**Visual builder is opinionated; advanced UI may require API/external dev**Roadmap Highlights:**- Enhanced RAG controls
 - More third-party integrations (DBs, CRMs, messaging)
 - Richer analytics/reporting
 - Expanded plugin marketplace
 
 ## Frequently Asked Questions (FAQ)
 
-<strong>Q: Do I need to code to use Dify?</strong>A: No, Dify is designed for no-code/low-code use. Basic logic helps, but the platform is visual and accessible.
-
-<strong>Q: Can I use multiple LLMs in one application?</strong>A: Yes. Dify enables mixing and matching models within workflows.
-
-<strong>Q: How does Dify ensure data privacy?</strong>A: Dify supports self-hosting, so all data can remain on your infrastructure. Role-based access and logging included.
-
-<strong>Q: What apps can I build?</strong>A: Chatbots, knowledge assistants, document Q&A, content generators, process automation bots, and more.
-
-<strong>Q: How does Dify compare to others?</strong>A: Dify emphasizes visual development, rapid deployment, and built-in ops. More accessible than code-heavy frameworks.
-
-<strong>Q: Where can I find support and community?</strong>A: See References section for documentation, forum, GitHub, Discord, and YouTube.
+**Q: Do I need to code to use Dify?**A: No, Dify is designed for no-code/low-code use. Basic logic helps, but the platform is visual and accessible.**Q: Can I use multiple LLMs in one application?**A: Yes. Dify enables mixing and matching models within workflows.**Q: How does Dify ensure data privacy?**A: Dify supports self-hosting, so all data can remain on your infrastructure. Role-based access and logging included.**Q: What apps can I build?**A: Chatbots, knowledge assistants, document Q&A, content generators, process automation bots, and more.**Q: How does Dify compare to others?**A: Dify emphasizes visual development, rapid deployment, and built-in ops. More accessible than code-heavy frameworks.**Q: Where can I find support and community?**A: See References section for documentation, forum, GitHub, Discord, and YouTube.
 
 ## References
 

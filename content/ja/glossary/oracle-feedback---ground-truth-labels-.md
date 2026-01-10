@@ -31,7 +31,7 @@ Oracleフィードバックは、AI/MLシステムに正しい回答(正解ラ�
 - AIシステムが例によって入力と望ましい出力の間のマッピングを学習できるようにします。
 - Oracleプラットフォームでは、ユーザーインターフェース、API、または特定のプロシージャを介してフィードバックを提供できます。
 
-<strong>リンク:</strong>- [Oracle ML Fundamentals](https://www.oracle.com/artificial-intelligence/machine-learning/what-is-machine-learning/)
+**リンク:**- [Oracle ML Fundamentals](https://www.oracle.com/artificial-intelligence/machine-learning/what-is-machine-learning/)
 - [Labeling Data for ML (LabelYourData)](https://labelyourdata.com/articles/label-data-for-machine-learning)
 - [OCI Data Labeling](https://www.oracle.com/artificial-intelligence/data-labeling/)
 
@@ -39,9 +39,9 @@ Oracleフィードバックは、AI/MLシステムに正しい回答(正解ラ�
 
 正解ラベルは、権威あるプロセスまたは専門家のアノテーションによって確立された、特定のデータセットに対する正しい回答のセットです。これらのラベルは、AIモデルのトレーニング、検証、評価のためのゴールドスタンダードです。
 
-- <strong>自然言語処理(NLP)の場合:</strong>自然言語プロンプトに対する正しいSQLクエリ。
-- <strong>コンピュータビジョンの場合:</strong>画像に対する正しいクラス、バウンディングボックス、またはセグメンテーションマスク。
-- <strong>分類の場合:</strong>データポイントに対する正しいクラスまたはカテゴリ。
+- **自然言語処理(NLP)の場合:**自然言語プロンプトに対する正しいSQLクエリ。
+- **コンピュータビジョンの場合:**画像に対する正しいクラス、バウンディングボックス、またはセグメンテーションマスク。
+- **分類の場合:**データポイントに対する正しいクラスまたはカテゴリ。
 
 ### オラクル(権威)
 
@@ -58,7 +58,7 @@ AI/MLにおけるオラクルとは、正しい出力がどうあるべきかに
 - アノテーターが各データ項目に正しい出力でラベル付けします。
 - ラベル付けされたデータは、Oracle AIおよびデータサイエンスサービスとの直接統合のためにJSON形式でエクスポートできます。
 
-<strong>機能:</strong>- カスタムテンプレートとアノテーション形式。
+**機能:**- カスタムテンプレートとアノテーション形式。
 - GUIおよびAPIベースのアノテーション。
 - シームレスなモデルトレーニングのためのOCI VisionおよびOCI Languageとの統合。
 
@@ -66,32 +66,32 @@ AI/MLにおけるオラクルとは、正しい出力がどうあるべきかに
 
 ラベル付けされたデータは教師あり学習に使用され、モデルは各例に対して正しい回答を明示的に示されます。
 
-- <strong>アルゴリズムの例:</strong>ニューラルネットワーク、決定木、SVM。
-- <strong>プロセス:</strong>各入力はそのラベルとペアになり、モデルは予測と正しい出力の間の誤差を最小化するために内部パラメータを調整します。
+- **アルゴリズムの例:**ニューラルネットワーク、決定木、SVM。
+- **プロセス:**各入力はそのラベルとペアになり、モデルは予測と正しい出力の間の誤差を最小化するために内部パラメータを調整します。
 
 ### 3. モデル評価と検証
 
 トレーニング後、モデルは新しいラベル付きデータでテストされます。出力は正解ラベルと比較され、精度、適合率、再現率、F1スコアなどのメトリクスが計算されます。
 
-- <strong>目的:</strong>AI予測が正解から逸脱する箇所を特定し、集中的な改善を可能にします。
-- <strong>ベストプラクティス:</strong>信頼できるオラクル提供のラベルを持つ別個のテストセットを使用します。
+- **目的:**AI予測が正解から逸脱する箇所を特定し、集中的な改善を可能にします。
+- **ベストプラクティス:**信頼できるオラクル提供のラベルを持つ別個のテストセットを使用します。
 
 ### 4. Oracleプラットフォームにおけるフィードバックメカニズム
 
-#### <strong>Oracle Select AI (NL2SQL) フィードバックループ</strong>[Select AI](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/select-ai-feedback.html)は、ユーザーがAI生成のSQLクエリに直接フィードバックを提供できるようにし、自然言語からSQLへのパフォーマンスを向上させます。
+#### **Oracle Select AI (NL2SQL) フィードバックループ**[Select AI](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/select-ai-feedback.html)は、ユーザーがAI生成のSQLクエリに直接フィードバックを提供できるようにし、自然言語からSQLへのパフォーマンスを向上させます。
 
-- <strong>プロセス:</strong>- ユーザーが自然言語プロンプトを発行します。
+- **プロセス:**- ユーザーが自然言語プロンプトを発行します。
   - AIがSQLクエリを生成します。
   - ユーザーがSQLをレビューします:
     - 正しい場合、肯定的なフィードバックが与えられます。
     - 正しくない場合、ユーザーは修正されたSQLまたは説明的なフィードバックを提供します。
   - フィードバックはベクトルインデックス(例: `<profile_name>_FEEDBACK_VECINDEX`)に記録されます。
 
-- <strong>技術的インターフェース:</strong>- フィードバックはUIを通じて、または`DBMS_CLOUD_AI.FEEDBACK`プロシージャを呼び出すことで提供できます。
+- **技術的インターフェース:**- フィードバックはUIを通じて、または`DBMS_CLOUD_AI.FEEDBACK`プロシージャを呼び出すことで提供できます。
     - [DBMS_CLOUD_AI Package Reference](https://docs.oracle.com/en-us/iaas/autonomous-database-serverless/doc/dbms-cloud-ai-package.html)
   - フィードバックは将来のプロンプトの参照として使用され、LLMのコンテキスト理解と精度を向上させます。
 
-- <strong>例:</strong>```sql
+- **例:**```sql
 -- 正しいSQLに対する肯定的なフィードバック
 EXEC DBMS_CLOUD_AI.FEEDBACK(
     ai_profile    => 'my_profile',
@@ -155,7 +155,7 @@ Oracleのフィードバックシステムは、クローズドフィードバ�
 - 修正されたSQLが正解として保存されます。
 - システムは保存されたフィードバックを使用して、将来のSQL生成を改善します。
 
-<strong>ドキュメント:</strong>[Select AI Feedback](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/select-ai-feedback.html)
+**ドキュメント:**[Select AI Feedback](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/select-ai-feedback.html)
 
 ### Oracle HCM Cloud: AI生成従業員フィードバック
 
@@ -164,7 +164,7 @@ Oracleのフィードバックシステムは、クローズドフィードバ�
 - マネージャーがレビュー/編集して送信します。
 - 人間がレビューしたフィードバックは、将来のAI提案のための正解コーパスの一部になります。
 
-<strong>ドキュメント:</strong>[AI Assistance for Giving Feedback](https://docs.oracle.com/en/cloud/saas/readiness/hcm/24a/tama-24a/24A-talent-mgmt-wn-f31188.htm)
+**ドキュメント:**[AI Assistance for Giving Feedback](https://docs.oracle.com/en/cloud/saas/readiness/hcm/24a/tama-24a/24A-talent-mgmt-wn-f31188.htm)
 
 ### コンピュータビジョンにおける教師あり学習
 
@@ -178,9 +178,7 @@ Oracleのフィードバックシステムは、クローズドフィードバ�
 
 ## ベストプラクティスと実装のヒント
 
-- **正解作成にはドメイン専門家または堅牢なアノテーションガイドラインを使用します。**- **スケーラブルなアノテーションのためにOCI Data Labelingなどのツールを活用します。**- **進化する要件に適応するために、フィードバックを継続的に組み込みます。**- **フィードバックへの過学習を防ぐために、別個の検証およびテストセットを使用します。**- **トレーサビリティと再現性のために、フィードバックとアノテーションプロセスを文書化します。**## 技術的詳細: Select AIフィードバックとDBMS_CLOUD_AI.FEEDBACK
-
-**フィードバックメカニズム:**- Oracle AI Database 26aiでのみ利用可能です。
+- **正解作成にはドメイン専門家または堅牢なアノテーションガイドラインを使用します。**-**スケーラブルなアノテーションのためにOCI Data Labelingなどのツールを活用します。**-**進化する要件に適応するために、フィードバックを継続的に組み込みます。**-**フィードバックへの過学習を防ぐために、別個の検証およびテストセットを使用します。**-**トレーサビリティと再現性のために、フィードバックとアノテーションプロセスを文書化します。**## 技術的詳細: Select AIフィードバックとDBMS_CLOUD_AI.FEEDBACK**フィードバックメカニズム:**- Oracle AI Database 26aiでのみ利用可能です。
 - Select AIアクション(`runsql`、`showsql`、`explainsql`)と併用されます。
 - フィードバックアクションまたは`DBMS_CLOUD_AI.FEEDBACK`プロシージャがユーザーの応答を記録します。
 - フィードバック参照を保存するためのデフォルトベクトルインデックス(`<profile_name>_FEEDBACK_VECINDEX`)を作成します。
@@ -189,7 +187,7 @@ Oracleのフィードバックシステムは、クローズドフィードバ�
 - 肯定的(確認)および否定的(修正)フィードバックの両方を許可します。
 - フィードバックは、将来の類似クエリの参照として使用されます。
 
-<strong>ドキュメント:</strong>[DBMS_CLOUD_AI Package Reference](https://docs.oracle.com/en-us/iaas/autonomous-database-serverless/doc/dbms-cloud-ai-package.html)
+**ドキュメント:**[DBMS_CLOUD_AI Package Reference](https://docs.oracle.com/en-us/iaas/autonomous-database-serverless/doc/dbms-cloud-ai-package.html)
 
 ## 参考文献とさらなる読み物
 

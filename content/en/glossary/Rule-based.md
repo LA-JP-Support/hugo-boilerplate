@@ -16,13 +16,13 @@ A rule-based system is a computational framework that processes data and makes d
 
 Rule-based systems are characterized by their reliance on predetermined logic rather than adaptive learning. This makes them ideal for scenarios demanding explainability, reliability, and strict adherence to policies. Unlike machine learning models that learn patterns from data, rule-based systems execute explicitly programmed instructions, making every decision traceable to specific rules.
 
-The fundamental structure of a rule is simple: <strong>IF condition(s) THEN action(s)</strong>. For example: "IF transaction amount > $10,000 THEN flag for compliance review." This transparency makes rule-based systems particularly valuable in regulated industries where decision auditability is mandatory.
+The fundamental structure of a rule is simple: **IF condition(s) THEN action(s)**. For example: "IF transaction amount > $10,000 THEN flag for compliance review." This transparency makes rule-based systems particularly valuable in regulated industries where decision auditability is mandatory.
 
 ## Historical Development
 
 Rule-based systems emerged in the 1970s as computer scientists sought to emulate expert decision-making, particularly in medicine, law, and engineering. The earliest AI systems, known as expert systems, were built on logical rules derived from how human experts reasoned through problems.
 
-<strong>MYCIN (Stanford University, 1970s):</strong>A pioneering expert system for diagnosing bacterial infections and recommending treatments. MYCIN's architecture demonstrated both the power and limitations of rule-based systems, achieving expert-level diagnostic accuracy while revealing scalability challenges with large rule sets. This landmark system influenced decades of AI research and established the foundation for modern expert systems.
+**MYCIN (Stanford University, 1970s):**A pioneering expert system for diagnosing bacterial infections and recommending treatments. MYCIN's architecture demonstrated both the power and limitations of rule-based systems, achieving expert-level diagnostic accuracy while revealing scalability challenges with large rule sets. This landmark system influenced decades of AI research and established the foundation for modern expert systems.
 
 As computational capabilities advanced, rule-based systems evolved to integrate with databases, handle more complex inference mechanisms, and operate alongside statistical machine learning models in hybrid architectures.
 
@@ -36,11 +36,7 @@ Repository for all rules (condition-action pairs) and factual domain knowledge. 
 
 The processing core that evaluates which rules apply to current facts, applies logical reasoning, and derives conclusions. Inference engines use:
 
-<strong>Forward Chaining (Data-Driven):</strong>Starts with known facts, applies rules to infer new information. Example: "IF temperature > 100°C THEN trigger safety alarm"
-
-<strong>Backward Chaining (Goal-Driven):</strong>Begins with a goal, works backward to determine supporting rules and facts. Example: "Goal: User eligible for loan. IF credit score > 700 AND income > $50,000 THEN eligible"
-
-<strong>Hybrid Approaches:</strong>Combine forward and backward chaining for complex scenarios requiring both data-driven and goal-driven reasoning
+**Forward Chaining (Data-Driven):**Starts with known facts, applies rules to infer new information. Example: "IF temperature > 100°C THEN trigger safety alarm"**Backward Chaining (Goal-Driven):**Begins with a goal, works backward to determine supporting rules and facts. Example: "Goal: User eligible for loan. IF credit score > 700 AND income > $50,000 THEN eligible"**Hybrid Approaches:**Combine forward and backward chaining for complex scenarios requiring both data-driven and goal-driven reasoning
 
 ### Working Memory (Fact Base)
 
@@ -62,15 +58,7 @@ Facilitates adding or updating rules, allowing domain experts or administrators 
 
 Rule-based systems process information through a systematic sequence:
 
-<strong>1. Data Input:</strong>Receives input from users, sensors, databases, or external systems
-
-<strong>2. Rule Matching (Pattern Matching):</strong>The inference engine scans the knowledge base for rules whose conditions match current facts
-
-<strong>3. Rule Execution:</strong>If conditions are satisfied, executes corresponding actions—updating working memory, generating outputs, or triggering workflows
-
-<strong>4. Conflict Resolution:</strong>When multiple rules are applicable, the system determines execution priority using strategies like priority-based resolution (explicit rule priorities), specificity-based resolution (more specific rules override general ones), temporal order (newer rules may take precedence), or rule grouping (organized by category with controlled execution order)
-
-<strong>5. Output Generation:</strong>Delivers outputs such as decisions, alerts, recommendations, or automated actions via the user interface
+**1. Data Input:**Receives input from users, sensors, databases, or external systems**2. Rule Matching (Pattern Matching):**The inference engine scans the knowledge base for rules whose conditions match current facts**3. Rule Execution:**If conditions are satisfied, executes corresponding actions—updating working memory, generating outputs, or triggering workflows**4. Conflict Resolution:**When multiple rules are applicable, the system determines execution priority using strategies like priority-based resolution (explicit rule priorities), specificity-based resolution (more specific rules override general ones), temporal order (newer rules may take precedence), or rule grouping (organized by category with controlled execution order)**5. Output Generation:**Delivers outputs such as decisions, alerts, recommendations, or automated actions via the user interface
 
 ## Types and Applications
 
@@ -153,26 +141,20 @@ Less effective with free-form text, images, or unstructured inputs that don't fi
 
 | Aspect | Rule-Based Systems | Machine Learning |
 |--------|-------------------|------------------|
-| <strong>Approach</strong>| Explicit human-authored rules | Statistical models learned from data |
-| <strong>Transparency</strong>| High (white-box, explainable) | Often low (black-box, especially deep learning) |
-| <strong>Adaptation</strong>| Manual updates only | Learns and improves from new data |
-| <strong>Data Requirements</strong>| No training data needed | Requires large, representative datasets |
-| <strong>Best For</strong>| Structured, stable domains with clear logic | Unstructured, complex, rapidly changing domains |
-| <strong>Development Time</strong>| Fast initial deployment | Longer training and validation period |
-| <strong>Consistency</strong>| Perfectly consistent | May vary with data distribution |
-| <strong>Maintenance</strong>| Rule updates as needed | Retraining with new data |
+| **Approach**| Explicit human-authored rules | Statistical models learned from data |
+| **Transparency**| High (white-box, explainable) | Often low (black-box, especially deep learning) |
+| **Adaptation**| Manual updates only | Learns and improves from new data |
+| **Data Requirements**| No training data needed | Requires large, representative datasets |
+| **Best For**| Structured, stable domains with clear logic | Unstructured, complex, rapidly changing domains |
+| **Development Time**| Fast initial deployment | Longer training and validation period |
+| **Consistency**| Perfectly consistent | May vary with data distribution |
+| **Maintenance**| Rule updates as needed | Retraining with new data |
 
 ## Modern Hybrid Approaches
 
 Contemporary systems increasingly blend rule-based and machine learning approaches:
 
-<strong>Explainable AI (XAI):</strong>Rule-based logic enhances explainability in complex AI systems, providing transparent decision paths alongside ML predictions
-
-<strong>Hybrid AI Systems:</strong>Integrate machine learning for pattern recognition and ambiguous inputs, with rule-based engines for regulatory logic and transparent decision-making
-
-<strong>Knowledge Graphs and Semantic Reasoning:</strong>Rule-based reasoning over knowledge graphs supports advanced inference and relationship management
-
-<strong>Business Process Automation:</strong>Rule engines power robotic process automation (RPA) and workflow orchestration, maintaining compliance and auditability
+**Explainable AI (XAI):**Rule-based logic enhances explainability in complex AI systems, providing transparent decision paths alongside ML predictions**Hybrid AI Systems:**Integrate machine learning for pattern recognition and ambiguous inputs, with rule-based engines for regulatory logic and transparent decision-making**Knowledge Graphs and Semantic Reasoning:**Rule-based reasoning over knowledge graphs supports advanced inference and relationship management**Business Process Automation:**Rule engines power robotic process automation (RPA) and workflow orchestration, maintaining compliance and auditability
 
 ## Industry-Specific Applications
 
@@ -198,37 +180,11 @@ Network management, service provisioning, billing systems, troubleshooting autom
 
 ## Implementation Best Practices
 
-<strong>Start Simple:</strong>Begin with core, high-value rules before adding complexity
-
-<strong>Involve Domain Experts:</strong>Ensure rules accurately reflect expert knowledge and business requirements
-
-<strong>Maintain Rule Documentation:</strong>Document rule rationale, owner, and modification history
-
-<strong>Implement Version Control:</strong>Track rule changes over time for auditability
-
-<strong>Test Thoroughly:</strong>Validate rules against diverse scenarios and edge cases
-
-<strong>Monitor Performance:</strong>Track rule execution patterns and effectiveness
-
-<strong>Plan for Scalability:</strong>Design architecture to accommodate growing rule sets
-
-<strong>Enable Explanation:</strong>Build capabilities to explain decisions to users
-
-<strong>Regular Review:</strong>Periodically audit rules for accuracy and relevance
+**Start Simple:**Begin with core, high-value rules before adding complexity**Involve Domain Experts:**Ensure rules accurately reflect expert knowledge and business requirements**Maintain Rule Documentation:**Document rule rationale, owner, and modification history**Implement Version Control:**Track rule changes over time for auditability**Test Thoroughly:**Validate rules against diverse scenarios and edge cases**Monitor Performance:**Track rule execution patterns and effectiveness**Plan for Scalability:**Design architecture to accommodate growing rule sets**Enable Explanation:**Build capabilities to explain decisions to users**Regular Review:**Periodically audit rules for accuracy and relevance
 
 ## Advanced Features
 
-<strong>Rule Authoring Tools:</strong>User-friendly interfaces enabling non-programmers to define and manage rules
-
-<strong>Rule Templates:</strong>Standardized formats for common patterns, accelerating development
-
-<strong>Rule Versioning and Auditing:</strong>Track changes over time, supporting compliance and debugging
-
-<strong>Integration Capabilities:</strong>APIs and connectors for interoperability with external systems
-
-<strong>Scalability Optimization:</strong>Algorithms for efficient processing of large rule sets
-
-<strong>Adaptive Rule Management:</strong>Dynamic rule adjustment based on data and feedback
+**Rule Authoring Tools:**User-friendly interfaces enabling non-programmers to define and manage rules**Rule Templates:**Standardized formats for common patterns, accelerating development**Rule Versioning and Auditing:**Track changes over time, supporting compliance and debugging**Integration Capabilities:**APIs and connectors for interoperability with external systems**Scalability Optimization:**Algorithms for efficient processing of large rule sets**Adaptive Rule Management:**Dynamic rule adjustment based on data and feedback
 
 ## References
 

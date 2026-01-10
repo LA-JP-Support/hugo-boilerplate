@@ -48,19 +48,7 @@ Logic that compares user query embeddings with route vectors, selects the best m
 
 ### Step-by-Step Workflow
 
-<strong>1. User Query:</strong>User submits a free-form question or command
-
-<strong>2. Text Embedding:</strong>Query is converted into a vector using an embedding model
-
-<strong>3. Route Definition:</strong>Each route is associated with one or more example utterances, embedded as vectors
-
-<strong>4. Similarity Search:</strong>The system computes similarity (e.g., cosine similarity) between the query vector and all route utterance vectors
-
-<strong>5. Routing Decision:</strong>The route with the highest similarity (above a threshold) is chosen
-
-<strong>6. Action/Fallback:</strong>The matched route triggers a specific action or a fallback/default route is used if no match is strong enough
-
-<strong>Example Workflow:</strong>```plaintext
+**1. User Query:**User submits a free-form question or command**2. Text Embedding:**Query is converted into a vector using an embedding model**3. Route Definition:**Each route is associated with one or more example utterances, embedded as vectors**4. Similarity Search:**The system computes similarity (e.g., cosine similarity) between the query vector and all route utterance vectors**5. Routing Decision:**The route with the highest similarity (above a threshold) is chosen**6. Action/Fallback:**The matched route triggers a specific action or a fallback/default route is used if no match is strong enough**Example Workflow:**```plaintext
 User Query: "I can't get into my account"
    ↓
 [Embedding Model] → Query Vector
@@ -84,73 +72,37 @@ Best Match: "Account Access" route (similarity: 0.92)
 
 ## Key Benefits
 
-**Speed and Efficiency**Vector similarity search is extremely fast (100ms typical) compared to LLM inference (5000ms+), enabling real-time routing decisions at scale.
-
-**Cost Optimization**Reduces need for expensive LLM calls by handling straightforward routing decisions through vector comparison, significantly lowering operational costs.
-
-**Scalability**Supports thousands of routes, surpassing LLM context limits. Vector databases can efficiently handle millions of embeddings for large-scale deployments.
-
-**Safety and Determinism**Routes only to pre-defined paths, minimizing risk of hallucinations or unexpected behavior common in LLM-based routing.
-
-**Customizability**Developers can define, tune, and optimize routes and utterances for any domain without model retraining.
-
-**Extensibility**New routes added by uploading new utterances—no retraining needed. Routes can be updated dynamically based on usage patterns.
-
-**Architectural Flexibility**Works with any embedding model or vector database, avoiding vendor lock-in and enabling technology stack customization.
+**Speed and Efficiency**Vector similarity search is extremely fast (100ms typical) compared to LLM inference (5000ms+), enabling real-time routing decisions at scale.**Cost Optimization**Reduces need for expensive LLM calls by handling straightforward routing decisions through vector comparison, significantly lowering operational costs.**Scalability**Supports thousands of routes, surpassing LLM context limits. Vector databases can efficiently handle millions of embeddings for large-scale deployments.**Safety and Determinism**Routes only to pre-defined paths, minimizing risk of hallucinations or unexpected behavior common in LLM-based routing.**Customizability**Developers can define, tune, and optimize routes and utterances for any domain without model retraining.**Extensibility**New routes added by uploading new utterances—no retraining needed. Routes can be updated dynamically based on usage patterns.**Architectural Flexibility**Works with any embedding model or vector database, avoiding vendor lock-in and enabling technology stack customization.
 
 ## Limitations and Trade-offs
 
-**Nuanced or Multi-part Queries**Struggles with queries containing multiple intents or requiring cross-domain reasoning. May require escalation to LLM-based routing for complex cases.
-
-**Quality of Route Definitions**Effectiveness depends on well-chosen utterances for each route. Poor utterance selection leads to misrouting.
-
-**Ambiguity Handling**Edge-case queries may require fallback mechanisms or escalation to LLM-based routing for disambiguation.
-
-**Limited Deep Understanding**Not a substitute for full language understanding; best as a "first line of defense" in hybrid systems that combine multiple routing approaches.
+**Nuanced or Multi-part Queries**Struggles with queries containing multiple intents or requiring cross-domain reasoning. May require escalation to LLM-based routing for complex cases.**Quality of Route Definitions**Effectiveness depends on well-chosen utterances for each route. Poor utterance selection leads to misrouting.**Ambiguity Handling**Edge-case queries may require fallback mechanisms or escalation to LLM-based routing for disambiguation.**Limited Deep Understanding**Not a substitute for full language understanding; best as a "first line of defense" in hybrid systems that combine multiple routing approaches.
 
 ## Common Use Cases
 
 ### Customer Support
 
-**Scenario:**Routing "I can't access my account" to technical support, "What's your pricing?" to sales
-
-**Benefit:**Reduces misrouting, ensures domain experts handle the right queries, improves first-contact resolution rates
+**Scenario:**Routing "I can't access my account" to technical support, "What's your pricing?" to sales**Benefit:**Reduces misrouting, ensures domain experts handle the right queries, improves first-contact resolution rates
 
 ### Content Moderation
 
-**Application:**Detects and routes toxic or policy-violating content to moderation workflows
-
-**Benefit:**Automated content filtering, real-time safety enforcement, reduced moderation overhead
+**Application:**Detects and routes toxic or policy-violating content to moderation workflows**Benefit:**Automated content filtering, real-time safety enforcement, reduced moderation overhead
 
 ### Personalization
 
-**Application:**Recognizes cues like "Can you talk more formally?" and switches response tone/persona
-
-**Benefit:**Dynamic adaptation to user preferences, improved user experience, context-aware interactions
+**Application:**Recognizes cues like "Can you talk more formally?" and switches response tone/persona**Benefit:**Dynamic adaptation to user preferences, improved user experience, context-aware interactions
 
 ### Multi-Source RAG
 
-**Application:**Directs queries to the correct domain-specific database (e.g., HR, finance, technical docs)
-
-**Benefit:**Accurate retrieval from specialized knowledge bases, reduced irrelevant results, faster response times
+**Application:**Directs queries to the correct domain-specific database (e.g., HR, finance, technical docs)**Benefit:**Accurate retrieval from specialized knowledge bases, reduced irrelevant results, faster response times
 
 ### API Orchestration
 
-**Application:**Decides whether to invoke an external API, local function, or LLM for a user request
-
-**Benefit:**Optimized resource utilization, cost reduction, intelligent workflow automation
+**Application:**Decides whether to invoke an external API, local function, or LLM for a user request**Benefit:**Optimized resource utilization, cost reduction, intelligent workflow automation
 
 ## Strategic Considerations
 
-**First Line of Defense**Fast, deterministic routing before invoking costly LLMs. Handles straightforward cases efficiently while escalating complex queries.
-
-**Hybrid Orchestration**Combine with LLM-as-router and agentic orchestration for optimal balance of control and efficiency.
-
-**Updating and Scaling**Easily update, add, or remove routes via utterance vectors without system downtime or model retraining.
-
-**Data Security**Sensitive queries can be routed without sending data to external providers, maintaining data sovereignty.
-
-**Vendor Independence**Works with both open-source and commercial embedding models/vector stores, enabling flexible technology choices.
+**First Line of Defense**Fast, deterministic routing before invoking costly LLMs. Handles straightforward cases efficiently while escalating complex queries.**Hybrid Orchestration**Combine with LLM-as-router and agentic orchestration for optimal balance of control and efficiency.**Updating and Scaling**Easily update, add, or remove routes via utterance vectors without system downtime or model retraining.**Data Security**Sensitive queries can be routed without sending data to external providers, maintaining data sovereignty.**Vendor Independence**Works with both open-source and commercial embedding models/vector stores, enabling flexible technology choices.
 
 ## Implementation Example
 
@@ -194,17 +146,7 @@ print(result)  # RouteChoice(name='support', ...)
 
 ## Best Practices
 
-**Design Clear Routes**Create distinct, non-overlapping routes with clear semantic boundaries to minimize confusion.
-
-**Diverse Utterances**Include varied phrasings for each route to capture different ways users express the same intent.
-
-**Threshold Tuning**Optimize similarity thresholds to balance precision and recall based on use case requirements.
-
-**Fallback Handling**Implement robust fallback routes for queries that don't match existing routes confidently.
-
-**Monitor Performance**Track routing accuracy, similarity scores, and fallback rates to identify improvement opportunities.
-
-**Iterative Refinement**Continuously update routes and utterances based on real usage patterns and user feedback.
+**Design Clear Routes**Create distinct, non-overlapping routes with clear semantic boundaries to minimize confusion.**Diverse Utterances**Include varied phrasings for each route to capture different ways users express the same intent.**Threshold Tuning**Optimize similarity thresholds to balance precision and recall based on use case requirements.**Fallback Handling**Implement robust fallback routes for queries that don't match existing routes confidently.**Monitor Performance**Track routing accuracy, similarity scores, and fallback rates to identify improvement opportunities.**Iterative Refinement**Continuously update routes and utterances based on real usage patterns and user feedback.
 
 ## Technology Stack Options
 

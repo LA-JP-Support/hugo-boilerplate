@@ -16,7 +16,7 @@ Monolithic architecture refers to unified software application model where all f
 
 A monolithic application encapsulates all functionality—web interfaces, business workflows, data persistence, and integrations—in single repository and release pipeline. This contrasts with microservices where application splits into independently deployable services with distinct runtimes and codebases.
 
-<strong>Analogy:</strong>Monolithic application is like single, solid building carved from one rock; any modification or repair requires working with entire structure, not just a part.
+**Analogy:**Monolithic application is like single, solid building carved from one rock; any modification or repair requires working with entire structure, not just a part.
 
 ## Structural Components
 
@@ -46,68 +46,48 @@ Cross-cutting concerns such as logging, error handling, monitoring, authenticati
 
 ## Key Characteristics
 
-<strong>Single Codebase:</strong>All application code managed in single repository and built together.
-
-<strong>Tightly Coupled Components:</strong>Modules and features are interdependent, often sharing class definitions, data models, and internal APIs.
-
-<strong>Unified Process Space:</strong>Application runs as single process with shared memory and resources.
-
-<strong>Single Deployment Unit:</strong>Entire application packaged and deployed together (.jar, .war, Docker container).
-
-<strong>Centralized Data Store:</strong>Typically single database serves all application components.
-
-<strong>Layered Structure:</strong>Code organized into logical layers (UI, business logic, data access) but remains one deployable artifact.
-
-<strong>Limited Scalability:</strong>Scaling requires scaling whole application even if only one component is under load.
+**Single Codebase:**All application code managed in single repository and built together.**Tightly Coupled Components:**Modules and features are interdependent, often sharing class definitions, data models, and internal APIs.**Unified Process Space:**Application runs as single process with shared memory and resources.**Single Deployment Unit:**Entire application packaged and deployed together (.jar, .war, Docker container).**Centralized Data Store:**Typically single database serves all application components.**Layered Structure:**Code organized into logical layers (UI, business logic, data access) but remains one deployable artifact.**Limited Scalability:**Scaling requires scaling whole application even if only one component is under load.
 
 ## Design Principles
 
-<strong>Modularity:</strong>Structure code into cohesive modules or packages for separation of concerns.
-
-<strong>Separation of Concerns:</strong>Distinct responsibilities for UI, business logic, and data access minimizing cross-layer dependencies.
-
-<strong>Encapsulation:</strong>Hide internal details within modules, exposing only necessary public interfaces.
-
-<strong>Consistency:</strong>Enforce uniform coding styles, design patterns, and architectural conventions across codebase.
-
-<strong>Scalability Considerations:</strong>Prepare for horizontal scaling (replicating whole application) and introduce caching or async processing where possible.
+**Modularity:**Structure code into cohesive modules or packages for separation of concerns.**Separation of Concerns:**Distinct responsibilities for UI, business logic, and data access minimizing cross-layer dependencies.**Encapsulation:**Hide internal details within modules, exposing only necessary public interfaces.**Consistency:**Enforce uniform coding styles, design patterns, and architectural conventions across codebase.**Scalability Considerations:**Prepare for horizontal scaling (replicating whole application) and introduce caching or async processing where possible.
 
 ## Advantages
 
 | Advantage | Explanation |
 |-----------|-------------|
-| <strong>Simplicity</strong>| Easier to develop, understand, and manage, especially for small to medium projects |
-| <strong>Quick Initial Development</strong>| Rapid prototyping with minimal infrastructure complexity |
-| <strong>Centralized Deployment</strong>| Single artifact release streamlines versioning and rollout |
-| <strong>Performance</strong>| In-process communication faster than network calls across distributed services |
-| <strong>Straightforward Debugging</strong>| Tracing and logging occur within one process, simplifying troubleshooting |
-| <strong>Unified Testing</strong>| End-to-end tests validate all application flows without orchestrating multiple environments |
-| <strong>Lower Infrastructure Overhead</strong>| Fewer moving parts mean simpler DevOps and cost-effective early-stage operations |
-| <strong>Enhanced Security</strong>| Fewer internal communication points reduce attack surface |
-| <strong>Legacy Compatibility</strong>| Well-suited for environments with established deployment practices |
+| **Simplicity**| Easier to develop, understand, and manage, especially for small to medium projects |
+| **Quick Initial Development**| Rapid prototyping with minimal infrastructure complexity |
+| **Centralized Deployment**| Single artifact release streamlines versioning and rollout |
+| **Performance**| In-process communication faster than network calls across distributed services |
+| **Straightforward Debugging**| Tracing and logging occur within one process, simplifying troubleshooting |
+| **Unified Testing**| End-to-end tests validate all application flows without orchestrating multiple environments |
+| **Lower Infrastructure Overhead**| Fewer moving parts mean simpler DevOps and cost-effective early-stage operations |
+| **Enhanced Security**| Fewer internal communication points reduce attack surface |
+| **Legacy Compatibility**| Well-suited for environments with established deployment practices |
 
 ## Drawbacks and Limitations
 
 | Limitation | Description |
 |------------|-------------|
-| <strong>Scalability Bottlenecks</strong>| Scaling entire application required even if only one module needs more resources |
-| <strong>Deployment Risk</strong>| Minor changes trigger full application redeployment, increasing downtime risk |
-| <strong>Tight Coupling</strong>| High interdependency makes code changes riskier and can introduce regression bugs |
-| <strong>Technology Lock-in</strong>| Difficult to introduce new languages, frameworks, or tools for specific features |
-| <strong>Slower Development at Scale</strong>| Large codebases become unwieldy with more merge conflicts and longer build/test cycles |
-| <strong>Reduced Fault Isolation</strong>| Bug in one module can crash entire application |
-| <strong>Limited CI/CD Support</strong>| Difficult to implement frequent, small releases |
-| <strong>Resource Inefficiency</strong>| Overprovisioning common; underutilized components still consume resources |
+| **Scalability Bottlenecks**| Scaling entire application required even if only one module needs more resources |
+| **Deployment Risk**| Minor changes trigger full application redeployment, increasing downtime risk |
+| **Tight Coupling**| High interdependency makes code changes riskier and can introduce regression bugs |
+| **Technology Lock-in**| Difficult to introduce new languages, frameworks, or tools for specific features |
+| **Slower Development at Scale**| Large codebases become unwieldy with more merge conflicts and longer build/test cycles |
+| **Reduced Fault Isolation**| Bug in one module can crash entire application |
+| **Limited CI/CD Support**| Difficult to implement frequent, small releases |
+| **Resource Inefficiency**| Overprovisioning common; underutilized components still consume resources |
 
 ## Use Cases
 
 | Use Case | Suitability Reason |
 |----------|-------------------|
-| <strong>Startups & MVPs</strong>| Rapid development with minimal infrastructure and lower cost |
-| <strong>Simple Applications</strong>| Limited scope eases maintenance and deployment |
-| <strong>Regulated Environments</strong>| Centralized code and deployment ease compliance and auditing |
-| <strong>Legacy Systems</strong>| Existing monolithic solutions can be efficiently maintained if scaling needs predictable |
-| <strong>Limited DevOps Teams</strong>| Easier to operate and debug without distributed system complexity |
+| **Startups & MVPs**| Rapid development with minimal infrastructure and lower cost |
+| **Simple Applications**| Limited scope eases maintenance and deployment |
+| **Regulated Environments**| Centralized code and deployment ease compliance and auditing |
+| **Legacy Systems**| Existing monolithic solutions can be efficiently maintained if scaling needs predictable |
+| **Limited DevOps Teams**| Easier to operate and debug without distributed system complexity |
 
 ## Scaling Strategies
 
@@ -133,24 +113,20 @@ Distributes incoming traffic across identical application nodes.
 
 ## Maintenance Challenges
 
-<strong>Codebase Growth:</strong>As features accumulate, codebase becomes harder to manage, increasing technical debt.
-
-<strong>Deployment Complexity:</strong>Longer build and test cycles, higher risk of deployment failures.
-
-<strong>Change Management:</strong>Difficult to refactor or update individual modules without impacting unrelated features.
+**Codebase Growth:**As features accumulate, codebase becomes harder to manage, increasing technical debt.**Deployment Complexity:**Longer build and test cycles, higher risk of deployment failures.**Change Management:**Difficult to refactor or update individual modules without impacting unrelated features.
 
 ## Monolithic vs. Microservices
 
 | Attribute | Monolithic | Microservices |
 |-----------|-----------|---------------|
-| <strong>Structure</strong>| Single codebase, tightly coupled | Multiple, loosely coupled services |
-| <strong>Deployment</strong>| Single deployment unit | Each service deploys independently |
-| <strong>Scalability</strong>| Entire app scales as one | Scale individual services as needed |
-| <strong>Technology Stack</strong>| Uniform across app | Each service can use different tech |
-| <strong>Debugging</strong>| Centralized, less complex | Distributed, requires tracing across services |
-| <strong>Release Management</strong>| Whole app released together | Continuous, targeted deployments |
-| <strong>Failure Impact</strong>| One bug affects all features | Faults isolated to affected service |
-| <strong>Team Autonomy</strong>| Lower; same codebase | Higher; teams own and deploy their services |
+| **Structure**| Single codebase, tightly coupled | Multiple, loosely coupled services |
+| **Deployment**| Single deployment unit | Each service deploys independently |
+| **Scalability**| Entire app scales as one | Scale individual services as needed |
+| **Technology Stack**| Uniform across app | Each service can use different tech |
+| **Debugging**| Centralized, less complex | Distributed, requires tracing across services |
+| **Release Management**| Whole app released together | Continuous, targeted deployments |
+| **Failure Impact**| One bug affects all features | Faults isolated to affected service |
+| **Team Autonomy**| Lower; same codebase | Higher; teams own and deploy their services |
 
 ## Migration Strategies
 
@@ -172,19 +148,15 @@ Use events to coordinate actions across services, reducing direct dependencies a
 
 ## Real-World Examples
 
-<strong>Banking Systems:</strong>Legacy banking apps often combine account management, transactions, and reporting in one monolithic system.
-
-<strong>Enterprise ERP:</strong>Classic ERP solutions manage HR, finance, and supply chain in single deployable unit.
-
-<strong>Early Web Platforms:</strong>Early versions of Facebook, Netflix, and WordPress were monolithic before migrating to microservices.
+**Banking Systems:**Legacy banking apps often combine account management, transactions, and reporting in one monolithic system.**Enterprise ERP:**Classic ERP solutions manage HR, finance, and supply chain in single deployable unit.**Early Web Platforms:**Early versions of Facebook, Netflix, and WordPress were monolithic before migrating to microservices.
 
 ## When to Choose Monolithic
 
-<strong>Appropriate Scenarios:</strong>- Rapid prototyping, MVPs, or simple applications
+**Appropriate Scenarios:**- Rapid prototyping, MVPs, or simple applications
 - Small teams or limited DevOps resources
 - Projects with stable, predictable workloads
 
-<strong>When to Consider Alternatives:</strong>- Large, evolving systems requiring independent scaling and deployment
+**When to Consider Alternatives:**- Large, evolving systems requiring independent scaling and deployment
 - Teams needing technology diversity and continuous delivery
 - Applications requiring high reliability and fault isolation
 

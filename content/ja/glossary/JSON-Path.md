@@ -23,7 +23,7 @@ JSON Pathは、JSONドキュメント内の要素をナビゲート、抽出、�
 
 JSON PathはIETFによってRFC 9535で標準化され、クエリ式の統一された構文とセマンティクスを提供しています。この言語は、JavaScript、Python、Java、PHP、SQLデータベースなど、多数のプログラミング環境で実装されています。一般的な用途には、APIテストと検証、ETLプロセス、データベースのJSON列クエリ、構成管理、チャットボットのデータ解析などがあります。
 
-<strong>クエリの例:</strong>```json
+**クエリの例:**```json
 {
   "user": {
     "id": 123,
@@ -47,9 +47,7 @@ JSON Pathは、深くネストされたドキュメント内のデータの抽�
 
 ### ルートとパス演算子
 
-**ルートオブジェクト (`$`)**JSONドキュメントのルートを示します。すべてのパスは`$`で始まります。
-
-**子要素へのアクセス**- ドット記法: `$.user.name` (単純なプロパティ)
+**ルートオブジェクト (`$`)**JSONドキュメントのルートを示します。すべてのパスは`$`で始まります。**子要素へのアクセス**- ドット記法: `$.user.name` (単純なプロパティ)
 - ブラケット記法: `$['user']['profile']` (特殊文字、スペース、予約語)
 - ブラケットは常にシングルクォートを使用
 
@@ -165,29 +163,19 @@ $['name','age']    // 複数のプロパティ
 **すべての本のタイトル:**```jsonpath
 $.store.book[*].title
 // ["Sayings of the Century", "Sword of Honour", "Moby Dick", "The Lord of the Rings"]
-```
-
-<strong>フィクションの著者:</strong>```jsonpath
+```**フィクションの著者:**```jsonpath
 $.store.book[?(@.category == 'fiction')].author
 // ["Evelyn Waugh", "Herman Melville", "J. R. R. Tolkien"]
-```
-
-**10ドル未満の本:**```jsonpath
+```**10ドル未満の本:**```jsonpath
 $.store.book[?(@.price < 10)]
 // 2つの本オブジェクトを返す
-```
-
-<strong>すべての価格 (再帰的):</strong>```jsonpath
+```**すべての価格 (再帰的):**```jsonpath
 $..price
 // [8.95, 12.99, 8.99, 22.99, 19.95]
-```
-
-**最初の2冊の本のタイトル:**```jsonpath
+```**最初の2冊の本のタイトル:**```jsonpath
 $.store.book[0:2].title
 // ["Sayings of the Century", "Sword of Honour"]
-```
-
-<strong>すべてのISBN番号:</strong>```jsonpath
+```**すべてのISBN番号:**```jsonpath
 $.store.book[*].isbn
 // ["0-553-21311-3", "0-395-19395-8"]
 ```
@@ -306,15 +294,13 @@ WHERE JSON_VALUE(value, '$.price') < 10;
 
 ### APIテストと自動化
 
-<strong>Postmanの例:</strong>```javascript
+**Postmanの例:**```javascript
 // レスポンスに期待値が含まれることをテスト
 pm.test("User email is correct", function() {
     const email = jsonpath.query(pm.response.json(), '$.user.email')[0];
     pm.expect(email).to.eql("test@example.com");
 });
-```
-
-**Rest-Assured (Java):**```java
+```**Rest-Assured (Java):**```java
 given()
     .when().get("/api/users")
     .then()
@@ -323,7 +309,7 @@ given()
 
 ### データ変換 (ETL)
 
-<strong>ログからエラーを抽出:</strong>```python
+**ログからエラーを抽出:**```python
 from jsonpath_ng import parse
 
 errors = [match.value 
@@ -340,7 +326,7 @@ WHERE data @> '{"active": true}';
 
 ### 構成管理
 
-<strong>構成値を更新:</strong>```javascript
+**構成値を更新:**```javascript
 const config = require('./config.json');
 jsonpath.value(config, '$.database.port', 5432);
 fs.writeFileSync('config.json', JSON.stringify(config, null, 2));
@@ -350,9 +336,7 @@ fs.writeFileSync('config.json', JSON.stringify(config, null, 2));
 
 **ユーザーメッセージを抽出:**```jsonpath
 $.conversation[*].user_message
-```
-
-<strong>インテントでフィルタ:</strong>```jsonpath
+```**インテントでフィルタ:**```jsonpath
 $.messages[?(@.intent == 'purchase')].text
 ```
 

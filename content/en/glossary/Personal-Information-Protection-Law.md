@@ -20,25 +20,13 @@ The law applies broadly to both domestic and international organizations process
 
 ## Core Definitions
 
-<strong>Personal Information</strong>Any information relating to an identified or identifiable natural person, excluding anonymized data. This encompasses names, identification numbers, biometric identifiers, location data, online identifiers, and other data that can identify individuals directly or indirectly.
-
-<strong>Sensitive Personal Information</strong>Data that, if leaked or illicitly used, could harm personal dignity or endanger the safety of persons or property. Categories include biometric identifiers, religious beliefs, specific social status, medical and health information, financial accounts, precise geolocation data, and information of minors under 14.
-
-<strong>Personal Information Handler</strong>Any organization or individual who independently determines the purposes and means for processing personal information, equivalent to GDPR's "data controller" concept.
-
-<strong>Entrusted Party</strong>A third party engaged by a handler to process data on its behalf, similar to GDPR's "data processor."
-
-<strong>Processing Activities</strong>Any operation on personal information including collection, storage, use, transmission, provision, disclosure, and deletion.
-
-<strong>Data Protection Officer (DPO)</strong>Required for organizations exceeding processing thresholds determined by the Cyberspace Administration of China (CAC). The DPO oversees PIPL compliance, manages data protection impact assessments, and serves as the regulatory contact point.
+**Personal Information**Any information relating to an identified or identifiable natural person, excluding anonymized data. This encompasses names, identification numbers, biometric identifiers, location data, online identifiers, and other data that can identify individuals directly or indirectly.**Sensitive Personal Information**Data that, if leaked or illicitly used, could harm personal dignity or endanger the safety of persons or property. Categories include biometric identifiers, religious beliefs, specific social status, medical and health information, financial accounts, precise geolocation data, and information of minors under 14.**Personal Information Handler**Any organization or individual who independently determines the purposes and means for processing personal information, equivalent to GDPR's "data controller" concept.**Entrusted Party**A third party engaged by a handler to process data on its behalf, similar to GDPR's "data processor."**Processing Activities**Any operation on personal information including collection, storage, use, transmission, provision, disclosure, and deletion.**Data Protection Officer (DPO)**Required for organizations exceeding processing thresholds determined by the Cyberspace Administration of China (CAC). The DPO oversees PIPL compliance, manages data protection impact assessments, and serves as the regulatory contact point.
 
 ## Scope of Application
 
 ### Territorial Scope
 
-<strong>Domestic Processing</strong>Applies to all personal information processing within the People's Republic of China, regardless of data subject nationality or residency.
-
-<strong>Extraterritorial Effect</strong>Applies to organizations outside China processing personal information of individuals in China when offering products or services to Chinese residents, analyzing or assessing behavior of individuals in China, or under other circumstances specified by regulations.
+**Domestic Processing**Applies to all personal information processing within the People's Republic of China, regardless of data subject nationality or residency.**Extraterritorial Effect**Applies to organizations outside China processing personal information of individuals in China when offering products or services to Chinese residents, analyzing or assessing behavior of individuals in China, or under other circumstances specified by regulations.
 
 ### Sectoral Scope
 
@@ -48,14 +36,14 @@ The PIPL covers both public and private sectors. Industries such as finance and 
 
 Processing personal information requires at least one lawful basis:
 
-- <strong>Consent:</strong>Explicit, voluntary, and informed consent from the data subject
-- <strong>Contractual Necessity:</strong>Processing needed for contract formation or fulfillment
-- <strong>HR Management:</strong>Necessary for human resource management under law or collective agreements
-- <strong>Legal Obligations:</strong>Required for compliance with legal duties
-- <strong>Public Health/Emergency:</strong>Protection of life, health, or property in public emergencies
-- <strong>Public Interest:</strong>News reporting and public opinion in the public interest
-- <strong>Lawfully Disclosed Data:</strong>Processing within reasonable scope of information already lawfully made public
-- <strong>Other Legal Circumstances:</strong>As stipulated by law or regulation
+- **Consent:**Explicit, voluntary, and informed consent from the data subject
+- **Contractual Necessity:**Processing needed for contract formation or fulfillment
+- **HR Management:**Necessary for human resource management under law or collective agreements
+- **Legal Obligations:**Required for compliance with legal duties
+- **Public Health/Emergency:**Protection of life, health, or property in public emergencies
+- **Public Interest:**News reporting and public opinion in the public interest
+- **Lawfully Disclosed Data:**Processing within reasonable scope of information already lawfully made public
+- **Other Legal Circumstances:**As stipulated by law or regulation
 
 Consent serves as the primary basis in most scenarios, particularly for AI chatbots and automation systems collecting user data.
 
@@ -80,14 +68,14 @@ Separate consent requires a distinct, unbundled opt-in such as a separate checkb
 
 The PIPL grants individuals comprehensive rights:
 
-- <strong>Access:</strong>Know whether their data is processed and access it
-- <strong>Copy:</strong>Obtain copies of their personal information
-- <strong>Rectification:</strong>Correct inaccurate or incomplete data
-- <strong>Deletion:</strong>Request deletion under certain circumstances
-- <strong>Withdraw Consent:</strong>Revoke consent at any time
-- <strong>Restrict/Object:</strong>Limit or object to certain processing activities
-- <strong>Data Portability:</strong>Request transfer to another handler where feasible
-- <strong>Explanation and Objection to Automated Decision-Making:</strong>Request explanation and refuse significant decisions made solely by automated means
+- **Access:**Know whether their data is processed and access it
+- **Copy:**Obtain copies of their personal information
+- **Rectification:**Correct inaccurate or incomplete data
+- **Deletion:**Request deletion under certain circumstances
+- **Withdraw Consent:**Revoke consent at any time
+- **Restrict/Object:**Limit or object to certain processing activities
+- **Data Portability:**Request transfer to another handler where feasible
+- **Explanation and Objection to Automated Decision-Making:**Request explanation and refuse significant decisions made solely by automated means
 
 ## Organizational Compliance Obligations
 
@@ -133,9 +121,9 @@ Personal information of minors under 14 is classified as sensitive. Processing r
 
 Personal information may be transferred outside China through one of three mechanisms:
 
-1. <strong>Security Assessment:</strong>Mandatory for Critical Information Infrastructure Operators (CIIOs) and large-scale handlers
-2. <strong>Certification:</strong>By recognized institutions
-3. <strong>Standard Contract:</strong>With overseas recipients per CAC-approved clauses
+1. **Security Assessment:**Mandatory for Critical Information Infrastructure Operators (CIIOs) and large-scale handlers
+2. **Certification:**By recognized institutions
+3. **Standard Contract:**With overseas recipients per CAC-approved clauses
 
 ### Additional Requirements
 
@@ -151,11 +139,7 @@ Personal information may be transferred outside China through one of three mecha
 
 ## Vendor and Joint Processing Management
 
-<strong>Joint Handlers</strong>Organizations jointly determining processing purposes and means must establish contracts specifying responsibilities. Joint and several liability applies.
-
-<strong>Entrusted Parties</strong>Processing agreements must clarify purpose, methods, retention, security measures, and responsibilities.
-
-<strong>Supervision</strong>Handlers remain responsible for compliance by entrusted parties.
+**Joint Handlers**Organizations jointly determining processing purposes and means must establish contracts specifying responsibilities. Joint and several liability applies.**Entrusted Parties**Processing agreements must clarify purpose, methods, retention, security measures, and responsibilities.**Supervision**Handlers remain responsible for compliance by entrusted parties.
 
 ## Enforcement and Penalties
 
@@ -165,10 +149,10 @@ The CAC serves as the lead PIPL enforcer. Sector-specific regulators for banking
 
 ### Penalties for Non-Compliance
 
-<strong>General Breaches</strong>- Organizations: Fines up to RMB 1 million
+**General Breaches**- Organizations: Fines up to RMB 1 million
 - Individuals: Fines RMB 10,000-100,000
 
-<strong>Serious Violations</strong>- Fines up to RMB 50 million or 5% of annual revenue
+**Serious Violations**- Fines up to RMB 50 million or 5% of annual revenue
 - Business suspension or license revocation
 - Disgorgement of illegal gains
 - Processing suspension
@@ -198,10 +182,10 @@ Providers handling large user volumes must appoint a DPO and perform regular com
 
 ### Compliance Automation
 
-- <strong>Consent Management Systems:</strong>Automated collection and recording of explicit and separate consents
-- <strong>Data Subject Request Workflows:</strong>Automated processing of access, rectification, and deletion requests
-- <strong>Impact Assessment Tools:</strong>Software streamlining PIPIA documentation and compliance tracking
-- <strong>Vendor Management Systems:</strong>Risk assessment for evaluating third-party processors
+- **Consent Management Systems:**Automated collection and recording of explicit and separate consents
+- **Data Subject Request Workflows:**Automated processing of access, rectification, and deletion requests
+- **Impact Assessment Tools:**Software streamlining PIPIA documentation and compliance tracking
+- **Vendor Management Systems:**Risk assessment for evaluating third-party processors
 
 ## Comparison with Global Data Protection Laws
 
@@ -217,32 +201,32 @@ Providers handling large user volumes must appoint a DPO and perform regular com
 
 ## Practical Compliance Steps
 
-1. <strong>Data Mapping:</strong>Catalog all personal information processing activities including AI and chatbot operations
-2. <strong>Privacy Notice:</strong>Publish policies meeting PIPL standards
-3. <strong>Consent Management:</strong>Implement systems for explicit and separate consent collection
-4. <strong>Data Subject Rights:</strong>Enable mechanisms for access, correction, and deletion requests
-5. <strong>Impact Assessments:</strong>Conduct and retain PIPIAs for high-risk scenarios
-6. <strong>DPO Appointment:</strong>Assess need based on processing volume and register if required
-7. <strong>Cross-Border Transfers:</strong>Choose legal transfer mechanism and update contracts
-8. <strong>Vendor Oversight:</strong>Conduct due diligence and formalize processor agreements
-9. <strong>Security Controls:</strong>Apply encryption, access management, and incident response
-10. <strong>Audit and Training:</strong>Regularly audit compliance and train staff on privacy obligations
+1. **Data Mapping:**Catalog all personal information processing activities including AI and chatbot operations
+2. **Privacy Notice:**Publish policies meeting PIPL standards
+3. **Consent Management:**Implement systems for explicit and separate consent collection
+4. **Data Subject Rights:**Enable mechanisms for access, correction, and deletion requests
+5. **Impact Assessments:**Conduct and retain PIPIAs for high-risk scenarios
+6. **DPO Appointment:**Assess need based on processing volume and register if required
+7. **Cross-Border Transfers:**Choose legal transfer mechanism and update contracts
+8. **Vendor Oversight:**Conduct due diligence and formalize processor agreements
+9. **Security Controls:**Apply encryption, access management, and incident response
+10. **Audit and Training:**Regularly audit compliance and train staff on privacy obligations
 
 ## Evolving Aspects and Ambiguities
 
-- <strong>Thresholds:</strong>The CAC has not specified precise data volume thresholds for DPO appointment or mandatory localization
-- <strong>Separate Consent:</strong>Limited regulatory guidance exists; best practice requires clear, unbundled consent
-- <strong>Joint Processing:</strong>The PIPL imposes joint and several liability but leaves some supervision requirements under-defined
-- <strong>Regulatory Updates:</strong>Ongoing supplemental regulations continue to emerge, particularly for cross-border transfers and sensitive data
+- **Thresholds:**The CAC has not specified precise data volume thresholds for DPO appointment or mandatory localization
+- **Separate Consent:**Limited regulatory guidance exists; best practice requires clear, unbundled consent
+- **Joint Processing:**The PIPL imposes joint and several liability but leaves some supervision requirements under-defined
+- **Regulatory Updates:**Ongoing supplemental regulations continue to emerge, particularly for cross-border transfers and sensitive data
 
 Organizations should monitor CAC guidance and industry best practices for updates.
 
 ## Related Terms
 
-- <strong>Data Security Law (DSL):</strong>Covers broader data protection and classification in China
-- <strong>Cybersecurity Law (CSL):</strong>Sets baseline network and cybersecurity requirements
-- <strong>Personal Information Security Specification:</strong>Detailed national guidance, highly persuasive but non-binding
-- <strong>Network Data:</strong>Data processed or generated by networked systems, subject to evolving regulation
+- **Data Security Law (DSL):**Covers broader data protection and classification in China
+- **Cybersecurity Law (CSL):**Sets baseline network and cybersecurity requirements
+- **Personal Information Security Specification:**Detailed national guidance, highly persuasive but non-binding
+- **Network Data:**Data processed or generated by networked systems, subject to evolving regulation
 
 ## References
 

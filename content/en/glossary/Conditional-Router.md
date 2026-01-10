@@ -14,7 +14,7 @@ draft: false
 
 A Conditional Router is a workflow component or node that evaluates incoming data against one or more user-defined rules and directs the data to a specific downstream route based on which condition matches. Its purpose is to enable dynamic, rule-based branching in automation pipelines, AI chatbots, business process automation, and software architectures. Each output port corresponds to a possible routed outcome, determined by customizable rules using a variety of operators.
 
-<strong>Key Capabilities:</strong>- Receives input (text, structured objects, metadata, etc.)
+**Key Capabilities:**- Receives input (text, structured objects, metadata, etc.)
 - Applies user-defined conditions (e.g., `equals`, `contains`, `is_email`, `regex`)
 - Activates exactly one output (route) per evaluation, except in some ETL contexts
 - Supports deterministic, manageable flows in complex automations
@@ -25,19 +25,15 @@ A Conditional Router is a workflow component or node that evaluates incoming dat
 
 The Conditional Router compares incoming data to specified values or logical expressions using a set of configurable operators. Each condition is linked to a named output. The router checks conditions in order: the first `true` condition determines the output route. If no condition matches, the router triggers a default or fallback route (if configured).
 
-<strong>Single-path Routing:</strong>Only one output is activated per evaluation (exclusive routing), except in some ETL frameworks.
-
-<strong>Configurable Rules:</strong>Conditions are defined with operators and can reference multiple fields, including nested data.
-
-<strong>Extensible:</strong>Supports logical composition, nested conditions, and custom expressions.
+**Single-path Routing:**Only one output is activated per evaluation (exclusive routing), except in some ETL frameworks.**Configurable Rules:**Conditions are defined with operators and can reference multiple fields, including nested data.**Extensible:**Supports logical composition, nested conditions, and custom expressions.
 
 ### Evaluation Sequence
 
-1. <strong>Input Reception:</strong>Receives data and optional metadata or parameters
-2. <strong>Condition Evaluation:</strong>Sequentially evaluates each defined condition using the configured operators
-3. <strong>Routing Decision:</strong>First condition that evaluates to `true` determines the output
-4. <strong>Default Handling:</strong>If no conditions match, data is sent to a default route (if defined)
-5. <strong>Downstream Processing:</strong>Data is passed to the next component or action
+1. **Input Reception:**Receives data and optional metadata or parameters
+2. **Condition Evaluation:**Sequentially evaluates each defined condition using the configured operators
+3. **Routing Decision:**First condition that evaluates to `true` determines the output
+4. **Default Handling:**If no conditions match, data is sent to a default route (if defined)
+5. **Downstream Processing:**Data is passed to the next component or action
 
 ## Inputs
 
@@ -74,7 +70,7 @@ Conditional Routers support a wide variety of operators for flexible routing:
 | `$gt`, `$gte` | Greater than / greater or equal | `score >= 0.8` |
 | `$lt`, `$lte` | Less than / less or equal | `temperature < 0.7` |
 
-<strong>Logical Operators:</strong>`$and` (all conditions must be true), `$or` (any condition true)
+**Logical Operators:**`$and` (all conditions must be true), `$or` (any condition true)
 
 ## Outputs
 
@@ -87,9 +83,7 @@ Each Conditional Router node provides multiple output ports:
 | Custom Routes | Named outputs for each condition | Message/Object |
 | Default Route | When no condition matches | Message/Object |
 
-<strong>Named Output Ports:</strong>Each condition links to a named output.  
-<strong>Default Output:</strong>Handles unmatched data.  
-<strong>Data Forwarding:</strong>The original (or transformed) message/data is passed through the activated output.
+**Named Output Ports:**Each condition links to a named output.**Default Output:**Handles unmatched data.**Data Forwarding:**The original (or transformed) message/data is passed through the activated output.
 
 ## Advanced Configuration
 
@@ -215,33 +209,11 @@ Ensure data routing based on region for regulatory compliance. Apply role-based 
 
 ## Best Practices
 
-<strong>Order of Conditions</strong>Place specific conditions before generic ones to prevent premature matches.
-
-<strong>Fail-Safe Defaults</strong>Always configure a default output for unmatched data.
-
-<strong>Testing</strong>Validate logic with test data to ensure correct routing; use logging and analytics to monitor routing decisions.
-
-<strong>Documentation</strong>Comment or document complex conditions for maintainability.
-
-<strong>Security</strong>Avoid unsafe template evaluation unless essential and inputs are trusted.
-
-<strong>Performance</strong>Avoid excessive nesting or extremely complex conditions to keep routing fast and maintainable.
-
-<strong>No-Code Accessibility</strong>Use platforms providing graphical or no-code interfaces for broader accessibility.
+**Order of Conditions**Place specific conditions before generic ones to prevent premature matches.**Fail-Safe Defaults**Always configure a default output for unmatched data.**Testing**Validate logic with test data to ensure correct routing; use logging and analytics to monitor routing decisions.**Documentation**Comment or document complex conditions for maintainability.**Security**Avoid unsafe template evaluation unless essential and inputs are trusted.**Performance**Avoid excessive nesting or extremely complex conditions to keep routing fast and maintainable.**No-Code Accessibility**Use platforms providing graphical or no-code interfaces for broader accessibility.
 
 ## Troubleshooting & FAQ
 
-<strong>Q: What happens if multiple conditions match?</strong>A: Only the first matching condition (in order) is selected; subsequent matches are ignored. In some ETL tools, data can be routed to multiple outputs.
-
-<strong>Q: How do I route based on multiple fields?</strong>A: Use logical operators (`$and`, `$or`) to combine conditions on multiple fields.
-
-<strong>Q: What if a referenced field is missing?</strong>A: The condition usually evaluates to `false`, and the router proceeds to the next condition or default.
-
-<strong>Q: Can I use regex or advanced matching?</strong>A: Yes, many routers support `$regex` or pattern-based operators.
-
-<strong>Q: Is this suitable for non-developers?</strong>A: Many platforms offer no-code configuration.
-
-<strong>Q: Can I perform parallel routing?</strong>A: Most routers are exclusive (single-path per evaluation). For parallel actions, use specialized multi-route or branching components.
+**Q: What happens if multiple conditions match?**A: Only the first matching condition (in order) is selected; subsequent matches are ignored. In some ETL tools, data can be routed to multiple outputs.**Q: How do I route based on multiple fields?**A: Use logical operators (`$and`, `$or`) to combine conditions on multiple fields.**Q: What if a referenced field is missing?**A: The condition usually evaluates to `false`, and the router proceeds to the next condition or default.**Q: Can I use regex or advanced matching?**A: Yes, many routers support `$regex` or pattern-based operators.**Q: Is this suitable for non-developers?**A: Many platforms offer no-code configuration.**Q: Can I perform parallel routing?**A: Most routers are exclusive (single-path per evaluation). For parallel actions, use specialized multi-route or branching components.
 
 ## References
 

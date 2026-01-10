@@ -36,35 +36,15 @@ Users rarely specify all contextual details. A search for "best restaurant" migh
 
 ### Classic Techniques
 
-<strong>Synonym Expansion:</strong>Adds synonyms of original terms ("car" → "automobile," "vehicle")
-
-<strong>Stemming/Lemmatization:</strong>Reduces words to root forms ("running," "ran," "runs" → "run")
-
-<strong>Related-Term Expansion:</strong>Adds contextually related terms ("diabetes" → "insulin," "glucose")
-
-<strong>Automatic Thesaurus Generation:</strong>Uses curated or machine-built thesauri
-
-<strong>Contextual Expansion:</strong>Considers query context or user profile (e.g., "Spring" as "Java framework" for developers)
+**Synonym Expansion:**Adds synonyms of original terms ("car" → "automobile," "vehicle")**Stemming/Lemmatization:**Reduces words to root forms ("running," "ran," "runs" → "run")**Related-Term Expansion:**Adds contextually related terms ("diabetes" → "insulin," "glucose")**Automatic Thesaurus Generation:**Uses curated or machine-built thesauri**Contextual Expansion:**Considers query context or user profile (e.g., "Spring" as "Java framework" for developers)
 
 ### Advanced/AI-Powered Techniques
 
-<strong>Relevance Feedback:</strong>User marks results as relevant or not; system refines expansion
-
-<strong>Pseudo-Relevance Feedback:</strong>System assumes top N results are relevant and extracts terms for expansion
-
-<strong>Semantic Embeddings:</strong>Uses models like Word2Vec, GloVe, BERT to find semantically similar terms
-
-<strong>Co-occurrence Analysis:</strong>Identifies terms that frequently appear together in relevant documents
-
-<strong>Hybrid Approaches:</strong>Combines manual curation with automated expansion
+**Relevance Feedback:**User marks results as relevant or not; system refines expansion**Pseudo-Relevance Feedback:**System assumes top N results are relevant and extracts terms for expansion**Semantic Embeddings:**Uses models like Word2Vec, GloVe, BERT to find semantically similar terms**Co-occurrence Analysis:**Identifies terms that frequently appear together in relevant documents**Hybrid Approaches:**Combines manual curation with automated expansion
 
 ### Implementation Approaches
 
-<strong>Manual Expansion:</strong>Curated by human experts (common in law, medicine)
-
-<strong>Automatic Expansion:</strong>Data-driven and algorithmic
-
-<strong>Hybrid Expansion:</strong>Merges human expertise with automation
+**Manual Expansion:**Curated by human experts (common in law, medicine)**Automatic Expansion:**Data-driven and algorithmic**Hybrid Expansion:**Merges human expertise with automation
 
 ## Comprehensive Technique Reference
 
@@ -82,21 +62,13 @@ Users rarely specify all contextual details. A search for "best restaurant" migh
 
 ### Basic Pipeline
 
-<strong>1. Query Analysis:</strong>The system receives the user's query (e.g., "climate change")
-
-<strong>2. Term Selection:</strong>Identifies key terms, synonyms, and possible ambiguities
-
-<strong>3. Expansion Generation:</strong>Generates related terms/phrases (e.g., "global warming," "greenhouse gas emissions")
-
-<strong>4. Query Reformulation:</strong>Combines original and expanded terms into a new query
-
-<strong>5. Search Execution:</strong>Executes the expanded query to retrieve a broader, more relevant set of results
+**1. Query Analysis:**The system receives the user's query (e.g., "climate change")**2. Term Selection:**Identifies key terms, synonyms, and possible ambiguities**3. Expansion Generation:**Generates related terms/phrases (e.g., "global warming," "greenhouse gas emissions")**4. Query Reformulation:**Combines original and expanded terms into a new query**5. Search Execution:**Executes the expanded query to retrieve a broader, more relevant set of results
 
 ### RAG System Implementation
 
 For AI-powered pipelines, especially Retrieval-Augmented Generation (RAG) systems, the process involves encoding the query as a vector, retrieving semantically relevant documents, ranking them, and feeding both the query and retrieved documents to a language model for final answer generation.
 
-<strong>Python Example (Haystack):</strong>```python
+**Python Example (Haystack):**```python
 query_expander = QueryExpander()
 retriever = MultiQueryInMemoryBM25Retriever(InMemoryBM25Retriever(document_store=doc_store))
 
@@ -120,33 +92,11 @@ results = expanded_retrieval_pipeline.run({"expander": {"query": "climate change
 
 ## Key Benefits
 
-**Improved Recall:**Recovers relevant documents that use different terminology
-
-**Higher Search Accuracy:**Better matches user intent, not just literal input
-
-**Enhanced User Experience:**Fewer repeated searches, less frustration
-
-**Disambiguation:**Handles short or vague queries using context
-
-**Natural Language Support:**Users can search in their own words
-
-**Personalization:**Expansion can be tailored to user history and profile
+**Improved Recall:**Recovers relevant documents that use different terminology**Higher Search Accuracy:**Better matches user intent, not just literal input**Enhanced User Experience:**Fewer repeated searches, less frustration**Disambiguation:**Handles short or vague queries using context**Natural Language Support:**Users can search in their own words**Personalization:**Expansion can be tailored to user history and profile
 
 ## Challenges and Considerations
 
-**Over-Expansion:**Too many or irrelevant terms dilute precision
-
-**Computational Overhead:**More terms increase system load and latency
-
-**Relevance Maintenance:**Added terms must match user intent
-
-**Privacy:**Personal data use can raise regulatory concerns
-
-**Bias Amplification:**Expansion algorithms may perpetuate biases
-
-**Transparency:**Users may not understand results if expansion is opaque
-
-**Adversarial Manipulation:**SEO and spam attacks may exploit expansion
+**Over-Expansion:**Too many or irrelevant terms dilute precision**Computational Overhead:**More terms increase system load and latency**Relevance Maintenance:**Added terms must match user intent**Privacy:**Personal data use can raise regulatory concerns**Bias Amplification:**Expansion algorithms may perpetuate biases**Transparency:**Users may not understand results if expansion is opaque**Adversarial Manipulation:**SEO and spam attacks may exploit expansion
 
 ## Industry Applications
 
@@ -207,49 +157,15 @@ Use Word2Vec, GloVe, BERT, or similar for vector-based semantic expansion.
 
 ## Emerging Trends
 
-**Large Language Models (LLMs):**GPT-4, BERT, and others enable context-aware, adaptive expansion
-
-**Personalized Expansion:**Real-time adaptation to user profiles, search history, and device context
-
-**Multi-Modal Expansion:**Expanding queries using text, images, audio, and other modalities
-
-**Explainable AI (XAI):**Making the expansion process transparent to users
-
-**Real-Time Feedback:**Continuous learning from user interactions
-
-**Cross-Lingual Expansion:**Handling multilingual queries and content
-
-**Fairness and Responsible AI:**Addressing bias, privacy, and explainability
+**Large Language Models (LLMs):**GPT-4, BERT, and others enable context-aware, adaptive expansion**Personalized Expansion:**Real-time adaptation to user profiles, search history, and device context**Multi-Modal Expansion:**Expanding queries using text, images, audio, and other modalities**Explainable AI (XAI):**Making the expansion process transparent to users**Real-Time Feedback:**Continuous learning from user interactions**Cross-Lingual Expansion:**Handling multilingual queries and content**Fairness and Responsible AI:**Addressing bias, privacy, and explainability
 
 ## Best Practices
 
-**Balance Precision and Recall:**Avoid over-expansion that reduces precision
-
-**Monitor Performance:**Track query latency, relevance metrics, and user satisfaction
-
-**Implement Feedback Loops:**Continuously learn from user interactions and relevance signals
-
-**Test Across Domains:**Different domains may require different expansion strategies
-
-**Combine Techniques:**Hybrid approaches often yield best results
-
-**Ensure Transparency:**Users should understand when and how queries are modified
+**Balance Precision and Recall:**Avoid over-expansion that reduces precision**Monitor Performance:**Track query latency, relevance metrics, and user satisfaction**Implement Feedback Loops:**Continuously learn from user interactions and relevance signals**Test Across Domains:**Different domains may require different expansion strategies**Combine Techniques:**Hybrid approaches often yield best results**Ensure Transparency:**Users should understand when and how queries are modified
 
 ## Frequently Asked Questions
 
-**What is query expansion in information retrieval?**A technique that reformulates a user's original query by adding synonyms, related terms, or contextually relevant phrases to improve retrieval of relevant documents.
-
-**How does synonym expansion improve search results?**Including synonyms enables retrieval of documents using different words for the same concept, increasing recall.
-
-**What are the main challenges?**Over-expansion, computational complexity, relevance maintenance, privacy/bias issues, and lack of transparency.
-
-**Can query expansion help with ambiguous queries?**Yes. Contextual expansion helps infer likely intent behind short or ambiguous queries.
-
-**Where is query expansion used?**Search engines, AI chatbots, e-commerce, healthcare, legal research, educational platforms, and RAG systems.
-
-**Does query expansion always improve results?**Not always. Poorly tuned expansion can reduce precision; careful balancing is required.
-
-**How is query expansion implemented?**Through synonym lists, statistical analysis, machine learning, embeddings, and LLMs, often integrated into retrieval pipelines.
+**What is query expansion in information retrieval?**A technique that reformulates a user's original query by adding synonyms, related terms, or contextually relevant phrases to improve retrieval of relevant documents.**How does synonym expansion improve search results?**Including synonyms enables retrieval of documents using different words for the same concept, increasing recall.**What are the main challenges?**Over-expansion, computational complexity, relevance maintenance, privacy/bias issues, and lack of transparency.**Can query expansion help with ambiguous queries?**Yes. Contextual expansion helps infer likely intent behind short or ambiguous queries.**Where is query expansion used?**Search engines, AI chatbots, e-commerce, healthcare, legal research, educational platforms, and RAG systems.**Does query expansion always improve results?**Not always. Poorly tuned expansion can reduce precision; careful balancing is required.**How is query expansion implemented?**Through synonym lists, statistical analysis, machine learning, embeddings, and LLMs, often integrated into retrieval pipelines.
 
 ## References
 

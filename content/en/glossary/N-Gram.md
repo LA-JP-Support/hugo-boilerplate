@@ -32,41 +32,31 @@ Today, while advanced neural architectures like Transformers have surpassed N-gr
 
 ### Unigrams
 
-<strong>Definition:</strong>Sequences of single items (usually words).
-
-<strong>Example:</strong>Text: "Natural language processing is fun."
+**Definition:**Sequences of single items (usually words).**Example:**Text: "Natural language processing is fun."
 Unigrams: "Natural", "language", "processing", "is", "fun"
 
-<strong>Use Cases:</strong>Basic word frequency analysis, text classification, information retrieval.
+**Use Cases:**Basic word frequency analysis, text classification, information retrieval.
 
 ### Bigrams
 
-<strong>Definition:</strong>Sequences of two consecutive items.
-
-<strong>Example:</strong>Text: "Natural language processing is fun."
+**Definition:**Sequences of two consecutive items.**Example:**Text: "Natural language processing is fun."
 Bigrams: "Natural language", "language processing", "processing is", "is fun"
 
-<strong>Use Cases:</strong>Phrase detection, sentiment analysis ("not good"), speech recognition.
+**Use Cases:**Phrase detection, sentiment analysis ("not good"), speech recognition.
 
 ### Trigrams
 
-<strong>Definition:</strong>Sequences of three consecutive items.
-
-<strong>Example:</strong>Text: "Natural language processing is fun."
+**Definition:**Sequences of three consecutive items.**Example:**Text: "Natural language processing is fun."
 Trigrams: "Natural language processing", "language processing is", "processing is fun"
 
-<strong>Use Cases:</strong>Capturing broader context, autocomplete, spelling correction.
+**Use Cases:**Capturing broader context, autocomplete, spelling correction.
 
 ### Higher-order N-grams
 
-<strong>Definition:</strong>Sequences of four or more consecutive items (4-grams, 5-grams).
-
-<strong>Example:</strong>For "Natural language processing is fun."
+**Definition:**Sequences of four or more consecutive items (4-grams, 5-grams).**Example:**For "Natural language processing is fun."
 4-gram: "Natural language processing is", "language processing is fun"
 
-<strong>Use Cases:</strong>Domain-specific language modeling, plagiarism detection.
-
-<strong>Considerations:</strong>As n increases, number of possible N-grams grows exponentially, leading to data sparsity and computational overhead.
+**Use Cases:**Domain-specific language modeling, plagiarism detection.**Considerations:**As n increases, number of possible N-grams grows exponentially, leading to data sparsity and computational overhead.
 
 ## How N-Gram Models Work
 
@@ -98,7 +88,7 @@ Where:
 
 For bigrams: P(wn | wn-1) = C(wn-1, wn) / C(wn-1)
 
-<strong>Example Calculation:</strong>Given corpus:
+**Example Calculation:**Given corpus:
 - "I am Sam"
 - "Sam I am"
 - "I do not like green eggs and ham"
@@ -110,21 +100,17 @@ To calculate P(am | I):
 
 ### Smoothing Techniques
 
-<strong>The Need for Smoothing:</strong>As n increases, many valid N-grams may not appear in training data, resulting in zero probability estimates. This is called data sparsity. Smoothing techniques adjust probability estimates to account for unseen N-grams, improving generalization.
-
-<strong>Laplace (Additive) Smoothing:</strong>Simply adds small constant (usually 1) to all N-gram counts:
+**The Need for Smoothing:**As n increases, many valid N-grams may not appear in training data, resulting in zero probability estimates. This is called data sparsity. Smoothing techniques adjust probability estimates to account for unseen N-grams, improving generalization.**Laplace (Additive) Smoothing:**Simply adds small constant (usually 1) to all N-gram counts:
 
 P_Laplace(wn | wn-1) = (C(wn-1, wn) + 1) / (C(wn-1) + V)
 
 Where V is vocabulary size. This ensures no N-gram has zero probability.
 
-<strong>Advanced Smoothing:</strong>Good-Turing and Kneser-Ney smoothing adjust frequencies based on distribution of contexts and are state-of-the-art for language modeling.
+**Advanced Smoothing:**Good-Turing and Kneser-Ney smoothing adjust frequencies based on distribution of contexts and are state-of-the-art for language modeling.
 
 ### Perplexity and Entropy
 
-<strong>Perplexity</strong>measures how well probability model predicts sample. Lower perplexity indicates better language model.
-
-<strong>Entropy</strong>measures unpredictability of text.
+**Perplexity**measures how well probability model predicts sample. Lower perplexity indicates better language model.**Entropy**measures unpredictability of text.
 
 ## Python Implementation
 
@@ -191,9 +177,7 @@ Bag-of-N-grams approach represents document as sparse vector where each dimensio
 
 ### Skip-grams and Subword N-grams
 
-<strong>Skip-grams:</strong>Non-contiguous N-grams (e.g., "I ... Sam" in "I am Sam"), useful for capturing longer-range dependencies.
-
-<strong>Subword N-grams:</strong>Character-level or syllable-based N-grams, essential for handling languages with rich morphology or noisy data (Twitter, OCR).
+**Skip-grams:**Non-contiguous N-grams (e.g., "I ... Sam" in "I am Sam"), useful for capturing longer-range dependencies.**Subword N-grams:**Character-level or syllable-based N-grams, essential for handling languages with rich morphology or noisy data (Twitter, OCR).
 
 ### Sequence Representation
 
@@ -201,21 +185,7 @@ Some models use sequence representations (ordered lists of N-grams) as input for
 
 ## Applications
 
-<strong>Language Modeling:</strong>Predict next word in sentence, powering autocomplete, predictive typing, and chatbot responses.
-
-<strong>Text Classification:</strong>Feature extraction for categorizing documents (topics, sentiment). Bigrams like "not good" improve sentiment classifiers.
-
-<strong>Speech Recognition:</strong>Model word sequences to enhance transcription accuracy.
-
-<strong>Spelling Correction:</strong>Suggests corrections based on likely word sequences (e.g., "from" vs. "form").
-
-<strong>Machine Translation:</strong>Statistical translation systems use N-gram probabilities to construct target-language sentences.
-
-<strong>Information Retrieval:</strong>Search engines use N-grams for indexing and ranking documents.
-
-<strong>Plagiarism Detection:</strong>Detects overlapping sequences in documents.
-
-<strong>Predictive Typing/Autocomplete:</strong>Suggests next words as users type using frequent N-gram sequences.
+**Language Modeling:**Predict next word in sentence, powering autocomplete, predictive typing, and chatbot responses.**Text Classification:**Feature extraction for categorizing documents (topics, sentiment). Bigrams like "not good" improve sentiment classifiers.**Speech Recognition:**Model word sequences to enhance transcription accuracy.**Spelling Correction:**Suggests corrections based on likely word sequences (e.g., "from" vs. "form").**Machine Translation:**Statistical translation systems use N-gram probabilities to construct target-language sentences.**Information Retrieval:**Search engines use N-grams for indexing and ranking documents.**Plagiarism Detection:**Detects overlapping sequences in documents.**Predictive Typing/Autocomplete:**Suggests next words as users type using frequent N-gram sequences.
 
 ## Advanced Topics
 
@@ -230,19 +200,11 @@ This causes data sparsity (many N-grams never appear in corpus) and high dimensi
 
 ### Backoff and Interpolation
 
-<strong>Backoff:</strong>If higher-order N-gram is not found, back off to lower-order N-gram.
-
-<strong>Interpolation:</strong>Combine probabilities from multiple N-gram orders, weighted by their reliability.
+**Backoff:**If higher-order N-gram is not found, back off to lower-order N-gram.**Interpolation:**Combine probabilities from multiple N-gram orders, weighted by their reliability.
 
 ## Limitations
 
-<strong>Fixed Context:</strong>Cannot capture dependencies beyond n-1 previous words.
-
-<strong>Data Sparsity:</strong>Many valid N-grams may not appear in training corpus.
-
-<strong>No Semantic Understanding:</strong>Treats words as discrete symbols without understanding meaning or synonyms.
-
-<strong>Computational Complexity:</strong>Higher-order N-grams require exponentially more storage and computation.
+**Fixed Context:**Cannot capture dependencies beyond n-1 previous words.**Data Sparsity:**Many valid N-grams may not appear in training corpus.**No Semantic Understanding:**Treats words as discrete symbols without understanding meaning or synonyms.**Computational Complexity:**Higher-order N-grams require exponentially more storage and computation.
 
 ## References
 

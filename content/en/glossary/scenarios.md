@@ -17,7 +17,7 @@ draft: false
 
 ## What Are Scenarios?
 
-A <strong>scenario</strong>(also called a chatbot script, bot story, or conversation flow) is a pre-prepared, structured sequence of interactions between a user and an AI-powered automation system. Scenarios define the complete path of a conversation, including the logic, branching, data collection, and actions that guide how a chatbot responds to user input and executes operations to achieve specific outcomes.
+A **scenario**(also called a chatbot script, bot story, or conversation flow) is a pre-prepared, structured sequence of interactions between a user and an AI-powered automation system. Scenarios define the complete path of a conversation, including the logic, branching, data collection, and actions that guide how a chatbot responds to user input and executes operations to achieve specific outcomes.
 
 Scenarios are the operational backbone of modern chatbot and automation platforms, translating business requirements into executable conversation flows. They are constructed using visual or code-based workflow builders where modular blocks—representing events, actions, conditions, and exits—are connected to create dynamic, context-aware experiences across digital channels including web chat, mobile apps, messaging platforms, and voice interfaces.
 
@@ -27,22 +27,18 @@ Understanding the relationship between these related concepts is essential for e
 
 | Aspect | Scenario | User Story | Use Case |
 |--------|----------|------------|----------|
-| <strong>Definition</strong>| Executable conversation flow with specific steps, logic, and actions | Brief feature description from user perspective (Agile format) | Comprehensive specification of all system interactions |
-| <strong>Format</strong>| Visual workflow or flowchart with blocks, branches, conditions | Text card: "As a [user], I want [goal], so that [benefit]" | Detailed text with main/alternate flows and error handling |
-| <strong>Detail Level</strong>| Step-by-step implementation with specific actions and responses | High-level, abstract | Comprehensive, covering all variations |
-| <strong>Purpose</strong>| Guide actual automated conversation or process execution | Capture requirement or feature to implement | Specify complete system requirements |
-| <strong>Focus</strong>| User behavior and system automation in practice | User need and desired outcome | System behavior and responses |
-| <strong>Audience</strong>| Chatbot builders, automation engineers | Product owners, development teams | System analysts, developers, QA |
-| <strong>Granularity</strong>| Operational (what actually happens) | Strategic (what should be built) | Tactical (how system should behave) |
+| **Definition**| Executable conversation flow with specific steps, logic, and actions | Brief feature description from user perspective (Agile format) | Comprehensive specification of all system interactions |
+| **Format**| Visual workflow or flowchart with blocks, branches, conditions | Text card: "As a [user], I want [goal], so that [benefit]" | Detailed text with main/alternate flows and error handling |
+| **Detail Level**| Step-by-step implementation with specific actions and responses | High-level, abstract | Comprehensive, covering all variations |
+| **Purpose**| Guide actual automated conversation or process execution | Capture requirement or feature to implement | Specify complete system requirements |
+| **Focus**| User behavior and system automation in practice | User need and desired outcome | System behavior and responses |
+| **Audience**| Chatbot builders, automation engineers | Product owners, development teams | System analysts, developers, QA |
+| **Granularity**| Operational (what actually happens) | Strategic (what should be built) | Tactical (how system should behave) |**Example Comparison:**
 
-<strong>Example Comparison:</strong>
-
-<strong>User Story:</strong>```
+**User Story:**```
 As a new visitor, I want to get product support
 so that I can resolve my issue quickly.
-```
-
-**Use Case:**```
+```**Use Case:**```
 Title: Get Product Support
 Actor: New Visitor
 Main Flow:
@@ -53,9 +49,7 @@ Main Flow:
 Alternate Flows:
 - 2a. Category unclear → Ask clarifying questions
 - 3a. Solution not available → Escalate to agent
-```
-
-<strong>Scenario:</strong>```
+```**Scenario:**```
 [Entry Gate]
 → [Event: New User Message]
 → [Send Message: "How can I help you today?"]
@@ -84,11 +78,7 @@ Scenarios are composed of interconnected **blocks**, each representing a discret
 
 ### Entry Gate
 
-**Function:**Defines the beginning of a scenario flow.
-
-**Critical rule:**Every executable scenario must begin with an Entry Gate. Without it, the scenario cannot be activated or executed.
-
-**Visual representation:**Typically shown as a distinctive icon or shape at the top of the workflow canvas.
+**Function:**Defines the beginning of a scenario flow.**Critical rule:**Every executable scenario must begin with an Entry Gate. Without it, the scenario cannot be activated or executed.**Visual representation:**Typically shown as a distinctive icon or shape at the top of the workflow canvas.
 
 ### Event Blocks: Triggers and Listeners
 
@@ -105,13 +95,9 @@ Event blocks pause scenario execution and wait for specific triggers:
 | **Segments Updated**| User/conversation segment changes | Audience targeting |
 | **URL Change Detected**| Navigation to specific page | Contextual assistance |
 | **New Crisp Event**| Programmatic trigger via SDK/API | Integration events |
-| **Awaiting Operator**| Unread message timeout | Escalation scenarios |
-
-**Pattern Matching:**- **Exact match:**"reset password" (precise phrase)
+| **Awaiting Operator**| Unread message timeout | Escalation scenarios |**Pattern Matching:**-**Exact match:**"reset password" (precise phrase)
 - **Wildcard:**"*refund*" (contains word anywhere)
-- **Multiple patterns:**"help|assist|support" (any variant)
-
-**Critical Note:**After collecting user input (Field Input, Button Picker), always place an Event Block to capture the response and store the value. Without this, the scenario cannot properly pause, resume, and process user input.
+- **Multiple patterns:**"help|assist|support" (any variant)**Critical Note:**After collecting user input (Field Input, Button Picker), always place an Event Block to capture the response and store the value. Without this, the scenario cannot properly pause, resume, and process user input.
 
 ### Action Blocks: Executing Operations
 
@@ -124,32 +110,24 @@ Action blocks perform specific operations within scenarios:
 | **Conversation Control**| Change State, Assign Operator, Block User | Manage conversation lifecycle |
 | **Integration**| Run Webhook, HTTP Request, Custom API | Connect to external systems |
 | **AI Operations**| Intent Analysis, Knowledge Base Search, Dynamic Reply | Leverage AI capabilities |
-| **Flow Control**| Delay, Wait, Set Variable | Manage timing and data |
-
-**Send Message Types:**
+| **Flow Control**| Delay, Wait, Set Variable | Manage timing and data |**Send Message Types:**
 
 **Text Message:**```
 Plain text or formatted content with variables:
 "Hello {{user_name}}, your order #{{order_id}} has shipped!"
-```
-
-<strong>Button Picker:</strong>```
+```**Button Picker:**```
 Message: "How would you like to proceed?"
 Buttons: 
   - "Check Order Status"
   - "Speak to Agent"
   - "Browse FAQs"
-```
-
-**Field Input:**```
+```**Field Input:**```
 Type: Email
 Label: "Please provide your email address"
 Required: Yes
 Validation: Email format
 Store in: user.email
-```
-
-<strong>Carousel:</strong>```
+```**Carousel:**```
 Display multiple cards with images, text, and buttons
 Use case: Product showcase, feature comparison
 ```
@@ -166,9 +144,7 @@ Condition blocks evaluate data or context to direct flow:
 | **Custom Data**| Any custom field value | Business logic branching |
 | **Message Intent**| AI-detected user intent | Intent-based routing |
 | **API Response**| HTTP status, response values | Integration-driven flow |
-| **User Metadata**| Location, language, device, time of day | Context-aware branching |
-
-**Example Condition Structure:**```
+| **User Metadata**| Location, language, device, time of day | Context-aware branching |**Example Condition Structure:**```
 [Condition: User Email is Set]
   → If TRUE:
     [Send Message: "Thanks {{user_name}}, we'll follow up at {{user_email}}"]
@@ -181,15 +157,15 @@ Condition blocks evaluate data or context to direct flow:
 
 Exit blocks control how scenarios conclude:
 
-<strong>Stop Scenario:</strong>- Terminates current flow completely
+**Stop Scenario:**- Terminates current flow completely
 - Returns control to main chat system
 - Use when objective achieved or error encountered
 
-<strong>Run Scenario:</strong>- Launches another scenario
+**Run Scenario:**- Launches another scenario
 - Enables modular, reusable flows
 - Supports scenario chaining for complex workflows
 
-<strong>Example Modular Design:</strong>```
+**Example Modular Design:**```
 Scenario A: Lead Qualification
   → [Exit: Run Scenario B "Email Collection"]
   
@@ -237,9 +213,7 @@ Scenario B: Email Collection
 
 ### Example 1: Email Collection Scenario
 
-**Objective:**Capture user email during conversation
-
-**Flow:**```
+**Objective:**Capture user email during conversation**Flow:**```
 [Entry Gate]
 ↓
 [Send Message: "Welcome! May I have your email for follow-up?"]
@@ -256,18 +230,14 @@ Scenario B: Email Collection
   → If FALSE:
     [Send Message: "Invalid email. Please try again."]
     [Loop back to Field Input]
-```
-
-<strong>Key Features:</strong>- Input validation
+```**Key Features:**- Input validation
 - Data storage
 - Confirmation feedback
 - Error handling
 
 ### Example 2: FAQ Resolution Scenario
 
-<strong>Objective:</strong>Automatically answer common questions
-
-<strong>Flow:</strong>```
+**Objective:**Automatically answer common questions**Flow:**```
 [Entry Gate]
 ↓
 [Event: User Message Matches "*refund*|*return*"]
@@ -284,18 +254,14 @@ Scenario B: Email Collection
   → If FALSE:
     [Send Message: "Let me connect you with a specialist."]
     [Action: Assign to Agent queue="Customer Service"]
-```
-
-**Key Features:**- Pattern matching with wildcards
+```**Key Features:**- Pattern matching with wildcards
 - AI-powered knowledge retrieval
 - User satisfaction check
 - Escalation path
 
 ### Example 3: Multichannel Welcome Scenario
 
-**Objective:**Greet users differently based on channel
-
-**Flow:**```
+**Objective:**Greet users differently based on channel**Flow:**```
 [Entry Gate]
 ↓
 [Event: New User Message]
@@ -315,17 +281,13 @@ Scenario B: Email Collection
 [Event: User Message]
 ↓
 [Continue to main conversation flow...]
-```
-
-<strong>Key Features:</strong>- Channel detection
+```**Key Features:**- Channel detection
 - Personalized greetings
 - Consistent user experience across platforms
 
 ### Example 4: Lead Qualification and Routing
 
-<strong>Objective:</strong>Qualify leads and route to appropriate sales team
-
-<strong>Flow:</strong>```
+**Objective:**Qualify leads and route to appropriate sales team**Flow:**```
 [Entry Gate]
 ↓
 [Send: "What's your company size?"]
@@ -347,9 +309,7 @@ Scenario B: Email Collection
     [Action: Assign to Operator group="SMB Sales"]
   → Default:
     [Send: "Thanks! A specialist will reach out within 24 hours."]
-```
-
-**Key Features:**- Progressive profiling
+```**Key Features:**- Progressive profiling
 - Segment assignment
 - Intelligent routing
 - Fallback handling
@@ -446,9 +406,7 @@ Modern scenarios leverage AI capabilities:
 | **Knowledge Base Search**| Automatic answer retrieval | Accurate responses without manual rules |
 | **Sentiment Analysis**| Detect frustration, satisfaction | Proactive escalation or satisfaction surveys |
 | **Generative AI**| Dynamic response creation | Flexible, natural conversations |
-| **Predictive Analytics**| Next-best-action recommendations | Optimized user journeys |
-
-**Example AI-Enhanced Scenario:**```
+| **Predictive Analytics**| Next-best-action recommendations | Optimized user journeys |**Example AI-Enhanced Scenario:**```
 [Event: User Message]
 ↓
 [AI Action: Detect Intent and Extract Entities]
@@ -471,24 +429,24 @@ Modern scenarios leverage AI capabilities:
 
 | KPI | Description | Target |
 |-----|-------------|--------|
-| <strong>Completion Rate</strong>| % of users who finish scenario | >80% |
-| <strong>Drop-off Points</strong>| Where users abandon flow | Minimize |
-| <strong>Average Duration</strong>| Time to complete scenario | Minimize while maintaining quality |
-| <strong>User Satisfaction</strong>| Post-interaction rating | >4/5 |
-| <strong>Containment Rate</strong>| % of issues resolved without escalation | >70% |
-| <strong>Error Rate</strong>| Invalid inputs, failed actions | <5% |
+| **Completion Rate**| % of users who finish scenario | >80% |
+| **Drop-off Points**| Where users abandon flow | Minimize |
+| **Average Duration**| Time to complete scenario | Minimize while maintaining quality |
+| **User Satisfaction**| Post-interaction rating | >4/5 |
+| **Containment Rate**| % of issues resolved without escalation | >70% |
+| **Error Rate**| Invalid inputs, failed actions | <5% |
 
 ### Optimization Strategies
 
-<strong>Analyze Logs:</strong>- Identify common drop-off points
+**Analyze Logs:**- Identify common drop-off points
 - Review misunderstood inputs
 - Spot technical errors
 
-<strong>A/B Testing:</strong>- Test different message phrasings
+**A/B Testing:**- Test different message phrasings
 - Compare button arrangements
 - Optimize input field placement
 
-<strong>User Feedback:</strong>- Survey satisfaction
+**User Feedback:**- Survey satisfaction
 - Collect improvement suggestions
 - Monitor social media mentions
 
@@ -496,18 +454,18 @@ Modern scenarios leverage AI capabilities:
 
 | Term | Definition |
 |------|------------|
-| <strong>Scenario</strong>| Pre-prepared conversation flow built from modular blocks |
-| <strong>Block</strong>| Discrete unit of logic or function (Event, Action, Condition, Exit) |
-| <strong>Entry Gate</strong>| Starting point of scenario flow |
-| <strong>Event Block</strong>| Triggers that pause/resume scenario based on user or system events |
-| <strong>Action Block</strong>| Operations executed within scenario (send message, update data, API call) |
-| <strong>Condition Block</strong>| Decision points that branch scenario flow based on evaluated criteria |
-| <strong>Exit Block</strong>| Ends scenario or transitions to another scenario |
-| <strong>Pattern Matching</strong>| Detecting keywords or phrases in user messages |
-| <strong>Memorization</strong>| Storing collected user data for later use in scenario |
-| <strong>Chaining</strong>| Connecting multiple scenarios in sequence |
-| <strong>Fallback</strong>| Default action when no conditions match |
-| <strong>Escalation</strong>| Transferring conversation from bot to human agent |
+| **Scenario**| Pre-prepared conversation flow built from modular blocks |
+| **Block**| Discrete unit of logic or function (Event, Action, Condition, Exit) |
+| **Entry Gate**| Starting point of scenario flow |
+| **Event Block**| Triggers that pause/resume scenario based on user or system events |
+| **Action Block**| Operations executed within scenario (send message, update data, API call) |
+| **Condition Block**| Decision points that branch scenario flow based on evaluated criteria |
+| **Exit Block**| Ends scenario or transitions to another scenario |
+| **Pattern Matching**| Detecting keywords or phrases in user messages |
+| **Memorization**| Storing collected user data for later use in scenario |
+| **Chaining**| Connecting multiple scenarios in sequence |
+| **Fallback**| Default action when no conditions match |
+| **Escalation**| Transferring conversation from bot to human agent |
 
 ## References
 

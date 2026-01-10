@@ -32,7 +32,7 @@ Oracle feedback is the process in which correct answers (ground-truth labels) ar
 - Enables AI systems to learn the mappings between inputs and desired outputs by example.
 - In Oracle platforms, feedback can be provided via user interfaces, APIs, or specific procedures.
 
-<strong>Links:</strong>- [Oracle ML Fundamentals](https://www.oracle.com/artificial-intelligence/machine-learning/what-is-machine-learning/)
+**Links:**- [Oracle ML Fundamentals](https://www.oracle.com/artificial-intelligence/machine-learning/what-is-machine-learning/)
 - [Labeling Data for ML (LabelYourData)](https://labelyourdata.com/articles/label-data-for-machine-learning)
 - [OCI Data Labeling](https://www.oracle.com/artificial-intelligence/data-labeling/)
 
@@ -40,9 +40,9 @@ Oracle feedback is the process in which correct answers (ground-truth labels) ar
 
 Ground-truth labels are the set of correct answers for a given dataset, established by an authoritative process or expert annotation. These labels are the gold standard for training, validating, and evaluating AI models.
 
-- <strong>In NLP:</strong>The correct SQL query for a natural language prompt.
-- <strong>In Computer Vision:</strong>The correct class, bounding box, or segmentation mask for an image.
-- <strong>In Classification:</strong>The correct class or category for a data point.
+- **In NLP:**The correct SQL query for a natural language prompt.
+- **In Computer Vision:**The correct class, bounding box, or segmentation mask for an image.
+- **In Classification:**The correct class or category for a data point.
 
 ### Oracle (Authority)
 
@@ -59,38 +59,38 @@ The process begins with data labeling—the act of assigning correct answers to 
 - Annotators label each data item with its correct output.
 - The labeled data can be exported in JSON for direct integration with Oracle AI and data science services.
 
-<strong>Features:</strong>- Custom templates and annotation formats.
+**Features:**- Custom templates and annotation formats.
 - GUI and API-based annotation.
 - Integration with OCI Vision and OCI Language for seamless model training.
 ### 2. Model Training (Supervised Learning)
 
 The labeled data is used for supervised learning, where the model is explicitly shown the correct answer for each example.
 
-- <strong>Algorithm Examples:</strong>Neural Networks, Decision Trees, SVMs.
-- <strong>Process:</strong>Each input is paired with its label; the model adjusts its internal parameters to minimize the error between predicted and correct outputs.
+- **Algorithm Examples:**Neural Networks, Decision Trees, SVMs.
+- **Process:**Each input is paired with its label; the model adjusts its internal parameters to minimize the error between predicted and correct outputs.
 ### 3. Model Evaluation and Validation
 
 After training, the model is tested on new, labeled data. The outputs are compared to the ground-truth labels to compute metrics such as accuracy, precision, recall, and F1 score.
 
-- <strong>Purpose:</strong>Identify where AI predictions diverge from ground truth, enabling focused improvement.
-- <strong>Best Practice:</strong>Use a separate test set with reliable, oracle-provided labels.
+- **Purpose:**Identify where AI predictions diverge from ground truth, enabling focused improvement.
+- **Best Practice:**Use a separate test set with reliable, oracle-provided labels.
 
 ### 4. Feedback Mechanisms in Oracle Platforms
 
-#### <strong>Oracle Select AI (NL2SQL) Feedback Loop</strong>[Select AI](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/select-ai-feedback.html) allows users to provide direct feedback on AI-generated SQL queries, improving natural language to SQL performance.
+#### **Oracle Select AI (NL2SQL) Feedback Loop**[Select AI](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/select-ai-feedback.html) allows users to provide direct feedback on AI-generated SQL queries, improving natural language to SQL performance.
 
-- <strong>Process:</strong>- User issues a natural language prompt.
+- **Process:**- User issues a natural language prompt.
   - AI generates an SQL query.
   - User reviews the SQL:
     - If correct, positive feedback is given.
     - If incorrect, user provides the corrected SQL or descriptive feedback.
   - Feedback is recorded in a vector index (e.g., `<profile_name>_FEEDBACK_VECINDEX`).
 
-- <strong>Technical Interface:</strong>- Feedback can be given through a UI or by calling the `DBMS_CLOUD_AI.FEEDBACK` procedure.
+- **Technical Interface:**- Feedback can be given through a UI or by calling the `DBMS_CLOUD_AI.FEEDBACK` procedure.
     - [DBMS_CLOUD_AI Package Reference](https://docs.oracle.com/en-us/iaas/autonomous-database-serverless/doc/dbms-cloud-ai-package.html)
   - The feedback is used as a reference for future prompts, enhancing the LLM’s contextual understanding and accuracy.
 
-- <strong>Example:</strong>```sql
+- **Example:**```sql
 -- Positive feedback for correct SQL
 EXEC DBMS_CLOUD_AI.FEEDBACK(
     ai_profile    => 'my_profile',
@@ -174,9 +174,7 @@ Oracle’s feedback systems support a closed feedback loop:
 
 ## Best Practices & Implementation Tips
 
-- **Use domain experts or robust annotation guidelines for ground-truth creation.**- **Leverage tools like OCI Data Labeling for scalable annotation.**- **Incorporate feedback continuously to adapt to evolving requirements.**- **Use separate validation and test sets to prevent overfitting to feedback.**- **Document feedback and annotation processes for traceability and reproducibility.**## Technical Deep Dive: Select AI Feedback & DBMS_CLOUD_AI.FEEDBACK
-
-**Feedback Mechanism:**- Available only on Oracle AI Database 26ai.
+- **Use domain experts or robust annotation guidelines for ground-truth creation.**-**Leverage tools like OCI Data Labeling for scalable annotation.**-**Incorporate feedback continuously to adapt to evolving requirements.**-**Use separate validation and test sets to prevent overfitting to feedback.**-**Document feedback and annotation processes for traceability and reproducibility.**## Technical Deep Dive: Select AI Feedback & DBMS_CLOUD_AI.FEEDBACK**Feedback Mechanism:**- Available only on Oracle AI Database 26ai.
 - Used alongside Select AI actions: `runsql`, `showsql`, `explainsql`.
 - Feedback action or `DBMS_CLOUD_AI.FEEDBACK` procedure records user responses.
 - Creates a default vector index (`<profile_name>_FEEDBACK_VECINDEX`) to store feedback references.
