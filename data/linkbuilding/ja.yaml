@@ -666,7 +666,7 @@ keywords:
   priority: 10
   title: JSON Pathは、簡潔なパス式を使用して複雑なJSONデータ構造から特定の値を抽出、検索、操作するためのクエリ構文です。
 - keyword: ジェイルブレイキング(AIジェイルブレイキング)
-  url: /ja/glossary/jailbreaking-ai-jailbreaking/
+  url: /ja/glossary/jailbreaking/
   exact: true
   priority: 10
   title: ジェイルブレイキング(AIジェイルブレイキング) の用語集ページ

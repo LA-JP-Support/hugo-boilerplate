@@ -51,6 +51,17 @@ keywords:
     exact: false
     priority: 8
     title: 自然言語処理（NLP） の用語集ページ
+
+  - keyword: ジェイルブレイク
+    url: /ja/glossary/jailbreaking/
+    exact: false
+    priority: 10
+    title: ジェイルブレイキング(AIジェイルブレイキング) の用語集ページ
+  - keyword: ジェイルブレイキング
+    url: /ja/glossary/jailbreaking/
+    exact: false
+    priority: 10
+    title: ジェイルブレイキング(AIジェイルブレイキング) の用語集ページ
   - keyword: 汎用人工知能
     url: /ja/glossary/agi/
     exact: false
