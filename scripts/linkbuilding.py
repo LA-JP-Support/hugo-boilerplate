@@ -403,6 +403,32 @@ class LinkBuilder:
     def should_skip_file(self, file_path: Path) -> bool:
         """Check if a file should be skipped based on its path."""
         path_str = str(file_path).replace('\\', '/')
+
+        if '/glossary/' in path_str:
+            # On case-sensitive hosts (e.g. Amplify/Linux), Hugo may output both:
+            #   /glossary/OpenAI/ and /glossary/openai/
+            # (canonical + alias). We can skip the mixed-case duplicate to reduce
+            # processing time.
+            #
+            # IMPORTANT: Do not rely on Path.exists() for case variants, because on
+            # case-insensitive filesystems (common on macOS), both paths may resolve
+            # to the same directory and would incorrectly trigger a skip.
+            m = re.search(r'/glossary/([^/]+)/', path_str)
+            if m:
+                slug = m.group(1)
+                lower_slug = slug.lower()
+                if slug != lower_slug and any('A' <= c <= 'Z' for c in slug):
+                    try:
+                        parts = file_path.parts
+                        idx = parts.index('glossary')
+                        glossary_parent = Path(*parts[:idx + 1])
+                        # Check the directory entries actually present on disk
+                        dirnames = {p.name for p in glossary_parent.iterdir() if p.is_dir()}
+                        if slug in dirnames and lower_slug in dirnames:
+                            return True
+                    except Exception:
+                        # If anything goes wrong, fall back to not skipping.
+                        pass
         
         # Skip paths containing any of the skip patterns
         for skip_pattern in self.SKIP_PATHS:
