@@ -1,7 +1,7 @@
 ---
 title: "SSML (Speech Synthesis Markup Language)"
 translationKey: "ssml-speech-synthesis-markup-language"
-description: "A markup language that controls how AI reads text aloud by adjusting pronunciation, speed, pitch, and pauses to make speech sound natural and expressive instead of robotic."
+description: "A markup language that controls how text sounds when spoken by AI, adjusting pronunciation, speed, pitch, and emotion to make speech sound more natural and human-like."
 keywords: ["SSML", "Speech Synthesis Markup Language", "Text-to-Speech", "TTS", "W3C", "prosody", "phonetics", "voice user interfaces", "AI chatbot"]
 category: "AI Chatbot & Automation / Text-to-Speech / Voice User Interfaces"
 type: "glossary"
@@ -16,7 +16,7 @@ Speech Synthesis Markup Language (SSML) is an XML-based markup standard develope
 
 Without SSML, text-to-speech (TTS) outputs are often robotic, monotonous, and prone to mispronunciations or awkward intonation. SSML solves these issues by providing fine-grained control over pronunciation using phonetic alphabets (IPA, X-SAMPA), prosody specification (pitch, rate, volume, emphasis), natural pause insertion and sentence structuring, explicit handling of special content (dates, times, acronyms, currency), voice and language switching mid-stream, and audio file embedding.
 
-**Industry Adoption:**SSML is the de facto standard for all major cloud TTS providers including Amazon Alexa Skills Kit, Google Cloud Text-to-Speech, Microsoft Azure Speech Service, IBM Watson Text-to-Speech, and Speechify.
+**Industry Adoption:** SSML is the de facto standard for all major cloud TTS providers including Amazon Alexa Skills Kit, Google Cloud Text-to-Speech, Microsoft Azure Speech Service, IBM Watson Text-to-Speech, and Speechify.
 
 ## Core Capabilities
 
@@ -64,7 +64,8 @@ Omitting the `<speak>` tag results in errors or the TTS engine falling back to p
 
 Adds a pause or controls the boundary between words or phrases.
 
-**Attributes:**- `time`: Exact pause duration (e.g., "500ms", "2s")
+**Attributes:**
+- `time`: Exact pause duration (e.g., "500ms", "2s")
 - `strength`: Relative pause ("none", "x-weak", "weak", "medium", "strong", "x-strong")
 
 ```xml
@@ -77,7 +78,8 @@ Adds a pause or controls the boundary between words or phrases.
 
 Changes expressiveness of speech.
 
-**Attributes:**- `pitch`: "x-low", "low", "medium", "high", "x-high", or percentage ("+20%")
+**Attributes:**
+- `pitch`: "x-low", "low", "medium", "high", "x-high", or percentage ("+20%")
 - `rate`: "x-slow", "slow", "medium", "fast", "x-fast", or percentage ("-20%")
 - `volume`: "silent", "x-soft", "soft", "medium", "loud", "x-loud", decibel ("-6dB"), or percentage
 
@@ -89,7 +91,7 @@ Changes expressiveness of speech.
 </speak>
 ```
 
-**Best Practice:**Avoid extreme values; subtle changes produce more natural speech.
+**Best Practice:** Avoid extreme values; subtle changes produce more natural speech.
 
 ### `<emphasis>`: Highlight Words
 
@@ -107,7 +109,8 @@ Levels: "strong", "moderate", "reduced"
 
 Directs TTS to read text as specific types.
 
-**Common interpret-as values:**- "cardinal": Numbers (123 → "one hundred twenty-three")
+**Common interpret-as values:**
+- "cardinal": Numbers (123 → "one hundred twenty-three")
 - "ordinal": Ordinal numbers (1st → "first")
 - "characters": Spell out ("SSML" → "S S M L")
 - "date": Dates with format specification
@@ -117,7 +120,9 @@ Directs TTS to read text as specific types.
 - "fraction": Fractions ("3/4" → "three quarters")
 - "unit": Measurements
 
-**Examples:**```xml
+**Examples:**
+
+```xml
 <speak>
   <say-as interpret-as="characters">SSML</say-as>
 </speak>
@@ -139,7 +144,8 @@ Directs TTS to read text as specific types.
 
 Specifies exact pronunciation using phonetic alphabets.
 
-**Attributes:**- `alphabet`: "ipa", "x-sampa"
+**Attributes:**
+- `alphabet`: "ipa", "x-sampa"
 - `ph`: Phonetic string
 
 ```xml
@@ -158,7 +164,7 @@ Reads the alias value instead of the enclosed text.
 </speak>
 ```
 
-**Use Cases:**Brand names, acronyms, foreign words
+**Use Cases:** Brand names, acronyms, foreign words
 
 ### `<audio>`: Insert Audio Clips
 
@@ -173,7 +179,8 @@ Embeds recorded audio in speech output (sound effects, music).
 </speak>
 ```
 
-**Provider Limitations:**- Google Cloud: Format and time restrictions apply
+**Provider Limitations:**
+- Google Cloud: Format and time restrictions apply
 - Amazon Alexa: 240-second max, HTTPS required, size limits
 - Azure: Supported with restrictions
 
@@ -215,7 +222,7 @@ Specifies language for a text segment, enabling proper pronunciation and accent.
 
 ### Amazon Alexa
 
-**`<amazon:emotion>`:**Adds "excited" or "disappointed" emotion
+**`<amazon:emotion>`:** Adds "excited" or "disappointed" emotion
 
 ```xml
 <speak>
@@ -225,11 +232,11 @@ Specifies language for a text segment, enabling proper pronunciation and accent.
 </speak>
 ```
 
-**`<amazon:domain>`:**Changes delivery style (news, music, conversational)
+**`<amazon:domain>`:** Changes delivery style (news, music, conversational)
 
 ### Microsoft Azure
 
-**`<mstts:express-as>`:**Neural voice styles and roles
+**`<mstts:express-as>`:** Neural voice styles and roles
 
 ```xml
 <speak>
@@ -243,7 +250,7 @@ Styles include: cheerful, sad, angry, fearful, friendly, hopeful, newscast, cust
 
 ### Speechify
 
-**`<speechify:style>`:**Proprietary style control for enhanced reading experiences
+**`<speechify:style>`:** Proprietary style control for enhanced reading experiences
 
 ## Practical Example
 
@@ -261,7 +268,7 @@ Styles include: cheerful, sad, angry, fearful, friendly, hopeful, newscast, cust
 </speak>
 ```
 
-**Expected Output:**"Welcome to the demo. [pause] Your appointment is on June tenth, twenty twenty-three. The amount due is nineteen dollars and ninety-nine cents. For assistance, call one eight hundred one two three four five six seven. [slower] Thank you for using our service."
+**Expected Output:** "Welcome to the demo. [pause] Your appointment is on June tenth, twenty twenty-three. The amount due is nineteen dollars and ninety-nine cents. For assistance, call one eight hundred one two three four five six seven. [slower] Thank you for using our service."
 
 ## Common Use Cases
 
@@ -291,33 +298,44 @@ Deliver notifications and responses with appropriate context and emotion
 
 ## Best Practices
 
-**Subtle Adjustments:**Small prosody changes are more effective than extreme modifications**Test Across Platforms:**Verify SSML rendering across target TTS providers**Use Phonetic Sparingly:**Only override pronunciation when necessary**Structure Logically:**Use `<p>` and `<s>` tags for natural pacing**Balance Speed:**Maintain natural rate; avoid overly fast or slow speech**Audio Quality:**Ensure embedded audio files are properly encoded and hosted**Accessibility Focus:**Consider all users, including those with assistive technology
+**Subtle Adjustments:** Small prosody changes are more effective than extreme modifications
+
+**Test Across Platforms:** Verify SSML rendering across target TTS providers
+
+**Use Phonetic Sparingly:** Only override pronunciation when necessary
+
+**Structure Logically:** Use `<p>` and `<s>` tags for natural pacing
+
+**Balance Speed:** Maintain natural rate; avoid overly fast or slow speech
+
+**Audio Quality:** Ensure embedded audio files are properly encoded and hosted
+
+**Accessibility Focus:** Consider all users, including those with assistive technology
 
 ## Implementation Considerations
 
-**Platform Compatibility:**Different providers support different tag subsets and extensions**Fallback Content:**Provide fallback text for unsupported tags**Character Limits:**Be aware of platform-specific text length restrictions**Processing Overhead:**Complex SSML may increase response time**Cost Management:**Some providers charge based on character count including markup**Testing Protocol:**Establish comprehensive testing across devices and platforms
+**Platform Compatibility:** Different providers support different tag subsets and extensions
+
+**Fallback Content:** Provide fallback text for unsupported tags
+
+**Character Limits:** Be aware of platform-specific text length restrictions
+
+**Processing Overhead:** Complex SSML may increase response time
+
+**Cost Management:** Some providers charge based on character count including markup
+
+**Testing Protocol:** Establish comprehensive testing across devices and platforms
 
 ## References
 
-
-1. W3C. (n.d.). Speech Synthesis Markup Language (SSML) Version 1.1. W3C Technical Report.
-
-2. Amazon. (n.d.). Alexa: SSML Reference. Amazon Developer Documentation.
-
-3. Google Cloud. (n.d.). SSML Documentation. Google Cloud Documentation.
-
-4. Microsoft Azure. (n.d.). Speech Synthesis Markup. Microsoft Learn.
-
-5. IBM Watson. (n.d.). SSML Elements. IBM Cloud Documentation.
-
-6. Speechify. (n.d.). SSML Features. Speechify Documentation.
-
-7. Wikipedia. (n.d.). International Phonetic Alphabet. Wikipedia.
-
-8. Microsoft Azure. (n.d.). Speech Voice Gallery. URL: https://speech.microsoft.com/portal/voicegallery
-
-9. Google Cloud. (n.d.). Supported SSML Elements. Google Cloud Documentation.
-
-10. Microsoft Azure. (n.d.). Supported SSML Elements. Microsoft Learn.
-
-11. Adaptive Cards. (n.d.). Adaptive Cards Designer. URL: https://adaptivecards.io/designer/
+- [W3C Speech Synthesis Markup Language (SSML) Version 1.1](https://www.w3.org/TR/speech-synthesis11/)
+- [Amazon Alexa: SSML Reference](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html)
+- [Google Cloud: SSML Documentation](https://cloud.google.com/text-to-speech/docs/ssml)
+- [Microsoft Azure: Speech Synthesis Markup](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup)
+- [IBM Watson: SSML Elements](https://cloud.ibm.com/docs/text-to-speech?topic=text-to-speech-ssml)
+- [Speechify: SSML Features](https://docs.sws.speechify.com/docs/features/ssml)
+- [International Phonetic Alphabet (IPA)](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet)
+- [Azure Speech Voice Gallery](https://speech.microsoft.com/portal/voicegallery)
+- [Google Cloud Supported SSML Elements](https://cloud.google.com/text-to-speech/docs/ssml#supported_ssml)
+- [Microsoft Azure Supported SSML Elements](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-structure#ssml-supported-elements)
+- [Adaptive Cards Designer](https://adaptivecards.io/designer/)

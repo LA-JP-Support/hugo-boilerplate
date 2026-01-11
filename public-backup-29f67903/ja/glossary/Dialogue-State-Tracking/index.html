@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>対話状態追跡 | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/dialogue-state-tracking/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Dialogue-State-Tracking/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/Dialogue-State-Tracking/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Dialogue-State-Tracking/" hreflang="x-default" rel="alternate"/>
+<meta content="対話状態追跡(DST)は、対話システムにおいてユーザーの目標、スロット値、会話履歴を推定し、一貫性のある適切なAI応答を可能にします。" name="description"/>
+<meta content="対話状態追跡, 会話型AI, チャットボット, 対話システム, スロットフィリング" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/dialogue-state-tracking/" property="og:url"/>
+<meta content="対話状態追跡 | SmartWeb" property="og:title"/>
+<meta content="対話状態追跡(DST)は、対話システムにおいてユーザーの目標、スロット値、会話履歴を推定し、一貫性のある適切なAI応答を可能にします。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/dialogue-state-tracking/" name="twitter:url"/>
+<meta content="対話状態追跡 | SmartWeb" name="twitter:title"/>
+<meta content="対話状態追跡(DST)は、対話システムにおいてユーザーの目標、スロット値、会話履歴を推定し、一貫性のある適切なAI応答を可能にします。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">対話状態追跡</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        対話状態追跡
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Dialogue State Tracking
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          対話状態追跡(DST)は、対話システムにおいてユーザーの目標、スロット値、会話履歴を推定し、一貫性のある適切なAI応答を可能にします。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                対話状態追跡
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                会話型AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                チャットボット
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                対話システム
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                スロットフィリング
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="対話状態追跡とは">対話状態追跡とは?</h2>
+<p>対話状態追跡(Dialogue State Tracking、DST)は、タスク指向の会話型<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="人工知能(AI) の用語集ページ">AIシステム</a>の基盤となる技術です。複数ターンにわたる会話を通じて重要な詳細情報を体系的に追跡し、ユーザーの目標と意図、スロット値(ユーザーが表現した特定の情報)、対話履歴とコンテキストの構造化された機械可読な表現を維持します。</p>
+<p>各ターンにおいて、DSTはユーザーの現在の目的とそれを達成するために必要なすべての関連パラメータを推定します。これにより、システムは次に何をすべきか、何を言うべきかについて情報に基づいた意思決定を行うことができ、会話の一貫性と関連性を確保します。DSTは、ユーザー入力の解釈(自然言語理解技術を通じて)と<a data-lb="1" href="/ja/glossary/dialogue-management/" title="会話スクリプトの包括的ガイド:チャットボット、音声アシスタント、インタラクティブシステムにおける対話フローを管理するための構造化されたフレームワーク。">対話管理</a>(システム応答の意思決定)の間の仲介役として機能します。</p>
+<h2 id="対話状態追跡の使用方法">対話状態追跡の使用方法</h2>
+<p>DSTは、会話コンテキストの維持(前のターンの記憶を保持することで連続性を確保)、対話ポリシーの誘導(<a data-lb="1" href="/ja/glossary/chatbot/" title="チャットボットは、テキストまたは音声を通じて人間の会話をシミュレートするAI駆動のソフトウェアアプリケーションです。カスタマーサポート、情報検索、タスク自動化に使用されます。">チャットボット</a>に適切な次のアクションを通知)、曖昧さの解決(複数ターンにわたる参照の処理とユーザーリクエストの明確化)、応答のパーソナライズ(ユーザーの好みに合わせたシステム動作の適応)、複数ターン推論の実現(複数の対話ターンにまたがる複雑なクエリと依存関係の追跡)に使用されます。</p>
+<p>適用領域:- 仮想アシスタント(Alexa、Siri、<a data-lb="1" href="/ja/glossary/google/" title="Google の用語集ページ">Google</a> Assistant)</p>
+<ul>
+<li>カスタマーサポートチャットボット(自動ヘルプデスク、ライブチャット)</li>
+<li>自動予約システム(レストラン、ホテル、フライト、タクシー)</li>
+<li>会話型コマース(ショッピングアシスタント)</li>
+<li>ヘルスケアエージェント(患者情報収集、トリアージ)</li>
+<li>技術トラブルシューティング(段階的なガイダンス)</li>
+</ul>
+<h2 id="主要な概念と用語">主要な概念と用語</h2>
+<table>
+<thead>
+<tr>
+<th>用語</th>
+<th>定義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>スロット</td>
+<td>特定の情報を表す変数(例:「場所」、「時間」、「料理」)</td>
+</tr>
+<tr>
+<td>スロット値</td>
+<td>ユーザーが提供した、またはシステムが推測したスロットの値(例:「場所」に対する「ニューヨーク」)</td>
+</tr>
+<tr>
+<td>スロット-値ペア</td>
+<td>スロットとその現在の値のキー-値レコード(例:{“time”: “7 PM”})</td>
+</tr>
+<tr>
+<td>対話状態</td>
+<td>各ターンで追跡されるすべてのスロット-値ペアとその他のコンテキスト情報の現在のセット</td>
+</tr>
+<tr>
+<td>信念状態</td>
+<td>可能な対話状態に対する確率分布。確率的DSTで使用される</td>
+</tr>
+<tr>
+<td>オントロジー</td>
+<td>ドメインのすべての可能なスロットとその許容値を定義するスキーマ</td>
+</tr>
+<tr>
+<td>通知可能スロット</td>
+<td>ユーザーが制約として指定できるスロット(例:「エリア = 北部」)</td>
+</tr>
+<tr>
+<td>要求可能スロット</td>
+<td>ユーザーが情報を要求できるスロット(例:「住所は何ですか?」)</td>
+</tr>
+<tr>
+<td>ターン</td>
+<td>ユーザー発話とシステム応答のペア</td>
+</tr>
+<tr>
+<td>対話ポリシー</td>
+<td>現在の対話状態に基づいて次のシステムアクションを選択する意思決定ロジック</td>
+</tr>
+</tbody>
+</table>
+<h2 id="対話状態追跡のアプローチ">対話状態追跡のアプローチ</h2>
+<h3 id="ルールベースdst">ルールベースDST</h3>
+<p>動作原理:手作業で作成されたルールまたはパターンがユーザー入力に応じて対話状態を更新します。長所:シンプル、解釈可能、データ不要。短所:言語の多様性やスケールに対して堅牢ではない、未知のシナリオに脆弱、集中的な手動エンジニアリングが必要。</p>
+<h3 id="確率的dst">確率的DST</h3>
+<p>動作原理:可能な対話状態に対する確率分布(信念状態)を維持します。ベイジアンネットワークやMDPなどの統計モデルを使用して更新を実行します。長所:不確実性や入力エラー(例:<a data-lb="1" href="/ja/glossary/speech-recognition/" title="音声認識(ASR)は、話し言葉をテキストに変換する技術です。このAI技術の仕組み、アルゴリズム、機能、応用分野、そして今後のトレンドについて解説します。">音声認識</a>からの)に対して堅牢、曖昧な言語を処理可能。短所:計算集約的、特徴エンジニアリングが必要、パラメータ推定のための十分なデータが必要。</p>
+<h3 id="機械学習深層学習dst">機械学習/深層学習DST</h3>
+<p>動作原理:RNN、LSTM/GRU、Transformer(BERT、GPT)、条件付き確率場(CRF)などのモデルを使用して、会話データから直接対話状態を更新することを学習します。長所:複雑な対話パターンを捉える、ドメイン間で汎化、大規模アプリケーションをサポート。短所:大規模な注釈付きデータセットが必要、<a data-lb="1" href="/ja/glossary/rule-based-systems/" title="ルールベースとは、明示的な「if-then」ルールを使用してデータを処理し、意思決定を行う計算フレームワークです。AI、ビジネス自動化、コンプライアンスに不可欠であり、透明性と一貫性を提供します。">ルールベースシステム</a>より解釈性が低い。技術例:- 逐次対話モデリングのためのRNN/LSTM/GRU</p>
+<ul>
+<li>会話コンテキストをエンコードするためのTransformer(BERT/GPT)</li>
+<li>関連する履歴に焦点を当てるためのアテンションメカニズム</li>
+<li>対話から直接スロット値を抽出するためのポインターネットワーク</li>
+</ul>
+<h3 id="ハイブリッド手法">ハイブリッド手法</h3>
+<p>動作原理:ルールベースと<a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>アプローチを組み合わせます。ルールは頻繁/単純なケースを処理し、MLは稀/複雑なシナリオを処理します。長所:ルールの解釈可能性とMLの堅牢性を活用。短所:統合の複雑さ。</p>
+<h2 id="対話状態表現形式">対話状態表現形式</h2>
+<h3 id="スロット-値ペア">スロット-値ペア</h3>
+<p>最も一般的な形式。各スロット(キー)がその現在の値を保持します:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"cuisine"</span>: <span style="color:#0ff;font-weight:bold">"Italian"</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"location"</span>: <span style="color:#0ff;font-weight:bold">"New York"</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"time"</span>: <span style="color:#0ff;font-weight:bold">"7 PM"</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>容易に解釈可能で、データベース/APIインターフェースに使用されます。</p>
+<h3 id="特徴ベクトル">特徴ベクトル</h3>
+<p>スロット値と対話特徴をエンコードする固定長の数値ベクトル。ML/DLモデル、特にニューラルネットとの統合に有用です。</p>
+<h3 id="グラフベース構造">グラフベース構造</h3>
+<p>ノードはエンティティ、スロット、またはユーザー意図を表し、エッジは関係と依存関係を捉えます。複雑なマルチドメイン会話の推論を促進し、知識グラフとインターフェースできます。</p>
+<h2 id="対話状態更新メカニズム">対話状態更新メカニズム</h2>
+<h3 id="ルールベース更新">ルールベース更新</h3>
+<p>事前定義されたルールがパターンマッチング、正規表現、またはテンプレート手法を使用してユーザー<a data-lb="1" href="/ja/glossary/utterance/" title="会話型AIにおける発話とは何か、NLU/NLPにおける役割、種類、ワークフロー、課題、そしてチャットボットを効果的にトレーニングするためのベストプラクティスについて学びます。">発話</a>を状態変化にマッピングします。単純または明確に定義されたタスクに対して高速で信頼性があります。</p>
+<h3 id="確率的更新">確率的更新</h3>
+<p>ベイズ推論が入力ソース(例:音声認識エラー)からの不確実性を考慮して信念状態を更新します。初期の音声対話システムで一般的で、ノイズに対して堅牢です。</p>
+<h3 id="ニューラルmlベース更新">ニューラル/MLベース更新</h3>
+<p>シーケンスモデル(RNN、Transformer)が対話履歴と現在の入力を処理して新しいスロット値を予測します。アテンションメカニズムが関連するコンテキストに焦点を当て、ジョイントモデリングがすべてのスロットを同時または個別に処理します。</p>
+<h3 id="スロット充填">スロット充填</h3>
+<p>固有表現認識(NER)とシーケンスラベリング(例:CRFを使用)がユーザー入力からスロット値を抽出します。ジョイントモデルが各ターンですべての関連スロットを予測し、マルチドメインおよび動的シナリオをサポートします。</p>
+<h3 id="思考連鎖推論">思考連鎖推論</h3>
+<p>複数の対話ターンにわたる段階的推論によりスロット値を推測し、複雑な複数ターン対話をサポートします。複雑なシナリオでDSTパフォーマンスを向上させることが実証されています。</p>
+<h2 id="評価メトリクスベンチマーク">評価、メトリクス、ベンチマーク</h2>
+<h3 id="標準データセット">標準データセット</h3>
+<p>WOZ(Wizard of Oz):レストラン予約における人間-人間対話MultiWOZ:大規模、マルチドメイン、注釈付き対話データセット(10,000以上の対話)DSTC(Dialogue State Tracking Challenge):DSTシステムのための一連のベンチマークタスクとデータセット</p>
+<h3 id="一般的なメトリクス">一般的なメトリクス</h3>
+<table>
+<thead>
+<tr>
+<th>メトリクス</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ジョイントゴール精度</td>
+<td>すべてのスロットが正しく予測された対話ターンの割合(厳格な指標)</td>
+</tr>
+<tr>
+<td>スロット精度</td>
+<td>個々のスロット-値予測の正確性</td>
+</tr>
+<tr>
+<td>スロットF1スコア</td>
+<td>スロット予測の適合率と再現率の調和平均。クラス不均衡を処理</td>
+</tr>
+<tr>
+<td>パープレキシティ</td>
+<td>言語モデリングを評価し、モデルがコンテキスト内で次のトークンをどれだけ予測できるかを測定</td>
+</tr>
+<tr>
+<td>人間評価</td>
+<td>システムパフォーマンスの主観的評価(一貫性、有用性、自然さ)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="例とユースケース">例とユースケース</h2>
+<h3 id="例レストラン予約対話状態">例:レストラン予約対話状態</h3>
+<p>ターン1ユーザー:「イタリアンレストランを探しています。」状態:<code>{ "cuisine": "Italian" }</code>ターン2ユーザー:「ニューヨークで。」状態:<code>{ "cuisine": "Italian", "location": "New York" }</code>ターン3ユーザー:「午後7時で。」状態:<code>{ "cuisine": "Italian", "location": "New York", "time": "7 PM" }</code>ターン4ユーザー:「時間を午後8時に変更してください。」状態:<code>{ "cuisine": "Italian", "location": "New York", "time": "8 PM" }</code></p>
+<h3 id="例マルチドメイン対話">例:マルチドメイン対話</h3>
+<p>ターン5の状態:```json
+{
+“hotel-name”: “York Hotel”,
+“hotel-stars”: “5”,
+“taxi-destination”: “York Hotel”,
+“taxi-departure”: “Cambridge Station”
+}</p>
+<pre tabindex="0"><code>
+### ユースケース
+
+**予約システム:**フライト、ホテル、レストラン、タクシー**カスタマーサポート:**問題追跡、ユーザー好みの保持**パーソナルアシスタント:**リマインダー、セッション間のコンテキスト**ヘルスケア:**複数ターンの症状収集**Eコマース:**ショッピングカート、好み、注文詳細の管理
+
+## 課題と最近の研究動向
+
+### 主要な課題
+
+**曖昧さと参照解決:**曖昧なユーザー入力と照応(例:「そこに予約」)の処理。**データ不足:**高品質な対話データの収集と注釈付けの困難さ。**マルチドメインと長距離依存関係:**ドメイン間および多数のターンにわたるコンテキストの追跡。**語彙外スロット値:**自由形式または以前に見たことのない値。**汎化:**最小限の再トレーニングで新しいドメインやスロットスキーマへの適応。
+
+### 最近の動向
+
+**TransformerベースDST:**Transformerモデル(BERT、GPT)が長距離会話コンテキストをエンコードし、転移学習をサポート。**アテンションとマルチアテンションメカニズム:**スロット推論のために対話の関連部分に焦点を当てます。クロスドメイン処理とスロット-値解決を改善。**思考連鎖(CoT)推論:**対話ターンにわたる複数ステップの推論を使用してスロット推論を改善。**ゼロショットおよび少数ショット汎化:**最小限のデータで新しいドメインへのDST適応のためのスキーマガイドおよびプロンプトベースモデル。**データ拡張:**DST堅牢性を強化するための合成データ生成、言い換え、シミュレーション。**ジョイントモデリングとエンドツーエンドシステム:**スロット、意図、アクションの同時予測。エラー伝播を削減。
+
+## 参考文献
+
+
+1. AAAI. (2020). MA-DST. AAAI Conference Proceedings.
+
+2. arXiv. (2024). Chain of Thought for DST. arXiv.
+
+3. Google Research. (n.d.). DSTC. Google Research Publications.
+
+4. Kaggle. (n.d.). Deepfake Detection Challenge. Kaggle Competitions.
+</code></pre>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/slot-filling/">
+                    スロットフィリング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    スロットフィリングは、会話型AIにおいてユーザーのクエリから特定のパラメータを抽出し、タスクを完了させる技術です。データ収集、自然な対話の実現、タスク完了の確実性を担保するために不可欠な機能です。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/slot-filling/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/voiceflow/">
+                    Voiceflow
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Voiceflowは、チャットボットや音声アシスタントなどの会話型<a data-lb="1" href="/ja/glossary/ai-agents/" title="Claude AIが自律的に自動販売機ビジネスを運営した実験「プロジェクト・ベンド」の詳細な探求。AIエージェントの限界、欺瞞、そして自律的なビジネス運営の未来について重要な洞察を明らかにする。">AIエージェント</a>を設計、構築、デプロイするためのノーコードプラットフォームです。複数のチャネルにわたって顧客とのやり取りやワークフロー...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/voiceflow/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/open-domain-bot/">
+                    オープンドメインボット
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    オープンドメインボットとは、タスク特化型のクローズドドメインボットとは異なり、あらゆるトピックについて自由形式の対話を行うように設計されたAI会話エージェントです。そのアーキテクチャと用途について解説...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/open-domain-bot/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/utterance/">
+                    発話
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    会話型AIにおける発話とは何か、NLU/NLPにおける役割、種類、ワークフロー、課題、そしてチャットボットを効果的にトレーニングするためのベストプラクティスについて学びます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/utterance/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/context-preservation/">
+                    コンテキスト保持
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI システムにおけるコンテキスト保持の包括的ガイド。会話の一貫性を維持するための技術、メリット、実装戦略について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/context-preservation/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/slot-carryover/">
+                    スロットキャリーオーバー
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    スロットキャリーオーバーは、<a data-lb="1" href="/ja/glossary/ai-chatbot/" title="SmartWebが提供するAIチャットボット・AIカスタマーサポートサービスの利用規約です">AIチャットボット</a>が会話のターンをまたいで構造化された情報(スロット)を記憶し再利用できるようにする機能です。これにより、タスク指向の対話システムにおいてコンテキストを維持...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/slot-carryover/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/dialogue-state-tracking/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

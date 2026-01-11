@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>レート制限ハンドラー | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/rate-limiting-handler/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Rate-Limiting-Handler/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/Rate-Limiting-Handler/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Rate-Limiting-Handler/" hreflang="x-default" rel="alternate"/>
+<meta content="レート制限ハンドラーは、APIリクエストのクォータを管理し、429エラーを検出し、リトライロジックを実装することで、クライアントおよびサーバーアプリケーションのコンプライアンスを確保し、サービス中断を防止します。" name="description"/>
+<meta content="レート制限ハンドラー, APIレート制限, 429 Too Many Requests, リトライロジック, エクスポネンシャルバックオフ" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/rate-limiting-handler/" property="og:url"/>
+<meta content="レート制限ハンドラー | SmartWeb" property="og:title"/>
+<meta content="レート制限ハンドラーは、APIリクエストのクォータを管理し、429エラーを検出し、リトライロジックを実装することで、クライアントおよびサーバーアプリケーションのコンプライアンスを確保し、サービス中断を防止します。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/rate-limiting-handler/" name="twitter:url"/>
+<meta content="レート制限ハンドラー | SmartWeb" name="twitter:title"/>
+<meta content="レート制限ハンドラーは、APIリクエストのクォータを管理し、429エラーを検出し、リトライロジックを実装することで、クライアントおよびサーバーアプリケーションのコンプライアンスを確保し、サービス中断を防止します。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">レート制限ハンドラー</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            General
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        レート制限ハンドラー
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Rate Limiting Handler
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          レート制限ハンドラーは、APIリクエストのクォータを管理し、429エラーを検出し、リトライロジックを実装することで、クライアントおよびサーバーアプリケーションのコンプライアンスを確保し、サービス中断を防止します。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                レート制限ハンドラー
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                APIレート制限
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                429 Too Many Requests
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                リトライロジック
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                エクスポネンシャルバックオフ
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="rate-limiting-handlerとは">Rate Limiting Handlerとは?</h2>
+<p>Rate Limiting Handlerは、クライアントアプリケーションとサーバーアプリケーションの両方に対して、APIリクエストのクォータを透過的に管理・適用します。リクエストの閾値への接近や超過を検知し、HTTP 429「Too Many Requests」レスポンスを処理し、APIレート制限への準拠を維持するためのリトライロジック、キューイング、または遅延処理を管理します。ハンドラーは、ミドルウェア、ライブラリ、プロキシレイヤー、またはクラウド管理サービスとして存在できます。</p>
+<p>Rate Limiting Handlerは、特にSaaS、AI、ソーシャルメディア、クラウドプラットフォームなど、公平な使用とインフラストラクチャの安定性を確保するためにAPIが制限を課す現代のAPIエコシステムにおいて不可欠なコンポーネントです。適切な処理がない場合、管理されていないリクエストのバーストはHTTP 429エラー、一時的または永続的な禁止、ワークフローの失敗、ユーザーの混乱、および繰り返しまたは失敗したリクエストによるコスト増加を引き起こします。</p>
+<h2 id="主要機能">主要機能</h2>
+<p>リクエスト追跡:ユーザー、キー、またはエンドポイントごとに送信または受信リクエストを監視・制限自動レスポンス処理:レート制限シグナル(HTTPヘッダー、エラーコード)を検知して応答インテリジェントなリトライロジック:指数バックオフを用いた高度な待機、キュー、またはリトライメカニズムを実装ユーザーフィードバック:開発者とエンドユーザーにクォータステータスと復旧情報を提供トラフィック管理:リソース使用を最適化するためにリクエストを<a data-lb="1" href="/ja/glossary/batch-processing/" title="バッチ処理は、大量のデータを収集し、設定された期間ごとにグループ単位で処理するデータアプローチです。高スループットのAI、分析、ビジネスオペレーションに最適です。">バッチ処理</a>、キャッシュ、または統合コンプライアンス適用:APIプロバイダーの<a data-lb="1" href="/ai-chatbot-terms-of-use/" title="SmartWebが提供するAIチャットボット・AIカスタマーサポートサービスの利用規約です">利用規約</a>と使用ポリシーへの準拠を確保</p>
+<h2 id="コアコンセプト">コアコンセプト</h2>
+<h3 id="apiレート制限">APIレート制限</h3>
+<p>定義された時間枠内でクライアントまたはユーザーが実行できるリクエスト数の制限—通常「N秒/分/時間あたりMリクエスト」として表現されます。レート制限はインフラストラクチャを保護し、公平なリソース配分を確保し、悪用を防止します。</p>
+<h3 id="429-too-many-requests">429 Too Many Requests</h3>
+<p>クライアントが許可されたリクエストレートを超えた場合に返される標準HTTPステータスコード。APIは通常、復旧をガイドするために<code>Retry-After</code>、<code>X-RateLimit-Reset</code>、<code>X-RateLimit-Limit</code>、<code>X-RateLimit-Remaining</code>などのヘッダーを含みます。</p>
+<h3 id="リトライロジックコンポーネント">リトライロジックコンポーネント</h3>
+<p>上限付きリトライ:無限ループを防ぐための最大リトライ試行回数指数バックオフ:リトライ間隔が指数関数的に増加(1秒、2秒、4秒、8秒)して負荷を軽減ジッター:同期したリトライストームを防ぐためにリトライ間隔に追加されるランダムな変動適応的遅延:APIレスポンスヘッダーと現在のシステム負荷に基づく動的調整</p>
+<h3 id="時間枠">時間枠</h3>
+<p>固定ウィンドウ:所定の間隔でカウンターがリセット(例:毎分:00秒)スライディングウィンドウ:継続的でスムーズな適用を提供するローリングウィンドウトークンバケット:トークンが固定レートで補充され、バーストトラフィックの後に安定したフローを許可リーキーバケット:キューに入れられたリクエストが固定レートで処理され、一貫したフローを実現</p>
+<h2 id="rate-limiting-handlerの動作原理">Rate Limiting Handlerの動作原理</h2>
+<h3 id="高度なハンドラーライフサイクル">高度なハンドラーライフサイクル</h3>
+<ol>
+<li>トラフィックパターン分析高度なハンドラーは、履歴データとリアルタイムデータを分析してクォータ消費を予測し、制限違反が発生する前にパターンを特定して積極的に管理します。2. 動的アルゴリズム選択ハンドラーは、トラフィックバースト、ユーザータイプ、またはエンドポイントの重要度に基づいて、最適なパフォーマンスのためにアルゴリズム(固定/スライディングウィンドウ、トークン/リーキーバケット)間で適応します。3. 多層制限適用制限は、<a data-lb="1" href="/ja/glossary/api-keys/" title="APIキーは、アプリケーションをAPIに対して認証するための一意の英数字文字列です。APIキーの仕組み、セキュリティへの影響、ベストプラクティス、および他の認証方法との比較について学びます。">APIキー</a>ごと、ユーザーごと、IPごと、リソースごと、またはグローバルに設定でき、多層アクセスと特殊ケース(VIP、パートナー、または一般ユーザー)をサポートします。4. APIゲートウェイ統合多くのハンドラーは、APIゲートウェイ(Kong、Zuplo、AWS API Gateway、Cloudflare)のプラグインとして存在し、すべてのAPIトラフィック全体で適用と可観測性を一元化します。5. インテリジェントなヘッダー解析ハンドラーは、任意の遅延を使用するのではなく、<code>Retry-After</code>、<code>X-RateLimit-Reset</code>、およびその他のヘッダーを解釈して、リトライを正確にスケジュールします。6. ユーザーコミュニケーション高度なシステムは、ユーザーエクスペリエンスを向上させるために、<a data-lb="1" href="/ja/glossary/dashboard/" title="ダッシュボードとは、複数のソースから主要なデータ、KPI、トレンドを表示するビジュアルインターフェースです。迅速な監視、分析、情報に基づいた意思決定を可能にします。">ダッシュボード</a>、ログ、またはAPIレスポンスを介して、待機時間、現在のクォータ、および予想される復旧をクライアントに通知します。7. 悪用検知と防止ハンドラーは異常な使用パターンを監視し、疑わしいアクティビティを自動ブロックし、潜在的なセキュリティ脅威やシステム悪用のアラートを生成します。</li>
+</ol>
+<h2 id="レート制限アルゴリズムの比較">レート制限アルゴリズムの比較</h2>
+<table>
+<thead>
+<tr>
+<th>アルゴリズム</th>
+<th>最適な用途</th>
+<th>主要機能</th>
+<th>トレードオフ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>固定ウィンドウ</td>
+<td>シンプルなトラフィックパターン</td>
+<td>固定間隔でカウンターリセット</td>
+<td>ウィンドウ境界でのバースト</td>
+</tr>
+<tr>
+<td>スライディングウィンドウ</td>
+<td>よりスムーズなトラフィック制御</td>
+<td>ローリングウィンドウ、継続的な適用</td>
+<td>メモリ使用量が高い</td>
+</tr>
+<tr>
+<td>トークンバケット</td>
+<td>トラフィックバーストの処理</td>
+<td>トークン補充、バースト後に安定</td>
+<td>実装が複雑</td>
+</tr>
+<tr>
+<td>リーキーバケット</td>
+<td>一貫したリクエストフロー</td>
+<td>固定レートでキューに入れられたリクエスト</td>
+<td>緊急リクエストを遅延させる可能性</td>
+</tr>
+<tr>
+<td>スライディングログ</td>
+<td>高精度</td>
+<td>タイムスタンプログ、最高精度</td>
+<td>最高のメモリ要件</td>
+</tr>
+</tbody>
+</table>
+<h2 id="実装例">実装例</h2>
+<h3 id="クライアントサイドjavascript-スライディングウィンドウ">クライアントサイドJavaScript: スライディングウィンドウ</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">class</span> RateLimiter {
+</span></span><span style="display:flex;"><span>  constructor(maxRequests = <span style="color:#ff0;font-weight:bold">10</span>, windowMs = <span style="color:#ff0;font-weight:bold">60000</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">this</span>.maxRequests = maxRequests;
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">this</span>.windowMs = windowMs;
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">this</span>.requests = [];
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  canMakeRequest() {
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">const</span> now = <span style="color:#fff;font-weight:bold">Date</span>.now();
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">this</span>.requests = <span style="color:#fff;font-weight:bold">this</span>.requests.filter(time =&gt; now - time &lt; <span style="color:#fff;font-weight:bold">this</span>.windowMs);
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">this</span>.requests.length &lt; <span style="color:#fff;font-weight:bold">this</span>.maxRequests;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  recordRequest() {
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">this</span>.requests.push(<span style="color:#fff;font-weight:bold">Date</span>.now());
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  getWaitTime() {
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">if</span> (<span style="color:#fff;font-weight:bold">this</span>.requests.length === <span style="color:#ff0;font-weight:bold">0</span>) <span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">const</span> oldestRequest = <span style="color:#fff;font-weight:bold">Math</span>.min(...<span style="color:#fff;font-weight:bold">this</span>.requests);
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">const</span> timeToWait = <span style="color:#fff;font-weight:bold">this</span>.windowMs - (<span style="color:#fff;font-weight:bold">Date</span>.now() - oldestRequest);
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">Math</span>.max(<span style="color:#ff0;font-weight:bold">0</span>, timeToWait);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="サーバーサイドpython-flask--redisによる固定ウィンドウ">サーバーサイドPython: Flask + Redisによる固定ウィンドウ</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">from</span> flask <span style="color:#fff;font-weight:bold">import</span> Flask, request, jsonify
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">from</span> flask_limiter <span style="color:#fff;font-weight:bold">import</span> Limiter
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">from</span> flask_limiter.util <span style="color:#fff;font-weight:bold">import</span> get_remote_address
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app = Flask(__name__)
+</span></span><span style="display:flex;"><span>limiter = Limiter(
+</span></span><span style="display:flex;"><span>    app=app,
+</span></span><span style="display:flex;"><span>    key_func=get_remote_address,
+</span></span><span style="display:flex;"><span>    storage_uri=<span style="color:#0ff;font-weight:bold">"redis://localhost:6379"</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@app.route(<span style="color:#0ff;font-weight:bold">"/api/resource"</span>, methods=[<span style="color:#0ff;font-weight:bold">"POST"</span>])
+</span></span><span style="display:flex;"><span>@limiter.limit(<span style="color:#0ff;font-weight:bold">"10/minute"</span>)
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">def</span> resource():
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">return</span> jsonify({<span style="color:#0ff;font-weight:bold">"message"</span>: <span style="color:#0ff;font-weight:bold">"Success"</span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@app.errorhandler(<span style="color:#ff0;font-weight:bold">429</span>)
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">def</span> ratelimit_handler(e):
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">return</span> jsonify(
+</span></span><span style="display:flex;"><span>        error=<span style="color:#0ff;font-weight:bold">f</span><span style="color:#0ff;font-weight:bold">"Too many attempts. Try again in </span><span style="color:#0ff;font-weight:bold">{</span><span style="color:#fff;font-weight:bold">int</span>(e.retry_after)<span style="color:#0ff;font-weight:bold">}</span><span style="color:#0ff;font-weight:bold"> seconds."</span>
+</span></span><span style="display:flex;"><span>    ), <span style="color:#ff0;font-weight:bold">429</span>
+</span></span></code></pre></div><h3 id="python-tenacityによる指数バックオフ">Python: Tenacityによる指数バックオフ</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">from</span> tenacity <span style="color:#fff;font-weight:bold">import</span> retry, wait_random_exponential, stop_after_attempt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@retry(
+</span></span><span style="display:flex;"><span>    wait=wait_random_exponential(<span style="color:#fff;font-weight:bold">min</span>=<span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#fff;font-weight:bold">max</span>=<span style="color:#ff0;font-weight:bold">60</span>),
+</span></span><span style="display:flex;"><span>    stop=stop_after_attempt(<span style="color:#ff0;font-weight:bold">6</span>)
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">def</span> call_api():
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">return</span> client.api_call()
+</span></span></code></pre></div><h2 id="429エラーの検知と処理">429エラーの検知と処理</h2>
+<h3 id="http-429レスポンス構造">HTTP 429レスポンス構造</h3>
+<pre tabindex="0"><code>HTTP/1.1 429 TOO MANY REQUESTS
+Retry-After: 60
+X-RateLimit-Limit: 5
+X-RateLimit-Remaining: 0
+X-RateLimit-Reset: 1715276060
+</code></pre><h3 id="ハンドラーレスポンスアクション">ハンドラーレスポンスアクション</h3>
+<p>ヘッダー解析:<code>Retry-After</code>を抽出するか、<code>X-RateLimit-Reset</code>を使用して遅延を計算リトライスケジュール:リクエストを再試行する前に指定された間隔を待機指数バックオフ:繰り返し429が発生した場合、遅延を指数関数的に増加ジッター追加:同期したリトライを防ぐために遅延をわずかにランダム化ログとアラート:監視と容量計画のためにクォータ枯渇を記録ユーザー通知:推定復旧時間とともに一時的な遅延をユーザーに通知</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<ol>
+<li>トラフィックパターンの分析保護と使いやすさのバランスをとる現実的で回復力のある制限を設定するために、実際の使用パターンを研究します。2. 適切なアルゴリズムの選択トラフィック特性とビジネス要件に適用アプローチを一致させます。3. きめ細かい制限の実装きめ細かい制御のために、APIキー、ユーザー、エンドポイント、またはリソースごとにクォータを適用します。4. ゲートウェイを通じた一元化一貫した適用と包括的な可観測性のために、APIゲートウェイまたはミドルウェアを使用します。5. 明確な復旧期間の定義偶発的および悪意のある過剰使用の両方に対して、明示的なタイムアウトとブロック期間を確立します。6. 動的調整の有効化サーバー負荷、ユーザークラス、またはビジネス優先度に基づいて、リアルタイムで制限を調整します。7. キャッシングとCDNの活用冗長なリクエストを削減し、パフォーマンスを向上させるために、Redis、CDN、またはその他のキャッシングレイヤーを使用します。8. 監視とアラート積極的な管理のために、クォータ使用量、エラー率、および異常なパターンを追跡します。9. 明確なフィードバックの提供レスポンスヘッダー、ダッシュボード、またはユーザーインターフェースを介してクォータステータスを可視化します。10. 管理プラットフォームの使用組み込みの分析、グローバル適用、および自動スケーリングのために、API管理プラットフォームを検討します。</li>
+</ol>
+<h2 id="避けるべき一般的な落とし穴">避けるべき一般的な落とし穴</h2>
+<p>レスポンスヘッダーの無視:<code>Retry-After</code>またはリセットヘッダーを読み取らないと、非効率的なリトライにつながりますジッターの欠如:同期したリトライは、サンダリングハード問題を引き起こします分散調整の不備:複数のサーバーまたはサーバーレス関数間でクォータが適切に共有されていません均一な制限の仮定:すべてのエンドポイントまたはキーが異なる制限を持つ場合に、それらを同一に扱います安全でないリトライパターン:非冪等操作を再試行すると、データ破損または重複実行のリスクがあります不十分なログ記録:不十分な監視により、クォータ問題の特定と解決が妨げられます</p>
+<h2 id="ユースケースとアプリケーション">ユースケースとアプリケーション</h2>
+<h3 id="aiチャットボットと自動化">AIチャットボットと自動化</h3>
+<p>LLM API(<a data-lb="1" href="/ja/glossary/openai/" title="ChatGPTは、大規模言語モデルを活用したOpenAIの高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。">OpenAI</a>、<a data-lb="1" href="/ja/glossary/anthropic/" title="AnthropicはClaudeファミリーのAIアシスタントを開発することで知られるAI研究企業です。Constitutional AI(憲法的AI)を通じて、AI安全性、解釈可能性、倫理的整合性を優先しています。">Anthropic</a>、<a data-lb="1" href="/ja/glossary/google/" title="Google の用語集ページ">Google</a>)を呼び出す際に、ユーザーごとまたはキーごとのクォータを追跡・適用します。ピーク使用時にリクエストをキューまたは遅延させ、ユーザーに「お待ちください」メッセージを表示し、サービスの中断を防ぎます。</p>
+<h3 id="ソーシャルメディア自動化">ソーシャルメディア自動化</h3>
+<p>Twitter/X、Facebook、LinkedIn APIのプラットフォーム固有のクォータを適用します。過度のAPI使用によるアカウントロックアウト、シャドウバン、または永続的な停止を防ぎます。</p>
+<h3 id="saas統合">SaaS統合</h3>
+<p>Salesforce、Atlassian、Jira API制限内でポーリングとバルクデータ同期を調整します。エンドポイントタイプとユーザー層に基づいてリクエスト頻度を動的に調整します。</p>
+<h3 id="eコマースプラットフォーム">Eコマースプラットフォーム</h3>
+<p>レート制限内で製品カタログの更新、在庫同期、および注文処理を管理します。ピークショッピング期間中の継続的な運用を確保します。</p>
+<h2 id="主要なハンドラー機能">主要なハンドラー機能</h2>
+<p>リアルタイムリクエスト追跡ユーザー、キー、エンドポイントごと設定可能なアルゴリズム複数のレート制限戦略をサポート優雅なエラー処理明確なユーザーメッセージング付き自動指数バックオフすべてのリトライにジッター付きインテリジェントなヘッダー解析<code>Retry-After</code>および関連シグナル用拡張性新しいエンドポイントまたは変更されるAPIルール用軽量パフォーマンス最小限のメモリとCPUオーバーヘッド包括的な可観測性一元化されたログとアラート付き</p>
+<h2 id="関連用語">関連用語</h2>
+<p>APIスロットリング:リクエストレート上限の適用、レート制限と互換的に使用されることが多いクォータ管理:ストレージ、コンピュートユニット、または帯域幅を含む、より広範なリソース使用制限バーストレート:定常状態制限を超えるトラフィックスパイクの短期的な許容分散レート制限:複数のサーバー、リージョン、またはアベイラビリティゾーン間での適用の調整サーキットブレーカー:失敗したサービスへのリクエストを一時的にブロックすることで、カスケード障害を防ぐパターン</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>Zuplo. (2025). 10 Best Practices for API Rate Limiting in 2025. Zuplo Learning Center.</li>
+<li>Zuplo. (n.d.). What is API Rate Limiting?. Zuplo Features.</li>
+<li>Zuplo. (n.d.). The Subtle Art of Rate Limiting. Zuplo Learning Center.</li>
+<li>Cloudflare. (n.d.). Rate Limiting Best Practices. Cloudflare Developers.</li>
+<li>KongHQ. (n.d.). What is API Rate Limiting?. KongHQ Blog.</li>
+<li>Mozilla Developer Network. (n.d.). HTTP 429 Too Many Requests. MDN Web Docs.</li>
+<li>Solo.io. (n.d.). Rate Limiting Algorithms. Solo.io Topics.</li>
+<li>DataDome. (n.d.). What is API Rate Limiting?. DataDome Blog.</li>
+<li>Testfully. (n.d.). API Rate Limit Explained. Testfully Blog.</li>
+<li>Tenacity. (n.d.). Python Retry Library. Tenacity Documentation.</li>
+<li>Reddit. (n.d.). Best Practices for Handling API Rate Limits. Reddit r/node.</li>
+<li>YouTube. (n.d.). Rate Limiting System Design. YouTube.</li>
+<li>YouTube. (n.d.). How to Design a Rate Limiter. YouTube.</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/api-rate-limiting/">
+                    APIレート制限
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    APIリクエストの頻度と使用量を制御するための、APIレート制限戦略、実装技術、ベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/api-rate-limiting/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/rate-limiting-handler/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

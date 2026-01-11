@@ -13,7 +13,9 @@ category: Application & Use-Cases
 type: glossary
 draft: false
 e-title: Scroll Depth
-url: /ja/glossary/Scroll-Depth/
+url: /ja/glossary/scroll-depth/
+aliases:
+- /ja/glossary/Scroll-Depth/
 term: すくろーるしんど
 ---
 

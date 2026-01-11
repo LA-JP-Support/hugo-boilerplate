@@ -35,7 +35,7 @@ url: "/ja/glossary/note/"
 - 承認(例:「John Smithによりパスワードリセットが承認された。」)
 - ドキュメントへの参照(例:「KB12345 [Microsoft]の手順に従った。」)
 
-**ベストプラクティス:**パスワードや機密認証情報を直接記録しないでください。代わりに、安全な認証情報管理ソリューション(例:[IT Glue](https://www.itglue.com/))を参照してください。
+**ベストプラクティス:** パスワードや機密認証情報を直接記録しないでください。代わりに、安全な認証情報管理ソリューション(例:[IT Glue](https://www.itglue.com/))を参照してください。
 
 ### 2. 知識移転とコラボレーション
 
@@ -59,18 +59,18 @@ url: "/ja/glossary/note/"
 
 適切に構造化されたノートは、AIシステムによって分析され、以下を可能にします:
 
-- **AI生成チケットサマリー:**トリアージとレポート作成のための簡潔な概要([Zendeskの例](https://www.zendesk.com/blog/ai-powered-ticketing/))
-- **インテント検出とルーティング:**AIがノートの内容を分析し、チケットを自動的に分類およびルーティング
-- **ナレッジベースの改善:**ノートに記録された繰り返し発生する問題と解決策が、KB記事の推奨と自動化トリガーに反映される
+- **AI生成チケットサマリー:** トリアージとレポート作成のための簡潔な概要([Zendeskの例](https://www.zendesk.com/blog/ai-powered-ticketing/))
+- **インテント検出とルーティング:** AIがノートの内容を分析し、チケットを自動的に分類およびルーティング
+- **ナレッジベースの改善:** ノートに記録された繰り返し発生する問題と解決策が、KB記事の推奨と自動化トリガーに反映される
 
 ## 高品質なノートの必須要素
 
 優れたノートは以下の特徴を持ちます:
 
-- **詳細かつ具体的:**何を、なぜ、どのように行ったかを説明し、曖昧な記述を避ける
-- **時系列:**実行された順序でアクションを記録
-- **アクション指向:**完了したアクションと保留中のアクションの両方を記載
-- **コンプライアンス準拠:**機密データを除外し、代わりに安全なストレージを参照
+- **詳細かつ具体的:** 何を、なぜ、どのように行ったかを説明し、曖昧な記述を避ける
+- **時系列:** 実行された順序でアクションを記録
+- **アクション指向:** 完了したアクションと保留中のアクションの両方を記載
+- **コンプライアンス準拠:** 機密データを除外し、代わりに安全なストレージを参照
 
 | 曖昧なノート                                 | 具体的なノート                                                                                 |
 |---------------------------------------------|----------------------------------------------------------------------------------------------|
@@ -79,7 +79,9 @@ url: "/ja/glossary/note/"
 | ドメイン管理者パスワードを使用してログインした。      | acme\itadminとしてログイン。パスワード参照:IT Glue。アクション:ユーザーアカウントのリセット。          |
 | 問題を修正した。                               | プリンタードライバーをアンインストール/再インストール。ユーザーとテスト。問題が解決されたことを確認。           |
 
-**含めてはいけないもの:**- パスワードまたは認証情報
+**含めてはいけないもの:**
+
+- パスワードまたは認証情報
 - 機密クライアント文書
 - クレジットカードまたは金融情報
 
@@ -105,10 +107,14 @@ url: "/ja/glossary/note/"
 
 各チケットを標準化されたサマリー行で終了する:
 
-- **TICKET RESOLVED**– さらなるアクションは不要
-- **NEXT STEPS [説明]**– 計画され、スケジュールされたさらなるアクション
-- **WAITING FOR [人物/アクション]**– 外部からの入力待ち
-- **ESCALATION REQUIRED**– 再割り当てまたは上位レベルの介入が必要**例:**```
+- **TICKET RESOLVED** – さらなるアクションは不要
+- **NEXT STEPS [説明]** – 計画され、スケジュールされたさらなるアクション
+- **WAITING FOR [人物/アクション]** – 外部からの入力待ち
+- **ESCALATION REQUIRED** – 再割り当てまたは上位レベルの介入が必要
+
+**例:**
+
+```
 - クライアントに電話。応答なし。ボイスメールを残した。
 - クライアントにトラブルシューティング手順をメール送信。
 - RMM経由でサーバーにログイン。印刷スプーラーを再起動。
@@ -121,11 +127,11 @@ url: "/ja/glossary/note/"
 
 以下を含める:
 
-- **問題(25語未満):**「移行後、ユーザーが共有ドライブにアクセスできない。」
-- **既に実行した手順:**「権限を確認、認証情報をリセット、マッピングを検証。」
-- **エスカレーションの理由:**「高度なADグループポリシーレビューが必要。」
-- **可能な次のステップ:**「GPO継承を確認、セキュリティフィルタリングをチェック。」
-- **追加情報:**「ユーザーは午後2時以降にコールバック可能。」
+- **問題(25語未満):** 「移行後、ユーザーが共有ドライブにアクセスできない。」
+- **既に実行した手順:** 「権限を確認、認証情報をリセット、マッピングを検証。」
+- **エスカレーションの理由:** 「高度なADグループポリシーレビューが必要。」
+- **可能な次のステップ:** 「GPO継承を確認、セキュリティフィルタリングをチェック。」
+- **追加情報:** 「ユーザーは午後2時以降にコールバック可能。」
 
 ## ユースケースとシナリオ
 
@@ -151,12 +157,12 @@ AIがノートを分析し、サマリー、チケット分類、ナレッジベ
 
 ## チケットシステムライフサイクルにおけるノートの重要性
 
-- **透明性:**明確でタイムスタンプ付きの活動記録が紛争を防ぐ
-- **説明責任:**責任を割り当て、技術者のパフォーマンス測定をサポート
-- **効率性:**冗長な作業とコミュニケーションを削減
-- **知識共有:**内部ナレッジベースを構築し、オンボーディングとトレーニングを支援
-- **AI実現:**構造化されたノートがAIトリアージ、サマリー、インテント検出、分析を促進
-- **継続的改善:**プロセス分析と自動化の機会を可能にする
+- **透明性:** 明確でタイムスタンプ付きの活動記録が紛争を防ぐ
+- **説明責任:** 責任を割り当て、技術者のパフォーマンス測定をサポート
+- **効率性:** 冗長な作業とコミュニケーションを削減
+- **知識共有:** 内部ナレッジベースを構築し、オンボーディングとトレーニングを支援
+- **AI実現:** 構造化されたノートがAIトリアージ、サマリー、インテント検出、分析を促進
+- **継続的改善:** プロセス分析と自動化の機会を可能にする
 
 ## ノートがAIと自動化とどのように統合されるか
 
@@ -192,10 +198,10 @@ AIがノートの内容を分析し、チケットのインテントと緊急度
 
 ## 避けるべき一般的な落とし穴
 
-- **曖昧なノート:**(「問題を修正した」)—常に何をどのように行ったかを具体的に記述する
-- **サマリーステータスの欠如:**各チケットは明確なステータス行で終了する必要がある
-- **一貫性のない用語:**自動化/分析のために標準化された表現を使用する
-- **機密データの露出:**パスワードを平文で書かない。常に安全なシステムを参照する
+- **曖昧なノート:** (「問題を修正した」)—常に何をどのように行ったかを具体的に記述する
+- **サマリーステータスの欠如:** 各チケットは明確なステータス行で終了する必要がある
+- **一貫性のない用語:** 自動化/分析のために標準化された表現を使用する
+- **機密データの露出:** パスワードを平文で書かない。常に安全なシステムを参照する
 
 ## 実例:サンプルノートエントリー
 
@@ -222,21 +228,13 @@ AIがノートの内容を分析し、チケットのインテントと緊急度
 
 ## 参考文献
 
+1. [Support Adventure: The Ultimate Guide to Improving Ticketing System Note Writing for MSPs!](https://www.supportadventure.com/msp-ticketing-system-notes/)
+2. [ProProfs: What Is an Internal Ticketing System?](https://www.proprofsdesk.com/blog/internal-ticketing-system/)
+3. [Helpt: The Crucial Role of Ticket Notes in Tech Support](https://helpt.com/blog/ticket-notes-in-tech-support/)
+4. [Zendesk Blog: AI-powered ticketing automation](https://www.zendesk.com/blog/ai-powered-ticketing/)
+5. [InternalNote: Road to Automation](https://internalnote.com/road-to-automation/)
+6. [Zluri: Internal Ticketing System: A Beginner's Guide](https://www.zluri.com/blog/internal-ticketing-system/)
+7. [SAP Community: Service Cloud: Internal Memo vs. Internal Note in Tickets](https://community.sap.com/t5/technology-blogs-by-sap/service-cloud-internal-memo-vs-internal-note-in-tickets/ba-p/13547023)
+8. [YouTube: MSP Helpdesk Ticket Note Writing Guide [MSP Best Practices]](https://www.youtube.com/watch?v=2sW8XJXDywU)
 
-1. Support Adventure. (n.d.). The Ultimate Guide to Improving Ticketing System Note Writing for MSPs!. Support Adventure Blog.
-
-2. ProProfs. (n.d.). What Is an Internal Ticketing System?. ProProfs Blog.
-
-3. Helpt. (n.d.). The Crucial Role of Ticket Notes in Tech Support. Helpt Blog.
-
-4. Zendesk. (n.d.). AI-powered ticketing automation. Zendesk Blog.
-
-5. InternalNote. (n.d.). Road to Automation. InternalNote Blog.
-
-6. Zluri. (n.d.). Internal Ticketing System: A Beginner's Guide. Zluri Blog.
-
-7. SAP Community. (n.d.). Service Cloud: Internal Memo vs. Internal Note in Tickets. SAP Community Technology Blogs.
-
-8. YouTube. (n.d.). MSP Helpdesk Ticket Note Writing Guide [MSP Best Practices]. YouTube Video.
-
-さらなる学習については、上記のリンクおよびお使いのシステム(Zendesk、ServiceNow、Jira、Freshdeskなど)のベンダー固有のドキュメントを参照してください。
+*さらなる学習については、上記のリンクおよびお使いのシステム(Zendesk、ServiceNow、Jira、Freshdeskなど)のベンダー固有のドキュメントを参照してください。*

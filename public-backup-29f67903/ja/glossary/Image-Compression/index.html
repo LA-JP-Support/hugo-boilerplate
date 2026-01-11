@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>画像圧縮 | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/image-compression/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="画像圧縮とは、デジタル画像の見た目の品質を保ちながらファイルサイズを削減する技術で、オンラインでの保存や共有を容易にします。" name="description"/>
+<meta content="画像圧縮, 非可逆圧縮, 可逆圧縮, JPEGアルゴリズム, ファイルサイズ最適化" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/image-compression/" property="og:url"/>
+<meta content="画像圧縮 | SmartWeb" property="og:title"/>
+<meta content="画像圧縮とは、デジタル画像の見た目の品質を保ちながらファイルサイズを削減する技術で、オンラインでの保存や共有を容易にします。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/image-compression/" name="twitter:url"/>
+<meta content="画像圧縮 | SmartWeb" name="twitter:title"/>
+<meta content="画像圧縮とは、デジタル画像の見た目の品質を保ちながらファイルサイズを削減する技術で、オンラインでの保存や共有を容易にします。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">画像圧縮</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        画像圧縮
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Image Compression
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          画像圧縮とは、デジタル画像の見た目の品質を保ちながらファイルサイズを削減する技術で、オンラインでの保存や共有を容易にします。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                画像圧縮
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                非可逆圧縮
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                可逆圧縮
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                JPEGアルゴリズム
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ファイルサイズ最適化
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="画像圧縮とは">画像圧縮とは</h2>
+<p>画像圧縮は、許容可能な視覚品質を維持しながらデジタル画像のファイルサイズを削減する、基本的なデジタル画像処理技術です。このプロセスでは、数学的アルゴリズムとエンコーディング手法を適用して、画像ファイルから冗長または不要なデータを除去し、保存、転送、処理をより効率的にします。画像圧縮の主な目的は、ファイルサイズの削減と画像品質の保持の最適なバランスを実現し、より高速なデータ転送、ストレージ要件の削減、さまざまなデジタルプラットフォームにおけるシステムパフォーマンスの向上を可能にすることです。</p>
+<p>画像圧縮の概念は、コンピューティングシステムにおいて指数関数的に増加するデジタル視覚コンテンツの量を管理する必要性から生まれました。生のデジタル画像には膨大な量のデータが含まれており、各ピクセルが色と輝度情報を保存するため、すぐに大きなファイルサイズになります。たとえば、非圧縮の高解像度写真は簡単に数メガバイトを超え、Web配信、モバイルアプリケーション、または帯域幅が制限されたシステムには実用的ではありません。画像圧縮は、統計的冗長性、空間的相関、人間の視覚が容易に検出できない知覚的に無関係な情報を特定して除去することで、この課題に対処します。</p>
+<p>現代の画像圧縮技術は、大きく2つの主要なアプローチに分類されます:可逆圧縮と非可逆圧縮です。可逆圧縮はすべての元の画像データを保持し、元の画像の完全な再構築を可能にするため、医療画像、科学写真、アーカイブ目的など、絶対的な忠実度を必要とするアプリケーションに最適です。一方、非可逆圧縮は、知覚的に重要性が低いと見なされる特定の画像情報を永久に破棄することで、より高い圧縮率を実現し、Webグラフィックス、ソーシャルメディア、一般的な写真撮影など、大幅に小さいファイルサイズと引き換えに適度な品質低下が許容される用途に適しています。</p>
+<h2 id="主要な圧縮技術">主要な圧縮技術</h2>
+<p>離散コサイン変換(DCT)- 空間画像データを周波数領域係数に変換する数学的変換技術で、画像エネルギーをより少ない係数に集中させることで効率的な圧縮を可能にします。DCTはJPEG圧縮の基礎を形成し、視覚知覚への寄与が少ない高周波成分の選択的除去を可能にします。ハフマン符号化- 出現頻度に基づいて画像データに可変長コードを割り当てるエントロピー符号化アルゴリズムで、より一般的な値にはより短いコードが割り当てられます。この可逆技術は圧縮データのビット表現を最適化し、さまざまな圧縮フォーマットの最終エンコーディングステップとして一般的に使用されます。ウェーブレット変換- 画像を異なる周波数サブバンドに分解する多重解像度解析技術で、プログレッシブ圧縮とスケーラブルな画像表現を可能にします。JPEG2000で使用されるウェーブレットベースの圧縮は、低ビットレートで優れたパフォーマンスを提供し、関心領域符号化などの高度な機能をサポートします。ベクトル量子化- ピクセルのグループを事前定義されたコードブックからの代表ベクトルで置き換える圧縮方法で、パターンマッチングと近似によって圧縮を実現します。この技術は、繰り返しパターンや限られたカラーパレットを持つ画像に特に効果的です。予測符号化- 隣接ピクセルに基づいてピクセル値を予測し、予測誤差のみをエンコードすることで空間的相関を利用する技術です。このアプローチは可逆圧縮フォーマットの基礎であり、差分パルス符号変調などの高度な技術の基盤となります。ランレングス符号化- 連続する同一の値を単一の値とそのカウントのペアとして表現するシンプルな圧縮方法で、大きな均一領域を持つ画像に特に効果的です。基本的ではありますが、この技術はより洗練された圧縮アルゴリズムの構成要素として機能します。</p>
+<h2 id="画像圧縮の仕組み">画像圧縮の仕組み</h2>
+<p>画像圧縮プロセスは、生の画像データを最適化された圧縮フォーマットに変換する体系的なワークフローに従います:</p>
+<ol>
+<li>
+<p>画像前処理- 元の画像は、色空間変換、ノイズ低減、フォーマット標準化などの初期処理を受け、圧縮アルゴリズムのためにデータを準備します。</p>
+</li>
+<li>
+<p>ブロック分割- 画像はより小さなブロックまたはタイル(通常8x8または16x16ピクセル)に分割され、局所的な処理と圧縮アルゴリズムの並列計算を可能にします。</p>
+</li>
+<li>
+<p>変換の適用- DCTやウェーブレット変換などの数学的変換により、空間ピクセルデータが画像のスペクトル特性を明らかにする周波数領域係数に変換されます。</p>
+</li>
+<li>
+<p>量子化- 周波数係数は、知覚的に重要性の低い成分の精度を下げる事前定義されたテーブルを使用して量子化され、非可逆圧縮において制御された品質損失が導入されます。</p>
+</li>
+<li>
+<p>エントロピー符号化- 量子化されたデータは、ハフマン符号化や算術符号化などの技術を使用してエントロピー符号化を受け、統計的特性に基づいて最適なビット表現を実現します。</p>
+</li>
+<li>
+<p>ヘッダー生成- 圧縮パラメータ、量子化テーブル、メタデータがファイルヘッダーにパッケージ化され、適切な解凍と画像再構築を可能にします。</p>
+</li>
+<li>
+<p>ファイル組み立て- エンコードされたデータストリームは、適切なマーカー、チェックサム、構造要素を含む最終的な圧縮ファイルフォーマットに組み立てられます。ワークフローの例: デジタル写真は、まずRGBからYCbCr色空間に変換され、8x8ブロックに分割され、DCT変換が適用され、品質固有のテーブルを使用して係数が量子化され、ハフマン符号化でエンコードされ、埋め込まれたメタデータを含むJPEGファイルに組み立てられることで、JPEG圧縮を受けます。</p>
+</li>
+</ol>
+<h2 id="主な利点">主な利点</h2>
+<p>ストレージ効率- 圧縮画像は大幅に少ないストレージスペースを必要とし、組織がより大きな画像コレクションをアーカイブし、視覚コンテンツへのアクセシビリティを維持しながらインフラストラクチャコストを削減できます。高速転送- ファイルサイズの削減により、ネットワーク上での画像転送が高速化され、Webアプリケーション、モバイルアプリ、リアルタイム通信システムでのユーザーエクスペリエンスが向上します。帯域幅の最適化- データ要件の低減により、ネットワークの輻輳と帯域幅消費が削減され、特にモバイルネットワークやインターネット接続が制限された地域で重要です。コスト削減- ファイルサイズの縮小は、ストレージコスト、帯域幅費用、コンテンツ配信ネットワークや<a data-lb="1" href="/ja/glossary/cloud-service/" title="クラウドサービスとは、サードパーティベンダーがインターネット経由で提供するITリソースです。SaaS、PaaS、IaaS、FaaS、XaaSモデルの特徴、メリット、ユースケースを理解しましょう。">クラウドサービス</a>のインフラストラクチャ要件の削減につながります。パフォーマンスの向上- 読み込み時間の短縮と処理オーバーヘッドの削減により、さまざまなデジタルプラットフォームやデバイスでアプリケーションの応答性とユーザー満足度が向上します。スケーラビリティの強化- 圧縮画像により、システムはストレージと処理リソースの比例的な増加なしに、より大量の視覚コンテンツを処理できます。モバイル最適化- データ使用量の削減は、ユーザーが限られたデータプランを持っているか、ネットワーク接続が遅い地域で動作する可能性があるモバイルアプリケーションにとって重要です。プログレッシブ読み込み- 多くの圧縮フォーマットはプログレッシブレンダリングをサポートし、データが到着するにつれて画像が段階的に表示されるため、知覚されるパフォーマンスが向上します。品質管理- 現代の圧縮アルゴリズムは、品質とサイズのトレードオフに対する細かい制御を提供し、特定のユースケースと要件に最適化できます。フォーマットの柔軟性- さまざまな圧縮標準が異なる機能と最適化を提供し、特定のアプリケーションとコンテンツタイプに最も適切なフォーマットを選択できます。</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p>Web開発- ページの読み込み時間を短縮し、検索エンジンランキングを向上させ、さまざまなデバイスと接続速度でユーザーエクスペリエンスを向上させるために、Webサイトの画像を最適化します。ソーシャルメディアプラットフォーム- 合理的な品質を維持しながら、毎日数百万のユーザーアップロード画像を処理し、高速な共有と閲覧体験を可能にします。デジタル写真- プロフェッショナルおよび個人使用のために、視覚品質を保持しながら、管理可能なファイルサイズで高解像度写真を保存および共有します。医療画像- 診断精度を維持しながら、X線、MRI、CTスキャンなどの診断画像を効率的に保存および転送するために圧縮します。衛星画像- 効率的なダウンリンク転送と地上ベースの処理のために、地球観測衛星によって生成される膨大なデータ量を削減します。ビデオストリーミング- ネットワーク条件に基づいて適応品質でリアルタイムストリーミングとオンデマンドビデオサービスを可能にするために、個々のビデオフレームを圧縮します。モバイルアプリケーション- 限られたストレージとさまざまなネットワーク接続を持つモバイルデバイス向けに、アプリアセットとユーザー生成コンテンツを最適化します。Eコマース- カスタマーエクスペリエンスを向上させ、直帰率を削減するために、最適な品質と読み込み速度で製品画像を表示します。デジタルアーカイブ- スペース効率の良いストレージで、歴史的文書、芸術作品、文化遺産をデジタルフォーマットで長期保存します。ゲーム業界- 視覚的忠実度を維持しながら、ダウンロードサイズを削減し、読み込みパフォーマンスを向上させるために、テクスチャファイルとゲームアセットを最適化します。</p>
+<h2 id="圧縮フォーマットの比較">圧縮フォーマットの比較</h2>
+<table>
+<thead>
+<tr>
+<th>フォーマット</th>
+<th>圧縮タイプ</th>
+<th>最適なユースケース</th>
+<th>品質</th>
+<th>ファイルサイズ</th>
+<th>ブラウザサポート</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JPEG</td>
+<td>非可逆</td>
+<td>写真、Web画像</td>
+<td>良好</td>
+<td>小</td>
+<td>ユニバーサル</td>
+</tr>
+<tr>
+<td>PNG</td>
+<td>可逆</td>
+<td>グラフィックス、透明度</td>
+<td>優秀</td>
+<td>中</td>
+<td>ユニバーサル</td>
+</tr>
+<tr>
+<td>WebP</td>
+<td>両方</td>
+<td>現代的なWebアプリケーション</td>
+<td>優秀</td>
+<td>非常に小</td>
+<td>モダンブラウザ</td>
+</tr>
+<tr>
+<td>HEIF</td>
+<td>非可逆</td>
+<td>モバイル写真</td>
+<td>優秀</td>
+<td>非常に小</td>
+<td>限定的</td>
+</tr>
+<tr>
+<td>TIFF</td>
+<td>可逆</td>
+<td>プロフェッショナル画像処理</td>
+<td>完璧</td>
+<td>大</td>
+<td>限定的</td>
+</tr>
+<tr>
+<td>AVIF</td>
+<td>非可逆</td>
+<td>次世代Web画像</td>
+<td>優秀</td>
+<td>最小</td>
+<td>新興</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p>品質劣化- 非可逆圧縮は必然的に画像品質を低下させるため、特定のアプリケーションに対してファイルサイズの削減と許容可能な視覚的忠実度の間の慎重なバランスが必要です。圧縮アーティファクト- 積極的な圧縮は、ブロッキング、リンギング、カラーバンディングなどの目に見えるアーティファクトを導入する可能性があり、特定のプロフェッショナルアプリケーションでは許容できない場合があります。処理オーバーヘッド- 圧縮と解凍操作には<a data-lb="1" href="/ja/glossary/computational-resources/" title="CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。">計算リソース</a>が必要で、特にリアルタイムアプリケーションやリソースが制約されたデバイスでは、システムパフォーマンスに影響を与える可能性があります。フォーマット互換性- 異なる圧縮フォーマットは、プラットフォームとアプリケーション間でさまざまなレベルのサポートを持ち、アクセシビリティと相互運用性を制限する可能性があります。メタデータの損失- 一部の圧縮プロセスは、元の画像に埋め込まれたEXIFデータ、カラープロファイル、著作権情報などの重要なメタデータを削除する可能性があります。プログレッシブな品質損失- 繰り返しの圧縮と解凍サイクルは品質劣化を蓄積する可能性があり、複数の編集ステップを含むワークフローでは特に問題となります。アルゴリズムの複雑さ- 高度な圧縮技術には洗練されたアルゴリズムと大量の計算リソースが必要で、リアルタイムアプリケーションを制限する可能性があります。ストレージと品質のトレードオフ- 最適な圧縮設定を決定するには、特定のユースケースとユーザー要件の理解が必要で、これはアプリケーション間で大きく異なる可能性があります。ライセンスに関する考慮事項- 一部の圧縮アルゴリズムとフォーマットには、商業実装の決定に影響を与える可能性がある特許制限またはライセンス料が含まれます。将来性への懸念- 技術が進化しても引き続きサポートされ、関連性を保つ圧縮フォーマットを選択するには、業界のトレンドと標準の慎重な検討が必要です。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p>品質評価- 圧縮パフォーマンスを評価し、出力がアプリケーション要件とユーザー期待を満たすことを確認するために、客観的および主観的な品質メトリクスを実装します。フォーマット選択- 万能のソリューションを適用するのではなく、特定のユースケース、ターゲットプラットフォーム、品質要件に基づいて圧縮フォーマットを選択します。プログレッシブエンハンスメント- さまざまなデバイスとネットワーク条件でユーザーエクスペリエンスを最適化するために、プログレッシブ画像読み込みと複数のフォーマットサポートを実装します。自動最適化- 一貫した品質と最適化パラメータで大量の画像を処理できる自動圧縮パイプラインを展開します。レスポンシブ圧縮- デバイス機能、画面解像度、ネットワーク条件に基づいて品質とフォーマットを調整する適応圧縮を実装します。メタデータの保持- 特にプロフェッショナル写真とアーカイブアプリケーションでは、圧縮プロセス中に重要なメタデータが保持されることを確認します。<a data-lb="1" href="/ja/glossary/batch-processing/" title="バッチ処理は、大量のデータを収集し、設定された期間ごとにグループ単位で処理するデータアプローチです。高スループットのAI、分析、ビジネスオペレーションに最適です。">バッチ処理</a>- 一貫した圧縮パラメータを維持しながら、大規模な画像コレクションを効率的に処理するためにバッチ処理機能を活用します。品質管理ワークフロー- コンテンツ展開前に圧縮アーティファクトを特定して対処するために、レビュープロセスと品質チェックポイントを確立します。パフォーマンス監視- 圧縮パフォーマンス、ファイルサイズ、品質メトリクスを継続的に監視して、設定を最適化し、改善の機会を特定します。バックアップ戦略- 将来の再処理またはより高品質の出力が必要になる可能性がある重要な画像については、非圧縮または可逆圧縮されたオリジナルを維持します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p>知覚圧縮- 人間の視覚知覚をモデル化して、視覚的に重要な情報を保持しながら知覚的に無関係なデータを積極的に圧縮することで圧縮を最適化する高度なアルゴリズム。<a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>による強化- <a data-lb="1" href="/ja/glossary/neural-networks/" title="ディープラーニングは、多層ニューラルネットワークを使用してデータから複雑なパターンを学習する高度なAI技術です。画像認識、自然言語処理、生成AIに不可欠な技術となっています。">ニューラルネットワーク</a>を使用して最適な圧縮パラメータを予測し、画像再構築品質を向上させるAI駆動の圧縮技術。関心領域符号化- 重要性に基づいて異なる画像領域に異なる品質レベルを適用する選択的圧縮で、重要な領域がより高い忠実度を維持できるようにします。マルチスケール圧縮- 複数の解像度で画像を圧縮する階層的アプローチで、プログレッシブ転送とスケーラブルな品質適応を可能にします。コンテンツ適応アルゴリズム- 画像コンテンツを分析し、特定の画像特性に対して最適なアルゴリズムとパラメータを自動的に選択するインテリジェント圧縮システム。可逆から非可逆へのトランスコーディング- さまざまな配信チャネルに対して品質とファイルサイズを最適化しながら、可逆フォーマットと非可逆フォーマット間のシームレスな変換を可能にする高度なワークフロー。</p>
+<h2 id="将来の方向性">将来の方向性</h2>
+<p>AI駆動圧縮- 機械学習アルゴリズムは、圧縮パラメータをますます最適化し、従来の数学的アプローチを超える新しい圧縮技術を開発します。リアルタイム最適化- 高度なハードウェアアクセラレーションとアルゴリズム最適化により、高解像度ビデオストリームとインタラクティブアプリケーションのリアルタイム圧縮が可能になります。量子圧縮- 新興の量子コンピューティング技術は、データ削減と最適化への新しい数学的アプローチを可能にすることで、圧縮アルゴリズムに革命をもたらす可能性があります。没入型メディアサポート- 次世代圧縮標準は、仮想現実、拡張現実、360度画像アプリケーションの独自の要件に対応します。エッジコンピューティング統合- 圧縮アルゴリズムはエッジコンピューティング環境向けに最適化され、データソースとユーザーに近いインテリジェント処理を可能にします。持続可能な圧縮- 環境への懸念が計算リソース使用の最適化を推進するにつれて、エネルギー効率の高い圧縮技術がますます重要になります。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Wallace, G. K. (1992). The JPEG still picture compression standard. IEEE Transactions on Consumer Electronics, 38(1), xviii-xxxiv.</p>
+</li>
+<li>
+<p>Taubman, D., &amp; Marcellin, M. (2012). JPEG2000 Image Compression Fundamentals, Standards and Practice. Springer Science &amp; Business Media.</p>
+</li>
+<li>
+<p>Sayood, K. (2017). Introduction to Data Compression. Morgan Kaufmann Publishers.</p>
+</li>
+<li>
+<p>Rabbani, M., &amp; Jones, P. W. (1991). Digital Image Compression Techniques. SPIE Press.</p>
+</li>
+<li>
+<p>Salomon, D., &amp; Motta, G. (2010). Handbook of Data Compression. Springer-Verlag London.</p>
+</li>
+<li>
+<p>Pennebaker, W. B., &amp; Mitchell, J. L. (1992). JPEG Still Image Data Compression Standard. Van Nostrand Reinhold.</p>
+</li>
+<li>
+<p>Gersho, A., &amp; Gray, R. M. (2012). Vector Quantization and Signal Compression. Springer Science &amp; Business Media.</p>
+</li>
+<li>
+<p>Bovik, A. C. (2009). The Essential Guide to Image Processing. Academic Press.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/image-optimization/">
+                    画像最適化
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    画像最適化とは、画像の見た目の品質を保ちながらファイルサイズを削減するプロセスです。これにより、ウェブサイトの読み込み速度が向上し、すべてのデバイスでより良いパフォーマンスを実現します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/image-optimization/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/image-compression/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

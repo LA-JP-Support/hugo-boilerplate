@@ -21,13 +21,13 @@
 
 {{ if $langData }}
   {{/* Set up base domain */}}
-  {{ $baseDomain := $langData.baseDomainName }}
-  {{ if (in $currentPage.Permalink "localhost") }}
+  {{ $baseDomain := strings.TrimSuffix "/" site.BaseURL }}
+  {{ if or (eq site.BaseURL "") (eq site.BaseURL "/") }}
     {{ $baseDomain = "" }}
   {{ end }}
   
   {{/* Default URL using language base URL */}}
-  {{ $href = printf "%s%s" $baseDomain $langData.baseURL }}
+  {{ $href = printf "%s/%s/" $baseDomain $code }}
   
   {{/* Try to load from precomputed translation URLs */}}
   {{ if $filePath }}
@@ -60,19 +60,32 @@
             {{/* Use the precomputed URL from JSON */}}
             {{/* For custom domains (baseURL="/"), remove language prefix from URL */}}
             {{ $cleanUrl := $translatedUrl }}
-            {{ if eq $langData.baseURL "/" }}
-              {{ $langPrefix := printf "/%s/" $code }}
-              {{ if hasPrefix $cleanUrl $langPrefix }}
-                {{ $cleanUrl = strings.TrimPrefix $langPrefix $cleanUrl }}
-                {{ if not $cleanUrl }}
-                  {{ $cleanUrl = "/" }}
-                {{ end }}
-              {{ end }}
+            {{ if not (hasPrefix $cleanUrl "/") }}
+              {{ $cleanUrl = printf "/%s" $cleanUrl }}
+            {{ end }}
+            {{ if strings.Contains $cleanUrl "/glossary/" }}
+              {{ $cleanUrl = strings.ToLower $cleanUrl }}
             {{ end }}
             {{ $href = printf "%s%s" $baseDomain $cleanUrl }}
           {{ end }}
         {{ end }}
       {{ end }}
+    {{ end }}
+
+    {{/* If translation_urls didn't yield a URL, construct from current page path */}}
+    {{ if not $href }}
+      {{ $currentRel := $currentPage.RelPermalink }}
+      {{ $currentPrefix := printf "/%s/" $currentLangCode }}
+      {{ $rest := strings.TrimPrefix $currentPrefix $currentRel }}
+      {{ $rest = strings.TrimPrefix "/" $rest }}
+      {{ $constructed := printf "/%s/%s" $code $rest }}
+      {{ if or (eq $rest "") (eq $rest "/") }}
+        {{ $constructed = printf "/%s/" $code }}
+      {{ end }}
+      {{ if strings.Contains $constructed "/glossary/" }}
+        {{ $constructed = strings.ToLower $constructed }}
+      {{ end }}
+      {{ $href = printf "%s%s" $baseDomain $constructed }}
     {{ end }}
   {{ end }}
 {{ else if $permalink }}

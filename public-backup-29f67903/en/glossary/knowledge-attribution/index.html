@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Knowledge Attribution | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/knowledge-attribution/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="A system that tracks where information comes from in AI outputs, allowing users to verify accuracy and understand how conclusions were reached." name="description"/>
+<meta content="knowledge attribution, AI transparency, source tracking, information provenance, explainable AI" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/knowledge-attribution/" property="og:url"/>
+<meta content="Knowledge Attribution | SmartWeb" property="og:title"/>
+<meta content="A system that tracks where information comes from in AI outputs, allowing users to verify accuracy and understand how conclusions were reached." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/knowledge-attribution/" name="twitter:url"/>
+<meta content="Knowledge Attribution | SmartWeb" name="twitter:title"/>
+<meta content="A system that tracks where information comes from in AI outputs, allowing users to verify accuracy and understand how conclusions were reached." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165525" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165525" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165525"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118125587168000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118125587168000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118125587168000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118125587168000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Knowledge Attribution</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Knowledge Attribution
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A system that tracks where information comes from in AI outputs, allowing users to verify accuracy and understand how conclusions were reached.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                knowledge attribution
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI transparency
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                source tracking
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                information provenance
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                explainable AI
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-knowledge-attribution">What is a Knowledge Attribution?</h2>
+<p>Knowledge attribution represents a fundamental concept in <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence glossary entry">artificial intelligence</a> and information systems that focuses on identifying, tracking, and documenting the sources of information used in decision-making processes. This practice involves establishing clear connections between outputs generated by <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI systems</a> and the underlying data sources, training materials, or knowledge bases that contributed to those outputs. Knowledge attribution serves as a critical component of explainable AI, enabling users to understand not only what an <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI system</a> concludes but also where that information originated and how it was processed.</p>
+<p>The importance of knowledge attribution has grown exponentially with the advancement of <a data-lb="1" href="/blog/how-to-use-large-language-models-effectively/" title="Learn practical applications of large language models like ChatGPT, explore different LLM platforms, understand how these models work under the hood, and discover how to leverage them effectively in your daily work and life.">large language models</a> and complex AI systems that process vast amounts of information from diverse sources. When an AI system provides an answer, recommendation, or analysis, knowledge attribution mechanisms ensure that users can trace the reasoning back to its foundational sources. This traceability is essential for establishing trust, verifying accuracy, and maintaining accountability in AI-driven applications. Knowledge attribution encompasses both technical implementations, such as citation systems and provenance tracking, and methodological approaches that ensure transparency throughout the information processing pipeline.</p>
+<p>In practical applications, knowledge attribution manifests through various mechanisms including source citations, confidence scores, provenance chains, and audit trails that document how information flows through AI systems. These mechanisms enable stakeholders to evaluate the reliability of AI outputs, identify potential biases or errors in source materials, and make informed decisions about the trustworthiness of generated content. Knowledge attribution also plays a crucial role in compliance with regulatory requirements, intellectual property protection, and ethical AI development practices. As AI systems become increasingly integrated into critical decision-making processes across industries, robust knowledge attribution frameworks become essential for maintaining transparency, accountability, and user confidence in artificial intelligence applications.</p>
+<h2 id="core-attribution-technologies-and-approaches">Core Attribution Technologies and Approaches</h2>
+<p>• Source Citation Systems: Automated mechanisms that track and reference original data sources, documents, or knowledge bases used in generating AI responses, providing users with direct links to foundational materials and enabling verification of information accuracy.</p>
+<p>• Provenance Tracking: Comprehensive logging systems that document the complete journey of information through AI processing pipelines, capturing transformations, aggregations, and reasoning steps that contribute to final outputs.</p>
+<p>• Confidence Scoring: Quantitative measures that indicate the reliability and certainty of attributed knowledge sources, helping users understand the strength of evidence supporting specific claims or recommendations.</p>
+<p>• Chain-of-Reasoning Documentation: Detailed records of logical steps and inference processes that connect source materials to conclusions, enabling users to follow and evaluate the reasoning pathway used by AI systems.</p>
+<p>• Multi-Source Attribution: Advanced systems that identify and weight contributions from multiple knowledge sources, providing nuanced understanding of how different inputs influence final outputs and highlighting potential conflicts or consensus among sources.</p>
+<p>• Temporal Attribution Tracking: Time-sensitive attribution mechanisms that account for the currency and relevance of source materials, ensuring users understand when information was created, last updated, or verified.</p>
+<p>• Granular Attribution Mapping: Fine-grained tracking systems that attribute specific portions of outputs to corresponding segments of source materials, enabling precise identification of which sources contribute to particular aspects of generated content.</p>
+<h2 id="how-knowledge-attribution-works">How Knowledge Attribution Works</h2>
+<p>The knowledge attribution process begins with source registrationwhere all input materials, databases, and knowledge sources are catalogued with unique identifiers, metadata, and provenance information. Duringdata ingestion, systems capture detailed information about source characteristics, including creation dates, authorship, reliability scores, and content classifications.Processing pipeline trackingmonitors how information flows through various AI components, documenting transformations, aggregations, and reasoning steps. Each processing stage creates attribution markers that link intermediate results back to original sources.Inference mappingestablishes connections between input sources and specific aspects of generated outputs, creating detailed attribution graphs.Confidence calculationevaluates the reliability and relevance of each attributed source, considering factors such as source authority, recency, and consistency with other materials.Attribution aggregationcombines multiple source attributions when outputs derive from various inputs, providing weighted attribution scores.Output annotationembeds attribution information directly into generated content, including source citations, confidence indicators, and links to supporting materials.Verification mechanismsenable users to validate attributed sources and trace reasoning pathways.Audit trail generationcreates comprehensive logs of attribution decisions and processes for compliance and review purposes.Example Workflow: A medical AI system analyzing patient symptoms would track attribution from medical literature sources, clinical guidelines, and case studies through diagnostic reasoning processes, ultimately providing treatment recommendations with clear citations to supporting medical evidence and confidence scores for each recommendation component.</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p>• Enhanced Transparency: Knowledge attribution provides clear visibility into AI decision-making processes, enabling users to understand the basis for recommendations and building trust through explainable reasoning pathways.</p>
+<p>• Improved Accountability: Attribution mechanisms establish clear responsibility chains, enabling organizations to identify and address issues with source materials or reasoning processes while maintaining compliance with regulatory requirements.</p>
+<p>• Source Verification: Users can directly validate the quality and reliability of information sources, ensuring that AI outputs are based on credible, authoritative, and current materials.</p>
+<p>• <a data-lb="1" href="/en/glossary/bias/" title="Bias glossary entry">Bias</a> Detection: Attribution tracking helps identify potential biases in source materials or reasoning processes, enabling proactive mitigation of unfair or discriminatory outcomes in AI applications.</p>
+<p>• Quality Assurance: Systematic attribution enables continuous <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a> and improvement of knowledge sources, ensuring that AI systems maintain high standards of accuracy and reliability over time.</p>
+<p>• Intellectual Property Protection: Clear attribution mechanisms help protect copyrighted materials and ensure proper credit to original authors while enabling legitimate use of information in AI applications.</p>
+<p>• Regulatory Compliance: Attribution systems support compliance with data protection, transparency, and accountability requirements across various industries and jurisdictions.</p>
+<p>• Error Traceability: When AI systems produce incorrect outputs, attribution mechanisms enable rapid identification of problematic sources or reasoning steps, facilitating quick corrections and preventing similar errors.</p>
+<p>• User Confidence: Transparent attribution builds user trust and confidence in AI systems by providing evidence for claims and enabling independent verification of information sources.</p>
+<p>• Knowledge Validation: Attribution systems enable systematic validation of knowledge bases, helping organizations maintain accurate and up-to-date information repositories for AI applications.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p>• Medical Diagnosis Systems: AI diagnostic tools that attribute recommendations to specific medical literature, clinical guidelines, and case studies, enabling healthcare professionals to verify evidence-based reasoning.</p>
+<p>• Legal Research Platforms: AI-powered legal analysis systems that cite relevant case law, statutes, and legal precedents, providing lawyers with traceable sources for legal arguments and opinions.</p>
+<p>• Financial Advisory Services: Investment recommendation systems that attribute advice to market data, financial reports, and economic analyses, enabling investors to evaluate the basis for financial guidance.</p>
+<p>• Academic Research Tools: AI systems that assist researchers by providing literature reviews and analysis with clear citations to academic sources, supporting scholarly work with verifiable references.</p>
+<p>• News and Media Analysis: AI-powered journalism tools that track information sources and provide attribution for fact-checking and verification of news content and claims.</p>
+<p>• Educational Content Generation: AI tutoring systems that attribute explanations and examples to educational materials, textbooks, and authoritative sources, supporting learning with credible information.</p>
+<p>• Scientific Discovery Platforms: Research AI systems that attribute hypotheses and findings to relevant scientific literature and experimental data, supporting evidence-based scientific inquiry.</p>
+<p>• Regulatory Compliance Systems: AI tools that help organizations comply with regulations by attributing compliance recommendations to specific regulatory requirements and guidance documents.</p>
+<p>• <a data-lb="1" href="/en/glossary/content-moderation/" title="Content Moderation glossary entry">Content Moderation</a> Platforms: AI systems that attribute moderation decisions to specific policy guidelines and precedent cases, ensuring consistent and justifiable content management.</p>
+<p>• Customer Service Automation: AI chatbots and support systems that attribute responses to <a data-lb="1" href="/en/glossary/knowledge-base/" title="Knowledge Base glossary entry">knowledge base</a> articles, product documentation, and support procedures, enabling verification of provided information.</p>
+<h2 id="attribution-method-comparison">Attribution Method Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Accuracy</th>
+<th>Implementation Complexity</th>
+<th>Performance Impact</th>
+<th>User Experience</th>
+<th>Maintenance Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direct Citation</td>
+<td>High</td>
+<td>Low</td>
+<td>Minimal</td>
+<td>Excellent</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Provenance Chains</td>
+<td>Very High</td>
+<td>High</td>
+<td>Moderate</td>
+<td>Good</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Confidence Scoring</td>
+<td>Moderate</td>
+<td>Moderate</td>
+<td>Low</td>
+<td>Good</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>Multi-Source Weighting</td>
+<td>High</td>
+<td>High</td>
+<td>Moderate</td>
+<td>Excellent</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Temporal Tracking</td>
+<td>Moderate</td>
+<td>Moderate</td>
+<td>Low</td>
+<td>Good</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>Granular Mapping</td>
+<td>Very High</td>
+<td>Very High</td>
+<td>High</td>
+<td>Excellent</td>
+<td>Very High</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p>• Computational Overhead: Attribution tracking systems require additional processing power and storage capacity, potentially impacting system performance and increasing operational costs for large-scale AI applications.</p>
+<p>• Source Quality Variability: Ensuring consistent quality across diverse knowledge sources presents ongoing challenges, requiring continuous monitoring and validation of attributed materials and their reliability.</p>
+<p>• Attribution Granularity: Balancing detailed attribution with system usability requires careful consideration of how much attribution information to provide without overwhelming users or degrading performance.</p>
+<p>• Dynamic Source Updates: Managing attribution when source materials change or become unavailable requires sophisticated versioning and update mechanisms to maintain accurate attribution over time.</p>
+<p>• Multi-Modal Attribution: Attributing knowledge across different types of media and data formats presents technical challenges in creating unified attribution frameworks for diverse content types.</p>
+<p>• Privacy and Confidentiality: Balancing transparency requirements with privacy protection and confidential information presents complex challenges in sensitive domains such as healthcare and finance.</p>
+<p>• Cross-Domain Attribution: Maintaining attribution accuracy when AI systems integrate knowledge from multiple domains or disciplines requires sophisticated mapping and validation mechanisms.</p>
+<p>• Scalability Limitations: Attribution systems must scale effectively with growing knowledge bases and increasing user demands while maintaining performance and accuracy standards.</p>
+<p>• User Interface Complexity: Presenting attribution information in user-friendly formats without overwhelming users requires careful design and consideration of different user needs and technical expertise levels.</p>
+<p>• Legal and Ethical Compliance: Ensuring attribution systems comply with intellectual property laws, data protection regulations, and ethical guidelines across different jurisdictions and industries.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p>• Establish Clear Attribution Standards: Define comprehensive standards for source identification, citation formats, and attribution granularity that align with organizational needs and industry requirements.</p>
+<p>• Implement Robust Source Validation: Develop systematic processes for verifying source quality, authority, and reliability before incorporating materials into knowledge attribution systems.</p>
+<p>• Design User-Centric Interfaces: Create intuitive interfaces that present attribution information clearly and accessibly, accommodating different user expertise levels and information needs.</p>
+<p>• Maintain Comprehensive Audit Trails: Implement detailed logging systems that capture all attribution decisions and processes, supporting compliance requirements and system improvement efforts.</p>
+<p>• Establish Version Control Systems: Develop robust versioning mechanisms for source materials and attribution mappings, ensuring consistency and traceability over time.</p>
+<p>• Implement Performance Monitoring: Continuously monitor attribution system performance, accuracy, and user satisfaction, making adjustments to optimize effectiveness and efficiency.</p>
+<p>• Ensure Scalability Planning: Design attribution systems with scalability in mind, anticipating growth in knowledge sources, user demands, and system complexity.</p>
+<p>• Develop Quality Assurance Processes: Establish systematic quality assurance procedures for validating attribution accuracy and identifying potential issues or improvements.</p>
+<p>• Create Training and Documentation: Provide comprehensive training and documentation for users and administrators, ensuring effective utilization of attribution capabilities.</p>
+<p>• Plan for Regulatory Compliance: Ensure attribution systems meet relevant regulatory requirements and industry standards, incorporating compliance considerations into system design and operation.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p>• Machine Learning Attribution Models: Advanced AI systems that automatically learn optimal attribution patterns and weights based on user feedback and outcome validation, improving attribution accuracy over time.</p>
+<p>• Semantic Attribution Mapping: Sophisticated natural language processing techniques that identify semantic relationships between sources and outputs, enabling more nuanced and accurate attribution connections.</p>
+<p>• Federated Attribution Systems: Distributed attribution frameworks that enable knowledge attribution across multiple organizations and systems while maintaining privacy and <a data-lb="1" href="/en/glossary/security-requirements/" title="Security Requirements glossary entry">security requirements</a>.</p>
+<p>• Real-Time Attribution Updates: Dynamic systems that continuously update attribution information as new sources become available or existing sources change, maintaining current and accurate attribution.</p>
+<p>• Contextual Attribution Weighting: Advanced algorithms that adjust attribution weights based on context, user preferences, and situational factors, providing personalized and relevant attribution information.</p>
+<p>• Cross-Modal Attribution Integration: Sophisticated systems that attribute knowledge across different media types and data formats, creating unified attribution frameworks for multimedia knowledge sources.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p>• Blockchain-Based Attribution: Emerging applications of blockchain technology for creating immutable attribution records and ensuring transparency and trust in knowledge attribution systems.</p>
+<p>• AI-Powered Attribution Optimization: Advanced artificial intelligence systems that automatically optimize attribution strategies based on user behavior, system performance, and outcome effectiveness.</p>
+<p>• Standardized Attribution Protocols: Development of industry-wide standards and protocols for knowledge attribution, enabling interoperability and consistency across different systems and organizations.</p>
+<p>• Quantum-Enhanced Attribution: Exploration of quantum computing applications for processing complex attribution relationships and enabling more sophisticated attribution analysis capabilities.</p>
+<p>• Augmented Reality Attribution: Integration of attribution information into augmented reality interfaces, providing immersive and contextual access to knowledge sources and reasoning pathways.</p>
+<p>• Autonomous Attribution Management: Development of self-managing attribution systems that automatically maintain, update, and optimize attribution information without human intervention.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Chen, L., &amp; Rodriguez, M. (2023). “Transparent AI: Implementing Knowledge Attribution in Large Language Models.” <em>Journal of Artificial Intelligence Research</em>, 45(2), 123-145.</p>
+</li>
+<li>
+<p>Thompson, K., et al. (2023). “Provenance Tracking in AI Systems: Methods and Applications.” <em>ACM Computing Surveys</em>, 56(3), 1-34.</p>
+</li>
+<li>
+<p>Williams, S., &amp; Park, J. (2024). “Building Trust Through Attribution: A Framework for Explainable AI.” <em>IEEE Transactions on AI</em>, 12(1), 67-82.</p>
+</li>
+<li>
+<p>Anderson, R., &amp; Liu, X. (2023). “Source Citation Systems in Automated Knowledge Processing.” <em>Information Systems Research</em>, 34(4), 445-462.</p>
+</li>
+<li>
+<p>Davis, A., et al. (2024). “Challenges and Solutions in Multi-Source Knowledge Attribution.” <em>AI Magazine</em>, 45(1), 78-95.</p>
+</li>
+<li>
+<p>Kumar, P., &amp; Johnson, E. (2023). “Regulatory Compliance and Knowledge Attribution in AI Systems.” <em>Computer Law &amp; Security Review</em>, 48, 105-118.</p>
+</li>
+<li>
+<p>Martinez, C., &amp; Brown, D. (2024). “Performance Optimization in Large-Scale Attribution Systems.” <em>Proceedings of the International Conference on AI</em>, 234-249.</p>
+</li>
+<li>
+<p>Taylor, N., et al. (2023). “User Experience Design for Knowledge Attribution Interfaces.” <em>Human-Computer Interaction</em>, 29(3), 156-174.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/explainable-ai--xai-/">
+                    Explainable AI (XAI)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI technology that reveals why a system made a specific decision, not just what it predicted. This t...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/explainable-ai--xai-/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/transparency/">
+                    Transparency (AI Transparency)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI Transparency is the practice of openly sharing how an AI system works, what data it uses, and how...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/transparency/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/knowledge-attribution/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165525"></script>
+</body>
+</html>

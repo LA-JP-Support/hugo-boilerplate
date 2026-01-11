@@ -3,7 +3,7 @@ title: "Qdrant"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "qdrant"
-description: "A database that stores AI-generated data patterns to quickly find similar items, enabling smart search and personalized recommendations."
+description: "A database designed to store and search through AI-generated data representations (embeddings) to find similar items quickly, powering features like semantic search and personalized recommendations."
 keywords: ["Qdrant", "vector database", "vector search", "embeddings", "RAG"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"
@@ -24,15 +24,19 @@ Traditional databases (relational or NoSQL) excel at storing structured data but
 
 A vector is an ordered list of numeric values, typically floats, representing the semantic features of an object as produced by an embedding model (e.g., OpenAI, HuggingFace, CLIP). Each number is a coordinate in a high-dimensional space. The vector "encodes" meaning or context, allowing for mathematical comparison.
 
-**Types:**-**Dense vectors:**Most elements are non-zero; typically from transformer models
-- **Sparse vectors:**Most elements are zero; common in keyword-based (BM25) search**Examples:**768-dimensional vector for a sentence, 1536-dimensional vector for a product description
+**Types:**
+- **Dense vectors:** Most elements are non-zero; typically from transformer models
+- **Sparse vectors:** Most elements are zero; common in keyword-based (BM25) search
+
+**Examples:**  
+768-dimensional vector for a sentence, 1536-dimensional vector for a product description
 
 ### Point
 
 The atomic unit of data in Qdrant, each point consists of:
-- **ID:**Unique key (integer or UUID)
-- **Vector:**High-dimensional embedding
-- **Payload:**Optional, schema-less JSON metadata
+- **ID:** Unique key (integer or UUID)
+- **Vector:** High-dimensional embedding
+- **Payload:** Optional, schema-less JSON metadata
 
 Points support filtering and faceted search via their payloads, analogous to a "row" in SQL but with vectors as primary data.
 
@@ -44,7 +48,13 @@ A named set of points (vectors + payloads) sharing the same dimensionality and d
 
 A function that measures the "similarity" between two vectors:
 
-**Cosine similarity:**Measures the angle between vectors; common for text embeddings**Dot product:**Sensitive to both direction and magnitude; used in recommendations**Euclidean distance:**Straight-line distance; useful for image or sensor embeddings**Manhattan distance:**Sum of absolute differences; sometimes used for sparse data
+**Cosine similarity:** Measures the angle between vectors; common for text embeddings
+
+**Dot product:** Sensitive to both direction and magnitude; used in recommendations
+
+**Euclidean distance:** Straight-line distance; useful for image or sensor embeddings
+
+**Manhattan distance:** Sum of absolute differences; sometimes used for sparse data
 
 ### Payload
 
@@ -52,7 +62,11 @@ A flexible JSON object attached to each point, storing structured metadata such 
 
 ### Storage Options
 
-**RAM Storage:**Vectors stored in memory; fastest for datasets that fit in available RAM**Memmap (On-Disk) Storage:**Vectors stored on disk and memory-mapped for efficient access, crucial for large datasets exceeding RAM**Quantized Storage:**Vectors compressed to use fewer bits (e.g., 8-bit, 2-bit), enabling much larger datasets at some trade-off in precision
+**RAM Storage:** Vectors stored in memory; fastest for datasets that fit in available RAM
+
+**Memmap (On-Disk) Storage:** Vectors stored on disk and memory-mapped for efficient access, crucial for large datasets exceeding RAM
+
+**Quantized Storage:** Vectors compressed to use fewer bits (e.g., 8-bit, 2-bit), enabling much larger datasets at some trade-off in precision
 
 ## Indexing and Search
 
@@ -82,7 +96,17 @@ Compresses vectors by representing them with fewer bits per value, allowing more
 
 ## Key Features
 
-**Sub-millisecond Search:**Returns results in milliseconds, even across billions of vectors, enabling real-time applications**Serverless Scaling:**Resources scale automatically based on usage; no manual sharding or provisioning required**Real-Time Data Ingestion:**New vectors are searchable immediately after upsert, supporting dynamic applications**Advanced Filtering:**Combine similarity with metadata filters for precise results**Multitenancy:**Namespaces keep customer or team data isolated while sharing infrastructure**Security and Compliance:**SOC 2, GDPR, ISO 27001, HIPAA certified with data encrypted at rest and in transit
+**Sub-millisecond Search:** Returns results in milliseconds, even across billions of vectors, enabling real-time applications
+
+**Serverless Scaling:** Resources scale automatically based on usage; no manual sharding or provisioning required
+
+**Real-Time Data Ingestion:** New vectors are searchable immediately after upsert, supporting dynamic applications
+
+**Advanced Filtering:** Combine similarity with metadata filters for precise results
+
+**Multitenancy:** Namespaces keep customer or team data isolated while sharing infrastructure
+
+**Security and Compliance:** SOC 2, GDPR, ISO 27001, HIPAA certified with data encrypted at rest and in transit
 
 ## Common Use Cases
 
@@ -90,13 +114,13 @@ Compresses vectors by representing them with fewer bits per value, allowing more
 
 Enable users to search vast document collections by meaning, not just keywords. Store vector embeddings for all items, embed user queries, and search for vectors with high similarity using cosine or other metrics.
 
-**Example:**"Find FAQs semantically similar to this support ticket"
+**Example:** "Find FAQs semantically similar to this support ticket"
 
 ### Recommendation Systems
 
 Deliver highly personalized recommendations by matching user behavior and preferences as vectors. Store embeddings for both users and items, using dot product or cosine similarity to find best matches.
 
-**Example:**"Recommend movies similar to what this user has watched"
+**Example:** "Recommend movies similar to what this user has watched"
 
 ### Retrieval-Augmented Generation (RAG)
 
@@ -167,11 +191,22 @@ Fully managed, enterprise-grade Qdrant hosting providing automatic scaling, zero
 
 ## Best Practices
 
-**Choose Appropriate Distance Metrics:**Select cosine for text, dot product for recommendations, or Euclidean for images based on your data characteristics**Optimize Storage:**Use RAM for speed, memmap for large datasets, and quantization for maximum capacity**Index Payloads Strategically:**Index frequently filtered fields for performance while avoiding over-indexing**Tune HNSW Parameters:**Adjust `m`, `ef`, and `ef_construct` to balance search accuracy and speed**Implement Multitenancy Properly:**Use single collection with tenant field in payload and filter all operations by tenant ID**Monitor Performance:**Track query latency, throughput, and resource utilization to optimize configuration
+**Choose Appropriate Distance Metrics:** Select cosine for text, dot product for recommendations, or Euclidean for images based on your data characteristics
+
+**Optimize Storage:** Use RAM for speed, memmap for large datasets, and quantization for maximum capacity
+
+**Index Payloads Strategically:** Index frequently filtered fields for performance while avoiding over-indexing
+
+**Tune HNSW Parameters:** Adjust `m`, `ef`, and `ef_construct` to balance search accuracy and speed
+
+**Implement Multitenancy Properly:** Use single collection with tenant field in payload and filter all operations by tenant ID
+
+**Monitor Performance:** Track query latency, throughput, and resource utilization to optimize configuration
 
 ## Supported Languages
 
-**Client SDKs available for:**- Python
+**Client SDKs available for:**
+- Python
 - Go
 - Rust
 - JavaScript/TypeScript
@@ -180,27 +215,36 @@ Fully managed, enterprise-grade Qdrant hosting providing automatic scaling, zero
 
 ## Frequently Asked Questions
 
-**What makes Qdrant different from FAISS or standalone vector libraries?**Qdrant is a fully managed, production-grade database with real-time updates, metadata filtering, access control, multitenancy, and serverless scaling. Libraries like FAISS are powerful for local vector search but lack database features, cloud-native reliability, and operational management.**What data can I store?**Any data that can be embedded as a vector: text, images, audio, user events, time series, product catalogs, and more.**How does Qdrant ensure security and compliance?**Data is encrypted at rest and in transit with hierarchical encryption keys and private networking. Qdrant holds SOC 2, GDPR, ISO 27001, and HIPAA certifications.**Can Qdrant be used with relational or document databases?**Yes. Qdrant typically complements SQL/NoSQL stores, handling unstructured, high-dimensional search while structured or transactional data remains in traditional systems.
+**What makes Qdrant different from FAISS or standalone vector libraries?**  
+Qdrant is a fully managed, production-grade database with real-time updates, metadata filtering, access control, multitenancy, and serverless scaling. Libraries like FAISS are powerful for local vector search but lack database features, cloud-native reliability, and operational management.
+
+**What data can I store?**  
+Any data that can be embedded as a vector: text, images, audio, user events, time series, product catalogs, and more.
+
+**How does Qdrant ensure security and compliance?**  
+Data is encrypted at rest and in transit with hierarchical encryption keys and private networking. Qdrant holds SOC 2, GDPR, ISO 27001, and HIPAA certifications.
+
+**Can Qdrant be used with relational or document databases?**  
+Yes. Qdrant typically complements SQL/NoSQL stores, handling unstructured, high-dimensional search while structured or transactional data remains in traditional systems.
 
 ## References
 
-
-1. Qdrant. (n.d.). Official Documentation. Qdrant Documentation.
-2. Qdrant. (n.d.). What is a Vector Database?. Qdrant Articles.
-3. Qdrant. (n.d.). Product Page. Qdrant Website.
-4. Pinecone. (n.d.). Vector Embeddings Explained. Pinecone Learn.
-5. Qdrant. (n.d.). Architecture Documentation. Qdrant Documentation.
-6. Pinecone. (n.d.). HNSW Algorithm Explained. Pinecone Learn.
-7. Qdrant. (n.d.). Quickstart Guide. Qdrant Documentation.
-8. Qdrant. (n.d.). Create and Manage Indexes. Qdrant Documentation.
-9. Qdrant. (n.d.). Filter by Metadata. Qdrant Documentation.
-10. Qdrant. (n.d.). Security. Qdrant Website.
-11. Qdrant. (n.d.). Cloud Overview. Qdrant Documentation.
-12. Qdrant. (n.d.). Collections Documentation. Qdrant Documentation.
-13. Qdrant. (n.d.). Distance Metrics Reference. Qdrant Documentation.
-14. Qdrant. (n.d.). Payloads in Qdrant. Qdrant Documentation.
-15. Qdrant. (n.d.). Quantization Guide. Qdrant Documentation.
-16. Qdrant. (n.d.). Hybrid Search Documentation. Qdrant Articles.
-17. Qdrant. (n.d.). Vector Search Resource Optimization. Qdrant Articles.
-18. Cohorte. (n.d.). A Developer's Friendly Guide to Qdrant. Cohorte Blog.
-19. LangChain. (n.d.). LangChain Integration for RAG. LangChain Documentation.
+- [Qdrant Official Documentation](https://qdrant.tech/documentation/)
+- [What is a Vector Database?](https://qdrant.tech/articles/what-is-a-vector-database/)
+- [Qdrant Product Page](https://www.qdrant.tech/)
+- [Vector Embeddings Explained](https://www.pinecone.io/learn/vector-embeddings/)
+- [Qdrant Architecture Documentation](https://qdrant.tech/documentation/guides/get-started/database-architecture)
+- [HNSW Algorithm Explained](https://www.pinecone.io/learn/series/faiss/hnsw/)
+- [Qdrant Quickstart Guide](https://qdrant.tech/documentation/quick-start/)
+- [Create and Manage Indexes](https://qdrant.tech/documentation/concepts/indexing/)
+- [Filter by Metadata](https://qdrant.tech/documentation/guides/search/filter-by-metadata)
+- [Qdrant Security](https://www.qdrant.tech/security/)
+- [Qdrant Cloud Overview](https://qdrant.tech/cloud/)
+- [Qdrant Collections Documentation](https://qdrant.tech/documentation/concepts/collections/)
+- [Distance Metrics Reference](https://qdrant.tech/documentation/concepts/collections/#distance-metrics)
+- [Payloads in Qdrant](https://qdrant.tech/documentation/concepts/payload/)
+- [Quantization Guide](https://qdrant.tech/documentation/guides/quantization/)
+- [Hybrid Search Documentation](https://qdrant.tech/articles/hybrid-search/)
+- [Vector Search Resource Optimization](https://qdrant.tech/articles/vector-search-resource-optimization/)
+- [A Developer's Friendly Guide to Qdrant](https://www.cohorte.co/blog/a-developers-friendly-guide-to-qdrant-vector-database)
+- [LangChain Integration for RAG](https://docs.langchain.com/oss/python/integrations/vectorstores/qdrant)

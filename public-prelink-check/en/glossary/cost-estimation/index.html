@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Cost Estimation | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/cost-estimation/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/cost-estimation/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/cost-estimation/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/cost-estimation/" hreflang="x-default" rel="alternate"/>
+<meta content="Cost estimation is a method to predict how much money and computing resources you'll need to run an AI chatbot, helping you plan budgets and avoid unexpected expenses." name="description"/>
+<meta content="Cost Estimation, AI Chatbot, Automation, Token Usage, AI Pricing" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/cost-estimation/" property="og:url"/>
+<meta content="Cost Estimation | SmartWeb" property="og:title"/>
+<meta content="Cost estimation is a method to predict how much money and computing resources you'll need to run an AI chatbot, helping you plan budgets and avoid unexpected expenses." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/cost-estimation/" name="twitter:url"/>
+<meta content="Cost Estimation | SmartWeb" name="twitter:title"/>
+<meta content="Cost estimation is a method to predict how much money and computing resources you'll need to run an AI chatbot, helping you plan budgets and avoid unexpected expenses." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Cost Estimation</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            General
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Cost Estimation
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          Cost estimation is a method to predict how much money and computing resources you'll need to run an AI chatbot, helping you plan budgets and avoid unexpected expenses.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Cost Estimation
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI Chatbot
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Automation
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Token Usage
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI Pricing
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-cost-estimation">What Is Cost Estimation?</h2>
+<p>Cost estimation within <a data-lb="1" href="/en/glossary/ai-chatbot/" title="AI Chatbot glossary entry">AI chatbot</a> and automation refers to the set of techniques and tools used to predict the resource consumption and financial outlay required for deploying <a data-lb="1" href="/en/glossary/conversational-ai/" title="Conversational AI glossary entry">conversational AI</a> solutions. This includes calculating anticipated token usage (input and output), infrastructure, third-party service costs, labor, and ongoing maintenance needs. The main objective is to provide a predictive snapshot of spending for a given <a data-lb="1" href="/en/glossary/chatbot/" title="Chatbot glossary entry">chatbot</a> or automation flow, enabling proactive budgeting, optimization, and transparent client communications.</p>
+<h2 id="why-cost-estimation-matters-in-ai-chatbot--automation">Why Cost Estimation Matters in AI Chatbot &amp; Automation</h2>
+<p><strong>Budget Control</strong><br/>
+Estimation prevents budget overruns and surprises by forecasting token usage and associated costs. Most AI model providers (like <a data-lb="1" href="/en/glossary/openai/" title="OpenAI glossary entry">OpenAI</a>, <a data-lb="1" href="/en/glossary/anthropic/" title="Anthropic glossary entry">Anthropic</a>, Google, or Cohere) bill on a per-token or per-message basis, making prior calculation essential.</p>
+<p><strong>Project Planning</strong><br/>
+Reliable estimates inform resourcing, timeline, and risk mitigation strategies—vital for both in-house and client-facing deployments.</p>
+<p><strong>Pricing Transparency</strong><br/>
+SaaS providers and agencies use detailed cost breakdowns to justify pricing to clients, improve trust, and avoid margin erosion.</p>
+<p><strong>Optimization</strong><br/>
+By analyzing token and message consumption, teams can optimize <a data-lb="1" href="/en/glossary/prompts/" title="Prompts glossary entry">prompts</a>, reduce verbosity, and select the most efficient AI models for each use case.</p>
+<p><strong>Business Impact</strong><br/>
+Accurate estimates set realistic expectations, reduce the risk of underbidding or overcharging, and support effective ROI calculations.</p>
+<h2 id="core-concepts">Core Concepts</h2>
+<h3 id="tokens-and-token-based-pricing">Tokens and Token-Based Pricing</h3>
+<p><strong>Token</strong><br/>
+The atomic unit of text processed by AI models. For example, “chatbots are great.” is typically six tokens in OpenAI’s GPT models. Both user prompts and AI-generated responses are measured in tokens.</p>
+<p><strong>Token-Based Pricing</strong><br/>
+Most AI vendors charge per 1,000 tokens, with separate rates for input (user) and output (AI response). Example: OpenAI GPT-4 might cost $0.03 per 1,000 input tokens and $0.06 per 1,000 output tokens.</p>
+<p><strong>Per-Message Pricing</strong><br/>
+Some platforms offer per-message billing, factoring in AI model cost, multimedia processing, and platform-specific fees. This approach simplifies budgeting for <a data-lb="1" href="/en/glossary/customer-support/" title="Customer Support glossary entry">customer support</a> and engagement bots.</p>
+<h3 id="cost-estimation-tools">Cost Estimation Tools</h3>
+<p><strong>Token Usage Calculators</strong><br/>
+Online calculators allow you to enter sample interactions to estimate token counts and direct costs.</p>
+<p><strong>Project Cost Estimation Platforms</strong><br/>
+Software like Avaza and Jira Align integrate cost estimation into broader project management, resource allocation, and budget tracking.</p>
+<p><strong>Manual Estimation</strong><br/>
+For custom or hybrid deployments, detailed spreadsheets or custom-built scripts may be used to capture all cost drivers.</p>
+<h2 id="how-cost-estimation-is-used">How Cost Estimation Is Used</h2>
+<h3 id="api-cost-forecasting">API Cost Forecasting</h3>
+<p>Developers estimate spend based on projected message volume, average tokens per message, and provider rates.</p>
+<h3 id="prompt-optimization">Prompt Optimization</h3>
+<p>Reducing prompt and response length directly lowers cost per interaction.</p>
+<h3 id="scenario-planning">Scenario Planning</h3>
+<p>Business teams model best- and worst-case usage to establish cost ranges and allocate budget buffers.</p>
+<h3 id="client-proposals">Client Proposals</h3>
+<p>Agencies and SaaS providers use estimators to prepare transparent, granular quotes for chatbot or automation deployments.</p>
+<h3 id="broader-use-cases">Broader Use Cases</h3>
+<ul>
+<li>AI model development (training, fine-tuning, inference)</li>
+<li>Infrastructure planning (cloud compute, storage, bandwidth)</li>
+<li>Service contracts (fixed-price, time-and-material, usage-based)</li>
+</ul>
+<h2 id="step-by-step-cost-estimation-workflow">Step-by-Step Cost Estimation Workflow</h2>
+<p><strong>1. Define the Flow</strong><br/>
+Document each conversational path, including all possible prompts and responses.</p>
+<p><strong>2. Estimate Token or Message Counts</strong><br/>
+Use calculators or provider documentation to assess average input/output length per interaction.</p>
+<p><strong>3. Calculate Usage Volume</strong><br/>
+Forecast user activity (e.g., sessions per day/month).</p>
+<p><strong>4. Apply Pricing Rates</strong><br/>
+Multiply estimated tokens or messages by provider rates.</p>
+<p><strong>5. Add Overhead and Buffers</strong><br/>
+Include extra costs for logging, <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a>, data storage, compliance, and unforeseen usage spikes.</p>
+<p><strong>6. Review and Optimize</strong><br/>
+Tweak prompts and logic to minimize unnecessary token/message usage.</p>
+<p><strong>7. Validate Assumptions</strong><br/>
+Compare estimates to historical data or pilot tests; refine as needed.</p>
+<h3 id="example-token--cost-estimation-table">Example: Token &amp; Cost Estimation Table</h3>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Input Tokens</th>
+<th>Output Tokens</th>
+<th>Monthly Sessions</th>
+<th>Input Cost ($)</th>
+<th>Output Cost ($)</th>
+<th>Total Monthly Cost ($)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Greeting</td>
+<td>8</td>
+<td>16</td>
+<td>10,000</td>
+<td>0.32</td>
+<td>0.96</td>
+<td>1.28</td>
+</tr>
+<tr>
+<td>FAQ</td>
+<td>20</td>
+<td>60</td>
+<td>6,000</td>
+<td>0.48</td>
+<td>2.16</td>
+<td>2.64</td>
+</tr>
+<tr>
+<td>Handover</td>
+<td>12</td>
+<td>24</td>
+<td>500</td>
+<td>0.02</td>
+<td>0.09</td>
+<td>0.11</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.82</td>
+<td>3.21</td>
+<td>4.03</td>
+</tr>
+</tbody>
+</table>
+<p><em>(Assume $0.004 per 1,000 input tokens, $0.012 per 1,000 output tokens)</em></p>
+<h2 id="factors-influencing-cost-estimates">Factors Influencing Cost Estimates</h2>
+<p><strong>1. Model Choice</strong><br/>
+<a data-lb="1" href="/blog/how-to-use-large-language-models-effectively/" title="Learn practical applications of large language models like ChatGPT, explore different LLM platforms, understand how these models work under the hood, and discover how to leverage them effectively in your daily work and life.">Large language models</a> (GPT-4, Claude, <a data-lb="1" href="/en/glossary/gemini/" title="Google's AI system that understands text, images, audio, and video together to answer questions and complete tasks.">Gemini</a>) have higher per-token or per-message costs than smaller or earlier models.</p>
+<p><strong>2. Prompt and Response Length</strong><br/>
+More verbose or detailed interactions consume more tokens, raising costs.</p>
+<p><strong>3. Volume and Frequency</strong><br/>
+High-traffic bots or automations multiply costs quickly, especially in customer service, ecommerce, or social engagement scenarios.</p>
+<p><strong>4. Language and Content Complexity</strong><br/>
+Some languages or technical documents tokenize less efficiently, increasing total token count.</p>
+<p><strong>5. Media and Document Processing</strong><br/>
+Adding support for audio, image, or PDF processing can increase costs.</p>
+<p><strong>6. Third-Party Integrations</strong><br/>
+APIs, analytics, compliance, and storage fees must be added to direct AI usage costs.</p>
+<p><strong>7. Pricing Model</strong><br/>
+Providers offer pay-as-you-go, fixed subscription, or hybrid plans.</p>
+<h2 id="methods-for-cost-estimation">Methods for Cost Estimation</h2>
+<h3 id="for-token-based-ai-usage">For Token-Based AI Usage</h3>
+<p><strong>Direct Calculation</strong><br/>
+Multiply projected tokens by provider per-token rates.</p>
+<p><strong>Analogous Estimation</strong><br/>
+Reference historical usage patterns from similar projects.</p>
+<p><strong>Parametric Estimation</strong><br/>
+Apply unit costs to measurable variables (e.g., cost per 1,000 messages).</p>
+<p><strong>Simulation</strong><br/>
+Run pilot tests and extrapolate based on observed consumption.</p>
+<h3 id="for-project-budgets-general">For Project Budgets (General)</h3>
+<p><strong>Bottom-Up Estimating</strong><br/>
+Break down every task and resource, sum for total project cost.</p>
+<p><strong>Top-Down (Analogous)</strong><br/>
+Reference completed projects as a baseline.</p>
+<p><strong>Parametric</strong><br/>
+Apply known unit costs (per endpoint, per user, per workflow).</p>
+<p><strong>Three-Point Estimating</strong><br/>
+Combine optimistic, most-likely, and pessimistic scenarios.</p>
+<p><strong>AI/Data-Driven</strong><br/>
+Use predictive analytics and past data for smarter forecasting.</p>
+<h2 id="tools-for-cost-estimation">Tools for Cost Estimation</h2>
+<table>
+<thead>
+<tr>
+<th>Tool/Platform</th>
+<th>Use Case</th>
+<th>Key Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Token Usage Calculator for AI Cost Planning</strong></td>
+<td>Token &amp; cost estimation for AI models</td>
+<td>Input/output breakdown, per-model pricing</td>
+</tr>
+<tr>
+<td><strong>Prompts.ai AI Token Cost Estimator</strong></td>
+<td>Token-based budget prediction</td>
+<td>Easy input, supports GPT-3/4, error handling</td>
+</tr>
+<tr>
+<td><strong>Avaza Budgeting &amp; Expense Management</strong></td>
+<td>Full project budgeting, time/resource tracking</td>
+<td>Real-time updates, alerts, integrations</td>
+</tr>
+<tr>
+<td><strong>Invent AI Pricing Calculator</strong></td>
+<td>Per-message, per-model, media/document toggle</td>
+<td>Transparent monthly projection, channel-specific logic</td>
+</tr>
+</tbody>
+</table>
+<h2 id="practical-examples-and-use-cases">Practical Examples and Use Cases</h2>
+<h3 id="1-summarizing-financial-reports-at-scale">1. Summarizing Financial Reports at Scale</h3>
+<p><strong>Scenario:</strong> AI model summarizes 58,200 annual reports.<br/>
+<strong>Estimate:</strong> $0.12 per summary; annual cost ~$6,730, rising to $14,000 with quarterly reports included.</p>
+<h3 id="2-ai-chatbot-for-retail-customer-support">2. AI Chatbot for Retail Customer Support</h3>
+<p><strong>Scenario:</strong> Bot answers 15,000 queries/month, 60 input and 120 output tokens per message.<br/>
+<strong>Token Calculation:</strong> 900,000 input + 1,800,000 output tokens/month.<br/>
+<strong>Cost:</strong> At $0.004 (input) and $0.012 (output) per 1,000 tokens = $3.60 (input) + $21.60 (output) = $25.20/month.</p>
+<h3 id="3-predictive-maintenance-in-manufacturing">3. Predictive Maintenance in Manufacturing</h3>
+<p><strong>Case:</strong> Siemens’ Senseye AI reduced downtime by 50% and maintenance costs by 40%.</p>
+<h3 id="4-cost-range-for-chatbot-projects-2025-data">4. Cost Range for Chatbot Projects (2025 Data)</h3>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Low-End Cost</th>
+<th>Average Cost</th>
+<th>High-End Cost</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic SMB Chatbot</strong></td>
+<td>$30/month</td>
+<td>$2,000–$10,000 (build)</td>
+<td>$150+/month (advanced)</td>
+<td>FAQ, lead capture</td>
+</tr>
+<tr>
+<td><strong>Mid-Market AI Chatbot</strong></td>
+<td>$800/month</td>
+<td>$10,000–$75,000 (build)</td>
+<td>$500k+ (enterprise)</td>
+<td>NLP, CRM integration</td>
+</tr>
+<tr>
+<td><strong>Enterprise GenAI Bot</strong></td>
+<td>$3,000/month</td>
+<td>$150k–$500k (custom build)</td>
+<td>$1,000,000+</td>
+<td>Advanced integrations</td>
+</tr>
+<tr>
+<td><strong>Per Resolved Chat</strong></td>
+<td>$0.50</td>
+<td>$2–$4</td>
+<td>$6+</td>
+<td>Usage-based pricing</td>
+</tr>
+<tr>
+<td><strong>Annual Maintenance</strong></td>
+<td>$1,000 (basic)</td>
+<td>$5,000–$15,000 (AI)</td>
+<td>$20,000+</td>
+<td>NLP retraining, updates</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cost-estimation-limitations-and-assumptions">Cost Estimation Limitations and Assumptions</h2>
+<p><strong>Pricing Volatility</strong><br/>
+Rates can change; always check current provider pricing.</p>
+<p><strong>Approximation</strong><br/>
+Calculators use averages (e.g., 1 token ≈ 4 characters for English); actual usage may vary by language or content.</p>
+<p><strong>Model Updates</strong><br/>
+New model releases can change tokenization and pricing logic.</p>
+<p><strong>Unaccounted Overhead</strong><br/>
+Logging, monitoring, compliance, or platform fees may not be included unless manually added.</p>
+<p><strong>User Input Variability</strong><br/>
+Real-world behavior often differs from planned scenarios; pilot tests help refine estimates.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<p><strong>How accurate are AI token cost estimators?</strong><br/>
+They provide reliable ballpark figures for planning. For mission-critical budgeting, always verify with current provider rates and run a small-scale test.</p>
+<p><strong>Why do input and output tokens have different costs?</strong><br/>
+Output (AI-generated text) is more computationally intensive and thus more expensive.</p>
+<p><strong>Can these tools be used for models other than GPT-3/4?</strong><br/>
+Yes, by updating the tokenization logic and pricing to fit the other model’s specs.</p>
+<p><strong>What if I enter invalid data in an estimator tool?</strong><br/>
+Modern calculators handle errors gracefully and prompt users to correct inputs.</p>
+<p><strong>How can I reduce AI chatbot costs?</strong><br/>
+Shorten prompts and responses, select smaller or more efficient models, batch non-urgent tasks, regularly review and optimize usage.</p>
+<p><strong>What’s the difference between fixed-price and time-and-material cost estimation?</strong><br/>
+Fixed-price is best for well-defined projects; T&amp;M is flexible for evolving scopes.</p>
+<h2 id="real-world-impact-and-roi">Real-World Impact and ROI</h2>
+<ul>
+<li>Microsoft’s study shows AI yields an average 3.5X return on investment</li>
+<li>Netflix’s AI recommendation engine saves $1 billion+ annually by optimizing user engagement</li>
+<li>Walmart’s supply chain AI cut unit costs by 20%</li>
+</ul>
+<h2 id="actionable-next-steps">Actionable Next Steps</h2>
+<p><strong>1. Try a Token Usage Calculator</strong><br/>
+Use online tools like Latitude Token Usage Calculator or Prompts.ai Estimator.</p>
+<p><strong>2. For Project Managers</strong><br/>
+Integrate Avaza Budgeting for dynamic estimates and live tracking.</p>
+<p><strong>3. Regular Review &amp; Optimization</strong><br/>
+Analyze usage and optimize flows or AI models as needed.</p>
+<p><strong>4. Consult Experts for Large Projects</strong><br/>
+For enterprise-scale deployments, consult AI cost specialists or your provider.</p>
+<p><strong>5. Document Assumptions &amp; Buffers</strong><br/>
+Keep clear records of how you estimate costs and apply contingency buffers.</p>
+<h2 id="related-terms">Related Terms</h2>
+<p><strong>Tokenization:</strong> The process by which text is split into tokens for AI processing.<br/>
+<strong>Predictive Analytics:</strong> AI-driven forecasting for trends, resource use, or costs.<br/>
+<strong>Project Budget:</strong> Comprehensive financial plan for a project.<br/>
+<strong>Fixed Price / Time &amp; Material:</strong> Common pricing models for AI and software projects.<br/>
+<strong>Data-Driven Estimation:</strong> Using historical data and analytics to refine predictions.<br/>
+<strong>Per-Message Pricing:</strong> A billing approach where each AI message has a set cost.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://quickchat.ai/post/how-much-does-chatbot-cost" rel="nofollow noopener noreferrer" target="_blank">Quickchat AI: How Much Does a Chatbot Really Cost in 2025?</a></li>
+<li><a href="https://quickchat.ai/post/how-much-does-chatbot-cost#2-chatbot-pricing-models-understanding-your-options" rel="nofollow noopener noreferrer" target="_blank">Quickchat AI: Chatbot Pricing Models</a></li>
+<li><a href="https://quickchat.ai/post/how-much-does-chatbot-cost#3-eight-key-cost-drivers-to-budget-for" rel="nofollow noopener noreferrer" target="_blank">Quickchat AI: Eight Key Cost Drivers</a></li>
+<li><a href="https://www.useinvent.com/blog/complete-guide-to-ai-chatbot-per-message-pricing-for-customer-support-lead-engagement-and-more" rel="nofollow noopener noreferrer" target="_blank">Invent: Complete Guide to AI Chatbot per-message pricing</a></li>
+<li><a href="https://www.useinvent.com/pricing" rel="nofollow noopener noreferrer" target="_blank">Invent: Pricing Calculator</a></li>
+<li><a href="https://latitude-blog.ghost.io/blog/token-usage-calculator-ai-cost-planning/" rel="nofollow noopener noreferrer" target="_blank">Latitude: Token Usage Calculator for AI Cost Planning</a></li>
+<li><a href="https://www.prompts.ai/zh/blog/ai-token-cost-estimator" rel="nofollow noopener noreferrer" target="_blank">Prompts.ai: AI Token Cost Estimator</a></li>
+<li><a href="https://www.avaza.com/project-cost-estimation/" rel="nofollow noopener noreferrer" target="_blank">Avaza: Project Cost Estimation</a></li>
+<li><a href="https://www.avaza.com/expense-management-software" rel="nofollow noopener noreferrer" target="_blank">Avaza: Expense Management Software</a></li>
+<li><a href="https://www.coherentsolutions.com/insights/ai-development-cost-estimation-pricing-structure-roi" rel="nofollow noopener noreferrer" target="_blank">Coherent Solutions: AI Development Cost Estimation</a></li>
+<li><a href="https://openai.com/pricing" rel="nofollow noopener noreferrer" target="_blank">OpenAI: Pricing</a></li>
+<li><a href="https://platform.openai.com/tokenizer" rel="nofollow noopener noreferrer" target="_blank">OpenAI: Tokenizer</a></li>
+<li><a href="https://blogs.microsoft.com/blog/2023/11/02/new-study-validates-the-business-value-and-opportunity-of-ai/" rel="nofollow noopener noreferrer" target="_blank">Microsoft: New study validates business value of AI</a></li>
+<li><a href="https://www.rebuyengine.com/blog/netflix" rel="nofollow noopener noreferrer" target="_blank">Rebuy Engine: Netflix Case Study</a></li>
+<li><a href="https://aiexpert.network/case-study-walmarts-ai-enhanced-supply-chain-operations/" rel="nofollow noopener noreferrer" target="_blank">AI Expert Network: Walmart AI Supply Chain</a></li>
+<li><a href="https://www.siemens.com/global/en/products/services/digital-enterprise-services/analytics-artificial-intelligence-services/predictive-services/senseye-predictive-maintenance/getting-started.html" rel="nofollow noopener noreferrer" target="_blank">Siemens: Senseye Predictive Maintenance</a></li>
+<li><a href="https://www.pmi.org/pmbok-guide-standards/foundational/pmbok" rel="nofollow noopener noreferrer" target="_blank">PMI: PMBOK Guide</a></li>
+<li><a href="https://www.atlassian.com/software/jira/align" rel="nofollow noopener noreferrer" target="_blank">Atlassian: Jira Align</a></li>
+<li><a href="https://www.promptingguide.ai/" rel="nofollow noopener noreferrer" target="_blank">Prompt Engineering Guide</a></li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/error-handler---try-catch/">
+                    Error Handler / Try-Catch
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    An error handler, often a Try-Catch block, manages unexpected failures in automation and AI chatbots...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/error-handler---try-catch/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/state-machine/">
+                    State Machine
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A computational model that tracks how a system moves between different states based on triggers, com...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/state-machine/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/bottlenecks/">
+                    Bottlenecks
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    The slowest step in a process that limits how much work can be completed, like a bottle's narrow nec...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/bottlenecks/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/escalation/">
+                    Escalation
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    The process of transferring a difficult or urgent issue to someone with more expertise or authority ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/escalation/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/false-negative/">
+                    False Negative
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A <a data-lb="1" href="/en/glossary/false-negative/" title="False Negative glossary entry">False Negative</a> is when an <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI system</a> fails to detect a real problem or request that actually exists...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/false-negative/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hybrid-system/">
+                    Hybrid System
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A collaborative framework where AI and humans work together, combining machine speed and consistency...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hybrid-system/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/cost-estimation/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+  });
+</script>
+</body>
+</html>

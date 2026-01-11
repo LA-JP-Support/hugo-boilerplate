@@ -15,7 +15,9 @@ lastmod: '2025-12-19'
 draft: false
 e-title: Entity Linking
 term: えんてぃてぃりんきんぐ
-url: "/ja/glossary/Entity-Linking/"
+url: "/ja/glossary/entity-linking/"
+aliases:
+- "/ja/glossary/Entity-Linking/"
 ---
 ## エンティティリンキングとは?
 エンティティリンキングは、自然言語処理(NLP)における基盤的なタスクであり、機械が非構造化テキスト内のエンティティを識別し、各言及を知識ベース内の特定のエントリに接続することを可能にします。このプロセスは人間の言語を構造化された実用的なデータに変換し、セマンティック検索、コンテンツ推薦、知識グラフ構築、AI駆動型アプリケーションに不可欠なものとなっています。
@@ -26,7 +28,26 @@ url: "/ja/glossary/Entity-Linking/"
 
 ## 主要な応用分野
 
-**検索エンジンとセマンティック検索**エンティティリンキングは、クエリと文書の曖昧さを解消することで検索の関連性を向上させます。ユーザーが「Paris」を検索した際、クエリの文脈が旅行や地理を示唆する場合、システムはパリス・ヒルトンではなく都市に関する結果を優先できます。**コンテンツ推薦とパーソナライゼーション**リンクされたエンティティを通じてユーザーの興味とコンテンツトピックを整合させることで、推薦がより正確になります。「Jaguar」を自動車ブランドと動物で区別することで、無関係な提案を防ぎ、ユーザー体験を向上させます。**知識グラフ構築**エンティティリンキングは知識グラフの構築と充実を自動化し、テキストから事実と関係を抽出し、グラフ内の既存エンティティに接続します。**情報抽出とデータ統合**組織は非構造化文書を構造化データに変換し、ビジネスインテリジェンスと分析に活用することで、大規模なデータ駆動型意思決定を可能にします。**SEOと構造化データ**コンテンツ制作者は、Schema.orgを使用してエンティティリンクでページをマークアップすることで発見性を高め、検索エンジンがコンテンツをより適切に理解しランク付けできるようにします。**AIアシスタントとチャットボット**仮想アシスタントはエンティティリンキングを使用してユーザークエリを正確に理解し、リンクされた知識に基づいて文脈に適した応答を生成します。**多言語サポート**システムは言語や地域を超えたエンティティ参照を処理し、「football」がヨーロッパではサッカーに、米国ではアメリカンフットボールにリンクされることを保証します。
+**検索エンジンとセマンティック検索**  
+エンティティリンキングは、クエリと文書の曖昧さを解消することで検索の関連性を向上させます。ユーザーが「Paris」を検索した際、クエリの文脈が旅行や地理を示唆する場合、システムはパリス・ヒルトンではなく都市に関する結果を優先できます。
+
+**コンテンツ推薦とパーソナライゼーション**  
+リンクされたエンティティを通じてユーザーの興味とコンテンツトピックを整合させることで、推薦がより正確になります。「Jaguar」を自動車ブランドと動物で区別することで、無関係な提案を防ぎ、ユーザー体験を向上させます。
+
+**知識グラフ構築**  
+エンティティリンキングは知識グラフの構築と充実を自動化し、テキストから事実と関係を抽出し、グラフ内の既存エンティティに接続します。
+
+**情報抽出とデータ統合**  
+組織は非構造化文書を構造化データに変換し、ビジネスインテリジェンスと分析に活用することで、大規模なデータ駆動型意思決定を可能にします。
+
+**SEOと構造化データ**  
+コンテンツ制作者は、Schema.orgを使用してエンティティリンクでページをマークアップすることで発見性を高め、検索エンジンがコンテンツをより適切に理解しランク付けできるようにします。
+
+**AIアシスタントとチャットボット**  
+仮想アシスタントはエンティティリンキングを使用してユーザークエリを正確に理解し、リンクされた知識に基づいて文脈に適した応答を生成します。
+
+**多言語サポート**  
+システムは言語や地域を超えたエンティティ参照を処理し、「football」がヨーロッパではサッカーに、米国ではアメリカンフットボールにリンクされることを保証します。
 
 ## エンティティリンキングのプロセス
 
@@ -48,11 +69,37 @@ url: "/ja/glossary/Entity-Linking/"
 
 ## 技術的アプローチ
 
-**ルールベース手法**初期のシステムは手作りのルールとヒューリスティックを使用し、多くの場合ドメイン固有でした。解釈可能ですが、これらのアプローチはスケーラビリティに欠け、曖昧さに苦労します。**古典的機械学習**文脈、文字列類似性、エンティティタイプに関する特徴量エンジニアリングが、サポートベクターマシンやランダムフォレストなどのモデルに供給されました。これらの方法は大きな手作業を必要としましたが、ルールのみよりも改善されました。**Transformerベースの深層学習**現代のシステムは、言及の文脈と候補エンティティの説明の両方をエンコードするTransformer(BERT、RoBERTa)からの文脈埋め込みを活用します。例には、Ontotext CEEL、Amazon ReFinED、Facebook GENREがあります。これらのモデルは曖昧さを効果的に処理し、以前に見たことのないエンティティへのゼロショットリンキングをサポートします。**知識グラフ統合**グラフニューラルネットワークと埋め込みは、エンティティの属性、タイプ、関係を捉えることで曖昧性解消を強化し、エンティティ接続に関するより洗練された推論を可能にします。
+**ルールベース手法**  
+初期のシステムは手作りのルールとヒューリスティックを使用し、多くの場合ドメイン固有でした。解釈可能ですが、これらのアプローチはスケーラビリティに欠け、曖昧さに苦労します。
+
+**古典的機械学習**  
+文脈、文字列類似性、エンティティタイプに関する特徴量エンジニアリングが、サポートベクターマシンやランダムフォレストなどのモデルに供給されました。これらの方法は大きな手作業を必要としましたが、ルールのみよりも改善されました。
+
+**Transformerベースの深層学習**  
+現代のシステムは、言及の文脈と候補エンティティの説明の両方をエンコードするTransformer(BERT、RoBERTa)からの文脈埋め込みを活用します。例には、Ontotext CEEL、Amazon ReFinED、Facebook GENREがあります。これらのモデルは曖昧さを効果的に処理し、以前に見たことのないエンティティへのゼロショットリンキングをサポートします。
+
+**知識グラフ統合**  
+グラフニューラルネットワークと埋め込みは、エンティティの属性、タイプ、関係を捉えることで曖昧性解消を強化し、エンティティ接続に関するより洗練された推論を可能にします。
 
 ## 主要な課題
 
-**曖昧性**多くの用語には複数の可能な参照先があり(例:「Jaguar」が自動車ブランドまたは動物)、洗練された文脈分析が必要です。**名前のバリエーション**エンティティは別名、略語、ニックネーム、またはスペルミスとして現れ(「NYC」と「Big Apple」はどちらもニューヨーク市を指す)、マッチングを複雑にします。**スケーラビリティ**Wikidataのような大規模な知識ベースには数百万のエンティティが含まれており、リアルタイムリンキングは計算集約的です。**ゼロショット能力**システムは訓練中に見たことのないエンティティにリンクする必要があり、タイプと説明情報からの汎化が必要です。**多言語処理**エンティティ名と文脈は言語によって異なり、言語に依存しないまたは多言語アプローチが必要です。**知識ベースの進化**新しいエンティティと事実が絶えず出現し、頻繁な再訓練なしにシステムが適応する必要があります。
+**曖昧性**  
+多くの用語には複数の可能な参照先があり(例:「Jaguar」が自動車ブランドまたは動物)、洗練された文脈分析が必要です。
+
+**名前のバリエーション**  
+エンティティは別名、略語、ニックネーム、またはスペルミスとして現れ(「NYC」と「Big Apple」はどちらもニューヨーク市を指す)、マッチングを複雑にします。
+
+**スケーラビリティ**  
+Wikidataのような大規模な知識ベースには数百万のエンティティが含まれており、リアルタイムリンキングは計算集約的です。
+
+**ゼロショット能力**  
+システムは訓練中に見たことのないエンティティにリンクする必要があり、タイプと説明情報からの汎化が必要です。
+
+**多言語処理**  
+エンティティ名と文脈は言語によって異なり、言語に依存しないまたは多言語アプローチが必要です。
+
+**知識ベースの進化**  
+新しいエンティティと事実が絶えず出現し、頻繁な再訓練なしにシステムが適応する必要があります。
 
 ## 主要なツールとプラットフォーム
 
@@ -66,11 +113,25 @@ url: "/ja/glossary/Entity-Linking/"
 
 ## 実用的なユースケース
 
-**医療検索最適化**医師プロフィールページでのエンティティリンキングにより、参照される医師、専門分野、クリニックを明確に識別することで、クリックスルー率が32%増加しました。**ロケーションベースSEO**ビジネスロケーションのエンティティリンクを追加することで、非ブランド検索クエリのインプレッションが46%、クリックが42%増加しました。**Eコマース製品の曖昧性解消**小売業者は「Apple」製品リストが果物ではなくApple Inc.にリンクされることを保証し、検索の関連性とコンバージョン率を向上させます。**多言語ニュース集約**ニュースサービスは、エンティティリンキングを通じて異なる言語の記事で同じ人物またはイベントへの参照を統一します。**ビジネスインテリジェンス**組織は、エンティティを知識グラフにリンクすることで、ニュース、研究、市場データから洞察を抽出し、自動分析を行います。
+**医療検索最適化**  
+医師プロフィールページでのエンティティリンキングにより、参照される医師、専門分野、クリニックを明確に識別することで、クリックスルー率が32%増加しました。
+
+**ロケーションベースSEO**  
+ビジネスロケーションのエンティティリンクを追加することで、非ブランド検索クエリのインプレッションが46%、クリックが42%増加しました。
+
+**Eコマース製品の曖昧性解消**  
+小売業者は「Apple」製品リストが果物ではなくApple Inc.にリンクされることを保証し、検索の関連性とコンバージョン率を向上させます。
+
+**多言語ニュース集約**  
+ニュースサービスは、エンティティリンキングを通じて異なる言語の記事で同じ人物またはイベントへの参照を統一します。
+
+**ビジネスインテリジェンス**  
+組織は、エンティティを知識グラフにリンクすることで、ニュース、研究、市場データから洞察を抽出し、自動分析を行います。
 
 ## 実装統合
 
-**Schema.orgマークアップ**エンティティリンキングのJSON-LD例:
+**Schema.orgマークアップ**  
+エンティティリンキングのJSON-LD例:
 
 ```json
 {
@@ -86,15 +147,42 @@ url: "/ja/glossary/Entity-Linking/"
 
 このマークアップは「Jaguar」が動物ではなく自動車ブランドを指すことを明確にします。
 
-**API統合**現代のツールは、既存システムへのシームレスな組み込みのためにREST API、SDK、GraphDB統合を提供します。クラウドサービスはマネージドソリューションを提供し、オープンソースオプションはオンプレミス展開を可能にします。
+**API統合**  
+現代のツールは、既存システムへのシームレスな組み込みのためにREST API、SDK、GraphDB統合を提供します。クラウドサービスはマネージドソリューションを提供し、オープンソースオプションはオンプレミス展開を可能にします。
 
 ## ベストプラクティス
 
-**高品質な知識ベースの使用**公開(Wikidata、DBpedia)または独自のものであれ、ドメインに適した権威ある、よく維持された知識ベースを選択します。**完全なパイプラインの実装**単一段階のアプローチに依存するのではなく、NER、候補生成、曖昧性解消を組み合わせます。**Transformerモデルの活用**現代の文脈埋め込みは、曖昧性解消の精度において古典的手法を大幅に上回ります。**ドメインベンチマークでの評価**一般的なベンチマークだけでなく、ユースケースを代表するデータでパフォーマンスをテストします。**SEOのためのSchemaマークアップの展開**検索可視性を向上させるために、Schema.orgの`sameAs`プロパティを使用してコンテンツを権威あるエンティティソースにリンクします。**内部知識グラフの維持**独自のエンティティを持つ組織は、正確なリンキングのためにカスタム知識ベースを構築し維持する必要があります。
+**高品質な知識ベースの使用**  
+公開(Wikidata、DBpedia)または独自のものであれ、ドメインに適した権威ある、よく維持された知識ベースを選択します。
+
+**完全なパイプラインの実装**  
+単一段階のアプローチに依存するのではなく、NER、候補生成、曖昧性解消を組み合わせます。
+
+**Transformerモデルの活用**  
+現代の文脈埋め込みは、曖昧性解消の精度において古典的手法を大幅に上回ります。
+
+**ドメインベンチマークでの評価**  
+一般的なベンチマークだけでなく、ユースケースを代表するデータでパフォーマンスをテストします。
+
+**SEOのためのSchemaマークアップの展開**  
+検索可視性を向上させるために、Schema.orgの`sameAs`プロパティを使用してコンテンツを権威あるエンティティソースにリンクします。
+
+**内部知識グラフの維持**  
+独自のエンティティを持つ組織は、正確なリンキングのためにカスタム知識ベースを構築し維持する必要があります。
 
 ## 関連概念
 
-**エンティティ曖昧性解消**は、類似した名前を持つエンティティを区別し、リンキングプロセスの中核コンポーネントを形成します。**知識ベース**は、Wikidata、DBpedia、またはドメイン固有のデータベースのような事実とエンティティの構造化リポジトリです。**固有表現認識**は、リンキング前の最初のステップとしてテキスト内のエンティティ言及を検出します。**知識グラフ**は、エンティティをノード、関係をエッジとするグラフ構造の知識ベースです。**セマンティックアノテーション**は、強化された処理のために機械可読なエンティティ参照でコンテンツにタグを付けます。**照合サービス**は、異なるデータセット間で同等のエンティティをマッピングおよびマージします。
+**エンティティ曖昧性解消**は、類似した名前を持つエンティティを区別し、リンキングプロセスの中核コンポーネントを形成します。
+
+**知識ベース**は、Wikidata、DBpedia、またはドメイン固有のデータベースのような事実とエンティティの構造化リポジトリです。
+
+**固有表現認識**は、リンキング前の最初のステップとしてテキスト内のエンティティ言及を検出します。
+
+**知識グラフ**は、エンティティをノード、関係をエッジとするグラフ構造の知識ベースです。
+
+**セマンティックアノテーション**は、強化された処理のために機械可読なエンティティ参照でコンテンツにタグを付けます。
+
+**照合サービス**は、異なるデータセット間で同等のエンティティをマッピングおよびマージします。
 
 ## まとめ
 
@@ -102,33 +190,18 @@ url: "/ja/glossary/Entity-Linking/"
 
 ## 参考文献
 
-
-1. Ontotext. (n.d.). What is Entity Linking. Ontotext Knowledge Hub.
-
-2. Amazon Science. (n.d.). Improving Entity Linking Between Texts and Knowledge Bases. Amazon Science Blog.
-
-3. Schema App. (n.d.). What is Entity Linking. Schema App.
-
-4. Wei Shen et al. (n.d.). Entity Linking with a Knowledge Base. Research Paper.
-
-5. Microsoft Azure. (n.d.). Entity Linking Overview. Microsoft Learn.
-
-6. Ontotext. (n.d.). Common English Entity Linking. Ontotext Blog.
-
-7. Ontotext. (n.d.). Semantic Search. Ontotext Knowledge Hub.
-
-8. Amazon Science. (n.d.). ReFinED Paper. Amazon Science Publications.
-
-9. Google Cloud. (n.d.). Natural Language API. Google Cloud Documentation.
-
-10. Facebook Research. (n.d.). BLINK. URL: https://github.com/facebookresearch/BLINK
-
-11. Ontotext. (n.d.). Knowledge Graph Embeddings. Ontotext Knowledge Hub.
-
-12. Ontotext. (n.d.). Natural Language Querying. Ontotext Knowledge Hub.
-
-13. Ontotext. (n.d.). Graph RAG. Ontotext Knowledge Hub.
-
-14. Schema App. (n.d.). Marshfield Clinic Case Study. Schema App Customer Stories.
-
-15. Ontotext Metadata Studio. Metadata Management Tool. URL: https://www.ontotext.com/products/ontotext-metadata-studio/
+- [Ontotext: What is Entity Linking](https://www.ontotext.com/knowledgehub/fundamentals/what-is-entity-linking/)
+- [Amazon Science: Improving Entity Linking Between Texts and Knowledge Bases](https://www.amazon.science/blog/improving-entity-linking-between-texts-and-knowledge-bases)
+- [Schema App: What is Entity Linking](https://www.schemaapp.com/schema-markup/what-is-entity-linking/)
+- [Wei Shen et al.: Entity Linking with a Knowledge Base (PDF)](https://dbgroup.cs.tsinghua.edu.cn/wangjy/papers/TKDE14-entitylinking.pdf)
+- [Microsoft Azure: Entity Linking Overview](https://learn.microsoft.com/en-us/azure/ai-services/language-service/entity-linking/overview)
+- [Ontotext: Common English Entity Linking](https://www.ontotext.com/blog/common-english-entity-linking-linking-text-to-knowledge-fast-and-efficient/)
+- [Ontotext: Semantic Search](https://www.ontotext.com/knowledgehub/fundamentals/what-is-semantic-search/)
+- [Amazon Science: ReFinED Paper](https://www.amazon.science/publications/refined-an-efficient-zero-shot-capable-approach-to-end-to-end-entity-linking)
+- [Google Cloud: Natural Language API](https://cloud.google.com/natural-language/docs)
+- [Facebook Research: BLINK](https://github.com/facebookresearch/BLINK)
+- [Ontotext: Knowledge Graph Embeddings](https://www.ontotext.com/knowledgehub/fundamentals/what-are-knowledge-graph-embeddings/)
+- [Ontotext: Natural Language Querying](https://www.ontotext.com/knowledgehub/fundamentals/what-is-natural-language-querying/)
+- [Ontotext: Graph RAG](https://www.ontotext.com/knowledgehub/fundamentals/what-is-graph-rag/)
+- [Schema App: Marshfield Clinic Case Study](https://www.schemaapp.com/customer-stories/how-marshfield-clinic-leveraged-schema-markup-to-improve-search-traffic-prepare-for-ai-search/)
+- [Ontotext: Products - Ontotext Metadata Studio](https://www.ontotext.com/products/ontotext-metadata-studio/)

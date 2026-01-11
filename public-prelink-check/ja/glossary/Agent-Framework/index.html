@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>エージェントフレームワーク | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/agent-framework/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="エージェントフレームワークの包括的ガイド - インテリジェントな自律システムを構築するためのアーキテクチャパターン、実装戦略、ベストプラクティスを解説します。" name="description"/>
+<meta content="エージェントフレームワーク, 自律エージェント, マルチエージェントシステム, インテリジェントエージェント, エージェントアーキテクチャ" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/agent-framework/" property="og:url"/>
+<meta content="エージェントフレームワーク | SmartWeb" property="og:title"/>
+<meta content="エージェントフレームワークの包括的ガイド - インテリジェントな自律システムを構築するためのアーキテクチャパターン、実装戦略、ベストプラクティスを解説します。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/agent-framework/" name="twitter:url"/>
+<meta content="エージェントフレームワーク | SmartWeb" name="twitter:title"/>
+<meta content="エージェントフレームワークの包括的ガイド - インテリジェントな自律システムを構築するためのアーキテクチャパターン、実装戦略、ベストプラクティスを解説します。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190816" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190816" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190816"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126096741115000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126096741115000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126096741115000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126096741115000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">エージェントフレームワーク</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        エージェントフレームワーク
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Agent Framework
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          エージェントフレームワークの包括的ガイド - インテリジェントな自律システムを構築するためのアーキテクチャパターン、実装戦略、ベストプラクティスを解説します。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                エージェントフレームワーク
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                自律エージェント
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                マルチエージェントシステム
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                インテリジェントエージェント
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                エージェントアーキテクチャ
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="エージェントフレームワークとは何か">エージェントフレームワークとは何か?</h2>
+<p>エージェントフレームワークとは、環境を認識し、意思決定を行い、特定の目標を達成するための行動を取ることができる、インテリジェントな自律エージェントを作成、デプロイ、管理するために設計された包括的なソフトウェアアーキテクチャおよび開発プラットフォームです。これらのフレームワークは、独立して、またはマルチエージェント環境内で協調して動作できる高度なエージェントベースシステムを構築するために必要な基盤インフラストラクチャ、ツール、抽象化を提供します。エージェントフレームワークは、エージェントの通信、調整、学習、適応に必要な複雑な基盤メカニズムをカプセル化し、開発者がコアエージェント機能をゼロから構築するのではなく、ドメイン固有の動作とロジックの実装に集中できるようにします。</p>
+<p>エージェントフレームワークの概念は、<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>、分散システム、ソフトウェアエンジニアリングの交差点から生まれ、自律的な実体が相互作用して集団的な目標を達成する生物学的システムからインスピレーションを得ています。現代のエージェントフレームワークは、<a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>、自然言語処理、知識表現、分散コンピューティングなどの先進技術を組み込み、複雑で動的かつ不確実な環境を処理できるエージェントを作成します。これらのフレームワークは通常、エージェント通信のための標準化されたインターフェース、調整と交渉のための組み込みプロトコル、知識共有と学習のためのメカニズム、大規模なエージェント集団を監視・管理するためのツールを提供します。</p>
+<p>エージェントフレームワークは、単純な反応型システムから、推論、計画、時間経過とともに適応できる複雑な認知アーキテクチャまで、幅広いアプリケーションを開発するためのバックボーンとして機能します。分散コンピューティング、並行処理、エージェント間通信の技術的複雑さを抽象化しながら、耐障害性、スケーラビリティ、セキュリティのための堅牢なメカニズムを提供します。フレームワークアプローチにより、ロボティクス、自動運転車、スマートシティ、金融取引、サプライチェーン管理、インテリジェントパーソナルアシスタントなど、多様なドメインにわたるエージェントベースソリューションの迅速なプロトタイピングとデプロイが可能になります。標準化された開発パターンと再利用可能なコンポーネントを提供することで、エージェントフレームワークはイノベーションを加速し、信頼性、保守性、相互運用性を確保しながら、インテリジェントシステムの市場投入までの時間を短縮します。</p>
+<h2 id="エージェントフレームワークのコアコンポーネント">エージェントフレームワークのコアコンポーネント</h2>
+<p><strong>エージェントランタイム環境</strong> - フレームワークエコシステム内でのエージェントの作成、初期化、実行、一時停止、終了を含む、エージェントライフサイクル管理に必要なインフラストラクチャを提供する基盤実行プラットフォーム。</p>
+<p><strong>通信ミドルウェア</strong> - エージェントが情報を交換し、活動を調整し、効果的に協力できるようにする高度なメッセージングおよび通信プロトコル。FIPA-ACLなどの標準やカスタムメッセージパッシングメカニズムを実装することが多い。</p>
+<p><strong>知識管理システム</strong> - エージェントが意思決定と推論プロセスに利用できるドメイン知識、オントロジー、共有情報を保存、整理、アクセスするための集中型または分散型リポジトリ。</p>
+<p><strong>調整メカニズム</strong> - エージェントの相互作用を管理し、競合を解決し、協調タスクを編成し、交渉と合意形成メカニズムを通じてシステム全体の一貫した動作を確保するための組み込みプロトコルとアルゴリズム。</p>
+<p><strong>学習・適応モジュール</strong> - 強化学習やニューラルネットワーク統合を含む、経験、フィードバック、環境観察を通じてエージェントが時間とともにパフォーマンスを向上させることを可能にする統合機械学習機能。</p>
+<p><strong>セキュリティ・信頼フレームワーク</strong> - 認証、認可、暗号化、信頼管理システムを含む包括的なセキュリティ対策。安全なエージェント相互作用を確保し、悪意のある動作から保護する。</p>
+<p><strong>監視・管理ツール</strong> - エージェントの動作、パフォーマンスメトリクス、システムヘルスを観察し、デバッグ、最適化、システムメンテナンスのためのメカニズムを提供する管理インターフェースと診断機能。</p>
+<h2 id="エージェントフレームワークの動作原理">エージェントフレームワークの動作原理</h2>
+<p>エージェントフレームワークは、エージェントのライフサイクル全体を管理し、自律的な実体間のシームレスな相互作用を促進する、相互接続されたプロセスの高度なオーケストレーションを通じて動作します。ワークフローは<strong>エージェントのインスタンス化</strong>から始まり、フレームワークは事前定義されたテンプレートまたは仕様に基づいて新しいエージェントインスタンスを作成し、必要な<a data-lb="1" href="/ja/glossary/computational-resources/" title="CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。">計算リソース</a>を割り当て、エージェントの知識ベース、目標、動作パラメータを初期化します。この段階で、フレームワークはエージェントのアイデンティティ、セキュリティ認証情報、通信チャネルを確立します。</p>
+<p>インスタンス化に続いて、フレームワークは<strong>環境認識フェーズ</strong>に入ります。ここでエージェントは、さまざまなセンサー、データフィード、またはAPI接続を通じて周囲を継続的に監視し、入力情報を処理して内部の世界モデルを更新します。次に<strong>意思決定プロセス</strong>が起動し、エージェントの推論能力、学習した動作、目標指向の計画を利用して、現在の環境条件と目標に基づいて適切な行動を決定します。</p>
+<p>フレームワークは、標準化されたメッセージングプロトコルを通じて<strong>エージェント間通信</strong>を促進し、エージェントが情報を共有し、リソースを交渉し、活動を調整し、協力的なパートナーシップを形成できるようにします。<strong>アクション実行</strong>は、エージェントがアクチュエータ、API呼び出し、またはシステムコマンドを通じて決定を実装するときに発生し、フレームワークは実行の成功を監視し、発生したエラーや例外を処理します。</p>
+<p><strong>学習と適応</strong>プロセスはバックグラウンドで継続的に実行され、エージェントのパフォーマンス、環境フィードバック、相互作用の結果を分析して、将来の意思決定能力を洗練させます。フレームワークは各サイクルを<strong>状態の永続化とレポート</strong>で終了し、エージェントの状態を保存し、活動をログに記録し、管理者や他の関係者にシステム全体のステータス更新を提供します。</p>
+<p><strong>ワークフローの例</strong>: スマートシティの交通管理システムでは、信号機エージェントがセンサーを通じて車両密度を認識し、隣接する交差点エージェントと通信して信号タイミングを調整し、最適化アルゴリズムに基づいて意思決定を行い、信号変更を実行し、交通フローパターンから学習し、中央管理システムにパフォーマンスメトリクスを報告します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>迅速な開発とデプロイ</strong> - エージェントフレームワークは、事前構築されたコンポーネント、標準化されたインターフェース、実証済みのアーキテクチャパターンを提供することで、複雑なエージェントインフラストラクチャをゼロから実装する必要をなくし、開発プロセスを大幅に加速します。</p>
+<p><strong>スケーラビリティとパフォーマンス</strong> - 分散コンピューティング、負荷分散、リソース管理のための組み込みメカニズムにより、エージェントシステムは複数のマシンにわたって水平方向にスケールし、増加するワークロードを効率的に処理できます。</p>
+<p><strong>相互運用性と標準準拠</strong> - フレームワークは業界標準とプロトコルを実装することが多く、異なるベンダーやプラットフォームのシステムとエージェントがシームレスに通信・協力できることを保証します。</p>
+<p><strong>耐障害性と信頼性</strong> - フレームワークに組み込まれた堅牢なエラー処理、冗長性メカニズム、回復手順により、個々のエージェントが故障してもシステムの回復力と継続的な動作が確保されます。</p>
+<p><strong>モジュール性と再利用性</strong> - コンポーネントベースのアーキテクチャにより、開発者は大幅な変更なしに異なるアプリケーションやドメインに簡単に統合できる再利用可能なエージェントモジュールを作成できます。</p>
+<p><strong>セキュリティと信頼管理</strong> - 暗号化、認証、アクセス制御を含む包括的なセキュリティ機能により、悪意のあるエージェントから保護し、安全なマルチエージェント相互作用を確保します。</p>
+<p><strong>監視とデバッグ機能</strong> - システム観察、パフォーマンス分析、デバッグのための組み込みツールにより、複雑なエージェントシステムの保守、最適化、トラブルシューティングが容易になります。</p>
+<p><strong>コスト効率</strong> - 開発時間の短縮、保守オーバーヘッドの削減、リソース利用の改善により、エージェントシステムをゼロから構築する場合と比較して大幅なコスト削減が実現します。</p>
+<p><strong>柔軟性と適応性</strong> - フレームワークの抽象化により、基盤となるインフラストラクチャや通信メカニズムを変更することなく、エージェントの動作を簡単に変更・拡張できます。</p>
+<p><strong>知識共有とコラボレーション</strong> - 標準化された知識表現と共有メカニズムにより、エージェントは集合知を活用し、互いの経験から効果的に学習できます。</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p><strong>自動運転車の調整</strong> - 車線変更、交差点のナビゲーション、交通最適化を調整しながら、リアルタイムの道路状況情報を共有する必要がある自動運転車両のフリート管理。</p>
+<p><strong>スマートグリッド管理</strong> - 電力網全体で需要と供給のバランスを取るインテリジェントエージェントを通じた、分散エネルギーリソース、デマンドレスポンスシステム、グリッド最適化の制御。</p>
+<p><strong>金融取引システム</strong> - 市場状況を分析し、取引を実行し、異なる金融商品や市場にわたってリスクを管理する複数のエージェントによるアルゴリズム取引戦略の実装。</p>
+<p><strong>サプライチェーン最適化</strong> - サプライヤー、製造業者、流通業者、小売業者を表すエージェントが協力して在庫と配送スケジュールを最適化する複雑な物流ネットワークの調整。</p>
+<p><strong>ロボットスウォームの調整</strong> - 捜索救助、環境モニタリング、建設プロジェクトなどのタスクで協力して作業する大量のロボットの管理。</p>
+<p><strong>インテリジェントパーソナルアシスタント</strong> - 会議のスケジュール設定、旅行の予約、スマートホームデバイスの管理、複雑な複数ステップのタスクを処理するために他のエージェントと調整できる高度なAIアシスタントの作成。</p>
+<p><strong>サイバーセキュリティ防御</strong> - ネットワークトラフィックを監視し、脅威を検出し、インシデント対応を調整し、進化する攻撃パターンに基づいて防御戦略を適応させるセキュリティエージェントの展開。</p>
+<p><strong>医療管理システム</strong> - 予約を管理し、バイタルサインを監視し、医療提供者間を調整し、リソース配分を最適化するエージェントを通じた患者ケアの調整。</p>
+<p><strong>スマートシティインフラストラクチャ</strong> - 調整されたエージェントネットワークを通じた、信号機、廃棄物収集、緊急サービス、公共交通機関を含む都市システムの管理。</p>
+<p><strong>Eコマース推奨システム</strong> - 顧客行動を分析し、在庫システムと調整し、価格設定と推奨を最適化するエージェントによるパーソナライズされたショッピング体験の実装。</p>
+<h2 id="エージェントフレームワークの比較">エージェントフレームワークの比較</h2>
+<table>
+<thead>
+<tr>
+<th>フレームワーク</th>
+<th>アーキテクチャ</th>
+<th>通信</th>
+<th>学習サポート</th>
+<th>デプロイモデル</th>
+<th>主要ドメイン</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JADE</td>
+<td>分散型</td>
+<td>FIPA-ACL</td>
+<td>限定的</td>
+<td>Javaベース</td>
+<td>研究/エンタープライズ</td>
+</tr>
+<tr>
+<td>Microsoft Bot Framework</td>
+<td>クラウドネイティブ</td>
+<td>REST/WebSocket</td>
+<td>ML.NET統合</td>
+<td>Azure/マルチクラウド</td>
+<td>対話型AI</td>
+</tr>
+<tr>
+<td>Apache Kafka Streams</td>
+<td>ストリームベース</td>
+<td>イベント駆動</td>
+<td>ストリームML</td>
+<td>分散型</td>
+<td>リアルタイム処理</td>
+</tr>
+<tr>
+<td>OpenAI Gym</td>
+<td>シミュレーション</td>
+<td>APIベース</td>
+<td>強化学習</td>
+<td>Python/クラウド</td>
+<td>AI研究</td>
+</tr>
+<tr>
+<td>ROS (Robot Operating System)</td>
+<td>モジュラー</td>
+<td>パブリッシュ/サブスクライブ</td>
+<td>TensorFlow/PyTorch</td>
+<td>Linux/組み込み</td>
+<td>ロボティクス</td>
+</tr>
+<tr>
+<td>Akka Actor Model</td>
+<td>アクターベース</td>
+<td>メッセージパッシング</td>
+<td>Akka ML</td>
+<td>JVM/Kubernetes</td>
+<td>分散システム</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>複雑性管理</strong> - エージェントフレームワークは、効果的に設計、実装、保守するために専門知識を必要とする重大なアーキテクチャの複雑性をもたらす可能性があり、エージェントベースのパラダイムに不慣れな開発チームを圧倒する可能性があります。</p>
+<p><strong>パフォーマンスオーバーヘッド</strong> - エージェントフレームワークに固有の抽象化レイヤーと通信プロトコルは、時間が重要なアプリケーションでシステムパフォーマンスに影響を与える可能性のあるレイテンシと計算オーバーヘッドをもたらす可能性があります。</p>
+<p><strong>デバッグとテストの困難さ</strong> - エージェントシステムの分散的で非同期的な性質により、従来のデバッグアプローチでは不十分となり、効果的なトラブルシューティングと品質保証のために専門的なツールと方法論が必要になります。</p>
+<p><strong>セキュリティの脆弱性</strong> - マルチエージェントシステムは、エージェントのなりすまし、メッセージの傍受、協調攻撃など、高度なセキュリティ対策と継続的な警戒を必要とする独自のセキュリティ課題を提示します。</p>
+<p><strong>スケーラビリティの<a data-lb="1" href="/ja/glossary/bottlenecks-comprehensive-glossary-action-guide-for-business-automation-and-ai-chatbot-operations/" title="ビジネス、自動化、AIチャットボット運用におけるボトルネックを理解します。プロセス、リソース、容量の制約を特定、分析、解決し、効率を向上させる方法を学びます。">ボトルネック</a></strong> - フレームワークはスケーラビリティを約束しますが、設計が不十分なエージェント相互作用や集中型コンポーネントは、システムの成長と効率を制限するパフォーマンスボトルネックを生み出す可能性があります。</p>
+<p><strong>統合の複雑性</strong> - エージェントフレームワークを既存のエンタープライズシステムに組み込むには、多くの場合、重大なアーキテクチャの変更と、レガシーシステムの互換性とデータ移行戦略の慎重な検討が必要です。</p>
+<p><strong>リソース管理</strong> - 複数のエージェント間での計算リソースの効率的な割り当てと管理には、実装と最適化が困難な高度なスケジューリングと負荷分散メカニズムが必要です。</p>
+<p><strong>標準の断片化</strong> - 異なるエージェントフレームワーク間での普遍的な標準の欠如は、複数のプロバイダーからのシステムを統合する際にベンダーロックインと相互運用性の問題につながる可能性があります。</p>
+<p><strong>学習収束の問題</strong> - マルチエージェント学習環境では、競合や振動を回避しながらエージェントが最適な動作に収束することを確保するには、慎重なアルゴリズム設計とパラメータ調整が必要です。</p>
+<p><strong>規制とコンプライアンスの課題</strong> - 規制された業界で動作するエージェントシステムは、従来のソフトウェアアーキテクチャでは適切にサポートされない可能性のある複雑なコンプライアンス要件、監査証跡、説明責任メカニズムに対処する必要があります。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>明確なエージェントの責任を定義する</strong> - 各エージェントタイプの明確に定義された役割、能力、境界を確立し、重複や競合を防ぎ、システム全体での効率的なタスク配分を確保します。</p>
+<p><strong>堅牢な通信プロトコルを実装する</strong> - 適切なエラー処理、タイムアウト管理、リトライロジックを備えた信頼性の高いメッセージパッシングメカニズムを設計し、さまざまなネットワーク条件下で一貫したエージェント相互作用を確保します。</p>
+<p><strong>包括的なセキュリティ対策を確立する</strong> - エージェント認証、メッセージ暗号化、アクセス制御、侵入検知を含む多層セキュリティを実装し、悪意のあるエージェントや外部の脅威から保護します。</p>
+<p><strong>耐障害性を考慮した設計</strong> - 個々のエージェントが故障したり利用できなくなったりしても機能を維持するために、冗長性、グレースフルデグラデーション、回復メカニズムをシステムに組み込みます。</p>
+<p><strong>リソース利用を最適化する</strong> - 効率的なリソース割り当て戦略、負荷分散、パフォーマンス監視を実装し、システムスループットを最大化し、計算の無駄を最小限に抑えます。</p>
+<p><strong>モジュラーなエージェントアーキテクチャを作成する</strong> - システム全体に影響を与えることなく簡単に変更、拡張、または置き換えることができる、疎結合で再利用可能なコンポーネントを持つエージェントを設計します。</p>
+<p><strong>包括的なログと監視を実装する</strong> - エージェントの動作、システムパフォーマンスを追跡し、潜在的な問題を事前に特定するために、詳細なログ記録、メトリクス収集、リアルタイム監視機能を確立します。</p>
+<p><strong>最初からスケーラビリティを計画する</strong> - 大規模な再構築を必要とせずに、エージェント集団、データ量、計算要件の増加に対応できるようにシステムアーキテクチャを設計します。</p>
+<p><strong>明確なデータガバナンスを確立する</strong> - マルチエージェントシステム全体での適切な情報管理を確保するために、データ所有権、アクセス権、プライバシー保護、共有プロトコルを定義します。</p>
+<p><strong>徹底的なテストと検証を実施する</strong> - デプロイ前にシステムの信頼性と正確性を確保するために、ユニットテスト、統合テスト、シミュレーションベースの検証を含む包括的なテスト戦略を実装します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>階層的エージェント組織</strong> - 監督エージェントが下位エージェントを管理する多層エージェント構造を実装し、大規模システム全体での複雑なタスク分解と効率的な調整を可能にします。</p>
+<p><strong>動的エージェント構成</strong> - 変化する環境条件とタスク要件に基づいて、新しい能力を動的に獲得したり、一時的な連合を形成したり、機能を統合したりできるエージェントを作成します。</p>
+<p><strong>連合学習の統合</strong> - データプライバシーを保持し、通信オーバーヘッドを削減しながら、エージェントが協力してモデルをトレーニングする分散機械学習アプローチを組み込みます。</p>
+<p><strong>ブロックチェーンベースの信頼管理</strong> - 分散型環境でエージェント間の透明で不変の信頼関係と評判システムを確立するために、分散台帳技術を活用します。</p>
+<p><strong>量子強化エージェント通信</strong> - 超安全なエージェント相互作用と強化された計算能力を実現するために、量子通信プロトコルと量子コンピューティング統合を探求します。</p>
+<p><strong>ニューロモーフィックエージェントアーキテクチャ</strong> - リソース制約のある環境でより効率的な処理、学習、適応を可能にする脳にインスパイアされた計算モデルを実装します。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>自律エージェントエコシステム</strong> - 人間の介入なしに進化、適応、構造を最適化できる自己組織化エージェントコミュニティの開発により、より回復力があり効率的なシステムが実現します。</p>
+<p><strong>クロスプラットフォームエージェントモビリティ</strong> - エージェントが状態と能力を維持しながら、異なるフレームワーク、クラウドプロバイダー、コンピューティング環境間でシームレスに移行できるようにする強化されたポータビリティメカニズム。</p>
+<p><strong>説明可能なエージェントインテリジェンス</strong> - エージェントが意思決定プロセスを説明できるようにする解釈可能性と透明性機能の統合により、信頼と規制コンプライアンスが向上します。</p>
+<p><strong>エッジネイティブエージェントデプロイ</strong> - レイテンシと帯域幅要件を削減し、データソースに近いインテリジェント処理を可能にする、エッジコンピューティング環境向けのエージェントフレームワークの最適化。</p>
+<p><strong>量子古典ハイブリッドエージェント</strong> - 複雑な最適化と機械学習の問題をより効率的に解決するために、古典的および量子コンピューティングリソースの両方を活用するエージェントの開発。</p>
+<p><strong>持続可能なエージェントコンピューティング</strong> - 大規模マルチエージェントシステムの環境への影響を削減するための、エネルギー効率の高いエージェントアーキテクチャとグリーンコンピューティングプラクティスへの焦点。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>Wooldridge, M. (2009). An Introduction to MultiAgent Systems. John Wiley &amp; Sons.</li>
+<li>Russell, S., &amp; Norvig, P. (2020). Artificial Intelligence: A Modern Approach. Pearson Education.</li>
+<li>Foundation for Intelligent Physical Agents. (2002). FIPA Agent Communication Language Specifications.</li>
+<li>Hewitt, C. (1977). Viewing Control Structures as Patterns of Passing Messages. Artificial Intelligence, 8(3), 323-364.</li>
+<li>Stone, P., &amp; Veloso, M. (2000). Multiagent Systems: A Survey from a Machine Learning Perspective. Autonomous Robots, 8(3), 345-383.</li>
+<li>Jennings, N. R. (2001). An Agent-Based Approach for Building Complex Software Systems. Communications of the ACM, 44(4), 35-41.</li>
+<li>Luck, M., McBurney, P., &amp; Preist, C. (2003). Agent Technology: Enabling Next Generation Computing. AgentLink.</li>
+<li>Bordini, R. H., Hübner, J. F., &amp; Wooldridge, M. (2007). Programming Multi-Agent Systems in AgentSpeak using Jason. John Wiley &amp; Sons.</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/agent-training/">
+                    エージェント訓練
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    エージェント訓練とは、<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="人工知能(AI) の用語集ページ">AIシステム</a>が経験から学習し、変化する環境において特定の目標を達成するために独立した意思決定を行えるよう教育するプロセスです。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/agent-training/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/blended-agent/">
+                    ブレンデッドエージェント
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIシステムにおけるブレンデッドエージェントの包括的ガイド。ハイブリッドアーキテクチャ、実装戦略、実際のアプリケーションについて解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/blended-agent/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/agent-framework/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190816"></script>
+</body>
+</html>

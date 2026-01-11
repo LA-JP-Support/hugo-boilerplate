@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>BERT | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/bert/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="BERT(Bidirectional Encoder Representations from Transformers)の包括的ガイド - 言語理解のためのGoogleの革新的なNLPモデル" name="description"/>
+<meta content="BERT, トランスフォーマーモデル, 自然言語処理, 双方向エンコーディング, Google AI" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/bert/" property="og:url"/>
+<meta content="BERT | SmartWeb" property="og:title"/>
+<meta content="BERT(Bidirectional Encoder Representations from Transformers)の包括的ガイド - 言語理解のためのGoogleの革新的なNLPモデル" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/bert/" name="twitter:url"/>
+<meta content="BERT | SmartWeb" name="twitter:title"/>
+<meta content="BERT(Bidirectional Encoder Representations from Transformers)の包括的ガイド - 言語理解のためのGoogleの革新的なNLPモデル" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">BERT</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        BERT
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          BERT
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          BERT(Bidirectional Encoder Representations from Transformers)の包括的ガイド - 言語理解のためのGoogleの革新的なNLPモデル
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                BERT
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                トランスフォーマーモデル
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                自然言語処理
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                双方向エンコーディング
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Google AI
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="bertとは何か">BERTとは何か?</h2>
+<p>BERT(Bidirectional Encoder Representations from Transformers)は、2018年に<a data-lb="1" href="/ja/glossary/google/" title="Google の用語集ページ">Google</a> AIが開発した自然言語処理(NLP)における画期的な進歩を表しています。従来の言語モデルが左から右、または右から左へとテキストを順次処理するのに対し、BERTは単語の左右両方の文脈を同時に考慮する革新的な双方向アプローチを導入しています。この方法論における根本的な転換により、機械が人間の言語を理解し解釈する方法が変革され、BERTは現代の<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>における最も影響力のある開発の一つとなりました。</p>
+<p>BERTのアーキテクチャは、Transformerモデルを基盤としており、特に元のTransformerアーキテクチャのエンコーダ部分のみを利用しています。この設計選択により、BERTはすべての層において左右両方の文脈を共同で条件付けることで、深い双方向表現を作成できます。モデルは、Masked Language Model(MLM)とNext Sentence Prediction(NSP)という2つの新しい教師なしタスクを使用して、大規模なラベルなしテキストコーパスで事前学習されます。MLMタスクでは、BERTは入力内の特定の単語をランダムにマスクし、周囲の文脈に基づいてそれらを予測しようとします。一方、NSPは、ある文が別の文に論理的に続くかどうかを予測することで、文間の関係を理解するようモデルを訓練します。</p>
+<p>BERTをその前身と区別するのは、大幅なタスク固有のアーキテクチャ修正を必要とせずに、幅広い下流タスクに対してファインチューニングできる能力です。この汎用性により、BERTは検索エンジンや<a data-lb="1" href="/ja/glossary/chatbot/" title="チャットボットは、テキストまたは音声を通じて人間の会話をシミュレートするAI駆動のソフトウェアアプリケーションです。カスタマーサポート、情報検索、タスク自動化に使用されます。">チャットボット</a>から感情分析や文書分類システムまで、NLP領域全体にわたる数多くのアプリケーションの基盤となっています。モデルの成功は非常に大きく、特定の制限に対処したり、特定のユースケースのパフォーマンスを向上させたりするために設計された、BERTベースの派生モデルと改良版の全ファミリーを生み出しました。2019年のGoogleによるBERTの検索アルゴリズムへの統合は、数十億人のユーザーがオンラインで情報とやり取りする方法に対するモデルの実用的な影響を示す重要な瞬間となりました。</p>
+<h2 id="コアtransformer技術">コアTransformer技術</h2>
+<p>Attentionメカニズム: セルフアテンションメカニズムにより、BERTは各単語を処理する際に、文内の異なる単語の重要性を重み付けできます。これにより、従来の逐次モデルがしばしば見逃す長距離依存関係や文脈的関係を捉えることができます。マルチヘッドAttention: BERTは、構文的依存関係、意味的類似性、位置関係など、異なるタイプの関係に同時に焦点を当てることができる複数のアテンションヘッドを採用しています。各ヘッドは入力シーケンスの異なる側面に注意を向けることを学習します。位置エンコーディング: BERTはトークンを順次ではなく同時に処理するため、シーケンス内の単語の順序と位置に関する情報を維持するために位置埋め込みを使用します。これらの埋め込みは訓練中に学習され、入力埋め込みに追加されます。Layer Normalization: Transformerアーキテクチャの各サブレイヤーの前に適用されるLayer Normalizationは、特徴次元全体で入力を正規化することで、訓練を安定化し収束を改善します。フィードフォワードネットワーク: 各Transformerレイヤーには、アテンション出力に非線形変換を適用する位置ごとのフィードフォワードネットワークが含まれており、モデルが複雑なパターンと表現を学習できるようにします。残差接続: 各サブレイヤーの周囲のスキップ接続は、勾配消失問題を防ぎ、勾配がネットワークを直接流れることを可能にすることで、より深いネットワークの訓練を可能にします。双方向文脈: 自己回帰モデルとは異なり、BERTのエンコーダのみのアーキテクチャはシーケンス全体を同時に処理し、各位置が双方向のすべての他の位置に注意を向けることができます。</p>
+<h2 id="bertの動作原理">BERTの動作原理</h2>
+<p>BERTのワークフローは、事前学習とファインチューニングという2つの主要なフェーズで構成され、それぞれ特定のステップを含みます:</p>
+<p>事前学習フェーズ:1.データ準備: 大規模なラベルなしテキストコーパス(WikipediaやBookCorpusなど)は、WordPieceトークン化を使用してトークン化され、語彙外の用語を効果的に処理するために単語をサブワード単位に分割します。</p>
+<ol start="2">
+<li>
+<p>Masked Language Modeling: 入力トークンの約15%がマスキング用にランダムに選択され、80%が[MASK]トークンに置き換えられ、10%がランダムなトークンに置き換えられ、10%はマスキング戦略への過学習を防ぐために変更されません。</p>
+</li>
+<li>
+<p>Next Sentence Predictionのセットアップ: 文ペアが作成され、50%は実際の連続した文を表し、50%はランダムにペアリングされた文であり、モデルが文レベルの関係を学習するのに役立ちます。</p>
+</li>
+<li>
+<p>双方向訓練: モデルはシーケンス内のすべてのトークンを同時に処理し、セルフアテンションを使用して双方向からの文脈を組み込んだ表現を構築します。ファインチューニングフェーズ:5.タスク固有の適応: 事前学習されたBERTモデルの上にタスク固有のレイヤーが追加されます。通常、下流タスクに応じて単純な分類ヘッドまたは回帰レイヤーです。</p>
+</li>
+<li>
+<p>パラメータ初期化: 事前学習されたモデルのすべてのパラメータが初期化に使用され、すでに言語パターンと関係を理解している強力な出発点を提供します。</p>
+</li>
+<li>
+<p>エンドツーエンド訓練: BERTレイヤーとタスク固有レイヤーの両方を含むモデル全体が、<a data-lb="1" href="/ja/glossary/supervised-learning/" title="教師あり学習は、アルゴリズムがラベル付きデータから学習し、入力を望ましい出力にマッピングすることで、新しい未知のデータに対して正確な予測を行う、機械学習の基礎的なパラダイムです。">教師あり学習</a>を使用して特定のタスクのラベル付きデータでファインチューニングされます。</p>
+</li>
+<li>
+<p>勾配フロー: 逆伝播がすべてのモデルパラメータを更新し、事前学習された表現がターゲットタスクの特定の要件に適応できるようにします。ワークフローの例: 感情分析の場合、BERTは入力文「The movie was absolutely terrible」を処理し、各トークンの文脈埋め込みを作成します。ここで「terrible」は「movie」の文脈で理解され、「absolutely」は強調語として理解され、最終的に分類のための否定的感情を捉えた表現を生成します。</p>
+</li>
+</ol>
+<h2 id="主な利点">主な利点</h2>
+<p>優れた文脈理解: BERTの双方向性により、前後の単語の両方に依存する微妙な意味を捉えることができ、曖昧な用語や複雑な言語構造のより正確な解釈が可能になります。転移学習の効率性: 大規模なラベルなしコーパスでの事前学習により、BERTは最小限の追加訓練データと<a data-lb="1" href="/ja/glossary/computational-resources/" title="CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。">計算リソース</a>で特定のタスクに効率的に適応できる一般的な言語表現を学習できます。最先端のパフォーマンス: BERTは、GLUE、SQuAD、SWAGを含む多数のNLPベンチマークで記録的な結果を達成し、多様な言語理解タスクにわたる有効性を実証しています。訓練時間の短縮: 事前学習されたBERTモデルのファインチューニングは、通常、タスク固有のモデルをゼロから訓練する場合と比較して、大幅に少ない時間と計算リソースを必要とし、より多くの組織が高度なNLPにアクセスできるようになります。稀な単語の処理: WordPieceトークン化戦略により、BERTは語彙外の単語を既知のサブワードコンポーネントに分割することで効果的に処理でき、異なるドメインや言語にわたる堅牢性が向上します。多言語機能: 多言語BERTバリアントは100以上の言語でテキストを理解および処理でき、言語固有のモデル訓練なしにクロスリンガル転移学習とグローバルコンテキストでのアプリケーションを可能にします。スケーラブルなアーキテクチャ: BERTのTransformerベースの設計により、シーケンスの並列処理が可能になり、再帰的アーキテクチャよりも計算効率が高く、より大規模なデータセットでの訓練が可能になります。解釈可能性機能: BERTのアテンション重みは、特定の予測に対してモデルが入力のどの部分に焦点を当てているかについての洞察を提供し、モデルの決定に対するある程度の解釈可能性を提供します。堅牢な汎化: 広範な事前学習プロセスにより、BERTは未見のデータやドメインによく汎化し、過学習を減らし、実世界のアプリケーションでのパフォーマンスを向上させます。柔軟な入力処理: BERTは、単一の文、文ペア、より長い文書を含むさまざまな入力形式を処理でき、異なるタイプのNLPタスクとアプリケーションに対して汎用性があります。</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p>検索エンジン最適化: BERTは、ユーザークエリをより良く理解し、適切なコンテンツとマッチングすることで検索結果の関連性を向上させます。特に文脈的解釈を必要とする会話型およびロングテールクエリに効果的です。質問応答システム: BERTは読解タスクに優れており、大規模な文書コレクションや知識ベースから正確な回答を抽出できる洗練されたQAシステムの開発を可能にします。感情分析: モデルの文脈理解により、テキスト内の感情的トーンや意見の極性を判定するのに非常に効果的であり、ソーシャルメディアモニタリングや顧客フィードバック分析のアプリケーションをサポートします。テキスト分類: BERTは、メールフィルタリング、<a data-lb="1" href="/ja/glossary/content-moderation/" title="コンテンツモデレーションについて解説します。ユーザー生成コンテンツの監視、評価、管理を通じて、プラットフォームのガイドライン、コミュニティ基準、法的コンプライアンスを確保する仕組みです。">コンテンツモデレーション</a>、ニュース分類、さまざまなドメインにわたる自動タグ付けシステムなどのアプリケーションに対して、堅牢な文書分類機能を提供します。固有表現認識: モデルは、テキスト内の人物、組織、場所、日付などのエンティティを識別および分類でき、情報抽出と知識グラフ構築アプリケーションをサポートします。言語翻訳: BERTは、特にソース言語の文脈を理解し、複雑な文に対してより正確な翻訳を生成する際に、ニューラル機械翻訳システムの基盤として機能します。チャットボット開発: 会話型<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="人工知能(AI) の用語集ページ">AIシステム</a>は、BERTの言語理解機能を活用して、カスタマーサービスや仮想アシスタントアプリケーションにおいて、より自然で文脈に適した応答を提供します。コンテンツ推薦: BERTは、ユーザーの好みとコンテンツの説明を分析することで推薦システムを強化し、キーワードマッチングではなく意味的類似性に基づいて関連する記事、製品、メディアを提案します。法的文書分析: 法律事務所や法律技術企業は、契約分析、法的調査、コンプライアンスチェックにBERTを使用し、複雑な法律言語を理解し、関連する条項や判例を識別します。医療テキスト処理: ヘルスケアアプリケーションは、臨床<a data-lb="1" href="/ja/glossary/note/" title="社内チケットシステムにおけるノートとは何か、スタッフ専用コミュニケーションの目的、そしてドキュメント作成、コラボレーション、AI自動化にどのように使用されるかを学びます。">ノート</a>分析、医学文献レビュー、患者記録処理にBERTを利用し、非構造化医療テキストデータから洞察を抽出するのに役立ちます。</p>
+<h2 id="bertモデル比較">BERTモデル比較</h2>
+<table>
+<thead>
+<tr>
+<th>モデル</th>
+<th>パラメータ数</th>
+<th>レイヤー数</th>
+<th>隠れ層サイズ</th>
+<th>Attentionヘッド数</th>
+<th>訓練データ</th>
+<th>主な利点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BERT-Base</td>
+<td>110M</td>
+<td>12</td>
+<td>768</td>
+<td>12</td>
+<td>16GB</td>
+<td>バランスの取れたパフォーマンスと効率性</td>
+</tr>
+<tr>
+<td>BERT-Large</td>
+<td>340M</td>
+<td>24</td>
+<td>1024</td>
+<td>16</td>
+<td>16GB</td>
+<td>複雑なタスクでの高精度</td>
+</tr>
+<tr>
+<td>RoBERTa</td>
+<td>355M</td>
+<td>24</td>
+<td>1024</td>
+<td>16</td>
+<td>160GB</td>
+<td>改善された訓練方法論</td>
+</tr>
+<tr>
+<td>ALBERT</td>
+<td>12M-235M</td>
+<td>12-24</td>
+<td>768-4096</td>
+<td>12-64</td>
+<td>16GB</td>
+<td>パラメータ共有の効率性</td>
+</tr>
+<tr>
+<td>DistilBERT</td>
+<td>66M</td>
+<td>6</td>
+<td>768</td>
+<td>12</td>
+<td>16GB</td>
+<td>60%小型化、97%のパフォーマンス維持</td>
+</tr>
+<tr>
+<td>DeBERTa</td>
+<td>139M-1.5B</td>
+<td>12-48</td>
+<td>768-1536</td>
+<td>12-24</td>
+<td>160GB</td>
+<td>強化されたAttentionメカニズム</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p>計算要件: BERTモデル、特に大規模なバリアントは、訓練と推論の両方で相当な計算リソースを必要とし、リソース制約のある環境やリアルタイムアプリケーションでの展開を困難にします。メモリ消費: モデルの大きなパラメータ数とアテンションメカニズムにより、大量のメモリ使用が発生し、バッチサイズが制限される可能性があり、最適なパフォーマンスには特殊なハードウェアが必要になる場合があります。ファインチューニングの複雑さ: BERTは転移学習を可能にしますが、適切なファインチューニングには、破滅的忘却や過学習を避けるために、慎重なハイパーパラメータ選択、学習率スケジューリング、正則化技術が必要です。<a data-lb="1" href="/ja/glossary/inference-latency/" title="推論レイテンシとは、AIモデルに入力を提供してから予測結果を得るまでの時間遅延のことです。リアルタイムAIアプリケーションにおいて重要な指標であり、応答性とユーザーエクスペリエンスに影響を与えます。">推論レイテンシ</a>: 深いアーキテクチャとアテンション計算により、より単純なモデルと比較して推論時間が遅くなる可能性があり、<a data-lb="1" href="/ja/glossary/latency/" title="レイテンシとは、リクエストとシステムの応答との間の時間遅延のことです。AIインフラストラクチャ、Webアプリケーション、リアルタイムシステムにおいて重要な要素です。その種類、原因、削減戦略について解説します。">レイテンシ</a>に敏感なアプリケーションでは問題となる場合があります。ドメイン適応: BERTのパフォーマンスは、訓練データと大きく異なるドメインに適用された場合に低下する可能性があり、ドメイン固有のファインチューニングまたは関連するコーパスでの追加の事前学習が必要になります。解釈可能性の制限: アテンションの可視化にもかかわらず、BERTがどのように決定を下すかを正確に理解することは依然として困難であり、説明可能なAIや規制コンプライアンスを必要とするアプリケーションでは問題となる可能性があります。データ要件: 効果的なファインチューニングには通常、相当量のラベル付きデータが必要であり、専門ドメインや低リソース言語では利用できない場合があります。バージョン管理: BERTバリアントと改良版の急速な進化により、特定のアプリケーションに最も適切なモデルバージョンを選択し、展開全体で一貫性を維持することが困難になる場合があります。バイアスと公平性: BERTは訓練データに存在するバイアスを永続化する可能性があり、慎重な<a data-lb="1" href="/ja/glossary/bias-mitigation/" title="バイアス緩和とは、機械学習モデルにおける体系的な不公平性を削減または排除するための技術と戦略を指し、倫理的で公平なAIの成果を確保します。">バイアス緩和</a>戦略なしに、機密性の高いアプリケーションで不公平または差別的な結果につながる可能性があります。多言語の制限: 多言語BERTは存在しますが、低リソース言語でのパフォーマンスは制限される可能性があり、クロスリンガル転移の有効性は言語ペアとタスクによって大きく異なります。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p>モデル選択: 精度のニーズと計算制約のバランスを取り、効率性のためのDistilBERTやパフォーマンスのためのRoBERTaなどの特殊バージョンを考慮して、特定の要件に基づいて適切なBERTバリアントを選択します。データ前処理: 事前学習されたモデルと同じWordPiece語彙を使用して一貫したトークン化を実装し、特殊トークンを適切に処理し、切り捨ての問題を避けるために適切なシーケンス長管理を確保します。学習率スケジューリング: 破滅的忘却を防ぐためにファインチューニングには低い学習率(2e-5から5e-5)を使用し、ウォームアップ期間を実装し、収束を最適化するために異なるレイヤーに異なる学習率を検討します。正則化戦略: 特に小規模なデータセットや高度に専門化されたドメインで作業する場合、ファインチューニング中の過学習を防ぐためにドロップアウト、重み減衰、早期停止を適用します。バッチサイズの最適化: 利用可能なメモリと訓練の安定性とのバランスを取り、限られたハードウェアリソースでより大きなバッチサイズをシミュレートするために必要に応じて勾配累積を使用します。シーケンス長管理: データ分布と計算制約に基づいて最大シーケンス長を最適化し、BERTの制限を超える長い文書にはスライディングウィンドウなどの技術を使用します。評価方法論: タスクに適した指標を使用して包括的な評価を実装し、可能な場合は交差検証を行い、訓練中の過学習を監視するために別個の検証セットを使用します。ハードウェア最適化: 混合精度訓練、勾配チェックポイント、モデル並列化技術を利用して、訓練効率を最大化し、利用可能なハードウェアでより大きなバッチサイズを可能にします。バージョン管理: 再現性を確保し、必要に応じて以前のバージョンへのロールバックを可能にするために、モデル、訓練スクリプト、ハイパーパラメータの慎重なバージョン管理を維持します。<a data-lb="1" href="/ja/glossary/monitoring/" title="モニタリングとは、システム、アプリケーション、ネットワーク、ビジネスオペレーションに関するデータを収集、分析、対応する体系的かつ継続的なプロセスです。パフォーマンス、セキュリティ、ユーザーエクスペリエンスに関するリアルタイムの可視性を提供します。">モニタリング</a>とロギング: 問題を早期に特定し、訓練手順を効果的に最適化するために、訓練指標、損失曲線、検証パフォーマンスの包括的なロギングを実装します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p>レイヤーごとの学習率: BERTの異なるレイヤーに異なる学習率を適用し、通常、タスク固有のレイヤーには高い率を使用し、事前学習されたレイヤーには低い率を使用して、ファインチューニングの有効性を最適化します。段階的解凍: ファインチューニング中にBERTレイヤーを段階的に解凍し、上位レイヤーから始めて徐々に下位レイヤーを含めることで、破滅的忘却を防ぎながら適応を可能にします。マルチタスク学習: 汎化を改善し、異なるが関連するNLPアプリケーション全体で共有表現を活用するために、複数の関連タスクでBERTを同時に訓練します。知識蒸留: BERTの動作を模倣するように訓練することで、より小さく高速なモデルを作成し、元のモデルのパフォーマンスの多くを保持しながら大幅な高速化を実現します。敵対的訓練: モデルを欺くように設計された小さな摂動を含む敵対的例で訓練することでモデルの堅牢性を強化し、ノイズの多い入力や敵対的入力でのパフォーマンスを向上させます。アンサンブル手法: 複数のBERTモデルまたは異なるチェックポイントからの予測を組み合わせて精度を向上させ、分散を減らします。特に最大のパフォーマンスを必要とする重要なアプリケーションに効果的です。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p>効率性の改善: スパースアテンションメカニズム、線形アテンションバリアント、プルーニング技術などのより効率的なアーキテクチャの開発により、パフォーマンスレベルを維持しながら計算要件を削減します。マルチモーダル統合: テキスト、画像、音声を含む複数のモダリティを同時に処理できるBERTライクなモデルの拡張により、マルチメディアコンテンツのより包括的な理解を可能にします。Few-shot学習: 改善された事前学習目標、メタ学習アプローチ、より良い転移学習メカニズムを通じて、最小限の例で新しいタスクに適応するBERTの能力を強化します。ドメイン特化: 医学、法律、金融、科学などの分野の専門コーパスで事前学習されたドメイン固有のBERTバリアントの作成により、ドメイン固有のタスクでのパフォーマンスを向上させます。継続学習: 以前に獲得した知識を忘れることなく新しいデータから継続的に学習できるようにする技術の開発により、進化する言語パターンへの動的な適応をサポートします。解釈可能性の進歩: より良いアテンションの可視化、プロービング技術、説明方法を通じてモデルの解釈可能性を改善し、BERTの意思決定プロセスをより透明で信頼できるものにします。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Devlin, J., Chang, M. W., Lee, K., &amp; Toutanova, K. (2018). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. arXiv preprint arXiv:1810.04805.</p>
+</li>
+<li>
+<p>Rogers, A., Kovaleva, O., &amp; Rumshisky, A. (2020). A primer on neural network models for natural language processing. Journal of Artificial Intelligence Research, 57, 615-686.</p>
+</li>
+<li>
+<p>Liu, Y., Ott, M., Goyal, N., Du, J., Joshi, M., Chen, D., … &amp; Stoyanov, V. (2019). RoBERTa: A robustly optimized BERT pretraining approach. arXiv preprint arXiv:1907.11692.</p>
+</li>
+<li>
+<p>Lan, Z., Chen, M., Goodman, S., Gimpel, K., Sharma, P., &amp; Soricut, R. (2019). ALBERT: A lite BERT for self-supervised learning of language representations. arXiv preprint arXiv:1909.11942.</p>
+</li>
+<li>
+<p>Sanh, V., Debut, L., Chaumond, J., &amp; Wolf, T. (2019). DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter. arXiv preprint arXiv:1910.01108.</p>
+</li>
+<li>
+<p>He, P., Liu, X., Gao, J., &amp; Chen, W. (2020). DeBERTa: Decoding-enhanced BERT with disentangled attention. arXiv preprint arXiv:2006.03654.</p>
+</li>
+<li>
+<p>Tenney, I., Das, D., &amp; Pavlick, E. (2019). BERT rediscovers the classical NLP pipeline. Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics.</p>
+</li>
+<li>
+<p>Kenton, J. D. M. W. C., &amp; Toutanova, L. K. (2019). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. Proceedings of NAACL-HLT, 4171-4186.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/context-window/">
+                    コンテキストウィンドウ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    コンテキストウィンドウは、LLMが一度に処理できるトークンの最大数を定義し、会話履歴やコンテキストをどれだけ考慮できるかを決定します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/context-window/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/natural-language-processing/">
+                    自然言語処理
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    自然言語処理(NLP)は、<a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>や<a data-lb="1" href="/ja/glossary/deep-learning/" title="ディープラーニングは、多層ニューラルネットワークを使用してデータから複雑なパターンを学習する高度なAI技術です。画像認識、自然言語処理、生成AIに不可欠な技術となっています。">ディープラーニング</a>などのAI技術を用いて、コンピュータが人間の言語を理解し、解釈し、生成することを可能にします。テキスト分析や翻訳に活用されています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/natural-language-processing/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/ai-copywriting/">
+                    AIコピーライティング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    自動コンテンツ作成とマーケティング最適化のためのAIコピーライティングツール、テクニック、アプリケーションに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/ai-copywriting/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/content-summarization/">
+                    Content Summarization（コンテンツ要約）
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI駆動のテキスト要約は、重要な情報とコンテキストを保持しながら大規模なドキュメントを凝縮し、効率的な情報処理を実現します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/content-summarization/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/ernie-bot/">
+                    Ernie-Bot
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    高度な推論、画像認識、コード生成機能を備え、中国語で理解し応答するBaiduのAIアシスタント。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/ernie-bot/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/gpt/">
+                    GPT
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    # 新しいdescription:
+GPT（生成型事前学習済みトランスフォーマー）は、大量のテキストデータで学習したAIが、人間らしい文章を自動生成する技術です。質問への回答や文章作成など、様々な言語...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/gpt/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/bert/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

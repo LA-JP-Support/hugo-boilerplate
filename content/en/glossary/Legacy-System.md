@@ -2,7 +2,7 @@
 title: "Legacy System"
 date: 2025-12-19
 translationKey: Legacy-System
-description: "An older computer system that organizations keep using because it still works reliably and replacing it would be too costly and risky, despite newer technology being available."
+description: "An older computer system or software that organizations continue using because replacing it is expensive and risky, even though newer technology exists."
 keywords:
 - legacy system
 - system modernization
@@ -56,7 +56,9 @@ The operation of legacy systems typically follows established patterns that have
 
 7. **System Integration**: Legacy systems communicate with other applications through established integration points, which may include file transfers, database connections, or custom APIs.
 
-8. **Backup and Recovery**: Data protection follows established procedures that may involve tape backups, database dumps, or other traditional backup methods.**Example Workflow**: A banking legacy system processes daily transactions by receiving batch files overnight, validating account information against the mainframe database, executing business rules for interest calculations and fee assessments, updating customer records, and generating daily reports for branch operations.
+8. **Backup and Recovery**: Data protection follows established procedures that may involve tape backups, database dumps, or other traditional backup methods.
+
+**Example Workflow**: A banking legacy system processes daily transactions by receiving batch files overnight, validating account information against the mainframe database, executing business rules for interest calculations and fee assessments, updating customer records, and generating daily reports for branch operations.
 
 ## Key Benefits
 
@@ -106,12 +108,12 @@ The operation of legacy systems typically follows established patterns that have
 
 | Aspect | Legacy Systems | Modern Systems |
 |--------|----------------|----------------|
-| **Architecture**| Monolithic, tightly coupled components | Microservices, loosely coupled, modular design |
-| **Technology Stack**| Older languages (COBOL, FORTRAN), proprietary platforms | Modern languages (Java, Python, JavaScript), open standards |
-| **User Interface**| Text-based terminals, basic GUIs | Web-based, mobile-responsive, intuitive design |
-| **Integration**| Point-to-point, file-based, custom protocols | API-driven, standardized protocols, cloud-native |
-| **Scalability**| Vertical scaling, hardware-dependent | Horizontal scaling, cloud-elastic, containerized |
-| **Maintenance**| Specialized skills, vendor-dependent, expensive | Standard skills, community support, automated tools |
+| **Architecture** | Monolithic, tightly coupled components | Microservices, loosely coupled, modular design |
+| **Technology Stack** | Older languages (COBOL, FORTRAN), proprietary platforms | Modern languages (Java, Python, JavaScript), open standards |
+| **User Interface** | Text-based terminals, basic GUIs | Web-based, mobile-responsive, intuitive design |
+| **Integration** | Point-to-point, file-based, custom protocols | API-driven, standardized protocols, cloud-native |
+| **Scalability** | Vertical scaling, hardware-dependent | Horizontal scaling, cloud-elastic, containerized |
+| **Maintenance** | Specialized skills, vendor-dependent, expensive | Standard skills, community support, automated tools |
 
 ## Challenges and Considerations
 

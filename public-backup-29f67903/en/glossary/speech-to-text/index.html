@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Speech-to-Text | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/speech-to-text/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="A technology that converts spoken words into written text using artificial intelligence, commonly used in virtual assistants, transcription services, and voice-controlled devices." name="description"/>
+<meta content="speech-to-text, automatic speech recognition, voice recognition, ASR technology, speech processing" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/speech-to-text/" property="og:url"/>
+<meta content="Speech-to-Text | SmartWeb" property="og:title"/>
+<meta content="A technology that converts spoken words into written text using artificial intelligence, commonly used in virtual assistants, transcription services, and voice-controlled devices." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/speech-to-text/" name="twitter:url"/>
+<meta content="Speech-to-Text | SmartWeb" name="twitter:title"/>
+<meta content="A technology that converts spoken words into written text using artificial intelligence, commonly used in virtual assistants, transcription services, and voice-controlled devices." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165525" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165525" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165525"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118125587168000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118125587168000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118125587168000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118125587168000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Speech-to-Text</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Speech-to-Text
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A technology that converts spoken words into written text using artificial intelligence, commonly used in virtual assistants, transcription services, and voice-controlled devices.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                speech-to-text
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                automatic speech recognition
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                voice recognition
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ASR technology
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                speech processing
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-speech-to-text">What is a Speech-to-Text?</h2>
+<p>Speech-to-text (STT), also known as automatic <a data-lb="1" href="/en/glossary/speech-recognition/" title="Speech Recognition glossary entry">speech recognition</a> (ASR), is a technology that converts spoken language into written text. This sophisticated process involves analyzing audio signals containing human speech and transforming them into machine-readable text format. The technology has evolved from simple command recognition systems to complex <a data-lb="1" href="/en/glossary/neural-networks/" title="Neural Networks glossary entry">neural networks</a> capable of understanding natural language with remarkable accuracy across multiple languages, accents, and speaking styles.</p>
+<p>The fundamental principle behind speech-to-text technology lies in pattern recognition and machine learning algorithms that can identify phonemes, words, and contextual meaning from audio input. Modern STT systems utilize deep learning models trained on vast datasets of human speech to recognize acoustic patterns and map them to corresponding textual representations. These systems must account for numerous variables including speaker characteristics, background noise, speaking pace, pronunciation variations, and contextual clues to produce accurate transcriptions.</p>
+<p>Contemporary speech-to-text applications have become ubiquitous in daily life, powering virtual assistants, transcription services, accessibility tools, and voice-controlled interfaces. The technology has reached a level of sophistication where it can handle real-time processing, multiple speaker identification, and domain-specific terminology with increasing <a data-lb="1" href="/en/glossary/precision/" title="Precision glossary entry">precision</a>. As <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence glossary entry">artificial intelligence</a> continues to advance, speech-to-text systems are becoming more adaptive, learning from user interactions and improving their accuracy over time while supporting an expanding range of languages and dialects.</p>
+<h2 id="core-speech-recognition-technologies">Core Speech Recognition Technologies</h2>
+<p>Acoustic Modelingrepresents the foundation of speech recognition systems, analyzing the relationship between audio signals and phonetic units. These models process raw audio waveforms and extract features that correspond to specific sounds in human speech, enabling the system to identify individual phonemes and their variations across different speakers and conditions.Language Modelingprovides <a data-lb="1" href="/en/glossary/contextual-understanding/" title="contextual understanding glossary entry">contextual understanding</a> by predicting the probability of word sequences based on linguistic patterns and grammar rules. This component helps the system choose the most likely word combinations when multiple interpretations are possible, significantly improving transcription accuracy by considering semantic and syntactic context.Deep Neural Networkshave revolutionized speech recognition by enabling end-to-end learning from raw audio to text output. These sophisticated architectures, including recurrent neural networks (RNNs) and transformer models, can capture complex patterns in speech data and adapt to various speaking styles and acoustic environments.Feature Extractioninvolves converting raw audio signals into mathematical representations that highlight important characteristics for speech recognition. Common techniques include Mel-frequency cepstral coefficients (MFCCs) and spectrograms, which capture the frequency and temporal patterns essential for accurate speech analysis.Decoder Systemscombine acoustic and language model outputs to generate the final text transcription. These components use algorithms like beam search or Viterbi decoding to find the most probable sequence of words that matches the input audio signal.Noise Reductiontechnologies filter out background sounds and enhance speech signals to improve recognition accuracy. Advanced systems employ spectral subtraction, Wiener filtering, and neural network-based denoising to isolate human speech from environmental interference.</p>
+<h2 id="how-speech-to-text-works">How Speech-to-Text Works</h2>
+<p>The speech-to-text process begins with audio capturethrough microphones or digital audio files, where analog sound waves are converted into digital signals through sampling and quantization. The system captures audio at specific sample rates, typically 16kHz or higher, to preserve the frequency components essential for speech recognition.Preprocessinginvolves cleaning and normalizing the audio signal by removing silence, reducing noise, and applying filters to enhance speech quality. This step may include automatic gain control, echo cancellation, and bandwidth optimization to prepare the audio for analysis.Feature extractiontransforms the preprocessed audio into mathematical representations that highlight speech characteristics. The system analyzes frequency components, temporal patterns, and spectral features to create feature vectors that represent the acoustic properties of the input speech.Acoustic analysisapplies trained models to map extracted features to phonetic units or sub-word components. Deep learning models process these features to identify probable phonemes, considering variations in pronunciation, accent, and speaking style.Language processingutilizes statistical language models or neural networks to determine the most likely word sequences based on acoustic analysis results. This step incorporates grammatical rules, vocabulary constraints, and contextual information to improve transcription accuracy.Decodingcombines acoustic and linguistic information to generate candidate transcriptions, using algorithms that search through possible word combinations to find the most probable text output. The system evaluates multiple hypotheses and selects the best match based on combined acoustic and language model scores.Post-processingrefines the initial transcription by applying spelling correction, punctuation insertion, and formatting rules. Advanced systems may perform semantic analysis to improve capitalization, add appropriate punctuation, and format the output according to specific requirements.Output generationproduces the final text transcription in the desired format, which may include timestamps, speaker identification, confidence scores, and alternative transcription hypotheses for quality assessment and further processing.</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p>Enhanced Accessibilityenables individuals with hearing impairments or motor disabilities to interact with technology and consume audio content through text-based interfaces. Speech-to-text technology breaks down communication barriers and provides equal access to information and services.Increased Productivityallows users to create documents, send messages, and input data faster than traditional typing methods. Voice input can be significantly quicker than keyboard entry, especially for longer texts and when hands-free operation is required.Multilingual Supportfacilitates communication across language barriers by providing real-time transcription and translation capabilities. Modern systems support dozens of languages and can switch between them automatically based on detected speech patterns.Cost Reductioneliminates the need for manual transcription services in many applications, reducing operational expenses for businesses that regularly process audio content. Automated transcription can handle large volumes of audio at a fraction of traditional costs.Real-time Processingenables immediate conversion of speech to text, supporting live captioning, instant messaging, and interactive applications. This capability is essential for time-sensitive communications and accessibility requirements.Scalabilityallows organizations to process unlimited amounts of audio content without proportional increases in human resources. <a data-lb="1" href="/en/glossary/cloud-based/" title="Cloud-Based glossary entry">Cloud-based</a> speech-to-text services can handle massive concurrent requests with consistent performance.Integration Flexibilitysupports seamless incorporation into existing applications and workflows through APIs and SDKs. Developers can easily add speech recognition capabilities to mobile apps, web services, and enterprise systems.Continuous Improvementleverages machine learning to enhance accuracy over time through user feedback and additional training data. Modern systems adapt to specific users, domains, and use cases to provide increasingly accurate results.Documentation Efficiencystreamlines the creation of meeting minutes, interview transcripts, and other documentation by automatically converting recorded audio to searchable text formats.Voice Analyticsenables extraction of insights from customer calls, interviews, and other spoken interactions by making audio content searchable and analyzable through text-based tools.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p>Virtual Assistantsutilize speech-to-text technology to understand user commands and queries, enabling natural language interactions with smart speakers, smartphones, and other connected devices for tasks ranging from web searches to home automation control.Medical Transcriptionconverts physician dictations, patient consultations, and medical procedures into electronic health records, improving documentation efficiency while maintaining accuracy in critical healthcare information management.Customer Serviceprocesses phone calls and voice messages to create searchable transcripts, enable automated routing, and provide quality assurance <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a> for call center operations and <a data-lb="1" href="/en/glossary/customer-support/" title="Customer Support glossary entry">customer support</a> interactions.Legal Documentationtranscribes court proceedings, depositions, and legal consultations to create official records and searchable case files, supporting legal professionals in case preparation and documentation requirements.Educational Applicationsprovide real-time captioning for lectures, convert recorded lessons to text for study materials, and support language learning through pronunciation feedback and comprehension exercises.Media and Broadcastinggenerate closed captions for television programs, create searchable archives of news broadcasts, and enable content indexing for media libraries and streaming platforms.Business Meetingsautomatically transcribe conference calls, video meetings, and presentations to create meeting minutes, action item lists, and searchable records of business discussions and decisions.Content Creationassists journalists, writers, and content creators in converting interviews, research calls, and brainstorming sessions into editable text formats for articles, books, and multimedia productions.Accessibility Servicesprovides real-time captioning for live events, converts audio books to text formats, and enables voice-controlled navigation for users with mobility limitations or visual impairments.Voice Analyticsanalyzes customer feedback, survey responses, and market research interviews to extract insights, <a data-lb="1" href="/en/glossary/sentiment-analysis/" title="Sentiment Analysis glossary entry">sentiment analysis</a>, and trending topics from large volumes of spoken data.</p>
+<h2 id="speech-recognition-accuracy-comparison">Speech Recognition Accuracy Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Technology Type</th>
+<th>Accuracy Rate</th>
+<th>Processing Speed</th>
+<th>Language Support</th>
+<th>Noise Tolerance</th>
+<th>Cost Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cloud-based ASR</td>
+<td>95-98%</td>
+<td>Real-time</td>
+<td>100+ languages</td>
+<td>High</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>On-device STT</td>
+<td>85-92%</td>
+<td>Real-time</td>
+<td>10-20 languages</td>
+<td>Medium</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Specialized Domain</td>
+<td>98-99%</td>
+<td>Real-time</td>
+<td>Limited</td>
+<td>High</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Open Source</td>
+<td>80-90%</td>
+<td>Variable</td>
+<td>20-50 languages</td>
+<td>Low-Medium</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>Enterprise Solutions</td>
+<td>92-96%</td>
+<td>Real-time</td>
+<td>50+ languages</td>
+<td>High</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Mobile Apps</td>
+<td>88-94%</td>
+<td>Real-time</td>
+<td>30+ languages</td>
+<td>Medium</td>
+<td>Low-Medium</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p>Accent and Dialect Variationspose significant challenges as speech patterns vary widely across geographic regions, cultural backgrounds, and individual speakers. Systems must be trained on diverse datasets to handle pronunciation differences and regional speech characteristics effectively.Background Noise Interferencedegrades recognition accuracy in real-world environments where multiple sound sources compete with target speech. Robust noise cancellation and signal processing techniques are essential for reliable performance in challenging acoustic conditions.Privacy and Security Concernsarise when sensitive audio data is processed by cloud-based services, requiring careful consideration of <a data-lb="1" href="/en/glossary/data-encryption/" title="Data Encryption glossary entry">data encryption</a>, storage policies, and compliance with privacy regulations like <a data-lb="1" href="/en/glossary/gdpr/" title="GDPR glossary entry">GDPR</a> and HIPAA.Processing Latencycan impact user experience in real-time applications, particularly when cloud processing introduces network delays. Balancing accuracy with response time requires optimization of model complexity and infrastructure design.Domain-Specific Terminologychallenges general-purpose models when encountering specialized vocabulary in medical, legal, technical, or industry-specific contexts. Custom training or domain adaptation may be necessary for optimal performance.Multi-Speaker Scenarioscomplicate transcription accuracy when multiple people speak simultaneously or in rapid succession. Speaker diarization and separation techniques are required to attribute speech segments to individual speakers correctly.Language Code-Switchingoccurs when speakers alternate between multiple languages within a single conversation, requiring systems capable of detecting and processing mixed-language input dynamically.Audio Quality Dependenciessignificantly impact recognition performance, as poor recording conditions, low bitrates, or compressed audio formats can introduce artifacts that degrade transcription accuracy.Computational Resource Requirementsfor high-accuracy models can be substantial, particularly for real-time processing of multiple audio streams or when running sophisticated neural network architectures.Training Data Biasmay result in reduced performance for underrepresented demographic groups or speaking styles if training datasets lack sufficient diversity in age, gender, ethnicity, and socioeconomic backgrounds.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p>Audio Quality Optimizationensures clear input signals by using high-quality microphones, appropriate sample rates (16kHz minimum), and noise reduction techniques to maximize recognition accuracy and system performance.Model Selection Strategyinvolves choosing between cloud-based, on-device, or hybrid solutions based on specific requirements for accuracy, <a data-lb="1" href="/en/glossary/latency/" title="Latency glossary entry">latency</a>, privacy, and offline functionality to optimize overall system effectiveness.Custom Vocabulary Integrationimproves accuracy for domain-specific applications by training models on relevant terminology, proper nouns, and industry jargon that may not be present in general-purpose recognition systems.Error Handling Mechanismsimplement robust fallback procedures for low-confidence transcriptions, including user confirmation <a data-lb="1" href="/en/glossary/prompts/" title="Prompts glossary entry">prompts</a>, alternative hypothesis presentation, and graceful degradation when recognition fails.Privacy Protection Measuresestablish secure data handling practices including encryption in transit and at rest, minimal data retention policies, and user consent mechanisms for audio processing and storage.Performance Monitoring Systemstrack key metrics such as word error rates, processing latency, and user satisfaction to identify issues and optimize system performance continuously over time.Multi-Modal Integrationcombines speech recognition with other input methods like keyboards, touch interfaces, and gesture recognition to provide users with flexible interaction options and improved accessibility.Contextual Adaptationleverages user history, application context, and environmental factors to improve recognition accuracy through personalized language models and adaptive processing parameters.Scalability Planningdesigns systems to handle varying loads through auto-scaling infrastructure, efficient resource allocation, and load balancing to maintain consistent performance during peak usage periods.User Experience Designcreates intuitive interfaces with clear feedback mechanisms, confidence indicators, and easy correction methods to ensure users can effectively interact with speech-to-text functionality.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p>End-to-End Neural Modelseliminate traditional pipeline components by directly mapping audio waveforms to text output through deep learning architectures, reducing error propagation and simplifying system design while improving overall accuracy.Transfer Learning Approachesleverage pre-trained models on large datasets and fine-tune them for specific domains or languages, reducing training time and data requirements while achieving high performance on specialized tasks.Attention Mechanismsenable models to focus on relevant parts of input audio sequences when generating each word in the output text, improving accuracy for long utterances and handling temporal dependencies more effectively.Multi-Task Learningtrains models simultaneously on related tasks such as speech recognition, speaker identification, and emotion detection, sharing learned representations to improve performance across all objectives.Federated Learningenables model training across distributed devices while preserving privacy by keeping raw audio data local and only sharing model updates, supporting <a data-lb="1" href="/en/glossary/personalization/" title="Personalization glossary entry">personalization</a> without compromising user privacy.Adversarial Trainingimproves <a data-lb="1" href="/en/glossary/model-robustness/" title="Model Robustness glossary entry">model robustness</a> by exposing systems to challenging examples during training, including noisy audio, adversarial attacks, and edge cases to enhance real-world performance and security.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p>Conversational AI Integrationwill enhance speech-to-text systems with deeper understanding of dialogue context, speaker intent, and multi-turn conversations, enabling more natural and intelligent voice interfaces for complex interactions.Edge Computing Optimizationfocuses on developing lightweight models that can run efficiently on mobile devices and IoT hardware while maintaining high accuracy, reducing dependence on cloud connectivity and improving privacy.Multimodal Fusioncombines speech recognition with visual lip reading, gesture recognition, and contextual sensors to improve accuracy in challenging environments and provide more robust human-computer interaction capabilities.Real-Time Translationintegrates speech-to-text with neural machine translation to enable seamless cross-language communication, supporting global collaboration and breaking down language barriers in real-time conversations.Emotional Intelligenceincorporates sentiment analysis, emotion recognition, and speaker state detection into transcription systems, providing richer context for applications in healthcare, customer service, and human-computer interaction.Quantum Computing Applicationsexplore potential quantum algorithms for speech processing that could dramatically improve pattern recognition capabilities and processing speed for complex acoustic modeling tasks.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Hinton, G., et al. (2012). Deep Neural Networks for Acoustic Modeling in Speech Recognition. IEEE Signal Processing Magazine, 29(6), 82-97.</p>
+</li>
+<li>
+<p>Graves, A., &amp; Jaitly, N. (2014). Towards End-to-End Speech Recognition with Recurrent Neural Networks. Proceedings of the 31st International Conference on Machine Learning, 1764-1772.</p>
+</li>
+<li>
+<p>Bahdanau, D., Chorowski, J., Serdyuk, D., Brakel, P., &amp; Bengio, Y. (2016). End-to-End Attention-based Large Vocabulary Speech Recognition. IEEE International Conference on Acoustics, Speech and Signal Processing, 4945-4949.</p>
+</li>
+<li>
+<p>Amodei, D., et al. (2016). Deep Speech 2: End-to-End Speech Recognition in English and Mandarin. Proceedings of the 33rd International Conference on Machine Learning, 173-182.</p>
+</li>
+<li>
+<p>Chiu, C. C., et al. (2018). State-of-the-Art Speech Recognition with Sequence-to-Sequence Models. IEEE International Conference on Acoustics, Speech and Signal Processing, 4774-4778.</p>
+</li>
+<li>
+<p>Gulati, A., et al. (2020). Conformer: Convolution-augmented Transformer for Speech Recognition. Proceedings of Interspeech 2020, 5036-5040.</p>
+</li>
+<li>
+<p>Zhang, Y., et al. (2020). Pushing the Limits of Semi-Supervised Learning for Automatic Speech Recognition. arXiv preprint arXiv:2010.10504.</p>
+</li>
+<li>
+<p>Radford, A., et al. (2022). Robust Speech Recognition via Large-Scale Weak Supervision. arXiv preprint arXiv:2212.04356.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/speech-to-text-node/">
+                    Speech-to-Text Node
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A Speech-to-Text Node converts spoken words from audio files into written text, enabling voice comma...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/speech-to-text-node/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/speech-to-text/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165525"></script>
+</body>
+</html>

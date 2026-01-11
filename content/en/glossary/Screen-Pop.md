@@ -2,7 +2,7 @@
 title: "Screen Pop"
 date: 2025-12-19
 translationKey: Screen-Pop
-description: "A technology that automatically shows a customer's information on an agent's screen when they call or message, so the agent can help them right away without searching for their details."
+description: "A feature that automatically displays a customer's information on an agent's screen when they call or message, helping the agent serve them faster and better."
 keywords:
 - screen pop
 - contact center technology
@@ -52,7 +52,9 @@ The screen pop process follows a systematic workflow that begins when a customer
 
 6. **Screen Display**: The compiled customer information is automatically displayed on the agent's screen before or immediately when the communication is answered or accepted.
 
-7. **Real-Time Updates**: As the interaction progresses, the system may update displayed information in real-time based on actions taken during the current session.**Example Workflow**: When John Smith calls customer service from his registered phone number (555-123-4567), the CTI system captures the ANI and triggers a database query. The screen pop engine retrieves John's customer record from the CRM, his recent order history from the e-commerce platform, and his previous support tickets from the help desk system. This information is formatted and displayed on the agent's screen showing John's name, account status, recent purchase of a laptop, and his previous inquiry about warranty coverage, enabling the agent to provide personalized assistance immediately upon answering the call.
+7. **Real-Time Updates**: As the interaction progresses, the system may update displayed information in real-time based on actions taken during the current session.
+
+**Example Workflow**: When John Smith calls customer service from his registered phone number (555-123-4567), the CTI system captures the ANI and triggers a database query. The screen pop engine retrieves John's customer record from the CRM, his recent order history from the e-commerce platform, and his previous support tickets from the help desk system. This information is formatted and displayed on the agent's screen showing John's name, account status, recent purchase of a laptop, and his previous inquiry about warranty coverage, enabling the agent to provide personalized assistance immediately upon answering the call.
 
 ## Key Benefits
 
@@ -183,14 +185,13 @@ The screen pop process follows a systematic workflow that begins when a customer
 
 ## References
 
-
-1. Zendesk. (n.d.). What is Screen Pop?. Zendesk Service Ticketing System.
-2. Five9. (n.d.). Screen Pop Feature. Five9 Product Features.
-3. Salesforce. (n.d.). CTI Screen Pop. Salesforce Help.
-4. Talkdesk. (n.d.). What is Screen Pop?. Talkdesk Blog.
-5. Genesys. (n.d.). Screen Pop Technology. Genesys Definitions.
-6. RingCentral. (n.d.). CTI and Screen Pop. RingCentral Office Features.
-7. NICE. (n.d.). Screen Pop in Contact Centers. NICE Glossary.
-8. Nextiva. (n.d.). What is CTI Screen Pop?. Nextiva Blog.
-9. 8x8. (n.d.). Screen Pop Functionality. 8x8 Product Integrations.
-10. HubSpot. (n.d.). CRM Screen Pop Integration. HubSpot Knowledge Base.
+- [What is Screen Pop? - Zendesk](https://www.zendesk.com/service/ticketing-system/screen-pop/)
+- [Screen Pop Feature - Five9](https://www.five9.com/products/features/screen-pop)
+- [CTI Screen Pop - Salesforce](https://help.salesforce.com/s/articleView?id=sf.cti_screen_pops.htm)
+- [What is Screen Pop? - Talkdesk](https://www.talkdesk.com/blog/what-is-screen-pop/)
+- [Screen Pop Technology - Genesys](https://www.genesys.com/en-sg/definitions/what-is-screen-pop)
+- [CTI and Screen Pop - RingCentral](https://www.ringcentral.com/office/features/computer-telephony-integration.html)
+- [Screen Pop in Contact Centers - NICE](https://www.nice.com/glossary/what-is-screen-pop)
+- [What is CTI Screen Pop? - Nextiva](https://www.nextiva.com/blog/cti-screen-pop.html)
+- [Screen Pop Functionality - 8x8](https://www.8x8.com/products/integrations/cti)
+- [CRM Screen Pop Integration - HubSpot](https://knowledge.hubspot.com/calling/use-screen-pop-in-the-hubspot-calling-tool)

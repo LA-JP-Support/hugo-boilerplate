@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>LLM as Judge(LLMによる評価) | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/llm-as-judge/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/LLM-as-Judge/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/LLM-as-Judge/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/LLM-as-Judge/" hreflang="x-default" rel="alternate"/>
+<meta content="LLM-as-a-Judge(LaaJ)は、LLMが他のLLMの出力を評価する手法です。スケーラブルで繊細なAI評価のための定義、手法、ベストプラクティス、ユースケースについて解説します。" name="description"/>
+<meta content="LLM as Judge, LLM評価, AI評価, 大規模言語モデル, プロンプトエンジニアリング" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/llm-as-judge/" property="og:url"/>
+<meta content="LLM as Judge(LLMによる評価) | SmartWeb" property="og:title"/>
+<meta content="LLM-as-a-Judge(LaaJ)は、LLMが他のLLMの出力を評価する手法です。スケーラブルで繊細なAI評価のための定義、手法、ベストプラクティス、ユースケースについて解説します。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/llm-as-judge/" name="twitter:url"/>
+<meta content="LLM as Judge(LLMによる評価) | SmartWeb" name="twitter:title"/>
+<meta content="LLM-as-a-Judge(LaaJ)は、LLMが他のLLMの出力を評価する手法です。スケーラブルで繊細なAI評価のための定義、手法、ベストプラクティス、ユースケースについて解説します。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">LLM as Judge(LLMによる評価)</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            LLMs
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        LLM as Judge(LLMによる評価)
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          LLM as Judge
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          LLM-as-a-Judge(LaaJ)は、LLMが他のLLMの出力を評価する手法です。スケーラブルで繊細なAI評価のための定義、手法、ベストプラクティス、ユースケースについて解説します。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                LLM as Judge
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                LLM評価
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI評価
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                大規模言語モデル
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                プロンプトエンジニアリング
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="llm-as-a-judgeとは">LLM-as-a-Judgeとは?</h2>
+<p>LLM-as-a-Judge(LaaJ)は、<a data-lb="1" href="/ja/glossary/large-language-models/" title="大規模言語モデル(LLM)は、深層学習とトランスフォーマーネットワークを活用した高度なAIシステムで、テキスト生成、翻訳などを実現します。その中核概念、応用分野、課題について理解を深めましょう。">大規模言語モデル(LLM)</a>が他のLLM、あるいは自身が生成した出力の品質を評価する手法です。人間の評価者や、BLEUやROUGEのような表面的な自動評価指標のみに依存するのではなく、このアプローチはLLMの解釈、比較、スコアリング能力を活用し、評価プロンプトで提供される微妙で意味的な基準に基づいて応答を評価します。</p>
+<p>LLM-as-a-Judge手法は、ラベル(例:「事実的に正確」「役に立たない」)、スコア(数値、リッカート尺度)、ペアワイズ判定(どちらの出力が優れているか)、説明(各判定の根拠)を生成します。LLMジャッジは、評価プロンプト(基準を定義する指示)、モデルが生成した出力、オプションの参照回答やルーブリックを処理します。その結果、人間の判断に近い評価を、はるかに大規模かつ低コストで実現できます。</p>
+<h2 id="なぜllm-as-a-judgeを使用するのか">なぜLLM-as-a-Judgeを使用するのか?</h2>
+<h3 id="従来の評価の限界">従来の評価の限界</h3>
+<p>人間による評価:微妙なタスクにおけるゴールドスタンダードですが、遅く、高コストで、スケールが困難であり、レビュアー間の主観的なばらつきにより一貫性に欠けることがよくあります。自動評価指標(BLEU、ROUGE、METEOR):高速でスケーラブルですが、表面的な類似性(単語の重複)に焦点を当てており、より深い意味的または文体的な品質を見逃します。これらの指標は、要約やオープンエンドな生成など、正確性が純粋な単語マッチングではないタスクでは失敗します。</p>
+<h3 id="llm-as-a-judgeの利点">LLM-as-a-Judgeの利点</h3>
+<p>スケール:APIやバッチジョブを介して、数分で数千の出力を評価できます。柔軟性:評価プロンプトを変更することで、事実の正確性、有用性、スタイル、安全性などに評価を調整できます。ニュアンス:意味的な品質、論理的一貫性、トーン—表面的な指標が見逃す品質を判定します。一貫性:すべての出力に同じルーブリックを適用し、レビュアーの主観性を減らします。コスト効率:手動アノテーションと比較して、費用を大幅に削減します。速度:ほぼ即座のフィードバックループを可能にし、高速な反復と継続的な監視に不可欠です。アクセシビリティ:大規模なアノテーション作業員を持たないチームでも評価を実現可能にします。優れている領域:オープンエンドな出力、大量の本番監視、迅速なリグレッションテスト、コードで簡単に捉えられない特性(丁寧さ、<a data-lb="1" href="/ja/glossary/bias/" title="バイアス の用語集ページ">バイアス</a>、<a data-lb="1" href="/ja/glossary/hallucination/" title="ハルシネーション の用語集ページ">ハルシネーション</a>、マルチターン対話の品質)の評価。</p>
+<h2 id="llm-as-a-judgeの仕組み">LLM-as-a-Judgeの仕組み</h2>
+<h3 id="実装プロセス">実装プロセス</h3>
+<ol>
+<li>評価基準の定義:重要な属性(有用性、事実の正確性、トーン、安全性)を決定します。2. 評価プロンプトの作成:ジャッジLLMへの明示的な指示を記述し、基準と期待される出力形式を詳細に説明します。例(few-shotプロンプティング)を提供し、決定論的な出力のために温度を0に設定します。3. データの準備:判定される出力(チャットボットログ、生成された要約、Q&amp;Aペア)を収集します。4. ジャッジLLMの呼び出し:APIまたは<a data-lb="1" href="/ja/glossary/batch-processing/" title="バッチ処理は、大量のデータを収集し、設定された期間ごとにグループ単位で処理するデータアプローチです。高スループットのAI、分析、ビジネスオペレーションに最適です。">バッチ処理</a>を介して、評価プロンプトとデータをLLMに送信します。5. 結果の収集と集約:LLMの応答(スコア、ラベル、説明)を解析し、<a data-lb="1" href="/ja/glossary/dashboard/" title="ダッシュボードとは、複数のソースから主要なデータ、KPI、トレンドを表示するビジュアルインターフェースです。迅速な監視、分析、情報に基づいた意思決定を可能にします。">ダッシュボード</a>、パフォーマンス監視、またはベンチマークに使用します。6. 分析と行動:評価を使用して、強み、弱み、リグレッション、または改善の機会を特定します。プロンプト例:&gt; 以下の<a data-lb="1" href="/ja/glossary/chatbot/" title="チャットボットは、テキストまたは音声を通じて人間の会話をシミュレートするAI駆動のソフトウェアアプリケーションです。カスタマーサポート、情報検索、タスク自動化に使用されます。">チャットボット</a>応答の有用性を評価してください。有用な応答は明確で、関連性があり、実行可能です。役に立たない応答は曖昧で、トピックから外れているか、詳細が不足しています。質問:「パスワードをリセットするにはどうすればよいですか?」応答:「ログインページのリンクを使用してパスワードをリセットできます。」「helpful」または「unhelpful」とラベル付けし、1文の説明を提供してください。</li>
+</ol>
+<h2 id="llm-as-a-judge評価の種類">LLM-as-a-Judge評価の種類</h2>
+<h3 id="単一出力評価参照なし">単一出力評価(参照なし)</h3>
+<p>ゴールドスタンダードの回答なしで、ルーブリックのみを使用して単一の出力を評価します。ユースケース:オープンエンドな生成、創造性、スタイル、またはトーンの評価。入力:プロンプト + 生成された出力。</p>
+<h3 id="単一出力評価参照あり">単一出力評価(参照あり)</h3>
+<p>単一の出力を参照(正解)回答と比較します。ユースケース:要約、質問応答、情報抽出。入力:プロンプト + 生成された出力 + 参照回答。</p>
+<h3 id="ペアワイズ比較">ペアワイズ比較</h3>
+<p>2つの出力を判定し、より良い方を選択します(または引き分けを宣言)。ユースケース:モデル選択、A/Bテスト、RLHFの選好学習。入力:プロンプト + 2つの出力。</p>
+<h3 id="マルチターン会話評価">マルチターン/会話評価</h3>
+<p>完全な対話履歴を使用して、マルチターンの会話出力を評価します。ユースケース:チャットボット、対話システム、カスタマーサービスボット。入力:完全な会話コンテキスト。</p>
+<h3 id="多基準ルーブリックベース評価">多基準/ルーブリックベース評価</h3>
+<p>複数の次元(正確性、明確性、トーン、関連性)に沿って出力をスコアリングします。ユースケース:包括的な品質評価、教育、モデレーション。入力:プロンプト + 出力 + 評価ルーブリック。</p>
+<h2 id="評価プロンプティング戦略">評価プロンプティング戦略</h2>
+<p>プロンプト設計は信頼性の高い評価に不可欠です。効果的なプロンプトは、評価タスクと基準を明確に定義し、望ましい出力形式を指定し、微妙なタスクのために判定例を提供し、構造化された出力を要求し、決定論的な結果のために温度をゼロに設定します。</p>
+<h3 id="一般的なテクニック">一般的なテクニック</h3>
+<table>
+<thead>
+<tr>
+<th>テクニック</th>
+<th>説明</th>
+<th>使用例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>直接スコアリング</td>
+<td>数値/カテゴリカルスコアを要求</td>
+<td>「1〜5で評価」</td>
+</tr>
+<tr>
+<td>ペアワイズ選択</td>
+<td>より良い出力を選択し説明</td>
+<td>モデル比較</td>
+</tr>
+<tr>
+<td>Chain-of-Thought (CoT)</td>
+<td>スコアリング前に推論を説明</td>
+<td>数学、段階的論理</td>
+</tr>
+<tr>
+<td>Few-Shotプロンプティング</td>
+<td>ラベル付き例を提供</td>
+<td>キャリブレーション、微妙なタスク</td>
+</tr>
+<tr>
+<td>多基準スコアリング</td>
+<td>複数の属性で評価</td>
+<td>包括的評価</td>
+</tr>
+<tr>
+<td>批評してから判定</td>
+<td>最終判定前に批評</td>
+<td>複雑/主観的タスク</td>
+</tr>
+</tbody>
+</table>
+<p>Chain-of-Thought例:&gt; 質問と回答を読んでください。段階的に、回答が正しいかどうかを説明し、次にYESまたはNOを述べてください。質問:「フランスの首都は何ですか?」回答:「パリはフランスの首都です。」説明:回答はパリをフランスの首都として正しく識別しています。判定:YES</p>
+<h2 id="ユースケースとアプリケーション">ユースケースとアプリケーション</h2>
+<p>自動品質保証:正確性、有用性、安全性について出力を継続的に監視します。ハルシネーションやバイアスを示すチャットボット応答にフラグを立てます。モデルベンチマーク:ペアワイズまたはルーブリックベースの判定を使用して、最適なモデルまたはプロンプト構成を選択します。リグレッションテスト:更新やファインチューニング後の品質低下を、時間経過に伴うLLMジャッジスコアを追跡することで検出します。本番監視:手動レビューなしで、リアルタイムでハルシネーションやバイアスなどの問題を表面化します。Human-in-the-Loopレビュー:低品質の出力を人間の<a data-lb="1" href="/ja/glossary/escalation/" title="カスタマーサポート、IT、AIチャットボットにおけるエスカレーションについて学びます。種類、トリガー、ベストプラクティス、そして自動化が複雑な問題解決をどのように効率化するかを解説します。">エスカレーション</a>のためにフィルタリングし、レビュアーの作業負荷を削減します。RLHFと選好学習:人間のフィードバックからの<a data-lb="1" href="/ja/glossary/reinforcement-learning/" title="強化学習(RL)は、エージェントが環境と相互作用し、試行錯誤を通じて累積報酬を最大化することで、逐次的な意思決定を学習する機械学習の一種です。">強化学習</a>における報酬モデルのための選好データを生成します。ワークフロー例:フィンテック企業がカスタマーサポートチャットボットを展開します。各応答は、正確性、丁寧さ、ハルシネーションチェックのためにジャッジLLMに送信されます。低スコアの出力は人間のレビューのためにフラグが立てられ、集約統計が監視されて継続的なモデル品質が確保されます。</p>
+<h2 id="従来の方法との比較">従来の方法との比較</h2>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>LLM-as-a-Judge</th>
+<th>人間による評価</th>
+<th>自動評価指標</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>速度</td>
+<td>即座(API/バッチ)</td>
+<td>遅い(サンプルあたり数分)</td>
+<td>高速</td>
+</tr>
+<tr>
+<td>スケーラビリティ</td>
+<td>高い(数千以上)</td>
+<td>作業員により制限</td>
+<td>高い</td>
+</tr>
+<tr>
+<td>コスト</td>
+<td>評価あたり低い</td>
+<td>高い(労働集約的)</td>
+<td>非常に低い</td>
+</tr>
+<tr>
+<td>一貫性</td>
+<td>高い(固定プロンプト)</td>
+<td>可変(レビュアーのばらつき)</td>
+<td>高い(決定論的)</td>
+</tr>
+<tr>
+<td>意味的深さ</td>
+<td>強い(良いプロンプト)</td>
+<td>強い(ドメイン知識)</td>
+<td>弱い(表面的)</td>
+</tr>
+<tr>
+<td>ニュアンス処理</td>
+<td>良い(プロンプト調整)</td>
+<td>最良(曖昧なタスク)</td>
+<td>貧弱</td>
+</tr>
+<tr>
+<td>バイアスリスク</td>
+<td>モデル/プロンプトバイアス</td>
+<td>人間/文化的バイアス</td>
+<td>指標設計バイアス</td>
+</tr>
+</tbody>
+</table>
+<p>パフォーマンス:LLM-as-a-Judgeは、公開ベンチマークで人間の評価と約80〜85%の一致を達成します。</p>
+<h2 id="ベストプラクティス">ベストプラクティス</h2>
+<p>明確で具体的な基準を定義し、具体的な例を含めます。構造化された出力(JSON、ラベル付きフィールド)を使用して、解析と集約を容易にします。温度をゼロに設定して、再現性と一貫した判定を実現します。Few-shot例を提供して、複雑または主観的な評価タスクに対応します。出力順序をランダム化して、ペアワイズプロンプトでの位置バイアスを回避します。定期的にキャリブレーションを行い、人間の評価者と照らし合わせて精度を検証します。スコアを集約して監視し、時間経過に伴う傾向とリグレッションを特定します。評価プロンプトを文書化しバージョン管理して、再現性を確保します。</p>
+<h2 id="よくある落とし穴">よくある落とし穴</h2>
+<p>曖昧/漠然としたプロンプトは、一貫性のない判定と信頼性の低い結果につながります。参照回答の欠如は、主観的評価における変動性を増加させます。ジャッジLLM自体の限界:ハルシネーションを起こしたり、敵対的入力に騙されたりする可能性があります。単一ジャッジへの過度の依存:重要なアプリケーションには、アンサンブルまたは人間のスポットチェックを使用します。コストの無視:高頻度の評価は、大きなAPI費用につながる可能性があります。</p>
+<h2 id="実装ガイドライン">実装ガイドライン</h2>
+<h3 id="ツールとフレームワーク">ツールとフレームワーク</h3>
+<p>オープンソース:- Evidently: <a data-lb="1" href="/ja/blog/ai-evaluation-japanese-benchmarks/" title="LLMの自動評価手法から日本語評価ベンチマーク、ハルシネーション対策まで、企業のAI導入に必要な知識を完全解説。FlowHunt活用例も紹介。">LLM評価</a>、ジャッジ作成、プロンプト管理、ダッシュボード</p>
+<ul>
+<li>DeepEval: さまざまな評価タイプと指標をサポート</li>
+<li>Langfuse: ジャッジ評価者、プロンプト管理、監視ダッシュボード</li>
+</ul>
+<p>クラウドプラットフォーム:- Amazon Bedrock Model Evaluation: LLM-as-a-Judge評価、複数の指標、レポート</p>
+<ul>
+<li>Toloka: 人間の評価と整合したLLMジャッジパイプライン</li>
+</ul>
+<h3 id="python-api例">Python API例</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">import</span> openai
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">def</span> judge_response(evaluation_prompt, model_output):
+</span></span><span style="display:flex;"><span>    prompt = <span style="color:#0ff;font-weight:bold">f</span><span style="color:#0ff;font-weight:bold">"</span><span style="color:#0ff;font-weight:bold">{</span>evaluation_prompt<span style="color:#0ff;font-weight:bold">}</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold">Output: </span><span style="color:#0ff;font-weight:bold">{</span>model_output<span style="color:#0ff;font-weight:bold">}</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold">Score:"</span>
+</span></span><span style="display:flex;"><span>    response = openai.ChatCompletion.create(
+</span></span><span style="display:flex;"><span>        model=<span style="color:#0ff;font-weight:bold">"gpt-4"</span>,
+</span></span><span style="display:flex;"><span>        messages=[{<span style="color:#0ff;font-weight:bold">"role"</span>: <span style="color:#0ff;font-weight:bold">"user"</span>, <span style="color:#0ff;font-weight:bold">"content"</span>: prompt}],
+</span></span><span style="display:flex;"><span>        temperature=<span style="color:#ff0;font-weight:bold">0</span>
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">return</span> response.choices[<span style="color:#ff0;font-weight:bold">0</span>].message[<span style="color:#0ff;font-weight:bold">'content'</span>]
+</span></span></code></pre></div><h3 id="監視と分析">監視と分析</h3>
+<p>ダッシュボード:モデルバージョン、プロンプト、またはカテゴリ別にスコアを集約します。リグレッションテスト:時間経過に伴う指標を追跡して、パフォーマンスのリグレッションを捉えます。障害アラート:しきい値を下回る出力に即座のレビューのためにフラグを立てます。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p>良い評価プロンプトを書くにはどうすればよいですか?明示的に:何を評価するかを定義し、ルーブリックまたはラベルを提供し、出力形式を指定し、微妙なタスクにはfew-shot例を使用します。コードや数学にLLM-as-a-Judgeを使用できますか?はい。LLMは、コードの正確性、数学的証明、論理的推論を評価でき、多くの場合、chain-of-thoughtまたは参照ベースのプロンプトを使用します。ジャッジLLMが信頼できるかどうかをどのように知ることができますか?LLMの判定を人間のアノテーションと比較します。統計的一致指標(Cohen’s Kappa、一致率)を使用します。定期的に再キャリブレーションします。LLM-as-a-Judgeは人間の評価の代替ですか?すべてのケースではありません。大規模な第一段階評価に最適です。曖昧または高リスクの出力については、人間のレビューが依然として重要です。ジャッジとして最適なモデルは何ですか?より大きく、より能力の高いモデル(GPT-4、Claude、<a data-lb="1" href="/ja/glossary/gemini/" title="Geminiは、テキスト、画像、音声、動画の理解に優れたGoogleの先進的なマルチモーダルAIモデルファミリーです。Gemini 2.5 Pro、機能、アプリケーションについて解説します。">Gemini</a>)は、一般的に小さなモデルよりも正確で微妙な判定を生成します。コストはどのくらいですか?コストはプロバイダーと使用量によって異なります。バッチ処理と効率的なプロンプト設計により、費用を大幅に削減できます。</p>
+<h2 id="主要用語集">主要用語集</h2>
+<p>評価プロンプト:ジャッジLLMに提供される指示/ルーブリック参照なし評価:ゴールド回答を必要とせず、基準のみに対して出力を判定参照あり評価:提供された参照回答と出力を比較ペアワイズ比較:2つの出力のうちより良い方を選択Chain-of-Thought (CoT):判定前の段階的推論ルーブリック:評価のための一連のルールまたは基準リッカート尺度:主観的評価のための数値尺度(例:1〜5)ハルシネーション:入力または事実によってサポートされていないLLM出力RLHF:人間(またはLLM)のフィードバックからの強化学習</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>AI21 Labs. (n.d.). What is LLM-as-a-Judge?. AI21 Labs Glossary.</p>
+</li>
+<li>
+<p>Evidently AI. (n.d.). LLM-as-a-Judge Guide. Evidently AI.</p>
+</li>
+<li>
+<p>Product Talk. (n.d.). LLM-as-Judge Overview. Product Talk.</p>
+</li>
+<li>
+<p>Langfuse. (n.d.). LLM Judge Evaluation Documentation. Langfuse.</p>
+</li>
+<li>
+<p>Amazon. (n.d.). Bedrock Model Evaluation. Amazon Web Services.</p>
+</li>
+<li>
+<p>DeepEval. (n.d.). LLM Evaluation Framework. GitHub. URL: <a href="https://github.com/confident-ai/deepeval" rel="nofollow noopener noreferrer" target="_blank">https://github.com/confident-ai/deepeval</a></p>
+</li>
+<li>
+<p>Evidently. (n.d.). LLM-as-a-Judge Tutorial. YouTube. URL: <a href="https://www.youtube.com/watch?v=kP_aaFnXLmY&amp;list=PL9omX6impEuNTr0KGLChHwhvN-q3ZF12d&amp;index=6" rel="nofollow noopener noreferrer" target="_blank">https://www.youtube.com/watch?v=kP_aaFnXLmY&amp;list=PL9omX6impEuNTr0KGLChHwhvN-q3ZF12d&amp;index=6</a></p>
+</li>
+<li>
+<p>Toloka. (n.d.). LLM Judge Pipelines. Toloka. URL: <a href="https://toloka.ai" rel="nofollow noopener noreferrer" target="_blank">https://toloka.ai</a></p>
+</li>
+<li>
+<p>Evidently. (n.d.). LLM Evaluation Framework. GitHub. URL: <a href="https://github.com/evidentlyai/evidently" rel="nofollow noopener noreferrer" target="_blank">https://github.com/evidentlyai/evidently</a></p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/in-context-learning/">
+                    インコンテキスト学習
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    インコンテキスト学習の包括的ガイド:AIモデルがパラメータ更新やファインチューニングなしに、プロンプト内の例から学習する方法を解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/in-context-learning/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/jailbreaking/">
+                    ジェイルブレイキング(AIジェイルブレイキング)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIジェイルブレイキングとは、AIの安全ガードレールを回避して禁止されたコンテンツを生成させる行為です。大規模言語モデル(LLM)における手法、リスク、および緩和戦略について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/jailbreaking/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hallucination-mitigation-strategies/">
+                    ハルシネーション緩和戦略
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIシステム、特にLLM（<a data-lb="1" href="/ja/glossary/large-language-models/" title="大規模言語モデル(LLM) の用語集ページ">大規模言語モデル</a>）におけるハルシネーション緩和戦略を探求します。RAG、プロンプトエンジニアリング、ファインチューニングなど、虚偽の出力を防ぐための技術について学びます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hallucination-mitigation-strategies/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/prompt-template/">
+                    プロンプトテンプレート
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    プロンプトテンプレートとは、静的な指示と変数プレースホルダーを含む事前設定されたプロンプト構造であり、AIチャットボットや自動化システムで繰り返し使用するために設計されています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/prompt-template/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/copilot/">
+                    AIコパイロット
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/ai-copilot/" title="AIコパイロットは、人間のユーザーと並行して動作する高度なAI搭載デジタルアシスタントであり、生産性、創造性、意思決定をリアルタイムで強化します。">AIコパイロット</a>は、人間のユーザーと並行して動作する高度なAI搭載デジタルアシスタントであり、生産性、創造性、意思決定をリアルタイムで強化します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/copilot/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/ai-email-auto-response-generation/">
+                    AIメール自動返信生成
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIメール自動返信生成は、AI、自然言語処理、大規模言語モデルを活用し、受信メッセージの内容、文脈、意図に基づいて、パーソナライズされたメール返信を自動的に生成します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/ai-email-auto-response-generation/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/llm-as-judge/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

@@ -22,61 +22,78 @@ Containerization solves environmental inconsistencies by packaging everything an
 
 Docker relies on operating system-level virtualization to create isolated containers. Each container is an isolated process running on the host, sharing the host OS kernel but possessing its own filesystem, network stack, and process space.
 
-**Operational Workflow:**1.**Build:**Use a Dockerfile—a text file defining the application environment, dependencies, and build steps—to create a Docker image
-2. **Ship:**Store and distribute the image via a container registry (Docker Hub or private registry)
-3. **Run:**Pull the image from the registry and start a container from it, anywhere Docker is supported**Example:**Building a web application image with a Dockerfile, pushing it to Docker Hub, and running it on a cloud VM demonstrates the complete workflow.
+**Operational Workflow:**
+1. **Build:** Use a Dockerfile—a text file defining the application environment, dependencies, and build steps—to create a Docker image
+2. **Ship:** Store and distribute the image via a container registry (Docker Hub or private registry)
+3. **Run:** Pull the image from the registry and start a container from it, anywhere Docker is supported
+
+**Example:** Building a web application image with a Dockerfile, pushing it to Docker Hub, and running it on a cloud VM demonstrates the complete workflow.
 
 ## Docker Architecture
 
 Docker's architecture is based on a client-server model with several key components:
 
-**Docker Daemon (dockerd)**- Background service managing Docker objects (images, containers, networks, volumes)
+**Docker Daemon (dockerd)**
+- Background service managing Docker objects (images, containers, networks, volumes)
 - Listens for Docker API requests and performs operations
 - Runs as a system process requiring root privileges or appropriate user group membership
 
-**Docker Client (docker)**- Primary user interface for Docker
+**Docker Client (docker)**
+- Primary user interface for Docker
 - Command-line tool for issuing commands like `docker build`, `docker run`, `docker ps`
 - Communicates with Docker daemon via REST API over UNIX socket or network
 
-**Docker Registries**- Storage and distribution systems for Docker images
+**Docker Registries**
+- Storage and distribution systems for Docker images
 - Docker Hub is the default public registry with millions of images
 - Organizations can run private registries for internal use
 
-**Docker Images**- Read-only templates with instructions for creating containers
+**Docker Images**
+- Read-only templates with instructions for creating containers
 - Built in layers; each Dockerfile command creates a new layer
 - Images can inherit from other images, enabling modular builds
 
-**Docker Containers**- Runnable instances of images
+**Docker Containers**
+- Runnable instances of images
 - Isolated from host and other containers but can communicate via Docker networks
 - Ephemeral by default, but can use volumes for persistent data
 
-**Docker Compose**- Tool for defining and managing multi-container applications using YAML file
+**Docker Compose**
+- Tool for defining and managing multi-container applications using YAML file
 - Enables declarative configuration of services, networks, and volumes
 
-**Docker Networks and Volumes**- Networks: Virtual networks for container communication (bridge, host, overlay)
+**Docker Networks and Volumes**
+- Networks: Virtual networks for container communication (bridge, host, overlay)
 - Volumes: Persistent storage for container data, surviving restarts and container destruction
 
 ## Key Benefits
 
-**Portability**- Containers run identically across different OSes and infrastructure
+**Portability**
+- Containers run identically across different OSes and infrastructure
 - Seamless workload movement between local, on-premises, and cloud environments
 
-**Speed**- Containers start in milliseconds or seconds (no OS boot required)
+**Speed**
+- Containers start in milliseconds or seconds (no OS boot required)
 - Quicker build, test, and deploy cycles
 
-**Resource Utilization**- Containers share host OS kernel, reducing overhead
+**Resource Utilization**
+- Containers share host OS kernel, reducing overhead
 - High application density per host
 
-**Isolation and Security**- Containers isolate processes, reducing conflict risk
+**Isolation and Security**
+- Containers isolate processes, reducing conflict risk
 - Linux namespaces and cgroups enforce boundaries
 
-**Scalability and Flexibility**- Scale applications by starting/stopping containers
+**Scalability and Flexibility**
+- Scale applications by starting/stopping containers
 - Supports microservices and dynamic deployment
 
-**Consistency and Reproducibility**- Identical environments from development to production
+**Consistency and Reproducibility**
+- Identical environments from development to production
 - Eliminates "works on my machine" problems
 
-**CI/CD Integration**- Automates build, test, and deploy steps in DevOps workflows
+**CI/CD Integration**
+- Automates build, test, and deploy steps in DevOps workflows
 - Standardizes environments across pipeline stages
 
 ## Docker vs. Virtual Machines
@@ -90,28 +107,35 @@ Docker's architecture is based on a client-server model with several key compone
 | Scalability | Easily scalable, low overhead | Less scalable, higher overhead |
 | Density | High | Lower |
 
-**Key Insights:**- Containers can run on VMs, combining benefits of both in cloud environments
+**Key Insights:**
+- Containers can run on VMs, combining benefits of both in cloud environments
 - Containers use host's kernel, limiting different OS support compared to VMs
 
 ## Common Use Cases
 
-**Microservices Architectures**- Decompose monolithic applications into independently deployable services
+**Microservices Architectures**
+- Decompose monolithic applications into independently deployable services
 - Each microservice runs in its own container
 - Enable independent scaling and updates
 
-**Continuous Integration / Continuous Deployment**- Standardize build/test environments for automation pipelines
+**Continuous Integration / Continuous Deployment**
+- Standardize build/test environments for automation pipelines
 - Minimize environment drift and deployment errors
 
-**Cloud-Native Application Development**- Simplify multi-cloud or hybrid deployments
+**Cloud-Native Application Development**
+- Simplify multi-cloud or hybrid deployments
 - Enable rapid prototyping and release cycles
 
-**Big Data and Analytics**- Package data processing jobs and analytics tools for reproducible runs
+**Big Data and Analytics**
+- Package data processing jobs and analytics tools for reproducible runs
 - Scale compute resources dynamically
 
-**Dev/Test Environments**- Provision disposable, consistent environments
+**Dev/Test Environments**
+- Provision disposable, consistent environments
 - Accelerate onboarding and troubleshooting
 
-**Web Application Deployment**- Deploy web servers, APIs, and frontends as isolated containers
+**Web Application Deployment**
+- Deploy web servers, APIs, and frontends as isolated containers
 - Enable rapid scaling and consistent performance
 
 ## Getting Started with Docker
@@ -170,52 +194,64 @@ docker-compose up
 
 ## Best Practices
 
-**Image Optimization**- Use official/minimal base images
+**Image Optimization**
+- Use official/minimal base images
 - Remove unnecessary files
 - Implement multi-stage builds to separate build and runtime dependencies
 
-**Security**- Use non-root users for better security
+**Security**
+- Use non-root users for better security
 - Regularly scan images for vulnerabilities
 - Apply principle of least privilege
 
-**Configuration Management**- Use environment variables for configuration
+**Configuration Management**
+- Use environment variables for configuration
 - Avoid hardcoded secrets
 - Tag images with semantic versioning
 
-**Monitoring and Logging**- Centralize logs for easy debugging
+**Monitoring and Logging**
+- Centralize logs for easy debugging
 - Monitor container health and resource usage
 - Implement health checks
 
-**Data Persistence**- Use volumes for persistent data
+**Data Persistence**
+- Use volumes for persistent data
 - Back up important data regularly
 - Separate stateful from stateless components
 
 ## Docker in AI Infrastructure
 
-**Model Packaging**- Containers encapsulate machine learning models and dependencies
+**Model Packaging**
+- Containers encapsulate machine learning models and dependencies
 - Ensures reproducible deployment across environments
 
-**Resource Efficiency**- Run multiple data pipelines in isolated containers on same hardware
+**Resource Efficiency**
+- Run multiple data pipelines in isolated containers on same hardware
 - Optimize resource allocation and utilization
 
-**Scalable Serving**- Deploy AI inference services as scalable, independent containers
+**Scalable Serving**
+- Deploy AI inference services as scalable, independent containers
 - Enable horizontal scaling based on demand
 
-**CI/CD Integration**- Automate testing, validation, and deployment with containerized stages
+**CI/CD Integration**
+- Automate testing, validation, and deployment with containerized stages
 - Streamline ML model deployment pipelines
 
-**Example:**A data scientist builds a Docker image with a trained model and API, then deploys it to Kubernetes for scalable inference.
+**Example:** A data scientist builds a Docker image with a trained model and API, then deploys it to Kubernetes for scalable inference.
 
 ## Advanced Topics
 
-**Container Orchestration**- Kubernetes and Docker Swarm manage deployment, scaling, and operation
+**Container Orchestration**
+- Kubernetes and Docker Swarm manage deployment, scaling, and operation
 - Handle service discovery, load balancing, auto-scaling, and self-healing
 
-**Security Considerations**- Use trusted images from official or verified publishers
+**Security Considerations**
+- Use trusted images from official or verified publishers
 - Regularly scan images for vulnerabilities
 - Restrict container permissions and isolate sensitive workloads
 
-**Networking**- Bridge: Default network for single-host containers
+**Networking**
+- Bridge: Default network for single-host containers
 - Host: Shares host's network stack
 - Overlay: Enables multi-host communication (used by orchestrators)
 
@@ -234,24 +270,39 @@ docker-compose up
 
 ## Key Technical Terms
 
-**Container:**Isolated process encapsulating an application and dependencies using kernel features like namespaces and cgroups**Docker Image:**Read-only layered template for creating containers**Dockerfile:**Script with instructions to build a Docker image**Docker Daemon:**Service managing Docker objects**Docker Client:**CLI or API to interact with Docker daemon**Registry:**Repository for storing and distributing images**Namespace:**Linux kernel feature for process isolation**Volume:**Persistent storage mounted into containers**Network:**Virtual network for container communication
+**Container:** Isolated process encapsulating an application and dependencies using kernel features like namespaces and cgroups
+
+**Docker Image:** Read-only layered template for creating containers
+
+**Dockerfile:** Script with instructions to build a Docker image
+
+**Docker Daemon:** Service managing Docker objects
+
+**Docker Client:** CLI or API to interact with Docker daemon
+
+**Registry:** Repository for storing and distributing images
+
+**Namespace:** Linux kernel feature for process isolation
+
+**Volume:** Persistent storage mounted into containers
+
+**Network:** Virtual network for container communication
 
 ## References
 
-
-1. Docker. (n.d.). Docker Official Documentation. Docker Docs.
-2. Docker. (n.d.). Docker: What is a Container?. Docker Docs.
-3. Docker Curriculum. (n.d.). Docker Curriculum (Beginner to Advanced). Docker Curriculum.
-4. AWS. (n.d.). What is Docker?. AWS.
-5. Oracle. (n.d.). What is Docker?. Oracle Cloud.
-6. GeeksforGeeks. (n.d.). Containerization using Docker. GeeksforGeeks Blog.
-7. Docker. (n.d.). Docker Compose Documentation. Docker Docs.
-8. Kubernetes. (n.d.). Kubernetes Documentation. Kubernetes Docs.
-9. Docker. (n.d.). Docker CLI Reference. Docker Docs.
-10. Docker. (n.d.). Docker Best Practices. Docker Docs.
-11. Docker Hub. Docker Container Registry. URL: https://hub.docker.com
-12. Docker. (n.d.). Docker Networking. Docker Docs.
-13. Docker. (n.d.). Docker Registry Docs. Docker Docs.
-14. Docker. (n.d.). Docker for Machine Learning. Docker Blog.
-15. Docker. (n.d.). Docker Scout. Docker Docs.
-16. Docker. (n.d.). Containers vs. VMs. Docker Docs.
+- [Docker Official Documentation](https://docs.docker.com/get-started/docker-overview/)
+- [Docker: What is a Container?](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/)
+- [Docker Curriculum (Beginner to Advanced)](https://docker-curriculum.com)
+- [AWS: What is Docker?](https://aws.amazon.com/docker/)
+- [Oracle: What is Docker?](https://www.oracle.com/cloud/cloud-native/container-registry/what-is-docker/)
+- [GeeksforGeeks: Containerization using Docker](https://www.geeksforgeeks.org/blogs/containerization-using-docker/)
+- [Docker Compose Documentation](https://docs.docker.com/compose/)
+- [Kubernetes Documentation](https://kubernetes.io/docs/)
+- [Docker CLI Reference](https://docs.docker.com/engine/reference/commandline/cli/)
+- [Docker Best Practices](https://docs.docker.com/develop/dev-best-practices/)
+- [Docker Hub](https://hub.docker.com)
+- [Docker Networking](https://docs.docker.com/network/)
+- [Docker Registry Docs](https://docs.docker.com/registry/)
+- [Docker for Machine Learning](https://www.docker.com/blog/tag/machine-learning/)
+- [Docker Scout](https://docs.docker.com/scout/)
+- [Containers vs. VMs (Docker Docs)](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/#containers-versus-virtual-machines-vms)

@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Demand Forecasting | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/demand-forecasting/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="A process that uses past sales data and AI to predict what customers will buy in the future, helping businesses decide how much inventory to stock and when to produce goods." name="description"/>
+<meta content="demand forecasting, predictive analytics, inventory optimization, supply chain management, time series analysis, machine learning forecasting, sales prediction, demand planning" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/demand-forecasting/" property="og:url"/>
+<meta content="Demand Forecasting | SmartWeb" property="og:title"/>
+<meta content="A process that uses past sales data and AI to predict what customers will buy in the future, helping businesses decide how much inventory to stock and when to produce goods." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/demand-forecasting/" name="twitter:url"/>
+<meta content="Demand Forecasting | SmartWeb" name="twitter:title"/>
+<meta content="A process that uses past sales data and AI to predict what customers will buy in the future, helping businesses decide how much inventory to stock and when to produce goods." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165525" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165525" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165525"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118125587168000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118125587168000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118125587168000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118125587168000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Demand Forecasting</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Demand Forecasting
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A process that uses past sales data and AI to predict what customers will buy in the future, helping businesses decide how much inventory to stock and when to produce goods.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                demand forecasting
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                predictive analytics
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                inventory optimization
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                supply chain management
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                time series analysis
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                machine learning forecasting
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                sales prediction
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                demand planning
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-demand-forecasting">What is Demand Forecasting?</h2>
+<p>Demand forecasting is the systematic process of predicting future customer demand for products, services, or resources using historical data, market analysis, statistical models, and increasingly, <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence glossary entry">artificial intelligence</a> and machine learning algorithms. This critical business intelligence capability enables organizations to anticipate future sales volumes, seasonal fluctuations, market trends, and consumer behavior patterns with quantifiable accuracy. By transforming past performance data, market indicators, promotional calendars, economic factors, and external variables into forward-looking demand predictions, businesses can make informed decisions about inventory levels, production scheduling, workforce planning, supply chain optimization, and capital allocation—ultimately reducing costs, minimizing stockouts, preventing overstock, and improving customer satisfaction.</p>
+<p>Modern demand forecasting has evolved far beyond simple historical trend analysis. Today’s sophisticated systems integrate multiple data sources including point-of-sale transactions, e-commerce analytics, social media sentiment, weather patterns, economic indicators, promotional activities, competitive intelligence, and even unconventional signals like search trends or satellite imagery. Machine learning models—including time series algorithms, regression models, <a data-lb="1" href="/en/glossary/neural-networks/" title="Neural Networks glossary entry">neural networks</a>, and ensemble methods—process these diverse inputs to generate increasingly accurate predictions across multiple time horizons, from hourly forecasts for perishable goods to multi-year projections for strategic capacity planning. The ability to forecast demand accurately at various levels of granularity—product SKU, store location, regional market, or national level—provides organizations with unprecedented visibility into future market dynamics.</p>
+<p>The business impact of accurate demand forecasting cannot be overstated. Retail organizations use it to stock the right products in the right quantities at the right locations, minimizing both stockouts that lose sales and overstock that ties up capital and increases markdown costs. Manufacturers leverage demand forecasts to optimize production schedules, raw material procurement, and capacity utilization. Service industries from healthcare to hospitality employ demand forecasting to manage staffing levels, ensuring sufficient resources during peak periods while avoiding unnecessary labor costs during slow times. Supply chain professionals coordinate complex global logistics based on demand predictions, balancing transportation costs, lead times, and service level requirements. In an era of just-in-time inventory, e-commerce growth, and heightened customer expectations, the ability to accurately predict and respond to demand fluctuations has become a fundamental competitive advantage.</p>
+<h2 id="core-forecasting-approaches">Core Forecasting Approaches</h2>
+<p>Time Series AnalysisStatistical methods analyzing historical demand patterns over time to identify trends, seasonality, cyclical patterns, and irregular fluctuations. Classic techniques include moving averages, exponential smoothing (Holt-Winters), and ARIMA models. These methods work well when historical patterns reliably indicate future behavior.Causal ModelsRegression-based approaches that correlate demand with explanatory variables like price changes, promotional activities, competitor actions, economic indicators, weather conditions, or demographic shifts. Multiple regression, econometric models, and generalized linear models identify which factors drive demand and quantify their impact.Machine Learning AlgorithmsAdvanced AI techniques including random forests, gradient boosting machines, support vector machines, and neural networks that learn complex, non-linear relationships between multiple variables and demand outcomes. These models excel at capturing intricate patterns humans might miss.Deep Learning for ForecastingSophisticated neural network architectures—Long Short-Term Memory (LSTM), Gated Recurrent Units (GRU), Temporal Convolutional Networks (TCN), and Transformers—specifically designed for sequential data. These models handle multiple time series simultaneously and capture long-range dependencies.Ensemble MethodsCombining multiple forecasting models to produce more accurate and robust predictions than any single model. Techniques include simple averaging, weighted averaging based on historical accuracy, stacking, or boosting approaches that leverage strengths of diverse modeling strategies.Judgmental ForecastingIncorporating expert opinion, market intelligence, and qualitative insights alongside quantitative models. Particularly valuable for new products without historical data, market disruptions, or situations where domain expertise identifies factors models might miss.Hybrid ApproachesIntegrating multiple methodologies—combining statistical baselines with machine learning adjustments, blending quantitative predictions with expert judgment, or using ensemble techniques that span traditional and modern approaches for optimal accuracy.</p>
+<h2 id="how-demand-forecasting-works">How Demand Forecasting Works</h2>
+<p>The demand forecasting process follows a systematic methodology:</p>
+<p>Data Collection and IntegrationGather historical sales data, inventory records, promotional calendars, pricing information, market data, economic indicators, weather patterns, and any relevant external factors. Integrate data from multiple sources including ERP systems, POS terminals, e-commerce platforms, and external data providers.Data PreprocessingClean data to handle missing values, outliers, and anomalies. Transform raw data through techniques like normalization, logarithmic transformations, or differencing to meet modeling requirements. Address issues like stockouts (where zero sales reflect lack of inventory rather than lack of demand).Feature EngineeringCreate relevant predictive variables from raw data. This might include lag features (previous periods’ demand), rolling statistics (moving averages), seasonality indicators (day of week, month, holiday effects), promotional flags, or derived metrics like price indices or competitive intensity measures.Exploratory AnalysisVisualize demand patterns, identify trends and seasonality, detect anomalies, and understand relationships between demand and potential explanatory variables. This analysis guides model selection and feature importance understanding.Model Selection and TrainingChoose appropriate forecasting techniques based on data characteristics, forecast horizon, required accuracy, and computational constraints. Train models on historical data, often using cross-validation or rolling-window approaches to ensure robust performance.Validation and TestingEvaluate model performance on held-out test data using metrics like Mean Absolute Error (MAE), Mean Absolute Percentage Error (MAPE), Root Mean Squared Error (RMSE), or domain-specific measures. Compare multiple models to identify best performers.Forecast GenerationApply validated models to generate predictions for future time periods. Produce point forecasts (single demand value) along with prediction intervals quantifying forecast uncertainty (e.g., 80% confidence that actual demand falls within a specified range).Forecast AdjustmentIncorporate last-minute information not captured in models—new market intelligence, unexpected events, planned promotions, or expert insights—to refine predictions before deployment.Deployment and MonitoringIntegrate forecasts into business systems for inventory planning, production scheduling, or staffing. Monitor forecast accuracy continuously, comparing predictions against actual outcomes to detect performance degradation.Model RefinementRegularly retrain models with new data, adjust features based on performance analysis, and update modeling approaches as business conditions evolve. Establish feedback loops enabling continuous improvement.Example Workflow:A grocery chain forecasts weekly demand for fresh produce. Historical sales data from 500 stores spanning three years feeds into an ensemble model combining time series methods (capturing seasonality) with regression models (accounting for promotions, weather, holidays). The system generates SKU-level forecasts for each store, providing prediction intervals. Distribution planners use these forecasts to optimize deliveries, reducing waste from overstocking perishables while ensuring sufficient supply during high-demand periods.</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p>Inventory OptimizationRight-size inventory levels to meet expected demand without excessive safety stock. Reduce carrying costs, minimize markdowns from overstock, and decrease stockout incidents that lose sales and frustrate customers.Improved Cash FlowFree up working capital by avoiding excess inventory purchases. Optimize payment terms and purchasing schedules based on predicted demand patterns rather than reactive purchasing.Production EfficiencyAlign manufacturing output with anticipated demand, smoothing production schedules to reduce overtime costs, minimize changeover frequency, and optimize capacity utilization without expensive rush orders.Supply Chain OptimizationCoordinate procurement, warehousing, and distribution activities with demand forecasts. Negotiate better terms with suppliers through predictable ordering patterns and optimize transportation by consolidating shipments.Enhanced Customer ServiceImprove product availability and reduce stockouts, enhancing customer satisfaction and loyalty. Meet service level targets more consistently while reducing safety stock requirements.Better Resource PlanningForecast staffing needs, equipment requirements, and facility capacity based on anticipated demand patterns. Avoid costly rush hiring or underutilization of resources.Strategic Planning SupportInform decisions about market expansion, product launches, capacity investments, and strategic partnerships with data-driven demand projections rather than intuition alone.Reduced WasteParticularly valuable for perishable goods (food, fashion, pharmaceuticals), accurate forecasting minimizes unsold inventory that must be discarded or heavily discounted.Competitive AdvantageRespond faster to market changes, capture demand during peak periods competitors miss, and avoid tying up capital in slow-moving inventory that hampers agility.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p>Retail Merchandise PlanningRetailers forecast demand at SKU-store level to optimize inventory placement and replenishment. Fashion retailers predict demand for seasonal collections accounting for style trends, weather, and promotional calendars.E-Commerce Order FulfillmentOnline retailers forecast demand to position inventory across fulfillment centers, optimizing delivery speed and cost. Amazon-style platforms predict demand at granular levels to enable same-day delivery while minimizing inventory costs.Manufacturing Production PlanningManufacturers use demand forecasts to schedule production runs, procure raw materials, manage workforce levels, and optimize capacity utilization across multiple facilities and product lines.Food and Beverage IndustryRestaurants and food manufacturers forecast demand for perishable items, balancing freshness requirements against waste minimization. Fast food chains predict hourly demand to optimize staffing and ingredient preparation.Pharmaceutical Supply ChainDrug manufacturers and distributors forecast demand accounting for seasonality (flu medications), regulatory approvals, patent expirations, and healthcare policy changes to ensure medication availability.Energy and UtilitiesElectric utilities forecast power demand at hourly granularity to optimize generation dispatch, manage peak capacity, schedule maintenance, and participate in wholesale power markets.Transportation and LogisticsAirlines forecast passenger demand to optimize pricing and capacity allocation. Shipping companies predict cargo volumes to position equipment and negotiate contracts.Healthcare Capacity PlanningHospitals forecast patient volumes, emergency room visits, and procedure demand to optimize staffing, equipment utilization, and bed capacity. Pandemic forecasting enables proactive resource allocation.TelecommunicationsService providers forecast network demand to optimize capacity investments, predict infrastructure requirements, and manage peak load handling for new technology rollouts.</p>
+<h2 id="forecasting-accuracy-metrics">Forecasting Accuracy Metrics</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Description</th>
+<th>Best For</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAPE(Mean Absolute Percentage Error)</td>
+<td>Average absolute error as percentage of actual</td>
+<td>General comparison across products</td>
+<td>Lower is better; 10% means ±10% average error</td>
+</tr>
+<tr>
+<td>MAE(Mean Absolute Error)</td>
+<td>Average absolute difference between forecast and actual</td>
+<td>Same-scale comparisons</td>
+<td>Lower is better; in units of measurement</td>
+</tr>
+<tr>
+<td>RMSE(Root Mean Squared Error)</td>
+<td>Square root of average squared errors</td>
+<td>Penalizing large errors</td>
+<td>Lower is better; sensitive to outliers</td>
+</tr>
+<tr>
+<td>Bias</td>
+<td>Average error (positive or negative)</td>
+<td>Detecting systematic over/under-forecasting</td>
+<td>Near zero is ideal; shows forecast direction</td>
+</tr>
+<tr>
+<td>Forecast Value Added</td>
+<td>Improvement over naive baseline</td>
+<td>Evaluating model worth</td>
+<td>Positive means model adds value</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p>Data Quality IssuesPoor data quality—missing values, incorrect records, unrecorded promotions—undermines forecast accuracy. Stockouts create artificial zero demand that misleads models if not properly flagged and handled.New Product ForecastingProducts without sales history require alternative approaches like analogous product comparisons, test market results, or pre-launch indicators. These forecasts inherently carry higher uncertainty.Demand VolatilityHighly variable or erratic demand patterns make accurate forecasting difficult. Products with infrequent, lumpy demand (industrial equipment, specialized services) challenge traditional forecasting methods.External DisruptionsUnexpected events—pandemics, natural disasters, supply chain disruptions, regulatory changes, viral trends—create demand shocks that models trained on historical patterns cannot anticipate.Promotional ImpactComplex promotional calendars with varying discount depths, durations, and combinations make isolating true baseline demand difficult. Promotional cannibalization and halo effects complicate analysis.Computational ComplexityForecasting at high granularity (SKU-store-day level) for large product assortments creates computational challenges requiring efficient algorithms and infrastructure.Forecast Horizon Trade-offsShort-term forecasts (days/weeks) can be quite accurate but provide limited planning value. Long-term forecasts (months/years) enable strategic planning but carry higher uncertainty.Organizational AdoptionGetting stakeholders to trust and act on forecasts requires change management, training, and demonstrating forecast value. Forecast accuracy must be communicated transparently with appropriate confidence intervals.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p>Start with Data FoundationInvest in data quality, integration, and governance before complex modeling. Clean, comprehensive historical data matters more than sophisticated algorithms.Choose Appropriate ModelsMatch forecasting techniques to problem characteristics. Simple methods often outperform complex models for stable demand patterns. Reserve advanced techniques for genuinely complex scenarios.Forecast at Appropriate LevelsAggregate forecasts are typically more accurate than disaggregate predictions. Consider forecasting at higher levels (product category, region) then allocating to lower levels using static proportions.Incorporate Domain ExpertiseBlend statistical forecasts with expert knowledge. Create structured processes for subject matter experts to adjust predictions based on factors models might miss.Measure and Monitor ContinuouslyTrack forecast accuracy systematically using appropriate metrics. Establish performance benchmarks and investigate when accuracy degrades beyond acceptable thresholds.Communicate UncertaintyPresent forecasts with confidence intervals rather than single point estimates. Help stakeholders understand forecast uncertainty and plan accordingly.Update Forecasts RegularlyRefresh predictions as new information becomes available. Short-cycle forecasting (weekly or daily updates) typically outperforms infrequent long-range projections.Plan for ExceptionsDevelop contingency plans for high-impact scenarios (demand surges, supply disruptions) even if they’re unlikely. Sensitivity analysis helps prepare for various potential outcomes.Automate Where PossibleFor high-volume forecasting (thousands of SKUs), automation is essential. Focus human effort on exception handling, strategy, and improving the forecasting system.Create Feedback LoopsConnect forecasts to business outcomes and establish processes for learning from forecast errors. Continuous improvement should be built into the forecasting workflow.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p>Hierarchical ForecastingGenerate forecasts at multiple aggregation levels (national, regional, store, SKU) ensuring consistency through reconciliation methods that enforce logical constraints across the hierarchy.Probabilistic ForecastingProduce full probability distributions rather than point estimates, enabling risk-based decision making and optimal safety stock calculations based on cost trade-offs.Transfer LearningApply knowledge from related products or markets to improve forecasts for items with limited history. Particularly valuable for new product introductions.Real-Time ForecastingContinuously update predictions as new data streams in (POS transactions, web traffic, social signals), enabling dynamic decision-making and rapid response to demand shifts.Causal Impact AnalysisQuantify the isolated impact of specific interventions (promotions, price changes) on demand using causal inference techniques, enabling more accurate future event modeling.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>McKinsey. (n.d.). Demand Forecasting Best Practices. McKinsey Insights.</p>
+</li>
+<li>
+<p>Towards <a data-lb="1" href="/en/glossary/data-science/" title="Data Science glossary entry">Data Science</a>. (n.d.). Machine Learning for Demand Forecasting. Towards Data Science.</p>
+</li>
+<li>
+<p>Hyndman, R., &amp; Athanasopoulos, G. (n.d.). Forecasting: Principles and Practice. OTexts.</p>
+</li>
+<li>
+<p>Amazon Science. (n.d.). Amazon’s Demand Forecasting at Scale. Amazon Science.</p>
+</li>
+<li>
+<p>IBM. (n.d.). Demand Forecasting Methods. IBM Topics.</p>
+</li>
+<li>
+<p>Gartner. (n.d.). AI-Powered Forecasting. Gartner Supply Chain Trends.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/retail-demand-forecasting/">
+                    Retail Demand Forecasting
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A method retailers use to predict what customers will buy by analyzing sales history, trends, and ma...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/retail-demand-forecasting/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/sales-forecasting/">
+                    Sales Forecasting
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A business method that predicts future sales by analyzing past performance, market trends, and custo...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/sales-forecasting/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/churn-prediction/">
+                    Churn Prediction
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A machine learning technique that identifies customers likely to stop using a service, helping busin...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/churn-prediction/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/digital-twin/">
+                    Digital Twin
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A virtual copy of a physical object or system that uses real-time data to monitor, simulate, and imp...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/digital-twin/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/long-short-term-memory--lstm-/">
+                    Long Short-Term Memory (LSTM)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A neural network that remembers important information over long sequences of data, making it useful ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/long-short-term-memory--lstm-/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/next-best-action/">
+                    Next Best Action
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI technology that analyzes customer data and behavior to recommend the best action at the right mom...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/next-best-action/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/demand-forecasting/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165525"></script>
+</body>
+</html>

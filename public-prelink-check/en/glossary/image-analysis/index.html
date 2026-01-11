@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Image Analysis | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/image-analysis/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/image-analysis/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/image-analysis/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/image-analysis/" hreflang="x-default" rel="alternate"/>
+<meta content="Image analysis is AI technology that automatically interprets digital images to identify objects, people, and text, extracting useful information for applications like medical imaging and quality inspection." name="description"/>
+<meta content="image analysis, AI, computer vision, object detection, image segmentation" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/image-analysis/" property="og:url"/>
+<meta content="Image Analysis | SmartWeb" property="og:title"/>
+<meta content="Image analysis is AI technology that automatically interprets digital images to identify objects, people, and text, extracting useful information for applications like medical imaging and quality inspection." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/image-analysis/" name="twitter:url"/>
+<meta content="Image Analysis | SmartWeb" name="twitter:title"/>
+<meta content="Image analysis is AI technology that automatically interprets digital images to identify objects, people, and text, extracting useful information for applications like medical imaging and quality inspection." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Image Analysis</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Image Analysis
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          Image analysis is AI technology that automatically interprets digital images to identify objects, people, and text, extracting useful information for applications like medical imaging and quality inspection.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                image analysis
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                computer vision
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                object detection
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                image segmentation
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-image-analysis">What Is Image Analysis?</h2>
+<p>Image analysis is the automated process by which <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">artificial intelligence (AI)</a> systems interpret, extract, and understand meaningful information from digital images. This encompasses technologies that enable computers to “see”—making sense of visual data such as photographs, X-rays, satellite imagery, or video frames. Core tasks include identifying objects, people, structures, text, and activities within images, and making decisions or generating outputs from this understanding.</p>
+<p><strong>Scope:</strong> While closely related to computer vision (the broader AI discipline), image analysis specifically focuses on extracting actionable insights from static images.</p>
+<h2 id="image-analysis-vs-computer-vision">Image Analysis vs. Computer Vision</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Computer Vision</th>
+<th>Image Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scope</strong></td>
+<td>Broad field covering all visual understanding</td>
+<td>Specific application within computer vision</td>
+</tr>
+<tr>
+<td><strong>Data Types</strong></td>
+<td>Images, video, 3D data, real-time streams</td>
+<td>Primarily static images</td>
+</tr>
+<tr>
+<td><strong>Applications</strong></td>
+<td>Robotics, autonomous vehicles, AR/VR</td>
+<td>Medical imaging, document processing, quality inspection</td>
+</tr>
+<tr>
+<td><strong>Processing</strong></td>
+<td>Real-time and offline</td>
+<td>Typically offline or <a data-lb="1" href="/en/glossary/batch-processing/" title="Batch Processing glossary entry">batch processing</a></td>
+</tr>
+<tr>
+<td><strong>Complexity</strong></td>
+<td>Encompasses full visual scene understanding</td>
+<td>Focused on specific image interpretation tasks</td>
+</tr>
+</tbody>
+</table>
+<h2 id="core-image-analysis-workflow">Core Image Analysis Workflow</h2>
+<h3 id="stage-1-data-acquisition-and-input">Stage 1: Data Acquisition and Input</h3>
+<p><strong>Image Sources:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Source Type</th>
+<th>Examples</th>
+<th>Use Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Medical Devices</strong></td>
+<td>X-ray, MRI, CT scan, ultrasound</td>
+<td>Diagnostics, treatment planning</td>
+</tr>
+<tr>
+<td><strong>Cameras</strong></td>
+<td>Smartphones, DSLRs, surveillance</td>
+<td>Security, social media, documentation</td>
+</tr>
+<tr>
+<td><strong>Satellites</strong></td>
+<td>Remote sensing imagery</td>
+<td>Agriculture, urban planning, environment</td>
+</tr>
+<tr>
+<td><strong>Scanners</strong></td>
+<td>Document scanners, barcode readers</td>
+<td>Digitization, inventory management</td>
+</tr>
+<tr>
+<td><strong>Industrial</strong></td>
+<td>Quality control cameras, microscopes</td>
+<td>Manufacturing, research</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stage-2-preprocessing">Stage 2: Preprocessing</h3>
+<p><strong>Purpose:</strong> Enhance image quality and standardize format for analysis.</p>
+<p><strong>Common Techniques:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Technique</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resizing</strong></td>
+<td>Standardize dimensions</td>
+<td>224×224, 512×512 for <a data-lb="1" href="/en/glossary/neural-networks/" title="Neural Networks glossary entry">neural networks</a></td>
+</tr>
+<tr>
+<td><strong>Normalization</strong></td>
+<td>Scale pixel values</td>
+<td>Convert to 0-1 range or standardize</td>
+</tr>
+<tr>
+<td><strong>Noise Reduction</strong></td>
+<td>Remove artifacts</td>
+<td>Gaussian blur, median filtering</td>
+</tr>
+<tr>
+<td><strong>Color Adjustment</strong></td>
+<td>Enhance visibility</td>
+<td>Contrast, brightness, histogram equalization</td>
+</tr>
+<tr>
+<td><strong>Grayscale Conversion</strong></td>
+<td>Simplify when color unnecessary</td>
+<td>Reduce from 3 channels to 1</td>
+</tr>
+<tr>
+<td><strong>Augmentation</strong></td>
+<td>Expand training data</td>
+<td>Rotation, flipping, cropping, scaling</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Preprocessing Pipeline:</strong></p>
+<pre tabindex="0"><code>Raw Image
+    ↓
+Resize to Standard Dimensions
+    ↓
+Normalize Pixel Values
+    ↓
+Apply Noise Reduction (if needed)
+    ↓
+Color/Contrast Adjustment
+    ↓
+Augmentation (training phase)
+    ↓
+Standardized Input for Model
+</code></pre><h3 id="stage-3-feature-extraction">Stage 3: Feature Extraction</h3>
+<p><strong>Classical Approach (Traditional ML):</strong></p>
+<ul>
+<li>Hand-crafted features using domain expertise</li>
+<li>Filters: Sobel (edges), Gabor (textures), SIFT/SURF (keypoints)</li>
+<li>Color histograms, texture descriptors</li>
+<li>Manual feature engineering</li>
+</ul>
+<p><strong>Deep Learning Approach:</strong></p>
+<ul>
+<li>Automated hierarchical feature learning</li>
+<li>Convolutional layers extract patterns progressively</li>
+<li>Low-level (edges, colors) → Mid-level (shapes) → High-level (objects)</li>
+<li>No manual feature engineering required</li>
+</ul>
+<p><strong>Feature Representation:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Classical ML</th>
+<th>Deep Learning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Low-Level</strong></td>
+<td>Edge detection filters</td>
+<td>Conv layer 1-2 (edges, corners)</td>
+</tr>
+<tr>
+<td><strong>Mid-Level</strong></td>
+<td>Texture descriptors</td>
+<td>Conv layer 3-5 (shapes, parts)</td>
+</tr>
+<tr>
+<td><strong>High-Level</strong></td>
+<td>Object templates</td>
+<td>Conv layer 6+ (complete objects)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stage-4-model-training-and-learning">Stage 4: Model Training and Learning</h3>
+<p><strong><a data-lb="1" href="/en/glossary/supervised-learning/" title="Supervised Learning glossary entry">Supervised Learning</a>:</strong></p>
+<pre tabindex="0"><code>Labeled Dataset (Images + Annotations)
+    ↓
+Model learns to map features → labels
+    ↓
+Trained Model predicts on new images
+</code></pre><p><strong>Training Approaches:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Description</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>From Scratch</strong></td>
+<td>Train entirely new model</td>
+<td>Large datasets, unique domains</td>
+</tr>
+<tr>
+<td><strong>Transfer Learning</strong></td>
+<td>Adapt pre-trained model</td>
+<td>Limited data, faster training</td>
+</tr>
+<tr>
+<td><strong>Fine-Tuning</strong></td>
+<td>Adjust pre-trained weights</td>
+<td>Domain-specific adaptation</td>
+</tr>
+<tr>
+<td><strong>Few-Shot Learning</strong></td>
+<td>Learn from minimal examples</td>
+<td>Rare classes, limited labels</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Popular Architectures:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Architecture Type</th>
+<th>Examples</th>
+<th>Strengths</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CNNs</strong></td>
+<td>ResNet, VGG, EfficientNet</td>
+<td>Strong spatial feature extraction</td>
+</tr>
+<tr>
+<td><strong>Vision Transformers</strong></td>
+<td>ViT, SWIN, DeiT</td>
+<td>Global context, attention mechanisms</td>
+</tr>
+<tr>
+<td><strong>Detection Models</strong></td>
+<td>YOLO, Faster R-CNN, DETR</td>
+<td>Object localization + classification</td>
+</tr>
+<tr>
+<td><strong>Segmentation Models</strong></td>
+<td>U-Net, Mask R-CNN, DeepLab</td>
+<td>Pixel-level labeling</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stage-5-validation-and-testing">Stage 5: Validation and Testing</h3>
+<p><strong>Dataset Splits:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Split</th>
+<th>Purpose</th>
+<th>Typical Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Training</strong></td>
+<td>Model learning</td>
+<td>70-80%</td>
+</tr>
+<tr>
+<td><strong>Validation</strong></td>
+<td>Hyperparameter tuning</td>
+<td>10-15%</td>
+</tr>
+<tr>
+<td><strong>Test</strong></td>
+<td>Final evaluation</td>
+<td>10-15%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Evaluation Metrics:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Use Case</th>
+<th>Formula/Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Accuracy</strong></td>
+<td>Classification</td>
+<td>Correct predictions / Total predictions</td>
+</tr>
+<tr>
+<td><strong><a data-lb="1" href="/en/glossary/precision/" title="Precision glossary entry">Precision</a></strong></td>
+<td>Object detection</td>
+<td>True Positives / (TP + False Positives)</td>
+</tr>
+<tr>
+<td><strong>Recall</strong></td>
+<td>Object detection</td>
+<td>True Positives / (TP + False Negatives)</td>
+</tr>
+<tr>
+<td><strong><a data-lb="1" href="/en/glossary/f1-score/" title="F1 Score glossary entry">F1 Score</a></strong></td>
+<td>Balanced metric</td>
+<td>2 × (Precision × Recall) / (Precision + Recall)</td>
+</tr>
+<tr>
+<td><strong>IoU</strong></td>
+<td>Segmentation, detection</td>
+<td>Intersection / Union of predicted and ground truth</td>
+</tr>
+<tr>
+<td><strong>mAP</strong></td>
+<td>Object detection</td>
+<td>Mean Average Precision across classes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stage-6-deployment-and-inference">Stage 6: Deployment and Inference</h3>
+<p><strong>Deployment Options:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Characteristics</th>
+<th>Use Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cloud APIs</strong></td>
+<td>Scalable, managed</td>
+<td>High-volume applications</td>
+</tr>
+<tr>
+<td><strong>Edge Devices</strong></td>
+<td>Low-latency, offline</td>
+<td>IoT, mobile apps, autonomous systems</td>
+</tr>
+<tr>
+<td><strong>Web Applications</strong></td>
+<td>Accessible, cross-platform</td>
+<td>Consumer applications</td>
+</tr>
+<tr>
+<td><strong>Embedded Systems</strong></td>
+<td>Resource-constrained</td>
+<td>Industrial, automotive</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Optimization Techniques:</strong></p>
+<ul>
+<li>Model quantization (reduce precision)</li>
+<li>Pruning (remove unnecessary weights)</li>
+<li>Knowledge distillation (create smaller models)</li>
+<li>Hardware acceleration (GPU, TPU, specialized chips)</li>
+</ul>
+<h3 id="stage-7-continuous-improvement">Stage 7: Continuous Improvement</h3>
+<p><strong>Maintenance Activities:</strong></p>
+<ul>
+<li>Monitor performance in production</li>
+<li>Collect new data from real-world usage</li>
+<li>Retrain models periodically</li>
+<li>Update for concept drift</li>
+<li>A/B testing new model versions</li>
+<li>User feedback integration</li>
+</ul>
+<h2 id="key-image-analysis-tasks">Key Image Analysis Tasks</h2>
+<h3 id="1-image-classification">1. Image Classification</h3>
+<p><strong>Definition:</strong> Assign a single category label to an entire image.</p>
+<p><strong>Applications:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th>Task</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>E-commerce</strong></td>
+<td>Product categorization</td>
+<td>“Shirt”, “Shoes”, “Electronics”</td>
+</tr>
+<tr>
+<td><strong>Healthcare</strong></td>
+<td>Disease detection</td>
+<td>“Normal”, “Pneumonia”, “COVID-19”</td>
+</tr>
+<tr>
+<td><strong>Agriculture</strong></td>
+<td>Crop identification</td>
+<td>“Wheat”, “Corn”, “Soybeans”</td>
+</tr>
+<tr>
+<td><strong>Wildlife</strong></td>
+<td>Species recognition</td>
+<td>“Lion”, “Elephant”, “Zebra”</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Model Architecture:</strong></p>
+<pre tabindex="0"><code>Input Image → CNN Backbone → Global Average Pooling → 
+Fully Connected Layers → Softmax → Class Probabilities
+</code></pre><h3 id="2-object-detection">2. Object Detection</h3>
+<p><strong>Definition:</strong> Identify and localize multiple objects within an image using bounding boxes.</p>
+<p><strong>Output Format:</strong></p>
+<pre tabindex="0"><code>[
+  {"class": "car", "confidence": 0.95, "bbox": [x, y, width, height]},
+  {"class": "person", "confidence": 0.88, "bbox": [x, y, width, height]},
+  {"class": "traffic_light", "confidence": 0.92, "bbox": [x, y, width, height]}
+]
+</code></pre><p><strong>Popular Models:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Speed</th>
+<th>Accuracy</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>YOLO v8</strong></td>
+<td>Very Fast</td>
+<td>High</td>
+<td>Real-time applications</td>
+</tr>
+<tr>
+<td><strong>Faster R-CNN</strong></td>
+<td>Moderate</td>
+<td>Very High</td>
+<td>Accuracy-critical tasks</td>
+</tr>
+<tr>
+<td><strong>DETR</strong></td>
+<td>Moderate</td>
+<td>High</td>
+<td>Transformer-based detection</td>
+</tr>
+<tr>
+<td><strong>RetinaNet</strong></td>
+<td>Fast</td>
+<td>High</td>
+<td>Handling class imbalance</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Applications:</strong></p>
+<ul>
+<li>Autonomous vehicles (pedestrians, vehicles, signs)</li>
+<li>Surveillance (person detection, behavior analysis)</li>
+<li>Retail (product recognition, shelf <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a>)</li>
+<li>Manufacturing (defect detection)</li>
+</ul>
+<h3 id="3-image-segmentation">3. Image Segmentation</h3>
+<p><strong>Definition:</strong> Label every pixel in an image according to class or instance.</p>
+<p><strong>Segmentation Types:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Semantic</strong></td>
+<td>Class per pixel, no instance distinction</td>
+<td>Land use mapping, medical imaging</td>
+</tr>
+<tr>
+<td><strong>Instance</strong></td>
+<td>Separate instances of same class</td>
+<td>Counting objects, robot manipulation</td>
+</tr>
+<tr>
+<td><strong>Panoptic</strong></td>
+<td>Combination of semantic + instance</td>
+<td>Comprehensive scene understanding</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Model Examples:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Type</th>
+<th>Strengths</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>U-Net</strong></td>
+<td>Semantic</td>
+<td>Medical imaging, small datasets</td>
+</tr>
+<tr>
+<td><strong>Mask R-CNN</strong></td>
+<td>Instance</td>
+<td>Object instances with precise boundaries</td>
+</tr>
+<tr>
+<td><strong>DeepLab</strong></td>
+<td>Semantic</td>
+<td>High accuracy, atrous convolutions</td>
+</tr>
+<tr>
+<td><strong>YOLOv8-seg</strong></td>
+<td>Instance</td>
+<td>Real-time segmentation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Applications:</strong></p>
+<ul>
+<li>Medical: Tumor segmentation, organ delineation</li>
+<li>Autonomous driving: Road, lane, sidewalk segmentation</li>
+<li>Agriculture: Crop and weed identification</li>
+<li>Satellite: Land cover classification</li>
+</ul>
+<h3 id="4-optical-character-recognition-ocr">4. Optical Character Recognition (OCR)</h3>
+<p><strong>Definition:</strong> Detect and extract text from images, including printed and handwritten sources.</p>
+<p><strong>Pipeline:</strong></p>
+<pre tabindex="0"><code>Image → Text Detection → Text Recognition → 
+Post-Processing → Structured Text Output
+</code></pre><p><strong>Capabilities:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Multi-Language</strong></td>
+<td>Support for 100+ languages</td>
+</tr>
+<tr>
+<td><strong>Handwriting</strong></td>
+<td>Cursive and printed handwriting</td>
+</tr>
+<tr>
+<td><strong>Mixed Content</strong></td>
+<td>Text + images + tables</td>
+</tr>
+<tr>
+<td><strong>Layout Analysis</strong></td>
+<td>Preserve document structure</td>
+</tr>
+<tr>
+<td><strong>Quality Enhancement</strong></td>
+<td>Handle low-quality scans</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Common Tools:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Strengths</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tesseract</strong></td>
+<td>Open-source, multi-language</td>
+<td>General OCR</td>
+</tr>
+<tr>
+<td><strong>Google Vision OCR</strong></td>
+<td>High accuracy, cloud-based</td>
+<td>Enterprise applications</td>
+</tr>
+<tr>
+<td><strong>Azure OCR</strong></td>
+<td>Layout understanding</td>
+<td>Complex documents</td>
+</tr>
+<tr>
+<td><strong>Amazon Textract</strong></td>
+<td>Form and table extraction</td>
+<td>Document automation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Applications:</strong></p>
+<ul>
+<li>Document digitization</li>
+<li>License plate reading</li>
+<li>Receipt processing</li>
+<li>ID verification</li>
+<li>Form automation</li>
+</ul>
+<h3 id="5-facial-recognition-and-analysis">5. Facial Recognition and Analysis</h3>
+<p><strong>Capabilities:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Description</th>
+<th>Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Face Detection</strong></td>
+<td>Locate faces in images</td>
+<td>Photo organization, security</td>
+</tr>
+<tr>
+<td><strong>Face Recognition</strong></td>
+<td>Identify specific individuals</td>
+<td>Authentication, tagging</td>
+</tr>
+<tr>
+<td><strong>Landmark Detection</strong></td>
+<td>Find key points (eyes, nose, mouth)</td>
+<td>Filters, emotion analysis</td>
+</tr>
+<tr>
+<td><strong>Attribute Analysis</strong></td>
+<td>Estimate age, gender, emotion</td>
+<td>Demographics, marketing</td>
+</tr>
+<tr>
+<td><strong>Face Verification</strong></td>
+<td>Confirm identity match</td>
+<td>Biometric systems</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Privacy Considerations:</strong></p>
+<ul>
+<li>Consent and data protection regulations</li>
+<li>Bias in recognition accuracy</li>
+<li>Security of biometric data</li>
+<li>Ethical use guidelines</li>
+</ul>
+<h3 id="6-image-captioning-and-description">6. Image Captioning and Description</h3>
+<p><strong>Definition:</strong> Generate natural language descriptions of image content.</p>
+<p><strong>Architecture:</strong></p>
+<pre tabindex="0"><code>Image → CNN Encoder → Visual Features → 
+LSTM/Transformer Decoder → Text Generation → Caption
+</code></pre><p><strong>Example Output:</strong></p>
+<pre tabindex="0"><code>Image: [Beach scene with people]
+Caption: "A group of people enjoying a sunny day at the beach, 
+          with waves in the background and umbrellas on the sand."
+</code></pre><p><strong>Models:</strong></p>
+<ul>
+<li><strong>CLIP:</strong> Contrastive Language-Image Pre-training</li>
+<li><strong>BLIP-2:</strong> Bootstrapped Language-Image Pre-training</li>
+<li><strong>PaliGemma:</strong> Google’s vision-language model</li>
+<li><strong>GPT-4V:</strong> OpenAI’s multimodal model</li>
+</ul>
+<p><strong>Applications:</strong></p>
+<ul>
+<li>Accessibility (image descriptions for visually impaired)</li>
+<li>Social media (automatic alt-text)</li>
+<li>E-commerce (product descriptions)</li>
+<li>Content moderation</li>
+<li>Image search</li>
+</ul>
+<h3 id="7-multimodal-embeddings-and-search">7. Multimodal Embeddings and Search</h3>
+<p><strong>Definition:</strong> Transform images and text into shared vector space for semantic search.</p>
+<p><strong>Use Cases:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Application</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Visual Search</strong></td>
+<td>Find images using text queries</td>
+</tr>
+<tr>
+<td><strong>Reverse Image Search</strong></td>
+<td>Find similar images</td>
+</tr>
+<tr>
+<td><strong>Cross-Modal Retrieval</strong></td>
+<td>Search images with text, vice versa</td>
+</tr>
+<tr>
+<td><strong>Content Recommendation</strong></td>
+<td>Suggest visually similar items</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Architecture:</strong></p>
+<pre tabindex="0"><code>Text → Text Encoder → Embedding Vector
+Image → Image Encoder → Embedding Vector
+    ↓
+Cosine Similarity → Relevance Score
+</code></pre><h2 id="industry-applications">Industry Applications</h2>
+<h3 id="healthcare-and-medical-imaging">Healthcare and Medical Imaging</h3>
+<p><strong>Applications:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Technology</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Disease Detection</strong></td>
+<td>Classification, segmentation</td>
+<td>Early diagnosis, treatment planning</td>
+</tr>
+<tr>
+<td><strong>Tumor Analysis</strong></td>
+<td>Segmentation, measurement</td>
+<td>Precise treatment targeting</td>
+</tr>
+<tr>
+<td><strong>Tissue Classification</strong></td>
+<td>Classification</td>
+<td>Pathology diagnosis</td>
+</tr>
+<tr>
+<td><strong>Treatment Monitoring</strong></td>
+<td>Change detection</td>
+<td>Track disease progression</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example Workflow:</strong></p>
+<pre tabindex="0"><code>X-Ray Image → Preprocessing → CNN Analysis → 
+Anomaly Detection → Confidence Score → 
+Radiologist Review → Diagnosis
+</code></pre><p><strong>Regulatory Considerations:</strong></p>
+<ul>
+<li>FDA approval for medical devices</li>
+<li>HIPAA compliance for patient data</li>
+<li>Clinical validation requirements</li>
+<li>Liability and insurance</li>
+</ul>
+<h3 id="autonomous-vehicles-and-robotics">Autonomous Vehicles and Robotics</h3>
+<p><strong>Critical Tasks:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Purpose</th>
+<th>Technology</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Object Detection</strong></td>
+<td>Identify vehicles, pedestrians, obstacles</td>
+<td>YOLO, R-CNN</td>
+</tr>
+<tr>
+<td><strong>Lane Detection</strong></td>
+<td>Keep vehicle in lane</td>
+<td>Segmentation</td>
+</tr>
+<tr>
+<td><strong>Traffic Sign Recognition</strong></td>
+<td>Obey traffic rules</td>
+<td>Classification</td>
+</tr>
+<tr>
+<td><strong>Depth Estimation</strong></td>
+<td>Judge distances</td>
+<td>Stereo vision, monocular depth</td>
+</tr>
+<tr>
+<td><strong>Semantic Segmentation</strong></td>
+<td>Understand scene layout</td>
+<td>DeepLab, U-Net</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Safety Requirements:</strong></p>
+<ul>
+<li>Real-time processing (&lt;100ms <a data-lb="1" href="/en/glossary/latency/" title="Latency glossary entry">latency</a>)</li>
+<li>High accuracy (&gt;99.9% for critical tasks)</li>
+<li>Redundancy and fail-safes</li>
+<li>Edge cases handling</li>
+</ul>
+<h3 id="retail-and-e-commerce">Retail and E-commerce</h3>
+<p><strong>Applications:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Application</th>
+<th>Technology</th>
+<th>Benefit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Visual Search</strong></td>
+<td>Embedding models</td>
+<td>Improved product discovery</td>
+</tr>
+<tr>
+<td><strong>Inventory Management</strong></td>
+<td>Object detection</td>
+<td>Automated stock tracking</td>
+</tr>
+<tr>
+<td><strong>Quality Control</strong></td>
+<td>Defect detection</td>
+<td>Reduced manual inspection</td>
+</tr>
+<tr>
+<td><strong>Customer Analytics</strong></td>
+<td>Demographic analysis</td>
+<td>Targeted marketing</td>
+</tr>
+<tr>
+<td><strong>Shelf Monitoring</strong></td>
+<td>Detection, segmentation</td>
+<td>Optimize product placement</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ROI Drivers:</strong></p>
+<ul>
+<li>Reduced labor costs</li>
+<li>Improved inventory accuracy</li>
+<li>Enhanced customer experience</li>
+<li>Faster product discovery</li>
+</ul>
+<h3 id="agriculture-and-environmental-monitoring">Agriculture and Environmental Monitoring</h3>
+<p><strong>Use Cases:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th>Application</th>
+<th>Technology</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Crop Health</strong></td>
+<td>Disease, pest detection</td>
+<td>Classification, segmentation</td>
+</tr>
+<tr>
+<td><strong>Yield Prediction</strong></td>
+<td>Estimate harvest</td>
+<td>Regression models</td>
+</tr>
+<tr>
+<td><strong>Precision Agriculture</strong></td>
+<td>Targeted treatment</td>
+<td>Segmentation, detection</td>
+</tr>
+<tr>
+<td><strong>Land Use</strong></td>
+<td>Map terrain types</td>
+<td>Semantic segmentation</td>
+</tr>
+<tr>
+<td><strong>Deforestation</strong></td>
+<td>Track forest loss</td>
+<td>Change detection</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data Sources:</strong></p>
+<ul>
+<li>Drone imagery</li>
+<li>Satellite imagery (multispectral)</li>
+<li>Ground-based sensors</li>
+<li>Time-series analysis</li>
+</ul>
+<h3 id="security-and-surveillance">Security and Surveillance</h3>
+<p><strong>Applications:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Technology</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Person Detection</strong></td>
+<td>Object detection</td>
+<td>Crowd monitoring</td>
+</tr>
+<tr>
+<td><strong>Behavior Analysis</strong></td>
+<td>Action recognition</td>
+<td>Threat detection</td>
+</tr>
+<tr>
+<td><strong>Facial Recognition</strong></td>
+<td>Face verification</td>
+<td>Access control</td>
+</tr>
+<tr>
+<td><strong>Anomaly Detection</strong></td>
+<td>Unsupervised learning</td>
+<td>Unusual activity flagging</td>
+</tr>
+<tr>
+<td><strong>Vehicle Tracking</strong></td>
+<td>Object tracking</td>
+<td>Traffic management</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Privacy and Ethics:</strong></p>
+<ul>
+<li>Data protection compliance</li>
+<li>Consent requirements</li>
+<li>Bias mitigation</li>
+<li>Transparency and accountability</li>
+</ul>
+<h2 id="ai-models-and-architectures">AI Models and Architectures</h2>
+<h3 id="convolutional-neural-networks-cnns">Convolutional Neural Networks (CNNs)</h3>
+<p><strong>Key Architectures:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Year</th>
+<th>Innovation</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LeNet</strong></td>
+<td>1998</td>
+<td>First successful CNN</td>
+<td>Digit recognition</td>
+</tr>
+<tr>
+<td><strong>AlexNet</strong></td>
+<td>2012</td>
+<td>Deep CNN breakthrough</td>
+<td>ImageNet classification</td>
+</tr>
+<tr>
+<td><strong>VGG</strong></td>
+<td>2014</td>
+<td>Very deep networks</td>
+<td>Feature extraction</td>
+</tr>
+<tr>
+<td><strong>ResNet</strong></td>
+<td>2015</td>
+<td>Skip connections</td>
+<td>Very deep networks (50-152 layers)</td>
+</tr>
+<tr>
+<td><strong>Inception</strong></td>
+<td>2015</td>
+<td>Multi-scale processing</td>
+<td>Efficient computation</td>
+</tr>
+<tr>
+<td><strong>EfficientNet</strong></td>
+<td>2019</td>
+<td>Compound scaling</td>
+<td>Mobile/edge deployment</td>
+</tr>
+<tr>
+<td><strong>MobileNet</strong></td>
+<td>2017</td>
+<td>Depthwise separable conv</td>
+<td>Resource-constrained devices</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vision-transformers">Vision Transformers</h3>
+<p><strong>Advantages over CNNs:</strong></p>
+<ul>
+<li>Global context from the start</li>
+<li>No inductive bias</li>
+<li>Scalable architecture</li>
+<li>Transfer learning effectiveness</li>
+</ul>
+<p><strong>Notable Models:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Organization</th>
+<th>Characteristics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ViT</strong></td>
+<td>Google</td>
+<td>Original vision transformer</td>
+</tr>
+<tr>
+<td><strong>SWIN</strong></td>
+<td>Microsoft</td>
+<td>Hierarchical, windowed attention</td>
+</tr>
+<tr>
+<td><strong>DeiT</strong></td>
+<td>Facebook</td>
+<td>Data-efficient training</td>
+</tr>
+<tr>
+<td><strong>BEiT</strong></td>
+<td>Microsoft</td>
+<td>Masked image modeling</td>
+</tr>
+</tbody>
+</table>
+<h3 id="multimodal-models">Multimodal Models</h3>
+<p><strong>Vision-Language Models:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Capability</th>
+<th>Training Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CLIP</strong></td>
+<td>Image-text alignment</td>
+<td>400M image-text pairs</td>
+</tr>
+<tr>
+<td><strong>BLIP-2</strong></td>
+<td>Visual question answering</td>
+<td>Mixed vision-language datasets</td>
+</tr>
+<tr>
+<td><strong>GPT-4V</strong></td>
+<td>Multimodal understanding</td>
+<td>Proprietary large-scale data</td>
+</tr>
+<tr>
+<td><strong>PaliGemma</strong></td>
+<td>Visual reasoning</td>
+<td>Curated multimodal corpus</td>
+</tr>
+</tbody>
+</table>
+<h2 id="benefits-and-advantages">Benefits and Advantages</h2>
+<h3 id="automation-and-efficiency">Automation and Efficiency</h3>
+<table>
+<thead>
+<tr>
+<th>Benefit</th>
+<th>Impact</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Speed</strong></td>
+<td>Process millions of images rapidly</td>
+<td>Quality inspection at production speed</td>
+</tr>
+<tr>
+<td><strong>Consistency</strong></td>
+<td>Eliminate human variability</td>
+<td>Standardized medical diagnoses</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Handle massive datasets</td>
+<td>Satellite imagery analysis</td>
+</tr>
+<tr>
+<td><strong>Cost Reduction</strong></td>
+<td>Reduce manual labor</td>
+<td>Automated document processing</td>
+</tr>
+</tbody>
+</table>
+<h3 id="accuracy-and-precision">Accuracy and Precision</h3>
+<p><strong>Domains Where AI Exceeds Humans:</strong></p>
+<ul>
+<li>High-volume repetitive tasks</li>
+<li>Detecting subtle patterns</li>
+<li>Processing complex visual data</li>
+<li>Maintaining concentration over time</li>
+<li>Analyzing multiple images simultaneously</li>
+</ul>
+<p><strong>Statistical Evidence:</strong></p>
+<ul>
+<li>Medical imaging: AI matches or exceeds radiologist performance in specific tasks</li>
+<li>Manufacturing: 99%+ defect detection in optimal conditions</li>
+<li>OCR: &gt;95% accuracy on clean printed text</li>
+</ul>
+<h3 id="new-capabilities-and-insights">New Capabilities and Insights</h3>
+<p><strong>Enabling New Applications:</strong></p>
+<ul>
+<li>Real-time video analysis at scale</li>
+<li>24/7 automated surveillance</li>
+<li>Instant visual search across billions of images</li>
+<li>Accessibility tools for visually impaired</li>
+<li>Automated content moderation</li>
+</ul>
+<h2 id="limitations-and-challenges">Limitations and Challenges</h2>
+<h3 id="technical-limitations">Technical Limitations</h3>
+<table>
+<thead>
+<tr>
+<th>Challenge</th>
+<th>Description</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data Dependency</strong></td>
+<td>Requires large labeled datasets</td>
+<td>High data collection costs</td>
+</tr>
+<tr>
+<td><strong>Domain Specificity</strong></td>
+<td>Models don’t generalize across domains</td>
+<td>Separate models for each use case</td>
+</tr>
+<tr>
+<td><strong>Adversarial Vulnerability</strong></td>
+<td>Can be fooled by crafted inputs</td>
+<td>Security concerns</td>
+</tr>
+<tr>
+<td><strong>Black Box Nature</strong></td>
+<td>Difficult to interpret decisions</td>
+<td>Regulatory challenges</td>
+</tr>
+<tr>
+<td><strong>Computational Cost</strong></td>
+<td>Resource-intensive training</td>
+<td>High infrastructure costs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-quality-issues">Data Quality Issues</h3>
+<p><strong>Common Problems:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Effect</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a data-lb="1" href="/en/glossary/bias/" title="Bias glossary entry">Bias</a></strong></td>
+<td>Unfair or inaccurate results</td>
+<td>Diverse, balanced datasets</td>
+</tr>
+<tr>
+<td><strong>Insufficient Labels</strong></td>
+<td>Poor model performance</td>
+<td>Active learning, semi-supervised learning</td>
+</tr>
+<tr>
+<td><strong>Low Quality</strong></td>
+<td>Reduced accuracy</td>
+<td>Preprocessing, data augmentation</td>
+</tr>
+<tr>
+<td><strong>Class Imbalance</strong></td>
+<td>Poor minority class performance</td>
+<td>Oversampling, weighted loss</td>
+</tr>
+</tbody>
+</table>
+<h3 id="privacy-and-ethical-concerns">Privacy and Ethical Concerns</h3>
+<p><strong>Key Issues:</strong></p>
+<ul>
+<li>Facial recognition privacy</li>
+<li>Surveillance and civil liberties</li>
+<li>Bias in demographic analysis</li>
+<li>Data protection compliance (<a data-lb="1" href="/en/glossary/gdpr/" title="GDPR glossary entry">GDPR</a>, CCPA)</li>
+<li>Consent for training data</li>
+<li>Deepfake and manipulation potential</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="data-management">Data Management</h3>
+<p><strong>Collection:</strong></p>
+<ul>
+<li>Diverse, representative datasets</li>
+<li>Clear labeling guidelines</li>
+<li>Quality control processes</li>
+<li>Proper consent and licensing</li>
+<li>Regular data audits</li>
+</ul>
+<p><strong>Preprocessing:</strong></p>
+<ul>
+<li>Standardized pipelines</li>
+<li>Appropriate augmentation</li>
+<li>Noise reduction</li>
+<li>Quality filtering</li>
+<li>Version control</li>
+</ul>
+<h3 id="model-development">Model Development</h3>
+<p><strong>Selection Criteria:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Considerations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Task Requirements</strong></td>
+<td>Classification, detection, segmentation</td>
+</tr>
+<tr>
+<td><strong>Performance Needs</strong></td>
+<td>Speed vs. accuracy trade-offs</td>
+</tr>
+<tr>
+<td><strong>Resource Constraints</strong></td>
+<td>Available compute, latency requirements</td>
+</tr>
+<tr>
+<td><strong>Data Availability</strong></td>
+<td>Dataset size, labeling quality</td>
+</tr>
+<tr>
+<td><strong>Interpretability</strong></td>
+<td>Explainability requirements</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Training Best Practices:</strong></p>
+<ul>
+<li>Start with pre-trained models (transfer learning)</li>
+<li>Use appropriate data augmentation</li>
+<li>Monitor for overfitting</li>
+<li>Validate on held-out data</li>
+<li>Use proper evaluation metrics</li>
+<li>Track experiments systematically</li>
+</ul>
+<h3 id="deployment-and-operations">Deployment and Operations</h3>
+<p><strong>Pre-Deployment:</strong></p>
+<ul>
+<li>Thorough testing on diverse data</li>
+<li>Performance benchmarking</li>
+<li>Security review</li>
+<li>Bias assessment</li>
+<li>Edge case handling</li>
+</ul>
+<p><strong>Post-Deployment:</strong></p>
+<ul>
+<li>Continuous monitoring</li>
+<li>A/B testing</li>
+<li>User feedback collection</li>
+<li>Regular retraining</li>
+<li>Performance tracking</li>
+<li>Incident response procedures</li>
+</ul>
+<h3 id="ethical-guidelines">Ethical Guidelines</h3>
+<p><strong>Responsible AI Principles:</strong></p>
+<ul>
+<li>Transparency in AI use</li>
+<li>Fairness and bias mitigation</li>
+<li>Privacy protection</li>
+<li>Accountability for decisions</li>
+<li>Human oversight where appropriate</li>
+<li>Clear limitations disclosure</li>
+</ul>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<p><strong>Q: What’s the difference between image analysis and image processing?</strong></p>
+<p>A: Image processing involves manipulating images (resizing, filtering, enhancement) while image analysis interprets and extracts meaning from images. Analysis builds on processing but focuses on understanding content.</p>
+<p><strong>Q: How much data is needed for image analysis?</strong></p>
+<p>A: Depends on complexity and transfer learning usage:</p>
+<ul>
+<li>Transfer learning: 100-1,000 images per class</li>
+<li>Training from scratch: 10,000-1,000,000+ images</li>
+<li>Few-shot learning: 5-50 images per class</li>
+</ul>
+<p><strong>Q: Can image analysis work in real-time?</strong></p>
+<p>A: Yes, with appropriate models and hardware:</p>
+<ul>
+<li>YOLO: 30-60 FPS on GPU</li>
+<li>Mobile models: 15-30 FPS on smartphones</li>
+<li>Edge devices: 10-30 FPS with optimized models</li>
+</ul>
+<p><strong>Q: How accurate is image analysis?</strong></p>
+<p>A: Varies by task and conditions:</p>
+<ul>
+<li>Controlled environments: 95-99%+ accuracy</li>
+<li>Real-world scenarios: 70-95% depending on complexity</li>
+<li>Medical imaging: Approaching or matching human expert performance</li>
+</ul>
+<p><strong>Q: What are the main cost factors?</strong></p>
+<p>A: Primary costs include:</p>
+<ul>
+<li>Data collection and labeling</li>
+<li>Computing resources for training</li>
+<li>Model development expertise</li>
+<li>Deployment infrastructure</li>
+<li>Ongoing maintenance and retraining</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.hdwebsoft.com/blog/ai-image-analysis-guide-to-machines-that-truly-see.html" rel="nofollow noopener noreferrer" target="_blank">HDWEBSOFT: AI Image Analysis Guide</a></li>
+<li><a href="https://nif.hms.harvard.edu/sites/nif.hms.harvard.edu/files/education-files/Zeiss%20AI%20eBook.pdf" rel="nofollow noopener noreferrer" target="_blank">ZEISS AI for Advanced Image Analysis (PDF)</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/" rel="nofollow noopener noreferrer" target="_blank">Microsoft: Computer Vision Concepts</a></li>
+<li><a href="https://cloud.google.com/vision" rel="nofollow noopener noreferrer" target="_blank">Google Cloud: Vision AI</a></li>
+<li><a href="https://aws.amazon.com/rekognition/" rel="nofollow noopener noreferrer" target="_blank">AWS: Amazon Rekognition</a></li>
+<li><a href="https://pytorch.org/vision/stable/models.html" rel="nofollow noopener noreferrer" target="_blank">PyTorch: Torchvision Models</a></li>
+<li><a href="https://www.tensorflow.org/tutorials/images" rel="nofollow noopener noreferrer" target="_blank">TensorFlow: Computer Vision Tutorials</a></li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/multimodal-technology/">
+                    Multimodal Technology
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Explore <a data-lb="1" href="/en/glossary/multimodal-technology/" title="Multimodal Technology glossary entry">multimodal technology</a>, <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI systems</a> that process and integrate diverse data formats like text,...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/multimodal-technology/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/chatbot/">
+                    Chatbot
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A computer program that simulates human conversation through text or voice, available 24/7 to automa...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/chatbot/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/continuous-learning/">
+                    Continuous Learning (Continual Learning)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    An <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI system</a> that learns and improves continuously from new data without forgetting previous knowled...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/continuous-learning/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/explicit-knowledge/">
+                    Explicit Knowledge
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/en/glossary/explicit-knowledge/" title="Explicit Knowledge glossary entry">Explicit knowledge</a> is information that can be written down, documented, and easily shared—like manua...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/explicit-knowledge/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/openai/">
+                    OpenAI
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/en/glossary/openai/" title="OpenAI glossary entry">OpenAI</a> is an AI company that creates advanced tools like ChatGPT for conversations, image generation...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/openai/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/precision/">
+                    Precision
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Precision measures how often an AI model's positive predictions are actually correct. It's essential...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/precision/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/image-analysis/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

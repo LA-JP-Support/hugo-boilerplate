@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>ITサービスカタログ | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/it-service-catalog/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="ITサービスカタログの包括的ガイド:定義、実装、メリット、およびエンタープライズサービス管理のベストプラクティスを解説します。" name="description"/>
+<meta content="ITサービスカタログ, サービス管理, ITILフレームワーク, サービスポートフォリオ, エンタープライズITサービス" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/it-service-catalog/" property="og:url"/>
+<meta content="ITサービスカタログ | SmartWeb" property="og:title"/>
+<meta content="ITサービスカタログの包括的ガイド:定義、実装、メリット、およびエンタープライズサービス管理のベストプラクティスを解説します。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/it-service-catalog/" name="twitter:url"/>
+<meta content="ITサービスカタログ | SmartWeb" name="twitter:title"/>
+<meta content="ITサービスカタログの包括的ガイド:定義、実装、メリット、およびエンタープライズサービス管理のベストプラクティスを解説します。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190816" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190816" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190816"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126096741115000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126096741115000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126096741115000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126096741115000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">ITサービスカタログ</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        ITサービスカタログ
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          IT Service Catalog
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          ITサービスカタログの包括的ガイド:定義、実装、メリット、およびエンタープライズサービス管理のベストプラクティスを解説します。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ITサービスカタログ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                サービス管理
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ITILフレームワーク
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                サービスポートフォリオ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                エンタープライズITサービス
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="itサービスカタログとは何か">ITサービスカタログとは何か?</h2>
+<p>ITサービスカタログは、組織のユーザー、顧客、ステークホルダーが利用可能なすべてのITサービスに関する詳細情報を含む、包括的で一元化されたリポジトリです。サービス提供の唯一の信頼できる情報源として機能し、利用可能なサービス、その仕様、価格設定、サービスレベル契約(SLA)、および要求方法について構造化されたビューを提供します。サービスカタログは、ITサービスプロバイダーと利用者の間の橋渡しとして機能し、サービス機能、要件、期待値に関する明確なコミュニケーションを促進しながら、サービス要求と提供プロセスを効率化します。</p>
+<p>ITサービスカタログの概念は、Information Technology Infrastructure Library(ITIL)フレームワークに深く根ざしており、ITILでは、展開可能なものを含むすべての稼働中のITサービスに関する情報を含むデータベースまたは構造化された文書として定義されています。開発のさまざまな段階にあるサービスを含むサービスポートフォリオとは異なり、サービスカタログは、現在ユーザーが利用可能なアクティブなサービスに特に焦点を当てています。通常、2つの主要なコンポーネントで構成されています:エンドユーザーが理解できるビジネス用語でサービスを提示するビジネスサービスカタログと、サービス、その依存関係、サポートするインフラストラクチャコンポーネントに関する詳細な技術情報を含むテクニカルサービスカタログです。</p>
+<p>現代のITサービスカタログは、単純な静的文書を超えて、さまざまなITサービス管理(ITSM)ツールやワークフローと統合する動的でインタラクティブなプラットフォームへと進化しています。多くの場合、ユーザーが利用可能なサービスを閲覧し、オプションを比較し、要求を送信し、進捗状況を追跡し、フィードバックを提供できるセルフサービスポータルを備えています。これらのカタログは、自動化されたワークフロー、承認プロセス、構成管理データベース(CMDB)との統合をサポートし、組織が管理オーバーヘッドを削減しながら、正確で最新のサービス情報を維持できるようにします。カタログは、サービスを求めるエンドユーザー、サービス提供を管理するITスタッフ、戦略的決定を行うビジネスマネージャー、サービスのパフォーマンスとコストを監視する経営幹部など、複数のステークホルダーにサービスを提供します。</p>
+<h2 id="サービスカタログの主要コンポーネント">サービスカタログの主要コンポーネント</h2>
+<p><strong>サービス定義</strong>は、各ITサービスの詳細な説明を包含し、その目的、機能性、ビジネス価値を含みます。これらの定義は、サービスが何をするのか、誰が使用できるのか、ビジネス目標をどのようにサポートするのかを明確に説明し、ユーザーがサービスの自分のニーズへの関連性を理解できるようにします。</p>
+<p><strong>サービスレベル契約(SLA)</strong><!-- -->は、各サービスのパフォーマンス基準、可用性のコミットメント、品質メトリクスを定義します。SLAは、サービスプロバイダーと利用者の間に明確な期待値を確立し、応答時間、解決目標、稼働時間保証、および不遵守の場合の結果を指定します。</p>
+<p><strong>要求充足プロセス</strong>は、サービスの要求、承認、提供のための標準化された手順を概説します。これらのプロセスには、提出要件、承認ワークフロー、プロビジョニング手順、および一貫したサービス提供体験を保証する通信プロトコルが含まれます。</p>
+<p><strong>価格設定とコストモデル</strong>は、サービスコスト、請求方法、財務取り決めに関する透明な情報を提供します。このコンポーネントは、ユーザーがサービス消費について情報に基づいた決定を下すのを支援し、IT部門がコスト回収とチャージバックメカニズムを実装できるようにします。</p>
+<p><strong>サービスの依存関係と関係</strong>は、サービスとそれらをサポートするインフラストラクチャコンポーネント間の相互接続をマッピングします。この情報は、ユーザーがサービスの制限を理解するのを支援し、ITスタッフが変更や<a data-lb="1" href="/ja/glossary/incidents/" title="インシデント の用語集ページ">インシデント</a>がサービスの可用性に与える影響を評価できるようにします。</p>
+<p><strong><a data-lb="1" href="/ja/glossary/access-control/" title="認可システム、アクセス制御モデル、実装戦略、および最新アプリケーションのセキュリティベストプラクティスに関する包括的なガイド。">アクセス制御</a>とエンタイトルメント</strong>は、役割、部門、場所、またはその他の組織基準に基づいて、誰が特定のサービスを要求できるかを定義します。これらの制御は、セキュリティとコンプライアンス要件を維持しながら、適切なサービスアクセスを保証します。</p>
+<p><strong>サービスメトリクスとパフォーマンスデータ</strong>は、各サービスの主要業績評価指標、使用統計、満足度スコアを提示します。この情報は、継続的な改善の取り組みを可能にし、ユーザーがサービスの品質と信頼性を評価するのを支援します。</p>
+<h2 id="itサービスカタログの仕組み">ITサービスカタログの仕組み</h2>
+<p>ITサービスカタログは、<strong>サービスの発見と文書化</strong>から始まる体系的なワークフローを通じて動作します。ITチームは、利用可能なすべてのサービスを特定し、その機能、要件、依存関係に関する詳細情報を収集し、技術者と非技術者の両方が容易に理解できる標準化された形式でこの情報を文書化します。</p>
+<p><strong>サービスの分類とカテゴリ化</strong>が続き、ビジネス機能、技術タイプ、ユーザーオーディエンス、またはその他の関連基準に基づいてサービスを論理的なグループに整理し、ユーザーが適切なサービスをナビゲートして見つけやすくすると同時に、より良いサービス管理とレポート作成を可能にします。</p>
+<p><strong>カタログの公開と提示</strong>には、通常、ユーザーがサービスを閲覧し、詳細な説明を表示し、オプションを比較し、直感的なナビゲーションと検索機能を備えた要求フォームにアクセスできるWebベースのポータルを通じて、ユーザーフレンドリーなインターフェースを介してサービス情報を利用可能にすることが含まれます。</p>
+<p><strong>要求の送信と検証</strong>は、ユーザーがカタログインターフェースを通じてサービス要求を送信するときに発生し、システムは自動的に要求の完全性を検証し、ユーザーのエンタイトルメントをチェックし、事前定義されたビジネスルールとサービス要件に基づいて適切な承認ワークフローに要求をルーティングします。</p>
+<p><strong>承認と認可の処理</strong>は、確立されたガバナンスポリシーに従ってサービス要求のレビューと承認を管理し、マネージャー、セキュリティチーム、予算所有者などの関連するステークホルダーを関与させながら、監査証跡を維持し、ステータス更新について要求者とコミュニケーションを取ります。</p>
+<p><strong>サービスのプロビジョニングと提供</strong>は、リソース割り当て、構成、テスト、展開活動を含む自動化または手動プロセスを通じて、承認された要求の実際の充足を包含し、エンドユーザーへの機能的なサービスの提供をもたらします。</p>
+<p><strong>監視とフィードバック収集</strong>には、定義されたSLAに対するサービスパフォーマンスの追跡、ユーザー満足度フィードバックの収集、改善機会を特定し継続的なサービス品質を保証するための使用パターンの監視が含まれます。</p>
+<p><strong>カタログのメンテナンスと更新</strong>は、定期的なレビュー、サービス変更に基づく更新、時代遅れのサービスの廃止、新しい提供が利用可能になったときの追加を通じて、サービス情報が正確で最新のままであることを保証します。</p>
+<p>例えば、従業員がサービスカタログを通じて新しいソフトウェアアプリケーションを要求すると、システムは彼らの適格性を検証し、マネージャーの承認のために要求をルーティングし、ソフトウェアライセンスを自動的にプロビジョニングし、アクセス許可を構成し、サービスが使用準備ができたときにユーザーに通知します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>サービスの可視性の向上</strong>は、ユーザーに利用可能なITサービスに関する包括的な情報を提供し、どのサービスが存在し、どのようにアクセスするかについての混乱を排除します。この透明性は、シャドーITの慣行を減らし、ユーザーが組織の基準を満たす承認されたサポートされたサービスを活用することを保証します。</p>
+<p><strong>標準化されたサービス提供</strong>は、サービス要求のための一貫したプロセスと手順を確立し、サービス提供体験のばらつきを減らし、すべてのユーザーが場所や部門に関係なく同じレベルのサービス品質を受けることを保証します。</p>
+<p><strong>ユーザーエクスペリエンスの向上</strong>は、ユーザーが直接的なITサポートとのやり取りを必要とせずに、都合の良いときにサービスを要求できる直感的な<a data-lb="1" href="/ja/glossary/self-service/" title="カスタマーサポートのためのセルフサービスソリューション、ツール、戦略を探求します。FAQ、ナレッジベース、AIチャットボットが顧客をエンパワーメントし、運用コストを削減する方法を学びます。">セルフサービス</a>機能を提供します。この自律性は、サービス消費プロセスの摩擦を減らしながら、ユーザー満足度を向上させます。</p>
+<p><strong>ITサポート負担の軽減</strong>は、自動化とセルフサービス機能を通じてITサポートスタッフが処理する日常的なサービス要求の量を減らし、技術リソースがより複雑な問題と戦略的イニシアチブに集中できるようにします。</p>
+<p><strong>より良いコスト管理</strong>は、サービスコストと使用パターンの正確な追跡を可能にし、サービス投資、コスト配分、予算計画に関する情報に基づいた意思決定をサポートしながら、IT支出の透明性を提供します。</p>
+<p><strong>より速いサービス提供</strong>は、自動化されたワークフローと標準化された手順を通じて要求処理を効率化し、サービス要求を充足するために必要な時間を短縮し、全体的なビジネスの俊敏性と応答性を向上させます。</p>
+<p><strong>コンプライアンスとガバナンスの改善</strong>は、サービス要求が確立された承認プロセスと<a data-lb="1" href="/ja/glossary/security-requirements/" title="セキュリティ要件について学ぶ:情報の機密性、完全性、可用性(CIA)を確保するためにシステムが満たすべき明確で実行可能な条件。デジタル資産を保護するために不可欠です。">セキュリティ要件</a>に従うことを保証し、監査証跡を維持し、規制コンプライアンスをサポートしながら、不正なサービスアクセスに関連するリスクを軽減します。</p>
+<p><strong>データ駆動型の意思決定</strong>は、サービスの使用、パフォーマンス、満足度に関するメトリクスと分析を提供し、サービスポートフォリオの最適化、リソース配分、改善の優先順位に関する戦略的決定を通知します。</p>
+<p><strong>コミュニケーションの強化</strong>は、標準化されたサービス説明、SLA、ステータス更新を通じて、ITサービスプロバイダーと利用者の間の明確なコミュニケーションを促進し、適切な期待値を設定し、誤解を減らします。</p>
+<p><strong>スケーラブルなサービス管理</strong>は、新しいサービスの追加、増加する要求量の管理、組織の拡大に伴うサービス品質の維持のためのフレームワークを提供することで、組織の成長をサポートします。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong>従業員のオンボーディングとオフボーディング</strong>は、新入社員に電子メールアカウント、システムアクセス、ハードウェアのプロビジョニング、ソフトウェアライセンスなどの必要なITサービスを提供するプロセスを効率化し、従業員が組織を離れるときに適切なデプロビジョニングを保証します。</p>
+<p><strong>ソフトウェアライセンス管理</strong>は、ソフトウェアアプリケーションの要求と承認プロセスを一元化し、ライセンス契約のコンプライアンスを保証し、不正なソフトウェアのインストールを防止し、組織全体でライセンスの利用を最適化します。</p>
+<p><strong>ハードウェアの調達と展開</strong>は、ラップトップ、デスクトップ、モバイルデバイス、その他のIT機器を要求するプロセスを標準化し、仕様、承認ワークフロー、調達手順、展開スケジューリングを含みます。</p>
+<p><strong>アクセス権管理</strong>は、システムアクセス、アプリケーション許可、セキュリティクリアランスの要求を、適切な承認を保証し、セキュリティコンプライアンス要件を維持する標準化されたワークフローを通じて管理します。</p>
+<p><strong><a data-lb="1" href="/ja/glossary/cloud-service/" title="クラウドサービスとは、サードパーティベンダーがインターネット経由で提供するITリソースです。SaaS、PaaS、IaaS、FaaS、XaaSモデルの特徴、メリット、ユースケースを理解しましょう。">クラウドサービス</a>のプロビジョニング</strong>は、仮想マシン、ストレージ、データベース、サービスとしてのソフトウェアアプリケーションなどの<a data-lb="1" href="/ja/glossary/cloud-based/" title="クラウドベース の用語集ページ">クラウドベース</a>のサービスの要求と提供を促進し、コスト管理とガバナンスの監視を維持します。</p>
+<p><strong>インフラストラクチャサービス要求</strong>は、ビジネス運営とアプリケーション要件をサポートするネットワーク接続、サーバーリソース、バックアップサービス、その他のインフラストラクチャコンポーネントの要求を処理します。</p>
+<p><strong>トレーニングとサポートサービス</strong>は、ユーザーが技術リソースを効果的に活用し、必要なスキルを開発するのを支援するITトレーニングプログラム、ドキュメント、ヘルプデスクサービス、コンサルティングサポートへのアクセスを提供します。</p>
+<p><strong>プロジェクトと開発サポート</strong>は、ビジネスイニシアチブと技術プロジェクトに必要な開発環境、テストリソース、プロジェクト管理ツール、専門ソフトウェアの要求を管理します。</p>
+<h2 id="サービスカタログ提供モデルの比較">サービスカタログ提供モデルの比較</h2>
+<table>
+<thead>
+<tr>
+<th>提供モデル</th>
+<th>実装の複雑さ</th>
+<th>コスト構造</th>
+<th>カスタマイズレベル</th>
+<th>メンテナンス要件</th>
+<th>展開までの時間</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>オンプレミスソリューション</strong></td>
+<td>高</td>
+<td>高い初期費用、低い継続費用</td>
+<td>広範なカスタマイズ</td>
+<td>内部ITの責任</td>
+<td>6〜12ヶ月</td>
+</tr>
+<tr>
+<td><strong>クラウドベースSaaS</strong></td>
+<td>低〜中</td>
+<td>サブスクリプションベース</td>
+<td>限定的〜中程度</td>
+<td>ベンダー管理</td>
+<td>1〜3ヶ月</td>
+</tr>
+<tr>
+<td><strong>ハイブリッド展開</strong></td>
+<td>中〜高</td>
+<td>混合モデル</td>
+<td>中程度〜広範</td>
+<td>共有責任</td>
+<td>3〜6ヶ月</td>
+</tr>
+<tr>
+<td><strong>カスタム開発</strong></td>
+<td>非常に高</td>
+<td>非常に高い初期費用</td>
+<td>完全な柔軟性</td>
+<td>完全な内部所有権</td>
+<td>12〜24ヶ月</td>
+</tr>
+<tr>
+<td><strong>オープンソースプラットフォーム</strong></td>
+<td>中</td>
+<td>低い初期費用、高い継続費用</td>
+<td>専門知識があれば広範</td>
+<td>内部または契約</td>
+<td>4〜8ヶ月</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>サービス定義の複雑さ</strong>には、技術ユーザーとビジネスユーザーの両方にとって意味のある用語でサービスを正確に定義し説明することの難しさが含まれ、技術的正確さとユーザーの理解の間の慎重なバランスが必要です。</p>
+<p><strong>カタログメンテナンスのオーバーヘッド</strong>は、サービスが進化し、新しい提供が追加され、組織の要件が時間とともに変化するにつれて、サービス情報を最新で正確かつ関連性のあるものに保つという継続的な課題を提示します。</p>
+<p><strong>ユーザー採用の抵抗</strong>は、ユーザーが既存の要求プロセスに慣れているか、ITスタッフとの直接的な接触を好む場合に発生する可能性があり、カタログの利用を促進するために変更管理の取り組みとユーザー教育が必要です。</p>
+<p><strong>統合の複雑さ</strong>は、サービスカタログを既存のITSMツール、承認システム、プロビジョニングプラットフォーム、その他のエンタープライズアプリケーションと接続する際に発生し、重要な技術的努力とカスタマイズが必要になる可能性があります。</p>
+<p><strong>承認ワークフロー管理</strong>は、組織が成長し、承認要件がより複雑になるにつれて困難になり、効率を維持するためにワークフローロジックの慎重な設計と承認プロセスの定期的なレビューが必要です。</p>
+<p><strong>サービス価格設定の正確性</strong>には、サービス価格が真のコストを反映し、競争力を維持し、組織の財務目標をサポートすることを保証するための洗練されたコストモデリングと配分方法が必要です。</p>
+<p><strong>パフォーマンスとスケーラビリティ</strong>の懸念は、カタログの使用が増加するにつれて現れ、パフォーマンスを低下させることなく増加する要求量とユーザーの同時実行性を処理するための堅牢なインフラストラクチャとアーキテクチャ設計が必要です。</p>
+<p><strong>セキュリティとアクセス制御</strong>の複雑さは、きめ細かい許可を管理し、適切なサービスアクセスを保証し、多様なユーザー集団とサービスタイプにわたってセキュリティコンプライアンスを維持する必要性とともに増加します。</p>
+<p><strong>ベンダーロックインのリスク</strong>は、組織が特定のカタログプラットフォームまたはベンダーに大きく依存するようになると発生する可能性があり、将来の柔軟性を制限し、長期的なコストを増加させる可能性があります。</p>
+<p><strong>測定とメトリクスの課題</strong>には、適切な成功メトリクスの定義、正確なデータの収集、サービスカタログの有効性とユーザー満足度の意味のある改善を推進するための結果の解釈が含まれます。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>サービスインベントリから始める</strong>ことで、既存のITサービスの包括的な評価を実施し、現在の状態を文書化し、ギャップや冗長性を特定し、カタログ開発の取り組みのベースラインを確立します。</p>
+<p><strong>ステークホルダーを早期に関与させる</strong>ことで、協力的なワークショップ、インタビュー、ビジネスユーザー、ITスタッフ、管理職とのフィードバックセッションを通じて、カタログが多様なニーズを満たし、組織のサポートを得られるようにします。</p>
+<p><strong>ユーザー中心のインターフェースを設計する</strong>ことで、使いやすさ、直感的なナビゲーション、非技術ユーザーが容易に理解し行動できるビジネス言語で書かれた明確なサービス説明を優先します。</p>
+<p><strong>段階的なロールアウトを実装する</strong>ことで、サービスまたはユーザーグループのサブセットから始め、フィードバックを収集し、プロセスを洗練し、リスクを最小限に抑え、成功した採用を保証するためにカタログの範囲を徐々に拡大します。</p>
+<p><strong>明確なガバナンスを確立する</strong>ことで、サービス所有権、承認権限、変更管理手順、パフォーマンス監視プロトコルを含む、カタログ管理のための定義された役割、責任、プロセスを通じて行います。</p>
+<p><strong>可能な限り自動化する</strong>ことで、一般的な要求のための自動化されたワークフローを実装し、既存のシステムと統合し、効率を向上させエラーを減らすために手動介入を削減します。</p>
+<p><strong>サービス品質に焦点を当てる</strong>ことで、明確なSLAを定義し、パフォーマンスメトリクスを監視し、ユーザーフィードバックを収集し、高い満足度レベルを維持するためにサービス提供プロセスを継続的に改善します。</p>
+<p><strong>包括的なトレーニングを提供する</strong>ことで、カタログユーザーと管理者の両方に、ドキュメント、チュートリアル、継続的なサポートを含め、効果的な利用とカタログシステムの適切な管理を保証します。</p>
+<p><strong>成功を監視し測定する</strong>ことで、カタログ使用率、要求充足時間、ユーザー満足度スコア、コスト削減などの主要業績評価指標を通じて、価値を実証し、改善機会を特定します。</p>
+<p><strong>継続的な進化を計画する</strong>ことで、定期的なレビューサイクルを確立し、技術トレンドを最新の状態に保ち、変化するビジネスニーズと組織の成長要件にカタログを適応させます。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong><a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>の統合</strong>は、<a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>アルゴリズムを活用して、インテリジェントなサービス推奨を提供し、ユーザーのニーズを予測し、要求の分類を自動化し、履歴パターンとユーザー行動に基づいてサービス提供プロセスを最適化します。</p>
+<p><strong>動的サービスオーケストレーション</strong>は、変化する条件に適応し、複雑な複数ステップのプロビジョニングプロセスを処理し、統合されたサービスソリューションを提供するために複数のシステムとチームにわたって調整できる自動化されたワークフローを実装します。</p>
+<p><strong>高度な分析とレポート</strong>は、洗練されたデータ分析技術を利用して、使用傾向を特定し、容量要件を予測し、サービスポートフォリオを最適化し、戦略的意思決定のための実用的な洞察を提供します。</p>
+<p><strong>モバイルファーストデザイン</strong>は、モバイルデバイスの互換性とネイティブモバイルアプリケーションを優先し、ユーザーがどのデバイスからでもサービスにアクセスして要求できるようにし、現代の作業パターンをサポートし、アクセシビリティを向上させます。</p>
+<p><strong>API駆動型アーキテクチャ</strong>は、サードパーティシステムとのシームレスな統合を可能にし、カスタムアプリケーションをサポートし、カタログ機能へのプログラマティックアクセスを通じて革新的なサービス提供メカニズムの開発を促進します。</p>
+<p><strong><a data-lb="1" href="/ja/glossary/personalization/" title="AIチャットボットと自動化におけるパーソナライゼーションは、高度なアルゴリズムを使用して、個々のユーザーの嗜好や行動に合わせてサービス、コンテンツ、インタラクションをカスタマイズします。">パーソナライゼーション</a>とカスタマイズ</strong>は、ユーザーの役割、好み、履歴使用パターンに基づいて、ユーザー固有のインターフェース、パーソナライズされたサービス推奨、カスタマイズされた承認ワークフローを実装し、ユーザーエクスペリエンスと効率を向上させます。</p>
+<h2 id="将来の方向性">将来の方向性</h2>
+<p><strong>人工知能と機械学習</strong>は、インテリジェントな要求ルーティング、容量計画のための予測分析、自動化されたサービス発見、個々の好みと使用パターンに適応するパーソナライズされたユーザーエクスペリエンスを通じて、サービスカタログの運用をますます自動化します。</p>
+<p><strong>ローコード/ノーコード統合</strong>は、ビジネスユーザーが広範な技術的専門知識なしにサービスカタログのワークフロー、フォーム、プロセスを作成および変更できるようにし、カタログのカスタマイズを民主化し、IT開発リソースへの依存を減らします。</p>
+<p><strong>マイクロサービスアーキテクチャ</strong>は、変化する要件に迅速に適応し、多様なシステムと容易に統合し、分散された<a data-lb="1" href="/ja/glossary/containerization/" title="コンテナ化は、ソフトウェアコードと依存関係をポータブルで分離されたコンテナにパッケージ化し、開発環境からクラウドまで、あらゆる環境で一貫したアプリケーション実行を保証します。">コンテナ化</a>されたサービスコンポーネントを通じてより良いパフォーマンスを提供できる、より柔軟でスケーラブルなカタログプラットフォームをサポートします。</p>
+<p><strong>強化されたユーザーエクスペリエンスデザイン</strong>は、現代のインターフェースパラダイム、音声起動要求、サービス可視化のための拡張現実、サービスカタログをより直感的で多様なユーザー集団にアクセス可能にする会話型AIインターフェースを組み込みます。</p>
+<p><strong>サービス検証のためのブロックチェーン</strong>は、サービス要求の不変の監査証跡、サービス契約のための自動化されたスマートコントラクト、サービス提供プロセスの透明性と信頼を高める分散型ガバナンスモデルを提供する可能性があります。</p>
+<p><strong>エッジコンピューティング統合</strong>は、リモートロケーションで効果的に動作し、エッジベースのサービス提供をサポートし、ネットワーク接続や地理的位置に関係なく一貫したユーザーエクスペリエンスを提供できる分散サービスカタログ機能を可能にします。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Axelos. (2019). ITIL 4 Foundation: ITIL 4 Edition. The Stationery Office.</p>
+</li>
+<li>
+<p>Cannon, D., &amp; Wheeldon, D. (2007). ITIL Service Strategy. The Stationery Office.</p>
+</li>
+<li>
+<p>Iqbal, M., &amp; Nieves, M. (2007). ITIL Service Design. The Stationery Office.</p>
+</li>
+<li>
+<p>Office of Government Commerce. (2007). ITIL Service Transition. The Stationery Office.</p>
+</li>
+<li>
+<p>Steinberg, R. A. (2021). Implementing ITIL Configuration Management. IT Governance Publishing.</p>
+</li>
+<li>
+<p>Young, C. (2004). Service Management and ITIL: How to Make IT Services Management Work for You. Computer Weekly Professional.</p>
+</li>
+<li>
+<p>Bon, J. V. (2020). IT Service Management Global Best Practices, Volume 1. Van Haren Publishing.</p>
+</li>
+<li>
+<p>Cartlidge, A., et al. (2007). An Introductory Overview of ITIL V3. itSMF UK.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/itil/">
+                    ITIL – Information Technology Infrastructure Library(ITインフラストラクチャライブラリ)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ITIL(Information Technology Infrastructure Library)について解説します。ITサービスマネジメントの主要なフレームワークとして、その歴史、原則、プラクテ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/itil/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/it-service-catalog/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190816"></script>
+</body>
+</html>

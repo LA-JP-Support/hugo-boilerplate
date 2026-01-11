@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>SSML (Speech Synthesis Markup Language) | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ssml--speech-synthesis-markup-language-/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/SSML--Speech-Synthesis-Markup-Language-/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/SSML--Speech-Synthesis-Markup-Language-/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/SSML--Speech-Synthesis-Markup-Language-/" hreflang="x-default" rel="alternate"/>
+<meta content="A markup language that controls how AI reads text aloud by adjusting pronunciation, speed, pitch, and pauses to make speech sound natural and expressive instead of robotic." name="description"/>
+<meta content="SSML, Speech Synthesis Markup Language, Text-to-Speech, TTS, W3C, prosody, phonetics, voice user interfaces, AI chatbot" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ssml--speech-synthesis-markup-language-/" property="og:url"/>
+<meta content="SSML (Speech Synthesis Markup Language) | SmartWeb" property="og:title"/>
+<meta content="A markup language that controls how AI reads text aloud by adjusting pronunciation, speed, pitch, and pauses to make speech sound natural and expressive instead of robotic." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ssml--speech-synthesis-markup-language-/" name="twitter:url"/>
+<meta content="SSML (Speech Synthesis Markup Language) | SmartWeb" name="twitter:title"/>
+<meta content="A markup language that controls how AI reads text aloud by adjusting pronunciation, speed, pitch, and pauses to make speech sound natural and expressive instead of robotic." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165525" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165525" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script defer="" src="/js/main.js?v=20260111165525"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118125587168000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118125587168000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118125587168000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118125587168000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">SSML (Speech Synthesis Markup Language)</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation / Text-to-Speech / Voice User Interfaces
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        SSML (Speech Synthesis Markup Language)
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A markup language that controls how AI reads text aloud by adjusting pronunciation, speed, pitch, and pauses to make speech sound natural and expressive instead of robotic.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                SSML
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Speech Synthesis Markup Language
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Text-to-Speech
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                TTS
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                W3C
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                prosody
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                phonetics
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                voice user interfaces
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI chatbot
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-ssml">What is SSML?</h2>
+<p>Speech Synthesis Markup Language (SSML) is an XML-based markup standard developed and maintained by the W3C that enables developers, designers, and linguists to precisely control how text is rendered in synthetic (machine-generated) speech. SSML is essential for applications requiring natural, expressive, and contextually appropriate spoken output—from AI chatbots and voice assistants to accessibility tools and interactive voice response systems.</p>
+<p>Without SSML, text-to-speech (TTS) outputs are often robotic, monotonous, and prone to mispronunciations or awkward intonation. SSML solves these issues by providing fine-grained control over pronunciation using phonetic alphabets (IPA, X-SAMPA), prosody specification (pitch, rate, volume, emphasis), natural pause insertion and sentence structuring, explicit handling of special content (dates, times, acronyms, currency), voice and language switching mid-stream, and audio file embedding.</p>
+<p>Industry Adoption:SSML is the de facto standard for all major cloud TTS providers including Amazon Alexa Skills Kit, Google Cloud Text-to-Speech, Microsoft Azure Speech Service, IBM Watson Text-to-Speech, and Speechify.</p>
+<h2 id="core-capabilities">Core Capabilities</h2>
+<h3 id="prosody-control">Prosody Control</h3>
+<p>Adjust how text is spoken by setting attributes for pitch, rate (speed), and volume, making speech sound more human and expressive. Subtle prosody changes dramatically improve naturalness and engagement.</p>
+<h3 id="pronunciation-management">Pronunciation Management</h3>
+<p>Override default pronunciations for technical terms, brand names, or foreign words using phonetic alphabets or text substitutions. This prevents embarrassing mispronunciations in professional applications.</p>
+<h3 id="special-content-handling">Special Content Handling</h3>
+<p>Direct explicit reading of dates, times, abbreviations, numbers, emails, and currency. SSML ensures “12/25” is read as “December twenty-fifth” and “$19.99” as “nineteen dollars and ninety-nine cents.”</p>
+<h3 id="expressiveness-and-style">Expressiveness and Style</h3>
+<p>Inject emphasis, emotional nuance, and stylistic variation using attributes or vendor-specific extensions. Amazon Alexa supports excited and disappointed emotions, while Azure offers neural voice styles for news reading, customer service, and cheerful delivery.</p>
+<h3 id="accessibility-enhancement">Accessibility Enhancement</h3>
+<p>Make speech output clearer and more understandable for users relying on assistive technology, improving comprehension for visually impaired users.</p>
+<h3 id="audio-integration">Audio Integration</h3>
+<p>Insert pauses matching natural conversational flow or embed sounds and music to enhance user experience. Background music, sound effects, and audio cues enrich voice interactions.</p>
+<h2 id="basic-structure">Basic Structure</h2>
+<h3 id="the-root-element-speak">The Root Element: <code>&lt;speak&gt;</code></h3>
+<p>All valid SSML documents begin with the <code>&lt;speak&gt;</code> root element, which defines the boundaries of speech synthesis content. This is required by all TTS engines supporting SSML.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  Welcome to your AI assistant.
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><p>Omitting the <code>&lt;speak&gt;</code> tag results in errors or the TTS engine falling back to plain text rendering.</p>
+<h2 id="essential-ssml-tags">Essential SSML Tags</h2>
+<h3 id="break-insert-pauses"><code>&lt;break&gt;</code>: Insert Pauses</h3>
+<p>Adds a pause or controls the boundary between words or phrases.</p>
+<p>Attributes:- <code>time</code>: Exact pause duration (e.g., “500ms”, “2s”)</p>
+<ul>
+<li><code>strength</code>: Relative pause (“none”, “x-weak”, “weak”, “medium”, “strong”, “x-strong”)</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  Please wait.<span style="font-weight:bold">&lt;break</span> <span style="color:#007f7f">time=</span><span style="color:#0ff;font-weight:bold">"1s"</span><span style="font-weight:bold">/&gt;</span>Processing your request.
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><h3 id="prosody-control-pitch-rate-volume"><code>&lt;prosody&gt;</code>: Control Pitch, Rate, Volume</h3>
+<p>Changes expressiveness of speech.</p>
+<p>Attributes:- <code>pitch</code>: “x-low”, “low”, “medium”, “high”, “x-high”, or percentage ("+20%")</p>
+<ul>
+<li><code>rate</code>: “x-slow”, “slow”, “medium”, “fast”, “x-fast”, or percentage ("-20%")</li>
+<li><code>volume</code>: “silent”, “x-soft”, “soft”, “medium”, “loud”, “x-loud”, decibel ("-6dB"), or percentage</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;prosody</span> <span style="color:#007f7f">pitch=</span><span style="color:#0ff;font-weight:bold">"high"</span> <span style="color:#007f7f">rate=</span><span style="color:#0ff;font-weight:bold">"fast"</span> <span style="color:#007f7f">volume=</span><span style="color:#0ff;font-weight:bold">"+20%"</span><span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    This is spoken with higher pitch, faster, and louder.
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;/prosody&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><p>Best Practice:Avoid extreme values; subtle changes produce more natural speech.</p>
+<h3 id="emphasis-highlight-words"><code>&lt;emphasis&gt;</code>: Highlight Words</h3>
+<p>Increases or reduces emphasis on specific words or phrases.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  You must <span style="font-weight:bold">&lt;emphasis</span> <span style="color:#007f7f">level=</span><span style="color:#0ff;font-weight:bold">"strong"</span><span style="font-weight:bold">&gt;</span>complete<span style="font-weight:bold">&lt;/emphasis&gt;</span> the task.
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><p>Levels: “strong”, “moderate”, “reduced”</p>
+<h3 id="say-as-interpret-content-type"><code>&lt;say-as&gt;</code>: Interpret Content Type</h3>
+<p>Directs TTS to read text as specific types.</p>
+<p>Common interpret-as values:- “cardinal”: Numbers (123 → “one hundred twenty-three”)</p>
+<ul>
+<li>“ordinal”: Ordinal numbers (1st → “first”)</li>
+<li>“characters”: Spell out (“SSML” → “S S M L”)</li>
+<li>“date”: Dates with format specification</li>
+<li>“time”: Time values</li>
+<li>“telephone”: Phone numbers</li>
+<li>“currency”: Currency amounts</li>
+<li>“fraction”: Fractions (“3/4” → “three quarters”)</li>
+<li>“unit”: Measurements</li>
+</ul>
+<p>Examples:```xml
+<speak>
+<say-as interpret-as="characters">SSML</say-as>
+</speak></p>
+<pre tabindex="0"><code>
+```xml
+&lt;speak&gt;
+  &lt;say-as interpret-as="date" format="yyyymmdd"&gt;20230610&lt;/say-as&gt;
+&lt;/speak&gt;
+</code></pre><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;say-as</span> <span style="color:#007f7f">interpret-as=</span><span style="color:#0ff;font-weight:bold">"currency"</span> <span style="color:#007f7f">language=</span><span style="color:#0ff;font-weight:bold">"en-US"</span><span style="font-weight:bold">&gt;</span>$19.99<span style="font-weight:bold">&lt;/say-as&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><h3 id="phoneme-custom-pronunciation"><code>&lt;phoneme&gt;</code>: Custom Pronunciation</h3>
+<p>Specifies exact pronunciation using phonetic alphabets.</p>
+<p><strong>Attributes:</strong>- <code>alphabet</code>: “ipa”, “x-sampa”</p>
+<ul>
+<li><code>ph</code>: Phonetic string</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;phoneme</span> <span style="color:#007f7f">alphabet=</span><span style="color:#0ff;font-weight:bold">"ipa"</span> <span style="color:#007f7f">ph=</span><span style="color:#0ff;font-weight:bold">"ˈniːʃ"</span><span style="font-weight:bold">&gt;</span>niche<span style="font-weight:bold">&lt;/phoneme&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><h3 id="sub-substitute-text"><code>&lt;sub&gt;</code>: Substitute Text</h3>
+<p>Reads the alias value instead of the enclosed text.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  Welcome to the <span style="font-weight:bold">&lt;sub</span> <span style="color:#007f7f">alias=</span><span style="color:#0ff;font-weight:bold">"World Wide Web Consortium"</span><span style="font-weight:bold">&gt;</span>W3C<span style="font-weight:bold">&lt;/sub&gt;</span>.
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><p>**Use Cases:**Brand names, acronyms, foreign words</p>
+<h3 id="audio-insert-audio-clips"><code>&lt;audio&gt;</code>: Insert Audio Clips</h3>
+<p>Embeds recorded audio in speech output (sound effects, music).</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  Please listen to this sound.
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;audio</span> <span style="color:#007f7f">src=</span><span style="color:#0ff;font-weight:bold">"https://www.example.com/sound.mp3"</span><span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    Unable to play audio.
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;/audio&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><p><strong>Provider Limitations:</strong>- Google Cloud: Format and time restrictions apply</p>
+<ul>
+<li>Amazon Alexa: 240-second max, HTTPS required, size limits</li>
+<li>Azure: Supported with restrictions</li>
+</ul>
+<h3 id="voice-change-voice-or-persona"><code>&lt;voice&gt;</code>: Change Voice or Persona</h3>
+<p>Switches to a different voice, language, or persona.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;voice</span> <span style="color:#007f7f">name=</span><span style="color:#0ff;font-weight:bold">"en-US-Wavenet-D"</span><span style="font-weight:bold">&gt;</span>Hello, I am the default voice.<span style="font-weight:bold">&lt;/voice&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;voice</span> <span style="color:#007f7f">name=</span><span style="color:#0ff;font-weight:bold">"en-GB-Wavenet-B"</span><span style="font-weight:bold">&gt;</span>And I am a British voice.<span style="font-weight:bold">&lt;/voice&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><h3 id="p-and-s-structure-text"><code>&lt;p&gt;</code> and <code>&lt;s&gt;</code>: Structure Text</h3>
+<p>Defines paragraphs (<code>&lt;p&gt;</code>) and sentences (<code>&lt;s&gt;</code>) for better pacing and grouping.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;p&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">&lt;s&gt;</span>This is the first sentence.<span style="font-weight:bold">&lt;/s&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">&lt;s&gt;</span>This is the second sentence.<span style="font-weight:bold">&lt;/s&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;/p&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><h3 id="lang-specify-language"><code>&lt;lang&gt;</code>: Specify Language</h3>
+<p>Specifies language for a text segment, enabling proper pronunciation and accent.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  Here is a word in French: <span style="font-weight:bold">&lt;lang</span> <span style="color:#007f7f">xml:lang=</span><span style="color:#0ff;font-weight:bold">"fr-FR"</span><span style="font-weight:bold">&gt;</span>bonjour<span style="font-weight:bold">&lt;/lang&gt;</span>.
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><h2 id="provider-specific-extensions">Provider-Specific Extensions</h2>
+<h3 id="amazon-alexa">Amazon Alexa</h3>
+<p>**<code>&lt;amazon:emotion&gt;</code>:**Adds “excited” or “disappointed” emotion</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;amazon:emotion</span> <span style="color:#007f7f">name=</span><span style="color:#0ff;font-weight:bold">"excited"</span> <span style="color:#007f7f">intensity=</span><span style="color:#0ff;font-weight:bold">"medium"</span><span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    Congratulations on your achievement!
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;/amazon:emotion&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><p>**<code>&lt;amazon:domain&gt;</code>:**Changes delivery style (news, music, conversational)</p>
+<h3 id="microsoft-azure">Microsoft Azure</h3>
+<p>**<code>&lt;mstts:express-as&gt;</code>:**Neural voice styles and roles</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;mstts:express-as</span> <span style="color:#007f7f">style=</span><span style="color:#0ff;font-weight:bold">"cheerful"</span><span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    Welcome to our service!
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;/mstts:express-as&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><p>Styles include: cheerful, sad, angry, fearful, friendly, hopeful, newscast, customer-service</p>
+<h3 id="speechify">Speechify</h3>
+<p>**<code>&lt;speechify:style&gt;</code>:**Proprietary style control for enhanced reading experiences</p>
+<h2 id="practical-example">Practical Example</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  Welcome to the demo.
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;break</span> <span style="color:#007f7f">time=</span><span style="color:#0ff;font-weight:bold">"500ms"</span><span style="font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>  Your appointment is on
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;say-as</span> <span style="color:#007f7f">interpret-as=</span><span style="color:#0ff;font-weight:bold">"date"</span> <span style="color:#007f7f">format=</span><span style="color:#0ff;font-weight:bold">"yyyymmdd"</span><span style="font-weight:bold">&gt;</span>20230610<span style="font-weight:bold">&lt;/say-as&gt;</span>.
+</span></span><span style="display:flex;"><span>  The amount due is
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;say-as</span> <span style="color:#007f7f">interpret-as=</span><span style="color:#0ff;font-weight:bold">"currency"</span> <span style="color:#007f7f">language=</span><span style="color:#0ff;font-weight:bold">"en-US"</span><span style="font-weight:bold">&gt;</span>$19.99<span style="font-weight:bold">&lt;/say-as&gt;</span>.
+</span></span><span style="display:flex;"><span>  For assistance, call
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;say-as</span> <span style="color:#007f7f">interpret-as=</span><span style="color:#0ff;font-weight:bold">"telephone"</span><span style="font-weight:bold">&gt;</span>18001234567<span style="font-weight:bold">&lt;/say-as&gt;</span>.
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;prosody</span> <span style="color:#007f7f">rate=</span><span style="color:#0ff;font-weight:bold">"slow"</span><span style="font-weight:bold">&gt;</span>Thank you for using our service.<span style="font-weight:bold">&lt;/prosody&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><p><strong>Expected Output:</strong>“Welcome to the demo. [pause] Your appointment is on June tenth, twenty twenty-three. The amount due is nineteen dollars and ninety-nine cents. For assistance, call one eight hundred one two three four five six seven. [slower] Thank you for using our service.”</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<h3 id="ai-chatbots-and-virtual-assistants">AI Chatbots and Virtual Assistants</h3>
+<p>Enhance <a data-lb="1" href="/en/glossary/conversational-ai/" title="Conversational AI glossary entry">conversational AI</a> with natural-sounding responses, appropriate pauses, and emotional expression</p>
+<h3 id="customer-service-ivr-systems">Customer Service IVR Systems</h3>
+<p>Guide callers through menus with clear pronunciation and professional tone</p>
+<h3 id="accessibility-applications">Accessibility Applications</h3>
+<p>Provide high-quality speech output for screen readers and assistive technologies</p>
+<h3 id="e-learning-platforms">E-Learning Platforms</h3>
+<p>Create engaging educational content with varied voices and appropriate pacing</p>
+<h3 id="audiobook-production">Audiobook Production</h3>
+<p>Generate natural-sounding narration with character voices and emotional expression</p>
+<h3 id="smart-home-devices">Smart Home Devices</h3>
+<p>Deliver notifications and responses with appropriate context and emotion</p>
+<h2 id="best-practices">Best Practices</h2>
+<p>**Subtle Adjustments:<strong>Small prosody changes are more effective than extreme modifications</strong>Test Across Platforms:<strong>Verify SSML rendering across target TTS providers</strong>Use Phonetic Sparingly:<strong>Only override pronunciation when necessary</strong>Structure Logically:<strong>Use <code>&lt;p&gt;</code> and <code>&lt;s&gt;</code> tags for natural pacing</strong>Balance Speed:<strong>Maintain natural rate; avoid overly fast or slow speech</strong>Audio Quality:<strong>Ensure embedded audio files are properly encoded and hosted</strong>Accessibility Focus:**Consider all users, including those with assistive technology</p>
+<h2 id="implementation-considerations">Implementation Considerations</h2>
+<p>**Platform Compatibility:<strong>Different providers support different tag subsets and extensions</strong>Fallback Content:<strong>Provide fallback text for unsupported tags</strong>Character Limits:<strong>Be aware of platform-specific text length restrictions</strong>Processing Overhead:<strong>Complex SSML may increase response time</strong>Cost Management:<strong>Some providers charge based on character count including markup</strong>Testing Protocol:**Establish comprehensive testing across devices and platforms</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>W3C. (n.d.). Speech Synthesis Markup Language (SSML) Version 1.1. W3C Technical Report.</p>
+</li>
+<li>
+<p>Amazon. (n.d.). Alexa: SSML Reference. Amazon Developer Documentation.</p>
+</li>
+<li>
+<p>Google Cloud. (n.d.). SSML Documentation. Google Cloud Documentation.</p>
+</li>
+<li>
+<p>Microsoft Azure. (n.d.). Speech Synthesis Markup. Microsoft Learn.</p>
+</li>
+<li>
+<p>IBM Watson. (n.d.). SSML Elements. IBM Cloud Documentation.</p>
+</li>
+<li>
+<p>Speechify. (n.d.). SSML Features. Speechify Documentation.</p>
+</li>
+<li>
+<p>Wikipedia. (n.d.). International Phonetic Alphabet. Wikipedia.</p>
+</li>
+<li>
+<p>Microsoft Azure. (n.d.). Speech Voice Gallery. URL: <a href="https://speech.microsoft.com/portal/voicegallery" rel="nofollow noopener noreferrer" target="_blank">https://speech.microsoft.com/portal/voicegallery</a></p>
+</li>
+<li>
+<p>Google Cloud. (n.d.). Supported SSML Elements. Google Cloud Documentation.</p>
+</li>
+<li>
+<p>Microsoft Azure. (n.d.). Supported SSML Elements. Microsoft Learn.</p>
+</li>
+<li>
+<p>Adaptive Cards. (n.d.). Adaptive Cards Designer. URL: <a href="https://adaptivecards.io/designer/" rel="nofollow noopener noreferrer" target="_blank">https://adaptivecards.io/designer/</a></p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/aggregator/">
+                    Aggregator
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A node that collects outputs from multiple execution paths or loops and combines them into a single ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/aggregator/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/chatgpt/">
+                    ChatGPT
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    An AI assistant that understands natural conversation and can answer questions, write content, help ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/chatgpt/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/text-to-speech/">
+                    Text-to-Speech
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Text-to-Speech is technology that converts written text into spoken words, making digital content ac...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/text-to-speech/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/voice-cloning/">
+                    Voice Cloning
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI technology that analyzes a person's voice to create a digital copy capable of generating new spee...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/voice-cloning/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ai-chatbot/">
+                    AI Chatbot
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Explore AI chatbots: learn what they are, how they work with NLP, NLU, and LLMs, their types, benefi...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ai-chatbot/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/bot-containment-rate/">
+                    Bot Containment Rate
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    The percentage of customer conversations your <a data-lb="1" href="/en/glossary/chatbot/" title="Chatbot glossary entry">chatbot</a> resolves completely on its own, without transf...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/bot-containment-rate/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/ssml--speech-synthesis-markup-language-/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165525"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+  });
+</script>
+</body>
+</html>

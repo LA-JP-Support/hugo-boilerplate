@@ -15,7 +15,9 @@ type: glossary
 draft: false
 e-title: Latency
 term: れいてんし
-url: "/ja/glossary/Latency/"
+url: "/ja/glossary/latency/"
+aliases:
+- "/ja/glossary/Latency/"
 ---
 ## レイテンシとは何か?
 レイテンシとは、プロセスの開始から完了までの時間遅延のことです。ネットワークシステムやAIインフラストラクチャにおいては、データがある地点から別の地点へ移動するのに必要な時間を表します。最も一般的には、ユーザーのアクションとシステムの応答との間の遅延として測定されます。通常ミリ秒(ms)で定量化され、レイテンシはWebアプリケーション、API、またはAI駆動型サービスとのやり取り中にユーザーが感じる「ラグ」を表します。
@@ -44,7 +46,13 @@ AIパイプラインでは、これらのレイテンシタイプが乗法的に
 
 ## レイテンシが重要な理由
 
-**ユーザーエクスペリエンス:**研究により、100 msを超える応答時間はユーザーに知覚され、1秒を超える遅延はエンゲージメントに大きな影響を与えることが一貫して示されています。eコマースサイトでは、100 msの追加レイテンシごとにコンバージョン率の測定可能な低下が発生します。**アプリケーションパフォーマンス:**低レイテンシは、レスポンシブなWebおよびモバイルアプリケーション、リアルタイム分析と意思決定、AI駆動型検索と検索、クラウドコンピューティングとAPI統合、インタラクティブメディア体験に不可欠です。**ビジネスへの影響:**高頻度取引では、1 msの遅延が重大な財務損失や機会損失につながる可能性があります。ストリーミングサービスでは、高レイテンシがバッファリングと加入者離脱を引き起こします。医療アプリケーションでは、遅延が診断やリアルタイム介入を妨げる可能性があります。**AI固有の懸念:**AIチャットボットでは、高レイテンシが会話体験を低下させます。自律システムでは、わずかな遅延でも安全上のリスクをもたらします。推奨システムでは、応答が遅いと推奨が読み込まれる前にユーザーが離脱します。
+**ユーザーエクスペリエンス:** 研究により、100 msを超える応答時間はユーザーに知覚され、1秒を超える遅延はエンゲージメントに大きな影響を与えることが一貫して示されています。eコマースサイトでは、100 msの追加レイテンシごとにコンバージョン率の測定可能な低下が発生します。
+
+**アプリケーションパフォーマンス:** 低レイテンシは、レスポンシブなWebおよびモバイルアプリケーション、リアルタイム分析と意思決定、AI駆動型検索と検索、クラウドコンピューティングとAPI統合、インタラクティブメディア体験に不可欠です。
+
+**ビジネスへの影響:** 高頻度取引では、1 msの遅延が重大な財務損失や機会損失につながる可能性があります。ストリーミングサービスでは、高レイテンシがバッファリングと加入者離脱を引き起こします。医療アプリケーションでは、遅延が診断やリアルタイム介入を妨げる可能性があります。
+
+**AI固有の懸念:** AIチャットボットでは、高レイテンシが会話体験を低下させます。自律システムでは、わずかな遅延でも安全上のリスクをもたらします。推奨システムでは、応答が遅いと推奨が読み込まれる前にユーザーが離脱します。
 
 ## 一般的なユースケース
 
@@ -130,7 +138,11 @@ NVMe SSD:読み取りで<0.1 ms
 
 ### アプリケーション固有の指標
 
-**検索レイテンシ:**クエリからデータ検索完了までの時間—AIおよび検索システムで重要。**推論レイテンシ:**AIシステムでの入力からモデル出力までの時間。**P50/P95/P99レイテンシ:**分布を捉えるパーセンタイル測定。P95レイテンシは、リクエストの95%がこのしきい値より速く完了することを意味します。
+**検索レイテンシ:** クエリからデータ検索完了までの時間—AIおよび検索システムで重要。
+
+**推論レイテンシ:** AIシステムでの入力からモデル出力までの時間。
+
+**P50/P95/P99レイテンシ:** 分布を捉えるパーセンタイル測定。P95レイテンシは、リクエストの95%がこのしきい値より速く完了することを意味します。
 
 | テクノロジー/媒体 | 典型的なレイテンシ |
 |-------------------|----------------|
@@ -221,39 +233,73 @@ NVMe SSD:読み取りで<0.1 ms
 
 ### AWSサービス
 
-**AWS Direct Connect:**レイテンシと変動性を削減する専用ネットワーク接続。**Amazon CloudFront:**400以上のエッジロケーションを持つ低レイテンシコンテンツ配信のためのグローバルCDN。**AWS Global Accelerator:**エニーキャストを使用して最適なAWSエッジロケーションを通じてトラフィックをルーティング。**AWS Local Zones:**超低レイテンシのために人口密集地に近いAWSサービスを展開。
+**AWS Direct Connect:** レイテンシと変動性を削減する専用ネットワーク接続。
+
+**Amazon CloudFront:** 400以上のエッジロケーションを持つ低レイテンシコンテンツ配信のためのグローバルCDN。
+
+**AWS Global Accelerator:** エニーキャストを使用して最適なAWSエッジロケーションを通じてトラフィックをルーティング。
+
+**AWS Local Zones:** 超低レイテンシのために人口密集地に近いAWSサービスを展開。
 
 ### クラウドプロバイダー
 
-**Google Cloud CDN:**Googleのグローバルネットワークインフラストラクチャを使用したエッジキャッシング。**Azure Front Door:**低レイテンシルーティングを備えたグローバルロードバランシングとCDN。**Cloudflare:**広範なグローバルプレゼンスを持つエッジコンピューティングプラットフォーム。
+**Google Cloud CDN:** Googleのグローバルネットワークインフラストラクチャを使用したエッジキャッシング。
+
+**Azure Front Door:** 低レイテンシルーティングを備えたグローバルロードバランシングとCDN。
+
+**Cloudflare:** 広範なグローバルプレゼンスを持つエッジコンピューティングプラットフォーム。
 
 ### 専門ソリューション
 
-**IBM Edge Computing:**レイテンシに敏感なワークロードのためにエッジに計算リソースを展開。**AI21 RAGCache:**インテリジェントキャッシングを通じてAIパイプラインの検索レイテンシを削減。
+**IBM Edge Computing:** レイテンシに敏感なワークロードのためにエッジに計算リソースを展開。
+
+**AI21 RAGCache:** インテリジェントキャッシングを通じてAIパイプラインの検索レイテンシを削減。
 
 ## よくある質問
 
-**「良好な」レイテンシとは何ですか?**ユースケースによって異なります。インタラクティブアプリケーション:<100 ms。リアルタイムゲーム:<50 ms。高頻度取引:<10 ms。音声/ビデオ:<150 ms。各アプリケーションには特定の要件があります。**高帯域幅はレイテンシを削減しますか?**必ずしもそうではありません。帯域幅は転送されるデータ量に影響しますが、個々のパケットが移動する速さには影響しません。10 Gbpsの衛星リンクでも、物理的距離のため500+ msのレイテンシがあります。**レイテンシを完全に排除できますか?**いいえ。物理的限界(光速)は、距離に基づく最小レイテンシを作成します。達成可能な最良のレイテンシは、物理的距離を信号伝播速度で割ったものです。**検索レイテンシはAIシステムにどのように影響しますか?**高い検索レイテンシは推論とリアルタイム意思決定を遅くし、AI駆動型検索、推奨、チャットボットの有効性に直接影響します。**可変レイテンシの原因は何ですか?**ネットワーク混雑、リソース競合、サーマルスロットリング、バックグラウンドプロセス、ルーティング変更はすべて、レイテンシ変動(ジッター)に寄与します。
+**「良好な」レイテンシとは何ですか?**
+ユースケースによって異なります。インタラクティブアプリケーション:<100 ms。リアルタイムゲーム:<50 ms。高頻度取引:<10 ms。音声/ビデオ:<150 ms。各アプリケーションには特定の要件があります。
+
+**高帯域幅はレイテンシを削減しますか?**
+必ずしもそうではありません。帯域幅は転送されるデータ量に影響しますが、個々のパケットが移動する速さには影響しません。10 Gbpsの衛星リンクでも、物理的距離のため500+ msのレイテンシがあります。
+
+**レイテンシを完全に排除できますか?**
+いいえ。物理的限界(光速)は、距離に基づく最小レイテンシを作成します。達成可能な最良のレイテンシは、物理的距離を信号伝播速度で割ったものです。
+
+**検索レイテンシはAIシステムにどのように影響しますか?**
+高い検索レイテンシは推論とリアルタイム意思決定を遅くし、AI駆動型検索、推奨、チャットボットの有効性に直接影響します。
+
+**可変レイテンシの原因は何ですか?**
+ネットワーク混雑、リソース競合、サーマルスロットリング、バックグラウンドプロセス、ルーティング変更はすべて、レイテンシ変動(ジッター)に寄与します。
 
 ## ベストプラクティス
 
-**継続的な測定:**すべてのシステムコンポーネントにわたるレイテンシ指標の包括的な監視を実装します。**明確な目標を設定:**ユーザーエクスペリエンス要件とビジネスニーズに基づいて、許容可能なレイテンシしきい値を定義します。**クリティカルパスの最適化:**エンドツーエンドレイテンシに最も寄与するコンポーネントに最適化の努力を集中します。**スケールの計画:**ユーザーベースとデータ量が増加しても、レイテンシが許容範囲内に留まることを確認します。**現実的なテスト:**本番環境に近い負荷と地理的分布の下でレイテンシを測定します。**パーセンタイルの監視:**平均だけでなく、P95とP99のレイテンシを追跡して、ユーザーに影響を与える外れ値を捉えます。
+**継続的な測定:** すべてのシステムコンポーネントにわたるレイテンシ指標の包括的な監視を実装します。
+
+**明確な目標を設定:** ユーザーエクスペリエンス要件とビジネスニーズに基づいて、許容可能なレイテンシしきい値を定義します。
+
+**クリティカルパスの最適化:** エンドツーエンドレイテンシに最も寄与するコンポーネントに最適化の努力を集中します。
+
+**スケールの計画:** ユーザーベースとデータ量が増加しても、レイテンシが許容範囲内に留まることを確認します。
+
+**現実的なテスト:** 本番環境に近い負荷と地理的分布の下でレイテンシを測定します。
+
+**パーセンタイルの監視:** 平均だけでなく、P95とP99のレイテンシを追跡して、ユーザーに影響を与える外れ値を捉えます。
 
 ## 参考文献
 
-
-1. AWS. (n.d.). What Is Latency?. AWS.
-2. IBM. (n.d.). What Is Latency?. IBM Think Topics.
-3. MDN. (n.d.). Understanding Latency. Mozilla Developer Network.
-4. Fortinet. (n.d.). What Is Latency. Fortinet Cyber Glossary.
-5. Galileo AI. (n.d.). Understanding Latency in AI. Galileo AI Blog.
-6. AI21. (n.d.). Retrieval Latency. AI21 Glossary.
-7. WEKA. (n.d.). Solving Latency Challenges. WEKA Blog.
-8. DriveNets. (n.d.). Latency in AI Networking. DriveNets Blog.
-9. AWS CloudFront. Cloud Content Delivery Network Service. URL: https://aws.amazon.com/cloudfront/
-10. AWS Direct Connect. Private Network Connection Service. URL: https://aws.amazon.com/directconnect/
-11. AWS Global Accelerator. Network Performance Optimization Service. URL: https://aws.amazon.com/global-accelerator/
-12. AWS Local Zones. Localized Cloud Infrastructure Service. URL: https://aws.amazon.com/about-aws/global-infrastructure/localzones/
-13. Investopedia. (n.d.). High-Frequency Trading. Investopedia.
-14. MDN. (n.d.). Time to First Byte. Mozilla Developer Network.
-15. AWS. (n.d.). What is Throughput?. AWS.
+- [AWS: What Is Latency?](https://aws.amazon.com/what-is/latency/)
+- [IBM: What Is Latency?](https://www.ibm.com/think/topics/latency)
+- [MDN: Understanding Latency](https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Understanding_latency)
+- [Fortinet: What Is Latency](https://www.fortinet.com/resources/cyberglossary/latency)
+- [Galileo AI: Understanding Latency in AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)
+- [AI21: Retrieval Latency](https://www.ai21.com/glossary/foundational-llm/retrieval-latency/)
+- [WEKA: Solving Latency Challenges](https://www.weka.io/blog/ai-ml/solving-latency-challenges-in-ai-data-centers/)
+- [DriveNets: Latency in AI Networking](https://drivenets.com/blog/latency-in-ai-networking-inevitable-limitation-to-solvable-challenge/)
+- [AWS CloudFront](https://aws.amazon.com/cloudfront/)
+- [AWS Direct Connect](https://aws.amazon.com/directconnect/)
+- [AWS Global Accelerator](https://aws.amazon.com/global-accelerator/)
+- [AWS Local Zones](https://aws.amazon.com/about-aws/global-infrastructure/localzones/)
+- [Investopedia: High-Frequency Trading](https://www.investopedia.com/terms/h/high-frequency-trading.asp)
+- [MDN: Time to First Byte](https://developer.mozilla.org/en-US/docs/Glossary/Time_to_first_byte)
+- [AWS: What is Throughput?](https://aws.amazon.com/what-is/throughput/)

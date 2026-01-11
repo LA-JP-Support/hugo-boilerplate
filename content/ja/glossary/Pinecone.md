@@ -15,7 +15,9 @@ type: glossary
 draft: false
 e-title: Pinecone
 term: パインコーン
-url: "/ja/glossary/Pinecone/"
+url: "/ja/glossary/pinecone/"
+aliases:
+- "/ja/glossary/Pinecone/"
 ---
 ## Pineconeとは何か?
 Pineconeは、AIモデルによって生成された高次元ベクトル埋め込みを保存、インデックス化、検索するために設計されたクラウド管理型ベクトルデータベースです。スカラーデータ型向けに設計された従来のデータベースとは異なり、Pineconeはベクトルデータ、つまりテキスト、画像、音声、その他の複雑なデータの意味的な意味をエンコードする数値配列に特化しています。高度な近似最近傍(ANN)アルゴリズムを通じて、Pineconeは大規模な高速で関連性の高い類似性検索を可能にし、セマンティック検索、レコメンデーション、生成AI、検索拡張生成(RAG)アプリケーションのバックボーンとして機能します。
@@ -30,7 +32,9 @@ Pineconeは、AWS、GCP、Azure上でサーバーレス、クラウドネイテ�
 
 埋め込みは、データのセマンティクスを表現するためにAIモデルによって作成される密なベクトル、つまり浮動小数点数の配列です。BERTやOpenAIモデルで処理された文は、768次元の埋め込みを生成する可能性があります。類似した文は、この高次元空間で互いに近いベクトルを生成し、セマンティック類似性検索を可能にします。
 
-**生成:**BERT、OpenAI、CLIP、またはカスタムニューラルネットワークなどのモデルが、テキスト、画像、その他のデータをベクトル表現に変換します。**応用:**セマンティック検索、レコメンデーション、異常検知、生成AIメモリ、コンテンツ発見。
+**生成:** BERT、OpenAI、CLIP、またはカスタムニューラルネットワークなどのモデルが、テキスト、画像、その他のデータをベクトル表現に変換します。
+
+**応用:** セマンティック検索、レコメンデーション、異常検知、生成AIメモリ、コンテンツ発見。
 
 ### チャンク
 
@@ -56,7 +60,11 @@ Pineconeのインデックスは、ベクトル埋め込みのコレクション
 
 Pineconeは、近似最近傍(ANN)アルゴリズムを使用して、指定されたメトリックに従ってクエリに最も近いベクトルを効率的に見つけます:
 
-**コサイン類似度:**ベクトル間の角度を測定し、大きさよりも方向が重要なテキストデータに人気があります。**ユークリッド距離:**直線距離を測定し、画像や音声の埋め込みに一般的です。**ドット積:**投影類似性とレコメンデーションシステムのための一部のMLアプリケーションで使用されます。
+**コサイン類似度:** ベクトル間の角度を測定し、大きさよりも方向が重要なテキストデータに人気があります。
+
+**ユークリッド距離:** 直線距離を測定し、画像や音声の埋め込みに一般的です。
+
+**ドット積:** 投影類似性とレコメンデーションシステムのための一部のMLアプリケーションで使用されます。
 
 ANNアルゴリズムは、完全検索よりも桁違いに高速に最適に近い結果を提供し、数十億規模のベクトル検索を実用的にします。
 
@@ -66,31 +74,91 @@ ANNアルゴリズムは、完全検索よりも桁違いに高速に最適に�
 
 Pineconeのアーキテクチャは、高スループット、信頼性、自動スケーリングのために設計されています:
 
-**APIゲートウェイ:**すべてのAPIリクエストを受信して認証し、管理操作のためのコントロールプレーンまたは読み取りと書き込みのためのデータプレーンにルーティングします。**コントロールプレーン:**プロジェクト、インデックス、課金を管理し、マルチリージョン操作と構成を調整します。**データプレーン:**特定のクラウドリージョン内のベクトルインデックスへのすべての読み取り/書き込み操作を処理し、低レイテンシに最適化されています。**オブジェクトストレージ:**無制限のスケーラビリティと高可用性のために、不変の分散スラブにレコードを保存します。**書き込みパス:**すべての書き込みがログに記録され、一貫性のために一意のシーケンス番号(LSN)で永続化されることを保証します。**インデックスビルダー:**インメモリと永続ストレージを管理し、新鮮なデータの取り込みとクエリパフォーマンスの両方に最適化します。**読み取りパス:**クエリは最初にインメモリ構造をチェックして最新の結果を取得し、次に完全性のために永続ストレージをチェックし、リアルタイムのデータ可用性を保証します。
+**APIゲートウェイ:** すべてのAPIリクエストを受信して認証し、管理操作のためのコントロールプレーンまたは読み取りと書き込みのためのデータプレーンにルーティングします。
+
+**コントロールプレーン:** プロジェクト、インデックス、課金を管理し、マルチリージョン操作と構成を調整します。
+
+**データプレーン:** 特定のクラウドリージョン内のベクトルインデックスへのすべての読み取り/書き込み操作を処理し、低レイテンシに最適化されています。
+
+**オブジェクトストレージ:** 無制限のスケーラビリティと高可用性のために、不変の分散スラブにレコードを保存します。
+
+**書き込みパス:** すべての書き込みがログに記録され、一貫性のために一意のシーケンス番号(LSN)で永続化されることを保証します。
+
+**インデックスビルダー:** インメモリと永続ストレージを管理し、新鮮なデータの取り込みとクエリパフォーマンスの両方に最適化します。
+
+**読み取りパス:** クエリは最初にインメモリ構造をチェックして最新の結果を取得し、次に完全性のために永続ストレージをチェックし、リアルタイムのデータ可用性を保証します。
 
 ## 主要機能
 
-**サブミリ秒検索**数十億のベクトル全体でもミリ秒単位で結果を返し、チャットボットやライブレコメンデーションなどのリアルタイムアプリケーションを可能にします。**サーバーレススケーリング**使用量に基づいてリソースが自動的にスケールし、手動のシャーディングやプロビジョニングは不要で、運用オーバーヘッドを削減します。**リアルタイムデータ取り込み**新しいベクトルはアップサート後すぐに検索可能になり、新鮮なデータを必要とする動的アプリケーションをサポートします。**ハイブリッド検索**密(ベクトル)検索と疎(キーワード)検索の両方をサポートし、セマンティック理解と従来のキーワードマッチングを組み合わせます。**高度なフィルタリング**類似性とメタデータフィルターを組み合わせて正確な結果を得ることができ、特定の日付範囲やカテゴリ内でセマンティックに類似した文書を見つけることができます。**マルチテナンシー**ネームスペースは、インフラストラクチャを共有しながら顧客またはチームのデータを分離し、効率的なマルチテナントアプリケーションを可能にします。**セキュリティとコンプライアンス**SOC 2、GDPR、ISO 27001、HIPAA認証。階層的暗号化キーとプライベートネットワーキングオプションにより、保存時および転送時にデータが暗号化されます。
+**サブミリ秒検索**
+
+数十億のベクトル全体でもミリ秒単位で結果を返し、チャットボットやライブレコメンデーションなどのリアルタイムアプリケーションを可能にします。
+
+**サーバーレススケーリング**
+
+使用量に基づいてリソースが自動的にスケールし、手動のシャーディングやプロビジョニングは不要で、運用オーバーヘッドを削減します。
+
+**リアルタイムデータ取り込み**
+
+新しいベクトルはアップサート後すぐに検索可能になり、新鮮なデータを必要とする動的アプリケーションをサポートします。
+
+**ハイブリッド検索**
+
+密(ベクトル)検索と疎(キーワード)検索の両方をサポートし、セマンティック理解と従来のキーワードマッチングを組み合わせます。
+
+**高度なフィルタリング**
+
+類似性とメタデータフィルターを組み合わせて正確な結果を得ることができ、特定の日付範囲やカテゴリ内でセマンティックに類似した文書を見つけることができます。
+
+**マルチテナンシー**
+
+ネームスペースは、インフラストラクチャを共有しながら顧客またはチームのデータを分離し、効率的なマルチテナントアプリケーションを可能にします。
+
+**セキュリティとコンプライアンス**
+
+SOC 2、GDPR、ISO 27001、HIPAA認証。階層的暗号化キーとプライベートネットワーキングオプションにより、保存時および転送時にデータが暗号化されます。
 
 ## Pineconeの動作方法:開発ワークフロー
 
 ### 基本ワークフロー
 
-**1. サインアップとAPIキー**pinecone.ioで登録し、認証用のAPI認証情報を生成します。**2. クライアントSDKのインストール**```bash
+**1. サインアップとAPIキー**
+
+pinecone.ioで登録し、認証用のAPI認証情報を生成します。
+
+**2. クライアントSDKのインストール**
+
+```bash
 pip install pinecone
-```**3. クライアントの初期化とインデックスの作成**```python
+```
+
+**3. クライアントの初期化とインデックスの作成**
+
+```python
 from pinecone import Pinecone
 pc = Pinecone(api_key="YOUR_API_KEY")
 pc.create_index("my-index", dimension=768, metric="cosine")
-```**4. 埋め込みの生成**```python
+```
+
+**4. 埋め込みの生成**
+
+```python
 from sentence_transformers import SentenceTransformer
 model = SentenceTransformer('all-MiniLM-L6-v2')
 embedding = model.encode("Sample text to embed").tolist()
-```**5. メタデータ付きベクトルのアップサート**```python
+```
+
+**5. メタデータ付きベクトルのアップサート**
+
+```python
 pc.Index("my-index").upsert(vectors=[
     ("doc1", embedding, {"category": "news"})
 ], namespace="projectA")
-```**6. 類似性とフィルターのクエリ**```python
+```
+
+**6. 類似性とフィルターのクエリ**
+
+```python
 query_embedding = model.encode("What are the latest news?").tolist()
 results = pc.Index("my-index").query(
     vector=query_embedding,
@@ -155,45 +223,60 @@ for match in results.matches:
 
 ## 高度な機能
 
-**ハイブリッド検索**密なベクトル埋め込みと疎なキーワード検索を組み合わせて最大の関連性を実現し、セマンティック理解と従来のキーワードマッチングの両方を活用します。**リランカー**高度なモデルを適用してトップ結果を再ランク付けし、精度を向上させ、より洗練されたスコアリングで初期検索結果を改善します。**リアルタイム鮮度レイヤー**新しく取り込まれたデータはすぐにクエリ可能になり、秒単位のデータ可用性を必要とするアプリケーションをサポートします。**サーバーレス運用**手動のハードウェアやクラスター管理は不要で、使用パターンに基づいてリソースが自動的にスケールします。**広範なエコシステム統合**LangChain、LlamaIndex、Hugging Face、クラウドオブジェクトストア、主要なMLフレームワークと互換性があり、シームレスなワークフロー統合を実現します。
+**ハイブリッド検索**
+
+密なベクトル埋め込みと疎なキーワード検索を組み合わせて最大の関連性を実現し、セマンティック理解と従来のキーワードマッチングの両方を活用します。
+
+**リランカー**
+
+高度なモデルを適用してトップ結果を再ランク付けし、精度を向上させ、より洗練されたスコアリングで初期検索結果を改善します。
+
+**リアルタイム鮮度レイヤー**
+
+新しく取り込まれたデータはすぐにクエリ可能になり、秒単位のデータ可用性を必要とするアプリケーションをサポートします。
+
+**サーバーレス運用**
+
+手動のハードウェアやクラスター管理は不要で、使用パターンに基づいてリソースが自動的にスケールします。
+
+**広範なエコシステム統合**
+
+LangChain、LlamaIndex、Hugging Face、クラウドオブジェクトストア、主要なMLフレームワークと互換性があり、シームレスなワークフロー統合を実現します。
 
 ## よくある質問
 
-**PineconeはFAISSやスタンドアロンのベクトルライブラリとどう違うのですか?**Pineconeは、リアルタイム更新、メタデータフィルタリング、アクセス制御、マルチテナンシー、サーバーレススケーリングを備えた完全管理型の本番グレードのデータベースです。FAISSのようなライブラリはローカルベクトル検索には強力ですが、データベース機能、クラウドネイティブの信頼性、運用管理が欠けています。**どのようなデータを保存できますか?**ベクトルとして埋め込むことができるあらゆるデータ:テキスト、画像、音声、ユーザーイベント、時系列、製品カタログなど。**Pineconeはどのようにセキュリティとコンプライアンスを保証しますか?**データは階層的暗号化キーとプライベートネットワーキングにより、保存時および転送時に暗号化されます。PineconeはSOC 2、GDPR、ISO 27001、HIPAA認証を保持しています。**Pineconeはリレーショナルデータベースやドキュメントデータベースと一緒に使用できますか?**はい。Pineconeは通常、SQL/NoSQLストアを補完し、非構造化の高次元検索を処理し、構造化またはトランザクションデータは従来のシステムに残ります。
+**PineconeはFAISSやスタンドアロンのベクトルライブラリとどう違うのですか?**
+
+Pineconeは、リアルタイム更新、メタデータフィルタリング、アクセス制御、マルチテナンシー、サーバーレススケーリングを備えた完全管理型の本番グレードのデータベースです。FAISSのようなライブラリはローカルベクトル検索には強力ですが、データベース機能、クラウドネイティブの信頼性、運用管理が欠けています。
+
+**どのようなデータを保存できますか?**
+
+ベクトルとして埋め込むことができるあらゆるデータ:テキスト、画像、音声、ユーザーイベント、時系列、製品カタログなど。
+
+**Pineconeはどのようにセキュリティとコンプライアンスを保証しますか?**
+
+データは階層的暗号化キーとプライベートネットワーキングにより、保存時および転送時に暗号化されます。PineconeはSOC 2、GDPR、ISO 27001、HIPAA認証を保持しています。
+
+**Pineconeはリレーショナルデータベースやドキュメントデータベースと一緒に使用できますか?**
+
+はい。Pineconeは通常、SQL/NoSQLストアを補完し、非構造化の高次元検索を処理し、構造化またはトランザクションデータは従来のシステムに残ります。
 
 ## 参考文献
 
-
-1. Pinecone. (n.d.). Pinecone Official Documentation. URL: https://docs.pinecone.io/
-
-2. Pinecone. (n.d.). What is a Vector Database?. URL: https://www.pinecone.io/learn/vector-database/
-
-3. Pinecone. (n.d.). Pinecone Product Page. URL: https://www.pinecone.io/
-
-4. Pinecone. (n.d.). Vector Embeddings Explanation. URL: https://www.pinecone.io/learn/vector-embeddings/
-
-5. Pinecone. (n.d.). Pinecone Architecture Documentation. URL: https://docs.pinecone.io/guides/get-started/database-architecture
-
-6. Pinecone. (n.d.). Vector Indexes and ANN Algorithms. URL: https://www.pinecone.io/learn/series/faiss/vector-indexes/
-
-7. Pinecone. (n.d.). HNSW Algorithm Explanation. URL: https://www.pinecone.io/learn/series/faiss/hnsw/
-
-8. Pinecone. (n.d.). Pinecone Quickstart Guide. URL: https://docs.pinecone.io/guides/get-started/quickstart
-
-9. Pinecone. (n.d.). Creating and Managing Indexes. URL: https://docs.pinecone.io/guides/index-data/create-an-index
-
-10. Pinecone. (n.d.). Filtering by Metadata. URL: https://docs.pinecone.io/guides/search/filter-by-metadata
-
-11. Pinecone. (n.d.). Pinecone Security. URL: https://www.pinecone.io/security/
-
-12. Pinecone. (n.d.). Pinecone Integrations Overview. URL: https://docs.pinecone.io/integrations/overview
-
-13. Pinecone. (n.d.). Vanguard Case Study. URL: https://www.pinecone.io/customers/vanguard/
-
-14. Pinecone. (n.d.). Spotify Podcast Search. URL: https://www.pinecone.io/learn/spotify-podcast-search/
-
-15. Estuary. (n.d.). What is Pinecone AI?. URL: https://estuary.dev/blog/what-is-pinecone-ai/
-
-16. F22 Labs. (n.d.). Pinecone Vector Database Guide: Core Concepts Explained. URL: https://www.f22labs.com/blogs/pinecone-vector-db-guide-core-concepts-explained/
-
-17. Oracle. (n.d.). What is Pinecone?. URL: https://www.oracle.com/ca-en/database/vector-database/pinecone/
+- [Pinecone公式ドキュメント](https://docs.pinecone.io/)
+- [ベクトルデータベースとは?](https://www.pinecone.io/learn/vector-database/)
+- [Pinecone製品ページ](https://www.pinecone.io/)
+- [ベクトル埋め込みの説明](https://www.pinecone.io/learn/vector-embeddings/)
+- [Pineconeアーキテクチャドキュメント](https://docs.pinecone.io/guides/get-started/database-architecture)
+- [ベクトルインデックスとANNアルゴリズム](https://www.pinecone.io/learn/series/faiss/vector-indexes/)
+- [HNSWアルゴリズムの説明](https://www.pinecone.io/learn/series/faiss/hnsw/)
+- [Pineconeクイックスタートガイド](https://docs.pinecone.io/guides/get-started/quickstart)
+- [インデックスの作成と管理](https://docs.pinecone.io/guides/index-data/create-an-index)
+- [メタデータによるフィルタリング](https://docs.pinecone.io/guides/search/filter-by-metadata)
+- [Pineconeセキュリティ](https://www.pinecone.io/security/)
+- [Pinecone統合概要](https://docs.pinecone.io/integrations/overview)
+- [Vanguardケーススタディ](https://www.pinecone.io/customers/vanguard/)
+- [Spotifyポッドキャスト検索](https://www.pinecone.io/learn/spotify-podcast-search/)
+- [Estuary: Pinecone AIとは](https://estuary.dev/blog/what-is-pinecone-ai/)
+- [F22 Labs: Pineconeベクトルデータベースガイド](https://www.f22labs.com/blogs/pinecone-vector-db-guide-core-concepts-explained/)
+- [Oracle: Pineconeとは](https://www.oracle.com/ca-en/database/vector-database/pinecone/)

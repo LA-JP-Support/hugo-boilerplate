@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Hugo Pipes | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hugo-pipes/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="Hugo Pipesは、スタイルシートやスクリプトなどのウェブサイトアセットを自動的に処理する組み込みツールで、別途外部ソフトウェアを必要としません。" name="description"/>
+<meta content="Hugo Pipes, アセット処理, 静的サイトジェネレーター, SCSSコンパイル, JavaScriptバンドリング" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hugo-pipes/" property="og:url"/>
+<meta content="Hugo Pipes | SmartWeb" property="og:title"/>
+<meta content="Hugo Pipesは、スタイルシートやスクリプトなどのウェブサイトアセットを自動的に処理する組み込みツールで、別途外部ソフトウェアを必要としません。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hugo-pipes/" name="twitter:url"/>
+<meta content="Hugo Pipes | SmartWeb" name="twitter:title"/>
+<meta content="Hugo Pipesは、スタイルシートやスクリプトなどのウェブサイトアセットを自動的に処理する組み込みツールで、別途外部ソフトウェアを必要としません。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190816" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190816" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script defer="" src="/js/main.js?v=20260111190816"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126096741115000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126096741115000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126096741115000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126096741115000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Hugo Pipes</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Hugo Pipes
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Hugo Pipes
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          Hugo Pipesは、スタイルシートやスクリプトなどのウェブサイトアセットを自動的に処理する組み込みツールで、別途外部ソフトウェアを必要としません。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Hugo Pipes
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                アセット処理
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                静的サイトジェネレーター
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                SCSSコンパイル
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                JavaScriptバンドリング
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="hugo-pipesとは">Hugo Pipesとは?</h2>
+<p>Hugo Pipesは、Hugo静的サイトジェネレーターに組み込まれた強力なアセット処理パイプラインで、開発者がHugoプロジェクト内でWebアセットを直接変換、バンドル、最適化できるようにします。この洗練されたシステムは、SCSSコンパイル、JavaScriptバンドリング、画像最適化、ファイル圧縮などの一般的なアセット処理タスクにネイティブサポートを提供することで、Webpack、Gulp、Gruntなどの外部ビルドツールの必要性を排除します。Hugo Pipesは、リソースに適用できる一連の連鎖可能な関数を通じて動作し、開発者がHugoのテンプレート構文を使用して複雑なアセット処理ワークフローを作成できるようにします。</p>
+<p>このシステムは、Hugoのシンプルさとスピードという中核的な哲学を維持しながら、現代のWeb開発ワークフローの複雑さの増大に対処するために導入されました。別個の設定ファイルと追加の依存関係を必要とする従来のビルドツールとは異なり、Hugo Pipesはhugoの既存のテンプレートシステムとシームレスに統合され、開発者がテンプレート内で直接アセット処理パイプラインを定義できるようにします。このアプローチは、アセット処理が別個のビルドステップではなく、サイト生成プロセスの一部となる、より統一された開発体験を提供します。</p>
+<p>Hugo Pipesは、基本的なファイル連結と圧縮から、PostCSS処理、Babelトランスパイル、カスタムリソース変換などの高度な操作まで、幅広いアセットタイプと処理操作をサポートしています。このシステムは、Hugoの高速処理エンジンを活用して迅速なアセットコンパイルを実現し、迅速な反復が不可欠な開発ワークフローに特に適しています。これらの機能を標準で提供することで、Hugo Pipesは開発者が複雑なビルドツールチェーンを管理するオーバーヘッドなしに、洗練されたプロダクション対応のWebサイトを作成できるようにします。</p>
+<h2 id="コアアセット処理コンポーネント">コアアセット処理コンポーネント</h2>
+<ul>
+<li>
+<p><strong>リソース管理</strong>: Hugo Pipesは、すべてのアセットをassetsディレクトリ、静的ファイル、リモートURLなどのさまざまなソースから取得できるリソースとして扱います。リソースは、コンテンツタイプ、サイズ、処理履歴に関するメタデータを保持し、インテリジェントなキャッシングと最適化の決定を可能にします。</p>
+</li>
+<li>
+<p><strong>変換パイプライン</strong>: Hugo Pipesのコアは、リソースを順次変更する連鎖可能な変換関数で構成されています。各変換は元のリソースを保持しながら新しいリソースを作成し、データ損失なしに複雑な処理ワークフローを可能にします。</p>
+</li>
+<li>
+<p><strong>SCSS/SASS処理</strong>: SCSSとSASSコンパイルのネイティブサポートにより、開発者は変数、ミックスイン、インポートを使用してモジュール式のスタイルシートを記述できます。プロセッサは依存関係の解決を処理し、デバッグのための詳細なエラーレポートを提供します。</p>
+</li>
+<li>
+<p><strong>JavaScriptバンドリング</strong>: 組み込みのJavaScript処理機能には、ES6モジュールバンドリング、圧縮、ソースマップ生成が含まれます。このシステムは複雑な依存関係グラフを処理でき、最適なバンドルサイズのためのツリーシェイキングを提供します。</p>
+</li>
+<li>
+<p><strong>PostCSS統合</strong>: PostCSSプラグインを通じた高度なCSS処理により、オートプレフィックス、CSS Gridポリフィル、カスタム変換が可能になります。この統合は、組み込みとカスタムの両方のPostCSS設定をサポートしています。</p>
+</li>
+<li>
+<p><strong>画像最適化</strong>: 包括的な画像処理機能には、リサイズ、フォーマット変換、品質調整、レスポンシブ画像生成が含まれます。このシステムは複数の出力フォーマットをサポートし、WebP代替を自動的に生成できます。</p>
+</li>
+<li>
+<p><strong>フィンガープリントとキャッシング</strong>: コンテンツベースの自動フィンガープリントは、アセットに一意のファイル名を生成し、コンテンツが変更されたときにキャッシュの無効化を確保しながら、積極的なブラウザキャッシングを可能にします。</p>
+</li>
+</ul>
+<h2 id="hugo-pipesの動作原理">Hugo Pipesの動作原理</h2>
+<p>Hugo Pipesワークフローは、アセット処理に対して体系的なアプローチに従います:</p>
+<ol>
+<li>
+<p><strong>リソース検出</strong>: Hugoはassetsディレクトリをスキャンし、ファイル拡張子とコンテンツタイプに基づいて利用可能なリソースを識別します。リソースは、リモートURLから読み込んだり、テンプレート内で動的に生成したりすることもできます。</p>
+</li>
+<li>
+<p><strong>パイプライン定義</strong>: 開発者は、パイプ演算子を使用して変換関数を連鎖させることで、Hugoテンプレート内で処理パイプラインを定義します。チェーン内の各関数は、前の関数の出力を入力として受け取ります。</p>
+</li>
+<li>
+<p><strong>依存関係解決</strong>: 依存関係を持つアセット(SCSSインポートやJavaScriptモジュールなど)に対して、Hugoは必要なファイルを自動的に解決して含め、効率的な処理のための完全な依存関係グラフを構築します。</p>
+</li>
+<li>
+<p><strong>変換実行</strong>: Hugoは定義された変換を順次実行し、各関数をリソースに適用して中間結果を生成します。システムは、変更されていないリソースをキャッシュすることで、このプロセスを最適化します。</p>
+</li>
+<li>
+<p><strong>最適化適用</strong>: 最終的な最適化ステップには、圧縮、圧縮、フィンガープリントが含まれます。これらの操作は、開発に適したソースマップを維持しながら、プロダクションデプロイメント用にアセットを準備します。</p>
+</li>
+<li>
+<p><strong>出力生成</strong>: 処理されたアセットは、適切なディレクトリ構造とファイル名でpublicディレクトリに書き込まれます。Hugoは、テンプレートによる参照のために処理されたアセットのマニフェストを維持します。</p>
+</li>
+<li>
+<p><strong>テンプレート統合</strong>: 処理されたアセットは、リソース変数を通じてテンプレートで利用可能になり、適切なキャッシュバスティングパラメータを使用してHTML出力に最適化されたアセットを動的に含めることができます。</p>
+</li>
+</ol>
+<p><strong>ワークフロー例</strong>:</p>
+<pre tabindex="0"><code>{{ $scss := resources.Get "scss/main.scss" }}
+{{ $css := $scss | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+&lt;link rel="stylesheet" href="{{ $css.RelPermalink }}"&gt;
+</code></pre><h2 id="主な利点">主な利点</h2>
+<ul>
+<li>
+<p><strong>簡素化されたツールチェーン</strong>: 別個のビルドツールと複雑な設定ファイルの必要性を排除し、プロフェッショナルグレードのアセット処理機能を提供しながら、プロジェクトの複雑さとメンテナンスのオーバーヘッドを削減します。</p>
+</li>
+<li>
+<p><strong>統合された開発体験</strong>: アセット処理がHugoテンプレートシステムの一部となり、開発者がコンテキストの切り替えなしに、単一の統一されたワークフロー内でアセットとコンテンツを管理できるようにします。</p>
+</li>
+<li>
+<p><strong>パフォーマンス最適化</strong>: 圧縮、圧縮、フィンガープリントを含む組み込みの最適化機能により、追加のツールや手動設定ステップを必要とせずに最適なアセット配信を保証します。</p>
+</li>
+<li>
+<p><strong>高速処理速度</strong>: Hugoの高性能エンジンを活用して迅速なアセットコンパイルを実現し、大規模プロジェクトや迅速な反復サイクルを必要とする開発ワークフローに適しています。</p>
+</li>
+<li>
+<p><strong>インテリジェントキャッシング</strong>: コンテンツハッシュに基づく処理済みアセットの自動キャッシングにより、変更されたアセットのみが再処理されることを保証し、大規模プロジェクトのビルド時間を大幅に改善します。</p>
+</li>
+<li>
+<p><strong>ゼロ設定</strong>: 高度なユースケースのための広範なカスタマイズオプションを提供しながら、合理的なデフォルトで標準で動作し、あらゆるスキルレベルの開発者がアクセスできるようにします。</p>
+</li>
+<li>
+<p><strong>ソースマップサポート</strong>: 開発環境で処理されたアセットをデバッグするための正確なソースマップを生成し、最適化されたアセットを使用しながら開発者の生産性を維持します。</p>
+</li>
+<li>
+<p><strong>依存関係管理</strong>: アセット間の複雑な依存関係を自動的に処理し、手動介入なしに変更が処理パイプラインを通じて正しく伝播することを保証します。</p>
+</li>
+<li>
+<p><strong>クロスプラットフォーム互換性</strong>: 異なるオペレーティングシステムと開発環境間で一貫した動作を提供し、プラットフォーム固有のビルド問題と設定の違いを排除します。</p>
+</li>
+<li>
+<p><strong>メモリ効率</strong>: 不要な一時ファイルを作成せずにメモリ内でアセットを処理し、ディスクI/Oを削減し、特に高速メモリを持つが低速ストレージを持つシステムで全体的なビルドパフォーマンスを向上させます。</p>
+</li>
+</ul>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<ul>
+<li>
+<p><strong>SCSSコンパイル</strong>: 保守可能なスタイルシートアーキテクチャのために、自動依存関係解決、変数処理、ミックスイン展開を使用してSCSSスタイルシートをCSSに変換します。</p>
+</li>
+<li>
+<p><strong>JavaScriptバンドリング</strong>: 改善された読み込みパフォーマンスとHTTPリクエストの削減のために、ツリーシェイキングと圧縮を使用して複数のJavaScriptファイルを最適化されたバンドルに結合します。</p>
+</li>
+<li>
+<p><strong>画像処理</strong>: 異なるデバイス間でのレスポンシブWebデザインとパフォーマンス最適化のために、画像をリサイズ、最適化し、複数のフォーマットとサイズに変換します。</p>
+</li>
+<li>
+<p><strong>CSSフレームワーク統合</strong>: プロジェクト固有の変数とコンポーネントオーバーライドを使用して、BootstrapやTailwind CSSなどのCSSフレームワークを処理およびカスタマイズします。</p>
+</li>
+<li>
+<p><strong>フォント最適化</strong>: 改善されたタイポグラフィ読み込みパフォーマンスのために、サブセット化、フォーマット変換、プリロードヒント生成を含むWebフォントを処理および最適化します。</p>
+</li>
+<li>
+<p><strong>アイコンシステム管理</strong>: スケーラブルなアイコンシステムのために、自動シンボル生成とCSSクラス作成を使用して、SVGアイコンをスプライトシートまたは個別の最適化されたファイルに処理します。</p>
+</li>
+<li>
+<p><strong>クリティカルCSS生成</strong>: 知覚される読み込みパフォーマンスとCore Web Vitalsスコアを改善するために、ファーストビューコンテンツのクリティカルCSSを抽出してインライン化します。</p>
+</li>
+<li>
+<p><strong>アセットバージョニング</strong>: 更新中に適切なキャッシュ無効化を保証しながら、積極的なブラウザキャッシングを可能にするために、フィンガープリントを使用したコンテンツベースのアセットバージョニングを実装します。</p>
+</li>
+<li>
+<p><strong>開発環境とプロダクション環境のビルド</strong>: 適切な最適化レベルとデバッグ機能を持つ開発環境とプロダクション環境用の異なるアセット処理パイプラインを作成します。</p>
+</li>
+<li>
+<p><strong>サードパーティライブラリ統合</strong>: 適切な依存関係の順序と互換性を維持しながら、サードパーティのCSSとJavaScriptライブラリをプロジェクトアセットと一緒に処理およびバンドルします。</p>
+</li>
+</ul>
+<h2 id="アセット処理の比較">アセット処理の比較</h2>
+<table>
+<thead>
+<tr>
+<th>機能</th>
+<th>Hugo Pipes</th>
+<th>Webpack</th>
+<th>Gulp</th>
+<th>Parcel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>設定</strong></td>
+<td>テンプレートベース</td>
+<td>設定ファイル</td>
+<td>Gulpfile.js</td>
+<td>ゼロ設定</td>
+</tr>
+<tr>
+<td><strong>学習曲線</strong></td>
+<td>低</td>
+<td>高</td>
+<td>中</td>
+<td>低</td>
+</tr>
+<tr>
+<td><strong>処理速度</strong></td>
+<td>非常に高速</td>
+<td>中</td>
+<td>中</td>
+<td>高速</td>
+</tr>
+<tr>
+<td><strong>組み込み最適化</strong></td>
+<td>広範</td>
+<td>プラグインベース</td>
+<td>プラグインベース</td>
+<td>組み込み</td>
+</tr>
+<tr>
+<td><strong>依存関係管理</strong></td>
+<td>自動</td>
+<td>手動/ローダー</td>
+<td>手動</td>
+<td>自動</td>
+</tr>
+<tr>
+<td><strong>統合の複雑さ</strong></td>
+<td>ネイティブ</td>
+<td>外部</td>
+<td>外部</td>
+<td>外部</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<ul>
+<li>
+<p><strong>限定的なJavaScriptエコシステム</strong>: Hugo Pipesは基本的なJavaScript処理をうまく処理しますが、複雑なJavaScriptアプリケーション用のWebpackのような専用バンドラーで利用可能な広範なプラグインエコシステムが不足しています。</p>
+</li>
+<li>
+<p><strong>テンプレート構文の学習</strong>: 開発者は、Hugo Pipesを効果的に使用するためにHugoのテンプレート構文とパイプ演算子を学ぶ必要があり、Goテンプレートに不慣れな人にとっては学習曲線が生じる可能性があります。</p>
+</li>
+<li>
+<p><strong>処理の制限</strong>: 一部の高度なアセット処理操作はネイティブで利用できない場合があり、高度な画像フィルターやカスタム変換などの特殊なユースケースには回避策や外部ツールが必要になります。</p>
+</li>
+<li>
+<p><strong>デバッグの複雑さ</strong>: パイプラインが複雑になると、アセット処理の問題のトラブルシューティングが困難になる可能性があります。エラーメッセージが多段階変換における問題の原因を常に明確に示すとは限りません。</p>
+</li>
+<li>
+<p><strong>バージョン互換性</strong>: Hugo Pipesの機能と能力は使用されているHugoバージョンに依存し、アップグレード時や異なる環境間で作業する際に互換性の問題を引き起こす可能性があります。</p>
+</li>
+<li>
+<p><strong>メモリ使用量</strong>: 大規模なアセット処理操作は、特に多数の高解像度画像や大きなJavaScriptバンドルを同時に処理する場合、かなりのメモリを消費する可能性があります。</p>
+</li>
+<li>
+<p><strong>プラットフォーム依存性</strong>: 一部の処理機能は、PostCSSやBabelなどの外部ツールをシステムにインストールする必要があり、デプロイメントと開発環境のセットアップを複雑にする可能性があります。</p>
+</li>
+<li>
+<p><strong>限定的なホットリロード</strong>: Hugoはライブリロード機能を提供しますが、複雑なアセット処理パイプラインは常に適切なリロードをトリガーするとは限らず、開発中に手動でブラウザを更新する必要があります。</p>
+</li>
+<li>
+<p><strong>ドキュメントのギャップ</strong>: 高度なHugo Pipes機能には包括的なドキュメントや例が不足している場合があり、広範な実験なしに洗練されたアセット処理ワークフローを実装することが困難になります。</p>
+</li>
+<li>
+<p><strong>パフォーマンス監視</strong>: アセット処理パフォーマンスを監視およびプロファイリングするための組み込みツールが限られているため、複雑な処理パイプラインの<a data-lb="1" href="/ja/glossary/bottlenecks-comprehensive-glossary-action-guide-for-business-automation-and-ai-chatbot-operations/" title="ビジネス、自動化、AIチャットボット運用におけるボトルネックを理解します。プロセス、リソース、容量の制約を特定、分析、解決し、効率を向上させる方法を学びます。">ボトルネック</a>を特定することが困難になる可能性があります。</p>
+</li>
+</ul>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<ul>
+<li>
+<p><strong>アセットを論理的に整理</strong>: 保守性の向上とチームコラボレーションのために、異なるアセットタイプを分離し、一貫した命名規則を維持する明確な階層でassetsディレクトリを構造化します。</p>
+</li>
+<li>
+<p><strong>条件付き処理を使用</strong>: ビルド時間とデバッグ機能を最適化するために、Hugoの環境検出を使用して開発環境とプロダクション環境用の異なる処理パイプラインを実装します。</p>
+</li>
+<li>
+<p><strong>パーシャルテンプレートを活用</strong>: サイト全体で一貫性を維持し、テンプレート内のコード重複を削減するために、一般的なアセット処理パターン用の再利用可能なパーシャルテンプレートを作成します。</p>
+</li>
+<li>
+<p><strong>エラー処理を実装</strong>: サイトビルドを壊すことなく、欠落ファイルや処理失敗を適切に処理するために、アセット処理パイプラインに適切なエラーチェックとフォールバックメカニズムを追加します。</p>
+</li>
+<li>
+<p><strong>処理順序を最適化</strong>: 処理オーバーヘッドを最小限に抑え、圧縮などの高コストな操作がパイプラインの最後に発生することを保証するために、変換関数を論理的な順序で配置します。</p>
+</li>
+<li>
+<p><strong>処理済みアセットをキャッシュ</strong>: 開発中の不要な再処理を最小限に抑えるために、キャッシュヒットを最大化するようにアセット処理を構造化することで、Hugoの組み込みキャッシングメカニズムを効果的に活用します。</p>
+</li>
+<li>
+<p><strong>アセットサイズを監視</strong>: 異なるネットワーク条件間で最適な読み込みパフォーマンスを維持するために、処理済みアセットサイズを定期的に監査し、適切な最適化戦略を実装します。</p>
+</li>
+<li>
+<p><strong>処理パイプラインを文書化</strong>: チームコラボレーションと将来のメンテナンス作業を促進するために、アセット処理ワークフローと依存関係の明確なドキュメントを維持します。</p>
+</li>
+<li>
+<p><strong>環境間でテスト</strong>: 環境固有の問題を防ぐために、アセット処理が異なる開発環境とデプロイメントターゲット間で一貫して機能することを確認します。</p>
+</li>
+<li>
+<p><strong>設定をバージョン管理</strong>: チームメンバーとデプロイメント環境間で再現可能なビルドを保証するために、生成されたアセットを除外しながら、必要なすべての設定ファイルと依存関係をバージョン管理に含めます。</p>
+</li>
+</ul>
+<h2 id="高度なテクニック">高度なテクニック</h2>
+<ul>
+<li>
+<p><strong>カスタムリソース関数</strong>: プロジェクト固有の要件に対してシステムの機能を拡張し、組み込みパイプでカバーされていない特殊なアセット処理タスク用のカスタムHugo関数を開発します。</p>
+</li>
+<li>
+<p><strong>動的アセット生成</strong>: 複雑なアプリケーション用のデータ駆動型スタイリングと動的リソース作成を可能にするために、サイトデータまたは設定に基づいてテンプレート内でプログラム的にアセットを作成します。</p>
+</li>
+<li>
+<p><strong>多段階処理</strong>: 洗練されたアセット最適化戦略のために、中間キャッシングと条件付きロジックを使用して複数の変換段階を組み合わせた複雑な処理ワークフローを実装します。</p>
+</li>
+<li>
+<p><strong>リソースバンドリング戦略</strong>: 最大効率のために、ページ要件、ユーザー行動パターン、パフォーマンスメトリクスに基づいてアセット配信を最適化する高度なバンドリング戦略を開発します。</p>
+</li>
+<li>
+<p><strong>外部APIとの統合</strong>: パフォーマンス向上のために、<a data-lb="1" href="/ja/glossary/cloud-based/" title="クラウドベース の用語集ページ">クラウドベース</a>の画像最適化やCDN統合などの高度な処理機能のために、Hugo Pipesを外部サービスと接続します。</p>
+</li>
+<li>
+<p><strong>パフォーマンスプロファイリング</strong>: 複雑な処理パイプラインでアセット処理パフォーマンスを追跡し、最適化の機会を特定するために、カスタムプロファイリングと監視ソリューションを実装します。</p>
+</li>
+</ul>
+<h2 id="今後の方向性">今後の方向性</h2>
+<ul>
+<li>
+<p><strong>強化されたJavaScriptサポート</strong>: より良いES6+サポート、改善されたツリーシェイキング、現代のJavaScriptフレームワークとビルドツールとの統合を含む、JavaScript処理機能の継続的な開発。</p>
+</li>
+<li>
+<p><strong>高度な画像処理</strong>: AI駆動の最適化、高度なフォーマットサポート、レスポンシブ画像や遅延読み込みなどの現代的な画像配信技術との統合を含む、画像処理機能の拡張。</p>
+</li>
+<li>
+<p><strong>クラウド統合</strong>: Hugo Pipesインターフェースのシンプルさを維持しながら、計算集約的な操作のために外部サービスを活用するクラウドベースの処理機能の開発。</p>
+</li>
+<li>
+<p><strong>パフォーマンス分析</strong>: 継続的な改善のために、アセット処理効率と最適化の機会に関する洞察を提供するパフォーマンス監視と分析ツールの統合。</p>
+</li>
+<li>
+<p><strong>拡張されたプラグインシステム</strong>: Hugoのパフォーマンス特性を維持しながら、サードパーティ開発者がカスタム処理関数を作成できるようにする、より広範なプラグインアーキテクチャの開発。</p>
+</li>
+<li>
+<p><strong>自動最適化</strong>: 最適な結果のために、コンテンツ分析とパフォーマンスメトリクスに基づいて処理パラメータを自動的に調整する<a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>駆動の最適化の実装。</p>
+</li>
+</ul>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>Hugo Official Documentation - Hugo Pipes. <a href="https://gohugo.io/hugo-pipes/" rel="nofollow noopener noreferrer" target="_blank">https://gohugo.io/hugo-pipes/</a></li>
+<li>Hugo Asset Processing Guide. <a href="https://gohugo.io/hugo-pipes/introduction/" rel="nofollow noopener noreferrer" target="_blank">https://gohugo.io/hugo-pipes/introduction/</a></li>
+<li>Static Site Generator Performance Comparison. Web Performance Working Group, 2024.</li>
+<li>Modern Web Asset Optimization Techniques. Frontend Masters, 2024.</li>
+<li>Hugo Community Best Practices. Hugo Community Forum, 2024.</li>
+<li>Asset Processing in Static Site Generators. JAMstack Conference Proceedings, 2024.</li>
+<li>Performance Optimization for Static Sites. <a data-lb="1" href="/ja/glossary/google/" title="Google の用語集ページ">Google</a> Web Fundamentals, 2024.</li>
+<li>Hugo Pipes Advanced Techniques. Hugo Community Documentation, 2024.</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/git-based-cms/">
+                    Git ベース CMS
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ウェブサイトのコンテンツをファイルとして保存し、Git バージョン管理を使用するコンテンツ管理システム。開発者がコードを管理するように、チームがコンテンツの管理、変更の追跡、公開を行うことができます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/git-based-cms/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hugo-taxonomy/">
+                    Hugo タクソノミー
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Hugo におけるコンテンツ整理システムで、タグやトピックなどのカスタマイズ可能なカテゴリを使用して関連記事にラベルを付けてグループ化し、閲覧用の整理されたページを自動的に作成します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hugo-taxonomy/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hugo-shortcode/">
+                    Hugoショートコード
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Hugoにおける再利用可能なコードスニペットで、コンテンツ制作者がHTMLを記述することなく、インタラクティブな要素やカスタムレイアウトをMarkdownに直接埋め込むことができます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hugo-shortcode/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hugo-theme/">
+                    Hugoテーマ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Hugoウェブサイト用の事前構築されたデザインテンプレートで、コンテンツを自動的にスタイリングし、完成度の高いウェブサイトに整理します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hugo-theme/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hugo-module/">
+                    Hugoモジュール
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Hugoウェブサイト向けの再利用可能なコンポーネントシステムで、開発者がテーマ、レイアウト、コンテンツブロックをビルディングブロックのように共有・管理でき、自動バージョン管理機能を備えています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hugo-module/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hugo-configuration/">
+                    Hugo設定
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Hugoがウェブサイトを構築・整理する方法を制御する設定ファイルで、サイト構造、コンテンツ処理、デプロイオプションなどを含みます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hugo-configuration/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/hugo-pipes/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190816"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+  });
+</script>
+</body>
+</html>

@@ -68,13 +68,13 @@ url: "/ja/glossary/tacit-knowledge/"
 
 ## 暗黙知 vs 明示知 vs 潜在知
 
-| **次元**|**暗黙知**|**潜在知**|**明示知**|
+| **次元** | **暗黙知** | **潜在知** | **明示知** |
 |--------------|---------------------|------------------------|----------------------|
-| **定義**| 経験的ノウハウ、言語化が困難 | 無意識の知識、努力により明示化可能 | 文書化され、体系化され、容易に共有可能 |
-| **言語化**| 極めて困難 | 内省を通じて可能 | 簡単 |
-| **伝達方法**| 観察、メンタリング、実践 | 議論、内省、文書化 | 読書、訓練、データベース |
-| **例**| 専門家の直感、熟練したパフォーマンス | 暗黙の前提、習慣的実践 | マニュアル、手順、データベース |
-| **捕捉アプローチ**| シャドーイング、ストーリーテリング、実演 | インタビュー、振り返り、内省演習 | 文書化、記録、体系化 |
+| **定義** | 経験的ノウハウ、言語化が困難 | 無意識の知識、努力により明示化可能 | 文書化され、体系化され、容易に共有可能 |
+| **言語化** | 極めて困難 | 内省を通じて可能 | 簡単 |
+| **伝達方法** | 観察、メンタリング、実践 | 議論、内省、文書化 | 読書、訓練、データベース |
+| **例** | 専門家の直感、熟練したパフォーマンス | 暗黙の前提、習慣的実践 | マニュアル、手順、データベース |
+| **捕捉アプローチ** | シャドーイング、ストーリーテリング、実演 | インタビュー、振り返り、内省演習 | 文書化、記録、体系化 |
 
 これらの区別を理解することは、知識管理戦略の指針となります。明示知は文書化を通じて伝達されます。潜在知は表面化し言語化するための促進された内省を必要とします。暗黙知は経験的学習方法を要求します。
 
@@ -110,43 +110,43 @@ url: "/ja/glossary/tacit-knowledge/"
 
 経験豊富な実践者と経験の浅い同僚をペアにすることで、観察と指導された実践を通じて暗黙知の伝達が可能になります。初心者は、長期的な相互作用を通じて、専門家の意思決定アプローチ、状況判断、微妙なテクニックを吸収します。
 
-**実装:**初心者が観察された決定について質問する内省セッションを含むシャドーイングを構造化します。多様な暗黙知を捕捉するために、初心者を複数のメンターにローテーションさせます。
+**実装:** 初心者が観察された決定について質問する内省セッションを含むシャドーイングを構造化します。多様な暗黙知を捕捉するために、初心者を複数のメンターにローテーションさせます。
 
 ### ストーリーテリングとケーススタディ
 
 物語は、手順文書が見逃す文脈の豊かさを捉えます。困難な状況、異常な問題、革新的な解決策についての専門家のストーリーは、標準的な手順が適用されない場合と適応方法についての暗黙知を伝えます。
 
-**実装:**専門家のストーリーを記録しカタログ化します。経験豊富な実践者が「戦争物語」を共有するストーリーテリングセッションを使用します。暗黙的判断の適用を示すケースライブラリを開発します。
+**実装:** 専門家のストーリーを記録しカタログ化します。経験豊富な実践者が「戦争物語」を共有するストーリーテリングセッションを使用します。暗黙的判断の適用を示すケースライブラリを開発します。
 
 ### 実践コミュニティ
 
 実践者が経験を共有し、課題を議論し、集団的に問題解決する場を作ることで、暗黙知の交換が可能になります。これらのコミュニティは、継続的な相互作用を通じて共有理解を発達させます。
 
-**実装:**定期的なコミュニティミーティング、オンラインフォーラム、または協働的問題解決セッションを促進します。単なる情報交換ではなく、経験の共有を奨励します。
+**実装:** 定期的なコミュニティミーティング、オンラインフォーラム、または協働的問題解決セッションを促進します。単なる情報交換ではなく、経験の共有を奨励します。
 
 ### アフターアクションレビュー
 
 プロジェクト、インシデント、または重要なイベントの後の体系的な内省は、何がうまくいき、何がうまくいかなかったか、そしてその理由を検討することで暗黙知を表面化させます。これらのレビューは、暗黙的な意思決定を明示的にします。
 
-**実装:**「計画にはなかった何を学んだか?」「どの専門知識が違いを生んだか?」を尋ねる構造化されたデブリーフィングを実施します。将来の参照のために洞察を文書化します。
+**実装:** 「計画にはなかった何を学んだか?」「どの専門知識が違いを生んだか?」を尋ねる構造化されたデブリーフィングを実施します。将来の参照のために洞察を文書化します。
 
 ### ビデオドキュメンテーション
 
 思考発話プロトコルを使用して専門家のパフォーマンスを記録することで、行動と推論の両方を捉えます。ビデオは、書面による説明が見逃す微妙なニュアンス—ボディランゲージ、タイミング、微妙なテクニック—を保存します。
 
-**実装:**専門家が思考を説明しながら複雑なタスクを実行する様子を撮影します。主要な決定ポイントと専門家のテクニックを強調するビデオに注釈を付けます。
+**実装:** 専門家が思考を説明しながら複雑なタスクを実行する様子を撮影します。主要な決定ポイントと専門家のテクニックを強調するビデオに注釈を付けます。
 
 ### 専門家インタビューと認知タスク分析
 
 体系的な質問技法は、専門家が通常無意識の知識を言語化するのを助けます。認知タスク分析は、メンタルモデル、認識された手がかり、決定戦略を特に明らかにします。
 
-**実装:**専門家に困難な状況を再構築してもらい、何に気づいたか、何をすべきかをどのように知ったか、どのような代替案を検討したかを説明してもらう構造化されたインタビュープロトコルを使用します。
+**実装:** 専門家に困難な状況を再構築してもらい、何に気づいたか、何をすべきかをどのように知ったか、どのような代替案を検討したかを説明してもらう構造化されたインタビュープロトコルを使用します。
 
 ### 徒弟制度モデル
 
 指導、観察、指導された実践、フィードバックを組み合わせた長期的な学習関係により、包括的な暗黙知の伝達が可能になります。徒弟は、持続的な関与を通じて専門家の知識を徐々に吸収します。
 
-**実装:**学習者が専門家の指導の下で徐々により多くの責任を引き受ける複数年の開発プログラムを設計し、構造化されたチェックポイントとスキル評価を含めます。
+**実装:** 学習者が専門家の指導の下で徐々により多くの責任を引き受ける複数年の開発プログラムを設計し、構造化されたチェックポイントとスキル評価を含めます。
 
 ## AIチャットボット開発における応用
 
@@ -242,23 +242,13 @@ ARシステムは、実世界の状況に専門家のガイダンスをオーバ
 
 ## 参考文献
 
-
-1. Helpjuice. (n.d.). Tacit Knowledge - Definition, Examples, and Importance. Helpjuice Blog.
-
-2. Commoncog. (n.d.). Why Tacit Knowledge is More Important Than Deliberate Practice. Commoncog.
-
-3. Commoncog. (n.d.). The Tacit Knowledge Series. Commoncog.
-
-4. Cambridge Dictionary. (n.d.). Tacit Knowledge. Cambridge Dictionary.
-
-5. Wikipedia. (n.d.). Tacit Knowledge. Wikipedia.
-
-6. ScreenSteps. (n.d.). Tacit Knowledge - Definition, Benefits, and Examples. ScreenSteps Blog.
-
-7. Psychology Today. (2023). Unpacking Tacit Knowledge. Psychology Today.
-
-8. Indeed. (n.d.). What Is Tacit Knowledge? Definition, Examples and Importance. Indeed Career Advice.
-
-9. Polanyi, Michael. (2009). The Tacit Dimension. University of Chicago Press.
-
-10. Collins, Harry. (2010). Tacit and Explicit Knowledge. University of Chicago Press.
+- [Helpjuice: Tacit Knowledge - Definition, Examples, and Importance](https://helpjuice.com/blog/tacit-knowledge)
+- [Commoncog: Why Tacit Knowledge is More Important Than Deliberate Practice](https://commoncog.com/tacit-knowledge-is-a-real-thing/)
+- [Commoncog: The Tacit Knowledge Series](https://commoncog.com/the-tacit-knowledge-series/)
+- [Cambridge Dictionary: Tacit Knowledge](https://dictionary.cambridge.org/us/dictionary/english/tacit-knowledge)
+- [Wikipedia: Tacit Knowledge](https://en.wikipedia.org/wiki/Tacit_knowledge)
+- [ScreenSteps: Tacit Knowledge - Definition, Benefits, and Examples](https://blog.screensteps.com/tacit-knowledge-definition)
+- [Psychology Today: Unpacking Tacit Knowledge](https://www.psychologytoday.com/us/blog/seeing-what-others-dont/202307/unpacking-tacit-knowledge)
+- [Indeed: What Is Tacit Knowledge? Definition, Examples and Importance](https://www.indeed.com/career-advice/career-development/tacit-knowledge-example)
+- [Polanyi, Michael: The Tacit Dimension - University of Chicago Press, 2009](https://press.uchicago.edu/ucp/books/book/chicago/T/bo5952342.html)
+- [Collins, Harry: Tacit and Explicit Knowledge - University of Chicago Press, 2010](https://press.uchicago.edu/ucp/books/book/chicago/T/bo8724932.html)

@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Unified Customer Profile | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/unified-customer-profile/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="A single customer record created by combining data from all the places a customer interacts with your business, used to provide personalized experiences and better service." name="description"/>
+<meta content="unified customer profile, customer data integration, single customer view, customer 360, data unification" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/unified-customer-profile/" property="og:url"/>
+<meta content="Unified Customer Profile | SmartWeb" property="og:title"/>
+<meta content="A single customer record created by combining data from all the places a customer interacts with your business, used to provide personalized experiences and better service." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/unified-customer-profile/" name="twitter:url"/>
+<meta content="Unified Customer Profile | SmartWeb" name="twitter:title"/>
+<meta content="A single customer record created by combining data from all the places a customer interacts with your business, used to provide personalized experiences and better service." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Unified Customer Profile</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Unified Customer Profile
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A single customer record created by combining data from all the places a customer interacts with your business, used to provide personalized experiences and better service.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                unified customer profile
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                customer data integration
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                single customer view
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                customer 360
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                data unification
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-an-unified-customer-profile">What is an Unified Customer Profile?</h2>
+<p>A unified customer profile represents a comprehensive, single view of each customer created by aggregating and integrating data from multiple touchpoints, systems, and channels across an organization. This consolidated profile combines demographic information, behavioral data, transaction history, preferences, interactions, and engagement patterns into one cohesive record that provides a complete picture of the customer’s relationship with the business. The unified customer profile serves as the foundation for personalized experiences, targeted marketing campaigns, and data-driven decision making across all customer-facing departments.</p>
+<p>The creation of a unified customer profile involves sophisticated data integration processes that collect information from various sources including CRM systems, e-commerce platforms, mobile applications, social media interactions, customer service records, email marketing platforms, and offline touchpoints such as in-store purchases or phone calls. This data undergoes cleansing, standardization, and deduplication processes to ensure accuracy and consistency. Advanced identity resolution techniques are employed to match and merge records belonging to the same individual across different systems, even when the data contains variations in names, addresses, or contact information. The resulting profile is continuously updated in real-time or near real-time as new customer interactions occur.</p>
+<p>The strategic importance of unified customer profiles has grown exponentially as businesses recognize the need to deliver consistent, personalized experiences across all channels. Organizations with fragmented customer data often struggle with inconsistent messaging, missed opportunities for cross-selling or upselling, and poor customer service experiences where representatives lack access to complete customer histories. A unified customer profile eliminates these silos by providing every department with access to the same comprehensive customer information, enabling coordinated efforts to improve customer satisfaction, increase lifetime value, and drive business growth through more effective targeting and <a data-lb="1" href="/en/glossary/personalization/" title="Personalization glossary entry">personalization</a> strategies.</p>
+<h2 id="core-data-integration-components">Core Data Integration Components</h2>
+<p><strong>Identity Resolution Engine</strong> - The foundational technology that matches and links customer records across different systems using probabilistic and deterministic matching algorithms. This engine analyzes various data points including names, email addresses, phone numbers, and behavioral patterns to identify when multiple records belong to the same individual.</p>
+<p><strong>Data Standardization Layer</strong> - A processing component that cleanses and normalizes incoming data to ensure consistency across all sources. This layer handles format standardization, data validation, and the correction of common data quality issues such as duplicate entries or incomplete records.</p>
+<p><strong>Real-Time Data Streaming</strong> - Infrastructure that enables continuous data flow from various touchpoints to the unified profile system. This component ensures that customer interactions are immediately reflected in the profile, providing up-to-date information for real-time personalization and decision making.</p>
+<p><strong>Master Data Management (MDM)</strong> - A comprehensive approach to managing and maintaining the golden record of customer information. MDM systems establish data governance rules, maintain data quality standards, and ensure that the unified profile remains accurate and authoritative across the organization.</p>
+<p><strong><a data-lb="1" href="/en/glossary/api-integration/" title="API Integration glossary entry">API Integration</a> Framework</strong> - A set of application programming interfaces that facilitate seamless data exchange between the unified customer profile system and various business applications. This framework enables both data ingestion from source systems and data consumption by downstream applications.</p>
+<p><strong>Privacy and Consent Management</strong> - Specialized components that track customer consent preferences and ensure compliance with data protection regulations. These systems manage opt-in/opt-out preferences and control which data elements can be used for specific purposes.</p>
+<p><strong>Analytics and Segmentation Engine</strong> - Advanced analytical capabilities that process the unified customer data to generate insights, create customer segments, and identify patterns or trends that inform business strategies and marketing campaigns.</p>
+<h2 id="how-unified-customer-profile-works">How Unified Customer Profile Works</h2>
+<p>The unified customer profile system begins by establishing connections to all relevant data sources across the organization, including transactional databases, marketing automation platforms, customer service systems, and digital touchpoints. Data extraction processes are configured to pull customer information on scheduled intervals or in real-time streams, depending on the source system capabilities and business requirements.</p>
+<p>Incoming data undergoes initial processing where it is validated, cleansed, and standardized according to predefined rules and formats. This step includes removing duplicates, correcting formatting inconsistencies, and filling in missing information where possible using data enrichment services or machine learning algorithms.</p>
+<p>The identity resolution engine analyzes the processed data to determine which records belong to the same customer across different systems. This matching process uses both exact matches on unique identifiers and probabilistic matching on combinations of attributes such as names, addresses, and behavioral patterns to create comprehensive customer linkages.</p>
+<p>Matched records are merged into a single, authoritative customer profile that combines all available information about the individual. The system maintains a complete audit trail of data sources and updates, ensuring transparency and enabling data lineage tracking for compliance and troubleshooting purposes.</p>
+<p>The unified profile is continuously updated as new customer interactions occur across various touchpoints. Real-time data streams feed fresh information into the system, triggering profile updates and potentially new insights or segmentation changes that can be immediately acted upon by marketing or customer service teams.</p>
+<p>Advanced analytics engines process the unified customer data to generate derived attributes such as lifetime value calculations, propensity scores, and behavioral segments. These enriched profiles provide deeper insights that support more sophisticated personalization and targeting strategies.</p>
+<p>The system exposes customer profile data through APIs and user interfaces that enable various business applications and teams to access the information they need. Role-based access controls ensure that sensitive information is only available to authorized personnel while maintaining compliance with privacy regulations.</p>
+<p><strong>Example Workflow</strong>: When a customer makes an online purchase, the transaction data flows into the unified profile system where it is matched to the existing customer record. The system updates the purchase history, recalculates lifetime value metrics, and triggers personalized email recommendations based on the new purchase behavior, all within minutes of the original transaction.</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p><strong>Enhanced Customer Experience</strong> - Unified profiles enable consistent, personalized interactions across all touchpoints by providing complete customer context to every department and channel, eliminating frustrating experiences where customers must repeat information or receive irrelevant communications.</p>
+<p><strong>Improved Marketing Effectiveness</strong> - Comprehensive customer data enables more precise targeting, better segmentation, and personalized messaging that resonates with individual preferences and behaviors, resulting in higher engagement rates and improved campaign ROI.</p>
+<p><strong>Increased Revenue Opportunities</strong> - Complete visibility into customer behavior and preferences reveals cross-selling and upselling opportunities that might otherwise be missed, while enabling more effective retention strategies for high-value customers.</p>
+<p><strong>Operational Efficiency</strong> - Centralized customer data eliminates the need for manual data gathering from multiple systems, reducing the time required for customer service interactions and enabling faster resolution of customer issues.</p>
+<p><strong>Data-Driven Decision Making</strong> - Unified profiles provide a solid foundation for analytics and reporting, enabling businesses to make informed decisions based on complete and accurate customer insights rather than fragmented data views.</p>
+<p><strong>Regulatory Compliance</strong> - Centralized customer data management makes it easier to respond to data subject requests, maintain consent records, and ensure compliance with privacy regulations such as <a data-lb="1" href="/en/glossary/gdpr/" title="GDPR glossary entry">GDPR</a> and CCPA.</p>
+<p><strong>Reduced Data Silos</strong> - Breaking down departmental data barriers improves collaboration and ensures that all teams are working with the same customer information, leading to more coordinated and effective customer engagement strategies.</p>
+<p><strong>Real-Time Personalization</strong> - Up-to-date customer profiles enable dynamic personalization of websites, mobile apps, and other digital experiences based on the most current customer behavior and preferences.</p>
+<p><strong>Customer Lifetime Value Optimization</strong> - Complete customer journey visibility enables better understanding of value drivers and more effective strategies for maximizing long-term customer relationships and profitability.</p>
+<p><strong>Competitive Advantage</strong> - Organizations with unified customer profiles can respond more quickly to customer needs and market changes, providing superior customer experiences that differentiate them from competitors with fragmented data approaches.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p><strong>E-commerce Personalization</strong> - Online retailers use unified profiles to deliver personalized product recommendations, dynamic pricing, and customized shopping experiences based on browsing history, purchase patterns, and demographic information.</p>
+<p><strong>Omnichannel Marketing Campaigns</strong> - Marketing teams leverage comprehensive customer data to create coordinated campaigns across email, social media, mobile apps, and traditional channels, ensuring consistent messaging and optimal channel selection for each individual.</p>
+<p><strong>Customer Service Enhancement</strong> - Support representatives access complete customer histories to provide more effective assistance, anticipate needs, and resolve issues faster by understanding the full context of customer relationships and previous interactions.</p>
+<p><strong>Financial Services Risk Management</strong> - Banks and financial institutions use unified profiles to assess credit risk, detect fraudulent activities, and ensure compliance with regulatory requirements by maintaining complete customer financial profiles and transaction histories.</p>
+<p><strong>Healthcare Patient Management</strong> - Healthcare providers integrate patient data from multiple systems to create comprehensive medical profiles that improve care coordination, reduce medical errors, and enable more personalized treatment plans.</p>
+<p><strong>Subscription Service Optimization</strong> - Streaming services, software companies, and other subscription businesses analyze unified customer data to reduce churn, optimize pricing strategies, and develop features that increase customer engagement and retention.</p>
+<p><strong>Retail Inventory Management</strong> - Retailers use customer purchase patterns and preferences from unified profiles to optimize inventory levels, plan seasonal promotions, and ensure popular products are available when and where customers want them.</p>
+<p><strong>Travel and Hospitality Personalization</strong> - Hotels, airlines, and travel companies create personalized experiences by integrating booking history, preferences, and loyalty program data to offer relevant upgrades, recommendations, and services.</p>
+<p><strong>B2B Sales Enablement</strong> - Sales teams use unified customer profiles to understand the complete relationship history with business clients, identify decision makers, and tailor sales approaches based on previous interactions and purchasing patterns.</p>
+<p><strong>Insurance Claims Processing</strong> - Insurance companies integrate customer data from multiple touchpoints to streamline claims processing, detect potential fraud, and provide more accurate risk assessments for policy pricing and underwriting decisions.</p>
+<h2 id="customer-data-platform-comparison">Customer Data Platform Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Traditional CRM</th>
+<th>Data Warehouse</th>
+<th>Customer Data Platform</th>
+<th>Unified Customer Profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data Sources</strong></td>
+<td>Limited to CRM interactions</td>
+<td>Batch-loaded historical data</td>
+<td>Multiple real-time sources</td>
+<td>All customer touchpoints</td>
+</tr>
+<tr>
+<td><strong>Real-Time Updates</strong></td>
+<td>Basic contact updates</td>
+<td>No real-time capability</td>
+<td>Real-time streaming</td>
+<td>Continuous profile updates</td>
+</tr>
+<tr>
+<td><strong>Identity Resolution</strong></td>
+<td>Manual deduplication</td>
+<td>Limited matching rules</td>
+<td>Advanced ML algorithms</td>
+<td>Sophisticated identity engine</td>
+</tr>
+<tr>
+<td><strong>Data Accessibility</strong></td>
+<td>CRM users only</td>
+<td>Technical analysts</td>
+<td>Business users via APIs</td>
+<td>Cross-departmental access</td>
+</tr>
+<tr>
+<td><strong>Personalization</strong></td>
+<td>Basic segmentation</td>
+<td>Historical reporting</td>
+<td>Real-time personalization</td>
+<td>Dynamic profile-based targeting</td>
+</tr>
+<tr>
+<td><strong>Implementation Time</strong></td>
+<td>Weeks to months</td>
+<td>Months to years</td>
+<td>Months</td>
+<td>Weeks to months</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p><strong>Data Quality Management</strong> - Maintaining accurate and consistent data across multiple sources requires ongoing attention to data cleansing, validation, and standardization processes, as poor data quality can undermine the effectiveness of the entire unified profile system.</p>
+<p><strong>Privacy and Compliance Complexity</strong> - Managing customer consent, data retention policies, and regulatory compliance across multiple jurisdictions becomes increasingly complex when consolidating data from various sources and systems.</p>
+<p><strong>Technical Integration Challenges</strong> - Connecting disparate systems with different data formats, APIs, and update frequencies requires significant technical expertise and ongoing maintenance to ensure reliable data flow and system performance.</p>
+<p><strong>Identity Resolution Accuracy</strong> - Achieving high accuracy in matching customer records across systems while minimizing false positives and negatives requires sophisticated algorithms and continuous tuning based on data quality and business requirements.</p>
+<p><strong>Scalability and Performance</strong> - As customer bases grow and data volumes increase, unified profile systems must maintain fast query response times and real-time update capabilities without compromising system performance or user experience.</p>
+<p><strong>Organizational Change Management</strong> - Implementing unified customer profiles often requires significant changes to business processes, team responsibilities, and decision-making workflows that can face resistance from stakeholders accustomed to existing systems.</p>
+<p><strong>Cost and Resource Requirements</strong> - Building and maintaining unified customer profile systems requires substantial investments in technology infrastructure, specialized personnel, and ongoing operational costs that must be justified by measurable business benefits.</p>
+<p><strong>Data Security and <a data-lb="1" href="/en/glossary/access-control/" title="Access Control glossary entry">Access Control</a></strong> - Centralizing sensitive customer information creates new security risks and requires robust access controls, encryption, and <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a> systems to prevent data breaches and unauthorized access.</p>
+<p><strong>Vendor Lock-in Risks</strong> - Choosing proprietary unified customer profile solutions may create dependencies on specific vendors that limit future flexibility and increase long-term costs for system changes or migrations.</p>
+<p><strong>Real-Time Processing Complexity</strong> - Maintaining accurate profiles with real-time data updates requires sophisticated event processing, conflict resolution, and system synchronization capabilities that add technical complexity and potential failure points.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p><strong>Start with Clear Business Objectives</strong> - Define specific goals and success metrics for the unified customer profile initiative before beginning implementation to ensure alignment with business priorities and measurable outcomes.</p>
+<p><strong>Conduct Comprehensive Data Audit</strong> - Thoroughly assess all existing customer data sources, quality levels, and integration requirements to understand the scope and complexity of the unification project.</p>
+<p><strong>Implement Robust Data Governance</strong> - Establish clear policies, procedures, and responsibilities for data quality, privacy, security, and lifecycle management before consolidating customer information from multiple sources.</p>
+<p><strong>Choose Scalable Technology Architecture</strong> - Select platforms and technologies that can grow with business needs and handle increasing data volumes, user loads, and integration requirements over time.</p>
+<p><strong>Prioritize Data Quality from Day One</strong> - Invest in data cleansing, standardization, and validation processes early in the implementation to establish a strong foundation for accurate customer profiles.</p>
+<p><strong>Design for Privacy by Default</strong> - Build privacy controls, consent management, and compliance features into the system architecture rather than adding them as afterthoughts to ensure regulatory compliance.</p>
+<p><strong>Plan Phased Implementation Approach</strong> - Roll out unified customer profiles gradually, starting with high-impact use cases and expanding to additional departments and applications over time to manage complexity and risk.</p>
+<p><strong>Invest in User Training and Adoption</strong> - Provide comprehensive training and support to ensure that business users understand how to effectively leverage unified customer profiles in their daily work and decision-making processes.</p>
+<p><strong>Establish Monitoring and Alerting</strong> - Implement comprehensive monitoring systems to track data quality, system performance, and business metrics to quickly identify and resolve issues that could impact profile accuracy or availability.</p>
+<p><strong>Create Feedback Loops for Continuous Improvement</strong> - Establish processes for collecting user feedback, monitoring system performance, and regularly updating algorithms and processes to improve profile accuracy and business value over time.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p><strong>Machine Learning-Enhanced Identity Resolution</strong> - Advanced algorithms that learn from historical matching decisions and user feedback to continuously improve the accuracy of customer record linking across disparate systems and data sources.</p>
+<p><strong>Predictive Profile Enrichment</strong> - Using <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence glossary entry">artificial intelligence</a> to predict missing customer attributes, future behaviors, and preferences based on similar customer patterns and available profile data to create more complete and actionable customer insights.</p>
+<p><strong>Real-Time Event Stream Processing</strong> - Implementing complex event processing systems that can analyze and respond to customer behavior patterns as they occur, enabling immediate personalization and automated decision-making based on unified profile data.</p>
+<p><strong>Graph-Based Customer Relationships</strong> - Utilizing graph databases and analytics to understand and leverage relationships between customers, products, and touchpoints to enhance targeting, recommendations, and customer experience strategies.</p>
+<p><strong>Federated Profile Management</strong> - Advanced architectures that create unified views of customer data without physically centralizing all information, enabling real-time access to distributed data sources while maintaining data sovereignty and <a data-lb="1" href="/en/glossary/security-requirements/" title="Security Requirements glossary entry">security requirements</a>.</p>
+<p><strong>Behavioral Biometrics Integration</strong> - Incorporating advanced behavioral analysis and biometric data into customer profiles to enhance security, improve personalization, and enable more sophisticated fraud detection and prevention capabilities.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p><strong>Artificial Intelligence-Driven Insights</strong> - Advanced <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI systems</a> will automatically generate actionable insights and recommendations from unified customer profiles, reducing the need for manual analysis and enabling more proactive customer engagement strategies.</p>
+<p><strong>Privacy-Preserving Analytics</strong> - Emerging technologies such as differential privacy and federated learning will enable organizations to gain insights from unified customer profiles while providing stronger privacy protections and regulatory compliance.</p>
+<p><strong>Edge Computing Integration</strong> - Distributed processing capabilities will enable real-time customer profile updates and personalization at edge locations, reducing <a data-lb="1" href="/en/glossary/latency/" title="Latency glossary entry">latency</a> and improving customer experience in mobile and IoT applications.</p>
+<p><strong>Blockchain-Based Identity Management</strong> - Distributed ledger technologies may provide new approaches to customer identity verification and consent management, giving customers more control over their data while enabling trusted profile sharing across organizations.</p>
+<p><strong>Augmented Analytics Capabilities</strong> - Natural language processing and automated insight generation will make unified customer profiles more accessible to non-technical users, democratizing data-driven decision making across organizations.</p>
+<p><strong>Cross-Enterprise Profile Sharing</strong> - Secure, privacy-compliant mechanisms for sharing customer profile insights across partner organizations and ecosystems will enable more comprehensive customer understanding and coordinated experience delivery.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Redman, T. C. (2020). “Getting in Front on Data: Who Does What.” Harvard Business Review Press.</p>
+</li>
+<li>
+<p>Davenport, T. H., &amp; Harris, J. G. (2017). “Competing on Analytics: Updated Edition.” Harvard Business Review Press.</p>
+</li>
+<li>
+<p>Siegel, E. (2016). “Predictive Analytics: The Power to Predict Who Will Click, Buy, Lie, or Die.” Wiley.</p>
+</li>
+<li>
+<p>Provost, F., &amp; Fawcett, T. (2013). “<a data-lb="1" href="/en/glossary/data-science/" title="Data Science glossary entry">Data Science</a> for Business: What You Need to Know about Data Mining and Data-Analytic Thinking.” O’Reilly Media.</p>
+</li>
+<li>
+<p>Kimball, R., &amp; Ross, M. (2013). “The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling.” Wiley.</p>
+</li>
+<li>
+<p>Chen, H., Chiang, R. H., &amp; Storey, V. C. (2012). “Business Intelligence and Analytics: From Big Data to Big Impact.” MIS Quarterly, 36(4), 1165-1188.</p>
+</li>
+<li>
+<p>LaValle, S., Lesser, E., Shockley, R., Hopkins, M. S., &amp; Kruschwitz, N. (2011). “Big Data, Analytics and the Path from Insights to Value.” MIT Sloan Management Review, 52(2), 21-32.</p>
+</li>
+<li>
+<p>Wedel, M., &amp; Kannan, P. K. (2016). “Marketing Analytics for Data-Rich Environments.” Journal of Marketing, 80(6), 97-121.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/unified-customer-view/">
+                    Unified Customer View
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A complete customer profile that combines all information about a person from every interaction with...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/unified-customer-view/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/unified-customer-profile/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

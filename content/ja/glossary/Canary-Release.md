@@ -15,7 +15,9 @@ type: glossary
 draft: false
 e-title: Canary Release
 term: かなりありりーす
-url: "/ja/glossary/Canary-Release/"
+url: "/ja/glossary/canary-release/"
+aliases:
+- "/ja/glossary/Canary-Release/"
 ---
 ## カナリアリリースとは?
 カナリアリリースは、新しいアプリケーションバージョンを全ユーザーベースに公開する前に、まず少数のユーザーまたはインフラストラクチャに段階的に展開する、プログレッシブなソフトウェアデプロイメント戦略です。この段階的アプローチにより、エンジニアリングチームは実際の本番環境条件下で新バージョンを監視し、問題を迅速に検出し、問題が発生した場合はロールアウトを一時停止またはロールバックすることで、リグレッションの影響を限定できます。
@@ -34,11 +36,14 @@ url: "/ja/glossary/Canary-Release/"
 
 ### 2. カナリア公開のためのユーザー選択
 
-**ユーザーセグメンテーション戦略:**-**ランダムサンプリング:**ユーザートラフィックの少数(1-5%)をカナリアにルーティング
-- **地理的ターゲティング:**特定の地域またはデータセンターに最初にデプロイ
-- **ユーザータイプ:**従業員またはパワーユーザーから開始(「ドッグフーディング」)
-- **ブランド/顧客セグメンテーション:**マルチテナントシステムの場合、特定のブランドまたはテナントをターゲット
-- **オプトイン/オプトアウト:**ユーザーが早期アクセスに自発的に参加できるようにする**例:**Facebookは、まず従業員に新バージョンを公開し、その後徐々により広範なコホートに展開します。
+**ユーザーセグメンテーション戦略:**
+- **ランダムサンプリング:** ユーザートラフィックの少数(1-5%)をカナリアにルーティング
+- **地理的ターゲティング:** 特定の地域またはデータセンターに最初にデプロイ
+- **ユーザータイプ:** 従業員またはパワーユーザーから開始(「ドッグフーディング」)
+- **ブランド/顧客セグメンテーション:** マルチテナントシステムの場合、特定のブランドまたはテナントをターゲット
+- **オプトイン/オプトアウト:** ユーザーが早期アクセスに自発的に参加できるようにする
+
+**例:** Facebookは、まず従業員に新バージョンを公開し、その後徐々により広範なコホートに展開します。
 
 ### 3. 段階的な公開拡大
 
@@ -46,12 +51,14 @@ url: "/ja/glossary/Canary-Release/"
 
 ### 4. 主要メトリクスとオブザーバビリティの監視
 
-**技術的メトリクス:**- エラー率(HTTP 5xx、例外)
+**技術的メトリクス:**
+- エラー率(HTTP 5xx、例外)
 - レイテンシーと応答時間
 - リソース消費(CPU、メモリ)
 - クラッシュ率とログ
 
-**ビジネスメトリクス:**- コンバージョン率とトランザクション成功率
+**ビジネスメトリクス:**
+- コンバージョン率とトランザクション成功率
 - エンゲージメントとリテンション
 - 収益への影響
 
@@ -61,7 +68,11 @@ url: "/ja/glossary/Canary-Release/"
 
 問題が検出された場合:
 
-**即時ロールバック**すべてのトラフィックを以前のバージョンに即座に復元します。**ロールバック戦略:**- ロードバランサー/APIゲートウェイ/フィーチャーフラグを介して再ルーティング
+**即時ロールバック**  
+すべてのトラフィックを以前のバージョンに即座に復元します。
+
+**ロールバック戦略:**
+- ロードバランサー/APIゲートウェイ/フィーチャーフラグを介して再ルーティング
 - カナリアポッド/インスタンスの廃止
 - 必要に応じて以前のデータベース状態を復元(スキーマ変更は慎重に計画)
 
@@ -69,23 +80,64 @@ url: "/ja/glossary/Canary-Release/"
 
 ## カナリアリリースのメリット
 
-**リスク軽減**失敗したリリースの「爆発半径」を少数のユーザーグループに限定します。**迅速な本番グレードのフィードバック**実際の使用により、ステージング環境では見つからない問題を露呈します。**高い保証**実際の本番環境条件下で新バージョンを検証します。**シームレスで高速なロールバック**ダウンタイムとユーザーへの影響を最小限に抑えます。**容量とパフォーマンステスト**完全なロールアウト前に、実際の規模で新バージョンを観察します。**継続的デリバリーのサポート**頻繁で安全なデプロイメントを可能にします。
+**リスク軽減**  
+失敗したリリースの「爆発半径」を少数のユーザーグループに限定します。
+
+**迅速な本番グレードのフィードバック**  
+実際の使用により、ステージング環境では見つからない問題を露呈します。
+
+**高い保証**  
+実際の本番環境条件下で新バージョンを検証します。
+
+**シームレスで高速なロールバック**  
+ダウンタイムとユーザーへの影響を最小限に抑えます。
+
+**容量とパフォーマンステスト**  
+完全なロールアウト前に、実際の規模で新バージョンを観察します。
+
+**継続的デリバリーのサポート**  
+頻繁で安全なデプロイメントを可能にします。
 
 ## 課題と制限事項
 
-**インフラストラクチャの複雑性**プログラマブルなトラフィックルーティングと高度な監視が必要です。**バージョン互換性**新旧バージョンが並行して実行されることが多く、APIとデータベースが複雑になります。**ユーザーエクスペリエンスの不一致**一部のユーザーは他のユーザーより先に新機能やバグを目にします。**データベースマイグレーション**スキーマ変更は両方のバージョンをサポートする必要があり、多くの場合Parallel Changeパターンを使用します。**オブザーバビリティ**監視の欠如はカナリアの価値を低下させます。**自動化**手動のカナリア管理はエラーが発生しやすくなります。**コストとオーバーヘッド**重複環境の実行により、リソース使用量が増加します。**すべてのシステムに適しているわけではない**ミッション/安全クリティカルなシステム、または不可逆的なデータベース変更を伴うシステムは、カナリアリリースを避けるべきです。
+**インフラストラクチャの複雑性**  
+プログラマブルなトラフィックルーティングと高度な監視が必要です。
+
+**バージョン互換性**  
+新旧バージョンが並行して実行されることが多く、APIとデータベースが複雑になります。
+
+**ユーザーエクスペリエンスの不一致**  
+一部のユーザーは他のユーザーより先に新機能やバグを目にします。
+
+**データベースマイグレーション**  
+スキーマ変更は両方のバージョンをサポートする必要があり、多くの場合Parallel Changeパターンを使用します。
+
+**オブザーバビリティ**  
+監視の欠如はカナリアの価値を低下させます。
+
+**自動化**  
+手動のカナリア管理はエラーが発生しやすくなります。
+
+**コストとオーバーヘッド**  
+重複環境の実行により、リソース使用量が増加します。
+
+**すべてのシステムに適しているわけではない**  
+ミッション/安全クリティカルなシステム、または不可逆的なデータベース変更を伴うシステムは、カナリアリリースを避けるべきです。
 
 ## 比較:カナリア vs. その他のデプロイメント戦略
 
 | 戦略           | ロールアウトモデル                  | リスク軽減 | ロールバックの複雑性 | ユーザーエクスペリエンス        | ユースケース                |
 |--------------------|-------------------------------|-----------------|---------------------|------------------------|--------------------------|
-| **カナリアリリース**| 段階的;ユーザーのサブセット       | 高            | 容易                | 一部が早期に新バージョンを見る | 高リスク、大規模ユーザーベース|
-| **Blue-Green**| 一斉;2つの環境  | 中            | 容易                | シームレス(バグがない場合) | 小規模な変更            |
-| **ローリング**| 段階的;サーバーバッチ        | 中          | 中程度            | ユーザーがバージョンを切り替える可能性 | インフラアップグレード           |
-| **フィーチャーフラグ**| ユーザー/グループごとに機能を切り替え | 高            | 非常に容易           | 高度にターゲット化        | 実験、A/Bテスト   |**主な違い:**-**Blue-green:**すべてのユーザーが一度に切り替わり、ロールバックは簡単だが、完全な公開のリスクがある
-- **ローリング:**ユーザーコホートではなく、インフラストラクチャを段階的に更新
-- **フィーチャーフラグ:**アプリケーション全体のバージョンではなく、機能を細かいレベルで制御
-- **カナリア:**高リスクまたは大規模デプロイメントのための段階的なコホートベースの公開
+| **カナリアリリース** | 段階的;ユーザーのサブセット       | 高            | 容易                | 一部が早期に新バージョンを見る | 高リスク、大規模ユーザーベース|
+| **Blue-Green**     | 一斉;2つの環境  | 中            | 容易                | シームレス(バグがない場合) | 小規模な変更            |
+| **ローリング**        | 段階的;サーバーバッチ        | 中          | 中程度            | ユーザーがバージョンを切り替える可能性 | インフラアップグレード           |
+| **フィーチャーフラグ**  | ユーザー/グループごとに機能を切り替え | 高            | 非常に容易           | 高度にターゲット化        | 実験、A/Bテスト   |
+
+**主な違い:**
+- **Blue-green:** すべてのユーザーが一度に切り替わり、ロールバックは簡単だが、完全な公開のリスクがある
+- **ローリング:** ユーザーコホートではなく、インフラストラクチャを段階的に更新
+- **フィーチャーフラグ:** アプリケーション全体のバージョンではなく、機能を細かいレベルで制御
+- **カナリア:** 高リスクまたは大規模デプロイメントのための段階的なコホートベースの公開
 
 ## 実装のベストプラクティス
 
@@ -141,27 +193,49 @@ url: "/ja/glossary/Canary-Release/"
 
 ## 一般的なアンチパターン
 
-**手動で自動化されていないカナリア**人的エラーのリスクを増加させます。**不十分な監視**カナリアのみの問題を検出できない可能性があります。**技術的メトリクスのみに焦点を当てる**ビジネスリグレッションを見逃す可能性があります。**過度に積極的な拡大**リスク軽減を無効にします。**カナリアとA/Bテストの混同**カナリアは安全性のためであり、製品分析のためではありません。
+**手動で自動化されていないカナリア**  
+人的エラーのリスクを増加させます。
+
+**不十分な監視**  
+カナリアのみの問題を検出できない可能性があります。
+
+**技術的メトリクスのみに焦点を当てる**  
+ビジネスリグレッションを見逃す可能性があります。
+
+**過度に積極的な拡大**  
+リスク軽減を無効にします。
+
+**カナリアとA/Bテストの混同**  
+カナリアは安全性のためであり、製品分析のためではありません。
 
 ## よくある質問
 
-**カナリアリリースとblue-greenデプロイメントの違いは何ですか?**Blue-greenはすべてのユーザーを一度に新しい環境に切り替えますが、カナリアリリースは段階的にトラフィックをシフトし、早期公開のリスクを最小限に抑えます。**データベース変更にカナリアリリースを使用できますか?**変更が後方互換性があり、両方のバージョンが並行して実行できる場合のみ可能で、多くの場合Parallel Changeパターンを介して行います。**カナリアリリースに必要なインフラストラクチャは何ですか?**プログラマブルなロードバランサー、APIゲートウェイ、オブザーバビリティスタック、CI/CD自動化。**カナリアリリースはすべてのタイプのソフトウェアに適していますか?**Webサービス、API、集中デプロイメントを持つクラウドネイティブアプリケーションに最も効果的です。
+**カナリアリリースとblue-greenデプロイメントの違いは何ですか?**  
+Blue-greenはすべてのユーザーを一度に新しい環境に切り替えますが、カナリアリリースは段階的にトラフィックをシフトし、早期公開のリスクを最小限に抑えます。
+
+**データベース変更にカナリアリリースを使用できますか?**  
+変更が後方互換性があり、両方のバージョンが並行して実行できる場合のみ可能で、多くの場合Parallel Changeパターンを介して行います。
+
+**カナリアリリースに必要なインフラストラクチャは何ですか?**  
+プログラマブルなロードバランサー、APIゲートウェイ、オブザーバビリティスタック、CI/CD自動化。
+
+**カナリアリリースはすべてのタイプのソフトウェアに適していますか?**  
+Webサービス、API、集中デプロイメントを持つクラウドネイティブアプリケーションに最も効果的です。
 
 ## 参考文献
 
-
-1. Fowler, M. (n.d.). Canary Release. Martin Fowler Blog.
-2. Fowler, M. (n.d.). Blue-Green Deployment. Martin Fowler Blog.
-3. Fowler, M. (n.d.). Dark Launching. Martin Fowler Blog.
-4. Fowler, M. (n.d.). Parallel Change (Expand-Contract). Martin Fowler Blog.
-5. Google Cloud. (n.d.). Use a Canary Deployment Strategy. Google Cloud Documentation.
-6. Google Cloud. (n.d.). Canary Deployments with Kubernetes. Google Cloud Documentation.
-7. Gravitee. (n.d.). Comprehensive Guide to Canary Releases. Gravitee Blog.
-8. LaunchDarkly. (n.d.). What Is a Canary Release?. LaunchDarkly Blog.
-9. Semaphore. (n.d.). What Is Canary Deployment?. Semaphore Blog.
-10. Harness. (n.d.). What is a Canary Deployment?. Harness DevOps Academy.
-11. Netflix. (n.d.). Automated Canary Analysis with Kayenta. Netflix Tech Blog.
-12. IMVU. (2010). Continuous Deployment QA. IMVU Engineering Blog.
-13. AWS. (n.d.). Rolling Deployment. AWS CodeDeploy Documentation.
-14. Wikipedia. (n.d.). Feature Toggle. Wikipedia.
-15. Wikipedia. (n.d.). A/B Testing. Wikipedia.
+- [Martin Fowler: Canary Release](https://martinfowler.com/bliki/CanaryRelease.html)
+- [Martin Fowler: Blue-Green Deployment](https://martinfowler.com/bliki/BlueGreenDeployment.html)
+- [Martin Fowler: Dark Launching](https://martinfowler.com/bliki/DarkLaunching.html)
+- [Martin Fowler: Parallel Change (Expand-Contract)](https://martinfowler.com/bliki/ParallelChange.html)
+- [Google Cloud: Use a Canary Deployment Strategy](https://docs.cloud.google.com/deploy/docs/deployment-strategies/canary)
+- [Google Cloud: Canary Deployments with Kubernetes](https://docs.cloud.google.com/deploy/docs/deployment-strategies/canary/gke/service-networking)
+- [Gravitee: Comprehensive Guide to Canary Releases](https://www.gravitee.io/blog/comprehensive-guide-to-canary-releases)
+- [LaunchDarkly: What Is a Canary Release?](https://launchdarkly.com/blog/what-is-a-canary-release/)
+- [Semaphore: What Is Canary Deployment?](https://semaphore.io/blog/what-is-canary-deployment)
+- [Harness: What is a Canary Deployment?](https://www.harness.io/harness-devops-academy/what-is-a-canary-deployment)
+- [Netflix: Automated Canary Analysis with Kayenta](https://medium.com/netflix-techblog/automated-canary-analysis-at-netflix-with-kayenta-3260bc7acc69)
+- [IMVU: Continuous Deployment QA](http://engineering.imvu.com/2010/04/09/imvus-approach-to-integrating-quality-assurance-with-continuous-deployment/)
+- [AWS CodeDeploy: Rolling Deployment](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-type-rolling.html)
+- [Wikipedia: Feature Toggle](https://en.wikipedia.org/wiki/Feature_toggle)
+- [Wikipedia: A/B Testing](https://en.wikipedia.org/wiki/A/B_testing)

@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Top-Pサンプリング | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/top-p-sampling/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="自然言語処理におけるTop-Pサンプリングの包括的ガイド。テキスト生成のための実装方法、メリット、ベストプラクティスを解説します。" name="description"/>
+<meta content="top-pサンプリング, ニュークリアスサンプリング, テキスト生成, 言語モデル, 確率分布" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/top-p-sampling/" property="og:url"/>
+<meta content="Top-Pサンプリング | SmartWeb" property="og:title"/>
+<meta content="自然言語処理におけるTop-Pサンプリングの包括的ガイド。テキスト生成のための実装方法、メリット、ベストプラクティスを解説します。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/top-p-sampling/" name="twitter:url"/>
+<meta content="Top-Pサンプリング | SmartWeb" name="twitter:title"/>
+<meta content="自然言語処理におけるTop-Pサンプリングの包括的ガイド。テキスト生成のための実装方法、メリット、ベストプラクティスを解説します。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190816" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190816" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190816"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126096741115000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126096741115000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126096741115000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126096741115000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Top-Pサンプリング</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Top-Pサンプリング
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Top-P Sampling
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          自然言語処理におけるTop-Pサンプリングの包括的ガイド。テキスト生成のための実装方法、メリット、ベストプラクティスを解説します。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                top-pサンプリング
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ニュークリアスサンプリング
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                テキスト生成
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                言語モデル
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                確率分布
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="top-pサンプリングとは">Top-Pサンプリングとは</h2>
+<p>Top-Pサンプリング(nucleus samplingとも呼ばれる)は、自然言語処理および<a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>モデルで使用される高度なテキスト生成技術であり、生成されるテキストのランダム性と品質を制御します。この手法は、累積確率分布に基づいて候補トークンのプールを動的に調整することで、シーケンス内の次のトークンを選択するという基本的な課題に対処します。固定パラメータに依存する従来のサンプリング手法とは異なり、Top-Pサンプリングはモデルの予測の信頼度レベルに適応し、テキスト生成に対するより洗練されたアプローチを実現します。</p>
+<p>Top-Pサンプリングの中核原理は、累積確率が所定の閾値(通常「p」と表記される)を超える最小のトークンセットから選択することです。この閾値は通常0.1から1.0の範囲で、一般的な値は0.9または0.95です。モデルが次のトークンについて高い信頼度を持つ場合(一般的なフレーズの補完や文法規則に従う場合など)、nucleusは小さくなり、最も可能性の高い選択肢に焦点を当てます。逆に、モデルが創造性や多様な応答を必要とするより曖昧な文脈に直面した場合、nucleusは拡大してより広範な可能性を含み、生成される出力の一貫性と多様性の両方を維持します。</p>
+<p>この動的調整メカニズムにより、Top-Pサンプリングは、<a data-lb="1" href="/ja/glossary/chatbot/" title="チャットボットは、テキストまたは音声を通じて人間の会話をシミュレートするAI駆動のソフトウェアアプリケーションです。カスタマーサポート、情報検索、タスク自動化に使用されます。">チャットボット</a>、創作支援ツール、コード生成ツール、コンテンツ作成プラットフォームなど、高品質なテキスト生成を必要とするアプリケーションで特に価値があります。この手法は、意味的一貫性を維持しながら、反復的または過度に予測可能な出力を避けるために十分な変動性を導入するという最適なバランスを実現します。モデルの信頼度レベルに自動的に適応することで、Top-Pサンプリングは、貪欲デコーディングや基本的なランダムサンプリングなどのより単純なサンプリング戦略と比較して、より自然で文脈に適した魅力的なテキストを生成します。</p>
+<h2 id="主要なサンプリング技術とコンポーネント">主要なサンプリング技術とコンポーネント</h2>
+<p><strong>確率分布分析</strong> - Top-Pサンプリングの基礎は、各生成ステップで語彙全体の確率分布を分析することにあります。モデルは、可能なすべての次のトークンに確率スコアを割り当て、最も可能性の高い候補から最も可能性の低い候補までのランク付けリストを作成します。</p>
+<p><strong>動的Nucleus形成</strong> - nucleusは、累積確率が指定されたp値閾値に達するトークンのセットを表します。このセットは、各ステップでの分布のエントロピーとモデルの信頼度レベルに基づいて動的にサイズが変化します。</p>
+<p><strong>累積確率計算</strong> - トークンは確率の降順でソートされ、その確率は合計がp閾値に達するか超えるまで累積されます。このプロセスにより、サンプリングプールに残るトークンが決定されます。</p>
+<p><strong>再正規化プロセス</strong> - nucleusトークンを選択した後、それらの確率は合計が1.0になるように再正規化され、相対的な尤度比を維持しながら最終的なサンプリングステップのための適切な確率分布を保証します。</p>
+<p><strong>温度統合</strong> - Top-Pサンプリングは、nucleus形成前に温度スケーリングを組み込むことが多く、確率分布の鋭さや平坦さをきめ細かく制御して、生成の多様性にさらに影響を与えることができます。</p>
+<p><strong>フォールバックメカニズム</strong> - 堅牢な実装には、単一のトークンがp閾値を超えない場合や、分布が多くのトークンにわたって極端に平坦な場合などのエッジケースに対するフォールバック戦略が含まれます。</p>
+<p><strong>トークンフィルタリング</strong> - 高度な実装では、Top-P選択プロセスを適用する前に、不適切、反復的、または文脈的に無関係なトークンを削除する追加のフィルタリングステップが含まれる場合があります。</p>
+<h2 id="top-pサンプリングの仕組み">Top-Pサンプリングの仕組み</h2>
+<p>Top-Pサンプリングプロセスは、各生成ステップに適応する体系的なワークフローに従います:</p>
+<ol>
+<li>
+<p><strong>モデルのフォワードパス</strong> - 言語モデルは入力コンテキストを処理し、語彙内のすべてのトークンに対して確率スコアを生成します。通常、数千から数十万の可能な次のトークンがあります。</p>
+</li>
+<li>
+<p><strong>確率のソート</strong> - すべてのトークンは確率スコアに基づいて降順でソートされ、次の位置の最も可能性の高い候補から最も可能性の低い候補までのランク付けリストが作成されます。</p>
+</li>
+<li>
+<p><strong>累積確率計算</strong> - 最も高い確率のトークンから始めて、累積合計が所定のp閾値に達するか超えるまで、確率が順次累積されます。</p>
+</li>
+<li>
+<p><strong>Nucleus境界の決定</strong> - アルゴリズムは、累積確率が閾値を超えるカットオフポイントを特定し、サンプリングの候補トークンのnucleusセットを定義します。</p>
+</li>
+<li>
+<p><strong>確率の再正規化</strong> - nucleus内のトークンの確率は、合計が1.0になるように再正規化され、低確率トークンを除外しながら適切な確率分布を維持します。</p>
+</li>
+<li>
+<p><strong>ランダムサンプリング</strong> - 再正規化されたnucleus分布からトークンがランダムに選択され、選択確率は各トークンの調整された確率重みに比例します。</p>
+</li>
+<li>
+<p><strong>コンテキストの更新</strong> - 選択されたトークンは生成されたシーケンスに追加され、次の生成ステップのためにコンテキストが更新されます。</p>
+</li>
+<li>
+<p><strong>反復制御</strong> - 最大長に達する、シーケンス終了トークンに遭遇する、または特定の完了基準を満たすなどの停止条件が満たされるまで、プロセスが繰り返されます。</p>
+</li>
+</ol>
+<p><strong>ワークフローの例</strong>: 「The weather today is」の後の次の単語を生成する場合、モデルは次のような確率を割り当てる可能性があります:「sunny」(0.4)、「cloudy」(0.25)、「rainy」(0.15)、「cold」(0.1)、「warm」(0.05)、残りのトークンはより低い確率を持ちます。p=0.9の場合、nucleusには最初の4つのトークン(累積確率=0.9)が含まれ、「warm」およびその他の低確率オプションは除外されます。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>テキスト品質の向上</strong> - Top-Pサンプリングは、高確率トークンに焦点を当てながら、反復的な出力につながる可能性のある貪欲デコーディングの決定論的性質を回避することで、より一貫性があり文脈に適したテキストを生成します。</p>
+<p><strong>動的適応性</strong> - この手法は、モデルの信頼度に基づいてサンプリングプールのサイズを自動的に調整し、明確な文脈では焦点を絞った選択を可能にし、曖昧な状況ではより広範な探索を可能にします。</p>
+<p><strong>反復の削減</strong> - 合理的な候補間の多様性を維持しながら極端に低い確率のトークンを除外することで、Top-Pサンプリングは反復ループや単調なテキストパターンの可能性を大幅に削減します。</p>
+<p><strong>創造性バランスの改善</strong> - この技術は、意味的一貫性を維持しながら、創造的で魅力的で多様な出力を生成するために十分なランダム性を導入するという最適なバランスを実現します。</p>
+<p><strong>計算効率</strong> - 語彙全体からサンプリングする場合と比較して、Top-Pサンプリングは生成品質を維持しながら候補プールを制限することで計算オーバーヘッドを削減します。</p>
+<p><strong>パラメータの安定性</strong> - pパラメータは生成動作に対する直感的な制御を提供し、頻繁な調整が必要な温度スケーリングとは異なり、異なるモデルやコンテキスト間で比較的安定しています。</p>
+<p><strong>コンテキスト感度</strong> - 動的nucleus形成は、事実情報に対してはより保守的で、創造的なタスクに対してはより探索的であるなど、異なるタイプのコンテンツに自然に適応します。</p>
+<p><strong>スケーラビリティ</strong> - Top-Pサンプリングは、小規模な特化モデルから大規模なトランスフォーマーアーキテクチャまで、異なるサイズとアーキテクチャのモデル間で一貫して良好に機能します。</p>
+<p><strong>品質の一貫性</strong> - この手法は、長いテキスト生成タスク全体で一貫した出力品質を維持し、より単純なサンプリング戦略でよく見られる劣化を回避します。</p>
+<p><strong>ユーザー制御</strong> - 単一のpパラメータは、基礎となるモデルの深い技術的知識を必要とせずに、創造性と一貫性のトレードオフに対する直感的な制御をユーザーに提供します。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong><a data-lb="1" href="/ja/glossary/conversational/" title="対話型AIを探求:自然言語処理、自然言語理解、機械学習、音声認識を用いて人間の会話をシミュレートする技術。その仕組み、メリット、ユースケース、将来のトレンドを学びます。">対話型AI</a>システム</strong> - チャットボットと仮想アシスタントは、Top-Pサンプリングを使用して、会話の一貫性を維持し、反復的な対話パターンを回避しながら、自然で多様な応答を生成します。</p>
+<p><strong>創作支援</strong> - コンテンツ作成ツールは、Top-Pサンプリングを活用して、文学的品質を維持しながら、多様なストーリーアイデア、キャラクター描写、物語の続きを生成するのを支援します。</p>
+<p><strong>コード生成ツール</strong> - プログラミングアシスタントは、Top-Pサンプリングを使用して、構文の正確性と論理的一貫性を維持しながら、多様なコード補完と実装を提案します。</p>
+<p><strong>コンテンツマーケティングプラットフォーム</strong> - マーケティングツールは、Top-Pサンプリングを使用して、ブランドボイスを維持しながら反復的なメッセージングを回避する、多様な広告コピー、ソーシャルメディア投稿、プロモーションコンテンツを生成します。</p>
+<p><strong>教育アプリケーション</strong> - 学習プラットフォームは、Top-Pサンプリングを利用して、教育的価値を維持しながら多様な学習体験を提供する、多様な練習問題、説明、例を作成します。</p>
+<p><strong>翻訳サービス</strong> - 機械翻訳システムは、Top-Pサンプリングを組み込んで、過度に文字通りの解釈を避けながら、ニュアンスのある意味を捉えたより自然な翻訳を生成します。</p>
+<p><strong>ゲームとインタラクティブフィクション</strong> - ゲーム開発者は、Top-Pサンプリングを使用して、物語の一貫性を維持しながらユニークなプレイヤー体験を提供する、動的なストーリーライン、キャラクターの対話、世界の描写を生成します。</p>
+<p><strong>研究・分析ツール</strong> - 学術およびビジネス研究プラットフォームは、Top-Pサンプリングを使用して、事実の正確性を維持しながら、多様なレポート要約、仮説提案、分析的洞察を生成します。</p>
+<p><strong>メールとコミュニケーションアシスタント</strong> - 生産性ツールは、Top-Pサンプリングを使用して、専門的なトーンと明確性を維持しながら、多様なメール応答、会議要約、コミュニケーションドラフトを提案します。</p>
+<p><strong>ソーシャルメディア管理</strong> - コンテンツスケジューリングおよび管理プラットフォームは、Top-Pサンプリングを活用して、エンゲージメントを維持しながら反復的なコンテンツパターンを回避する、多様な投稿と応答を生成します。</p>
+<h2 id="サンプリング手法の比較">サンプリング手法の比較</h2>
+<table>
+<thead>
+<tr>
+<th>手法</th>
+<th>多様性</th>
+<th>品質</th>
+<th>計算コスト</th>
+<th>パラメータの複雑さ</th>
+<th>使用例の適合性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>貪欲デコーディング</td>
+<td>非常に低い</td>
+<td>高い</td>
+<td>非常に低い</td>
+<td>なし</td>
+<td>事実的、決定論的タスク</td>
+</tr>
+<tr>
+<td>ランダムサンプリング</td>
+<td>非常に高い</td>
+<td>低い</td>
+<td>低い</td>
+<td>温度のみ</td>
+<td>実験的、高創造性</td>
+</tr>
+<tr>
+<td>Top-Kサンプリング</td>
+<td>中程度</td>
+<td>中〜高</td>
+<td>中程度</td>
+<td>K値+温度</td>
+<td>汎用、固定多様性</td>
+</tr>
+<tr>
+<td>Top-Pサンプリング</td>
+<td>高い</td>
+<td>高い</td>
+<td>中程度</td>
+<td>P値+温度</td>
+<td>適応的、高品質生成</td>
+</tr>
+<tr>
+<td>ビームサーチ</td>
+<td>低い</td>
+<td>非常に高い</td>
+<td>高い</td>
+<td>ビーム幅</td>
+<td>翻訳、要約</td>
+</tr>
+<tr>
+<td>典型的サンプリング</td>
+<td>中〜高</td>
+<td>高い</td>
+<td>中〜高</td>
+<td>Tauパラメータ</td>
+<td>情報理論的アプリケーション</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>パラメータ調整の複雑さ</strong> - 最適なp値を選択するには実験とドメイン固有の知識が必要であり、異なるアプリケーションでは創造性と一貫性の間の異なるバランスポイントが必要になる場合があります。</p>
+<p><strong>コンテキスト長の依存性</strong> - Top-Pサンプリングの有効性は、利用可能なコンテキスト長によって大きく異なる可能性があり、短いコンテキストでは情報に基づかないnucleus形成の決定につながる可能性があります。</p>
+<p><strong>モデルアーキテクチャの感度</strong> - 異なるモデルアーキテクチャは異なる確率分布を生成する可能性があり、p値の調整が必要になり、Top-Pサンプリングのパフォーマンスの一貫性に影響を与える可能性があります。</p>
+<p><strong>計算オーバーヘッド</strong> - 完全な語彙サンプリングよりも効率的ですが、Top-Pサンプリングは、リアルタイムアプリケーションでの生成速度に影響を与える可能性のあるソートと累積確率計算を必要とします。</p>
+<p><strong>エッジケースの処理</strong> - 確率分布が極端に平坦または尖っている状況では、予期しないnucleusサイズにつながる可能性があり、堅牢なフォールバックメカニズムとエラー処理が必要です。</p>
+<p><strong>品質評価の困難さ</strong> - Top-Pサンプリングの有効性を測定するには、単純なパープレキシティスコアを超えた高度な評価指標が必要であり、最適化と比較が困難になります。</p>
+<p><strong>ドメイン適応要件</strong> - 異なるドメイン(技術文書、創作フィクション、対話的対話)では、最適なパフォーマンスのために異なるp値と追加の調整が必要になる場合があります。</p>
+<p><strong>再現性の懸念</strong> - Top-Pサンプリングの確率的性質により、正確な出力を再現することが困難になる可能性があり、一貫性を必要とする特定のアプリケーションでは問題になる可能性があります。</p>
+<p><strong>統合の複雑さ</strong> - Top-Pサンプリングを効果的に実装するには、温度スケーリングや反復ペナルティなどの他の技術との統合が必要になることが多く、システムの複雑さが増します。</p>
+<p><strong><a data-lb="1" href="/ja/glossary/bias/" title="バイアス の用語集ページ">バイアス</a>増幅リスク</strong> - 他のサンプリング手法と同様に、Top-Pサンプリングはトレーニングデータに存在するバイアスを増幅する可能性があり、慎重な監視と緩和戦略が必要です。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>最適なP値の選択</strong> - ベースラインとしてp=0.9から始め、アプリケーション要件に基づいて調整します。より保守的な生成には高い値(0.95-0.99)を、創造性の向上には低い値(0.7-0.85)を使用します。</p>
+<p><strong>温度統合</strong> - Top-Pサンプリングを、nucleus形成前に適用される温度スケーリング(通常0.7-1.2)と組み合わせて、確率分布の鋭さと生成の多様性を微調整します。</p>
+<p><strong>堅牢なエッジケース処理</strong> - 極端な確率分布に対するフォールバックメカニズムを実装します。例えば、最小nucleusサイズや、分布が平坦すぎるまたは尖りすぎている場合の自動p値調整などです。</p>
+<p><strong>効率的な実装</strong> - 最適化されたソートアルゴリズムを使用し、大規模な語彙に対しては近似技術を検討して、サンプリング品質を維持しながら計算オーバーヘッドを最小限に抑えます。</p>
+<p><strong>コンテキスト対応調整</strong> - コンテキスト特性に基づいて動的p値調整を実装します。例えば、創造的なタスクには低いp値を使用し、事実的なコンテンツ生成には高い値を使用します。</p>
+<p><strong>品質監視システム</strong> - 多様性と一貫性の両方の指標を評価する包括的な評価フレームワークを確立し、時間の経過とともにTop-Pサンプリングのパフォーマンスを監視および最適化します。</p>
+<p><strong>反復防止</strong> - Top-Pサンプリングを反復ペナルティとn-gramフィルタリングと組み合わせて、nucleusサンプリングの利点を維持しながら反復的な出力を防ぎます。</p>
+<p><strong><a data-lb="1" href="/ja/glossary/batch-processing/" title="バッチ処理は、大量のデータを収集し、設定された期間ごとにグループ単位で処理するデータアプローチです。高スループットのAI、分析、ビジネスオペレーションに最適です。">バッチ処理</a>の最適化</strong> - 複数の生成を必要とするアプリケーションの場合、複数のシーケンス間でTop-Pサンプリングを同時に処理できる効率的なバッチ処理技術を実装します。</p>
+<p><strong>メモリ管理</strong> - 確率ソートとnucleus形成のための効率的なメモリ管理を実装します。これは、大規模な語彙を持つモデルやリソースが制約された環境で特に重要です。</p>
+<p><strong>ドキュメントとログ記録</strong> - p値、nucleusサイズ、生成品質指標の詳細なログを維持して、デバッグ、最適化、結果の再現性を促進します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>適応的P値スケジューリング</strong> - 生成プロセス全体でサンプリング動作を最適化するために、生成の進行状況、コンテキストエントロピー、または品質指標に基づいて動的p値調整を実装します。</p>
+<p><strong>マルチモーダルNucleusサンプリング</strong> - 単一の連続したnucleusではなく、複数の確率ピークを特定してサンプリングすることで、マルチモーダル確率分布を処理するようにTop-Pサンプリングを拡張します。</p>
+<p><strong>階層的Top-Pサンプリング</strong> - 文レベルと単語レベルなど、複数の抽象化レベルでTop-Pサンプリングを適用して、異なる言語スケール間で一貫性を維持します。</p>
+<p><strong>制約付きNucleus形成</strong> - 多様性を維持しながら生成されたコンテンツが特定の要件を満たすことを保証するために、意味的、構文的、またはドメイン固有の制約をnucleus形成プロセスに統合します。</p>
+<p><strong>アンサンブルNucleusサンプリング</strong> - Top-Pサンプリングを適用する前に複数のモデルからの確率分布を組み合わせて、多様なモデルの視点を活用し、生成の堅牢性を向上させます。</p>
+<p><strong>コンテキスト的P値学習</strong> - コンテキスト特性、ユーザー設定、タスク要件に基づいて最適なp値を自動的に予測する機械学習モデルを開発します。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>ニューラルP値最適化</strong> - 完全に自動化されたパラメータ調整のために、コンテキスト、ユーザーフィードバック、生成目標に基づいて最適なp値を動的に予測することを学習するニューラルネットワークの開発。</p>
+<p><strong>多目的Nucleusサンプリング</strong> - より洗練されたアプリケーション固有のサンプリング戦略を作成するために、複数の目標(一貫性、創造性、事実性、スタイル)をnucleus形成プロセスに統合。</p>
+<p><strong>量子インスパイアードサンプリング手法</strong> - 多様性と品質の面で古典的なTop-Pサンプリングに対する利点を提供できる新しいサンプリング技術を開発するための量子コンピューティング原理の探求。</p>
+<p><strong>リアルタイム適応システム</strong> - パーソナライズされたテキスト生成のために、ユーザーフィードバック、エンゲージメント指標、リアルタイム品質評価に基づいてTop-Pパラメータを継続的に適応させるシステムの開発。</p>
+<p><strong>クロスリンガルNucleusサンプリング</strong> - 言語固有のパラメータ最適化とクロスリンガル一貫性維持を備えた多言語モデルへのTop-Pサンプリング技術の拡張。</p>
+<p><strong>解釈可能なサンプリング決定</strong> - 特定のトークンがnucleusに含まれた理由または除外された理由についての洞察を提供する説明可能なAIシステムの作成により、AI生成コンテンツの透明性と信頼性を向上。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Holtzman, A., Buys, J., Du, L., Forbes, M., &amp; Choi, Y. (2019). The curious case of neural text degeneration. arXiv preprint arXiv:1904.09751.</p>
+</li>
+<li>
+<p>Radford, A., Wu, J., Child, R., Luan, D., Amodei, D., &amp; Sutskever, I. (2019). Language models are unsupervised multitask learners. <a data-lb="1" href="/ja/glossary/openai/" title="ChatGPTは、大規模言語モデルを活用したOpenAIの高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。">OpenAI</a> blog.</p>
+</li>
+<li>
+<p>Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J. D., Dhariwal, P., … &amp; Amodei, D. (2020). Language models are few-shot learners. Advances in neural information processing systems.</p>
+</li>
+<li>
+<p>Meister, C., Pimentel, T., Wiher, G., &amp; Cotterell, R. (2022). Typical sampling improves coherence and quality of neural text generation. arXiv preprint arXiv:2202.00666.</p>
+</li>
+<li>
+<p>Zhang, H., Dathathri, S., Ramakrishnan, R., Deng, B., Kuo, T., Prabhumoye, S., … &amp; Galley, M. (2022). Systematic evaluation of predictive fairness. arXiv preprint arXiv:2210.07057.</p>
+</li>
+<li>
+<p>Welleck, S., Kulikov, I., Roller, S., Dinan, E., Cho, K., &amp; Weston, J. (2019). Neural text generation with unlikelihood training. arXiv preprint arXiv:1908.04319.</p>
+</li>
+<li>
+<p>Khandelwal, U., Clark, K., Jurafsky, D., &amp; Kaiser, L. (2019). Sample efficient text summarization using a single pre-trained transformer. arXiv preprint arXiv:1905.08836.</p>
+</li>
+<li>
+<p>Liu, Y., Ott, M., Goyal, N., Du, J., Joshi, M., Chen, D., … &amp; Stoyanov, V. (2019). RoBERTa: A robustly optimized BERT pretraining approach. arXiv preprint arXiv:1907.11692.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/top-k-sampling/">
+                    Top-Kサンプリング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    自然言語処理におけるTop-Kサンプリングの包括的ガイド。テキスト生成のための実装方法、メリット、ベストプラクティスを解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/top-k-sampling/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/text-generation/">
+                    テキスト生成
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    テキスト生成の包括的ガイド:AIを活用したコンテンツ作成、自然言語処理、現代のアプリケーション向け自動ライティング技術について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/text-generation/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/instruction-tuning/">
+                    インストラクションチューニング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    インストラクションチューニングの包括的ガイド:人間の指示に従い、特定のタスクを効果的に実行するための言語モデルのファインチューニング手法について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/instruction-tuning/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/tree-of-thoughts/">
+                    思考の木
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    思考の木(ToT)の包括的ガイド - 複数の解決経路を体系的に探索可能にする高度なAI推論フレームワーク...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/tree-of-thoughts/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/top-p-sampling/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190816"></script>
+</body>
+</html>

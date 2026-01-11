@@ -15,7 +15,9 @@ type: glossary
 draft: false
 e-title: F1 Score
 term: エフワンスコア
-url: "/ja/glossary/F1-score/"
+url: "/ja/glossary/f1-score/"
+aliases:
+- "/ja/glossary/F1-score/"
 ---
 ## F1スコアとは?
 
@@ -33,8 +35,13 @@ F1スコアは0(最悪)から1(最良)の範囲で、1は完璧な適合率と�
 
 |                     | 予測陽性 | 予測陰性 |
 |---------------------|---------|---------|
-| **実際陽性**| 真陽性(TP) | 偽陰性(FN) |
-| **実際陰性**| 偽陽性(FP) | 真陰性(TN) |**真陽性(TP):**正しく予測された陽性インスタンス**偽陽性(FP):**陰性インスタンスを誤って陽性と予測**偽陰性(FN):**陽性インスタンスを誤って陰性と予測**真陰性(TN):**正しく予測された陰性インスタンス
+| **実際陽性** | 真陽性(TP) | 偽陰性(FN) |
+| **実際陰性** | 偽陽性(FP) | 真陰性(TN) |
+
+**真陽性(TP):** 正しく予測された陽性インスタンス  
+**偽陽性(FP):** 陰性インスタンスを誤って陽性と予測  
+**偽陰性(FN):** 陽性インスタンスを誤って陰性と予測  
+**真陰性(TN):** 正しく予測された陰性インスタンス
 
 ### 適合率と再現率
 
@@ -68,7 +75,9 @@ F1 = 2 × (適合率 × 再現率) / (適合率 + 再現率)
 
 F1 = (2 × TP) / (2 × TP + FP + FN)
 
-**計算例:**適合率 = 0.8、再現率 = 0.6の場合:
+**計算例:**
+
+適合率 = 0.8、再現率 = 0.6の場合:
 
 F1 = 2 × (0.8 × 0.6) / (0.8 + 0.6) = 2 × 0.48 / 1.4 ≈ 0.686
 
@@ -80,7 +89,9 @@ F-betaスコアは、適合率と再現率に異なる重みを付けること�
 
 F_β = (1 + β²) × (適合率 × 再現率) / (β² × 適合率 + 再現率)
 
-**β = 1:**等しい重み(標準F1)**β > 1:**再現率を重視(例: 医療スクリーニングのF2)**β < 1:**適合率を重視(例: スパム検出のF0.5)
+**β = 1:** 等しい重み(標準F1)  
+**β > 1:** 再現率を重視(例: 医療スクリーニングのF2)  
+**β < 1:** 適合率を重視(例: スパム検出のF0.5)
 
 使用ケースはドメインによって異なります。医療診断は多くの場合、再現率を優先し(偽陽性があっても全ての疾患を捉える)、スパムフィルタリングは適合率を優先する場合があります(正当なメールのブロックを避ける)。
 
@@ -88,7 +99,13 @@ F_β = (1 + β²) × (適合率 × 再現率) / (β² × 適合率 + 再現率)
 
 複数のクラスを持つ問題では、いくつかの集約戦略が存在します:
 
-**マクロ平均:**クラスごとにF1を計算し、平均します。サイズに関係なくすべてのクラスを平等に扱います。**マイクロ平均:**クラス全体でTP、FP、FNを集約し、グローバルF1を計算します。クラス頻度で重み付けされます。**加重平均:**クラスサポート(真のインスタンス数)で重み付けされたクラスごとのF1スコアの平均。**クラスごと:**集約せずに各クラスのF1を報告し、最大の詳細を提供します。
+**マクロ平均:** クラスごとにF1を計算し、平均します。サイズに関係なくすべてのクラスを平等に扱います。
+
+**マイクロ平均:** クラス全体でTP、FP、FNを集約し、グローバルF1を計算します。クラス頻度で重み付けされます。
+
+**加重平均:** クラスサポート(真のインスタンス数)で重み付けされたクラスごとのF1スコアの平均。
+
+**クラスごと:** 集約せずに各クラスのF1を報告し、最大の詳細を提供します。
 
 戦略の選択は、すべてのクラスが等しく重要か(マクロ)、頻繁なクラスのパフォーマンスがより重要か(マイクロ/加重)によって異なります。
 
@@ -166,15 +183,41 @@ F1は、構造化抽出タスクにおけるLLMの精度を評価し、モデル
 
 ### F1の制限
 
-**等しい重み付けの仮定**F1は適合率と再現率を等しく扱います。一方が大幅に重要な場合、F-betaまたは個別の指標がより良い評価を提供します。**真陰性への非感受性**F1はTNを無視するため、陰性クラスのパフォーマンスが重要な場合、情報量が少なくなります。**解釈の複雑さ**同一のF1スコアは、大きく異なる適合率/再現率の組み合わせから生じます。常に両方の基礎となる指標を調べてください。**深刻な不均衡への不適切さ**極めてまれな陽性の場合、貧弱なモデルでも妥当なF1スコアを達成します。代わりに適合率-再現率曲線またはROC-AUCを検討してください。
+**等しい重み付けの仮定**  
+F1は適合率と再現率を等しく扱います。一方が大幅に重要な場合、F-betaまたは個別の指標がより良い評価を提供します。
+
+**真陰性への非感受性**  
+F1はTNを無視するため、陰性クラスのパフォーマンスが重要な場合、情報量が少なくなります。
+
+**解釈の複雑さ**  
+同一のF1スコアは、大きく異なる適合率/再現率の組み合わせから生じます。常に両方の基礎となる指標を調べてください。
+
+**深刻な不均衡への不適切さ**  
+極めてまれな陽性の場合、貧弱なモデルでも妥当なF1スコアを達成します。代わりに適合率-再現率曲線またはROC-AUCを検討してください。
 
 ### 代替指標
 
-**再現率を優先:**再現率を直接使用するか、F2スコアを使用**適合率を優先:**適合率を直接使用するか、F0.5スコアを使用**ランキング評価:**ROC-AUCまたは適合率-再現率AUCを使用**コスト重視アプリケーション:**ビジネスへの影響を反映するカスタムコスト行列を使用
+**再現率を優先:** 再現率を直接使用するか、F2スコアを使用  
+**適合率を優先:** 適合率を直接使用するか、F0.5スコアを使用  
+**ランキング評価:** ROC-AUCまたは適合率-再現率AUCを使用  
+**コスト重視アプリケーション:** ビジネスへの影響を反映するカスタムコスト行列を使用
 
 ## ベストプラクティス
 
-**ドメインコンテキストが重要**指標を選択する前に、偽陽性と偽陰性のビジネスコストを理解してください。F1は両方がほぼ等しく重要な場合に機能します。**構成要素を調べる**F1と一緒に常に適合率と再現率を確認してください。同一のF1スコアは重要なパフォーマンスの違いを隠す可能性があります。**複数の指標を検討**包括的な評価のために、F1を他の指標(正解率、ROC-AUC、適合率-再現率曲線)と一緒に使用してください。**閾値分析**確率ベースの分類器の場合、分類閾値全体でF1がどのように変化するかを分析して、最適な動作点を見つけてください。**交差検証**複数のデータ分割でF1を計算して、パフォーマンスの安定性を評価し、特定のテストセットへの過学習を避けてください。
+**ドメインコンテキストが重要**  
+指標を選択する前に、偽陽性と偽陰性のビジネスコストを理解してください。F1は両方がほぼ等しく重要な場合に機能します。
+
+**構成要素を調べる**  
+F1と一緒に常に適合率と再現率を確認してください。同一のF1スコアは重要なパフォーマンスの違いを隠す可能性があります。
+
+**複数の指標を検討**  
+包括的な評価のために、F1を他の指標(正解率、ROC-AUC、適合率-再現率曲線)と一緒に使用してください。
+
+**閾値分析**  
+確率ベースの分類器の場合、分類閾値全体でF1がどのように変化するかを分析して、最適な動作点を見つけてください。
+
+**交差検証**  
+複数のデータ分割でF1を計算して、パフォーマンスの安定性を評価し、特定のテストセットへの過学習を避けてください。
 
 ## 重要なポイント
 
@@ -182,16 +225,15 @@ F1スコアは、適合率と再現率をバランスさせる単一の指標を
 
 ## 参考文献
 
-
-1. V7 Labs. (n.d.). F1 Score in Machine Learning. V7 Labs Blog.
-2. GeeksforGeeks. (n.d.). F1 Score in Machine Learning. GeeksforGeeks.
-3. KDnuggets. (2022). Confusion Matrix, Precision, and Recall Explained. KDnuggets.
-4. Google Developers. (n.d.). Classification Metrics. Google Developers.
-5. Towards Data Science. (n.d.). Performance Metrics. Towards Data Science.
-6. Permetrics. (n.d.). F-Beta Score. Permetrics Documentation.
-7. scikit-learn. (n.d.). f1_score Documentation. scikit-learn Documentation.
-8. Arize. (n.d.). Understanding and Applying F1 Score. Arize Blog.
-9. ScienceDirect. (2024). Fraud Detection in Healthcare. ScienceDirect.
-10. Galileo AI. (n.d.). F1 Score in AI Evaluation. Galileo AI Blog.
-11. Wikipedia. (n.d.). F-score. Wikipedia.
-12. scikit-learn. (n.d.). Model Evaluation Guide. scikit-learn Documentation.
+- [V7 Labs: F1 Score in Machine Learning](https://www.v7labs.com/blog/f1-score-guide)
+- [GeeksforGeeks: F1 Score in Machine Learning](https://www.geeksforgeeks.org/machine-learning/f1-score-in-machine-learning/)
+- [KDnuggets: Confusion Matrix, Precision, and Recall Explained](https://www.kdnuggets.com/2022/11/confusion-matrix-precision-recall-explained.html)
+- [Google Developers: Classification Metrics](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall)
+- [Towards Data Science: Performance Metrics](https://towardsdatascience.com/performance-metrics-confusion-matrix-precision-recall-and-f1-score-a8fe076a2262/)
+- [Permetrics: F-Beta Score](https://permetrics.readthedocs.io/en/latest/pages/classification/FBS.html)
+- [scikit-learn: f1_score Documentation](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)
+- [Arize: Understanding and Applying F1 Score](https://arize.com/blog-course/f1-score/)
+- [ScienceDirect: Fraud Detection in Healthcare](https://www.sciencedirect.com/science/article/pii/S0933365724003038)
+- [Galileo AI: F1 Score in AI Evaluation](https://galileo.ai/blog/f1-score-ai-evaluation-precision-recall)
+- [Wikipedia: F-score](https://en.wikipedia.org/wiki/F-score)
+- [scikit-learn: Model Evaluation Guide](https://scikit-learn.org/stable/modules/model_evaluation.html#f1-score)

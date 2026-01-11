@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>完成の定義 | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/definition-of-done/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="アジャイル開発における完成の定義の包括的ガイド - 品質基準、実装方法、メリット、および高品質な成果物を提供するためのベストプラクティス。" name="description"/>
+<meta content="完成の定義, アジャイル開発, 品質基準, スプリント完了, 受け入れ基準" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/definition-of-done/" property="og:url"/>
+<meta content="完成の定義 | SmartWeb" property="og:title"/>
+<meta content="アジャイル開発における完成の定義の包括的ガイド - 品質基準、実装方法、メリット、および高品質な成果物を提供するためのベストプラクティス。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/definition-of-done/" name="twitter:url"/>
+<meta content="完成の定義 | SmartWeb" name="twitter:title"/>
+<meta content="アジャイル開発における完成の定義の包括的ガイド - 品質基準、実装方法、メリット、および高品質な成果物を提供するためのベストプラクティス。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190816" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190816" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190816"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126096741115000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126096741115000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126096741115000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126096741115000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">完成の定義</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        完成の定義
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Definition of Done
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          アジャイル開発における完成の定義の包括的ガイド - 品質基準、実装方法、メリット、および高品質な成果物を提供するためのベストプラクティス。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                完成の定義
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                アジャイル開発
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                品質基準
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                スプリント完了
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                受け入れ基準
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="definition-of-done完成の定義とは">Definition of Done(完成の定義)とは?</h2>
+<p>Definition of Done(完成の定義、DoD)は、アジャイルソフトウェア開発における基本的な概念であり、作業が完了したと見なされる意味について共通の理解を確立するものです。これは、プロダクトインクリメント、ユーザーストーリー、または機能が完成し、出荷可能と見なされる前に満たすべき基準、活動、品質標準の包括的なチェックリストとして機能します。Definition of Doneは、開発チームとステークホルダー間の契約として機能し、すべての関係者が成果物の品質と完全性について期待を一致させることを保証します。</p>
+<p>Scrumメソドロジーにおいて、Definition of Doneは特に重要であり、透明性を提供し、チームが進捗と品質を評価するための共通言語を作り出します。個々のユーザーストーリーに固有の受け入れ基準とは異なり、Definition of Doneはプロジェクトまたは組織内のすべての作業項目に普遍的に適用されます。これには、技術標準、テスト要件、ドキュメント要件、および提供されるインクリメントが組織の品質標準を満たし、エンドユーザーへのリリース準備が整っていることを保証するために満たすべきその他の条件が含まれます。</p>
+<p>Definition of Doneは、チームが成熟し、組織の能力が向上するにつれて進化します。当初、チームはコード完成と基本的なテストなどの単純な基準を含む基本的なDefinition of Doneを持つかもしれません。時間の経過とともに、チームの実践が成熟し、インフラストラクチャが改善されるにつれて、Definition of Doneは通常、自動テスト、パフォーマンスベンチマーク、セキュリティレビュー、包括的なドキュメントなど、より洗練された要件を含むように拡大します。この進化は、より高品質なソフトウェアを提供するチームの能力の向上と、開発実践における継続的改善へのコミットメントを反映しています。</p>
+<h2 id="definition-of-doneの中核コンポーネント">Definition of Doneの中核コンポーネント</h2>
+<p><strong>コード品質標準</strong> - コーディング規約、ピアレビュー要件、静的コード解析結果を含みます。コードはクリーンで、十分に文書化され、確立されたアーキテクチャパターンと組織のコーディング標準に準拠している必要があります。</p>
+<p><strong>テスト要件</strong> - 指定されたカバレッジ閾値を持つユニットテスト、統合テスト、機能テストを含む包括的なテスト基準。すべてのテストに合格し、新機能には信頼性を確保するための適切なテストカバレッジが含まれている必要があります。</p>
+<p><strong>ドキュメントの完全性</strong> - 技術ドキュメント、ユーザーガイド、APIドキュメント、インラインコードコメントを作成または更新する必要があります。これにより、知識の移転と提供される機能の保守性が確保されます。</p>
+<p><strong>統合検証</strong> - インクリメントは既存システムと正常に統合され、適切な環境にデプロイされている必要があります。これには、データベースマイグレーション、構成更新、サードパーティサービス統合が含まれます。</p>
+<p><strong>パフォーマンスベンチマーク</strong> - 提供される機能は、予想される負荷条件下での応答時間、スループット要件、リソース使用制限を含む、確立されたパフォーマンス基準を満たす必要があります。</p>
+<p><strong>セキュリティコンプライアンス</strong> - セキュリティレビュー、脆弱性スキャン、組織のセキュリティポリシーへの準拠を完了する必要があります。これには、認証、認可、データ保護、セキュアコーディング実践の検証が含まれます。</p>
+<p><strong>ユーザー受け入れ検証</strong> - 提供される機能のステークホルダーレビューと承認を行い、ビジネス要件を満たし、さまざまなシナリオとユーザーペルソナにわたって期待されるユーザーエクスペリエンスを提供することを確認します。</p>
+<h2 id="definition-of-doneの仕組み">Definition of Doneの仕組み</h2>
+<p>Definition of Doneは、開発プロセス全体を通じて品質ゲートとして機能し、初期開発から最終納品までチームをガイドします:</p>
+<ol>
+<li>
+<p><strong>初期計画フェーズ</strong> - チームはスプリント計画中にDefinition of Doneをレビューし、各ユーザーストーリーに必要な作業の全範囲を理解し、現実的な見積もりとコミットメントを確保します。</p>
+</li>
+<li>
+<p><strong>開発実行</strong> - 開発者は機能を実装する際にDefinition of Doneをチェックリストとして使用し、機能要件だけでなくすべての必要な基準に対処することを確保します。</p>
+</li>
+<li>
+<p><strong>継続的検証</strong> - 開発全体を通じて、チームメンバーはDefinition of Done基準に対する進捗を定期的にチェックし、プロセスの早い段階で潜在的なギャップを特定します。</p>
+</li>
+<li>
+<p><strong>コードレビュープロセス</strong> - ピアレビュアーはDefinition of Doneを使用してプルリクエストを評価し、統合前に提案された変更がすべての確立された品質標準を満たしていることを確認します。</p>
+</li>
+<li>
+<p><strong>テスト検証</strong> - 品質保証チームは、Definition of Doneで指定されたすべてのテスト要件が完了し、結果が受け入れ閾値を満たしていることを検証します。</p>
+</li>
+<li>
+<p><strong>統合チェックポイント</strong> - インクリメントはステージング環境にデプロイされ、Definition of Done要件に従って統合とシステムレベルの検証が行われます。</p>
+</li>
+<li>
+<p><strong>ステークホルダーレビュー</strong> - プロダクトオーナーとステークホルダーは、受け入れ基準とDefinition of Done標準の両方に対してインクリメントを評価し、リリース準備が整っていることを確認します。</p>
+</li>
+<li>
+<p><strong>最終承認ゲート</strong> - すべてのDefinition of Done基準が満たされた場合にのみ、インクリメントは完了としてマークされ、本番リリースに含まれる可能性があります。</p>
+</li>
+</ol>
+<p><strong>ワークフロー例</strong>: 新しい決済機能を実装するユーザーストーリーでは、開発者はクリーンでテストされたコードを書き、APIドキュメントを作成し、セキュリティコンプライアンスを確保し、負荷下でのパフォーマンスを検証し、既存の決済システムと統合し、完了と見なされる前にステークホルダーの承認を得る必要があります。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>品質保証</strong> - すべての成果物にわたって一貫した品質標準を確立し、欠陥を削減し、組織の期待とユーザーニーズを満たす信頼性の高いソフトウェアを確保します。</p>
+<p><strong>透明性の向上</strong> - 完了した作業を構成するものについて明確な可視性を提供し、曖昧さを排除し、ステークホルダーとチームメンバーの正確な進捗追跡を可能にします。</p>
+<p><strong>リスク軽減</strong> - 作業が完了と見なされる前に包括的な検証を要求することで、開発プロセスの早い段階で潜在的な問題を特定し、本番環境での問題の可能性を減らします。</p>
+<p><strong>チームの整合性</strong> - 期待と標準についてチームメンバー間で共通の理解を作り出し、コラボレーションを改善し、作業品質と完全性に関する対立を減らします。</p>
+<p><strong>予測可能な納品</strong> - すべてのチームメンバーが任意のタスクや機能を完了するために必要な作業の全範囲を理解することで、より正確な見積もりと計画を可能にします。</p>
+<p><strong>継続的改善</strong> - チームの能力が成熟するにつれて品質標準を進化させるフレームワークを提供し、組織の成長とプロセスの改善を長期的にサポートします。</p>
+<p><strong>顧客満足度</strong> - 提供される機能が品質期待を満たし、真に使用準備が整っていることを確保し、ユーザーエクスペリエンスを改善し、リリース後のサポート問題を削減します。</p>
+<p><strong><a data-lb="1" href="/ja/glossary/technical-debt/" title="技術的負債とは、堅牢なアプローチではなく短期的な解決策を選択した際に発生する、将来的な作り直しに伴う潜在的なコストを指します。ソフトウェア開発やAIシステムにおいて、メンテナンス、複雑性、修復にかかるコストの増加につながります。">技術的負債</a>の削減</strong> - 作業が完了と見なされる前に適切なドキュメント、テスト、コード品質標準を要求することで、技術的負債の蓄積を防ぎます。</p>
+<p><strong>コンプライアンス保証</strong> - Definition of Done基準を通じてコンプライアンス要件を開発プロセスに組み込むことで、組織が規制および業界標準を満たすのを支援します。</p>
+<p><strong>知識管理</strong> - チームの回復力を向上させ、個々のチームメンバーへの依存を減らすドキュメントと知識共有の実践を促進します。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong>スプリント完了検証</strong> - チームはDefinition of Doneを使用して、スプリントレビューとレトロスペクティブ中にユーザーストーリーとタスクを完了としてマークできるタイミングを決定します。</p>
+<p><strong>リリース計画</strong> - プロダクトマネージャーはDefinition of Done基準を活用して、どの機能が本当に本番リリースの準備ができており、どの機能が追加作業を必要とするかを評価します。</p>
+<p><strong>コードレビュー標準</strong> - 開発チームは、すべての貢献にわたって一貫した品質を確保するために、ピアコードレビュー中の評価基準としてDefinition of Doneを適用します。</p>
+<p><strong>品質ゲートの実装</strong> - 組織は、不完全または標準以下のコードが環境を通じて進むのを防ぐために、CI/CDパイプラインで自動品質ゲートとしてDefinition of Doneを実装します。</p>
+<p><strong>チームオンボーディング</strong> - 新しいチームメンバーは、組織内の品質期待と開発標準を理解するための包括的なガイドとしてDefinition of Doneを使用します。</p>
+<p><strong>クロスチーム調整</strong> - 統合システムで作業する複数のチームは、コンポーネント間の互換性と一貫した品質を確保するために、共有Definition of Done標準を使用します。</p>
+<p><strong>ベンダー管理</strong> - 組織は、外部開発チームや請負業者からの成果物を評価する際にDefinition of Done基準を適用し、内部標準との一貫性を確保します。</p>
+<p><strong>監査とコンプライアンス</strong> - 規制コンプライアンスチームは、業界標準と品質管理プロセスへの準拠を実証するためにDefinition of Doneドキュメントを使用します。</p>
+<p><strong>パフォーマンス最適化</strong> - チームは、新機能がシステムパフォーマンスとスケーラビリティ要件を維持することを確保するために、Definition of Doneにパフォーマンスベンチマークを組み込みます。</p>
+<p><strong>セキュリティ統合</strong> - セキュリティチームは、すべての成果物が組織のセキュリティ標準と脅威軽減要件を満たすことを確保するために、Definition of Doneにセキュリティ要件を組み込みます。</p>
+<h2 id="definition-of-doneの成熟度レベル">Definition of Doneの成熟度レベル</h2>
+<table>
+<thead>
+<tr>
+<th>成熟度レベル</th>
+<th>焦点領域</th>
+<th>典型的な基準</th>
+<th>自動化レベル</th>
+<th>チーム経験</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>基本</strong></td>
+<td>機能完成</td>
+<td>コード記述、手動テスト</td>
+<td>最小限の自動化</td>
+<td>初心者チーム</td>
+</tr>
+<tr>
+<td><strong>中級</strong></td>
+<td>品質標準</td>
+<td>ユニットテスト、コードレビュー、ドキュメント</td>
+<td>一部自動化</td>
+<td>発展途上チーム</td>
+</tr>
+<tr>
+<td><strong>上級</strong></td>
+<td>統合重視</td>
+<td>自動テスト、CI/CD、パフォーマンス</td>
+<td>高度な自動化</td>
+<td>経験豊富なチーム</td>
+</tr>
+<tr>
+<td><strong>エキスパート</strong></td>
+<td>包括的品質</td>
+<td>セキュリティ、コンプライアンス、モニタリング</td>
+<td>完全自動化</td>
+<td>成熟チーム</td>
+</tr>
+<tr>
+<td><strong>最適化</strong></td>
+<td>継続的改善</td>
+<td>予測品質、自己修復</td>
+<td>AI強化</td>
+<td>エリートチーム</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>スコープクリープリスク</strong> - Definition of Doneが過度に包括的になり、合理的な時間枠内で作業を完了することが困難になり、チームの生産性と士気を潜在的に低下させる可能性があります。</p>
+<p><strong>ツール統合の複雑性</strong> - 包括的なDefinition of Done基準を実装するには、複数のツールとシステムの統合が必要になることが多く、技術的な複雑性とメンテナンスオーバーヘッドが生じます。</p>
+<p><strong>チームの抵抗</strong> - 開発者は包括的なDefinition of Done要件に抵抗する可能性があり、開発速度と創造的な問題解決を遅らせる官僚的なオーバーヘッドと見なすことがあります。</p>
+<p><strong>メンテナンス負担</strong> - Definition of Doneを最新かつ関連性のあるものに保つには、特にテクノロジースタックと組織要件が進化するにつれて、継続的な努力と定期的なレビューが必要です。</p>
+<p><strong>コンテキスト感度</strong> - 異なるタイプの作業には異なるDefinition of Done基準が必要になる場合があり、単一の組織またはプロジェクト内で複数の標準を管理する複雑性が生じます。</p>
+<p><strong>測定の困難</strong> - 一部のDefinition of Done基準は主観的または客観的に測定することが困難であり、一貫性のない適用と潜在的なチーム対立につながります。</p>
+<p><strong>リソース要件</strong> - 包括的なDefinition of Done実装には、追加のツール、トレーニング、人員が必要になる場合があり、プロジェクトコストとリソース配分ニーズが増加します。</p>
+<p><strong>レガシーシステムの制約</strong> - 既存のシステムと技術的負債により、理想的なDefinition of Done基準を実装することが困難になる場合があり、妥協と段階的な改善アプローチが必要になります。</p>
+<p><strong>ステークホルダーの整合性</strong> - 異なるステークホルダーは異なる優先順位と品質期待を持つ可能性があり、すべての関係者を満足させるDefinition of Done基準を作成することが困難になります。</p>
+<p><strong>パフォーマンスへの影響</strong> - 広範なDefinition of Done要件は開発速度を遅くする可能性があり、品質と納品速度の間の慎重なバランスが必要です。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>シンプルに始めて進化させる</strong> - 基本的で達成可能なDefinition of Done基準から始め、チームメンバーを圧倒しないように、チームの能力とインフラストラクチャが成熟するにつれて徐々に拡大します。</p>
+<p><strong>チーム全体を巻き込む</strong> - すべてのチームメンバーがDefinition of Doneの作成と改善に参加することを確保し、品質標準の賛同と共有所有権を促進します。</p>
+<p><strong>可視化する</strong> - Definition of Doneをチームスペースとツールに目立つように表示し、日常の開発活動と意思決定プロセス中に常に意識されるようにします。</p>
+<p><strong>可能な限り自動化する</strong> - Definition of Done基準の自動チェックを実装して、手動作業を削減し、すべての作業項目にわたって一貫した適用を確保します。</p>
+<p><strong>定期的なレビューと更新</strong> - Definition of Doneの定期的なレビューをスケジュールし、現在の組織ニーズとチーム能力を反映し続けることを確保します。</p>
+<p><strong>コンテキスト固有のバリエーション</strong> - すべてのバリエーションにわたってコア品質原則を維持しながら、異なるタイプの作業に対して異なるDefinition of Done標準を作成します。</p>
+<p><strong>明確な所有権の割り当て</strong> - Definition of Doneのさまざまな側面を検証する責任を特定のチームメンバーまたは役割に指定し、説明責任と徹底性を確保します。</p>
+<p><strong>ツールとの統合</strong> - Definition of Done基準をプロジェクト管理および開発ツールに組み込み、検証と追跡プロセスを合理化します。</p>
+<p><strong>トレーニングとサポート</strong> - チームメンバーがDefinition of Done要件を効果的に理解し実装するのを支援するための適切なトレーニングとリソースを提供します。</p>
+<p><strong>継続的測定</strong> - Definition of Doneコンプライアンスと結果に関連するメトリクスを追跡して、改善機会を特定し、現在の標準の有効性を検証します。</p>
+<h2 id="高度なテクニック">高度なテクニック</h2>
+<p><strong>自動品質ゲート</strong> - 静的解析、自動テスト、デプロイメント検証ツールを使用してDefinition of Done基準を自動的に検証する洗練されたCI/CDパイプラインを実装します。</p>
+<p><strong>リスクベース基準</strong> - リスク評価、機能の重要性、システムの安定性とユーザーエクスペリエンスへの潜在的な影響に基づいて調整される動的なDefinition of Done要件を開発します。</p>
+<p><strong>予測品質分析</strong> - 機械学習と履歴データを使用して潜在的な品質問題を予測し、欠陥を防ぐためにDefinition of Done基準を事前に調整します。</p>
+<p><strong>クロスチーム標準化</strong> - チーム固有のカスタマイズと要件を許可しながら、複数のチーム間で一貫性を可能にする組織全体のDefinition of Doneフレームワークを確立します。</p>
+<p><strong>ステークホルダー主導の検証</strong> - Definition of Done要件の一部としてビジネス検証が完了することを確保する自動ステークホルダー通知と承認ワークフローを実装します。</p>
+<p><strong>パフォーマンス回帰防止</strong> - Definition of Done検証プロセスの一部としてパフォーマンス基準を自動的に検証する洗練されたパフォーマンスモニタリングとベンチマークツールを統合します。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>AI強化品質検証</strong> - 人工知能は、機械学習を使用して品質問題を特定し、基準とプロセスの改善を提案することで、Definition of Done検証をますます自動化します。</p>
+<p><strong>予測品質管理</strong> - 高度な分析により、チームは品質結果を予測し、プロジェクトの特性と過去のパターンに基づいてDefinition of Done基準を事前に調整できるようになります。</p>
+<p><strong>動的基準適応</strong> - Definition of Doneは、プロジェクトのコンテキスト、チームの成熟度、以前の納品からの組織学習に基づいて要件を自動的に調整し、より適応的になります。</p>
+<p><strong>統合コンプライアンス自動化</strong> - 規制およびコンプライアンス要件は、手動監視なしで業界標準への準拠を確保し、Definition of Done基準に自動的に統合されます。</p>
+<p><strong>リアルタイム品質フィードバック</strong> - 継続的なモニタリングとフィードバックシステムは、Definition of Done基準のリアルタイム検証を提供し、開発中の即座のコース修正を可能にします。</p>
+<p><strong>クロスプラットフォーム標準化</strong> - Definition of Doneの業界全体の標準が出現し、組織間のより良いコラボレーションとソフトウェア業界全体でのより一貫した品質期待を可能にします。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>Schwaber, K., &amp; Sutherland, J. (2020). The Scrum Guide. Scrum.org.</li>
+<li>Cohn, M. (2010). Succeeding with Agile: Software Development Using Scrum. Addison-Wesley Professional.</li>
+<li>Rubin, K. S. (2012). Essential Scrum: A Practical Guide to the Most Popular Agile Process. Addison-Wesley Professional.</li>
+<li>Pichler, R. (2010). Agile Product Management with Scrum: Creating Products that Customers Love. Addison-Wesley Professional.</li>
+<li>Derby, E., &amp; Larsen, D. (2006). Agile Retrospectives: Making Good Teams Great. Pragmatic Bookshelf.</li>
+<li>Leffingwell, D. (2018). SAFe 4.5 Reference Guide: Scaled Agile Framework for Lean Enterprises. Addison-Wesley Professional.</li>
+<li>Humble, J., &amp; Farley, D. (2010). Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation. Addison-Wesley Professional.</li>
+<li>Beck, K., et al. (2001). Manifesto for Agile Software Development. AgileManifesto.org.</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/acceptance-criteria/">
+                    受け入れ基準
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ソフトウェア機能またはユーザーストーリーが完成し、ステークホルダーに受け入れられるために満たすべき具体的な条件と要件。高レベルの要件と詳細な実装の間の基準として機能します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/acceptance-criteria/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/backlog-grooming/">
+                    バックログ・グルーミング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    アジャイル開発におけるバックログ・グルーミングの包括的ガイド。プロセス、メリット、ベストプラクティス、チームへの実装戦略を網羅しています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/backlog-grooming/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/product-backlog/">
+                    プロダクトバックログ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    アジャイル開発におけるプロダクトバックログの包括的ガイド。管理、優先順位付け、効果的な実装のためのベストプラクティスを網羅しています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/product-backlog/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/minimum-viable-product--mvp-/">
+                    ミニマム・バイアブル・プロダクト(MVP)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ミニマム・バイアブル・プロダクト(MVP)の開発、実装戦略、メリット、およびリーンスタートアップ手法のベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/minimum-viable-product--mvp-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/user-story/">
+                    ユーザーストーリー
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    アジャイル開発におけるユーザーストーリーの包括的ガイド - 定義、メリット、実装のベストプラクティス、およびチーム向けの高度なテクニック。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/user-story/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/user-acceptance-testing--uat-/">
+                    ユーザー受け入れテスト(UAT)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ユーザー受け入れテスト(UAT)の包括的ガイド - 方法論、ベストプラクティス、実装戦略、ソフトウェア検証における将来のトレンドを解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/user-acceptance-testing--uat-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/definition-of-done/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190816"></script>
+</body>
+</html>

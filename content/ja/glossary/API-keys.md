@@ -15,7 +15,9 @@ type: glossary
 draft: false
 e-title: API Keys
 term: エーピーアイキー
-url: "/ja/glossary/API-keys/"
+url: "/ja/glossary/api-keys/"
+aliases:
+- "/ja/glossary/API-keys/"
 
 ---
 ## API キーとは何か?
@@ -23,24 +25,29 @@ API キーは、アプリケーションプログラミングインターフェ�
 
 ## API キーの仕組み
 
-**生成**- API キーは API プロバイダーによって生成され、通常は開発者ポータルまたはコンソールから発行されます
+**生成**
+- API キーは API プロバイダーによって生成され、通常は開発者ポータルまたはコンソールから発行されます
 - 各キーはグローバルに一意であり、多くの場合ランダムに生成されるため、予測可能性やブルートフォース攻撃のリスクが軽減されます
 - 生成されたキーは、追跡と承認のために特定のアプリケーション、プロジェクト、または開発者アカウントに紐付けられます
 
-**送信と使用**- API キーはすべての API リクエストに含める必要があります
+**送信と使用**
+- API キーはすべての API リクエストに含める必要があります
 - 最も安全な方法は HTTP ヘッダー経由です
 - その他の代替手段には、URL クエリパラメータや Cookie がありますが(安全性が低く、機密性の高い操作には推奨されません)
 - HTTP ヘッダーの例:`GET /v1/data` に `Authorization: ApiKey ABCD1234EFGH5678` を付与
 - クエリパラメータの例:`GET /v1/data?api_key=ABCD1234EFGH5678`
 
-**リクエストの検証**- API サーバーは、発行されたキーのデータベースに対してキーをチェックします
+**リクエストの検証**
+- API サーバーは、発行されたキーのデータベースに対してキーをチェックします
 - キーが有効でアクティブな場合、リクエストは処理されます。そうでない場合は拒否されます
 - 一部のクラウドプロバイダーは、キーを使用してリクエストを課金とクォータ追跡に関連付けます
 
-**承認スコープ**- API キーは、特定のリソース、アクション(読み取り、書き込み、管理者)、IP アドレス、リファラー URL、または地理的地域へのアクセスを制限するようにスコープ設定できます
+**承認スコープ**
+- API キーは、特定のリソース、アクション(読み取り、書き込み、管理者)、IP アドレス、リファラー URL、または地理的地域へのアクセスを制限するようにスコープ設定できます
 - キーは、アプリケーションが特定の期間内に実行できるリクエスト数のクォータを設定し、強制するためによく使用されます
 
-**ワークフローの例**1. 開発者が API プロバイダーにアプリケーションを登録します
+**ワークフローの例**
+1. 開発者が API プロバイダーにアプリケーションを登録します
 2. プロバイダーが登録されたアプリケーションに API キーを発行します
 3. アプリケーションが API への各リクエストに API キーを含めます
 4. API サーバーがキーを検証し、関連するアクセス制御を適用します
@@ -48,46 +55,56 @@ API キーは、アプリケーションプログラミングインターフェ�
 
 ## API キーの種類
 
-**公開キー**- 限定的で機密性の低いデータと操作に使用されます
+**公開キー**
+- 限定的で機密性の低いデータと操作に使用されます
 - 一般情報へのアクセスのために開発者間で共有できます(例:検索専用キー)
 
-**プライベートキー**- 機密性の高い操作、書き込みアクセス、または機密データへのアクセスに使用されます
+**プライベートキー**
+- 機密性の高い操作、書き込みアクセス、または機密データへのアクセスに使用されます
 - 機密に保持し、公開してはいけません(例:管理者キー)
 
 一部のプラットフォームでは、追加のセキュリティのために公開キーとプライベートキーのペアリングをサポートしており、プライベートキーがデジタル署名として機能し、公開キーがリクエストを検証します。
 
 ## セキュリティへの影響
 
-**強み**- シンプルさ:生成、配布、使用が容易
+**強み**
+- シンプルさ:生成、配布、使用が容易
 - 基本的なアクセス制御:登録されたアプリケーションへの API アクセスを制限
 - 使用状況の監視:キーごとの API 消費の追跡を可能にします
 
-**弱点**- ユーザー固有ではない:API キーはアプリケーションやプロジェクトを認証しますが、個々のユーザーは認証しません
+**弱点**
+- ユーザー固有ではない:API キーはアプリケーションやプロジェクトを認証しますが、個々のユーザーは認証しません
 - 露出リスク:API キーが漏洩した場合(例:公開リポジトリにプッシュされた場合)、キーを持つ誰もがその権限で API にアクセスできます
 - デフォルトで有効期限なし:API キーは、明示的に取り消されるか、ローテーションされない限り、通常は期限切れになりません
 - 限定的な粒度:きめ細かいアクセス制御(ユーザーごと、時間制限付き、またはリソースレベル)は本質的に備わっていません
 
-**一般的な攻撃ベクトル**- キーの漏洩:コードリポジトリ、ログ、またはクライアント側コードでの偶発的な公開
+**一般的な攻撃ベクトル**
+- キーの漏洩:コードリポジトリ、ログ、またはクライアント側コードでの偶発的な公開
 - 中間者攻撃:暗号化されていないチャネル(HTTPS ではなく HTTP)で送信される際のキーの傍受
 - クレデンシャルスタッフィング:盗まれたキーや推測されたキーを使用する自動化された試み
 
-**セキュリティの強化**- キーの制限:IP アドレス、リファラー、またはアプリケーション ID による使用を制限
+**セキュリティの強化**
+- キーの制限:IP アドレス、リファラー、またはアプリケーション ID による使用を制限
 - トランスポートセキュリティ:API リクエストを暗号化するために常に HTTPS を使用
 - キーのローテーション:漏洩の影響を軽減するために定期的にキーを再生成して置き換える
 - 監視とアラート:キーの使用状況を追跡し、異常や悪用についてアラートを出す
 
 ## 一般的な使用例
 
-**アプリケーションの識別と消費追跡**- どのアプリケーションまたは自動化スクリプトがリクエストを行っているかを識別
+**アプリケーションの識別と消費追跡**
+- どのアプリケーションまたは自動化スクリプトがリクエストを行っているかを識別
 - 課金、デバッグ、または分析のために、リクエストと消費メトリクスを特定のプロジェクトに関連付ける
 
-**アクセス制御**- 匿名トラフィックのブロック:未登録または未承認のアプリケーションが API にアクセスするのを防ぐ
+**アクセス制御**
+- 匿名トラフィックのブロック:未登録または未承認のアプリケーションが API にアクセスするのを防ぐ
 - レート制限:API の負荷を管理し、悪用を防ぐために、キーごとのリクエストクォータを適用
 
-**自動化と統合**- 自動化されたジョブやワークフローのための安全でプログラム的なアクセスを可能にする
+**自動化と統合**
+- 自動化されたジョブやワークフローのための安全でプログラム的なアクセスを可能にする
 - パートナーや顧客が制御された方法で API に接続できるようにする
 
-**例:Google Maps API**位置情報対応の Web アプリケーションを作成する開発者は、Google に登録し、API キーを取得し、Maps API へのすべてのリクエストにそれを含める必要があります。このキーにより、Google は呼び出し元アプリケーションを認証し、使用制限と課金を適用し、承認されたドメインまたは IP アドレスへのアクセスを制限できます。
+**例:Google Maps API**
+位置情報対応の Web アプリケーションを作成する開発者は、Google に登録し、API キーを取得し、Maps API へのすべてのリクエストにそれを含める必要があります。このキーにより、Google は呼び出し元アプリケーションを認証し、使用制限と課金を適用し、承認されたドメインまたは IP アドレスへのアクセスを制限できます。
 
 ## 他の認証方法との比較
 
@@ -100,47 +117,76 @@ API キーは、アプリケーションプログラミングインターフェ�
 
 *明示的に設定またはローテーションされない限り
 
-**主な違い**- API キー:呼び出し元アプリケーションまたはプロジェクトを認証しますが、個々のユーザーは認証しません。アプリケーションの識別と管理に最適です
+**主な違い**
+- API キー:呼び出し元アプリケーションまたはプロジェクトを認証しますが、個々のユーザーは認証しません。アプリケーションの識別と管理に最適です
 - OAuth 2.0:委任された、時間制限付きの、ユーザー固有のアクセスを提供する承認フレームワーク。きめ細かい権限のためのアクセストークンとスコープをサポートします
 - JWT:OAuth 2.0 またはカスタム認証スキームでベアラートークンとしてよく使用されます。ユーザーまたはアプリケーションに関するクレームを表し、サーバー側のストレージなしで検証できます
 - Basic Auth:各リクエストで認証情報(ユーザー名とパスワード)を送信します。レガシーまたは内部使用を除いて推奨されず、常に HTTPS 経由で使用する必要があります
 
 ## ベストプラクティス
 
-**キーを安全に保管する**- API キーをクライアント側コードや公開リポジトリに埋め込まない
+**キーを安全に保管する**
+- API キーをクライアント側コードや公開リポジトリに埋め込まない
 - キーの保管には環境変数または安全なボールトを使用する
 
-**キーアクセスを制限する**- IP アドレス、リファラー、またはプラットフォームによって API キーの使用を制限する
+**キーアクセスを制限する**
+- IP アドレス、リファラー、またはプラットフォームによって API キーの使用を制限する
 - 必要最小限の権限セットを割り当てる(「最小権限の原則」)
 
-**定期的にキーをローテーションする**- キーローテーションポリシーを実装する(例:90〜180 日ごと)
+**定期的にキーをローテーションする**
+- キーローテーションポリシーを実装する(例:90〜180 日ごと)
 - 侵害が疑われる場合はキーを取り消して置き換える
 
-**キーの使用状況を監視および監査する**- キーの使用パターンを追跡し、異常検出を設定する
+**キーの使用状況を監視および監査する**
+- キーの使用パターンを追跡し、異常検出を設定する
 - 未承認または予期しないアクティビティについて監査ログを確認する
 
-**HTTPS を強制する**- 傍受を防ぐために、すべての API トラフィックが暗号化されていることを確認する**スコープときめ細かい権限を使用する**- 可能な限り、各キーに特定の権限(読み取り、書き込み、管理者)を割り当てる
+**HTTPS を強制する**
+- 傍受を防ぐために、すべての API トラフィックが暗号化されていることを確認する
+
+**スコープときめ細かい権限を使用する**
+- 可能な限り、各キーに特定の権限(読み取り、書き込み、管理者)を割り当てる
 - 絶対に必要でない限り、広範囲または管理者アクセスを付与しない
 
-**レート制限を実装する**- 悪用を軽減し、公平なリソース使用を確保するために、キーごとのクォータを適用する**必要に応じてより強力な認証と組み合わせる**- 機密性の高い操作やユーザー固有の操作には、API キーに加えて OAuth 2.0、JWT、または多要素認証を要求する
+**レート制限を実装する**
+- 悪用を軽減し、公平なリソース使用を確保するために、キーごとのクォータを適用する
+
+**必要に応じてより強力な認証と組み合わせる**
+- 機密性の高い操作やユーザー固有の操作には、API キーに加えて OAuth 2.0、JWT、または多要素認証を要求する
 
 ## 高度なトピック
 
-**ハイブリッド認証**- 一部のプラットフォームでは、API キーとユーザー認証(OAuth など)の両方を使用するハイブリッドアプローチをサポートしています
+**ハイブリッド認証**
+- 一部のプラットフォームでは、API キーとユーザー認証(OAuth など)の両方を使用するハイブリッドアプローチをサポートしています
 - デフォルト:アプリケーションは初期の匿名リクエストに API キーを使用します
 - ユーザーログイン:ユーザーがサインインすると、アプリケーションは後続のリクエストにユーザー固有のトークンに切り替えます
 - このアプローチは、使いやすさ(公開データにサインインが不要)とセキュリティ(機密操作のためのユーザー固有のアクセス)の両方を最適化します
 
-**API キーのローテーション**- 自動ローテーション:多くのプラットフォームは、キーローテーションを自動化するための API またはダッシュボードを提供しています
+**API キーのローテーション**
+- 自動ローテーション:多くのプラットフォームは、キーローテーションを自動化するための API またはダッシュボードを提供しています
 - スクリプトをスケジュールして、新しいキーを生成し、デプロイメント環境で古いキーを置き換えることができます
 - ゼロダウンタイム:アプリケーションは、サービスの中断なしにシームレスなキー移行をサポートする必要があります
 
-**セキュアな API キー**- 一部のシステムは、セッション、ユーザー ID、または限定された時間枠に紐付けられた一時的またはスコープ付きの「セキュアな API キー」を実装しています
+**セキュアな API キー**
+- 一部のシステムは、セッション、ユーザー ID、または限定された時間枠に紐付けられた一時的またはスコープ付きの「セキュアな API キー」を実装しています
 - 漏洩したキーの影響を軽減します
 
 ## 制限事項
 
-**ユーザーレベルの認証なし**- 同じアプリケーションを使用する異なるユーザーを区別できません**限定的なセキュリティ**- キーが侵害された場合、キーが取り消されるまで、関連するすべての権限が悪用される可能性があります**静的な性質**- ローテーションまたは取り消されない限り、API キーは無期限に有効なままです**機密性の高い操作には不適切**- 個人情報または高度に機密性の高いデータを処理する API の唯一の認証メカニズムとしては推奨されません**スケーラビリティの課題**- 多数の個別の API キー(例:マルチテナントシステムでのユーザーごと)の管理は複雑になる可能性があります
+**ユーザーレベルの認証なし**
+- 同じアプリケーションを使用する異なるユーザーを区別できません
+
+**限定的なセキュリティ**
+- キーが侵害された場合、キーが取り消されるまで、関連するすべての権限が悪用される可能性があります
+
+**静的な性質**
+- ローテーションまたは取り消されない限り、API キーは無期限に有効なままです
+
+**機密性の高い操作には不適切**
+- 個人情報または高度に機密性の高いデータを処理する API の唯一の認証メカニズムとしては推奨されません
+
+**スケーラビリティの課題**
+- 多数の個別の API キー(例:マルチテナントシステムでのユーザーごと)の管理は複雑になる可能性があります
 
 ## 重要なポイント
 
@@ -151,35 +197,19 @@ API キーは、アプリケーションプログラミングインターフェ�
 
 ## 参考文献
 
-
-1. IBM. (n.d.). What Is an API Key?. IBM Think Topics.
-
-2. Algolia. (n.d.). What is an API key & how is it used for security?. Algolia Engineering Blog.
-
-3. Google Cloud. (n.d.). Manage API keys. Google Cloud Documentation.
-
-4. Frontegg. (n.d.). API Authentication and Authorization: 6 Methods and Tips for Success. Frontegg Blog.
-
-5. Esri. (n.d.). Introduction to API key authentication. Esri Developer Documentation.
-
-6. OpenAI. (n.d.). Best Practices for API Key Safety. OpenAI Help Center.
-
-7. Zuplo. (n.d.). Top 7 API Authentication Methods Compared. Zuplo Learning Center.
-
-8. Testfully. (n.d.). API Authentication Methods. Testfully Blog.
-
-9. LegitSecurity. (n.d.). API Key Security Best Practices. LegitSecurity ASPM Knowledge Base.
-
-10. CodeAcademy. (n.d.). What is an API Key?. YouTube Video.
-
-11. Google. (n.d.). Using API Keys. Google Cloud Documentation.
-
-12. Algolia. (n.d.). API Keys vs JWT Auth. Algolia Engineering Blog.
-
-13. IBM. (n.d.). Enhanced Access Administration API Overview. IBM Documentation.
-
-14. Google Cloud. (n.d.). API Key Security Best Practices. Google Cloud Documentation.
-
-15. Algolia. (n.d.). API Keys Documentation. Algolia Documentation.
-
-16. Google. (n.d.). Google Maps API Documentation. Google Developers.
+- [IBM — What Is an API Key?](https://www.ibm.com/think/topics/api-key)
+- [Algolia — What is an API key & how is it used for security?](https://www.algolia.com/blog/engineering/search-101-what-is-an-api-key-how-does-it-provide-api-security)
+- [Google Cloud Documentation — Manage API keys](https://docs.cloud.google.com/docs/authentication/api-keys)
+- [Frontegg — API Authentication and Authorization: 6 Methods and Tips for Success](https://frontegg.com/blog/api-authentication-authorization)
+- [Esri Developer Documentation — Introduction to API key authentication](https://developers.arcgis.com/documentation/core-concepts/security-and-authentication/api-keys/)
+- [OpenAI — Best Practices for API Key Safety](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety)
+- [Zuplo — Top 7 API Authentication Methods Compared](https://zuplo.com/learning-center/top-7-api-authentication-methods-compared)
+- [Testfully — API Authentication Methods](https://testfully.io/blog/api-authentication/)
+- [LegitSecurity — API Key Security Best Practices](https://www.legitsecurity.com/aspm-knowledge-base/api-key-security-best-practices)
+- [YouTube: What is an API Key? (CodeAcademy)](https://www.youtube.com/watch?v=GZvSYJDk-us)
+- [Google: Using API Keys](https://cloud.google.com/docs/authentication/api-keys-use)
+- [Algolia: API Keys vs JWT Auth](https://www.algolia.com/blog/engineering/api-keys-vs-json-web-tokens/)
+- [IBM Docs: Enhanced Access Administration API Overview](https://www.ibm.com/docs/en/apptio-platform/access-administration/saas?topic=apis-enhanced-access-administration-api-overview-api-keys-faq)
+- [Google Cloud: API Key Security Best Practices](https://docs.cloud.google.com/docs/authentication/api-keys-best-practices)
+- [Algolia: API Keys Documentation](https://algolia.com/doc/guides/security/api-keys)
+- [Google Maps API Documentation](https://developers.google.com/maps/documentation)

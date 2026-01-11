@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Model Compression | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/model-compression/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="A set of techniques that reduces AI model size and computing power needed while keeping its accuracy and performance intact." name="description"/>
+<meta content="model compression, neural network optimization, quantization, pruning, knowledge distillation" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/model-compression/" property="og:url"/>
+<meta content="Model Compression | SmartWeb" property="og:title"/>
+<meta content="A set of techniques that reduces AI model size and computing power needed while keeping its accuracy and performance intact." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/model-compression/" name="twitter:url"/>
+<meta content="Model Compression | SmartWeb" name="twitter:title"/>
+<meta content="A set of techniques that reduces AI model size and computing power needed while keeping its accuracy and performance intact." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165525" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165525" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165525"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118125587168000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118125587168000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118125587168000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118125587168000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Model Compression</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Model Compression
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A set of techniques that reduces AI model size and computing power needed while keeping its accuracy and performance intact.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                model compression
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                neural network optimization
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                quantization
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                pruning
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                knowledge distillation
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-model-compression">What is a Model Compression?</h2>
+<p>Model compression represents a critical set of techniques designed to reduce the computational and memory requirements of machine learning models while preserving their predictive performance. As <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence glossary entry">artificial intelligence</a> applications become increasingly sophisticated, the models powering them have grown exponentially in size and complexity. Modern deep learning models, particularly <a data-lb="1" href="/blog/how-to-use-large-language-models-effectively/" title="Learn practical applications of large language models like ChatGPT, explore different LLM platforms, understand how these models work under the hood, and discover how to leverage them effectively in your daily work and life.">large language models</a> and computer vision networks, can contain billions or even trillions of parameters, requiring substantial <a data-lb="1" href="/en/glossary/computational-resources/" title="Computational Resources glossary entry">computational resources</a> for both training and inference. Model compression addresses this challenge by systematically reducing model size, memory footprint, and computational demands without significantly compromising accuracy or functionality.</p>
+<p>The fundamental principle behind model compression lies in the observation that many machine learning models, especially deep <a data-lb="1" href="/en/glossary/neural-networks/" title="Neural Networks glossary entry">neural networks</a>, contain significant redundancy in their parameters and computations. This redundancy manifests in various forms: neurons that contribute minimally to the final output, weights that are close to zero, or intermediate representations that can be approximated with lower <a data-lb="1" href="/en/glossary/precision/" title="Precision glossary entry">precision</a>. Model compression techniques exploit these redundancies through mathematical transformations, structural modifications, and optimization strategies that eliminate unnecessary components while maintaining the model’s essential decision-making capabilities.</p>
+<p>The importance of model compression extends beyond mere efficiency gains. In an era where AI applications must operate across diverse deployment environments—from high-performance cloud servers to resource-constrained mobile devices and edge computing platforms—the ability to adapt model complexity to available resources becomes paramount. Compressed models enable real-time inference on smartphones, reduce energy consumption in data centers, lower bandwidth requirements for model distribution, and make advanced AI capabilities accessible in environments with limited computational infrastructure. Furthermore, model compression plays a crucial role in democratizing AI technology by reducing the barrier to entry for organizations with limited computational budgets while supporting the development of environmentally sustainable <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI systems</a>.</p>
+<h2 id="core-compression-techniques">Core Compression Techniques</h2>
+<p>Quantizationinvolves reducing the precision of model parameters and activations from standard 32-bit floating-point representations to lower bit-width formats such as 8-bit integers or even binary values. This technique can achieve significant memory reductions and computational speedups while maintaining acceptable accuracy levels through careful calibration and optimization strategies.Pruningsystematically removes redundant or less important connections, neurons, or entire layers from neural networks based on various importance criteria. Structured pruning removes entire channels or layers, while unstructured pruning eliminates individual weights, both approaches reducing model complexity and computational requirements.Knowledge Distillationtransfers knowledge from a large, complex teacher model to a smaller, more efficient student model through specialized training procedures. The student model learns to mimic the teacher’s behavior and decision-making patterns while maintaining a significantly reduced parameter count and computational footprint.Low-Rank Approximationdecomposes weight matrices into products of smaller matrices with reduced rank, exploiting the inherent low-dimensional structure present in many neural network layers. This mathematical transformation reduces parameter count while preserving the essential linear transformations performed by the original layers.Weight Sharingreduces model size by forcing multiple connections or layers to use identical parameter values, effectively reducing the unique parameter count while maintaining network connectivity. This technique is particularly effective in convolutional neural networks where spatial weight sharing is naturally present.Huffman Coding and Sparse Representationapply data compression principles to model parameters, using variable-length encoding schemes and sparse matrix representations to reduce storage requirements for models with many zero or near-zero weights.</p>
+<h2 id="how-model-compression-works">How Model Compression Works</h2>
+<p>The model compression workflow typically begins with baseline model evaluation, where the original, uncompressed model is thoroughly assessed for accuracy, computational requirements, and memory usage across relevant benchmarks and datasets. This establishes performance targets and compression goals for subsequent optimization steps.Compression technique selectionfollows, where practitioners choose appropriate methods based on deployment constraints, target hardware capabilities, and acceptable performance trade-offs. Different techniques may be combined for maximum effectiveness, requiring careful consideration of their interactions and cumulative effects.Parameter analysis and profilinginvolves detailed examination of model weights, activations, and computational patterns to identify redundancies and optimization opportunities. This analysis guides the application of specific compression techniques and helps establish appropriate hyperparameters for the compression process.Iterative compression applicationimplements the chosen techniques through multiple rounds of optimization, with each iteration carefully monitored for performance degradation. This step-by-step approach allows for fine-tuning and adjustment of compression parameters to achieve optimal results.Fine-tuning and calibrationrestores model performance through additional training or calibration procedures that help the compressed model adapt to its new structure and parameter constraints. This step is crucial for maintaining accuracy while maximizing compression benefits.Validation and testingensures that the compressed model maintains acceptable performance across all relevant metrics and use cases. Comprehensive testing includes accuracy evaluation, <a data-lb="1" href="/en/glossary/latency/" title="Latency glossary entry">latency</a> measurement, and memory usage analysis under realistic deployment conditions.Deployment optimizationadapts the compressed model for specific target hardware and software environments, potentially including additional optimizations such as operator fusion, memory layout optimization, and runtime-specific adaptations.Performance monitoringestablishes ongoing evaluation procedures to ensure that the compressed model continues to meet performance requirements in production environments, with provisions for model updates or recompression as needed.</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p>Reduced Memory Footprintenables deployment on resource-constrained devices and reduces memory bandwidth requirements, allowing models to fit within available RAM and cache hierarchies more effectively.Faster Inference Speeddecreases computation time through reduced parameter counts and simplified operations, enabling real-time applications and improved user experience across various deployment scenarios.Lower Energy Consumptionreduces power requirements for both inference and data movement, contributing to longer battery life in mobile devices and reduced operational costs in data center environments.Decreased Storage Requirementsminimizes disk space and network bandwidth needed for model distribution and updates, facilitating faster deployment and reducing infrastructure costs.Enhanced Scalabilityallows serving more concurrent requests with the same hardware resources, improving system throughput and reducing per-inference costs in production environments.Improved Accessibilitymakes advanced AI capabilities available on lower-end hardware and in bandwidth-constrained environments, democratizing access to sophisticated machine learning applications.Cost Optimizationreduces computational infrastructure requirements and associated operational expenses, making AI deployment more economically viable for organizations with limited budgets.Environmental Sustainabilitydecreases carbon footprint through reduced energy consumption and computational requirements, supporting environmentally responsible AI development and deployment practices.Edge Computing Enablementfacilitates deployment in distributed computing environments where connectivity and computational resources may be limited, enabling offline operation and reduced latency.Regulatory Compliancesupports data privacy and <a data-lb="1" href="/en/glossary/security-requirements/" title="Security Requirements glossary entry">security requirements</a> by enabling local processing and reducing dependence on <a data-lb="1" href="/en/glossary/cloud-based/" title="Cloud-Based glossary entry">cloud-based</a> inference services.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p>Mobile Application Optimizationenables sophisticated AI features on smartphones and tablets while maintaining acceptable battery life and response times for applications such as image recognition, natural language processing, and augmented reality.Edge Computing Deploymentsupports AI inference in IoT devices, autonomous vehicles, and industrial sensors where connectivity may be intermittent and computational resources are severely constrained.Real-Time Video Processingfacilitates live video analysis, object detection, and <a data-lb="1" href="/en/glossary/content-moderation/" title="Content Moderation glossary entry">content moderation</a> applications that require low-latency processing of high-throughput data streams.Autonomous Vehicle Systemsenables on-board AI processing for perception, decision-making, and control systems where safety-critical applications demand reliable, low-latency inference capabilities.Healthcare Device Integrationsupports medical imaging analysis, patient <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a>, and diagnostic assistance applications that must operate within strict regulatory and resource constraints.Industrial Automationenables AI-powered quality control, predictive maintenance, and process optimization in manufacturing environments with limited computational infrastructure.Smart Home and IoT Applicationsfacilitates intelligent device behavior, voice recognition, and automated control systems that operate locally without constant cloud connectivity.Financial Services Optimizationsupports fraud detection, risk assessment, and algorithmic trading applications that require high-throughput, low-latency processing of sensitive financial data.</p>
+<h2 id="compression-technique-comparison">Compression Technique Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Technique</th>
+<th>Compression Ratio</th>
+<th>Accuracy Impact</th>
+<th>Implementation Complexity</th>
+<th>Hardware Requirements</th>
+<th>Best Use Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Quantization</td>
+<td>2-4x</td>
+<td>Low-Medium</td>
+<td>Medium</td>
+<td>Specialized INT8 support</td>
+<td>Mobile, Edge devices</td>
+</tr>
+<tr>
+<td>Pruning</td>
+<td>2-10x</td>
+<td>Low-High</td>
+<td>High</td>
+<td>Standard hardware</td>
+<td>General optimization</td>
+</tr>
+<tr>
+<td>Knowledge Distillation</td>
+<td>5-50x</td>
+<td>Medium</td>
+<td>High</td>
+<td>Standard hardware</td>
+<td>Resource-constrained deployment</td>
+</tr>
+<tr>
+<td>Low-Rank Approximation</td>
+<td>2-5x</td>
+<td>Low-Medium</td>
+<td>Medium</td>
+<td>Standard hardware</td>
+<td>Linear layer optimization</td>
+</tr>
+<tr>
+<td>Weight Sharing</td>
+<td>2-8x</td>
+<td>Low</td>
+<td>Medium</td>
+<td>Standard hardware</td>
+<td>Convolutional networks</td>
+</tr>
+<tr>
+<td>Huffman Coding</td>
+<td>1.5-3x</td>
+<td>None</td>
+<td>Low</td>
+<td>Standard hardware</td>
+<td>Storage optimization</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p>Accuracy Degradationrepresents the primary trade-off in model compression, requiring careful balance between size reduction and performance maintenance through systematic evaluation and optimization procedures.Hardware Compatibilityissues arise when compressed models require specific hardware features or software libraries that may not be available across all target deployment environments.Compression Complexityinvolves sophisticated optimization procedures that require specialized expertise and significant computational resources for effective implementation and validation.Validation Overheaddemands comprehensive testing across multiple metrics and use cases to ensure that compressed models maintain acceptable performance in all relevant scenarios.Maintenance Burdenincreases as compressed models may require specialized update procedures and recompression when underlying models are modified or retrained.Tool Chain Integrationchallenges emerge when incorporating compression techniques into existing machine learning workflows and deployment pipelines.Performance Variabilityacross different input types and edge cases may be more pronounced in compressed models, requiring extensive testing and validation procedures.Intellectual Property Concernsmay arise when using knowledge distillation or other techniques that involve proprietary teacher models or compression algorithms.Regulatory Compliancerequirements may impose additional constraints on compression techniques, particularly in safety-critical or regulated industries.Long-term Sustainabilityconsiderations include the ongoing maintenance and optimization of compressed models as hardware and software environments evolve.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p>Establish Clear Compression Goalsby defining specific targets for model size, inference speed, and accuracy retention before beginning the compression process.Implement Comprehensive Baseline Measurementto accurately assess original model performance across all relevant metrics and use cases.Choose Appropriate Compression Techniquesbased on target hardware capabilities, deployment constraints, and acceptable performance trade-offs.Apply Gradual Compression Strategiesusing iterative approaches that allow for fine-tuning and adjustment throughout the optimization process.Maintain Extensive Validation Datasetsthat represent real-world usage patterns and edge cases for thorough compressed model evaluation.Document Compression Proceduresthoroughly to ensure reproducibility and facilitate future model updates and maintenance.Implement Automated Testing Pipelinesthat continuously validate compressed model performance throughout the development and deployment process.Consider Hardware-Specific Optimizationsthat leverage target platform capabilities for maximum compression benefits and performance gains.Plan for Model Updatesby establishing procedures for recompressing models when underlying architectures or training data change.Monitor Production Performancecontinuously to ensure that compressed models maintain acceptable performance in real-world deployment environments.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p>Neural Architecture Search (NAS)automatically discovers optimal compressed architectures by exploring the design space of efficient neural network structures tailored to specific deployment constraints and performance requirements.Dynamic Compressionadapts model complexity in real-time based on available computational resources, input complexity, or performance requirements, enabling flexible deployment across varying operational conditions.Mixed-Precision Trainingcombines multiple numerical precisions within a single model to optimize the trade-off between computational efficiency and numerical accuracy for different model components.Structured Sparsity Patternsimplement systematic approaches to weight pruning that align with hardware acceleration capabilities, maximizing the practical benefits of sparse model representations.Gradient Compressionreduces communication overhead in distributed training scenarios by compressing gradient information while maintaining convergence properties and training effectiveness.Federated Learning Optimizationapplies compression techniques specifically designed for distributed learning environments where communication efficiency and privacy preservation are paramount concerns.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p>Hardware-Software Co-Designwill increasingly integrate compression techniques with specialized hardware architectures, enabling more efficient and effective model optimization through coordinated development approaches.Automated Compression Pipelineswill leverage machine learning techniques to automatically select and apply optimal compression strategies based on model characteristics and deployment requirements.Compression-Aware Trainingwill incorporate compression objectives directly into the model training process, producing models that are inherently more amenable to subsequent compression techniques.Cross-Modal Compressionwill extend compression techniques to multimodal models that process multiple data types simultaneously, addressing the unique challenges of complex, integrated AI systems.Quantum-Inspired Compressionwill explore quantum computing principles and algorithms to develop novel compression approaches that leverage quantum mechanical properties for enhanced efficiency.Sustainability-Focused Optimizationwill prioritize environmental impact reduction through compression techniques specifically designed to minimize energy consumption and carbon footprint across the entire AI lifecycle.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Han, S., Mao, H., &amp; Dally, W. J. (2016). Deep compression: Compressing deep neural networks with pruning, trained quantization and huffman coding. International Conference on Learning Representations.</p>
+</li>
+<li>
+<p>Hinton, G., Vinyals, O., &amp; Dean, J. (2015). Distilling the knowledge in a neural network. Neural Information Processing Systems Deep Learning Workshop.</p>
+</li>
+<li>
+<p>Jacob, B., Kligys, S., Chen, B., Zhu, M., Tang, M., Howard, A., … &amp; Kalenichenko, D. (2018). Quantization and training of neural networks for efficient integer-arithmetic-only inference. Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition.</p>
+</li>
+<li>
+<p>Louizos, C., Welling, M., &amp; Kingma, D. P. (2018). Learning sparse neural networks through L0 regularization. International Conference on Learning Representations.</p>
+</li>
+<li>
+<p>Cheng, Y., Wang, D., Zhou, P., &amp; Zhang, T. (2017). A survey of model compression and acceleration for deep neural networks. IEEE Signal Processing Magazine, 35(1), 126-136.</p>
+</li>
+<li>
+<p>Denton, E. L., Zaremba, W., Bruna, J., LeCun, Y., &amp; Fergus, R. (2014). Exploiting linear structure within convolutional networks for efficient evaluation. Neural Information Processing Systems.</p>
+</li>
+<li>
+<p>Gou, J., Yu, B., Maybank, S. J., &amp; Tao, D. (2021). Knowledge distillation: A survey. International Journal of Computer Vision, 129(6), 1789-1819.</p>
+</li>
+<li>
+<p>Wang, K., Liu, Z., Lin, Y., Lin, J., &amp; Han, S. (2019). HAQ: Hardware-aware automated quantization with mixed precision. Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/student-models/">
+                    Student Models
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Discover <a data-lb="1" href="/en/glossary/student-models/" title="Student Models glossary entry">student models</a>, AI systems trained to mimic larger 'teacher' models for efficient deploymen...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/student-models/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/model-compression/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165525"></script>
+</body>
+</html>

@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Accessibility (Web) | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/accessibility--web-/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="Web accessibility is the practice of designing websites so that people with disabilities—such as vision, hearing, or mobility impairments—can use them easily and effectively." name="description"/>
+<meta content="web accessibility, WCAG guidelines, assistive technology, inclusive design, disability compliance" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/accessibility--web-/" property="og:url"/>
+<meta content="Accessibility (Web) | SmartWeb" property="og:title"/>
+<meta content="Web accessibility is the practice of designing websites so that people with disabilities—such as vision, hearing, or mobility impairments—can use them easily and effectively." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/accessibility--web-/" name="twitter:url"/>
+<meta content="Accessibility (Web) | SmartWeb" name="twitter:title"/>
+<meta content="Web accessibility is the practice of designing websites so that people with disabilities—such as vision, hearing, or mobility impairments—can use them easily and effectively." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Accessibility (Web)</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Accessibility (Web)
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          Web accessibility is the practice of designing websites so that people with disabilities—such as vision, hearing, or mobility impairments—can use them easily and effectively.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                web accessibility
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                WCAG guidelines
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                assistive technology
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                inclusive design
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                disability compliance
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-an-accessibility-web">What is an Accessibility (Web)?</h2>
+<p>Web accessibility refers to the inclusive practice of designing and developing websites, applications, and digital content that can be used by people with disabilities. This fundamental principle ensures that individuals with visual, auditory, motor, or cognitive impairments can perceive, understand, navigate, and interact with web content effectively. Web accessibility encompasses a broad spectrum of considerations, from providing alternative text for images to ensuring keyboard navigation functionality and maintaining sufficient color contrast ratios.</p>
+<p>The concept of web accessibility is grounded in the principle of universal design, which advocates for creating products and environments that are usable by all people, to the greatest extent possible, without the need for adaptation or specialized design. In the digital realm, this translates to developing web experiences that accommodate various assistive technologies such as screen readers, voice recognition software, and alternative input devices. Web accessibility is not merely a technical consideration but a fundamental human right that enables equal access to information, services, and opportunities in our increasingly digital world.</p>
+<p>The importance of web accessibility extends beyond serving individuals with permanent disabilities. It also benefits users with temporary impairments, situational limitations, and age-related changes in abilities. For instance, someone with a broken arm may temporarily rely on keyboard navigation, while a person in a noisy environment might need captions for video content. Additionally, accessible design principles often result in improved usability for all users, creating cleaner interfaces, better content structure, and more intuitive navigation patterns. Organizations that prioritize web accessibility demonstrate social responsibility while also expanding their potential user base and reducing legal risks associated with discrimination claims.</p>
+<h2 id="core-accessibility-principles-and-standards">Core Accessibility Principles and Standards</h2>
+<p><strong>Web Content Accessibility Guidelines (WCAG)</strong> serve as the international standard for web accessibility, providing comprehensive guidelines organized around four fundamental principles: perceivable, operable, understandable, and robust. These guidelines offer three levels of conformance (A, AA, AAA) with specific success criteria for each level.</p>
+<p><strong>Perceivable Content</strong> ensures that information and user interface components are presentable to users in ways they can perceive, including providing text alternatives for non-text content, captions for multimedia, and sufficient color contrast ratios.</p>
+<p><strong>Operable Interfaces</strong> guarantee that user interface components and navigation are operable by all users, encompassing keyboard accessibility, seizure prevention, and providing users enough time to read and use content.</p>
+<p><strong>Understandable Information</strong> focuses on making text readable and understandable while ensuring that web pages appear and operate in predictable ways, with input assistance provided when users make mistakes.</p>
+<p><strong>Robust Content</strong> emphasizes creating content that can be interpreted reliably by a wide variety of assistive technologies and remains accessible as technologies advance.</p>
+<p><strong>Assistive Technologies</strong> include screen readers, voice recognition software, alternative keyboards, eye-tracking devices, and switch controls that enable users with disabilities to interact with digital content.</p>
+<p><strong>Semantic HTML</strong> provides the foundation for accessible web development by using proper markup elements that convey meaning and structure to assistive technologies and browsers.</p>
+<h2 id="how-accessibility-web-works">How Accessibility (Web) Works</h2>
+<p>The implementation of web accessibility follows a systematic approach that integrates accessibility considerations throughout the development lifecycle:</p>
+<ol>
+<li>
+<p><strong>Planning and Requirements Gathering</strong> involves identifying target users, including those with disabilities, and establishing accessibility requirements based on applicable standards and legal requirements.</p>
+</li>
+<li>
+<p><strong>Design Phase Integration</strong> incorporates accessibility principles into wireframes, mockups, and design systems, ensuring color contrast compliance, focus indicators, and logical content hierarchy.</p>
+</li>
+<li>
+<p><strong>Semantic HTML Implementation</strong> utilizes proper markup elements, heading structures, form labels, and ARIA attributes to create a solid foundation for assistive technology interpretation.</p>
+</li>
+<li>
+<p><strong>Keyboard Navigation Development</strong> ensures all interactive elements are reachable and operable via keyboard, implementing proper focus management and skip navigation links.</p>
+</li>
+<li>
+<p><strong>Alternative Content Creation</strong> involves writing descriptive alt text for images, providing captions and transcripts for multimedia content, and creating text alternatives for complex graphics.</p>
+</li>
+<li>
+<p><strong>Testing with Assistive Technologies</strong> includes validation using screen readers, keyboard-only navigation, voice control software, and automated accessibility testing tools.</p>
+</li>
+<li>
+<p><strong>User Testing with Disabled Users</strong> incorporates feedback from actual users with disabilities to identify real-world usability issues and improvement opportunities.</p>
+</li>
+<li>
+<p><strong>Continuous <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">Monitoring</a> and Maintenance</strong> establishes ongoing accessibility audits, staff training, and content governance processes to maintain accessibility standards.</p>
+</li>
+</ol>
+<p><strong>Example Workflow</strong>: An e-commerce website implements accessibility by conducting user research with disabled customers, designing high-contrast interfaces with clear focus indicators, developing semantic product listings with proper ARIA labels, testing checkout processes with screen readers, and establishing content guidelines for product descriptions and images.</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p><strong>Legal Compliance</strong> reduces the risk of discrimination lawsuits and ensures adherence to regulations such as the Americans with Disabilities Act (ADA), Section 508, and international accessibility laws.</p>
+<p><strong>Expanded Market Reach</strong> opens access to the estimated 1.3 billion people worldwide who experience significant disability, representing a substantial market opportunity and customer base expansion.</p>
+<p><strong>Improved SEO Performance</strong> enhances search engine optimization through semantic HTML, proper heading structures, and descriptive content that search engines can better understand and index.</p>
+<p><strong>Enhanced User Experience</strong> creates more intuitive and usable interfaces that benefit all users, not just those with disabilities, leading to increased user satisfaction and engagement.</p>
+<p><strong>Brand Reputation Enhancement</strong> demonstrates corporate social responsibility and inclusive values, improving brand perception and customer loyalty among diverse user groups.</p>
+<p><strong>Reduced Development Costs</strong> prevents expensive retrofitting by incorporating accessibility from the beginning of the development process, avoiding costly redesigns and legal remediation.</p>
+<p><strong>Better Code Quality</strong> promotes cleaner, more semantic markup and well-structured content that is easier to maintain, debug, and enhance over time.</p>
+<p><strong>Increased Innovation</strong> drives creative problem-solving and innovative design solutions that often benefit broader user populations and improve overall product quality.</p>
+<p><strong>Future-Proofing</strong> ensures compatibility with emerging technologies and assistive devices while maintaining accessibility as platforms and standards evolve.</p>
+<p><strong>Competitive Advantage</strong> differentiates organizations in markets where accessibility is increasingly valued and expected by consumers and business partners.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p><strong>E-commerce Platforms</strong> implement accessible product catalogs, shopping carts, and checkout processes to serve customers with disabilities and comply with retail accessibility requirements.</p>
+<p><strong>Educational Institutions</strong> create accessible learning management systems, online courses, and digital resources to ensure equal educational opportunities for students with disabilities.</p>
+<p><strong>Government Websites</strong> develop accessible public services, forms, and information portals to meet legal requirements and serve all citizens effectively.</p>
+<p><strong>Healthcare Systems</strong> build accessible patient portals, appointment scheduling systems, and medical information resources to ensure equitable healthcare access.</p>
+<p><strong>Financial Services</strong> implement accessible online banking, investment platforms, and financial planning tools to serve customers with disabilities securely and effectively.</p>
+<p><strong>Media and Entertainment</strong> create accessible streaming platforms, news websites, and digital content with captions, audio descriptions, and screen reader compatibility.</p>
+<p><strong>Corporate Intranets</strong> develop accessible employee portals, training systems, and internal communication tools to support diverse workforces and inclusive employment practices.</p>
+<p><strong>Social Media Platforms</strong> implement accessibility features for content creation, consumption, and interaction to enable participation by users with various disabilities.</p>
+<p><strong>Travel and Hospitality</strong> create accessible booking systems, travel information, and customer service platforms to serve travelers with disabilities effectively.</p>
+<p><strong>Non-Profit Organizations</strong> develop accessible fundraising platforms, volunteer management systems, and community resources to engage supporters with disabilities.</p>
+<h2 id="accessibility-compliance-levels-comparison">Accessibility Compliance Levels Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Requirements</th>
+<th>Success Criteria</th>
+<th>Target Users</th>
+<th>Implementation Effort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WCAG A</td>
+<td>Basic accessibility features</td>
+<td>25 criteria</td>
+<td>Users with severe disabilities</td>
+<td>Low to Medium</td>
+</tr>
+<tr>
+<td>WCAG AA</td>
+<td>Standard compliance level</td>
+<td>38 criteria</td>
+<td>Broad disability spectrum</td>
+<td>Medium to High</td>
+</tr>
+<tr>
+<td>WCAG AAA</td>
+<td>Enhanced accessibility</td>
+<td>61 criteria</td>
+<td>Users with complex needs</td>
+<td>High to Very High</td>
+</tr>
+<tr>
+<td>Section 508</td>
+<td>US federal compliance</td>
+<td>AA equivalent + specific requirements</td>
+<td>Government users</td>
+<td>Medium to High</td>
+</tr>
+<tr>
+<td>EN 301 549</td>
+<td>European standard</td>
+<td>AA equivalent + mobile/documents</td>
+<td>EU citizens</td>
+<td>Medium to High</td>
+</tr>
+<tr>
+<td>ADA Compliance</td>
+<td>Legal requirement (US)</td>
+<td>No specific technical standard</td>
+<td>All US users</td>
+<td>Variable</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p><strong>Complex Implementation Requirements</strong> involve understanding and applying numerous technical standards, guidelines, and best practices across different platforms and technologies.</p>
+<p><strong>Resource Allocation Constraints</strong> require balancing accessibility investments with other development priorities while securing adequate budget and staffing for accessibility initiatives.</p>
+<p><strong><a data-lb="1" href="/en/glossary/technical-debt/" title="Technical Debt glossary entry">Technical Debt</a> Management</strong> addresses existing inaccessible content and systems that require significant remediation efforts and ongoing maintenance commitments.</p>
+<p><strong>Cross-Platform Consistency</strong> ensures accessibility standards are maintained across web, mobile, and desktop applications while accommodating platform-specific accessibility features.</p>
+<p><strong>Content Management Complexity</strong> involves training content creators, establishing governance processes, and maintaining accessibility standards across large volumes of dynamic content.</p>
+<p><strong>Testing and Validation Difficulties</strong> require specialized knowledge, tools, and access to users with disabilities for comprehensive accessibility testing and validation.</p>
+<p><strong>Evolving Standards and Technologies</strong> demand continuous learning and adaptation as accessibility guidelines, assistive technologies, and web standards continue to evolve.</p>
+<p><strong>Performance Impact Concerns</strong> address potential conflicts between accessibility features and performance optimization while maintaining fast, responsive user experiences.</p>
+<p><strong>Third-Party Integration Issues</strong> involve ensuring accessibility compliance when incorporating external widgets, plugins, and services that may not meet accessibility standards.</p>
+<p><strong>Legal Uncertainty</strong> navigates varying interpretations of accessibility requirements across different jurisdictions and evolving legal precedents in accessibility litigation.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p><strong>Start with Semantic HTML</strong> as the foundation for all accessibility efforts, using proper markup elements, heading hierarchies, and form structures that assistive technologies can interpret correctly.</p>
+<p><strong>Implement Progressive Enhancement</strong> by building core functionality that works without JavaScript or CSS, then layering enhanced features while maintaining accessibility at each level.</p>
+<p><strong>Establish Design System Standards</strong> that include accessibility requirements, color contrast ratios, focus indicators, and interaction patterns documented for consistent implementation.</p>
+<p><strong>Integrate Automated Testing Tools</strong> into development workflows using accessibility linters, browser extensions, and continuous integration testing to catch issues early in development.</p>
+<p><strong>Conduct Regular Manual Testing</strong> with keyboard navigation, screen readers, and other assistive technologies to identify issues that automated tools cannot detect.</p>
+<p><strong>Provide Comprehensive Alternative Content</strong> including descriptive alt text, captions, transcripts, and audio descriptions that convey equivalent information to users with sensory impairments.</p>
+<p><strong>Ensure Keyboard Accessibility</strong> by making all interactive elements reachable and operable via keyboard, implementing logical tab order, and providing visible focus indicators.</p>
+<p><strong>Maintain Sufficient Color Contrast</strong> ratios between text and background colors while avoiding color as the sole means of conveying important information.</p>
+<p><strong>Create Clear Content Structure</strong> using proper headings, lists, and landmarks that help users understand and navigate content efficiently with assistive technologies.</p>
+<p><strong>Establish Accessibility Training Programs</strong> for designers, developers, content creators, and stakeholders to build organization-wide accessibility knowledge and commitment.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p><strong>ARIA Implementation Strategies</strong> involve sophisticated use of Accessible Rich Internet Applications attributes to enhance complex widgets, dynamic content, and single-page applications for assistive technology users.</p>
+<p><strong>Custom Focus Management</strong> creates seamless navigation experiences in dynamic applications by programmatically managing focus states, implementing focus traps, and providing logical focus sequences.</p>
+<p><strong>Advanced Screen Reader Optimization</strong> includes techniques for live regions, skip navigation patterns, and content announcements that provide optimal experiences for screen reader users.</p>
+<p><strong>Cognitive Accessibility Enhancements</strong> implement features such as content simplification options, reading assistance tools, and customizable interface elements to support users with cognitive disabilities.</p>
+<p><strong>Multi-Modal Interaction Support</strong> enables alternative input methods including voice control, eye tracking, and switch navigation while maintaining consistent functionality across interaction modes.</p>
+<p><strong>Accessibility Performance Optimization</strong> balances accessibility features with performance requirements through efficient ARIA usage, optimized assistive technology compatibility, and streamlined accessibility APIs.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p><strong><a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence glossary entry">Artificial Intelligence</a> Integration</strong> will enhance accessibility through automated alt text generation, real-time captioning, content simplification, and personalized accessibility adaptations based on user needs and preferences.</p>
+<p><strong>Voice Interface Accessibility</strong> expands beyond traditional screen readers to include voice assistants, conversational interfaces, and speech-controlled navigation systems that provide new interaction paradigms.</p>
+<p><strong>Augmented Reality Accessibility</strong> develops standards and techniques for making AR experiences accessible to users with disabilities, including spatial audio cues, haptic feedback, and alternative visual representations.</p>
+<p><strong><a data-lb="1" href="/en/glossary/personalization/" title="Personalization glossary entry">Personalization</a> and Customization</strong> advances toward user-controlled accessibility preferences that automatically adapt interfaces, content presentation, and interaction methods based on individual needs and contexts.</p>
+<p><strong>Internet of Things Accessibility</strong> extends accessibility principles to connected devices, smart home systems, and embedded interfaces that require new approaches to inclusive design.</p>
+<p><strong>Regulatory Evolution</strong> continues toward more specific technical requirements, international harmonization of accessibility standards, and expanded coverage of emerging technologies and platforms.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Web Content Accessibility Guidelines (WCAG) 2.1. (2018). World Wide Web Consortium (W3C). <a href="https://www.w3.org/WAI/WCAG21/quickref/" rel="nofollow noopener noreferrer" target="_blank">https://www.w3.org/WAI/WCAG21/quickref/</a></p>
+</li>
+<li>
+<p>Section 508 Standards. (2018). U.S. General Services Administration. <a href="https://www.section508.gov/" rel="nofollow noopener noreferrer" target="_blank">https://www.section508.gov/</a></p>
+</li>
+<li>
+<p>WebAIM. (2021). Screen Reader User Survey #9 Results. <a href="https://webaim.org/projects/screenreadersurvey9/" rel="nofollow noopener noreferrer" target="_blank">https://webaim.org/projects/screenreadersurvey9/</a></p>
+</li>
+<li>
+<p>Disability Statistics Annual Report. (2021). University of New Hampshire Institute on Disability.</p>
+</li>
+<li>
+<p>EN 301 549 V3.2.1 Accessibility Requirements for ICT Procurement. (2021). European Telecommunications Standards Institute.</p>
+</li>
+<li>
+<p>Inclusive Design Principles. (2016). The Paciello Group. <a href="https://inclusivedesignprinciples.org/" rel="nofollow noopener noreferrer" target="_blank">https://inclusivedesignprinciples.org/</a></p>
+</li>
+<li>
+<p>WAI-ARIA Authoring Practices Guide. (2021). World Wide Web Consortium (W3C). <a href="https://www.w3.org/WAI/ARIA/apg/" rel="nofollow noopener noreferrer" target="_blank">https://www.w3.org/WAI/ARIA/apg/</a></p>
+</li>
+<li>
+<p>The Business Case for Digital Accessibility. (2020). W3C Web Accessibility Initiative. <a href="https://www.w3.org/WAI/business-case/" rel="nofollow noopener noreferrer" target="_blank">https://www.w3.org/WAI/business-case/</a></p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/alt-text/">
+                    Alt Text
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A written description of an image that helps people using screen readers and search engines understa...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/alt-text/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/heading-tags--h1-h6-/">
+                    Heading Tags (H1-H6)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    HTML elements that organize web page content into a hierarchy, helping search engines understand you...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/heading-tags--h1-h6-/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/semantic-markup/">
+                    Semantic Markup
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    HTML code that clearly labels what each part of a webpage means, helping search engines and accessib...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/semantic-markup/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/web-accessibility-standards/">
+                    Web Accessibility Standards
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Guidelines that ensure websites work for everyone, including people with disabilities, by making con...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/web-accessibility-standards/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hamburger-menu/">
+                    Hamburger Menu
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A menu icon with three stacked lines that opens hidden navigation options when clicked, commonly use...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hamburger-menu/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/accessibility--web-/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

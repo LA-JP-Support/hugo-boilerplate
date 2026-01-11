@@ -137,7 +137,7 @@ A: はい。FlowHuntFlowHunのようなノーコードAI構築ツールを使え
 
 ### 高品質なLLMの活用
 
-SmartWebのAIチャットボットは、OpenAI社 の最新モデル-5、**Google社 のGemini 2.5 Pro、Anthropic社 のClaudeSonnet 4など、業界最高水準のLLMを採用しています。これらのモデルは、本記事で紹介した各種ベンチマークで高い性能を実証済みです。
+SmartWebのAIチャットボットは、OpenAI社 の最新モデル-5、Google社 のGemini 2.5 Pro、Anthropic社 のClaudeSonnet 4など、業界最高水準のLLMを採用しています。これらのモデルは、本記事で紹介した各種ベンチマークで高い性能を実証済みです。
 
 ### ハルシネーション問題への実践的対策
 

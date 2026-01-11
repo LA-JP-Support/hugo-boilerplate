@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Model Evaluation | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/model-evaluation/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="The process of testing a machine learning model to measure how well it works and whether it's ready to use in real situations." name="description"/>
+<meta content="model evaluation, performance metrics, cross-validation, model assessment, machine learning validation" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/model-evaluation/" property="og:url"/>
+<meta content="Model Evaluation | SmartWeb" property="og:title"/>
+<meta content="The process of testing a machine learning model to measure how well it works and whether it's ready to use in real situations." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/model-evaluation/" name="twitter:url"/>
+<meta content="Model Evaluation | SmartWeb" name="twitter:title"/>
+<meta content="The process of testing a machine learning model to measure how well it works and whether it's ready to use in real situations." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Model Evaluation</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Model Evaluation
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          The process of testing a machine learning model to measure how well it works and whether it's ready to use in real situations.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                model evaluation
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                performance metrics
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                cross-validation
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                model assessment
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                machine learning validation
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-model-evaluation">What is a Model Evaluation?</h2>
+<p>Model evaluation is the systematic process of assessing the performance, reliability, and effectiveness of machine learning models using various metrics, techniques, and methodologies. This critical phase in the machine learning pipeline determines how well a trained model performs on unseen data and whether it meets the requirements for deployment in real-world applications. Model evaluation encompasses multiple dimensions of assessment, including accuracy, <a data-lb="1" href="/en/glossary/precision/" title="Precision glossary entry">precision</a>, recall, robustness, fairness, and computational efficiency, providing stakeholders with comprehensive insights into a model’s capabilities and limitations.</p>
+<p>The evaluation process serves as a bridge between model development and deployment, offering objective measures to compare different algorithms, hyperparameter configurations, and feature engineering approaches. Effective model evaluation requires careful consideration of the problem domain, data characteristics, and business objectives to select appropriate evaluation metrics and validation strategies. This process involves splitting datasets into training, validation, and test sets, implementing cross-validation techniques, and applying domain-specific performance measures that align with the intended use case and success criteria.</p>
+<p>Modern model evaluation extends beyond traditional accuracy metrics to encompass broader considerations such as model interpretability, <a data-lb="1" href="/en/glossary/bias/" title="Bias glossary entry">bias</a> detection, computational resource requirements, and deployment feasibility. As machine learning systems become increasingly integrated into critical decision-making processes across industries, comprehensive model evaluation has become essential for ensuring reliability, fairness, and regulatory compliance. The evaluation framework must address not only statistical performance but also practical considerations such as inference speed, memory usage, model stability, and the ability to generalize across different populations and environments.</p>
+<h2 id="core-evaluation-components">Core Evaluation Components</h2>
+<p><strong>Performance Metrics</strong> are quantitative measures that assess different aspects of model performance, including classification accuracy, regression error rates, precision, recall, F1-score, and area under the curve (AUC). These metrics provide standardized ways to compare models and track improvement over time.</p>
+<p><strong>Validation Strategies</strong> encompass techniques like holdout validation, k-fold cross-validation, stratified sampling, and time series validation that ensure robust performance estimation. These approaches help prevent overfitting and provide reliable estimates of model generalization capability.</p>
+<p><strong>Statistical Testing</strong> involves hypothesis testing, confidence intervals, and significance tests to determine whether observed performance differences between models are statistically meaningful. This component ensures that evaluation conclusions are supported by rigorous statistical evidence.</p>
+<p><strong>Bias and Fairness Assessment</strong> includes techniques for detecting and measuring algorithmic bias across different demographic groups, ensuring equitable model performance. This involves analyzing disparate impact, equalized odds, and demographic parity metrics.</p>
+<p><strong>Robustness Testing</strong> evaluates model stability under various conditions, including data distribution shifts, <a data-lb="1" href="/en/glossary/adversarial-attack/" title="Adversarial Attack glossary entry">adversarial attacks</a>, and input perturbations. This component assesses how well models maintain performance when faced with real-world variability.</p>
+<p><strong>Computational Evaluation</strong> measures resource requirements including training time, <a data-lb="1" href="/en/glossary/inference-latency/" title="Inference Latency glossary entry">inference latency</a>, memory usage, and energy consumption. This practical assessment ensures models can be deployed efficiently within operational constraints.</p>
+<p><strong>Interpretability Analysis</strong> examines model transparency, feature importance, and decision-making processes to ensure models can be understood and trusted by stakeholders. This component is crucial for regulated industries and high-stakes applications.</p>
+<h2 id="how-model-evaluation-works">How Model Evaluation Works</h2>
+<p><strong>Step 1: Data Preparation and Splitting</strong>
+Divide the dataset into training, validation, and test sets using appropriate sampling strategies that maintain data distribution and prevent data leakage between sets.</p>
+<p><strong>Step 2: Baseline Establishment</strong>
+Create simple baseline models using basic algorithms or heuristics to establish minimum performance thresholds and provide comparison benchmarks for more complex models.</p>
+<p><strong>Step 3: Metric Selection</strong>
+Choose evaluation metrics that align with business objectives and problem characteristics, considering factors like class imbalance, cost sensitivity, and domain-specific requirements.</p>
+<p><strong>Step 4: Cross-Validation Implementation</strong>
+Apply cross-validation techniques to obtain robust performance estimates and assess model stability across different data subsets while avoiding overfitting to specific train-test splits.</p>
+<p><strong>Step 5: Performance Measurement</strong>
+Calculate selected metrics across validation folds and test sets, documenting both central tendencies and variability to understand model consistency and reliability.</p>
+<p><strong>Step 6: Statistical Analysis</strong>
+Conduct statistical tests to determine significance of performance differences, calculate confidence intervals, and assess whether results are statistically meaningful rather than due to random variation.</p>
+<p><strong>Step 7: Bias and Fairness Testing</strong>
+Evaluate model performance across different demographic groups and sensitive attributes to identify potential bias and ensure equitable treatment of all populations.</p>
+<p><strong>Step 8: Robustness Assessment</strong>
+Test model performance under various conditions including data perturbations, distribution shifts, and adversarial examples to evaluate real-world reliability.</p>
+<p><strong>Step 9: Computational Profiling</strong>
+Measure resource requirements including training time, inference speed, memory usage, and scalability characteristics to assess deployment feasibility.</p>
+<p><strong>Step 10: Results Documentation and Interpretation</strong>
+Compile comprehensive evaluation reports that communicate findings to stakeholders, including limitations, recommendations, and deployment considerations.</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p><strong>Objective Performance Assessment</strong> provides quantitative measures of model effectiveness, enabling data-driven decisions about model selection and deployment readiness based on empirical evidence rather than subjective judgment.</p>
+<p><strong>Risk Mitigation</strong> identifies potential model failures, biases, and limitations before deployment, reducing the likelihood of costly mistakes and negative impacts on users or business operations.</p>
+<p><strong>Model Comparison and Selection</strong> enables systematic comparison of different algorithms, hyperparameters, and approaches using standardized metrics, facilitating optimal model selection for specific use cases.</p>
+<p><strong>Stakeholder Confidence</strong> builds trust among business leaders, regulators, and end users by demonstrating model reliability and performance through transparent evaluation processes and comprehensive documentation.</p>
+<p><strong>Regulatory Compliance</strong> ensures models meet industry standards and regulatory requirements by documenting performance across relevant metrics and demonstrating fairness and transparency in decision-making processes.</p>
+<p><strong>Continuous Improvement</strong> establishes baselines and benchmarks that enable tracking of model performance over time, facilitating iterative improvement and optimization of machine learning systems.</p>
+<p><strong>Resource Optimization</strong> identifies computational requirements and efficiency characteristics, enabling informed decisions about infrastructure needs and deployment strategies while optimizing cost-effectiveness.</p>
+<p><strong>Quality Assurance</strong> implements systematic testing procedures that ensure models meet quality standards before deployment, reducing the risk of poor performance in production environments.</p>
+<p><strong>Scientific Rigor</strong> applies statistical methods and experimental design principles to model assessment, ensuring conclusions are supported by robust evidence and reproducible methodologies.</p>
+<p><strong>Business Value Demonstration</strong> translates technical performance metrics into business impact measures, helping organizations understand the value proposition and return on investment of machine learning initiatives.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p><strong>Healthcare Diagnostics</strong> involves evaluating medical imaging models, disease prediction algorithms, and treatment recommendation systems using metrics like sensitivity, specificity, and clinical utility measures.</p>
+<p><strong>Financial Risk Assessment</strong> encompasses credit scoring models, fraud detection systems, and algorithmic trading strategies evaluated for accuracy, fairness, and regulatory compliance across diverse customer populations.</p>
+<p><strong>Autonomous Vehicle Systems</strong> requires comprehensive evaluation of perception, planning, and control models using safety metrics, edge case performance, and real-world testing scenarios.</p>
+<p><strong>Natural Language Processing</strong> includes <a data-lb="1" href="/en/glossary/sentiment-analysis/" title="Sentiment Analysis glossary entry">sentiment analysis</a>, machine translation, and <a data-lb="1" href="/en/glossary/chatbot/" title="Chatbot glossary entry">chatbot</a> systems evaluated for linguistic accuracy, cultural sensitivity, and user satisfaction across different languages and contexts.</p>
+<p><strong>Recommendation Systems</strong> involves assessing <a data-lb="1" href="/en/glossary/personalization/" title="Personalization glossary entry">personalization</a> algorithms, content filtering, and product recommendation engines using <a data-lb="1" href="/en/glossary/engagement-metrics/" title="Engagement Metrics glossary entry">engagement metrics</a>, diversity measures, and user experience indicators.</p>
+<p><strong>Computer Vision Applications</strong> encompasses object detection, facial recognition, and image classification systems evaluated for accuracy, bias, and performance across different demographic groups and environmental conditions.</p>
+<p><strong>Predictive Maintenance</strong> includes industrial equipment <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a>, failure prediction, and maintenance scheduling systems evaluated for prediction accuracy, false alarm rates, and operational impact.</p>
+<p><strong>Marketing and Advertising</strong> involves customer segmentation, campaign optimization, and conversion prediction models evaluated for targeting accuracy, return on investment, and customer privacy considerations.</p>
+<p><strong>Supply Chain Optimization</strong> encompasses demand forecasting, inventory management, and logistics optimization models evaluated for prediction accuracy, cost reduction, and operational efficiency.</p>
+<p><strong>Cybersecurity Systems</strong> includes threat detection, anomaly identification, and security monitoring models evaluated for detection rates, <a data-lb="1" href="/en/glossary/false-positive/" title="False Positive glossary entry">false positive</a> rates, and response time requirements.</p>
+<h2 id="model-evaluation-comparison-table">Model Evaluation Comparison Table</h2>
+<table>
+<thead>
+<tr>
+<th>Evaluation Approach</th>
+<th>Strengths</th>
+<th>Limitations</th>
+<th>Best Use Cases</th>
+<th>Computational Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Holdout Validation</td>
+<td>Simple, fast, interpretable</td>
+<td>High variance, data inefficient</td>
+<td>Large datasets, quick prototyping</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>K-Fold Cross-Validation</td>
+<td>Robust estimates, data efficient</td>
+<td>Computationally expensive, temporal issues</td>
+<td>Standard evaluation, model comparison</td>
+<td>Medium-High</td>
+</tr>
+<tr>
+<td>Stratified Validation</td>
+<td>Maintains class distribution, reduces bias</td>
+<td>Complex implementation, limited applicability</td>
+<td>Imbalanced datasets, classification tasks</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Time Series Validation</td>
+<td>Respects temporal order, realistic</td>
+<td>Complex setup, limited data usage</td>
+<td>Sequential data, forecasting models</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Bootstrap Sampling</td>
+<td>Confidence intervals, flexible</td>
+<td>Computational overhead, assumptions</td>
+<td>Statistical inference, small datasets</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Leave-One-Out CV</td>
+<td>Maximum data usage, unbiased</td>
+<td>Extremely expensive, high variance</td>
+<td>Small datasets, critical applications</td>
+<td>Very High</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p><strong>Data Leakage Prevention</strong> requires careful attention to information flow between training and test sets, temporal dependencies, and feature engineering processes that might inadvertently introduce future information into historical predictions.</p>
+<p><strong>Metric Selection Complexity</strong> involves choosing appropriate evaluation metrics that align with business objectives while considering trade-offs between different performance aspects and potential conflicts between technical and business metrics.</p>
+<p><strong>Class Imbalance Handling</strong> presents challenges in evaluation when datasets contain unequal class distributions, requiring specialized metrics and sampling strategies to ensure fair assessment of minority class performance.</p>
+<p><strong>Overfitting Detection</strong> requires distinguishing between models that genuinely generalize well and those that have memorized training data, necessitating careful validation design and multiple evaluation perspectives.</p>
+<p><strong>Computational Resource Constraints</strong> limit the extent of evaluation possible within time and budget constraints, requiring strategic decisions about evaluation depth versus resource availability and project timelines.</p>
+<p><strong>Statistical Significance Assessment</strong> involves determining whether observed performance differences are meaningful or due to random variation, requiring appropriate statistical tests and sample size considerations.</p>
+<p><strong>Bias and Fairness Measurement</strong> presents complex challenges in defining, measuring, and addressing algorithmic bias while balancing fairness across different groups and maintaining overall model performance.</p>
+<p><strong>Real-World Performance Gap</strong> occurs when laboratory evaluation results don’t translate to production performance due to distribution shifts, data quality issues, and operational constraints not captured in evaluation.</p>
+<p><strong>Interpretability Trade-offs</strong> require balancing model performance with explainability requirements, as more complex models may achieve better metrics but be harder to understand and validate.</p>
+<p><strong>Regulatory Compliance Requirements</strong> impose additional evaluation constraints and documentation needs that may conflict with technical optimization goals and require specialized expertise to navigate effectively.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p><strong>Establish Clear Evaluation Objectives</strong> by defining success criteria, stakeholder requirements, and business constraints before beginning evaluation to ensure alignment between technical metrics and organizational goals.</p>
+<p><strong>Implement Robust Data Splitting</strong> using stratified sampling, temporal considerations, and data leakage prevention techniques to ensure evaluation results reflect real-world performance expectations.</p>
+<p><strong>Use Multiple Evaluation Metrics</strong> to capture different aspects of model performance and avoid optimization for single metrics that may not reflect overall model quality or business value.</p>
+<p><strong>Apply Cross-Validation Consistently</strong> across all model comparisons using the same folds and random seeds to ensure fair comparison and reproducible results throughout the evaluation process.</p>
+<p><strong>Document Evaluation Methodology</strong> comprehensively including data preprocessing steps, metric calculations, and statistical tests to enable reproducibility and stakeholder understanding of evaluation procedures.</p>
+<p><strong>Test for Statistical Significance</strong> using appropriate hypothesis tests and confidence intervals to distinguish meaningful performance differences from random variation in evaluation results.</p>
+<p><strong>Evaluate Across Diverse Subgroups</strong> to identify potential bias and ensure equitable performance across different demographic groups and use case scenarios relevant to the application domain.</p>
+<p><strong>Assess Computational Requirements</strong> including training time, inference <a data-lb="1" href="/en/glossary/latency/" title="Latency glossary entry">latency</a>, memory usage, and scalability characteristics to ensure deployment feasibility within operational constraints.</p>
+<p><strong>Validate on Representative Data</strong> that reflects the target deployment environment including data quality, distribution characteristics, and edge cases likely to be encountered in production.</p>
+<p><strong>Implement Continuous Monitoring</strong> frameworks that enable ongoing evaluation of deployed models and detection of performance degradation over time due to data drift or changing conditions.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p><strong>Adversarial Testing</strong> involves systematically exposing models to adversarial examples and edge cases to evaluate robustness and identify potential failure modes that might not be apparent in standard evaluation procedures.</p>
+<p><strong>Uncertainty Quantification</strong> implements techniques like Bayesian inference, ensemble methods, and prediction intervals to assess model confidence and provide uncertainty estimates alongside predictions for better decision-making.</p>
+<p><strong>Causal Evaluation</strong> applies causal inference methods to assess whether models capture genuine causal relationships rather than spurious correlations, ensuring more reliable performance in changing environments.</p>
+<p><strong>Multi-Objective Optimization</strong> balances competing evaluation criteria like accuracy, fairness, interpretability, and computational efficiency using Pareto optimization and multi-criteria decision analysis techniques.</p>
+<p><strong>Federated Evaluation</strong> enables assessment of models trained on distributed data without centralizing sensitive information, using privacy-preserving techniques to maintain data confidentiality while enabling comprehensive evaluation.</p>
+<p><strong>Automated Model Selection</strong> implements automated machine learning (AutoML) approaches that systematically explore model architectures, hyperparameters, and evaluation strategies to identify optimal configurations efficiently.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p><strong>Automated Evaluation Pipelines</strong> will integrate advanced automation tools and continuous integration practices to streamline evaluation processes and enable real-time assessment of model performance across development and deployment lifecycles.</p>
+<p><strong>Explainable Evaluation Metrics</strong> will develop new approaches to make evaluation results more interpretable and actionable for non-technical stakeholders while maintaining statistical rigor and comprehensive assessment capabilities.</p>
+<p><strong>Privacy-Preserving Evaluation</strong> will advance techniques for assessing model performance while protecting sensitive data through differential privacy, homomorphic encryption, and secure multi-party computation methods.</p>
+<p><strong>Dynamic Evaluation Frameworks</strong> will adapt evaluation criteria and metrics based on changing business requirements, data characteristics, and deployment environments to maintain relevance and effectiveness over time.</p>
+<p><strong>Standardized Evaluation Protocols</strong> will establish industry-wide standards and benchmarks for model evaluation across different domains, enabling better comparison and reproducibility of evaluation results.</p>
+<p><strong>Real-Time Performance Monitoring</strong> will integrate advanced monitoring capabilities that provide continuous assessment of deployed models and automatic detection of performance degradation or bias emergence.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Hastie, T., Tibshirani, R., &amp; Friedman, J. (2009). The Elements of Statistical Learning: Data Mining, Inference, and Prediction. Springer.</p>
+</li>
+<li>
+<p>Flach, P. (2012). Machine Learning: The Art and Science of Algorithms that Make Sense of Data. Cambridge University Press.</p>
+</li>
+<li>
+<p>Kuhn, M., &amp; Johnson, K. (2013). Applied Predictive Modeling. Springer.</p>
+</li>
+<li>
+<p>Japkowicz, N., &amp; Shah, M. (2011). Evaluating Learning Algorithms: A Classification Perspective. Cambridge University Press.</p>
+</li>
+<li>
+<p>Sokolova, M., &amp; Lapalme, G. (2009). A systematic analysis of performance measures for classification tasks. Information Processing &amp; Management, 45(4), 427-437.</p>
+</li>
+<li>
+<p>Barocas, S., Hardt, M., &amp; Narayanan, A. (2019). Fairness and Machine Learning: Limitations and Opportunities. MIT Press.</p>
+</li>
+<li>
+<p>Molnar, C. (2020). Interpretable Machine Learning: A Guide for Making Black Box Models Explainable. Lulu.com.</p>
+</li>
+<li>
+<p>Raschka, S. (2018). Model Evaluation, Model Selection, and Algorithm Selection in Machine Learning. arXiv preprint arXiv:1811.12808.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/test-set/">
+                    Test Set
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A portion of data kept separate during model training to fairly evaluate how well the model performs...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/test-set/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/cross-validation/">
+                    Cross-Validation
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A machine learning technique that splits data into multiple parts to test how well a model works on ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/cross-validation/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/operational-efficiency/">
+                    Operational Efficiency
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Operational Efficiency is how well a company uses its resources like labor and materials to produce ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/operational-efficiency/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/overfitting/">
+                    Overfitting
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A machine learning problem where a model memorizes training data too well and fails to work accurate...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/overfitting/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/performance-budget/">
+                    Performance Budget
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A set of performance limits that development teams establish to keep websites fast and ensure good u...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/performance-budget/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/validation-set/">
+                    Validation Set
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A dataset used to test how well a machine learning model works on new data during development, helpi...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/validation-set/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/model-evaluation/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

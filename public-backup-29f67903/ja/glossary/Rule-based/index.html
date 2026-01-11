@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>ルールベース | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/rule-based/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Rule-based/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/Rule-based/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Rule-based/" hreflang="x-default" rel="alternate"/>
+<meta content="ルールベースとは、明示的な「if-then」ルールを使用してデータを処理し、意思決定を行う計算フレームワークです。AI、ビジネス自動化、コンプライアンスに不可欠であり、透明性と一貫性を提供します。" name="description"/>
+<meta content="ルールベースシステム, エキスパートシステム, 推論エンジン, AI, ビジネス自動化" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/rule-based/" property="og:url"/>
+<meta content="ルールベース | SmartWeb" property="og:title"/>
+<meta content="ルールベースとは、明示的な「if-then」ルールを使用してデータを処理し、意思決定を行う計算フレームワークです。AI、ビジネス自動化、コンプライアンスに不可欠であり、透明性と一貫性を提供します。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/rule-based/" name="twitter:url"/>
+<meta content="ルールベース | SmartWeb" name="twitter:title"/>
+<meta content="ルールベースとは、明示的な「if-then」ルールを使用してデータを処理し、意思決定を行う計算フレームワークです。AI、ビジネス自動化、コンプライアンスに不可欠であり、透明性と一貫性を提供します。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">ルールベース</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Artificial Intelligence
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        ルールベース
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Rule-Based
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          ルールベースとは、明示的な「if-then」ルールを使用してデータを処理し、意思決定を行う計算フレームワークです。AI、ビジネス自動化、コンプライアンスに不可欠であり、透明性と一貫性を提供します。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ルールベースシステム
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                エキスパートシステム
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                推論エンジン
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ビジネス自動化
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="ルールベースシステムとは">ルールベースシステムとは?</h2>
+<p><a data-lb="1" href="/ja/glossary/rule-based-systems/" title="ルールベースとは、明示的な「if-then」ルールを使用してデータを処理し、意思決定を行う計算フレームワークです。AI、ビジネス自動化、コンプライアンスに不可欠であり、透明性と一貫性を提供します。">ルールベースシステム</a>は、明示的に人間が作成したルール(通常は「if-then」文として表現される)に基づいてデータを処理し、意思決定を行う計算フレームワークです。これらのシステムはドメイン専門知識とロジックをエンコードし、<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>(AI)、ビジネス自動化、規制コンプライアンス、<a data-lb="1" href="/ja/glossary/chatbot/" title="チャットボットは、テキストまたは音声を通じて人間の会話をシミュレートするAI駆動のソフトウェアアプリケーションです。カスタマーサポート、情報検索、タスク自動化に使用されます。">チャットボット</a>などのインタラクティブ技術といった領域において、一貫性があり、透明性が高く、監査可能な運用を可能にします。</p>
+<p>ルールベースシステムは、適応学習ではなく事前に定義されたロジックに依存することが特徴です。これにより、説明可能性、信頼性、ポリシーへの厳格な準拠が求められるシナリオに最適です。データからパターンを学習する<a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>モデルとは異なり、ルールベースシステムは明示的にプログラムされた指示を実行するため、すべての意思決定を特定のルールまで追跡できます。</p>
+<p>ルールの基本構造はシンプルです:IF 条件 THEN アクション。例えば、「IF 取引金額 &gt; $10,000 THEN コンプライアンスレビューのためにフラグを立てる」といった形です。この透明性により、ルールベースシステムは意思決定の監査が義務付けられている規制産業において特に価値があります。</p>
+<h2 id="歴史的発展">歴史的発展</h2>
+<p>ルールベースシステムは、コンピュータ科学者が専門家の意思決定を模倣しようとした1970年代に登場しました。特に医療、法律、工学の分野で発展しました。最初期の<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="人工知能(AI) の用語集ページ">AIシステム</a>はエキスパートシステムとして知られ、人間の専門家が問題を推論する方法から導き出された論理ルールに基づいて構築されました。</p>
+<p>MYCIN(スタンフォード大学、1970年代):細菌感染症の診断と治療推奨を行う先駆的なエキスパートシステム。MYCINのアーキテクチャは、ルールベースシステムの力と限界の両方を実証し、専門家レベルの診断精度を達成する一方で、大規模なルールセットにおけるスケーラビリティの課題を明らかにしました。この画期的なシステムは数十年にわたるAI研究に影響を与え、現代のエキスパートシステムの基盤を確立しました。</p>
+<p>計算能力の進歩に伴い、ルールベースシステムはデータベースとの統合、より複雑な推論メカニズムの処理、ハイブリッドアーキテクチャにおける統計的機械学習モデルとの併用へと進化しました。</p>
+<h2 id="コアコンポーネント">コアコンポーネント</h2>
+<h3 id="ナレッジベース知識ベース">ナレッジベース(知識ベース)</h3>
+<p>すべてのルール(条件-アクション対)と事実に基づくドメイン知識のリポジトリ。ルールはIF-THEN文として構造化され、専門家によってキュレーションされるか、組織のポリシーから導出されます。<a data-lb="1" href="/ja/glossary/knowledge-base/" title="ナレッジベースとは何かを解説します。顧客、従業員、または自動化システムによる迅速な情報検索とセルフサービスを実現する、一元化された整理された情報の集合体です。">ナレッジベース</a>はシステムのエンコードされた専門知識を表します。</p>
+<h3 id="推論エンジン決定エンジン">推論エンジン(決定エンジン)</h3>
+<p>現在の事実に適用されるルールを評価し、論理的推論を適用し、結論を導き出す処理コア。推論エンジンは以下を使用します:</p>
+<p>前向き連鎖(データ駆動型):既知の事実から始まり、ルールを適用して新しい情報を推論します。例:「IF 温度 &gt; 100°C THEN 安全アラームをトリガー」後向き連鎖(ゴール駆動型):ゴールから始まり、それを支持するルールと事実を決定するために逆方向に作業します。例:「ゴール:ユーザーがローンの資格あり。IF 信用スコア &gt; 700 AND 収入 &gt; $50,000 THEN 資格あり」ハイブリッドアプローチ:データ駆動型とゴール駆動型の両方の推論を必要とする複雑なシナリオのために、前向き連鎖と後向き連鎖を組み合わせます</p>
+<h3 id="ワーキングメモリ事実ベース">ワーキングメモリ(事実ベース)</h3>
+<p>現在の事実、中間結果、推論プロセス中に生成されたデータの一時的なストレージ。ワーキングメモリはルールの実行に伴って動的に更新されます。</p>
+<h3 id="ルールインタープリター">ルールインタープリター</h3>
+<p>ルールを実行および解釈し、データの現在の状態を考慮してその適用可能性を判断します。高度なシステムは、意思決定がどのように到達されたかを明確にする説明機能を提供します。</p>
+<h3 id="ユーザーインターフェース">ユーザーインターフェース</h3>
+<p>ユーザーがデータを入力し、出力や推奨事項を受け取る媒体(ウェブ、アプリ、チャットボット、API)。</p>
+<h3 id="知識獲得モジュール">知識獲得モジュール</h3>
+<p>ルールの追加または更新を容易にし、ドメイン専門家または管理者が新しい知識や規制が登場するにつれてシステムの動作を変更できるようにします。</p>
+<h2 id="ルールベースシステムの動作方法">ルールベースシステムの動作方法</h2>
+<p>ルールベースシステムは体系的なシーケンスを通じて情報を処理します:</p>
+<ol>
+<li>データ入力:ユーザー、センサー、データベース、または外部システムから入力を受け取ります2. ルールマッチング(パターンマッチング):推論エンジンは、条件が現在の事実と一致するルールをナレッジベースからスキャンします3. ルール実行:条件が満たされている場合、対応するアクションを実行します—ワーキングメモリの更新、出力の生成、またはワークフローのトリガー4. 競合解決:複数のルールが適用可能な場合、システムは優先度ベースの解決(明示的なルール優先度)、特異性ベースの解決(より具体的なルールが一般的なルールを上書き)、時間的順序(新しいルールが優先される場合がある)、またはルールグループ化(制御された実行順序でカテゴリ別に整理)などの戦略を使用して実行優先度を決定します5. 出力生成:意思決定、アラート、推奨事項、または自動化されたアクションなどの出力をユーザーインターフェースを介して提供します</li>
+</ol>
+<h2 id="タイプと応用">タイプと応用</h2>
+<h3 id="医療診断エキスパートシステム">医療診断エキスパートシステム</h3>
+<p>臨床意思決定支援システムは、診断提案を提供するためにルールを使用します:「IF 患者が発熱 AND 咳 AND 疲労 THEN インフルエンザ検査を提案」。これらのシステムは、医療提供者の鑑別診断と治療推奨を支援します。</p>
+<h3 id="カスタマーサービスチャットボット">カスタマーサービスチャットボット</h3>
+<p>会話型AIは意図処理にルールを使用します:</p>
+<ul>
+<li>「IF ユーザーが『口座残高は?』と尋ねる THEN 口座残高を表示」</li>
+<li>「IF ユーザーが『担当者と話したい』と要求 THEN 人間のサポートに転送」</li>
+<li>「IF ユーザーが不適切な言葉を入力 THEN 不適切な言葉のポリシーメッセージで応答」</li>
+</ul>
+<h3 id="自動コンプライアンスチェック">自動コンプライアンスチェック</h3>
+<p>金融機関は規制遵守を確保するためにルールを使用します:「IF 取引金額 &gt; $10,000 THEN コンプライアンスレビューとAMLスクリーニングのためにフラグを立てる」。これらのシステムは、組織が自動的に規制コンプライアンスを維持するのを支援します。</p>
+<h3 id="製造品質管理">製造品質管理</h3>
+<p>生産システムは予知保全のためにルールを使用します:「IF 欠陥検出 AND 生産数 &gt; 1000 THEN 保守点検をスケジュール」。これにより、機器の故障を防ぎ、製品品質を確保します。</p>
+<h3 id="ビジネスプロセス自動化">ビジネスプロセス自動化</h3>
+<p>組織はルールを使用してワークフローを自動化します:「IF 請求書金額 &gt; 承認閾値 THEN 承認のためにマネージャーにルーティング」または「IF 顧客の苦情が48時間未解決 THEN スーパーバイザーに<a data-lb="1" href="/ja/glossary/escalation/" title="カスタマーサポート、IT、AIチャットボットにおけるエスカレーションについて学びます。種類、トリガー、ベストプラクティス、そして自動化が複雑な問題解決をどのように効率化するかを解説します。">エスカレーション</a>」。</p>
+<h2 id="主な利点">主な利点</h2>
+<h3 id="透明性と説明可能性">透明性と説明可能性</h3>
+<p>すべての意思決定は特定のルールまで追跡可能で、監査と規制要件をサポートします。ユーザーは特定の意思決定がなぜ行われたかを正確に理解できます—これは規制産業と信頼構築にとって重要です。</p>
+<h3 id="一貫性">一貫性</h3>
+<p>同一の入力は常に同一の出力をもたらし、人間の判断による変動を排除します。この予測可能性は、標準化されたプロセスとコンプライアンスに不可欠です。</p>
+<h3 id="実装の容易さ">実装の容易さ</h3>
+<p>ルールはモジュール式で独立して更新可能です。専門家は、プログラミングの専門知識なしに、自然言語またはビジュアルルールビルダーを使用してルール策定に直接参加できます。</p>
+<h3 id="トレーニングデータ不要">トレーニングデータ不要</h3>
+<p>機械学習システムとは異なり、ルールベースシステムは大規模なデータセットやトレーニング期間を必要としません。ルールが定義されれば、すぐに展開できます。</p>
+<h3 id="専門知識の獲得">専門知識の獲得</h3>
+<p>ドメイン知識を組織全体で再利用可能かつアクセス可能にし、専門家が退職した後も組織の専門知識を保持します。</p>
+<h3 id="迅速なプロトタイピング">迅速なプロトタイピング</h3>
+<p>明確で曖昧さのないロジックを持つドメインで、システムを迅速に運用可能にする必要がある場合に最適です。</p>
+<h2 id="制限と課題">制限と課題</h2>
+<h3 id="スケーラビリティの問題">スケーラビリティの問題</h3>
+<p>大規模なルールセット(数千のルール)は、管理、デバッグ、保守が困難になります。ルールの相互作用により予期しない動作が発生する可能性があります。</p>
+<h3 id="硬直性">硬直性</h3>
+<p>新規、曖昧、または不完全なデータの処理が苦手です。システムは、手動更新なしにプログラムされたルール外の状況に適応できません。</p>
+<h3 id="学習能力なし">学習能力なし</h3>
+<p>手動で更新されない限り、経験から適応または改善できません。これには、条件が変化するにつれて継続的なメンテナンスが必要です。</p>
+<h3 id="複雑性管理">複雑性管理</h3>
+<p>複雑なドメインでは、ルールの一貫性を維持し、矛盾を回避することが困難です。ルールが競合したり、循環ロジックを作成したりする可能性があります。</p>
+<h3 id="メンテナンスオーバーヘッド">メンテナンスオーバーヘッド</h3>
+<p>変化する要件、規制、またはビジネス条件に合わせるために頻繁な更新が必要です。これにより、継続的な運用コストが発生します。</p>
+<h3 id="非構造化データ処理の制限">非構造化データ処理の制限</h3>
+<p>事前定義されたパターンに適合しない自由形式のテキスト、画像、または非構造化入力に対しては効果が低くなります。</p>
+<h2 id="ルールベースシステム-vs-機械学習">ルールベースシステム vs. 機械学習</h2>
+<table>
+<thead>
+<tr>
+<th>側面</th>
+<th>ルールベースシステム</th>
+<th>機械学習</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>アプローチ</td>
+<td>明示的な人間が作成したルール</td>
+<td>データから学習された統計モデル</td>
+</tr>
+<tr>
+<td>透明性</td>
+<td>高い(ホワイトボックス、説明可能)</td>
+<td>多くの場合低い(ブラックボックス、特にディープラーニング)</td>
+</tr>
+<tr>
+<td>適応</td>
+<td>手動更新のみ</td>
+<td>新しいデータから学習し改善</td>
+</tr>
+<tr>
+<td>データ要件</td>
+<td>トレーニングデータ不要</td>
+<td>大規模で代表的なデータセットが必要</td>
+</tr>
+<tr>
+<td>最適な用途</td>
+<td>構造化された、安定した、明確なロジックを持つドメイン</td>
+<td>非構造化、複雑、急速に変化するドメイン</td>
+</tr>
+<tr>
+<td>開発時間</td>
+<td>迅速な初期展開</td>
+<td>より長いトレーニングと検証期間</td>
+</tr>
+<tr>
+<td>一貫性</td>
+<td>完全に一貫</td>
+<td>データ分布によって変動する可能性</td>
+</tr>
+<tr>
+<td>メンテナンス</td>
+<td>必要に応じてルール更新</td>
+<td>新しいデータでの再トレーニング</td>
+</tr>
+</tbody>
+</table>
+<h2 id="現代のハイブリッドアプローチ">現代のハイブリッドアプローチ</h2>
+<p>現代のシステムは、ルールベースと機械学習のアプローチをますます融合させています:</p>
+<p>説明可能なAI(XAI):ルールベースのロジックは、複雑なAIシステムにおける説明可能性を強化し、ML予測と並行して透明な意思決定パスを提供しますハイブリッドAIシステム:パターン認識と曖昧な入力のための機械学習と、規制ロジックと透明な意思決定のためのルールベースエンジンを統合します<a data-lb="1" href="/ja/glossary/knowledge-graph/" title="ナレッジグラフは、エンティティとその関係性をグラフとして表現する構造化データモデルであり、情報の効率的な検索、推論、統合を可能にします。">ナレッジグラフ</a>とセマンティック推論:ナレッジグラフ上のルールベース推論は、高度な推論と関係管理をサポートしますビジネスプロセス自動化:<a data-lb="1" href="/ja/glossary/rules-engine/" title="ルールエンジンは、事前定義された「if-then」ルールに対してデータを評価することで意思決定を自動化し、ビジネスロジックをコードから分離して効率的な管理と更新を実現します。">ルールエンジン</a>は、ロボティックプロセスオートメーション(RPA)とワークフローオーケストレーションを強化し、コンプライアンスと監査可能性を維持します</p>
+<h2 id="業界固有の応用">業界固有の応用</h2>
+<h3 id="医療">医療</h3>
+<p>医療診断支援、臨床意思決定システム、治療プロトコルの実施、規制コンプライアンス監視</p>
+<h3 id="金融">金融</h3>
+<p>信用決定、不正検出、規制コンプライアンス、リスク評価、自動取引ルール</p>
+<h3 id="製造">製造</h3>
+<p>品質管理、予知保全、生産スケジューリング、安全システム</p>
+<h3 id="法律">法律</h3>
+<p>契約分析、コンプライアンスチェック、判例法の適用、文書分類</p>
+<h3 id="通信">通信</h3>
+<p>ネットワーク管理、サービスプロビジョニング、請求システム、トラブルシューティング自動化</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p>シンプルに始める:複雑さを追加する前に、コアで価値の高いルールから始めますドメイン専門家を関与させる:ルールが専門知識とビジネス要件を正確に反映していることを確認しますルールドキュメンテーションを維持する:ルールの根拠、所有者、変更履歴を文書化しますバージョン管理を実装する:監査可能性のために、時間の経過に伴うルールの変更を追跡します徹底的にテストする:多様なシナリオとエッジケースに対してルールを検証しますパフォーマンスを監視する:ルール実行パターンと有効性を追跡しますスケーラビリティを計画する:成長するルールセットに対応できるアーキテクチャを設計します説明を可能にする:ユーザーに意思決定を説明する機能を構築します定期的なレビュー:ルールの正確性と関連性を定期的に監査します</p>
+<h2 id="高度な機能">高度な機能</h2>
+<p>ルールオーサリングツール:プログラマー以外がルールを定義および管理できるユーザーフレンドリーなインターフェースルールテンプレート:一般的なパターンの標準化されたフォーマットで、開発を加速しますルールバージョニングと監査:時間の経過に伴う変更を追跡し、コンプライアンスとデバッグをサポートします統合機能:外部システムとの相互運用性のためのAPIとコネクタスケーラビリティ最適化:大規模なルールセットの効率的な処理のためのアルゴリズム適応的ルール管理:データとフィードバックに基づく動的なルール調整</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>GeeksforGeeks. (n.d.). Rule-Based System in AI. GeeksforGeeks.</p>
+</li>
+<li>
+<p>Nected. (n.d.). Rule-Based Inference Engine. Nected Blog.</p>
+</li>
+<li>
+<p>WeAreBrain. (n.d.). Rule-Based AI vs. Machine Learning: What’s the Difference?. WeAreBrain Blog.</p>
+</li>
+<li>
+<p>Sapien. (n.d.). Rule-Based System Glossary. Sapien Glossary.</p>
+</li>
+<li>
+<p>DeepAI. (n.d.). Rule-Based System Definition. DeepAI Machine Learning Glossary.</p>
+</li>
+<li>
+<p>Wikipedia. (n.d.). MYCIN Case Study. Wikipedia.</p>
+</li>
+<li>
+<p>IBM. (n.d.). Types of Chatbots. IBM Think Topics.</p>
+</li>
+<li>
+<p>GeeksforGeeks. (n.d.). Expert Systems. GeeksforGeeks.</p>
+</li>
+<li>
+<p>Nected. (n.d.). Business Rules Management. Nected Blog.</p>
+</li>
+<li>
+<p>Nected. (n.d.). Rules Engine Design Pattern. Nected Blog.</p>
+</li>
+<li>
+<p>Pennsylvania State University. (n.d.). Production Systems and Rule-Based Inference. PSU Research Paper.</p>
+</li>
+<li>
+<p>Nected. (n.d.). Cloud-Based Rule Engine. Nected Blog.</p>
+</li>
+<li>
+<p>Nected. (n.d.). Dynamic Pricing Rule Engine. Nected Blog.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/multimodal-technology/">
+                    マルチモーダル技術
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    マルチモーダル技術について探求します。テキスト、画像、音声などの多様なデータ形式を処理・統合し、より豊かな理解とインタラクションを実現するAIシステムです。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/multimodal-technology/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/continuous-learning/">
+                    AIにおける継続学習
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIにおける継続学習を探求します。システムが忘却することなく段階的に適応し知識を獲得できるようにする技術です。そのプロセス、破滅的忘却などの課題、実世界での応用について理解を深めます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/continuous-learning/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/gpu-acceleration/">
+                    GPUアクセラレーション
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/gpu-acceleration/" title="GPUアクセラレーションは、グラフィックス処理ユニット(GPU)を活用して大規模な並列処理を実現し、AI、ディープラーニング、データサイエンス、HPCなどの計算集約型ワークロードを大幅に高速化します。">GPUアクセラレーション</a>は、グラフィックス処理ユニット(GPU)を活用して大規模な並列処理を実現し、AI、ディープラーニング、データサイエンス、HPCなどの計算集約型ワークロードを大幅に高速化します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/gpu-acceleration/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/whatsapp-integration/">
+                    WhatsApp連携
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ビジネス向けWhatsApp連携の包括的ガイド。API、実装戦略、メリット、顧客エンゲージメントのベストプラクティスを網羅しています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/whatsapp-integration/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/intent-recognition/">
+                    インテント認識
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    インテント認識は、ユーザーの入力を解釈して特定の目標を理解する、AI/NLPのコア技術です。システムが文脈に応じて効率的に応答することを可能にします。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/intent-recognition/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/oracle-feedback---ground-truth-labels-/">
+                    オラクルフィードバック(正解ラベル)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI/MLにおけるオラクルフィードバックと正解ラベルについて解説します。Oracle Select AIやHCM Cloudが、モデルのトレーニング、評価、継続的改善のために権威あるデータをどのように...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/oracle-feedback---ground-truth-labels-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/rule-based-chatbot/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+  });
+</script>
+</body>
+</html>

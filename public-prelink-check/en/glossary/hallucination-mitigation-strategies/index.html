@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Hallucination Mitigation Strategies | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hallucination-mitigation-strategies/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/hallucination-mitigation-strategies/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hallucination-mitigation-strategies/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/hallucination-mitigation-strategies/" hreflang="x-default" rel="alternate"/>
+<meta content="Techniques and methods that prevent AI systems from generating false or made-up information by improving accuracy and reliability through tools like data verification and prompt refinement." name="description"/>
+<meta content="hallucination mitigation strategies, AI hallucinations, large language models, retrieval-augmented generation, prompt engineering" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hallucination-mitigation-strategies/" property="og:url"/>
+<meta content="Hallucination Mitigation Strategies | SmartWeb" property="og:title"/>
+<meta content="Techniques and methods that prevent AI systems from generating false or made-up information by improving accuracy and reliability through tools like data verification and prompt refinement." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hallucination-mitigation-strategies/" name="twitter:url"/>
+<meta content="Hallucination Mitigation Strategies | SmartWeb" name="twitter:title"/>
+<meta content="Techniques and methods that prevent AI systems from generating false or made-up information by improving accuracy and reliability through tools like data verification and prompt refinement." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Hallucination Mitigation Strategies</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Hallucination Mitigation Strategies
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          Techniques and methods that prevent AI systems from generating false or made-up information by improving accuracy and reliability through tools like data verification and prompt refinement.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                hallucination mitigation strategies
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI hallucinations
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                large language models
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                retrieval-augmented generation
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                prompt engineering
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-are-hallucination-mitigation-strategies">What Are Hallucination Mitigation Strategies?</h2>
+<p><a data-lb="1" href="/en/glossary/hallucination/" title="Hallucination glossary entry">Hallucination</a> mitigation strategies encompass technologies, technical processes, and operational best practices designed to prevent or reduce the risk of <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI systems</a>—particularly <a data-lb="1" href="/en/glossary/large-language-models/" title="Large Language Models (LLMs) glossary entry">large language models (LLMs)</a>—generating incorrect, fabricated, or misleading information. An AI “hallucination” is an output that appears plausible but is not grounded in factual reality, training data, or verifiable sources.</p>
+<p><strong>Core Objectives:</strong></p>
+<ul>
+<li>Improve output reliability and accuracy</li>
+<li>Reduce fabricated or false information</li>
+<li>Enhance user trust in AI systems</li>
+<li>Minimize operational and reputational risks</li>
+<li>Ensure compliance in regulated industries</li>
+</ul>
+<h2 id="understanding-ai-hallucinations">Understanding AI Hallucinations</h2>
+<h3 id="definition-and-characteristics">Definition and Characteristics</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Appearance</strong></td>
+<td>Plausible, grammatically correct, contextually appropriate</td>
+</tr>
+<tr>
+<td><strong>Reality</strong></td>
+<td>Factually incorrect, unverifiable, or fabricated</td>
+</tr>
+<tr>
+<td><strong>Intent</strong></td>
+<td>Unintentional (not deliberate deception)</td>
+</tr>
+<tr>
+<td><strong>Risk</strong></td>
+<td>Damages trust, spreads misinformation, causes errors</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hallucination-types">Hallucination Types</h3>
+<p><strong>Factual Errors:</strong></p>
+<ul>
+<li>Invented statistics or data points</li>
+<li>Fabricated historical events</li>
+<li>Non-existent research citations</li>
+<li>Incorrect technical specifications</li>
+</ul>
+<p><strong>Contextual Errors:</strong></p>
+<ul>
+<li>Information not present in source material</li>
+<li>Misattribution of quotes or statements</li>
+<li>Incorrect relationships between entities</li>
+<li>Temporal inconsistencies</li>
+</ul>
+<p><strong>Intrinsic Errors:</strong></p>
+<ul>
+<li>Self-contradictory statements</li>
+<li>Logical inconsistencies within response</li>
+<li>Conflicting information in same output</li>
+</ul>
+<p><strong>Extrinsic Errors:</strong></p>
+<ul>
+<li>Claims unsupported by provided context</li>
+<li>References to non-existent external sources</li>
+<li>Data not derivable from available information</li>
+</ul>
+<p><strong>Linguistic Errors:</strong></p>
+<ul>
+<li>Grammatically correct but semantically meaningless</li>
+<li>Coherent-sounding nonsense</li>
+<li>Circular or tautological statements</li>
+</ul>
+<h2 id="root-causes-of-hallucinations">Root Causes of Hallucinations</h2>
+<h3 id="technical-causes">Technical Causes</h3>
+<table>
+<thead>
+<tr>
+<th>Cause</th>
+<th>Description</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Probabilistic Architecture</strong></td>
+<td>LLMs predict next tokens based on probability, not facts</td>
+<td>Generates plausible but incorrect content</td>
+</tr>
+<tr>
+<td><strong>Training Data Gaps</strong></td>
+<td>Incomplete, outdated, or biased training data</td>
+<td>Model lacks knowledge to answer accurately</td>
+</tr>
+<tr>
+<td><strong>Lack of Grounding</strong></td>
+<td>No access to real-time or authoritative sources</td>
+<td>Relies solely on training data</td>
+</tr>
+<tr>
+<td><strong>Overfitting</strong></td>
+<td>Excessive memorization of training patterns</td>
+<td>Poor generalization to novel inputs</td>
+</tr>
+<tr>
+<td><strong>Context Window Limits</strong></td>
+<td>Truncated or incomplete context</td>
+<td>Missing critical information</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operational-causes">Operational Causes</h3>
+<p><strong>Prompt Quality Issues:</strong></p>
+<ul>
+<li>Vague or ambiguous instructions</li>
+<li>Insufficient context provided</li>
+<li>Conflicting requirements</li>
+<li>Unclear constraints</li>
+</ul>
+<p><strong>System Design Flaws:</strong></p>
+<ul>
+<li>No verification mechanisms</li>
+<li>Absence of confidence scoring</li>
+<li>Missing escalation paths</li>
+<li>Inadequate testing</li>
+</ul>
+<p><strong>Adversarial Factors:</strong></p>
+<ul>
+<li>Malicious <a data-lb="1" href="/en/glossary/prompts/" title="Prompts glossary entry">prompts</a> exploiting weaknesses</li>
+<li>Injection attacks</li>
+<li>Social engineering attempts</li>
+</ul>
+<h2 id="business-and-technical-risks">Business and Technical Risks</h2>
+<h3 id="organizational-impact">Organizational Impact</h3>
+<p><strong>Reputational Damage:</strong></p>
+<ul>
+<li>Public AI mistakes damage brand trust</li>
+<li>Viral incorrect information</li>
+<li>Loss of customer confidence</li>
+<li>Stock price impacts (e.g., Google Bard telescope error)</li>
+</ul>
+<p><strong>Operational Consequences:</strong></p>
+<ul>
+<li>Incorrect business decisions</li>
+<li>Wasted time correcting errors</li>
+<li>Increased review workload</li>
+<li>Reduced productivity</li>
+</ul>
+<p><strong>Legal and Compliance:</strong></p>
+<ul>
+<li>Regulatory violations and penalties</li>
+<li>Lawsuits from fabricated legal citations</li>
+<li>Healthcare liability from incorrect medical information</li>
+<li>Financial services compliance breaches</li>
+</ul>
+<p><strong>Security Vulnerabilities:</strong></p>
+<ul>
+<li>Hallucinated code suggesting malicious packages</li>
+<li>Supply chain attack vectors</li>
+<li>Compromised security recommendations</li>
+<li>Exposed sensitive information</li>
+</ul>
+<h3 id="industry-specific-risks">Industry-Specific Risks</h3>
+<table>
+<thead>
+<tr>
+<th>Industry</th>
+<th>Risk Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Healthcare</strong></td>
+<td>Patient safety</td>
+<td>Incorrect diagnosis or treatment recommendations</td>
+</tr>
+<tr>
+<td><strong>Legal</strong></td>
+<td>Professional liability</td>
+<td>Fabricated case law citations</td>
+</tr>
+<tr>
+<td><strong>Finance</strong></td>
+<td>Investment losses</td>
+<td>False market analysis or recommendations</td>
+</tr>
+<tr>
+<td><strong>Manufacturing</strong></td>
+<td>Safety incidents</td>
+<td>Incorrect operating procedures</td>
+</tr>
+<tr>
+<td><strong>Customer Service</strong></td>
+<td>Trust erosion</td>
+<td>Wrong policy or product information</td>
+</tr>
+</tbody>
+</table>
+<h2 id="comprehensive-mitigation-strategies">Comprehensive Mitigation Strategies</h2>
+<h3 id="1-retrieval-augmented-generation-rag">1. Retrieval-Augmented Generation (RAG)</h3>
+<p><strong>Concept:</strong> Combine LLM generation with real-time retrieval from authoritative data sources.</p>
+<p><strong>Architecture:</strong></p>
+<pre tabindex="0"><code>User Query
+    ↓
+Embed Query
+    ↓
+Search Vector Database → Retrieve Top-K Documents
+    ↓
+Context + Query → LLM → Grounded Response
+</code></pre><p><strong>Implementation Components:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+<th>Technology Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Embedding Model</strong></td>
+<td>Convert text to vectors</td>
+<td><a data-lb="1" href="/en/glossary/openai/" title="OpenAI glossary entry">OpenAI</a> ada-002, Sentence Transformers</td>
+</tr>
+<tr>
+<td><strong>Vector Database</strong></td>
+<td>Store and search embeddings</td>
+<td><a data-lb="1" href="/en/glossary/pinecone/" title="Pinecone glossary entry">Pinecone</a>, Weaviate, FAISS, Qdrant</td>
+</tr>
+<tr>
+<td><strong>Retriever</strong></td>
+<td>Find relevant documents</td>
+<td>BM25, Dense retrieval, Hybrid search</td>
+</tr>
+<tr>
+<td><strong>Generator</strong></td>
+<td>Produce response</td>
+<td>GPT-4, Claude, Llama 2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Best Practices:</strong></p>
+<ul>
+<li>Curate high-quality, authoritative knowledge bases</li>
+<li>Regular data updates and quality audits</li>
+<li>Optimize chunk size (typically 256-512 tokens)</li>
+<li>Use hybrid search (vector + keyword) for better recall</li>
+<li>Implement metadata filtering (date, source, category)</li>
+<li>Monitor retrieval quality and relevance</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>Dependent on source data quality</li>
+<li>Requires infrastructure investment</li>
+<li>May not cover all query types</li>
+<li>Retrieval failures create gaps</li>
+</ul>
+<h3 id="2-advanced-prompt-engineering">2. Advanced Prompt Engineering</h3>
+<p><strong>Principle:</strong> Design clear, specific, constrained prompts to guide accurate outputs.</p>
+<p><strong>Prompt Structure Template:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="font-weight:bold">## ROLE
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span>You are [specific role with defined expertise]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">## TASK
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span>[Clear, unambiguous task description]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">## CONTEXT
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span>[Relevant background information]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">## CONSTRAINTS
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span><span style="color:#fff;font-weight:bold">-</span> Answer ONLY from provided information
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">-</span> If uncertain, respond with "I don't know"
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">-</span> Do not invent or extrapolate beyond sources
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">-</span> Cite sources for all factual claims
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">## OUTPUT FORMAT
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span>[Specify exact format: list, JSON, paragraph, etc.]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">## EXAMPLE
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span>[Provide few-shot examples if applicable]
+</span></span></code></pre></div><p><strong>Effective Techniques:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Technique</th>
+<th>Description</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role Definition</strong></td>
+<td>Specify expert persona and boundaries</td>
+<td>Domain-specific queries</td>
+</tr>
+<tr>
+<td><strong>Task Decomposition</strong></td>
+<td>Break complex queries into steps</td>
+<td>Multi-part problems</td>
+</tr>
+<tr>
+<td><strong>Chain-of-Thought</strong></td>
+<td>Request step-by-step reasoning</td>
+<td>Logic and math problems</td>
+</tr>
+<tr>
+<td><strong>Few-Shot Examples</strong></td>
+<td>Provide input-output demonstrations</td>
+<td>Format consistency</td>
+</tr>
+<tr>
+<td><strong>Constraint Repetition</strong></td>
+<td>State critical rules multiple times</td>
+<td>High-risk applications</td>
+</tr>
+<tr>
+<td><strong>Fallback Instructions</strong></td>
+<td>Define behavior for uncertainty</td>
+<td>Unknown information</td>
+</tr>
+<tr>
+<td><strong>Temperature Control</strong></td>
+<td>Lower values for deterministic outputs</td>
+<td>Factual responses</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Implementation Example:</strong></p>
+<pre tabindex="0"><code>CORRECT:
+"Using ONLY the attached financial report, list the three 
+largest expenses in Q3 2024. If any expense is unclear, 
+state 'Information not found.' Do not estimate or infer."
+
+INCORRECT:
+"What were the main expenses?"
+</code></pre><h3 id="3-model-fine-tuning-and-domain-adaptation">3. Model Fine-Tuning and Domain Adaptation</h3>
+<p><strong>Approach:</strong> Adapt pre-trained models to specific domains with curated, high-quality data.</p>
+<p><strong>Fine-Tuning Methods:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+<th>Resource Requirements</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Full Fine-Tuning</strong></td>
+<td>Update all model parameters</td>
+<td>Very High</td>
+<td>Complete domain shift</td>
+</tr>
+<tr>
+<td><strong>LoRA (Low-Rank Adaptation)</strong></td>
+<td>Update small parameter subsets</td>
+<td>Medium</td>
+<td>Efficient adaptation</td>
+</tr>
+<tr>
+<td><strong>Prompt Tuning</strong></td>
+<td>Train soft prompts</td>
+<td>Low</td>
+<td>Task-specific optimization</td>
+</tr>
+<tr>
+<td><strong>Few-Shot Learning</strong></td>
+<td>Learn from limited examples</td>
+<td>Very Low</td>
+<td>Quick adaptation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Implementation Workflow:</strong></p>
+<pre tabindex="0"><code>1. Data Collection
+   ↓
+2. Quality Assurance &amp; Cleaning
+   ↓
+3. Dataset Preparation (train/val/test split)
+   ↓
+4. Model Selection &amp; Configuration
+   ↓
+5. Training with Monitoring
+   ↓
+6. Evaluation &amp; Validation
+   ↓
+7. Deployment &amp; Monitoring
+   ↓
+8. Continuous Improvement Loop
+</code></pre><p><strong>Best Practices:</strong></p>
+<ul>
+<li>Use diverse, representative training data</li>
+<li>Implement rigorous data quality controls</li>
+<li>Balance dataset across categories</li>
+<li>Regular model retraining schedules</li>
+<li>A/B testing for deployment</li>
+<li>Monitor for drift and degradation</li>
+</ul>
+<p><strong>Tools and Platforms:</strong></p>
+<ul>
+<li>InstructLab for taxonomy-based fine-tuning</li>
+<li>Hugging Face Transformers</li>
+<li>OpenAI Fine-tuning API</li>
+<li>Azure OpenAI Fine-tuning</li>
+<li>Google Vertex AI</li>
+</ul>
+<h3 id="4-system-level-controls-and-guardrails">4. System-Level Controls and Guardrails</h3>
+<p><strong>Definition:</strong> Programmatic controls enforcing boundaries on AI behavior and outputs.</p>
+<p><strong>Guardrail Categories:</strong></p>
+<p><strong>Content Filtering:</strong></p>
+<ul>
+<li>Profanity and toxicity detection</li>
+<li>PII (Personal Identifiable Information) redaction</li>
+<li>Inappropriate content blocking</li>
+<li>Topic restriction enforcement</li>
+</ul>
+<p><strong>Behavioral Constraints:</strong></p>
+<ul>
+<li>Scope limitation (answer only from sources)</li>
+<li>Action restrictions (read-only vs. write operations)</li>
+<li><a data-lb="1" href="/en/glossary/escalation/" title="Escalation glossary entry">Escalation</a> triggers (complexity, uncertainty)</li>
+<li>Output format validation</li>
+</ul>
+<p><strong>Security Controls:</strong></p>
+<ul>
+<li>Input sanitization</li>
+<li>Prompt injection detection</li>
+<li>Rate limiting and throttling</li>
+<li><a data-lb="1" href="/en/glossary/access-control/" title="Access Control glossary entry">Access control</a> and authentication</li>
+</ul>
+<p><strong>Implementation Approaches:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rule-Based</strong></td>
+<td>Explicit programmatic rules</td>
+<td>Regex patterns, keyword lists</td>
+</tr>
+<tr>
+<td><strong>ML-Based</strong></td>
+<td>Trained classifiers</td>
+<td>Toxicity detection models</td>
+</tr>
+<tr>
+<td><strong>Hybrid</strong></td>
+<td>Combination of rules and ML</td>
+<td>Layered filtering approach</td>
+</tr>
+<tr>
+<td><strong>External APIs</strong></td>
+<td>Third-party moderation services</td>
+<td>OpenAI Moderation API</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Configuration Example:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span>guardrails = {
+</span></span><span style="display:flex;"><span>    <span style="color:#0ff;font-weight:bold">"content_safety"</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#0ff;font-weight:bold">"block_violence"</span>: <span style="color:#fff;font-weight:bold">True</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#0ff;font-weight:bold">"block_sexual"</span>: <span style="color:#fff;font-weight:bold">True</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#0ff;font-weight:bold">"block_hate"</span>: <span style="color:#fff;font-weight:bold">True</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#0ff;font-weight:bold">"threshold"</span>: <span style="color:#ff0;font-weight:bold">0.7</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#0ff;font-weight:bold">"behavioral"</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#0ff;font-weight:bold">"require_grounding"</span>: <span style="color:#fff;font-weight:bold">True</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#0ff;font-weight:bold">"max_speculation"</span>: <span style="color:#ff0;font-weight:bold">0.3</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#0ff;font-weight:bold">"escalate_on_uncertainty"</span>: <span style="color:#fff;font-weight:bold">True</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#0ff;font-weight:bold">"output_validation"</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#0ff;font-weight:bold">"check_citations"</span>: <span style="color:#fff;font-weight:bold">True</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#0ff;font-weight:bold">"verify_facts"</span>: <span style="color:#fff;font-weight:bold">True</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#0ff;font-weight:bold">"max_response_length"</span>: <span style="color:#ff0;font-weight:bold">2000</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="5-continuous-evaluation-and-human-in-the-loop">5. Continuous Evaluation and Human-in-the-Loop</h3>
+<p><strong>Principle:</strong> Systematic quality assurance combining automated metrics and expert review.</p>
+<p><strong>Evaluation Framework:</strong></p>
+<p><strong>Automated Metrics:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Measures</th>
+<th>Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Groundedness</strong></td>
+<td>Alignment with source material</td>
+<td>RAG systems</td>
+</tr>
+<tr>
+<td><strong>Relevance</strong></td>
+<td>Response appropriateness to query</td>
+<td>General QA</td>
+</tr>
+<tr>
+<td><strong>Coherence</strong></td>
+<td>Logical consistency</td>
+<td>All outputs</td>
+</tr>
+<tr>
+<td><strong>Fluency</strong></td>
+<td>Language quality</td>
+<td>Text generation</td>
+</tr>
+<tr>
+<td><strong>Factuality</strong></td>
+<td>Correctness of claims</td>
+<td>Information retrieval</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Human Review Process:</strong></p>
+<pre tabindex="0"><code>AI Output Generation
+    ↓
+Automated Screening (flags low-confidence)
+    ↓
+Human Expert Review
+    ↓
+Feedback Collection
+    ↓
+Model Improvement Loop
+</code></pre><p><strong>Review Prioritization:</strong></p>
+<ul>
+<li>High-risk domains (medical, legal, financial)</li>
+<li>Low-confidence outputs</li>
+<li>User-reported issues</li>
+<li>Random sampling for quality assurance</li>
+<li>New edge cases</li>
+</ul>
+<p><strong>Best Practices:</strong></p>
+<ul>
+<li>Clear evaluation criteria and rubrics</li>
+<li>Expert reviewer training and calibration</li>
+<li>Inter-rater reliability measurement</li>
+<li>Structured feedback mechanisms</li>
+<li>Integration with CI/CD pipelines</li>
+<li>Regular audit schedules</li>
+</ul>
+<p><strong>Tools and Platforms:</strong></p>
+<ul>
+<li>LangSmith for LLM observability</li>
+<li>Weights &amp; Biases for experiment tracking</li>
+<li>Custom annotation platforms</li>
+<li>A/B testing frameworks</li>
+</ul>
+<h3 id="6-organizational-governance-and-risk-management">6. Organizational Governance and Risk Management</h3>
+<p><strong>Framework:</strong> Enterprise-level processes for systematic hallucination risk management.</p>
+<p><strong>Governance Structure:</strong></p>
+<p><strong>Risk Assessment Process:</strong></p>
+<pre tabindex="0"><code>1. Use Case Identification
+   ↓
+2. Risk Analysis (likelihood × impact)
+   ↓
+3. Control Selection
+   ↓
+4. Implementation
+   ↓
+5. Monitoring &amp; Review
+   ↓
+6. Continuous Improvement
+</code></pre><p><strong>Key Components:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Activities</th>
+<th>Stakeholders</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Policy Development</strong></td>
+<td>Define acceptable use, risk tolerance</td>
+<td>Leadership, Legal, Compliance</td>
+</tr>
+<tr>
+<td><strong>Use Case Prioritization</strong></td>
+<td>Assess risk/value of applications</td>
+<td>Product, Risk Management</td>
+</tr>
+<tr>
+<td><strong>Training Programs</strong></td>
+<td>Educate users on AI limitations</td>
+<td>HR, Training, IT</td>
+</tr>
+<tr>
+<td><strong>Incident Response</strong></td>
+<td>Handle and learn from failures</td>
+<td>Operations, Support</td>
+</tr>
+<tr>
+<td><strong>Regulatory Compliance</strong></td>
+<td>Align with regulations (EU AI Act)</td>
+<td>Legal, Compliance</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Risk Classification Matrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Risk Level</th>
+<th>Characteristics</th>
+<th>Controls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Critical</strong></td>
+<td>Patient safety, legal liability</td>
+<td>Human oversight mandatory, extensive testing</td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>Financial decisions, sensitive data</td>
+<td>Strong guardrails, regular audits</td>
+</tr>
+<tr>
+<td><strong>Medium</strong></td>
+<td>Customer service, content generation</td>
+<td>Automated <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a>, sampling review</td>
+</tr>
+<tr>
+<td><strong>Low</strong></td>
+<td>Internal tools, creative applications</td>
+<td>Basic guardrails, user feedback</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Best Practices:</strong></p>
+<ul>
+<li>Establish AI ethics committee</li>
+<li>Document decision-making processes</li>
+<li>Maintain audit trails</li>
+<li>Regular stakeholder communication</li>
+<li>Scenario planning and tabletop exercises</li>
+<li>Continuous learning and adaptation</li>
+</ul>
+<h2 id="practical-implementation-roadmap">Practical Implementation Roadmap</h2>
+<h3 id="phase-1-assessment-and-planning-weeks-1-4">Phase 1: Assessment and Planning (Weeks 1-4)</h3>
+<p><strong>Activities:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"/> Identify use cases and prioritize by risk</li>
+<li><input disabled="" type="checkbox"/> Assess current AI capabilities and gaps</li>
+<li><input disabled="" type="checkbox"/> Define success metrics and KPIs</li>
+<li><input disabled="" type="checkbox"/> Select initial mitigation strategies</li>
+<li><input disabled="" type="checkbox"/> Allocate resources and budget</li>
+<li><input disabled="" type="checkbox"/> Establish governance structure</li>
+</ul>
+<h3 id="phase-2-technical-implementation-weeks-5-12">Phase 2: Technical Implementation (Weeks 5-12)</h3>
+<p><strong>Activities:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"/> Deploy <a data-lb="1" href="/blog/rag-vs-cag-knowledge-augmentation/" title="Explore the differences between Retrieval-Augmented Generation (RAG) and Cache-Augmented Generation (CAG), two powerful techniques for enhancing large language models with external knowledge. Learn when to use each approach and how they solve the knowledge gap problem in AI.">RAG</a> infrastructure (if applicable)</li>
+<li><input disabled="" type="checkbox"/> Develop prompt templates and guidelines</li>
+<li><input disabled="" type="checkbox"/> Implement guardrails and content filtering</li>
+<li><input disabled="" type="checkbox"/> Set up evaluation frameworks</li>
+<li><input disabled="" type="checkbox"/> Configure monitoring and alerting</li>
+<li><input disabled="" type="checkbox"/> Conduct initial testing</li>
+</ul>
+<h3 id="phase-3-integration-and-training-weeks-13-16">Phase 3: Integration and Training (Weeks 13-16)</h3>
+<p><strong>Activities:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"/> Integrate with existing systems</li>
+<li><input disabled="" type="checkbox"/> Train end users and support staff</li>
+<li><input disabled="" type="checkbox"/> Establish escalation procedures</li>
+<li><input disabled="" type="checkbox"/> Create documentation and playbooks</li>
+<li><input disabled="" type="checkbox"/> Pilot with limited user groups</li>
+<li><input disabled="" type="checkbox"/> Collect and analyze feedback</li>
+</ul>
+<h3 id="phase-4-deployment-and-optimization-weeks-17">Phase 4: Deployment and Optimization (Weeks 17+)</h3>
+<p><strong>Activities:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"/> Gradual rollout to production</li>
+<li><input disabled="" type="checkbox"/> Monitor performance metrics</li>
+<li><input disabled="" type="checkbox"/> Iterate based on real-world data</li>
+<li><input disabled="" type="checkbox"/> Regular model retraining</li>
+<li><input disabled="" type="checkbox"/> Continuous improvement cycles</li>
+<li><input disabled="" type="checkbox"/> Expand to additional use cases</li>
+</ul>
+<h2 id="strategy-comparison-matrix">Strategy Comparison Matrix</h2>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Complexity</th>
+<th>Cost</th>
+<th>Effectiveness</th>
+<th>Maintenance</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RAG</strong></td>
+<td>High</td>
+<td>High</td>
+<td>Very High</td>
+<td>Medium</td>
+<td>Factual domains with authoritative sources</td>
+</tr>
+<tr>
+<td><strong>Prompt Engineering</strong></td>
+<td>Low</td>
+<td>Low</td>
+<td>Medium-High</td>
+<td>Low</td>
+<td>All applications, first-line defense</td>
+</tr>
+<tr>
+<td><strong>Fine-Tuning</strong></td>
+<td>Very High</td>
+<td>Very High</td>
+<td>Very High</td>
+<td>High</td>
+<td>Specialized domains with data</td>
+</tr>
+<tr>
+<td><strong>Guardrails</strong></td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Low</td>
+<td>Risk mitigation, compliance</td>
+</tr>
+<tr>
+<td><strong>HITL Review</strong></td>
+<td>Medium</td>
+<td>High</td>
+<td>Very High</td>
+<td>Medium</td>
+<td>High-stakes, complex decisions</td>
+</tr>
+<tr>
+<td><strong>Governance</strong></td>
+<td>Low-Medium</td>
+<td>Low-Medium</td>
+<td>High</td>
+<td>Medium</td>
+<td>Organization-wide deployment</td>
+</tr>
+</tbody>
+</table>
+<h2 id="industry-specific-applications">Industry-Specific Applications</h2>
+<h3 id="healthcare">Healthcare</h3>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>Regulatory compliance (HIPAA, FDA)</li>
+<li>Patient safety paramount</li>
+<li>Medical accuracy critical</li>
+</ul>
+<p><strong>Recommended Stack:</strong></p>
+<pre tabindex="0"><code>- RAG with medical literature databases
+- Strict prompt constraints
+- Mandatory human expert review
+- Comprehensive audit trails
+- Specialized fine-tuning on clinical data
+</code></pre><h3 id="legal">Legal</h3>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>Case law accuracy</li>
+<li>Citation verification</li>
+<li>Professional liability protection</li>
+</ul>
+<p><strong>Recommended Stack:</strong></p>
+<pre tabindex="0"><code>- RAG with legal database integration
+- Citation validation systems
+- Lawyer review mandatory
+- Detailed provenance tracking
+- Conservative guardrails
+</code></pre><h3 id="financial-services">Financial Services</h3>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>Regulatory compliance (SEC, FINRA)</li>
+<li>Accurate market data</li>
+<li>Risk management</li>
+</ul>
+<p><strong>Recommended Stack:</strong></p>
+<pre tabindex="0"><code>- RAG with real-time market data
+- Strict prompt templates
+- Automated fact-checking
+- Compliance monitoring
+- Regular audits
+</code></pre><h3 id="customer-support">Customer Support</h3>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>Brand consistency</li>
+<li>Customer satisfaction</li>
+<li>Operational efficiency</li>
+</ul>
+<p><strong>Recommended Stack:</strong></p>
+<pre tabindex="0"><code>- RAG with policy documentation
+- Dynamic prompt engineering
+- Sentiment-based escalation
+- Quality monitoring
+- Continuous optimization
+</code></pre><h2 id="practical-examples">Practical Examples</h2>
+<h3 id="example-1-enterprise-hr-chatbot">Example 1: Enterprise HR Chatbot</h3>
+<p><strong>Scenario:</strong> HR <a data-lb="1" href="/en/glossary/chatbot/" title="Chatbot glossary entry">chatbot</a> answering employee benefits questions</p>
+<p><strong>Implementation:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#007f7f"># RAG Configuration</span>
+</span></span><span style="display:flex;"><span>knowledge_base = [
+</span></span><span style="display:flex;"><span>    <span style="color:#0ff;font-weight:bold">"Employee_Handbook_2024.pdf"</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#0ff;font-weight:bold">"Benefits_Guide.pdf"</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#0ff;font-weight:bold">"PTO_Policy.pdf"</span>
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007f7f"># Prompt Template</span>
+</span></span><span style="display:flex;"><span>system_prompt = <span style="color:#0ff;font-weight:bold">"""
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">You are an HR assistant. Answer ONLY using the provided 
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">HR documents. If the answer is not found, respond with:
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">"I don't have that information. Please contact HR at 
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">hr@company.com."
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">Never speculate about policies or benefits.
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">"""</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007f7f"># Guardrails</span>
+</span></span><span style="display:flex;"><span>guardrails = {
+</span></span><span style="display:flex;"><span>    <span style="color:#0ff;font-weight:bold">"require_citation"</span>: <span style="color:#fff;font-weight:bold">True</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#0ff;font-weight:bold">"confidence_threshold"</span>: <span style="color:#ff0;font-weight:bold">0.8</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#0ff;font-weight:bold">"escalate_if_uncertain"</span>: <span style="color:#fff;font-weight:bold">True</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="example-2-medical-diagnostic-assistant">Example 2: Medical Diagnostic Assistant</h3>
+<p><strong>Scenario:</strong> AI supporting radiologists in <a data-lb="1" href="/en/glossary/image-analysis/" title="Image Analysis glossary entry">image analysis</a></p>
+<p><strong>Implementation:</strong></p>
+<pre tabindex="0"><code>1. RAG: Medical literature + clinical guidelines
+2. Fine-tuning: Specialized radiology model
+3. Prompt: Strict diagnostic protocol following
+4. HITL: Mandatory radiologist verification
+5. Governance: FDA compliance documentation
+6. Monitoring: Continuous accuracy tracking
+</code></pre><h3 id="example-3-legal-research-tool">Example 3: Legal Research Tool</h3>
+<p><strong>Scenario:</strong> Case law research and citation verification</p>
+<p><strong>Implementation:</strong></p>
+<pre tabindex="0"><code>1. RAG: Legal database (Westlaw, LexisNexis)
+2. Prompt: Citation format requirements
+3. Guardrails: Automatic citation verification
+4. HITL: Lawyer review before client delivery
+5. Audit: Complete provenance tracking
+</code></pre><h2 id="monitoring-and-continuous-improvement">Monitoring and Continuous Improvement</h2>
+<h3 id="key-performance-indicators">Key Performance Indicators</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Description</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hallucination Rate</strong></td>
+<td>% of outputs with fabrications</td>
+<td>&lt; 2%</td>
+</tr>
+<tr>
+<td><strong>User Satisfaction</strong></td>
+<td>Rating of response quality</td>
+<td>&gt; 4.5/5</td>
+</tr>
+<tr>
+<td><strong>Escalation Rate</strong></td>
+<td>% requiring human intervention</td>
+<td>10-20%</td>
+</tr>
+<tr>
+<td><strong>Response Accuracy</strong></td>
+<td>Factual correctness score</td>
+<td>&gt; 95%</td>
+</tr>
+<tr>
+<td><strong>Confidence Calibration</strong></td>
+<td>Alignment of confidence with accuracy</td>
+<td>&gt; 0.8 correlation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="continuous-improvement-cycle">Continuous Improvement Cycle</h3>
+<pre tabindex="0"><code>Monitor Performance
+    ↓
+Identify Issues and Patterns
+    ↓
+Analyze Root Causes
+    ↓
+Implement Improvements
+    ↓
+Validate Changes
+    ↓
+Deploy Updates
+    ↓
+[Return to Monitor]
+</code></pre><h2 id="quick-reference-checklist">Quick Reference Checklist</h2>
+<p><strong>Pre-Deployment:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"/> Curate high-quality <a data-lb="1" href="/en/glossary/knowledge-base/" title="Knowledge Base glossary entry">knowledge base</a></li>
+<li><input disabled="" type="checkbox"/> Design role-based prompt templates</li>
+<li><input disabled="" type="checkbox"/> Implement RAG for factual grounding</li>
+<li><input disabled="" type="checkbox"/> Deploy content <a data-lb="1" href="/en/glossary/safety-guardrails/" title="Safety Guardrails glossary entry">safety guardrails</a></li>
+<li><input disabled="" type="checkbox"/> Establish evaluation framework</li>
+<li><input disabled="" type="checkbox"/> Train users on system capabilities and limitations</li>
+<li><input disabled="" type="checkbox"/> Create escalation procedures</li>
+</ul>
+<p><strong>Post-Deployment:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"/> Monitor hallucination rates</li>
+<li><input disabled="" type="checkbox"/> Track user satisfaction</li>
+<li><input disabled="" type="checkbox"/> Review flagged outputs</li>
+<li><input disabled="" type="checkbox"/> Collect user feedback</li>
+<li><input disabled="" type="checkbox"/> Regular model retraining</li>
+<li><input disabled="" type="checkbox"/> Update knowledge bases</li>
+<li><input disabled="" type="checkbox"/> Refine prompts and guardrails</li>
+<li><input disabled="" type="checkbox"/> Conduct periodic audits</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.tredence.com/blog/mitigating-hallucination-in-large-language-models" rel="nofollow noopener noreferrer" target="_blank">Tredence: Mitigating Hallucination in Large Language Models</a></li>
+<li><a href="https://insight.factset.com/ai-strategies-series-7-ways-to-overcome-hallucinations" rel="nofollow noopener noreferrer" target="_blank">FactSet: AI Strategies Series—7 Ways to Overcome Hallucinations</a></li>
+<li><a href="https://arxiv.org/abs/2401.01313" rel="nofollow noopener noreferrer" target="_blank">arXiv: Comprehensive Survey of Hallucination Mitigation Techniques</a></li>
+<li><a href="https://gizmodo.com/google-bard-ai-ad-incorrect-webb-telescope-facts-1850087798" rel="nofollow noopener noreferrer" target="_blank">Google Bard Telescope Error News</a></li>
+<li><a href="https://platform.openai.com/docs/api-reference/chat/create" rel="nofollow noopener noreferrer" target="_blank">OpenAI API Reference: Temperature Parameter</a></li>
+<li><a href="https://www.youtube.com/watch?v=rQ7-HqEgF40" rel="nofollow noopener noreferrer" target="_blank">Legal Citation Hallucinations</a></li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/prompt-template/">
+                    Prompt Template
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A reusable instruction blueprint for AI systems that combines fixed directions with customizable pla...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/prompt-template/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/in-context-learning/">
+                    In-Context Learning
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A capability that allows AI models to learn and perform new tasks by simply reading examples in a pr...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/in-context-learning/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/jailbreaking/">
+                    Jailbreaking (AI Jailbreaking)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI Jailbreaking is a technique that bypasses safety features in AI systems to make them generate har...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/jailbreaking/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/llm-as-judge/">
+                    LLM as Judge
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/en/glossary/llm-as-judge/" title="LLM as Judge glossary entry">LLM as Judge</a> is an AI evaluation method where one language model assesses the quality of outputs fro...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/llm-as-judge/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ai-chatbot/">
+                    AI Chatbot
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Explore AI chatbots: learn what they are, how they work with NLP, NLU, and LLMs, their types, benefi...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ai-chatbot/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ai-email-auto-response-generation/">
+                    AI Email Auto-Response Generation
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI technology that automatically reads incoming emails and generates personalized replies based on t...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ai-email-auto-response-generation/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/hallucination-mitigation-strategies/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

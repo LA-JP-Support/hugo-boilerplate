@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>交差検証 | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/cross-validation/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="機械学習におけるモデル評価、パフォーマンス評価、堅牢な検証戦略のための交差検証技術に関する包括的なガイド。" name="description"/>
+<meta content="交差検証, モデル検証, k分割検証, 機械学習評価, 統計的検証" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/cross-validation/" property="og:url"/>
+<meta content="交差検証 | SmartWeb" property="og:title"/>
+<meta content="機械学習におけるモデル評価、パフォーマンス評価、堅牢な検証戦略のための交差検証技術に関する包括的なガイド。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/cross-validation/" name="twitter:url"/>
+<meta content="交差検証 | SmartWeb" name="twitter:title"/>
+<meta content="機械学習におけるモデル評価、パフォーマンス評価、堅牢な検証戦略のための交差検証技術に関する包括的なガイド。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190816" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190816" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190816"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126096741115000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126096741115000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126096741115000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126096741115000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">交差検証</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        交差検証
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Cross-Validation
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          機械学習におけるモデル評価、パフォーマンス評価、堅牢な検証戦略のための交差検証技術に関する包括的なガイド。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                交差検証
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                モデル検証
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                k分割検証
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                機械学習評価
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                統計的検証
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="クロスバリデーション交差検証とは">クロスバリデーション(交差検証)とは</h2>
+<p>クロスバリデーション(交差検証)は、<a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>と<a data-lb="1" href="/ja/glossary/data-science/" title="データサイエンスは、数学、統計学、コンピュータサイエンス、および専門領域の知識を組み合わせて、複雑なデータセットから実用的なインサイトを抽出する学際的な分野です。">データサイエンス</a>において予測モデルの性能と汎化能力を評価するために使用される基本的な統計手法です。このリサンプリング手法は、データセットを補完的なサブセットに体系的に分割し、一方のサブセット(訓練セット)で分析を実行しながら、別のサブセット(検証セットまたはテストセット)で分析を検証します。クロスバリデーションの主な目的は、モデル訓練プロセスで使用されなかった独立したデータセットに適用された際に、予測モデルが実際にどの程度正確に機能するかを推定することです。</p>
+<p>この手法は、機械学習における最も重要な課題の一つである過学習に対処します。モデルが特定のデータセットで訓練されると、より広い母集団に適用可能な汎化可能なパターンではなく、その特定のデータに固有のパターンを学習してしまう可能性があります。クロスバリデーションは、モデルが一度も見たことのないデータでモデルの性能をテストすることで、この問題を特定するのに役立ちます。訓練セットと検証セットのさまざまな組み合わせを循環させることで、クロスバリデーションは単一の訓練-テスト分割よりも堅牢なモデル性能の推定を提供します。このアプローチは、限られたデータセットを扱う際に特に価値があります。テスト用に大部分のデータを確保すると、訓練に利用できるデータ量が大幅に減少してしまうためです。</p>
+<p>クロスバリデーションは、単純なモデル評価を超えた複数の目的を果たします。実務者が異なるアルゴリズムを客観的に比較し、ハイパーパラメータを効果的に調整し、モデル選択について情報に基づいた意思決定を行うことを可能にします。この手法は性能指標の信頼区間を提供し、データサイエンティストがモデルの平均性能だけでなく、その性能のばらつきも理解するのに役立ちます。この包括的な評価アプローチは、責任ある機械学習実践の業界標準となっており、モデルが訓練データで正確であるだけでなく、新しい未知のデータに遭遇する実世界のシナリオに展開された際にも信頼できることを保証します。</p>
+<h2 id="主要なクロスバリデーション技術">主要なクロスバリデーション技術</h2>
+<p><strong>K分割交差検証</strong>は最も広く使用されるクロスバリデーション技術であり、データセットをk個の等しいサイズの分割(フォールド)に分けます。モデルはk-1個のフォールドで訓練され、残りのフォールドで検証されます。このプロセスはk回繰り返され、各フォールドが検証セットとして正確に1回使用されます。</p>
+<p><strong>層化交差検証</strong>は、完全なデータセットと同じ各ターゲットクラスからのサンプルの割合を各フォールドで維持します。この手法は、ランダムな分割では全体のクラス分布を表さないフォールドが生じる可能性がある不均衡なデータセットに特に重要です。</p>
+<p><strong>一つ抜き交差検証(LOOCV)</strong><!-- -->は、単一の観測値を検証セットとして使用し、残りの観測値を訓練セットとして使用します。このプロセスはデータセット内の各観測値に対して繰り返され、各反復で最大量の訓練データを提供します。</p>
+<p><strong>時系列交差検証</strong>は、過去の観測値のみを使用して将来を予測することで、データの時間的順序を尊重します。このアプローチは、将来の情報が過去の出来事を予測するために使用された場合に発生する可能性のあるデータリークを防ぎます。</p>
+<p><strong>グループ交差検証</strong>は、同じグループ(同じ患者や地理的位置からのデータなど)からのサンプルが訓練セットまたは検証セットのいずれかにまとめて保持されることを保証し、過度に楽観的な性能推定を防ぎます。</p>
+<p><strong>ネスト交差検証</strong>は、性能推定のための外側のループとハイパーパラメータ調整のための内側のループを使用して、モデル選択と性能推定を組み合わせます。このアプローチは、モデルの最適化を可能にしながら、偏りのない性能推定を提供します。</p>
+<p><strong>モンテカルロ交差検証</strong>は、データを訓練セットと検証セットにランダムに複数回分割し、各分割で訓練と検証に異なる割合のデータを使用する可能性があります。</p>
+<h2 id="クロスバリデーションの仕組み">クロスバリデーションの仕組み</h2>
+<p>クロスバリデーションプロセスは、包括的なモデル評価を保証する体系的なワークフローに従います:</p>
+<ol>
+<li>
+<p><strong>データ準備</strong>: データセットをクリーニングおよび前処理し、欠損値、外れ値、特徴量スケーリングを必要に応じて処理します。選択したクロスバリデーション技術に適した形式でデータが整っていることを確認します。</p>
+</li>
+<li>
+<p><strong>フォールド作成</strong>: 選択した分割戦略を使用して、データセットをk個のフォールド(通常5または10)に分割します。層化交差検証の場合、フォールド間でクラスの割合を維持します。</p>
+</li>
+<li>
+<p><strong>モデル訓練</strong>: 結合されたデータを訓練セットとして使用し、k-1個のフォールドで機械学習モデルを訓練します。訓練データに必要な前処理ステップを適用します。</p>
+</li>
+<li>
+<p><strong>モデル検証</strong>: 訓練されたモデルを保留されたフォールド(検証セット)に適用して予測を生成します。精度、適合率、再現率、平均二乗誤差などの性能指標を計算します。</p>
+</li>
+<li>
+<p><strong>反復</strong>: 訓練と検証のプロセスをk回繰り返し、毎回異なるフォールドを検証セットとして使用し、残りのフォールドを訓練セットとして使用します。</p>
+</li>
+<li>
+<p><strong>性能の集約</strong>: すべてのk回の反復から性能指標を収集し、平均性能、標準偏差、信頼区間を含む要約統計を計算します。</p>
+</li>
+<li>
+<p><strong>モデル選択</strong>: クロスバリデーションスコアに基づいて、異なるアルゴリズムまたはハイパーパラメータ設定間で結果を比較し、最良の性能構成を特定します。</p>
+</li>
+<li>
+<p><strong>最終モデル訓練</strong>: クロスバリデーションを通じて特定されたハイパーパラメータを使用して、展開用にデータセット全体で選択されたモデルを訓練します。</p>
+</li>
+</ol>
+<p><strong>ワークフローの例</strong>: 分類問題の5分割交差検証では、1000サンプルのデータセットが各200サンプルの5つのフォールドに分割されます。反復1では、フォールド2-5(800サンプル)がモデルを訓練し、フォールド1(200サンプル)がそれを検証します。このプロセスは5回繰り返され、各フォールドが検証セットとして1回使用されます。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>堅牢な性能推定</strong>は、複数の検証セットにわたる結果を平均化することで、単一の訓練-テスト分割と比較してより信頼性の高いモデル性能の推定を提供し、特定のデータ分割が性能指標に与える影響を軽減します。</p>
+<p><strong>過学習の検出</strong>は、訓練中に使用されなかったデータで一貫してテストすることで、訓練データでは良好に機能するが未知のデータでは不良なモデルを特定するのに役立ち、汎化可能なパターンを学習するのではなく記憶したモデルを明らかにします。</p>
+<p><strong>モデル比較</strong>は、同一のデータ分割にわたって標準化された性能指標を提供することで、異なるアルゴリズムまたはモデル構成間の客観的な比較を可能にし、公平な評価条件を保証します。</p>
+<p><strong>ハイパーパラメータ最適化</strong>は、異なるパラメータの組み合わせに対して信頼性の高い性能フィードバックを提供することで、モデルパラメータの体系的な調整をサポートし、より最適化されたモデルにつながります。</p>
+<p><strong>信頼区間</strong>は、性能のばらつきの統計的測定を生成し、実務者が平均性能だけでなく、モデル予測の信頼性と一貫性も理解できるようにします。</p>
+<p><strong>効率的なデータ利用</strong>は、すべてのサンプルが異なるフォールドにわたって訓練と検証の両方の目的を果たすことを保証することで、利用可能なデータの使用を最大化し、小規模データセットに特に価値があります。</p>
+<p><strong>分散の削減</strong>は、複数の訓練-検証分割にわたって平均化することで性能推定の分散を減らし、より安定した信頼できる性能指標を提供します。</p>
+<p><strong>統計的有意性検定</strong>は、モデル間の性能差がランダムな変動によるものではなく統計的に有意であるかどうかを判断するための正式な統計検定を可能にします。</p>
+<p><strong><a data-lb="1" href="/ja/glossary/bias/" title="バイアス の用語集ページ">バイアス</a>の削減</strong>は、検証のためにデータのさまざまな分割を使用することで、単一の訓練-テスト分割から発生する可能性のある選択バイアスを最小限に抑えます。</p>
+<p><strong>展開の信頼性</strong>は、さまざまなデータサブセットにわたる一貫した性能を示すことでモデル展開の信頼性を高め、モデルが新しいデータに対してうまく汎化することを示唆します。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong>医療診断システム</strong>は、臨床展開前に異なる人口統計グループや医療状態にわたって信頼性の高い性能を保証するために、多様な患者集団にわたって診断アルゴリズムを検証します。</p>
+<p><strong>金融リスク評価</strong>は、規制遵守を維持しながら、異なる期間と顧客セグメントにわたって一貫した性能を保証するために、信用スコアリングモデルと不正検出システムを評価します。</p>
+<p><strong>画像認識アプリケーション</strong>は、異なる照明条件、角度、物体の変化にわたって堅牢な性能を確認するために、多様な画像データセットでコンピュータビジョンモデルをテストします。</p>
+<p><strong>自然言語処理</strong>は、広範な適用可能性を保証するために、多様な言語パターンとドメインにわたってテキスト分類、感情分析、言語翻訳モデルを検証します。</p>
+<p><strong>推薦システム</strong>は、異なるユーザーセグメントと製品カテゴリにわたって一貫した性能を保証するために、協調フィルタリングとコンテンツベースの推薦アルゴリズムを評価します。</p>
+<p><strong>自動運転車システム</strong>は、安全性と信頼性を保証するために、さまざまな運転条件、気象パターン、地理的位置にわたって知覚と意思決定アルゴリズムを評価します。</p>
+<p><strong>創薬研究</strong>は、化学空間にわたって有望な薬物候補の信頼性の高い特定を保証するために、分子特性予測モデルと化合物スクリーニングアルゴリズムを検証します。</p>
+<p><strong>マーケティングキャンペーン最適化</strong>は、異なる市場状況と顧客行動にわたって効果的なターゲティングを保証するために、顧客セグメンテーションと応答予測モデルをテストします。</p>
+<p><strong>品質管理システム</strong>は、異なる生産バッチと環境条件にわたって一貫した性能を保証するために、製造欠陥検出モデルを評価します。</p>
+<p><strong>気候モデリング</strong>は、正確な予測能力を保証するために、異なる地理的地域と時間的期間にわたって天気予測と気候変動モデルを検証します。</p>
+<h2 id="クロスバリデーション技術の比較">クロスバリデーション技術の比較</h2>
+<table>
+<thead>
+<tr>
+<th>技術</th>
+<th>データ使用率</th>
+<th>計算コスト</th>
+<th>最適な使用例</th>
+<th>利点</th>
+<th>制限事項</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>K分割</td>
+<td>高</td>
+<td>中程度</td>
+<td>汎用目的</td>
+<td>バイアス-分散のバランス</td>
+<td>データ構造を保持しない可能性</td>
+</tr>
+<tr>
+<td>層化K分割</td>
+<td>高</td>
+<td>中程度</td>
+<td>不均衡データセット</td>
+<td>クラス分布を維持</td>
+<td>分類のみ</td>
+</tr>
+<tr>
+<td>LOOCV</td>
+<td>最大</td>
+<td>非常に高</td>
+<td>小規模データセット</td>
+<td>最小バイアス</td>
+<td>高分散、計算コストが高い</td>
+</tr>
+<tr>
+<td>時系列CV</td>
+<td>連続的</td>
+<td>中程度</td>
+<td>時間的データ</td>
+<td>時間順序を尊重</td>
+<td>時間的構造が必要</td>
+</tr>
+<tr>
+<td>グループCV</td>
+<td>グループ化</td>
+<td>中程度</td>
+<td>クラスター化データ</td>
+<td>データリークを防止</td>
+<td>グループ情報が必要</td>
+</tr>
+<tr>
+<td>モンテカルロCV</td>
+<td>可変</td>
+<td>低-中程度</td>
+<td>迅速な評価</td>
+<td>柔軟な分割比率</td>
+<td>体系的なカバレッジが少ない</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>計算の複雑さ</strong>は、フォールド数とモデルの複雑さとともに大幅に増加し、大規模データセットや計算集約的なアルゴリズムに対してクロスバリデーションが法外に高価になる可能性があります。</p>
+<p><strong>データリークの防止</strong>は、検証セットからの情報がモデル訓練に不注意に影響を与えないように、特に前処理ステップが誤って適用された場合に、細心の注意を払う必要があります。</p>
+<p><strong>時間的依存関係</strong>は、時系列データでランダムなクロスバリデーション分割によって違反される可能性があり、将来の情報が過去の出来事を予測するために使用された場合、過度に楽観的な性能推定につながります。</p>
+<p><strong>クラス不均衡の問題</strong>は、少数派クラスの例が非常に少ないか全くない検証フォールドを生じさせる可能性があり、信頼性の低い性能推定と潜在的なモデル選択エラーにつながります。</p>
+<p><strong>ハイパーパラメータ調整バイアス</strong>は、クロスバリデーションがモデル選択と性能推定の両方に使用される場合に発生する可能性があり、過度に楽観的な性能推定につながる可能性があります。</p>
+<p><strong>小規模データセットの制限</strong>は、個々のフォールドに信頼性の高いモデル訓練または検証のための不十分なデータが含まれている場合、クロスバリデーション推定の高い分散を引き起こす可能性があります。</p>
+<p><strong>相関のある観測値</strong>は、データセット内で関連するサンプルが訓練セットと検証セットの両方に現れる場合、独立性の仮定に違反し、過学習につながる可能性があります。</p>
+<p><strong>指標選択の課題</strong>は、クロスバリデーション中に最適化する性能指標を慎重に検討する必要があり、異なる指標が異なるモデル選択の決定につながる可能性があります。</p>
+<p><strong>フォールドサイズの感度</strong>は、バイアス-分散のトレードオフに影響を与え、小さいフォールドは分散を増加させ、大きいフォールドは性能推定のバイアスを増加させる可能性があります。</p>
+<p><strong>再現性の懸念</strong>は、フォールド作成におけるランダムシードの依存性から生じ、異なる実行間で一貫した結果を得るために慎重なドキュメント化とシード管理が必要です。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>層化戦略</strong>は、分類問題に対して採用すべきであり、各フォールドが元のデータセットと同じクラス分布を維持することを保証し、偏った性能推定を防ぎます。</p>
+<p><strong>前処理パイプライン</strong>は、各フォールドに個別に適用する必要があり、前処理パラメータを訓練データのみに適合させ、検証データに適用してデータリークを防ぎます。</p>
+<p><strong>ランダムシード管理</strong>は、フォールド作成に使用されるランダムシードを設定および文書化することで再現可能な結果を保証し、異なる実行と環境間で一貫した結果を可能にします。</p>
+<p><strong>適切なK選択</strong>は、ほとんどのアプリケーションでk=5またはk=10を使用し、データセットサイズの制約を考慮しながら、計算コストと信頼性の高い性能推定のバランスをとります。</p>
+<p><strong>性能指標の整合</strong>は、ビジネス目標と問題タイプに一致する必要があり、不均衡な分類には<a data-lb="1" href="/ja/glossary/f1-score/" title="F1スコアは、機械学習における重要な評価指標であり、適合率と再現率の調和平均を表します。偽陽性と偽陰性のバランスを取るため、不均衡なデータセットに最適です。">F1スコア</a>、回帰問題にはRMSEなどの適切な指標を使用します。</p>
+<p><strong>統計的有意性検定</strong>は、観察された差異がランダムな変動によるものではなく統計的に意味があるかどうかを判断するために、適切な統計検定を使用してモデル性能を比較します。</p>
+<p><strong>ネスト検証構造</strong>は、過度に楽観的な性能推定を避けるために、ネスト交差検証を使用してハイパーパラメータ調整と性能推定を分離します。</p>
+<p><strong>データ分割のドキュメント化</strong>は、再現性と透明性のために使用されたグループ化または層化戦略を含む、データがどのように分割されたかの明確な記録を維持します。</p>
+<p><strong><a data-lb="1" href="/ja/glossary/computational-resources/" title="CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。">計算リソース</a>計画</strong>は、特に大規模データセットや複雑なモデルの場合、技術とフォールド数を選択する際にクロスバリデーションの計算コストを考慮します。</p>
+<p><strong>検証セットの独立性</strong>は、偏りのない評価を維持するために、検証データがモデル訓練、特徴選択、またはモデル開発の他の側面に決して使用されないことを保証します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>ネスト交差検証</strong>は、外側のループがモデル性能を推定し、内側のループがハイパーパラメータ最適化を実行する二重ループ構造を実装し、調整されたモデルに対する偏りのない性能推定を提供します。</p>
+<p><strong>敵対的検証</strong>は、訓練サンプルとテストサンプルを区別する分類器を訓練することで、訓練分布とテスト分布の違いを検出するために機械学習を使用し、潜在的なドメインシフトの問題を特定します。</p>
+<p><strong>パージ交差検証</strong>は、金融時系列アプリケーションで検証セットに時間的に近すぎる観測値を削除し、高頻度取引戦略における先読みバイアスを防ぎます。</p>
+<p><strong>組み合わせパージ交差検証</strong>は、時間的制約とパージ要件を維持しながら、訓練セットとテストセットのすべての可能な組み合わせを体系的にテストすることで、パージ交差検証を拡張します。</p>
+<p><strong>ブートストラップ交差検証</strong>は、ブートストラップサンプリングとクロスバリデーションを組み合わせて、より堅牢な性能推定と信頼区間を提供し、特に小規模データセットに有用です。</p>
+<p><strong>ブロック交差検証</strong>は、時系列データの連続する観測値をブロックにグループ化し、時間的構造を尊重しながら、異なる期間にわたって複数の検証機会を提供します。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>自動クロスバリデーション選択</strong>は、メタ学習アプローチを使用して、データセットの特性と問題要件に基づいて最も適切なクロスバリデーション技術を自動的に選択します。</p>
+<p><strong>分散クロスバリデーション</strong>は、<a data-lb="1" href="/ja/glossary/cloud-computing-glossary-comprehensive-guide-for-ai-infrastructure-deployment/" title="スポットインスタンスは、AWS、Azure、GCPが提供する割引価格のクラウドコンピューティングリソースで、バッチ処理、分析、機械学習トレーニングなどの耐障害性ワークロードに最適です。">クラウドコンピューティング</a>と並列処理を活用して、大規模データセットと複雑なディープラーニングモデルに対してクロスバリデーションを計算的に実行可能にします。</p>
+<p><strong>適応的クロスバリデーション</strong>は、モデル性能とデータセットの特性に基づいて検証戦略を動的に調整し、特定のアプリケーションのバイアス-分散のトレードオフを最適化します。</p>
+<p><strong>プライバシー保護クロスバリデーション</strong>は、連合学習や差分プライバシーなどの技術を使用して、機密データを共有せずに分散データセット間でモデル検証を可能にします。</p>
+<p><strong>継続的クロスバリデーション</strong>は、ストリーミングデータアプリケーションにリアルタイムのモデル検証を提供し、新しいデータが利用可能になるにつれて性能推定を継続的に更新します。</p>
+<p><strong>多目的クロスバリデーション</strong>は、モデル選択中に複数の性能基準を同時に最適化し、精度、公平性、解釈可能性、計算効率のバランスをとります。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Kohavi, R. (1995). A study of cross-validation and bootstrap for accuracy estimation and model selection. International Joint Conference on Artificial Intelligence.</p>
+</li>
+<li>
+<p>Hastie, T., Tibshirani, R., &amp; Friedman, J. (2009). The Elements of Statistical Learning: Data Mining, Inference, and Prediction. Springer.</p>
+</li>
+<li>
+<p>Varma, S., &amp; Simon, R. (2006). Bias in error estimation when using cross-validation for model selection. BMC Bioinformatics, 7(1), 91.</p>
+</li>
+<li>
+<p>Arlot, S., &amp; Celisse, A. (2010). A survey of cross-validation procedures for model selection. Statistics Surveys, 4, 40-79.</p>
+</li>
+<li>
+<p>Bergmeir, C., &amp; Benítez, J. M. (2012). On the use of cross-validation for time series predictor evaluation. Information Sciences, 191, 192-213.</p>
+</li>
+<li>
+<p>Tashman, L. J. (2000). Out-of-sample tests of forecasting accuracy: an analysis and review. International Journal of Forecasting, 16(4), 437-450.</p>
+</li>
+<li>
+<p>Stone, M. (1974). Cross-validatory choice and assessment of statistical predictions. Journal of the Royal Statistical Society, 36(2), 111-147.</p>
+</li>
+<li>
+<p>Browne, M. W. (2000). Cross-validation methods. Journal of Mathematical Psychology, 44(1), 108-132.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/model-evaluation/">
+                    モデル評価
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    機械学習モデルのパフォーマンスと信頼性を評価するためのモデル評価技術、メトリクス、ベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/model-evaluation/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/validation-set/">
+                    検証セット
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    機械学習における検証セットの包括的ガイド - 定義、実装、ベストプラクティス、およびモデル評価のための高度なテクニックを解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/validation-set/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/overfitting/">
+                    過学習
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    機械学習における過学習の包括的ガイド:原因、検出方法、防止テクニック、およびモデル汎化のベストプラクティス。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/overfitting/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/cross-validation/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190816"></script>
+</body>
+</html>

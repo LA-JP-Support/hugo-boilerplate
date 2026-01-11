@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Knowledge Base Connector | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/knowledge-base-connector/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/knowledge-base-connector/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/knowledge-base-connector/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/knowledge-base-connector/" hreflang="x-default" rel="alternate"/>
+<meta content="A bridge connecting AI chatbots to knowledge sources like documents and databases, enabling them to provide accurate, up-to-date answers based on specific information rather than general knowledge." name="description"/>
+<meta content="Knowledge Base Connector, Retrieval Augmented Generation, AI Chatbot, Vector Database, Automation" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/knowledge-base-connector/" property="og:url"/>
+<meta content="Knowledge Base Connector | SmartWeb" property="og:title"/>
+<meta content="A bridge connecting AI chatbots to knowledge sources like documents and databases, enabling them to provide accurate, up-to-date answers based on specific information rather than general knowledge." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/knowledge-base-connector/" name="twitter:url"/>
+<meta content="Knowledge Base Connector | SmartWeb" name="twitter:title"/>
+<meta content="A bridge connecting AI chatbots to knowledge sources like documents and databases, enabling them to provide accurate, up-to-date answers based on specific information rather than general knowledge." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Knowledge Base Connector</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Knowledge Base Connector
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A bridge connecting AI chatbots to knowledge sources like documents and databases, enabling them to provide accurate, up-to-date answers based on specific information rather than general knowledge.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Knowledge Base Connector
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Retrieval Augmented Generation
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI Chatbot
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Vector Database
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Automation
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-knowledge-base-connector">What is a Knowledge Base Connector?</h2>
+<p>A <a data-lb="1" href="/en/glossary/knowledge-base/" title="Knowledge Base glossary entry">Knowledge Base</a> Connector acts as a bridge between AI-powered conversational agents and knowledge repositories, such as documentation, FAQs, policy manuals, or internal wikis. In the context of Retrieval Augmented Generation (<a data-lb="1" href="/blog/rag-vs-cag-knowledge-augmentation/" title="Explore the differences between Retrieval-Augmented Generation (RAG) and Cache-Augmented Generation (CAG), two powerful techniques for enhancing large language models with external knowledge. Learn when to use each approach and how they solve the knowledge gap problem in AI.">RAG</a>), it is the critical component that allows a Large Language Model (LLM) to dynamically retrieve, process, and reason over private or proprietary data, rather than relying solely on static, pre-trained knowledge.</p>
+<p>Knowledge Base Connectors transform AI chatbots from generic responders into intelligent assistants with access to specific, up-to-date information. They connect to structured databases, unstructured documents, and real-time data sources, enabling semantic search via vector embeddings. This integration is integral for modern RAG pipelines, delivering context-aware and accurate responses grounded in authoritative knowledge.</p>
+<p><strong>Core Capabilities:</strong></p>
+<ul>
+<li>Connects to structured (databases, CSV) and unstructured (PDFs, HTML, images) data sources</li>
+<li>Supports ingestion, indexing, and real-time retrieval of information</li>
+<li>Enables semantic search via vector embeddings</li>
+<li>Provides source attribution and citation capabilities</li>
+<li>Maintains data freshness through automated syncing</li>
+</ul>
+<h2 id="technical-workflow-in-rag-architecture">Technical Workflow in RAG Architecture</h2>
+<h3 id="1-data-preparation--ingestion">1. Data Preparation &amp; Ingestion</h3>
+<p><strong>Supported Sources:</strong> Connectors ingest files from cloud storage (Google Drive, SharePoint), internal drives, URLs, APIs, or direct database connections.</p>
+<p><strong>Formats:</strong> Support for PDFs, DOCX, HTML, JSON, CSV, images, and more specialized formats.</p>
+<p><strong>Ingestion Methods:</strong></p>
+<ul>
+<li>Drag-and-drop uploads for manual addition</li>
+<li>Automated crawlers for website content</li>
+<li>Third-party connectors for cloud platforms</li>
+<li>API integrations for real-time data feeds</li>
+</ul>
+<p><strong>Real-Time Sync:</strong> Incremental updates and scheduled syncs ensure knowledge base stays current without manual intervention.</p>
+<h3 id="2-document-chunking--embedding">2. Document Chunking &amp; Embedding</h3>
+<p><strong>Chunking Strategy:</strong> Documents are split into contextually meaningful segments (paragraphs, sections) to optimize retrieval <a data-lb="1" href="/en/glossary/precision/" title="Precision glossary entry">precision</a>. Chunk size typically ranges from 512 to 2048 tokens depending on use case.</p>
+<p><strong>Embedding Generation:</strong> Each chunk is converted into a high-dimensional vector using embedding models (<a data-lb="1" href="/en/glossary/openai/" title="OpenAI glossary entry">OpenAI</a>, Cohere, Sentence Transformers). These vectors encode semantic meaning, enabling similarity-based retrieval.</p>
+<p><strong>Vector Storage:</strong> Embeddings are stored in specialized vector databases (<a data-lb="1" href="/en/glossary/pinecone/" title="Pinecone glossary entry">Pinecone</a>, <a data-lb="1" href="/en/glossary/weaviate/" title="Weaviate glossary entry">Weaviate</a>, OpenSearch) along with metadata for filtering and attribution.</p>
+<h3 id="3-indexing">3. Indexing</h3>
+<p><strong>Mapping:</strong> Each embedding is indexed with references to original document and metadata (title, section, source, timestamp, author).</p>
+<p><strong>Optimized Search:</strong> Facilitates rapid semantic search across large datasets. Modern vector databases can handle millions of documents with sub-second query times.</p>
+<p><strong>Metadata Enrichment:</strong> Additional context stored alongside embeddings enables filtered searches, temporal queries, and <a data-lb="1" href="/en/glossary/access-control/" title="Access Control glossary entry">access control</a>.</p>
+<h3 id="4-retrieval">4. Retrieval</h3>
+<p><strong>Query Embedding:</strong> User queries are embedded using same model as knowledge base to maintain semantic alignment.</p>
+<p><strong>Similarity Search:</strong> Connector performs nearest-neighbor search in vector store to retrieve most relevant document chunks. Typical retrieval returns top 3-10 most similar chunks.</p>
+<p><strong>Filtering:</strong> Results can be filtered based on metadata, source type, recency, or custom attributes to ensure relevance.</p>
+<h3 id="5-augmentation">5. Augmentation</h3>
+<p><strong>Prompt Construction:</strong> Retrieved document chunks are injected into LLM prompt as context. Typical pattern: “Based on the following information: [retrieved chunks], answer: [user query]”</p>
+<p><strong>Response Generation:</strong> LLM generates response grounded in retrieved knowledge, often including source citations for transparency and verifiability.</p>
+<p><strong>Quality Enhancement:</strong> RAG significantly reduces hallucinations by providing factual grounding from authoritative sources.</p>
+<h3 id="6-response-delivery--automation">6. Response Delivery &amp; Automation</h3>
+<p><strong>Answer Delivery:</strong> Returns answer to user, potentially with references or direct links to source documents.</p>
+<p><strong>Downstream Actions:</strong> May trigger further automation—updating records, escalating support tickets, or triggering workflows in platforms like <a data-lb="1" href="/en/glossary/n8n/" title="n8n glossary entry">n8n</a> or Automation Anywhere.</p>
+<p><strong>Feedback Loop:</strong> User interactions can inform retrieval quality, enabling continuous improvement of knowledge base organization.</p>
+<h2 id="platform-implementation-examples">Platform Implementation Examples</h2>
+<h3 id="n8n-rag-chatbot">n8n RAG Chatbot</h3>
+<p><strong>Workflow <a data-lb="1" href="/en/glossary/visualization/" title="Visualization glossary entry">Visualization</a>:</strong> Each step (ingestion, embedding, retrieval, augmentation) represented as node in n8n’s visual workflow builder.</p>
+<p><strong>Integration:</strong> Connects to sources like Google Drive, APIs, or GitHub OpenAPI specs through pre-built nodes.</p>
+<p><strong>Vector Store:</strong> Typically uses Pinecone or other modern vector databases with native integrations.</p>
+<p><strong>LLM Integration:</strong> Uses OpenAI GPT or other LLMs for embedding and generative response, configurable via <a data-lb="1" href="/en/glossary/api-keys/" title="API Keys glossary entry">API keys</a>.</p>
+<h3 id="automation-anywhere-knowledge-base">Automation Anywhere Knowledge Base</h3>
+<p><strong>Centralized Repository:</strong> Upload, store, and search through documents and URLs in unified interface.</p>
+<p><strong>Connectors:</strong> Import from Google Drive, SharePoint, Confluence, databases, or use web crawlers for automated content discovery.</p>
+<p><strong>Fine-Tuning:</strong> Add Q&amp;A pairs, refine documents, and tune retrieval parameters for optimal performance.</p>
+<p><strong>Search &amp; Verification:</strong> Test retrieval before deploying to chatbots or agents, ensuring quality assurance.</p>
+<h3 id="stack-ai-health-chatbot">Stack AI Health Chatbot</h3>
+<p><strong>Custom RAG Pipeline:</strong> Demonstrates building healthcare <a data-lb="1" href="/en/glossary/chatbot/" title="Chatbot glossary entry">chatbot</a> that retrieves and summarizes specific medical documentation, ensuring responses are accurate and compliant with regulations.</p>
+<p><strong>Compliance Features:</strong> Includes audit trails, source attribution, and controlled access to sensitive information.</p>
+<h3 id="amazon-bedrock-knowledge-bases">Amazon Bedrock Knowledge Bases</h3>
+<p><strong>Managed Data Connectors:</strong> Connect directly to S3 buckets, databases, or other enterprise data sources with minimal configuration.</p>
+<p><strong>Automated Embedding &amp; Indexing:</strong> Utilizes Bedrock’s built-in models and vector stores, reducing implementation complexity.</p>
+<p><strong>Secure Retrieval:</strong> Includes robust access controls, encryption at rest and in transit, and comprehensive auditing.</p>
+<p><strong>Enterprise Features:</strong> Supports multi-region deployment, high availability, and integration with AWS identity services.</p>
+<h2 id="real-world-use-cases">Real-World Use Cases</h2>
+<h3 id="internal-knowledge-base-chatbots">Internal Knowledge Base Chatbots</h3>
+<p>Employees ask questions about HR policies, compliance procedures, or SOPs. Connector fetches and summarizes specific sections from internal documentation, providing accurate answers with source citations. Reduces HR support tickets by 40-60% through <a data-lb="1" href="/en/glossary/self-service/" title="Self-Service glossary entry">self-service</a>.</p>
+<h3 id="developer-documentation-assistants">Developer Documentation Assistants</h3>
+<p>Developers query API documentation for code examples, parameter definitions, or integration guides. Connector retrieves relevant snippets and explanations, accelerating development workflows. Example: n8n GitHub API Chatbot provides instant access to API documentation.</p>
+<h3 id="financial-analyst-assistants">Financial Analyst Assistants</h3>
+<p>Fetches real-time financial data, market sentiment, and historical reports from multiple sources. Uses HTTP request nodes to pull data; LLM generates analytical summaries with proper attribution. Enables rapid response to market events.</p>
+<h3 id="customer-support-automation">Customer Support Automation</h3>
+<p>Technical support chatbots access product manuals, troubleshooting guides, and known issue databases. Provides step-by-step solutions with references to official documentation. Reduces average resolution time by 50%.</p>
+<h3 id="multimodal-retrieval">Multimodal Retrieval</h3>
+<p>Advanced connectors support images, tables, diagrams, and charts, enabling richer responses. Can extract information from technical drawings, flowcharts, or data visualizations.</p>
+<h3 id="compliance-and-legal-research">Compliance and Legal Research</h3>
+<p>Legal teams search through contracts, regulations, and case law. Connector retrieves relevant precedents and regulatory text, significantly reducing research time while ensuring accuracy.</p>
+<h2 id="business-benefits">Business Benefits</h2>
+<p><strong>Accuracy:</strong> Responses grounded in latest organizational knowledge, reducing misinformation and outdated guidance. RAG reduces hallucinations by 70-90% compared to standard LLMs.</p>
+<p><strong>Scalability:</strong> New sources and formats can be added as business needs evolve without retraining models or extensive development work.</p>
+<p><strong>Cost-Efficiency:</strong> Reduces manual knowledge curation and repetitive support efforts. Average cost savings of 30-50% in support operations.</p>
+<p><strong>Enhanced User Experience:</strong> Delivers rapid, conversational, context-aware answers 24/7 without wait times.</p>
+<p><strong>Actionability:</strong> Integration with workflow platforms automates follow-ups, logging, and escalations based on query intent.</p>
+<p><strong>Knowledge Democratization:</strong> Makes specialized knowledge accessible to non-experts throughout organization.</p>
+<p><strong>Continuous Improvement:</strong> Analytics on query patterns inform knowledge base optimization and content creation priorities.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<h3 id="data-preparation">Data Preparation</h3>
+<p><strong>Structure Documents Logically:</strong> Organize information hierarchically with clear sections, headings, and metadata.</p>
+<p><strong>Regular Updates:</strong> Implement automated update cycles to ensure knowledge base reflects current state.</p>
+<p><strong>Remove Redundancy:</strong> Eliminate outdated or duplicate content that could confuse retrieval algorithms.</p>
+<p><strong>Quality Assurance:</strong> Review and validate content accuracy before ingestion into knowledge base.</p>
+<h3 id="embedding-model-selection">Embedding Model Selection</h3>
+<p><strong>Use Appropriate Models:</strong> Select models suitable for data type (text, code, images, tables).</p>
+<p><strong>Balance Factors:</strong> Consider storage requirements, retrieval speed, and accuracy when choosing embedding dimensions.</p>
+<p><strong>Domain-Specific Models:</strong> For specialized fields (medical, legal, technical), consider fine-tuned embedding models.</p>
+<h3 id="vector-store-optimization">Vector Store Optimization</h3>
+<p><strong>Monitor Performance:</strong> Track index health, retrieval <a data-lb="1" href="/en/glossary/latency/" title="Latency glossary entry">latency</a>, and query throughput.</p>
+<p><strong>Scalable Infrastructure:</strong> Use high-performance vector databases that support growing data volumes.</p>
+<p><strong>Indexing Strategy:</strong> Choose appropriate index types (HNSW, IVF) based on dataset size and query patterns.</p>
+<h3 id="security--access-control">Security &amp; Access Control</h3>
+<p><strong>Data Protection:</strong> Secure data at rest and in transit with encryption.</p>
+<p><strong>Authentication:</strong> Implement robust authentication and authorization at data source level.</p>
+<p><strong>Audit Trails:</strong> Maintain comprehensive logs of data access and retrieval for compliance.</p>
+<p><strong>Role-Based Access:</strong> Ensure users only retrieve information appropriate to their permissions.</p>
+<h3 id="automation--maintenance">Automation &amp; Maintenance</h3>
+<p><strong>Automated Syncing:</strong> Schedule regular data syncs and re-indexing to maintain freshness.</p>
+<p><strong>Health <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">Monitoring</a>:</strong> Set up alerts for connector failures, indexing errors, or performance degradation.</p>
+<p><strong>Version Control:</strong> Track changes to knowledge base content for rollback and audit purposes.</p>
+<h3 id="continuous-evaluation">Continuous Evaluation</h3>
+<p><strong>Track KPIs:</strong> Monitor accuracy, latency, user satisfaction, and query success rates.</p>
+<p><strong>Feedback Loops:</strong> Collect user feedback on response quality and relevance.</p>
+<p><strong>Iterative Improvement:</strong> Refine chunking strategies, embedding models, and retrieval parameters based on performance data.</p>
+<h2 id="troubleshooting-common-issues">Troubleshooting Common Issues</h2>
+<p><strong>Outdated or Irrelevant Information</strong></p>
+<p>Solution: Ensure regular re-indexing schedules. Implement content versioning and automated deprecation policies.</p>
+<p><strong>Security Concerns</strong></p>
+<p>Solution: Use storage and connector-level access controls. Implement encryption and comprehensive audit logging. Regular security audits and compliance reviews.</p>
+<p><strong>Complex Query Failures</strong></p>
+<p>Solution: Refine chunking strategy to preserve context. Increase data coverage in knowledge base. Consider using advanced embedding models or query rewriting techniques.</p>
+<p><strong>Multiple Knowledge Sources</strong></p>
+<p>Solution: Most platforms support multi-source connectors or federated search. Implement source prioritization and conflict resolution strategies.</p>
+<p><strong>Non-Textual Knowledge</strong></p>
+<p>Solution: Use multimodal connectors and embedding models for images, tables, diagrams. Consider OCR for scanned documents.</p>
+<p><strong>Performance Issues</strong></p>
+<p>Solution: Optimize vector database configuration. Implement caching layers. Scale infrastructure based on query volumes.</p>
+<h2 id="integration-with-workflow-automation">Integration with Workflow Automation</h2>
+<p>Knowledge Base Connectors integrate seamlessly with automation platforms:</p>
+<p><strong>n8n Workflows:</strong> Visual workflow builder enables complex automation sequences triggered by retrieval results.</p>
+<p><strong>Automation Anywhere:</strong> <a data-lb="1" href="/en/glossary/ai-agents/" title="AI Agents glossary entry">AI agents</a> use knowledge base responses to inform decision-making and action execution.</p>
+<p><strong>Zapier Integration:</strong> Connects knowledge retrieval to thousands of applications for downstream automation.</p>
+<p><strong>Custom APIs:</strong> Most connectors provide REST APIs for integration with proprietary systems.</p>
+<h2 id="performance-metrics">Performance Metrics</h2>
+<p><strong>Retrieval Accuracy:</strong> Measure percentage of queries returning relevant information (target: &gt;90%)</p>
+<p><strong>Response Latency:</strong> Track time from query to response delivery (target: &lt;2 seconds)</p>
+<p><strong>User Satisfaction:</strong> Monitor feedback scores and query refinement rates</p>
+<p><strong>Coverage:</strong> Measure percentage of queries successfully answered from knowledge base</p>
+<p><strong>Cost Efficiency:</strong> Track cost per query and compare to manual support alternatives</p>
+<h2 id="future-trends">Future Trends</h2>
+<p><strong>Hybrid Search:</strong> Combining vector similarity with keyword search for improved accuracy</p>
+<p><strong>Active Learning:</strong> Systems that identify knowledge gaps and suggest content additions</p>
+<p><strong>Contextual Retrieval:</strong> Enhanced understanding of user intent and conversation history</p>
+<p><strong>Multimodal Integration:</strong> Seamless handling of text, images, audio, and video in unified knowledge base</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://blog.n8n.io/rag-chatbot/" rel="nofollow noopener noreferrer" target="_blank">n8n: Build a Custom Knowledge RAG Chatbot</a></li>
+<li><a href="https://www.youtube.com/watch?v=Z6JWTrpObQo" rel="nofollow noopener noreferrer" target="_blank">Automation Anywhere: Knowledge Base Feature (YouTube)</a></li>
+<li><a href="https://www.stack-ai.com/blog/how-to-build-ai-chatbot-with-knowledge-base-rag" rel="nofollow noopener noreferrer" target="_blank">Stack AI: Healthcare Chatbot Tutorial</a></li>
+<li><a href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html" rel="nofollow noopener noreferrer" target="_blank">Amazon Bedrock Knowledge Base Documentation</a></li>
+<li><a href="https://blog.getodin.ai/what-is-a-knowledge-base-complete-beginners-guide-2024/" rel="nofollow noopener noreferrer" target="_blank">Odin AI: What is a Knowledge Base?</a></li>
+<li><a href="https://www.youtube.com/watch?v=iT9xpiUwVbI" rel="nofollow noopener noreferrer" target="_blank">YouTube: Step-by-step RAG Agent with Pinecone and n8n</a></li>
+<li><a href="https://utilityanalytics.com/how-rag-architecture-improves-knowledge-base-interactions/" rel="nofollow noopener noreferrer" target="_blank">Utility Analytics: RAG Architecture Guide</a></li>
+<li><a href="https://docs.n8n.io/advanced-ai/examples/understand-vector-databases/" rel="nofollow noopener noreferrer" target="_blank">n8n: Vector Database Guide</a></li>
+<li><a href="https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html" rel="nofollow noopener noreferrer" target="_blank">Amazon Bedrock Agents Documentation</a></li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/escalation/">
+                    Escalation
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    The process of transferring a difficult or urgent issue to someone with more expertise or authority ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/escalation/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/false-negative/">
+                    False Negative
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A False Negative is when an AI system fails to detect a real problem or request that actually exists...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/false-negative/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hybrid-system/">
+                    Hybrid System
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A collaborative framework where AI and humans work together, combining machine speed and consistency...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hybrid-system/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ltv---lifetime-value-/">
+                    LTV (Lifetime Value)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    The total profit or revenue a customer generates for your business over their entire relationship wi...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ltv---lifetime-value-/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/persona-design/">
+                    Persona Design
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Persona Design is the process of creating a unique personality for an AI chatbot by defining its ton...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/persona-design/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/reproducibility-validation/">
+                    Reproducibility Validation
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Reproducibility Validation is a process that checks whether AI systems produce the same results when...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/reproducibility-validation/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/knowledge-base-connector/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

@@ -15,7 +15,9 @@ type: glossary
 draft: false
 e-title: Model Serving
 term: もでるさーびんぐ
-url: "/ja/glossary/Model-Serving/"
+url: "/ja/glossary/model-serving/"
+aliases:
+- "/ja/glossary/Model-Serving/"
 ---
 ## モデルサービングとは
 モデルサービングとは、訓練済みMLモデルを本番環境で使用可能にするための運用プラクティスと技術の集合体であり、通常はネットワーク経由でアクセス可能なサービスとして提供されます。これは、REST APIやgRPC APIを介してモデルを他のアプリケーションやユーザーに公開し、新しいデータを処理して予測結果を返すことを含みます。
@@ -26,7 +28,17 @@ url: "/ja/glossary/Model-Serving/"
 
 ### 典型的なワークフロー
 
-**モデルの訓練:**MLフレームワーク(TensorFlow、PyTorch、scikit-learn、XGBoost)を使用して、履歴データでモデルを構築・訓練します。**モデルのパッケージング:**訓練済みモデルをポータブルな形式(.pkl、.pt、.onnx、.pb)にシリアライズまたはエクスポートします。**APIでラップ:**FastAPI、Flask、またはTensorFlow Serving、TorchServe、KServeなどの専用ツールを使用して、モデルをHTTP/gRPC APIとして公開します。**インフラのデプロイ:**モデルとAPIをサーバー、コンテナ、Kubernetesポッド、またはクラウドマネージドサービスにデプロイします。**リクエストの処理:**受信データ(JSON、画像、表形式)がサービングエンドポイントに送信され、モデルがそれを処理し、結果を返します。**監視とスケーリング:**監視ツールを使用して使用状況、レイテンシ、エラーを追跡します。必要に応じてリソースを自動スケーリングし、CI/CDを通じてモデルバージョンを更新します。
+**モデルの訓練:** MLフレームワーク(TensorFlow、PyTorch、scikit-learn、XGBoost)を使用して、履歴データでモデルを構築・訓練します。
+
+**モデルのパッケージング:** 訓練済みモデルをポータブルな形式(.pkl、.pt、.onnx、.pb)にシリアライズまたはエクスポートします。
+
+**APIでラップ:** FastAPI、Flask、またはTensorFlow Serving、TorchServe、KServeなどの専用ツールを使用して、モデルをHTTP/gRPC APIとして公開します。
+
+**インフラのデプロイ:** モデルとAPIをサーバー、コンテナ、Kubernetesポッド、またはクラウドマネージドサービスにデプロイします。
+
+**リクエストの処理:** 受信データ(JSON、画像、表形式)がサービングエンドポイントに送信され、モデルがそれを処理し、結果を返します。
+
+**監視とスケーリング:** 監視ツールを使用して使用状況、レイテンシ、エラーを追跡します。必要に応じてリソースを自動スケーリングし、CI/CDを通じてモデルバージョンを更新します。
 
 ### アーキテクチャパターン
 
@@ -36,20 +48,28 @@ url: "/ja/glossary/Model-Serving/"
 
 ## モデルサービングが必要な理由
 
-**リアルタイム推論:**100ms未満の厳格なレイテンシ要件を持つ即座の意思決定(不正検出、レコメンデーション、パーソナライゼーション)を可能にします。**バッチ処理:**大規模データセットの効率的なスコアリング(数百万件のレコードに対する夜間チャーン予測)をサポートします。**集中管理:**モデルロジックをアプリケーションコードから分離し、複数のアプリが同じモデルエンドポイントを使用できます。**バージョニングと更新:**モデルの安全なデプロイメント、A/Bテスト、ロールバック、カナリアリリースを可能にします。**スケーラブルなインフラ:**クラウド/サーバーレスの自動スケーリングを活用して、変動する負荷に対応し、コストを最適化します。
+**リアルタイム推論:** 100ms未満の厳格なレイテンシ要件を持つ即座の意思決定(不正検出、レコメンデーション、パーソナライゼーション)を可能にします。
+
+**バッチ処理:** 大規模データセットの効率的なスコアリング(数百万件のレコードに対する夜間チャーン予測)をサポートします。
+
+**集中管理:** モデルロジックをアプリケーションコードから分離し、複数のアプリが同じモデルエンドポイントを使用できます。
+
+**バージョニングと更新:** モデルの安全なデプロイメント、A/Bテスト、ロールバック、カナリアリリースを可能にします。
+
+**スケーラブルなインフラ:** クラウド/サーバーレスの自動スケーリングを活用して、変動する負荷に対応し、コストを最適化します。
 
 ## 主要機能
 
 | 機能 | 説明 |
 |---------|-------------|
-| **APIアクセス**| HTTP/REST、gRPC、またはカスタムプロトコル経由でモデルを提供 |
-| **スケーラビリティ**| 需要に基づいて自動スケールアップ/ダウン、ゼロへのスケーリングを含む |
-| **低レイテンシ**| リアルタイムアプリケーション向けの100ms未満の応答時間 |
-| **モデルバージョニング**| 複数バージョンのデプロイ/管理、ロールバックとA/Bテストのサポート |
-| **監視**| 使用状況、エラー、レイテンシ、モデルドリフト、リソース使用率のダッシュボード |
-| **セキュリティ**| 認証、認可、暗号化(TLS)、コンプライアンス |
-| **統合**| フィーチャーストア、データソース、オーケストレーションツールへの接続 |
-| **コスト最適化**| リソースの動的割り当て、従量課金制 |
+| **APIアクセス** | HTTP/REST、gRPC、またはカスタムプロトコル経由でモデルを提供 |
+| **スケーラビリティ** | 需要に基づいて自動スケールアップ/ダウン、ゼロへのスケーリングを含む |
+| **低レイテンシ** | リアルタイムアプリケーション向けの100ms未満の応答時間 |
+| **モデルバージョニング** | 複数バージョンのデプロイ/管理、ロールバックとA/Bテストのサポート |
+| **監視** | 使用状況、エラー、レイテンシ、モデルドリフト、リソース使用率のダッシュボード |
+| **セキュリティ** | 認証、認可、暗号化(TLS)、コンプライアンス |
+| **統合** | フィーチャーストア、データソース、オーケストレーションツールへの接続 |
+| **コスト最適化** | リソースの動的割り当て、従量課金制 |
 
 ## ユースケース
 
@@ -77,15 +97,23 @@ url: "/ja/glossary/Model-Serving/"
 
 ### モノリシック vs. APIベース
 
-**モノリシック:**モデルコードがアプリケーションに組み込まれています。更新にはアプリの再デプロイが必要で、他のサービスで再利用できません。**APIベース(サービス指向):**モデルはAPI経由でアクセス可能な独立したサービスで、共有、集中管理、独立した更新をサポートします。
+**モノリシック:** モデルコードがアプリケーションに組み込まれています。更新にはアプリの再デプロイが必要で、他のサービスで再利用できません。
+
+**APIベース(サービス指向):** モデルはAPI経由でアクセス可能な独立したサービスで、共有、集中管理、独立した更新をサポートします。
 
 ### バッチ vs. リアルタイム
 
-**バッチ:**スケジュールに従って大規模データセットを処理(夜間ジョブ)。**リアルタイム:**低レイテンシで個別リクエストに応答(不正チェック、レコメンデーション)。
+**バッチ:** スケジュールに従って大規模データセットを処理(夜間ジョブ)。
+
+**リアルタイム:** 低レイテンシで個別リクエストに応答(不正チェック、レコメンデーション)。
 
 ### デプロイメントオプション
 
-**オンプレミス:**完全な制御が可能だが、高コストとメンテナンスが必要。**クラウド/サーバーレス:**マネージド、弾力的、スケーラブル、従量課金制。**ハイブリッド:**機密性の高いモデル/データはオンプレミス、非機密データはクラウド。
+**オンプレミス:** 完全な制御が可能だが、高コストとメンテナンスが必要。
+
+**クラウド/サーバーレス:** マネージド、弾力的、スケーラブル、従量課金制。
+
+**ハイブリッド:** 機密性の高いモデル/データはオンプレミス、非機密データはクラウド。
 
 ## 運用上の考慮事項
 
@@ -99,7 +127,11 @@ url: "/ja/glossary/Model-Serving/"
 
 ### コストとインフラ
 
-**オンプレミス:**高い設備投資(Nvidia A100 GPUは1台あたり10,000ドル以上)。**クラウド:**運用費/従量課金制(AWS GPU:1〜32ドル/時間)。**マネージドプラットフォーム:**コストを最適化しますが、深いカスタマイズが制限される場合があります。
+**オンプレミス:** 高い設備投資(Nvidia A100 GPUは1台あたり10,000ドル以上)。
+
+**クラウド:** 運用費/従量課金制(AWS GPU:1〜32ドル/時間)。
+
+**マネージドプラットフォーム:** コストを最適化しますが、深いカスタマイズが制限される場合があります。
 
 ### セキュリティとプライバシー
 
@@ -113,13 +145,13 @@ url: "/ja/glossary/Model-Serving/"
 
 | プラットフォーム | 最適な用途 | 主要機能 |
 |----------|----------|--------------|
-| **TensorFlow Serving**| TensorFlowモデル | スケーラブルで本番対応のサービング |
-| **TorchServe**| PyTorchモデル | マルチモデル、REST/gRPC API |
-| **KServe**| Kubernetesネイティブ | マルチフレームワーク、A/Bテスト |
-| **Amazon SageMaker**| マネージドクラウド | トレーニング、デプロイメント、エンドポイント、監視 |
-| **Azure ML**| マネージドクラウド | トレーニング、サービング、バージョニング、セキュリティ |
-| **Databricks Model Serving**| 統合MLプラットフォーム | リアルタイム/バッチ、サーバーレス、監視 |
-| **Hugging Face Inference**| NLP/LLMモデル | 高速トランスフォーマーモデルデプロイメント |
+| **TensorFlow Serving** | TensorFlowモデル | スケーラブルで本番対応のサービング |
+| **TorchServe** | PyTorchモデル | マルチモデル、REST/gRPC API |
+| **KServe** | Kubernetesネイティブ | マルチフレームワーク、A/Bテスト |
+| **Amazon SageMaker** | マネージドクラウド | トレーニング、デプロイメント、エンドポイント、監視 |
+| **Azure ML** | マネージドクラウド | トレーニング、サービング、バージョニング、セキュリティ |
+| **Databricks Model Serving** | 統合MLプラットフォーム | リアルタイム/バッチ、サーバーレス、監視 |
+| **Hugging Face Inference** | NLP/LLMモデル | 高速トランスフォーマーモデルデプロイメント |
 
 ## 実装例
 
@@ -148,38 +180,71 @@ Dockerでパッケージ化し、Kubernetes、クラウドVM、またはマネ�
 
 ### メリット
 
-**スケーラビリティ:**クラウド/サーバーレスの自動スケーリングにより、予測不可能またはバースト的なワークロードに対応。**コスト効率:**実際の使用量に対して支払い、初期ハードウェア投資を回避。**DevOpsの削減:**マネージドプラットフォームがインフラ、セキュリティ、監視を簡素化。**本番化の高速化:**モデル開発からデプロイメントまでの時間を短縮。**集中監視:**すべてのモデルエンドポイントの統一ダッシュボード。
+**スケーラビリティ:** クラウド/サーバーレスの自動スケーリングにより、予測不可能またはバースト的なワークロードに対応。
+
+**コスト効率:** 実際の使用量に対して支払い、初期ハードウェア投資を回避。
+
+**DevOpsの削減:** マネージドプラットフォームがインフラ、セキュリティ、監視を簡素化。
+
+**本番化の高速化:** モデル開発からデプロイメントまでの時間を短縮。
+
+**集中監視:** すべてのモデルエンドポイントの統一ダッシュボード。
 
 ### デメリット
 
-**データプライバシー:**外部/マネージドプラットフォームの使用はコンプライアンス上の懸念を引き起こす可能性があります。**カスタマイズの制限:**マネージドサービスは高度なチューニングやハードウェアオプションを制限する場合があります。**ベンダーロックイン:**プラットフォームの切り替えには再エンジニアリングが必要になる場合があります。**コストの予測可能性:**使用量ベースの価格設定は、トラフィックスパイクで変動する可能性があります。**セキュリティ責任:**オンプレミスデプロイメントには、社内での強化と監視が必要です。
+**データプライバシー:** 外部/マネージドプラットフォームの使用はコンプライアンス上の懸念を引き起こす可能性があります。
+
+**カスタマイズの制限:** マネージドサービスは高度なチューニングやハードウェアオプションを制限する場合があります。
+
+**ベンダーロックイン:** プラットフォームの切り替えには再エンジニアリングが必要になる場合があります。
+
+**コストの予測可能性:** 使用量ベースの価格設定は、トラフィックスパイクで変動する可能性があります。
+
+**セキュリティ責任:** オンプレミスデプロイメントには、社内での強化と監視が必要です。
 
 ## モデルサービング vs. モデルデプロイメント
 
-**モデルデプロイメント:**訓練済みモデルを本番環境に移動する行為(アップロード、登録、コンテナ化)。**モデルサービング:**デプロイされたモデルを推論リクエストに利用可能にする継続的な運用(API、バッチ)。
+**モデルデプロイメント:** 訓練済みモデルを本番環境に移動する行為(アップロード、登録、コンテナ化)。
+
+**モデルサービング:** デプロイされたモデルを推論リクエストに利用可能にする継続的な運用(API、バッチ)。
 
 デプロイメントはモデルを本番環境に提供する方法であり、サービングは実世界での使用を可能にする方法です。
 
 ## ベストプラクティス
 
-**フレームワーク互換性:**MLフレームワーク(TensorFlow、PyTorch、Hugging Face)がサポートされていることを確認。**推論モード:**リアルタイムまたはバッチ推論の要件を決定。**パフォーマンス要件:**レイテンシとスループットの要件を定義。**データの機密性:**プライバシーと規制要件を評価。**優先順位のバランス:**コスト、柔軟性、速度の優先順位を決定。**更新戦略:**本番環境でモデルを監視・更新する方法を計画。**ベンダー独立性:**ベンダーロックインの影響を考慮。**テスト:**本番デプロイメント前の包括的なテスト。**ドキュメント:**エンドポイント、バージョニング、ロールバック手順のドキュメントを維持。
+**フレームワーク互換性:** MLフレームワーク(TensorFlow、PyTorch、Hugging Face)がサポートされていることを確認。
+
+**推論モード:** リアルタイムまたはバッチ推論の要件を決定。
+
+**パフォーマンス要件:** レイテンシとスループットの要件を定義。
+
+**データの機密性:** プライバシーと規制要件を評価。
+
+**優先順位のバランス:** コスト、柔軟性、速度の優先順位を決定。
+
+**更新戦略:** 本番環境でモデルを監視・更新する方法を計画。
+
+**ベンダー独立性:** ベンダーロックインの影響を考慮。
+
+**テスト:** 本番デプロイメント前の包括的なテスト。
+
+**ドキュメント:** エンドポイント、バージョニング、ロールバック手順のドキュメントを維持。
 
 ## 参考文献
 
-
-1. Databricks. (n.d.). Model Serving Documentation. Databricks Docs.
-2. Databricks. (n.d.). Model Serving Tutorial. Databricks Docs.
-3. Backblaze. (n.d.). AI 101 – What Is Model Serving?. Backblaze Blog.
-4. Hopsworks. (n.d.). Model Serving Dictionary. Hopsworks Dictionary.
-5. Hopsworks. (n.d.). KServe Documentation. Hopsworks Dictionary.
-6. UbiOps. (n.d.). What Is AI Model Serving?. UbiOps Blog.
-7. Unify. (n.d.). Model Serving Multi-Layered Landscape. Unify Blog.
-8. Seldon. (n.d.). ML Model Serving Strategies Guide. Seldon Blog.
-9. TensorFlow. (n.d.). Serving Guide. TensorFlow Documentation.
-10. PyTorch. (n.d.). TorchServe Documentation. PyTorch Documentation.
-11. FastAPI. (n.d.). FastAPI Documentation. FastAPI Docs.
-12. Amazon SageMaker. Cloud Machine Learning Platform. URL: https://aws.amazon.com/sagemaker/
-13. Azure Machine Learning. Cloud Machine Learning Platform. URL: https://azure.microsoft.com/en-us/products/machine-learning
-14. Hugging Face Inference Endpoints. Machine Learning Model Deployment Service. URL: https://huggingface.co/docs/inference-endpoints/index
-15. AWS EC2. Cloud Computing Service. URL: https://aws.amazon.com/ec2/pricing/
-16. YouTube. (n.d.). Model Serving 101. YouTube Video.
+- [Databricks: Model Serving Documentation](https://docs.databricks.com/aws/en/machine-learning/model-serving/)
+- [Databricks: Model Serving Tutorial](https://docs.databricks.com/aws/en/machine-learning/model-serving/model-serving-intro)
+- [Backblaze: AI 101 – What Is Model Serving?](https://www.backblaze.com/blog/ai-101-what-is-model-serving/)
+- [Hopsworks: Model Serving Dictionary](https://www.hopsworks.ai/dictionary/model-serving)
+- [Hopsworks: KServe Documentation](https://www.hopsworks.ai/dictionary/kserve)
+- [UbiOps: What Is AI Model Serving?](https://ubiops.com/what-is-ai-model-serving/)
+- [Unify: Model Serving Multi-Layered Landscape](https://unify.ai/blog/cloud-model-serving)
+- [Seldon: ML Model Serving Strategies Guide](https://www.seldon.io/an-essential-guide-to-ml-model-serving-strategies-including-llms/)
+- [TensorFlow: Serving Guide](https://www.tensorflow.org/tfx/guide/serving)
+- [PyTorch: TorchServe Documentation](https://pytorch.org/serve/)
+- [FastAPI Documentation](https://fastapi.tiangolo.com/)
+- [Amazon SageMaker](https://aws.amazon.com/sagemaker/)
+- [Azure Machine Learning](https://azure.microsoft.com/en-us/products/machine-learning)
+- [Hugging Face Inference Endpoints](https://huggingface.co/docs/inference-endpoints/index)
+- [AWS EC2 Pricing](https://aws.amazon.com/ec2/pricing/)
+- [YouTube: Model Serving 101](https://www.youtube.com/watch?v=YAxDyHvLzoE)

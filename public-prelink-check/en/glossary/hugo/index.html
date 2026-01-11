@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Hugo | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hugo/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="A fast, open-source tool that builds websites by converting content into static HTML files, ideal for blogs, documentation, and large sites." name="description"/>
+<meta content="Hugo static site generator, Go-based web framework, JAMstack development, Static website builder, Fast site generation" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hugo/" property="og:url"/>
+<meta content="Hugo | SmartWeb" property="og:title"/>
+<meta content="A fast, open-source tool that builds websites by converting content into static HTML files, ideal for blogs, documentation, and large sites." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hugo/" name="twitter:url"/>
+<meta content="Hugo | SmartWeb" name="twitter:title"/>
+<meta content="A fast, open-source tool that builds websites by converting content into static HTML files, ideal for blogs, documentation, and large sites." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Hugo</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Hugo
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A fast, open-source tool that builds websites by converting content into static HTML files, ideal for blogs, documentation, and large sites.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Hugo static site generator
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Go-based web framework
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                JAMstack development
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Static website builder
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Fast site generation
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-hugo">What is a Hugo?</h2>
+<p>Hugo is a powerful, open-source static site generator written in the Go programming language that enables developers and content creators to build fast, secure, and scalable websites. Developed by Steve Francia in 2013 and later maintained by Bjørn Erik Pedersen and the Hugo community, Hugo has emerged as one of the most popular static site generators in the modern web development ecosystem. Unlike traditional content management systems that generate pages dynamically on each request, Hugo pre-builds all website pages into static HTML, CSS, and JavaScript files that can be served directly by web servers or content delivery networks.</p>
+<p>The fundamental philosophy behind Hugo centers on speed, simplicity, and flexibility. Hugo can generate thousands of pages in seconds, making it exceptionally suitable for large-scale websites, documentation sites, blogs, and corporate web presences. The generator supports multiple content formats including Markdown, HTML, and various markup languages, while providing a robust templating system based on Go’s template engine. Hugo’s architecture separates content from presentation, allowing writers to focus on creating content while developers can craft sophisticated themes and layouts without interference.</p>
+<p>Hugo operates on the principles of the JAMstack architecture (JavaScript, APIs, and Markup), which emphasizes pre-built markup, serverless functions, and APIs for dynamic functionality. This approach results in websites that load faster, require less server resources, provide better security through reduced attack surfaces, and offer improved scalability. The static nature of Hugo-generated sites means they can be hosted on various platforms, from traditional web servers to modern static hosting services like Netlify, Vercel, or GitHub Pages, often at minimal or no cost while maintaining excellent performance and reliability.</p>
+<h2 id="core-static-site-generation-technologies">Core Static Site Generation Technologies</h2>
+<p><strong>Content Management System</strong> - Hugo uses a file-based content management approach where content is stored in Markdown files with YAML, TOML, or JSON front matter. This system eliminates the need for databases while providing structured content organization and metadata management.</p>
+<p><strong>Go Template Engine</strong> - The templating system leverages Go’s powerful template syntax to create dynamic layouts, partial templates, and shortcodes. Templates support conditional logic, loops, variables, and functions for sophisticated page generation.</p>
+<p><strong>Asset Pipeline</strong> - Hugo includes a comprehensive asset processing system that handles SCSS/Sass compilation, JavaScript bundling, image optimization, and fingerprinting for cache busting. The pipeline supports modern web development workflows and optimization techniques.</p>
+<p><strong>Multilingual Support</strong> - Built-in internationalization features enable the creation of multilingual websites with automatic language detection, content translation management, and localized URL structures without additional plugins or complex configurations.</p>
+<p><strong>Taxonomy System</strong> - Hugo provides flexible content categorization through tags, categories, and custom taxonomies that automatically generate listing pages, archives, and navigation structures based on content relationships.</p>
+<p><strong>Shortcodes Framework</strong> - A powerful system for embedding complex HTML structures, interactive elements, or third-party services within Markdown content using simple, reusable code snippets that maintain content readability.</p>
+<p><strong>Live Reload Development</strong> - The built-in development server provides instant page updates during content creation and theme development, significantly accelerating the development workflow and enabling real-time preview capabilities.</p>
+<h2 id="how-hugo-works">How Hugo Works</h2>
+<p>Hugo follows a systematic build process that transforms source content and templates into a complete static website:</p>
+<ol>
+<li>
+<p><strong>Content Parsing</strong> - Hugo scans the content directory and parses Markdown files, extracting front matter metadata and converting Markdown to HTML using the configured renderer (typically Goldmark).</p>
+</li>
+<li>
+<p><strong>Template Resolution</strong> - The system identifies appropriate templates for each content type based on Hugo’s lookup order, considering content type, layout specifications, and template hierarchy.</p>
+</li>
+<li>
+<p><strong>Data Processing</strong> - Hugo loads data files (JSON, YAML, TOML) from the data directory and makes them available to templates, enabling dynamic content generation from external sources.</p>
+</li>
+<li>
+<p><strong>Asset Processing</strong> - The asset pipeline processes SCSS files, bundles JavaScript, optimizes images, and applies fingerprinting for cache management according to the configured build settings.</p>
+</li>
+<li>
+<p><strong>Page Generation</strong> - Templates are executed with content and data to generate individual HTML pages, applying layouts, partials, and shortcodes as specified in the template hierarchy.</p>
+</li>
+<li>
+<p><strong>Taxonomy Creation</strong> - Hugo automatically generates taxonomy pages for tags, categories, and custom taxonomies, creating listing pages and RSS feeds based on content relationships.</p>
+</li>
+<li>
+<p><strong>Sitemap and RSS Generation</strong> - The system creates XML sitemaps and RSS feeds automatically, ensuring proper search engine indexing and content syndication capabilities.</p>
+</li>
+<li>
+<p><strong>Output Optimization</strong> - Final HTML files are optimized, minified (if configured), and organized in the public directory structure ready for deployment to web servers or hosting platforms.</p>
+</li>
+</ol>
+<p><strong>Example Workflow</strong>: A blog post written in Markdown with front matter specifying tags and categories gets processed through the single post template, which includes the site header partial, renders the content, applies syntax highlighting to code blocks, generates related posts based on taxonomy, and outputs a complete HTML page with optimized assets.</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p><strong>Exceptional Performance</strong> - Static files load significantly faster than dynamically generated pages, resulting in improved user experience, better search engine rankings, and reduced server response times across all devices and network conditions.</p>
+<p><strong>Enhanced Security</strong> - The absence of databases, server-side scripting, and dynamic content generation eliminates common attack vectors such as SQL injection, reducing security vulnerabilities and maintenance overhead.</p>
+<p><strong>Cost-Effective Hosting</strong> - Static sites can be hosted on content delivery networks, static hosting services, or basic web servers at minimal cost, often with free tiers that support significant traffic volumes.</p>
+<p><strong>Scalability and Reliability</strong> - Static files can handle traffic spikes effortlessly through CDN distribution, providing consistent performance regardless of visitor volume without requiring complex server infrastructure.</p>
+<p><strong>Version Control Integration</strong> - Content and code can be managed through Git workflows, enabling collaborative editing, change tracking, branching strategies, and automated deployment pipelines that integrate with development practices.</p>
+<p><strong>Developer Experience</strong> - Hugo’s fast build times, live reload functionality, and comprehensive documentation create an efficient development environment that supports rapid iteration and experimentation.</p>
+<p><strong>SEO Optimization</strong> - Static sites provide excellent search engine optimization opportunities through fast loading times, clean HTML output, automatic sitemap generation, and structured data support.</p>
+<p><strong>Content Portability</strong> - Markdown-based content remains platform-independent and easily portable between different systems, ensuring long-term content accessibility and reducing vendor lock-in concerns.</p>
+<p><strong>Offline Development</strong> - The entire site can be developed and previewed locally without internet connectivity, enabling productive work in various environments and reducing dependency on external services.</p>
+<p><strong>Flexible Deployment Options</strong> - Hugo sites can be deployed to numerous platforms including traditional web servers, cloud storage, CDNs, and specialized static hosting services with automated build processes.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p><strong>Corporate Websites</strong> - Business websites requiring fast loading times, reliable uptime, and easy content management for marketing pages, product information, and company communications.</p>
+<p><strong>Documentation Sites</strong> - Technical documentation, API references, and user guides that benefit from version control integration, collaborative editing, and fast search capabilities.</p>
+<p><strong>Personal Blogs</strong> - Individual blogs and portfolios that require minimal maintenance overhead while providing excellent performance and customization options for personal branding.</p>
+<p><strong>E-commerce Landing Pages</strong> - Product landing pages, marketing campaigns, and promotional sites that need fast loading times for conversion optimization and SEO performance.</p>
+<p><strong>News and Media Sites</strong> - Publishing platforms that require rapid content deployment, high traffic handling capabilities, and integration with content management workflows.</p>
+<p><strong>Educational Resources</strong> - Course materials, tutorials, and educational content that benefit from structured organization, search functionality, and multimedia content support.</p>
+<p><strong>Event Websites</strong> - Conference sites, workshop pages, and event information that require quick setup, reliable performance during traffic spikes, and easy content updates.</p>
+<p><strong>Portfolio Showcases</strong> - Creative portfolios, agency websites, and professional showcases that emphasize visual design, fast loading times, and mobile responsiveness.</p>
+<p><strong>Government and Non-Profit Sites</strong> - Public sector websites requiring accessibility compliance, security, and cost-effective hosting solutions with transparent content management.</p>
+<p><strong>Multilingual Publications</strong> - International websites and publications that need robust multilingual support, content translation management, and localized user experiences.</p>
+<h2 id="hugo-vs-other-static-site-generators-comparison">Hugo vs Other Static Site Generators Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Hugo</th>
+<th>Jekyll</th>
+<th>Gatsby</th>
+<th>Next.js</th>
+<th>Nuxt.js</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Build Speed</strong></td>
+<td>Extremely Fast</td>
+<td>Moderate</td>
+<td>Slow</td>
+<td>Moderate</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td><strong>Language</strong></td>
+<td>Go</td>
+<td>Ruby</td>
+<td>JavaScript</td>
+<td>JavaScript</td>
+<td>JavaScript</td>
+</tr>
+<tr>
+<td><strong>Learning Curve</strong></td>
+<td>Moderate</td>
+<td>Easy</td>
+<td>Steep</td>
+<td>Steep</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td><strong>Plugin Ecosystem</strong></td>
+<td>Limited</td>
+<td>Extensive</td>
+<td>Extensive</td>
+<td>Extensive</td>
+<td>Extensive</td>
+</tr>
+<tr>
+<td><strong>Asset Processing</strong></td>
+<td>Built-in</td>
+<td>Requires Plugins</td>
+<td>Advanced</td>
+<td>Advanced</td>
+<td>Advanced</td>
+</tr>
+<tr>
+<td><strong>Hosting Options</strong></td>
+<td>Universal</td>
+<td>Universal</td>
+<td>Universal</td>
+<td>Requires Node.js</td>
+<td>Requires Node.js</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p><strong>Limited Dynamic Functionality</strong> - Static sites cannot handle server-side processing, user authentication, or real-time data without external services or JavaScript-based solutions that may complicate architecture.</p>
+<p><strong>Learning Curve Complexity</strong> - Hugo’s template syntax, directory structure conventions, and configuration options require significant learning investment, particularly for users without programming experience.</p>
+<p><strong>Plugin Ecosystem Limitations</strong> - Compared to other static site generators, Hugo has a smaller plugin ecosystem, requiring custom development for specialized functionality or third-party service integration.</p>
+<p><strong>Content Management Complexity</strong> - Non-technical users may find file-based content management challenging compared to traditional CMS interfaces, requiring training or additional tools for content editing.</p>
+<p><strong>Build Process Dependencies</strong> - Large sites with extensive content may experience longer build times, and the entire site must be rebuilt for any content changes, potentially impacting editorial workflows.</p>
+<p><strong>Template Debugging Difficulties</strong> - Go template syntax can be challenging to debug, and error messages may not always clearly indicate the source of template issues during development.</p>
+<p><strong>Asset Management Overhead</strong> - While Hugo includes asset processing, complex asset workflows may require additional build tools or external processing pipelines for advanced optimization.</p>
+<p><strong>Search Functionality Limitations</strong> - Implementing search requires client-side solutions or external services, as static sites cannot provide server-side search capabilities without additional infrastructure.</p>
+<p><strong>Comment System Integration</strong> - Static sites require third-party comment systems or JavaScript-based solutions, adding complexity and potential privacy concerns for user-generated content.</p>
+<p><strong>Real-time Content Updates</strong> - Content changes require site rebuilding and redeployment, making Hugo less suitable for applications requiring frequent real-time content updates or user-generated content.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p><strong>Content Organization Strategy</strong> - Structure content directories logically with consistent naming conventions, use front matter effectively for metadata, and implement content archetypes for standardized content creation workflows.</p>
+<p><strong>Template Hierarchy Optimization</strong> - Design template layouts following Hugo’s lookup order, create reusable partials for common elements, and implement base templates for consistent site structure and maintenance efficiency.</p>
+<p><strong>Asset Pipeline Configuration</strong> - Configure SCSS/Sass processing, implement JavaScript bundling, optimize images automatically, and use fingerprinting for cache busting to ensure optimal performance and browser caching.</p>
+<p><strong>SEO Implementation</strong> - Configure proper meta tags, implement structured data markup, generate XML sitemaps automatically, and optimize page titles and descriptions for search engine visibility.</p>
+<p><strong>Performance Optimization</strong> - Minimize asset sizes, implement lazy loading for images, configure CDN distribution, and optimize critical rendering path for improved page load speeds.</p>
+<p><strong>Version Control Workflow</strong> - Implement Git-based content management, use branching strategies for content review, configure automated deployment pipelines, and maintain separate environments for development and production.</p>
+<p><strong>Multilingual Site Planning</strong> - Configure language settings properly, organize translated content systematically, implement language switching navigation, and ensure consistent URL structures across languages.</p>
+<p><strong>Security Configuration</strong> - Implement Content Security Policy headers, configure HTTPS properly, sanitize user inputs in forms, and regularly update Hugo versions for security patches.</p>
+<p><strong>Backup and Recovery Procedures</strong> - Maintain regular backups of content and configuration, document deployment procedures, implement rollback strategies, and test recovery processes periodically.</p>
+<p><strong><a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">Monitoring</a> and Analytics Setup</strong> - Configure web analytics tracking, implement performance monitoring, set up uptime monitoring, and establish metrics for measuring site success and user engagement.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p><strong>Custom Shortcodes Development</strong> - Create sophisticated shortcodes for complex content embedding, interactive elements, and third-party service integration that maintain content readability while providing rich functionality.</p>
+<p><strong>Data-Driven Content Generation</strong> - Leverage Hugo’s data files and APIs to generate content dynamically from external sources, creating automated content workflows and integration with headless CMS solutions.</p>
+<p><strong>Advanced Template Functions</strong> - Implement custom template functions, use Hugo’s built-in functions effectively, and create complex conditional logic for sophisticated content presentation and navigation systems.</p>
+<p><strong>Asset Processing Pipelines</strong> - Configure advanced asset processing workflows including PostCSS integration, JavaScript transpilation, image optimization, and custom build processes for modern web development requirements.</p>
+<p><strong>Headless CMS Integration</strong> - Connect Hugo with headless content management systems, implement webhook-based rebuilding, and create editorial workflows that combine static site benefits with user-friendly content management.</p>
+<p><strong>Performance Optimization Techniques</strong> - Implement advanced caching strategies, configure service workers for offline functionality, optimize critical CSS delivery, and use resource hints for improved loading performance.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p><strong>Enhanced Asset Processing</strong> - Continued improvements to the asset pipeline with better JavaScript bundling, advanced image processing capabilities, and integration with modern build tools and optimization techniques.</p>
+<p><strong>Improved Developer Experience</strong> - Enhanced debugging tools, better error reporting, improved template syntax highlighting, and development environment improvements for faster iteration and troubleshooting.</p>
+<p><strong>Headless CMS Ecosystem Growth</strong> - Expanded integration options with headless content management systems, improved editorial workflows, and better tools for non-technical content creators and editors.</p>
+<p><strong>Performance Optimization Advances</strong> - Implementation of modern web standards, automatic performance optimization features, and integration with web performance monitoring tools for continuous improvement.</p>
+<p><strong>AI-Powered Content Features</strong> - Integration of <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence glossary entry">artificial intelligence</a> for content optimization, automated SEO improvements, and intelligent content suggestions to enhance content creation workflows.</p>
+<p><strong>Edge Computing Integration</strong> - Better support for edge computing platforms, serverless function integration, and hybrid static-dynamic architectures that combine static site benefits with dynamic capabilities.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>Hugo Official Documentation. (2024). Hugo Static Site Generator. Retrieved from <a href="https://gohugo.io/documentation/" rel="nofollow noopener noreferrer" target="_blank">https://gohugo.io/documentation/</a></li>
+<li>Francia, S. (2023). Modern Static Site Architecture with Hugo. O’Reilly Media.</li>
+<li>Pedersen, B. E. (2024). Hugo Performance Optimization Guide. Hugo Community Documentation.</li>
+<li>JAMstack.org. (2024). Static Site Generator Comparison and Best Practices. JAMstack Foundation.</li>
+<li>GitHub. (2024). Hugo Project Repository and Community Contributions. Retrieved from <a href="https://github.com/gohugoio/hugo" rel="nofollow noopener noreferrer" target="_blank">https://github.com/gohugoio/hugo</a></li>
+<li>Netlify. (2023). Static Site Deployment and Hosting Best Practices. Netlify Documentation.</li>
+<li>Web.dev. (2024). Static Site Performance Optimization Techniques. Google Developers.</li>
+<li>Smashing Magazine. (2023). Advanced Hugo Development Techniques and Workflows. Smashing Magazine Publications.</li>
+</ul>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/hugo/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

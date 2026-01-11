@@ -15,7 +15,9 @@ type: glossary
 draft: false
 e-title: RAG Benchmarks
 term: ラグベンチマーク
-url: "/ja/glossary/RAG-benchmarks/"
+url: "/ja/glossary/rag-benchmarks/"
+aliases:
+- "/ja/glossary/RAG-benchmarks/"
 ---
 ## RAGベンチマークとは?
 RAGベンチマークとは、Retrieval-Augmented Generation(RAG)システムのパフォーマンスを評価するために設計された、構造化された基準、データセット、および指標のことです。RAGシステムは、大規模言語モデル(LLM)と検索メカニズムを組み合わせることで、AIが応答を生成する際に、ドキュメント、ナレッジベース、ウェブサイトなどの外部知識に動的にアクセスし活用できるようにします。このハイブリッドアーキテクチャは評価の複雑性をもたらします。検索フェーズ(適切なドキュメントが見つかっているか?)と生成フェーズ(回答は正確で根拠があるか?)の両方を評価する必要があるためです。
@@ -32,15 +34,46 @@ RAGシステムは多段階パイプラインとして機能します。リト�
 
 ### 検索品質指標
 
-**Precision@k:**検索されたアイテムのうち関連性のあるものの割合(上位k件中の関連アイテム数 / k)**Recall@k:**上位k件で検索されたすべての関連アイテムの割合(上位k件中の関連アイテム数 / 総関連アイテム数)**Mean Reciprocal Rank (MRR):**最初の関連結果がどれだけ上位に表示されるか(最初の関連ドキュメントの順位の逆数の平均)**Mean Average Precision (MAP):**すべての順位にわたる検索品質(再現率レベル全体の平均精度)**NDCG@k:**順位位置の重み付けを伴う段階的関連性(正規化割引累積利得)**Hit Rate:**基本的なカバレッジ測定(上位k件に少なくとも1つの関連アイテムが含まれていたか?)**例のシナリオ:**クエリ:「エア・カナダの返金ポリシーは?」で5つのドキュメントを検索し、3つが関連 → Precision@5 = 0.6。4つの関連ドキュメントが存在し、3つが見つかった場合 → Recall@5 = 0.75。
+**Precision@k:** 検索されたアイテムのうち関連性のあるものの割合(上位k件中の関連アイテム数 / k)
+
+**Recall@k:** 上位k件で検索されたすべての関連アイテムの割合(上位k件中の関連アイテム数 / 総関連アイテム数)
+
+**Mean Reciprocal Rank (MRR):** 最初の関連結果がどれだけ上位に表示されるか(最初の関連ドキュメントの順位の逆数の平均)
+
+**Mean Average Precision (MAP):** すべての順位にわたる検索品質(再現率レベル全体の平均精度)
+
+**NDCG@k:** 順位位置の重み付けを伴う段階的関連性(正規化割引累積利得)
+
+**Hit Rate:** 基本的なカバレッジ測定(上位k件に少なくとも1つの関連アイテムが含まれていたか?)
+
+**例のシナリオ:**  
+クエリ:「エア・カナダの返金ポリシーは?」で5つのドキュメントを検索し、3つが関連 → Precision@5 = 0.6。4つの関連ドキュメントが存在し、3つが見つかった場合 → Recall@5 = 0.75。
 
 ### 生成品質指標
 
-**BLEU:**生成された回答と参照回答間のN-gramオーバーラップ精度、参照回答との類似性を測定**ROUGE:**生成された回答と参照回答間のN-gramオーバーラップ再現率、要約品質とカバレッジを評価**BERTScore:**トランスフォーマー埋め込みを使用した意味的類似性、深い意味的マッチング**METEOR:**同義語、言い換え、語幹処理を考慮した柔軟な類似性測定**LLM-as-a-Judge:**LLMが事実性、関連性、一貫性、根拠性について出力をスコアリング—スケーラブルで微妙なエラーを捉える**Hallucination Rate:**サポートされていない、または捏造された情報を含む出力の割合、コンテキストへの忠実性を測定**Groundedness:**回答が検索されたドキュメントによって直接サポートされている度合い、ソースの帰属と信頼性を保証
+**BLEU:** 生成された回答と参照回答間のN-gramオーバーラップ精度、参照回答との類似性を測定
+
+**ROUGE:** 生成された回答と参照回答間のN-gramオーバーラップ再現率、要約品質とカバレッジを評価
+
+**BERTScore:** トランスフォーマー埋め込みを使用した意味的類似性、深い意味的マッチング
+
+**METEOR:** 同義語、言い換え、語幹処理を考慮した柔軟な類似性測定
+
+**LLM-as-a-Judge:** LLMが事実性、関連性、一貫性、根拠性について出力をスコアリング—スケーラブルで微妙なエラーを捉える
+
+**Hallucination Rate:** サポートされていない、または捏造された情報を含む出力の割合、コンテキストへの忠実性を測定
+
+**Groundedness:** 回答が検索されたドキュメントによって直接サポートされている度合い、ソースの帰属と信頼性を保証
 
 ### 幻覚検出アプローチ
 
-**Token Similarity Detector:**検索されたコンテキストに存在しないコンテンツにフラグを立てる**Semantic Similarity Detector:**生成された回答がコンテキストと意味的に近いかをチェック**LLM Prompt-Based Detector:**カスタムプロンプトでLLMを使用して回答の忠実性を評価**BERT Stochastic Checker:**モデルの不確実性を使用して幻覚の可能性を特定
+**Token Similarity Detector:** 検索されたコンテキストに存在しないコンテンツにフラグを立てる
+
+**Semantic Similarity Detector:** 生成された回答がコンテキストと意味的に近いかをチェック
+
+**LLM Prompt-Based Detector:** カスタムプロンプトでLLMを使用して回答の忠実性を評価
+
+**BERT Stochastic Checker:** モデルの不確実性を使用して幻覚の可能性を特定
 
 高速検出器と時折のLLMスコアリングを組み合わせることで、速度と精度の効率的な妥協点を提供します。
 
@@ -48,17 +81,17 @@ RAGシステムは多段階パイプラインとして機能します。リト�
 
 | データセット | 焦点領域 | 説明 |
 |---------|-----------|-------------|
-| **NeedleInAHaystack (NIAH)**| 長文コンテキスト検索 | 大量の無関係なコーパス内に埋め込まれた事実を見つける能力をテスト |
-| **BEIR**| クロスドメイン検索 | ファクトチェック、QA、重複検出をカバーする18の多様なデータセット |
-| **FRAMES**| 事実性、マルチホップ推論 | 複数のWikipedia記事からの情報統合が必要 |
-| **RAGTruth**| 幻覚、忠実性 | 幻覚について注釈された18,000以上のLLM生成応答 |
-| **RULER**| マルチホップ、コンテキストウィンドウ | 複雑なドキュメント内のニードルを検索・集約するための合成テストベッド |
-| **MMNeedle**| マルチモーダル検索 | 大規模な画像セット内でテキストを使用してサブ画像を検索 |
-| **FEVER**| 事実抽出、検証 | Wikipediaからの証拠を必要とする185,000以上の主張 |
-| **Natural Questions (NQ)**| 実際の検索クエリ | Wikipediaの回答を持つ実際のGoogleクエリ |
-| **MS MARCO**| パッセージ検索 | パッセージ検索タスクを持つBing検索クエリ |
-| **HotpotQA**| マルチホップQA | 質問応答のためのソース結合 |
-| **TriviaQA**| 事実豊富な質問 | ウェブとWikipediaからの証拠 |
+| **NeedleInAHaystack (NIAH)** | 長文コンテキスト検索 | 大量の無関係なコーパス内に埋め込まれた事実を見つける能力をテスト |
+| **BEIR** | クロスドメイン検索 | ファクトチェック、QA、重複検出をカバーする18の多様なデータセット |
+| **FRAMES** | 事実性、マルチホップ推論 | 複数のWikipedia記事からの情報統合が必要 |
+| **RAGTruth** | 幻覚、忠実性 | 幻覚について注釈された18,000以上のLLM生成応答 |
+| **RULER** | マルチホップ、コンテキストウィンドウ | 複雑なドキュメント内のニードルを検索・集約するための合成テストベッド |
+| **MMNeedle** | マルチモーダル検索 | 大規模な画像セット内でテキストを使用してサブ画像を検索 |
+| **FEVER** | 事実抽出、検証 | Wikipediaからの証拠を必要とする185,000以上の主張 |
+| **Natural Questions (NQ)** | 実際の検索クエリ | Wikipediaの回答を持つ実際のGoogleクエリ |
+| **MS MARCO** | パッセージ検索 | パッセージ検索タスクを持つBing検索クエリ |
+| **HotpotQA** | マルチホップQA | 質問応答のためのソース結合 |
+| **TriviaQA** | 事実豊富な質問 | ウェブとWikipediaからの証拠 |
 
 標準データセットは最先端のパフォーマンスと比較するために不可欠ですが、カスタムデータセットはドメイン固有およびビジネス固有の評価に不可欠です。
 
@@ -70,7 +103,9 @@ RAGシステムは多段階パイプラインとして機能します。リト�
 
 ### 手動およびLLM判定による関連性評価
 
-**手動ラベリング:**専門家がドキュメントの関連性をレビューしスコアリング、高品質な評価のため**LLM-as-a-Judge:**LLMプロンプトを使用して関連性と根拠性のスコアリングを自動化、スケーラビリティのため
+**手動ラベリング:** 専門家がドキュメントの関連性をレビューしスコアリング、高品質な評価のため
+
+**LLM-as-a-Judge:** LLMプロンプトを使用して関連性と根拠性のスコアリングを自動化、スケーラビリティのため
 
 評価のスケーリング、オープンエンドタスク、反復的改善に最適です。
 
@@ -96,7 +131,15 @@ LLMまたはテンプレートを使用してコーパスからQ&Aペアを自�
 
 ## ベンチマーク結果の解釈
 
-**結果を分解:**検索スコアと生成スコアを分離してボトルネックを特定し、どのコンポーネントが改善を必要としているかを識別**構成を比較:**さまざまなリトリーバー、埋め込みモデル、チャンク化戦略、プロンプト設定をテストして最適な組み合わせを見つける**時系列で監視:**モデル更新全体でリグレッションチェックとドリフト検出のために「ゴールデンデータセット」を使用**トレードオフのバランス:**高い再現率はレイテンシを増加させる可能性がある。LLM判定は微妙な問題を捉えるが、自動化された指標よりコストがかかる**マルチメトリック分析:**包括的な評価のために単一のスコアではなく複数の指標を示すダッシュボードに依存
+**結果を分解:** 検索スコアと生成スコアを分離してボトルネックを特定し、どのコンポーネントが改善を必要としているかを識別
+
+**構成を比較:** さまざまなリトリーバー、埋め込みモデル、チャンク化戦略、プロンプト設定をテストして最適な組み合わせを見つける
+
+**時系列で監視:** モデル更新全体でリグレッションチェックとドリフト検出のために「ゴールデンデータセット」を使用
+
+**トレードオフのバランス:** 高い再現率はレイテンシを増加させる可能性がある。LLM判定は微妙な問題を捉えるが、自動化された指標よりコストがかかる
+
+**マルチメトリック分析:** 包括的な評価のために単一のスコアではなく複数の指標を示すダッシュボードに依存
 
 ## 実世界のアプリケーション
 
@@ -120,63 +163,113 @@ RAG搭載チャットボットがマニュアル、FAQ、サポートチケッ�
 
 コンプライアンスクエリと投資調査のために規制と提出書類を検索し、正確で監査可能な情報検索を保証します。
 
-**業界への影響:**- 検索拡張モデルは、静的LLMと比較して事実の不正確さを最大30%削減
+**業界への影響:**
+- 検索拡張モデルは、静的LLMと比較して事実の不正確さを最大30%削減
 - RAGベンチマークからのプロンプトエンジニアリングとチューニングにより、eコマースのコンバージョン率を最大25%向上可能
 - 適切にベンチマークされ最適化されたチャットボットは、平均してカスタマーサポートコストを30%削減可能
 
 ## ツールとフレームワーク
 
-**Evidently:**RAG評価、監視、100以上のチェックのためのオープンソースライブラリ**LangSmith (LangChain):**RAGシステムのためのデータセット作成、評価、LLMベースの指標**RAGAS:**コンテキスト精度/再現率とグラウンドトゥルースマッピングを含むRAG指標のライブラリ**Maxim:**データセット管理、マルチモーダル評価、カスタマイズ可能な評価者**DeepEval & OpenAI Evals:**包括的評価のためのLLMベースの評価ツール**ARES & RAGAs:**合成データ生成と自動スコアリングフレームワーク
+**Evidently:** RAG評価、監視、100以上のチェックのためのオープンソースライブラリ
+
+**LangSmith (LangChain):** RAGシステムのためのデータセット作成、評価、LLMベースの指標
+
+**RAGAS:** コンテキスト精度/再現率とグラウンドトゥルースマッピングを含むRAG指標のライブラリ
+
+**Maxim:** データセット管理、マルチモーダル評価、カスタマイズ可能な評価者
+
+**DeepEval & OpenAI Evals:** 包括的評価のためのLLMベースの評価ツール
+
+**ARES & RAGAs:** 合成データ生成と自動スコアリングフレームワーク
 
 ## ベストプラクティス
 
-**明確な目標を設定:**具体的な測定目標を定義(関連性、事実性、安全性、レイテンシ)**代表的なデータセットを使用:**実際のクエリとドキュメントに一致する標準データとカスタムデータをブレンド**評価アプローチのバランス:**自動化された指標(高速、スケーラブル)とLLM/人間レビュー(微妙、包括的)を組み合わせる**ベンチマークを定期的に更新:**データ、ビジネスニーズ、ユーザー期待の変化に対応**バイアスと公平性を監視:**異なるユーザー、トピック、情報ソース全体でパフォーマンスを分析**マルチメトリックダッシュボードを実装:**単一のスコアに依存するのではなく、包括的な指標スイートを追跡**文書化とバージョン管理:**再現性とコンプライアンスのためにデータセット、指標、基準の明確な記録を維持**フィードバックループを確立:**ベンチマークの洞察を使用して検索と生成の継続的改善を推進
+**明確な目標を設定:** 具体的な測定目標を定義(関連性、事実性、安全性、レイテンシ)
+
+**代表的なデータセットを使用:** 実際のクエリとドキュメントに一致する標準データとカスタムデータをブレンド
+
+**評価アプローチのバランス:** 自動化された指標(高速、スケーラブル)とLLM/人間レビュー(微妙、包括的)を組み合わせる
+
+**ベンチマークを定期的に更新:** データ、ビジネスニーズ、ユーザー期待の変化に対応
+
+**バイアスと公平性を監視:** 異なるユーザー、トピック、情報ソース全体でパフォーマンスを分析
+
+**マルチメトリックダッシュボードを実装:** 単一のスコアに依存するのではなく、包括的な指標スイートを追跡
+
+**文書化とバージョン管理:** 再現性とコンプライアンスのためにデータセット、指標、基準の明確な記録を維持
+
+**フィードバックループを確立:** ベンチマークの洞察を使用して検索と生成の継続的改善を推進
 
 ## 実装例
 
 ### カスタマーサポートチャットボット
 
-**データセット:**ポリシードキュメントにマッピングされた100の実際の顧客返金質問**検索評価:**上位3つのドキュメントが関連ポリシーをカバーすることを保証するためにrecall@3を計算**生成評価:**ソース資料における正確性と根拠性のためのLLM-as-a-judge**本番監視:**1%を超えた場合のアラートで幻覚率を追跡**成果:**ポリシー誤表現事件を防ぐ継続的な品質保証
+**データセット:** ポリシードキュメントにマッピングされた100の実際の顧客返金質問
+
+**検索評価:** 上位3つのドキュメントが関連ポリシーをカバーすることを保証するためにrecall@3を計算
+
+**生成評価:** ソース資料における正確性と根拠性のためのLLM-as-a-judge
+
+**本番監視:** 1%を超えた場合のアラートで幻覚率を追跡
+
+**成果:** ポリシー誤表現事件を防ぐ継続的な品質保証
 
 ### 法的文書アシスタント
 
-**データセット:**注釈付き回答とサポート法令を持つ法的クエリ**指標:**検索のためのMAPとNDCG、生成のためのBERTScoreと忠実性**最適化:**埋め込みモデルのチューニング後、検索精度が15%向上**成果:**適切なソース帰属を伴うより速く正確な法的調査
+**データセット:** 注釈付き回答とサポート法令を持つ法的クエリ
+
+**指標:** 検索のためのMAPとNDCG、生成のためのBERTScoreと忠実性
+
+**最適化:** 埋め込みモデルのチューニング後、検索精度が15%向上
+
+**成果:** 適切なソース帰属を伴うより速く正確な法的調査
 
 ## まとめ:RAGベンチマーキング一覧
 
 | 側面 | 検索評価 | 生成評価 |
 |--------|---------------------|----------------------|
-| **指標**| Precision@k、Recall@k、MRR、MAP、NDCG、Hit Rate | BLEU、ROUGE、BERTScore、LLM-as-judge、Hallucination Rate、Groundedness |
-| **データセット**| NIAH、BEIR、FRAMES、MS MARCO、HotpotQA、カスタム | FEVER、RAGTruth、カスタムQAペア |
-| **方法**| グラウンドトゥルース、LLM/人間ラベリング、合成データ | 参照比較、参照フリーLLMスコアリング |
-| **ツール**| Evidently、LangSmith、RAGAS、Maxim、OpenAI Evals | 同じツールに加えて人間/LLMレビューワークフロー |
-| **ユースケース**| カスタマーサポート、法務、エンタープライズ検索、教育、医療 | 回答の正確性と忠実性に焦点を当てた同じアプリケーション |
+| **指標** | Precision@k、Recall@k、MRR、MAP、NDCG、Hit Rate | BLEU、ROUGE、BERTScore、LLM-as-judge、Hallucination Rate、Groundedness |
+| **データセット** | NIAH、BEIR、FRAMES、MS MARCO、HotpotQA、カスタム | FEVER、RAGTruth、カスタムQAペア |
+| **方法** | グラウンドトゥルース、LLM/人間ラベリング、合成データ | 参照比較、参照フリーLLMスコアリング |
+| **ツール** | Evidently、LangSmith、RAGAS、Maxim、OpenAI Evals | 同じツールに加えて人間/LLMレビューワークフロー |
+| **ユースケース** | カスタマーサポート、法務、エンタープライズ検索、教育、医療 | 回答の正確性と忠実性に焦点を当てた同じアプリケーション |
 
 ## 主要用語
 
-**Retriever(リトリーバー):**外部ソースから関連情報を検索するコンポーネント**Generator(ジェネレーター):**ユーザークエリと検索されたコンテキストを使用して最終応答を作成するLLM**Ground Truth(グラウンドトゥルース):**評価ベンチマーキングに使用される正しい回答またはコンテキスト**Hallucination(幻覚):**検索されたソースに根拠のないモデル生成情報**Faithfulness(忠実性):**サポート証拠とコンテキストへの出力の整合性**Context Window(コンテキストウィンドウ):**応答生成中にLLMが利用できる情報量**Prompt Engineering(プロンプトエンジニアリング):**LLMの動作と精度を制御するための入力プロンプトの設計
+**Retriever(リトリーバー):** 外部ソースから関連情報を検索するコンポーネント
+
+**Generator(ジェネレーター):** ユーザークエリと検索されたコンテキストを使用して最終応答を作成するLLM
+
+**Ground Truth(グラウンドトゥルース):** 評価ベンチマーキングに使用される正しい回答またはコンテキスト
+
+**Hallucination(幻覚):** 検索されたソースに根拠のないモデル生成情報
+
+**Faithfulness(忠実性):** サポート証拠とコンテキストへの出力の整合性
+
+**Context Window(コンテキストウィンドウ):** 応答生成中にLLMが利用できる情報量
+
+**Prompt Engineering(プロンプトエンジニアリング):** LLMの動作と精度を制御するための入力プロンプトの設計
 
 ## 参考文献
 
-
-1. Evidently AI. (n.d.). A Complete Guide to RAG Evaluation. Evidently AI.
-2. Evidently AI. (n.d.). 7 RAG Benchmarks. Evidently AI Blog.
-3. Statsig. (n.d.). RAG Evaluation Metrics, Methods, and Benchmarks. Statsig Perspectives.
-4. Braintrust. (2025). The 5 Best RAG Evaluation Tools in 2025. Braintrust Articles.
-5. Braintrust. (n.d.). RAG Evaluation Metrics. Braintrust Articles.
-6. Greg Kamradt. (n.d.). Needle-in-a-Haystack GitHub Repository. GitHub.
-7. Greg Kamradt. (n.d.). Needle-in-a-Haystack Video. YouTube.
-8. BEIR. (2021). Benchmark for Information Retrieval. arXiv.
-9. FEVER. (n.d.). Fact Extraction and Verification Dataset. FEVER AI.
-10. Google AI. (n.d.). Natural Questions Dataset. Google AI Research.
-11. Microsoft. (n.d.). MS MARCO Dataset. Microsoft GitHub.
-12. HotpotQA. (n.d.). HotpotQA Dataset. HotpotQA.
-13. TriviaQA. (n.d.). TriviaQA Dataset. University of Washington.
-14. Evidently AI. (n.d.). LLM Evaluation Benchmarks Database. Evidently AI.
-15. LangChain. (n.d.). RAG Evaluation Tutorial. LangChain Documentation.
-16. RAGAS. (n.d.). RAGAS GitHub Repository. GitHub.
-17. Maxim. (n.d.). RAG Evaluation Metrics. Maxim Blog.
-18. DeepEval. (n.d.). DeepEval GitHub Repository. GitHub.
-19. OpenAI. (n.d.). Evaluation Guide. OpenAI Platform.
-20. CBC News. (2024). Air Canada Chatbot Case. CBC News.
-21. Evidently AI. (n.d.). RAG Production Examples. Evidently AI Blog.
+- [Evidently AI: A Complete Guide to RAG Evaluation](https://www.evidentlyai.com/llm-guide/rag-evaluation)
+- [Evidently AI: 7 RAG Benchmarks](https://www.evidentlyai.com/blog/rag-benchmarks)
+- [Statsig: RAG Evaluation Metrics, Methods, and Benchmarks](https://www.statsig.com/perspectives/rag-evaluation-metrics-methods-benchmarks)
+- [Braintrust: The 5 Best RAG Evaluation Tools in 2025](https://www.braintrust.dev/articles/best-rag-evaluation-tools)
+- [Braintrust: RAG Evaluation Metrics](https://www.braintrust.dev/articles/rag-evaluation-metrics)
+- [Greg Kamradt: Needle-in-a-Haystack GitHub Repository](https://github.com/gkamradt/LLMTest_NeedleInAHaystack)
+- [Greg Kamradt: Needle-in-a-Haystack Video](https://www.youtube.com/watch?v=KwRRuiCCdmc)
+- [BEIR: Benchmark for Information Retrieval](https://arxiv.org/abs/2104.08663)
+- [FEVER: Fact Extraction and Verification Dataset](https://fever.ai/)
+- [Google AI: Natural Questions Dataset](https://ai.google.com/research/NaturalQuestions)
+- [Microsoft: MS MARCO Dataset](https://microsoft.github.io/msmarco/)
+- [HotpotQA Dataset](https://hotpotqa.github.io/)
+- [TriviaQA Dataset](http://nlp.cs.washington.edu/triviaqa/)
+- [Evidently: LLM Evaluation Benchmarks Database](https://www.evidentlyai.com/llm-evaluation-benchmarks-datasets)
+- [LangChain: RAG Evaluation Tutorial](https://docs.langchain.com/langsmith/evaluate-rag-tutorial)
+- [RAGAS GitHub Repository](https://github.com/explodinggradients/ragas)
+- [Maxim: RAG Evaluation Metrics](https://www.getmaxim.ai/blog/rag-evaluation-metrics/)
+- [DeepEval GitHub Repository](https://github.com/confident-ai/deepeval)
+- [OpenAI: Evaluation Guide](https://platform.openai.com/docs/guides/evals)
+- [CBC News: Air Canada Chatbot Case](https://www.cbc.ca/news/business/air-canada-chatbot-refund-1.7129533)
+- [Evidently AI: RAG Production Examples](https://www.evidentlyai.com/blog/rag-examples)

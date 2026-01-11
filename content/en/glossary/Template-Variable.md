@@ -2,7 +2,7 @@
 title: "Template Variable"
 date: 2025-12-19
 translationKey: Template-Variable
-description: "A placeholder in a template that automatically gets replaced with actual data during processing, enabling personalized content creation without rewriting the template each time."
+description: "A placeholder in a template that automatically gets replaced with actual data when the template is processed, allowing you to create personalized content without rewriting the template each time."
 keywords:
 - template variable
 - dynamic content
@@ -40,7 +40,21 @@ Template variables typically follow specific syntax conventions depending on the
 
 ## How Template Variable Works
 
-The template variable workflow begins with **template definition**, where developers create template files containing static content mixed with variable placeholders using the appropriate syntax for their chosen templating engine. These templates serve as blueprints that define the structure and layout while leaving specific content areas open for dynamic insertion.**Variable declaration**occurs when the template engine encounters variable syntax during template parsing, identifying placeholder locations and extracting variable names for subsequent resolution. The parser builds an internal representation of the template structure, noting variable positions and any associated formatting or filtering instructions.**Context preparation**involves gathering the data that will populate template variables, typically from databases, APIs, configuration files, or programmatically defined objects. This data gets organized into a context object or dictionary structure that maps variable names to their corresponding values.**Variable resolution**takes place when the template engine matches variable names from the template against available data in the provided context, retrieving the appropriate values for substitution. The engine handles missing variables according to configured policies, either throwing errors, using default values, or leaving placeholders empty.**Type processing**ensures that variable values are properly formatted for their intended output context, converting data types as needed and applying any specified filters or transformations such as date formatting, string manipulation, or numerical calculations.**Content substitution**replaces variable placeholders with their resolved values, maintaining the original template structure while inserting dynamic content at the designated locations. The engine preserves formatting and handles special characters appropriately for the target output format.**Template compilation**generates the final output by combining static template content with substituted variable values, producing a complete document ready for delivery to end users or further processing by other systems.**Caching optimization**stores compiled templates and resolved variable values when appropriate, improving performance for frequently used templates while ensuring that dynamic content remains current and accurate.
+The template variable workflow begins with **template definition**, where developers create template files containing static content mixed with variable placeholders using the appropriate syntax for their chosen templating engine. These templates serve as blueprints that define the structure and layout while leaving specific content areas open for dynamic insertion.
+
+**Variable declaration** occurs when the template engine encounters variable syntax during template parsing, identifying placeholder locations and extracting variable names for subsequent resolution. The parser builds an internal representation of the template structure, noting variable positions and any associated formatting or filtering instructions.
+
+**Context preparation** involves gathering the data that will populate template variables, typically from databases, APIs, configuration files, or programmatically defined objects. This data gets organized into a context object or dictionary structure that maps variable names to their corresponding values.
+
+**Variable resolution** takes place when the template engine matches variable names from the template against available data in the provided context, retrieving the appropriate values for substitution. The engine handles missing variables according to configured policies, either throwing errors, using default values, or leaving placeholders empty.
+
+**Type processing** ensures that variable values are properly formatted for their intended output context, converting data types as needed and applying any specified filters or transformations such as date formatting, string manipulation, or numerical calculations.
+
+**Content substitution** replaces variable placeholders with their resolved values, maintaining the original template structure while inserting dynamic content at the designated locations. The engine preserves formatting and handles special characters appropriately for the target output format.
+
+**Template compilation** generates the final output by combining static template content with substituted variable values, producing a complete document ready for delivery to end users or further processing by other systems.
+
+**Caching optimization** stores compiled templates and resolved variable values when appropriate, improving performance for frequently used templates while ensuring that dynamic content remains current and accurate.
 
 ## Key Benefits
 

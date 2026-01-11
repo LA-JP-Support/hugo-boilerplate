@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Sentiment-Adaptive Tone | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/sentiment-adaptive-tone/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/sentiment-adaptive-tone/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/sentiment-adaptive-tone/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/sentiment-adaptive-tone/" hreflang="x-default" rel="alternate"/>
+<meta content="AI technology that adjusts how chatbots communicate—tone, mood, and formality—based on detecting a customer's emotions to create more natural and satisfying conversations." name="description"/>
+<meta content="sentiment-adaptive tone, AI chatbots, customer service, sentiment analysis, emotional intelligence" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/sentiment-adaptive-tone/" property="og:url"/>
+<meta content="Sentiment-Adaptive Tone | SmartWeb" property="og:title"/>
+<meta content="AI technology that adjusts how chatbots communicate—tone, mood, and formality—based on detecting a customer's emotions to create more natural and satisfying conversations." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/sentiment-adaptive-tone/" name="twitter:url"/>
+<meta content="Sentiment-Adaptive Tone | SmartWeb" name="twitter:title"/>
+<meta content="AI technology that adjusts how chatbots communicate—tone, mood, and formality—based on detecting a customer's emotions to create more natural and satisfying conversations." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Sentiment-Adaptive Tone</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Sentiment-Adaptive Tone
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          AI technology that adjusts how chatbots communicate—tone, mood, and formality—based on detecting a customer's emotions to create more natural and satisfying conversations.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                sentiment-adaptive tone
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI chatbots
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                customer service
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                sentiment analysis
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                emotional intelligence
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-sentiment-adaptive-tone">What is Sentiment-Adaptive Tone?</h2>
+<p>Sentiment-adaptive tone is an advanced <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">artificial intelligence (AI)</a> capability that enables chatbots, voicebots, and automated systems to dynamically adjust their communication style—tone, mood, and formality—based on the detected emotional state of a user during an interaction.</p>
+<p>For instance, if a customer expresses frustration, the AI responds with empathy and reassurance. If the customer is cheerful, the AI engages in a friendly, light tone. For formal inquiries, the tone becomes authoritative and precise. This real-time adaptation creates more natural, emotionally aware conversations that feel contextually appropriate and human-like.</p>
+<p>Sentiment-adaptive tone bridges the human-machine gap by enabling automated conversations to feel natural, emotionally aware, and contextually appropriate. Customers judge not only the answers they receive but also how they feel during the interaction. Emotional intelligence in AI is closely linked to customer satisfaction, loyalty, and business outcomes. According to industry research, over 80% of customers report at least one poor <a data-lb="1" href="/en/glossary/chatbot/" title="Chatbot glossary entry">chatbot</a> experience, and 55% never return after a bad interaction. Personality-driven AI chatbots, which utilize sentiment-adaptive tone, can raise satisfaction by 20-30% and lower support costs by up to 30%.</p>
+<h2 id="core-technologies">Core Technologies</h2>
+<h3 id="natural-language-processing-nlp">Natural Language Processing (NLP)</h3>
+<p>Understands meaning, intent, context, and sentiment in text or speech. Analyzes syntactic and semantic structures to interpret user messages.</p>
+<h3 id="sentiment-analysis">Sentiment Analysis</h3>
+<p>Detects emotional tone—positive, negative, neutral, or nuanced emotions like frustration, joy, confusion, or anger. Uses classification models trained on emotion-labeled datasets.</p>
+<h3 id="voice-pattern-analysis">Voice Pattern Analysis</h3>
+<p>Analyzes pitch, rate, volume, and rhythm for emotional cues in speech. Detects stress, urgency, or calmness through acoustic features.</p>
+<h3 id="machine-learning-ml">Machine Learning (ML)</h3>
+<p>Learns from large datasets to improve emotion detection over time. Adaptive models refine accuracy through continuous feedback loops.</p>
+<h3 id="contextual-understanding">Contextual Understanding</h3>
+<p>Tracks conversation flow, user history, and situational context. Maintains emotional trajectory across multi-turn interactions.</p>
+<h3 id="real-time-adaptation">Real-Time Adaptation</h3>
+<p>Instantly shifts tone, language, or <a data-lb="1" href="/en/glossary/escalation/" title="Escalation glossary entry">escalation</a> based on detected emotion. Enables dynamic response adjustment within milliseconds.</p>
+<h2 id="system-architecture">System Architecture</h2>
+<p>A robust sentiment-adaptive tone system integrates several modules:</p>
+<p><strong>Automatic <a data-lb="1" href="/en/glossary/speech-recognition/" title="Speech Recognition glossary entry">Speech Recognition</a> (ASR):</strong> Converts voice to text for further analysis</p>
+<p><strong>Sentiment &amp; Emotion Classifiers:</strong> Assign emotion scores to input using ML models</p>
+<p><strong>Dialogue State Tracker:</strong> Maintains conversation context and emotional trajectory</p>
+<p><strong>Response Generator:</strong> Crafts replies with tone parameters, using templates or <a data-lb="1" href="/en/glossary/generative-ai/" title="Generative AI glossary entry">generative AI</a> models</p>
+<p><strong>Escalation Engine:</strong> Routes to human agents if strong negative sentiment or risk is detected</p>
+<p><strong>Workflow Diagram:</strong></p>
+<pre tabindex="0"><code>[User Input] → [Emotion &amp; Context Detection] → [Tone Selection Engine] → [Adaptive Response Generation] → [User]
+                        ↑
+                        | (Feedback loop: monitors for tone shifts)
+</code></pre><h2 id="multi-layered-processing-example">Multi-Layered Processing Example</h2>
+<p>Engage 360 by Voxtron uses a comprehensive process:</p>
+<p><strong>1. Data Collection:</strong> Analyzes customer interactions—text, voice, or chat—in real time</p>
+<p><strong>2. Emotion Detection:</strong> The NLP engine identifies cues such as tone, word patterns, and intensity</p>
+<p><strong>3. Classification:</strong> Each segment is labeled (positive, negative, neutral, angry, appreciative, confused)</p>
+<p><strong>4. Adaptive Response:</strong> The chatbot adapts tone, escalates to a human agent, or reinforces positive sentiment</p>
+<p><strong>5. Continuous Learning:</strong> The AI refines its understanding of context and emotion from each interaction</p>
+<h2 id="common-applications">Common Applications</h2>
+<h3 id="customer-service--support">Customer Service &amp; Support</h3>
+<p><strong>Automated Issue Resolution:</strong> Chatbots identify when a customer is upset and respond empathetically: “I’m sorry you’re experiencing this—let’s get it resolved quickly.”</p>
+<p><strong>Escalation Management:</strong> When high frustration is detected, the system can escalate the interaction to a human agent automatically</p>
+<p><strong>Aftercare &amp; Follow-Up:</strong> AI uses a caring tone for post-case check-ins to reinforce trust</p>
+<h3 id="contact-centers">Contact Centers</h3>
+<p><strong>Real-Time Call Guidance:</strong> Voicebots adjust tone mid-call as emotions shift—from formal greeting to empathetic problem-solving</p>
+<p><strong>Analytics &amp; Coaching:</strong> Sentiment-tracking dashboards help supervisors identify emotional hotspots for agent coaching</p>
+<h3 id="sales-marketing--engagement">Sales, Marketing &amp; Engagement</h3>
+<p><strong>Personalized Product Recommendations:</strong> AI adapts its persuasive tone based on user’s mood or stage in the buying journey</p>
+<p><strong>Brand Personality Consistency:</strong> Maintains brand voice across channels while tuning tone to individual customer sentiment</p>
+<h3 id="healthcare-financial-services-and-other-domains">Healthcare, Financial Services, and Other Domains</h3>
+<p><strong>Sensitive Conversations:</strong> AI uses a gentle, non-judgmental tone for health, finance, or insurance queries</p>
+<p><strong>Education:</strong> E-learning bots adopt encouraging or corrective tones based on student frustration or progress</p>
+<h2 id="practical-examples">Practical Examples</h2>
+<h3 id="text-chatbot-scenarios">Text Chatbot Scenarios</h3>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Customer Emotion</th>
+<th>Adaptive Response Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Complaint about delayed order</td>
+<td>Frustration</td>
+<td>“I’m really sorry for the delay. Let’s get this sorted.”</td>
+</tr>
+<tr>
+<td>Product inquiry, positive feedback</td>
+<td>Enthusiasm</td>
+<td>“Great to hear you’re enjoying it! Need help with anything else?”</td>
+</tr>
+<tr>
+<td>Confused about a bill</td>
+<td>Confusion</td>
+<td>“I understand this can be confusing. Let me explain step by step.”</td>
+</tr>
+<tr>
+<td>Cancellations or complaints</td>
+<td>Anger</td>
+<td>“I can see this is upsetting. I’m here to make things right.”</td>
+</tr>
+</tbody>
+</table>
+<h3 id="voicebot-and-omnichannel-scenarios">Voicebot and Omnichannel Scenarios</h3>
+<p><strong>Voice Call:</strong> If a caller’s tone is flat and terse, voice AI detects negative sentiment, softens its voice, and slows speech: “I’m here to help, and I can sense this is important to you. Let’s work through it together.”</p>
+<p><strong>Omnichannel:</strong> If a customer starts chat with cheerful language, the bot responds in kind. If the conversation turns negative, the bot pivots to a more measured, supportive tone.</p>
+<h2 id="business-value-and-measurable-impact">Business Value and Measurable Impact</h2>
+<h3 id="key-benefits">Key Benefits</h3>
+<p><strong>Higher Customer Satisfaction (CSAT):</strong> Responding in the right emotional tone increases customer approval</p>
+<p><strong>Reduced Churn:</strong> Proactive tone adaptation prevents frustration from escalating to lost business</p>
+<p><strong>Improved Agent Efficiency:</strong> Automated systems handle more queries successfully, freeing agents for complex cases</p>
+<p><strong>Brand Loyalty:</strong> Customers feel heard and valued, fostering long-term relationships</p>
+<p><strong>Operational Insight:</strong> Sentiment data reveals process or product pain points for targeted improvement</p>
+<h3 id="supporting-data--statistics">Supporting Data &amp; Statistics</h3>
+<ul>
+<li>Companies integrating <a data-lb="1" href="/en/glossary/sentiment-analysis/" title="Sentiment Analysis glossary entry">sentiment analysis</a> report up to a <strong>25% increase in CSAT</strong> and a <strong>20% reduction in customer churn</strong></li>
+<li>68% of service teams now use AI with sentiment analysis to improve empathy in interactions</li>
+<li>Personality-driven AI chatbots can lower support costs by up to 30% while boosting satisfaction by 20-30%</li>
+<li>Sentiment-adaptive contact centers see 15-30% higher first-contact resolution rates</li>
+</ul>
+<h2 id="implementation-steps">Implementation Steps</h2>
+<h3 id="technical-considerations">Technical Considerations</h3>
+<p><strong>1. Define Goals:</strong> Target business outcomes (CSAT, churn, NPS, etc.)</p>
+<p><strong>2. Select Technology Stack:</strong> Choose platforms with integrated NLP, sentiment analysis, and real-time adaptation</p>
+<p><strong>3. Integrate with Existing Systems:</strong> CRM, contact center, and knowledge bases for seamless experience</p>
+<p><strong>4. Train and Fine-Tune Models:</strong> Use historical data, call recordings, and brand-specific tone guidelines</p>
+<p><strong>5. Test in Stages:</strong> Pilot in low-risk channels before full deployment</p>
+<p><strong>6. Monitor and Refine:</strong> Continuous learning from live data and user feedback</p>
+<h3 id="operational--cultural-alignment">Operational &amp; Cultural Alignment</h3>
+<p><strong>Brand Personality Definition:</strong> Document the desired tone (e.g., helpful, formal, witty) and ensure AI responses reflect it</p>
+<p><strong>Cultural Sensitivity:</strong> Adapt tone for regional differences—what’s friendly in one culture may be inappropriate in another</p>
+<p><strong>Escalation Protocols:</strong> Set clear rules for transferring to a human agent</p>
+<p><strong>Feedback Loops:</strong> Collect customer and agent feedback to iteratively improve tone models</p>
+<h2 id="key-performance-indicators">Key Performance Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CSAT/NPS</strong></td>
+<td>Customer satisfaction and loyalty scores post-interaction</td>
+</tr>
+<tr>
+<td><strong>Churn Rate</strong></td>
+<td>Percentage of customers lost, correlated with sentiment trends</td>
+</tr>
+<tr>
+<td><strong>Resolution Rate</strong></td>
+<td>Percentage of queries solved on first contact</td>
+</tr>
+<tr>
+<td><strong>Escalation Rate</strong></td>
+<td>Frequency of transferring interactions from bot to human</td>
+</tr>
+<tr>
+<td><strong>Sentiment Shift</strong></td>
+<td>Change in customer sentiment across the conversation</td>
+</tr>
+<tr>
+<td><strong>Average Handling Time</strong></td>
+<td>Time to resolve queries, ideally reduced with effective adaptation</td>
+</tr>
+<tr>
+<td><strong>Return Interaction Rate</strong></td>
+<td>Frequency of customers engaging again after a positive interaction</td>
+</tr>
+<tr>
+<td><strong>Sentiment Analytics</strong></td>
+<td>Trends in emotion detected across all conversations</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-limitations">Challenges and Limitations</h2>
+<p><strong>Sarcasm and Irony:</strong> AI still struggles to reliably detect non-literal language in all contexts</p>
+<p><strong>Cultural Nuance:</strong> Emotional expression varies globally; tone models require local tuning</p>
+<p><strong>Data Privacy:</strong> Sentiment analysis must comply with regulations (<a data-lb="1" href="/en/glossary/gdpr/" title="GDPR glossary entry">GDPR</a>, CCPA) regarding voice/text data usage</p>
+<p><strong>Integration Complexities:</strong> Legacy systems may not easily support real-time sentiment adaptation</p>
+<p><strong>Over-Humanization:</strong> Inconsistent or excessive attempts to mimic humans can cause discomfort or trust issues</p>
+<h2 id="future-trends">Future Trends</h2>
+<p><strong>Multimodal Sentiment Analysis:</strong> AI will interpret emotion from voice, text, video, and even biometrics simultaneously</p>
+<p><strong>Predictive Emotional Analytics:</strong> AI will anticipate customer frustration before it surfaces—enabling preemptive support or outreach</p>
+<p><strong>Personalized Tone Profiles:</strong> AI will adapt tone based on user history and preferences, not just general sentiment</p>
+<p><strong>Emotionally Consistent Omnichannel Experiences:</strong> Seamless tone adaptation across chat, voice, email, and social channels</p>
+<p><strong>Integration with Generative AI:</strong> Next-gen chatbots will use <a data-lb="1" href="/blog/how-to-use-large-language-models-effectively/" title="Learn practical applications of large language models like ChatGPT, explore different LLM platforms, understand how these models work under the hood, and discover how to leverage them effectively in your daily work and life.">large language models</a> to fine-tune responses for nuance and context in real time</p>
+<h2 id="related-concepts">Related Concepts</h2>
+<p><strong>Sentiment Analysis:</strong> AI process of detecting emotional tone in text/voice</p>
+<p><strong>Emotional Intelligence in AI:</strong> Systems capable of perceiving, understanding, and reacting to human emotions</p>
+<p><strong><a data-lb="1" href="/en/glossary/natural-language-processing/" title="Natural Language Processing (NLP) glossary entry">Natural Language Processing (NLP)</a>:</strong> Core technology for interpreting meaning, context, and emotion in language</p>
+<p><strong>Machine Learning (ML):</strong> Enables systems to learn from data and improve emotion detection over time</p>
+<p><strong><a data-lb="1" href="/en/glossary/contextual-understanding/" title="contextual understanding glossary entry">Contextual Understanding</a>:</strong> Keeping track of conversation flow, user history, and intent</p>
+<p><strong><a data-lb="1" href="/en/glossary/customer-experience---cx-/" title="Customer Experience (CX) glossary entry">Customer Experience (CX)</a>:</strong> Holistic perception of a brand shaped by every interaction, heavily influenced by emotional tone</p>
+<p><strong>Voice Pattern Analysis:</strong> Identifies emotion through speech features—pitch, rhythm, intensity</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.voxtronme.com/2025/11/24/how-chatbot-sentiment-analysis-is-transforming-customer-experience-in-contact-centers/" rel="nofollow noopener noreferrer" target="_blank">Voxtron: How Chatbot Sentiment Analysis is Transforming Customer Experience in Contact Centers</a></li>
+<li><a href="https://www.bitcot.com/chatbot-personality/" rel="nofollow noopener noreferrer" target="_blank">Bitcot: Humanizing Chatbot Personality with Conversational AI</a></li>
+<li><a href="https://dialzara.com/blog/top-7-sentiment-analysis-techniques-for-voice-ai" rel="nofollow noopener noreferrer" target="_blank">DialZara: Top 7 Sentiment Analysis Techniques for Voice AI</a></li>
+<li><a href="https://www.linkedin.com/pulse/meaning-aware-chatbots-adapt-tone-evolution-future-andre-g5sze" rel="nofollow noopener noreferrer" target="_blank">LinkedIn: Meaning-Aware Chatbots That Adapt Tone</a></li>
+<li><a href="https://www.retellai.com/glossary/sentiment-analysis" rel="nofollow noopener noreferrer" target="_blank">Retell AI: Sentiment Analysis Glossary</a></li>
+<li><a href="https://www.qevalpro.com/blog/ai-sentiment-analysis-improves-customer-experience/" rel="nofollow noopener noreferrer" target="_blank">QEval Pro: AI Sentiment Analysis for Customer Experience</a></li>
+<li><a href="https://www.bitcot.com/services/ai-automation-agency/" rel="nofollow noopener noreferrer" target="_blank">Bitcot: AI Automation Solutions</a></li>
+<li><a href="https://www.voxtronme.com/engage-360-platform/" rel="nofollow noopener noreferrer" target="_blank">Voxtron: Engage 360 Platform</a></li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/customer-support/">
+                    Customer Support
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/en/glossary/customer-support/" title="Customer Support glossary entry">Customer support</a> is a team and set of tools that help customers solve problems, answer questions, an...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/customer-support/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/multi-channel-support/">
+                    Multi-channel Support
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A customer service approach where businesses offer support through multiple separate channels like c...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/multi-channel-support/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/canonical-form/">
+                    Canonical Form
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A standardized format that converts different versions of the same information into one consistent f...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/canonical-form/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/cognitive-load/">
+                    Cognitive load
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    The amount of mental effort needed to understand and process information. Managing it well improves ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/cognitive-load/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/consistency-evaluation/">
+                    Consistency Evaluation
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A test that checks whether an <a data-lb="1" href="/en/glossary/ai-chatbot/" title="AI Chatbot glossary entry">AI chatbot</a> gives the same reliable answers when asked the same questio...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/consistency-evaluation/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/context-switching/">
+                    Context Switching
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/en/glossary/context-switching/" title="Context Switching glossary entry">Context switching</a> is when a user suddenly changes topics during a conversation, requiring AI chatbot...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/context-switching/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/sentiment-adaptive-tone/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

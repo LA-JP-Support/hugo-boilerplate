@@ -42,7 +42,21 @@ Agent occupancy directly impacts both customer experience and employee satisfact
 
 The agent occupancy calculation process begins with comprehensive time tracking systems that monitor every aspect of an agent's workday. These systems automatically record when agents log in, begin handling interactions, place customers on hold, complete calls, and engage in post-call work activities.
 
-**Step 1**: Time tracking systems capture all agent activities including productive work time (talk time, hold time, wrap-up time) and non-productive time (idle time, personal breaks, system delays).**Step 2**: The system calculates total handle time by summing all customer interaction minutes, including direct conversation time and necessary follow-up work.**Step 3**: Available time is determined by subtracting scheduled breaks, training sessions, meetings, and other approved non-productive activities from total logged-in time.**Step 4**: The occupancy percentage is calculated using the formula: (Total Handle Time ÷ Total Available Time) × 100.**Step 5**: Real-time monitoring systems compare current occupancy rates against predetermined thresholds and generate alerts when rates fall outside acceptable ranges.**Step 6**: Management dashboards display occupancy data in real-time, enabling supervisors to make immediate adjustments to staffing, call routing, or break schedules.**Step 7**: Historical data analysis identifies patterns and trends, supporting long-term workforce planning and process optimization initiatives.**Example Workflow**: An agent works an 8-hour shift with 1 hour of scheduled breaks, resulting in 7 hours (420 minutes) of available time. During this period, the agent handles customer interactions for 315 minutes, yielding an occupancy rate of 75% (315 ÷ 420 × 100).
+**Step 1**: Time tracking systems capture all agent activities including productive work time (talk time, hold time, wrap-up time) and non-productive time (idle time, personal breaks, system delays).
+
+**Step 2**: The system calculates total handle time by summing all customer interaction minutes, including direct conversation time and necessary follow-up work.
+
+**Step 3**: Available time is determined by subtracting scheduled breaks, training sessions, meetings, and other approved non-productive activities from total logged-in time.
+
+**Step 4**: The occupancy percentage is calculated using the formula: (Total Handle Time ÷ Total Available Time) × 100.
+
+**Step 5**: Real-time monitoring systems compare current occupancy rates against predetermined thresholds and generate alerts when rates fall outside acceptable ranges.
+
+**Step 6**: Management dashboards display occupancy data in real-time, enabling supervisors to make immediate adjustments to staffing, call routing, or break schedules.
+
+**Step 7**: Historical data analysis identifies patterns and trends, supporting long-term workforce planning and process optimization initiatives.
+
+**Example Workflow**: An agent works an 8-hour shift with 1 hour of scheduled breaks, resulting in 7 hours (420 minutes) of available time. During this period, the agent handles customer interactions for 315 minutes, yielding an occupancy rate of 75% (315 ÷ 420 × 100).
 
 ## Key Benefits
 

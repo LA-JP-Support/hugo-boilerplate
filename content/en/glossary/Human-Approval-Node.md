@@ -11,7 +11,8 @@ draft: false
 ---
 ## Definition
 
-**Human Approval Node:**A workflow step that pauses automation until a designated human user reviews the task and clicks 'Approve' or 'Reject' (or provides feedback) via a dashboard, UI, or communication channel. This step—also known as a "Human-in-the-Loop" (HITL) checkpoint—enforces human oversight and decision-making at predefined points in automated or agentic workflows.  
+**Human Approval Node:**  
+A workflow step that pauses automation until a designated human user reviews the task and clicks 'Approve' or 'Reject' (or provides feedback) via a dashboard, UI, or communication channel. This step—also known as a "[Human-in-the-Loop](/en/glossary/human-in-the-loop--hitl-/)" (HITL) checkpoint—enforces human oversight and decision-making at predefined points in automated or agentic workflows.  
 ## Concept and Purpose
 
 Automation excels at routine, repetitive tasks, but critical decision points—such as approving high-value transactions, handling sensitive data, or executing configuration changes—require human judgment for safety, compliance, and auditability. Human Approval Nodes exist to:
@@ -21,20 +22,21 @@ Automation excels at routine, repetitive tasks, but critical decision points—s
 - Enforce explicit human consent before any high-impact, ambiguous, or non-reversible action.
 - Provide an immutable, auditable trail of approvals/rejections for compliance.
 
-**Why is HITL essential?**AI agents and automation can hallucinate, misinterpret, or act outside intended scope. Human approval nodes mitigate these risks by requiring explicit, contextual review and recording all decisions.  
+**Why is HITL essential?**  
+AI agents and automation can hallucinate, misinterpret, or act outside intended scope. Human approval nodes mitigate these risks by requiring explicit, contextual review and recording all decisions.  
 ## Key Features
 
-- **Workflow Pausing:**Automation execution halts at this step until a human decision is received.
-- **Role-Based Assignment:**Tasks can be assigned to specific users/roles (e.g. manager, compliance officer).
-- **Approval & Rejection Paths:**Supports distinct workflow branches based on human input.
-- **Real-Time Updates:**Status changes are reflected instantly in dashboards or task lists.
-- **Notifications:**Email, Slack, or in-app alerts notify reviewers of pending tasks.
-- **Audit Logging:**All actions and decisions are logged immutably for transparency and auditability.
-- **Flexible Input Types:**Supports binary (approve/reject) and open-ended (comments, modifications) feedback.
-- **Seamless Integration:**Compatible with major workflow engines (LangGraph, n8n, Permit.io, etc.).
-- **Timeouts and Escalation:**Configurable wait times for response with fallback escalation.
-- **Granular Permissions:**Fine-grained access control over who can view, approve, or reject tasks.
-- **Immutable History:**Approval logs are tamper-proof for compliance and investigation.
+- **Workflow Pausing:** Automation execution halts at this step until a human decision is received.
+- **Role-Based Assignment:** Tasks can be assigned to specific users/roles (e.g. manager, compliance officer).
+- **Approval & Rejection Paths:** Supports distinct workflow branches based on human input.
+- **Real-Time Updates:** Status changes are reflected instantly in dashboards or task lists.
+- **Notifications:** Email, Slack, or in-app alerts notify reviewers of pending tasks.
+- **Audit Logging:** All actions and decisions are logged immutably for [transparency](/en/glossary/transparency/) and auditability.
+- **Flexible Input Types:** Supports binary (approve/reject) and open-ended (comments, modifications) feedback.
+- **Seamless Integration:** Compatible with major workflow engines (LangGraph, n8n, Permit.io, etc.).
+- **Timeouts and Escalation:** Configurable wait times for response with fallback escalation.
+- **Granular Permissions:** Fine-grained access control over who can view, approve, or reject tasks.
+- **Immutable History:** Approval logs are tamper-proof for compliance and investigation.
 ## How Human Approval Nodes Are Used
 
 ### Workflow Placement
@@ -45,27 +47,35 @@ Insert approval nodes at decision points where:
 - Policy or compliance requires oversight (SOC2, GDPR).
 - Actions could cause irreversible change (e.g., deleting user accounts, modifying infrastructure).
 
-**Example:**"If the expense exceeds the predefined threshold, escalate to human review for approval."  
+**Example:**  
+"If the expense exceeds the predefined threshold, escalate to human review for approval."  
 ### Configuration and Setup
 
-**Steps:**1.**Define Purpose:**Use descriptive node names (e.g., "Legal Approval", "Publish Review").
-2. **Set Assignment Logic:**Assign to specific users or roles per task type/criticality.
-3. **Configure Permissions:**Specify which users/roles can view/act on each approval node.
-4. **Design Branches:**- Approve → continue workflow  
+**Steps:**
+
+1. **Define Purpose:** Use descriptive node names (e.g., "Legal Approval", "Publish Review").
+2. **Set Assignment Logic:** Assign to specific users or roles per task type/criticality.
+3. **Configure Permissions:** Specify which users/roles can view/act on each approval node.
+4. **Design Branches:**  
+    - Approve → continue workflow  
     - Reject → trigger alternate flow (notify, revert, escalate)
-5. **Notifications:**Enable email, Slack, or in-app alerts for new approval tasks.
-6. **Audit Trail:**Ensure all decisions and comments are logged for compliance.
+5. **Notifications:** Enable email, Slack, or in-app alerts for new approval tasks.
+6. **Audit Trail:** Ensure all decisions and comments are logged for compliance.
 
 ### Interaction Flow
 
-**Typical sequence:**1. Automation reaches approval node and pauses.
+**Typical sequence:**
+
+1. Automation reaches approval node and pauses.
 2. Task is generated and assigned to designated reviewer(s).
 3. Reviewer receives notification and opens approval dashboard.
 4. Reviewer examines the context, instructions, and proposed action.
 5. Reviewer selects "Approve" or "Reject" (with optional comments).
 6. Workflow resumes, following the branch corresponding to the decision.
 
-**Diagram:**```
+**Diagram:**
+
+```
 [Automated Step] → [Human Approval Node] → [Approve] → [Next Step]
                                             ↓
                                         [Reject] → [Alternate Flow]
@@ -74,14 +84,20 @@ Insert approval nodes at decision points where:
 
 ### Example 1: Expense Approval Workflow (LangGraph)
 
-**Scenario:**Automated expense processing with escalation for human review above threshold.**Workflow:**1. Employee submits expense.
+**Scenario:**  
+Automated expense processing with escalation for human review above threshold.
+
+**Workflow:**
+
+1. Employee submits expense.
 2. AI agent reviews:
     - If amount ≤ $50 → auto-approve.
     - If amount > $50 → pause at Human Approval Node.
 3. Human reviewer approves or rejects.
 4. Workflow continues accordingly.
 
-**Code Snippet (Python / LangGraph):**```python
+**Code Snippet (Python / LangGraph):**
+```python
 def review_expense(state):
     if state["expense_amount"] <= 50:
         return Command(update={"approval_status": ["Auto Approved"]}, goto="end_node")
@@ -98,25 +114,37 @@ def human_approval_node(state):
 
 ### Example 2: Email Response Automation with HITL (n8n Workflow)
 
-**Scenario:**AI-powered email replies are always routed for human approval before sending.**Workflow:**1. Incoming email triggers workflow.
+**Scenario:**  
+AI-powered email replies are always routed for human approval before sending.
+
+**Workflow:**
+
+1. Incoming email triggers workflow.
 2. AI summarizes and drafts response.
 3. Human Approval Node emails draft to a reviewer.
 4. Reviewer approves or rejects the response.
 5. Only approved responses are sent.
 
-**n8n Node Chain:**Email Trigger → Summarization → AI Draft → Human Approval Node (Approve Email) → Send Email
+**n8n Node Chain:**  
+Email Trigger → Summarization → AI Draft → Human Approval Node (Approve Email) → Send Email
 
 - [YouTube No-Code Tutorial](https://www.youtube.com/watch?v=n6llypVyGx8)
 - [Workflow Template](https://n8n.io/workflows/2907-a-very-simple-human-in-the-loop-email-response-system-using-ai-and-imap/)
 
 ### Example 3: Agent Access Control Requests (Permit.io / LangChain MCP)
 
-**Scenario:**An LLM agent attempts to modify user roles or access sensitive resources.**Workflow:**1. Agent proposes privileged action.
+**Scenario:**  
+An LLM agent attempts to modify user roles or access sensitive resources.
+
+**Workflow:**
+
+1. Agent proposes privileged action.
 2. Agent pauses workflow (calls `interrupt()`), submits access request.
 3. Human reviewer receives approval request in dashboard.
 4. Reviewer approves/rejects; only approved actions are executed.
 
-**Pattern:**LLM agents never execute privileged operations without explicit human approval.
+**Pattern:**  
+LLM agents never execute privileged operations without explicit human approval.
 
 - [Permit.io: Human-in-the-Loop Documentation](https://docs.permit.io/)
 - [Best Practices, Frameworks, Use Cases, and Demo](https://www.permit.io/blog/human-in-the-loop-for-ai-agents-best-practices-frameworks-use-cases-and-demo)
@@ -125,19 +153,19 @@ def human_approval_node(state):
 
 ### Interrupt & Resume
 
-- **Used in:**LangGraph, agentic workflows.
-- **Pattern:**Use `interrupt()` to pause workflow for human input, then resume.
-- **Tip:**Critical actions always pass through an interrupt checkpoint for explicit review.
+- **Used in:** LangGraph, agentic workflows.
+- **Pattern:** Use `interrupt()` to pause workflow for human input, then resume.
+- **Tip:** Critical actions always pass through an interrupt checkpoint for explicit review.
 ### Approval Flows
 
-- **Used in:**Permit.io, n8n, enterprise approval chains.
-- **Pattern:**Assign approval rights to specific roles. Only authorized users can approve sensitive actions.
-- **Tip:**Configure role-based access control to prevent unauthorized approvals.
+- **Used in:** Permit.io, n8n, enterprise approval chains.
+- **Pattern:** Assign approval rights to specific roles. Only authorized users can approve sensitive actions.
+- **Tip:** Configure role-based access control to prevent unauthorized approvals.
 
 ### Fallback Escalation
 
-- **Pattern:**If confidence is low or response is delayed, escalate to a human via dashboard, Slack, or email.
-- **Tip:**Use escalation to balance automation efficiency with human oversight for complex issues.
+- **Pattern:** If confidence is low or response is delayed, escalate to a human via dashboard, Slack, or email.
+- **Tip:** Use escalation to balance automation efficiency with human oversight for complex issues.
 
 ### General Best Practices
 
@@ -157,7 +185,9 @@ def human_approval_node(state):
 - Only users with appropriate roles can see/act on specific approval nodes.
 - Separate task access from general workflow management.
 
-**Example:**1. Open Task Management Settings.
+**Example:**
+
+1. Open Task Management Settings.
 2. Select roles (e.g., “Content Reviewer”) for approval rights.
 3. Save and apply settings.
 ### Notification and Task Management
@@ -168,7 +198,8 @@ def human_approval_node(state):
 
 ### Technical Integration Snippets
 
-**LangGraph Interrupt Example:**```python
+**LangGraph Interrupt Example:**
+```python
 from langgraph.types import interrupt
 
 def human_approval_node(state):
@@ -177,16 +208,19 @@ def human_approval_node(state):
         "message": "Approve, Reject, or provide comments."
     })
     # Resume workflow based on input
-```**n8n Structure:**Place “Approve Email” node after AI draft step. Route approved and rejected branches accordingly.
+```
+
+**n8n Structure:**  
+Place “Approve Email” node after AI draft step. Route approved and rejected branches accordingly.
 
 ## Troubleshooting & Common Issues
 
-- **Users can’t see assigned tasks:**Check role permissions and task access settings.
-- **Task notifications not received:**Check spam, validate email addresses, and notification settings.
-- **Can’t assign tasks to some users/roles:**Confirm permissions and role configuration.
-- **Approval delays:**Add escalation rules or reminders.
+- **Users can’t see assigned tasks:** Check role permissions and task access settings.
+- **Task notifications not received:** Check spam, validate email addresses, and notification settings.
+- **Can’t assign tasks to some users/roles:** Confirm permissions and role configuration.
+- **Approval delays:** Add escalation rules or reminders.
 
-> **Tip:**Use fallback escalation and reminders to ensure timely human reviews.
+> **Tip:** Use fallback escalation and reminders to ensure timely human reviews.
 
 
 ## References & Further Reading
@@ -207,7 +241,9 @@ def human_approval_node(state):
 - [Access Control and Role Management](https://docs.permit.io/)
 - [Approval Workflow Patterns](https://n8n.io/workflows/)
 
-**Implementation Example Sentences:**- “The Human Approval Node pauses the automation until a designated user approves or rejects the task.”
+**Implementation Example Sentences:**
+
+- “The Human Approval Node pauses the automation until a designated user approves or rejects the task.”
 - “Use the `interrupt()` function to insert a real-time human checkpoint in your workflow.”
 - “Configure which roles have access to approve tasks in the Task Management Settings.”
 - “Insert Human Approval Nodes at logical decision points for oversight and compliance.”
@@ -230,7 +266,9 @@ def human_approval_node(state):
 
 For advanced support or implementation guidance, refer to official documentation or contact your platform’s support channels.
 
-**Sources and Further Reading:**- [Permit.io: Human-in-the-Loop for AI Agents: Best Practices, Frameworks, Use Cases, and Demo](https://www.permit.io/blog/human-in-the-loop-for-ai-agents-best-practices-frameworks-use-cases-and-demo)
+**Sources and Further Reading:**
+
+- [Permit.io: Human-in-the-Loop for AI Agents: Best Practices, Frameworks, Use Cases, and Demo](https://www.permit.io/blog/human-in-the-loop-for-ai-agents-best-practices-frameworks-use-cases-and-demo)
 - [Delegating AI Permissions to Human Users with Permit.io’s Access Request MCP](https://www.permit.io/blog/delegating-ai-permissions-to-human-users-with-permitios-access-request-mcp)
 - [LangGraph interrupt() Reference](https://langchain-ai.github.io/langgraph/reference/types/#langgraph.types.interrupt)
 - [n8n Human-in-the-Loop Workflow Tutorial (YouTube)](https://www.youtube.com/watch?v=n6llypVyGx8)

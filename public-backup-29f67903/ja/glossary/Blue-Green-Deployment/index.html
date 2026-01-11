@@ -1,0 +1,2406 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+<meta charset="utf-8">
+<meta name="viewport" content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+
+<title>ブルーグリーンデプロイメント | SmartWeb</title>
+<link rel="canonical" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/blue-green-deployment/">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/faivicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/faivicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/faivicon.png">
+<link rel="shortcut icon" href="/images/faivicon.png">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+      
+      
+
+      
+      
+        
+        
+        
+        
+        
+        
+      
+    
+      
+      
+
+      
+      
+        
+        
+        
+        
+        
+        
+      
+    
+  
+
+
+
+
+
+
+
+  
+  
+    
+    
+      
+      
+      
+      
+    
+  
+
+
+
+
+
+
+
+<link rel="alternate" hreflang="en" href="%!s(<nil>)/glossary/Blue-Green-Deployment/">
+
+<link rel="alternate" hreflang="ja" href="%!s(<nil>)/ja/glossary/Blue-Green-Deployment/">
+
+<link rel="alternate" hreflang="x-default" href="%!s(<nil>)/glossary/Blue-Green-Deployment/">
+
+
+
+<meta name="description" content="ブルーグリーンデプロイメントは、2つの同一の本番環境(ブルーとグリーン)を稼働させることで、ダウンタイムとリスクを最小限に抑える戦略です。シームレスなトラフィック切り替えと、新しいソフトウェアリリースの即座のロールバックを可能にします。">
+<meta name="keywords" content="ブルーグリーンデプロイメント, デプロイメント戦略, ゼロダウンタイム, ロールバック, CI/CD">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/blue-green-deployment/">
+<meta property="og:title" content="ブルーグリーンデプロイメント | SmartWeb">
+<meta property="og:description" content="ブルーグリーンデプロイメントは、2つの同一の本番環境(ブルーとグリーン)を稼働させることで、ダウンタイムとリスクを最小限に抑える戦略です。シームレスなトラフィック切り替えと、新しいソフトウェアリリースの即座のロールバックを可能にします。">
+
+
+
+
+
+
+
+  
+  
+
+
+<meta property="og:image" content="">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/blue-green-deployment/">
+<meta name="twitter:title" content="ブルーグリーンデプロイメント | SmartWeb">
+<meta name="twitter:description" content="ブルーグリーンデプロイメントは、2つの同一の本番環境(ブルーとグリーン)を稼働させることで、ダウンタイムとリスクを最小限に抑える戦略です。シームレスなトラフィック切り替えと、新しいソフトウェアリリースの即座のロールバックを可能にします。">
+<meta name="twitter:image" content="">
+
+
+
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+
+<link rel="preload" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/main.css?v=20260111165522" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/css/custom-code-blockquote.css?v=20260111165522" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+<script src="/js/main.js?v=20260111165522" defer></script>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+</head>
+<body class="antialiased bg-white">
+
+
+
+
+
+
+
+
+
+
+  
+  <header class="bg-white">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8" aria-label="Global">
+    <div class="flex lg:flex-1">
+      <a href="/ja/" class="-m-1.5 p-1.5">
+        <span class="sr-only">SmartWeb</span>
+        
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="200"
+    >
+      
+      <source
+        type="image/png"
+        
+        data-srcset="/images/smartweb-logo.png 466w"
+        
+        sizes="200px"
+        data-original-src="/images/smartweb-logo.png"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/smartweb-logo.png"
+        
+        alt="SmartWeb Logo"
+        class="lazy-image h-6 sm:h-10 md:h-12 w-auto"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/smartweb-logo.png"
+      >
+    </picture>
+
+
+  
+
+      </a>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12"><a href="/ja/" class="text-sm/6 font-semibold text-gray-900">ホーム</a><a href="/ja/blog/" class="text-sm/6 font-semibold text-gray-900">ブログ</a><a href="/ja/glossary/" class="text-sm/6 font-semibold text-gray-900">用語集</a><a href="https://www.intwk.co.jp/about/" class="text-sm/6 font-semibold text-gray-900">会社情報</a></div>
+    <div class="flex flex-1 items-center justify-end gap-x-6">
+      <a href="https://support.smartweb.jp/" class="hidden text-sm/6 font-semibold text-gray-900 lg:block">サポート</a>
+      <a href="/ja/blog/" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">今すぐ始める</a>
+    </div>
+    <div class="flex lg:hidden">
+      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" aria-expanded="false" aria-controls="mobile-menu-1768118122019187000">
+        <span class="sr-only">Open main menu</span>
+        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+  
+  
+  <div id="mobile-menu-1768118122019187000" class="lg:hidden hidden relative z-50" role="dialog" aria-modal="true">
+    
+    <div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+    <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+      <div class="flex items-center gap-x-6">
+        <a href="/ja/" class="-m-1.5 p-1.5">
+          <span class="sr-only">SmartWeb</span>
+          
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+      
+        
+      
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+          
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+            
+            
+        
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="3000"
+    >
+      
+      <source
+        type="image/png"
+        
+        data-srcset="/images/smartweb-logo.png 466w"
+        
+        sizes="(max-width: 466px) 466px, 3000px"
+        data-original-src="/images/smartweb-logo.png"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/smartweb-logo.png"
+        
+        alt="SmartWeb Logo"
+        class="lazy-image h-6 sm:h-10 md:h-12 w-auto"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/smartweb-logo.png"
+      >
+    </picture>
+
+
+  
+
+        </a>
+        <a href="/ja/blog/" class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">今すぐ始める</a>
+        <button type="button" class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu">
+          <span class="sr-only">Close menu</span>
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="space-y-2 py-6"><a href="/ja/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">ホーム</a><a href="/ja/blog/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">ブログ</a><a href="/ja/glossary/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">用語集</a><a href="https://www.intwk.co.jp/about/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">会社情報</a></div>
+          <div class="py-6">
+            <a href="https://support.smartweb.jp/" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">サポート</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+
+
+
+<main class="w-full">
+  
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+  
+  <header class="py-12 sm:py-16">
+    <div class="mx-auto max-w-4xl">
+      
+      <div class="mb-8">
+        <nav class="text-sm hidden sm:block">
+          <ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+            <li class="flex items-center">
+              <a href="/ja/" class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center">
+                <img src="/images/home-icon.png" alt="Home" class="h-4 w-4 opacity-60">
+              </a>
+            </li>
+            <li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+            <li>
+              <a href="/ja/glossary/" class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors">
+                用語集
+              </a>
+            </li>
+            <li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+            <li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">ブルーグリーンデプロイメント</li>
+          </ol>
+        </nav>
+      </div>
+
+      
+      
+        <div class="mb-6">
+          <span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+            <svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+            </svg>
+            AI Infrastructure &amp; Deployment
+          </span>
+        </div>
+      
+
+      
+      <h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        ブルーグリーンデプロイメント
+      </h1>
+      
+        <p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Blue-Green Deployment
+        </p>
+      
+
+      
+      
+        <p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          ブルーグリーンデプロイメントは、2つの同一の本番環境(ブルーとグリーン)を稼働させることで、ダウンタイムとリスクを最小限に抑える戦略です。シームレスなトラフィック切り替えと、新しいソフトウェアリリースの即座のロールバックを可能にします。
+        </p>
+      
+
+      
+      <div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+
+      
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        
+        
+          <div class="flex flex-wrap gap-2">
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ブルーグリーンデプロイメント
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                デプロイメント戦略
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ゼロダウンタイム
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ロールバック
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                CI/CD
+              </span>
+            
+          </div>
+        
+
+        
+        
+
+
+
+
+
+
+
+
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+  
+    <span class="inline-flex items-center justify-end">
+      <svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/>
+      </svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+  
+
+  
+</div>
+
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+    <h2 id="blue-green-deploymentとは">Blue-Green Deploymentとは?</h2>
+<p>Blue-Green Deployment(ブルーグリーンデプロイメント)は、ソフトウェアの新バージョンリリースに伴うダウンタイムを最小化し、リスクを軽減するために設計されたデプロイメント戦略です。「Blue」(現在稼働中)と「Green」(新規または候補)と呼ばれる、2つの独立した、しかし同一の環境を運用します。任意の時点で、1つの環境のみが本番トラフィックを処理します。新バージョンの準備が整うと、アイドル状態の環境(Green)にデプロイし、テストを実施します。検証が完了したら、通常はゼロダウンタイムでBlueからGreenへトラフィックを切り替えます。問題が発生した場合は、即座に切り替えを元に戻すことができます。主な特徴:- 2つの同一の本番環境:Blue(アクティブ)とGreen(アイドル/候補)</p>
+<ul>
+<li>常に1つの環境のみがライブトラフィックを受信</li>
+<li>シームレスな切り替えと即座のロールバックを実現</li>
+<li>ゼロダウンタイムリリースと堅牢なディザスタリカバリをサポート</li>
+</ul>
+<h2 id="blue-green-deploymentの仕組み">Blue-Green Deploymentの仕組み</h2>
+<p>このプロセスは体系的であり、制御された可逆的なリリースを可能にすることでリスクを最小化します。以下に詳細なワークフローを示します。</p>
+<h3 id="ステップバイステップのワークフロー">ステップバイステップのワークフロー</h3>
+<table>
+  <thead>
+      <tr>
+          <th>ステップ</th>
+          <th>説明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1. リリース準備</td>
+          <td>ステージング/開発環境で新しいアプリケーションバージョンを開発およびテスト</td>
+      </tr>
+      <tr>
+          <td>2. Greenへのデプロイ</td>
+          <td>本番環境のクローンであるが、まだライブではないGreen環境に新バージョンをデプロイ</td>
+      </tr>
+      <tr>
+          <td>3. Greenのテスト</td>
+          <td>Green環境で、ユニット、統合、UAT、パフォーマンステストを含む包括的なテストを実施</td>
+      </tr>
+      <tr>
+          <td>4. トラフィック切り替え</td>
+          <td>ロードバランサー、DNS更新、またはサービスメッシュを使用して、本番トラフィックをBlueからGreenにリダイレクト</td>
+      </tr>
+      <tr>
+          <td>5. 監視</td>
+          <td>エラー、パフォーマンス、ユーザーへの影響について、Green環境を綿密に監視</td>
+      </tr>
+      <tr>
+          <td>6. ロールバック(必要に応じて)</td>
+          <td>問題が発生した場合、トラフィックを迅速にBlue環境に戻す</td>
+      </tr>
+      <tr>
+          <td>7. クリーンアップ/ローテーション</td>
+          <td>Greenが安定していると検証された後、Blueは廃止、再利用、またはバックアップとして保持可能</td>
+      </tr>
+      <tr>
+          <td>[ユーザー]</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>(トラフィック切り替え)</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>&mdash;&mdash;&gt; [Blue環境] &mdash;&mdash;&mdash;&ndash;</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>&mdash;&mdash;&gt; [Green環境] &lt;&mdash;&mdash;&mdash;</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<pre tabindex="0"><code class="language-**重要なポイント:**-" data-lang="**重要なポイント:**-">- ロールバックは即座に実行でき、単にトラフィックをリダイレクトするだけです
+
+## 主要な概念と用語
+
+- **Blue環境:**現在アクティブで安定した本番環境
+- **Green環境:**並行してデプロイされた新しいリリース候補環境、初期状態ではアイドル
+- **トラフィック切り替え:**ユーザートラフィックを1つの環境から別の環境にリダイレクトすること、通常はロードバランサーまたはDNS更新を介して実施
+- **ロールバック:**問題が発生した場合に、トラフィックを以前の安定した環境に即座に戻すこと
+- **同一の本番環境:**BlueとGreenの両方が、同等のインフラストラクチャ、構成、依存関係を持つ必要があります
+- **デプロイメント自動化:**CI/CDとInfrastructure as Code(IaC)を活用して、反復可能で手作業不要のデプロイメントとトラフィック切り替えを実現
+- **継続的デプロイメント/デリバリー:**より迅速で安全なリリースのために、Blue-Green Deploymentを統合した自動化パイプライン
+- **ディザスタリカバリ:**アイドル環境は、壊滅的な障害が発生した場合のホットスタンバイとして機能
+
+## Blue-Green Deploymentの利点
+
+Blue-Green Deploymentは、運用、技術、ビジネス面で大きな利点を提供します。
+
+| 利点 | 説明 |
+|---------|-------------|
+| **ゼロダウンタイムリリース**| シームレスな移行により、ユーザーに見える停止を防止 |
+| **即座のロールバック**| 障害発生時に以前の環境へ即座に復帰可能 |
+| **信頼性とユーザーエクスペリエンスの向上**| デプロイメントによってユーザーが中断されることがなく、満足度が向上 |
+| **本番環境同等のテスト**| 新しいリリースを本番に近い環境でテストし、予期しない問題を削減 |
+| **コンプライアンスと監査可能性**| 明確で監査可能なデプロイメント手順が、規制および内部コンプライアンス要件をサポート |
+| **ディザスタリカバリ**| 旧環境を迅速な復旧のためのホットスタンバイとして利用可能 |
+| **CI/CDのサポート**| 継続的インテグレーションおよびデリバリーパイプラインとシームレスに統合 |
+| **パフォーマンスベンチマーク**| カットオーバー前に候補環境で負荷およびパフォーマンステストを実施可能 |
+| **人的エラーの削減**| 自動化と反復可能なプロセスにより、手作業のミスを最小化 |
+
+## 課題と欠点
+
+その強みにもかかわらず、Blue-Green Deploymentには特有の課題があります。
+
+| 課題 | 説明 |
+|-----------|-------------|
+| **リソースコスト**| デプロイメント中に2つの完全な環境を維持することで、インフラストラクチャコストが倍増 |
+| **環境の同期**| 両方の環境を真に同一に保つことは複雑で、自動化が必要 |
+| **データベース移行の複雑さ**| ダウンタイムなしでスキーマ変更とデータ移行を管理することは困難 |
+| **ロードバランサー/DNSの複雑さ**| トラフィック切り替えは正確である必要があり、設定ミスは停止を引き起こす可能性 |
+| **監視のオーバーヘッド**| 切り替え中および切り替え後に、堅牢なリアルタイム監視が必要 |
+| **セキュリティリスク**| 両方の環境を同等にセキュアにし、パッチを適用する必要があり、攻撃対象領域が倍増 |
+| **自動化の要求**| 手動介入はリスクを増大させるため、安全で反復可能な結果のために自動化が不可欠 |
+
+## ユースケースと実践例
+
+**一般的なユースケース:**-**高可用性アプリケーション:**24時間365日の稼働が必要なEコマース、SaaS、API
+- **規制産業:**監査可能で可逆的なデプロイメントが必要な金融、医療、その他のセクター
+- **ディザスタリカバリ:**アイドル環境を即座のフェイルオーバーターゲットとして使用
+- **パフォーマンステスト:**完全なカットオーバー前に候補環境でベンチマークを実施
+- **機能ロールアウトとA/Bテスト:**Blue-Greenと段階的なトラフィックシフトを組み合わせて、安全な機能実験を実施
+- **クラウド移行:**オンプレミスのBlueからクラウドベースのGreen環境へトラフィックを切り替え**例:Azure Container AppsでのBlue-Green Deployment**Azure Container Appsは、リビジョン、トラフィック分割、ラベルを介してBlue-Green Deploymentをサポートします。新しいコンテナを「Green」リビジョンとしてデプロイおよびテストし、その後、本番トラフィックをアトミックに再割り当てできます。
+
+```bash
+az containerapp ingress traffic set \
+  --name $APP_NAME \
+  --resource-group $RESOURCE_GROUP \
+  --label-weight blue=0 green=100
+</code></pre><p>ロールバックは以下のコマンドで実行:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>az containerapp ingress traffic <span style="color:#fff;font-weight:bold">set</span> <span style="color:#0ff;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold"></span>  --name $APP_NAME <span style="color:#0ff;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold"></span>  --resource-group $RESOURCE_GROUP <span style="color:#0ff;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold"></span>  --label-weight blue=<span style="color:#ff0;font-weight:bold">100</span> green=<span style="color:#ff0;font-weight:bold">0</span>
+</span></span></code></pre></div><h2 id="実装パターン">実装パターン</h2>
+<h3 id="kubernetes上での実装">Kubernetes上での実装</h3>
+<p>Kubernetesは、宣言的なインフラストラクチャとサービス抽象化により、Blue-Green Deploymentに適しています。</p>
+<ul>
+<li>**Namespace:**BlueとGreenのデプロイメントを別々のNamespaceで分離</li>
+<li>**Deployment:**各バージョンは個別のDeploymentリソース</li>
+<li>**Service:**検証後、ServiceセレクターをGreen Deploymentを指すように切り替え</li>
+<li><strong>Ingress/Service Mesh:<strong>外部または内部でアクティブな環境へトラフィックをルーティング</strong>Kubernetes YAMLの例:</strong>```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+name: myapp-blue
+spec:
+<h1 id="blue-version-spec">blue version spec</h1>
+</li>
+</ul>
+<hr>
+<p>apiVersion: apps/v1
+kind: Deployment
+metadata:
+name: myapp-green
+spec:</p>
+<h1 id="green-version-spec">green version spec</h1>
+<hr>
+<p>apiVersion: v1
+kind: Service
+metadata:
+name: myapp-service
+spec:
+selector:
+app: myapp-green # myapp-blueからmyapp-greenに切り替え</p>
+<pre tabindex="0"><code>
+### クラウドプラットフォーム上での実装
+
+- AWS:AWSは、Elastic Load BalancingとCodeDeployを使用してBlue-Green Deploymentを実現し、トラフィックシフトとヘルスチェックを調整
+- Azure:Azure Container Appsは、リビジョンとトラフィックウェイトを利用してBlue-Green戦略を管理
+- Google Cloud:Google Cloud Platformは、Cloud RunとTraffic Splittingを通じてBlue-Green Deploymentをサポート
+
+### Infrastructure as Code(IaC)での実装
+
+Terraform、AWS CloudFormation、Ansibleなどのツールにより、BlueとGreen環境の再現可能で自動化されたプロビジョニングと切り替えが可能になります。
+
+## データベースに関する考慮事項
+
+### データベースの課題
+
+アプリケーション環境は複製できますが、ほとんどのBlue-Green Deploymentは単一の本番データベースを共有するため、いくつかのリスクと制約が生じます。
+
+| 問題 | 解決策/ベストプラクティス |
+|-------|------------------------|
+| スキーマ変更| すべての変更が後方互換性を持つことを確認 |
+| 同時実行アプリケーションバージョン| 移行中、BlueとGreenの両方が同じスキーマ/データで動作する必要がある |
+| データ移行| ロック時間とリスクを最小化するために移行ツールを使用 |
+| ロールバックの安全性| 旧バージョンが廃止されるまで、破壊的なスキーマ変更を避ける |
+
+#### AWS RDS Blue/Green Deployments
+
+- Green環境は本番環境のクローンで、物理または論理レプリケーションを介して同期を維持
+- 利点:変更を独立してテストし、1分未満のダウンタイムとデータ損失なしで切り替え可能
+- 制限事項:- 一部の機能(例:RDS Proxy、クロスリージョンレプリカ)はサポートされていません
+  - スキーマ変更は後方互換性が必要
+  - 論理レプリケーションは、ログなしテーブルや特定のPostgres機能をサポートしない場合があります
+  - スイッチオーバーには慎重なリソースとスロット管理が必要。リソースが不足している場合、レプリケーションラグが発生する可能性があります
+
+#### 一般的なベストプラクティス
+
+- 後方互換性のある移行:カラム/テーブルを追加しますが、すべての環境が移行されるまで削除/名前変更は行わない
+- 機能トグル:データベースとコードの変更を分離
+- データベースバージョニング:Liquibaseなどのツールを使用して、スキーマ移行とロールバックを自動化
+
+## ベストプラクティス
+
+| ベストプラクティス | 説明 |
+|---------------|-------------|
+| すべてを自動化| CI/CDツール(Jenkins、GitHub Actionsなど)とIaCを使用して、デプロイメントと環境セットアップを自動化 |
+| 堅牢な監視と可観測性| 両方の環境とトラフィック切り替え中のリアルタイム監視(Prometheus、Grafana、Datadog)を実装 |
+| カットオーバー前の徹底的なテスト| Green環境ですべてのテスト(ユニット、統合、パフォーマンス、UAT)を実施 |
+| 段階的なトラフィックシフト| 完全なカットオーバー前に、オプションで段階的に(カナリアスタイルで)トラフィックをシフト |
+| データベース互換性の維持| スキーマ変更には段階的で後方互換性のある移行を使用 |
+| ロールバックの計画と定期的なテスト| ロールバック手順を文書化、自動化し、リハーサルを実施 |
+| 両方の環境をセキュア化| BlueとGreenの両方に対して、パッチ適用、スキャン、セキュリティポリシーの適用を同等に実施 |
+| クリーンアップとコスト管理| デプロイメント後、不要な環境を廃止して不必要なコストを回避 |
+
+## 他のデプロイメント戦略との比較
+
+| デプロイメント戦略 | 必要な環境数 | トラフィック切り替え | ロールバック速度 | 段階的な公開 | ダウンタイムリスク | 複雑さ | ユースケース |
+|---------------------|---------------------|----------------|----------------|------------------|---------------|-----------|----------|
+| Blue-Green| 2 | 一括 | 即座 | なし(組み合わせない限り) | 低 | 中 | ゼロダウンタイム、高速ロールバック |
+| Canary| 1+ | 段階的 | 高速 | あり | 低 | 高 | リスク回避、段階的ロールアウト |
+| Rolling| 1 | 順次 | 中程度 | あり | 低〜中 | 中 | リソース制約、大規模クラスター |
+| A/Bテスト| 2+ | 部分的 | N/A | あり(設計上) | 低 | 高 | 機能実験、ユーザー調査 |
+
+## 関連用語集
+
+- トラフィック切り替え:デプロイメント中にライブリクエストを1つの環境から別の環境にリダイレクトすること
+- デプロイメント自動化:デプロイメントプロセスから手動介入を排除するためのスクリプトとツールの使用
+- 継続的デプロイメント:自動テストに合格したすべてのコード変更を自動的にデプロイすること
+- ディザスタリカバリ:障害後にサービスを迅速に復旧するための手順とインフラストラクチャ
+- 同一の本番環境:構成、依存関係、インフラストラクチャが可能な限り一致する環境
+- ロールバック:以前の安定した状態/バージョンに戻すプロセス
+- Infrastructure as Code(IaC):マシン可読な定義ファイルを通じてコンピューティングリソースを管理およびプロビジョニングすること
+- 段階的なトラフィックシフト:一度にすべてを切り替えるのではなく、新しい環境に向けられるトラフィックの割合を段階的に増やすこと
+- ロードバランサー:複数のサーバー/環境に着信トラフィックを分散するハードウェアまたはソフトウェア
+
+## 参考文献
+
+
+1. Fowler, M. (n.d.). Blue Green Deployment. Martin Fowler Blog.
+
+2. AWS. (n.d.). Overview of Deployment Options on AWS. AWS Whitepapers.
+
+3. AWS. (n.d.). What Is Blue/Green Deployment?. AWS Whitepapers.
+
+4. Microsoft. (n.d.). Blue-Green Deployment. Azure Container Apps Documentation.
+
+5. Microsoft. (n.d.). Revisions. Azure Container Apps Documentation.
+
+6. Microsoft. (n.d.). Traffic Splitting. Azure Container Apps Documentation.
+
+7. Google Cloud. (n.d.). Traffic Migration and Splitting Concepts. Google Cloud Architecture.
+
+8. Kubernetes. (n.d.). Deployments. Kubernetes Documentation.
+
+9. Liquibase. (n.d.). Blue-Green Deployments. Liquibase Blog.
+
+10. AWS. (n.d.). Blue/Green Deployments Overview. AWS RDS Documentation.
+
+11. AWS. (n.d.). Blue/Green Deployment Considerations. AWS RDS Documentation.
+
+12. Terraform. Infrastructure as Code Tool. URL: https://www.terraform.io/
+
+13. Spinnaker. Continuous Delivery Platform. URL: https://spinnaker.io/
+
+14. AWS CodeDeploy. Deployment Service. URL: https://docs.aws.amazon.com/codedeploy/
+
+15. Prometheus. Monitoring Tool. URL: https://prometheus.io/
+
+16. Grafana. Observability Platform. URL: https://grafana.com/
+
+17. Datadog. Monitoring and Analytics Platform. URL: https://www.datadoghq.com/
+</code></pre>
+  </div>
+
+  
+  
+  
+  
+  
+    
+    <div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+      <div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/gitops/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    GitOps
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    GitOpsは、Gitをインフラストラクチャとアプリケーション管理の唯一の信頼できる情報源として使用する、最新の運用フレームワークです。その原則、ワークフロー、メリット、そして一貫性があり、監査可能で...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/gitops/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/canary-release/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    カナリアリリース
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    カナリアリリースとは、新しいアプリケーションバージョンを少数のユーザーに段階的に展開する漸進的なソフトウェアデプロイメント戦略であり、早期の問題検出とリスク軽減を可能にします。...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/canary-release/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/quick-deployment/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    クイックデプロイメント
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    クイックデプロイメントとは、自動化と効率化されたプロセスを活用して、最小限の手作業で本番システムへソフトウェアの更新や変更を迅速にリリースする手法です。品質を維持しながら、より速やかにデリバリーを実現...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/quick-deployment/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/version-history---rollback/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    バージョン履歴 / ロールバック
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIチャットボットおよび自動化プラットフォームにおけるバージョン履歴とロールバックについて理解します。ボット設定の追跡、管理、および安定した状態への復元方法を学び、エラーからの迅速な復旧を実現します。...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/version-history---rollback/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+        </div>
+      </div>
+    
+
+
+  
+  <div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+    <a 
+      href="/ja/glossary/" 
+      class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+    >
+      <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+      </svg>
+      
+        用語集に戻る
+      
+    </a>
+  </div>
+</article>
+
+</main>
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer style="background-color: #000000;">
+  
+  <div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+    
+    <svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="curveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+        </linearGradient>
+      </defs>
+      
+      
+      <path class="curve" data-speed="0.8" stroke="url(#curveGrad1)" stroke-width="2" fill="none" />
+      <path class="curve" data-speed="1.2" stroke="url(#curveGrad2)" stroke-width="2.5" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.6" stroke="url(#curveGrad3)" stroke-width="1.5" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.5" stroke="url(#curveGrad1)" stroke-width="2" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="0.9" stroke="url(#curveGrad2)" stroke-width="3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.3" stroke="url(#curveGrad3)" stroke-width="1.8" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.7" stroke="url(#curveGrad1)" stroke-width="2.2" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.1" stroke="url(#curveGrad2)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="1.4" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="0.85" stroke="url(#curveGrad1)" stroke-width="1.5" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="1.0" stroke="url(#curveGrad2)" stroke-width="2.8" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.25" stroke="url(#curveGrad3)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.95" stroke="url(#curveGrad1)" stroke-width="2.3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.35" stroke="url(#curveGrad2)" stroke-width="1.7" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.75" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.7" />
+    </svg>
+    
+    
+    <div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    
+    <div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+      <h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+      <p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+      <p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+      <div class="mt-8 flex justify-center">
+        <a href="/ja/blog/" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">無料で始める</a>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+  
+  <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+    <div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+      
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="200"
+    >
+      
+      <source
+        type="image/webp"
+        
+        data-srcset="/images/interwork-logo-white-1.webp 568w"
+        
+        sizes="200px"
+        data-original-src="/images/interwork-logo-white-1.webp"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/interwork-logo-white-1.webp"
+        
+        alt="Interwork"
+        class="lazy-image h-9"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/interwork-logo-white-1.webp"
+      >
+    </picture>
+
+
+  
+
+      <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          
+          <div>
+            <h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">AIソリューション</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Webサイト制作</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">システム開発</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">コンサルティング</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="https://support.smartweb.jp/" class="text-sm/6 text-gray-400 hover:text-white">サポートポータル</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">ドキュメント</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+        
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          
+          <div>
+            <h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="https://www.intwk.co.jp/about/" class="text-sm/6 text-gray-400 hover:text-white">会社概要</a>
+              </li>
+              
+              <li>
+                <a href="/ja/blog/" class="text-sm/6 text-gray-400 hover:text-white">ブログ</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">採用情報</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">ニュース</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="/ja/privacy-policy/" class="text-sm/6 text-gray-400 hover:text-white">プライバシーポリシー</a>
+              </li>
+              
+              <li>
+                <a href="/ja/ai-chatbot-terms-of-use/" class="text-sm/6 text-gray-400 hover:text-white">AIチャットボット利用規約</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div>
+        <p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+        
+          
+
+
+
+
+<div class="language-selector">
+  <div class="flex flex-wrap items-center justify-center gap-3">
+    
+      
+      
+      
+      
+      
+      
+        
+        <span class="inline-flex items-center text-sm opacity-50" title="日本語">
+          <img 
+            src="/flags/jp.png"
+            alt="日本語"
+            width="24"
+            height="18"
+            class="rounded"
+          >
+        </span>
+      
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+        
+        
+        
+          
+            
+            
+          
+        
+        
+        
+        
+        
+        <a href="/en/glossary/blue-green-deployment/"
+           class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" 
+           title="English"
+           aria-label="English"
+           hreflang="en">
+          <img 
+            src="/flags/gb.png"
+            alt="English"
+            width="24"
+            height="18"
+            class="rounded"
+          >
+        </a>
+      
+    
+  </div>
+</div>
+
+        
+      </div>
+    </div>
+    <div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div class="flex gap-x-6 md:order-2">
+        
+        <a href="https://github.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">GitHub</span>
+          
+
+
+
+        </a>
+        
+        <a href="https://x.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">X</span>
+          
+
+
+
+        </a>
+        
+        <a href="https://youtube.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">YouTube</span>
+          
+
+
+
+        </a>
+        
+      </div>
+      <p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">&copy; 2026 Interwork Corporation All rights reserved.</p>
+    </div>
+  </div>
+  
+  <style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<div id="cookie-consent-banner" data-cookie-consent-banner class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark">
+    <div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+        <p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a href="/ja/privacy-policy/" class="font-semibold text-primary hover:text-primary-500">privacy policy</a>.</p>
+        <div class="mt-4 flex items-center gap-x-3 flex-wrap">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group"
+      aria-label="すべてを受け入れる"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=accept-all
+    >
+      すべてを受け入れる
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group"
+      aria-label="必要なものだけを受け入れる"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=accept-necessary
+    >
+      必要なものだけを受け入れる
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group"
+      aria-label="クッキー設定"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=settings
+    >
+      クッキー設定
+      
+      
+    </a>
+  
+
+
+        </div>
+    </div>
+</div>
+
+
+<div id="cookie-settings-modal" class="fixed inset-0 z-50 hidden dark">
+    <div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close></div>
+    <div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+            <button type="button" class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close>
+                <span class="sr-only">閉じる</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="space-y-4">
+            <div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+                        <p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+                    </div>
+                    <div class="ml-3 flex h-5 items-center">
+                        <input id="necessary-cookies" name="necessary-cookies" type="checkbox" checked disabled class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+                        <p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+                    </div>
+                    <div class="ml-3 flex h-5 items-center">
+                        <input id="analytics-cookies" name="analytics-cookies" type="checkbox" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 flex justify-end gap-x-3">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-secondary dark:btn-secondary-dark px-3 py-2  not-prose group"
+      aria-label="キャンセル"
+      
+      target="_self"
+      
+      
+      data-cookie-settings-close
+    >
+      キャンセル
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-primary dark:btn-primary-dark px-3 py-2  not-prose group"
+      aria-label="設定を保存"
+      
+      target="_self"
+      
+      
+      data-cookie-settings-save
+    >
+      設定を保存
+      
+      
+    </a>
+  
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+  
+<button
+  id="back-to-top-btn"
+  aria-label="Back to Top"
+  class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg 
+         transition-all duration-300 transform translate-y-12 opacity-0 invisible
+         hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2
+         dark:bg-indigo-500 dark:hover:bg-indigo-400"
+  onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+  </svg>
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+
+
+
+
+<script src="/js/app.js?v=20260111165522"></script>
+
+
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+  });
+</script>
+
+</body>
+</html>

@@ -3,7 +3,7 @@ title: "Latency"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "latency"
-description: "The delay between when you perform an action and when a system responds, measured in milliseconds. High latency makes digital services feel slow and sluggish."
+description: "The time delay between a user's action and a system's response, typically measured in milliseconds. High latency makes digital services feel slow and sluggish."
 keywords: ["latency", "AI infrastructure", "network latency", "performance optimization", "real-time systems"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"
@@ -38,7 +38,13 @@ In AI pipelines, these latency types compound multiplicatively. A 100 ms network
 
 ## Why Latency Matters
 
-**User Experience:**Studies consistently show that response times exceeding 100 ms are perceptible to users, and delays beyond 1 second significantly impact engagement. E-commerce sites experience measurable conversion rate decreases with every 100 ms of additional latency.**Application Performance:**Low latency is essential for responsive web and mobile applications, real-time analytics and decision-making, AI-powered search and retrieval, cloud computing and API integration, and interactive media experiences.**Business Impact:**In high-frequency trading, 1 ms delay can result in significant financial loss or missed opportunities. In streaming services, high latency causes buffering and subscriber churn. In healthcare applications, delays can impede diagnosis or real-time interventions.**AI-Specific Concerns:**For AI chatbots, high latency degrades conversational experience. For autonomous systems, even slight delays pose safety risks. For recommendation systems, slow responses lead to user abandonment before recommendations load.
+**User Experience:** Studies consistently show that response times exceeding 100 ms are perceptible to users, and delays beyond 1 second significantly impact engagement. E-commerce sites experience measurable conversion rate decreases with every 100 ms of additional latency.
+
+**Application Performance:** Low latency is essential for responsive web and mobile applications, real-time analytics and decision-making, AI-powered search and retrieval, cloud computing and API integration, and interactive media experiences.
+
+**Business Impact:** In high-frequency trading, 1 ms delay can result in significant financial loss or missed opportunities. In streaming services, high latency causes buffering and subscriber churn. In healthcare applications, delays can impede diagnosis or real-time interventions.
+
+**AI-Specific Concerns:** For AI chatbots, high latency degrades conversational experience. For autonomous systems, even slight delays pose safety risks. For recommendation systems, slow responses lead to user abandonment before recommendations load.
 
 ## Common Use Cases
 
@@ -124,7 +130,11 @@ Sends ICMP packet to destination, measures return time. Lower ping indicates low
 
 ### Application-Specific Metrics
 
-**Retrieval Latency:**Time from query to data retrieval completion—vital in AI and search systems.**Inference Latency:**Time from input to model output in AI systems.**P50/P95/P99 Latency:**Percentile measurements capturing distribution. P95 latency means 95% of requests complete faster than this threshold.
+**Retrieval Latency:** Time from query to data retrieval completion—vital in AI and search systems.
+
+**Inference Latency:** Time from input to model output in AI systems.
+
+**P50/P95/P99 Latency:** Percentile measurements capturing distribution. P95 latency means 95% of requests complete faster than this threshold.
 
 | Technology/Medium | Typical Latency |
 |-------------------|----------------|
@@ -215,39 +225,73 @@ Use optimized protocols for specific use cases:
 
 ### AWS Services
 
-**AWS Direct Connect:**Dedicated network connections reducing latency and variability.**Amazon CloudFront:**Global CDN for low-latency content delivery with 400+ edge locations.**AWS Global Accelerator:**Routes traffic through optimal AWS edge location using anycast.**AWS Local Zones:**Deploys AWS services closer to population centers for ultra-low latency.
+**AWS Direct Connect:** Dedicated network connections reducing latency and variability.
+
+**Amazon CloudFront:** Global CDN for low-latency content delivery with 400+ edge locations.
+
+**AWS Global Accelerator:** Routes traffic through optimal AWS edge location using anycast.
+
+**AWS Local Zones:** Deploys AWS services closer to population centers for ultra-low latency.
 
 ### Cloud Providers
 
-**Google Cloud CDN:**Edge caching with Google's global network infrastructure.**Azure Front Door:**Global load balancing and CDN with low-latency routing.**Cloudflare:**Edge computing platform with extensive global presence.
+**Google Cloud CDN:** Edge caching with Google's global network infrastructure.
+
+**Azure Front Door:** Global load balancing and CDN with low-latency routing.
+
+**Cloudflare:** Edge computing platform with extensive global presence.
 
 ### Specialized Solutions
 
-**IBM Edge Computing:**Deploys compute resources at edge for latency-sensitive workloads.**AI21 RAGCache:**Reduces retrieval latency in AI pipelines through intelligent caching.
+**IBM Edge Computing:** Deploys compute resources at edge for latency-sensitive workloads.
+
+**AI21 RAGCache:** Reduces retrieval latency in AI pipelines through intelligent caching.
 
 ## Frequently Asked Questions
 
-**What is considered "good" latency?**Depends on use case. Interactive applications: <100 ms. Real-time gaming: <50 ms. High-frequency trading: <10 ms. Voice/video: <150 ms. Each application has specific requirements.**Does high bandwidth reduce latency?**Not necessarily. Bandwidth affects how much data transfers, not how quickly individual packets travel. 10 Gbps satellite link still has 500+ ms latency due to physical distance.**Can latency be completely eliminated?**No. Physical limits (speed of light) create minimum latency based on distance. Best achievable latency is physical distance divided by signal propagation speed.**How does retrieval latency affect AI systems?**High retrieval latency slows inference and real-time decision-making, directly impacting effectiveness of AI-powered search, recommendations, and chatbots.**What causes variable latency?**Network congestion, resource contention, thermal throttling, background processes, and routing changes all contribute to latency variation (jitter).
+**What is considered "good" latency?**
+Depends on use case. Interactive applications: <100 ms. Real-time gaming: <50 ms. High-frequency trading: <10 ms. Voice/video: <150 ms. Each application has specific requirements.
+
+**Does high bandwidth reduce latency?**
+Not necessarily. Bandwidth affects how much data transfers, not how quickly individual packets travel. 10 Gbps satellite link still has 500+ ms latency due to physical distance.
+
+**Can latency be completely eliminated?**
+No. Physical limits (speed of light) create minimum latency based on distance. Best achievable latency is physical distance divided by signal propagation speed.
+
+**How does retrieval latency affect AI systems?**
+High retrieval latency slows inference and real-time decision-making, directly impacting effectiveness of AI-powered search, recommendations, and chatbots.
+
+**What causes variable latency?**
+Network congestion, resource contention, thermal throttling, background processes, and routing changes all contribute to latency variation (jitter).
 
 ## Best Practices
 
-**Measure Continuously:**Implement comprehensive monitoring of latency metrics across all system components.**Set Clear Targets:**Define acceptable latency thresholds based on user experience requirements and business needs.**Optimize Critical Paths:**Focus optimization efforts on components contributing most to end-to-end latency.**Plan for Scale:**Ensure latency remains acceptable as user base and data volumes grow.**Test Realistically:**Measure latency under production-like loads and geographic distributions.**Monitor Percentiles:**Track P95 and P99 latency, not just averages, to catch outliers affecting users.
+**Measure Continuously:** Implement comprehensive monitoring of latency metrics across all system components.
+
+**Set Clear Targets:** Define acceptable latency thresholds based on user experience requirements and business needs.
+
+**Optimize Critical Paths:** Focus optimization efforts on components contributing most to end-to-end latency.
+
+**Plan for Scale:** Ensure latency remains acceptable as user base and data volumes grow.
+
+**Test Realistically:** Measure latency under production-like loads and geographic distributions.
+
+**Monitor Percentiles:** Track P95 and P99 latency, not just averages, to catch outliers affecting users.
 
 ## References
 
-
-1. AWS. (n.d.). What Is Latency?. AWS.
-2. IBM. (n.d.). What Is Latency?. IBM Think Topics.
-3. MDN. (n.d.). Understanding Latency. Mozilla Developer Network.
-4. Fortinet. (n.d.). What Is Latency. Fortinet Cyber Glossary.
-5. Galileo AI. (n.d.). Understanding Latency in AI. Galileo AI Blog.
-6. AI21. (n.d.). Retrieval Latency. AI21 Glossary.
-7. WEKA. (n.d.). Solving Latency Challenges. WEKA Blog.
-8. DriveNets. (n.d.). Latency in AI Networking. DriveNets Blog.
-9. AWS CloudFront. Cloud Content Delivery Network Service. URL: https://aws.amazon.com/cloudfront/
-10. AWS Direct Connect. Private Network Connection Service. URL: https://aws.amazon.com/directconnect/
-11. AWS Global Accelerator. Network Performance Optimization Service. URL: https://aws.amazon.com/global-accelerator/
-12. AWS Local Zones. Localized Cloud Infrastructure Service. URL: https://aws.amazon.com/about-aws/global-infrastructure/localzones/
-13. Investopedia. (n.d.). High-Frequency Trading. Investopedia.
-14. MDN. (n.d.). Time to First Byte. Mozilla Developer Network.
-15. AWS. (n.d.). What is Throughput?. AWS.
+- [AWS: What Is Latency?](https://aws.amazon.com/what-is/latency/)
+- [IBM: What Is Latency?](https://www.ibm.com/think/topics/latency)
+- [MDN: Understanding Latency](https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Understanding_latency)
+- [Fortinet: What Is Latency](https://www.fortinet.com/resources/cyberglossary/latency)
+- [Galileo AI: Understanding Latency in AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)
+- [AI21: Retrieval Latency](https://www.ai21.com/glossary/foundational-llm/retrieval-latency/)
+- [WEKA: Solving Latency Challenges](https://www.weka.io/blog/ai-ml/solving-latency-challenges-in-ai-data-centers/)
+- [DriveNets: Latency in AI Networking](https://drivenets.com/blog/latency-in-ai-networking-inevitable-limitation-to-solvable-challenge/)
+- [AWS CloudFront](https://aws.amazon.com/cloudfront/)
+- [AWS Direct Connect](https://aws.amazon.com/directconnect/)
+- [AWS Global Accelerator](https://aws.amazon.com/global-accelerator/)
+- [AWS Local Zones](https://aws.amazon.com/about-aws/global-infrastructure/localzones/)
+- [Investopedia: High-Frequency Trading](https://www.investopedia.com/terms/h/high-frequency-trading.asp)
+- [MDN: Time to First Byte](https://developer.mozilla.org/en-US/docs/Glossary/Time_to_first_byte)
+- [AWS: What is Throughput?](https://aws.amazon.com/what-is/throughput/)

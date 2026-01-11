@@ -2,7 +2,7 @@
 title: "Knowledge Attribution"
 date: 2025-12-19
 translationKey: Knowledge-Attribution
-description: "A system that tracks where information comes from in AI outputs, allowing users to verify accuracy and understand how conclusions were reached."
+description: "A system that tracks and documents where information comes from in AI outputs, so users can verify accuracy and understand how conclusions were reached."
 keywords:
 - knowledge attribution
 - AI transparency
@@ -40,7 +40,15 @@ In practical applications, knowledge attribution manifests through various mecha
 
 ## How Knowledge Attribution Works
 
-The knowledge attribution process begins with **source registration**where all input materials, databases, and knowledge sources are catalogued with unique identifiers, metadata, and provenance information. During**data ingestion**, systems capture detailed information about source characteristics, including creation dates, authorship, reliability scores, and content classifications.**Processing pipeline tracking**monitors how information flows through various AI components, documenting transformations, aggregations, and reasoning steps. Each processing stage creates attribution markers that link intermediate results back to original sources.**Inference mapping**establishes connections between input sources and specific aspects of generated outputs, creating detailed attribution graphs.**Confidence calculation**evaluates the reliability and relevance of each attributed source, considering factors such as source authority, recency, and consistency with other materials.**Attribution aggregation**combines multiple source attributions when outputs derive from various inputs, providing weighted attribution scores.**Output annotation**embeds attribution information directly into generated content, including source citations, confidence indicators, and links to supporting materials.**Verification mechanisms**enable users to validate attributed sources and trace reasoning pathways.**Audit trail generation**creates comprehensive logs of attribution decisions and processes for compliance and review purposes.**Example Workflow**: A medical AI system analyzing patient symptoms would track attribution from medical literature sources, clinical guidelines, and case studies through diagnostic reasoning processes, ultimately providing treatment recommendations with clear citations to supporting medical evidence and confidence scores for each recommendation component.
+The knowledge attribution process begins with **source registration** where all input materials, databases, and knowledge sources are catalogued with unique identifiers, metadata, and provenance information. During **data ingestion**, systems capture detailed information about source characteristics, including creation dates, authorship, reliability scores, and content classifications.
+
+**Processing pipeline tracking** monitors how information flows through various AI components, documenting transformations, aggregations, and reasoning steps. Each processing stage creates attribution markers that link intermediate results back to original sources. **Inference mapping** establishes connections between input sources and specific aspects of generated outputs, creating detailed attribution graphs.
+
+**Confidence calculation** evaluates the reliability and relevance of each attributed source, considering factors such as source authority, recency, and consistency with other materials. **Attribution aggregation** combines multiple source attributions when outputs derive from various inputs, providing weighted attribution scores.
+
+**Output annotation** embeds attribution information directly into generated content, including source citations, confidence indicators, and links to supporting materials. **Verification mechanisms** enable users to validate attributed sources and trace reasoning pathways. **Audit trail generation** creates comprehensive logs of attribution decisions and processes for compliance and review purposes.
+
+**Example Workflow**: A medical AI system analyzing patient symptoms would track attribution from medical literature sources, clinical guidelines, and case studies through diagnostic reasoning processes, ultimately providing treatment recommendations with clear citations to supporting medical evidence and confidence scores for each recommendation component.
 
 ## Key Benefits
 

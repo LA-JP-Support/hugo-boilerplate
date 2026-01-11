@@ -343,6 +343,32 @@ class LinkBuilder:
             return parsed.path
         
         return None
+
+    def _lowercase_existing_glossary_hrefs(self, soup) -> bool:
+        modified = False
+
+        for a in soup.find_all('a'):
+            href = a.get('href')
+            if not href:
+                continue
+
+            href_str = str(href).strip()
+            if not href_str:
+                continue
+
+            # Only touch internal-ish links we might generate/host.
+            if not (href_str.startswith('/') or href_str.startswith('http://') or href_str.startswith('https://') or href_str.startswith('//')):
+                continue
+
+            if '/glossary/' not in href_str.lower():
+                continue
+
+            normalized = normalize_url(href_str)
+            if normalized and normalized != href_str:
+                a['href'] = normalized
+                modified = True
+
+        return modified
     
     def _should_skip_url(self, keyword_url: str) -> bool:
         """Check if a keyword URL should be skipped (e.g., self-reference)"""
@@ -511,13 +537,17 @@ class LinkBuilder:
             
             # Count existing links
             self.existing_links = len(soup.find_all('a'))
+
+            href_modified = self._lowercase_existing_glossary_hrefs(soup)
             
             # Process the document
-            modified = self.process_element(soup)
+            modified = self.process_element(soup) or href_modified
             
             self.stats.total_files_processed += 1
             
-            if modified and self.page_replacements > 0:
+            should_write = modified and (self.page_replacements > 0 or href_modified)
+
+            if should_write:
                 if not self.dry_run:
                     # Write back modified content
                     with open(file_path, 'w', encoding='utf-8') as f:
@@ -525,9 +555,15 @@ class LinkBuilder:
 
                 self.stats.total_files_modified += 1
                 if self.dry_run:
-                    print(f"[DRY-RUN] {file_path}: Would add {self.page_replacements} links")
+                    if self.page_replacements > 0:
+                        print(f"[DRY-RUN] {file_path}: Would add {self.page_replacements} links")
+                    else:
+                        print(f"[DRY-RUN] {file_path}: Would normalize glossary hrefs")
                 else:
-                    print(f"✓ {file_path}: Added {self.page_replacements} links")
+                    if self.page_replacements > 0:
+                        print(f"✓ {file_path}: Added {self.page_replacements} links")
+                    else:
+                        print(f"✓ {file_path}: Normalized glossary hrefs")
                 return True
             else:
                 print(f"  {file_path}: No changes")
@@ -891,13 +927,13 @@ def load_keywords_from_yaml(file_path: str) -> List[Keyword]:
     return keywords
 
 
-def load_keywords_from_multiple_sources(manual_file: Optional[str] = None,
+def load_keywords_from_multiple_sources(manual_file: Optional[List[str]] = None,
                                        automatic_file: Optional[str] = None,
                                        manual_priority_boost: int = 10) -> List[Keyword]:
     """Load keywords from both manual and automatic sources
     
     Args:
-        manual_file: Path to manual keywords file (CSV or JSON)
+        manual_file: Paths to manual keywords files (CSV/YAML/JSON)
         automatic_file: Path to automatic keywords file (JSON)
         manual_priority_boost: Priority boost for manual keywords over automatic ones
     
@@ -916,23 +952,29 @@ def load_keywords_from_multiple_sources(manual_file: Optional[str] = None,
             print(f"Warning: Failed to load automatic keywords from {automatic_file}: {e}")
     
     # Load manual keywords (higher priority)
-    if manual_file and os.path.exists(manual_file):
+    manual_files: List[str] = []
+    if manual_file:
+        manual_files = [p for p in manual_file if p]
+
+    for mf in manual_files:
+        if not os.path.exists(mf):
+            continue
         try:
-            if manual_file.endswith('.json'):
-                manual_keywords = load_keywords_from_json(manual_file)
-            elif manual_file.endswith('.yaml') or manual_file.endswith('.yml'):
-                manual_keywords = load_keywords_from_yaml(manual_file)
+            if mf.endswith('.json'):
+                manual_keywords = load_keywords_from_json(mf)
+            elif mf.endswith('.yaml') or mf.endswith('.yml'):
+                manual_keywords = load_keywords_from_yaml(mf)
             else:
-                manual_keywords = load_keywords_from_csv(manual_file)
-            
+                manual_keywords = load_keywords_from_csv(mf)
+
             # Boost priority for manual keywords
             for kw in manual_keywords:
                 kw.priority += manual_priority_boost
-            
-            print(f"Loaded {len(manual_keywords)} manual keywords from {manual_file}")
+
+            print(f"Loaded {len(manual_keywords)} manual keywords from {mf}")
             keywords.extend(manual_keywords)
         except Exception as e:
-            print(f"Warning: Failed to load manual keywords from {manual_file}: {e}")
+            print(f"Warning: Failed to load manual keywords from {mf}: {e}")
     
     # Remove duplicates (manual keywords take precedence due to higher priority)
     # Keep the highest priority version of each keyword
@@ -999,8 +1041,8 @@ Note: Field names are capitalized (Keyword, URL, Title, Priority, Exact) but low
         """
     )
     
-    parser.add_argument('-k', '--keywords',
-                       help='Path to manual keywords file (CSV or JSON)')
+    parser.add_argument('-k', '--keywords', action='append', default=[],
+                       help='Path to manual keywords file (CSV/YAML/JSON). Can be specified multiple times.')
     parser.add_argument('-a', '--automatic',
                        help='Path to automatic keywords file (JSON)')
     parser.add_argument('-d', '--directory', required=True,

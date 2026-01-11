@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Incidents | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/incidents/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/incidents/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/incidents/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/incidents/" hreflang="x-default" rel="alternate"/>
+<meta content="An unplanned disruption to IT services that reduces performance or availability, impacting business operations. Detected through user reports or automated monitoring." name="description"/>
+<meta content="incident management, ITSM, incidents, automation, ITIL" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/incidents/" property="og:url"/>
+<meta content="Incidents | SmartWeb" property="og:title"/>
+<meta content="An unplanned disruption to IT services that reduces performance or availability, impacting business operations. Detected through user reports or automated monitoring." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/incidents/" name="twitter:url"/>
+<meta content="Incidents | SmartWeb" name="twitter:title"/>
+<meta content="An unplanned disruption to IT services that reduces performance or availability, impacting business operations. Detected through user reports or automated monitoring." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165525" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165525" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165525"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118125587168000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118125587168000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118125587168000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118125587168000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Incidents</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            ITSM
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Incidents
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          An unplanned disruption to IT services that reduces performance or availability, impacting business operations. Detected through user reports or automated monitoring.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                incident management
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ITSM
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                incidents
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                automation
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ITIL
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-an-incident">What Is an Incident?</h2>
+<p>An incidentis defined as any unplanned interruption to an IT service or a reduction in the quality of that service. The ITIL framework describes incidents as events where a service is not functioning as expected or its performance is degraded, impacting users’ ability to carry out normal business activities.Core Characteristics:| Characteristic | Description |
+|—————-|————-|
+| Unplanned| Unscheduled events disrupting normal operations |
+| Service Impact| Any interruption or quality reduction affects business |
+| Detection Methods| User reports, technical staff, automated <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a> |</p>
+<p>| Prevention Focus| Can be reported before SLA breach to minimize impact |Common Incident Examples:| Category | Examples |
+|———-|———-|
+| Infrastructure| Server outages, database crashes, storage failures |
+| Network| WAN/LAN disruptions, VPN failures, connectivity issues |
+| Applications| Software crashes, error messages, performance degradation |
+| Hardware| Printer failures, workstation breakdowns, device malfunctions |
+| Security| Malware infections, unauthorized access, data breaches |</p>
+<h2 id="incidents-vs-problems-vs-service-requests">Incidents vs. Problems vs. Service Requests</h2>
+<p>Understanding the distinctions is essential for efficient resource allocation, SLA compliance, and user satisfaction.</p>
+<h3 id="comparison-matrix">Comparison Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Incident</th>
+<th>Problem</th>
+<th>Service Request</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Definition</td>
+<td>Unplanned service interruption or quality reduction</td>
+<td>Root cause of incidents</td>
+<td>Formal request for standard change or access</td>
+</tr>
+<tr>
+<td>Nature</td>
+<td>Something broken or not working</td>
+<td>Underlying cause, often hidden</td>
+<td>User needs resource or information</td>
+</tr>
+<tr>
+<td>Urgency</td>
+<td>Requires immediate attention</td>
+<td>May not be urgent, needs analysis</td>
+<td>Follows standard timelines</td>
+</tr>
+<tr>
+<td>Focus</td>
+<td>Rapid restoration</td>
+<td>Root cause analysis and permanent fix</td>
+<td>Fulfillment per service catalog</td>
+</tr>
+<tr>
+<td>SLA Metric</td>
+<td>Response and resolution time</td>
+<td>Time to permanent solution</td>
+<td>Fulfillment time</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>Server crash, network outage</td>
+<td>Faulty router causing repeated outages</td>
+<td>Password reset, software installation</td>
+</tr>
+<tr>
+<td>Staff Involved</td>
+<td>Service desk, operations</td>
+<td>Problem management, specialists</td>
+<td>Service desk, fulfillment teams</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>Incident ticket with resolution</td>
+<td>Problem record with analysis</td>
+<td>Request ticket with approval</td>
+</tr>
+</tbody>
+</table>
+<h3 id="classification-decision-tree">Classification Decision Tree</h3>
+<pre tabindex="0"><code>Is it unplanned?
+    ↓
+    Yes → Is service degraded/interrupted?
+        ↓
+        Yes → INCIDENT
+            ↓
+            Multiple similar incidents?
+                ↓
+                Yes → Create PROBLEM record
+    ↓
+    No → Is it a standard request?
+        ↓
+        Yes → SERVICE REQUEST
+</code></pre><h3 id="why-correct-classification-matters">Why Correct Classification Matters</h3>
+<p>Impact of Misclassification:| Issue | Consequence | Solution |
+|——-|————-|———-|
+| Service Requests as Incidents| Wasted support resources, missed SLAs | Clear classification criteria and training |
+| Incidents as Service Requests| Delayed critical issue resolution | Automated priority assessment |
+| Incidents as Problems| Service restoration delayed | Focus on rapid restoration first |
+| Problems as Incidents| Root cause never addressed | Pattern recognition and analysis |</p>
+<h2 id="incident-management-lifecycle">Incident Management Lifecycle</h2>
+<h3 id="complete-process-flow">Complete Process Flow</h3>
+<pre tabindex="0"><code>1. Detection and Logging
+    ↓
+2. Classification and Categorization
+    ↓
+3. Prioritization
+    ↓
+4. Initial Diagnosis
+    ↓
+5. Escalation (if needed)
+    ↓
+6. Investigation and Resolution
+    ↓
+7. Recovery and Validation
+    ↓
+8. Closure
+    ↓
+9. Documentation and Review
+</code></pre><h3 id="stage-1-detection-and-logging">Stage 1: Detection and Logging</h3>
+<p>Detection Methods:| Method | Description | Response Time | Coverage |
+|——–|————-|—————|———-|
+| User Reports| Service desk tickets, calls, emails | Minutes to hours | Known issues |
+| Automated Monitoring| System alerts, performance metrics | Seconds to minutes | Infrastructure |</p>
+<p>| Proactive Detection| Predictive analytics, anomaly detection | Before impact | Emerging issues |Logging Requirements:| Data Element | Purpose | Example |
+|————–|———|———|
+| Timestamp| Track response time | 2025-12-18 14:23:15 |
+| Reporter| Contact for updates | <a href="mailto:jane.smith@company.com">jane.smith@company.com</a> |
+| Affected Service| Identify scope | Email System |
+| Description| Understand issue | “Cannot send emails, error 550” |
+| Business Impact| Determine priority | 200 users affected |
+| Symptoms| Aid diagnosis | Timeout after 30 seconds |</p>
+<h3 id="stage-2-classification-and-prioritization">Stage 2: Classification and Prioritization</h3>
+<p>Priority Matrix:| Impact ↓ / Urgency → | High Urgency | Medium Urgency | Low Urgency |
+|———————–|————–|—————-|————-|
+| Critical Impact| Priority 1 (P1) | Priority 2 (P2) | Priority 3 (P3) |
+| High Impact| Priority 2 (P2) | Priority 3 (P3) | Priority 4 (P4) |
+| Medium Impact| Priority 3 (P3) | Priority 4 (P4) | Priority 5 (P5) |</p>
+<p>| Low Impact| Priority 4 (P4) | Priority 5 (P5) | Priority 5 (P5) |Impact Assessment:| Level | User Impact | Business Effect | Examples |
+|——-|————-|—————–|———-|
+| Critical| 500+ users or entire service | Revenue loss, compliance violation | Core business system down |
+| High| 100-500 users or key function | Significant productivity loss | Email system outage |
+| Medium| 10-100 users or workaround available | Moderate inconvenience | Single printer failure |</p>
+<p>| Low| Individual user, no workaround needed | Minimal impact | Cosmetic software issue |Urgency Factors:| Factor | High | Medium | Low |
+|——–|——|——–|—–|
+| Deadline| Immediate/critical | Within 24 hours | No specific deadline |
+| Workaround| None available | Complex workaround | Easy workaround |
+| User Type| Executive, external customer | Management, key staff | General staff |
+| Time Sensitivity| Peak business hours | Normal hours | Off-hours |</p>
+<h3 id="stage-3-initial-diagnosis-and-triage">Stage 3: Initial Diagnosis and Triage</h3>
+<p>Diagnostic Workflow:```
+Receive Incident
+↓
+Search <a data-lb="1" href="/en/glossary/knowledge-base/" title="Knowledge Base glossary entry">Knowledge Base</a>
+↓
+├─→ Known Issue? → Apply Solution → Test → Close
+│
+└─→ Unknown? → Perform Basic Troubleshooting
+↓
+├─→ Resolved? → Document → Close
+│
+└─→ Unresolved? → Escalate to Specialist</p>
+<pre tabindex="0"><code class="language-**First-Line" data-lang="**First-Line">|--------|---------|-------|
+| **Knowledge Base Search**| Find existing solutions | ITSM, Wiki |
+| **Basic Troubleshooting**| Resolve simple issues | Scripts, checklists |
+| **Information Gathering**| Aid escalation | Diagnostic tools |
+| **Workaround Provision**| Temporary relief | KB articles |
+
+### Stage 4: Escalation
+
+**Escalation Types:**| Type | Trigger | Target | Timeline |
+|------|---------|--------|----------|
+| **Functional**| Specialized skills needed | Technical team | Immediate |
+| **Hierarchical**| SLA breach risk | Management | Before breach |
+| **Automatic**| P1/P2 incident | On-call engineers | &lt; 5 minutes |
+| **Request-based**| User demands | Higher authority | As needed |**Escalation Criteria:**| Priority | First Escalation | Second Escalation | Executive Notification |
+|----------|------------------|-------------------|----------------------|
+| **P1**| 15 minutes | 30 minutes | 1 hour |
+| **P2**| 1 hour | 4 hours | 8 hours |
+| **P3**| 4 hours | 1 day | N/A |
+| **P4**| 1 day | 3 days | N/A |
+
+### Stage 5: Investigation and Resolution
+
+**Resolution Approaches:**| Approach | Description | Use Case | Time |
+|----------|-------------|----------|------|
+| **Known Solution**| Apply documented fix | Repeated issues | Minutes |
+| **Workaround**| Temporary bypass | Rapid restoration needed | &lt; 1 hour |
+| **Standard Fix**| Common resolution | Typical incidents | Hours |
+| **Custom Solution**| Novel resolution | Unique issues | Hours to days |
+| **Emergency Change**| Infrastructure modification | Critical fixes | Expedited |
+
+### Stage 6: Recovery and Validation
+
+**Validation Checklist:**- [ ] Service functionality restored
+- [ ] Performance within acceptable parameters
+- [ ] User confirms resolution
+- [ ] No secondary issues introduced
+- [ ] Monitoring shows stable state
+- [ ] Documentation updated
+
+### Stage 7: Closure and Documentation
+
+**Closure Requirements:**| Requirement | Purpose | Responsible Party |
+|-------------|---------|------------------|
+| **User Confirmation**| Ensure satisfaction | Service desk |
+| **Resolution Documentation**| Knowledge capture | Resolver |
+| **Time Logging**| SLA tracking | All involved |
+| **Category/Cause Recording**| Trend analysis | Service desk |
+| **Follow-up Actions**| Prevent recurrence | Problem management |
+
+## Major Incident Management
+
+### Definition and Criteria
+
+**Major Incident Characteristics:**| Characteristic | Description |
+|----------------|-------------|
+| **Widespread Impact**| Affects 500+ users or critical business function |
+| **Revenue Impact**| Direct financial loss or compliance risk |
+| **Executive Involvement**| Requires senior management awareness |
+| **Media/Public Attention**| Potential reputational damage |
+| **Extended Duration**| Likely to exceed standard SLA |
+
+### Major Incident Process
+
+**Enhanced Workflow:**```
+Major Incident Declared
+    ↓
+Assemble Incident Response Team
+    ↓
+Establish Communication Plan
+    ↓
+↓ (Parallel Activities) ↓
+│                        │
+Investigation        Communication
+│                        │
+    ↓                    ↓
+Resolution        Status Updates
+    ↓                    ↓
+Validation        Final Notification
+    ↓
+Post-Incident Review
+    ↓
+Lessons Learned Documentation
+</code></pre><h3 id="major-incident-team-roles">Major Incident Team Roles</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Responsibilities</th>
+<th>Skills Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Incident Manager</td>
+<td>Coordination, decision-making, communication</td>
+<td>Leadership, ITSM knowledge</td>
+</tr>
+<tr>
+<td>Technical Lead</td>
+<td>Investigation, resolution planning</td>
+<td>Deep technical expertise</td>
+</tr>
+<tr>
+<td>Communications Lead</td>
+<td>Stakeholder updates, messaging</td>
+<td>Communication, business acumen</td>
+</tr>
+<tr>
+<td>Business Liaison</td>
+<td>Business impact assessment</td>
+<td>Business knowledge</td>
+</tr>
+<tr>
+<td>Support Specialists</td>
+<td>Technical investigation and fixes</td>
+<td>Specialized technical skills</td>
+</tr>
+</tbody>
+</table>
+<h3 id="communication-plan">Communication Plan</h3>
+<p>Stakeholder Update Frequency:| Priority | Internal Updates | Customer Updates | Executive Updates |
+|———-|—————–|——————|——————-|
+| P1| Every 30 minutes | Every hour | Every 2 hours |</p>
+<p>| P2| Every 2 hours | Every 4 hours | Daily |Communication Templates:| Template | Purpose | Key Elements |
+|———-|———|————–|
+| Initial Notification| Inform of incident | Issue, impact, ETA |
+| Status Update| Progress report | Actions taken, current status, next steps |
+| Resolution Notice| Closure confirmation | Solution, validation, follow-up |</p>
+<h2 id="automation-and-ai-in-incident-management">Automation and AI in Incident Management</h2>
+<h3 id="benefits-of-automation">Benefits of Automation</h3>
+<table>
+<thead>
+<tr>
+<th>Benefit</th>
+<th>Impact</th>
+<th>Measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Speed</td>
+<td>60-80% faster resolution</td>
+<td>MTTR reduction</td>
+</tr>
+<tr>
+<td>Consistency</td>
+<td>Standardized handling</td>
+<td>Quality scores</td>
+</tr>
+<tr>
+<td>Scalability</td>
+<td>24/7 capacity</td>
+<td>Ticket volume handled</td>
+</tr>
+<tr>
+<td>Cost Efficiency</td>
+<td>Reduced labor costs</td>
+<td>Cost per ticket</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>Fewer human errors</td>
+<td>Error rate</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ai-powered-use-cases">AI-Powered Use Cases</h3>
+<ol>
+<li>Intelligent Ticket Routing```
+Incident Detected/Reported
+↓
+AI Classification
+<ul>
+<li>Natural Language Processing</li>
+<li>Historical Pattern Analysis</li>
+<li>Severity Assessment
+↓
+Automatic Routing</li>
+<li>Right team</li>
+<li>Right priority</li>
+<li>Context included
+↓
+Notification Sent</li>
+</ul>
+</li>
+</ol>
+<pre tabindex="0"><code class="language-**Technologies:**-" data-lang="**Technologies:**-">- Machine Learning classification
+- Rule-based routing engines
+
+**2. Chatbot First-Line Support**
+
+**Capabilities:**| Capability | Description | Success Rate |
+|------------|-------------|--------------|
+| **Intent Recognition**| Understand user issue | 85-95% |
+| **Knowledge Base Search**| Find relevant articles | 80-90% |
+| **Guided Troubleshooting**| Step-by-step resolution | 60-70% |
+| **Ticket Creation**| Auto-generate for escalation | 95%+ |
+| **Status Updates**| Provide real-time info | 99% |**Example Interaction:**```
+User: "I can't access my email"
+Bot: "I'll help you with email access. Let me check a few things:
+      1. Can you access other systems? [Yes/No]
+      2. What error message do you see? [Describe]"
+    → Guides through diagnostics
+    → Provides solution or escalates
+```**3. Automated Incident Detection**
+
+Detection Methods:| Method | Data Source | Detection Type | Response Time |
+|--------|-------------|----------------|---------------|
+| Threshold Monitoring| Performance metrics | Exceeds limits | &lt; 1 minute |
+| Anomaly Detection| ML analysis of patterns | Unusual behavior | 1-5 minutes |
+| Log Analysis| System logs | Error patterns | Real-time |
+| Synthetic Monitoring| Simulated transactions | Service availability | Continuous |4. Predictive Incident Management
+
+Approach:```
+Historical Data Collection
+    ↓
+Pattern Analysis (ML)
+    ↓
+Risk Prediction
+    ↓
+Proactive Action
+    - Preventive maintenance
+    - Resource allocation
+    - Early warning
+```**Benefits:**- Prevent incidents before they occur
+- Reduce mean time between failures (MTBF)
+- Optimize resource planning
+- Improve service availability
+
+### Automation Maturity Model
+
+| Level | Description | Automation % | Characteristics |
+|-------|-------------|--------------|----------------|
+| **Level 1: Manual**| All manual processes | 0-10% | High labor, slow response |
+| **Level 2: Assisted**| Basic automation support | 10-30% | Some routing, alerts |
+| **Level 3: Partial**| Automated triage and routing | 30-50% | Chatbots, auto-routing |
+| **Level 4: Extensive**| AI-driven resolution | 50-70% | Auto-resolution for common issues |
+| **Level 5: Autonomous**| Self-healing systems | 70-90% | Predictive and proactive |
+
+## Best Practices
+
+### Organizational Best Practices
+
+**1. Clear Escalation Policies**| Element | Implementation |
+|---------|---------------|
+| **Criteria**| Document when to escalate (time, complexity, impact) |
+| **Paths**| Define escalation hierarchy and contact methods |
+| **Training**| Regular drills and role-playing |
+| **Authority**| Empower responders to make escalation decisions |**2. Knowledge Management**
+
+**Knowledge Base Structure:**```
+Knowledge Base
+├── Known Errors (Problem Solutions)
+├── Workarounds (Temporary Fixes)
+├── Standard Procedures (Step-by-step)
+├── Troubleshooting Guides (Diagnostic)
+└── FAQs (Common Questions)
+```**Quality Criteria:**- Accurate and tested solutions
+- Clear, step-by-step instructions
+- Regular updates and validation
+- User-friendly language
+- Searchable and well-tagged
+
+3. Communication Standards
+
+Communication Principles:| Principle | Application |
+|-----------|-------------|
+| Timeliness| Update at defined intervals |
+| Clarity| Avoid jargon, be specific |
+| Completeness| Include impact, actions, timeline |
+| Consistency| Use templates and standards |
+| Accessibility| Multiple channels (email, SMS, portal) |
+
+### Technical Best Practices
+
+4. Monitoring and Detection
+
+Monitoring Coverage:| Layer | Metrics | Tools |
+|-------|---------|-------|
+| Infrastructure| CPU, memory, disk, network | Nagios, Zabbix, Datadog |
+| Application| Response time, errors, availability | New Relic, AppDynamics |
+| Business| Transactions, SLA compliance | Custom dashboards |
+| Security| Access attempts, vulnerabilities | SIEM, IDS/IPS |5. Post-Incident Reviews
+
+Review Process:```
+Incident Closed
+    ↓
+Review Meeting (within 48 hours)
+    ↓
+Analyze:
+    - Timeline and response
+    - Root cause
+    - What went well
+    - What could improve
+    ↓
+Action Items:
+    - Process improvements
+    - Training needs
+    - Tool enhancements
+    ↓
+Document and Share Lessons
+```**Review Questions:**| Category | Questions |
+|----------|-----------|
+| **Detection**| How was the incident detected? Could it have been detected earlier? |
+| **Response**| Was escalation timely? Were resources adequate? |
+| **Communication**| Were stakeholders informed appropriately? |
+| **Resolution**| Was the fix effective? Could it have been faster? |
+| **Prevention**| What can prevent recurrence? |
+
+## Performance Metrics and KPIs
+
+### Key Metrics
+
+| Metric | Definition | Target | Importance |
+|--------|------------|--------|------------|
+| **MTTR**| Mean Time to Restore/Resolve | &lt; 4 hours | Service restoration speed |
+| **MTTD**| Mean Time to Detect | &lt; 5 minutes | Detection efficiency |
+| **First Contact Resolution**| % resolved at first touch | &gt; 70% | Support effectiveness |
+| **SLA Compliance**| % incidents meeting SLA | &gt; 95% | Service quality |
+| **Escalation Rate**| % requiring escalation | 20-30% | Process efficiency |
+| **Reopen Rate**| % reopened after closure | &lt; 5% | Resolution quality |
+| **Incident Volume**| Total incidents per period | Trend down | Service stability |
+
+### Reporting and Dashboards
+
+**Executive Dashboard Elements:**| Element | Purpose |
+|---------|---------|
+| **Critical Incidents**| Active P1/P2 incidents |
+| **SLA Status**| At-risk and breached SLAs |
+| **Trends**| Volume, MTTR, category trends |
+| **Top Issues**| Most common incident types |
+| **Team Performance**| Resolution rates by team |
+
+## Challenges and Solutions
+
+### Common Challenges
+
+| Challenge | Impact | Solution |
+|-----------|--------|----------|
+| **Alert Fatigue**| Important issues missed | Tune thresholds, consolidate alerts |
+| **Misclassification**| Resource waste, SLA misses | Training, decision trees, automation |
+| **Communication Gaps**| Stakeholder dissatisfaction | Templates, regular updates, tools |
+| **Knowledge Silos**| Inconsistent resolution | Centralized KB, documentation culture |
+| **Tool Sprawl**| Integration complexity | ITSM platform consolidation |
+| **Staff Burnout**| High turnover, errors | Automation, workload management |
+
+### Integration Challenges
+
+**Common Integration Points:**| System | Integration Purpose | Challenge |
+|--------|-------------------|-----------|
+| **Monitoring Tools**| Auto-ticket creation | Alert correlation |
+| **CMDB**| Impact assessment | Data accuracy |
+| **Communication**| Notifications | Multiple channel management |
+| **Knowledge Base**| Solution retrieval | Search relevance |
+| **Change Management**| Change correlation | Process alignment |
+
+## Industry Standards and Frameworks
+
+### ITIL Framework
+
+**ITIL Incident Management Principles:**| Principle | Description |
+|-----------|-------------|
+| **Service Restoration**| Focus on rapid restoration, not root cause |
+| **SLA Compliance**| Meet agreed service levels |
+| **Continuous Improvement**| Learn from incidents |
+| **User Focus**| Minimize business impact |
+
+### NIST Guidelines
+
+**NIST Incident Response Lifecycle:**```
+1. Preparation
+2. Detection and Analysis
+3. Containment, Eradication, and Recovery
+4. Post-Incident Activity
+```**Applicable to:**Security incidents, cybersecurity events
+
+### ISO 20000
+
+Requirements:- Documented incident management process
+- Priority assignment criteria
+- SLA compliance tracking
+- Continual improvement activities
+
+## Real-World Examples
+
+### Example 1: E-commerce Platform Outage
+
+Scenario:Payment gateway failure during peak shopping seasonResponse:```
+Detection: Automated monitoring alerts within 2 minutes
+Classification: P1 - Critical (revenue impact)
+Team: Major incident team assembled
+Communication: Customer notification, status page update
+Investigation: Identified third-party API failure
+Workaround: Switched to backup payment provider
+Resolution Time: 45 minutes
+Post-Incident: Implemented automatic failover
+</code></pre><h3 id="example-2-email-system-degradation">Example 2: Email System Degradation</h3>
+<p><strong>Scenario:<strong>Slow email delivery affecting 2,000 users</strong>Response:</strong>```
+Detection: User reports to service desk
+Classification: P2 - High impact
+Diagnosis: Database performance issue
+Resolution: Database optimization and index rebuild
+Communication: Status updates every 2 hours
+Resolution Time: 6 hours
+Follow-up: Scheduled preventive maintenance</p>
+<pre tabindex="0"><code>
+### Example 3: Security Incident
+
+Scenario:Ransomware detection on file serverResponse:```
+Detection: Security monitoring alert
+Classification: P1 - Critical (security)
+Immediate Actions:
+  1. Network isolation of affected systems
+  2. Security team mobilization
+  3. Executive notification
+Investigation: Phishing email vector identified
+Remediation: Malware removal, system restoration from backup
+Resolution Time: 24 hours
+Follow-up: Security awareness training, email filtering enhancement
+</code></pre><h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<p>**Q: What’s the difference between an incident and an outage?**A: An outage is a type of incident where a service is completely unavailable. All outages are incidents, but not all incidents are outages (e.g., performance degradation is an incident but not an outage).**Q: How quickly should incidents be logged?**A: Incidents should be logged immediately upon detection—within minutes for critical issues. Automated systems log instantly; manual reports should be logged within 15-30 minutes.**Q: Who can report an incident?**A: Anyone—end users, IT staff, automated monitoring systems, external partners. All incident sources are valid.**Q: Should workarounds be documented?**A: Yes. Workarounds should be documented in the knowledge base as temporary solutions until permanent fixes are implemented.**Q: How long should incident records be retained?**A: Typically 1-3 years for trend analysis and compliance, though requirements vary by industry and regulation.**Q: What happens if an SLA is breached?**A: Document the breach, notify stakeholders, analyze root cause, and implement corrective actions. Many organizations have <a data-lb="1" href="/en/glossary/escalation/" title="Escalation glossary entry">escalation</a> or credit policies for SLA breaches.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Atlassian. (n.d.). What are incidents?. Jira Service Management.</p>
+</li>
+<li>
+<p>Global Knowledge. (n.d.). How ITIL Differentiates Problems and Incidents. Global Knowledge Resource Library.</p>
+</li>
+<li>
+<p>Workato. (n.d.). Automated Incident Management. Workato Blog.</p>
+</li>
+<li>
+<p>AWS. (n.d.). What is Incident Management?. AWS.</p>
+</li>
+<li>
+<p>ServiceNow Community. (n.d.). Incident Management. ServiceNow Community Forum.</p>
+</li>
+<li>
+<p>Microtica. (n.d.). AI for Incident Response. Microtica Blog.</p>
+</li>
+<li>
+<p>Freshworks. (n.d.). Incident vs Service Request. Freshworks Explore IT.</p>
+</li>
+<li>
+<p>IT Process Wiki. (n.d.). Incident Management. IT Process Wiki.</p>
+</li>
+<li>
+<p>Moveworks. (n.d.). Reduce MTTR With Incident Management Automation. Moveworks Blog.</p>
+</li>
+<li>
+<p>PagerDuty. (n.d.). Using AIOps for Better Incident Management. PagerDuty Resources.</p>
+</li>
+<li>
+<p>BigPanda. (n.d.). 6 Top Incident Management Use Cases for AI Copilots. BigPanda Blog.</p>
+</li>
+<li>
+<p>Pulpstream. (n.d.). 5 Steps of Incident Management Process. Pulpstream Blog.</p>
+</li>
+<li>
+<p>RSI Security. (n.d.). 5 Steps of the Incident Management Lifecycle. RSI Security Blog.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/itsm/">
+                    ITSM (IT Service Management)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A systematic approach that organizes IT operations to align technology services with business goals,...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/itsm/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/itil/">
+                    ITIL – Information Technology Infrastructure Library
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A global best practices framework that helps organizations manage IT services efficiently and align ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/itil/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/zero-touch-resolution/">
+                    Zero-Touch Resolution
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI-powered technology that automatically solves problems and fulfills requests without human involve...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/zero-touch-resolution/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/average-resolution-time/">
+                    Average Resolution Time
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Average Resolution Time is the average time it takes to resolve a customer problem from when it's re...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/average-resolution-time/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/devops/">
+                    DevOps
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A management approach where development and operations teams collaborate closely to automate softwar...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/devops/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/resolution-time/">
+                    Resolution Time
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    The total time it takes to fix a reported problem or issue, from when it's first reported until norm...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/resolution-time/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/incidents/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165525"></script>
+</body>
+</html>

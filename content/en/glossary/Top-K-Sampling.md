@@ -2,7 +2,7 @@
 title: "Top-K Sampling"
 date: 2025-12-19
 translationKey: Top-K-Sampling
-description: "A text generation technique that randomly selects the next word from the K most likely candidates, balancing text quality with creativity and variety."
+description: "A text generation technique that randomly selects the next word from only the most likely candidates, balancing quality and creativity in AI-generated text."
 keywords:
 - top-k sampling
 - text generation
@@ -54,7 +54,9 @@ The Top-K sampling process follows a systematic workflow that transforms the mod
 
 7. **Sequence Update**: The selected token is appended to the current sequence, and the process repeats for the next token generation step.
 
-8. **Iterative Generation**: Steps 1-7 are repeated until a stopping condition is met, such as reaching a maximum length or encountering an end-of-sequence token.**Example Workflow**: Consider generating the next word after "The weather today is". The model might predict probabilities like: "sunny" (0.3), "cloudy" (0.25), "rainy" (0.2), "cold" (0.1), "beautiful" (0.08), with hundreds of other words having lower probabilities. With K=3, only "sunny", "cloudy", and "rainy" are kept, their probabilities are renormalized to 0.4, 0.33, and 0.27 respectively, and one is randomly selected based on these adjusted probabilities.
+8. **Iterative Generation**: Steps 1-7 are repeated until a stopping condition is met, such as reaching a maximum length or encountering an end-of-sequence token.
+
+**Example Workflow**: Consider generating the next word after "The weather today is". The model might predict probabilities like: "sunny" (0.3), "cloudy" (0.25), "rainy" (0.2), "cold" (0.1), "beautiful" (0.08), with hundreds of other words having lower probabilities. With K=3, only "sunny", "cloudy", and "rainy" are kept, their probabilities are renormalized to 0.4, 0.33, and 0.27 respectively, and one is randomly selected based on these adjusted probabilities.
 
 ## Key Benefits
 

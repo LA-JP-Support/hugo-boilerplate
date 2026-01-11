@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Conditional Router | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/conditional-router/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/conditional-router/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/conditional-router/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/conditional-router/" hreflang="x-default" rel="alternate"/>
+<meta content="A workflow component that automatically directs data to different paths based on matching rules, enabling smart decision-making in automation systems and chatbots." name="description"/>
+<meta content="Conditional Router, Workflow automation, Rule-based branching, AI chatbots, Data routing" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/conditional-router/" property="og:url"/>
+<meta content="Conditional Router | SmartWeb" property="og:title"/>
+<meta content="A workflow component that automatically directs data to different paths based on matching rules, enabling smart decision-making in automation systems and chatbots." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/conditional-router/" name="twitter:url"/>
+<meta content="Conditional Router | SmartWeb" name="twitter:title"/>
+<meta content="A workflow component that automatically directs data to different paths based on matching rules, enabling smart decision-making in automation systems and chatbots." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Conditional Router</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            General
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Conditional Router
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A workflow component that automatically directs data to different paths based on matching rules, enabling smart decision-making in automation systems and chatbots.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Conditional Router
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Workflow automation
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Rule-based branching
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI chatbots
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Data routing
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-conditional-router">What Is a Conditional Router?</h2>
+<p>A Conditional Router is a workflow component or node that evaluates incoming data against one or more user-defined rules and directs the data to a specific downstream route based on which condition matches. Its purpose is to enable dynamic, rule-based branching in automation pipelines, AI chatbots, business process automation, and software architectures. Each output port corresponds to a possible routed outcome, determined by customizable rules using a variety of operators.</p>
+<p><strong>Key Capabilities:</strong></p>
+<ul>
+<li>Receives input (text, structured objects, metadata, etc.)</li>
+<li>Applies user-defined conditions (e.g., <code>equals</code>, <code>contains</code>, <code>is_email</code>, <code>regex</code>)</li>
+<li>Activates exactly one output (route) per evaluation, except in some ETL contexts</li>
+<li>Supports deterministic, manageable flows in complex automations</li>
+</ul>
+<h2 id="how-the-conditional-router-works">How the Conditional Router Works</h2>
+<h3 id="core-logic">Core Logic</h3>
+<p>The Conditional Router compares incoming data to specified values or logical expressions using a set of configurable operators. Each condition is linked to a named output. The router checks conditions in order: the first <code>true</code> condition determines the output route. If no condition matches, the router triggers a default or fallback route (if configured).</p>
+<p><strong>Single-path Routing:</strong> Only one output is activated per evaluation (exclusive routing), except in some ETL frameworks.</p>
+<p><strong>Configurable Rules:</strong> Conditions are defined with operators and can reference multiple fields, including nested data.</p>
+<p><strong>Extensible:</strong> Supports logical composition, nested conditions, and custom expressions.</p>
+<h3 id="evaluation-sequence">Evaluation Sequence</h3>
+<ol>
+<li><strong>Input Reception:</strong> Receives data and optional metadata or parameters</li>
+<li><strong>Condition Evaluation:</strong> Sequentially evaluates each defined condition using the configured operators</li>
+<li><strong>Routing Decision:</strong> First condition that evaluates to <code>true</code> determines the output</li>
+<li><strong>Default Handling:</strong> If no conditions match, data is sent to a default route (if defined)</li>
+<li><strong>Downstream Processing:</strong> Data is passed to the next component or action</li>
+</ol>
+<h2 id="inputs">Inputs</h2>
+<p>Input parameters for Conditional Routers may vary by platform, but typically include:</p>
+<table>
+<thead>
+<tr>
+<th>Input Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input Data/Text</td>
+<td>String/Object</td>
+<td>The primary data to evaluate</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Match Value</td>
+<td>String/Object</td>
+<td>The value or expression to compare against</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Operator</td>
+<td>String</td>
+<td>The comparison operator</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Case Sensitive</td>
+<td>Boolean</td>
+<td>Enables case-sensitive comparisons</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Metadata/Params</td>
+<td>Object</td>
+<td>Additional fields for routing</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Message Object</td>
+<td>Object</td>
+<td>Payload to pass along the route</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h2 id="available-operators">Available Operators</h2>
+<p>Conditional Routers support a wide variety of operators for flexible routing:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+<th>Example Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>equals</code> / <code>$eq</code></td>
+<td>Value is equal to match</td>
+<td><code>"status" == "active"</code></td>
+</tr>
+<tr>
+<td><code>not equals</code>/ <code>$ne</code></td>
+<td>Value is not equal to match</td>
+<td><code>"role" != "admin"</code></td>
+</tr>
+<tr>
+<td><code>contains</code></td>
+<td>Value contains substring</td>
+<td><code>"hello@example.com" contains "@"</code></td>
+</tr>
+<tr>
+<td><code>starts with</code></td>
+<td>Value starts with substring</td>
+<td><code>"prefix"</code> starts with “pre”</td>
+</tr>
+<tr>
+<td><code>ends with</code></td>
+<td>Value ends with substring</td>
+<td><code>"file.pdf"</code> ends with “.pdf”</td>
+</tr>
+<tr>
+<td><code>is empty</code></td>
+<td>Value is empty/null/undefined</td>
+<td><code>""</code></td>
+</tr>
+<tr>
+<td><code>is not empty</code></td>
+<td>Value is not empty</td>
+<td><code>"not empty"</code></td>
+</tr>
+<tr>
+<td><code>is_url</code></td>
+<td>Value matches URL format</td>
+<td><code>"https://..."</code></td>
+</tr>
+<tr>
+<td><code>is_email</code></td>
+<td>Value matches email format</td>
+<td><code>"name@domain.com"</code></td>
+</tr>
+<tr>
+<td><code>is_number</code></td>
+<td>Value is numeric</td>
+<td><code>123</code></td>
+</tr>
+<tr>
+<td><code>$in</code></td>
+<td>Value is in array/list</td>
+<td><code>tier in ["pro", "enterprise"]</code></td>
+</tr>
+<tr>
+<td><code>$nin</code></td>
+<td>Value not in array/list</td>
+<td><code>status not in ["error"]</code></td>
+</tr>
+<tr>
+<td><code>$regex</code></td>
+<td>Value matches regular expression</td>
+<td><code>input matches /pattern/</code></td>
+</tr>
+<tr>
+<td><code>$gt</code>, <code>$gte</code></td>
+<td>Greater than / greater or equal</td>
+<td><code>score &gt;= 0.8</code></td>
+</tr>
+<tr>
+<td><code>$lt</code>, <code>$lte</code></td>
+<td>Less than / less or equal</td>
+<td><code>temperature &lt; 0.7</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Logical Operators:</strong> <code>$and</code> (all conditions must be true), <code>$or</code> (any condition true)</p>
+<h2 id="outputs">Outputs</h2>
+<p>Each Conditional Router node provides multiple output ports:</p>
+<table>
+<thead>
+<tr>
+<th>Output Name</th>
+<th>Trigger Condition</th>
+<th>Output Data Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>True Route</td>
+<td>When condition evaluates to <code>true</code></td>
+<td>Message/Object</td>
+</tr>
+<tr>
+<td>False Route</td>
+<td>When condition evaluates to <code>false</code></td>
+<td>Message/Object</td>
+</tr>
+<tr>
+<td>Custom Routes</td>
+<td>Named outputs for each condition</td>
+<td>Message/Object</td>
+</tr>
+<tr>
+<td>Default Route</td>
+<td>When no condition matches</td>
+<td>Message/Object</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Named Output Ports:</strong> Each condition links to a named output.<br/>
+<strong>Default Output:</strong> Handles unmatched data.<br/>
+<strong>Data Forwarding:</strong> The original (or transformed) message/data is passed through the activated output.</p>
+<h2 id="advanced-configuration">Advanced Configuration</h2>
+<h3 id="logical-operators">Logical Operators</h3>
+<p>To define multi-condition logic for a single route, use logical operators:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"query"</span>: {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">"$and"</span>: [
+</span></span><span style="display:flex;"><span>      { <span style="font-weight:bold">"metadata.user_type"</span>: { <span style="font-weight:bold">"$eq"</span>: <span style="color:#0ff;font-weight:bold">"pro"</span> } },
+</span></span><span style="display:flex;"><span>      { <span style="font-weight:bold">"params.model"</span>: { <span style="font-weight:bold">"$eq"</span>: <span style="color:#0ff;font-weight:bold">"gpt-4"</span> } }
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"then"</span>: <span style="color:#0ff;font-weight:bold">"pro_gpt4_target"</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Supports <code>$and</code>, <code>$or</code>, and even nested logical blocks.</p>
+<h3 id="case-sensitivity">Case Sensitivity</h3>
+<p>Configure whether string comparisons should be case-sensitive:</p>
+<ul>
+<li><code>case_sensitive: true</code> for exact match</li>
+<li><code>case_sensitive: false</code> for case-insensitive</li>
+</ul>
+<h2 id="practical-examples">Practical Examples</h2>
+<h3 id="example-1-simple-text-match">Example 1: Simple Text Match</h3>
+<p>Route user message to support if it contains the keyword “help”, otherwise route to the bot.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"input_text"</span>: <span style="color:#0ff;font-weight:bold">"I need help with my order"</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"match_text"</span>: <span style="color:#0ff;font-weight:bold">"help"</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"operator"</span>: <span style="color:#0ff;font-weight:bold">"contains"</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"case_sensitive"</span>: <span style="color:#fff;font-weight:bold">false</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="example-2-parameter-based-model-selection">Example 2: Parameter-Based Model Selection</h3>
+<p>Route requests to different models based on the <code>model</code> parameter.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"strategy"</span>: {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">"mode"</span>: <span style="color:#0ff;font-weight:bold">"conditional"</span>,
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">"conditions"</span>: [
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">"query"</span>: { <span style="font-weight:bold">"params.model"</span>: { <span style="font-weight:bold">"$eq"</span>: <span style="color:#0ff;font-weight:bold">"fastest"</span> } },
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">"then"</span>: <span style="color:#0ff;font-weight:bold">"fast-model"</span>
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">"query"</span>: { <span style="font-weight:bold">"params.model"</span>: { <span style="font-weight:bold">"$eq"</span>: <span style="color:#0ff;font-weight:bold">"smartest"</span> } },
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">"then"</span>: <span style="color:#0ff;font-weight:bold">"smart-model"</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">"default"</span>: <span style="color:#0ff;font-weight:bold">"balanced-model"</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="example-3-data-validation">Example 3: Data Validation</h3>
+<p>Route based on input length:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span>routes = [
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#0ff;font-weight:bold">"condition"</span>: <span style="color:#0ff;font-weight:bold">"{{ query|length &gt; 10 }}"</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#0ff;font-weight:bold">"output"</span>: [<span style="color:#0ff;font-weight:bold">"{{ query }}"</span>, <span style="color:#0ff;font-weight:bold">"{{ query|length }}"</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#0ff;font-weight:bold">"output_name"</span>: [<span style="color:#0ff;font-weight:bold">"ok_query"</span>, <span style="color:#0ff;font-weight:bold">"length"</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#0ff;font-weight:bold">"output_type"</span>: [<span style="color:#fff;font-weight:bold">str</span>, <span style="color:#fff;font-weight:bold">int</span>],
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#0ff;font-weight:bold">"condition"</span>: <span style="color:#0ff;font-weight:bold">"{{ query|length &lt;= 10 }}"</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#0ff;font-weight:bold">"output"</span>: [<span style="color:#0ff;font-weight:bold">"query too short: {{ query }}"</span>, <span style="color:#0ff;font-weight:bold">"{{ query|length }}"</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#0ff;font-weight:bold">"output_name"</span>: [<span style="color:#0ff;font-weight:bold">"too_short_query"</span>, <span style="color:#0ff;font-weight:bold">"length"</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#0ff;font-weight:bold">"output_type"</span>: [<span style="color:#fff;font-weight:bold">str</span>, <span style="color:#fff;font-weight:bold">int</span>],
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><h3 id="example-4-combined-metadata-and-parameter-routing">Example 4: Combined Metadata and Parameter Routing</h3>
+<p>Route enterprise users with high creativity requests to a premium model.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"strategy"</span>: {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">"mode"</span>: <span style="color:#0ff;font-weight:bold">"conditional"</span>,
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">"conditions"</span>: [
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">"query"</span>: {
+</span></span><span style="display:flex;"><span>          <span style="font-weight:bold">"$and"</span>: [
+</span></span><span style="display:flex;"><span>            { <span style="font-weight:bold">"metadata.user_tier"</span>: { <span style="font-weight:bold">"$eq"</span>: <span style="color:#0ff;font-weight:bold">"enterprise"</span> } },
+</span></span><span style="display:flex;"><span>            { <span style="font-weight:bold">"params.temperature"</span>: { <span style="font-weight:bold">"$gte"</span>: <span style="color:#ff0;font-weight:bold">0.7</span> } }
+</span></span><span style="display:flex;"><span>          ]
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">"then"</span>: <span style="color:#0ff;font-weight:bold">"creative-premium-target"</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">"default"</span>: <span style="color:#0ff;font-weight:bold">"standard-target"</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="typical-use-cases">Typical Use Cases</h2>
+<h3 id="1-branching-logic">1. Branching Logic</h3>
+<p>Direct users to different dialog or process paths based on intent, content, or attributes. Orchestrate automation workflows that diverge depending on event or message data.</p>
+<h3 id="2-validation-and-filtering">2. Validation and Filtering</h3>
+<p>Enforce input validation (e.g., required fields, correct formats). Detect and filter spam or inappropriate content.</p>
+<h3 id="3-personalization-and-user-segmentation">3. Personalization and User Segmentation</h3>
+<p>Route premium vs. free users to different flows. Implement A/B testing by allocating users to experimental branches.</p>
+<h3 id="4-model-selection-and-feature-flags">4. Model Selection and Feature Flags</h3>
+<p>Select AI models dynamically based on user segment or request properties. Enable/disable features using configuration flags.</p>
+<h3 id="5-access-control-and-compliance">5. Access Control and Compliance</h3>
+<p>Ensure data routing based on region for regulatory compliance. Apply role-based access restrictions using metadata.</p>
+<h2 id="best-practices">Best Practices</h2>
+<p><strong>Order of Conditions</strong><br/>
+Place specific conditions before generic ones to prevent premature matches.</p>
+<p><strong>Fail-Safe Defaults</strong><br/>
+Always configure a default output for unmatched data.</p>
+<p><strong>Testing</strong><br/>
+Validate logic with test data to ensure correct routing; use logging and analytics to monitor routing decisions.</p>
+<p><strong>Documentation</strong><br/>
+Comment or document complex conditions for maintainability.</p>
+<p><strong>Security</strong><br/>
+Avoid unsafe template evaluation unless essential and inputs are trusted.</p>
+<p><strong>Performance</strong><br/>
+Avoid excessive nesting or extremely complex conditions to keep routing fast and maintainable.</p>
+<p><strong>No-Code Accessibility</strong><br/>
+Use platforms providing graphical or no-code interfaces for broader accessibility.</p>
+<h2 id="troubleshooting--faq">Troubleshooting &amp; FAQ</h2>
+<p><strong>Q: What happens if multiple conditions match?</strong><br/>
+A: Only the first matching condition (in order) is selected; subsequent matches are ignored. In some ETL tools, data can be routed to multiple outputs.</p>
+<p><strong>Q: How do I route based on multiple fields?</strong><br/>
+A: Use logical operators (<code>$and</code>, <code>$or</code>) to combine conditions on multiple fields.</p>
+<p><strong>Q: What if a referenced field is missing?</strong><br/>
+A: The condition usually evaluates to <code>false</code>, and the router proceeds to the next condition or default.</p>
+<p><strong>Q: Can I use regex or advanced matching?</strong><br/>
+A: Yes, many routers support <code>$regex</code> or pattern-based operators.</p>
+<p><strong>Q: Is this suitable for non-developers?</strong><br/>
+A: Many platforms offer no-code configuration.</p>
+<p><strong>Q: Can I perform parallel routing?</strong><br/>
+A: Most routers are exclusive (single-path per evaluation). For parallel actions, use specialized multi-route or branching components.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html" rel="nofollow noopener noreferrer" target="_blank">AWS Glue: Conditional Router</a></li>
+<li><a href="https://www.flowhunt.io/components/ConditionalRouter/" rel="nofollow noopener noreferrer" target="_blank">FlowHunt: Conditional Router</a></li>
+<li><a href="https://docs.haystack.deepset.ai/docs/conditionalrouter" rel="nofollow noopener noreferrer" target="_blank">Haystack: ConditionalRouter</a></li>
+<li><a href="https://docs.portkey.ai/docs/product/ai-gateway/conditional-routing" rel="nofollow noopener noreferrer" target="_blank">Portkey AI: Conditional Routing</a></li>
+<li><a href="https://docs.portkey.ai/docs/product/ai-gateway/conditional-routing#combined-routing-with-multiple-conditions" rel="nofollow noopener noreferrer" target="_blank">Portkey AI: Combined Routing with Multiple Conditions</a></li>
+<li><a href="https://fluix.io/help/conditional-logic-tutorial" rel="nofollow noopener noreferrer" target="_blank">Fluix: Conditional Logic Tutorial</a></li>
+<li><a href="https://slack.com/blog/news/conditional-branching-workflow-builder" rel="nofollow noopener noreferrer" target="_blank">Slack: Conditional Branching Workflow Builder</a></li>
+<li><a href="https://slack.com/help/articles/360035692513-Guide-to-Slack-Workflow-Builder" rel="nofollow noopener noreferrer" target="_blank">Slack: Guide to Slack Workflow Builder</a></li>
+<li><a href="https://help.getfrontline.ai/en/articles/10174140-understanding-conditional-routing-in-ai-agent-flows" rel="nofollow noopener noreferrer" target="_blank">Frontline AI: Understanding Conditional Routing in AI Agent Flows</a></li>
+<li><a href="https://rapidomize.com/docs/services/router/" rel="nofollow noopener noreferrer" target="_blank">Rapidomize: Conditional Routing</a></li>
+<li><a href="https://www.flowhunt.io/demo/" rel="nofollow noopener noreferrer" target="_blank">FlowHunt: Live Demo</a></li>
+<li><a href="https://www.youtube.com/watch?v=3O4c7iYhD5Y" rel="nofollow noopener noreferrer" target="_blank">Conditional Routing in Slack Workflow Builder (YouTube)</a></li>
+<li><a href="https://www.youtube.com/watch?v=rgqX7Qj3QAo" rel="nofollow noopener noreferrer" target="_blank">How to Use Conditional Router in FlowHunt (YouTube)</a></li>
+<li><a href="https://www.youtube.com/watch?v=90p4Vq8F9pQ" rel="nofollow noopener noreferrer" target="_blank">AWS Glue Conditional Router Tutorial (YouTube)</a></li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/node-grouping/">
+                    Node Grouping
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A method of organizing related processing elements together in workflows to make complex systems eas...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/node-grouping/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/parallel-execution/">
+                    Parallel Execution
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Multiple tasks running at the same time instead of one after another, speeding up work and making be...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/parallel-execution/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/goal-completion-rate--gcr-/">
+                    Goal Completion Rate (GCR)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/en/glossary/goal-completion-rate--gcr-/" title="Goal Completion Rate (GCR) glossary entry">Goal Completion Rate (GCR)</a> is the percentage of users who successfully complete their intended tasks...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/goal-completion-rate--gcr-/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/aggregator/">
+                    Aggregator
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A node that collects outputs from multiple execution paths or loops and combines them into a single ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/aggregator/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/asana/">
+                    Asana
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A web-based platform that helps teams organize tasks, track progress, and collaborate on projects in...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/asana/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/business-automation/">
+                    Business Automation
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Technology that handles repetitive business tasks automatically, reducing manual work and helping or...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/business-automation/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/conditional-router/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+  });
+</script>
+</body>
+</html>

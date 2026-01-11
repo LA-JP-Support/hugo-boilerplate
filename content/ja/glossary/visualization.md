@@ -50,15 +50,39 @@ url: "/ja/glossary/visualization/"
 
 ### 統計的・分析的グラフィックス
 
-**比較ビジュアライゼーション**棒グラフ、縦棒グラフ、グループ化された棒グラフは、カテゴリ間の量を比較します。横棒グラフは長いカテゴリ名に適しており、グループ化またはスタックされた棒グラフはサブカテゴリの内訳を示します。折れ線グラフは時間経過に伴う変化を追跡し、時系列データのトレンド、サイクル、異常を明らかにします。**分布ビジュアライゼーション**ヒストグラムは連続変数の度数分布を表示し、データの形状、広がり、外れ値を明らかにします。箱ひげ図は統計的特性—中央値、四分位数、外れ値—を要約し、グループ間の分布比較を可能にします。バイオリンプロットは箱ひげ図と確率密度の視覚化を組み合わせます。**関係ビジュアライゼーション**散布図は二変量データの相関、クラスター、外れ値を明らかにします。バブルチャートは点のサイズを通じて第三の次元を追加します。ヒートマップは、色の強度が大きさを表すマトリックスデータを表示し、相関行列、混同行列、カレンダーパターンに理想的です。**構成ビジュアライゼーション**円グラフは少数のカテゴリの部分対全体の関係を示しますが、棒グラフが同じ情報をより効果的に伝えることが多いです。スタック棒グラフと面グラフは時間経過に伴う構成変化を表示します。ツリーマップは値に比例して空間を階層的に分割し、階層とサイズを同時に示します。
+**比較ビジュアライゼーション**  
+棒グラフ、縦棒グラフ、グループ化された棒グラフは、カテゴリ間の量を比較します。横棒グラフは長いカテゴリ名に適しており、グループ化またはスタックされた棒グラフはサブカテゴリの内訳を示します。折れ線グラフは時間経過に伴う変化を追跡し、時系列データのトレンド、サイクル、異常を明らかにします。
+
+**分布ビジュアライゼーション**  
+ヒストグラムは連続変数の度数分布を表示し、データの形状、広がり、外れ値を明らかにします。箱ひげ図は統計的特性—中央値、四分位数、外れ値—を要約し、グループ間の分布比較を可能にします。バイオリンプロットは箱ひげ図と確率密度の視覚化を組み合わせます。
+
+**関係ビジュアライゼーション**  
+散布図は二変量データの相関、クラスター、外れ値を明らかにします。バブルチャートは点のサイズを通じて第三の次元を追加します。ヒートマップは、色の強度が大きさを表すマトリックスデータを表示し、相関行列、混同行列、カレンダーパターンに理想的です。
+
+**構成ビジュアライゼーション**  
+円グラフは少数のカテゴリの部分対全体の関係を示しますが、棒グラフが同じ情報をより効果的に伝えることが多いです。スタック棒グラフと面グラフは時間経過に伴う構成変化を表示します。ツリーマップは値に比例して空間を階層的に分割し、階層とサイズを同時に示します。
 
 ### 地理的・空間的ビジュアライゼーション
 
-**コロプレスマップ**データ値—人口密度、選挙結果、疾病有病率、経済指標—によって地理的地域を色分けします。空間パターンと地域比較を示すのに効果的ですが、誤解を招く印象を避けるために慎重な色スキーム選択が必要です。**フローマップ**場所間の移動を視覚化します—移住パターン、貿易ルート、物流ネットワーク。矢印の太さは大きさを表し、方向は移動を示します。現代のインタラクティブバージョンは、期間、商品タイプ、閾値による絞り込みを可能にします。**ヒートマップと密度マップ**空間的に点の集中を表示します—犯罪ホットスポット、顧客の場所、イベントの発生。離散的なイベントやエンティティのクラスタリングパターンと地理的分布を明らかにします。
+**コロプレスマップ**  
+データ値—人口密度、選挙結果、疾病有病率、経済指標—によって地理的地域を色分けします。空間パターンと地域比較を示すのに効果的ですが、誤解を招く印象を避けるために慎重な色スキーム選択が必要です。
+
+**フローマップ**  
+場所間の移動を視覚化します—移住パターン、貿易ルート、物流ネットワーク。矢印の太さは大きさを表し、方向は移動を示します。現代のインタラクティブバージョンは、期間、商品タイプ、閾値による絞り込みを可能にします。
+
+**ヒートマップと密度マップ**  
+空間的に点の集中を表示します—犯罪ホットスポット、顧客の場所、イベントの発生。離散的なイベントやエンティティのクラスタリングパターンと地理的分布を明らかにします。
 
 ### ネットワークと階層的ビジュアライゼーション
 
-**ノードリンク図**エンティティをノードとして、関係をエッジで接続して表現します。ソーシャルネットワーク、組織構造、依存関係グラフ、知識グラフ、引用ネットワークを視覚化します。レイアウトアルゴリズムは、コミュニティ構造、中心的アクター、接続パターンを明らかにするようにノードを配置します。**ツリーマップとサンバースト図**入れ子になった長方形(ツリーマップ)または同心円(サンバースト)を通じて階層データを表示します。階層の視覚化と定量的サイズ表現を組み合わせます—ファイルシステムストレージ、予算配分、製品分類。**サンキー図**システムを通じたフローと変換を示します—エネルギー変換、予算配分、顧客ジャーニーステージ。幅は量を表し、接続は変換または遷移を示します。
+**ノードリンク図**  
+エンティティをノードとして、関係をエッジで接続して表現します。ソーシャルネットワーク、組織構造、依存関係グラフ、知識グラフ、引用ネットワークを視覚化します。レイアウトアルゴリズムは、コミュニティ構造、中心的アクター、接続パターンを明らかにするようにノードを配置します。
+
+**ツリーマップとサンバースト図**  
+入れ子になった長方形(ツリーマップ)または同心円(サンバースト)を通じて階層データを表示します。階層の視覚化と定量的サイズ表現を組み合わせます—ファイルシステムストレージ、予算配分、製品分類。
+
+**サンキー図**  
+システムを通じたフローと変換を示します—エネルギー変換、予算配分、顧客ジャーニーステージ。幅は量を表し、接続は変換または遷移を示します。
 
 ### インタラクティブダッシュボード
 
@@ -116,15 +140,39 @@ AIシステムは、個々のユーザーの行動パターン、頻繁にアク
 
 ### エンタープライズビジネスインテリジェンススイート
 
-**Tableau**広範なチャートタイプ、ドラッグアンドドロップインターフェース、強力なデータ接続性、洗練された計算、活気あるユーザーコミュニティを提供する業界をリードするプラットフォーム。アナリストとビジネスユーザーのための探索的分析とダッシュボード作成に優れています。**Microsoft Power BI**Microsoftエコシステムと深く統合され、強力な価値提案、大規模データセットでの優れたパフォーマンス、自然言語クエリ機能、広範なコネクタライブラリを提供します。Microsoft中心の組織で人気があります。**Qlik Sense**事前定義されたドリルダウンパスなしで自由形式の探索を可能にする連想データエンジン。予期しない関係を明らかにし、発見駆動型分析をサポートすることに優れています。
+**Tableau**  
+広範なチャートタイプ、ドラッグアンドドロップインターフェース、強力なデータ接続性、洗練された計算、活気あるユーザーコミュニティを提供する業界をリードするプラットフォーム。アナリストとビジネスユーザーのための探索的分析とダッシュボード作成に優れています。
+
+**Microsoft Power BI**  
+Microsoftエコシステムと深く統合され、強力な価値提案、大規模データセットでの優れたパフォーマンス、自然言語クエリ機能、広範なコネクタライブラリを提供します。Microsoft中心の組織で人気があります。
+
+**Qlik Sense**  
+事前定義されたドリルダウンパスなしで自由形式の探索を可能にする連想データエンジン。予期しない関係を明らかにし、発見駆動型分析をサポートすることに優れています。
 
 ### プログラミングライブラリとフレームワーク
 
-**D3.js (JavaScript)**直接的なDOM操作を通じてカスタムインタラクティブビジュアライゼーションを可能にする強力で柔軟なライブラリ。学習曲線は急ですが、ウェブベースのビジュアライゼーションのための比類のないカスタマイズ可能性があります。**Matplotlib と Seaborn (Python)**統計ビジュアライゼーションのための必須のPythonライブラリ。Matplotlibは低レベルの制御を提供し、Seabornは魅力的なデフォルトスタイリングを備えた高レベルの統計グラフィックスを提供します。**ggplot2 (R)**宣言的構文を通じて洗練された統計ビジュアライゼーションを生成するグラフィックスの文法実装。学術および研究環境で人気があります。**Plotly**最小限のコードでインタラクティブチャートを生成するクロスランゲージライブラリ(Python、R、JavaScript)。Dashフレームワークを通じたウェブ展開とダッシュボード作成をサポートします。
+**D3.js (JavaScript)**  
+直接的なDOM操作を通じてカスタムインタラクティブビジュアライゼーションを可能にする強力で柔軟なライブラリ。学習曲線は急ですが、ウェブベースのビジュアライゼーションのための比類のないカスタマイズ可能性があります。
+
+**Matplotlib と Seaborn (Python)**  
+統計ビジュアライゼーションのための必須のPythonライブラリ。Matplotlibは低レベルの制御を提供し、Seabornは魅力的なデフォルトスタイリングを備えた高レベルの統計グラフィックスを提供します。
+
+**ggplot2 (R)**  
+宣言的構文を通じて洗練された統計ビジュアライゼーションを生成するグラフィックスの文法実装。学術および研究環境で人気があります。
+
+**Plotly**  
+最小限のコードでインタラクティブチャートを生成するクロスランゲージライブラリ(Python、R、JavaScript)。Dashフレームワークを通じたウェブ展開とダッシュボード作成をサポートします。
 
 ### AI統合プラットフォーム
 
-**Thoughtspot**ビジュアライゼーションと洞察を生成する自然言語クエリを可能にする検索駆動型分析。AI駆動のSpotIQは、調査する価値のあるパターンを自動的に表面化します。**Sisense**AI駆動の洞察、自動化されたナラティブ生成、異なるオーディエンス向けのカスタマイズ可能なダッシュボード作成を備えた組み込み分析プラットフォーム。**Looker (Google Cloud)**組織全体で一貫したメトリクス定義を保証するモデリングレイヤーアプローチ。Google Cloudデータエコシステムと機械学習機能との強力な統合。
+**Thoughtspot**  
+ビジュアライゼーションと洞察を生成する自然言語クエリを可能にする検索駆動型分析。AI駆動のSpotIQは、調査する価値のあるパターンを自動的に表面化します。
+
+**Sisense**  
+AI駆動の洞察、自動化されたナラティブ生成、異なるオーディエンス向けのカスタマイズ可能なダッシュボード作成を備えた組み込み分析プラットフォーム。
+
+**Looker (Google Cloud)**  
+組織全体で一貫したメトリクス定義を保証するモデリングレイヤーアプローチ。Google Cloudデータエコシステムと機械学習機能との強力な統合。
 
 ## メリットと戦略的価値
 
@@ -232,35 +280,19 @@ AI駆動の自動化された洞察は、トレーニングデータまたはア
 
 ## 参考文献
 
-
-1. GoodData. (n.d.). How To Use AI for Data Visualizations and Dashboards. GoodData Blog.
-
-2. Cambridge Intelligence. (n.d.). Data Visualization and AI - Powering the Intelligence Cycle. Cambridge Intelligence.
-
-3. Friendly, M. (n.d.). A Brief History of Data Visualization. Springer.
-
-4. DASCA. (n.d.). The Rise of AI in Advancing Data Visualization. DASCA World of Data Science.
-
-5. TechTarget. (n.d.). What is Data Visualization and Why is it Important?. TechTarget.
-
-6. Tableau. (n.d.). Data Visualization Types - A Complete Guide. Tableau Learn.
-
-7. Pixelixe. (n.d.). How Automation Is Revolutionizing Data Visualization. Pixelixe Blog.
-
-8. Hwang & Kim. (2023). JourneyBot - Journey Map Visualization. International Journal of Technology and Systems.
-
-9. Urban, G. (n.d.). Integrating GenAI Chatbots with Dashboard Visualization - DHL Case Study. LinkedIn.
-
-10. Quantilope. (n.d.). How To Use AI for Automated Data Analysis and Visualization. Quantilope Resources.
-
-11. International Journal of Technology and Systems. (n.d.). AI-enhanced Data Visualization. Journal of Technology and Systems.
-
-12. D3.js. Data-Driven Documents. URL: https://d3js.org/
-
-13. Matplotlib. Visualization with Python. URL: https://matplotlib.org/
-
-14. Seaborn. Statistical Data Visualization. URL: https://seaborn.pydata.org/
-
-15. ggplot2. Create Elegant Data Visualisations Using the Grammar of Graphics. URL: https://ggplot2.tidyverse.org/
-
-16. Google Data Studio. Data Visualization Tool. URL: https://datastudio.google.com/
+- [GoodData: How To Use AI for Data Visualizations and Dashboards](https://www.gooddata.com/blog/how-to-use-ai-for-data-visualizations-and-dashboards/)
+- [Cambridge Intelligence: Data Visualization and AI - Powering the Intelligence Cycle](https://cambridge-intelligence.com/ai-and-data-visualization/)
+- [Friendly, M.: A Brief History of Data Visualization](https://doi.org/10.1007/978-3-540-33037-0_2)
+- [DASCA: The Rise of AI in Advancing Data Visualization](https://www.dasca.org/world-of-data-science/article/the-rise-of-ai-in-advancing-data-visualization)
+- [TechTarget: What is Data Visualization and Why is it Important?](https://www.techtarget.com/searchbusinessanalytics/definition/data-visualization)
+- [Tableau: Data Visualization Types - A Complete Guide](https://www.tableau.com/learn/articles/data-visualization)
+- [Pixelixe: How Automation Is Revolutionizing Data Visualization](https://pixelixe.com/blog/how-automation-is-revolutionizing-data-visualization/)
+- [Hwang & Kim (2023): JourneyBot - Journey Map Visualization](https://doi.org/10.57698/v17i3.06)
+- [LinkedIn: Integrating GenAI Chatbots with Dashboard Visualization - DHL Case Study](https://www.linkedin.com/pulse/integrating-genai-chatbots-dashboard-visualization-dhl-greg-urban-zbief/)
+- [Quantilope: How To Use AI for Automated Data Analysis and Visualization](https://www.quantilope.com/resources/how-to-use-ai-for-automated-data-analysis-and-visualization)
+- [International Journal of Technology and Systems: AI-enhanced Data Visualization](https://doi.org/10.47941/jts.1911)
+- [D3.js - Data-Driven Documents](https://d3js.org/)
+- [Matplotlib - Visualization with Python](https://matplotlib.org/)
+- [Seaborn - Statistical Data Visualization](https://seaborn.pydata.org/)
+- [ggplot2 - Create Elegant Data Visualisations Using the Grammar of Graphics](https://ggplot2.tidyverse.org/)
+- [Google Data Studio](https://datastudio.google.com/)

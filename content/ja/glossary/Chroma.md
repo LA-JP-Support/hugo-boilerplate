@@ -16,14 +16,17 @@ type: glossary
 draft: false
 e-title: Chroma
 term: クロマ
-url: "/ja/glossary/Chroma/"
+url: "/ja/glossary/chroma/"
+aliases:
+- "/ja/glossary/Chroma/"
 ---
 ## Chromaとは?
 Chromaは、AI-native アプリケーション、特に大規模言語モデル(LLM)やマルチモーダルAIを使用するアプリケーション向けに設計されたオープンソースのベクトル(埋め込み)データベースです。従来のデータベースとは異なり、Chromaは高次元ベクトル埋め込み(テキスト、画像、その他の非構造化データの数値表現)の保存、インデックス化、検索に特化しています。
 
 Chromaの中核的な使命は、開発者や組織が最小限のセットアップと最大限の柔軟性で、セマンティック検索、レコメンデーション、RAG、AI-nativeの機能をアプリケーションに追加できるようにすることです。
 
-**主な特徴:**- ドキュメントとメタデータと共に埋め込みを保存・検索するネイティブサポート
+**主な特徴:**
+- ドキュメントとメタデータと共に埋め込みを保存・検索するネイティブサポート
 - HNSWインデックスによる高速な近似最近傍(ANN)検索
 - マルチモーダルサポート(テキスト、画像など)
 - ハイブリッドクエリ:セマンティック検索+キーワード検索、メタデータフィルタリング
@@ -58,7 +61,8 @@ Chromaでは、各ドキュメントまたはベクトルに任意のキー・�
 ### ベクトルインデックスと類似度検索
 Chromaは、高速な近似最近傍(ANN)検索のために階層的ナビゲート可能スモールワールド(HNSW)グラフを使用します。HNSWは、高次元ベクトル類似度検索のための最先端のアルゴリズムで、再現率(精度)と速度のバランスを取り、数百万のベクトルにスケールします。
 
-**主な特性:**- 大規模データセットに対する準線形検索時間
+**主な特性:**
+- 大規模データセットに対する準線形検索時間
 - 高い再現率/精度(設定可能)
 - 動的な挿入と効率的な削除をサポート
 
@@ -72,10 +76,10 @@ Chromaはデータを以下の方法で保存できます:
 
 ### APIとクライアントライブラリ
 Chromaは、4つの主要な操作を持つ最小限で直感的なAPIを提供します:
-- **Add:**ドキュメントを挿入(オプションで埋め込みとメタデータ付き)
-- **Update:**保存されたエントリを変更
-- **Delete:**エントリを削除
-- **Query:**ベクトル検索で類似ドキュメントを取得、オプションのメタデータフィルタ付き
+- **Add:** ドキュメントを挿入(オプションで埋め込みとメタデータ付き)
+- **Update:** 保存されたエントリを変更
+- **Delete:** エントリを削除
+- **Query:** ベクトル検索で類似ドキュメントを取得、オプションのメタデータフィルタ付き
 
 Python(`chromadb`)とJavaScript/TypeScript用のクライアントライブラリが存在します。ChromaはLangChainやLlamaIndexなどのフレームワークとネイティブに統合されます。
 
@@ -84,9 +88,17 @@ Python(`chromadb`)とJavaScript/TypeScript用のクライアントライブラ�
 ### オープンソース(セルフホスト)
 Chromaは、ローカルまたは独自のインフラストラクチャで3つのモードで実行できます:
 
-**インメモリ:**高速、一時的、プロトタイピングやテストに最適**永続:**ディスクにデータを保存(SQLite + バイナリベクトルファイル)、ローカル/小規模本番環境に適している**クライアント-サーバー:**スタンドアロンサーバーとして実行、HTTP API経由で接続(マルチユーザー、マルチプロセスをサポート)**サーバー起動例:**```shell
+**インメモリ:** 高速、一時的、プロトタイピングやテストに最適  
+**永続:** ディスクにデータを保存(SQLite + バイナリベクトルファイル)、ローカル/小規模本番環境に適している  
+**クライアント-サーバー:** スタンドアロンサーバーとして実行、HTTP API経由で接続(マルチユーザー、マルチプロセスをサポート)
+
+**サーバー起動例:**
+```shell
 chroma run --path ./db --port 8000
-```**Pythonクライアント:**```python
+```
+
+**Pythonクライアント:**
+```python
 import chromadb
 client = chromadb.HttpClient(host="localhost", port=8000)
 ```
@@ -94,7 +106,8 @@ client = chromadb.HttpClient(host="localhost", port=8000)
 ### Chroma Cloud(サーバーレス)
 Chroma Cloudは完全マネージドのサーバーレスデプロイメントです。弾力的なスケーリング、自動バックアップと高可用性、メンテナンスとモニタリングを処理します。
 
-**接続例:**```python
+**接続例:**
+```python
 import chromadb
 client = chromadb.HttpClient(
     host="api.trychroma.com",
@@ -106,7 +119,8 @@ client = chromadb.HttpClient(
 
 ### インストール
 
-**Python:**```bash
+**Python:**
+```bash
 pip install chromadb
 ```
 
@@ -162,7 +176,8 @@ collection = client.create_collection(
 ### LangChain統合
 LangChainは、RAG、チャットボット、メモリなどの高度なワークフローをサポートする、Chroma用のネイティブラッパーを提供します。
 
-**例:**```python
+**例:**
+```python
 from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings
 
@@ -176,7 +191,16 @@ vector_store = Chroma(
 
 ## コア機能
 
-**オープンソースApache 2.0**- ロックインなし、拡張可能、コミュニティ駆動(GitHub Stars 24k+)**高速ANN検索**- 準線形検索時間のためのHNSWグラフインデックス**ドキュメントとメタデータの保存**- 各埋め込みはドキュメントとユーザー定義のメタデータに関連**ハイブリッド検索**- セマンティック(ベクトル)検索とキーワード検索を組み合わせ**マルチモーダルサポート**- テキスト、画像などを保存/検索**バッチ操作**- 効率のための一括挿入とクエリ**シンプルなAPI**- 追加、更新、削除、検索**統合**- LangChain、LlamaIndex、OpenAI、HuggingFace、Cohere、OpenCLIPとネイティブ統合**柔軟なデプロイメント**- インメモリ、永続、クライアント-サーバー、マネージドクラウド**活発なコミュニティ**- Discord、GitHub、ドキュメント
+**オープンソースApache 2.0** - ロックインなし、拡張可能、コミュニティ駆動(GitHub Stars 24k+)  
+**高速ANN検索** - 準線形検索時間のためのHNSWグラフインデックス  
+**ドキュメントとメタデータの保存** - 各埋め込みはドキュメントとユーザー定義のメタデータに関連  
+**ハイブリッド検索** - セマンティック(ベクトル)検索とキーワード検索を組み合わせ  
+**マルチモーダルサポート** - テキスト、画像などを保存/検索  
+**バッチ操作** - 効率のための一括挿入とクエリ  
+**シンプルなAPI** - 追加、更新、削除、検索  
+**統合** - LangChain、LlamaIndex、OpenAI、HuggingFace、Cohere、OpenCLIPとネイティブ統合  
+**柔軟なデプロイメント** - インメモリ、永続、クライアント-サーバー、マネージドクラウド  
+**活発なコミュニティ** - Discord、GitHub、ドキュメント
 
 ## 主なユースケース
 
@@ -202,7 +226,13 @@ ChromaはLLMとチャットボットのための永続的なセマンティッ�
 
 Chromaは開発者の速度と効率のために設計されていますが、最適化のヒントには以下が含まれます:
 
-**バッチ操作**- オーバーヘッドを減らすために一括で挿入/クエリ**埋め込み次元数**- 低次元ベクトルはメモリ使用量が少なく、検索が高速(精度の犠牲を伴う可能性あり)**インデックス圧縮**- 頻繁な削除/更新後にHNSWインデックスを圧縮**メタデータ事前フィルタリング**- 類似度計算前にメタデータでフィルタリングして計算量を削減**例:**```python
+**バッチ操作** - オーバーヘッドを減らすために一括で挿入/クエリ  
+**埋め込み次元数** - 低次元ベクトルはメモリ使用量が少なく、検索が高速(精度の犠牲を伴う可能性あり)  
+**インデックス圧縮** - 頻繁な削除/更新後にHNSWインデックスを圧縮  
+**メタデータ事前フィルタリング** - 類似度計算前にメタデータでフィルタリングして計算量を削減
+
+**例:**
+```python
 collection.add(
     documents=large_document_list,
     ids=id_list,
@@ -216,32 +246,34 @@ collection.add(
 
 | 機能 | Chroma | Pinecone | Faiss | Weaviate | Qdrant | Milvus |
 |---------|--------|----------|-------|----------|--------|--------|
-| **オープンソース**| ✅ | ❌ | ✅ | ✅ | ✅ | ✅ |
-| **セットアップの容易さ**| 非常にシンプル | マネージド、簡単 | 複雑 | 中程度 | 中程度 | 中程度 |
-| **言語サポート**| Python、JS | Python、JS、Go | Python、C++ | Python、JS、Go | Python、REST | Python、REST |
-| **ベクトルインデックス**| HNSW | 複数 | 複数 | HNSW、その他 | HNSW | IVF、HNSW |
-| **ドキュメント保存**| 組み込み | なし | なし | 組み込み | 組み込み | 組み込み |
-| **メタデータフィルタリング**| あり | あり | 制限あり | あり | あり | あり |
-| **ハイブリッド検索**| あり | なし | なし | あり | なし | なし |
-| **クラウド/サーバーレス**| Chroma Cloud | あり | なし | あり | あり | あり |
-| **RBAC/マルチテナンシー**| なし | あり | なし | あり | あり | あり |
-| **スケール**| シングルノード | 分散 | ローカル、分散 | 分散 | 分散 | 分散 |
-| **最適用途**| 開発速度、プロトタイピング | 大規模 | 研究、カスタムML | エンタープライズ検索 | 高パフォーマンス | 超大規模 |**エコシステムスナップショット:**-**Chroma:**OSS、簡単なセットアップ、ハイブリッド検索、プロトタイピング/開発速度に最適
-- **Pinecone:**マネージド、分散、エンタープライズグレード、マルチインデックスサポート、高スケール
-- **Faiss:**OSS、研究/ML重視、C++/Python、データベースではない(ドキュメント/メタデータ保存なし)
-- **Weaviate:**OSS、分散、ハイブリッド検索、スキーマ、マルチテナント
-- **Qdrant:**OSS、分散、フィルタリング、REST/gRPC、高パフォーマンス
-- **Milvus:**OSS、クラウドネイティブ、GPUサポート、超高スケール
+| **オープンソース** | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ |
+| **セットアップの容易さ** | 非常にシンプル | マネージド、簡単 | 複雑 | 中程度 | 中程度 | 中程度 |
+| **言語サポート** | Python、JS | Python、JS、Go | Python、C++ | Python、JS、Go | Python、REST | Python、REST |
+| **ベクトルインデックス** | HNSW | 複数 | 複数 | HNSW、その他 | HNSW | IVF、HNSW |
+| **ドキュメント保存** | 組み込み | なし | なし | 組み込み | 組み込み | 組み込み |
+| **メタデータフィルタリング** | あり | あり | 制限あり | あり | あり | あり |
+| **ハイブリッド検索** | あり | なし | なし | あり | なし | なし |
+| **クラウド/サーバーレス** | Chroma Cloud | あり | なし | あり | あり | あり |
+| **RBAC/マルチテナンシー** | なし | あり | なし | あり | あり | あり |
+| **スケール** | シングルノード | 分散 | ローカル、分散 | 分散 | 分散 | 分散 |
+| **最適用途** | 開発速度、プロトタイピング | 大規模 | 研究、カスタムML | エンタープライズ検索 | 高パフォーマンス | 超大規模 |
+
+**エコシステムスナップショット:**
+- **Chroma:** OSS、簡単なセットアップ、ハイブリッド検索、プロトタイピング/開発速度に最適
+- **Pinecone:** マネージド、分散、エンタープライズグレード、マルチインデックスサポート、高スケール
+- **Faiss:** OSS、研究/ML重視、C++/Python、データベースではない(ドキュメント/メタデータ保存なし)
+- **Weaviate:** OSS、分散、ハイブリッド検索、スキーマ、マルチテナント
+- **Qdrant:** OSS、分散、フィルタリング、REST/gRPC、高パフォーマンス
+- **Milvus:** OSS、クラウドネイティブ、GPUサポート、超高スケール
 
 ## 参考文献
 
-
-1. Chroma. GitHub Repository. URL: https://github.com/chroma-core/chroma
-2. Chroma. Documentation. URL: https://docs.trychroma.com/
-3. LangChain. Chroma Integration Documentation. URL: https://docs.langchain.com/oss/python/integrations/providers/chroma
-4. Netflix. Chaos Monkey. URL: https://netflix.github.io/chaosmonkey/
-5. Pinecone. Documentation. URL: https://www.pinecone.io/
-6. Facebook Research. Faiss GitHub Repository. URL: https://github.com/facebookresearch/faiss
-7. Weaviate. Documentation. URL: https://weaviate.io/
-8. Qdrant. Documentation. URL: https://qdrant.tech/
-9. Milvus. Documentation. URL: https://milvus.io/
+- [Chroma GitHubリポジトリ](https://github.com/chroma-core/chroma)
+- [Chromaドキュメント](https://docs.trychroma.com/)
+- [LangChain Chroma統合](https://docs.langchain.com/oss/python/integrations/providers/chroma)
+- [Netflix Chaos Monkey](https://netflix.github.io/chaosmonkey/)
+- [Pineconeドキュメント](https://www.pinecone.io/)
+- [Faiss GitHubリポジトリ](https://github.com/facebookresearch/faiss)
+- [Weaviateドキュメント](https://weaviate.io/)
+- [Qdrantドキュメント](https://qdrant.tech/)
+- [Milvusドキュメント](https://milvus.io/)

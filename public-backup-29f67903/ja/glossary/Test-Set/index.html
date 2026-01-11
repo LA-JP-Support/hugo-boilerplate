@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>テストセット | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/test-set/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="機械学習モデルの性能を評価するために、訓練に使わない別のデータを用意したもの。モデルが実際に新しいデータにどれだけ対応できるかを正しく測るために使います。" name="description"/>
+<meta content="テストセット, 機械学習検証, データ分割, モデル評価, ホールドアウト検証" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/test-set/" property="og:url"/>
+<meta content="テストセット | SmartWeb" property="og:title"/>
+<meta content="機械学習モデルの性能を評価するために、訓練に使わない別のデータを用意したもの。モデルが実際に新しいデータにどれだけ対応できるかを正しく測るために使います。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/test-set/" name="twitter:url"/>
+<meta content="テストセット | SmartWeb" name="twitter:title"/>
+<meta content="機械学習モデルの性能を評価するために、訓練に使わない別のデータを用意したもの。モデルが実際に新しいデータにどれだけ対応できるかを正しく測るために使います。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">テストセット</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        テストセット
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Test Set
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          機械学習モデルの性能を評価するために、訓練に使わない別のデータを用意したもの。モデルが実際に新しいデータにどれだけ対応できるかを正しく測るために使います。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                テストセット
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                機械学習検証
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                データ分割
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                モデル評価
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ホールドアウト検証
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="テストセットとは何か">テストセットとは何か?</h2>
+<p>テストセットは、<a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>と<a data-lb="1" href="/ja/glossary/data-science/" title="データサイエンスは、数学、統計学、コンピュータサイエンス、および専門領域の知識を組み合わせて、複雑なデータセットから実用的なインサイトを抽出する学際的な分野です。">データサイエンス</a>のワークフローにおいて、訓練済みモデルの最終的なパフォーマンスを評価するために特別に確保されたデータのサブセットを表す重要な構成要素です。モデルの構築に使用される訓練データや開発中に使用される検証データとは異なり、テストセットは訓練プロセス全体を通じてモデルから完全に隠されたままです。この分離により、モデルが新しい実世界のデータに対してどの程度うまく機能するかについて、偏りのない評価が保証されます。テストセットは、機械学習モデルが本番環境への展開準備ができているかどうかを判断するための究極のベンチマークとして機能します。</p>
+<p>テストセットの背後にある基本原理は、汎化の概念、つまりモデルがこれまで遭遇したことのないデータに対してうまく機能する能力にあります。データサイエンティストが機械学習モデルを開発する際、彼らは過学習という絶え間ない課題に直面します。過学習とは、モデルが訓練データをあまりにもよく学習しすぎて、新しい例に対して汎化できない状態です。完全に分離されたテストセットを維持することで、実務者はモデルの真のパフォーマンス能力について正直な推定値を得ることができます。このアプローチは、モデルが開発段階では利用できなかった全く新しいデータポイントに遭遇する実世界のシナリオを模倣しています。</p>
+<p>テストセットのサイズと構成は、特定の問題領域、利用可能なデータ量、パフォーマンス推定における望ましい信頼水準に基づいて慎重に検討する必要があります。通常、テストセットは利用可能な全データの10〜30%を占めますが、この割合はデータセットのサイズと問題の複雑さによって大きく異なる可能性があります。テストセットは、モデルが本番環境で遭遇する母集団を代表するものでなければならず、データセット全体と同じ統計的特性と分布を維持する必要があります。この代表性により、テストセットで計算されたパフォーマンス指標が期待される実世界のパフォーマンスについて意味のある洞察を提供することが保証され、テストセットは責任ある機械学習開発のための不可欠なツールとなります。</p>
+<h2 id="コアデータ分割戦略">コアデータ分割戦略</h2>
+<p>ランダム分割は、データの全体的な分布を維持しながら、データセットを訓練、検証、テストの部分にランダムに分割することを含みます。このアプローチは、均一な分布を持つ大規模なデータセットに適しており、各サブセットが母集団の特性を表すことを保証します。層化分割は、すべてのデータ分割にわたって異なるクラスまたはカテゴリの割合を維持し、不均衡なデータセットや分類問題において特に重要です。この方法により、希少なクラスが各サブセットに適切に表現され、モデル評価における偏りが防止されます。時系列分割は、時間シーケンスに基づいてデータを分離し、初期のデータを訓練に、後期のデータをテストに使用します。このアプローチは、時系列問題や、データリークを避けるために時間的関係を保持する必要があるシナリオにおいて不可欠です。グループベース分割は、関連するデータポイントが同じ分割内にまとまって残ることを保証し、訓練セットとテストセット間の情報リークを防ぎます。この戦略は、階層的なデータを扱う場合や、独立性の仮定を維持する必要がある場合に重要です。交差検証分割は、データサブセットの体系的なローテーションを通じて複数のテストセットを作成し、より堅牢なパフォーマンス推定を提供します。このアプローチは、評価プロセスの整合性を維持しながらデータ利用を最大化します。ドメインベース分割は、異なるドメインまたはコンテキストに基づいてデータを分離し、異なる環境にわたるモデルの汎化を評価できるようにします。この戦略は、モデルの堅牢性と転移学習能力を評価する上で特に価値があります。</p>
+<h2 id="テストセットの動作方法">テストセットの動作方法</h2>
+<p>テストセットのワークフローは、初期データ収集と前処理から始まります。ここでは、元の特性と分布を維持しながら、生データが収集、クリーニング、分析のために準備されます。データ分割はプロジェクトライフサイクルの早期に発生します。通常、探索的データ分析やモデル開発が始まる前に行われ、テストセットがすべての開発活動から完全に隔離されることを保証します。テストセットの隔離と保存には、開発データセットからテストデータを物理的または論理的に分離することが含まれ、開発プロセス中の偶発的な汚染を防ぐために、しばしば<a data-lb="1" href="/ja/glossary/access-control/" title="認可システム、アクセス制御モデル、実装戦略、および最新アプリケーションのセキュリティベストプラクティスに関する包括的なガイド。">アクセス制御</a>が制限されます。モデル開発は訓練データと検証データのみを使用して進行します。特徴エンジニアリング、アルゴリズム選択、ハイパーパラメータチューニング、パフォーマンス最適化の反復サイクルは、非テストデータのみで実施されます。検証戦略がモデル選択を導きます。交差検証、ホールドアウト検証、ブートストラップサンプリングなどの技術を通じて、予約されたテストセットに触れることなくパフォーマンス推定を提供します。最終的なモデル選択と準備は、すべての開発活動が完了した後に行われ、以前に見たことのないテストデータで究極の評価を受ける準備ができた単一の最終モデルが得られます。テストセット評価は一度だけ実行されます。最終モデルで実行され、さらなる最適化の機会なしにモデルの期待される実世界のパフォーマンスを表す決定的なパフォーマンス指標を生成します。パフォーマンス分析とレポート作成には、テスト結果の解釈、信頼区間の計算、テストセットのパフォーマンスに基づくモデルの能力と制限の文書化が含まれます。ワークフローの例: 不正検出システムの開発は、100,000件の取引を70,000件の訓練、15,000件の検証、15,000件のテストサンプルに分割することから始まります。チームは訓練データを使用して複数のモデルを開発し、検証データを使用して最良のパフォーマーを選択し、その後テストセットで最終モデルを一度評価し、94.2%の精度と2.1%の<a data-lb="1" href="/ja/glossary/false-positive/" title="偽陽性とは、AIシステム(チャットボット、検知ツール、プライバシーフィルター)が、状況やコンテンツを誤って基準に一致すると識別し、エラーを引き起こすことです。">偽陽性</a>率を達成します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p>偏りのないパフォーマンス推定は、完全に未見のデータでパフォーマンスを評価することにより、モデル能力の正直な評価を提供し、開発中に使用されたデータでモデルを評価する際に発生する可能性のある楽観的な偏りを排除します。過学習の検出は、モデルが汎化可能な関係を学習するのではなく訓練パターンを記憶している場合を明らかにし、実務者が開発では良好に機能するが本番環境では失敗するモデルを特定して対処するのに役立ちます。モデルの比較と選択は、実世界のパフォーマンス期待を反映する標準化された評価基準を提供することにより、異なるアルゴリズム、アーキテクチャ、またはアプローチ間の客観的な比較を可能にします。展開決定への信頼は、モデル展開のゴー/ノーゴー決定を通知する信頼性の高いパフォーマンス指標を関係者に提供し、本番実装に関連するリスクを軽減します。規制コンプライアンスのサポートは、金融や医療などの規制産業における独立したモデル検証の要件を満たし、承認プロセスにおいて偏りのないパフォーマンス評価が必須です。パフォーマンスベンチマーキングは、将来のモデル反復と改善のためのベースライン指標を確立し、進捗の追跡を可能にし、新しいバージョンが実際に以前の実装を改善することを保証します。リスク評価と軽減は、本番展開前に潜在的な障害モードとパフォーマンスの制限を特定し、チームが適切な保護措置と監視システムを実装できるようにします。ステークホルダーコミュニケーションは、ビジネスステークホルダーに伝達できる明確で理解しやすいパフォーマンス指標を提供し、モデルの採用とリソース配分に関する情報に基づいた意思決定を促進します。品質保証は、機械学習開発ライフサイクルにおける最終的な品質チェックとして機能し、モデルが本番環境にリリースされる前に最低限のパフォーマンス閾値を満たすことを保証します。科学的厳密性は、機械学習の研究開発における方法論的健全性を維持し、学術的および商業的文脈における再現可能な結果と信頼できるパフォーマンス主張をサポートします。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p>医療診断システムは、訓練中に見たことのない患者データで診断精度を検証するためにテストセットを利用し、多様な患者集団と医療状態にわたる信頼性の高いパフォーマンスを保証します。金融リスク評価は、信用スコアリングモデル、不正検出システム、アルゴリズム取引戦略を、将来の市場状況をシミュレートする履歴データで評価するためにテストセットを使用します。自動運転車の開発は、道路展開前に安全性が重要な意思決定能力を評価するために、多様な運転シナリオ、気象条件、交通パターンを含むテストセットに依存しています。自然言語処理アプリケーションは、実際のユーザーインタラクションとコンテンツを表すテキストデータで<a data-lb="1" href="/ja/glossary/chatbot/" title="チャットボットは、テキストまたは音声を通じて人間の会話をシミュレートするAI駆動のソフトウェアアプリケーションです。カスタマーサポート、情報検索、タスク自動化に使用されます。">チャットボット</a>、翻訳システム、感情分析ツールを評価するためにテストセットを使用します。コンピュータビジョンシステムは、さまざまな照明条件、角度、画質にわたって物体検出、顔認識、医療画像アプリケーションを検証するためにテストセットを活用します。レコメンデーションエンジンは、モデル訓練中に使用されなかった履歴ユーザー行動データで推奨精度とユーザーエンゲージメント指標を測定するためにテストセットを使用します。予知保全システムは、産業展開前に故障予測モデルの精度を検証するために、機器センサーデータと故障記録を含むテストセットを利用します。マーケティングキャンペーン最適化は、履歴キャンペーンデータと顧客インタラクションで顧客応答予測モデルとターゲティングアルゴリズムを評価するためにテストセットを使用します。創薬研究は、最終評価のために予約された化学データベースで分子特性予測モデルと化合物スクリーニングアルゴリズムを検証するためにテストセットを使用します。気候モデリングアプリケーションは、環境予測モデルと気候変動予測の精度を評価するために、履歴気象および気候データを含むテストセットを活用します。</p>
+<h2 id="テストセット検証アプローチの比較">テストセット検証アプローチの比較</h2>
+<table>
+<thead>
+<tr>
+<th>アプローチ</th>
+<th>データ効率</th>
+<th>計算コスト</th>
+<th>偏りレベル</th>
+<th>使用例の適合性</th>
+<th>信頼性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>シンプルホールドアウト</td>
+<td>低</td>
+<td>非常に低</td>
+<td>中</td>
+<td>大規模データセット、迅速な検証</td>
+<td>中</td>
+</tr>
+<tr>
+<td>層化ホールドアウト</td>
+<td>中</td>
+<td>低</td>
+<td>低</td>
+<td>不均衡データセット、分類</td>
+<td>高</td>
+</tr>
+<tr>
+<td>K分割交差検証</td>
+<td>高</td>
+<td>高</td>
+<td>非常に低</td>
+<td>小〜中規模データセット</td>
+<td>非常に高</td>
+</tr>
+<tr>
+<td>時系列分割</td>
+<td>中</td>
+<td>中</td>
+<td>低</td>
+<td>時系列データ、予測</td>
+<td>高</td>
+</tr>
+<tr>
+<td>グループK分割</td>
+<td>中</td>
+<td>高</td>
+<td>低</td>
+<td>グループ化データ、階層構造</td>
+<td>高</td>
+</tr>
+<tr>
+<td>ブートストラップサンプリング</td>
+<td>高</td>
+<td>非常に高</td>
+<td>非常に低</td>
+<td>小規模データセット、信頼区間</td>
+<td>非常に高</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p>データリークの防止は、前処理ステップ、特徴選択、またはハイパーパラメータチューニングの決定を通じて、テストセットからの情報がモデル開発に不注意に影響を与えないようにするために細心の注意を払う必要があります。サンプルサイズの決定には、信頼性の高いパフォーマンス推定の必要性と訓練データの可用性の最大化とのバランスが含まれ、すべてのサンプルが貴重な小規模データセットでは特に困難です。分布シフトの処理は、時間的変化、母集団シフト、またはパフォーマンス推定を無効にする可能性のあるサンプリング<a data-lb="1" href="/ja/glossary/bias/" title="バイアス の用語集ページ">バイアス</a>により、テストセットの分布が訓練データと異なるシナリオに対処します。多重検定問題は、研究者が同じテストセットで複数のモデルを評価したり、複数の実験を実施したりする場合に発生し、パフォーマンス推定の膨張と誤発見につながる可能性があります。テストセットの汚染は、テストセットのパフォーマンスに関する情報が後続のモデル開発決定に影響を与える場合に発生し、事実上テストセットを検証セットに変え、評価の整合性を損ないます。代表性の課題には、テストセットがモデルが本番環境で遭遇するターゲット母集団と使用例を正確に反映することを保証することが含まれ、進化する多様な母集団では特に困難です。統計的有意性の評価には、観察されたパフォーマンスの差がランダムな変動ではなく意味のあるものであるかどうかを判断するために、適切なサンプルサイズと統計的方法が必要です。時間的妥当性の懸念は、動的環境において基礎となるデータ分布と関係が時間とともに変化するにつれて、テストセットの結果がどのくらいの期間有効であるかに対処します。コストとリソースの制約は、大規模で高品質なテストセットを維持する能力に影響を与え、特にデータ収集が高価または時間がかかる領域では顕著です。プライバシーとセキュリティの考慮事項には、モデル評価のための有用性を維持しながら、テストセット内の機密情報を保護することが含まれ、医療および金融アプリケーションで特に関連性があります。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p>早期データ分割は、評価プロセスに偏りを導入する可能性のある探索的分析やモデル開発活動の前に、データ収集と基本的な前処理の直後に行う必要があります。層化サンプリングの実装は、テストセットが全体のデータセットと同じクラス分布と主要な特性の割合を維持することを保証し、不均衡または多クラス問題において特に重要です。アクセス制御の確立は、テストセットへのアクセスを許可された担当者のみに制限し、モデル開発段階での偶発的な汚染を防ぐための技術的および手続き的保護措置を実装します。文書化とバージョン管理は、テストセットの構成、作成方法論、および時間の経過に伴う変更の詳細な記録を維持し、再現性と監査コンプライアンスを保証します。統計的検出力分析は、信頼性の高いパフォーマンス推定を保証するために、望ましい信頼水準、効果サイズ、許容可能なエラー率に基づいて適切なテストセットサイズを決定します。時間的考慮事項の統合は、テストセットを作成する際に時間ベースのパターンと季節性を考慮し、時間に敏感なアプリケーションと予測モデルの時間的代表性を保証します。ドメインエキスパートの関与は、テストセット設計と検証において主題専門家を関与させ、実用的な関連性を保証し、評価方法論における潜在的な盲点を特定します。パフォーマンス指標の選択は、ビジネス目標と実世界の成功基準に合致する評価指標を選択し、標準的な<a data-lb="1" href="/ja/glossary/accuracy-measurement/" title="精度測定 の用語集ページ">精度測定</a>を超えてドメイン固有の指標を含めます。信頼区間の計算は、適切な統計的方法を使用してパフォーマンス指標の周りの不確実性推定を提供し、テスト結果の信頼性を関係者に伝えます。定期的なテストセットの更新は、基礎となるデータ分布とビジネス要件が時間とともに進化するにつれて関連性を維持するために、テストセットを定期的に更新する手順を確立します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p>敵対的テストセット生成は、モデルの弱点と障害モードを露呈するように設計された困難なテスト例を作成し、標準的な評価アプローチを超えた堅牢性評価を改善します。ネストされた交差検証は、複雑な評価シナリオにおいてモデルのパフォーマンスとハイパーパラメータ最適化の有効性の両方の偏りのない推定を提供するために、複数レベルのデータ分割を実装します。ブートストラップ信頼区間は、リサンプリング技術を使用してパフォーマンス指標の周りの堅牢な不確実性推定を生成し、単純な点推定よりも信頼性の高い統計的推論を提供します。公平性を考慮したテストセット設計は、人口統計学的パリティと公平な表現の考慮事項を組み込み、モデルが異なる母集団サブグループと保護された特性にわたって一貫して機能することを保証します。マルチドメインテスト評価は、多様な運用条件を表す慎重にキュレーションされたテストセットを使用して、異なるドメイン、コンテキスト、または環境にわたるモデルの汎化を評価します。時間的ホールドアウト戦略は、縦断的データアプリケーションにおける概念ドリフト、季節性、進化するパターンを考慮した洗練された時間ベースの分割アプローチを実装します。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p>自動化されたテストセットキュレーションは、機械学習技術を活用して、偏りを最小限に抑え、包括的なカバレッジを保証しながら評価の有効性を最大化する最適なテストセットを自動的に生成します。継続的評価フレームワークは、ストリーミングテストデータを使用したリアルタイムモデルパフォーマンス監視を可能にし、パフォーマンス低下とモデルドリフトの即座の検出を可能にします。プライバシー保護テスト方法は、連合学習、差分プライバシー、安全なマルチパーティ計算アプローチを使用して、機密データでのモデル評価のための技術を開発します。合成テストデータ生成は、生成モデルとシミュレーション技術を使用して現実的なテストシナリオを作成し、希少なイベントと安全性が重要なアプリケーションにおいて特に価値があります。因果的テストセット設計は、因果推論の原則を組み込んで、交絡変数と疑似相関に対するモデルの堅牢性をより適切に評価するテストセットを作成します。インタラクティブ評価プラットフォームは、関係者がリアルタイムで異なるテストシナリオと評価基準にわたってモデルのパフォーマンスを探索するための動的でユーザーフレンドリーなインターフェースを提供します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Hastie, T., Tibshirani, R., &amp; Friedman, J. (2009). The Elements of Statistical Learning: Data Mining, Inference, and Prediction. Springer Series in Statistics.</p>
+</li>
+<li>
+<p>Bishop, C. M. (2006). Pattern Recognition and Machine Learning. Springer-Verlag New York.</p>
+</li>
+<li>
+<p>Kohavi, R. (1995). A study of cross-validation and bootstrap for accuracy estimation and model selection. International Joint Conference on Artificial Intelligence.</p>
+</li>
+<li>
+<p>Japkowicz, N., &amp; Shah, M. (2011). Evaluating Learning Algorithms: A Classification Perspective. Cambridge University Press.</p>
+</li>
+<li>
+<p>Flach, P. (2012). Machine Learning: The Art and Science of Algorithms that Make Sense of Data. Cambridge University Press.</p>
+</li>
+<li>
+<p>Provost, F., &amp; Fawcett, T. (2013). Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking. O’Reilly Media.</p>
+</li>
+<li>
+<p>Géron, A. (2019). Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow. O’Reilly Media.</p>
+</li>
+<li>
+<p>Raschka, S., &amp; Mirjalili, V. (2019). Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow. Packt Publishing.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/model-evaluation/">
+                    モデル評価
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    機械学習モデルのパフォーマンスと信頼性を評価するためのモデル評価技術、メトリクス、ベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/model-evaluation/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/validation-set/">
+                    検証セット
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    機械学習における検証セットの包括的ガイド - 定義、実装、ベストプラクティス、およびモデル評価のための高度なテクニックを解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/validation-set/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/precision/">
+                    精度(Precision)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/precision/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/test-set/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

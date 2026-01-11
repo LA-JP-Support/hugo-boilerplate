@@ -2,7 +2,7 @@
 title: "Data Mesh"
 date: 2025-12-19
 translationKey: Data-Mesh
-description: "A decentralized data management approach where individual business teams own and manage their own data as products, rather than relying on a single central team."
+description: "A decentralized data management approach where different business teams own and manage their own data, rather than relying on a single central data team."
 keywords:
 - data mesh
 - decentralized data architecture
@@ -56,7 +56,9 @@ The Data Mesh operates through a distributed yet coordinated approach to data ma
 
 7. **Consumption and Feedback**: Consumer domains access data products through standardized APIs and interfaces, providing feedback to producers about quality, usability, and feature requests.
 
-8. **Governance Enforcement**: Automated policies ensure compliance with security, privacy, and regulatory requirements while maintaining audit trails and access controls.**Example Workflow**: An e-commerce company's customer domain creates a "Customer Behavior Analytics" data product by processing clickstream data, purchase history, and support interactions. They publish this product with clear schemas and SLAs, making it available to the marketing domain for campaign optimization and the product domain for recommendation engines.
+8. **Governance Enforcement**: Automated policies ensure compliance with security, privacy, and regulatory requirements while maintaining audit trails and access controls.
+
+**Example Workflow**: An e-commerce company's customer domain creates a "Customer Behavior Analytics" data product by processing clickstream data, purchase history, and support interactions. They publish this product with clear schemas and SLAs, making it available to the marketing domain for campaign optimization and the product domain for recommendation engines.
 
 ## Key Benefits
 
@@ -106,12 +108,12 @@ The Data Mesh operates through a distributed yet coordinated approach to data ma
 
 | Aspect | Data Mesh | Traditional Centralized |
 |--------|-----------|------------------------|
-| **Ownership Model**| Distributed across domains | Centralized data team |
-| **Scalability**| Horizontal, domain-based | Vertical, team-dependent |
-| **Data Quality**| Domain accountability | Central team responsibility |
-| **Technology Choice**| Flexible per domain | Standardized across organization |
-| **Time to Market**| Faster, parallel development | Slower, sequential dependencies |
-| **Governance**| Federated, automated | Manual, centralized control |
+| **Ownership Model** | Distributed across domains | Centralized data team |
+| **Scalability** | Horizontal, domain-based | Vertical, team-dependent |
+| **Data Quality** | Domain accountability | Central team responsibility |
+| **Technology Choice** | Flexible per domain | Standardized across organization |
+| **Time to Market** | Faster, parallel development | Slower, sequential dependencies |
+| **Governance** | Federated, automated | Manual, centralized control |
 
 ## Challenges and Considerations
 

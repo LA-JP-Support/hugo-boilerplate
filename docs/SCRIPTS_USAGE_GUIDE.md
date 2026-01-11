@@ -237,14 +237,46 @@ python scripts/optimize_glossary_descriptions.py --lang en --dry-run
 # 1. 単一ファイル翻訳
 python scripts/translate_glossary_en_to_ja.py --one-file Active-Learning.md
 
-# 2. 全ファイル翻訳（5並列）
-python scripts/translate_glossary_en_to_ja.py --workers 5
+# 2. 未翻訳ファイルを翻訳（既存JAファイルはスキップ）
+python scripts/translate_glossary_en_to_ja.py \
+  --skip-existing \
+  --max-workers 5 \
+  --model claude-sonnet-4-5-20250929 \
+  --style-guide docs/TRANSLATION_GUIDELINES.md
 
-# 3. 特定範囲を翻訳
-python scripts/translate_glossary_en_to_ja.py --start 0 --end 10 --workers 3
+# 3. バッチ翻訳（複数ファイルをまとめて翻訳。API制限に注意）
+python scripts/translate_glossary_en_to_ja.py \
+  --skip-existing \
+  --batch-size 2 \
+  --model claude-sonnet-4-5-20250929 \
+  --style-guide docs/TRANSLATION_GUIDELINES.md
 
-# 4. ドライラン
-python scripts/translate_glossary_en_to_ja.py --dry-run
+# 4. CSVリストのファイルだけ翻訳（例: databases/missing_in_backup_29f67903_en_glossary.csv）
+python3 - <<'PY'
+import csv
+import subprocess
+import sys
+from pathlib import Path
+
+csv_path = Path('databases/missing_in_backup_29f67903_en_glossary.csv')
+model = 'claude-sonnet-4-5-20250929'
+
+rows = list(csv.DictReader(csv_path.open('r', encoding='utf-8')))
+for row in rows:
+    fn = row.get('filename')
+    if not fn:
+        continue
+    if (Path('content/ja/glossary') / fn).exists():
+        continue
+    subprocess.check_call([
+        sys.executable, 'scripts/translate_glossary_en_to_ja.py',
+        '--one-file', fn,
+        '--skip-existing',
+        '--model', model,
+        '--style-guide', 'docs/TRANSLATION_GUIDELINES.md',
+        '--csv-path', str(csv_path),
+    ])
+PY
 ```
 
 **自動追加されるフィールド**:
@@ -259,7 +291,7 @@ title: "Active Learning（アクティブラーニング）"
 translationKey: active-learning
 e-title: "Active Learning"  # ✅ 自動追加
 term: "あくてぃぶらーにんぐ"  # ✅ 自動追加（Claude API生成）
-url: "/ja/glossary/Active-Learning/"  # ✅ 自動追加
+url: "/ja/glossary/active-learning/"  # ✅ 自動追加
 ```
 
 ---

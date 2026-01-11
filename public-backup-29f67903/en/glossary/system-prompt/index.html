@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>System Prompt | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/system-prompt/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="A set of foundational instructions that define how an AI system behaves and responds. System prompts work behind the scenes to ensure the AI stays consistent, reliable, and safe across all interactions." name="description"/>
+<meta content="system prompt, AI prompt engineering, language model instructions, AI behavior control, prompt design" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/system-prompt/" property="og:url"/>
+<meta content="System Prompt | SmartWeb" property="og:title"/>
+<meta content="A set of foundational instructions that define how an AI system behaves and responds. System prompts work behind the scenes to ensure the AI stays consistent, reliable, and safe across all interactions." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/system-prompt/" name="twitter:url"/>
+<meta content="System Prompt | SmartWeb" name="twitter:title"/>
+<meta content="A set of foundational instructions that define how an AI system behaves and responds. System prompts work behind the scenes to ensure the AI stays consistent, reliable, and safe across all interactions." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165525" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165525" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165525"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118125587168000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118125587168000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118125587168000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118125587168000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">System Prompt</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        System Prompt
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A set of foundational instructions that define how an AI system behaves and responds. System prompts work behind the scenes to ensure the AI stays consistent, reliable, and safe across all interactions.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                system prompt
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI prompt engineering
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                language model instructions
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI behavior control
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                prompt design
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-system-prompt">What is a System Prompt?</h2>
+<p>A system prompt is a foundational instruction set that defines the behavior, personality, capabilities, and operational parameters of an <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence glossary entry">artificial intelligence</a> system, particularly <a data-lb="1" href="/en/glossary/large-language-models/" title="Large Language Models (LLMs) glossary entry">large language models (LLMs)</a>. Unlike user <a data-lb="1" href="/en/glossary/prompts/" title="Prompts glossary entry">prompts</a> that contain specific queries or requests, system prompts establish the underlying framework that governs how an AI system interprets, processes, and responds to all subsequent interactions. These prompts serve as the constitutional document for AI behavior, setting boundaries, defining roles, and establishing the context within which the AI operates throughout an entire conversation or session.</p>
+<p>System prompts function as persistent instructions that remain active across multiple user interactions, creating consistency in AI responses and ensuring adherence to predetermined guidelines. They are typically invisible to end users but profoundly influence every aspect of the AI’s output, from tone and style to factual accuracy and ethical considerations. The system prompt acts as a meta-layer of instruction that shapes the AI’s understanding of its purpose, limitations, and appropriate responses to various scenarios. This foundational layer is crucial for creating reliable, predictable, and safe AI interactions in production environments.</p>
+<p>The strategic implementation of system prompts has become essential for organizations deploying <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI systems</a> at scale, as they provide a mechanism for maintaining brand consistency, ensuring compliance with regulations, and delivering specialized functionality tailored to specific use cases. Modern AI applications rely heavily on well-crafted system prompts to transform general-purpose language models into specialized tools capable of performing complex tasks while maintaining appropriate boundaries and exhibiting desired characteristics. The quality and <a data-lb="1" href="/en/glossary/precision/" title="Precision glossary entry">precision</a> of system prompts directly impact the effectiveness, safety, and user satisfaction of AI-powered applications across industries.</p>
+<h2 id="core-system-prompt-components">Core System Prompt Components</h2>
+<p>Role Definition: Establishes the AI’s primary function and identity within the interaction context. This component clearly defines what the AI is supposed to be, whether a customer service representative, technical expert, creative assistant, or specialized consultant, providing the foundational framework for all subsequent responses.Behavioral Guidelines: Specifies the tone, style, and manner of communication the AI should adopt. These guidelines ensure consistency in personality traits, communication patterns, and interaction styles, creating a predictable and professional user experience across all conversations.Knowledge Boundaries: Defines the scope of topics the AI can discuss and areas where it should defer or decline to provide information. This component helps prevent the AI from venturing into inappropriate territories or making claims beyond its expertise or training data.Output Formatting: Establishes standards for how responses should be structured, including length preferences, formatting requirements, and presentation styles. This ensures that AI outputs meet specific organizational or application requirements for consistency and usability.Ethical Constraints: Implements safety measures and ethical guidelines that govern AI behavior, including restrictions on harmful content, <a data-lb="1" href="/en/glossary/bias-mitigation/" title="Bias Mitigation glossary entry">bias mitigation</a> strategies, and adherence to moral and legal standards appropriate for the deployment context.Context Awareness: Provides instructions for how the AI should interpret and respond to different types of user inputs, including handling ambiguous requests, managing multi-turn conversations, and maintaining contextual relevance throughout extended interactions.Error Handling: Defines how the AI should respond when encountering unclear instructions, conflicting information, or requests outside its capabilities, ensuring graceful degradation and helpful guidance for users in challenging scenarios.</p>
+<h2 id="how-system-prompt-works">How System Prompt Works</h2>
+<p>The system prompt implementation follows a structured workflow that begins before any user interaction occurs:</p>
+<ol>
+<li>
+<p>Initialization Phase: The system prompt is loaded into the AI model’s context window as the first and most persistent instruction set, establishing the foundational parameters that will govern all subsequent processing and response generation.</p>
+</li>
+<li>
+<p>Context Establishment: The AI processes the system prompt to understand its assigned role, behavioral parameters, and operational constraints, creating an internal framework that influences how it will interpret and respond to user inputs.</p>
+</li>
+<li>
+<p>User Input Processing: When a user query arrives, the AI evaluates it against the established system prompt guidelines, ensuring that the response will align with the predetermined behavioral and functional parameters.</p>
+</li>
+<li>
+<p>Response Formulation: The AI generates responses that satisfy both the user’s specific request and the overarching requirements established in the system prompt, balancing user needs with system constraints and guidelines.</p>
+</li>
+<li>
+<p>Consistency Maintenance: Throughout multi-turn conversations, the system prompt continues to influence each response, ensuring behavioral consistency and adherence to established parameters across the entire interaction session.</p>
+</li>
+<li>
+<p>Boundary Enforcement: The system prompt actively prevents the AI from violating established constraints, redirecting inappropriate requests and maintaining compliance with safety and ethical guidelines.Example Workflow: A customer service AI receives a system prompt defining it as a helpful, professional representative with access to product information but restrictions on providing technical support. When users ask product questions, the AI responds helpfully within its knowledge scope, but technical support requests are politely redirected to appropriate channels, maintaining consistency with its defined role and limitations.</p>
+</li>
+</ol>
+<h2 id="key-benefits">Key Benefits</h2>
+<p>Enhanced Consistency: System prompts ensure uniform AI behavior across all interactions, eliminating unpredictable responses and creating reliable user experiences that meet organizational standards and user expectations consistently.Improved Safety: By establishing clear boundaries and ethical guidelines, system prompts prevent AI systems from generating harmful, inappropriate, or dangerous content, protecting both users and organizations from potential risks.Brand Alignment: Organizations can embed their voice, values, and communication style into AI interactions, ensuring that automated responses reflect brand personality and maintain professional standards across all customer touchpoints.Specialized Functionality: System prompts transform general-purpose AI models into specialized tools tailored for specific industries, roles, or applications, maximizing effectiveness for particular use cases and requirements.Regulatory Compliance: Built-in compliance measures help organizations meet industry regulations and legal requirements by ensuring AI responses adhere to relevant standards and avoid prohibited content or advice.Quality Control: Consistent output formatting and response standards improve the overall quality of AI-generated content, making it more useful and professional for end users and organizational stakeholders.Risk Mitigation: Clear operational boundaries and error handling procedures reduce the likelihood of AI systems providing incorrect information or engaging in inappropriate behaviors that could damage organizational reputation.Scalability: Well-designed system prompts enable organizations to deploy AI solutions across multiple channels and use cases while maintaining consistent quality and behavior standards without extensive manual oversight.User Experience Optimization: Tailored behavioral guidelines create more engaging and appropriate interactions that meet user expectations and provide value-added experiences across different contexts and applications.Operational Efficiency: Automated adherence to organizational policies and procedures reduces the need for human intervention and oversight, enabling more efficient deployment of AI solutions at scale.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p>Customer Service Automation: AI chatbots use system prompts to maintain professional, helpful personas while accessing knowledge bases and following <a data-lb="1" href="/en/glossary/escalation/" title="Escalation glossary entry">escalation</a> procedures for complex issues requiring human intervention.Content Creation Assistance: Writing tools employ system prompts to adopt specific writing styles, maintain brand voice consistency, and adhere to content guidelines while helping users generate various types of written material.Technical Documentation: AI systems use specialized prompts to provide accurate technical information, follow documentation standards, and maintain appropriate levels of detail for different audience types and technical expertise levels.Educational Tutoring: Learning platforms implement system prompts to create patient, encouraging AI tutors that adapt explanations to student levels while maintaining pedagogical best practices and educational objectives.Healthcare Information: Medical AI assistants use carefully crafted prompts to provide general health information while clearly distinguishing between informational content and professional medical advice requiring human consultation.Legal Research Support: Legal AI tools employ system prompts to assist with research tasks while maintaining appropriate disclaimers about the limitations of AI-generated legal information and the need for professional review.Financial Advisory: Investment and financial planning tools use system prompts to provide general financial education while clearly indicating when personalized professional advice is necessary for specific financial decisions.Creative Collaboration: Design and creative tools implement system prompts to facilitate brainstorming and creative processes while respecting intellectual property boundaries and maintaining appropriate creative standards.Code Development: Programming assistants use system prompts to provide coding help, follow best practices, and maintain security awareness while assisting developers with various programming tasks and challenges.Language Translation: Translation services employ system prompts to maintain cultural sensitivity, handle idiomatic expressions appropriately, and provide context-aware translations that preserve meaning and intent across languages.</p>
+<h2 id="system-prompt-comparison-table">System Prompt Comparison Table</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Basic System Prompt</th>
+<th>Advanced System Prompt</th>
+<th>Enterprise System Prompt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Complexity</td>
+<td>Simple role definition</td>
+<td>Multi-layered instructions</td>
+<td>Comprehensive framework</td>
+</tr>
+<tr>
+<td>Customization</td>
+<td>Limited parameters</td>
+<td>Moderate flexibility</td>
+<td>Highly configurable</td>
+</tr>
+<tr>
+<td>Safety Measures</td>
+<td>Basic guidelines</td>
+<td>Enhanced protections</td>
+<td>Enterprise-grade security</td>
+</tr>
+<tr>
+<td>Context Handling</td>
+<td>Single-turn focus</td>
+<td>Multi-turn awareness</td>
+<td>Session-wide consistency</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>Standalone operation</td>
+<td>API-compatible</td>
+<td>Full system integration</td>
+</tr>
+<tr>
+<td>Maintenance</td>
+<td>Manual updates</td>
+<td>Semi-automated</td>
+<td>Automated management</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p><a data-lb="1" href="/blog/mastering-ai-security-threats-vulnerabilities-and-defense-strategies/" title="Learn the critical security risks in AI systems, from data poisoning to prompt injection and jailbreaks. Discover how to evaluate vulnerabilities across the AI lifecycle and build resilient AI architectures.">Prompt Injection</a> Vulnerabilities: Malicious users may attempt to override system prompts through carefully crafted inputs, potentially causing AI systems to behave inappropriately or violate established safety and operational guidelines.Context Window Limitations: System prompts consume valuable context space that could otherwise be used for user interactions, requiring careful balance between comprehensive instructions and available processing capacity.Conflicting Instructions: Complex system prompts may contain contradictory guidelines that create confusion in AI responses, leading to inconsistent behavior or suboptimal user experiences requiring careful prompt design and testing.Maintenance Complexity: As organizational needs evolve, system prompts require regular updates and refinements, creating ongoing maintenance overhead and the need for systematic version control and testing procedures.Performance Impact: Lengthy or complex system prompts can slow response times and increase computational costs, requiring optimization to balance functionality with efficiency and user experience expectations.Testing Difficulties: Comprehensive testing of system prompt effectiveness across diverse scenarios and edge cases requires significant resources and sophisticated testing methodologies to ensure reliable performance.Cultural Sensitivity: Global deployments must account for cultural differences and local regulations, requiring region-specific adaptations of system prompts that maintain core functionality while respecting local norms.Transparency Requirements: Some jurisdictions require disclosure of <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI system</a> capabilities and limitations, necessitating careful consideration of how system prompt information should be communicated to users.Version Control: Managing multiple versions of system prompts across different deployments and use cases requires robust versioning systems and careful coordination to prevent inconsistencies and errors.Skill Requirements: Effective system prompt design requires specialized expertise in both AI technology and domain-specific knowledge, creating staffing and training challenges for organizations implementing AI solutions.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p>Clear Role Definition: Establish specific, unambiguous descriptions of the AI’s purpose and capabilities, avoiding vague language that could lead to inconsistent interpretations or inappropriate responses.Hierarchical Instruction Structure: Organize system prompt components in order of priority, ensuring that critical safety and operational guidelines take precedence over less important behavioral preferences.Comprehensive Testing: Implement systematic testing procedures that evaluate system prompt effectiveness across diverse scenarios, edge cases, and potential failure modes before deployment to production environments.Regular Updates: Establish scheduled review and update cycles for system prompts, incorporating user feedback, performance data, and evolving organizational requirements into prompt refinements.Version Control: Maintain detailed records of system prompt changes, including rationale for modifications and performance impact assessments, enabling rollback capabilities and systematic improvement tracking.Safety-First Design: Prioritize safety and ethical considerations in all system prompt components, implementing multiple layers of protection against harmful or inappropriate AI behavior.User-Centric Approach: Design system prompts with end-user needs and expectations in mind, ensuring that AI behavior enhances rather than hinders user experience and task completion.Documentation Standards: Maintain comprehensive documentation of system prompt design decisions, implementation details, and operational procedures to support ongoing maintenance and troubleshooting efforts.Performance <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">Monitoring</a>: Implement continuous monitoring systems that track AI behavior and response quality, identifying potential issues with system prompt effectiveness and areas for improvement.Stakeholder Collaboration: Involve relevant stakeholders from technical, business, and compliance teams in system prompt design and review processes to ensure comprehensive coverage of organizational requirements.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p>Dynamic Prompt Adaptation: Implement systems that modify system prompts based on user context, session history, or real-time conditions, enabling more personalized and contextually appropriate AI behavior.Multi-Modal Integration: Develop system prompts that coordinate AI behavior across text, image, and audio modalities, ensuring consistent personality and capabilities across different types of user interactions.Conditional Logic Implementation: Create sophisticated system prompts that include conditional statements and branching logic, enabling AI systems to adapt their behavior based on specific circumstances or user characteristics.Prompt Chaining Strategies: Design interconnected system prompts that work together across multiple <a data-lb="1" href="/en/glossary/ai-agents/" title="AI Agents glossary entry">AI agents</a> or processing stages, creating complex workflows while maintaining behavioral consistency.Adversarial Testing: Employ red-team testing methodologies specifically designed to identify system prompt vulnerabilities and develop more robust protection mechanisms against prompt injection attacks.Performance Optimization: Utilize advanced techniques such as prompt compression, caching strategies, and efficient instruction encoding to minimize the performance impact of comprehensive system prompts.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p>Automated Prompt Generation: Development of AI systems capable of generating and optimizing system prompts based on organizational requirements and performance data, reducing manual effort and improving effectiveness.Adaptive Learning Systems: Implementation of system prompts that evolve based on user interactions and feedback, continuously improving AI behavior while maintaining safety and consistency standards.Cross-Platform Standardization: Emergence of industry standards for system prompt formats and best practices, enabling better interoperability and knowledge sharing across different AI platforms and applications.Enhanced Security Measures: Development of more sophisticated protection mechanisms against prompt injection and other security threats, including cryptographic approaches and advanced validation techniques.Regulatory Integration: Evolution of system prompt frameworks that automatically incorporate changing regulatory requirements and compliance standards, reducing manual oversight and ensuring ongoing compliance.<a data-lb="1" href="/en/glossary/personalization/" title="Personalization glossary entry">Personalization</a> at Scale: Advanced techniques for creating personalized system prompts that adapt to individual user preferences while maintaining organizational standards and safety requirements.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p><a data-lb="1" href="/en/glossary/openai/" title="OpenAI glossary entry">OpenAI</a>. (2023). “GPT-4 System Card.” OpenAI Technical Report. <a href="https://openai.com/research/gpt-4-system-card" rel="nofollow noopener noreferrer" target="_blank">https://openai.com/research/gpt-4-system-card</a></p>
+</li>
+<li>
+<p><a data-lb="1" href="/en/glossary/anthropic/" title="Anthropic glossary entry">Anthropic</a>. (2023). “Constitutional AI: Harmlessness from AI Feedback.” arXiv preprint arXiv:2212.08073.</p>
+</li>
+<li>
+<p>Wei, J., et al. (2022). “<a data-lb="1" href="/en/glossary/chain-of-thought-prompting/" title="Chain-of-Thought Prompting glossary entry">Chain-of-Thought Prompting</a> Elicits Reasoning in Large Language Models.” Advances in Neural Information Processing Systems.</p>
+</li>
+<li>
+<p>Liu, P., et al. (2023). “Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing.” ACM Computing Surveys.</p>
+</li>
+<li>
+<p>Ouyang, L., et al. (2022). “Training Language Models to Follow Instructions with Human Feedback.” Advances in Neural Information Processing Systems.</p>
+</li>
+<li>
+<p>Bommasani, R., et al. (2021). “On the Opportunities and Risks of Foundation Models.” Stanford Institute for Human-Centered Artificial Intelligence.</p>
+</li>
+<li>
+<p>Kenton, Z., et al. (2021). “Alignment of Language Agents.” arXiv preprint arXiv:2103.14659.</p>
+</li>
+<li>
+<p>Bai, Y., et al. (2022). “Constitutional AI: Harmlessness from AI Feedback.” Anthropic Technical Report.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/contextual-prompt/">
+                    Contextual Prompt
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI instructions that include background information and context so the system understands your needs...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/contextual-prompt/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/self-consistency-prompting/">
+                    Self-Consistency Prompting
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A technique that improves AI reasoning by generating multiple solution paths for the same problem an...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/self-consistency-prompting/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/structured-prompts/">
+                    Structured Prompts
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Clear, organized instructions given to AI systems to get reliable and consistent results, using labe...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/structured-prompts/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/system-prompt/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165525"></script>
+</body>
+</html>

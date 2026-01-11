@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Build Performance | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/build-performance/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="Build Performance is how quickly software development tools compile and prepare code for release. It directly affects how fast developers can work and how quickly projects are completed." name="description"/>
+<meta content="build performance, compilation optimization, build tools, CI/CD performance, incremental builds" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/build-performance/" property="og:url"/>
+<meta content="Build Performance | SmartWeb" property="og:title"/>
+<meta content="Build Performance is how quickly software development tools compile and prepare code for release. It directly affects how fast developers can work and how quickly projects are completed." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/build-performance/" name="twitter:url"/>
+<meta content="Build Performance | SmartWeb" name="twitter:title"/>
+<meta content="Build Performance is how quickly software development tools compile and prepare code for release. It directly affects how fast developers can work and how quickly projects are completed." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165525" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165525" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165525"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118125587168000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118125587168000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118125587168000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118125587168000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Build Performance</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Build Performance
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          Build Performance is how quickly software development tools compile and prepare code for release. It directly affects how fast developers can work and how quickly projects are completed.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                build performance
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                compilation optimization
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                build tools
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                CI/CD performance
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                incremental builds
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-build-performance">What is a Build Performance?</h2>
+<p>Build performance refers to the efficiency and speed with which software development tools compile, package, and prepare code for deployment or execution. It encompasses the entire process from source code transformation to the final deliverable, including compilation time, linking duration, packaging speed, and resource utilization during the build process. In modern software development, build performance has become a critical factor affecting developer productivity, continuous integration pipelines, and overall project delivery timelines.</p>
+<p>The significance of build performance extends beyond mere convenience, directly impacting development workflows and business outcomes. Slow builds create <a data-lb="1" href="/en/glossary/bottlenecks/" title="Bottlenecks glossary entry">bottlenecks</a> that interrupt developer flow states, reduce the frequency of testing cycles, and delay feedback loops essential for maintaining code quality. In large-scale projects with hundreds or thousands of developers, even minor improvements in build times can translate to substantial productivity gains and cost savings. Organizations often measure build performance through metrics such as clean build time, incremental build time, cache hit rates, and resource consumption patterns.</p>
+<p>Modern build performance optimization involves a multifaceted approach that considers hardware capabilities, software architecture, toolchain selection, and process design. Effective build performance strategies leverage techniques such as parallel processing, intelligent caching, incremental compilation, and distributed build systems. The complexity of contemporary software projects, with their numerous dependencies, multiple target platforms, and sophisticated toolchains, makes build performance optimization both challenging and essential. Understanding and implementing proper build performance practices has become a specialized skill that can significantly differentiate successful development teams from those struggling with productivity issues.</p>
+<h2 id="core-build-performance-components">Core Build Performance Components</h2>
+<p>Compilation Optimizationinvolves techniques to reduce the time required for source code transformation into executable code. This includes compiler flag optimization, precompiled headers, and unity builds that combine multiple source files.Caching Mechanismsstore intermediate build artifacts to avoid redundant processing in subsequent builds. Effective caching strategies can dramatically reduce build times by reusing previously computed results when source code remains unchanged.Parallel Processingleverages multiple CPU cores and threads to execute build tasks simultaneously. Modern build systems can analyze dependency graphs to identify independent tasks that can run concurrently without conflicts.Incremental Buildingprocesses only the components that have changed since the last build, rather than rebuilding the entire project. This approach requires sophisticated dependency tracking and change detection mechanisms.Dependency Managementoptimizes how external libraries and modules are resolved, downloaded, and integrated into the build process. Efficient dependency management reduces network overhead and storage requirements.Resource Allocationinvolves optimizing memory usage, disk I/O patterns, and CPU utilization during the build process. Proper resource management prevents bottlenecks and ensures consistent build performance across different environments.Build Tool Selectionencompasses choosing appropriate build systems, compilers, and supporting tools that align with project requirements and performance goals. Different tools offer varying optimization capabilities and performance characteristics.</p>
+<h2 id="how-build-performance-works">How Build Performance Works</h2>
+<p>The build performance optimization process begins with profiling and measurementto establish baseline metrics and identify bottlenecks. Developers use specialized tools to analyze build times, resource usage, and dependency patterns across different components of their projects.Dependency analysisfollows, where build systems examine the relationships between source files, libraries, and generated artifacts. This analysis creates a dependency graph that determines the optimal order for build operations and identifies opportunities for parallelization.Cache validationoccurs next, where the build system checks whether previously generated artifacts remain valid based on source code changes. Modern caching systems use sophisticated algorithms to detect changes and determine cache validity with high <a data-lb="1" href="/en/glossary/precision/" title="Precision glossary entry">precision</a>.Parallel task schedulingdistributes independent build operations across available CPU cores and worker processes. The build system coordinates these parallel tasks while respecting dependency constraints and resource limitations.Incremental processingexecutes only the necessary build steps for changed components, leveraging the dependency graph to determine the minimal set of operations required. This step often provides the most significant performance improvements.Artifact generationproduces the final build outputs, including executables, libraries, documentation, and deployment packages. Optimized artifact generation minimizes redundant operations and maximizes reuse of intermediate results.Validation and testingverify that the build outputs meet quality standards and functional requirements. Efficient build performance includes optimizing test execution and validation processes to maintain rapid feedback cycles.Distribution and deploymentprepare build artifacts for delivery to target environments. High-performance build systems optimize packaging, compression, and transfer operations to minimize deployment overhead.</p>
+<p>Example workflow: A typical optimized build might complete dependency resolution in 30 seconds, leverage cached artifacts to skip 70% of compilation tasks, execute remaining compilation in parallel across 8 cores in 2 minutes, and generate final packages in 45 seconds, achieving a total build time of 3.25 minutes compared to 15 minutes for an unoptimized process.</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p>Reduced Development Cycle Timeenables developers to iterate more quickly by minimizing the delay between code changes and testable builds. Faster builds encourage more frequent testing and experimentation, leading to higher code quality.Improved Developer Productivityresults from eliminating long wait times that interrupt concentration and workflow. Developers can maintain focus and accomplish more meaningful work when builds complete rapidly.Enhanced CI/CD Pipeline Efficiencyallows continuous integration systems to process more commits and provide faster feedback to development teams. Optimized builds enable more sophisticated testing and deployment strategies within acceptable time windows.Cost Reductionoccurs through more efficient utilization of computing resources and reduced infrastructure requirements. Organizations can achieve the same build throughput with fewer servers and lower operational expenses.Faster Time-to-Marketenables organizations to deliver features and fixes more rapidly by eliminating build-related bottlenecks from the development process. Competitive advantages often depend on the ability to respond quickly to market demands.Increased Build Reliabilityresults from optimized build processes that are less prone to resource exhaustion and timing-related failures. Stable, predictable builds reduce the overhead of investigating and resolving build issues.Better Resource Utilizationmaximizes the value of existing hardware investments by ensuring that CPU, memory, and storage resources are used efficiently during build operations.Scalability Improvementsenable build systems to handle larger codebases and more complex projects without proportional increases in build times. Well-optimized builds can accommodate growth in project size and team membership.Enhanced Developer Experiencecreates a more pleasant and productive working environment by eliminating frustrating delays and enabling rapid experimentation with code changes.Quality Assurance Benefitssupport more comprehensive testing strategies by making it feasible to run extensive test suites frequently without impacting development velocity.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p>Large-Scale Enterprise Applicationsrequire sophisticated build performance optimization to manage codebases with millions of lines of code and complex dependency relationships across multiple teams and modules.Mobile Application Developmentbenefits from optimized builds to support rapid iteration cycles and frequent testing across multiple device configurations and operating system versions.Game Development Projectsdemand high-performance builds to handle large asset files, complex graphics pipelines, and frequent content updates that require rapid turnaround times.Microservices Architecturesleverage build performance optimization to manage numerous small services that must be built, tested, and deployed independently while maintaining consistency across the entire system.Open Source Projectsutilize build performance improvements to support diverse contributor communities and enable efficient continuous integration across multiple platforms and configurations.DevOps and Site Reliability Engineeringteams implement build performance optimization to support rapid deployment cycles and minimize the time required for emergency fixes and updates.Machine Learning and Data Scienceprojects benefit from optimized builds when working with large datasets, complex model training pipelines, and frequent experimentation with different algorithms and parameters.Embedded Systems Developmentrequires efficient builds to support cross-compilation for multiple target platforms and enable rapid prototyping with resource-constrained hardware.Financial Services Applicationsdemand fast builds to support rapid response to market changes and regulatory requirements while maintaining strict quality and security standards.Cloud-Native Applicationsleverage build performance optimization to support <a data-lb="1" href="/en/glossary/containerization/" title="Containerization glossary entry">containerization</a>, orchestration, and deployment strategies that require frequent image rebuilds and updates.</p>
+<h2 id="build-performance-comparison-table">Build Performance Comparison Table</h2>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Build Time</th>
+<th>Resource Usage</th>
+<th>Complexity</th>
+<th>Scalability</th>
+<th>Maintenance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Traditional Sequential</td>
+<td>High (100%)</td>
+<td>Low</td>
+<td>Low</td>
+<td>Poor</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Parallel Processing</td>
+<td>Medium (40-60%)</td>
+<td>Medium-High</td>
+<td>Medium</td>
+<td>Good</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Incremental Builds</td>
+<td>Low (10-30%)</td>
+<td>Low-Medium</td>
+<td>Medium</td>
+<td>Excellent</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Distributed Builds</td>
+<td>Very Low (5-20%)</td>
+<td>High</td>
+<td>High</td>
+<td>Excellent</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Cached Builds</td>
+<td>Very Low (5-25%)</td>
+<td>Medium</td>
+<td>Medium-High</td>
+<td>Good</td>
+<td>Medium-High</td>
+</tr>
+<tr>
+<td>Hybrid Optimization</td>
+<td>Minimal (3-15%)</td>
+<td>Medium</td>
+<td>High</td>
+<td>Excellent</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p>Dependency Complexitycreates challenges in accurately tracking relationships between components and determining optimal build orders. Complex dependency graphs can limit parallelization opportunities and complicate incremental build strategies.Cache Invalidationrequires sophisticated algorithms to determine when cached artifacts are no longer valid. Incorrect cache invalidation can lead to inconsistent builds, while overly conservative invalidation reduces performance benefits.Resource Contentionoccurs when multiple build processes compete for limited CPU, memory, or I/O resources. Effective resource management requires careful coordination and scheduling to prevent performance degradation.Platform Differencescomplicate build performance optimization when targeting multiple operating systems, architectures, or deployment environments. Cross-platform builds often require specialized tools and techniques.Tool Integrationchallenges arise when combining multiple build tools, compilers, and supporting utilities that may have conflicting optimization strategies or resource requirements.Debugging Complexityincreases with build performance optimizations that obscure the relationship between source code and build artifacts. Parallel and distributed builds can make it difficult to diagnose issues.Configuration Managementbecomes more complex as build performance optimizations introduce additional parameters, settings, and environmental dependencies that must be maintained consistently.Security Considerationsemerge when implementing distributed builds or shared caching systems that may expose sensitive code or create new attack vectors that require careful security planning.Measurement and Monitoringrequire sophisticated instrumentation to accurately assess build performance and identify optimization opportunities across different environments and use cases.Team Coordinationchallenges arise when build performance optimizations affect multiple teams or require changes to established development workflows and practices.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p>Establish Performance Baselinesby measuring current build times and resource usage patterns before implementing optimizations. Accurate baselines enable objective assessment of improvement efforts and help prioritize optimization activities.Implement Comprehensive Cachingstrategies that cover compilation artifacts, dependency resolution, test results, and other intermediate build products. Design cache invalidation policies that balance performance with correctness.Optimize Dependency Managementby minimizing external dependencies, using dependency caching, and implementing efficient dependency resolution algorithms. Consider dependency bundling and vendoring strategies for critical components.Leverage Parallel Processingcapabilities by analyzing dependency graphs to identify independent tasks and configuring build tools to utilize available CPU cores effectively while avoiding resource contention.Design Incremental Build Strategiesthat accurately track file changes and dependencies to minimize unnecessary rebuilds. Implement fine-grained dependency tracking and efficient change detection mechanisms.Monitor and Profile Regularlyusing specialized tools to identify performance bottlenecks and track the effectiveness of optimization efforts. Establish automated <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a> to detect performance regressions.Standardize Build Environmentsto ensure consistent performance across development, testing, and production systems. Use containerization and infrastructure-as-code approaches to maintain environment consistency.Implement Build Artifact Managementsystems that efficiently store, retrieve, and distribute build outputs. Consider artifact deduplication and compression strategies to optimize storage and transfer costs.Optimize Hardware Configurationby selecting appropriate CPU, memory, and storage configurations for build workloads. Consider the trade-offs between local and distributed build approaches based on team size and project characteristics.Document and Share Knowledgeabout build performance optimization techniques and maintain runbooks for common performance issues. Provide training and resources to help team members understand and contribute to optimization efforts.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p>Distributed Build Systemsleverage multiple machines to execute build tasks in parallel across a network of workers. These systems require sophisticated job scheduling, artifact distribution, and result aggregation capabilities to achieve optimal performance.Build Result Sharingenables teams to share compiled artifacts and intermediate build products through centralized repositories. This approach eliminates redundant compilation work when multiple developers build the same code versions.Predictive Cachinguses machine learning algorithms to anticipate which build artifacts will be needed and pre-populate caches accordingly. This technique can significantly reduce cache miss rates and improve build performance.Dynamic Resource Allocationautomatically adjusts build parallelism and resource usage based on current system load and available capacity. Advanced systems can scale build resources up or down based on demand patterns.Build Graph Optimizationanalyzes dependency relationships to identify opportunities for restructuring build processes and reducing critical path lengths. This may involve refactoring code organization or build script design.Compiler Optimization Integrationleverages advanced compiler features such as link-time optimization, profile-guided optimization, and interprocedural analysis to improve both build performance and runtime efficiency.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p>Cloud-Native Build Platformswill provide elastic, on-demand build resources that automatically scale based on workload requirements. These platforms will offer specialized hardware configurations optimized for different types of build workloads.AI-Powered Build Optimizationwill use machine learning to automatically identify performance bottlenecks, suggest optimizations, and predict build resource requirements. Intelligent systems will continuously adapt build strategies based on usage patterns.Quantum Computing Applicationsmay eventually provide exponential speedups for certain types of build operations, particularly those involving complex optimization problems or cryptographic operations.Edge Computing Integrationwill enable distributed build systems that leverage edge computing resources to reduce <a data-lb="1" href="/en/glossary/latency/" title="Latency glossary entry">latency</a> and improve performance for geographically distributed development teams.Advanced Parallelization Techniqueswill exploit new hardware architectures, including specialized processors and accelerators, to achieve unprecedented levels of build parallelism and performance.Immutable Build Infrastructurewill provide reproducible, hermetic build environments that eliminate variability and enable more aggressive caching and optimization strategies while maintaining build correctness.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Fowler, Martin. “Continuous Integration.” ThoughtWorks, 2020. <a href="https://martinfowler.com/articles/continuousIntegration.html" rel="nofollow noopener noreferrer" target="_blank">https://martinfowler.com/articles/continuousIntegration.html</a></p>
+</li>
+<li>
+<p>Google. “Bazel Build Performance Guide.” Google Developers Documentation, 2023. <a href="https://bazel.build/rules/performance" rel="nofollow noopener noreferrer" target="_blank">https://bazel.build/rules/performance</a></p>
+</li>
+<li>
+<p>Gradle Inc. “Build Performance Optimization.” Gradle User Manual, 2023. <a href="https://docs.gradle.org/current/userguide/performance.html" rel="nofollow noopener noreferrer" target="_blank">https://docs.gradle.org/current/userguide/performance.html</a></p>
+</li>
+<li>
+<p>Microsoft. “MSBuild Performance Best Practices.” Microsoft Docs, 2023. <a href="https://docs.microsoft.com/en-us/visualstudio/msbuild/build-performance" rel="nofollow noopener noreferrer" target="_blank">https://docs.microsoft.com/en-us/visualstudio/msbuild/build-performance</a></p>
+</li>
+<li>
+<p>Facebook Engineering. “Buck: A Fast Build System.” Facebook Engineering Blog, 2022. <a href="https://engineering.fb.com/2013/04/buck-an-android-build-tool/" rel="nofollow noopener noreferrer" target="_blank">https://engineering.fb.com/2013/04/buck-an-android-build-tool/</a></p>
+</li>
+<li>
+<p>Netflix Technology Blog. “Scaling Build Systems at Netflix.” Netflix Tech Blog, 2023. <a href="https://netflixtechblog.com/scaling-build-systems" rel="nofollow noopener noreferrer" target="_blank">https://netflixtechblog.com/scaling-build-systems</a></p>
+</li>
+<li>
+<p>Atlassian. “Bamboo Build Performance Optimization.” Atlassian Documentation, 2023. <a href="https://confluence.atlassian.com/bamboo/build-performance" rel="nofollow noopener noreferrer" target="_blank">https://confluence.atlassian.com/bamboo/build-performance</a></p>
+</li>
+<li>
+<p>Jenkins Project. “Pipeline Performance Best Practices.” Jenkins Documentation, 2023. <a href="https://www.jenkins.io/doc/book/pipeline/performance/" rel="nofollow noopener noreferrer" target="_blank">https://www.jenkins.io/doc/book/pipeline/performance/</a></p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/incremental-build/">
+                    Incremental Build
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    An optimization technique that rebuilds only the parts of your code that changed, making development...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/incremental-build/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/static-site-generator/">
+                    Static Site Generator
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A tool that automatically builds fast, secure websites by converting templates and content files int...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/static-site-generator/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/build-performance/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165525"></script>
+</body>
+</html>

@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>ウォーターマーキング | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/watermarking/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Watermarking/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/Watermarking/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Watermarking/" hreflang="x-default" rel="alternate"/>
+<meta content="AIにおけるウォーターマーキングとは、AI生成コンテンツ(テキスト、画像、音声、動画)に可視または不可視の信号を埋め込み、その出所を検証し、ディープフェイクに対抗し、真正性を確保する技術です。" name="description"/>
+<meta content="AIウォーターマーキング, 生成AI, ディープフェイク, コンテンツ来歴, デジタル真正性" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/watermarking/" property="og:url"/>
+<meta content="ウォーターマーキング | SmartWeb" property="og:title"/>
+<meta content="AIにおけるウォーターマーキングとは、AI生成コンテンツ(テキスト、画像、音声、動画)に可視または不可視の信号を埋め込み、その出所を検証し、ディープフェイクに対抗し、真正性を確保する技術です。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/watermarking/" name="twitter:url"/>
+<meta content="ウォーターマーキング | SmartWeb" name="twitter:title"/>
+<meta content="AIにおけるウォーターマーキングとは、AI生成コンテンツ(テキスト、画像、音声、動画)に可視または不可視の信号を埋め込み、その出所を検証し、ディープフェイクに対抗し、真正性を確保する技術です。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">ウォーターマーキング</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Ethics &amp; Safety Mechanisms
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        ウォーターマーキング
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Watermarking
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          AIにおけるウォーターマーキングとは、AI生成コンテンツ(テキスト、画像、音声、動画)に可視または不可視の信号を埋め込み、その出所を検証し、ディープフェイクに対抗し、真正性を確保する技術です。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AIウォーターマーキング
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                生成AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ディープフェイク
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                コンテンツ来歴
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                デジタル真正性
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="aiウォーターマーキングとは">AIウォーターマーキングとは?</h2>
+<p><a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>におけるウォーターマーキングとは、<a data-lb="1" href="/ja/glossary/large-language-models/" title="大規模言語モデル(LLM) の用語集ページ">大規模言語モデル</a>、画像生成器、その他の<a data-lb="1" href="/ja/glossary/generative/" title="シャドーAIとは、従業員による生成AI(ジェネレーティブAI)ツールの無許可使用を指し、データセキュリティ、コンプライアンス、知的財産に重大なリスクをもたらします。">生成AI</a> システム によって生成された出力に、固有の追跡可能なマーカーを埋め込むことを指します。これらのマーカーはデジタル署名として機能し、コンテンツとそれを生成したモデルまたはシステムとの間に監査可能なリンクを確立します。AI生成コンテンツがテキスト、画像、音声、動画において人間が作成した素材と区別がつかなくなるにつれ、ウォーターマーキングは真正性の維持、誤情報との戦い、デジタルエコシステムにおける説明責任のサポートのための重要なメカニズムとして浮上しています。</p>
+<p>ウォーターマーキング技術は、偽造を防ぐために設計された物理的な認証方法—通貨、法的文書、写真プリントにおけるウォーターマーク—から進化しました。デジタルウォーターマーキングはAI以前から存在し、アルゴリズム技術を用いてデジタルメディアに情報を堅牢に埋め込んでいました。AI時代において、これらの技術は生成モデル、ディープフェイク、合成メディアの拡散によってもたらされる独自の課題に対処するために適応しています。</p>
+<h2 id="主要な応用と目的">主要な応用と目的</h2>
+<h3 id="主な目的">主な目的</h3>
+<p>コンテンツ識別すべてのメディアタイプにおいて、AI生成素材を人間が作成したコンテンツから区別する出所と追跡可能性コンテンツを元のAIモデル、開発者、または生成タイムスタンプまで追跡可能にする認証と所有権著作権と創作権の技術的証拠を通じて知的財産を保護する誤情報対策特にディープフェイクなど、合成コンテンツの迅速な検出と適切なラベリングを促進する説明責任のサポート医療、法律、金融、規制対象セクターにおける機密性の高いアプリケーションのための検証可能な監査証跡を提供する</p>
+<h3 id="ユースケースの例">ユースケースの例</h3>
+<p>メディアとジャーナリズムニュース画像、動画、記事がAI生成かどうかを検証する。選挙、危機的事象、速報ニュースシナリオにおいて重要ソーシャルメディアプラットフォームAI生成コンテンツを自動的にフラグ付けまたはラベリングし、ユーザーに通知し、誤情報の拡散を制限する学術的誠実性AI生成のエッセイ、課題、研究を検出し、公正な評価と学術的誠実性をサポートする法律と規制著作権紛争、詐欺調査、規制遵守のためのデジタルフォレンジック証拠を提供するデジタルマーケティング透明性と規制遵守のために、人間が作成した広告コンテンツとAI生成コンテンツを区別する</p>
+<h2 id="ウォーターマークの種類と分類">ウォーターマークの種類と分類</h2>
+<h3 id="可視性による分類">可視性による分類</h3>
+<p>可視ウォーターマークオーバーレイ、ロゴ、テキストラベル(「AIによって生成」)、またはユーザーが容易に認識できる視覚的マーカーを含む明示的な信号。ただし、トリミングや編集によって容易に除去可能不可視(隠密)ウォーターマークピクセル、周波数スペクトル、単語分布、または構造パターンへの知覚できない変更を通じてデータレベルで埋め込まれる—特殊なアルゴリズムまたは暗号鍵によってのみ検出可能</p>
+<h3 id="堅牢性による分類">堅牢性による分類</h3>
+<p>堅牢なウォーターマーク圧縮、リサイズ、トリミング、フォーマット変換、軽微な編集を含む標準的な変更を生き延び、コンテンツ変換を通じて検出可能性を維持する脆弱なウォーターマークあらゆる編集によって容易に破壊される。その不在または破損は改ざんまたは変更を示し、整合性検証と改ざん検出に有用</p>
+<h2 id="技術的実装">技術的実装</h2>
+<h3 id="ウォーターマーキングのライフサイクル">ウォーターマーキングのライフサイクル</h3>
+<p>埋め込みフェーズコンテンツ生成中(モデルレベル)または後処理(コンテンツレベル)でウォーターマークを挿入。出力作成中の変更されたサンプリングプロセスまたはパターン注入を含む可能性がある検出フェーズ特殊なアルゴリズム(多くの場合、秘密鍵または専有知識が必要)が、疑わしいコンテンツからウォーターマークを抽出または検証する。検出は通常、モデル開発者または認可された第三者に制限される</p>
+<h3 id="コンテンツ固有の技術">コンテンツ固有の技術</h3>
+<p>テキストウォーターマーキング:- 単語選択、同義語選択、または文構造における統計的パターンを埋め込む。人間の読者には見えないがアルゴリズム的に検出可能</p>
+<ul>
+<li>暗号的にシードされたランダム性が、固有の署名をエンコードする特定の言語選択を制御する</li>
+<li>トークン分布操作により、出力頻度分布に検出可能なパターンを作成する</li>
+</ul>
+<p>画像ウォーターマーキング:- 知覚品質を維持しながら、ピクセル値、カラーチャネル、または周波数領域(DCT、DWT)を変更する</p>
+<ul>
+<li><a data-lb="1" href="/ja/glossary/google/" title="Google の用語集ページ">Google</a> SynthIDは堅牢で知覚できない画像ウォーターマーキングの例</li>
+<li>空間的(直接画像)またはスペクトル(周波数表現)埋め込みアプローチ</li>
+</ul>
+<p>音声ウォーターマーキング:- 人間の聴覚閾値以下の特定の周波数帯域または音相に信号を挿入する</p>
+<ul>
+<li>デジタル分析を通じて検出可能だが、リスナーには聞こえない</li>
+<li>一般的な音声処理とフォーマット変換に対して堅牢</li>
+</ul>
+<p>動画ウォーターマーキング:- 画像と音声技術を組み合わせ、フレーム全体またはコーデックレベルでマーカーを埋め込む</p>
+<ul>
+<li>再エンコード、ストリーミング、プラットフォーム固有の処理を通じて持続する</li>
+<li>フレームシーケンス全体で時間的一貫性を維持</li>
+</ul>
+<h3 id="現代的アプローチ">現代的アプローチ</h3>
+<p>統計的ウォーターマーキング:検出可能性と自然な生成パターンのバランスを取りながら、出力確率分布に情報を埋め込む暗号的ウォーターマーキング:生成と検証のために秘密鍵と暗号プリミティブを使用し、検出を認可された当事者に制限するステガノグラフィー:データ内に情報を隠蔽するより広範な分野で、不可視マルチメディアウォーターマークの技術的基盤を形成するデータ出所追跡:ウォーターマーキングの代替として、トレーニングデータに信号を導入するか、出力にデジタル署名する</p>
+<h3 id="オープンシステムとクローズドシステム">オープンシステムとクローズドシステム</h3>
+<p>オープンウォーターマーク:公開文書化されており、普遍的な検出ツールの開発を可能にするが、既知の技術を通じて回避される可能性が高いクローズドウォーターマーク:専有的で、秘密鍵または特殊なアルゴリズムでのみ検出可能。セキュリティを強化するが、透明性と相互運用性に関する懸念を引き起こす</p>
+<h2 id="利点と価値提案">利点と価値提案</h2>
+<p>出所の確立検証可能な起源と作成の証跡を作成し、コンテンツの真正性検証を可能にする認証の信頼性法律、ジャーナリズム、科学、規制対象セクターにとって不可欠な、信頼できるコンテンツ検証を可能にする誤情報の軽減ディープフェイク、操作されたメディア、合成コンテンツの迅速な検出とラベリングをサポートする知的財産の執行技術的な著作権証拠を通じて権利管理と法的手続きを促進する規制遵守監査可能な実装により、AIコンテンツ開示を義務付ける進化する法律をサポートする信頼の強化検証可能な真正性を通じて、デジタルコンテンツエコシステムにおける公共および機関の信頼を強化する</p>
+<h2 id="制限と課題">制限と課題</h2>
+<h3 id="技術的制約">技術的制約</h3>
+<p>堅牢性のトレードオフ:より強力なウォーターマークは知覚品質を低下させる可能性がある。微妙なウォーターマークは高度な除去技術に対して脆弱回避の脆弱性:熟練した敵対者は、テキストを言い換えたり、画像をトリミングしたり、ウォーターマークを除去する変換を適用したりできる。特にテキストにおいて顕著検出精度:<a data-lb="1" href="/ja/glossary/false-positive/" title="偽陽性とは、AIシステム(チャットボット、検知ツール、プライバシーフィルター)が、状況やコンテンツを誤って基準に一致すると識別し、エラーを引き起こすことです。">偽陽性</a>(人間のコンテンツをAI生成と誤分類)と<a data-lb="1" href="/ja/glossary/false-negative/" title="偽陰性とは、チャットボットのようなAIシステムが実際の問題や意図を検出できない状態を指します。自動化における影響、原因、削減戦略について解説します。">偽陰性</a>(変換後のウォーターマーク付きコンテンツを見逃す)相互運用性の問題:ほとんどのスキームはモデル固有であり、普遍的な検出とクロスプラットフォーム検証を複雑にする</p>
+<h3 id="ガバナンスの課題">ガバナンスの課題</h3>
+<p>標準の不在:普遍的なウォーターマーキング標準がないため、断片化、一貫性のない検出能力、実装のばらつきが生じる開発者の協力:有効性には自発的な参加が必要。オープンソースモデルはウォーターマークの回避または無効化のリスクがあるスケーラビリティの懸念:大規模な埋め込みと検出は、計算オーバーヘッドと運用の複雑さをもたらす</p>
+<h3 id="倫理的および法的考慮事項">倫理的および法的考慮事項</h3>
+<p>プライバシーリスク:ウォーターマークは、特にユーザーIDにリンクされている場合、ユーザー追跡または匿名化解除を可能にする可能性がある自律性の制約:必須のウォーターマーキングは、ユーザーの表現、技術の自由、または創造的コントロールを制限する可能性がある悪用の可能性:悪意のある行為者がウォーターマークを偽装したり、AI生成を虚偽に主張したり、評判を傷つけるために検出を武器化したりする可能性がある</p>
+<h2 id="標準化イニシアチブ">標準化イニシアチブ</h2>
+<p>Coalition for Content Provenance and Authenticity (C2PA):デジタルコンテンツの真正性と出所検証のためのオープン標準を開発する業界連合<a data-lb="1" href="/ja/glossary/google-deepmind/" title="Google DeepMindは、Alphabet傘下のAI研究機関であり、AlphaGoやAlphaFoldなどの画期的な成果で知られ、汎用人工知能の発展に貢献しています。">Google DeepMind</a> SynthID:実証された有効性を持つ、AI生成画像とテキストにおける堅牢で知覚できないウォーターマークのフレームワーク<a data-lb="1" href="/ja/glossary/meta/" title="Meta の用語集ページ">Meta</a> Video Seal:クロスプラットフォームの追跡可能性をサポートする合成動画用の専有ウォーターマーキング技術規制の発展:EU AI法と米国大統領令が、AIコンテンツの必須ラベリングと堅牢なウォーターマーキング要件を推進国際電気通信連合(ITU):AIウォーターマーキングとマルチメディア認証のための国際標準開発を促進するグローバルサミット組織</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p>高度な暗号技術:セキュリティと堅牢性を強化する、ニューラル暗号、適応型ウォーターマーキング、量子耐性スキームに関する研究クロスモーダルウォーターマーク:複雑な変換とフォーマット変換を生き延びる、テキスト、画像、音声、動画全体で持続する技術普遍的検出インフラストラクチャ:標準化された公開アクセス可能な検出プロトコルを備えた、ウォーターマーク付きモデルの集中レジストリ透明なフレームワーク:透明性、プライバシー保護、<a data-lb="1" href="/ja/glossary/security-requirements/" title="セキュリティ要件について学ぶ:情報の機密性、完全性、可用性(CIA)を確保するためにシステムが満たすべき明確で実行可能な条件。デジタル資産を保護するために不可欠です。">セキュリティ要件</a>のバランスを取るコミュニティ主導のウォーターマーキングツール倫理的ガバナンス:ユーザーオプトインメカニズム、明確な開示要件、悪用またはプライバシー侵害に対する包括的な保護措置</p>
+<h2 id="実装の概要">実装の概要</h2>
+<table>
+<thead>
+<tr>
+<th>側面</th>
+<th>詳細</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定義</td>
+<td>起源検証のためにAI生成コンテンツに追跡可能な信号を埋め込む</td>
+</tr>
+<tr>
+<td>メディアタイプ</td>
+<td>テキスト、画像、音声、動画、マルチモーダル</td>
+</tr>
+<tr>
+<td>可視性</td>
+<td>可視(明示的)または不可視(隠密)マーカー</td>
+</tr>
+<tr>
+<td>堅牢性</td>
+<td>堅牢(変更を生き延びる)または脆弱(改ざんを示す)</td>
+</tr>
+<tr>
+<td>埋め込み</td>
+<td>モデルレベルの生成または後処理挿入</td>
+</tr>
+<tr>
+<td>検出</td>
+<td>アルゴリズム分析、多くの場合専有鍵または知識が必要</td>
+</tr>
+<tr>
+<td>応用</td>
+<td>出所、認証、IP保護、誤情報軽減、コンプライアンス</td>
+</tr>
+<tr>
+<td>課題</td>
+<td>堅牢性、回避、精度、相互運用性、スケーラビリティ</td>
+</tr>
+<tr>
+<td>政策問題</td>
+<td>標準開発、プライバシー、ユーザー自律性、悪用リスク</td>
+</tr>
+<tr>
+<td>主要イニシアチブ</td>
+<td>C2PA、SynthID、Meta Video Seal、EU AI法、ITU調整</td>
+</tr>
+</tbody>
+</table>
+<h2 id="よくある質問">よくある質問</h2>
+<p>AIウォーターマーキングは従来のデジタルウォーターマーキングとどう違うのですか?AIウォーターマーキングは、統計的出力パターン、大規模な合成コンテンツ、<a data-lb="1" href="/ja/glossary/deepfake-detection/" title="AIが生成または改変したメディアを識別するためのディープフェイク検出技術、手法、ワークフローを探求します。詐欺や誤情報と戦い、デジタル信頼を保護する方法を学びましょう。">ディープフェイク検出</a>を含む生成モデルの独自の課題に対処し、特殊な埋め込みと検出技術を必要とします。ウォーターマークは除去できますか?高度なユーザーは、言い換え(テキスト)、トリミング(画像)、または変換技術を通じて、ウォーターマークを除去または回避できる場合がありますが、堅牢なウォーターマーキングは一般的な変更に耐えます。ウォーターマークはAIコンテンツの検出に完全ですか?いいえ。ウォーターマーキングは強力な証拠を提供しますが、絶対確実ではありません。決意した敵対者は検出を回避する可能性があり、大幅な変換はウォーターマークを破壊する可能性があります。誰がウォーターマーク付きコンテンツを検出できますか?ウォーターマークのタイプによります。オープンウォーターマークは公開検出を可能にします。クローズドウォーターマークは、適切な鍵またはアルゴリズムを持つ認可された当事者に検出を制限します。ウォーターマークはコンテンツ品質にどのように影響しますか?適切に設計されたウォーターマークは知覚できないままで、完全な品質を維持します。堅牢性と知覚不可能性の間にはトレードオフがあり、慎重な最適化が必要です。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>EY. (2024). Identifying AI Generated Content in the Digital Age - The Role of Watermarking. EY Insights.</p>
+</li>
+<li>
+<p>TechTarget. (n.d.). What is AI Watermarking?. TechTarget.</p>
+</li>
+<li>
+<p>Brookings. (n.d.). Detecting AI Fingerprints - A Guide to Watermarking and Beyond. Brookings.</p>
+</li>
+<li>
+<p>ITU. (2024). AI Watermarking - A Watershed for Multimedia Authenticity. ITU Hub.</p>
+</li>
+<li>
+<p>CertLibrary. (n.d.). Understanding AI Watermarking - Definition and Significance. CertLibrary Blog.</p>
+</li>
+<li>
+<p>Access Now. (n.d.). Watermarking &amp; Generative AI - What, How, Why (and Why Not). Access Now.</p>
+</li>
+<li>
+<p><a data-lb="1" href="/ja/glossary/hugging-face/" title="Hugging Face の用語集ページ">Hugging Face</a>. (n.d.). AI Watermarking 101. Hugging Face Blog.</p>
+</li>
+<li>
+<p>Google <a data-lb="1" href="/ja/glossary/google-deepmind/" title="Google DeepMindは、Alphabet傘下のAI研究機関であり、AlphaGoやAlphaFoldなどの画期的な成果で知られ、汎用人工知能の発展に貢献しています。">DeepMind</a>. (n.d.). SynthID - Watermarking AI-Generated Images. DeepMind Blog.</p>
+</li>
+<li>
+<p>C2PA. Coalition for Content Provenance and Authenticity. URL: <a href="https://c2pa.org/" rel="nofollow noopener noreferrer" target="_blank">https://c2pa.org/</a></p>
+</li>
+<li>
+<p>ITU. AI for Good Global Summit. URL: <a href="https://aiforgood.itu.int/summit24/programme/" rel="nofollow noopener noreferrer" target="_blank">https://aiforgood.itu.int/summit24/programme/</a></p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/shadow-ai/">
+                    シャドーAI
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    シャドーAIとは、従業員による生成AI(ジェネレーティブAI)ツールの無許可使用を指し、データセキュリティ、コンプライアンス、知的財産に重大なリスクをもたらします。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/shadow-ai/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/stability-ai/">
+                    Stability AI
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    画像、テキスト、動画生成のための無料の生成AIモデルを開発するオープンソースAI企業。先進的なAI技術をプロプライエタリに保つのではなく、誰もがアクセスできるようにすることを目指しています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/stability-ai/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hallucination/">
+                    ハルシネーション
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIにおける<a data-lb="1" href="/ja/glossary/hallucination/" title="ハルシネーション の用語集ページ">ハルシネーション</a>とは、生成モデルがもっともらしいものの事実として誤っている、意味をなさない、または捏造されたコンテンツを生成することを指します。その原因、種類、リスク、および軽減戦略につい...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hallucination/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hallucination-detection/">
+                    ハルシネーション検出
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ハルシネーション検出について探求します。AIモデル、特にLLMが生成する誤った情報や捏造された情報を識別するために使用される技術とワークフローを解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hallucination-detection/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/prompts/">
+                    プロンプト
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIプロンプトについて学ぶ:定義、重要性、効果的なプロンプトの書き方、ベストプラクティス、AIチャットボットと自動化システムへの応用。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/prompts/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/artificial-intelligence/">
+                    人工知能(AI)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    人工知能(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/artificial-intelligence/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/watermarking/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

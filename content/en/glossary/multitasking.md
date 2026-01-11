@@ -3,7 +3,7 @@ title: "Multitasking"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "multitasking"
-description: "Multitasking is attempting to do multiple tasks at once or switch between them rapidly, though research shows it usually reduces efficiency and work quality."
+description: "Multitasking is attempting to do multiple tasks at once or switch between them rapidly, though research shows it usually reduces efficiency and work quality rather than boosting productivity."
 keywords: ["multitasking", "task switching", "cognitive load", "productivity", "AI chatbots"]
 category: "AI Chatbot & Automation"
 type: "glossary"
@@ -12,7 +12,7 @@ draft: false
 
 ## What Is Multitasking?
 
-**Multitasking**is the act of performing two or more tasks either concurrently or in rapid succession. In practice, this might mean responding to emails during a meeting, juggling multiple browser tabs for research, or switching between preparing a report and handling instant messages. While multitasking is often thought of as a productivity enhancer, extensive scientific research shows that it generally impedes both efficiency and work quality.
+**Multitasking** is the act of performing two or more tasks either concurrently or in rapid succession. In practice, this might mean responding to emails during a meeting, juggling multiple browser tabs for research, or switching between preparing a report and handling instant messages. While multitasking is often thought of as a productivity enhancer, extensive scientific research shows that it generally impedes both efficiency and work quality.
 
 ### Technical Definition
 
@@ -63,9 +63,9 @@ Here, multitasking relies on computational parallelism, which is fundamentally d
 ### Task Switching vs. Parallel Processing
 
 Human brains do not process complex tasks in parallel. Instead, they engage in **task switching**—quickly alternating attention between different tasks. This process is governed by several key cognitive functions:
-- **Goal Shifting:**Deciding to move focus to a new task.
-- **Rule Activation:**Suppressing the “mental rules” of the previous task and activating those for the new task.
-- **Executive Control:**Overseeing and coordinating these shifts.
+- **Goal Shifting:** Deciding to move focus to a new task.
+- **Rule Activation:** Suppressing the “mental rules” of the previous task and activating those for the new task.
+- **Executive Control:** Overseeing and coordinating these shifts.
 
 These transitions, though rapid, are not seamless. They introduce **switch costs**: brief periods of reduced efficiency, higher error rates, and increased vulnerability to distraction. [Wake Forest News](https://news.wfu.edu/2024/04/16/the-switch-cost-of-multitasking/), [APA: Switching Costs](https://www.apa.org/topics/research/multitasking)
 
@@ -82,43 +82,43 @@ Additional reading:
 
 ### Impact on Productivity
 
-- **Reduced Efficiency:**Research demonstrates that multitasking slows progress on tasks compared to unitasking. The time lost in shifting mental gears accumulates, making multitasking less productive overall.
+- **Reduced Efficiency:** Research demonstrates that multitasking slows progress on tasks compared to unitasking. The time lost in shifting mental gears accumulates, making multitasking less productive overall.
   - [APA: “Multitasking Undermines Our Efficiency, Study Suggests”](https://www.apa.org/monitor/oct01/multitask)
   - [Journal of Experimental Psychology: Task Switching](https://www.apa.org/pubs/journals/releases/xhp274763.pdf)
-- **Increased Errors:**Error rates rise when juggling multiple tasks, especially critical in high-stakes settings like driving or healthcare.
-- **Lower Work Quality:**Fragmented attention leads to shallow or incomplete work.
-- **Illusion of Productivity:**Many feel busier when multitasking, but objective measures show declines in output and quality.
+- **Increased Errors:** Error rates rise when juggling multiple tasks, especially critical in high-stakes settings like driving or healthcare.
+- **Lower Work Quality:** Fragmented attention leads to shallow or incomplete work.
+- **Illusion of Productivity:** Many feel busier when multitasking, but objective measures show declines in output and quality.
 
 ### Effects on Brain Health
 
-- **Impaired Attention:**Frequent multitaskers report more difficulty focusing, even when single-tasking.
-- **Increased Distractibility:**Heavy media multitaskers show poorer sustained attention and more activity in brain regions linked to distraction.
-- **Stress and Fatigue:**Multitasking elevates stress hormones, raising blood pressure and heart rate; chronic exposure can contribute to anxiety, depression, and cognitive decline.
-- **Structural Changes:**Some research links heavy multitasking to reduced volume in brain areas involved in emotional regulation and attention, though causality is unclear.
+- **Impaired Attention:** Frequent multitaskers report more difficulty focusing, even when single-tasking.
+- **Increased Distractibility:** Heavy media multitaskers show poorer sustained attention and more activity in brain regions linked to distraction.
+- **Stress and Fatigue:** Multitasking elevates stress hormones, raising blood pressure and heart rate; chronic exposure can contribute to anxiety, depression, and cognitive decline.
+- **Structural Changes:** Some research links heavy multitasking to reduced volume in brain areas involved in emotional regulation and attention, though causality is unclear.
   - [PBI: How Multitasking Adversely Affects Your Brain](https://www.pbi.org/blog/how-multitasking-adversely-affects-your-brain)
   - [Cleveland Clinic: Why Multitasking Doesn’t Work](https://health.clevelandclinic.org/science-clear-multitasking-doesnt-work/)
 
 ### Organizational and Team Impact
 
-- **Miscommunication:**Team multitasking leads to more missed information, misunderstandings, and errors.
-- **Missed Deadlines:**Divided attention among team members increases risk of overlooked tasks.
-- **Reduced Collaboration:**Focus is diluted, making it harder to achieve deep, high-quality work.
+- **Miscommunication:** Team multitasking leads to more missed information, misunderstandings, and errors.
+- **Missed Deadlines:** Divided attention among team members increases risk of overlooked tasks.
+- **Reduced Collaboration:** Focus is diluted, making it harder to achieve deep, high-quality work.
   - [USC MAPP: How to Combat Multitasking in Teams](https://appliedpsychologydegree.usc.edu/blog/benefits-of-multitasking)
 
 ## Examples and Use Cases
 
 ### Personal and Professional Scenarios
 
-- **Emails and Meetings:**Attempting to answer emails during a video call impairs comprehension and memory for both.
-- **Media Multitasking:**Watching TV while scrolling social media, common among adolescents, can impair cognitive development and academic performance.
-- **Driving with Distractions:**Using a phone or adjusting navigation while driving compromises attention and increases accident risk.
-- **Customer Service:**Human agents handling multiple chat windows simultaneously are more prone to mistakes and provide slower responses.
+- **Emails and Meetings:** Attempting to answer emails during a video call impairs comprehension and memory for both.
+- **Media Multitasking:** Watching TV while scrolling social media, common among adolescents, can impair cognitive development and academic performance.
+- **Driving with Distractions:** Using a phone or adjusting navigation while driving compromises attention and increases accident risk.
+- **Customer Service:** Human agents handling multiple chat windows simultaneously are more prone to mistakes and provide slower responses.
 
 ### Automation and AI Bots
 
-- **Chatbots Handling Multiple Conversations:**Unlike humans, chatbots can genuinely process many threads at once, provided they have the necessary computational resources.
-- **Virtual Assistants:**Set reminders, answer queries, and update calendars in parallel.
-- **Customer Support Bots:**Process requests, escalate issues, and retrieve information concurrently.
+- **Chatbots Handling Multiple Conversations:** Unlike humans, chatbots can genuinely process many threads at once, provided they have the necessary computational resources.
+- **Virtual Assistants:** Set reminders, answer queries, and update calendars in parallel.
+- **Customer Support Bots:** Process requests, escalate issues, and retrieve information concurrently.
 
 For an overview of AI multitasking:
 - [DevRev: Chatbot Automation](https://devrev.ai/blog/chatbot-automation)
@@ -128,25 +128,38 @@ For an overview of AI multitasking:
 
 ### Common Myths
 
-- **"Multitasking makes you more efficient."**Evidence shows most people complete tasks more slowly and make more errors when multitasking. [APA: Multitasking Myths](https://www.apa.org/monitor/oct01/multitask)
-- **"Some people are 'natural' multitaskers."**While distractibility and executive function vary, most people perform worse when tested on multitasking.
-- **"Multitasking improves brain health."**Engaging in simultaneous attention-heavy tasks does not "exercise" the brain beneficially and may increase cognitive fatigue.
+- **"Multitasking makes you more efficient."**  
+  Evidence shows most people complete tasks more slowly and make more errors when multitasking. [APA: Multitasking Myths](https://www.apa.org/monitor/oct01/multitask)
+- **"Some people are 'natural' multitaskers."**  
+  While distractibility and executive function vary, most people perform worse when tested on multitasking.
+- **"Multitasking improves brain health."**  
+  Engaging in simultaneous attention-heavy tasks does not "exercise" the brain beneficially and may increase cognitive fatigue.
 
 ### When Multitasking Is Less Harmful
 
-- **Automatic + Focused Task:**Combining an automatic activity (walking) with a mental one (listening to an audiobook) is usually manageable.
-- **Batching Similar Tasks:**Grouping similar, lower-demand tasks (processing emails in one session) is more efficient than constant switching.
+- **Automatic + Focused Task:**  
+  Combining an automatic activity (walking) with a mental one (listening to an audiobook) is usually manageable.
+- **Batching Similar Tasks:**  
+  Grouping similar, lower-demand tasks (processing emails in one session) is more efficient than constant switching.
 
 ## Strategies to Reduce Multitasking and Improve Focus
 
-1. **Time Blocking:**Allocate periods for deep, undistracted work on one task at a time.
-2. **Batch Processing:**Handle similar tasks together to reduce switching costs.
-3. **Limit Distractions:**Turn off notifications, close unnecessary tabs, and create a quiet workspace.
-4. **Mindfulness Practice:**Regular exercises improve your awareness of attention drift and make it easier to return to single-task focus.
-5. **Set Communication Schedules:**Check and respond to messages at set times, not reactively.
-6. **Workspace Declutter:**Minimize visual and digital clutter to reduce cognitive overload.
-7. **Prioritize Tasks:**Use to-do lists and rank high-impact activities to avoid unnecessary context switching.
-8. **Team Agreements:**Establish team norms for focused work—meeting-free periods, clear communication, and shared expectations.
+1. **Time Blocking:**  
+   Allocate periods for deep, undistracted work on one task at a time.
+2. **Batch Processing:**  
+   Handle similar tasks together to reduce switching costs.
+3. **Limit Distractions:**  
+   Turn off notifications, close unnecessary tabs, and create a quiet workspace.
+4. **Mindfulness Practice:**  
+   Regular exercises improve your awareness of attention drift and make it easier to return to single-task focus.
+5. **Set Communication Schedules:**  
+   Check and respond to messages at set times, not reactively.
+6. **Workspace Declutter:**  
+   Minimize visual and digital clutter to reduce cognitive overload.
+7. **Prioritize Tasks:**  
+   Use to-do lists and rank high-impact activities to avoid unnecessary context switching.
+8. **Team Agreements:**  
+   Establish team norms for focused work—meeting-free periods, clear communication, and shared expectations.
 
 For more strategies:
 - [Harvard Business Review: Spend Less Time on Email](https://hbr.org/2019/01/how-to-spend-way-less-time-on-email-every-day)
@@ -156,13 +169,17 @@ For more strategies:
 
 ### Chatbots
 
-- **Simultaneous Query Handling:**AI chatbots can truly manage multiple conversations, access databases, and provide information in parallel, with no performance loss—unlike humans.
-- **Workflow Automation:**Automated systems process orders, update records, and send notifications at the same time.
+- **Simultaneous Query Handling:**  
+  AI chatbots can truly manage multiple conversations, access databases, and provide information in parallel, with no performance loss—unlike humans.
+- **Workflow Automation:**  
+  Automated systems process orders, update records, and send notifications at the same time.
 
 ### Human-AI Collaboration
 
-- **Reducing Cognitive Load:**By offloading routine or information-heavy tasks to automation, humans can focus on higher-level, single-focus work.
-- **Task Batching:**Bots can schedule or suggest optimal times for task batches, nudging users to avoid unnecessary multitasking.
+- **Reducing Cognitive Load:**  
+  By offloading routine or information-heavy tasks to automation, humans can focus on higher-level, single-focus work.
+- **Task Batching:**  
+  Bots can schedule or suggest optimal times for task batches, nudging users to avoid unnecessary multitasking.
 
 Detailed guides and best practices:
 - [Smartsupp: Using AI for Customer Support](https://www.smartsupp.com/blog/using-AI-for-customer-support-2025/)
@@ -170,30 +187,42 @@ Detailed guides and best practices:
 
 ## Frequently Asked Questions
 
-**Is multitasking ever beneficial?**Rarely, and only when combining a fully automated task (like walking) with a focus-demanding one. Two complex tasks at once typically degrade performance.**Why do I feel more productive when multitasking?**The sensation of busyness gives an illusion of productivity, but objective data (task completion, errors) usually shows the opposite.**Can multitasking be improved with practice?**Practice may slightly reduce switch costs, but biology imposes limits. Most people’s performance drops when managing more than one complex task.**Should I list multitasking as a skill on my resume?**Use caution—employers increasingly value focus, attention to detail, and deep work over the ability to juggle many tasks.**Does multitasking harm brain health long-term?**Chronic multitasking can increase stress, impair attention, and is linked to structural brain changes. The full long-term impact remains under study.
+**Is multitasking ever beneficial?**  
+Rarely, and only when combining a fully automated task (like walking) with a focus-demanding one. Two complex tasks at once typically degrade performance.
+
+**Why do I feel more productive when multitasking?**  
+The sensation of busyness gives an illusion of productivity, but objective data (task completion, errors) usually shows the opposite.
+
+**Can multitasking be improved with practice?**  
+Practice may slightly reduce switch costs, but biology imposes limits. Most people’s performance drops when managing more than one complex task.
+
+**Should I list multitasking as a skill on my resume?**  
+Use caution—employers increasingly value focus, attention to detail, and deep work over the ability to juggle many tasks.
+
+**Does multitasking harm brain health long-term?**  
+Chronic multitasking can increase stress, impair attention, and is linked to structural brain changes. The full long-term impact remains under study.
 
 ## Related Terms
 
-- **Task Switching:**Alternating attention between tasks, incurring efficiency and accuracy costs. [APA: Task Switching](https://www.apa.org/topics/research/multitasking)
-- **Executive Function:**Higher-order cognitive processes for planning, shifting attention, and inhibiting distractions.
-- **Cognitive Load:**The total mental effort in working memory.
-- **Media Multitasking:**Simultaneous use of multiple media sources; linked to greater distractibility and poorer attention.
+- **Task Switching:** Alternating attention between tasks, incurring efficiency and accuracy costs. [APA: Task Switching](https://www.apa.org/topics/research/multitasking)
+- **Executive Function:** Higher-order cognitive processes for planning, shifting attention, and inhibiting distractions.
+- **Cognitive Load:** The total mental effort in working memory.
+- **Media Multitasking:** Simultaneous use of multiple media sources; linked to greater distractibility and poorer attention.
   - [Frontiers in Psychology: Media Multitasking](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7905209/)
 
 ## References
 
-
-1. Wake Forest University News. (2024). The 'switch cost' of multitasking. WFU News.
-2. USC MAPP Online. (n.d.). Are There Benefits of Multitasking?. USC Applied Psychology Blog.
-3. American Psychological Association. (n.d.). Multitasking: Switching Costs. APA Topics.
-4. Journal of Experimental Psychology. (n.d.). Task Switching. APA Publications.
-5. Cleveland Clinic. (n.d.). Why Multitasking Doesn't Work. Cleveland Clinic Health.
-6. Pennsylvania Bar Institute. (n.d.). How Multitasking Adversely Affects Your Brain. PBI Blog.
-7. Harvard Business Review. (2019). How to Spend Less Time on Email Every Day. HBR.
-8. Smartsupp. (n.d.). Mastering Multitasking in Live Chat. Smartsupp Blog. URL: https://www.smartsupp.com/blog/mastering-multitasking-how-to-handle-multiple-live-chats/
-9. DevRev. (n.d.). Chatbot Automation. DevRev Blog. URL: https://devrev.ai/blog/chatbot-automation
-10. Frontiers in Psychology. (n.d.). Media Multitasking. NCBI.
-11. ScienceDirect. (n.d.). Multitasking Overview. ScienceDirect Topics.
+1. [Wake Forest University News: The ‘switch cost’ of multitasking](https://news.wfu.edu/2024/04/16/the-switch-cost-of-multitasking/)
+2. [USC MAPP Online: Are There Benefits of Multitasking?](https://appliedpsychologydegree.usc.edu/blog/benefits-of-multitasking)
+3. [American Psychological Association, Multitasking: Switching Costs](https://www.apa.org/topics/research/multitasking)
+4. [Journal of Experimental Psychology: Task Switching](https://www.apa.org/pubs/journals/releases/xhp274763.pdf)
+5. [Cleveland Clinic: Why Multitasking Doesn’t Work](https://health.clevelandclinic.org/science-clear-multitasking-doesnt-work/)
+6. [Pennsylvania Bar Institute: How Multitasking Adversely Affects Your Brain](https://www.pbi.org/blog/how-multitasking-adversely-affects-your-brain/)
+7. [Harvard Business Review: How to Spend Less Time on Email Every Day](https://hbr.org/2019/01/how-to-spend-way-less-time-on-email-every-day)
+8. [Smartsupp: Mastering Multitasking in Live Chat](https://www.smartsupp.com/blog/mastering-multitasking-how-to-handle-multiple-live-chats/)
+9. [DevRev: Chatbot Automation](https://devrev.ai/blog/chatbot-automation)
+10. [Frontiers in Psychology: Media Multitasking](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7905209/)
+11. [ScienceDirect: Multitasking Overview](https://www.sciencedirect.com/topics/psychology/multitasking)
 
 ## Further Reading & Video
 

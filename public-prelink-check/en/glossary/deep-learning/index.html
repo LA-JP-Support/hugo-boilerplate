@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Deep Learning | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/deep-learning/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/deep-learning/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/deep-learning/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/deep-learning/" hreflang="x-default" rel="alternate"/>
+<meta content="A machine learning technology that uses layered artificial networks inspired by the human brain to automatically learn patterns from data, powering applications like image recognition and language understanding." name="description"/>
+<meta content="deep learning, neural networks, machine learning, artificial intelligence, AI chatbots" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/deep-learning/" property="og:url"/>
+<meta content="Deep Learning | SmartWeb" property="og:title"/>
+<meta content="A machine learning technology that uses layered artificial networks inspired by the human brain to automatically learn patterns from data, powering applications like image recognition and language understanding." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/deep-learning/" name="twitter:url"/>
+<meta content="Deep Learning | SmartWeb" name="twitter:title"/>
+<meta content="A machine learning technology that uses layered artificial networks inspired by the human brain to automatically learn patterns from data, powering applications like image recognition and language understanding." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Deep Learning</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Deep Learning
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A machine learning technology that uses layered artificial networks inspired by the human brain to automatically learn patterns from data, powering applications like image recognition and language understanding.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                deep learning
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                neural networks
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                machine learning
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                artificial intelligence
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI chatbots
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-deep-learning">What is Deep Learning?</h2>
+<p>Deep learning is a specialized branch of machine learning and <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">artificial intelligence (AI)</a> that uses multi-layered artificial <a data-lb="1" href="/en/glossary/neural-networks/" title="Neural Networks glossary entry">neural networks</a> to learn, extract, and model complex patterns from large and often unstructured datasets. The architecture of deep learning algorithms draws inspiration from the structure and functioning of the human brain, enabling computers to handle sophisticated tasks such as image recognition, natural language understanding, speech processing, autonomous decision-making, and creative content generation.</p>
+<p>The term “deep” refers to the multiple layers of processing nodes (neurons) that transform input data through increasingly abstract representations. Unlike traditional machine learning approaches that require manual feature engineering—where human experts must identify and extract relevant characteristics from data—deep learning models automatically discover hierarchical features directly from raw data. This capability has revolutionized fields ranging from computer vision and natural language processing to robotics and drug discovery.</p>
+<p>Deep learning represents a paradigm shift in how machines learn. Traditional programming involves writing explicit rules and logic to solve problems. Machine learning takes a step forward by learning patterns from examples. Deep learning extends this further by learning not just patterns but the optimal representations of data itself, discovering features that even human experts might not recognize as relevant. This automatic feature learning, combined with the ability to process massive datasets and leverage modern computational power, has made deep learning the foundation of contemporary AI breakthroughs.</p>
+<p>The explosive growth of deep learning since the early 2010s stems from three converging factors: the availability of vast datasets for training (big data), dramatic increases in computational power particularly through GPUs (graphics processing units), and algorithmic innovations that enable effective training of very deep networks. These advances have transformed deep learning from a theoretical curiosity into a practical technology that powers everything from smartphone face recognition to autonomous vehicles to medical diagnosis systems.</p>
+<h2 id="how-deep-learning-works">How Deep Learning Works</h2>
+<h3 id="neural-networks-architecture-and-mechanisms">Neural Networks: Architecture and Mechanisms</h3>
+<p>Artificial neural networks are computational structures inspired by biological neural networks in animal brains. Each network consists of interconnected layers of artificial neurons that process and transform information:</p>
+<p><strong>Input Layer</strong><br/>
+Receives raw data in its original form—pixel values for images, word embeddings for text, or numerical features for structured data. The input layer passes this information forward without transformation, serving as the entry point for data into the network.</p>
+<p><strong>Hidden Layers</strong><br/>
+Intermediate layers where the actual learning and feature extraction occurs. Each neuron in a hidden layer receives inputs from the previous layer, applies mathematical transformations through weights and activation functions, and passes results to the next layer. Multiple hidden layers enable the learning of increasingly complex and abstract representations. A network with many hidden layers is considered “deep,” hence the name deep learning.</p>
+<p><strong>Output Layer</strong><br/>
+Produces the final result—class probabilities for classification tasks, continuous values for regression, generated sequences for language models, or reconstructed data for autoencoders. The structure of the output layer depends on the specific task the network aims to solve.</p>
+<h3 id="layers-and-hierarchical-feature-learning">Layers and Hierarchical Feature Learning</h3>
+<p>The power of deep learning lies in hierarchical feature extraction across layers. Each layer builds upon representations learned by previous layers, progressively transforming raw input into increasingly abstract and meaningful representations.</p>
+<p>For image recognition, early layers might detect simple features like edges, corners, and textures—basic building blocks of visual information. Middle layers combine these simple features into more complex shapes, parts of objects, and patterns. Deeper layers recognize complete objects, scenes, and contextual relationships. This hierarchical organization mirrors how visual processing works in biological brains, where information flows from simple visual features to complex object recognition.</p>
+<p>In natural language processing, early layers might learn character or word-level patterns, middle layers capture syntactic structures and grammatical relationships, and deep layers understand semantic meaning, context, and pragmatic nuances. This automatic discovery of hierarchical representations eliminates the need for manual feature engineering and enables models to learn optimal representations for specific tasks.</p>
+<h3 id="weights-biases-and-activation-functions">Weights, Biases, and Activation Functions</h3>
+<p>Neural networks learn through adjusting internal parameters:</p>
+<p><strong>Weights</strong><br/>
+Numerical parameters that represent the strength and direction of connections between neurons. During training, weights are iteratively adjusted to minimize the difference between predicted and actual outputs. The specific values of millions or billions of weights in a network encode the learned patterns and knowledge.</p>
+<p><strong>Biases</strong><br/>
+Additional parameters added to each neuron that provide flexibility in fitting data. Biases allow neurons to shift their activation functions, enabling better modeling of complex patterns.</p>
+<p><strong>Activation Functions</strong><br/>
+Nonlinear functions applied to weighted sums of inputs, introducing the nonlinearity essential for modeling complex relationships. Common activation functions include:</p>
+<ul>
+<li>ReLU (Rectified Linear Unit): Most widely used, outputs zero for negative inputs and the input value for positive inputs</li>
+<li>Sigmoid: Squashes outputs to range 0-1, useful for probability outputs</li>
+<li>Tanh: Squashes outputs to range -1 to 1, often used in recurrent networks</li>
+<li>Softmax: Converts output values into probability distributions, used for multi-class classification</li>
+</ul>
+<p>Without nonlinear activation functions, multiple layers would collapse into a single linear transformation, eliminating the benefit of depth.</p>
+<h3 id="forward-propagation-and-prediction">Forward Propagation and Prediction</h3>
+<p>During forward propagation, data flows from input through hidden layers to output:</p>
+<ol>
+<li>Input data enters the network</li>
+<li>Each layer applies linear transformations (weighted sums) followed by nonlinear activation functions</li>
+<li>Information flows forward through all layers</li>
+<li>The output layer produces predictions</li>
+</ol>
+<p>This process happens very quickly even with millions of parameters, particularly when accelerated by specialized hardware like GPUs.</p>
+<h3 id="loss-functions-and-error-measurement">Loss Functions and Error Measurement</h3>
+<p>Loss functions quantify how far predictions deviate from actual targets:</p>
+<ul>
+<li><strong>Mean Squared Error (MSE)</strong>: For regression tasks, measures average squared differences</li>
+<li><strong>Cross-Entropy Loss</strong>: For classification, measures difference between predicted and true probability distributions</li>
+<li><strong>Custom Loss Functions</strong>: Designed for specific applications like object detection, semantic segmentation, or generative models</li>
+</ul>
+<p>The choice of loss function profoundly impacts what the network learns and how it behaves.</p>
+<h3 id="backpropagation-and-learning">Backpropagation and Learning</h3>
+<p>Backpropagation is the algorithm that enables neural networks to learn from data:</p>
+<ol>
+<li><strong>Forward Pass</strong>: Input data flows through the network to generate predictions</li>
+<li><strong>Loss Calculation</strong>: The loss function measures prediction error</li>
+<li><strong>Gradient Computation</strong>: Backpropagation calculates how much each weight contributed to the error by computing gradients of the loss with respect to all parameters</li>
+<li><strong>Parameter Update</strong>: Optimization algorithms (typically variants of gradient descent) adjust weights to reduce the loss</li>
+</ol>
+<p>This process repeats thousands or millions of times across many training examples, gradually improving the network’s performance. Modern deep learning uses sophisticated optimization algorithms like Adam, RMSprop, or AdamW that adapt learning rates for different parameters and accelerate convergence.</p>
+<p>The remarkable aspect of backpropagation is its efficiency—it calculates gradients for millions of parameters in reasonable time through clever application of the chain rule from calculus. This makes training very deep networks computationally feasible.</p>
+<h2 id="types-of-neural-networks">Types of Neural Networks</h2>
+<p>Deep learning encompasses diverse neural network architectures, each designed for specific data types and tasks:</p>
+<h3 id="1-feedforward-neural-networks-fnns">1. Feedforward Neural Networks (FNNs)</h3>
+<p>The simplest architecture where information flows in one direction from input to output without cycles. Fully connected layers connect every neuron in one layer to every neuron in the next. Used for basic classification and regression on structured, tabular data.</p>
+<h3 id="2-multilayer-perceptrons-mlps">2. Multilayer Perceptrons (MLPs)</h3>
+<p>Feedforward networks with one or more hidden layers. Despite their simplicity, MLPs can approximate any continuous function given sufficient hidden units (universal approximation theorem). They serve as building blocks for more complex architectures.</p>
+<h3 id="3-convolutional-neural-networks-cnns">3. Convolutional Neural Networks (CNNs)</h3>
+<p>Specifically designed for grid-structured data like images and video. CNNs use convolutional layers that apply filters to detect local patterns, pooling layers that downsample feature maps, and fully connected layers for final classification.</p>
+<p><strong>Key Innovations:</strong></p>
+<ul>
+<li>Local receptive fields capture spatial relationships</li>
+<li>Weight sharing across spatial locations reduces parameters</li>
+<li>Translation invariance recognizes patterns regardless of position</li>
+<li>Hierarchical feature learning from edges to complex objects</li>
+</ul>
+<p><strong>Applications:</strong> Image classification, object detection, facial recognition, medical <a data-lb="1" href="/en/glossary/image-analysis/" title="Image Analysis glossary entry">image analysis</a>, autonomous vehicle perception, video analysis.</p>
+<p><strong>Notable Architectures:</strong> LeNet, AlexNet, VGGNet, ResNet, Inception, EfficientNet, Vision Transformers.</p>
+<h3 id="4-recurrent-neural-networks-rnns">4. Recurrent Neural Networks (RNNs)</h3>
+<p>Designed for sequential data where order matters. RNNs maintain internal hidden states that capture information from previous time steps, enabling processing of sequences of variable length.</p>
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li>Loops in network architecture allow information persistence</li>
+<li>Share parameters across time steps</li>
+<li>Process one element at a time while maintaining memory</li>
+</ul>
+<p><strong>Challenges:</strong> Vanilla RNNs suffer from vanishing and exploding gradient problems when learning long-range dependencies.</p>
+<p><strong>Applications:</strong> Time series forecasting, <a data-lb="1" href="/en/glossary/speech-recognition/" title="Speech Recognition glossary entry">speech recognition</a>, music generation, video captioning, sequential decision-making.</p>
+<h3 id="5-long-short-term-memory-lstm-networks">5. Long Short-Term Memory (LSTM) Networks</h3>
+<p>Advanced RNN variant designed to address long-term dependency problems. LSTMs use gating mechanisms (input, forget, and output gates) to control information flow, enabling learning of relationships across long sequences.</p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Maintain information over long sequences</li>
+<li>Selectively forget irrelevant information</li>
+<li>Protect against vanishing gradients</li>
+</ul>
+<p><strong>Applications:</strong> Machine translation, speech recognition, handwriting recognition, language modeling, time series with long-term patterns.</p>
+<h3 id="6-gated-recurrent-units-grus">6. Gated Recurrent Units (GRUs)</h3>
+<p>Simplified LSTM variant with fewer parameters. GRUs merge the forget and input gates into a single update gate, making them faster to train while maintaining similar performance to LSTMs for many tasks.</p>
+<h3 id="7-transformer-networks">7. Transformer Networks</h3>
+<p>Revolutionary architecture that has become dominant for natural language processing and increasingly for other domains. Transformers use self-attention mechanisms to process entire sequences simultaneously rather than sequentially.</p>
+<p><strong>Key Innovations:</strong></p>
+<ul>
+<li>Self-attention mechanisms capture relationships between all positions</li>
+<li>Parallel processing enables training on massive datasets</li>
+<li>Positional encodings maintain sequence order information</li>
+<li>Multi-head attention captures different types of relationships</li>
+</ul>
+<p><strong>Impact:</strong> Transformers power modern <a data-lb="1" href="/blog/how-to-use-large-language-models-effectively/" title="Learn practical applications of large language models like ChatGPT, explore different LLM platforms, understand how these models work under the hood, and discover how to leverage them effectively in your daily work and life.">large language models</a> (GPT, BERT, Claude, etc.) and increasingly replace RNNs for sequential data processing.</p>
+<p><strong>Applications:</strong> Language translation, text generation, question answering, code generation, protein structure prediction, image generation (DALL-E).</p>
+<h3 id="8-autoencoders">8. Autoencoders</h3>
+<p><a data-lb="1" href="/en/glossary/unsupervised-learning/" title="Unsupervised Learning glossary entry">Unsupervised learning</a> architecture that learns compressed representations of data. Autoencoders consist of an encoder that compresses input into a latent representation and a decoder that reconstructs the input from this representation.</p>
+<p><strong>Types:</strong></p>
+<ul>
+<li>Vanilla Autoencoders: Basic compression and reconstruction</li>
+<li>Variational Autoencoders (VAEs): Generate new samples by learning probability distributions</li>
+<li>Denoising Autoencoders: Learn robust representations by reconstructing corrupted inputs</li>
+</ul>
+<p><strong>Applications:</strong> Dimensionality reduction, anomaly detection, data denoising, feature learning, generative modeling.</p>
+<h3 id="9-generative-adversarial-networks-gans">9. Generative Adversarial Networks (GANs)</h3>
+<p>Consist of two networks in competition: a generator creates synthetic data, and a discriminator distinguishes real from generated data. Through adversarial training, the generator learns to create increasingly realistic outputs.</p>
+<p><strong>Training Process:</strong></p>
+<ul>
+<li>Generator creates fake samples</li>
+<li>Discriminator attempts to classify real vs. fake</li>
+<li>Both networks improve through competition</li>
+<li>Training reaches equilibrium when discriminator cannot distinguish real from fake</li>
+</ul>
+<p><strong>Applications:</strong> Image synthesis, style transfer, super-resolution, data augmentation, video generation, deepfake creation.</p>
+<p><strong>Notable Variants:</strong> DCGAN, StyleGAN, CycleGAN, Progressive GAN, Conditional GAN.</p>
+<h3 id="10-graph-neural-networks-gnns">10. Graph Neural Networks (GNNs)</h3>
+<p>Process data structured as graphs (<a data-lb="1" href="/en/glossary/nodes-and-edges/" title="Nodes and Edges glossary entry">nodes and edges</a>). GNNs aggregate information from neighboring nodes to learn representations that capture graph structure.</p>
+<p><strong>Applications:</strong> Social network analysis, molecular property prediction, recommendation systems, traffic forecasting, knowledge graphs.</p>
+<h3 id="11-capsule-networks">11. Capsule Networks</h3>
+<p>Alternative architecture designed to better capture spatial hierarchies and viewpoint variations. Capsule networks use groups of neurons (capsules) to represent different properties of entities.</p>
+<h3 id="12-residual-networks-resnets">12. Residual Networks (ResNets)</h3>
+<p>Introduced skip connections that allow gradients to flow directly through network layers, enabling training of very deep networks (100+ layers). ResNets revolutionized image recognition by demonstrating that deeper networks could achieve better performance.</p>
+<h2 id="deep-learning-vs-machine-learning-vs-ai">Deep Learning vs. Machine Learning vs. AI</h2>
+<p>Understanding the relationship between these concepts clarifies their scope and applications:</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Artificial Intelligence (AI)</th>
+<th>Machine Learning (ML)</th>
+<th>Deep Learning (DL)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td>Broad field of creating intelligent systems</td>
+<td>AI subset focused on learning from data</td>
+<td>ML subset using deep neural networks</td>
+</tr>
+<tr>
+<td><strong>Scope</strong></td>
+<td>Encompasses all intelligent systems</td>
+<td>Pattern recognition and prediction</td>
+<td>Automatic feature learning from raw data</td>
+</tr>
+<tr>
+<td><strong>Feature Engineering</strong></td>
+<td>Varies by approach</td>
+<td>Often requires manual feature extraction</td>
+<td>Automatic feature learning</td>
+</tr>
+<tr>
+<td><strong>Data Requirements</strong></td>
+<td>Varies widely</td>
+<td>Moderate datasets often sufficient</td>
+<td>Requires large datasets for best performance</td>
+</tr>
+<tr>
+<td><strong>Model Complexity</strong></td>
+<td>Ranges from simple rules to complex systems</td>
+<td>Moderate complexity</td>
+<td>Highly complex with millions of parameters</td>
+</tr>
+<tr>
+<td><strong>Hardware Requirements</strong></td>
+<td>Varies by application</td>
+<td>Standard CPUs often sufficient</td>
+<td>Requires GPUs/TPUs for efficient training</td>
+</tr>
+<tr>
+<td><strong>Interpretability</strong></td>
+<td>Depends on approach</td>
+<td>Generally interpretable</td>
+<td>Often “black box” with limited interpretability</td>
+</tr>
+<tr>
+<td><strong>Examples</strong></td>
+<td>Expert systems, robotics, game playing</td>
+<td>Spam filters, credit scoring, recommendation</td>
+<td>Image recognition, language translation, speech synthesis</td>
+</tr>
+<tr>
+<td><strong>Historical Development</strong></td>
+<td>1950s onwards</td>
+<td>1980s-1990s mainstream</td>
+<td>2010s breakthrough and rapid adoption</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hierarchy:</strong> AI encompasses ML, which encompasses DL. Deep learning represents the current frontier of machine learning, achieving superhuman performance on many perceptual and cognitive tasks previously thought to require human intelligence.</p>
+<h2 id="applications-and-real-world-use-cases">Applications and Real-World Use Cases</h2>
+<p>Deep learning transforms industries through diverse applications:</p>
+<h3 id="computer-vision">Computer Vision</h3>
+<p><strong>Image Classification</strong><br/>
+Categorizing images into predefined classes. Applications include medical diagnosis from X-rays and MRI scans, agricultural crop disease detection, wildlife <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a>, and quality control in manufacturing.</p>
+<p><strong>Object Detection</strong><br/>
+Locating and classifying multiple objects within images or video streams. Powers autonomous vehicle perception, surveillance systems, retail checkout automation, and industrial robotics.</p>
+<p><strong>Semantic Segmentation</strong><br/>
+Classifying every pixel in an image by category. Used for medical image analysis (tumor delineation), autonomous driving (road scene understanding), satellite imagery analysis, and augmented reality.</p>
+<p><strong>Face Recognition</strong><br/>
+Identifying individuals by facial features. Applications include security systems, photo organization, authentication, and social media tagging.</p>
+<p><strong>Image Generation</strong><br/>
+Creating new images from text descriptions or modifying existing images. Enables creative tools for artists, product <a data-lb="1" href="/en/glossary/visualization/" title="Visualization glossary entry">visualization</a>, virtual environments, and content creation.</p>
+<h3 id="natural-language-processing">Natural Language Processing</h3>
+<p><strong>Machine Translation</strong><br/>
+Translating text between languages with increasing fluency and accuracy. Powers Google Translate, DeepL, and real-time conversation translation.</p>
+<p><strong>Text Generation</strong><br/>
+Producing coherent, contextually appropriate text. Applications include content creation, code generation, automated report writing, creative writing assistance, and <a data-lb="1" href="/en/glossary/conversational-ai/" title="Conversational AI glossary entry">conversational AI</a>.</p>
+<p><strong><a data-lb="1" href="/en/glossary/sentiment-analysis/" title="Sentiment Analysis glossary entry">Sentiment Analysis</a></strong><br/>
+Determining emotional tone and opinion in text. Used for brand monitoring, customer feedback analysis, market research, and social media monitoring.</p>
+<p><strong>Named Entity Recognition</strong><br/>
+Identifying and classifying named entities (people, organizations, locations) in text. Supports information extraction, <a data-lb="1" href="/en/glossary/knowledge-graphs/" title="Knowledge Graph glossary entry">knowledge graph</a> construction, and document analysis.</p>
+<p><strong>Question Answering</strong><br/>
+Providing direct answers to natural language questions. Powers virtual assistants, <a data-lb="1" href="/en/glossary/customer-support/" title="Customer Support glossary entry">customer support</a> automation, and information retrieval systems.</p>
+<p><strong>Text Summarization</strong><br/>
+Generating concise summaries of longer documents. Applications include news aggregation, research paper summarization, and meeting notes generation.</p>
+<h3 id="speech-and-audio">Speech and Audio</h3>
+<p><strong>Speech Recognition</strong><br/>
+Converting spoken language to text. Enables voice assistants (Siri, Alexa, Google Assistant), transcription services, voice-controlled interfaces, and accessibility tools.</p>
+<p><strong>Text-to-Speech</strong><br/>
+Generating natural-sounding speech from text. Applications include audiobook narration, assistive technologies, virtual assistants, and voice user interfaces.</p>
+<p><strong>Music Generation</strong><br/>
+Creating original musical compositions. Enables AI-composed background music, creative tools for musicians, and personalized music experiences.</p>
+<p><strong>Audio Enhancement</strong><br/>
+Removing noise, enhancing quality, and restoring damaged audio. Used in telecommunications, media production, and hearing aids.</p>
+<h3 id="healthcare-and-life-sciences">Healthcare and Life Sciences</h3>
+<p><strong>Medical Image Analysis</strong><br/>
+Detecting diseases from X-rays, CT scans, MRI images, and pathology slides. Assists radiologists in diagnosis, screening programs, and treatment planning.</p>
+<p><strong>Drug Discovery</strong><br/>
+Predicting molecular properties, identifying drug candidates, and optimizing compounds. Accelerates pharmaceutical research and reduces development costs.</p>
+<p><strong>Genomics</strong><br/>
+Analyzing genetic sequences, predicting gene function, and identifying disease-causing mutations. Enables personalized medicine and genetic research.</p>
+<p><strong>Prognosis Prediction</strong><br/>
+Forecasting patient outcomes and disease progression. Supports treatment planning and resource allocation.</p>
+<h3 id="autonomous-systems">Autonomous Systems</h3>
+<p><strong>Self-Driving Vehicles</strong><br/>
+Perceiving environments, making driving decisions, and controlling vehicle operation. Combines computer vision, sensor fusion, and <a data-lb="1" href="/en/glossary/reinforcement-learning/" title="Reinforcement Learning glossary entry">reinforcement learning</a>.</p>
+<p><strong>Robotics</strong><br/>
+Enabling robots to perceive environments, manipulate objects, and navigate spaces. Applications span manufacturing, logistics, agriculture, and service industries.</p>
+<p><strong>Drones</strong><br/>
+Autonomous flight, obstacle avoidance, and mission execution. Used for delivery, inspection, surveillance, and search-and-rescue operations.</p>
+<h3 id="recommendation-systems">Recommendation Systems</h3>
+<p><strong>Content Recommendations</strong><br/>
+Suggesting movies, music, articles, or products based on user preferences and behavior. Powers Netflix, Spotify, YouTube, and e-commerce platforms.</p>
+<p><strong>Social Media Feeds</strong><br/>
+Curating personalized content feeds based on engagement patterns and interests. Core to Facebook, Instagram, TikTok, and Twitter.</p>
+<h3 id="finance">Finance</h3>
+<p><strong>Fraud Detection</strong><br/>
+Identifying suspicious transactions in real-time. Protects against credit card fraud, money laundering, and identity theft.</p>
+<p><strong>Algorithmic Trading</strong><br/>
+Executing trades based on learned patterns and predictions. Enables high-frequency trading and quantitative investment strategies.</p>
+<p><strong>Risk Assessment</strong><br/>
+Evaluating credit risk, insurance risk, and market risk. Improves underwriting accuracy and portfolio management.</p>
+<h3 id="manufacturing-and-industry">Manufacturing and Industry</h3>
+<p><strong>Predictive Maintenance</strong><br/>
+Forecasting equipment failures before they occur. Reduces downtime and maintenance costs in manufacturing, energy, and transportation.</p>
+<p><strong>Quality Control</strong><br/>
+Detecting defects and anomalies in production. Ensures consistent product quality and reduces waste.</p>
+<p><strong>Process Optimization</strong><br/>
+Optimizing manufacturing parameters for efficiency and quality. Improves yield and reduces energy consumption.</p>
+<h2 id="advantages-of-deep-learning">Advantages of Deep Learning</h2>
+<p>Deep learning offers compelling benefits that drive its widespread adoption:</p>
+<p><strong>Automatic Feature Learning</strong><br/>
+Eliminates manual feature engineering by learning optimal representations directly from raw data. This reduces development time and often discovers features human experts wouldn’t identify.</p>
+<p><strong>Superior Performance</strong><br/>
+Achieves state-of-the-art results on complex tasks like image recognition, speech processing, and natural language understanding. Performance often improves with more data and larger models.</p>
+<p><strong>Scalability</strong><br/>
+Benefits from increased data volumes and <a data-lb="1" href="/en/glossary/computational-resources/" title="Computational Resources glossary entry">computational resources</a>. Larger models trained on more data generally achieve better performance, following empirical scaling laws.</p>
+<p><strong>Versatility</strong><br/>
+Handles diverse data types including images, text, audio, video, time series, and structured data. Single models can process multiple modalities simultaneously (multimodal learning).</p>
+<p><strong>End-to-End Learning</strong><br/>
+Maps inputs directly to outputs without requiring intermediate processing steps or hand-crafted pipelines. Simplifies system design and optimization.</p>
+<p><strong>Transfer Learning</strong><br/>
+Pre-trained models can be fine-tuned for new tasks with limited data. Reduces training time and data requirements for specialized applications.</p>
+<p><strong>Continuous Improvement</strong><br/>
+Models improve as more data becomes available and computational resources increase. Systems can be updated with new knowledge without complete retraining.</p>
+<h2 id="challenges-and-limitations">Challenges and Limitations</h2>
+<p>Despite impressive capabilities, deep learning faces significant challenges:</p>
+<p><strong>Large Data Requirements</strong><br/>
+Training effective deep learning models typically requires thousands to millions of labeled examples. Acquiring and labeling large datasets is expensive and time-consuming. Some domains (medical imaging, rare events) inherently have limited data availability.</p>
+<p><strong>Computational Demands</strong><br/>
+Training large models requires expensive specialized hardware (GPUs, TPUs) and substantial energy consumption. Training times can range from hours to weeks or months. Inference costs for deployed models can be significant at scale.</p>
+<p><strong>Black Box Nature</strong><br/>
+Deep neural networks operate as “black boxes” with limited interpretability. Understanding why a model makes specific predictions proves challenging, particularly for networks with millions of parameters. This opacity raises concerns in high-stakes applications like healthcare and criminal justice.</p>
+<p><strong>Overfitting Risk</strong><br/>
+Models may memorize training data rather than learning generalizable patterns, resulting in poor performance on new data. Requires careful regularization, validation strategies, and monitoring.</p>
+<p><strong>Adversarial Vulnerability</strong><br/>
+Small, carefully crafted perturbations to inputs can cause dramatic misclassifications. This vulnerability raises security concerns for deployed systems.</p>
+<p><strong>Bias and Fairness</strong><br/>
+Models learn and amplify biases present in training data. Can produce discriminatory outcomes when trained on biased datasets or when certain groups are underrepresented.</p>
+<p><strong>Limited Reasoning</strong><br/>
+Current deep learning excels at pattern recognition but struggles with logical reasoning, common-sense understanding, and causal inference. Models lack genuine understanding of concepts they manipulate.</p>
+<p><strong>Brittleness</strong><br/>
+Models trained for specific tasks perform poorly when conditions change. Lack the robustness and adaptability of human intelligence.</p>
+<p><strong>Resource Constraints</strong><br/>
+Deploying large models on resource-constrained devices (smartphones, IoT devices) requires model compression techniques and hardware optimization.</p>
+<h2 id="best-practices-for-deep-learning-projects">Best Practices for Deep Learning Projects</h2>
+<p>Successfully implementing deep learning requires attention to several key practices:</p>
+<p><strong>Data Preparation</strong><br/>
+Collect diverse, representative training data. Implement robust data augmentation to increase effective dataset size. Carefully split data into training, validation, and test sets. Address class imbalance issues.</p>
+<p><strong>Model Selection</strong><br/>
+Start with proven architectures appropriate for your task. Consider transfer learning from pre-trained models. Balance model complexity with available data and computational resources.</p>
+<p><strong>Training Strategies</strong><br/>
+Use appropriate loss functions and optimization algorithms. Implement early stopping to prevent overfitting. Monitor training and validation metrics closely. Use techniques like learning rate scheduling and gradient clipping.</p>
+<p><strong>Regularization</strong><br/>
+Apply dropout, weight decay, or other regularization techniques to prevent overfitting. Use data augmentation to increase training set diversity. Implement batch normalization for training stability.</p>
+<p><strong>Validation and Testing</strong><br/>
+Maintain strictly separated validation and test sets. Use cross-validation for small datasets. Test models on diverse real-world examples beyond the test set.</p>
+<p><strong>Deployment Considerations</strong><br/>
+Optimize models for inference speed and resource efficiency. Implement monitoring for model performance in production. Plan for model updates and retraining. Consider edge cases and failure modes.</p>
+<p><strong>Ethical Considerations</strong><br/>
+Test for biases across demographic groups. Implement fairness metrics and constraints. Provide appropriate documentation and transparency. Consider societal impacts of deployments.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<p><strong>What is the difference between deep learning and machine learning?</strong><br/>
+Machine learning encompasses all algorithms that learn from data. Deep learning is a subset using neural networks with multiple layers. Deep learning automatically learns features from raw data, while traditional machine learning often requires manual feature engineering.</p>
+<p><strong>How much data do I need for deep learning?</strong><br/>
+Requirements vary by task complexity and model size. Simple tasks might need thousands of examples, while complex tasks often require millions. Transfer learning can reduce data requirements by leveraging pre-trained models.</p>
+<p><strong>Why is deep learning called “deep”?</strong><br/>
+The “deep” refers to the multiple layers of processing in the neural network. More layers enable learning of more abstract and complex representations.</p>
+<p><strong>Can deep learning models explain their decisions?</strong><br/>
+Standard deep learning models have limited interpretability. Research into explainable AI aims to make models more transparent, but fundamental trade-offs exist between performance and interpretability.</p>
+<p><strong>Do I need GPUs for deep learning?</strong><br/>
+GPUs dramatically accelerate training and enable working with larger models. While CPUs can train small models, GPUs are practically essential for serious deep learning work. Cloud services provide GPU access without hardware investment.</p>
+<p><strong>How long does it take to train a deep learning model?</strong><br/>
+Training time varies from minutes to weeks depending on model size, dataset size, hardware, and task complexity. Small models on modest datasets train in hours. Large language models require weeks on massive GPU clusters.</p>
+<p><strong>Is deep learning better than traditional machine learning?</strong><br/>
+Deep learning excels when large datasets are available and automatic feature learning is beneficial (images, speech, text). Traditional machine learning often performs better on small structured datasets where interpretability matters. The best approach depends on the specific problem, data availability, and requirements.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://aws.amazon.com/what-is/deep-learning/" rel="nofollow noopener noreferrer" target="_blank">AWS: What is Deep Learning?</a></li>
+<li><a href="https://www.geeksforgeeks.org/deep-learning/introduction-deep-learning/" rel="nofollow noopener noreferrer" target="_blank">GeeksforGeeks: Introduction to Deep Learning</a></li>
+<li><a href="https://www.analyticsvidhya.com/blog/2020/02/cnn-vs-rnn-vs-mlp-analyzing-3-types-of-neural-networks-in-deep-learning/" rel="nofollow noopener noreferrer" target="_blank">Analytics Vidhya: 12 Types of Neural Networks</a></li>
+<li><a href="https://www.techtarget.com/searchenterpriseai/definition/deep-learning" rel="nofollow noopener noreferrer" target="_blank">TechTarget: What is Deep Learning?</a></li>
+<li><a href="https://datascience.columbia.edu/about-us/news/artificial-intelligence-ai-vs-machine-learning/" rel="nofollow noopener noreferrer" target="_blank">Columbia University: AI vs. Machine Learning</a></li>
+<li><a href="https://www.geeksforgeeks.org/machine-learning/neural-networks-a-beginners-guide/" rel="nofollow noopener noreferrer" target="_blank">GeeksforGeeks: Neural Networks Guide</a></li>
+<li><a href="https://www.analyticsvidhya.com/blog/2020/02/cnn-vs-rnn-vs-mlp-analyzing-3-types-of-neural-networks-in-deep-learning/" rel="nofollow noopener noreferrer" target="_blank">Analytics Vidhya: How Neural Networks Work</a></li>
+<li><a href="https://www.analyticsvidhya.com/blog/2021/10/perceptron-building-block-of-artificial-neural-network/" rel="nofollow noopener noreferrer" target="_blank">Analytics Vidhya: Perceptron</a></li>
+<li><a href="https://www.analyticsvidhya.com/blog/2022/03/basics-of-cnn-in-deep-learning/" rel="nofollow noopener noreferrer" target="_blank">Analytics Vidhya: CNN Basics</a></li>
+<li><a href="https://www.geeksforgeeks.org/machine-learning/introduction-convolution-neural-network/" rel="nofollow noopener noreferrer" target="_blank">GeeksforGeeks: Convolutional Neural Networks</a></li>
+<li><a href="https://www.analyticsvidhya.com/blog/2022/03/a-brief-overview-of-recurrent-neural-networks-rnn/" rel="nofollow noopener noreferrer" target="_blank">Analytics Vidhya: RNNs Overview</a></li>
+<li><a href="https://www.geeksforgeeks.org/machine-learning/introduction-to-recurrent-neural-network/" rel="nofollow noopener noreferrer" target="_blank">GeeksforGeeks: Recurrent Neural Networks</a></li>
+<li><a href="https://www.analyticsvidhya.com/blog/2021/03/introduction-to-long-short-term-memory-lstm/" rel="nofollow noopener noreferrer" target="_blank">Analytics Vidhya: LSTM Introduction</a></li>
+<li><a href="https://www.analyticsvidhya.com/blog/2024/04/understanding-transformers-a-deep-dive-into-nlps-core-technology/" rel="nofollow noopener noreferrer" target="_blank">Analytics Vidhya: Understanding Transformers</a></li>
+<li><a href="https://www.geeksforgeeks.org/machine-learning/getting-started-with-transformers/" rel="nofollow noopener noreferrer" target="_blank">GeeksforGeeks: Getting Started with Transformers</a></li>
+<li><a href="https://www.geeksforgeeks.org/machine-learning/auto-encoders/" rel="nofollow noopener noreferrer" target="_blank">GeeksforGeeks: Auto-Encoders</a></li>
+<li><a href="https://www.geeksforgeeks.org/deep-learning/generative-adversarial-network-gan/" rel="nofollow noopener noreferrer" target="_blank">GeeksforGeeks: Generative Adversarial Networks</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Types_of_artificial_neural_networks" rel="nofollow noopener noreferrer" target="_blank">Wikipedia: Types of Artificial Neural Networks</a></li>
+<li><a href="https://www.ibm.com/topics/deep-learning" rel="nofollow noopener noreferrer" target="_blank">IBM: What is Deep Learning?</a></li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/neural-networks/">
+                    Neural Networks
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A computational model inspired by the human brain that learns patterns in data by processing informa...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/neural-networks/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/artificial-intelligence/">
+                    Artificial Intelligence (AI)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Technology that enables computers to learn from experience and make decisions like humans do, rather...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/artificial-intelligence/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/machine-learning/">
+                    Machine Learning
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Machine Learning is a type of AI that enables computers to learn from data and make predictions or d...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/machine-learning/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/backpropagation/">
+                    Backpropagation
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A fundamental algorithm that trains neural networks by calculating how much each parameter contribut...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/backpropagation/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/data-augmentation/">
+                    Data Augmentation
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A technique that creates new training examples by modifying existing data, helping AI models learn b...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/data-augmentation/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/generative-adversarial-network--gan-/">
+                    Generative Adversarial Network (GAN)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A machine learning system with two competing AI networks: one creates fake data, the other detects f...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/generative-adversarial-network--gan-/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/deep-learning/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Voicebot | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/voicebot/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/voicebot/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/voicebot/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/voicebot/" hreflang="x-default" rel="alternate"/>
+<meta content="A voicebot is an AI-powered assistant that listens to spoken words, understands them, and responds naturally to automate customer service tasks and answer questions through voice conversations." name="description"/>
+<meta content="voicebot, AI, ASR, NLP, TTS, conversational AI, customer service, automation, NLU, LLM" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/voicebot/" property="og:url"/>
+<meta content="Voicebot | SmartWeb" property="og:title"/>
+<meta content="A voicebot is an AI-powered assistant that listens to spoken words, understands them, and responds naturally to automate customer service tasks and answer questions through voice conversations." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/voicebot/" name="twitter:url"/>
+<meta content="Voicebot | SmartWeb" name="twitter:title"/>
+<meta content="A voicebot is an AI-powered assistant that listens to spoken words, understands them, and responds naturally to automate customer service tasks and answer questions through voice conversations." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Voicebot</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            General
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Voicebot
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A voicebot is an AI-powered assistant that listens to spoken words, understands them, and responds naturally to automate customer service tasks and answer questions through voice conversations.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                voicebot
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ASR
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                NLP
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                TTS
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                conversational AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                customer service
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                automation
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                NLU
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                LLM
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-voicebot">What is a Voicebot?</h2>
+<p>A voicebot is an <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence glossary entry">artificial intelligence</a>-powered software agent designed to engage users through spoken language. It listens, processes, and responds to voice commands in real time, enabling natural, conversational interactions with technology. Voicebots automate tasks, answer questions, route calls, schedule appointments, provide technical support, and execute complex workflows across platforms including contact centers, mobile applications, smart devices, and enterprise solutions.</p>
+<p>Modern voicebots represent the evolution of decades of speech technology research. Early voice recognition systems from the 1950s through the 1990s, pioneered by IBM and Bell Labs, laid the groundwork for today’s sophisticated <a data-lb="1" href="/en/glossary/conversational-ai/" title="Conversational AI glossary entry">conversational AI</a>. The 2010s brought consumer voice assistants like Apple Siri, Google Assistant, and Amazon Alexa into mainstream use. Contemporary voicebots leverage advanced artificial intelligence—including <a data-lb="1" href="/blog/how-to-use-large-language-models-effectively/" title="Learn practical applications of large language models like ChatGPT, explore different LLM platforms, understand how these models work under the hood, and discover how to leverage them effectively in your daily work and life.">large language models</a> and <a data-lb="1" href="/en/glossary/generative-ai/" title="Generative AI glossary entry">generative AI</a>—enabling highly dynamic, contextually aware, human-like conversations that adapt to user needs in real time.</p>
+<p><strong>Alternate terminology:</strong> Conversational Voice AI, Voice Assistant, Voice AI Agent, AI Voice <a data-lb="1" href="/en/glossary/chatbot/" title="Chatbot glossary entry">Chatbot</a>, Intelligent Voice Agent.</p>
+<h2 id="core-technologies-behind-voicebots">Core Technologies Behind Voicebots</h2>
+<p>Voicebots integrate multiple cutting-<a data-lb="1" href="/en/glossary/edge-ai/" title="Edge AI glossary entry">edge AI</a> technologies working in concert to deliver seamless voice interactions.</p>
+<h3 id="automatic-speech-recognition-asr">Automatic Speech Recognition (ASR)</h3>
+<p>ASR converts spoken audio into written text, serving as the entry point for processing user voice input. Modern ASR systems employ advanced deep learning models, particularly <a data-lb="1" href="/en/glossary/neural-networks/" title="Neural Networks glossary entry">neural networks</a>, achieving near-human accuracy even in challenging environments with background noise or diverse accents.</p>
+<p><strong>Technological Evolution:</strong></p>
+<ul>
+<li>Early systems relied on Hidden Markov Models (HMM) and Gaussian Mixture Models (GMM), which plateaued in accuracy around 80-85%</li>
+<li>End-to-end deep learning models (Deep Speech, QuartzNet, Citrinet, Conformer) map audio directly to text, surpassing 95% accuracy</li>
+<li>Commercial ASR APIs (AssemblyAI, NVIDIA Riva, Google Speech-to-Text) provide real-time, scalable speech-to-text for enterprise applications</li>
+</ul>
+<p><strong>Market Impact:</strong> ASR technology now powers real-time transcription across platforms like Zoom, Spotify, and TikTok. The global ASR market is projected to reach $73 billion by 2031, reflecting widespread adoption across industries.</p>
+<h3 id="natural-language-processing-and-understanding">Natural Language Processing and Understanding</h3>
+<p><a data-lb="1" href="/en/glossary/natural-language-processing/" title="Natural Language Processing (NLP) glossary entry">Natural Language Processing (NLP)</a> enables machines to interpret, process, and generate human language, while Natural Language Understanding (NLU) focuses specifically on comprehending intent, meaning, and context. These technologies transform transcribed speech into actionable intelligence.</p>
+<p><strong>Core Capabilities:</strong></p>
+<ul>
+<li><strong><a data-lb="1" href="/en/glossary/intent-recognition/" title="Intent Recognition glossary entry">Intent Recognition</a></strong> – Identifies user goals (questions, requests, complaints, confirmations)</li>
+<li><strong>Entity Extraction</strong> – Captures specific data points including dates, names, amounts, locations</li>
+<li><strong><a data-lb="1" href="/en/glossary/contextual-understanding/" title="contextual understanding glossary entry">Contextual Understanding</a></strong> – Maintains conversation memory enabling coherent multi-turn dialogue</li>
+<li><strong><a data-lb="1" href="/en/glossary/sentiment-analysis/" title="Sentiment Analysis glossary entry">Sentiment Analysis</a></strong> – Detects emotional tone allowing empathetic, adaptive responses</li>
+</ul>
+<p><strong>Advanced Implementation:</strong> Modern NLP/NLU systems leverage machine learning to continuously improve accuracy, handle colloquialisms and slang naturally, support multilingual interactions seamlessly, and adapt to industry-specific terminology. State-of-the-art NLU engines achieve up to 99% intent accuracy in production environments.</p>
+<h3 id="text-to-speech-tts">Text-to-Speech (TTS)</h3>
+<p>TTS technology converts textual responses into natural, human-like speech, completing the conversational loop and enabling voicebots to communicate with users verbally.</p>
+<p><strong>Process Architecture:</strong></p>
+<ul>
+<li><strong>Text Analysis</strong> – Breaks content into phrases, words, and phonemes</li>
+<li><strong>Linguistic Processing</strong> – Determines pronunciation, stress patterns, and intonation using sophisticated models</li>
+<li><strong>Acoustic Modeling</strong> – Neural networks predict speech waveforms, generating natural prosody including rhythm, emotion, and emphasis</li>
+<li><strong>Waveform Synthesis</strong> – Produces high-fidelity digital audio signals for playback</li>
+<li><strong>Voice Customization</strong> – Modern engines offer diverse voices, accents, speaking styles, and emotional tones</li>
+</ul>
+<p><strong>Business Benefits:</strong> TTS enables real-time responses with clarity and emotional nuance, making voicebots more engaging and accessible. Customizable voices support brand alignment while inclusive voice options ensure accessibility for diverse user populations.</p>
+<h3 id="machine-learning-and-conversational-ai">Machine Learning and Conversational AI</h3>
+<p>Machine learning forms the adaptive foundation enabling voicebots to learn from interactions, improve accuracy over time, model user preferences, and adapt to evolving scenarios without manual reprogramming.</p>
+<p><strong>System Components:</strong></p>
+<ul>
+<li><strong>Supervised and <a data-lb="1" href="/en/glossary/unsupervised-learning/" title="Unsupervised Learning glossary entry">Unsupervised Learning</a></strong> – Models trained on massive datasets of speech patterns, language structures, and user interactions</li>
+<li><strong><a data-lb="1" href="/en/glossary/large-language-models/" title="Large Language Models (LLMs) glossary entry">Large Language Models (LLMs)</a></strong> – Generative AI models (GPT-4, Claude, <a data-lb="1" href="/en/glossary/gemini/" title="Google's AI system that understands text, images, audio, and video together to answer questions and complete tasks.">Gemini</a>, LLaMA) generate nuanced, context-aware, personalized responses</li>
+<li><strong><a data-lb="1" href="/en/glossary/dialogue-management/" title="Dialogue Management glossary entry">Dialogue Management</a></strong> – Maintains context, manages turn-taking, controls conversation flow, handles interruptions</li>
+<li><strong>Continuous Improvement</strong> – Systems adapt based on user feedback, error correction, and updated training data</li>
+</ul>
+<p><strong>Performance Metrics:</strong> Conversational AI voicebots handle 90-95% of routine customer queries autonomously, deliver 85-95% customer satisfaction scores, reduce average handling time by 40-60%, and enable true 24/7 scalable support without human intervention.</p>
+<h2 id="how-voicebots-work-technical-architecture">How Voicebots Work: Technical Architecture</h2>
+<p>A complete voicebot interaction follows this systematic process:</p>
+<p><strong>1. Voice Input Capture</strong><br/>
+User speaks into a device (phone, smart speaker, app, car system)</p>
+<p><strong>2. Speech-to-Text Conversion</strong><br/>
+ASR system transcribes audio into text with high accuracy</p>
+<p><strong>3. Intent and Context Analysis</strong><br/>
+NLP/NLU engines analyze text for user intent, context, and key entities</p>
+<p><strong>4. Backend Integration</strong><br/>
+System queries databases, CRMs, knowledge bases, or external APIs for required information</p>
+<p><strong>5. Response Formulation</strong><br/>
+Appropriate response generated using business logic, templates, or LLM generation</p>
+<p><strong>6. Text-to-Speech Rendering</strong><br/>
+Response converted to natural synthetic speech</p>
+<p><strong>7. Multi-Turn Dialogue Management</strong><br/>
+Voicebot maintains conversation context for seamless follow-up interactions</p>
+<p>This end-to-end process typically completes in under 2 seconds, creating the perception of natural, real-time conversation.</p>
+<h2 id="key-features-and-capabilities">Key Features and Capabilities</h2>
+<p><strong>Natural Language Understanding</strong><br/>
+Comprehends idioms, slang, colloquialisms, and multi-turn dialogue naturally without rigid scripts or menus.</p>
+<p><strong>24/7 Availability</strong><br/>
+Operates continuously without breaks, holidays, or time zone constraints, providing instant responses at any time.</p>
+<p><strong>Multilingual Support</strong><br/>
+Handles multiple languages with automatic language detection, code-switching, and accent adaptation.</p>
+<p><strong>Contextual Memory</strong><br/>
+Remembers conversation history enabling seamless follow-up questions without repetition.</p>
+<p><strong>Business System Integration</strong><br/>
+Connects with CRMs, ERPs, scheduling systems, knowledge bases, payment platforms, and custom applications.</p>
+<p><strong>Adaptive Personalization</strong><br/>
+Delivers responses tailored to individual users based on history, preferences, and behavioral patterns.</p>
+<p><strong>Seamless Escalation</strong><br/>
+Transfers complex issues to human agents with full context transfer, eliminating user repetition.</p>
+<p><strong>Unlimited Scalability</strong><br/>
+Handles thousands of concurrent conversations without performance degradation or wait times.</p>
+<p><strong>Voice Customization</strong><br/>
+Offers branded voices, tones, speaking styles, and emotional ranges aligned with company identity.</p>
+<p><strong>Real-Time Analytics</strong><br/>
+Provides speech analytics, sentiment tracking, and conversation insights for continuous optimization.</p>
+<h2 id="types-of-voicebots">Types of Voicebots</h2>
+<p><strong>Contact Center Voicebots</strong><br/>
+Automate inbound and outbound calls, handle FAQs, route calls intelligently, provide support, manage escalations, and qualify leads.</p>
+<p><strong>Consumer Voice Assistants</strong><br/>
+Embedded in devices (Alexa, Siri, Google Assistant) for personal task management, smart home control, entertainment, and information retrieval.</p>
+<p><strong>Hybrid Text-Voice Chatbots</strong><br/>
+Enable users to switch seamlessly between text and voice channels based on context and preference.</p>
+<p><strong>Generative AI Voicebots</strong><br/>
+Leverage LLMs for dynamic, contextually rich conversations with creative problem-solving and adaptive responses.</p>
+<p><strong>Industry-Specific Voicebots</strong><br/>
+Tailored solutions for banking, healthcare, retail, insurance, real estate, with specialized vocabularies, compliance features, and domain integrations.</p>
+<h2 id="voicebot-vs-alternative-technologies">Voicebot vs. Alternative Technologies</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Voicebot</th>
+<th>Chatbot</th>
+<th>IVR</th>
+<th>Voice Assistant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Interface</strong></td>
+<td>Spoken language</td>
+<td>Text (chat, SMS, web)</td>
+<td>Phone keypad/limited voice</td>
+<td>Spoken language</td>
+</tr>
+<tr>
+<td><strong>Input</strong></td>
+<td>Voice</td>
+<td>Text</td>
+<td>DTMF/basic voice</td>
+<td>Voice</td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td>Voice</td>
+<td>Text</td>
+<td>Recorded prompts</td>
+<td>Voice</td>
+</tr>
+<tr>
+<td><strong>AI Capabilities</strong></td>
+<td>High (NLP, NLU, ML, TTS)</td>
+<td>High (NLP, NLU)</td>
+<td>Low (rules-based)</td>
+<td>High (NLP, NLU, TTS, ML)</td>
+</tr>
+<tr>
+<td><strong>User Experience</strong></td>
+<td>Natural, conversational</td>
+<td>Conversational</td>
+<td>Menu-driven, rigid</td>
+<td>Personal, contextual</td>
+</tr>
+<tr>
+<td><strong>Use Cases</strong></td>
+<td>Service, sales, support</td>
+<td>Service, e-commerce, info</td>
+<td>Routing, info gathering</td>
+<td>Personal tasks, control</td>
+</tr>
+<tr>
+<td><strong>Escalation</strong></td>
+<td>Seamless to agents</td>
+<td>Seamless to agents</td>
+<td>Manual or unavailable</td>
+<td>Limited</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Distinctions:</strong> Voicebots support natural spoken interactions with complex automation capabilities. Chatbots are limited to text-based communication. IVR systems follow rigid menu structures. Voice assistants focus primarily on personal rather than business automation.</p>
+<h2 id="business-use-cases-and-applications">Business Use Cases and Applications</h2>
+<h3 id="general-applications">General Applications</h3>
+<ul>
+<li>24/7 automated customer support and self-service</li>
+<li>Intelligent call routing and queue management</li>
+<li>FAQ automation for routine inquiries</li>
+<li>Appointment scheduling, reminders, and notifications</li>
+<li>Order tracking and delivery status updates</li>
+<li>Billing inquiries, payment processing, and account management</li>
+<li>Technical troubleshooting and guided problem resolution</li>
+<li>Multilingual support for global customer bases</li>
+<li>Customer feedback collection and survey automation</li>
+<li>Lead qualification and sales support</li>
+</ul>
+<h3 id="industry-specific-examples">Industry-Specific Examples</h3>
+<p><strong>Banking and Financial Services</strong><br/>
+Account balance inquiries, transaction history, fraud alerts, lost/stolen card reporting, loan applications, payment reminders, secure authentication via voice biometrics.</p>
+<p><strong>Insurance</strong><br/>
+Policy sales and renewals, claims filing (FNOL - First Notice of Loss), status updates, emergency roadside assistance, lead qualification, outbound sales campaigns.</p>
+<p><strong>E-Commerce and Retail</strong><br/>
+Product search and recommendations, order placement, returns and exchanges, inventory checks, personalized promotions, post-purchase support.</p>
+<p><strong>Healthcare</strong><br/>
+Appointment scheduling and reminders, patient triage and symptom assessment, prescription refills, insurance verification, pre-visit paperwork guidance.</p>
+<p><strong>Real Estate</strong><br/>
+Property information inquiries, virtual tour scheduling, buyer/seller qualification, document status updates, appointment coordination.</p>
+<p><strong>Telecommunications</strong><br/>
+Service activation, plan upgrades, billing inquiries, technical support, outage reporting and status updates.</p>
+<h2 id="benefits-of-voicebot-implementation">Benefits of Voicebot Implementation</h2>
+<h3 id="for-organizations">For Organizations</h3>
+<p><strong>Cost Reduction</strong><br/>
+Automate repetitive tasks reducing reliance on human agents. Organizations report up to 50% cost reduction in support operations through voicebot deployment.</p>
+<p><strong>Infinite Scalability</strong><br/>
+Handle demand spikes instantly without hiring, training, or infrastructure expansion.</p>
+<p><strong>Agent Efficiency</strong><br/>
+Free human agents for complex, high-value interactions improving job satisfaction and reducing turnover.</p>
+<p><strong>Faster Resolution</strong><br/>
+Reduce average handling time, increase first-contact resolution rates, eliminate hold times for routine queries.</p>
+<p><strong>Data Intelligence</strong><br/>
+Generate actionable insights through speech analytics, sentiment analysis, and conversation pattern recognition.</p>
+<p><strong>Personalization at Scale</strong><br/>
+Deliver tailored responses by integrating with CRM systems containing customer history and preferences.</p>
+<p><strong>Continuous Availability</strong><br/>
+Provide support across all time zones without shift premiums or overtime costs.</p>
+<p><strong>Regulatory Compliance</strong><br/>
+Advanced voicebots support PII redaction, GDPR compliance, call recording, and audit trail requirements.</p>
+<h3 id="for-customers">For Customers</h3>
+<p><strong>Immediate Access</strong><br/>
+Receive support instantly without wait times or business hour constraints.</p>
+<p><strong>Natural Interaction</strong><br/>
+Speak naturally without navigating complex menus or learning specific commands.</p>
+<p><strong>Quick Resolution</strong><br/>
+Get instant answers to routine questions without human agent involvement.</p>
+<p><strong>Reduced Friction</strong><br/>
+Eliminate long hold times, repeated menu navigation, and call transfers for simple inquiries.</p>
+<p><strong>Language Flexibility</strong><br/>
+Receive service in preferred languages with automatic detection and adaptation.</p>
+<p><strong>Accessibility</strong><br/>
+Ideal solution for users with disabilities, literacy challenges, or situations requiring hands-free interaction.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p><strong>Define Clear Objectives</strong><br/>
+Establish specific use cases, success metrics, and business goals before implementation.</p>
+<p><strong>Design Conversational Flows</strong><br/>
+Map out greetings, common queries, FAQs, fallback responses, and escalation paths comprehensively.</p>
+<p><strong>Train AI Models Thoroughly</strong><br/>
+Provide diverse sample phrases, real user utterances, and scenario-based training data.</p>
+<p><strong>Integrate Backend Systems</strong><br/>
+Connect to CRMs, databases, knowledge bases, and APIs for dynamic information access.</p>
+<p><strong>Configure ASR and TTS Appropriately</strong><br/>
+Select languages, voices, speaking rates, and acoustic models matching your audience.</p>
+<p><strong>Implement Security Measures</strong><br/>
+Ensure data privacy, consent management, encryption, and compliance with relevant regulations (GDPR, CCPA, HIPAA).</p>
+<p><strong>Test Comprehensively</strong><br/>
+Validate accuracy and performance with real user data across diverse scenarios, accents, and environments.</p>
+<p><strong>Deploy Across Channels</strong><br/>
+Make voicebot accessible via phone, web, mobile apps, and smart devices as appropriate.</p>
+<p><strong>Monitor and Optimize Continuously</strong><br/>
+Analyze conversation logs, identify improvement opportunities, refine responses, and retrain models regularly.</p>
+<p><strong>Plan Escalation Carefully</strong><br/>
+Ensure seamless handoff to human agents with complete context transfer avoiding user frustration.</p>
+<h2 id="common-challenges-and-considerations">Common Challenges and Considerations</h2>
+<p><strong>Accuracy Expectations</strong><br/>
+While modern systems achieve high accuracy, performance depends on audio quality, accent diversity, background noise, and training data quality.</p>
+<p><strong>Context Limitations</strong><br/>
+Voicebots may struggle with highly ambiguous requests, sarcasm, complex emotions, or nuanced cultural references requiring human judgment.</p>
+<p><strong>Integration Complexity</strong><br/>
+Connecting multiple backend systems, ensuring data consistency, and managing authentication can require significant technical effort.</p>
+<p><strong>User Adoption</strong><br/>
+Some users prefer human interaction or distrust AI systems, requiring change management and clear communication about capabilities.</p>
+<p><strong>Privacy Concerns</strong><br/>
+Voice data collection requires transparent policies, user consent, secure storage, and compliance with evolving regulations.</p>
+<p><strong>Maintenance Requirements</strong><br/>
+Ongoing monitoring, knowledge base updates, model retraining, and performance optimization demand dedicated resources.</p>
+<p><strong>Cost Considerations</strong><br/>
+While voicebots reduce operational costs long-term, initial implementation, integration, and training require substantial investment.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<p><strong>How do voicebots differ from chatbots?</strong><br/>
+Voicebots process spoken language using ASR and TTS technologies, while chatbots operate via text. Voicebots enable hands-free, natural interactions ideal for situations where typing is impractical.</p>
+<p><strong>What accuracy levels can voicebots achieve?</strong><br/>
+Modern systems achieve 95%+ accuracy with proper training, quality audio, and current deep learning ASR models. Performance varies based on platform, training data, and use case complexity.</p>
+<p><strong>Do voicebots support multiple languages?</strong><br/>
+Yes. Leading platforms offer real-time language detection and support dozens of languages with accent adaptation and code-switching capabilities.</p>
+<p><strong>Can voicebots replace human agents entirely?</strong><br/>
+No. Voicebots excel at automating routine, predictable tasks but escalate complex, sensitive, or ambiguous situations to human agents with appropriate expertise.</p>
+<p><strong>What ROI can organizations expect?</strong><br/>
+Organizations report 30-50% reduction in support costs, increased customer satisfaction scores, improved agent productivity, and enhanced scalability. ROI typically materializes within 6-12 months.</p>
+<p><strong>How should businesses choose a platform?</strong><br/>
+Consider use case requirements, integration needs, language support, scalability, ease of implementation, vendor support, and total cost of ownership.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://floatbot.ai/blog/voicebot-an-ultimate-guide" rel="nofollow noopener noreferrer" target="_blank">Floatbot: Voicebot - An Ultimate Guide</a></li>
+<li><a href="https://www.puzzel.com/blog/ai-voicebot-guide" rel="nofollow noopener noreferrer" target="_blank">Puzzel: AI Voicebot Guide</a></li>
+<li><a href="https://assemblyai.com/blog/what-is-asr" rel="nofollow noopener noreferrer" target="_blank">AssemblyAI: What is ASR?</a></li>
+<li><a href="https://developer.nvidia.com/blog/essential-guide-to-automatic-speech-recognition-technology/" rel="nofollow noopener noreferrer" target="_blank">NVIDIA: Essential Guide to Automatic Speech Recognition Technology</a></li>
+<li><a href="https://www.teneo.ai/blog/the-role-of-nlu-in-improving-voicebots-accuracy" rel="nofollow noopener noreferrer" target="_blank">Teneo: The Role of NLU in Improving Voicebots Accuracy</a></li>
+<li><a href="https://convin.ai/blog/natural-language-conversational-ai" rel="nofollow noopener noreferrer" target="_blank">Convin AI: Natural Language Conversational AI</a></li>
+<li><a href="https://exotel.com/blog/the-magic-of-ai-voice-bots-bringing-text-to-life-with-text-to-speech-technology/" rel="nofollow noopener noreferrer" target="_blank">Exotel: The Magic of AI Voice Bots - Bringing Text to Life with TTS</a></li>
+<li><a href="https://www.liveperson.com/blog/text-to-speech-ai/" rel="nofollow noopener noreferrer" target="_blank">LivePerson: Text to Speech AI</a></li>
+<li><a href="https://www.teneo.ai/blog/voice-bot-solutions-role-of-conversational-ai" rel="nofollow noopener noreferrer" target="_blank">Teneo: Voice Bot Solutions - Role of Conversational AI</a></li>
+<li><a href="https://www.sobot.io/article/conversational-ai-voice-bot-benefits-for-modern-businesses/" rel="nofollow noopener noreferrer" target="_blank">Sobot: Conversational AI Voice Bot Benefits</a></li>
+<li><a href="https://floatbot.ai/blog/conversational-aI-voice-bot-use-cases-in-different-industries" rel="nofollow noopener noreferrer" target="_blank">Floatbot: Conversational AI Voice Bot Use Cases</a></li>
+<li><a href="https://www.cmswire.com/customer-experience/how-digital-voice-technology-is-changing-customer-service/" rel="nofollow noopener noreferrer" target="_blank">CMSWire: How Digital Voice Technology is Changing Customer Service</a></li>
+<li><a href="https://connect.comptia.org/blog/artificial-intelligence-statistics-facts" rel="nofollow noopener noreferrer" target="_blank">CompTIA: Artificial Intelligence Statistics Facts</a></li>
+<li><a href="https://www.voiceflow.com/blog/voicebot" rel="nofollow noopener noreferrer" target="_blank">Voiceflow: Voicebot Guide</a></li>
+<li><a href="https://www.youtube.com/watch?v=qgAEB_acB3c" rel="nofollow noopener noreferrer" target="_blank">YouTube: Build a Voicebot in 10 Minutes</a></li>
+<li><a href="https://www.teneo.ai/blog/6-benefits-of-implementing-voicebots-for-businesses" rel="nofollow noopener noreferrer" target="_blank">Teneo: 6 Benefits of Implementing Voicebots for Businesses</a></li>
+<li><a href="https://www.teneo.ai/learning-hub/whitepapers/nlu-benchmark-teneo" rel="nofollow noopener noreferrer" target="_blank">Teneo: NLU Benchmark</a></li>
+<li><a href="https://floatbot.ai/blog/is-voice-biometrics-the-future-of-user-authentication" rel="nofollow noopener noreferrer" target="_blank">Floatbot: Voice Biometrics - Future of User Authentication</a></li>
+<li><a href="https://www.genesys.com/definitions/what-is-a-voicebot" rel="nofollow noopener noreferrer" target="_blank">Genesys: What is a Voicebot?</a></li>
+<li><a href="https://gettalkative.com/roi-calculator" rel="nofollow noopener noreferrer" target="_blank">Talkative: ROI Calculator</a></li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hybrid-support/">
+                    Hybrid Support
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A customer service approach that combines AI chatbots for quick, routine answers with human agents f...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hybrid-support/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/utterance/">
+                    Utterance
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    An utterance is any message, question, or command a user sends to a chatbot—whether typed or spoken....
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/utterance/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/intent-recognition/">
+                    Intent Recognition
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Intent recognition is an AI technology that understands what users want by analyzing the meaning beh...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/intent-recognition/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ai-agents/">
+                    AI Agents
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Autonomous software that perceives its environment, makes decisions, and takes actions independently...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ai-agents/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/botpress/">
+                    Botpress
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A platform for building AI chatbots using a visual drag-and-drop editor, enabling businesses to auto...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/botpress/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/chatbot/">
+                    Chatbot
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A computer program that simulates human conversation through text or voice, available 24/7 to automa...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/chatbot/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/voicebot/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+  });
+</script>
+</body>
+</html>

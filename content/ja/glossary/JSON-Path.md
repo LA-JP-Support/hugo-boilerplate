@@ -15,7 +15,9 @@ lastmod: '2025-12-19'
 draft: false
 e-title: JSON Path
 term: ジェイソン パス
-url: "/ja/glossary/JSON-Path/"
+url: "/ja/glossary/json-path/"
+aliases:
+- "/ja/glossary/JSON-Path/"
 ---
 ## JSON Pathとは?
 
@@ -23,7 +25,8 @@ JSON Pathは、JSONドキュメント内の要素をナビゲート、抽出、�
 
 JSON PathはIETFによってRFC 9535で標準化され、クエリ式の統一された構文とセマンティクスを提供しています。この言語は、JavaScript、Python、Java、PHP、SQLデータベースなど、多数のプログラミング環境で実装されています。一般的な用途には、APIテストと検証、ETLプロセス、データベースのJSON列クエリ、構成管理、チャットボットのデータ解析などがあります。
 
-**クエリの例:**```json
+**クエリの例:**
+```json
 {
   "user": {
     "id": 123,
@@ -47,43 +50,54 @@ JSON Pathは、深くネストされたドキュメント内のデータの抽�
 
 ### ルートとパス演算子
 
-**ルートオブジェクト (`$`)**JSONドキュメントのルートを示します。すべてのパスは`$`で始まります。**子要素へのアクセス**- ドット記法: `$.user.name` (単純なプロパティ)
+**ルートオブジェクト (`$`)**  
+JSONドキュメントのルートを示します。すべてのパスは`$`で始まります。
+
+**子要素へのアクセス**  
+- ドット記法: `$.user.name` (単純なプロパティ)
 - ブラケット記法: `$['user']['profile']` (特殊文字、スペース、予約語)
 - ブラケットは常にシングルクォートを使用
 
-**配列へのアクセス**- インデックス: `$.store.book[0]` (0ベースのインデックス)
+**配列へのアクセス**  
+- インデックス: `$.store.book[0]` (0ベースのインデックス)
 - 複数のインデックス: `$.store.book[0,2]` (要素の結合)
 - 負のインデックス: `$.store.book[-1]` (最後の要素)
 
-**配列のスライス**Pythonスタイルのスライス: `[start:end:step]`
+**配列のスライス**  
+Pythonスタイルのスライス: `[start:end:step]`
 - `$.store.book[0:2]` (最初の2冊)
 - `$.store.book[::2]` (1つおきの本)
 - `$.store.book[1:]` (最初以外のすべて)
 
-**ワイルドカードと再帰**- `*`: 現在のレベルのすべての要素 (`$.store.book[*].author`)
+**ワイルドカードと再帰**  
+- `*`: 現在のレベルのすべての要素 (`$.store.book[*].author`)
 - `..`: 再帰的降下、任意の深さですべての一致を検索 (`$..price`)
 
 ### フィルタ式
 
-**基本フィルタ**構文: `[?(condition)]` ここで`@`は現在の要素を参照
+**基本フィルタ**  
+構文: `[?(condition)]` ここで`@`は現在の要素を参照
 
 ```jsonpath
 $.store.book[?(@.price < 10)]        // 10ドル未満の本
 $.store.book[?(@.category == 'fiction')]  // フィクションの本
 ```
 
-**比較演算子**- `==`, `!=`: 等価比較
+**比較演算子**  
+- `==`, `!=`: 等価比較
 - `>`, `>=`, `<`, `<=`: 数値比較
 - `=~`: 正規表現マッチ (実装依存)
 
-**論理演算子**- `&&`: 論理AND
+**論理演算子**  
+- `&&`: 論理AND
 - `||`: 論理OR
 
 ```jsonpath
 $.store.book[?(@.category=='fiction' && @.price < 10)]
 ```
 
-**高度な演算子 (実装固有)**- `in`, `nin`: 配列メンバーシップ
+**高度な演算子 (実装固有)**  
+- `in`, `nin`: 配列メンバーシップ
 - `subsetof`: 配列サブセットチェック
 - `contains`: 文字列/配列の包含
 - `size`: 長さチェック
@@ -91,14 +105,16 @@ $.store.book[?(@.category=='fiction' && @.price < 10)]
 
 ### 結合と参照
 
-**結合演算子**複数のプロパティやインデックスを選択: `[,]`
+**結合演算子**  
+複数のプロパティやインデックスを選択: `[,]`
 
 ```jsonpath
 $.store.book[0,1]  // 最初の2冊
 $['name','age']    // 複数のプロパティ
 ```
 
-**現在のオブジェクト**フィルタ内では、`@`はテスト中の現在のアイテムを参照します。
+**現在のオブジェクト**  
+フィルタ内では、`@`はテスト中の現在のアイテムを参照します。
 
 ## 構文クイックリファレンス
 
@@ -160,22 +176,38 @@ $['name','age']    // 複数のプロパティ
 
 ### 一般的なクエリパターン
 
-**すべての本のタイトル:**```jsonpath
+**すべての本のタイトル:**
+```jsonpath
 $.store.book[*].title
 // ["Sayings of the Century", "Sword of Honour", "Moby Dick", "The Lord of the Rings"]
-```**フィクションの著者:**```jsonpath
+```
+
+**フィクションの著者:**
+```jsonpath
 $.store.book[?(@.category == 'fiction')].author
 // ["Evelyn Waugh", "Herman Melville", "J. R. R. Tolkien"]
-```**10ドル未満の本:**```jsonpath
+```
+
+**10ドル未満の本:**
+```jsonpath
 $.store.book[?(@.price < 10)]
 // 2つの本オブジェクトを返す
-```**すべての価格 (再帰的):**```jsonpath
+```
+
+**すべての価格 (再帰的):**
+```jsonpath
 $..price
 // [8.95, 12.99, 8.99, 22.99, 19.95]
-```**最初の2冊の本のタイトル:**```jsonpath
+```
+
+**最初の2冊の本のタイトル:**
+```jsonpath
 $.store.book[0:2].title
 // ["Sayings of the Century", "Sword of Honour"]
-```**すべてのISBN番号:**```jsonpath
+```
+
+**すべてのISBN番号:**
+```jsonpath
 $.store.book[*].isbn
 // ["0-553-21311-3", "0-395-19395-8"]
 ```
@@ -205,7 +237,7 @@ $.store.book[*].isbn
 
 ### JavaScript (Node.js)
 
-**ライブラリ:**jsonpath
+**ライブラリ:** jsonpath
 
 ```javascript
 const jsonpath = require('jsonpath');
@@ -223,7 +255,7 @@ jsonpath.value(data, '$.store.bicycle.price', 25.00);
 
 ### Python
 
-**ライブラリ:**jsonpath-ng
+**ライブラリ:** jsonpath-ng
 
 ```python
 import json
@@ -243,7 +275,7 @@ cheap_books = [match.value for match in expression.find(data)]
 
 ### Java
 
-**ライブラリ:**JsonPath (Jayway)
+**ライブラリ:** JsonPath (Jayway)
 
 ```java
 import com.jayway.jsonpath.JsonPath;
@@ -261,7 +293,7 @@ List<Map<String, Object>> cheapBooks =
 
 ### PHP
 
-**ライブラリ:**Flow\JSONPath
+**ライブラリ:** Flow\JSONPath
 
 ```php
 use Flow\JSONPath\JSONPath;
@@ -278,7 +310,9 @@ $cheapBooks = (new JSONPath($data))
 
 ### SQL Server
 
-**ネイティブJSON Pathサポート:**```sql
+**ネイティブJSON Pathサポート:**
+
+```sql
 -- JSON列をクエリ
 SELECT *
 FROM Products
@@ -294,13 +328,17 @@ WHERE JSON_VALUE(value, '$.price') < 10;
 
 ### APIテストと自動化
 
-**Postmanの例:**```javascript
+**Postmanの例:**
+```javascript
 // レスポンスに期待値が含まれることをテスト
 pm.test("User email is correct", function() {
     const email = jsonpath.query(pm.response.json(), '$.user.email')[0];
     pm.expect(email).to.eql("test@example.com");
 });
-```**Rest-Assured (Java):**```java
+```
+
+**Rest-Assured (Java):**
+```java
 given()
     .when().get("/api/users")
     .then()
@@ -309,7 +347,8 @@ given()
 
 ### データ変換 (ETL)
 
-**ログからエラーを抽出:**```python
+**ログからエラーを抽出:**
+```python
 from jsonpath_ng import parse
 
 errors = [match.value 
@@ -318,7 +357,8 @@ errors = [match.value
 
 ### データベースJSONクエリ
 
-**PostgreSQL:**```sql
+**PostgreSQL:**
+```sql
 SELECT data->>'name' as name
 FROM users
 WHERE data @> '{"active": true}';
@@ -326,7 +366,8 @@ WHERE data @> '{"active": true}';
 
 ### 構成管理
 
-**構成値を更新:**```javascript
+**構成値を更新:**
+```javascript
 const config = require('./config.json');
 jsonpath.value(config, '$.database.port', 5432);
 fs.writeFileSync('config.json', JSON.stringify(config, null, 2));
@@ -334,9 +375,13 @@ fs.writeFileSync('config.json', JSON.stringify(config, null, 2));
 
 ### チャットボットのデータ解析
 
-**ユーザーメッセージを抽出:**```jsonpath
+**ユーザーメッセージを抽出:**
+```jsonpath
 $.conversation[*].user_message
-```**インテントでフィルタ:**```jsonpath
+```
+
+**インテントでフィルタ:**
+```jsonpath
 $.messages[?(@.intent == 'purchase')].text
 ```
 
@@ -352,49 +397,45 @@ $.messages[?(@.intent == 'purchase')].text
 | 親/兄弟 | サポートなし | サポートあり |
 | 軸 | 限定的 | 包括的 |
 
-**主な違い:**- JSON PathはJSONのよりシンプルな構造専用に設計
+**主な違い:**
+- JSON PathはJSONのよりシンプルな構造専用に設計
 - XPathはより複雑なナビゲーション(祖先、兄弟)を提供
 - JSON Pathは前方トラバーサルに焦点
 - 両方とも類似のフィルタと述語の概念を使用
 
 ## ベストプラクティス
 
-**パフォーマンス最適化:**- 可能な限り再帰的降下よりも特定のパスを使用
+**パフォーマンス最適化:**
+- 可能な限り再帰的降下よりも特定のパスを使用
 - パフォーマンスクリティカルなコードではコンパイル済み式をキャッシュ
 - 大規模データセットでの繰り返しクエリにはインデックス作成を検討
 
-**エラー処理:**- クエリ前に常にJSONを検証
+**エラー処理:**
+- クエリ前に常にJSONを検証
 - strict/laxモードを適切に使用 (SQL Server)
 - 空の結果を適切に処理
 - 解析例外をキャッチ
 
-**コード構成:**- 複雑なパスを定数として保存
+**コード構成:**
+- 複雑なパスを定数として保存
 - パスのセマンティクスを文書化
 - 結果に意味のある変数名を使用
 - サンプルデータでパスをテスト
 
-**セキュリティ上の考慮事項:**- ユーザー提供のパスを検証およびサニタイズ
+**セキュリティ上の考慮事項:**
+- ユーザー提供のパスを検証およびサニタイズ
 - 内部データ構造の露出を避ける
 - 適切なアクセス制御を使用
 - 疑わしいクエリパターンをログ記録
 
 ## 参考資料
 
-
-1. IETF. (2023). RFC 9535: JSONPath仕様. IETF RFC.
-
-2. SmartBear. (n.d.). JSONPath構文ドキュメント. SmartBear Support Documentation.
-
-3. Microsoft. (n.d.). SQL ServerのJSON Path式. Microsoft Learn.
-
-4. Postman. (n.d.). JSONPath変数. Postman Learning Center.
-
-5. ToolsQA. (n.d.). REST-Assured JSONPath. ToolsQA Tutorial.
-
-6. jsonpath. JavaScript Library. URL: https://github.com/dchester/jsonpath
-
-7. jsonpath-ng. Python Library. URL: https://github.com/h2non/jsonpath-ng
-
-8. JsonPath. Java Library. URL: https://github.com/json-path/JsonPath
-
-9. Flow\JSONPath. PHP Library. URL: https://github.com/Flow-Communications/JSONPath
+- [RFC 9535: JSONPath仕様](https://datatracker.ietf.org/doc/html/rfc9535)
+- [SmartBear JSONPath構文ドキュメント](https://support.smartbear.com/alertsite/docs/monitors/api/endpoint/jsonpath.html)
+- [Microsoft: SQL ServerのJSON Path式](https://learn.microsoft.com/en-us/sql/relational-databases/json/json-path-expressions-sql-server?view=sql-server-ver17)
+- [Postman: JSONPath変数](https://learning.postman.com/docs/writing-scripts/script-references/variables-list/)
+- [ToolsQA: REST-Assured JSONPath](https://toolsqa.com/rest-assured/jsonpath-and-query-json-using-jsonpath/)
+- [jsonpath (JavaScriptライブラリ)](https://github.com/dchester/jsonpath)
+- [jsonpath-ng (Pythonライブラリ)](https://github.com/h2non/jsonpath-ng)
+- [JsonPath (Javaライブラリ)](https://github.com/json-path/JsonPath)
+- [Flow\JSONPath (PHPライブラリ)](https://github.com/Flow-Communications/JSONPath)

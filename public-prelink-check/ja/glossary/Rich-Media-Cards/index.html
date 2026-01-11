@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>リッチメディアカード | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/rich-media-cards/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/rich-media-cards/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/rich-media-cards/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/rich-media-cards/" hreflang="x-default" rel="alternate"/>
+<meta content="リッチメディアカードは、チャットストリーム内のインタラクティブなUIコンポーネントで、画像、動画、ボタンなどのマルチメディアコンテンツとアクション可能な要素を提供し、魅力的な会話を実現します。" name="description"/>
+<meta content="リッチメディアカード, チャットボット, 対話型AI, メッセージングプラットフォーム, ユーザーエンゲージメント" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/rich-media-cards/" property="og:url"/>
+<meta content="リッチメディアカード | SmartWeb" property="og:title"/>
+<meta content="リッチメディアカードは、チャットストリーム内のインタラクティブなUIコンポーネントで、画像、動画、ボタンなどのマルチメディアコンテンツとアクション可能な要素を提供し、魅力的な会話を実現します。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/rich-media-cards/" name="twitter:url"/>
+<meta content="リッチメディアカード | SmartWeb" name="twitter:title"/>
+<meta content="リッチメディアカードは、チャットストリーム内のインタラクティブなUIコンポーネントで、画像、動画、ボタンなどのマルチメディアコンテンツとアクション可能な要素を提供し、魅力的な会話を実現します。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190816" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190816" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190816"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126096741115000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126096741115000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126096741115000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126096741115000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">リッチメディアカード</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        リッチメディアカード
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Rich Media Cards
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          リッチメディアカードは、チャットストリーム内のインタラクティブなUIコンポーネントで、画像、動画、ボタンなどのマルチメディアコンテンツとアクション可能な要素を提供し、魅力的な会話を実現します。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                リッチメディアカード
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                チャットボット
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                対話型AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                メッセージングプラットフォーム
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ユーザーエンゲージメント
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="リッチメディアカードとは">リッチメディアカードとは?</h2>
+<p>リッチメディアカードは、チャットストリーム内に埋め込まれた構造化されたインタラクティブなUIコンポーネントであり、会話の中で魅力的なマルチメディアコンテンツとアクション可能な要素を直接配信できます。プレーンテキストメッセージとは異なり、リッチメディアカードは画像、GIF、動画、タイトル、サブタイトル、ボタンをまとめて提供し、ユーザーに視覚的に魅力的でアクション可能な体験を提供します。これらのカードはチャット内のミニランディングページのように機能し、アクションの促進、情報収集、ユーザビリティとコンバージョン率の向上を実現できます。</p>
+<p>リッチメディアカードは、会話型インターフェースをシンプルなテキスト交換から、製品発見、リード生成、<a data-lb="1" href="/ja/glossary/customer-support/" title="カスタマーサポートのチケットシステムの基本から導入方法、AI活用まで詳しく解説。業務効率化と顧客満足度向上を実現する方法を紹介します。">カスタマーサポート</a>、予約、アンケート、コンテンツ配信をサポートする動的でインタラクティブな体験へと変革します。これはWebチャット、ソーシャルメッセージングプラットフォーム、エンタープライズソリューション全体で実現されます。</p>
+<h2 id="リッチメディアカードの構造">リッチメディアカードの構造</h2>
+<p>リッチメディアカードは、機能的および視覚的な目的を果たすいくつかの標準コンポーネントで構成されています:</p>
+<p><strong>メディア要素:</strong> 画像(JPEG、PNG、GIF)、アニメーション、動画(MP4、M4V、WebM)、またはPDF(プラットフォーム依存)で、注目を集め、製品を説明し、キャラクターを追加します</p>
+<p><strong>サムネイル:</strong> メディアファイル、特に大きなファイルやPDFのカスタムまたはデフォルトのアイコンプレビューで、高速読み込みのために100KB未満に最適化されています</p>
+<p><strong>タイトル:</strong> 見出しまたはメインラベルで、通常最大200文字(プラットフォーム依存)、簡潔で情報的です</p>
+<p><strong>サブタイトル/説明:</strong> サポートテキストで、多くの場合最大2,000文字、コンテキスト、メリット、またはコールトゥアクション情報を提供します</p>
+<p><strong>アクションボタン:</strong> Web遷移、ポストバック、電話、ダウンロードなどのアクションをトリガーするクリック可能な要素で、プラットフォームによって制限が異なります</p>
+<p><strong>提案された返信:</strong> チップまたはボタンとして事前定義されたユーザー応答で、会話を最適なパスに導きます</p>
+<p><strong>オプションのインタラクティブ要素:</strong> カルーセル(スクロール可能なカードグループ)、フォーム(データキャプチャ)、クイック返信、リストピッカー、カスタムペイロード</p>
+<h2 id="リッチメディアカードの仕組み">リッチメディアカードの仕組み</h2>
+<h3 id="会話型エンゲージメント">会話型エンゲージメント</h3>
+<p>リッチメディアカードは、会話をよりアクション可能で表現力豊かで視覚的に魅力的にすることで、<a data-lb="1" href="/ja/glossary/chatbot/" title="チャットボットは、テキストまたは音声を通じて人間の会話をシミュレートするAI駆動のソフトウェアアプリケーションです。カスタマーサポート、情報検索、タスク自動化に使用されます。">チャットボット</a>のインタラクションを強化します。</p>
+<p><strong>一般的な使用例:</strong></p>
+<p><strong>製品レコメンデーション:</strong> 製品画像、価格、「今すぐ購入」ボタンを表示して、スムーズな購入を実現</p>
+<p><strong>リード生成:</strong> チャット内でユーザー詳細をキャプチャするフォームを埋め込み、摩擦のないデータ収集を実現</p>
+<p><strong>カスタマーサポート:</strong> 「これは役に立ちましたか?」ボタン付きのステップバイステップのトラブルシューティングガイドを提示</p>
+<p><strong>予約/スケジューリング:</strong> 利用可能な時間枠またはサービスをカードとして表示し、即座の予約ボタンを提供</p>
+<p><strong>アンケート&amp;フィードバック:</strong> カード要素を通じて評価、コメント、または選択を直接リクエスト</p>
+<p><strong>インタラクティブFAQ:</strong> サポートコンテンツを閲覧するための展開/折りたたみ可能なカードを使用したナビゲート可能なヘルプトピック</p>
+<h3 id="マルチプラットフォームサポート">マルチプラットフォームサポート</h3>
+<p>リッチメディアカードのサポートは、メッセージングプラットフォームによって異なります:</p>
+<p><strong>Webチャットウィジェット:</strong> 完全なカード、カルーセル、フォームサポート、カスタマイズ可能なレイアウト(Intercom、Drift、Kommunicate)</p>
+<p><strong>ソーシャルメッセージング:</strong></p>
+<ul>
+<li><strong>Facebook Messenger:</strong> カードテンプレート、カルーセル、クイック返信、カルーセルあたり最大10枚のカード</li>
+<li><strong>WhatsApp:</strong> 限定的なリストとボタンテンプレート(カルーセルなし)、メッセージあたり最大3つのボタン</li>
+<li><strong>Apple Business Chat:</strong> 高度なカードタイプ、Apple Pay、フォーム、リストピッカー</li>
+<li><strong>Telegram、Viber、Slack:</strong> カード、ボタン、メディアのサポートは様々</li>
+</ul>
+<p><strong>エンタープライズソリューション:</strong></p>
+<ul>
+<li><strong>Microsoft Dynamics 365、Salesforce:</strong> Adaptive Cards(JSONベース)、カルーセル、カスタムデータ収集</li>
+<li><strong>カスタムAPI:</strong> プログラム可能なペイロードとUIレンダリング</li>
+</ul>
+<h2 id="技術的実装">技術的実装</h2>
+<h3 id="カード構造json">カード構造(JSON)</h3>
+<p>リッチメディアカードは通常、JSONのような構造化フォーマットで定義されます:</p>
+<p><strong>製品カードの例:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"type"</span>: <span style="color:#0ff;font-weight:bold">"card"</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"title"</span>: <span style="color:#0ff;font-weight:bold">"Wireless Headphones"</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"subtitle"</span>: <span style="color:#0ff;font-weight:bold">"Noise-cancelling, 20h battery life"</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"image_url"</span>: <span style="color:#0ff;font-weight:bold">"https://example.com/img/headphones.png"</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"buttons"</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">"type"</span>: <span style="color:#0ff;font-weight:bold">"web_url"</span>,
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">"title"</span>: <span style="color:#0ff;font-weight:bold">"Buy Now"</span>,
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">"url"</span>: <span style="color:#0ff;font-weight:bold">"https://example.com/buy/headphones"</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">"type"</span>: <span style="color:#0ff;font-weight:bold">"postback"</span>,
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">"title"</span>: <span style="color:#0ff;font-weight:bold">"More Info"</span>,
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">"payload"</span>: <span style="color:#0ff;font-weight:bold">"INFO_HEADPHONES"</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="カルーセル実装">カルーセル実装</h3>
+<p>カルーセルは、製品発見またはオプション選択のために複数のカードを水平に表示します:</p>
+<p><strong>カルーセルの例:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"type"</span>: <span style="color:#0ff;font-weight:bold">"carousel"</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"cards"</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">"title"</span>: <span style="color:#0ff;font-weight:bold">"Product 1"</span>,
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">"image_url"</span>: <span style="color:#0ff;font-weight:bold">"https://example.com/img/p1.png"</span>,
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">"buttons"</span>: [<span style="color:#f00">...</span>]
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">"title"</span>: <span style="color:#0ff;font-weight:bold">"Product 2"</span>,
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">"image_url"</span>: <span style="color:#0ff;font-weight:bold">"https://example.com/img/p2.png"</span>,
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">"buttons"</span>: [<span style="color:#f00">...</span>]
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="サポートされているカードタイプmicrosoft-bot-framework">サポートされているカードタイプ(Microsoft Bot Framework)</h3>
+<p><strong>HeroCard:</strong> 大きな画像、テキスト、ボタン</p>
+<p><strong>ThumbnailCard:</strong> 小さな画像、テキスト、ボタン</p>
+<p><strong>AnimationCard/VideoCard/AudioCard:</strong> 埋め込みメディア再生</p>
+<p><strong>ReceiptCard:</strong> アイテム、価格、合計を含む構造化されたレシート</p>
+<p><strong>SignInCard:</strong> OAuthまたはサードパーティ認証フロー</p>
+<p><strong>AdaptiveCard:</strong> リッチなUI要素、レイアウト、フォームを備えた高度にカスタマイズ可能なカード</p>
+<h3 id="プラットフォーム固有の制約">プラットフォーム固有の制約</h3>
+<table>
+<thead>
+<tr>
+<th>プラットフォーム</th>
+<th>カードサポート</th>
+<th>最大カード数/カルーセル</th>
+<th>画像サイズ</th>
+<th>ボタン制限</th>
+<th>注目すべき機能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Webチャットウィジェット</td>
+<td>完全(カード、フォーム)</td>
+<td>様々(最大10)</td>
+<td>~1MB</td>
+<td>3–5</td>
+<td>カスタムレイアウト、クイック返信</td>
+</tr>
+<tr>
+<td>WhatsApp</td>
+<td>限定的(リスト、ボタン)</td>
+<td>1–3/行</td>
+<td>&lt;1MB</td>
+<td>3</td>
+<td>シンプルなカード、カルーセルなし</td>
+</tr>
+<tr>
+<td>Apple Business Chat</td>
+<td>高度</td>
+<td>様々</td>
+<td>~1MB</td>
+<td>3–5</td>
+<td>Apple Pay、フォーム、リストピッカー</td>
+</tr>
+<tr>
+<td>Facebook Messenger</td>
+<td>完全(カード、カルーセル)</td>
+<td>10/カルーセル</td>
+<td>1MB</td>
+<td>3</td>
+<td>テンプレート、クイック返信</td>
+</tr>
+<tr>
+<td>Microsoft Dynamics 365</td>
+<td>完全(カード、JSON)</td>
+<td>10/カルーセル</td>
+<td>1MB</td>
+<td>5</td>
+<td>Adaptive cards、フォーム、カスタムJSON</td>
+</tr>
+</tbody>
+</table>
+<p><strong>実装上の注意:</strong></p>
+<ul>
+<li>モバイルパフォーマンスのために画像と動画を圧縮</li>
+<li>プラットフォーム固有の文字制限を尊重</li>
+<li>デバイスとチャネル全体でインタラクティビティをテスト</li>
+<li>ボタンクリック、カードビュー、ユーザーアクションの分析を使用</li>
+</ul>
+<h2 id="主な利点">主な利点</h2>
+<h3 id="より高いエンゲージメント">より高いエンゲージメント</h3>
+<p>リッチメディアカードは、テキストのみのメッセージを一貫して上回ります:</p>
+<ul>
+<li>画像豊富な会話は2〜3倍高いエンゲージメントを促進</li>
+<li>ビジュアルとボタンが注目を集め、インタラクションを促進</li>
+<li>摩擦なし:ユーザーはワンタップでアクション(購入、予約、返信)</li>
+</ul>
+<h3 id="コンバージョン率の向上">コンバージョン率の向上</h3>
+<ul>
+<li>リッチメディアを使用したチャットボットは、テキストのみのボットと比較して最大85%高いコンバージョン率を実現</li>
+<li>インタラクティブなフォーム、カルーセル、CTAがユーザージャーニーを合理化し、離脱を削減</li>
+<li>直接アクションボタンがナビゲーションの摩擦を排除</li>
+</ul>
+<h3 id="ブランド体験の向上">ブランド体験の向上</h3>
+<ul>
+<li>カードはカスタム画像、色、トーンを通じてブランドアイデンティティを強化</li>
+<li>より記憶に残り楽しく、ブランド想起率の向上につながる</li>
+<li>GIF、絵文字、または動画の個性でチャットボットを人間化</li>
+</ul>
+<h3 id="運用効率">運用効率</h3>
+<ul>
+<li>ユーザーを<a data-lb="1" href="/ja/glossary/self-service/" title="カスタマーサポートのためのセルフサービスソリューション、ツール、戦略を探求します。FAQ、ナレッジベース、AIチャットボットが顧客をエンパワーメントし、運用コストを削減する方法を学びます。">セルフサービス</a>の回答に導くことで、カスタマーサポートの作業負荷を削減</li>
+<li>応答を標準化し、一貫性と正確性を確保</li>
+<li>日常的なインタラクションを自動化し、エージェントを複雑な問題に解放</li>
+</ul>
+<h3 id="高度なトラッキング">高度なトラッキング</h3>
+<p>リッチメディアカードは包括的な分析を可能にします:</p>
+<ul>
+<li>ボタンのクリックスルー率</li>
+<li>カードビュー数</li>
+<li>離脱ポイントとファネル分析</li>
+<li>ゴール達成率</li>
+<li>ユーザーエンゲージメントパターン</li>
+</ul>
+<h2 id="実世界での応用">実世界での応用</h2>
+<h3 id="eコマース製品発見">Eコマース製品発見</h3>
+<p><strong>実装:</strong> Messengerボットがベストセラーのカルーセルを製品画像、価格、「今すぐ購入」ボタン付きで送信</p>
+<p><strong>結果:</strong> 合理化されたブラウジングと購入がコンバージョンを促進し、カート放棄を削減</p>
+<h3 id="リード生成">リード生成</h3>
+<p><strong>実装:</strong> Webサイトチャットボットが「お問い合わせ」ボタン付きのサービスカルーセルを提示し、チャット内で連絡先情報をキャプチャ</p>
+<p><strong>結果:</strong> 摩擦のないデータキャプチャがリード量と質を向上</p>
+<h3 id="カスタマーサポート">カスタマーサポート</h3>
+<p><strong>実装:</strong> ボットが「これは役に立ちましたか?」ボタン付きのトラブルシューティング手順をカードとして提示</p>
+<p><strong>結果:</strong> エージェントの作業負荷を削減し、解決速度を向上し、CSATを改善</p>
+<h3 id="予約">予約</h3>
+<p><strong>実装:</strong> ボットが利用可能な時間枠をカードとして表示、ユーザーがタップして確認</p>
+<p><strong>結果:</strong> スケジューリングを簡素化し、放棄を削減し、予約を増加</p>
+<h3 id="コンテンツ配信">コンテンツ配信</h3>
+<p><strong>実装:</strong> メディアボットがサムネイル、見出し、「続きを読む」ボタン付きのニュース記事をカードとして送信</p>
+<p><strong>結果:</strong> コンテンツ消費とエンゲージメントを増加</p>
+<h2 id="ベストプラクティス">ベストプラクティス</h2>
+<h3 id="デザインとコンテンツ">デザインとコンテンツ</h3>
+<p><strong>明確性を優先:</strong> カルーセルあたりのカード数を制限(プラットフォームに応じて3〜10)、簡潔なテキスト、高品質な画像を使用</p>
+<p><strong>パフォーマンスの最適化:</strong> 画像/動画を1MB未満に保つ、サムネイルは50〜100KBを推奨、高速CDNでホスト</p>
+<p><strong>モバイルファーストアプローチ:</strong> ボタンを大きくタッチフレンドリーに、密集したレイアウトを避ける</p>
+<p><strong>アクション指向のボタン:</strong> 明確で具体的なCTAを使用(例:「今すぐ予約」、「見積もりを取得」)、カードあたり3〜5アクションに制限</p>
+<p><strong><a data-lb="1" href="/ja/glossary/personalization/" title="AIチャットボットと自動化におけるパーソナライゼーションは、高度なアルゴリズムを使用して、個々のユーザーの嗜好や行動に合わせてサービス、コンテンツ、インタラクションをカスタマイズします。">パーソナライゼーション</a>:</strong> ユーザーのコンテキスト、履歴、または好みに基づいてカードコンテンツを調整</p>
+<h3 id="アクセシビリティとテスト">アクセシビリティとテスト</h3>
+<p><strong>アクセシビリティの追加:</strong> 画像の説明的な代替テキスト、スクリーンリーダーフレンドリーなボタンラベル</p>
+<p><strong>A/Bテスト:</strong> カードの順序、ビジュアル、メッセージングを実験、実際の使用に基づいて反復</p>
+<p><strong>クロスプラットフォームテスト:</strong> すべてのターゲットプラットフォームでフォーマットと機能を検証</p>
+<h3 id="分析と最適化">分析と最適化</h3>
+<p><strong>包括的なトラッキング:</strong> カードインプレッション、ボタンクリック、離脱、ゴール達成</p>
+<p><strong><a data-lb="1" href="/ja/glossary/dashboard/" title="ダッシュボードとは、複数のソースから主要なデータ、KPI、トレンドを表示するビジュアルインターフェースです。迅速な監視、分析、情報に基づいた意思決定を可能にします。">ダッシュボード</a>の使用:</strong> 最適化のためのファネル可視化、ボトルネックの特定</p>
+<p><strong>セグメント分析:</strong> ユーザーセグメント、チャネル、期間全体でパフォーマンスを比較</p>
+<h3 id="ブランドの一貫性">ブランドの一貫性</h3>
+<p><strong>ビジュアル基準:</strong> ブランド承認済みの色、ロゴ、タイポグラフィを使用</p>
+<p><strong>トーンの整合:</strong> メッセージングがブランドボイスと一致することを確認</p>
+<p><strong>品質管理:</strong> 定期的なコンテンツレビューと更新</p>
+<h3 id="避けるべき一般的な落とし穴">避けるべき一般的な落とし穴</h3>
+<ul>
+<li>テキストやボタンが多すぎるカードの過負荷</li>
+<li>画像最適化を怠り、読み込み時間が遅くなる</li>
+<li>一般的または無関係なビジュアルの使用</li>
+<li>プラットフォーム固有の制限と制約を無視</li>
+<li>カード全体でブランディングが一貫していない</li>
+<li>分析実装の欠如</li>
+</ul>
+<h2 id="分析と測定">分析と測定</h2>
+<h3 id="主要パフォーマンス指標">主要パフォーマンス指標</h3>
+<p><strong>総ユーザー数:</strong> ボットとインタラクションするユニークユーザー</p>
+<p><strong>アクティブ/エンゲージユーザー:</strong> ウェルカムメッセージを超えてインタラクションするユーザー</p>
+<p><strong>カードビュー:</strong> カードがユーザーに表示された回数</p>
+<p><strong>ボタンクリック/CTAエンゲージメント:</strong> 各アクションのクリックスルー率</p>
+<p><strong>離脱率:</strong> ユーザーが会話を放棄するポイント</p>
+<p><strong>ゴール達成率:</strong> 望ましいアクションを完了する割合</p>
+<p><strong>セルフサービス率:</strong> 人間の介入なしで解決された問題</p>
+<p><strong>デフレクション率:</strong> ボットが処理した問い合わせで人間の作業負荷を削減</p>
+<p><strong>CSAT/NPS:</strong> アンケートカードからの顧客満足度スコア</p>
+<h3 id="最適化戦略">最適化戦略</h3>
+<p><strong>ファネル分析:</strong> カルーセル/カードを通じたユーザーの動きを追跡し、離脱ポイントを特定</p>
+<p><strong>コンテンツ最適化:</strong> カードレベルの分析に基づいて画像、タイトル、CTAを改善</p>
+<p><strong>A/Bテスト:</strong> カードの順序、ボタンの配置、CTAの文言を実験</p>
+<p><strong>パーソナライゼーション:</strong> 分析を活用してユーザーをセグメント化し、ターゲットカードを配信</p>
+<h2 id="プラットフォーム固有のリソース">プラットフォーム固有のリソース</h2>
+<p><strong><a data-lb="1" href="/ja/glossary/google/" title="Google の用語集ページ">Google</a> RCS Business Messaging:</strong> リッチカード機能、メディアフォーマット、実装ガイド</p>
+<p><strong>Microsoft Bot Framework:</strong> カードタイプ、チャネルサポートマトリックス、Adaptive Cardデザイナー</p>
+<p><strong>Facebook Messenger Platform:</strong> テンプレートドキュメント、カルーセル実装</p>
+<p><strong>WhatsApp Business API:</strong> メッセージテンプレート、ボタン制限</p>
+<p><strong>Apple Business Chat:</strong> 高度な機能、Apple Pay統合</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>リッチメディアカードと標準メッセージの違いは何ですか?</strong><br/>
+標準メッセージはプレーンテキストです。リッチメディアカードには、画像、動画、カルーセル、ボタンが含まれ、インタラクティブで視覚的に魅力的な体験を可能にします。</p>
+<p><strong>リッチメディアカードを作成するにはデザインスキルが必要ですか?</strong><br/>
+ほとんどのチャットボットプラットフォームは、ドラッグアンドドロップでカードを作成できるビジュアルビルダーを提供しています。最小限のデザインスキルで十分ですが、明確性とブランディングへの注意は重要です。</p>
+<p><strong>リッチメディアはチャットボットを遅くしますか?</strong><br/>
+最適化された画像と動画(できれば1MB未満)は遅延を防ぎます。すべてのメディアを圧縮し、大きなファイルにはCDNホスティングを使用してください。</p>
+<p><strong>リッチメディアカードとのユーザーインタラクションを追跡できますか?</strong><br/>
+はい。ほとんどのプラットフォームは、ボタンクリック、カードビュー、離脱、ゴール達成の分析を提供します。</p>
+<p><strong>リッチメディアカードはすべてのメッセージングアプリでサポートされていますか?</strong><br/>
+サポートはプラットフォームによって異なります。Webチャット、Messenger、Apple Business Chatは堅牢なサポートを提供しますが、WhatsAppとSMSは機能が限定的です。</p>
+<p><strong>カルーセルと単一カードのどちらを選ぶべきですか?</strong><br/>
+製品発見、比較、または複数のオプションにはカルーセルを使用します。単一カードは、焦点を絞ったアクションや詳細情報に適しています。</p>
+<p><strong>カルーセルの最適なカード数は?</strong><br/>
+プラットフォームに応じて3〜10枚のカード。モバイルでは少ないカード数(3〜5)が通常より良いパフォーマンスを発揮します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li><a href="https://developers.google.com/business-communications/rcs-business-messaging/guides/learn/rich-cards" rel="nofollow noopener noreferrer" target="_blank">Google RCS Business Messaging: Rich Cards</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards?view=azure-bot-service-4.0" rel="nofollow noopener noreferrer" target="_blank">Microsoft Bot Framework: Add Rich Card Attachments</a></li>
+<li><a href="https://www.sprinklr.com/blog/chatbot-analytics/" rel="nofollow noopener noreferrer" target="_blank">Sprinklr: Chatbot Analytics</a></li>
+<li><a href="https://hellotars.com/blog/improve-chatbot-conversion-rate-rich-media" rel="nofollow noopener noreferrer" target="_blank">Tars: Improve Chatbot Conversion Rate Using Rich Media</a></li>
+<li><a href="https://www.kommunicate.io/blog/best-chatbot-practices/" rel="nofollow noopener noreferrer" target="_blank">Kommunicate: Best Chatbot Practices</a></li>
+<li><a href="https://quickchat.ai/post/chatbot-analytics" rel="nofollow noopener noreferrer" target="_blank">Quickchat: Chatbot Analytics Deep Dive</a></li>
+<li><a href="https://adaptivecards.io/designer/" rel="nofollow noopener noreferrer" target="_blank">Adaptive Cards Designer</a></li>
+<li><a href="https://developers.facebook.com/docs/messenger-platform/send-messages/template/" rel="nofollow noopener noreferrer" target="_blank">Facebook Messenger Platform Templates</a></li>
+<li><a href="https://developers.facebook.com/docs/whatsapp/api/messages/message-templates" rel="nofollow noopener noreferrer" target="_blank">WhatsApp Business Messaging Templates</a></li>
+<li><a href="https://sendbird.com/learn/what-is-rich-media" rel="nofollow noopener noreferrer" target="_blank">Sendbird: What is Rich Media?</a></li>
+<li><a href="https://madgicx.com/blog/rich-media" rel="nofollow noopener noreferrer" target="_blank">Madgicx: Rich Media Ads</a></li>
+<li><a href="https://www.conferbot.com/features/rich-media" rel="nofollow noopener noreferrer" target="_blank">Conferbot: Rich Media Features</a></li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/quick-replies/">
+                    クイックリプライ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    クイックリプライは、チャットインターフェースに表示される一時的で選択可能なボタンで、事前定義されたオプションを提供します。選択後に消えるため、画面の煩雑さを防ぎ、会話の流れを維持します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/quick-replies/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/conversational-ai/">
+                    対話型AI
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    対話型AIを探求:自然言語処理、自然言語理解、機械学習、音声認識を用いて人間の会話をシミュレートする技術。その仕組み、メリット、ユースケース、将来のトレンドを学びます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/conversational-ai/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/chatgpt/">
+                    ChatGPT
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/blog/how-to-use-large-language-models-effectively/" title="ChatGPTのような大規模言語モデルの実用的な活用方法を学び、さまざまなLLMプラットフォームを探索し、これらのモデルが内部でどのように機能するかを理解し、日常の仕事や生活で効果的に活用する方法を発見しましょう。">ChatGPT</a>は、大規模言語モデルを活用した<a data-lb="1" href="/ja/glossary/openai/" title="ChatGPTは、大規模言語モデルを活用したOpenAIの高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。">OpenAI</a>の高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/chatgpt/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/faq/">
+                    FAQ(よくある質問)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    デジタルコミュニケーション、カスタマーサポート、<a data-lb="1" href="/ja/glossary/ai-chatbot/" title="SmartWebが提供するAIチャットボット・AIカスタマーサポートサービスの利用規約です">AIチャットボット</a>の基盤となるFAQ(よくある質問)について解説します。その定義、目的、メリット、実装方法を学びましょう。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/faq/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/nlu-confidence-threshold/">
+                    NLU信頼度閾値
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    NLU信頼度閾値とは、NLUエンジンがユーザーの<a data-lb="1" href="/ja/glossary/utterance/" title="会話型AIにおける発話とは何か、NLU/NLPにおける役割、種類、ワークフロー、課題、そしてチャットボットを効果的にトレーニングするためのベストプラクティスについて学びます。">発話</a>に対して特定のインテントをトリガーするために必要な最小信頼度スコアです。これは会話型AIの中核となる要素です。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/nlu-confidence-threshold/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/voiceflow/">
+                    Voiceflow
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Voiceflowは、チャットボットや音声アシスタントなどの会話型<a data-lb="1" href="/ja/glossary/ai-agents/" title="Claude AIが自律的に自動販売機ビジネスを運営した実験「プロジェクト・ベンド」の詳細な探求。AIエージェントの限界、欺瞞、そして自律的なビジネス運営の未来について重要な洞察を明らかにする。">AIエージェント</a>を設計、構築、デプロイするためのノーコードプラットフォームです。複数のチャネルにわたって顧客とのやり取りやワークフロー...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/voiceflow/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/rich-media-cards/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190816"></script>
+</body>
+</html>

@@ -79,7 +79,7 @@ IntuitはAmazon Connectを活用して、統合型カスタマーコンタクト
 
 ### 3. Joyful Hands（ベトナム・美容ヘルス製品スタートアップ）
 
-ベトナム・ハノイ拠点の美容・健康製品スタートアップ<strong>Joyful Hands</strong>では、ベトナム語・タイ語・英語の3言語にわたる顧客問い合わせ対応に課題を抱えていました。そこで<strong>BotStar社の多言語対応AIチャットボットを導入し、各言語で自動応答できる体制を構築しました。その結果、カート放棄率が</strong>35%減少<strong>し、自動対応できる問い合わせ割合も</strong>55%から89%へ向上<strong>、回答速度や会話のしやすさに対する顧客からの好意的なレビューも増加しています。</strong>参考資料：**- Case Study 1: Multilingual Chatbot Boosts Cross-Border E-Commerce
+ベトナム・ハノイ拠点の美容・健康製品スタートアップ<strong>Joyful Hands</strong>では、ベトナム語・タイ語・英語の3言語にわたる顧客問い合わせ対応に課題を抱えていました。そこで<strong>BotStar社の多言語対応AIチャットボットを導入し、各言語で自動応答できる体制を構築しました。その結果、カート放棄率が</strong>35%減少<strong>し、自動対応できる問い合わせ割合も</strong>55%から89%へ向上<strong>、回答速度や会話のしやすさに対する顧客からの好意的なレビューも増加しています。</strong>参考資料：- Case Study 1: Multilingual Chatbot Boosts Cross-Border E-Commerce
 
 ### 4. Bali Bliss Homestay（インドネシア・小規模宿泊業）
 
@@ -97,7 +97,7 @@ IntuitはAmazon Connectを活用して、統合型カスタマーコンタクト
 
 <strong>共通点：</strong>- <strong>AIによる自動化と精度向上：</strong>SalesforceやIntuitのような大手から、Joyful HandsやBali Bliss Homestayといった中小規模の企業まで、AIを導入することで問い合わせ対応の自動化や回答精度の向上を実現しています。
 - <strong>顧客体験を中心に改善：</strong>即時応答、多言語対応、感情分析などにより、顧客満足度の向上やリピート利用につながっています。
-- 業務効率と成果の両立：<strong>単なるコスト削減ではなく、売上拡大、予約率向上、リード獲得増加など、具体的なビジネス成果に直結しています。</strong>差別化ポイント：<strong>-</strong>Salesforce（米国）：**自律型AIエージェントにより複雑な問い合わせでも人間に近い精度で解決。大規模環境での導入に強み。
+- 業務効率と成果の両立：<strong>単なるコスト削減ではなく、売上拡大、予約率向上、リード獲得増加など、具体的なビジネス成果に直結しています。</strong>差別化ポイント：<strong>-</strong>Salesforce（米国）：自律型AIエージェントにより複雑な問い合わせでも人間に近い精度で解決。大規模環境での導入に強み。
 - <strong>Intuit（米国）：</strong>繁忙期に合わせたスケーラブルなコンタクトセンター構築で、需要変動の大きい業種における迅速な体制構築を可能に。
 - <strong>Joyful Hands（ベトナム）：</strong>越境ECにおける多言語対応で、カート放棄率を削減し顧客体験を改善。東南アジア特有の多国籍市場への対応がポイント。
 - <strong>Bali Bliss Homestay（インドネシア）：</strong>小規模宿泊施設でも導入可能なボットで、時差やスタッフ不在の課題を解決。

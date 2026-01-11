@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>ChatGPT | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/chatgpt/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="ChatGPTは、大規模言語モデルを活用したOpenAIの高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。" name="description"/>
+<meta content="ChatGPT, OpenAI, 対話型AI, GPT-4, AIチャットボット" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/chatgpt/" property="og:url"/>
+<meta content="ChatGPT | SmartWeb" property="og:title"/>
+<meta content="ChatGPTは、大規模言語モデルを活用したOpenAIの高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/chatgpt/" name="twitter:url"/>
+<meta content="ChatGPT | SmartWeb" name="twitter:title"/>
+<meta content="ChatGPTは、大規模言語モデルを活用したOpenAIの高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">ChatGPT</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        ChatGPT
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          ChatGPT
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          ChatGPTは、大規模言語モデルを活用したOpenAIの高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ChatGPT
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                OpenAI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                対話型AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                GPT-4
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AIチャットボット
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="chatgptとは何か">ChatGPTとは何か?</h2>
+<p>ChatGPTは、<a href="/ja/glossary/openai/" title="OpenAIは、ChatGPT、GPT-5.2、GPT-4o、DALL-E 3などの先進的なモデルを開発することで知られる、AI分野をリードする企業です。そのミッション、製品、および影響力について探ります。">OpenAI</a>が開発した高度な<a data-lb="1" href="/ja/glossary/conversational/" title="対話型AIを探求:自然言語処理、自然言語理解、機械学習、音声認識を用いて人間の会話をシミュレートする技術。その仕組み、メリット、ユースケース、将来のトレンドを学びます。">対話型AI</a>アシスタントで、<a data-lb="1" href="/ja/glossary/large-language-models/" title="大規模言語モデル(LLM)は、深層学習とトランスフォーマーネットワークを活用した高度なAIシステムで、テキスト生成、翻訳などを実現します。その中核概念、応用分野、課題について理解を深めましょう。">大規模言語モデル(LLM)</a>を使用して自然で人間らしい会話を行います。2022年11月にリリースされた<a data-lb="1" href="/blog/how-to-use-large-language-models-effectively/" title="ChatGPTのような大規模言語モデルの実用的な活用方法を学び、さまざまなLLMプラットフォームを探索し、これらのモデルが内部でどのように機能するかを理解し、日常の仕事や生活で効果的に活用する方法を発見しましょう。">ChatGPT</a>は、わずか2ヶ月で1億ユーザーに到達し、史上最速で成長した消費者向けアプリケーションとなりました。このシステムは、文脈を理解し、創造的なコンテンツを生成し、質問に答え、コーディングを支援し、ドキュメントを分析し、シンプルなテキストプロンプトを通じて多様な言語ベースのタスクを実行できます。</p>
+<p>関連:<a data-lb="1" href="/ja/glossary/openai/" title="ChatGPTは、大規模言語モデルを活用したOpenAIの高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。">OpenAI</a>のミッション、歴史、GPT-4、DALL-E、Whisperを含む全製品ラインナップに関する包括的な情報については、<a href="/ja/glossary/openai/" title="OpenAIは、ChatGPT、GPT-5.2、GPT-4o、DALL-E 3などの先進的なモデルを開発することで知られる、AI分野をリードする企業です。そのミッション、製品、および影響力について探ります。">OpenAI</a>を参照してください。</p>
+<p>ChatGPTは、従来のキーワードベースのシステムから真の対話型インターフェースへと、人間とコンピュータの相互作用における重要な進化を表しています。このアシスタントは、一貫性のある文脈に適したテキストを予測・生成するために特別に設計されたGPT(Generative Pre-trained Transformer)アーキテクチャを活用しています。事前に決められたスクリプトに従うルールベースの<a data-lb="1" href="/ja/glossary/chatbot/" title="チャットボットは、テキストまたは音声を通じて人間の会話をシミュレートするAI駆動のソフトウェアアプリケーションです。カスタマーサポート、情報検索、タスク自動化に使用されます。">チャットボット</a>とは異なり、ChatGPTは確率的言語モデリングを使用して動的に応答を生成するため、オープンエンドな質問、創造的なタスク、事実上無制限のトピックにわたる複雑な推論を処理できます。</p>
+<p>現在のChatGPT実装は、タスクの複雑さに応じて複数のGPTモデル間でインテリジェントにルーティングする機能を備えています。シンプルなクエリは高速モデルからほぼ瞬時に応答を受け取り、複雑な推論、数学的問題、またはコーディングタスクは、ソリューションを生成する前に問題を分析するのにより多くの時間を費やす、より深い「思考」モデルを自動的に使用します。このハイブリッドアプローチは、速度と能力のバランスを取り、多様なユースケースにわたって最適なパフォーマンスを提供します。</p>
+<h2 id="コア技術">コア技術</h2>
+<p><a data-lb="1" href="/ja/glossary/large-language-models/" title="大規模言語モデル(LLM) の用語集ページ">大規模言語モデル</a>(GPTシリーズ)ChatGPTは、GPT-3.5、GPT-4、GPT-4o、および最新のGPT-5シリーズを含むOpenAIのGPTモデルによって駆動されています。これらのトランスフォーマーベースの<a data-lb="1" href="/ja/glossary/neural-networks/" title="ディープラーニングは、多層ニューラルネットワークを使用してデータから複雑なパターンを学習する高度なAI技術です。画像認識、自然言語処理、生成AIに不可欠な技術となっています。">ニューラルネットワーク</a>は、書籍、ウェブサイト、コードリポジトリ、多様なテキストソースを含む膨大なデータセットでトレーニングされており、広範な知識と洗練された言語理解を可能にしています。インテリジェントモデルルーティングシステムは各クエリに最も適したモデルバリアントを自動的に選択します。GPT-5.2 Instantは簡単な情報検索と執筆を処理し、GPT-5.2 Thinkingは複雑なコーディングと分析に取り組み、GPT-5.2 Proは困難な専門的タスクに最大の精度を提供します。マルチモーダル機能ChatGPTは、テキスト、コード、画像(DALL-E統合経由)、ドキュメント分析を含む複数のコンテンツタイプを処理・生成します。ユーザーは、分析、要約、またはデータ抽出のためにPDF、画像、スプレッドシート、その他のファイルをアップロードできます。会話メモリChatGPTは会話全体を通じて文脈を維持し、セッション内の以前のやり取りを記憶し、メモリ機能が有効な場合は複数のセッションにわたって記憶します。これにより、一貫性のある複数ターンの対話と、時間の経過とともにパーソナライズされた支援が可能になります。リアルタイム情報アクセスウェブブラウジングが有効な場合、ChatGPTはインターネットで現在の情報を検索し、最近のニュースにアクセスし、事実を調べ、トレーニングカットオフを超えたデータを検証できるため、応答が正確で最新の状態を保ちます。カスタム指示ユーザーは、ChatGPTの動作、応答スタイル、詳細レベル、焦点領域を導く永続的な設定を設定でき、特定のニーズやユースケースに合わせたパーソナライズされた体験を作成できます。</p>
+<h2 id="主な機能と能力">主な機能と能力</h2>
+<p>自然言語会話人間の会話に似た流暢で文脈に沿った対話を行い、ChatGPTは複数の言語にわたってニュアンス、慣用句、ユーモア、複雑な言語構造を理解します。コンテンツ生成と執筆エッセイ、記事、ブログ投稿、マーケティングコピー、メール、創造的なストーリー、詩、スクリプト、そして事実上あらゆるテキストベースのコンテンツを、カスタマイズ可能なトーン、スタイル、長さで作成します。コード開発とデバッグPython、JavaScript、Java、C++、SQLなどのプログラミング言語でコードを書き、説明し、デバッグし、最適化します。ChatGPTは、アルゴリズム設計、コードレビュー、技術文書作成を支援します。データ分析と可視化データセットを分析し、統計計算を実行し、パターンを特定し、インサイトを生成し、可視化を作成します。ChatGPTは、CSV、Excelスプレッドシート、JSONデータを含むアップロードされたファイルを処理できます。ドキュメント処理長いドキュメントを要約し、重要な情報を抽出し、コンテンツを翻訳し、データを再フォーマットし、PDF、Wordドキュメント、プレゼンテーション、その他のファイルタイプを分析します。問題解決と推論数学的問題、論理パズル、戦略的計画、複雑な推論タスクに取り組みます。思考モードは、推論プロセスの段階的な説明を提供します。研究支援情報を収集し、学術論文を要約し、研究質問を生成し、文献レビューの草案を作成し、科学的および技術的領域にわたる複雑な概念の説明を提供します。学習と個別指導概念を説明し、例を提供し、質問に答え、練習問題を生成し、数学から歴史まで科目全体にわたってパーソナライズされた学習サポートを提供します。タスク自動化テンプレートを作成し、大量のコンテンツを生成し、構造化データを処理し、指示の一貫した適用を通じて反復的な執筆または分析タスクを自動化します。創造的コラボレーションアイデアをブレインストーミングし、物語を開発し、概念を洗練し、フィードバックを提供し、ストーリーテリング、マーケティングキャンペーン、製品開発を含む創造的プロジェクトで協力します。</p>
+<h2 id="chatgptの仕組み">ChatGPTの仕組み</h2>
+<p>ユーザー入力処理ユーザーがプロンプトを送信すると、ChatGPTは入力をより小さな単位にトークン化し、単語間の意味的意味と関係を捉える数値表現を作成します。文脈統合モデルは、意図を理解し、複数のやり取りにわたって一貫した対話を維持するために、完全な会話履歴、ユーザー設定、カスタム指示を考慮します。モデル選択とルーティングChatGPTのオーケストレーション層は、クエリの複雑さを評価し、最も適切なGPTバリアント(速度のためのInstant、深さのためのThinking、最大精度のためのPro)にリクエストを自動的にルーティングします。応答生成選択されたモデルは、複数のトランスフォーマー層を通じて拡張されたプロンプトを処理し、アテンションメカニズムを使用して関連するパターンと関係を特定します。モデルは、文脈に基づいて最も可能性の高い次の単語を予測しながら、トークンごとに応答を生成します。品質保証応答は、潜在的に有害なコンテンツを削除し、可能な場合は事実の一貫性を検証し、OpenAIの使用ポリシーと倫理ガイドラインとの整合性を確保するためにフィルタリングされます。出力配信生成された応答は、構造化されたコンテンツのマークダウン、プログラミング例のコードブロック、ウェブブラウジングが外部情報を取得した場合の引用を含む適切なフォーマットでユーザーに提示されます。</p>
+<h2 id="価格とプラン">価格とプラン</h2>
+<p>無料ティアGPT-3.5へのアクセスと限定的な日次使用量で、カジュアルユーザーやChatGPTの潜在能力を探索する人々に核となる会話機能を提供します。Plusプラン($20/月)- GPT-4、GPT-4o、GPT-5.2モデルへのアクセス</p>
+<ul>
+<li>より高速な応答時間とピーク使用時の優先アクセス</li>
+<li>DALL-E画像生成</li>
+<li>高度なデータ分析とファイルアップロード</li>
+<li>現在の情報のためのウェブブラウジング</li>
+<li>カスタムGPTとGPTストアへのアクセス</li>
+</ul>
+<p>Teamプラン($25-$30/ユーザー/月)Plus機能に加えて、チームワークスペース、管理コンソール、コラボレーション機能、ビジネスチームと組織のためのより高い使用制限。Enterpriseプラン(カスタム価格)最高能力モデルへの無制限アクセス、専用サポート、SSOを含むセキュリティ機能、管理制御、分析、大規模組織向けのカスタム展開オプション。</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p>ビジネスと生産性メールの下書き、レポート作成、プレゼンテーション生成、ドキュメント自動化、ビジネスデータ分析、会議要約の準備、コミュニケーションワークフローの合理化。ソフトウェア開発コードの記述、エラーのデバッグ、複雑なアルゴリズムの説明、ドキュメント生成、単体テストの作成、レガシーコードのリファクタリング、技術スタック全体での開発サイクルの加速。コンテンツ作成ブログ投稿、ソーシャルメディアコンテンツ、マーケティングコピー、ビデオスクリプト、SEO最適化記事、プレスリリース、一貫したブランドボイスとスタイルでの創造的な執筆を制作。教育と研究複雑な概念の説明、個別指導の提供、学習教材の生成、研究論文の要約、課題の支援、学術分野全体での学習サポート。カスタマーサポートサポート応答の下書き、FAQコンテンツの作成、顧客フィードバックの分析、トラブルシューティングガイドの生成、サービスドキュメントの品質と一貫性の向上。データ分析スプレッドシートの処理、トレンドの特定、可視化の生成、統計分析の実行、データセットのクリーニング、構造化データからの実用的なインサイトの抽出。創造的プロジェクトストーリーアイデアの開発、フィクションの執筆、マーケティングキャンペーンの作成、製品コンセプトのブレインストーミング、ユーザーエクスペリエンスの設計、革新的なプロジェクトでの協力。専門サービス法的文書の下書き、契約の分析、財務レポートの準備、クライアントプレゼンテーションの作成、ケーススタディの要約、コンサルティング成果物のサポート。</p>
+<h2 id="強みと利点">強みと利点</h2>
+<p>卓越した言語理解ChatGPTは、文脈、ニュアンス、慣用句、複雑な言語構造の洗練された理解を示し、多様なトピックと言語にわたる自然な会話を可能にします。ドメイン全体での多様性単一のインターフェースが、執筆、コーディング、分析、個別指導、創造的作業、問題解決にわたるタスクを処理し、各タスクに特化したツールの必要性を排除します。アクセシビリティと使いやすさシンプルな会話型インターフェースは、技術的専門知識、プログラミング知識、複雑な設定を必要とせず、高度なAI機能を誰もが利用できるようにします。継続的な改善定期的なモデル更新と機能追加により、ユーザーフィードバックと技術的進歩に基づいて機能が強化され、問題が修正され、機能が拡張されます。広範な知識ベース多様で包括的なデータセットでのトレーニングにより、歴史、科学、文化、技術、その他無数の領域にわたる広範な知識を提供します。速度と効率インテリジェントなモデルルーティングにより、シンプルなクエリに対して数秒で応答を提供しながら精度を維持し、手動で行うと何時間もかかるタスクを劇的に加速します。コスト効果的な支援サブスクリプション価格により、専門家の雇用、複数のソフトウェアツールの購入、またはタスクのアウトソーシングが必要となる機能への無制限アクセスを提供します。パーソナライゼーションオプションカスタム指示、メモリ機能、GPTカスタマイズにより、個々のニーズ、設定、ワークフローに合わせた体験が可能になります。</p>
+<h2 id="制限と考慮事項">制限と考慮事項</h2>
+<p>知識カットオフトレーニングデータにはカットオフ日(現在2025年1月)があり、ウェブブラウジングが有効でない限り、この時点以降に発生したイベントに関する知識がChatGPTにはありません。潜在的な不正確さChatGPTは、特に曖昧なトピック、最近のイベント、または検証を必要とする高度に専門化された領域について、もっともらしく聞こえるが事実的に誤った情報を生成する可能性があります。リアルタイム認識なしウェブブラウジングがない場合、システムは現在の情報、株価、天気、ニュース、またはトレーニングデータセットに存在しないリアルタイムデータにアクセスできません。文脈長の制限会話には有限の文脈ウィンドウがあり、非常に長いドキュメントや拡張された対話はこれらの制限を超える可能性があり、要約またはチャンク化が必要です。推論の制限GPT-5シリーズで改善されていますが、複雑な数学的推論、複数ステップの論理問題、特定の抽象的推論タスクは依然としてエラーを生成する可能性があります。真の理解の欠如ChatGPTは、真の理解、意識、または意味、真実、現実世界の因果関係の理解を持つのではなく、統計的パターンを処理します。<a data-lb="1" href="/ja/glossary/bias/" title="バイアス の用語集ページ">バイアス</a>と安全性トレーニングデータのバイアスが応答に影響を与える可能性があり、安全対策にもかかわらず、不適切なコンテンツが時折出現し、継続的な監視と改善が必要です。永続的な外部アクションなしChatGPTは、ユーザーの介入と適切な統合なしに、外部システムでアクションを直接実行したり、メールを送信したり、購入したり、ファイルを変更したりすることはできません。</p>
+<h2 id="chatgpt-vs-代替aiアシスタント">ChatGPT vs. 代替AIアシスタント</h2>
+<table>
+<thead>
+<tr>
+<th>機能</th>
+<th>ChatGPT</th>
+<th>Claude</th>
+<th>Gemini</th>
+<th>Microsoft Copilot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>開発者</td>
+<td>OpenAI</td>
+<td>Anthropic</td>
+<td>Google</td>
+<td>Microsoft</td>
+</tr>
+<tr>
+<td>最新モデル</td>
+<td>GPT-5.2</td>
+<td>Claude Opus 4.5</td>
+<td>Gemini 2.5 Pro</td>
+<td>GPT-4ベース</td>
+</tr>
+<tr>
+<td>無料ティア</td>
+<td>あり(GPT-3.5)</td>
+<td>制限あり</td>
+<td>あり</td>
+<td>制限あり</td>
+</tr>
+<tr>
+<td>有料プラン</td>
+<td>$20/月</td>
+<td>$20/月</td>
+<td>$20/月</td>
+<td>M365に含まれる</td>
+</tr>
+<tr>
+<td>文脈ウィンドウ</td>
+<td>128K-272Kトークン</td>
+<td>200Kトークン</td>
+<td>1Mトークン</td>
+<td>可変</td>
+</tr>
+<tr>
+<td>画像生成</td>
+<td>あり(DALL-E)</td>
+<td>なし</td>
+<td>あり(Imagen)</td>
+<td>あり(DALL-E)</td>
+</tr>
+<tr>
+<td>ウェブブラウジング</td>
+<td>あり</td>
+<td>制限あり</td>
+<td>あり</td>
+<td>あり</td>
+</tr>
+<tr>
+<td>コード実行</td>
+<td>あり</td>
+<td>なし</td>
+<td>あり</td>
+<td>制限あり</td>
+</tr>
+<tr>
+<td>プラグイン/拡張機能</td>
+<td>あり(GPTストア)</td>
+<td>なし</td>
+<td>一部</td>
+<td>多数(M365)</td>
+</tr>
+<tr>
+<td>最適用途</td>
+<td>一般用途、コーディング</td>
+<td>長文書、安全性</td>
+<td>研究、マルチモーダル</td>
+<td>Microsoftエコシステム</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ベストプラクティスとヒント">ベストプラクティスとヒント</h2>
+<p>プロンプトエンジニアリング技術明確な役割、タスク、文脈、フォーマット、例を含むプロンプトを構造化します。「〜として行動する」を使用して視点を定義し、関連する背景情報を提供し、希望する出力フォーマット(箇条書き、表、コード)を指定し、期待される結果を示す例を含めます。反復的な洗練基本的なプロンプトから始め、初期応答に基づいて徐々に詳細を追加します。出力が期待を外れた場合は明確化を要求し、理解を深めるためにフォローアップの質問をし、会話内の以前のやり取りに基づいて構築します。文脈管理無関係な詳細で圧倒することなく、必要な背景情報を提供します。以前のトピックに基づいて構築する際は会話の以前の部分を参照し、複雑な複数ターンの対話の重要なポイントを要約し、文脈が扱いにくくなったら会話を再開します。タスク分解複雑なタスクをより小さく管理可能なステップに分解します。詳細なコンテンツを生成する前にChatGPTにアプローチの概要を説明させ、文脈ウィンドウを圧倒するのではなくセクションごとに大きなドキュメントを処理し、次のフェーズに進む前に各ステップを検証します。品質保証重要な文脈での事実の主張を外部ソースを通じて検証します。可能な場合は引用とソースを要求し、計算と技術的詳細をクロスチェックし、本番使用前に生成されたコードを徹底的にテストし、自信に満ちているが未検証の主張に対して懐疑的な姿勢を維持します。効率の最適化繰り返しタスクのテンプレートとして効果的なプロンプトを保存します。特化した繰り返しワークフローにカスタムGPTを使用し、より速い対話のためにキーボードショートカットと音声入力を活用し、明確な命名とフォルダで会話を整理し、一般的なユースケースに対する体系的なアプローチを確立します。</p>
+<h2 id="高度なユースケースと技術">高度なユースケースと技術</h2>
+<p>自動化のための<a data-lb="1" href="/ja/glossary/api-integration/" title="複数の異なるAPIやサービスを標準化された一貫性のあるレイヤーに統合する単一のインターフェース。通信プロトコル、データフォーマット、認証メカニズムを正規化することで複雑性を抽象化し、開発者が各APIを個別に学習することなく、さまざまなサードパーティサービスと統合できるようにします。">API統合</a>OpenAI APIを通じてChatGPT機能をカスタムアプリケーションに接続し、手動の会話インターフェース対話なしに、自動化されたコンテンツ生成、インテリジェントなデータ処理、チャットボット開発、ワークフロー自動化、既存のビジネスシステムとの統合を可能にします。カスタムGPT開発GPT Builderを使用して特化したアシスタントを作成し、特定の知識ベース、行動ガイドライン、統合機能を定義します。カスタムGPTは、社内ツール、顧客向けアシスタント、または特定のドメインやワークフローに合わせた専門コンサルタントとして機能します。<a data-lb="1" href="/ja/glossary/rag/" title="RAG(Retrieval-Augmented Generation)は、外部データソースを統合することでLLMを強化します。正確でタイムリー、かつ文脈に関連したAI応答を提供し、ハルシネーションを削減します。">RAG</a>実装外部知識ソースを接続するRetrieval-Augmented GenerationでChatGPTを強化します。企業ドキュメントをアップロードし、データベースを統合し、リアルタイム情報フィードを接続し、会話機能を維持しながら幻覚を減らす権威あるソースに応答を根拠づけます。マルチモーダル分析プロジェクト包括的な分析のためにテキストと画像の機能を組み合わせます。仕様を含むデザインモックアップを処理し、文脈的解釈を含むチャートとグラフを分析し、技術的フィードバックを含むスクリーンショットをレビューし、OCRと理解を必要とする視覚的ドキュメントからデータを抽出します。コード開発ワークフロー要件仕様、アーキテクチャ計画、段階的実装、テスト戦略開発、ドキュメント生成、コードレビュー、デバッグ支援、ソフトウェア開発ライフサイクル全体を通じたパフォーマンス最適化ガイダンスを含む体系的なコーディング支援パターンを確立します。データ分析パイプライン探索的データ分析、統計的テスト、可視化生成、パターン識別、インサイト抽出、仮説検定、レポート生成を含む包括的な分析のためにデータセットをアップロードし、生データを実用的なインテリジェンスに変換します。</p>
+<h2 id="エンタープライズ実装戦略">エンタープライズ実装戦略</h2>
+<p>パイロットプログラム設計特定のユースケース、部門、またはチームをターゲットとした焦点を絞ったパイロットプログラムでエンタープライズChatGPT採用を開始します。明確な成功指標を確立し、ユーザーフィードバックを収集し、生産性への影響を測定し、最適化の機会を特定し、より広範な展開前に価値を示すケーススタディを開発します。ガバナンスフレームワーク開発許容される使用ガイドライン、データ機密性分類、出力レビュー要件、引用と検証基準、知的財産の考慮事項、業界と規制環境に特有のコンプライアンス要件を含む、ChatGPT使用を管理する包括的なポリシーを確立します。セキュリティとコンプライアンスSSO認証、ユーザーアクセス管理、監査ログ、データレジデンシー要件、暗号化基準、<a data-lb="1" href="/ja/glossary/gdpr/" title="EUの包括的なデータ保護規則であるGDPRについて理解しましょう。その原則、コンプライアンス要件、データ主体の権利、そしてAIチャットボットへの影響について学びます。">GDPR</a>、HIPAA、SOC 2などの規制および業界固有の要件のコンプライアンス検証を含むエンタープライズセキュリティ制御を実装します。トレーニングと変更管理効果的なプロンプティング、ユースケースの識別、制限の認識、品質保証、倫理的考慮事項、実用的なアプリケーションをカバーする包括的なトレーニングプログラムを開発します。ワークショップ、ドキュメント、社内チャンピオン、継続的な学習リソースを通じて採用をサポートします。ROI測定タスクごとに節約された時間、自動化によるコスト削減、品質改善指標、従業員満足度、顧客成果、戦略的価値生成を含むChatGPTの影響を定量化する指標を確立し、継続的な投資と拡大に関するデータ駆動型の意思決定を可能にします。既存システムとの統合CRMシステム、ナレッジマネジメントプラットフォーム、プロジェクト管理ツール、ドキュメントリポジトリ、コミュニケーションチャネル、ビジネスインテリジェンスシステムを含む既存のエンタープライズインフラストラクチャとChatGPT機能を接続し、シームレスなワークフロー統合を通じて価値を最大化します。</p>
+<h2 id="実世界の成功事例">実世界の成功事例</h2>
+<p>ソフトウェア開発の加速テクノロジー企業は、コード生成、ドキュメント作成、デバッグ、アーキテクチャ計画にChatGPTを使用して、開発サイクルが30〜50%高速化されたと報告しています。開発者は、ボイラープレートコード、API統合、テストケース生成、リファクタリングの提案にアシスタントを活用しています。コンテンツマーケティングのスケーリングマーケティングチームは、ブログ投稿の下書き、ソーシャルメディアコンテンツ、メールキャンペーン、製品説明、SEO最適化にChatGPTを使用して、慎重なプロンプティングと編集を通じて品質とブランドボイスの一貫性を維持しながら、コンテンツ出力が3〜5倍増加したと報告しています。<a data-lb="1" href="/ja/glossary/customer-support/" title="カスタマーサポートのチケットシステムの基本から導入方法、AI活用まで詳しく解説。業務効率化と顧客満足度向上を実現する方法を紹介します。">カスタマーサポート</a>の強化サポートチームは、ChatGPTを使用して応答の下書き、問題のトラブルシューティング、ドキュメントの作成、顧客フィードバックパターンの分析を行うことで、応答時間を短縮し、より多くの量を処理し、複雑な共感を必要とする対話のために人間のエージェントを解放しています。教育の変革教育機関と個別指導サービスは、練習問題の生成、複数の方法での概念の説明、即座のフィードバックの提供、個々の学習スタイルとペースへの適応を通じて、大規模にパーソナライズされた学習体験を提供しています。研究の加速分野を超えた研究者は、文献レビュー、仮説生成、データ分析、実験設計、助成金提案の下書き、原稿準備にChatGPTを使用し、研究タイムラインを大幅に圧縮し、出力品質を向上させています。法律および専門サービス法律事務所とコンサルティング実務は、契約分析、法的調査、文書作成、クライアントコミュニケーション、ケース戦略開発にChatGPTを活用し、高品質の出力を維持しながら日常的なタスクの請求可能時間を削減しています。</p>
+<h2 id="chatgptの始め方">ChatGPTの始め方</h2>
+<p>アカウント作成chat.openai.comにアクセスし、メール、<a data-lb="1" href="/ja/glossary/google/" title="Google の用語集ページ">Google</a>、Microsoft、またはApple認証を使用して無料アカウントを作成し、すぐに会話を開始します。効果的なプロンプティング関連する文脈、例、希望する出力フォーマットを含む明確で具体的な指示を提供します。最適な結果を達成するために、初期応答に基づいてプロンプトを反復し、洗練します。機能の探索ドキュメント分析のためのファイルアップロードをテストし、現在の情報のためにウェブブラウジングを有効にし、モバイルで音声入力を使用し、GPTストアからカスタムGPTを試します。アップグレードの検討使用パターン、応答品質のニーズ、機能要件を評価して、Plus、Team、またはEnterpriseプランがユースケースに十分な価値を提供するかどうかを判断します。統合オプションOpenAI API経由でChatGPTをワークフローに接続し、サードパーティの統合を探索し、特化した繰り返しタスクのためのカスタムGPT作成を検討します。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p>ChatGPTはインターネットにアクセスできますか?はい、ウェブブラウジングが有効な場合(Plusおよびそれ以上のプラン)、ChatGPTはインターネットから現在の情報を検索および取得できます。ChatGPTのデータは安全ですか?会話は暗号化されており、ユーザーはトレーニングデータの使用を無効にできます。Enterpriseプランは、SSO、データレジデンシー制御、コンプライアンス認証を含む強化されたセキュリティを提供します。ChatGPTを商業的に使用できますか?はい、有料プランユーザーはChatGPTの出力を商業目的で使用できますが、<a data-lb="1" href="/ai-chatbot-terms-of-use/" title="SmartWebが提供するAIチャットボット・AIカスタマーサポートサービスの利用規約です">利用規約</a>は特定の高リスクアプリケーションを禁止し、適切な帰属を要求します。ChatGPTは会話を記憶しますか?セッション内では、はい。セッション間では、メモリ機能を有効にして時間の経過とともに文脈と設定を維持するか、プライバシーのために無効にすることができます。ChatGPTはどの言語をサポートしていますか?ChatGPTは、英語、スペイン語、フランス語、ドイツ語、中国語、日本語、アラビア語など数十の言語をサポートしていますが、パフォーマンスは言語によって異なります。ChatGPTはコードを書いて実行できますか?はい、ChatGPTは複数のプログラミング言語でコードを書くことができ、Advanced Data Analysisが有効な場合、Pythonコードを実行してデータを処理し、可視化を生成できます。ChatGPTは検索エンジンとどう違いますか?ChatGPTは統合された会話型の応答を提供し、情報について推論できますが、検索エンジンはソースドキュメントへのリンクを返します。ウェブブラウジングを備えたChatGPTは両方のアプローチを組み合わせます。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>ChatGPT. Official Website. URL: <a href="https://chat.openai.com/" rel="nofollow noopener noreferrer" target="_blank">https://chat.openai.com/</a></li>
+<li>OpenAI. Company Profile. URL: <a href="https://openai.com/" rel="nofollow noopener noreferrer" target="_blank">https://openai.com/</a></li>
+<li>ChatGPT. Help Center. URL: <a href="https://help.openai.com/" rel="nofollow noopener noreferrer" target="_blank">https://help.openai.com/</a></li>
+<li>OpenAI. API Documentation. URL: <a href="https://platform.openai.com/docs/" rel="nofollow noopener noreferrer" target="_blank">https://platform.openai.com/docs/</a></li>
+<li>OpenAI. (n.d.). GPT-5 Announcement. URL: <a href="https://openai.com/gpt-5/" rel="nofollow noopener noreferrer" target="_blank">https://openai.com/gpt-5/</a></li>
+<li>OpenAI. (n.d.). GPT-5.2 Technical Details. URL: <a href="https://openai.com/index/introducing-gpt-5-2/" rel="nofollow noopener noreferrer" target="_blank">https://openai.com/index/introducing-gpt-5-2/</a></li>
+<li>ChatGPT Plus. Service Features. URL: <a href="https://openai.com/chatgpt/pricing/" rel="nofollow noopener noreferrer" target="_blank">https://openai.com/chatgpt/pricing/</a></li>
+<li>ChatGPT Enterprise. Enterprise Solution. URL: <a href="https://openai.com/enterprise/" rel="nofollow noopener noreferrer" target="_blank">https://openai.com/enterprise/</a></li>
+<li>OpenAI. GPT Store. URL: <a href="https://openai.com/gpt-store/" rel="nofollow noopener noreferrer" target="_blank">https://openai.com/gpt-store/</a></li>
+<li>OpenAI. Usage Policies. URL: <a href="https://openai.com/policies/usage-policies/" rel="nofollow noopener noreferrer" target="_blank">https://openai.com/policies/usage-policies/</a></li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/disambiguation/">
+                    曖昧性解消
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    曖昧性解消は、ユーザーの入力に複数の意味がある場合に、<a data-lb="1" href="/ja/glossary/ai-chatbot/" title="SmartWebが提供するAIチャットボット・AIカスタマーサポートサービスの利用規約です">AIチャットボット</a>がユーザーの意図を明確化するプロセスです。明確化のための質問を行ったり、選択肢を提示したりすることで、正確な解釈を保証します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/disambiguation/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/openai/">
+                    OpenAI
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    OpenAIは、ChatGPT、GPT-5.2、GPT-4o、DALL-E 3などの先進的なモデルを開発することで知られる、AI分野をリードする企業です。そのミッション、製品、および影響力について探り...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/openai/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/multi-turn-conversation/">
+                    マルチターン会話
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIチャットボットと自動化におけるマルチターン会話について学びます。AIシステムがコンテキスト、状態、複数のやり取りを管理し、複雑なタスクを処理する方法を理解します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/multi-turn-conversation/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/aggregator/">
+                    Aggregator（アグリゲーター）
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    複数の実行パスやループからの出力を収集し、単一の結果に統合するノード。効率的なデータ処理を実現します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/aggregator/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/botpress/">
+                    Botpress
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Botpressは、ビジュアルフローエディタ、高度なAI、LLM統合を備えた、AIチャットボットと会話エージェントを構築するための開発者フレンドリーなプラットフォームです。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/botpress/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/gdpr/">
+                    GDPR
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    EUの包括的なデータ保護規則であるGDPRについて理解しましょう。その原則、コンプライアンス要件、データ主体の権利、そしてAIチャットボットへの影響について学びます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/gdpr/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/chatgpt/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+  });
+</script>
+</body>
+</html>

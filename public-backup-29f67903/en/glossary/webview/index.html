@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Webview | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/webview/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Webview/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/Webview/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Webview/" hreflang="x-default" rel="alternate"/>
+<meta content="A browser window embedded within an app or chatbot that displays web content like forms and payment pages without leaving the application." name="description"/>
+<meta content="webview, chatbot, mobile app, interactive content, user experience" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/webview/" property="og:url"/>
+<meta content="Webview | SmartWeb" property="og:title"/>
+<meta content="A browser window embedded within an app or chatbot that displays web content like forms and payment pages without leaving the application." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/webview/" name="twitter:url"/>
+<meta content="Webview | SmartWeb" name="twitter:title"/>
+<meta content="A browser window embedded within an app or chatbot that displays web content like forms and payment pages without leaving the application." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165525" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165525" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script defer="" src="/js/main.js?v=20260111165525"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118125587168000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118125587168000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118125587168000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118125587168000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Webview</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Webview
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A browser window embedded within an app or chatbot that displays web content like forms and payment pages without leaving the application.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                webview
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                chatbot
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                mobile app
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                interactive content
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                user experience
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-webview">What Is a Webview?</h2>
+<p>A webview is an embedded browser component that renders web content—including HTML forms, interactive widgets, product catalogs, payment interfaces, multimedia elements, and complex web applications—directly within conversational interfaces or mobile applications. Rather than redirecting users to external browsers, webviews maintain contextual continuity by overlaying or embedding rich web experiences within the primary application interface, creating seamless transitions between conversational flows and sophisticated visual interactions.</p>
+<p>In <a data-lb="1" href="/en/glossary/ai-chatbot/" title="AI Chatbot glossary entry">AI chatbot</a> ecosystems and digital assistant platforms, webviews transcend the limitations of text-based messaging by enabling feature-rich user experiences impossible through traditional chat interfaces. Modern webview implementations support full web standards including JavaScript execution, CSS styling, responsive design, form validation, and secure payment processing, while maintaining tight integration with host applications through bidirectional communication channels enabling data exchange, authentication sharing, and workflow orchestration.</p>
+<p>Core Capabilities:</p>
+<p>Rich UI Components– Complex forms with validation, image galleries, interactive maps, video players, document viewers, and custom visualizationsSecure Transactions– PCI-compliant payment flows, encrypted data submission, secure authentication, and sensitive information handling outside chat transcriptsDynamic Content– Real-time data loading, AJAX updates, progressive rendering, and responsive adaptation to device capabilitiesNative Integration– Bidirectional communication with host applications, parameter passing, session sharing, and coordinated navigation</p>
+<h2 id="why-webviews-transform-chatbot-capabilities">Why Webviews Transform Chatbot Capabilities</h2>
+<p>Traditional text-based <a data-lb="1" href="/en/glossary/chatbot/" title="Chatbot glossary entry">chatbot</a> interfaces excel at simple question-answer patterns, <a data-lb="1" href="/en/glossary/quick-replies/" title="Quick Replies glossary entry">quick replies</a>, and linear menu navigation. However, contemporary business requirements frequently demand interactions exceeding these constraints:</p>
+<p>Multi-Step Data Collection– Registration forms, application processes, detailed surveys, or qualification workflows requiring numerous fields with complex validation rulesVisual Product Selection– E-commerce browsing with image carousels, filtering options, size charts, color variations, and comparison featuresAppointment Scheduling– Interactive calendar interfaces with availability <a data-lb="1" href="/en/glossary/visualization/" title="Visualization glossary entry">visualization</a>, time zone handling, and conflict detectionDocument Management– File uploads, preview generation, multi-page navigation, annotation capabilities, and download managementPayment Processing– Secure payment forms with card validation, billing address collection, saved payment method selection, and transaction confirmationInteractive Maps– Location selection, delivery area visualization, route planning, and proximity-based service discovery</p>
+<p>Webviews enable these sophisticated workflows while preserving conversational context, preventing user abandonment through browser redirects, and maintaining seamless experiences that combine natural language interaction with graphical interface power.</p>
+<h2 id="technical-architecture">Technical Architecture</h2>
+<h3 id="component-layers">Component Layers</h3>
+<ol>
+<li>Chatbot Platform Integration LayerManages primary conversation flow, detects conditions triggering webview presentation, constructs webview URLs incorporating user context and session data, and processes returned results integrating outcomes into conversation state.2. Webview Container ComponentPlatform-specific browser rendering engine (WKWebView on iOS, WebView on Android, web iframe for browser-based chats) responsible for displaying web content, handling user interactions, managing navigation events, and enforcing <a data-lb="1" href="/en/glossary/security-policies/" title="Security Policies glossary entry">security policies</a>.3. Web Application FrontendComplete web applications built with modern frameworks (React, Vue, Angular) or vanilla HTML/CSS/JavaScript providing rich user interfaces, client-side validation, responsive layouts, and interactive features optimized for mobile and desktop contexts.4. Backend Service InfrastructureServer-side applications processing form submissions, executing business logic, interfacing with databases and third-party services, generating dynamic content, and maintaining session state across webview and chat interactions.5. Integration and Communication LayerMiddleware facilitating bidirectional data exchange between chatbot platform, webview content, and backend services through secure APIs, postMessage protocols, URL parameters, or platform-specific integration mechanisms.6. Security and Compliance FrameworkHTTPS enforcement, authentication token management, <a data-lb="1" href="/en/glossary/data-encryption/" title="Data Encryption glossary entry">data encryption</a>, CSRF protection, content security policies, and regulatory compliance (<a data-lb="1" href="/en/glossary/gdpr/" title="GDPR glossary entry">GDPR</a>, CCPA, PCI-DSS) ensuring secure data handling throughout webview workflows.7. Navigation and Exit ControlsUser interface elements enabling webview closure, navigation between steps, return to conversational interface, and data persistence enabling users to resume interrupted workflows.</li>
+</ol>
+<h2 id="platform-implementation">Platform Implementation</h2>
+<h3 id="facebook-messenger-webview">Facebook Messenger Webview</h3>
+<p>Messenger Platform provides native webview support with configurable heights (compact 50%, tall 75%, full 100%), context passing through Messenger Extensions SDK, and user information sharing with consent.</p>
+<p>Button Configuration:```json
+{
+“type”: “web_url”,
+“url”: “<a href="https://your-domain.com/booking-form%22" rel="nofollow noopener noreferrer" target="_blank">https://your-domain.com/booking-form"</a>,
+“title”: “Schedule Appointment”,
+“webview_height_ratio”: “tall”,
+“messenger_extensions”: true
+}</p>
+<pre tabindex="0"><code class="language-**Messenger" data-lang="**Messenger">- Thread context and conversation metadata
+- Payment request API for in-chat purchases
+- Webview closure with result passing back to conversation
+
+### WhatsApp Business API
+
+WhatsApp supports webview integration through URL buttons and interactive messages enabling in-chat web experiences for appointments, forms, catalogs, and transactions while maintaining conversation continuity.
+
+**Implementation patterns:**- Direct URL buttons launching webviews
+- Interactive list/button messages with webview targets
+- Product catalog integration with webview checkout flows
+- Session parameter passing via URL encoding
+
+### Mobile Native Webviews
+
+**iOS WKWebView**provides high-performance web content rendering with JavaScript evaluation, cookie management, navigation control, and secure message passing to native code.**Android WebView**delivers similar capabilities with extensive customization options including JavaScript interface injection, resource interception, and fine-grained security controls.**React Native WebView**component abstracts platform differences enabling cross-platform implementations with unified APIs for navigation, messaging, and event handling.
+
+```javascript
+import { WebView } from 'react-native-webview';
+
+&lt;WebView
+  source={{ uri: 'https://your-domain.com/checkout' }}
+  onMessage={(event) =&gt; {
+    const data = JSON.parse(event.nativeEvent.data);
+    handleWebviewData(data);
+  }}
+  injectedJavaScript={`
+    window.ReactNativeWebView.postMessage(JSON.stringify({
+      action: 'ready',
+      userId: '${userId}'
+    }));
+  `}
+/&gt;
+</code></pre><h3 id="chatbot-framework-integration">Chatbot Framework Integration</h3>
+<p><strong>Botonic</strong>provides React-based webview components with parameter injection, data return mechanisms, and seamless bot integration.<strong>Oracle Digital Assistant</strong>supports webview skills with pre-built components for common patterns including forms, lists, and detail views.<strong>Smartly.AI</strong>enables mobile webview integration with native SDKs and web embedding options supporting complex conversation flows.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<h3 id="mobile-first-design-principles">Mobile-First Design Principles</h3>
+<p><strong>Responsive Layouts</strong>– Fluid grids adapting to screen dimensions, breakpoints optimized for mobile, tablet, and desktop viewports<strong>Touch-Optimized Interactions</strong>– Appropriately sized tap targets (minimum 44x44 pixels), gesture support, and mobile-friendly navigation patterns<strong>Performance Optimization</strong>– Lightweight assets, code splitting, lazy loading, and progressive rendering ensuring &lt; 3 second load times<strong>Offline Resilience</strong>– Service worker implementation, cached assets, and graceful degradation when connectivity fluctuates</p>
+<h3 id="security-and-privacy">Security and Privacy</h3>
+<p><strong>HTTPS Enforcement</strong>– All webview content must be served over encrypted connections preventing man-in-the-middle attacks<strong>Data Encryption</strong>– Sensitive information encrypted at rest and in transit using industry-standard algorithms<strong>Authentication Integration</strong>– Secure token passing between chat platform and webview, session synchronization, and automatic logout handling<strong>Regulatory Compliance</strong>– GDPR consent management, CCPA opt-out mechanisms, data retention policies, and user privacy controls<strong>Sensitive Data Handling</strong>– Payment information, health data, and personal identifiers processed outside chat logs using PCI-DSS or HIPAA compliant workflows</p>
+<h3 id="user-experience-optimization">User Experience Optimization</h3>
+<p><strong>Progressive Disclosure</strong>– Multi-step forms broken into logical sections with clear progress indicators reducing <a data-lb="1" href="/en/glossary/cognitive-load/" title="Cognitive load glossary entry">cognitive load</a><strong>Smart Defaults and Autofill</strong>– Pre-populate known information from chat context, leverage browser autofill, and remember user preferences<strong>Clear Exit Paths</strong>– Prominent close/back buttons, confirmation dialogs for unsaved changes, and automatic return to chat after completion<strong>Error Handling</strong>– Inline validation, clear error messages, recovery suggestions, and contact support options when failures occur<strong>Accessibility Standards</strong>– WCAG 2.1 Level AA compliance including keyboard navigation, screen reader support, sufficient color contrast, and semantic HTML</p>
+<h3 id="data-exchange-patterns">Data Exchange Patterns</h3>
+<p><strong>URL Parameter Injection</strong>Pass user identifiers, session tokens, and contextual data through query parameters enabling personalized webview experiences.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">const</span> webviewUrl = <span style="color:#0ff;font-weight:bold">`https://your-domain.com/form?userId=</span><span style="color:#0ff;font-weight:bold">${</span>userId<span style="color:#0ff;font-weight:bold">}</span><span style="color:#0ff;font-weight:bold">&amp;sessionId=</span><span style="color:#0ff;font-weight:bold">${</span>sessionId<span style="color:#0ff;font-weight:bold">}</span><span style="color:#0ff;font-weight:bold">&amp;context=</span><span style="color:#0ff;font-weight:bold">${</span>encodedContext<span style="color:#0ff;font-weight:bold">}</span><span style="color:#0ff;font-weight:bold">`</span>;
+</span></span></code></pre></div><p><strong>PostMessage Communication</strong>Enable bidirectional messaging between webview content and host application for real-time data synchronization.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#007f7f">// In webview content
+</span></span></span><span style="display:flex;"><span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">window</span>.parent.postMessage({
+</span></span><span style="display:flex;"><span>  action: <span style="color:#0ff;font-weight:bold">'formSubmitted'</span>,
+</span></span><span style="display:flex;"><span>  data: formData
+</span></span><span style="display:flex;"><span>}, <span style="color:#0ff;font-weight:bold">'*'</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007f7f">// In host application
+</span></span></span><span style="display:flex;"><span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">window</span>.addEventListener(<span style="color:#0ff;font-weight:bold">'message'</span>, (event) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">if</span> (event.data.action === <span style="color:#0ff;font-weight:bold">'formSubmitted'</span>) {
+</span></span><span style="display:flex;"><span>    processFormData(event.data.data);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p><strong>Callback APIs</strong>Platform-specific APIs return control and data to chatbot after webview completion.</p>
+<h2 id="real-world-use-cases">Real-World Use Cases</h2>
+<h3 id="e-commerce-and-retail">E-Commerce and Retail</h3>
+<p><strong>Product Catalog Browsing</strong>– Interactive galleries with filtering, sorting, detailed product views, size guides, reviews, and add-to-cart functionality<strong>Checkout Flows</strong>– Multi-step purchase processes with cart review, shipping selection, payment processing, and order confirmation**Example:**Fashion retailers enabling complete shopping experiences within Messenger including product discovery, size selection, payment, and order tracking without external browser redirects.</p>
+<h3 id="banking-and-financial-services">Banking and Financial Services</h3>
+<p><strong>Account Management</strong>– Secure webviews for balance inquiries, transaction history, statement downloads, and beneficiary management<strong>Loan Applications</strong>– Multi-page application forms with document uploads, income verification, and real-time approval status**Example:**Banks deploying WhatsApp chatbots with webview workflows for credit card applications including document capture, e-signature, and instant decisioning.</p>
+<h3 id="healthcare-and-wellness">Healthcare and Wellness</h3>
+<p><strong>Appointment Booking</strong>– Calendar interfaces with provider availability, specialty filters, location selection, and confirmation workflows<strong>Patient Intake</strong>– HIPAA-compliant medical history forms, insurance verification, symptom checkers, and consent documentation<strong>Telemedicine</strong>– Secure video consultation interfaces, prescription management, and medical record access</p>
+<h3 id="travel-and-hospitality">Travel and Hospitality</h3>
+<p><strong>Booking Systems</strong>– Hotel reservations with room type selection, amenity preferences, date pickers, and payment processing<strong>Flight Management</strong>– Seat selection interfaces, upgrade options, baggage handling, and itinerary modifications**Example:**Airlines using WhatsApp webviews for complete booking modifications including flight changes, seat maps, extra services, and payment processing.</p>
+<h3 id="hr-and-recruitment">HR and Recruitment</h3>
+<p><strong>Job Applications</strong>– Comprehensive application forms with resume uploads, portfolio links, availability scheduling, and assessment completion<strong>Onboarding Workflows</strong>– New hire paperwork including tax forms, benefits enrollment, policy acknowledgments, and emergency contacts<strong>Interview Scheduling</strong>– Calendar integration with interviewer availability, timezone handling, and video conferencing setup</p>
+<h2 id="performance-and-optimization">Performance and Optimization</h2>
+<table>
+<thead>
+<tr>
+<th>Optimization Area</th>
+<th>Techniques</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Load Time</strong></td>
+<td>Asset compression, CDN delivery, code splitting, lazy loading</td>
+<td>&lt; 3 second load, reduced <a data-lb="1" href="/en/glossary/bounce-rate/" title="Bounce Rate glossary entry">bounce rate</a></td>
+</tr>
+<tr>
+<td><strong>Runtime Performance</strong></td>
+<td>Minimal JavaScript, efficient DOM manipulation, debounced inputs</td>
+<td>Smooth interactions, low battery drain</td>
+</tr>
+<tr>
+<td><strong>Data Efficiency</strong></td>
+<td>Request batching, response caching, incremental loading</td>
+<td>Reduced bandwidth, offline capability</td>
+</tr>
+<tr>
+<td><strong>Rendering</strong></td>
+<td>Progressive enhancement, critical CSS inline, deferred scripts</td>
+<td>Faster first paint, perceived speed</td>
+</tr>
+<tr>
+<td><strong>Mobile Optimization</strong></td>
+<td>Touch event optimization, hardware acceleration, reduced reflows</td>
+<td>Responsive interactions, smooth scrolling</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-solutions">Challenges and Solutions</h2>
+<p><strong>Device Compatibility</strong>– Test across diverse devices, OS versions, and screen sizes using responsive design, progressive enhancement, and feature detection<strong>Session Management</strong>– Implement secure token exchange, automatic session extension, and graceful timeout handling with save/resume capabilities<strong>Data Privacy</strong>– Encrypt sensitive data, implement proper consent flows, provide transparent privacy policies, and enable user data deletion<strong>Network Reliability</strong>– Handle poor connectivity through offline-first design, request queuing, automatic retry, and clear error messaging<strong>Integration Complexity</strong>– Use well-documented platform SDKs, implement robust error handling, maintain comprehensive testing suites, and monitor production performance</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<p>**What is the difference between webviews and external browser links?**Webviews embed web content within the host application maintaining context and session continuity, while external links open separate browser instances losing conversational context and requiring user navigation back.**Which platforms support webview integration?**Facebook Messenger, WhatsApp Business API, Telegram, most mobile apps (iOS, Android, React Native, Flutter), and many chatbot frameworks (Botonic, Oracle Digital Assistant, Smartly.AI).**Are webviews secure for payment processing?**Yes, when implementing HTTPS encryption, PCI-DSS compliance, secure authentication, and keeping sensitive data outside chat transcripts.**Can webviews access device features like camera or GPS?**Yes, through browser APIs or native bridge implementations enabling camera access for document scanning, GPS for location services, and other device capabilities with proper permissions.**How do you test webview implementations?**Use browser developer tools, mobile device simulators, real device testing, automated testing frameworks, and platform-specific debugging tools provided by chatbot platforms.**What happens if users close webviews without completing actions?**Implement status callbacks, session preservation, and chatbot logic resuming incomplete workflows or offering completion alternatives.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Facebook Developers. (n.d.). Messenger Platform Webview Documentation. Facebook Developers.</p>
+</li>
+<li>
+<p>Hubtype. (n.d.). WhatsApp Webviews Features &amp; Benefits Guide. Hubtype Blog.</p>
+</li>
+<li>
+<p>Botonic. (n.d.). Webviews Concepts. Botonic Documentation.</p>
+</li>
+<li>
+<p>Oracle. (n.d.). Digital Assistant Webviews. Oracle Cloud Documentation.</p>
+</li>
+<li>
+<p>Smartly.AI. (n.d.). Mobile Webview Documentation. Smartly.AI Documentation.</p>
+</li>
+<li>
+<p>Facebook Developers. (n.d.). Messenger Webview Height Ratios. Facebook Developers.</p>
+</li>
+<li>
+<p>Botonic. (n.d.). Invoking Webview with Parameters. Botonic Documentation.</p>
+</li>
+<li>
+<p>Botonic. (n.d.). Creating Webview Components. Botonic Documentation.</p>
+</li>
+<li>
+<p>BotStar. (n.d.). Webview Configuration. BotStar Documentation.</p>
+</li>
+<li>
+<p>BotStar. (n.d.). Webview YouTube Example. BotStar Documentation.</p>
+</li>
+<li>
+<p>W3C. (n.d.). Web Content Accessibility Guidelines (WCAG). W3C Standards.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/splash-screen/">
+                    Splash Screen
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A branded image or animation that appears when an app or chatbot starts up, showing the company logo...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/splash-screen/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/bot-avatar/">
+                    Bot Avatar
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A <a data-lb="1" href="/en/glossary/bot-avatar/" title="Bot Avatar glossary entry">bot avatar</a> is the visual character or icon that represents an AI chatbot, giving it a recognizable...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/bot-avatar/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/chatbot/">
+                    Chatbot
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A computer program that simulates human conversation through text or voice, available 24/7 to automa...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/chatbot/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/code-block--python-js-/">
+                    Code Block (Python/JS)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A group of related programming statements grouped together and treated as a single unit. Python uses...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/code-block--python-js-/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/dialogue-state-tracking/">
+                    Dialogue State Tracking
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A technology that remembers what a user wants during a conversation, tracking key details so AI chat...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/dialogue-state-tracking/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/embed-script/">
+                    Embed Script
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A simple code snippet you paste into your website to instantly add an AI chatbot without any coding ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/embed-script/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/webview/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165525"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+  });
+</script>
+</body>
+</html>

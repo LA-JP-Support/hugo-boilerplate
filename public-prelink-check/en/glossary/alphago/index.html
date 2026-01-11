@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>AlphaGo | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/alphago/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="AlphaGo is DeepMind's AI system that became the first program to defeat a professional human Go player, marking a historic milestone in artificial intelligence." name="description"/>
+<meta content="AlphaGo, DeepMind, Go game, deep reinforcement learning, Monte Carlo tree search, AI milestone" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/alphago/" property="og:url"/>
+<meta content="AlphaGo | SmartWeb" property="og:title"/>
+<meta content="AlphaGo is DeepMind's AI system that became the first program to defeat a professional human Go player, marking a historic milestone in artificial intelligence." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/alphago/" name="twitter:url"/>
+<meta content="AlphaGo | SmartWeb" name="twitter:title"/>
+<meta content="AlphaGo is DeepMind's AI system that became the first program to defeat a professional human Go player, marking a historic milestone in artificial intelligence." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">AlphaGo</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        AlphaGo
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          AlphaGo is DeepMind's AI system that became the first program to defeat a professional human Go player, marking a historic milestone in artificial intelligence.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AlphaGo
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                DeepMind
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Go game
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                deep reinforcement learning
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Monte Carlo tree search
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI milestone
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: January 11, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-alphago">What Is AlphaGo?</h2>
+<p>AlphaGo is a revolutionary <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence glossary entry">artificial intelligence</a> system developed by <a href="/en/glossary/google-deepmind/" title="Google DeepMind is a leading AI research laboratory combining DeepMind and Google Brain, creating breakthrough AI systems like AlphaFold, Gemini, and pioneering advances in scientific AI applications.">Google DeepMind</a> that became the first computer program to defeat a professional human player at the ancient board game of Go. This achievement, culminating in AlphaGo’s historic victory over world champion Lee Sedol in March 2016, represented one of the most significant milestones in the history of artificial intelligence and demonstrated the potential of deep learning combined with <a data-lb="1" href="/en/glossary/reinforcement-learning/" title="Reinforcement Learning glossary entry">reinforcement learning</a> to master complex cognitive tasks.</p>
+<p>The game of Go had long been considered the ultimate challenge for artificial intelligence due to its extraordinary complexity. While computers had conquered chess by 1997 when IBM’s Deep Blue defeated Garry Kasparov, the vast number of possible positions in Go—estimated at 10^170, far exceeding the number of atoms in the observable universe—made traditional search-based approaches computationally intractable. Go also relies heavily on intuitive pattern recognition, positional judgment, and strategic thinking that computers struggled to replicate.</p>
+<p>AlphaGo’s breakthrough came through an innovative combination of deep <a data-lb="1" href="/en/glossary/neural-networks/" title="Neural Networks glossary entry">neural networks</a> trained on millions of professional games, reinforcement learning through self-play, and advanced Monte Carlo tree search techniques. This approach enabled AlphaGo to develop what appeared to be genuine intuition about the game, making moves that surprised and inspired both professional players and AI researchers. The system’s success sparked renewed interest in AI research worldwide and demonstrated that machines could master domains requiring creativity and sophisticated judgment.</p>
+<h2 id="the-challenge-of-go">The Challenge of Go</h2>
+<p>Understanding AlphaGo’s significance requires appreciating why Go posed such an extraordinary challenge:</p>
+<p><strong>Game Complexity</strong></p>
+<p><em>Vast Search Space</em></p>
+<ul>
+<li>19×19 board with 361 intersection points</li>
+<li>Average game length of approximately 250 moves</li>
+<li>Approximately 10^170 possible board configurations (chess has approximately 10^47)</li>
+<li>Around 200 legal moves per position versus approximately 35 in chess</li>
+<li>Brute-force search computationally impossible</li>
+</ul>
+<p><em>Evaluation Difficulty</em></p>
+<ul>
+<li>No simple material-based evaluation (unlike chess pieces)</li>
+<li>Territorial control emerges from complex interactions</li>
+<li>Value of positions changes dramatically through the game</li>
+<li>Local battles connect to global strategy in subtle ways</li>
+<li>Professional players rely on intuition built over years</li>
+</ul>
+<p><strong>Why Previous AI Failed</strong></p>
+<ul>
+<li>Chess-style evaluation functions don’t translate to Go</li>
+<li>Search depth limited by branching factor</li>
+<li>Pattern recognition requirements exceeded traditional methods</li>
+<li>Positional judgment considered uniquely human capability</li>
+<li>Go masters predicted computers wouldn’t succeed for decades</li>
+</ul>
+<p><strong>Cultural and Historical Significance</strong></p>
+<ul>
+<li>Go originated in China over 3,000 years ago</li>
+<li>Considered one of the four essential arts of ancient Chinese scholars</li>
+<li>Professional Go highly competitive in East Asia (China, Korea, Japan)</li>
+<li>Deep strategic traditions and philosophy around the game</li>
+<li>Victory in Go seen as demonstrating profound cognitive capability</li>
+</ul>
+<h2 id="how-alphago-works">How AlphaGo Works</h2>
+<p>AlphaGo’s architecture combined multiple AI techniques in innovative ways:</p>
+<p><strong>Deep Neural Networks</strong></p>
+<p><em>Policy Network</em></p>
+<ul>
+<li>Predicts probability distribution over next moves</li>
+<li>Trained initially on 30 million moves from professional games</li>
+<li>Learns intuitive move selection from human expertise</li>
+<li>Reduces search space by focusing on promising moves</li>
+<li>Further refined through self-play reinforcement learning</li>
+</ul>
+<p><em>Value Network</em></p>
+<ul>
+<li>Evaluates board positions to predict game outcome</li>
+<li>Estimates win probability from any position</li>
+<li>Enables comparison of different strategic choices</li>
+<li>Critical innovation for position evaluation in Go</li>
+<li>Trained on millions of self-play games</li>
+</ul>
+<p><strong>Monte Carlo Tree Search (MCTS)</strong></p>
+<ul>
+<li>Explores game tree through random simulations</li>
+<li>Uses policy network to guide move selection</li>
+<li>Value network provides position evaluations</li>
+<li>Balances exploration of new moves with exploitation of known good moves</li>
+<li>Combines neural network intuition with search-based verification</li>
+</ul>
+<p><strong>Training Process</strong></p>
+<p><em><a data-lb="1" href="/en/glossary/supervised-learning/" title="Supervised Learning glossary entry">Supervised Learning</a> Phase</em></p>
+<ul>
+<li>Trained on database of 30 million moves from expert games</li>
+<li>Policy network learns to predict human expert moves</li>
+<li>Achieves 57% accuracy in predicting professional moves</li>
+<li>Creates foundation for further improvement</li>
+</ul>
+<p><em>Reinforcement Learning Phase</em></p>
+<ul>
+<li>Self-play between different versions of the network</li>
+<li>Policy network improves through trial and error</li>
+<li>Learns strategies beyond human knowledge</li>
+<li>Discovers novel tactical and strategic patterns</li>
+</ul>
+<p><em>Value Network Training</em></p>
+<ul>
+<li>Trained on 30 million positions from self-play games</li>
+<li>Learns to predict winner from any board position</li>
+<li>Provides accurate position evaluation for MCTS</li>
+<li>Critical for reducing computational requirements</li>
+</ul>
+<h2 id="historic-matches-and-achievements">Historic Matches and Achievements</h2>
+<p><strong>Fan Hui Match (October 2015)</strong></p>
+<ul>
+<li>First defeat of professional Go player by AI</li>
+<li>AlphaGo won 5-0 against European champion</li>
+<li>Conducted in secret before public announcement</li>
+<li>Published in Nature journal in January 2016</li>
+<li>Shocked Go community worldwide</li>
+</ul>
+<p><strong>Lee Sedol Match (March 2016)</strong></p>
+<ul>
+<li>Historic five-game match in Seoul, Korea</li>
+<li>AlphaGo won 4-1 against 18-time world champion</li>
+<li>Move 37 in Game 2 stunned professional commentators</li>
+<li>Lee’s Game 4 victory revealed potential weakness</li>
+<li>Over 200 million viewers watched worldwide</li>
+<li>Marked watershed moment for AI</li>
+</ul>
+<p><strong>Ke Jie Match (May 2017)</strong></p>
+<ul>
+<li>AlphaGo defeated world number one 3-0</li>
+<li>Played at Future of Go Summit in Wuzhen, China</li>
+<li>Final public match for AlphaGo</li>
+<li>Ke Jie praised AlphaGo’s “godlike” play</li>
+<li><a data-lb="1" href="/en/glossary/google-deepmind/" title="Google DeepMind is an AI research laboratory under Alphabet, known for breakthroughs like AlphaGo and AlphaFold that advance artificial general intelligence.">DeepMind</a> retired AlphaGo from competition afterward</li>
+</ul>
+<p><strong>Key Achievements Timeline</strong></p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Achievement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>October 2015</td>
+<td>Defeats Fan Hui 5-0 (European Champion)</td>
+</tr>
+<tr>
+<td>January 2016</td>
+<td>Published in Nature journal</td>
+</tr>
+<tr>
+<td>March 2016</td>
+<td>Defeats Lee Sedol 4-1 (World Champion)</td>
+</tr>
+<tr>
+<td>December 2016</td>
+<td>Master version wins 60 online games against top players</td>
+</tr>
+<tr>
+<td>May 2017</td>
+<td>Defeats Ke Jie 3-0 (World Number One)</td>
+</tr>
+<tr>
+<td>October 2017</td>
+<td>AlphaGo Zero paper published</td>
+</tr>
+</tbody>
+</table>
+<h2 id="alphago-versions">AlphaGo Versions</h2>
+<p><strong>AlphaGo Fan (2015)</strong></p>
+<ul>
+<li>First version to defeat professional player</li>
+<li>Used policy and value networks with MCTS</li>
+<li>Trained on human expert games</li>
+<li>Beat Fan Hui 5-0</li>
+</ul>
+<p><strong>AlphaGo Lee (2016)</strong></p>
+<ul>
+<li>Enhanced version for Lee Sedol match</li>
+<li>Improved neural networks and training</li>
+<li>Discovered novel strategies through self-play</li>
+<li>Won 4-1 against Lee Sedol</li>
+</ul>
+<p><strong>AlphaGo Master (2016-2017)</strong></p>
+<ul>
+<li>Significantly stronger than Lee version</li>
+<li>Won 60 consecutive online games against top professionals</li>
+<li>Played anonymously as “Master” and “Magister”</li>
+<li>Defeated world champions Ke Jie, Park Junghwan, and others</li>
+</ul>
+<p><strong>AlphaGo Zero (2017)</strong></p>
+<ul>
+<li>Revolutionary tabula rasa approach</li>
+<li>No human game data used in training</li>
+<li>Learned entirely through self-play</li>
+<li>Surpassed all previous versions within 40 days</li>
+<li>Defeated AlphaGo Lee 100-0</li>
+<li>Simpler architecture with single neural network</li>
+<li>Demonstrated superhuman performance without human knowledge</li>
+</ul>
+<h2 id="technical-innovations">Technical Innovations</h2>
+<p><strong>Neural Network Architecture</strong></p>
+<ul>
+<li>Convolutional neural networks for pattern recognition</li>
+<li>Input: 19×19×48 feature planes encoding board state</li>
+<li>Policy network: 13-layer CNN outputting move probabilities</li>
+<li>Value network: Similar architecture outputting win probability</li>
+<li>Residual connections in later versions</li>
+</ul>
+<p><strong>Training Infrastructure</strong></p>
+<ul>
+<li>Distributed across hundreds of CPUs and GPUs</li>
+<li>TPUs used for later versions</li>
+<li>Massive parallel self-play for data generation</li>
+<li>Efficient pipeline for continuous improvement</li>
+</ul>
+<p><strong>Search Efficiency</strong></p>
+<ul>
+<li>MCTS guided by neural network evaluations</li>
+<li>Selective search focusing on promising moves</li>
+<li>Reduced branching factor from 200+ to manageable level</li>
+<li>Balance between computation and playing strength</li>
+</ul>
+<p><strong>Key Algorithmic Contributions</strong></p>
+<ul>
+<li>Combining deep learning with tree search</li>
+<li>Value networks for position evaluation</li>
+<li>Policy networks for move selection</li>
+<li>Asynchronous policy and value MCTS</li>
+<li>Self-play reinforcement learning</li>
+</ul>
+<h2 id="impact-on-go-and-ai">Impact on Go and AI</h2>
+<p><strong>Impact on Professional Go</strong></p>
+<p><em>Changed Understanding of the Game</em></p>
+<ul>
+<li>Revealed new strategic concepts and patterns</li>
+<li>Challenged centuries of established theory</li>
+<li>Influenced professional playing styles</li>
+<li>Created new opening variations (“AlphaGo joseki”)</li>
+</ul>
+<p><em>Professional Player Response</em></p>
+<ul>
+<li>Initial shock and concern about AI dominance</li>
+<li>Adoption of AI tools for training and analysis</li>
+<li>Renewed interest in game’s complexity</li>
+<li>Philosophical reflection on human versus machine</li>
+</ul>
+<p><em>Go Community Transformation</em></p>
+<ul>
+<li>AI analysis became standard for professional study</li>
+<li>New training methodologies incorporating AI</li>
+<li>Increased global interest in Go</li>
+<li>Questions about future of professional competition</li>
+</ul>
+<p><strong>Impact on AI Research</strong></p>
+<p><em>Demonstrated Capabilities</em></p>
+<ul>
+<li>Showed deep learning could master intuitive tasks</li>
+<li>Proved AI could exceed human performance in complex domains</li>
+<li>Validated combination of learning and search</li>
+<li>Inspired confidence in AI potential</li>
+</ul>
+<p><em>Technical Influence</em></p>
+<ul>
+<li>Reinforcement learning from self-play became standard approach</li>
+<li>Neural network evaluation functions widely adopted</li>
+<li>Influenced development of <a href="/en/glossary/alphazero/" title="AlphaZero is DeepMind's AI system that mastered chess, shogi, and Go through self-play alone, achieving superhuman performance without human knowledge or game-specific tuning.">AlphaZero</a> and AlphaFold</li>
+<li>Inspired applications beyond games</li>
+</ul>
+<p><em>Broader Implications</em></p>
+<ul>
+<li>Sparked public interest in AI capabilities</li>
+<li>Raised questions about human-AI relationship</li>
+<li>Influenced AI safety discussions</li>
+<li>Demonstrated potential for AI to discover new knowledge</li>
+</ul>
+<h2 id="legacy-and-evolution">Legacy and Evolution</h2>
+<p><strong>Successor Systems</strong></p>
+<p><em><a href="/en/glossary/alphazero/" title="AlphaZero is DeepMind's AI system that mastered chess, shogi, and Go through self-play alone, achieving superhuman performance without human knowledge or game-specific tuning.">AlphaZero</a></em></p>
+<ul>
+<li>Generalized approach to multiple games</li>
+<li>Mastered chess, shogi, and Go with same algorithm</li>
+<li>No game-specific knowledge or human data</li>
+<li>Even stronger performance than AlphaGo</li>
+</ul>
+<p><em><a href="/en/glossary/alphafold/" title="AlphaFold is DeepMind's AI system that predicts 3D protein structures from amino acid sequences with revolutionary accuracy, transforming structural biology and drug discovery.">AlphaFold</a></em></p>
+<ul>
+<li>Applied similar principles to protein structure prediction</li>
+<li>Solved 50-year grand challenge in biology</li>
+<li>Won 2024 Nobel Prize in Chemistry</li>
+<li>Demonstrated transfer of techniques to scientific problems</li>
+</ul>
+<p><em>MuZero</em></p>
+<ul>
+<li>Learned game rules through experience</li>
+<li>No explicit game model provided</li>
+<li>Extended approach to Atari games</li>
+<li>Further generalization of AlphaGo principles</li>
+</ul>
+<p><strong>Cultural Impact</strong></p>
+<ul>
+<li>Documentary film “AlphaGo” (2017) widely acclaimed</li>
+<li>Subject of numerous books and articles</li>
+<li>Referenced in discussions of AI capabilities</li>
+<li>Symbol of AI achievement in popular culture</li>
+</ul>
+<p><strong>Lessons Learned</strong></p>
+<ul>
+<li>Importance of combining learning and search</li>
+<li>Value of self-play for superhuman performance</li>
+<li>Potential for AI to discover novel strategies</li>
+<li>Human-AI collaboration opportunities</li>
+</ul>
+<h2 id="significance-for-ai-development">Significance for AI Development</h2>
+<p>AlphaGo represents a pivotal moment in artificial intelligence history for several reasons:</p>
+<p><strong>Proof of Concept</strong></p>
+<ul>
+<li>Demonstrated AI could master intuitive, creative tasks</li>
+<li>Showed that scale and architecture matter</li>
+<li>Validated deep reinforcement learning approach</li>
+<li>Proved AI could exceed human capability in complex domains</li>
+</ul>
+<p><strong>Methodological Advances</strong></p>
+<ul>
+<li>Established blueprint for similar challenges</li>
+<li>Combined multiple AI techniques effectively</li>
+<li>Showed value of self-play for improvement</li>
+<li>Created framework extended to other domains</li>
+</ul>
+<p><strong>Inspiration for Future Research</strong></p>
+<ul>
+<li>Motivated development of more general systems</li>
+<li>Influenced AI safety and alignment research</li>
+<li>Sparked interest in AI applications to science</li>
+<li>Demonstrated potential for AI discovery</li>
+</ul>
+<p>AlphaGo’s legacy extends far beyond the game of Go, representing a demonstration that artificial intelligence could master domains long thought to require uniquely human intuition and creativity. Its techniques and philosophy continue to influence AI research and have led to breakthrough applications in science, medicine, and beyond.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://deepmind.google/technologies/alphago/" rel="nofollow noopener noreferrer" target="_blank">DeepMind: AlphaGo</a></li>
+<li><a href="https://www.nature.com/articles/nature16961" rel="nofollow noopener noreferrer" target="_blank">Nature: Mastering the game of Go with deep neural networks and tree search</a></li>
+<li><a href="https://www.nature.com/articles/nature24270" rel="nofollow noopener noreferrer" target="_blank">Nature: Mastering the game of Go without human knowledge</a></li>
+<li><a href="https://www.theguardian.com/technology/2016/mar/15/googles-alphago-seals-4-1-victory-over-grandmaster-lee-sedol" rel="nofollow noopener noreferrer" target="_blank">The Guardian: AlphaGo beats Lee Sedol</a></li>
+<li><a href="https://deepmind.google/discover/blog/alphagos-next-move/" rel="nofollow noopener noreferrer" target="_blank">DeepMind Blog: AlphaGo’s next move</a></li>
+<li><a href="https://www.alphagomovie.com/" rel="nofollow noopener noreferrer" target="_blank">AlphaGo Documentary</a></li>
+<li><a href="https://www.wired.com/2016/03/sadness-beauty-watching-googles-ai-play-go/" rel="nofollow noopener noreferrer" target="_blank">Wired: The Sadness and Beauty of Watching Google’s AI Play Go</a></li>
+<li><a href="https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol" rel="nofollow noopener noreferrer" target="_blank">Wikipedia: AlphaGo versus Lee Sedol</a></li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/google-deepmind/">
+                    Google DeepMind
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/en/glossary/google-deepmind/" title="Google DeepMind is an AI research laboratory under Alphabet, known for breakthroughs like AlphaGo and AlphaFold that advance artificial general intelligence.">Google DeepMind</a> is a leading AI research laboratory combining DeepMind and Google Brain, creating br...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/google-deepmind/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/alphafold/">
+                    AlphaFold
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AlphaFold is DeepMind's <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI system</a> that predicts 3D protein structures from amino acid sequences with...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/alphafold/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/alphazero/">
+                    AlphaZero
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/en/glossary/alphazero/" title="AlphaZero is a general game-playing AI that mastered chess, shogi, and Go through pure self-play reinforcement learning without human knowledge.">AlphaZero</a> is DeepMind's AI system that mastered chess, shogi, and Go through self-play alone, achiev...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/alphazero/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

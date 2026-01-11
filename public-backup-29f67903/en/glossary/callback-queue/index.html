@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Callback Queue | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/callback-queue/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="A waiting line for callback functions that executes them in order once the main program finishes, keeping programs responsive without freezing." name="description"/>
+<meta content="callback queue, asynchronous programming, event loop, JavaScript callbacks, message queue" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/callback-queue/" property="og:url"/>
+<meta content="Callback Queue | SmartWeb" property="og:title"/>
+<meta content="A waiting line for callback functions that executes them in order once the main program finishes, keeping programs responsive without freezing." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/callback-queue/" name="twitter:url"/>
+<meta content="Callback Queue | SmartWeb" name="twitter:title"/>
+<meta content="A waiting line for callback functions that executes them in order once the main program finishes, keeping programs responsive without freezing." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165525" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165525" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165525"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118125587168000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118125587168000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118125587168000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118125587168000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Callback Queue</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Callback Queue
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A waiting line for callback functions that executes them in order once the main program finishes, keeping programs responsive without freezing.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                callback queue
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                asynchronous programming
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                event loop
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                JavaScript callbacks
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                message queue
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-callback-queue">What is a Callback Queue?</h2>
+<p>A callback queue is a fundamental data structure in asynchronous programming that manages the execution order of callback functions waiting to be processed by the event loop. This queue-based mechanism ensures that asynchronous operations complete in an orderly fashion while maintaining the non-blocking nature of modern programming environments. The callback queue operates on a first-in-first-out (FIFO) principle, where callbacks are added to the end of the queue and removed from the front for execution when the call stack becomes empty.</p>
+<p>The callback queue serves as an intermediary storage mechanism between asynchronous operations and their eventual execution. When an asynchronous operation completes, such as a timer expiring, an HTTP request finishing, or a file read operation concluding, the associated callback function is placed into the callback queue rather than being executed immediately. This queuing mechanism prevents the interruption of currently executing synchronous code and maintains the single-threaded execution model that many programming environments, particularly JavaScript, rely upon for predictable behavior.</p>
+<p>Understanding the callback queue is crucial for developers working with asynchronous programming patterns, as it directly impacts application performance, user experience, and code reliability. The queue’s behavior influences how applications handle concurrent operations, manage resource utilization, and respond to user interactions. Modern web applications, server-side applications, and mobile applications all rely heavily on callback queue mechanisms to deliver responsive and efficient user experiences while managing complex asynchronous workflows that involve database operations, API calls, file system interactions, and real-time communication protocols.</p>
+<h2 id="core-event-loop-components">Core Event Loop Components</h2>
+<p>Call Stack: The call stack maintains the execution context for currently running functions, operating as a last-in-first-out (LIFO) structure. When functions are called, they are pushed onto the stack, and when they complete, they are popped off, allowing the event loop to check for queued callbacks.Web APIs/Node.js APIs: These browser or runtime environment APIs handle asynchronous operations such as setTimeout, HTTP requests, and file operations. When these operations complete, they place their associated callbacks into the appropriate queue for later execution.Callback Queue (Task Queue): The primary queue that holds callbacks from completed asynchronous operations like setTimeout, setInterval, and DOM events. These callbacks wait for the call stack to become empty before being moved to execution.Microtask Queue: A higher-priority queue that contains callbacks from Promise resolutions, queueMicrotask calls, and MutationObserver callbacks. Microtasks are processed before regular callback queue items, ensuring promise-based operations have precedence.Event Loop: The central coordinator that continuously monitors the call stack and queues, moving callbacks from queues to the call stack when appropriate. The event loop ensures non-blocking execution by managing the timing and order of callback execution.Render Queue: In browser environments, this queue manages rendering operations and visual updates. The event loop coordinates between callback execution and rendering to maintain smooth user interface performance.I/O Operations: Background processes that handle file system operations, network requests, and database queries. These operations run independently and signal completion through the callback queue mechanism.</p>
+<h2 id="how-callback-queue-works">How Callback Queue Works</h2>
+<p>The callback queue operates through a sophisticated coordination mechanism between multiple components:</p>
+<ol>
+<li>
+<p>Asynchronous Operation Initiation: When code calls an asynchronous function like setTimeout or makes an HTTP request, the operation is handed off to the appropriate Web API or system service while the main thread continues executing synchronous code.</p>
+</li>
+<li>
+<p>Background Processing: The asynchronous operation runs in the background, managed by the browser’s Web APIs or Node.js’s libuv library, without blocking the main execution thread or interfering with other operations.</p>
+</li>
+<li>
+<p>Completion Detection: Once the asynchronous operation completes (timer expires, request returns, file reads), the system prepares to execute the associated callback function that was provided when the operation was initiated.</p>
+</li>
+<li>
+<p>Queue Placement: The completed operation’s callback function is placed into the appropriate queue - either the callback queue for regular operations or the microtask queue for Promise-based operations.</p>
+</li>
+<li>
+<p>Event Loop <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">Monitoring</a>: The event loop continuously checks the call stack status, waiting for it to become empty before processing any queued callbacks, ensuring that synchronous code always completes before asynchronous callbacks execute.</p>
+</li>
+<li>
+<p>Priority Processing: The event loop first processes all microtasks from the microtask queue, then moves one callback from the callback queue to the call stack, maintaining proper execution order and priority.</p>
+</li>
+<li>
+<p>Callback Execution: The selected callback function is pushed onto the call stack and executed, potentially triggering additional asynchronous operations that will repeat this cycle.</p>
+</li>
+<li>
+<p>Cycle Continuation: After executing a callback, the event loop repeats the process, checking for more queued callbacks and maintaining the continuous flow of asynchronous operation handling.Example Workflow: A setTimeout call with a 1000ms delay places its callback in the callback queue after the timer expires, waiting for the call stack to clear before execution, while any Promise resolutions would be processed first through the microtask queue.</p>
+</li>
+</ol>
+<h2 id="key-benefits">Key Benefits</h2>
+<p>Non-Blocking Execution: The callback queue enables applications to remain responsive during long-running operations by preventing asynchronous tasks from blocking the main execution thread, allowing user interfaces to stay interactive while background processes complete.Predictable Execution Order: The FIFO nature of the callback queue ensures that callbacks execute in the order they were queued, providing developers with predictable behavior patterns that simplify debugging and application logic design.Resource Efficiency: By queuing callbacks rather than creating multiple execution threads, the callback queue minimizes memory overhead and <a data-lb="1" href="/en/glossary/context-switching/" title="Context Switching glossary entry">context switching</a> costs, leading to more efficient resource utilization in single-threaded environments.Concurrency Management: The queue mechanism allows applications to handle multiple asynchronous operations simultaneously without the complexity of traditional multi-threading, reducing the risk of race conditions and synchronization issues.Priority Handling: The separation between callback queues and microtask queues enables proper prioritization of different types of asynchronous operations, ensuring that critical operations like Promise resolutions receive appropriate precedence.Scalability Support: Applications can handle large numbers of concurrent asynchronous operations through the queuing mechanism, making it possible to build scalable systems that manage thousands of simultaneous requests or operations.Error Isolation: The callback queue helps isolate errors within individual callbacks, preventing failures in one asynchronous operation from cascading to other queued operations or crashing the entire application.Performance Optimization: By batching callback execution and coordinating with rendering cycles, the callback queue contributes to smoother application performance and better user experience metrics.Memory Management: The queue structure provides a controlled environment for managing callback references, helping prevent memory leaks and enabling garbage collection of completed operations.Debugging Capabilities: The structured nature of callback queues makes it easier to trace asynchronous operation flow, debug timing issues, and understand application behavior during development and troubleshooting.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p>Web API Requests: HTTP requests to REST APIs, GraphQL endpoints, or third-party services use callback queues to handle responses without blocking user interface interactions or other application functionality.Timer Operations: setTimeout and setInterval functions rely on callback queues to execute delayed or repeated operations, enabling features like animations, periodic data updates, and user interface transitions.File System Operations: Reading files, writing data, and directory operations in Node.js applications use callback queues to manage I/O operations without blocking other server processes or request handling.Database Queries: Asynchronous database operations, including SELECT queries, INSERT operations, and transaction management, utilize callback queues to maintain application responsiveness during data access operations.User Interface Events: Click handlers, form submissions, keyboard events, and mouse interactions are managed through callback queues to ensure responsive user interfaces and proper event handling order.Real-time Communication: WebSocket connections, Server-Sent Events, and WebRTC implementations use callback queues to manage incoming messages and connection state changes without disrupting application flow.Image and Media Processing: Loading images, processing videos, and handling audio operations rely on callback queues to manage resource-intensive operations while maintaining application performance.Animation and Rendering: requestAnimationFrame callbacks and CSS animation completions use specialized queues to coordinate with browser rendering cycles for smooth visual effects.Background Synchronization: Service workers and background sync operations use callback queues to manage offline data synchronization and background task execution.Microservice Communication: Inter-service communication in distributed systems relies on callback queues to handle asynchronous message passing and service coordination.</p>
+<h2 id="callback-queue-vs-other-async-patterns">Callback Queue vs. Other Async Patterns</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Callback Queue</th>
+<th>Promise Chain</th>
+<th>Async/Await</th>
+<th>Observable Stream</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Execution Model</td>
+<td>FIFO queue processing</td>
+<td>Chained then/catch calls</td>
+<td>Sequential async syntax</td>
+<td>Reactive stream processing</td>
+</tr>
+<tr>
+<td>Error Handling</td>
+<td>Manual error checking</td>
+<td>Built-in catch mechanisms</td>
+<td>Try/catch blocks</td>
+<td>Error operators and handlers</td>
+</tr>
+<tr>
+<td>Composability</td>
+<td>Limited composition</td>
+<td>Chainable operations</td>
+<td>Linear composition</td>
+<td>Rich operator composition</td>
+</tr>
+<tr>
+<td>Memory Usage</td>
+<td>Queue overhead</td>
+<td>Promise object overhead</td>
+<td>Minimal overhead</td>
+<td>Stream subscription overhead</td>
+</tr>
+<tr>
+<td>Browser Support</td>
+<td>Universal support</td>
+<td>ES6+ support required</td>
+<td>ES2017+ support required</td>
+<td>Library-dependent support</td>
+</tr>
+<tr>
+<td>Learning Curve</td>
+<td>Moderate complexity</td>
+<td>Moderate complexity</td>
+<td>Low complexity</td>
+<td>High complexity</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p>Callback Hell Prevention: Deeply nested callbacks can create maintenance nightmares and reduce code readability, requiring careful architecture planning and the adoption of modern async patterns to maintain clean, manageable codebases.Memory Leak Management: Improperly managed callbacks can create memory leaks when references are not properly cleaned up, especially in long-running applications with frequent asynchronous operations and event listeners.Error Propagation Complexity: Errors in callback-based systems can be difficult to trace and handle properly, as they may not propagate through the normal exception handling mechanisms that developers expect.Timing Dependencies: Race conditions can occur when callbacks depend on the execution order of other asynchronous operations, requiring careful coordination and sometimes additional synchronization mechanisms.Queue Overflow Risks: Rapidly queuing callbacks faster than they can be processed may lead to memory exhaustion and application performance degradation, particularly in high-throughput scenarios.Debugging Difficulties: Asynchronous callback execution makes traditional debugging techniques less effective, as stack traces may not provide clear insight into the original call context and execution flow.Testing Complexity: Unit testing asynchronous callback-based code requires special techniques and tools to properly mock timing, handle async assertions, and ensure test reliability across different execution environments.Performance <a data-lb="1" href="/en/glossary/bottlenecks/" title="Bottlenecks glossary entry">Bottlenecks</a>: Poorly designed callback systems can create performance bottlenecks when callbacks perform expensive operations or when queue processing becomes a limiting factor in application throughput.Browser Compatibility: Different JavaScript engines and browser versions may have subtle differences in callback queue implementation and timing, requiring careful testing across target environments.Concurrency Limitations: The single-threaded nature of callback queues may not be suitable for CPU-intensive operations that could benefit from true parallel processing capabilities.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p>Minimize Callback Nesting: Keep callback nesting shallow by using named functions, modular design patterns, and modern async/await syntax to improve code readability and maintainability.Implement Proper Error Handling: Always include error handling in callback functions, use error-first callback conventions, and implement fallback mechanisms to gracefully handle failure scenarios.Avoid Blocking Operations: Never perform synchronous, blocking operations within callbacks, as this defeats the purpose of asynchronous programming and can freeze the entire application.Use Appropriate Queue Types: Choose between callback queues and microtask queues based on operation priority, with Promises and microtasks for high-priority operations and regular callbacks for standard async tasks.Implement Timeout Mechanisms: Add timeout handling to prevent callbacks from waiting indefinitely for operations that may never complete, using techniques like Promise.race or manual timeout tracking.Clean Up Resources: Properly clean up event listeners, timers, and other resources in callbacks to prevent memory leaks and ensure optimal application performance over time.Batch Related Operations: Group related asynchronous operations together when possible to reduce callback queue overhead and improve overall application performance and user experience.Monitor Queue Performance: Implement monitoring and logging for callback queue performance, tracking metrics like queue depth, processing time, and error rates to identify potential issues.Use Modern Alternatives: Consider using Promises, async/await, or reactive programming libraries for new development while maintaining callback-based code for legacy compatibility requirements.Document Async Behavior: Clearly document the asynchronous behavior of functions and their callback requirements, including parameter expectations, error conditions, and timing considerations for other developers.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p>Custom Queue Implementation: Develop specialized callback queues with custom prioritization logic, rate limiting, or batching capabilities to meet specific application requirements and performance optimization needs.Queue Monitoring and Metrics: Implement comprehensive monitoring systems that track callback queue depth, processing <a data-lb="1" href="/en/glossary/latency/" title="Latency glossary entry">latency</a>, error rates, and throughput metrics to identify performance bottlenecks and optimization opportunities.Adaptive Queue Management: Create dynamic queue management systems that adjust processing strategies based on system load, available resources, and application performance requirements.Cross-Context Communication: Implement callback queue mechanisms that work across different execution contexts, such as Web Workers, Service Workers, or iframe boundaries for complex application architectures.Queue Persistence: Develop persistent callback queue systems that can survive application restarts or crashes, using techniques like local storage, IndexedDB, or server-side queue management.Hybrid Async Patterns: Combine callback queues with other asynchronous patterns like Promises, Observables, and async iterators to create sophisticated async workflows that leverage the strengths of each approach.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p>WebAssembly Integration: Emerging patterns for integrating callback queues with WebAssembly modules will enable more efficient processing of computationally intensive callbacks while maintaining JavaScript interoperability.Scheduler API Development: The proposed Scheduler API will provide more granular control over callback queue prioritization and timing, allowing developers to optimize for specific performance characteristics and user experience requirements.Worker Thread Coordination: Advanced techniques for coordinating callback queues across multiple worker threads and the main thread will enable better utilization of multi-core processors while maintaining async programming benefits.Real-time Performance Optimization: Future developments will focus on reducing callback queue latency and improving predictability for real-time applications like gaming, audio processing, and interactive media.AI-Driven Queue Management: Machine learning algorithms may be applied to callback queue management, optimizing execution order and resource allocation based on application usage patterns and performance requirements.Enhanced Debugging Tools: Development of sophisticated debugging and profiling tools specifically designed for callback queue analysis will improve developer productivity and application performance optimization capabilities.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Oberoi, R. (n.d.). Understanding the Event Loop, Callback Queue, and Call Stack in JavaScript. DEV Community.</p>
+</li>
+<li>
+<p>MDN Web Docs. (n.d.). JavaScript Execution Model. MDN Web Docs.</p>
+</li>
+<li>
+<p>Node.js. (n.d.). The Node.js Event Loop. Node.js Documentation.</p>
+</li>
+<li>
+<p>Bos, W. (n.d.). The Event Loop and Callback Hell. Wes Bos.</p>
+</li>
+<li>
+<p>DigitalOcean. (n.d.). Understanding the Event Loop, Callbacks, Promises, and Async/Await in JavaScript. DigitalOcean Community.</p>
+</li>
+<li>
+<p>GeeksforGeeks. (n.d.). Event Loop in JavaScript. GeeksforGeeks.</p>
+</li>
+<li>
+<p>MDN Web Docs. (n.d.). The Event Loop. MDN Web Docs.</p>
+</li>
+<li>
+<p>JavaScript in Plain English. (n.d.). Inside the Event Loop: How Node.js Handles Asynchronous Operations. JavaScript in Plain English.</p>
+</li>
+<li>
+<p>Megida, D. (n.d.). Callback Queue and Event Loop. Dillion’s Blog.</p>
+</li>
+<li>
+<p>ITNEXT. (n.d.). Javascript Runtime: JS Engine, Event Loop, Call Stack. ITNEXT.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/message-queue/">
+                    Message Queue
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A system that temporarily stores messages between applications, allowing them to communicate reliabl...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/message-queue/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/callback-queue/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165525"></script>
+</body>
+</html>

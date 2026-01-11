@@ -15,7 +15,9 @@ type: glossary
 draft: false
 e-title: High Availability (HA)
 term: こうかようせい (エイチエー)
-url: "/ja/glossary/High-Availability--HA-/"
+url: "/ja/glossary/high-availability--ha-/"
+aliases:
+- "/ja/glossary/High-Availability--HA-/"
 ---
 ## 高可用性(HA)とは?
 高可用性(HA)は、特定の期間にわたって持続的な運用パフォーマンス(最も一般的には「稼働時間」として定量化される)を達成することに焦点を当てたシステム設計および運用規律です。HAは、個々のコンポーネントが故障した場合でも継続的なサービスを確保することを目指しており、停止が深刻な財務的、安全性、または評判上の影響をもたらす分野におけるミッションクリティカルなワークロードにとって不可欠です。
@@ -26,33 +28,68 @@ url: "/ja/glossary/High-Availability--HA-/"
 
 高可用性戦略は、中断のないサービスが不可欠なあらゆる場所で実装されます:
 
-**AIモデルサービング:**不正検出やレコメンデーションエンジンなどのアプリケーションのために、トレーニング済みモデルがダウンタイムなしで推論にアクセス可能であることを保証します。**データパイプライン:**データレイク、分析、AIワークフローにとって重要な、継続的なデータ取り込み、変換、ストレージを維持します。**ユーザー向けアプリケーション:**停止がデータ損失、取引の失敗、または人命への脅威につながる可能性がある医療、金融、輸送における重要なプラットフォームを支えます。**エッジコンピューティングとIoT:**地理的に分散したデバイス全体にインテリジェンスを分散させ、ローカルの障害がグローバルサービスを中断しないようにします。**クラウドおよびハイブリッド環境:**リージョンまたはアベイラビリティゾーン間でのシームレスなフェイルオーバーを確保し、クラウドネイティブAIデプロイメントの標準となっています。
+**AIモデルサービング:**  
+不正検出やレコメンデーションエンジンなどのアプリケーションのために、トレーニング済みモデルがダウンタイムなしで推論にアクセス可能であることを保証します。
+
+**データパイプライン:**  
+データレイク、分析、AIワークフローにとって重要な、継続的なデータ取り込み、変換、ストレージを維持します。
+
+**ユーザー向けアプリケーション:**  
+停止がデータ損失、取引の失敗、または人命への脅威につながる可能性がある医療、金融、輸送における重要なプラットフォームを支えます。
+
+**エッジコンピューティングとIoT:**  
+地理的に分散したデバイス全体にインテリジェンスを分散させ、ローカルの障害がグローバルサービスを中断しないようにします。
+
+**クラウドおよびハイブリッド環境:**  
+リージョンまたはアベイラビリティゾーン間でのシームレスなフェイルオーバーを確保し、クラウドネイティブAIデプロイメントの標準となっています。
 
 サービスレベル契約(SLA)は、しばしばHAを正式化し、「ファイブナイン」(99.999%)の稼働時間などの目標を指定します。これは年間5分15秒のダウンタイムに相当します。
 
 ## 主要概念
 
-**冗長性:**サーバー、データベース、ネットワークリンク、ストレージなどの重複またはバックアップコンポーネントの展開により、プライマリが故障した場合にセカンダリが即座に引き継ぎます。**冗長性モデル:**| モデル | 説明 | 使用例 |
+**冗長性:**  
+サーバー、データベース、ネットワークリンク、ストレージなどの重複またはバックアップコンポーネントの展開により、プライマリが故障した場合にセカンダリが即座に引き継ぎます。
+
+**冗長性モデル:**
+
+| モデル | 説明 | 使用例 |
 |-------|------|--------|
 | N+1 | 最小限を超える1つの追加コンポーネント | クラスター化された推論 |
 | 2N | すべてのコンポーネントの完全な複製 | 金融、航空管制 |
 | N+2、2N+1 | 安全性向上のための複数のスペア | 医療、銀行 |
 
-**単一障害点(SPOF):**その故障がシステム全体の停止を引き起こす要素。HA設計はSPOFを体系的に特定し、排除します。**フェイルオーバー:**故障したコンポーネントからスタンバイへ運用を自動的に切り替えるプロセス。高速で信頼性の高いフェイルオーバーは、重要なサービスにとって不可欠です。**負荷分散:**複数のノード間でトラフィックまたはワークロードを分散し、最適なリソース使用とノード障害時の継続的なサービスを確保します。ロードバランサー自体も冗長化する必要があります。**レプリケーション:**ノードまたはサイト間でデータを同期させます。
+**単一障害点(SPOF):**  
+その故障がシステム全体の停止を引き起こす要素。HA設計はSPOFを体系的に特定し、排除します。
 
-- **同期**– リアルタイムレプリケーション; データ損失なし、ただしパフォーマンスに影響する可能性あり
-- **非同期**– わずかな遅延; 高パフォーマンス、最小限のデータ損失リスク**監視と自動復旧:**継続的な監視により、障害とパフォーマンス低下を検出します。自動オーケストレーションは、人間の介入なしにフェイルオーバーをトリガーし、サービスを再起動し、リソースをスケーリングします。
+**フェイルオーバー:**  
+故障したコンポーネントからスタンバイへ運用を自動的に切り替えるプロセス。高速で信頼性の高いフェイルオーバーは、重要なサービスにとって不可欠です。
+
+**負荷分散:**  
+複数のノード間でトラフィックまたはワークロードを分散し、最適なリソース使用とノード障害時の継続的なサービスを確保します。ロードバランサー自体も冗長化する必要があります。
+
+**レプリケーション:**  
+ノードまたはサイト間でデータを同期させます。
+
+- **同期** – リアルタイムレプリケーション; データ損失なし、ただしパフォーマンスに影響する可能性あり
+- **非同期** – わずかな遅延; 高パフォーマンス、最小限のデータ損失リスク
+
+**監視と自動復旧:**  
+継続的な監視により、障害とパフォーマンス低下を検出します。自動オーケストレーションは、人間の介入なしにフェイルオーバーをトリガーし、サービスを再起動し、リソースをスケーリングします。
 
 ## 高可用性クラスタリング
 
 クラスタリングは、複数のサーバー/ノードをグループ化して単一の論理システムとして機能させます。クラスターはHAの基盤であり、冗長性とスケーラビリティの両方をサポートします。
 
-**アクティブ-アクティブクラスター:**- すべてのノードがリクエストを積極的に処理; ワークロードが分散される
+**アクティブ-アクティブクラスター:**
+
+- すべてのノードがリクエストを積極的に処理; ワークロードが分散される
 - 利点: パフォーマンスと耐障害性; アイドルリソースなし
 - 使用例: 分散AI推論、リアルタイム分析
 - 考慮事項: 高度な競合解決と状態同期が必要
 
-**アクティブ-パッシブクラスター:**- プライマリノードのみがアクティブ; スタンバイノードが引き継ぐ準備完了
+**アクティブ-パッシブクラスター:**
+
+- プライマリノードのみがアクティブ; スタンバイノードが引き継ぐ準備完了
 - 利点: 設定が簡単; 状態管理が容易
 - 使用例: データベースバックエンド、トランザクションシステム
 - 考慮事項: フェイルオーバーにより短い切り替え遅延が発生
@@ -61,7 +98,12 @@ url: "/ja/glossary/High-Availability--HA-/"
 
 可用性は通常、システムが稼働している時間の割合として測定されます。
 
-**計算式:**可用性(%) = ((総時間 - ダウンタイム) / 総時間) × 100**稼働時間(「ナイン」):**| 可用性(%) | 年間ダウンタイム |
+**計算式:**  
+可用性(%) = ((総時間 - ダウンタイム) / 総時間) × 100
+
+**稼働時間(「ナイン」):**
+
+| 可用性(%) | 年間ダウンタイム |
 |----------|----------------|
 | 99% | 約3日15時間 |
 | 99.9% | 約8時間45分 |
@@ -70,7 +112,17 @@ url: "/ja/glossary/High-Availability--HA-/"
 
 **主要メトリクス:**
 
-**MTBF(平均故障間隔):**システム障害間の平均時間; MTBFが高いほど信頼性が高いことを示します。**MTTR(平均修復/復旧時間):**サービスを復元するために必要な平均時間; MTTRが低いほど顧客向けダウンタイムが減少します。**RTO(目標復旧時間):**停止後の最大目標ダウンタイム。**RPO(目標復旧時点):**障害によりデータが失われる可能性がある最大許容期間。
+**MTBF(平均故障間隔):**  
+システム障害間の平均時間; MTBFが高いほど信頼性が高いことを示します。
+
+**MTTR(平均修復/復旧時間):**  
+サービスを復元するために必要な平均時間; MTTRが低いほど顧客向けダウンタイムが減少します。
+
+**RTO(目標復旧時間):**  
+停止後の最大目標ダウンタイム。
+
+**RPO(目標復旧時点):**  
+障害によりデータが失われる可能性がある最大許容期間。
 
 ## HA vs ディザスタリカバリ vs フォールトトレランス
 
@@ -81,37 +133,86 @@ url: "/ja/glossary/High-Availability--HA-/"
 | 技術 | 冗長性、フェイルオーバー、クラスタリング | バックアップ、地理的レプリケーション、ホットサイト | すべてのコンポーネントの完全な複製 |
 | 例 | AIモデルサーバーのフェイルオーバー | 災害後のデータセンター復元 | 航空機制御システム |
 
-- **HA**– 日常的な障害に対する回復力のために設計
-- **DR**– 災害またはサイト全体の停止からの復旧に焦点
-- **フォールトトレランス**– 真のゼロダウンタイムを目指し、すべての重要なパスを複製
+- **HA** – 日常的な障害に対する回復力のために設計
+- **DR** – 災害またはサイト全体の停止からの復旧に焦点
+- **フォールトトレランス** – 真のゼロダウンタイムを目指し、すべての重要なパスを複製
 
 ## ベストプラクティス
 
-**単一障害点の排除:**すべてのアーキテクチャレイヤーでSPOFを特定し、削除します。**冗長性の実装:**サーバー、ネットワークパス、ストレージ、電源を複製します。**フェイルオーバーと復旧の自動化:**オーケストレーションツールを使用し、定期的にフェイルオーバーをテストします。**負荷分散:**ヘルスチェックと冗長性を備えたロードバランサーを採用します。**データレプリケーションとバックアップ:**リアルタイムまたはほぼリアルタイムのレプリケーションを確保; 頻繁なバックアップをスケジュールします。**継続的な監視:**メトリクス、ログ、イベントを監視; アラートを実装します。**地理的分散:**サイト障害に耐えるためにリージョン間でリソースを分散させます。**定期的なメンテナンスとテスト:**パッチ適用、更新、フェイルオーバー訓練を実施します。**明確なドキュメントとトレーニング:**運用ランブックを維持し、チームをトレーニングします。**SLAの正式化:**可用性目標、RTO、RPOを定義し、実施します。
+**単一障害点の排除:**  
+すべてのアーキテクチャレイヤーでSPOFを特定し、削除します。
+
+**冗長性の実装:**  
+サーバー、ネットワークパス、ストレージ、電源を複製します。
+
+**フェイルオーバーと復旧の自動化:**  
+オーケストレーションツールを使用し、定期的にフェイルオーバーをテストします。
+
+**負荷分散:**  
+ヘルスチェックと冗長性を備えたロードバランサーを採用します。
+
+**データレプリケーションとバックアップ:**  
+リアルタイムまたはほぼリアルタイムのレプリケーションを確保; 頻繁なバックアップをスケジュールします。
+
+**継続的な監視:**  
+メトリクス、ログ、イベントを監視; アラートを実装します。
+
+**地理的分散:**  
+サイト障害に耐えるためにリージョン間でリソースを分散させます。
+
+**定期的なメンテナンスとテスト:**  
+パッチ適用、更新、フェイルオーバー訓練を実施します。
+
+**明確なドキュメントとトレーニング:**  
+運用ランブックを維持し、チームをトレーニングします。
+
+**SLAの正式化:**  
+可用性目標、RTO、RPOを定義し、実施します。
 
 ## 実世界の例
 
-**医療システム:**電子健康記録(EHR)は、緊急医療のために24時間365日アクセス可能である必要があります。**自動運転車:**車載AI推論は、運転中に決して故障してはなりません。**金融サービス:**取引プラットフォームは、中断なく取引を処理するためにHAを必要とします。**大規模AIデプロイメント:**負荷分散された冗長クラスターを介して提供されるクラウドベースのAIモデル。**IoTとエッジ:**スマートシティインフラストラクチャは、センサーネットワークとリアルタイム応答のためにHAに依存しています。
+**医療システム:**  
+電子健康記録(EHR)は、緊急医療のために24時間365日アクセス可能である必要があります。
+
+**自動運転車:**  
+車載AI推論は、運転中に決して故障してはなりません。
+
+**金融サービス:**  
+取引プラットフォームは、中断なく取引を処理するためにHAを必要とします。
+
+**大規模AIデプロイメント:**  
+負荷分散された冗長クラスターを介して提供されるクラウドベースのAIモデル。
+
+**IoTとエッジ:**  
+スマートシティインフラストラクチャは、センサーネットワークとリアルタイム応答のためにHAに依存しています。
 
 ## 実装技術
 
-**クラスタリングソリューション:**- Red Hat High Availability Add-On
+**クラスタリングソリューション:**
+
+- Red Hat High Availability Add-On
 - PacemakerとCorosync
 - コンテナオーケストレーション用Kubernetes
 - コンテナクラスタリング用Docker Swarm
 
-**ロードバランサー:**- HAProxy
+**ロードバランサー:**
+
+- HAProxy
 - NGINX
 - F5 BIG-IP
 - AWS Elastic Load Balancing
 - Azure Load Balancer
 
-**データベースレプリケーション:**- MySQL Replication
+**データベースレプリケーション:**
+
+- MySQL Replication
 - PostgreSQL Streaming Replication
 - MongoDB Replica Sets
 - Cassandra Multi-datacenter Replication
 
-**監視と自動化:**- PrometheusとGrafana
+**監視と自動化:**
+
+- PrometheusとGrafana
 - Nagios
 - Zabbix
 - ELK Stack(Elasticsearch、Logstash、Kibana)
@@ -119,27 +220,26 @@ url: "/ja/glossary/High-Availability--HA-/"
 
 ## 参考文献
 
-
-1. IBM. (n.d.). What is High Availability?. IBM Think Topics.
-2. TechTarget. (n.d.). High Availability (HA). TechTarget.
-3. Aerospike. (n.d.). HA in Cloud Computing. Aerospike Blog.
-4. Red Hat. (n.d.). HA Clustering Guide. Red Hat Documentation.
-5. Memgraph. (n.d.). High Availability Clustering. Memgraph Documentation.
-6. Memgraph. (n.d.). How High Availability Works. Memgraph Documentation.
-7. Memgraph. (n.d.). HA Best Practices. Memgraph Documentation.
-8. Memgraph. (n.d.). Setup HA Cluster with Docker. Memgraph Documentation.
-9. Memgraph. (n.d.). Setup HA Cluster with Kubernetes. Memgraph Documentation.
-10. Memgraph. (n.d.). How Replication Works. Memgraph Documentation.
-11. Nobl9. (n.d.). High Availability Design. Nobl9.
-12. Nobl9. (n.d.). Incident Response Metrics. Nobl9.
-13. Nobl9. (n.d.). HA vs Fault Tolerance. Nobl9.
-14. Cisco. (n.d.). What Is High Availability?. Cisco Learn.
-15. F5. (n.d.). What Is High Availability?. F5 Glossary.
-16. TechTarget. (n.d.). Redundancy. TechTarget.
-17. TechTarget. (n.d.). Single Point of Failure. TechTarget.
-18. TechTarget. (n.d.). Load Balancing. TechTarget.
-19. IBM. (n.d.). Disaster Recovery. IBM Topics.
-20. IBM. (n.d.). Cloud Computing. IBM Topics.
-21. TechTarget. (n.d.). Self-driving Car. TechTarget.
-22. Aerospike. (n.d.). Database Clustering Use Cases. Aerospike Blog.
-23. Aerospike. (n.d.). Measuring High Availability. Aerospike Blog.
+- [IBM: What is High Availability?](https://www.ibm.com/think/topics/high-availability)
+- [TechTarget: High Availability (HA)](https://www.techtarget.com/searchdatacenter/definition/high-availability)
+- [Aerospike: HA in Cloud Computing](https://aerospike.com/blog/what-is-high-availability/)
+- [Red Hat: HA Clustering Guide](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/system_design_guide/assembly_overview-of-high-availability-system-design-guide)
+- [Memgraph: High Availability Clustering](https://memgraph.com/docs/clustering/high-availability)
+- [Memgraph: How High Availability Works](https://memgraph.com/docs/clustering/high-availability/how-high-availability-works)
+- [Memgraph: HA Best Practices](https://memgraph.com/docs/clustering/high-availability/best-practices)
+- [Memgraph: Setup HA Cluster with Docker](https://memgraph.com/docs/clustering/high-availability/setup-ha-cluster-docker)
+- [Memgraph: Setup HA Cluster with Kubernetes](https://memgraph.com/docs/clustering/high-availability/setup-ha-cluster-k8s)
+- [Memgraph: How Replication Works](https://memgraph.com/docs/clustering/replication/how-replication-works)
+- [Nobl9: High Availability Design](https://www.nobl9.com/service-availability/high-availability-design)
+- [Nobl9: Incident Response Metrics](https://www.nobl9.com/service-availability/incident-response-metrics)
+- [Nobl9: HA vs Fault Tolerance](https://www.nobl9.com/service-availability/high-availability-vs-fault-tolerance)
+- [Cisco: What Is High Availability?](https://www.cisco.com/site/us/en/learn/topics/networking/what-is-high-availability.html)
+- [F5: What Is High Availability?](https://www.f5.com/glossary/high-availability)
+- [TechTarget: Redundancy](https://www.techtarget.com/whatis/definition/redundancy)
+- [TechTarget: Single Point of Failure](https://www.techtarget.com/searchdatacenter/definition/Single-point-of-failure-SPOF)
+- [TechTarget: Load Balancing](https://www.techtarget.com/searchnetworking/definition/load-balancing)
+- [IBM: Disaster Recovery](https://www.ibm.com/topics/disaster-recovery)
+- [IBM: Cloud Computing](https://www.ibm.com/topics/cloud-computing)
+- [TechTarget: Self-driving Car](https://www.techtarget.com/searchenterpriseai/definition/driverless-car)
+- [Aerospike: Database Clustering Use Cases](https://aerospike.com/blog/database-clustering-use-cases/)
+- [Aerospike: Measuring High Availability](https://aerospike.com/blog/what-is-high-availability/#measuring_high_availability)

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RAG on SmartWeb</title>
+    <link>https://main.d1jtfhinlastnr.amplifyapp.com/en/tags/rag/</link>
+    <description>Recent content in RAG on SmartWeb</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 19 Nov 2025 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/tags/rag/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How AI Answers Accurately with Latest Information: Introduction to RAG (Retrieval-Augmented Generation)</title>
+      <link>https://main.d1jtfhinlastnr.amplifyapp.com/en/archived_blog_backup/introduction-to-rag/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0900</pubDate>
+      <guid>https://main.d1jtfhinlastnr.amplifyapp.com/en/archived_blog_backup/introduction-to-rag/</guid>
+      <description>&lt;h2 id=&#34;basics-and-applications-of-rag-retrieval-augmented-generation&#34;&gt;Basics and Applications of RAG (Retrieval-Augmented Generation)&lt;/h2&gt;&#xA;&lt;h3 id=&#34;basic-structure-of-rag&#34;&gt;Basic Structure of RAG&lt;/h3&gt;&#xA;&lt;p&gt;RAG (Retrieval-Augmented Generation) is a mechanism that combines &amp;ldquo;retrieval&amp;rdquo; and &amp;ldquo;generation&amp;rdquo;. Traditional AI created text and responses using only learned knowledge. RAG searches for necessary information from external sources like databases when questions arrive, then creates answers based on that information.&lt;/p&gt;&#xA;&lt;p&gt;First, AI understands the question content and retrieves relevant information from search engines or specific databases. Next, using the found information, it creates answers in natural text. This method enables AI to immediately update knowledge and quickly reflect new information.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How AI Answers Accurately with Latest Information: Introduction to RAG (Retrieval-Augmented Generation)</title>
+      <link>https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/introduction-to-rag/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0900</pubDate>
+      <guid>https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/introduction-to-rag/</guid>
+      <description>&lt;h2 id=&#34;basics-and-applications-of-rag-retrieval-augmented-generation&#34;&gt;Basics and Applications of RAG (Retrieval-Augmented Generation)&lt;/h2&gt;&#xA;&lt;h3 id=&#34;basic-structure-of-rag&#34;&gt;Basic Structure of RAG&lt;/h3&gt;&#xA;&lt;p&gt;RAG (Retrieval-Augmented Generation) is a mechanism that combines &amp;ldquo;retrieval&amp;rdquo; and &amp;ldquo;generation&amp;rdquo;. Traditional AI created text and responses using only learned knowledge. RAG searches for necessary information from external sources like databases when questions arrive, then creates answers based on that information.&lt;/p&gt;&#xA;&lt;p&gt;First, AI understands the question content and retrieves relevant information from search engines or specific databases. Next, using the found information, it creates answers in natural text. This method enables AI to immediately update knowledge and quickly reflect new information.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

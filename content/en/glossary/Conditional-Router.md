@@ -14,7 +14,8 @@ draft: false
 
 A Conditional Router is a workflow component or node that evaluates incoming data against one or more user-defined rules and directs the data to a specific downstream route based on which condition matches. Its purpose is to enable dynamic, rule-based branching in automation pipelines, AI chatbots, business process automation, and software architectures. Each output port corresponds to a possible routed outcome, determined by customizable rules using a variety of operators.
 
-**Key Capabilities:**- Receives input (text, structured objects, metadata, etc.)
+**Key Capabilities:**
+- Receives input (text, structured objects, metadata, etc.)
 - Applies user-defined conditions (e.g., `equals`, `contains`, `is_email`, `regex`)
 - Activates exactly one output (route) per evaluation, except in some ETL contexts
 - Supports deterministic, manageable flows in complex automations
@@ -25,15 +26,19 @@ A Conditional Router is a workflow component or node that evaluates incoming dat
 
 The Conditional Router compares incoming data to specified values or logical expressions using a set of configurable operators. Each condition is linked to a named output. The router checks conditions in order: the first `true` condition determines the output route. If no condition matches, the router triggers a default or fallback route (if configured).
 
-**Single-path Routing:**Only one output is activated per evaluation (exclusive routing), except in some ETL frameworks.**Configurable Rules:**Conditions are defined with operators and can reference multiple fields, including nested data.**Extensible:**Supports logical composition, nested conditions, and custom expressions.
+**Single-path Routing:** Only one output is activated per evaluation (exclusive routing), except in some ETL frameworks.
+
+**Configurable Rules:** Conditions are defined with operators and can reference multiple fields, including nested data.
+
+**Extensible:** Supports logical composition, nested conditions, and custom expressions.
 
 ### Evaluation Sequence
 
-1. **Input Reception:**Receives data and optional metadata or parameters
-2. **Condition Evaluation:**Sequentially evaluates each defined condition using the configured operators
-3. **Routing Decision:**First condition that evaluates to `true` determines the output
-4. **Default Handling:**If no conditions match, data is sent to a default route (if defined)
-5. **Downstream Processing:**Data is passed to the next component or action
+1. **Input Reception:** Receives data and optional metadata or parameters
+2. **Condition Evaluation:** Sequentially evaluates each defined condition using the configured operators
+3. **Routing Decision:** First condition that evaluates to `true` determines the output
+4. **Default Handling:** If no conditions match, data is sent to a default route (if defined)
+5. **Downstream Processing:** Data is passed to the next component or action
 
 ## Inputs
 
@@ -70,7 +75,7 @@ Conditional Routers support a wide variety of operators for flexible routing:
 | `$gt`, `$gte` | Greater than / greater or equal | `score >= 0.8` |
 | `$lt`, `$lte` | Less than / less or equal | `temperature < 0.7` |
 
-**Logical Operators:**`$and` (all conditions must be true), `$or` (any condition true)
+**Logical Operators:** `$and` (all conditions must be true), `$or` (any condition true)
 
 ## Outputs
 
@@ -83,7 +88,9 @@ Each Conditional Router node provides multiple output ports:
 | Custom Routes | Named outputs for each condition | Message/Object |
 | Default Route | When no condition matches | Message/Object |
 
-**Named Output Ports:**Each condition links to a named output.**Default Output:**Handles unmatched data.**Data Forwarding:**The original (or transformed) message/data is passed through the activated output.
+**Named Output Ports:** Each condition links to a named output.  
+**Default Output:** Handles unmatched data.  
+**Data Forwarding:** The original (or transformed) message/data is passed through the activated output.
 
 ## Advanced Configuration
 
@@ -209,26 +216,60 @@ Ensure data routing based on region for regulatory compliance. Apply role-based 
 
 ## Best Practices
 
-**Order of Conditions**Place specific conditions before generic ones to prevent premature matches.**Fail-Safe Defaults**Always configure a default output for unmatched data.**Testing**Validate logic with test data to ensure correct routing; use logging and analytics to monitor routing decisions.**Documentation**Comment or document complex conditions for maintainability.**Security**Avoid unsafe template evaluation unless essential and inputs are trusted.**Performance**Avoid excessive nesting or extremely complex conditions to keep routing fast and maintainable.**No-Code Accessibility**Use platforms providing graphical or no-code interfaces for broader accessibility.
+**Order of Conditions**  
+Place specific conditions before generic ones to prevent premature matches.
+
+**Fail-Safe Defaults**  
+Always configure a default output for unmatched data.
+
+**Testing**  
+Validate logic with test data to ensure correct routing; use logging and analytics to monitor routing decisions.
+
+**Documentation**  
+Comment or document complex conditions for maintainability.
+
+**Security**  
+Avoid unsafe template evaluation unless essential and inputs are trusted.
+
+**Performance**  
+Avoid excessive nesting or extremely complex conditions to keep routing fast and maintainable.
+
+**No-Code Accessibility**  
+Use platforms providing graphical or no-code interfaces for broader accessibility.
 
 ## Troubleshooting & FAQ
 
-**Q: What happens if multiple conditions match?**A: Only the first matching condition (in order) is selected; subsequent matches are ignored. In some ETL tools, data can be routed to multiple outputs.**Q: How do I route based on multiple fields?**A: Use logical operators (`$and`, `$or`) to combine conditions on multiple fields.**Q: What if a referenced field is missing?**A: The condition usually evaluates to `false`, and the router proceeds to the next condition or default.**Q: Can I use regex or advanced matching?**A: Yes, many routers support `$regex` or pattern-based operators.**Q: Is this suitable for non-developers?**A: Many platforms offer no-code configuration.**Q: Can I perform parallel routing?**A: Most routers are exclusive (single-path per evaluation). For parallel actions, use specialized multi-route or branching components.
+**Q: What happens if multiple conditions match?**  
+A: Only the first matching condition (in order) is selected; subsequent matches are ignored. In some ETL tools, data can be routed to multiple outputs.
+
+**Q: How do I route based on multiple fields?**  
+A: Use logical operators (`$and`, `$or`) to combine conditions on multiple fields.
+
+**Q: What if a referenced field is missing?**  
+A: The condition usually evaluates to `false`, and the router proceeds to the next condition or default.
+
+**Q: Can I use regex or advanced matching?**  
+A: Yes, many routers support `$regex` or pattern-based operators.
+
+**Q: Is this suitable for non-developers?**  
+A: Many platforms offer no-code configuration.
+
+**Q: Can I perform parallel routing?**  
+A: Most routers are exclusive (single-path per evaluation). For parallel actions, use specialized multi-route or branching components.
 
 ## References
 
-
-1. AWS. (n.d.). AWS Glue: Conditional Router. AWS Documentation.
-2. FlowHunt. (n.d.). FlowHunt: Conditional Router. FlowHunt Documentation.
-3. Haystack. (n.d.). Haystack: ConditionalRouter. Haystack Documentation.
-4. Portkey AI. (n.d.). Portkey AI: Conditional Routing. Portkey AI Documentation.
-5. Portkey AI. (n.d.). Portkey AI: Combined Routing with Multiple Conditions. Portkey AI Documentation.
-6. Fluix. (n.d.). Fluix: Conditional Logic Tutorial. Fluix Help.
-7. Slack. (n.d.). Slack: Conditional Branching Workflow Builder. Slack Blog.
-8. Slack. (n.d.). Slack: Guide to Slack Workflow Builder. Slack Help.
-9. Frontline AI. (n.d.). Frontline AI: Understanding Conditional Routing in AI Agent Flows. Frontline AI Help.
-10. Rapidomize. (n.d.). Rapidomize: Conditional Routing. Rapidomize Documentation.
-11. FlowHunt. (n.d.). FlowHunt: Live Demo. FlowHunt Website.
-12. Unknown. (n.d.). Conditional Routing in Slack Workflow Builder. YouTube.
-13. Unknown. (n.d.). How to Use Conditional Router in FlowHunt. YouTube.
-14. Unknown. (n.d.). AWS Glue Conditional Router Tutorial. YouTube.
+- [AWS Glue: Conditional Router](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)
+- [FlowHunt: Conditional Router](https://www.flowhunt.io/components/ConditionalRouter/)
+- [Haystack: ConditionalRouter](https://docs.haystack.deepset.ai/docs/conditionalrouter)
+- [Portkey AI: Conditional Routing](https://docs.portkey.ai/docs/product/ai-gateway/conditional-routing)
+- [Portkey AI: Combined Routing with Multiple Conditions](https://docs.portkey.ai/docs/product/ai-gateway/conditional-routing#combined-routing-with-multiple-conditions)
+- [Fluix: Conditional Logic Tutorial](https://fluix.io/help/conditional-logic-tutorial)
+- [Slack: Conditional Branching Workflow Builder](https://slack.com/blog/news/conditional-branching-workflow-builder)
+- [Slack: Guide to Slack Workflow Builder](https://slack.com/help/articles/360035692513-Guide-to-Slack-Workflow-Builder)
+- [Frontline AI: Understanding Conditional Routing in AI Agent Flows](https://help.getfrontline.ai/en/articles/10174140-understanding-conditional-routing-in-ai-agent-flows)
+- [Rapidomize: Conditional Routing](https://rapidomize.com/docs/services/router/)
+- [FlowHunt: Live Demo](https://www.flowhunt.io/demo/)
+- [Conditional Routing in Slack Workflow Builder (YouTube)](https://www.youtube.com/watch?v=3O4c7iYhD5Y)
+- [How to Use Conditional Router in FlowHunt (YouTube)](https://www.youtube.com/watch?v=rgqX7Qj3QAo)
+- [AWS Glue Conditional Router Tutorial (YouTube)](https://www.youtube.com/watch?v=90p4Vq8F9pQ)

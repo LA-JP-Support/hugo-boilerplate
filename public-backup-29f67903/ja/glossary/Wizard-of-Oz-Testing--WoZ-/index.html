@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>ウィザード・オブ・オズ・テスティング(WoZ) | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/wizard-of-oz-testing--woz-/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Wizard-of-Oz-Testing--WoZ-/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/Wizard-of-Oz-Testing--WoZ-/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Wizard-of-Oz-Testing--WoZ-/" hreflang="x-default" rel="alternate"/>
+<meta content="ウィザード・オブ・オズ・テスティング(WoZ)は、ユーザーが隠れた人間によって制御されるシステムと対話し、AIをシミュレートすることで、コスト効率的にデザインをテストするユーザーリサーチ手法です。" name="description"/>
+<meta content="ウィザード・オブ・オズ・テスティング, WoZテスティング, ユーザーリサーチ, プロトタイピング, 対話型AI" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/wizard-of-oz-testing--woz-/" property="og:url"/>
+<meta content="ウィザード・オブ・オズ・テスティング(WoZ) | SmartWeb" property="og:title"/>
+<meta content="ウィザード・オブ・オズ・テスティング(WoZ)は、ユーザーが隠れた人間によって制御されるシステムと対話し、AIをシミュレートすることで、コスト効率的にデザインをテストするユーザーリサーチ手法です。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/wizard-of-oz-testing--woz-/" name="twitter:url"/>
+<meta content="ウィザード・オブ・オズ・テスティング(WoZ) | SmartWeb" name="twitter:title"/>
+<meta content="ウィザード・オブ・オズ・テスティング(WoZ)は、ユーザーが隠れた人間によって制御されるシステムと対話し、AIをシミュレートすることで、コスト効率的にデザインをテストするユーザーリサーチ手法です。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">ウィザード・オブ・オズ・テスティング(WoZ)</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        ウィザード・オブ・オズ・テスティング(WoZ)
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Wizard of Oz Testing (WoZ)
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          ウィザード・オブ・オズ・テスティング(WoZ)は、ユーザーが隠れた人間によって制御されるシステムと対話し、AIをシミュレートすることで、コスト効率的にデザインをテストするユーザーリサーチ手法です。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ウィザード・オブ・オズ・テスティング
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                WoZテスティング
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ユーザーリサーチ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                プロトタイピング
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                対話型AI
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="オズの魔法使いテストとは">オズの魔法使いテストとは?</h2>
+<p>オズの魔法使いテスト(WoZ)は、隠れた人間オペレーターが自動化機能をシミュレートすることで、完全な実装前にインテリジェントシステムを評価できるユーザーリサーチおよびプロトタイピング手法です。ユーザーは自律的なシステム(<a data-lb="1" href="/ja/glossary/chatbot/" title="チャットボットは、テキストまたは音声を通じて人間の会話をシミュレートするAI駆動のソフトウェアアプリケーションです。カスタマーサポート、情報検索、タスク自動化に使用されます。">チャットボット</a>、音声アシスタント、レコメンデーションエンジン、スマートデバイスなど)と対話していると認識しますが、実際には隠れた人間の「魔法使い」がリアルタイムで応答を生成し、システムの動作を制御しています。この欺瞞は、適切なデブリーフィングを通じて倫理的に管理されることで、デザインの改善やAIトレーニングデータ収集に不可欠な、本物のユーザー反応と自然な言語パターンを引き出します。</p>
+<p>この手法の名称は、L・フランク・ボームの小説に由来します。小説では、一見強力な魔法使いが、実はカーテンの裏から認識を操作する普通の人物であることが明らかになります。同様に、WoZテストでは人間オペレーターをインターフェースの背後に配置し、デザインチームがユーザーの期待、メンタルモデル、インタラクションパターンを研究できるようにします。これにより、最終的にユーザーニーズを満たせない可能性のある複雑な<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="人工知能(AI) の用語集ページ">AIシステム</a>の開発に数ヶ月から数年を投資する必要がありません。このアプローチは、会話型インターフェース、音声体験、またはインテリジェンスと適応性がコア価値提案でありながら技術的に困難または高コストな実装が必要なシステムのプロトタイピングに特に有効です。</p>
+<p>歴史的背景と進化:この手法の文書化された起源は1973年に遡ります。Don NormanとAllen Munroが、そのような技術が存在する前に空港情報システムをシミュレートしてユーザーインタラクションを研究しました。Jeff Kelleyは1983年に自然言語インターフェースに関する論文を通じて「オズの魔法使い」という用語を正式化しました。それ以来、このアプローチは<a data-lb="1" href="/ja/glossary/ux/" title="ユーザーエクスペリエンス(UX)について、その定義、原則、プロセス、価値を網羅的に解説します。UXとUI、ユーザビリティ、CXの違いを学び、AIチャットボットと自動化の文脈におけるUXに焦点を当てます。">UX</a>リサーチ、ヒューマンコンピュータインタラクション、AIシステムデザインの基礎となり、シンプルなペーパープロトタイプから音声合成、アニメーション、マルチモーダルインタラクションを組み込んだ洗練されたデジタルシミュレーションへと進化してきました。</p>
+<h2 id="コアコンポーネントと手法">コアコンポーネントと手法</h2>
+<h3 id="必須要素">必須要素</h3>
+<p>参加者(ユーザー)– プロトタイプが自律的に機能していると信じて自然に対話し、本物の行動データと言語パターンを提供します魔法使い(隠れたオペレーター)– 隠れた場所からすべてのシステム応答を制御し、準備されたスクリプトに従うか、トレーニングと意図されたシステム機能の理解に基づいて即興で対応しますファシリテーター(オプション)– セッションをガイドし、シナリオを紹介し、インタラクションを観察し、魔法使いの存在を明かすことなく記録機器を管理しますプロトタイプインターフェース– 低忠実度のペーパーモックアップから、中忠実度のデジタルワイヤーフレーム、合成音声、アニメーション、リアルなUI要素を組み込んだ高忠実度シミュレーションまで幅広く対応します通信インフラストラクチャ– 魔法使いが検出されることなくユーザー入力を受信し応答を送信できる技術的セットアップ。別室、マジックミラー、リモート接続ツール、隠しコントロールインターフェースなどを使用することが多いです</p>
+<h3 id="忠実度スペクトラム">忠実度スペクトラム</h3>
+<p>低忠実度実装ペーパーインターフェース、基本的なデジタルモックアップ、または魔法使いが手動で画面を更新したりスライドを進めたりするシンプルなクリック可能なプロトタイプ。初期のコンセプト探索、迅速な反復、基本的なフロー検証に最適です。最小限の投資で学習速度を最大化します。中忠実度実装Figma、Axure、またはカスタムWebインターフェースなどのツールで構築されたインタラクティブなデジタルプロトタイプ。魔法使いが応答を入力したり、準備されたオプションから選択したり、事前構築されたアニメーションをトリガーしたりします。リアリズムと柔軟性のバランスを取り、修正速度を維持しながらより微妙なインタラクションのテストを可能にします。高忠実度実装洗練されたグラフィックス、リアルなアニメーション、合成音声、洗練されたインタラクションを備えた本番環境に近いインターフェース。魔法使いのコントロールは隠されたままですが、ロジックとコンテンツ生成は人間主導のままです。開発投資前の最終検証や、音声パーソナリティやビジュアルの洗練度などの微妙な体験品質をテストする場合に適しています。</p>
+<h3 id="魔法使いの役割と責任">魔法使いの役割と責任</h3>
+<p>効果的な魔法使いは、迅速で文脈に適した技術的に実現可能な応答を通じて、システムの自律性という錯覚を維持します。トレーニング要件には、意図されたシステム機能の深い理解、不可能な約束を防ぐ技術的制約、会話デザインの原則、観察圧力下での迅速な意思決定が含まれます。スクリプトの準備はアプローチによって異なります:</p>
+<p>クローズドスクリプトアプローチ– 魔法使いが意図、文脈、または会話フローによって整理された事前作成された応答ライブラリから選択します。一貫性と速度を提供しますが、予期しない入力への自然な適応が制限されます。オープンスクリプトアプローチ– 魔法使いがトレーニングとシステム理解に基づいて動的にオリジナルの応答を作成します。自然さと柔軟性を最大化しますが、より高いスキルを要求し、一貫性の課題を生み出し、実現不可能な機能を約束するリスクがあります。ハイブリッドアプローチ– 一般的なシナリオのスクリプト化された応答と、エッジケースの即興の柔軟性を組み合わせ、魔法使いの判断を通じて効率性と適応性のバランスを取ります。</p>
+<h2 id="戦略的応用">戦略的応用</h2>
+<h3 id="会話型ai開発">会話型AI開発</h3>
+<p>WoZテストは、ユーザーがクエリをどのように自然に表現し、支援を期待し、会話スタイルに応答するかを明らかにすることで、チャットボットと仮想アシスタントのデザインの基礎となります。チームは、一般的なインテント、必要なエンティティ、期待される<a data-lb="1" href="/ja/glossary/escalation/" title="カスタマーサポート、IT、AIチャットボットにおけるエスカレーションについて学びます。種類、トリガー、ベストプラクティス、そして自動化が複雑な問題解決をどのように効率化するかを解説します。">エスカレーション</a>トリガー、自然な会話修復戦略を特定する本物の言語パターンを観察します。このデータは以下に直接情報を提供します:</p>
+<ul>
+<li>インテント分類とエンティティ抽出要件</li>
+<li>フォールバックとエラー処理戦略</li>
+<li>パーソナリティとトーンの調整</li>
+<li>エスカレーショントリガーの特定</li>
+<li>機械学習モデルのトレーニングデータ収集</li>
+</ul>
+<p>実装例:カスタマーサポートチャットボットシミュレーションで、魔法使いがサービス問い合わせに応答すると、ユーザーが頻繁に複数の問題を1つのメッセージにまとめ、反応的な回答ではなく積極的な提案を期待し、特定のフレーズを即座の人間へのエスカレーションを必要とする緊急性の指標として解釈することが明らかになります。</p>
+<h3 id="音声アシスタント体験">音声アシスタント体験</h3>
+<p>自然言語音声インターフェースは、<a data-lb="1" href="/ja/glossary/speech-recognition/" title="音声認識(ASR)は、話し言葉をテキストに変換する技術です。このAI技術の仕組み、アルゴリズム、機能、応用分野、そして今後のトレンドについて解説します。">音声認識</a>、自然言語理解、音声合成統合の複雑さとコストを考えると、WoZ手法から特に恩恵を受けます。テストでは以下に対処します:</p>
+<ul>
+<li>ウェイクワードの有効性と誤検出率</li>
+<li>音声パターンの自然さと理解度</li>
+<li>エラー処理と回復戦略</li>
+<li>音声パーソナリティと感情的共鳴</li>
+<li>マルチターン対話管理</li>
+</ul>
+<p>実装例:参加者が偽装されたデバイスに話しかけ、リモートの魔法使いが聞いてテキスト読み上げ合成を通じて応答することで、特定の音声技術スタックにコミットする前に、音声インタラクションフロー、コマンドフレーズの好み、システム応答の自然さを評価できます。</p>
+<h3 id="レコメンデーションとパーソナライゼーションシステム">レコメンデーションとパーソナライゼーションシステム</h3>
+<p>WoZは、魔法使いがユーザープロファイル、行動、明示的な好みに基づいてパーソナライズされたコンテンツ、製品、または提案を手動で選択して提示することで、インテリジェントなレコメンデーションエンジンをシミュレートします。これにより、以下に対するユーザーの期待が明らかになります:</p>
+<ul>
+<li>パーソナライゼーションの深さとタイミング</li>
+<li>説明と透明性の要件</li>
+<li>コントロールとオーバーライドの好み</li>
+<li>信頼構築メカニズム</li>
+<li>プライバシーの快適性の境界</li>
+</ul>
+<p>実装例:魔法使いが閲覧行動を観察し、戦略的に製品レコメンデーションを表示する小売体験。異なるパーソナライゼーションレベル、レコメンデーションのタイミング、説明形式に対するユーザーの受容性をテストします。</p>
+<h2 id="実装ガイド">実装ガイド</h2>
+<h3 id="フェーズ1-リサーチデザイン">フェーズ1: リサーチデザイン</h3>
+<p>学習目標の定義– 回答すべき質問を明確化します:ユーザーの期待、インタラクションパターン、言語の好み、メンタルモデル、機能の優先順位、またはエラー回復行動対象シナリオの特定– 魔法使いの能力内で達成可能でありながら、重要なデザイン決定に洞察を提供する代表的なタスクまたはユースケースを選択します適切な忠実度の決定– プロトタイプの洗練度をリサーチの質問と利用可能なリソースに合わせます。忠実度が高いほど信頼性が増しますが、反復速度が低下することを認識します</p>
+<h3 id="フェーズ2-プロトタイプ開発">フェーズ2: プロトタイプ開発</h3>
+<p>技術スタックの選択– 必要な忠実度レベルをサポートしながら、セッション間の迅速な更新を可能にするツールを選択します(ペーパー、プレゼンテーションソフトウェア、デザインツール、Webプロトタイプ、カスタムアプリケーション)魔法使いインターフェースの設計– 魔法使いが存在を明かすことなく、入力を受信し、スクリプトやガイドラインを参照し、応答を効率的に送信できるコントロールシステムを作成します応答素材の準備– 意図されたシステム機能と技術的制約に基づいて、スクリプト、応答ライブラリ、決定木、または即興ガイドラインを開発します</p>
+<h3 id="フェーズ3-魔法使いトレーニング">フェーズ3: 魔法使いトレーニング</h3>
+<p>システム知識の移転– 製品ビジョン、意図された機能、技術的制限、ビジネス制約、ユーザーリサーチ目標について魔法使いにブリーフィングします練習セッション– チームメンバーが参加者として行動する内部リハーサルを実施し、魔法使いの応答、タイミング、問題処理を改善します緊急時計画– 技術的障害、予期しないユーザー行動、魔法使いの不確実性状況、早期の錯覚検出のプロトコルを定義します</p>
+<h3 id="フェーズ4-研究プロトコル開発">フェーズ4: 研究プロトコル開発</h3>
+<p>参加者募集– 対象人口統計、使用コンテキスト、経験レベルに一致する代表的なユーザーを特定しますセッション構造設計– 導入アプローチ、タスク提示、観察方法、介入プロトコル、デブリーフ手順の概要を作成します記録と文書化– 魔法使いの隠蔽を維持しながら、ユーザー行動、魔法使いの応答、技術的問題、定性的観察を捉える方法を確立します</p>
+<h3 id="フェーズ5-パイロットテスト">フェーズ5: パイロットテスト</h3>
+<p>内部検証– 同僚と完全なセットアップをテストし、技術的問題、タイミングの問題、スクリプトのギャップ、魔法使いトレーニングのニーズを特定しますプロトコルの改善– パイロット結果に基づいて調整します。スクリプトの更新、魔法使いトレーニングの強化、技術的修正、手順の改善を含みます</p>
+<h3 id="フェーズ6-研究実施">フェーズ6: 研究実施</h3>
+<p>環境準備– 別室、マジックミラー、リモートツール、またはスクリーン共有配置を通じて魔法使いの隠蔽を維持する物理的または仮想的なセットアップを確立しますセッションファシリテーション– 魔法使いの存在を明かす手がかりを避けながら、自然なインタラクションを維持してシナリオを通じて参加者をガイドしますリアルタイム観察– 新たなパターン、予期しない行動、技術的問題、調整の機会についてセッションを監視します</p>
+<h3 id="フェーズ7-倫理的デブリーフィング">フェーズ7: 倫理的デブリーフィング</h3>
+<p>欺瞞の開示– 魔法使い手法、アプローチの根拠、リサーチ価値を正直で敬意を持った方法で説明します同意の確認– 継続的な参加同意を確認し、データ撤回オプションを提供しますフィードバック収集– 疑念、快適レベル、提案品質を含む体験に関するメタ観察を収集します</p>
+<h3 id="フェーズ8-分析と反復">フェーズ8: 分析と反復</h3>
+<p>パターン特定– トランスクリプトを分析して、言語パターン、インテントカテゴリ、エラートリガー、期待のミスマッチ、機能の優先順位を特定しますデザインへの影響– 調査結果を具体的なデザイン推奨事項、技術要件、開発優先順位に変換します反復計画– 改善されたプロトタイプやスクリプトを使用した追加セッションが価値ある追加の洞察を提供するかどうかを判断します</p>
+<h2 id="メリットと制限">メリットと制限</h2>
+<h3 id="主な利点">主な利点</h3>
+<p>コスト効率的な検証– バックエンド開発、AIトレーニング、インフラストラクチャ投資なしでデザインコンセプトをテストし、初期段階のリスク削減を可能にします本物の行動データ– アンケートやインタビューではシミュレートできない自然なユーザー言語とインタラクションパターンを捉えます迅速な反復速度– セッション間でスクリプトとプロトタイプを迅速に更新し、応答性の高いデザイン改善を可能にします技術的リスクの軽減– 大規模なエンジニアリング投資前に基本的なコンセプトの欠陥を特定しますトレーニングデータ生成– 会話トランスクリプトは、<a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>モデルトレーニングと自然言語処理システム開発のための高品質な例を提供しますステークホルダーの整合– 具体的なプロトタイプは、多様な背景と視点を持つチームメンバー間の共通理解を促進します</p>
+<h3 id="重要な制限">重要な制限</h3>
+<p>スケーラビリティの制約– 手動の魔法使い操作により実用的な研究規模が制限され、大規模な定量的検証が非実用的になります魔法使いの変動性– 複数の魔法使いが参加する場合や、単一の魔法使いが長時間のセッションで疲労を経験する場合の応答一貫性の課題錯覚の脆弱性– 人間の関与に対するユーザーの疑念は、行動を変化させ、データの真正性を損なう可能性があります技術検証のギャップ– 応答遅延、精度率、エラー処理の堅牢性、スケーラビリティなど、実際のシステムパフォーマンス特性を評価できませんスキル依存性– 効果的な魔法使い操作には、専門的なトレーニング、ドメイン知識、即興能力が必要であり、普遍的に利用可能ではありません倫理的複雑性– 欺瞞ベースのリサーチには、慎重な機関審査、インフォームドコンセントプロセス、デブリーフィングプロトコルが必要です</p>
+<h2 id="ベストプラクティス">ベストプラクティス</h2>
+<p>厳格な分離の維持– 物理的障壁、リモートツール、または一方向観察を使用して、魔法使いが参加者から完全に見えないようにします適切な標準化– リサーチ目標と魔法使いの能力に基づいて、スクリプトの一貫性と即興の柔軟性のバランスを取りますセッション時間の制限– 適切な休憩間隔を設けた合理的なセッション時間(通常30〜60分)を通じて魔法使いの疲労を防ぎます包括的な記録– 徹底的なセッション後分析を可能にするために、音声、ビデオ、画面録画、魔法使いの入力、ファシリテーターのメモを捉えます倫理的なデブリーフィング– セッション後に常に手法を説明し、継続的な同意を確保し、参加者の自律性を尊重してデータ撤回オプションを提供しますエンジニアの関与– 不可能な機能のデザインを防ぐために、スクリプト開発に技術チームメンバーを含めます反復的改善– 初期セッションをパイロット研究として扱い、新たなパターンに基づいて魔法使いトレーニング、スクリプト、プロトコルを改善します</p>
+<h2 id="倫理的考慮事項">倫理的考慮事項</h2>
+<p>WoZテストは一時的な欺瞞に依存するため、慎重な倫理的管理が必要です。研究倫理委員会は通常、以下の場合に手法を承認します:</p>
+<ul>
+<li>欺瞞の必要性がリサーチ価値を考慮してアプローチを正当化する</li>
+<li>参加者がセッション後に包括的なデブリーフィングを受ける</li>
+<li>インフォームドコンセントに詳細を明かすことなく欺瞞の可能性が含まれる</li>
+<li>デブリーフィング後にデータ撤回オプションが存在する</li>
+<li>特別な保護なしに脆弱な集団が参加しない</li>
+<li>代替の非欺瞞的方法が目標に対して不十分であることが証明される</li>
+</ul>
+<p>追加の倫理的責任には、機密データの取り扱い、プライバシー法の遵守、プロセス全体を通じた参加者の快適性への配慮が含まれます。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p>WoZテストは会話型AIに限定されますか?いいえ、この手法は、レコメンデーションエンジン、適応型インターフェース、予測システム、自律サービスなど、インテリジェンスや適応性のプロトタイプ作成が困難なあらゆるシステムに適用されます。参加者が人間の関与を疑った場合はどうなりますか?ほとんどのセッションは、疑念に関係なく価値ある洞察をもたらします。参加者に自然に対話するよう促し、疑念が存在する場合でもデブリーフィング中に常に手法を説明します。WoZデータは本番AIシステムのトレーニングに使用できますか?はい、会話トランスクリプト、ユーザー言語パターン、インタラクションフローは、自然言語処理、インテント分類、エンティティ抽出モデルのための高品質なトレーニングデータを提供します。何回のセッションで十分ですか?定性的リサーチでは通常、パターン特定のためにユーザーセグメントごとに5〜8人の参加者が必要ですが、複雑なシナリオでは包括的なカバレッジのために追加セッションが必要になる場合があります。魔法使いは自分が評価されていることを知るべきですか?魔法使いは個人のパフォーマンスではなく、本物のシステムシミュレーションに焦点を当てるべきです。ただし、魔法使いの有効性を評価することは、トレーニングとスクリプト開発の改善に役立ちます。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Nielsen Norman Group. (n.d.). The Wizard of Oz Method in UX. Nielsen Norman Group.</p>
+</li>
+<li>
+<p>Interaction Design Foundation. (n.d.). Wizard of Oz Prototypes. Interaction Design Foundation.</p>
+</li>
+<li>
+<p>Nielsen Norman Group. (n.d.). Wizard of Oz Method Video. YouTube.</p>
+</li>
+<li>
+<p>AnswerLab. (n.d.). What in the UX is Wizard of Oz Testing?. AnswerLab.</p>
+</li>
+<li>
+<p>Bonsaibrain. (n.d.). The Wizard of Oz Technique in Testing Conversational Agents. Bonsaibrain.</p>
+</li>
+<li>
+<p>UX SideQuest. (n.d.). What is Wizard of Oz Testing?. UX SideQuest.</p>
+</li>
+<li>
+<p>Wikipedia. (n.d.). Wizard of Oz Experiment. Wikipedia.</p>
+</li>
+<li>
+<p>CDS. (n.d.). What is Wizard of Oz Testing and How Can It Be Used?. CDS Blog.</p>
+</li>
+<li>
+<p>Nielsen Norman Group. (n.d.). Do You Need to Reveal the Wizard?. Nielsen Norman Group.</p>
+</li>
+<li>
+<p>Nielsen Norman Group. (n.d.). Ethical Dilemmas in User Research. Nielsen Norman Group.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/chatgpt/">
+                    ChatGPT
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/blog/how-to-use-large-language-models-effectively/" title="ChatGPTのような大規模言語モデルの実用的な活用方法を学び、さまざまなLLMプラットフォームを探索し、これらのモデルが内部でどのように機能するかを理解し、日常の仕事や生活で効果的に活用する方法を発見しましょう。">ChatGPT</a>は、大規模言語モデルを活用した<a data-lb="1" href="/ja/glossary/openai/" title="ChatGPTは、大規模言語モデルを活用したOpenAIの高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。">OpenAI</a>の高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/chatgpt/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/rich-media-cards/">
+                    リッチメディアカード
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/rich-media-cards/" title="リッチメディアカードは、チャットストリーム内のインタラクティブなUIコンポーネントで、画像、動画、ボタンなどのマルチメディアコンテンツとアクション可能な要素を提供し、魅力的な会話を実現します。">リッチメディアカード</a>は、チャットストリーム内のインタラクティブなUIコンポーネントで、画像、動画、ボタンなどのマルチメディアコンテンツとアクション可能な要素を提供し、魅力的な会話を実現します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/rich-media-cards/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/conversational-ai/">
+                    対話型AI
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    対話型AIを探求:自然言語処理、自然言語理解、機械学習、音声認識を用いて人間の会話をシミュレートする技術。その仕組み、メリット、ユースケース、将来のトレンドを学びます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/conversational-ai/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/disambiguation/">
+                    曖昧性解消
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/disambiguation/" title="曖昧性解消は、ユーザーの入力に複数の意味がある場合に、AIチャットボットがユーザーの意図を明確化するプロセスです。明確化のための質問を行ったり、選択肢を提示したりすることで、正確な解釈を保証します。">曖昧性解消</a>は、ユーザーの入力に複数の意味がある場合に、<a data-lb="1" href="/ja/glossary/ai-chatbot/" title="SmartWebが提供するAIチャットボット・AIカスタマーサポートサービスの利用規約です">AIチャットボット</a>がユーザーの意図を明確化するプロセスです。明確化のための質問を行ったり、選択肢を提示したりすることで、正確な解釈を保証します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/disambiguation/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/ernie-bot/">
+                    Ernie-Bot
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    高度な推論、画像認識、コード生成機能を備え、中国語で理解し応答するBaiduのAIアシスタント。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/ernie-bot/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/contextual-prompt/">
+                    コンテクスチュアルプロンプト
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIシステムにおけるコンテクスチュアルプロンプトの包括的ガイド。実装戦略、メリット、AIインタラクションを強化するためのベストプラクティスを網羅しています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/contextual-prompt/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/wizard-of-oz-testing--woz-/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Regularization | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/regularization/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="A machine learning technique that prevents models from memorizing training data by adding penalties that encourage simpler, more generalizable solutions." name="description"/>
+<meta content="regularization, overfitting, L1 regularization, L2 regularization, dropout" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/regularization/" property="og:url"/>
+<meta content="Regularization | SmartWeb" property="og:title"/>
+<meta content="A machine learning technique that prevents models from memorizing training data by adding penalties that encourage simpler, more generalizable solutions." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/regularization/" name="twitter:url"/>
+<meta content="Regularization | SmartWeb" name="twitter:title"/>
+<meta content="A machine learning technique that prevents models from memorizing training data by adding penalties that encourage simpler, more generalizable solutions." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165525" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165525" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165525"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118125587168000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118125587168000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118125587168000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118125587168000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Regularization</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Regularization
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A machine learning technique that prevents models from memorizing training data by adding penalties that encourage simpler, more generalizable solutions.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                regularization
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                overfitting
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                L1 regularization
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                L2 regularization
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                dropout
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-regularization">What is a Regularization?</h2>
+<p>Regularization represents a fundamental concept in machine learning and statistical modeling that addresses one of the most critical challenges in predictive analytics: overfitting. At its core, regularization is a collection of techniques designed to prevent models from becoming overly complex and memorizing training data rather than learning generalizable patterns. This mathematical framework introduces controlled constraints or penalties to the learning process, effectively guiding models toward simpler, more robust solutions that perform better on unseen data. The concept draws from the principle of Occam’s razor, favoring simpler explanations when multiple solutions exist, and has become indispensable in modern machine learning applications ranging from linear regression to deep <a data-lb="1" href="/en/glossary/neural-networks/" title="Neural Networks glossary entry">neural networks</a>.</p>
+<p>The mathematical foundation of regularization lies in modifying the standard loss function by adding penalty terms that discourage model complexity. When a machine learning algorithm optimizes its parameters during training, it typically minimizes a loss function that measures the difference between predicted and actual values. Regularization augments this objective by incorporating additional terms that penalize large parameter values, excessive model complexity, or other undesirable characteristics. This modification creates a trade-off between fitting the training data perfectly and maintaining model simplicity, ultimately leading to better generalization performance. The strength of regularization is controlled by hyperparameters that determine how much penalty to apply, allowing practitioners to fine-tune the balance between <a data-lb="1" href="/en/glossary/bias/" title="Bias glossary entry">bias</a> and variance in their models.</p>
+<p>The practical importance of regularization extends far beyond theoretical considerations, as it directly impacts the real-world performance of machine learning systems. In high-dimensional datasets where the number of features approaches or exceeds the number of training examples, regularization becomes essential for preventing models from finding spurious correlations that don’t generalize. Modern applications in computer vision, natural language processing, and recommendation systems routinely employ sophisticated regularization techniques to manage model complexity and improve robustness. The field has evolved from simple penalty-based methods to include advanced techniques like dropout, batch normalization, and data augmentation, each addressing different aspects of the overfitting problem while maintaining the core principle of controlled complexity reduction.</p>
+<h2 id="core-regularization-techniques">Core Regularization Techniques</h2>
+<p>L1 Regularization (Lasso)adds a penalty term proportional to the absolute values of model parameters to the loss function. This technique promotes sparsity by driving some parameters to exactly zero, effectively performing automatic feature selection. L1 regularization is particularly valuable when dealing with high-dimensional datasets where identifying the most relevant features is crucial.L2 Regularization (Ridge)incorporates a penalty term based on the squared values of model parameters, encouraging smaller parameter values without necessarily driving them to zero. This approach helps prevent any single parameter from becoming too large and provides smoother, more stable solutions. L2 regularization is especially effective for addressing multicollinearity in linear models.Elastic Net Regularizationcombines both L1 and L2 penalties in a single framework, offering the benefits of both sparsity and parameter shrinkage. This hybrid approach allows practitioners to balance feature selection capabilities with parameter stability. The technique includes mixing parameters that control the relative contribution of each penalty type.Dropout Regularizationrandomly sets a fraction of neural network units to zero during training, preventing the network from becoming overly dependent on specific neurons. This stochastic approach forces the network to learn more robust representations and has become a standard technique in deep learning. Dropout effectively creates an ensemble of different network architectures during training.Early Stoppingmonitors model performance on a validation set during training and halts the process when performance begins to degrade. This temporal regularization technique prevents the model from continuing to fit noise in the training data. Early stopping requires careful <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a> of validation metrics and appropriate patience parameters.Data Augmentationartificially increases the training dataset size by applying transformations that preserve the underlying patterns while introducing controlled variations. This technique helps models learn more generalizable features by exposing them to diverse examples. Data augmentation is particularly effective in computer vision and natural language processing applications.Batch Normalizationnormalizes the inputs to each layer in a neural network, reducing internal covariate shift and acting as an implicit regularizer. This technique stabilizes training and often reduces the need for other regularization methods. Batch normalization has become a standard component in modern deep learning architectures.</p>
+<h2 id="how-regularization-works">How Regularization Works</h2>
+<p>The regularization process begins with defining the base loss functionthat measures model performance on training data, such as mean squared error for regression or cross-entropy for classification. This foundation establishes the primary objective that the model seeks to optimize.Adding penalty termsinvolves incorporating mathematical constraints into the loss function that penalize undesirable model characteristics. These penalties typically target parameter magnitude, model complexity, or other structural properties that contribute to overfitting.Hyperparameter selectiondetermines the strength of regularization through parameters like lambda (λ) that control the relative importance of penalty terms versus data fitting. This critical step requires careful tuning to achieve optimal bias-variance trade-off.Modified optimizationadjusts the training algorithm to account for the regularized objective function, often requiring specialized solvers or gradient computations. The optimization process now balances data fitting with penalty minimization.Validation monitoringtracks model performance on held-out data to assess the effectiveness of regularization and guide hyperparameter adjustments. This feedback loop ensures that regularization improves generalization rather than simply reducing training performance.Parameter updatesincorporate regularization effects into weight adjustments during training, typically shrinking parameters toward zero or enforcing sparsity constraints. These modifications occur at each iteration of the optimization algorithm.Convergence assessmentevaluates when the regularized model has reached an optimal solution, considering both training loss and regularization penalties. The process continues until convergence criteria are met or early stopping conditions are triggered.Final model evaluationtests the regularized model on completely unseen data to verify improved generalization performance. This validation confirms that regularization has successfully reduced overfitting while maintaining predictive accuracy.</p>
+<p>Example workflow: Training a regularized linear regression model involves computing gradients of both the data loss and L2 penalty, updating parameters using the combined gradient, and monitoring validation performance to select optimal regularization strength.</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p>Overfitting Preventionrepresents the primary advantage of regularization, as it constrains model complexity to prevent memorization of training data noise. This fundamental benefit ensures that models learn generalizable patterns rather than dataset-specific artifacts, leading to better performance on new, unseen data.Improved Generalizationresults from regularization’s ability to find simpler models that capture essential patterns while ignoring irrelevant details. This enhanced generalization capability translates directly into better real-world performance and more reliable predictions across diverse scenarios.Feature Selectionoccurs naturally with certain regularization techniques like L1, which automatically identifies and eliminates irrelevant features by driving their coefficients to zero. This automatic feature selection reduces model complexity and improves interpretability while maintaining predictive performance.Numerical Stabilityimproves significantly with regularization, particularly in ill-conditioned problems where small changes in input data can cause large changes in model parameters. Regularization techniques like L2 help stabilize the optimization process and produce more robust solutions.Reduced Variancein model predictions results from regularization’s constraint on parameter values, leading to more consistent performance across different training datasets. This variance reduction is particularly valuable in scenarios with limited training data or high-dimensional feature spaces.Enhanced Interpretabilityemerges from simpler models with fewer parameters or more structured parameter distributions. Regularized models are often easier to understand, debug, and explain to stakeholders, making them more suitable for applications requiring transparency.Computational Efficiencycan improve with regularization techniques that reduce model complexity or enable early stopping. Simpler models require less <a data-lb="1" href="/en/glossary/computational-resources/" title="Computational Resources glossary entry">computational resources</a> for both training and inference, making them more practical for resource-constrained environments.Robustness to Noiseincreases as regularization helps models focus on strong, consistent patterns rather than fitting to noisy observations. This robustness is particularly valuable in real-world applications where data quality may be inconsistent or contain measurement errors.Better Convergence Propertiesoften result from regularization’s smoothing effect on the loss landscape, making optimization algorithms more likely to find good solutions. Regularized objectives typically have fewer local minima and more stable gradient behavior.Cross-Domain Transferabilityimproves with regularized models that learn more general representations, making them better candidates for transfer learning and domain adaptation tasks. This transferability extends the utility of trained models across different but related problem domains.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p>Linear and Logistic Regressionapplications extensively use L1 and L2 regularization to handle multicollinearity and prevent overfitting in high-dimensional datasets. These techniques are standard in statistical modeling and feature selection tasks across various domains.Deep Neural Networksemploy dropout, batch normalization, and weight decay to manage the complexity of models with millions of parameters. Regularization is essential for training deep architectures that would otherwise severely overfit to training data.Computer Vision Modelsutilize data augmentation, dropout, and specialized regularization techniques to improve performance on image classification, object detection, and segmentation tasks. These methods help models generalize across different lighting conditions, orientations, and image qualities.Natural Language Processingapplications leverage dropout, attention regularization, and data augmentation to improve text classification, machine translation, and language modeling. Regularization helps models handle the high dimensionality and sparsity typical of text data.Recommendation Systemsemploy regularization to prevent overfitting to user-item interaction patterns and improve recommendations for new users or items. Matrix factorization techniques commonly use L2 regularization to stabilize collaborative filtering algorithms.Time Series Forecastingmodels use regularization to prevent overfitting to historical patterns that may not persist in the future. Techniques like early stopping and parameter constraints help maintain <a data-lb="1" href="/en/glossary/model-robustness/" title="Model Robustness glossary entry">model robustness</a> across different time periods.Medical Diagnosis Systemsrely on regularization to ensure models generalize across different patient populations and medical institutions. The high stakes of medical applications make regularization crucial for developing reliable diagnostic tools.Financial Risk Modelingapplications use regularization to create stable models that perform consistently across different market conditions. Regularized models are less likely to exploit temporary market anomalies that don’t represent genuine risk factors.Genomics and Bioinformaticsresearch employs regularization techniques to handle high-dimensional genetic data where the number of features often exceeds the number of samples. L1 regularization is particularly valuable for identifying relevant genetic markers.Autonomous Vehicle Systemsuse regularized models to ensure robust performance across diverse driving conditions and scenarios. Regularization helps prevent overfitting to specific training environments and improves safety in novel situations.</p>
+<h2 id="regularization-techniques-comparison">Regularization Techniques Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Technique</th>
+<th>Sparsity</th>
+<th>Parameter Shrinkage</th>
+<th>Computational Cost</th>
+<th>Best Use Case</th>
+<th>Hyperparameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L1 (Lasso)</td>
+<td>High</td>
+<td>Moderate</td>
+<td>Low</td>
+<td>Feature selection, sparse models</td>
+<td>Lambda (λ)</td>
+</tr>
+<tr>
+<td>L2 (Ridge)</td>
+<td>None</td>
+<td>High</td>
+<td>Low</td>
+<td>Multicollinearity, parameter stability</td>
+<td>Lambda (λ)</td>
+</tr>
+<tr>
+<td>Elastic Net</td>
+<td>Moderate</td>
+<td>High</td>
+<td>Low</td>
+<td>Balanced sparsity and shrinkage</td>
+<td>Alpha (α), L1 ratio</td>
+</tr>
+<tr>
+<td>Dropout</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>Moderate</td>
+<td>Deep neural networks</td>
+<td>Dropout rate, schedule</td>
+</tr>
+<tr>
+<td>Early Stopping</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>Low</td>
+<td>Any iterative algorithm</td>
+<td>Patience, validation metric</td>
+</tr>
+<tr>
+<td>Data Augmentation</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>High</td>
+<td>Computer vision, NLP</td>
+<td>Augmentation types, intensity</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p>Hyperparameter Tuningrepresents one of the most significant challenges in regularization, as selecting appropriate penalty strengths requires extensive experimentation and validation. The optimal regularization parameters depend on dataset characteristics, model architecture, and specific application requirements, making automated tuning essential but computationally expensive.Computational Overheadcan become substantial with certain regularization techniques, particularly data augmentation and ensemble methods that multiply training time. The additional computational cost must be balanced against performance improvements, especially in resource-constrained environments or real-time applications.Bias Introductionoccurs when regularization is too aggressive, leading to underfitting and poor performance on both training and test data. Finding the right balance between bias and variance requires careful monitoring and may necessitate different regularization strategies for different parts of the model.Method Selection Complexityarises from the numerous regularization techniques available, each with specific strengths and appropriate use cases. Practitioners must understand the theoretical foundations and practical implications of different methods to make informed choices for their specific problems.Cross-Validation Requirementsincrease the computational burden of regularization, as proper hyperparameter selection typically requires multiple rounds of model training and evaluation. This process can become prohibitively expensive for large datasets or complex models, necessitating efficient validation strategies.Interpretability Trade-offscan occur when regularization techniques like dropout or data augmentation make it more difficult to understand model behavior and decision-making processes. This challenge is particularly relevant in applications requiring model explainability or regulatory compliance.Domain-Specific Adaptationrequires tailoring regularization approaches to specific problem domains, as techniques that work well in one area may be ineffective or counterproductive in another. Understanding domain characteristics and constraints is crucial for successful regularization implementation.Interaction Effectsbetween different regularization techniques can be complex and unpredictable, potentially leading to suboptimal performance when multiple methods are combined. Careful experimentation is needed to understand how different regularization approaches interact in specific contexts.Validation Set Leakagecan occur when regularization hyperparameters are tuned using the same validation set repeatedly, leading to overfitting to the validation data. Proper experimental design requires careful separation of tuning and evaluation datasets.Scale Sensitivityaffects many regularization techniques, as the optimal penalty strength often depends on the scale of features and parameters. Proper feature scaling and normalization become critical components of successful regularization implementation.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p>Start with Simple Techniquesby implementing basic L1 or L2 regularization before exploring more complex methods, as these foundational approaches often provide significant improvements with minimal implementation complexity. This progressive approach helps establish baselines and understand regularization effects.Use Cross-Validation Systematicallyto select regularization hyperparameters, employing techniques like k-fold cross-validation or time series splits for temporal data. Proper validation ensures that regularization parameters generalize well beyond the training set.Monitor Multiple Metricsincluding training loss, validation loss, and domain-specific performance measures to assess regularization effectiveness comprehensively. This multi-metric approach helps identify overfitting, underfitting, and optimal regularization strength.Implement Early Stoppingas a default regularization technique for iterative algorithms, as it provides significant benefits with minimal implementation overhead. Configure appropriate patience parameters and validation monitoring to maximize effectiveness.Scale Features Appropriatelybefore applying regularization, as penalty terms are sensitive to feature magnitudes and can unfairly penalize features with larger natural scales. Standardization or normalization ensures fair treatment of all features.Combine Complementary Techniquesthoughtfully, such as using L2 regularization with dropout in neural networks, but validate that combinations provide additive benefits rather than conflicting effects. Test individual and combined effects systematically.Document Hyperparameter Choicesthoroughly, including the rationale for specific regularization parameters and the validation process used to select them. This documentation facilitates reproducibility and future model improvements.Use Regularization-Aware Optimizersthat account for penalty terms in their update rules, such as proximal gradient methods for L1 regularization or weight decay implementations for L2 regularization. Proper optimization ensures regularization effects are correctly applied.Validate on Truly Held-Out Databy maintaining separate test sets that are never used for hyperparameter tuning or model selection. This practice ensures unbiased assessment of regularization effectiveness and model generalization.Consider Domain Constraintswhen selecting and configuring regularization techniques, as some methods may be inappropriate for specific applications or data types. Align regularization choices with domain knowledge and practical requirements.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p>Adaptive Regularizationdynamically adjusts penalty strengths during training based on model performance or parameter distributions, providing more sophisticated control over the regularization process. These methods can automatically balance exploration and exploitation throughout the training process.Group Regularizationapplies penalties to predefined groups of parameters simultaneously, encouraging structured sparsity patterns that respect domain knowledge or model architecture. This approach is particularly valuable in applications where features have natural groupings or hierarchical relationships.Spectral Regularizationconstrains the spectral properties of weight matrices in neural networks, controlling aspects like the Lipschitz constant or spectral norm to improve stability and generalization. These techniques are especially relevant for generative models and adversarial training.Meta-Learning Regularizationuses learned regularization strategies that adapt to different tasks or datasets automatically, reducing the need for manual hyperparameter tuning. This approach leverages experience from multiple related tasks to inform regularization choices.Bayesian Regularizationincorporates uncertainty quantification into the regularization process, treating regularization parameters as random variables with prior distributions. This probabilistic approach provides more principled handling of model uncertainty and parameter selection.Adversarial Regularizationuses adversarial examples or minimax optimization to improve model robustness and generalization, particularly in scenarios where standard regularization may be insufficient. These techniques are increasingly important for security-critical applications.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p>Automated Regularization Selectionwill leverage machine learning techniques to automatically choose and configure regularization methods based on dataset characteristics and model architecture. This automation will reduce the expertise required for effective regularization implementation.Neural Architecture Search Integrationwill incorporate regularization considerations directly into automated architecture design, optimizing both model structure and regularization strategies simultaneously. This holistic approach promises more efficient and effective model development.Federated Learning Regularizationwill address the unique challenges of distributed learning scenarios where data privacy and communication constraints require specialized regularization approaches. These techniques will become crucial as federated learning adoption increases.Quantum-Inspired Regularizationwill explore regularization techniques based on quantum computing principles, potentially offering new approaches to constraint satisfaction and optimization in machine learning. Early research suggests promising applications in combinatorial optimization problems.Continual Learning Regularizationwill develop methods to prevent catastrophic forgetting in models that learn from streaming data or multiple sequential tasks. These techniques will be essential for adaptive systems that must retain knowledge while learning new information.Explainable Regularizationwill focus on developing regularization techniques that not only improve model performance but also enhance interpretability and provide insights into model decision-making processes. This direction addresses growing demands for transparent <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI systems</a>.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Hastie, T., Tibshirani, R., &amp; Friedman, J. (2009). The Elements of Statistical Learning: Data Mining, Inference, and Prediction. Springer Series in Statistics.</p>
+</li>
+<li>
+<p>Goodfellow, I., Bengio, Y., &amp; Courville, A. (2016). Deep Learning. MIT Press.</p>
+</li>
+<li>
+<p>Bishop, C. M. (2006). Pattern Recognition and Machine Learning. Springer.</p>
+</li>
+<li>
+<p>Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., &amp; Salakhutdinov, R. (2014). Dropout: A Simple Way to Prevent Neural Networks from Overfitting. Journal of Machine Learning Research, 15(1), 1929-1958.</p>
+</li>
+<li>
+<p>Tibshirani, R. (1996). Regression Shrinkage and Selection via the Lasso. Journal of the Royal Statistical Society, 58(1), 267-288.</p>
+</li>
+<li>
+<p>Zou, H., &amp; Hastie, T. (2005). Regularization and Variable Selection via the Elastic Net. Journal of the Royal Statistical Society, 67(2), 301-320.</p>
+</li>
+<li>
+<p>Ioffe, S., &amp; Szegedy, C. (2015). Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift. International Conference on Machine Learning.</p>
+</li>
+<li>
+<p>Zhang, C., Bengio, S., Hardt, M., Recht, B., &amp; Vinyals, O. (2017). Understanding Deep Learning Requires Rethinking Generalization. International Conference on Learning Representations.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/overfitting/">
+                    Overfitting
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A machine learning problem where a model memorizes training data too well and fails to work accurate...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/overfitting/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/regularization/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165525"></script>
+</body>
+</html>

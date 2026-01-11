@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Encryption in Transit | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/encryption-in-transit/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="A security method that scrambles data into unreadable code while traveling across networks, so only the intended recipient can decode it." name="description"/>
+<meta content="encryption in transit, TLS protocol, data transmission security, network encryption, secure communications" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/encryption-in-transit/" property="og:url"/>
+<meta content="Encryption in Transit | SmartWeb" property="og:title"/>
+<meta content="A security method that scrambles data into unreadable code while traveling across networks, so only the intended recipient can decode it." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/encryption-in-transit/" name="twitter:url"/>
+<meta content="Encryption in Transit | SmartWeb" name="twitter:title"/>
+<meta content="A security method that scrambles data into unreadable code while traveling across networks, so only the intended recipient can decode it." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165525" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165525" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165525"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118125587168000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118125587168000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118125587168000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118125587168000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Encryption in Transit</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Encryption in Transit
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A security method that scrambles data into unreadable code while traveling across networks, so only the intended recipient can decode it.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                encryption in transit
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                TLS protocol
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                data transmission security
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                network encryption
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                secure communications
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-an-encryption-in-transit">What is an Encryption in Transit?</h2>
+<p>Encryption in transit refers to the cryptographic protection of data while it travels between different locations across networks, including local area networks, wide area networks, and the internet. This security measure ensures that sensitive information remains confidential and maintains its integrity during transmission from a source to a destination. Unlike encryption at rest, which protects stored data, encryption in transit specifically addresses the vulnerabilities that arise when data moves through potentially insecure communication channels where it could be intercepted, modified, or accessed by unauthorized parties.</p>
+<p>The fundamental principle behind encryption in transit involves transforming readable data into an encrypted format before transmission, using cryptographic algorithms and keys that make the information unintelligible to anyone who might intercept it during its journey. The receiving party possesses the necessary decryption keys to convert the encrypted data back into its original, readable format. This process creates a secure tunnel or channel through which data can travel safely, even across public networks like the internet where multiple intermediary systems may handle the data packets before they reach their final destination.</p>
+<p>Modern encryption in transit implementations typically employ a combination of symmetric and asymmetric encryption techniques, along with digital certificates and authentication mechanisms to establish secure communication channels. The most common protocols implementing encryption in transit include Transport Layer Security (TLS), Secure Shell (SSH), Internet Protocol Security (IPSec), and various Virtual Private Network (VPN) technologies. These protocols not only encrypt the data payload but also provide authentication to verify the identity of communicating parties and ensure data integrity through cryptographic hashing and digital signatures. The strength of encryption in transit depends on factors such as the encryption algorithm used, key length, implementation quality, and the overall security architecture of the communication system.</p>
+<h2 id="core-encryption-protocols-and-technologies">Core Encryption Protocols and Technologies</h2>
+<p>Transport Layer Security (TLS)is the most widely used protocol for encryption in transit, providing secure communication over computer networks through cryptographic protocols. TLS establishes an encrypted connection between clients and servers, ensuring data confidentiality, integrity, and authentication during web browsing, email transmission, and API communications.Internet Protocol Security (IPSec)operates at the network layer to secure IP communications by authenticating and encrypting each IP packet in a communication session. IPSec provides end-to-end security for data transmission and is commonly used in VPN implementations and site-to-site network connections.Secure Shell (SSH)protocol enables secure remote access and file transfers over unsecured networks by providing strong authentication and encrypted data communications. SSH is extensively used for remote server administration, secure file transfers, and tunneling other network protocols through encrypted connections.Virtual Private Networks (VPNs)create secure, encrypted tunnels over public networks, allowing remote users and branch offices to access private network resources securely. VPNs implement various encryption protocols including IPSec, SSL/TLS, and proprietary encryption methods to protect data transmission.Secure/Multipurpose Internet Mail Extensions (S/MIME)provides cryptographic security services for electronic messaging applications, including authentication, message integrity, and encryption. S/MIME enables secure email communication by encrypting email content and attachments during transmission.Pretty Good Privacy (PGP)offers cryptographic privacy and authentication for data communication, file encryption, and digital signatures. PGP uses a combination of symmetric and asymmetric encryption to secure data transmission and storage across various communication channels.Wireless Security Protocolsincluding WPA3, WPA2, and enterprise wireless security standards provide encryption for wireless network communications. These protocols protect data transmitted over Wi-Fi networks from eavesdropping and unauthorized access through various encryption algorithms and authentication mechanisms.</p>
+<h2 id="how-encryption-in-transit-works">How Encryption in Transit Works</h2>
+<p>The encryption in transit process begins when a client application initiates a connection to a server or another endpoint, triggering the establishment of a secure communication channel. During this initial phase, the communicating parties negotiate encryption parameters, including cipher suites, key exchange methods, and authentication mechanisms that will govern the secure session.</p>
+<p>The next step involves authentication and key exchange, where the parties verify each other’s identities using digital certificates or other authentication methods. The client typically validates the server’s certificate against trusted certificate authorities, while the server may also authenticate the client depending on the <a data-lb="1" href="/en/glossary/security-requirements/" title="Security Requirements glossary entry">security requirements</a> and configuration.</p>
+<p>Following successful authentication, the parties generate and exchange cryptographic keys using secure key exchange algorithms such as Diffie-Hellman or Elliptic Curve Diffie-Hellman. These algorithms allow both parties to derive the same symmetric encryption keys without transmitting the actual keys over the network, preventing potential interception by malicious actors.</p>
+<p>Once the secure channel is established and keys are exchanged, all subsequent data transmission is encrypted using symmetric encryption algorithms such as AES (Advanced Encryption Standard). The sending party encrypts each data packet or message using the agreed-upon encryption algorithm and shared keys before transmission over the network.</p>
+<p>During transmission, the encrypted data travels through various network infrastructure components including routers, switches, and intermediate servers. The encryption ensures that even if the data is intercepted at any point during its journey, it remains unintelligible to unauthorized parties who lack the decryption keys.</p>
+<p>The receiving party decrypts the incoming encrypted data using the same symmetric keys and algorithms established during the initial handshake. This process converts the encrypted data back into its original, readable format for processing by the receiving application or system.</p>
+<p>Throughout the communication session, integrity checks using cryptographic hash functions ensure that the data has not been modified during transmission. If any tampering is detected, the receiving party can reject the corrupted data and request retransmission.</p>
+<p>The secure session continues until one party terminates the connection, at which point the encryption keys are typically discarded to ensure forward secrecy. This means that even if the keys are compromised later, previously transmitted data remains secure.</p>
+<p>Example Workflow: HTTPS Web Transaction1. User enters website URL in browser
+2. Browser initiates TLS handshake with web server
+3. Server presents digital certificate for authentication
+4. Browser validates certificate and generates session keys
+5. Encrypted tunnel established for data transmission
+6. All HTTP requests and responses encrypted using AES
+7. Session terminated when user closes browser or times out</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p>Data Confidentialityensures that sensitive information remains private during transmission, preventing unauthorized parties from accessing confidential data even if they intercept network communications. This protection is essential for maintaining privacy and complying with data protection regulations.Data Integrityguarantees that transmitted data has not been altered, corrupted, or tampered with during its journey across networks. Cryptographic hash functions and digital signatures detect any unauthorized modifications, ensuring recipients receive authentic, unmodified information.Authenticationverifies the identity of communicating parties, preventing man-in-the-middle attacks and ensuring that data is transmitted to legitimate recipients. Digital certificates and authentication protocols establish trust between communication endpoints.Compliance Requirementsare met through encryption in transit, helping organizations satisfy regulatory mandates such as <a data-lb="1" href="/en/glossary/gdpr/" title="GDPR glossary entry">GDPR</a>, HIPAA, PCI DSS, and SOX. Many regulations specifically require encryption of sensitive data during transmission to protect customer information and maintain regulatory compliance.Protection Against Eavesdroppingprevents malicious actors from intercepting and reading sensitive communications transmitted over public networks. Encryption renders intercepted data useless without the proper decryption keys, maintaining confidentiality even on unsecured networks.Business Continuityis enhanced by protecting critical business communications and data transfers from security breaches that could disrupt operations. Secure transmission channels ensure that business processes can continue safely across distributed networks and remote locations.Customer Trustis built and maintained through the implementation of strong encryption practices that protect customer data and communications. Visible security measures such as HTTPS certificates demonstrate an organization’s commitment to protecting user information.Reduced Liabilityresults from implementing proper encryption controls that protect against data breaches and security incidents. Organizations can minimize legal and financial exposure by demonstrating due diligence in protecting transmitted data.Competitive Advantageis gained through superior security practices that differentiate organizations in the marketplace. Strong encryption capabilities can be a selling point for security-conscious customers and partners.Cost Savingsare achieved by preventing expensive data breaches, regulatory fines, and reputation damage that can result from inadequate transmission security. The cost of implementing encryption is typically far less than the potential costs of a security incident.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p>Web Browsing and E-commercerelies heavily on HTTPS encryption to protect user credentials, payment information, and personal data transmitted between browsers and web servers. Online shopping, banking, and social media platforms depend on TLS encryption to maintain user trust and security.Email Communicationsutilize encryption protocols such as TLS, S/MIME, and PGP to protect sensitive email content and attachments during transmission. Organizations implement encrypted email solutions to protect confidential business communications and comply with privacy regulations.Remote Work and VPN Accessenables secure connections for employees working from home or remote locations. VPN technologies encrypt all network traffic between remote devices and corporate networks, protecting sensitive business data and maintaining <a data-lb="1" href="/en/glossary/security-policies/" title="Security Policies glossary entry">security policies</a>.<a data-lb="1" href="/en/glossary/cloud-service/" title="Cloud Service glossary entry">Cloud Service</a> Communicationsprotect data transmitted between on-premises systems and cloud platforms, including file uploads, API calls, and database synchronization. Cloud providers implement encryption in transit to secure customer data moving to and from their services.Financial Transactionsrequire strong encryption for payment processing, banking operations, and financial data exchange. Payment card industry standards mandate encryption for credit card transactions and financial communications to prevent fraud and data theft.Healthcare Data Exchangeprotects patient information transmitted between healthcare providers, insurance companies, and medical systems. HIPAA compliance requires encryption of protected health information during electronic transmission to maintain patient privacy.Government and Military Communicationsimplement high-grade encryption for classified information and sensitive government data transmission. Secure communication protocols protect national security information and government operations from foreign intelligence and cyber threats.Internet of Things (IoT) Devicesincreasingly incorporate encryption in transit to protect data transmitted between connected devices and cloud platforms. Smart home devices, industrial sensors, and automotive systems use encryption to prevent unauthorized access and control.File Transfer and Backup Operationsutilize encrypted protocols such as SFTP, FTPS, and encrypted backup solutions to protect sensitive files during transmission. Organizations encrypt data backups and file transfers to prevent data exposure during routine operations.Video Conferencing and Voice Communicationsimplement encryption to protect audio and video streams during online meetings and voice calls. Secure communication platforms encrypt real-time communications to prevent eavesdropping and maintain conversation privacy.</p>
+<h2 id="protocol-comparison-table">Protocol Comparison Table</h2>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Layer</th>
+<th>Primary Use Case</th>
+<th>Key Exchange</th>
+<th>Encryption Algorithms</th>
+<th>Authentication Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TLS 1.3</td>
+<td>Transport</td>
+<td>Web/Application Security</td>
+<td>ECDHE, DHE</td>
+<td>AES-GCM, ChaCha20-Poly1305</td>
+<td>X.509 Certificates</td>
+</tr>
+<tr>
+<td>IPSec</td>
+<td>Network</td>
+<td>VPN/Network Security</td>
+<td>IKE, Diffie-Hellman</td>
+<td>AES, 3DES</td>
+<td>Pre-shared Keys, Certificates</td>
+</tr>
+<tr>
+<td>SSH</td>
+<td>Application</td>
+<td>Remote Access</td>
+<td>Diffie-Hellman, ECDH</td>
+<td>AES, ChaCha20</td>
+<td>Public Key, Password</td>
+</tr>
+<tr>
+<td>WPA3</td>
+<td>Data Link</td>
+<td>Wireless Security</td>
+<td>SAE, OWE</td>
+<td>AES-CCMP</td>
+<td>PSK, Enterprise Auth</td>
+</tr>
+<tr>
+<td>S/MIME</td>
+<td>Application</td>
+<td>Email Security</td>
+<td>RSA, ECDH</td>
+<td>AES, 3DES</td>
+<td>X.509 Certificates</td>
+</tr>
+<tr>
+<td>OpenVPN</td>
+<td>Application</td>
+<td>VPN Tunneling</td>
+<td>TLS-based</td>
+<td>AES, Blowfish</td>
+<td>Certificates, PSK</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p>Performance Impactoccurs when encryption and decryption processes consume <a data-lb="1" href="/en/glossary/computational-resources/" title="Computational Resources glossary entry">computational resources</a> and introduce <a data-lb="1" href="/en/glossary/latency/" title="Latency glossary entry">latency</a> into network communications. Organizations must balance security requirements with performance needs, particularly for high-throughput applications and real-time communications.Key Management Complexityincreases as organizations implement encryption across multiple systems and applications. Proper key generation, distribution, rotation, and revocation require sophisticated key management infrastructure and processes to maintain security effectiveness.Certificate Managementpresents ongoing challenges including certificate procurement, installation, renewal, and revocation across distributed systems. Expired or misconfigured certificates can disrupt services and create security vulnerabilities that require constant <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a> and maintenance.Compatibility Issuesarise when different systems, applications, or organizations use incompatible encryption protocols or cipher suites. Legacy systems may not support modern encryption standards, requiring careful planning for upgrades and interoperability.Implementation Errorscan undermine encryption effectiveness through misconfigurations, weak cipher selections, or improper protocol implementations. Security vulnerabilities often result from human error rather than cryptographic weaknesses, requiring thorough testing and validation.Regulatory Compliancerequirements vary across jurisdictions and industries, creating complexity for organizations operating in multiple regions. Different encryption standards and key length requirements must be understood and implemented to maintain compliance.Cost Considerationsinclude licensing fees for encryption software, hardware acceleration requirements, and ongoing maintenance costs. Organizations must budget for encryption infrastructure, training, and support to maintain effective security programs.Endpoint Securityremains a challenge as encryption in transit only protects data during transmission, not at endpoints where data is processed. Comprehensive security strategies must address both transmission and endpoint protection to prevent data exposure.Quantum Computing Threatspose future risks to current encryption algorithms, requiring organizations to plan for post-quantum cryptography migration. The timeline for quantum computing advancement creates uncertainty about when current encryption methods may become vulnerable.Monitoring and Troubleshootingbecome more difficult when network traffic is encrypted, limiting visibility into application performance and security issues. Organizations need specialized tools and techniques to monitor encrypted communications effectively.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p>Use Strong Encryption Algorithmsby implementing current industry-standard algorithms such as AES-256 and avoiding deprecated or weak encryption methods. Regularly review and update cipher suites to maintain protection against evolving threats and cryptographic advances.Implement Perfect Forward Secrecythrough ephemeral key exchange methods that ensure session keys cannot be compromised even if long-term private keys are exposed. This practice protects historical communications from future key compromises.Enforce Strong Authenticationby requiring mutual authentication between communicating parties using digital certificates or multi-factor authentication methods. Verify certificate validity and implement proper certificate validation procedures to prevent man-in-the-middle attacks.Maintain Current Protocol Versionsby using the latest versions of encryption protocols such as TLS 1.3 and disabling older, vulnerable versions. Regularly update systems and applications to support current security standards and patch known vulnerabilities.Implement Proper Key Managementthrough centralized key management systems that handle key generation, distribution, rotation, and revocation securely. Use hardware security modules (HSMs) for high-security environments and implement automated key lifecycle management.Monitor Certificate Expirationby implementing automated certificate management systems that track expiration dates and renew certificates before they expire. Use certificate transparency logs and monitoring tools to detect unauthorized certificate issuance.Configure Security Headersappropriately for web applications, including HTTP Strict Transport Security (HSTS), Content Security Policy (CSP), and other security headers that enhance encryption in transit effectiveness.Implement Network Segmentationto reduce the scope of encrypted communications and limit potential attack surfaces. Use micro-segmentation and zero-trust network architectures to minimize lateral movement opportunities for attackers.Regular Security Testingthrough penetration testing, vulnerability assessments, and protocol analysis to identify weaknesses in encryption implementations. Test encryption configurations regularly to ensure they meet security requirements and industry standards.Document Security Policiesand procedures for encryption in transit implementation, including approved algorithms, key management procedures, and incident response plans. Provide training for administrators and developers on proper encryption practices and security requirements.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p>Elliptic Curve Cryptography (ECC)provides equivalent security to traditional RSA encryption with smaller key sizes, resulting in improved performance and reduced computational overhead. ECC is particularly beneficial for mobile devices and IoT applications with limited processing power and battery life.Hardware Security Modules (HSMs)offer tamper-resistant hardware devices for secure key generation, storage, and cryptographic operations. HSMs provide high-performance encryption processing and meet stringent security requirements for government and financial applications.Quantum Key Distribution (QKD)represents an emerging technology that uses quantum mechanical properties to detect eavesdropping attempts and provide theoretically unbreakable key exchange. QKD systems are being deployed for ultra-high-security communications in government and research environments.Post-Quantum Cryptographyinvolves developing and implementing encryption algorithms that remain secure against quantum computer attacks. Organizations are beginning to evaluate and test post-quantum algorithms in preparation for future quantum computing threats.Application-Layer Encryptionprovides end-to-end encryption at the application level, independent of transport-layer security protocols. This approach ensures data protection even when intermediate systems or network infrastructure may be compromised.Zero-Knowledge Protocolsenable authentication and data verification without revealing sensitive information during the process. These protocols enhance privacy protection and reduce the risk of credential exposure during authentication procedures.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p>Post-Quantum Cryptography Adoptionwill accelerate as quantum computing technology advances and threatens current encryption algorithms. Organizations will need to migrate to quantum-resistant algorithms and hybrid approaches that provide protection against both classical and quantum attacks.<a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence glossary entry">Artificial Intelligence</a> Integrationwill enhance encryption in transit through intelligent threat detection, automated key management, and adaptive security policies. AI-powered systems will optimize encryption performance and detect anomalous communication patterns that may indicate security threats.Edge Computing Securitywill drive new encryption requirements as processing moves closer to data sources and users. Edge environments will need lightweight encryption protocols and distributed key management systems to protect data in highly distributed architectures.5G and Beyond Wireless Securitywill introduce new encryption challenges and opportunities as next-generation wireless networks support massive IoT deployments and ultra-low latency applications. New protocols and encryption methods will be needed to secure diverse wireless communication scenarios.Homomorphic Encryptionadvancement will enable computation on encrypted data without decryption, allowing secure processing in cloud environments while maintaining data confidentiality. This technology will transform how organizations handle sensitive data in distributed computing environments.Blockchain-Based Key Managementwill provide decentralized approaches to key distribution and certificate management, reducing reliance on traditional certificate authorities and enabling new trust models for encryption in transit implementations.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>National Institute of Standards and Technology. (2019). “Guidelines for Cryptographic Key Management.” NIST Special Publication 800-57 Part 1 Rev. 5.</p>
+</li>
+<li>
+<p>Internet Engineering Task Force. (2018). “The Transport Layer Security (TLS) Protocol Version 1.3.” RFC 8446.</p>
+</li>
+<li>
+<p>Rescorla, E. (2018). “The Transport Layer Security (TLS) Protocol Version 1.3.” Internet Engineering Task Force RFC 8446.</p>
+</li>
+<li>
+<p>National Security Agency. (2021). “Commercial National Security Algorithm Suite 2.0.” NSA Cybersecurity Information Sheet.</p>
+</li>
+<li>
+<p>European Telecommunications Standards Institute. (2020). “Quantum-Safe Cryptography; Quantum Key Distribution; Application Interface.” ETSI GS QKD 014 V1.1.1.</p>
+</li>
+<li>
+<p>Cloud Security Alliance. (2021). “Encryption in Transit Guidelines.” CSA Security Guidance for Critical Areas of Focus in <a data-lb="1" href="/en/glossary/cloud-computing/" title="Cloud Computing glossary entry">Cloud Computing</a> v4.0.</p>
+</li>
+<li>
+<p>Payment Card Industry Security Standards Council. (2022). “Payment Card Industry Data Security Standard Requirements and Security Assessment Procedures Version 4.0.”</p>
+</li>
+<li>
+<p>International Organization for Standardization. (2019). “Information Technology — Security Techniques — Key Management.” ISO/IEC 11770-1:2010.</p>
+</li>
+</ol>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/encryption-in-transit/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165525"></script>
+</body>
+</html>

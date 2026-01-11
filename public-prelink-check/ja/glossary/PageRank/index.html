@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>ページランク | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/pagerank/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="ウェブページに向けられた質の高いリンクの数に基づいてページをランク付けするアルゴリズムで、検索エンジンがどのページが最も重要で関連性が高いかを判断するのに役立ちます。" name="description"/>
+<meta content="ページランクアルゴリズム, Googleランキング要因, リンク解析, ウェブページオーソリティ, 検索エンジン最適化, リンクエクイティ, ページオーソリティスコアリング" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/pagerank/" property="og:url"/>
+<meta content="ページランク | SmartWeb" property="og:title"/>
+<meta content="ウェブページに向けられた質の高いリンクの数に基づいてページをランク付けするアルゴリズムで、検索エンジンがどのページが最も重要で関連性が高いかを判断するのに役立ちます。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/pagerank/" name="twitter:url"/>
+<meta content="ページランク | SmartWeb" name="twitter:title"/>
+<meta content="ウェブページに向けられた質の高いリンクの数に基づいてページをランク付けするアルゴリズムで、検索エンジンがどのページが最も重要で関連性が高いかを判断するのに役立ちます。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190816" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190816" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190816"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126096741115000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126096741115000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126096741115000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126096741115000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">ページランク</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        ページランク
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          PageRank
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          ウェブページに向けられた質の高いリンクの数に基づいてページをランク付けするアルゴリズムで、検索エンジンがどのページが最も重要で関連性が高いかを判断するのに役立ちます。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ページランクアルゴリズム
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Googleランキング要因
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                リンク解析
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ウェブページオーソリティ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                検索エンジン最適化
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                リンクエクイティ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ページオーソリティスコアリング
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="pagerankとは何か">PageRankとは何か?</h2>
+<p>PageRankは、1996年にスタンフォード大学のラリー・ペイジとセルゲイ・ブリンによって開発された基本的なリンク解析アルゴリズムであり、<a data-lb="1" href="/ja/glossary/google/" title="Google の用語集ページ">Google</a>の検索エンジン技術の礎となりました。ラリー・ペイジにちなんで名付けられたこのアルゴリズムは、ウェブページへのリンクの量と質を分析することで、ページの重要性と権威性を評価します。PageRankの背後にある核心的な原理は、ページの重要性はそのページにリンクしている他のページの数と質によって決定できるというものであり、重要なページは他の重要なページからリンクを受ける可能性が高いという前提に基づいています。</p>
+<p>このアルゴリズムは、ウェブを巨大な有向グラフとして扱い、ページをノード、ハイパーリンクをこれらのノードを接続するエッジとして表現します。PageRankは各ページに数値的な重みを割り当て、ランダムにリンクをクリックする人がその特定のページに到達する確率を表します。この確率分布は、ウェブ全体のリンク構造を考慮した反復プロセスを通じて計算され、単純なリンク数のカウント方法よりも大幅に洗練されています。このアルゴリズムには減衰係数が組み込まれており、通常0.85に設定され、ユーザーがランダムなページにジャンプするのではなくリンクをクリックし続ける確率を表します。</p>
+<p>PageRankは、コンテンツ分析やキーワードマッチングのみに依存するのではなく、ウェブのリンク構造内での相対的な重要性に基づいてページをランク付けする方法を提供することで、ウェブ検索に革命をもたらしました。Googleは元のPageRankアルゴリズムを遥かに超えて進化し、数百のランキング要因を組み込んでいますが、リンクベースの権威性という基本概念は、現代の検索アルゴリズムの重要な構成要素であり続けています。PageRankを理解することは、ウェブサイトの検索エンジンでの可視性を向上させ、検索エンジンがページの権威性と関連性をどのように評価するかを理解しようとするSEO専門家、ウェブ開発者、デジタルマーケターにとって不可欠です。</p>
+<h2 id="コアリンク解析コンポーネント">コアリンク解析コンポーネント</h2>
+<p><strong>ランダムウォークモデル</strong> - PageRankは、ユーザーが一定の確率でリンクをたどり、それ以外の場合はランダムなページにジャンプするウェブブラウジングをランダムウォークとしてモデル化します。この数学的フレームワークは、ページの重要度スコアを計算するための基盤を提供します。</p>
+<p><strong>減衰係数</strong> - 減衰係数(通常0.85)は、ユーザーがランダムなページで新たに開始するのではなくリンクをクリックし続ける確率を表します。このパラメータは、アルゴリズムがリンクサイクルに閉じ込められるのを防ぎ、収束を保証します。</p>
+<p><strong>リンクエクイティの分配</strong> - 各ページは、そのPageRank値をすべての発リンクに均等に分配し、ウェブのリンク構造を通じて権威性の流れを作り出します。発リンクが少ないページは、リンクごとにより多くの価値を渡します。</p>
+<p><strong>反復計算</strong> - アルゴリズムは安定したPageRank値に収束するために複数の反復を必要とし、各反復は前回の反復結果に基づいて重要度スコアを洗練します。</p>
+<p><strong>権威性の伝播</strong> - 高権威性のページはリンク先のページに信頼性を転送し、確立されたソースから新しいまたはあまり接続されていないコンテンツへと権威性が流れる階層構造を作り出します。</p>
+<p><strong>グラフ理論の基盤</strong> - PageRankはグラフ理論の原理に依存し、ウェブを有向グラフとして扱い、数学的操作によって接続パターンに基づくノードの相対的な重要性を決定します。</p>
+<h2 id="pagerankの仕組み">PageRankの仕組み</h2>
+<p>PageRankアルゴリズムは、ページの重要度スコアを計算するために体系的なプロセスに従います:</p>
+<ol>
+<li>
+<p><strong>グラフの構築</strong> - アルゴリズムは、各ウェブページがノードを表し、すべてのハイパーリンクがノード間の有向エッジを作成する有向グラフとしてウェブをマッピングすることから始まります。</p>
+</li>
+<li>
+<p><strong>初期値の割り当て</strong> - すべてのページは初期PageRank値を受け取り、通常は1/N(Nはシステム内のページの総数)であり、すべてのノードに等しい開始点を保証します。</p>
+</li>
+<li>
+<p><strong>リンク行列の作成</strong> - 任意のページから他の任意のページへ移動する確率を示す遷移行列が構築され、直接リンクとランダムジャンプの両方が組み込まれます。</p>
+</li>
+<li>
+<p><strong>反復計算</strong> - アルゴリズムはPageRank式を繰り返し適用します:PR(A) = (1-d)/N + d × Σ(PR(Ti)/C(Ti))、ここでdは減衰係数、Nは総ページ数、TiはAにリンクしているページ、C(Ti)は発リンク数です。</p>
+</li>
+<li>
+<p><strong>権威性の分配</strong> - 各ページは、現在のPageRank値をリンク先のすべてのページに均等に分配し、ネットワークを通じて権威性の流れを作り出します。</p>
+</li>
+<li>
+<p><strong>収束テスト</strong> - アルゴリズムは、PageRank値が許容可能な許容範囲内で安定するまで反復を続け、システムが平衡状態に達したことを示します。</p>
+</li>
+<li>
+<p><strong>正規化</strong> - 最終的なPageRankスコアは、総ページ数の合計になり、期待される範囲内に収まるように正規化されます。</p>
+</li>
+<li>
+<p><strong>品質フィルタリング</strong> - 現代の実装には、操作的なリンクスキームや低品質コンテンツの影響を特定し最小化するための追加フィルターが含まれています。</p>
+</li>
+</ol>
+<p><strong>ワークフローの例</strong>:高PageRankのニュースウェブサイトがブログ記事にリンクします。ブログ記事はニュースサイトの権威性の一部を受け取り、自身のPageRankを増加させます。この強化された権威性は、ブログがリンクするページに流れ、ネットワーク全体にカスケード効果を生み出します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>客観的な権威性測定</strong> - PageRankは、主観的なバイアスを減らし、ウェブ全体で一貫した評価基準を作成する、ページの重要性を測定するための定量的でアルゴリズムベースの方法を提供します。</p>
+<p><strong>リンク品質評価</strong> - アルゴリズムは、権威あるソースからの高価値リンクと、信頼性の低いサイトからの低価値リンクを区別し、より洗練されたリンク解析を可能にします。</p>
+<p><strong>スパム耐性</strong> - PageRankの反復的な性質と権威性伝播モデルにより、スパマーが単純なリンクファームや人工的なリンク作成スキームを通じてランキングを操作することが困難になります。</p>
+<p><strong>スケーラブルな実装</strong> - アルゴリズムは、分散コンピューティングシステムを通じて数十億のウェブページを効率的に処理でき、ウェブスケールの検索エンジンにとって実用的です。</p>
+<p><strong>ネットワーク効果の認識</strong> - PageRankは、ページがコンテンツだけでなく、より広い情報エコシステム内での位置から価値を得るウェブのネットワーク効果を捉えます。</p>
+<p><strong>歴史的安定性</strong> - 確立されたリンクプロファイルを持つページは、時間の経過とともに安定したPageRankスコアを維持する傾向があり、長期的なSEO計画のための予測可能な権威性メトリクスを提供します。</p>
+<p><strong>クロスドメイン適用性</strong> - アルゴリズムの原理は、ウェブ検索を超えてソーシャルネットワーク、引用分析、および関係マッピングが価値のある他のドメインに拡張されます。</p>
+<p><strong>競合分析の基盤</strong> - PageRankは、ウェブサイトの権威性の比較分析を可能にし、企業が検索結果における競争上の位置を理解するのに役立ちます。</p>
+<p><strong>コンテンツ戦略のガイダンス</strong> - PageRankを理解することで、コンテンツクリエイターは、サイトの権威性に最大の影響を与える高品質なリンクを獲得することに集中できます。</p>
+<p><strong>テクニカルSEO最適化</strong> - PageRankの洞察は、内部リンク、サイトアーキテクチャ、リンクエクイティ分配戦略に関する技術的決定に情報を提供します。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong>検索エンジン最適化</strong> - SEO専門家は、PageRankの概念を使用してリンク構築戦略を開発し、高権威性のリンクターゲットを優先順位付けし、最大の権威性フローのために内部リンク構造を最適化します。</p>
+<p><strong>競合インテリジェンス</strong> - デジタルマーケターは、競合他社のPageRankとリンクプロファイルを分析して、成功したコンテンツ戦略と潜在的なリンク構築の機会を特定します。</p>
+<p><strong>コンテンツマーケティング戦略</strong> - コンテンツチームは、PageRankの原理を使用して、高権威性のバックリンクを引き付け、サイト全体の権威性を向上させるリンク可能なアセットを作成します。</p>
+<p><strong>ウェブサイトアーキテクチャ計画</strong> - ウェブ開発者は、戦略的な内部リンクと階層的なページ構成を通じてPageRankフローを最適化するサイト構造を設計します。</p>
+<p><strong>リンク監査とクリーンアップ</strong> - SEOスペシャリストは、PageRankと全体的な検索パフォーマンスに悪影響を与える可能性のある低品質または有害なリンクを特定します。</p>
+<p><strong>パートナーシップ評価</strong> - 企業は、協力的な利益を最大化するために、パートナーのPageRankと権威性メトリクスに基づいて潜在的なパートナーシップの機会を評価します。</p>
+<p><strong>学術引用分析</strong> - 研究者は、引用ネットワークに基づいて学術論文の重要性と影響力を評価するためにPageRankの原理を適用します。</p>
+<p><strong>ソーシャルメディア影響力測定</strong> - ソーシャルプラットフォームは、共有とエンゲージメントパターンに基づいて影響力のあるユーザーとコンテンツを特定するためにPageRankの概念を適応させます。</p>
+<p><strong>Eコマース製品ランキング</strong> - オンライン小売業者は、ユーザー行動、レビュー、製品間の関係に基づいて製品をランク付けするためにPageRankに触発されたアルゴリズムを使用します。</p>
+<p><strong>ニュースとメディアの優先順位付け</strong> - ニュースアグリゲーターは、権威あるニュースソースとトレンドストーリーを特定し優先順位付けするためにPageRankのようなシステムを採用します。</p>
+<h2 id="pagerankと他の権威性メトリクスの比較">PageRankと他の権威性メトリクスの比較</h2>
+<table>
+<thead>
+<tr>
+<th>メトリクス</th>
+<th>計算方法</th>
+<th>データソース</th>
+<th>更新頻度</th>
+<th>アクセス可能性</th>
+<th>主な使用例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PageRank</td>
+<td>リンクグラフ解析</td>
+<td>Googleのウェブクロール</td>
+<td>四半期ごと(過去)</td>
+<td>限定的な公開データ</td>
+<td>検索ランキングの基盤</td>
+</tr>
+<tr>
+<td>Domain Authority</td>
+<td>機械学習モデル</td>
+<td>リンクデータ + ランキング要因</td>
+<td>月次</td>
+<td>公開利用可能</td>
+<td>SEO競合分析</td>
+</tr>
+<tr>
+<td>Trust Flow</td>
+<td>リンク品質評価</td>
+<td>キュレートされたシードサイト</td>
+<td>リアルタイム</td>
+<td>商用ツール</td>
+<td>リンク品質評価</td>
+</tr>
+<tr>
+<td>Citation Flow</td>
+<td>生のリンク量</td>
+<td>リンク量メトリクス</td>
+<td>リアルタイム</td>
+<td>商用ツール</td>
+<td>リンク構築ポテンシャル</td>
+</tr>
+<tr>
+<td>Alexa Rank</td>
+<td>トラフィック推定</td>
+<td>ツールバーデータ + 分析</td>
+<td>日次</td>
+<td>2022年廃止</td>
+<td>過去のトラフィック分析</td>
+</tr>
+<tr>
+<td>Authority Score</td>
+<td>複合メトリクス</td>
+<td>複数のデータソース</td>
+<td>月次</td>
+<td>ツール依存</td>
+<td>総合的なサイト評価</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>リンク操作の脆弱性</strong> - 組み込みの保護にもかかわらず、PageRankは、ランキングを人為的に膨らませるために設計された洗練されたリンクスキーム、プライベートブログネットワーク、その他の操作的な戦術に対して依然として脆弱です。</p>
+<p><strong>計算の複雑さ</strong> - 数十億のウェブページのPageRankを計算するには、重要な計算リソースと洗練された分散システムが必要であり、リアルタイム更新を困難にします。</p>
+<p><strong>時間的遅延の問題</strong> - PageRank計算には、リンク作成と権威性転送の間に遅延が含まれるため、新しい高品質リンクがランキングに即座に影響を与えない可能性があります。</p>
+<p><strong>リンクコンテキストの無視</strong> - 元のアルゴリズムは、リンクコンテキスト、アンカーテキスト、またはトピックの関連性を考慮しないため、無関係だが権威ある可能性のあるリンクを過大評価する可能性があります。</p>
+<p><strong>減衰係数の感度</strong> - 減衰係数のわずかな変化は、PageRank分布に大きな影響を与える可能性があり、慎重な調整とテストが必要です。</p>
+<p><strong>スケール<a data-lb="1" href="/ja/glossary/bias/" title="バイアス の用語集ページ">バイアス</a>の問題</strong> - 広範な内部リンクを持つ大規模なウェブサイトは、同等の外部権威性を持つ小規模サイトと比較して、不釣り合いなPageRankを蓄積する可能性があります。</p>
+<p><strong>デッドリンクの処理</strong> - 壊れたリンクと削除されたページは、PageRank計算に複雑さを生み出し、洗練されたエラー処理とグラフメンテナンスが必要です。</p>
+<p><strong>ゲーミングとスパムの進化</strong> - PageRank対策が改善されるにつれて、スパム技術はより洗練され、検索エンジンと操作者の間で継続的な軍拡競争が生まれます。</p>
+<p><strong>データプライバシーの懸念</strong> - 現代のプライバシー規制と追跡制限は、PageRank計算とリンク解析に利用可能なデータに影響を与えます。</p>
+<p><strong>モバイルとアプリの統合</strong> - 従来のPageRankは、現代の検索行動に影響を与えるモバイルアプリ、ソーシャルメディアプラットフォーム、その他の非ウェブコンテンツソースを考慮していません。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>戦略的な内部リンク</strong> - サイト全体でPageRankを効果的に分配する内部リンク構造を設計し、重要なページを優先し、論理的なコンテンツ階層を作成します。</p>
+<p><strong>量より質の重視</strong> - 大量の低品質バックリンクを追求するのではなく、高権威性で関連性のあるソースからのリンクを獲得することを優先します。</p>
+<p><strong>自然なリンクプロファイルの開発</strong> - アルゴリズムペナルティを回避し、真正性を維持するために、多様なアンカーテキスト、リンクタイプ、ソースドメインを持つ多様なリンクプロファイルを構築します。</p>
+<p><strong>定期的なリンク監査</strong> - PageRankに影響を与える可能性のある低品質または潜在的に有害なリンクを特定し対処するために、バックリンクプロファイルの定期的なレビューを実施します。</p>
+<p><strong>コンテンツハブの作成</strong> - 自然に高品質なリンクを引き付け、PageRank分配センターとして機能する包括的なリソースページとコンテンツハブを開発します。</p>
+<p><strong>テクニカルSEO最適化</strong> - PageRank信号の効果を最大化するために、適切なクロール可能性、高速な読み込み時間、クリーンなサイトアーキテクチャを確保します。</p>
+<p><strong>関係構築</strong> - 自然で高価値なリンクを獲得するために、業界のインフルエンサーや権威あるウェブサイトとの真の関係を構築することに焦点を当てます。</p>
+<p><strong>競合分析の統合</strong> - 機会を特定しパフォーマンスをベンチマークするために、競合他社のリンクプロファイルとPageRank戦略を定期的に分析します。</p>
+<p><strong>長期戦略計画</strong> - 短期的なランキング操作ではなく、長期的な権威性構築に焦点を当てた持続可能なリンク構築戦略を開発します。</p>
+<p><strong>監視と測定</strong> - PageRank関連メトリクスを監視し、最適化努力の影響を測定するための包括的な追跡システムを実装します。</p>
+<h2 id="高度なテクニック">高度なテクニック</h2>
+<p><strong>パーソナライズドPageRank</strong> - 高度な実装は、個々のユーザーにとってより関連性の高い結果を提供するために、ユーザーの好み、検索履歴、行動パターンに基づいてPageRank計算をカスタマイズします。</p>
+<p><strong>トピックセンシティブPageRank</strong> - このバリエーションは、異なるトピックやカテゴリーごとに個別のPageRankスコアを計算し、特定の主題領域内でより微妙な権威性評価を可能にします。</p>
+<p><strong>時間的PageRank分析</strong> - 高度な実践者は、トレンド、季節パターン、リンク構築努力の長期的な影響を特定するために、時間の経過に伴うPageRank変化を分析します。</p>
+<p><strong>多層ネットワーク分析</strong> - 洗練されたアプローチは、単純なハイパーリンクを超えて、ソーシャルシグナル、ユーザー行動、コンテンツ類似性を含む複数のタイプの関係を考慮します。</p>
+<p><strong><a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>統合</strong> - 現代のシステムは、リンクの品質、コンテキスト、ユーザー意図をよりよく理解するために、従来のPageRankと機械学習アルゴリズムを組み合わせます。</p>
+<p><strong>リアルタイムPageRank近似</strong> - 高度な技術は、完全な再計算なしにほぼリアルタイムのPageRank推定を提供するために、増分更新と近似アルゴリズムを使用します。</p>
+<h2 id="将来の方向性">将来の方向性</h2>
+<p><strong>AI強化権威性評価</strong> - 将来のPageRankの進化は、単純なリンク解析を超えて、コンテンツの品質、ユーザー意図、文脈的関連性をよりよく理解するために人工知能を組み込む可能性があります。</p>
+<p><strong>クロスプラットフォーム統合</strong> - 次世代の権威性メトリクスは、より包括的な権威性評価を作成するために、ソーシャルメディア、モバイルアプリ、その他のデジタルプラットフォームからの信号を統合します。</p>
+<p><strong>リアルタイムパーソナライゼーション</strong> - 高度なシステムは、個々のユーザーの行動、好み、検索コンテキストに基づいて、ますますパーソナライズされたPageRank計算を提供します。</p>
+<p><strong>意味理解</strong> - 将来の実装は、リンクされたコンテンツの意味とコンテキストをよりよく理解するために、自然言語処理と意味分析を組み込みます。</p>
+<p><strong>プライバシー保護計算</strong> - 新しいアプローチは、包括的なリンク解析の必要性と、増加するプライバシー要件およびデータ保護規制とのバランスを取ります。</p>
+<p><strong>量子コンピューティングアプリケーション</strong> - 量子コンピューティングが成熟するにつれて、より洗練されたPageRank計算と、より大きなウェブグラフのリアルタイム処理が可能になる可能性があります。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Page, L., Brin, S., Motwani, R., &amp; Winograd, T. (1999). The PageRank Citation Ranking: Bringing Order to the Web. Stanford InfoLab Technical Report.</p>
+</li>
+<li>
+<p>Langville, A. N., &amp; Meyer, C. D. (2011). Google’s PageRank and Beyond: The Science of Search Engine Rankings. Princeton University Press.</p>
+</li>
+<li>
+<p>Berkhin, P. (2005). A Survey on PageRank Computing. Internet Mathematics, 2(1), 73-120.</p>
+</li>
+<li>
+<p>Haveliwala, T. H. (2003). Topic-sensitive PageRank: A Context-Sensitive Ranking Algorithm for Web Search. IEEE Transactions on Knowledge and Data Engineering.</p>
+</li>
+<li>
+<p>Bianchini, M., Gori, M., &amp; Scarselli, F. (2005). Inside PageRank. ACM Transactions on Internet Technology, 5(1), 92-128.</p>
+</li>
+<li>
+<p>Gleich, D. F. (2015). PageRank Beyond the Web. SIAM Review, 57(3), 321-363.</p>
+</li>
+<li>
+<p>Boldi, P., &amp; Vigna, S. (2014). Axioms for Centrality. Internet Mathematics, 10(3-4), 222-262.</p>
+</li>
+<li>
+<p>Chen, Y., Gan, Q., &amp; Suel, T. (2004). Local Methods for Estimating PageRank Values. Proceedings of the 13th ACM International Conference on Information and Knowledge Management.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/nofollow-link/">
+                    Nofollowリンク
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Nofollowリンクは、検索エンジンにリンク先のウェブサイトへの支持票としてカウントしないよう指示する特殊なHTMLリンクです。推奨したくないコンテンツへのリンクや、スパム防止のために使用されます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/nofollow-link/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/serp--search-engine-results-page-/">
+                    SERP(検索エンジン結果ページ)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Googleやその他の検索エンジンで検索した際に表示されるウェブページで、検索クエリに関連するリンク、画像、情報が表示されます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/serp--search-engine-results-page-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/anchor-text/">
+                    アンカーテキスト
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ハイパーリンク内のクリック可能なテキストで、ユーザーと検索エンジンに対して、リンクをクリックした際にどのようなコンテンツが表示されるかを示します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/anchor-text/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/on-page-seo/">
+                    オンページSEO
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    オンページSEOとは、検索エンジンがより高くランク付けし、より多くの訪問者を引き付けるために、個々のウェブページをより良いコンテンツ、タイトル、技術的設定で最適化する実践です。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/on-page-seo/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/organic-traffic/">
+                    オーガニックトラフィック
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Googleなどの検索エンジンで、広告を使わずに自然検索結果から訪れる訪問者のことです。コンテンツがユーザーの検索意図と一致したときに、自然に発生します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/organic-traffic/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/keyword-mapping/">
+                    キーワードマッピング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    SEOコンテンツ最適化と検索可視性向上のための、キーワードマッピング戦略、実装テクニック、ベストプラクティスに関する包括的ガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/keyword-mapping/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/pagerank/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190816"></script>
+</body>
+</html>

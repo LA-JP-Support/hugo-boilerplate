@@ -3,7 +3,7 @@ title: 'Microservices Architecture: Comprehensive'
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: microservices-architecture
-description: "An architectural approach that splits applications into small, independent services that communicate through APIs, enabling teams to develop and update each service separately without affecting others."
+description: "A software design approach that breaks applications into small, independent services that communicate via APIs, allowing teams to develop and update each service separately."
 keywords: ["microservices", "API Gateway", "bounded context", "event-driven architecture", "resilience"]
 category: Microservices
 type: glossary
@@ -48,7 +48,9 @@ Automated pipelines for building, testing, and deploying software changes. Enabl
 
 ### Command and Query
 
-**Command:**Operation that modifies data or state, typically with side effects.**Query:**Operation that retrieves data without side effects, adhering to read-only semantics.
+**Command:** Operation that modifies data or state, typically with side effects.
+
+**Query:** Operation that retrieves data without side effects, adhering to read-only semantics.
 
 ### Container
 
@@ -164,22 +166,39 @@ Process of managing changes to service APIs or data contracts ensuring backward 
 
 ## Architecture Benefits
 
-**Independent Deployment:**Services can be deployed separately without coordinating releases across entire application.**Technology Flexibility:**Teams can choose optimal technologies for each service's specific requirements.**Scalability:**Individual services can be scaled independently based on demand.**Fault Isolation:**Failures are contained within services rather than bringing down entire application.**Team Autonomy:**Small teams can own complete services, improving velocity and accountability.**Easier Maintenance:**Smaller codebases are easier to understand, modify, and test.
+**Independent Deployment:** Services can be deployed separately without coordinating releases across entire application.
+
+**Technology Flexibility:** Teams can choose optimal technologies for each service's specific requirements.
+
+**Scalability:** Individual services can be scaled independently based on demand.
+
+**Fault Isolation:** Failures are contained within services rather than bringing down entire application.
+
+**Team Autonomy:** Small teams can own complete services, improving velocity and accountability.
+
+**Easier Maintenance:** Smaller codebases are easier to understand, modify, and test.
 
 ## Common Challenges
 
-**Distributed System Complexity:**Network latency, partial failures, and eventual consistency require careful handling.**Operational Overhead:**More services mean more deployment pipelines, monitoring, and management.**Data Consistency:**Maintaining consistency across services requires patterns like Saga or event sourcing.**Testing Complexity:**End-to-end testing becomes more challenging with multiple independently deployed services.**Network Overhead:**Inter-service communication introduces latency and potential failure points.
+**Distributed System Complexity:** Network latency, partial failures, and eventual consistency require careful handling.
+
+**Operational Overhead:** More services mean more deployment pipelines, monitoring, and management.
+
+**Data Consistency:** Maintaining consistency across services requires patterns like Saga or event sourcing.
+
+**Testing Complexity:** End-to-end testing becomes more challenging with multiple independently deployed services.
+
+**Network Overhead:** Inter-service communication introduces latency and potential failure points.
 
 ## References
 
-
-1. Microservices.io. (n.d.). Glossary. Microservices.io.
-2. AWS. (n.d.). Microservices Glossary. AWS Documentation.
-3. Microsoft. (n.d.). Microservices Architecture. Azure Learn.
-4. Google Cloud. (n.d.). Microservices Architecture. Google Cloud.
-5. GeeksforGeeks. (n.d.). Microservices System Design. GeeksforGeeks.
-6. Microservices.io. (n.d.). Patterns. Microservices.io.
-7. Microservices.io. (n.d.). Anti-Patterns. Microservices.io.
-8. Eventuate. (n.d.). Distributed Data Patterns. Eventuate.
-9. GeeksforGeeks. (n.d.). System Design Fundamentals. GeeksforGeeks.
-10. YouTube. (n.d.). Microservices Explained. YouTube.
+- [Microservices.io: Glossary](https://microservices.io/articles/glossary)
+- [AWS Microservices Glossary](https://docs.aws.amazon.com/whitepapers/latest/microservices-on-aws/glossary.html)
+- [Azure: Microservices Architecture](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices)
+- [Google Cloud: Microservices Architecture](https://cloud.google.com/learn/what-is-microservices-architecture)
+- [GeeksforGeeks: Microservices System Design](https://www.geeksforgeeks.org/system-design/microservices/)
+- [Microservices.io: Patterns](https://microservices.io/patterns/index.html)
+- [Microservices.io: Anti-Patterns](https://microservices.io/patterns/anti-patterns/index.html)
+- [Eventuate: Distributed Data Patterns](https://eventuate.io/)
+- [GeeksforGeeks: System Design Fundamentals](https://www.geeksforgeeks.org/system-design/get)
+- [YouTube: Microservices Explained](https://www.youtube.com/watch?v=lL_j7ilk7rc)

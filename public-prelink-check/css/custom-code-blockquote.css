@@ -1,0 +1,323 @@
+/* ==========================================================================
+   HUGOサイト用カスタムスタイル - 完全版
+   コードブロック + 引用ブロック + フォーミュラブロック
+   ========================================================================== */
+
+/* ==========================================================================
+   1. コードブロック
+   ========================================================================== */
+
+/* インラインコード（pre の外） */
+code {
+    /* シンプルなライトテーマ：薄いグレー背景 + 濃いテキスト */
+    background-color: #f3f4f6 !important; /* gray-100 相当 */
+    color: #111827 !important;            /* gray-900 相当 */
+    padding: 2px 4px !important;
+    border-radius: 3px !important;
+    font-family: 'Courier New', Consolas, Monaco, monospace !important;
+    font-size: 90% !important;   /* 本文より少し小さめ */
+    font-weight: 600 !important; /* やや太め */
+    border: 1px solid #e1e4e8 !important;
+}
+
+/* ==========================================================================
+   7. Glossary internal links (linkbuilding)
+   ========================================================================== */
+
+/* 用語集リンク - 下線なし、青いテキスト */
+.prose a[href^="/en/glossary/"],
+.prose a[href^="/ja/glossary/"],
+.prose a[data-lb="1"] {
+    color: #2563eb !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    background-color: transparent;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    padding: 0 2px;
+    margin: 0 -2px;
+    border-radius: 3px;
+}
+
+/* ホバー時 - 薄い背景色で強調 */
+.prose a[href^="/en/glossary/"]:hover,
+.prose a[href^="/ja/glossary/"]:hover,
+.prose a[data-lb="1"]:hover {
+    color: #1d4ed8 !important;
+    background-color: rgba(37, 99, 235, 0.08);
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+/* ダークモード対応 */
+.dark .prose a[href^="/en/glossary/"],
+.dark .prose a[href^="/ja/glossary/"],
+.dark .prose a[data-lb="1"] {
+    color: #60a5fa !important;
+}
+
+.dark .prose a[href^="/en/glossary/"]:hover,
+.dark .prose a[href^="/ja/glossary/"]:hover,
+.dark .prose a[data-lb="1"]:hover {
+    color: #93c5fd !important;
+    background-color: rgba(96, 165, 250, 0.15);
+}
+
+/* コードブロック全体（汎用） */
+pre {
+    background-color: #f3f4f6 !important; /* 薄いグレー背景 */
+    background-image: none !important;
+    border: 1px solid #e5e7eb !important; /* 明るい枠線 */
+    border-radius: 6px !important;
+    padding: 16px !important;
+    overflow-x: auto !important;
+    font-family: 'Courier New', Consolas, Monaco, monospace !important;
+    margin: 1.5em 0 !important;
+}
+
+/* コードブロック内のコード（汎用） */
+pre code {
+    background-color: transparent !important;
+    color: #111827 !important;            /* 濃いテキスト */
+    padding: 0 !important;
+    font-size: 14px !important;  /* 一般的なコードサイズ */
+    line-height: 1.6 !important;
+    font-weight: 600 !important; /* 読みやすい太さ */
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* シンタックスハイライト：完全リセットして統一スタイルに */
+.highlight pre {
+    all: unset;
+    display: block;
+    margin: 1rem 0 !important;
+    padding: 16px !important;
+    border-radius: 6px !important;
+    background-color: #f3f4f6 !important;
+    background-image: none !important;
+    border: 1px solid #e5e7eb !important;
+    overflow-x: auto !important;
+    font-family: 'Courier New', Consolas, Monaco, monospace !important;
+}
+
+.highlight pre code,
+.highlight pre code * {
+    all: unset;
+    border: none !important;
+    box-shadow: none !important;
+    font-family: 'Courier New', Consolas, Monaco, monospace !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    font-weight: 600 !important;
+    color: #111827 !important;
+    background-color: transparent !important;
+}
+
+/* ==========================================================================
+   2. 引用ブロック（blockquote）
+   ========================================================================== */
+
+blockquote {
+    /* 余白を最適化 */
+    margin: 1em 0 !important;
+    padding: 12px 20px !important;
+    
+    /* 左側の青いボーダーのみ */
+    border-left: 4px solid #2196F3 !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    
+    /* 背景色 */
+    background-color: #f8f9fa !important;
+    
+    /* テキストスタイル */
+    color: #333 !important;
+    font-style: normal !important;
+    line-height: 1.6 !important;
+    
+    /* 右側を少し丸く */
+    border-radius: 0 4px 4px 0 !important;
+    
+    /* 右側のバーを非表示 */
+    overflow: visible !important;
+}
+
+/* 引用ブロック内の段落 */
+blockquote p {
+    margin: 0.5em 0 !important;
+    padding: 0 !important;
+}
+
+/* 最初と最後の段落の余白を削除 */
+blockquote p:first-child {
+    margin-top: 0 !important;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* 引用元（cite, footer）*/
+blockquote cite,
+blockquote footer {
+    display: block !important;
+    margin-top: 8px !important;
+    font-size: 0.9em !important;
+    color: #666 !important;
+    font-style: normal !important;
+}
+
+/* 引用元の前に "— " を追加 */
+blockquote cite::before,
+blockquote footer::before {
+    content: "— " !important;
+}
+
+/* ネストされた引用 */
+blockquote blockquote {
+    margin-left: 1em !important;
+    border-left-color: #90CAF9 !important;
+    background-color: #e3f2fd !important;
+}
+
+/* 引用ブロック内のリンク */
+blockquote a {
+    color: #2196F3 !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid #2196F3 !important;
+}
+
+blockquote a:hover {
+    color: #1976D2 !important;
+    border-bottom-color: #1976D2 !important;
+}
+
+/* 余計な装飾を削除 */
+blockquote::before,
+blockquote::after {
+    content: none !important;
+}
+
+/* 右側のスクロールバーを非表示 */
+blockquote::-webkit-scrollbar {
+    display: none !important;
+}
+
+blockquote {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+}
+
+/* ==========================================================================
+   3. フォーミュラ・計算式ブロック
+   ========================================================================== */
+
+.formula,
+.calculation,
+blockquote.formula,
+pre.formula {
+    margin: 1em 0 !important;
+    padding: 12px 16px !important;
+    background-color: #e3f2fd !important;
+    border-left: 4px solid #1976D2 !important;
+    border-radius: 0 4px 4px 0 !important;
+    font-family: 'Courier New', Consolas, Monaco, monospace !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #1565C0 !important;
+    overflow-x: auto !important;
+}
+
+/* ==========================================================================
+   4. モバイル対応
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    blockquote {
+        padding: 10px 15px !important;
+        margin: 0.8em 0 !important;
+    }
+    
+    pre {
+        padding: 12px !important;
+        font-size: 13px !important;
+    }
+    
+    code {
+        font-size: 85% !important;
+    }
+}
+
+/* ==========================================================================
+   5. ダークモード対応
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+    /* OSダークモードでもライトテーマと同じスタイルを維持 */
+    code {
+        background-color: #f3f4f6 !important;
+        color: #111827 !important;
+    }
+
+    pre {
+        background-color: #f3f4f6 !important;
+        border-color: #e5e7eb !important;
+    }
+
+    pre code {
+        color: #111827 !important;
+    }
+
+    .highlight pre {
+        background-color: #f3f4f6 !important;
+        border-color: #e5e7eb !important;
+    }
+    
+    /* 引用ブロック */
+    blockquote {
+        background-color: #1e1e1e !important;
+        border-left-color: #42A5F5 !important;
+        color: #e0e0e0 !important;
+    }
+    
+    blockquote cite,
+    blockquote footer {
+        color: #999 !important;
+    }
+    
+    blockquote a {
+        color: #42A5F5 !important;
+        border-bottom-color: #42A5F5 !important;
+    }
+    
+    /* フォーミュラブロック */
+    .formula,
+    .calculation,
+    blockquote.formula,
+    pre.formula {
+        background-color: #0d47a1 !important;
+        border-left-color: #42A5F5 !important;
+        color: #90CAF9 !important;
+    }
+}
+
+/* ==========================================================================
+   6. 印刷用スタイル
+   ========================================================================== */
+
+@media print {
+    blockquote {
+        border-left-color: #000 !important;
+        background-color: #f5f5f5 !important;
+    }
+    
+    pre {
+        border: 1px solid #000 !important;
+        background-color: #f5f5f5 !important;
+    }
+}
+
+.prose strong a {
+    font-weight: inherit !important;
+}

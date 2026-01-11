@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>OpenAI | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/openai/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/openai/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/openai/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/openai/" hreflang="x-default" rel="alternate"/>
+<meta content="OpenAIは、ChatGPT、GPT-5.2、GPT-4o、DALL-E 3などの先進的なモデルを開発することで知られる、AI分野をリードする企業です。そのミッション、製品、および影響力について探ります。" name="description"/>
+<meta content="OpenAI, ChatGPT, GPT-5.2, GPT-5, AI, DALL-E 3, 人工知能, オープンエーアイ" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/openai/" property="og:url"/>
+<meta content="OpenAI | SmartWeb" property="og:title"/>
+<meta content="OpenAIは、ChatGPT、GPT-5.2、GPT-4o、DALL-E 3などの先進的なモデルを開発することで知られる、AI分野をリードする企業です。そのミッション、製品、および影響力について探ります。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/openai/" name="twitter:url"/>
+<meta content="OpenAI | SmartWeb" name="twitter:title"/>
+<meta content="OpenAIは、ChatGPT、GPT-5.2、GPT-4o、DALL-E 3などの先進的なモデルを開発することで知られる、AI分野をリードする企業です。そのミッション、製品、および影響力について探ります。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190816" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190816" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190816"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126096741115000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126096741115000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126096741115000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126096741115000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">OpenAI</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        OpenAI
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          OpenAI
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          OpenAIは、ChatGPT、GPT-5.2、GPT-4o、DALL-E 3などの先進的なモデルを開発することで知られる、AI分野をリードする企業です。そのミッション、製品、および影響力について探ります。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                OpenAI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ChatGPT
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                GPT-5.2
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                GPT-5
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                DALL-E 3
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                人工知能
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                オープンエーアイ
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月18日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="openaiとは">OpenAIとは?</h2>
+<p>OpenAIは、公共の利益のために高度なAIモデルの構築と展開に注力する、<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能(AI)</a>分野をリードする企業です。2015年に設立されたOpenAIは、世界で最も先進的な<a data-lb="1" href="/ja/glossary/large-language-models/" title="大規模言語モデル(LLM) の用語集ページ">大規模言語モデル</a>(LLM)、生成画像システム、AI駆動ツールを開発し、人々や企業が<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>と対話する方法を変革してきました。OpenAIの使命は、汎用人工知能(AGI)が全人類に利益をもたらすことを保証することであり、その製品は自動化、コンテンツ作成、ソフトウェア開発、カスタマーサービス、科学研究に広く使用されています。</p>
+<p><strong>主要製品とサービス:</strong></p>
+<ul>
+<li><strong><a href="/ja/glossary/chatgpt/" title="ChatGPTは、大規模言語モデルを活用したOpenAIの高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。">ChatGPT</a></strong> - GPTモデルを搭載した高度な対話型AIアシスタント。自然言語による対話、コンテンツ作成、コーディング支援、多様な領域における問題解決を提供</li>
+<li><strong><a href="/ja/glossary/gpt/" title="GPT(Generative Pre-trained Transformer)技術の包括的なガイド。アーキテクチャ、応用例、実装のベストプラクティスを解説します。">GPTモデルシリーズ</a></strong> - ChatGPTとAPIサービスの基盤となる最先端の大規模言語モデル(GPT-3.5、GPT-4、GPT-5シリーズ)。業界をリードする推論と生成能力を提供</li>
+<li><strong>DALL-E 3</strong> - テキスト記述から詳細で創造的な画像を生成するAI画像生成システム</li>
+<li><strong>Codex</strong> - GitHub Copilotを支え、自然言語からコードへの変換を可能にするコード生成・解析システム</li>
+<li><strong>Whisper</strong> - 数十の言語で文字起こしと翻訳を行う自動音声認識システム</li>
+<li><strong>OpenAI API</strong> - カスタムアプリケーションと統合のために、すべてのOpenAIモデルへのプログラマティックアクセスを提供する開発者プラットフォーム</li>
+</ul>
+<p><strong>関連製品記事:</strong> OpenAIの主力対話型アシスタントの詳細については、<a href="/ja/glossary/chatgpt/" title="ChatGPTは、大規模言語モデルを活用したOpenAIの高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。">ChatGPT</a>をご覧ください。基盤となるモデルアーキテクチャと機能の包括的な技術詳細については、<a href="/ja/glossary/gpt/" title="GPT(Generative Pre-trained Transformer)技術の包括的なガイド。アーキテクチャ、応用例、実装のベストプラクティスを解説します。">GPT</a>をご覧ください。</p>
+<h2 id="企業背景">企業背景</h2>
+<p>OpenAIは2015年12月、サンフランシスコでサム・アルトマン、イーロン・マスク、グレッグ・ブロックマン、イリヤ・サツケヴァー、ジョン・シュルマン、ヴォイチェフ・ザレンバによって設立されました。創設者たちは、独占的な<a data-lb="1" href="/blog/the-future-of-intelligence-scaling-innovation-and-the-path-to-agi/" title="DeepMindのCEOデミス・ハサビスが、スケーリングとイノベーションのバランス、AGIの追求、そして科学技術における画期的な応用について語る、人工知能の未来を探求します。">AGI</a>のリスクを回避するため、研究を自由に共有する意図で非営利団体としてOpenAIを設立しました。2019年、OpenAIは「利益上限付き」モデルに移行し、元のOpenAI非営利団体が管理するOpenAI LP(営利法人)を設立し、使命との整合性を維持しながら投資と商業的拡大を可能にしました。</p>
+<p><strong>主要な出来事:</strong></p>
+<ul>
+<li><strong>2015年:</strong> 10億ドルの資金コミットメントでOpenAI設立</li>
+<li><strong>2019年:</strong> 利益上限付きモデルへ移行、マイクロソフトから10億ドルの投資を受け、Azure経由の専用クラウドインフラストラクチャで提携</li>
+<li><strong>2023-2025年:</strong> APIの広範な採用と企業パートナーシップにより収益が急成長し、2025年半ばまでに年間130億ドルを超える</li>
+<li><strong>2024年:</strong> AppleがChatGPTをApple Intelligenceに統合する契約を締結</li>
+<li><strong>2025年8月:</strong> インテリジェントルーティングを備えた統合システムGPT-5をリリース</li>
+<li><strong>2025年11月:</strong> 会話能力が向上したGPT-5.1をリリース</li>
+<li><strong>2025年12月:</strong> プロフェッショナルワークに最適な最先端モデルGPT-5.2をリリース</li>
+</ul>
+<h2 id="使命と目標">使命と目標</h2>
+<p>OpenAIの中核的使命は、AGI(経済的に価値のある作業のほとんどで人間を上回る高度に自律的なシステム)が全人類に利益をもたらすことを保証することです。</p>
+<p><strong>目標:</strong></p>
+<p><strong>AI能力の向上:</strong> より強力で汎用的なAIシステムを開発する。</p>
+<p><strong>安全性と倫理:</strong> 安全な展開とAIアライメントに関する研究を優先する。</p>
+<p><strong>透明性:</strong> 研究を公開し、開放性と理解を促進する。</p>
+<p><strong>民主化:</strong> 高度なAIを広くアクセス可能で有用なものにする。</p>
+<p><strong>人間の価値観との整合:</strong> AIシステムが人間の意図と倫理基準を反映することを保証する。</p>
+<h2 id="主要製品">主要製品</h2>
+<h3 id="大規模言語モデルllm">大規模言語モデル(LLM)</h3>
+<p><strong>GPT-5シリーズ(最新世代):</strong></p>
+<p><strong>GPT-5.2(2025年12月):</strong> プロフェッショナルな知識労働に最適な最先端モデル。3つのバージョンで提供:</p>
+<ul>
+<li><strong>GPT-5.2 Instant:</strong> 情報検索、執筆、翻訳などの日常的なクエリに最適化された高速版</li>
+<li><strong>GPT-5.2 Thinking:</strong> コーディング、長文書の分析、数学、計画立案などの複雑な構造化作業に優れる</li>
+<li><strong>GPT-5.2 Pro:</strong> 困難な問題に対する最大の精度と信頼性を提供し、拡張推論能力を備える</li>
+</ul>
+<p><strong>GPT-5.2の主要機能:</strong></p>
+<ul>
+<li>44の職業にわたるプロフェッショナルタスクでの専門家レベルのパフォーマンス(GDPvalベンチマーク:70.9%が専門家のパフォーマンスと同等またはそれを上回る)</li>
+<li>最先端のコーディング、数学、科学能力(GPQA Diamond:93.2%、FrontierMath:40.3%)</li>
+<li>以前のモデルと比較して幻覚が80%減少</li>
+<li>Thinkingモードの応答でエラーが38%減少</li>
+<li>優れた長文<a data-lb="1" href="/ja/glossary/contextual-understanding/" title="AIにおけるコンテキスト理解を探る:システムが進行中の会話の中でユーザー入力をどのように解釈し、履歴、好み、リアルタイムデータを活用してパーソナライズされたインタラクションを実現するかを解説します。">コンテキスト理解</a>(入力272Kトークン、出力128Kトークン)</li>
+<li>高度なビジョン、ツール呼び出し、エージェントワークフロー機能</li>
+<li>GitHub Copilotに統合され、コード生成を強化</li>
+</ul>
+<p><strong>GPT-5.1(2025年11月):</strong> より温かみのある性格を持つ改良された対話モデル。エージェントタスクとコーディングに適している。</p>
+<p><strong>GPT-5(2025年8月):</strong> 高速なデフォルトモデルと複雑な問題のためのより深い「Thinking」モード間のインテリジェントルーティングを備えた統合システム。</p>
+<p><strong>以前のGPTモデル:</strong></p>
+<p><strong>GPT-4o(Omni):</strong> 2024年にリリース。テキスト、音声、ビジョンをリアルタイムで処理し、速度と能力が向上。</p>
+<p><strong>GPT-4:</strong> 画像とテキスト入力を受け付け、テキスト出力を生成するマルチモーダルモデル。</p>
+<p><strong>GPT-3.5 Turbo:</strong> 対話型AIとテキスト生成に広く使用される。</p>
+<p><strong><a data-lb="1" href="/blog/how-to-use-large-language-models-effectively/" title="ChatGPTのような大規模言語モデルの実用的な活用方法を学び、さまざまなLLMプラットフォームを探索し、これらのモデルが内部でどのように機能するかを理解し、日常の仕事や生活で効果的に活用する方法を発見しましょう。">ChatGPT</a>:</strong> GPTモデル上に構築された対話型AI。ウェブ、モバイル、APIで利用可能。マルチモーダル入出力と高度なプラグイン統合をサポート。現在、タスクの複雑さに基づいて適切なGPT-5バリアントを使用するインテリジェントルーティング機能を搭載。</p>
+<h3 id="dall-e">DALL-E</h3>
+<p><strong>DALL·E 3:</strong> テキスト記述から画像を生成するAIシステム。詳細で創造的な画像生成をサポートし、すべてのChatGPTユーザーと開発者がAPI経由で利用可能。</p>
+<h3 id="codex">Codex</h3>
+<p><strong>Codex:</strong> 複数のプログラミング言語でコード生成、解釈、説明を行うAIシステム。GitHub Copilot(現在GPT-5.2で強化)を支え、IDE、Slack、その他の開発者ツールでの統合をサポート。</p>
+<h3 id="whisper">Whisper</h3>
+<p><strong>Whisper:</strong> 68万時間の多言語・マルチタスク教師あり学習データで訓練された自動音声認識(ASR)システム。数十の言語で文字起こしと翻訳をサポートし、API経由で利用可能。</p>
+<h3 id="openai-api">OpenAI API</h3>
+<p><strong>OpenAI API:</strong> 開発者向けに言語、コード、画像、音声モデルへのプログラマティックアクセスを提供。テキスト生成、チャットボット、画像作成、コード解析、音声文字起こしをサポート。</p>
+<p><strong>GPT-5 API価格:</strong></p>
+<ul>
+<li>GPT-5:入力100万トークンあたり1.25ドル、出力100万トークンあたり10ドル</li>
+<li>GPT-5 mini:入力100万トークンあたり0.25ドル、出力100万トークンあたり2ドル</li>
+<li>GPT-5 nano:入力100万トークンあたり0.05ドル、出力100万トークンあたり0.40ドル</li>
+</ul>
+<h3 id="その他のツール">その他のツール</h3>
+<p><strong>OpenAI Gym:</strong> 強化学習アルゴリズムの開発と比較のためのツールキット。</p>
+<p><strong>Assistants API:</strong> コードを実行し、ワークフローを処理し、外部データと統合できるタスク固有のAIエージェントの作成を可能にする。</p>
+<h2 id="仕組み">仕組み</h2>
+<h3 id="訓練データ">訓練データ</h3>
+<p>OpenAIのモデルは以下で訓練されています:</p>
+<ul>
+<li>公開ウェブコンテンツ(書籍、記事、ウェブサイト)</li>
+<li>ライセンスされたデータセット</li>
+<li>人間のトレーナーによって生成またはラベル付けされたデータ</li>
+<li>特定の種類のデータを除外(例:プライベートユーザーコンテンツ、オプトインされない限り)</li>
+</ul>
+<h3 id="モデル開発">モデル開発</h3>
+<p><strong><a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>:</strong> モデルは大規模なデータセットから統計的表現を学習する。</p>
+<p><strong>人間のフィードバックからの<a data-lb="1" href="/ja/glossary/reinforcement-learning/" title="強化学習(RL)は、エージェントが環境と相互作用し、試行錯誤を通じて累積報酬を最大化することで、逐次的な意思決定を学習する機械学習の一種です。">強化学習</a>(RLHF):</strong> 人間の評価者が出力をランク付けして改良し、モデルの動作を導く。</p>
+<p><strong><a data-lb="1" href="/ja/glossary/neural-networks/" title="ディープラーニングは、多層ニューラルネットワークを使用してデータから複雑なパターンを学習する高度なAI技術です。画像認識、自然言語処理、生成AIに不可欠な技術となっています。">ニューラルネットワーク</a>:</strong> 深層学習アーキテクチャ(トランスフォーマー)がLLMを支え、モダリティ全体で複雑なパターン認識を可能にする。</p>
+<p><strong>インテリジェントルーティング(GPT-5シリーズ):</strong> リアルタイムルーターが会話の複雑さとユーザーの意図に基づいて、高速モデルとより深い推論モデルのどちらを使用するかを決定する。</p>
+<h3 id="能力と制限">能力と制限</h3>
+<p><strong>モデルができること:</strong></p>
+<ul>
+<li>テキストの生成、要約、翻訳</li>
+<li>画像の作成</li>
+<li>プロフェッショナルグレードの品質でコードの記述と解釈</li>
+<li>音声の文字起こしと翻訳</li>
+<li>インタラクティブな会話のシミュレーション</li>
+<li>複雑な多段階推論の実行</li>
+<li>長時間実行されるエージェントワークフローの実行</li>
+<li>長文書の分析と理解(最大272Kトークン)</li>
+</ul>
+<p><strong>制限:</strong></p>
+<ul>
+<li>真の理解や意識はない</li>
+<li>出力は確率的で、訓練データに基づく</li>
+<li>明示的にプログラムされない限り、リアルタイムの外部データにアクセスできない</li>
+<li>大幅な改善にもかかわらず、依然としてエラーを生成する可能性がある</li>
+</ul>
+<h3 id="展開とアクセス">展開とアクセス</h3>
+<p>ウェブプラットフォーム(ChatGPT)、モバイルアプリ、API。エンタープライズソリューションは、強化されたプライバシー、信頼性、管理制御を提供。</p>
+<h2 id="影響と応用">影響と応用</h2>
+<h3 id="科学研究">科学研究</h3>
+<p>GPT-5.2は、数学、物理学、生物学、コンピュータサイエンス、天文学、材料科学全体で科学研究を加速しています。このモデルは、大学院レベルの科学問題で専門家レベルの能力を示し、以前は未解決だった数学的問題に貢献しています。</p>
+<h3 id="プロフェッショナルな知識労働">プロフェッショナルな知識労働</h3>
+<p>平均的なChatGPT Enterpriseユーザーは、AIが1日あたり40〜60分節約すると報告しており、ヘビーユーザーは週に10時間以上節約しています。GPT-5.2は、専門家の11倍以上の速度で、コストは1%未満でプロフェッショナルタスクを実行します。</p>
+<h3 id="顧客体験とサポート">顧客体験とサポート</h3>
+<p>即座の自動カスタマーサービスのための<a data-lb="1" href="/ja/glossary/chatbot/" title="チャットボットは、テキストまたは音声を通じて人間の会話をシミュレートするAI駆動のソフトウェアアプリケーションです。カスタマーサポート、情報検索、タスク自動化に使用されます。">チャットボット</a>と仮想アシスタント。コンタクトセンターでの要約と自動化。</p>
+<h3 id="コンテンツ作成とデザイン">コンテンツ作成とデザイン</h3>
+<p>コピー、ブログ、マーケティング資料、スプレッドシート、プレゼンテーションの自動生成。広告とソーシャルメディアのための画像生成。</p>
+<h3 id="itとプロフェッショナルサービス">ITとプロフェッショナルサービス</h3>
+<p>ワークフローの自動化とコード生成。GPT-5.2を搭載したCopilot統合によるソフトウェア開発の加速。</p>
+<h3 id="ヘルスケア">ヘルスケア</h3>
+<p>文書の要約と研究支援。医療画像とパターン分析(補助的、診断用ではない)。</p>
+<h3 id="金融と分析">金融と分析</h3>
+<p>予測分析、レポート作成、トレンド分析。大規模データセットでの不正検出。</p>
+<h3 id="教育と研究">教育と研究</h3>
+<p>パーソナライズされた個別指導、質問への回答、コンテンツ生成。研究論文の要約と学術支援。</p>
+<h3 id="データサイエンス">データサイエンス</h3>
+<p>Databricks、Hex、Triple Whaleなどのパートナーが報告するように、エージェント型<a data-lb="1" href="/ja/glossary/data-science/" title="データサイエンスは、数学、統計学、コンピュータサイエンス、および専門領域の知識を組み合わせて、複雑なデータセットから実用的なインサイトを抽出する学際的な分野です。">データサイエンス</a>と文書分析タスクでの卓越したパフォーマンス。</p>
+<h3 id="アクセシビリティと多言語サポート">アクセシビリティと多言語サポート</h3>
+<p>アクセシビリティのための<a data-lb="1" href="/ja/glossary/real-time-translation/" title="リアルタイム翻訳 の用語集ページ">リアルタイム翻訳</a>と音声テキスト変換。テキストと音声で数十の言語をサポート。</p>
+<h2 id="利点と制限">利点と制限</h2>
+<h3 id="利点">利点</h3>
+<p><strong>効率性:</strong> プロフェッショナル・専門家レベルで複雑で反復的なタスクを自動化。</p>
+<p><strong>スケーラビリティ:</strong> 一貫したパフォーマンスで大規模に動作。</p>
+<p><strong><a data-lb="1" href="/ja/glossary/personalization/" title="AIチャットボットと自動化におけるパーソナライゼーションは、高度なアルゴリズムを使用して、個々のユーザーの嗜好や行動に合わせてサービス、コンテンツ、インタラクションをカスタマイズします。">パーソナライゼーション</a>:</strong> ユーザーのコンテキストに応答と出力を適応。</p>
+<p><strong>創造性:</strong> 新しいコンテンツ形式とアイデア創出を可能にする。</p>
+<p><strong>洞察の生成:</strong> 大規模データセットから実用的な情報を抽出。</p>
+<p><strong>言語/フォーマットの多様性:</strong> 言語、メディア、業界全体で機能。</p>
+<p><strong>プロフェッショナルグレードの品質:</strong> GPT-5.2は、多くの領域で専門家に匹敵するか、それを上回る出力を提供。</p>
+<p><strong>コスト効率:</strong> 専門家レベルの作業をコストと時間の一部で提供。</p>
+<h3 id="制限">制限</h3>
+<p><strong>完璧ではない:</strong> 大幅に改善されたものの、一部のケースでは依然としてエラーを生成する可能性がある。</p>
+<p><strong><a data-lb="1" href="/ja/glossary/bias/" title="バイアス の用語集ページ">バイアス</a>:</strong> 訓練データに存在するバイアスを反映。</p>
+<p><strong>透明性:</strong> 深層学習モデルの「ブラックボックス」的性質。</p>
+<p><strong>データプライバシー:</strong> 機密データや規制対象データの慎重な取り扱いが必要。</p>
+<p><strong>コスト:</strong> エンタープライズグレードのモデルとAPI使用は高額になる可能性があるが、タスクあたりのコストは減少している。</p>
+<p><strong>人間の監視:</strong> 特に規制された分野では、出力のレビューが必要なことが多い。</p>
+<h3 id="よくある誤解">よくある誤解</h3>
+<p>AIは人間のように理解したり推論したり<strong>しない</strong>。パターンに基づいて出力を予測する(ただし、GPT-5.2は多くの領域で専門家レベルの推論を示す)。</p>
+<p>AIは<strong>常に中立ではない</strong>。出力はバイアスがかかる可能性がある。</p>
+<p>AIは人間の作業を補強する。GPT-5.2では、この補強は専門家レベルの支援に達する。</p>
+<h2 id="倫理的考慮事項とガバナンス">倫理的考慮事項とガバナンス</h2>
+<p>OpenAIは、ガバナンス、透明性、協力を通じて責任あるAI開発を重視しています。</p>
+<p><strong>利益上限付き構造:</strong> OpenAI LPは、資金調達のために管理された利益を可能にし、非営利団体が使命の管理を維持。</p>
+<p><strong>取締役会の監督:</strong> OpenAI非営利団体の取締役会は、リーダーシップの変更や使命との整合性を含め、OpenAI LPに対する最終的な権限を持つ。</p>
+<p><strong>倫理ガイドライン:</strong> 使用ポリシーを公開し、高リスクアプリケーションを制限し、安全プロトコルを定期的に更新。</p>
+<p><strong>安全性テスト:</strong> 禁止コンテンツ評価、ジェイルブレイク耐性、プロンプトインジェクション防御、幻覚削減、欺瞞緩和を含む包括的なテスト。</p>
+<p><strong>透明性:</strong> 研究出版物、モデルシステムカード、能力開示。</p>
+<p><strong>協力:</strong> 学界、業界、政策立案者と協力して基準を設定。</p>
+<h3 id="継続的な課題">継続的な課題</h3>
+<p><strong>著作権とデータ所有権:</strong> 訓練データ(特に著作権で保護された資料)に関する訴訟。</p>
+<p><strong>バイアスと公平性:</strong> バイアスを緩和し、公平な出力を保証するための積極的な研究。</p>
+<p><strong>AIアライメント:</strong> 高度なAIが人間の意図に確実に従うことを保証。</p>
+<p><strong>大規模での安全性:</strong> モデルがより能力を持つようになるにつれて、安全性とアライメントの確保がますます重要になる。</p>
+<h2 id="企業構造とセキュリティに関する考慮事項">企業構造とセキュリティに関する考慮事項</h2>
+<h3 id="管轄と企業構造">管轄と企業構造</h3>
+<p><strong>本社:</strong> アメリカ合衆国カリフォルニア州サンフランシスコ</p>
+<p><strong>法的構造:</strong> OpenAIは、利益インセンティブと使命との整合性のバランスを取るために設計された独自の二重エンティティ構造で運営されています:</p>
+<ul>
+<li><strong>OpenAI Inc.</strong> - 最終的な管理権と人類への受託者責任を持つ501(c)(3)非営利親組織</li>
+<li><strong>OpenAI LP</strong> - 非営利団体がガバナンス管理を維持しながら、投資家に最大100倍のリターンを可能にする利益上限付き子会社</li>
+<li><strong>OpenAI Global LLC</strong> - 日常的なビジネス運営を管理する運営エンティティ</li>
+</ul>
+<p>この構造により、利益動機が人類全体にAGIの利益をもたらすという使命に従属し続けることが保証され、非営利団体の取締役会が商業的決定に対する拒否権を維持します。</p>
+<h3 id="資本構造と主要投資家">資本構造と主要投資家</h3>
+<p><strong>総資金調達額:</strong> 2025年までに130億ドル以上を調達</p>
+<p><strong>主要投資家:</strong></p>
+<ul>
+<li><strong>マイクロソフト</strong> - 130億ドルの投資(最大の投資家)、約49%の経済的利益を保有し、過半数支配を防ぐガバナンス保護を持つ</li>
+<li><strong>Thrive Capital</strong> - 最近の資金調達ラウンドを主導</li>
+<li><strong>Khosla Ventures</strong> - 初期段階の投資家</li>
+<li><strong>リード・ホフマン</strong> - 個人投資家および取締役会メンバー</li>
+<li><strong>その他の投資家</strong> - 様々なベンチャーキャピタル企業と戦略的パートナー</li>
+</ul>
+<p><strong>戦略的パートナーシップ:</strong> マイクロソフトはAzureを通じて専用クラウドインフラストラクチャを提供し、優先的なAPIアクセスと統合権を獲得する一方、OpenAIは独立したガバナンスを維持。</p>
+<p><strong>投資上限:</strong> 投資家のリターンは初期投資の100倍に制限され、超過価値は非営利団体に流れ、利益最大化よりも使命との整合性を確保。</p>
+<h3 id="データガバナンスと主権">データガバナンスと主権</h3>
+<p><strong>データセンターの場所:</strong> 主にMicrosoft Azureインフラストラクチャでホストされ、以下にデータセンターがある:</p>
+<ul>
+<li>アメリカ合衆国(主要)</li>
+<li>欧州連合(GDPR準拠)</li>
+<li>Azureネットワークを通じた追加のグローバル地域</li>
+</ul>
+<p><strong>データレジデンシーオプション:</strong></p>
+<ul>
+<li>エンタープライズ顧客は地域データ処理を要求可能</li>
+<li>APIデータは顧客に最も近いAzure地域で処理</li>
+<li>会話データは顧客ティアと設定に応じて保持</li>
+</ul>
+<p><strong>データ保持ポリシー:</strong></p>
+<ul>
+<li>無料ティア:サービス改善のためのデフォルト30日間保持</li>
+<li>API/エンタープライズ:ユーザーデータはデフォルトで訓練に使用されない</li>
+<li>ユーザーはデータを削除し、訓練データ使用をオプトアウト可能</li>
+<li>エンタープライズプランは強化されたデータ分離と保持制御を提供</li>
+</ul>
+<p><strong>政府のデータアクセス:</strong></p>
+<ul>
+<li>米国の法的管轄とCLOUD法の対象</li>
+<li>確立された手順に従って合法的な政府の要求に応答</li>
+<li>政府のデータ要求に関する透明性レポートを公開</li>
+<li>エンタープライズ顧客は追加の暗号化とアクセス制御を実装可能</li>
+</ul>
+<h3 id="規制遵守と認証">規制遵守と認証</h3>
+<p><strong>セキュリティ認証:</strong></p>
+<ul>
+<li><strong>SOC 2 Type II</strong> - 包括的なセキュリティ、可用性、機密性制御</li>
+<li><strong>ISO 27001</strong> - 情報セキュリティ管理システム(進行中)</li>
+<li><strong>エンタープライズグレードのセキュリティ</strong> - 保存時および転送時の暗号化、アクセス制御、監査ログ</li>
+</ul>
+<p><strong>プライバシー遵守:</strong></p>
+<ul>
+<li><strong><a data-lb="1" href="/ja/glossary/gdpr/" title="EUの包括的なデータ保護規則であるGDPRについて理解しましょう。その原則、コンプライアンス要件、データ主体の権利、そしてAIチャットボットへの影響について学びます。">GDPR</a></strong>(欧州連合) - データ保護権の完全な遵守</li>
+<li><strong>CCPA</strong>(カリフォルニア) - 消費者プライバシー権の実装</li>
+<li><strong>Privacy Shieldの代替</strong> - EU-USデータ転送のための標準契約条項</li>
+</ul>
+<p><strong>業界固有の遵守:</strong></p>
+<ul>
+<li><strong>HIPAA</strong> - ビジネスアソシエイト契約を通じてヘルスケア顧客に利用可能</li>
+<li><strong>FERPA</strong> - 教育記録保護が利用可能</li>
+<li><strong>FedRAMP</strong> - 現在認証されていないが、政府認可に向けて取り組み中</li>
+</ul>
+<p><strong>AI固有の規制:</strong></p>
+<ul>
+<li>高リスクAIシステムに対するEU AI法の要件を監視</li>
+<li>米国政府との自主的なAI安全コミットメントに参加</li>
+<li>責任あるAI開発について世界中の規制当局と関与</li>
+</ul>
+<h3 id="地政学的およびセキュリティに関する考慮事項">地政学的およびセキュリティに関する考慮事項</h3>
+<p><strong>国家安全保障上の地位:</strong></p>
+<ul>
+<li>米国に本社を置く企業で、対米外国投資委員会(CFIUS)の監督対象</li>
+<li>国際武器取引規則(ITAR)および輸出管理規則(EAR)の下で米国の輸出管理の対象となる技術</li>
+<li>高度なAI能力は、潜在的な軍事応用を持つデュアルユース技術と見なされる</li>
+</ul>
+<p><strong>輸出制限:</strong></p>
+<ul>
+<li>GPT-4およびGPT-5モデルは特定の国に対する米国の輸出管理の対象</li>
+<li>禁輸国(イラン、北朝鮮、シリア、キューバなど)ではサービス利用が制限</li>
+<li>高リスク管轄区域ではAPIアクセスに検証が必要</li>
+<li>チップ輸出制限が訓練インフラストラクチャの利用可能性に影響</li>
+</ul>
+<p><strong>政府契約:</strong></p>
+<ul>
+<li>米国連邦機関と防衛請負業者にサービスを提供</li>
+<li>国家安全保障アプリケーションについて国防総省と協力</li>
+<li>NIST AIリスク管理フレームワークの開発に参加</li>
+<li>AI安全研究について情報機関と協力</li>
+</ul>
+<p><strong>ファイブアイズ同盟:</strong></p>
+<ul>
+<li>ファイブアイズ情報共有フレームワーク(米国、英国、カナダ、オーストラリア、ニュージーランド)内で運営</li>
+<li>ファイブアイズ政府機関が技術にアクセス可能</li>
+<li>同盟国間の情報共有協定の対象</li>
+</ul>
+<p><strong>国際顧客のための戦略的考慮事項:</strong></p>
+<ul>
+<li><strong>中国:</strong> サービスは直接利用不可。技術輸出が制限</li>
+<li><strong>ロシア:</strong> 制裁と輸出管理によりサービスが制限</li>
+<li><strong>EU:</strong> GDPR遵守とデータレジデンシーオプションで完全なサービス利用可能</li>
+<li><strong>中東:</strong> 地域のデータ主権要件を考慮して利用可能</li>
+<li><strong>アジア太平洋:</strong> ほとんどの市場で地域データ処理オプションとともに利用可能</li>
+</ul>
+<p><strong>技術移転管理:</strong></p>
+<ul>
+<li>モデルの重みは米国規制の下で管理技術と見なされる</li>
+<li>訓練技術は輸出制限の対象</li>
+<li>外国エンティティとのパートナーシップには政府の審査が必要</li>
+<li>オープンソースリリースは国家安全保障への影響について評価される</li>
+</ul>
+<h3 id="エンタープライズセキュリティに関する考慮事項">エンタープライズセキュリティに関する考慮事項</h3>
+<p><strong>政府および規制産業向け:</strong></p>
+<ul>
+<li>エンタープライズプランを通じて強化されたセキュリティ機能が利用可能</li>
+<li>専用インスタンスとプライベート展開オプション(限定的な利用可能性)</li>
+<li>カスタムデータ保持および削除ポリシー</li>
+<li>高度なアクセス制御と監査ログ</li>
+<li>インシデント対応とセキュリティ運用サポート</li>
+</ul>
+<p><strong>サプライチェーンセキュリティ:</strong></p>
+<ul>
+<li>Microsoft Azureインフラストラクチャへの依存</li>
+<li>主に米国と連携したサプライヤーから調達されたハードウェア</li>
+<li>サプライチェーンパートナーの定期的なセキュリティ監査</li>
+<li>ハードウェアの脆弱性とバックドアの監視</li>
+</ul>
+<p><strong>リスクに敏感な組織への推奨事項:</strong></p>
+<ul>
+<li>展開前に独立したセキュリティ評価を実施</li>
+<li>データ分類と取り扱い手順を実装</li>
+<li>機密ワークロードにはプライベート展開オプションを使用</li>
+<li>進化する規制要件の認識を維持</li>
+<li>AI関連リスクのインシデント対応手順を確立</li>
+<li>国際業務のためのデータ主権要件を考慮</li>
+</ul>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p>OpenAIは、責任を持ってAIを進歩させるために、研究、製品開発、協力への投資を続けています。</p>
+<p><strong>継続的なモデルの進歩:</strong> 推論、計画、能力のさらなる改善。</p>
+<p><strong>強化されたマルチモーダルAI:</strong> テキスト、画像、音声、ビデオのより深い統合。</p>
+<p><strong>カスタマイゼーション:</strong> AI出力に対するユーザーと組織のより細かい制御。</p>
+<p><strong>より強力な安全性とアライメント:</strong> 安全な展開と価値のアライメントのためのより良いツール。</p>
+<p><strong>科学の加速:</strong> 科学的発見の加速におけるAIの役割の拡大。</p>
+<p><strong>グローバルな協力:</strong> パートナーシップとAI研究への公共アクセスの拡大。</p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li><a href="https://openai.com/" rel="nofollow noopener noreferrer" target="_blank">OpenAI公式サイト</a></li>
+<li><a href="https://openai.com/about/" rel="nofollow noopener noreferrer" target="_blank">OpenAI About</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenAI" rel="nofollow noopener noreferrer" target="_blank">OpenAI Wikipedia</a></li>
+<li><a href="https://openai.com/index/introducing-gpt-5-2/" rel="nofollow noopener noreferrer" target="_blank">GPT-5.2の紹介</a></li>
+<li><a href="https://openai.com/index/introducing-gpt-5-for-developers/" rel="nofollow noopener noreferrer" target="_blank">開発者向けGPT-5の紹介</a></li>
+<li><a href="https://openai.com/index/introducing-gpt-5/" rel="nofollow noopener noreferrer" target="_blank">GPT-5の紹介</a></li>
+<li><a href="https://openai.com/gpt-5/" rel="nofollow noopener noreferrer" target="_blank">GPT-5はここに</a></li>
+<li><a href="https://openai.com/index/gpt-5-2-for-science-and-math/" rel="nofollow noopener noreferrer" target="_blank">GPT-5.2による科学と数学の進歩</a></li>
+<li><a href="https://openai.com/index/gpt-5-system-card-update-gpt-5-2/" rel="nofollow noopener noreferrer" target="_blank">GPT-5.2システムカード</a></li>
+<li><a href="https://openai.com/index/gpt-4-research/" rel="nofollow noopener noreferrer" target="_blank">GPT-4研究</a></li>
+<li><a href="https://openai.com/index/hello-gpt-4o/" rel="nofollow noopener noreferrer" target="_blank">GPT-4oの紹介</a></li>
+<li><a href="https://openai.com/index/dall-e-3/" rel="nofollow noopener noreferrer" target="_blank">DALL-E 3概要</a></li>
+<li><a href="https://platform.openai.com/docs/models/dall-e-3" rel="nofollow noopener noreferrer" target="_blank">DALL-E 3 APIドキュメント</a></li>
+<li><a href="https://openai.com/codex/" rel="nofollow noopener noreferrer" target="_blank">Codex概要</a></li>
+<li><a href="https://developers.openai.com/codex/" rel="nofollow noopener noreferrer" target="_blank">Codex開発者ドキュメント</a></li>
+<li><a href="https://openai.com/index/whisper/" rel="nofollow noopener noreferrer" target="_blank">Whisperの紹介</a></li>
+<li><a href="https://platform.openai.com/docs/guides/speech-to-text" rel="nofollow noopener noreferrer" target="_blank">音声テキスト変換APIガイド</a></li>
+<li><a href="https://platform.openai.com/docs/api-reference/introduction" rel="nofollow noopener noreferrer" target="_blank">APIリファレンス</a></li>
+<li><a href="https://openai.com/our-structure/" rel="nofollow noopener noreferrer" target="_blank">OpenAIの構造</a></li>
+<li><a href="https://openai.com/index/evolving-our-structure/" rel="nofollow noopener noreferrer" target="_blank">OpenAIの構造の進化</a></li>
+<li><a href="https://epoch.ai/data-insights/openai-revenue" rel="nofollow noopener noreferrer" target="_blank">OpenAIの収益と成長</a></li>
+<li><a href="https://techcrunch.com/2025/12/11/openai-fires-back-at-google-with-gpt-5-2-after-code-red-memo/" rel="nofollow noopener noreferrer" target="_blank">TechCrunch: OpenAI GPT-5.2リリース</a></li>
+<li><a href="https://www.cnbc.com/2025/12/11/openai-intros-new-ai-model-gpt-5point2-says-better-at-professional-tasks.html" rel="nofollow noopener noreferrer" target="_blank">CNBC: GPT-5.2発表</a></li>
+<li><a href="https://github.blog/changelog/2025-12-11-openais-gpt-5-2-is-now-in-public-preview-for-github-copilot/" rel="nofollow noopener noreferrer" target="_blank">GitHub: GitHub CopilotのGPT-5.2</a></li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/chatgpt/">
+                    ChatGPT
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ChatGPTは、大規模言語モデルを活用したOpenAIの高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/chatgpt/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/continuous-learning/">
+                    AIにおける継続学習
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIにおける継続学習を探求します。システムが忘却することなく段階的に適応し知識を獲得できるようにする技術です。そのプロセス、破滅的忘却などの課題、実世界での応用について理解を深めます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/continuous-learning/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/ai-reporting/">
+                    AIレポーティング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIレポーティングは、AI、機械学習、自然言語処理を活用してデータ分析とレポート生成を自動化します。詳細なインサイトの取得、異常検知、KPI要因の説明、トレンド予測を効率的に実現します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/ai-reporting/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/scenarios/">
+                    シナリオ(事前準備された会話フロー)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIチャットボットおよび自動化システムにおけるシナリオ(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/scenarios/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/student-models/">
+                    スチューデントモデル
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    スチューデントモデルとは、より大規模な「ティーチャーモデル」の動作を模倣するように訓練されたAIシステムで、リソースに制約のあるデバイス上での効率的なデプロイメント、モデル圧縮、転移学習を実現します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/student-models/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/self-healing-knowledge/">
+                    セルフヒーリング・ナレッジ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    セルフヒーリング・ナレッジは、AI、機械学習、自動化を活用して、ナレッジマネジメントシステム内の古くなった情報や誤った情報を自律的に検出、診断、修正し、正確性を確保します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/self-healing-knowledge/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/openai/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190816"></script>
+</body>
+</html>

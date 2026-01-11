@@ -2,7 +2,7 @@
 title: "Tree of Thoughts"
 date: 2025-12-19
 translationKey: Tree-of-Thoughts
-description: "An AI problem-solving method that explores multiple solution paths at once, like branching roads, allowing the system to backtrack and find better answers than following just one step-by-step path."
+description: "An AI reasoning method that explores multiple solution paths simultaneously, like a decision tree, to solve complex problems more effectively than step-by-step approaches."
 keywords:
 - tree of thoughts
 - AI reasoning
@@ -56,7 +56,9 @@ The Tree of Thoughts framework operates through a systematic process that combin
 
 7. **Solution Synthesis**: When complete solutions are found or search limits are reached, the system synthesizes the best available reasoning paths into final answers or recommendations.
 
-8. **Backtrack Integration**: If needed, the system can backtrack to explore alternative paths or integrate insights from multiple successful reasoning branches.**Example Workflow**: For a mathematical word problem, ToT might first generate thoughts about different solution approaches (algebraic, geometric, numerical), evaluate each approach's applicability, pursue the most promising methods while maintaining alternatives, and synthesize the most reliable solution path.
+8. **Backtrack Integration**: If needed, the system can backtrack to explore alternative paths or integrate insights from multiple successful reasoning branches.
+
+**Example Workflow**: For a mathematical word problem, ToT might first generate thoughts about different solution approaches (algebraic, geometric, numerical), evaluate each approach's applicability, pursue the most promising methods while maintaining alternatives, and synthesize the most reliable solution path.
 
 ## Key Benefits
 
@@ -106,12 +108,12 @@ The Tree of Thoughts framework operates through a systematic process that combin
 
 | Aspect | Tree of Thoughts | Chain of Thought | Direct Generation | Beam Search |
 |--------|------------------|------------------|-------------------|-------------|
-| **Reasoning Structure**| Hierarchical tree with backtracking | Linear sequential steps | Single-step output | Parallel linear paths |
-| **Error Recovery**| Full backtracking capability | Limited error correction | No error recovery | Minimal backtracking |
-| **Solution Exploration**| Systematic multi-path exploration | Single reasoning chain | Direct answer generation | Multiple similar paths |
-| **Computational Cost**| High due to tree search | Moderate sequential cost | Low single-pass cost | Moderate parallel cost |
-| **Problem Complexity**| Handles highly complex problems | Moderate complexity tasks | Simple to moderate tasks | Moderate complexity |
-| **Solution Quality**| Often highest quality | Good for linear problems | Variable quality | Good average quality |
+| **Reasoning Structure** | Hierarchical tree with backtracking | Linear sequential steps | Single-step output | Parallel linear paths |
+| **Error Recovery** | Full backtracking capability | Limited error correction | No error recovery | Minimal backtracking |
+| **Solution Exploration** | Systematic multi-path exploration | Single reasoning chain | Direct answer generation | Multiple similar paths |
+| **Computational Cost** | High due to tree search | Moderate sequential cost | Low single-pass cost | Moderate parallel cost |
+| **Problem Complexity** | Handles highly complex problems | Moderate complexity tasks | Simple to moderate tasks | Moderate complexity |
+| **Solution Quality** | Often highest quality | Good for linear problems | Variable quality | Good average quality |
 
 ## Challenges and Considerations
 

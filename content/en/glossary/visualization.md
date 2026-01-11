@@ -44,15 +44,39 @@ Current visualization integrates artificial intelligence and machine learning th
 
 ### Statistical and Analytical Graphics
 
-**Comparative Visualizations**Bar charts, column charts, and grouped bars compare quantities across categories. Horizontal bars work well for long category names, while grouped or stacked bars show subcategory breakdowns. Line charts track changes over time, revealing trends, cycles, and anomalies in temporal data.**Distribution Visualizations**Histograms display frequency distributions of continuous variables, revealing data shape, spread, and outliers. Box plots summarize statistical properties—median, quartiles, and outliers—enabling distribution comparisons across groups. Violin plots combine box plots with probability density visualization.**Relationship Visualizations**Scatter plots reveal correlations, clusters, and outliers in bivariate data. Bubble charts add third dimensions through point size. Heatmaps display matrix data with color intensity representing magnitude, ideal for correlation matrices, confusion matrices, or calendar patterns.**Composition Visualizations**Pie charts show part-to-whole relationships for few categories, though bar charts often communicate the same information more effectively. Stacked bar charts and area charts display composition changes over time. Treemaps hierarchically partition space proportional to values, showing both hierarchy and size simultaneously.
+**Comparative Visualizations**  
+Bar charts, column charts, and grouped bars compare quantities across categories. Horizontal bars work well for long category names, while grouped or stacked bars show subcategory breakdowns. Line charts track changes over time, revealing trends, cycles, and anomalies in temporal data.
+
+**Distribution Visualizations**  
+Histograms display frequency distributions of continuous variables, revealing data shape, spread, and outliers. Box plots summarize statistical properties—median, quartiles, and outliers—enabling distribution comparisons across groups. Violin plots combine box plots with probability density visualization.
+
+**Relationship Visualizations**  
+Scatter plots reveal correlations, clusters, and outliers in bivariate data. Bubble charts add third dimensions through point size. Heatmaps display matrix data with color intensity representing magnitude, ideal for correlation matrices, confusion matrices, or calendar patterns.
+
+**Composition Visualizations**  
+Pie charts show part-to-whole relationships for few categories, though bar charts often communicate the same information more effectively. Stacked bar charts and area charts display composition changes over time. Treemaps hierarchically partition space proportional to values, showing both hierarchy and size simultaneously.
 
 ### Geographic and Spatial Visualizations
 
-**Choropleth Maps**Color-code geographic regions by data values—population density, election results, disease prevalence, economic indicators. Effective for showing spatial patterns and regional comparisons, though require careful color scheme selection avoiding misleading impressions.**Flow Maps**Visualize movement between locations—migration patterns, trade routes, logistics networks. Arrow thickness represents magnitude; direction shows movement. Modern interactive versions enable filtering by time period, commodity type, or threshold values.**Heatmaps and Density Maps**Display point concentration spatially—crime hotspots, customer locations, event occurrences. Reveal clustering patterns and geographic distributions of discrete events or entities.
+**Choropleth Maps**  
+Color-code geographic regions by data values—population density, election results, disease prevalence, economic indicators. Effective for showing spatial patterns and regional comparisons, though require careful color scheme selection avoiding misleading impressions.
+
+**Flow Maps**  
+Visualize movement between locations—migration patterns, trade routes, logistics networks. Arrow thickness represents magnitude; direction shows movement. Modern interactive versions enable filtering by time period, commodity type, or threshold values.
+
+**Heatmaps and Density Maps**  
+Display point concentration spatially—crime hotspots, customer locations, event occurrences. Reveal clustering patterns and geographic distributions of discrete events or entities.
 
 ### Network and Hierarchical Visualizations
 
-**Node-Link Diagrams**Represent entities as nodes connected by relationship edges. Visualize social networks, organizational structures, dependency graphs, knowledge graphs, and citation networks. Layout algorithms position nodes revealing community structure, central actors, and connection patterns.**Treemaps and Sunburst Diagrams**Display hierarchical data through nested rectangles (treemaps) or concentric circles (sunburst). Combine hierarchy visualization with quantitative size representation—file system storage, budget allocations, product categorization.**Sankey Diagrams**Show flow and transformation through systems—energy conversions, budget allocation, customer journey stages. Width represents quantity; connections show transformations or transitions.
+**Node-Link Diagrams**  
+Represent entities as nodes connected by relationship edges. Visualize social networks, organizational structures, dependency graphs, knowledge graphs, and citation networks. Layout algorithms position nodes revealing community structure, central actors, and connection patterns.
+
+**Treemaps and Sunburst Diagrams**  
+Display hierarchical data through nested rectangles (treemaps) or concentric circles (sunburst). Combine hierarchy visualization with quantitative size representation—file system storage, budget allocations, product categorization.
+
+**Sankey Diagrams**  
+Show flow and transformation through systems—energy conversions, budget allocation, customer journey stages. Width represents quantity; connections show transformations or transitions.
 
 ### Interactive Dashboards
 
@@ -110,15 +134,39 @@ Journey maps visualize customer or user experiences across touchpoints, revealin
 
 ### Enterprise Business Intelligence Suites
 
-**Tableau**Industry-leading platform offering extensive chart types, drag-and-drop interface, strong data connectivity, sophisticated calculations, and vibrant user community. Excels at exploratory analysis and dashboard creation for analysts and business users.**Microsoft Power BI**Deeply integrated with Microsoft ecosystem, offering strong value proposition, good performance with large datasets, natural language query capabilities, and extensive connector library. Popular in Microsoft-centric organizations.**Qlik Sense**Associative data engine enabling free-form exploration without predefined drill-down paths. Strong at revealing unexpected relationships and supporting discovery-driven analysis.
+**Tableau**  
+Industry-leading platform offering extensive chart types, drag-and-drop interface, strong data connectivity, sophisticated calculations, and vibrant user community. Excels at exploratory analysis and dashboard creation for analysts and business users.
+
+**Microsoft Power BI**  
+Deeply integrated with Microsoft ecosystem, offering strong value proposition, good performance with large datasets, natural language query capabilities, and extensive connector library. Popular in Microsoft-centric organizations.
+
+**Qlik Sense**  
+Associative data engine enabling free-form exploration without predefined drill-down paths. Strong at revealing unexpected relationships and supporting discovery-driven analysis.
 
 ### Programming Libraries and Frameworks
 
-**D3.js (JavaScript)**Powerful, flexible library enabling custom interactive visualizations through direct DOM manipulation. Steep learning curve but unmatched customization possibilities for web-based visualizations.**Matplotlib and Seaborn (Python)**Essential Python libraries for statistical visualization. Matplotlib provides low-level control; Seaborn offers higher-level statistical graphics with attractive default styling.**ggplot2 (R)**Grammar of graphics implementation producing sophisticated statistical visualizations through declarative syntax. Popular in academic and research settings.**Plotly**Cross-language library (Python, R, JavaScript) producing interactive charts with minimal code. Supports web deployment and dashboard creation through Dash framework.
+**D3.js (JavaScript)**  
+Powerful, flexible library enabling custom interactive visualizations through direct DOM manipulation. Steep learning curve but unmatched customization possibilities for web-based visualizations.
+
+**Matplotlib and Seaborn (Python)**  
+Essential Python libraries for statistical visualization. Matplotlib provides low-level control; Seaborn offers higher-level statistical graphics with attractive default styling.
+
+**ggplot2 (R)**  
+Grammar of graphics implementation producing sophisticated statistical visualizations through declarative syntax. Popular in academic and research settings.
+
+**Plotly**  
+Cross-language library (Python, R, JavaScript) producing interactive charts with minimal code. Supports web deployment and dashboard creation through Dash framework.
 
 ### AI-Integrated Platforms
 
-**Thoughtspot**Search-driven analytics enabling natural language queries producing visualizations and insights. AI-powered SpotIQ automatically surfaces patterns worth investigating.**Sisense**Embedded analytics platform with AI-driven insights, automated narrative generation, and customizable dashboard creation for different audiences.**Looker (Google Cloud)**Modeling-layer approach ensuring consistent metrics definitions across organization. Strong integration with Google Cloud data ecosystem and machine learning capabilities.
+**Thoughtspot**  
+Search-driven analytics enabling natural language queries producing visualizations and insights. AI-powered SpotIQ automatically surfaces patterns worth investigating.
+
+**Sisense**  
+Embedded analytics platform with AI-driven insights, automated narrative generation, and customizable dashboard creation for different audiences.
+
+**Looker (Google Cloud)**  
+Modeling-layer approach ensuring consistent metrics definitions across organization. Strong integration with Google Cloud data ecosystem and machine learning capabilities.
 
 ## Benefits and Strategic Value
 
@@ -226,35 +274,19 @@ Evolution toward Google Docs-style collaborative visualization where multiple us
 
 ## References
 
-
-1. GoodData. (n.d.). How To Use AI for Data Visualizations and Dashboards. GoodData Blog.
-
-2. Cambridge Intelligence. (n.d.). Data Visualization and AI - Powering the Intelligence Cycle. Cambridge Intelligence.
-
-3. Friendly, M. (n.d.). A Brief History of Data Visualization. Springer.
-
-4. DASCA. (n.d.). The Rise of AI in Advancing Data Visualization. DASCA World of Data Science.
-
-5. TechTarget. (n.d.). What is Data Visualization and Why is it Important?. TechTarget SearchBusinessAnalytics.
-
-6. Tableau. (n.d.). Data Visualization Types - A Complete Guide. Tableau Learn.
-
-7. Pixelixe. (n.d.). How Automation Is Revolutionizing Data Visualization. Pixelixe Blog.
-
-8. Hwang & Kim. (2023). JourneyBot - Journey Map Visualization. International Journal of Technology and Systems.
-
-9. Urban, G. (n.d.). Integrating GenAI Chatbots with Dashboard Visualization - DHL Case Study. LinkedIn Pulse.
-
-10. Quantilope. (n.d.). How To Use AI for Automated Data Analysis and Visualization. Quantilope Resources.
-
-11. International Journal of Technology and Systems. (n.d.). AI-enhanced Data Visualization. Journal of Technology and Systems.
-
-12. D3.js. Data-Driven Documents. URL: https://d3js.org/
-
-13. Matplotlib. Visualization with Python. URL: https://matplotlib.org/
-
-14. Seaborn. Statistical Data Visualization. URL: https://seaborn.pydata.org/
-
-15. ggplot2. Create Elegant Data Visualisations Using the Grammar of Graphics. URL: https://ggplot2.tidyverse.org/
-
-16. Google Data Studio. Data Visualization and Reporting Tool. URL: https://datastudio.google.com/
+- [GoodData: How To Use AI for Data Visualizations and Dashboards](https://www.gooddata.com/blog/how-to-use-ai-for-data-visualizations-and-dashboards/)
+- [Cambridge Intelligence: Data Visualization and AI - Powering the Intelligence Cycle](https://cambridge-intelligence.com/ai-and-data-visualization/)
+- [Friendly, M.: A Brief History of Data Visualization](https://doi.org/10.1007/978-3-540-33037-0_2)
+- [DASCA: The Rise of AI in Advancing Data Visualization](https://www.dasca.org/world-of-data-science/article/the-rise-of-ai-in-advancing-data-visualization)
+- [TechTarget: What is Data Visualization and Why is it Important?](https://www.techtarget.com/searchbusinessanalytics/definition/data-visualization)
+- [Tableau: Data Visualization Types - A Complete Guide](https://www.tableau.com/learn/articles/data-visualization)
+- [Pixelixe: How Automation Is Revolutionizing Data Visualization](https://pixelixe.com/blog/how-automation-is-revolutionizing-data-visualization/)
+- [Hwang & Kim (2023): JourneyBot - Journey Map Visualization](https://doi.org/10.57698/v17i3.06)
+- [LinkedIn: Integrating GenAI Chatbots with Dashboard Visualization - DHL Case Study](https://www.linkedin.com/pulse/integrating-genai-chatbots-dashboard-visualization-dhl-greg-urban-zbief/)
+- [Quantilope: How To Use AI for Automated Data Analysis and Visualization](https://www.quantilope.com/resources/how-to-use-ai-for-automated-data-analysis-and-visualization)
+- [International Journal of Technology and Systems: AI-enhanced Data Visualization](https://doi.org/10.47941/jts.1911)
+- [D3.js - Data-Driven Documents](https://d3js.org/)
+- [Matplotlib - Visualization with Python](https://matplotlib.org/)
+- [Seaborn - Statistical Data Visualization](https://seaborn.pydata.org/)
+- [ggplot2 - Create Elegant Data Visualisations Using the Grammar of Graphics](https://ggplot2.tidyverse.org/)
+- [Google Data Studio](https://datastudio.google.com/)

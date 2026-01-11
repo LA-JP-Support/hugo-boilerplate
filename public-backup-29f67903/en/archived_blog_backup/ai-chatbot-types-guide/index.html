@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>AI Chatbot Types and Selection Guide | Comprehensive Analysis of 5 Types and Implementation Points | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/archived_blog_backup/ai-chatbot-types-guide/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="A comprehensive guide to the 5 types of AI chatbots (rule-based, AI-powered, generative AI, RAG, and hybrid). Learn their characteristics, advantages and disadvantages, selection criteria by use case, and implementation considerations to confidently deploy chatbots even for small and medium-sized businesses." name="description"/>
+<meta content="AI chatbot, chatbot types, rule-based, generative AI, RAG, implementation guide, SMB" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/archived_blog_backup/ai-chatbot-types-guide/" property="og:url"/>
+<meta content="AI Chatbot Types and Selection Guide | Comprehensive Analysis of 5 Types and Implementation Points | SmartWeb" property="og:title"/>
+<meta content="A comprehensive guide to the 5 types of AI chatbots (rule-based, AI-powered, generative AI, RAG, and hybrid). Learn their characteristics, advantages and disadvantages, selection criteria by use case, and implementation considerations to confidently deploy chatbots even for small and medium-sized businesses." property="og:description"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/images/blog/ai-chatbot-types-guide.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/archived_blog_backup/ai-chatbot-types-guide/" name="twitter:url"/>
+<meta content="AI Chatbot Types and Selection Guide | Comprehensive Analysis of 5 Types and Implementation Points | SmartWeb" name="twitter:title"/>
+<meta content="A comprehensive guide to the 5 types of AI chatbots (rule-based, AI-powered, generative AI, RAG, and hybrid). Learn their characteristics, advantages and disadvantages, selection criteria by use case, and implementation considerations to confidently deploy chatbots even for small and medium-sized businesses." name="twitter:description"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/images/blog/ai-chatbot-types-guide.jpg" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165525" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165525" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165525"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118125587168000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118125587168000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118125587168000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118125587168000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<nav aria-label="Breadcrumb" class="wrapper flex gap-2 py-8">
+<ol class="flex flex-wrap items-center gap-y-2" role="list">
+<li class="flex items-center">
+<a class="icon-on-gray" href="/en/">
+<svg class="map[class:size-5 block h-5 shrink-0 ]" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.4697 3.84099C11.7626 3.5481 12.2374 3.5481 12.5303 3.84099L21.2197 12.5303C21.5126 12.8232 21.9874 12.8232 22.2803 12.5303C22.5732 12.2374 22.5732 11.7626 22.2803 11.4697L13.591 2.78033C12.7123 1.90165 11.2877 1.90165 10.409 2.78033L1.71967 11.4697C1.42678 11.7626 1.42678 12.2374 1.71967 12.5303C2.01256 12.8232 2.48744 12.8232 2.78033 12.5303L11.4697 3.84099Z" fill="currentColor"></path>
+<path d="M12 5.43198L20.159 13.591C20.1887 13.6207 20.2191 13.6494 20.25 13.6771V19.875C20.25 20.9105 19.4105 21.75 18.375 21.75H15C14.5858 21.75 14.25 21.4142 14.25 21V16.5C14.25 16.0858 13.9142 15.75 13.5 15.75H10.5C10.0858 15.75 9.75 16.0858 9.75 16.5V21C9.75 21.4142 9.41421 21.75 9 21.75H5.625C4.58947 21.75 3.75 20.9105 3.75 19.875V13.6771C3.78093 13.6494 3.81127 13.6207 3.84099 13.591L12 5.43198Z" fill="currentColor"></path>
+</svg>
+<span class="sr-only">Home</span>
+</a><span class="mx-2 lg:mx-4 text-gray-300 dark:text-gray-600 whitespace-nowrap">/</span></li><li class="flex items-center"><a class="text-sm font-medium text-secondary hover:text-gray-700 break-words" href="/en/archived_blog_backup/">Archived_blog_backups</a>
+<span class="mx-2 lg:mx-4 text-gray-300 dark:text-gray-600 whitespace-nowrap">/</span></li><li class="flex items-center"><a aria-current="page" class="text-sm font-medium text-heading hover:text-gray-700 break-words" href="/en/archived_blog_backup/ai-chatbot-types-guide/">AI Chatbot Types and Selection Guide | Comprehensive Analysis of 5 Types and Implementation Points</a></li></ol>
+</nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Home",
+      "item": "https:\/\/main.d1jtfhinlastnr.amplifyapp.com\/en\/"
+    },{
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Archived_blog_backups",
+      "item": "https:\/\/main.d1jtfhinlastnr.amplifyapp.com\/en\/archived_blog_backup\/"
+    },{
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "AI Chatbot Types and Selection Guide | Comprehensive Analysis of 5 Types and Implementation Points",
+      "item": "https:\/\/main.d1jtfhinlastnr.amplifyapp.com\/en\/archived_blog_backup\/ai-chatbot-types-guide\/"
+    }]
+}
+</script>
+<div class="split-with-image-hero section-bg-light max-md:pt-0 py-12 lg:py-16 relative overflow-hidden">
+<div class="wrapper lg:flex lg:justify-between lg:items-stretch gap-x-8 lg:flex-row-reverse relative z-10">
+<div class="lg:flex lg:w-1/2 lg:items-start lg:shrink lg:grow-0 xl:relative xl:inset-y-0 xl:left-0">
+<div class="max-md:hidden relative rounded-lg py-6 flex items-start justify-center w-full overflow-hidden mx-auto max-w-[38rem] max-h-[35rem]">
+<picture class="lazy-picture loaded" data-maxwidth="3000">
+<source data-original-src="/images/blog/ai-chatbot-types-guide.jpg" sizes="(max-width: 1456px) 1456px, 3000px" srcset="/images/blog/ai-chatbot-types-guide.jpg 1456w" type="image/jpeg">
+<img alt="AI Chatbot Types and Selection Guide | Comprehensive Analysis of 5 Types and Implementation Points" class="lazy-image object-contain rounded-lg loaded" data-original-src="/images/blog/ai-chatbot-types-guide.jpg" decoding="async" src="/images/blog/ai-chatbot-types-guide.jpg"/>
+</source></picture>
+</div>
+</div>
+<div class="lg:flex lg:w-1/2 lg:items-center">
+<div class="py-4 lg:w-full lg:flex-none lg:pr-0">
+<h1 class="mt-6 lg:text-[1.75rem] xl:text-[2rem] font-semibold tracking-tight text-heading leading-tight" data-dynamic-font="" data-text-length="98">
+            AI Chatbot Types and Selection Guide | Comprehensive Analysis of 5 Types and Implementation Points
+          </h1>
+<p class="mt-8 text-lg/7 text-secondary sm:text-xl/8 prose-links">A comprehensive guide to the 5 types of AI chatbots (rule-based, AI-powered, <a data-lb="1" href="/en/glossary/generative-ai/" title="Generative AI glossary entry">generative AI</a>, <a data-lb="1" href="/blog/rag-vs-cag-knowledge-augmentation/" title="Explore the differences between Retrieval-Augmented Generation (RAG) and Cache-Augmented Generation (CAG), two powerful techniques for enhancing large language models with external knowledge. Learn when to use each approach and how they solve the knowledge gap problem in AI.">RAG</a>, and hybrid). Learn their characteristics, advantages and disadvantages, selection criteria by use case, and implementation considerations to confidently deploy chatbots even for small and medium-sized businesses.</p>
+<div class="mt-6 flex flex-col gap-4">
+<div class="pt-4 pb-4 gap-3 flex flex-wrap justify-start" id="tags-container-default">
+<a class="tag-visible" href="/en/tags/ai-chatbot/">
+<span class="badge-base badge-gray badge-with-border not-prose whitespace-nowrap [&amp;_a]:no-underline [&amp;_a]:!text-inherit [&amp;_a]:px-0.5 [&amp;_.link-building-link]:!no-underline [&amp;_.link-building-link]:!text-inherit">
+    AI Chatbot
+  </span>
+</a>
+<a class="tag-visible" href="/en/tags/chatbot-types/">
+<span class="badge-base badge-gray badge-with-border not-prose whitespace-nowrap [&amp;_a]:no-underline [&amp;_a]:!text-inherit [&amp;_a]:px-0.5 [&amp;_.link-building-link]:!no-underline [&amp;_.link-building-link]:!text-inherit">
+    Chatbot Types
+  </span>
+</a>
+<a class="tag-visible" href="/en/tags/implementation-guide/">
+<span class="badge-base badge-gray badge-with-border not-prose whitespace-nowrap [&amp;_a]:no-underline [&amp;_a]:!text-inherit [&amp;_a]:px-0.5 [&amp;_.link-building-link]:!no-underline [&amp;_.link-building-link]:!text-inherit">
+    Implementation Guide
+  </span>
+</a>
+</div>
+</div>
+<div class="mt-10 flex items-center gap-x-6">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white">
+<div class="wrapper">
+<div class="mx-auto max-w-none prose">
+<h2 id="ai-chatbot-fundamentals">AI Chatbot Fundamentals</h2>
+<p>An <a data-lb="1" href="/en/glossary/ai-chatbot/" title="AI Chatbot glossary entry">AI chatbot</a> is a program that uses <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence glossary entry">artificial intelligence</a> to communicate with customers using natural language. Today, they are used in various scenarios including <a data-lb="1" href="/en/glossary/customer-support/" title="Customer Support glossary entry">customer support</a>, information guidance, and business efficiency improvements.</p>
+<p>This article provides clear explanations of the differences and characteristics of each AI <a data-lb="1" href="/en/glossary/chatbot/" title="Chatbot glossary entry">chatbot</a> type, along with selection criteria. We will also introduce the features of SmartWeb’s AI chatbot development service.</p>
+<h2 id="what-is-an-ai-chatbot">What is an AI Chatbot?</h2>
+<h3 id="definition-of-ai-chatbot">Definition of AI Chatbot</h3>
+<p>An AI chatbot is software built using artificial intelligence. This program can converse in natural language just like humans. It can interact through text or voice on websites, apps, LINE, and other SNS platforms.</p>
+<p>Modern AI chatbots combine technologies such as <a data-lb="1" href="/blog/how-to-use-large-language-models-effectively/" title="Learn practical applications of large language models like ChatGPT, explore different LLM platforms, understand how these models work under the hood, and discover how to leverage them effectively in your daily work and life.">large language models</a>, deep learning, and natural language processing. This allows them to automatically generate human-like responses to customer questions.</p>
+<h3 id="basic-mechanisms">Basic Mechanisms</h3>
+<p>Traditional chatbots responded based on predetermined rules or scenarios. Modern AI chatbots learn patterns and context from large amounts of text data. Therefore, they can flexibly handle questions they’ve never encountered before.</p>
+<p>For example, in customer support, FAQs, and automated guidance, they can accurately understand what customers need and provide relevant information and suggestions.</p>
+<h3 id="utilization-and-evolution">Utilization and Evolution</h3>
+<p>AI chatbots have evolved from simple auto-response tools to systems capable of natural, human-like conversations. They are used in customer service, business efficiency, information provision, and many other areas. They increasingly bring convenience to customer lives and work.</p>
+<p>Small and medium-sized businesses are particularly interested in AI adoption that doesn’t require dedicated IT staff. For details, see " <a href="https://www.smartweb.jp/start-using-ai-today/" rel="nofollow noopener noreferrer" target="_blank">AI Adoption Guide for SMBs Without IT Staff: Get Started Today</a>".</p>
+<h2 id="five-main-types-of-chatbots">Five Main Types of Chatbots</h2>
+<p>Chatbots can be categorized into five types based on their response mechanisms and AI technologies used. Each type can be selected according to the intended purpose and required performance.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Main Features</th>
+<th>Suitable Use Cases</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rule-Based/)</td>
+<td>Responds with predetermined scenarios</td>
+<td>FAQ, routine tasks</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>AI-Powered (Machine Learning)</td>
+<td>Flexible responses possible</td>
+<td>Complex inquiries</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Generative AI</td>
+<td>Automatically generates natural text</td>
+<td>Creative dialogue</td>
+<td>Medium-High</td>
+</tr>
+<tr>
+<td>RAG</td>
+<td>Searches for and responds with latest information</td>
+<td>Specialized knowledge domains</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Hybrid</td>
+<td>Combines multiple mechanisms</td>
+<td>Wide range of business operations</td>
+<td>Medium-High</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rule-based-scenario-based">Rule-Based (Scenario-Based)</h3>
+<p>This type returns predetermined answers based on pre-set keywords, question patterns, or scenarios. It’s suitable for FAQ auto-responses and automation of routine tasks.</p>
+<p><strong>Advantages:</strong>- Simple system creation and operation</p>
+<ul>
+<li>Complete control over response content</li>
+<li>Relatively low implementation cost</li>
+</ul>
+<p><strong>Disadvantages:</strong>- Cannot handle unexpected questions</p>
+<ul>
+<li>Lacks flexibility</li>
+</ul>
+<p><strong>Technical Background:</strong>Rule-based/) systems use finite state machines and conditional branching. Although simple, they operate reliably and are still widely used by many companies.</p>
+<h3 id="ai-powered-machine-learning">AI-Powered (Machine Learning)</h3>
+<p>This type analyzes customer statements using natural language processing. It then uses machine learning to find patterns and respond flexibly. It can handle complex questions and ambiguous expressions.</p>
+<p><strong>Advantages:</strong>- Can handle diverse expressions</p>
+<ul>
+<li>Becomes smarter with use</li>
+<li>Understands ambiguous questions</li>
+</ul>
+<p><strong>Disadvantages:</strong>- Requires preparation of training data</p>
+<ul>
+<li>May generate unexpected responses</li>
+</ul>
+<p><strong>Technical Background:</strong>AI-powered chatbots use classification techniques and <a data-lb="1" href="/en/glossary/neural-networks/" title="Neural Networks glossary entry">neural networks</a>. Their ability to handle diverse statements has been demonstrated. For those interested in AI performance evaluation, see " <a href="https://www.smartweb.jp/ai-evaluation-japanese-benchmarks/" rel="nofollow noopener noreferrer" target="_blank">AI Report Card: Japanese-Proficient vs. Struggling AI - How to Judge the Difference?</a>".</p>
+<h3 id="generative-ai">Generative AI</h3>
+<p>Like <a data-lb="1" href="/blog/how-to-use-large-language-models-effectively/" title="Learn practical applications of large language models like ChatGPT, explore different LLM platforms, understand how these models work under the hood, and discover how to leverage them effectively in your daily work and life.">ChatGPT</a>, generative AI automatically creates text from large-scale data. It utilizes pre-trained knowledge to enable natural conversation and creative responses.</p>
+<p><strong>Advantages:</strong>- Human-like natural conversation</p>
+<ul>
+<li>Can handle unregistered questions</li>
+<li>Can make creative suggestions</li>
+</ul>
+<p><strong>Disadvantages:</strong>- Risk of hallucination</p>
+<ul>
+<li>Consistency of responses is a challenge</li>
+</ul>
+<p><strong>Technical Background:</strong>Generative AI is based on large language models. Using the latest models provided by <a data-lb="1" href="/en/glossary/openai/" title="OpenAI glossary entry">OpenAI</a>, Google, and <a data-lb="1" href="/en/glossary/anthropic/" title="Anthropic glossary entry">Anthropic</a> significantly improves the accuracy of natural text generation.</p>
+<h3 id="rag-retrieval-augmented-generation">RAG (Retrieval-Augmented Generation)</h3>
+<p>RAG is a type where AI searches external databases or documents and uses that information to create answers. It provides highly reliable responses when the latest information or specialized knowledge is needed.</p>
+<p><strong>Advantages:</strong>- Responses based on latest information</p>
+<ul>
+<li>Significantly reduces <a data-lb="1" href="/en/glossary/hallucination/" title="Hallucination glossary entry">hallucination</a></li>
+<li>Excels at handling specialized knowledge</li>
+</ul>
+<p><strong>Disadvantages:</strong>- Requires building search databases</p>
+<ul>
+<li>System becomes complex</li>
+</ul>
+<p><strong>Technical Background:</strong>RAG combines information retrieval with generative AI. It excels at fact-checking and handling new information compared to traditional generative AI. <a data-lb="1" href="/en/glossary/flowhunt/" title="FlowHunt glossary entry">FlowHunt</a>, used by SmartWeb, enables chatbot construction using this RAG technology.</p>
+<p>For those interested in learning more about RAG mechanisms and applications, see " <a href="https://www.smartweb.jp/introduction-to-rag/" rel="nofollow noopener noreferrer" target="_blank">How AI Answers Accurately with Latest Information: Introduction to RAG (Retrieval-Augmented Generation)</a>". We also recommend deepening your understanding of " <a href="https://www.smartweb.jp/knowledge-base-faq-guide-2025/" rel="nofollow noopener noreferrer" target="_blank">Knowledge Base (FAQ)</a>" which can be used in combination with RAG.</p>
+<h3 id="hybrid">Hybrid</h3>
+<p>The hybrid type combines rule-based/), AI-powered, and generative <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI systems</a>. For example, it uses rules for scenarios and FAQs, while using AI for complex questions, leveraging multiple mechanisms. It can be utilized in various business operations and scenarios.</p>
+<p><strong>Advantages:</strong>- Leverages strengths of each type</p>
+<ul>
+<li>Can handle wide range of operations</li>
+<li>Balances accuracy and flexibility</li>
+</ul>
+<p><strong>Disadvantages:</strong>- Design becomes complex</p>
+<ul>
+<li>Requires specialized knowledge for operational management</li>
+</ul>
+<p><strong>Technical Background:</strong>Research shows that dialogue systems combining multiple models improve response accuracy and business usability.</p>
+<hr/>
+<blockquote>
+<p><strong>Key Point:</strong>Each chatbot type has its own characteristics. Selecting the optimal type based on objectives and required business operations can significantly change customer usability and work efficiency.</p>
+</blockquote>
+<h2 id="performance-and-functionality-differences">Performance and Functionality Differences</h2>
+<h3 id="what-is-ai-chatbot-performance">What is AI Chatbot “Performance”?</h3>
+<p>Performance indicates how accurately and human-like an AI chatbot can respond. Evaluation metrics include:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Description</th>
+<th>Importance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accuracy Rate</td>
+<td>Percentage of correct answers to customer questions</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Resolution Rate</td>
+<td>Percentage of actual problem resolutions</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Hallucination Rate</td>
+<td>Percentage of incorrect or irrelevant responses</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<p>Generative AI and AI-powered chatbots have high performance in these areas and can handle natural conversation and difficult questions. Rule-based types are strong with predetermined patterns but have limitations with complex interactions.</p>
+<h3 id="what-is-ai-chatbot-functionality">What is AI Chatbot “Functionality”?</h3>
+<p>Functionality refers to what tasks and operations an AI chatbot can handle. For example:</p>
+<ul>
+<li>Automated FAQ responses</li>
+<li>Integration with external databases</li>
+<li>Multi-channel support</li>
+<li>API integration</li>
+<li>Automated form responses</li>
+</ul>
+<p>Hybrid and generative AI types can be equipped with many functions such as business support and automated form responses.</p>
+<h3 id="selecting-performance-and-functionality">Selecting Performance and Functionality</h3>
+<p>When choosing an AI chatbot, compare both “performance” (how accurately it can respond) and “functionality” (what business operations it can handle). Selecting a type that matches your objectives and use cases enables more effective utilization.</p>
+<h2 id="learning-method-differences">Learning Method Differences</h2>
+<p>Understanding how AI chatbots become smarter helps in selecting the appropriate system. Let’s look at the main learning methods.</p>
+<h3 id="supervised-learning">Supervised Learning</h3>
+<p>In <a data-lb="1" href="/en/glossary/supervised-learning/" title="Supervised Learning glossary entry">supervised learning</a>, the AI chatbot is given data with correct answers provided by humans to learn proper response methods.</p>
+<p><strong>Example:</strong>Prepare many examples like “I want to cancel my order” → “I’ll guide you through the cancellation process”. The AI uses these examples to statistically derive appropriate responses.</p>
+<p><strong>Characteristics:</strong>- Can answer with high accuracy</p>
+<ul>
+<li>Requires preparation of quality data</li>
+<li>Regular updates are essential</li>
+</ul>
+<h3 id="unsupervised-learning">Unsupervised Learning</h3>
+<p>In unsupervised learning, without providing correct answers, AI finds patterns and features on its own from large amounts of conversation data.</p>
+<p><strong>Characteristics:</strong>- Flexibly handles unknown questions</p>
+<ul>
+<li>Data preparation is relatively simple</li>
+<li>Output quality can be unstable</li>
+</ul>
+<h3 id="reinforcement-learning">Reinforcement Learning</h3>
+<p>In reinforcement learning, the AI chatbot receives evaluations based on conversation results while repeating trial and error.</p>
+<p>Correct responses receive “rewards” while incorrect responses receive “penalties”. This way, AI continues to learn to provide better responses.</p>
+<h3 id="continuous-learningonline-learning">Continuous Learning/Online Learning</h3>
+<p>In continuous learning, the AI chatbot updates knowledge in real-time to adapt to new questions and changes in business content. This allows flexible response to changing situations and new information even after implementation.</p>
+<blockquote>
+<p><strong>Key Point:</strong>Each AI chatbot learning method has its own characteristics. Selecting learning methods based on objectives and operational methods enables more practical and accurate chatbot operation.</p>
+</blockquote>
+<h2 id="use-case-based-chatbot-selection">Use Case-Based Chatbot Selection</h2>
+<h3 id="optimal-selection-based-on-business-content-and-objectives">Optimal Selection Based on Business Content and Objectives</h3>
+<p>When choosing an AI chatbot, thoroughly confirm the implementation objectives and actual business content. The suitable chatbot type varies by industry and use case.</p>
+<h3 id="for-customer-support">For Customer Support</h3>
+<p>“Rule-based” or “AI-powered” types are suitable for FAQ (frequently asked questions) and predetermined inquiry responses.</p>
+<p><strong>Recommended Selection:</strong>- Need quick, accurate responses → <strong>Rule-based</strong>- Complex questions, asked in various expressions → <strong>AI-powered</strong>or <strong>Generative AI</strong>SmartWeb can build efficient customer support systems by combining LiveAgent with FlowHunt. For actual implementation cases and success strategies, see " <a href="https://www.smartweb.jp/ai-customer-support-2025-guide/" rel="nofollow noopener noreferrer" target="_blank">2025 AI Customer Support Guide: Success Strategies from Amazon &amp; Salesforce to SMBs</a>".</p>
+<h3 id="internal-helpdesk-and-business-efficiency">Internal Helpdesk and Business Efficiency</h3>
+<p>“AI-powered” or “Hybrid” types are suitable for internal inquiries and assisting daily operations.</p>
+<p><strong>Reasons:</strong>- Internal operations require specialized terminology and knowledge</p>
+<ul>
+<li>AI types can continue learning and growing</li>
+<li>Hybrid types are effective for questions spanning multiple operations</li>
+</ul>
+<h3 id="marketing-and-sales-support">Marketing and Sales Support</h3>
+<p>“Generative AI” or “RAG” types are convenient for product recommendations and finding new customers.</p>
+<p><strong>Reasons:</strong>- Can make personalized suggestions</p>
+<ul>
+<li>Can utilize latest market data</li>
+<li>Can quickly respond to market changes</li>
+</ul>
+<h3 id="selection-checklist">Selection Checklist</h3>
+<p>When selecting chatbots, make the following points measurable:</p>
+<ul>
+<li>Response accuracy (accuracy rate)</li>
+<li>Implementation and operational costs</li>
+<li>Integration capabilities with other systems</li>
+<li>Security and privacy measures</li>
+<li>Percentage of operations that can be automated</li>
+<li>Customer satisfaction levels</li>
+</ul>
+<blockquote>
+<p><strong>Key Point:</strong>After clearly defining business content and objectives, selecting chatbots based on specific evaluation methods and actual case studies makes it easier to achieve maximum effectiveness.</p>
+</blockquote>
+<h2 id="implementation-considerations">Implementation Considerations</h2>
+<h3 id="clarifying-objectives-and-requirements">Clarifying Objectives and Requirements</h3>
+<p>When implementing AI chatbots, first clearly identify the issues to solve and business flows. It’s important to specifically determine what functions are needed and which operations will use them.</p>
+<p><strong>Specific Goal Examples:</strong>- Reduce inquiries by 30%</p>
+<ul>
+<li>Achieve customer satisfaction above 80 points</li>
+<li>Shorten response time by 50%</li>
+</ul>
+<p>Vague objectives make it difficult to determine which system to choose, and measuring effectiveness after implementation becomes challenging.</p>
+<h3 id="operational-structure-and-cost-design">Operational Structure and Cost Design</h3>
+<p>AI chatbots require not only initial implementation costs but also ongoing costs for operation, maintenance, and regular updates.</p>
+<p><strong>Items to Consider:</strong>| Item | Content | Importance |
+|——|——|——–|
+| Initial Cost | System construction, setup work | High |
+| Monthly Cost | Usage fees, license fees | High |
+| Operational Cost | Update work, data maintenance | Medium |
+| Personnel Cost | Staff assignment, training | Medium |</p>
+<p>Generative AI and hybrid types especially require ongoing operational effort and costs. Before implementation, organize who will be responsible, what support structure to create, and how operations will flow.</p>
+<p>Estimating TCO in advance can reduce unexpected expenses and troubles.</p>
+<h3 id="security-and-privacy-measures">Security and Privacy Measures</h3>
+<p>Sufficient care is needed to ensure that personal information and confidential information entered by customers are not used for AI training or leaked externally.</p>
+<p><strong>Necessary Measures:</strong>- Compliance with Japan’s Personal Information Protection Law</p>
+<ul>
+<li>Consideration of Europe’s GDPR (for overseas expansion)</li>
+<li>Data encryption</li>
+<li>Access control implementation</li>
+<li>Restriction of external data transmission</li>
+</ul>
+<p>Choose designs that prevent chatbot response data from being sent to or stored by external AI models. For details on AI chatbot safety measures, see " <a href="https://www.smartweb.jp/ai-chatbot-safety/" rel="nofollow noopener noreferrer" target="_blank">Safety Measures You Should Know Before AI Chatbot Implementation</a>".</p>
+<h3 id="accountability-to-users">Accountability to Users</h3>
+<p>It’s necessary to clearly communicate to chatbot users how personal information is handled and the purpose of conversation content usage.</p>
+<p><strong>Areas Requiring Special Attention:</strong>- Health consultations</p>
+<ul>
+<li>Mental care</li>
+<li>Financial advice</li>
+</ul>
+<p>In these areas, clearly state what AI responses can and cannot do, and incorporate mechanisms to connect to human operators when necessary. This makes users feel more comfortable using the system.</p>
+<blockquote>
+<p><strong>Important:</strong>Thoroughly preparing objectives, operational methods, and legal and ethical rules before implementing AI chatbots helps avoid troubles and operate safely.</p>
+</blockquote>
+<h2 id="future-of-ai-chatbots-and-trends">Future of AI Chatbots and Trends</h2>
+<h3 id="evolution-of-multilingual-and-multimodal-support">Evolution of Multilingual and Multimodal Support</h3>
+<p>AI chatbots will further strengthen multilingual support capabilities. They will enable more natural interactions with people from various countries and regions.</p>
+<p>Recently, technologies like speech recognition, image analysis, and multimodal technology including video understanding are being introduced.</p>
+<p>Customers can communicate with AI not only through text input but also using voice, photos, and videos.</p>
+<p><strong>Industry Trends:</strong>Research firm Gartner predicts rapid adoption of multimodal AI by 2026. Generative AI in particular is expected to become capable of integrating text, voice, images, and video in enterprise applications.</p>
+<h3 id="deepening-of-automated-learning-and-personalization">Deepening of Automated Learning and Personalization</h3>
+<p>AI chatbots will automatically learn from customer usage data and provide optimal responses and services tailored to each individual.</p>
+<p>With advances in technologies like continuous learning and reinforcement learning, AI acquires new knowledge while being used. This enables services that can flexibly respond to each customer’s preferences and situations, rather than uniform responses.</p>
+<h3 id="emphasis-on-ai-ethics-and-governance">Emphasis on AI Ethics and Governance</h3>
+<p>As AI chatbot usage expands, interest in AI ethics such as fairness, transparency, and accountability, as well as management methods, is increasing.</p>
+<p><strong>Research Institution Findings:</strong>MIT research points out that while AI usage reduces user burden, it may also affect long-term thinking and memory.</p>
+<p>Therefore, the following are considered important:</p>
+<ul>
+<li>Disclosure of AI mechanisms and algorithms</li>
+<li>Proper explanation to users</li>
+<li>Operation considering balance between technology and society</li>
+<li>Elimination of bias</li>
+</ul>
+<h3 id="future-ai-chatbots">Future AI Chatbots</h3>
+<p>Future AI chatbots will evolve in the following directions:</p>
+<ol>
+<li><strong>Support for Diverse Inputs</strong>- Freely combining text, voice, images, and video</li>
+<li><strong>Individual Optimization</strong>- Services tailored to each customer</li>
+<li><strong>Improved Reliability</strong>- System design considering ethics</li>
+<li><strong>Utilization Across Various Fields</strong>- Business, education, healthcare, public services, etc.</li>
+</ol>
+<p>These technologies will add new value to our lives and societal systems.</p>
+<h2 id="smartwebs-ai-chatbot-development-service">SmartWeb’s AI Chatbot Development Service</h2>
+<h3 id="high-flexibility-through-hybrid-architecture">High Flexibility Through Hybrid Architecture</h3>
+<p>SmartWeb’s AI chatbot development service uses FlowHunt to realize a hybrid type combining RAG, generative AI, and rule-based systems.</p>
+<p>This mechanism can handle a wide range of content from frequently asked questions to complex customized responses.</p>
+<p><strong>RAG Strengths:</strong>It searches for relevant information from the customer’s unique external knowledge base, and generative AI creates highly accurate responses based on that information. By using a unique knowledge base, it can provide reliable responses without using other companies’ information or incorrect data.</p>
+<p><strong>System Configuration:</strong>- <strong>Rule-Based Engine</strong>- Immediately responds to predetermined questions like FAQs</p>
+<ul>
+<li><strong>Generative AI</strong>- Creates flexible responses even to unregistered questions (using latest models from OpenAI, Google, and Anthropic)</li>
+<li><strong>RAG Search</strong>- Retrieves accurate information from customer’s unique knowledge base</li>
+</ul>
+<h3 id="multi-channel-unified-management-and-auto-response">Multi-Channel Unified Management and Auto-Response</h3>
+<p>SmartWeb utilizes LiveAgent to enable unified management of multiple channels including websites, LINE, SNS, and email. Consistent responses are possible regardless of which contact point receives inquiries.</p>
+<p><strong>Main Functions:</strong>| Function | Content | Effect |
+|——|——|——|
+| 24/7/365 Support | AI auto-response always available | Zero missed responses |
+| AI Email Auto-Response | Automatically creates response drafts for inquiry forms and emails | Dramatically shortens response time |
+| Multi- Channel Integration | Unified management of Web, LINE, email | Unified response quality |
+| Ticket Management | Batch management of inquiry history | Visualization of response status |</p>
+<p>This enables business efficiency while maintaining customer response quality. For the actual capabilities of AI email auto-response, see " <a href="https://www.smartweb.jp/ai-email-response-examples/" rel="nofollow noopener noreferrer" target="_blank">Can AI Really Write Inquiry Email Responses? Accuracy and Capabilities Shown Through Examples</a>".</p>
+<h3 id="continuous-learning-and-customizability">Continuous Learning and Customizability</h3>
+<p>Chatbots using FlowHunt continue learning after operation begins and are updated to adapt to business and era changes.</p>
+<p><strong>Use Cases:</strong>- Order automation for EC sites</p>
+<ul>
+<li>24/7 internal helpdesk support</li>
+<li>Sales support bots (product guidance, quote creation)</li>
+<li>Integration with reservation systems</li>
+</ul>
+<p>Because they can be customized to match intended use, they can be implemented in the optimal form for customer businesses.</p>
+<h3 id="implementation-benefits">Implementation Benefits</h3>
+<p>Implementing SmartWeb’s AI chatbot development service provides the following benefits:</p>
+<ol>
+<li><strong>Business Efficiency</strong>- Can manage inquiries from multiple channels in one place, preventing missed responses and dependency on specific individuals</li>
+<li><strong>High- Precision Auto-Response</strong>- Leveraging strengths of both AI and rule-based systems enables accurate and efficient auto-responses</li>
+<li><strong>Cost Reduction</strong>- Automated form response suggestions and business process automation reduce personnel costs</li>
+<li><strong>Latest AI Technology Utilization</strong>- Uses latest models from OpenAI, Google, and Anthropic to consistently provide high-quality responses</li>
+<li><strong>Hallucination Countermeasures</strong>- RAG technology significantly reduces generation of incorrect information</li>
+</ol>
+<p>SmartWeb’s AI chatbot development service is a next-generation solution supporting corporate customer response and business automation by combining FlowHunt and LiveAgent.</p>
+</div>
+</div>
+</div>
+<div class="wrapper dark">
+<div style="
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    background-color: #000000;
+    background-image: 
+      linear-gradient(rgba(99, 102, 241, 0.15) 2px, transparent 2px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.15) 2px, transparent 2px);
+    background-size: 40px 40px;
+    min-height: 400px;
+  ">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: 5px solid rgba(99, 102, 241, 0.5); pointer-events: none; z-index: 999;"></div>
+<div style="position: absolute; top: 20px; left: 20px; width: 80px; height: 80px; border-left: 3px solid rgba(99, 102, 241, 0.7); border-top: 3px solid rgba(99, 102, 241, 0.7); z-index: 10;"></div>
+<div style="position: absolute; top: 20px; right: 20px; width: 80px; height: 80px; border-right: 3px solid rgba(99, 102, 241, 0.7); border-top: 3px solid rgba(99, 102, 241, 0.7); z-index: 10;"></div>
+<div style="position: absolute; bottom: 20px; left: 20px; width: 80px; height: 80px; border-left: 3px solid rgba(99, 102, 241, 0.7); border-bottom: 3px solid rgba(99, 102, 241, 0.7); z-index: 10;"></div>
+<div style="position: absolute; bottom: 20px; right: 20px; width: 80px; height: 80px; border-right: 3px solid rgba(99, 102, 241, 0.7); border-bottom: 3px solid rgba(99, 102, 241, 0.7); z-index: 10;"></div>
+<div style="position: relative; z-index: 20; padding: 6rem 1.5rem;">
+<div style="max-width: 42rem; margin: 0 auto; text-align: center;">
+<h2 style="font-size: 2.25rem; font-weight: 600; color: #ffffff; margin-bottom: 1.5rem;">
+          Expand your knowledge with our resources
+        </h2>
+<p style="font-size: 1.125rem; color: #d1d5db; margin-bottom: 2.5rem; max-width: 36rem; margin-left: auto; margin-right: auto;">
+          Explore our comprehensive library of articles, guides, and tutorials to deepen your understanding of key concepts and stay up-to-date with the latest developments.
+        </p>
+<div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+<a aria-label="Browse resources" class="btn-primary-alternate dark:btn-primary-alternate-dark px-3 py-2 not-prose group" href="#" target="_self">
+      Browse resources
+      
+      
+    </a>
+<a aria-label="Contact our experts" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" href="#" target="_self">
+      Contact our experts
+      
+        <span aria-hidden="true" class="ml-1.5 btn-arrow">
+<svg class="map[class:w-5 h-5 p-0.5 icon:arrow-up-right]" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.5 19.5L19.5 4.5M19.5 4.5L8.25 4.5M19.5 4.5V15.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/blog/ai-chatbot-types-guide/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<script src="/js/app.js?v=20260111165525"></script>
+</body>
+</html>

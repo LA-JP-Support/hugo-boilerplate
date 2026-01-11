@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>オムニチャネル・カスタマーエクスペリエンス | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/omnichannel-customer-experience/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="シームレスなクロスチャネルエンゲージメントを実現するための、オムニチャネル・カスタマーエクスペリエンス戦略、実装方法、ベストプラクティスに関する包括的なガイド。" name="description"/>
+<meta content="オムニチャネル・カスタマーエクスペリエンス, クロスチャネル統合, カスタマージャーニーマッピング, 統合顧客データ, シームレスな顧客エンゲージメント" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/omnichannel-customer-experience/" property="og:url"/>
+<meta content="オムニチャネル・カスタマーエクスペリエンス | SmartWeb" property="og:title"/>
+<meta content="シームレスなクロスチャネルエンゲージメントを実現するための、オムニチャネル・カスタマーエクスペリエンス戦略、実装方法、ベストプラクティスに関する包括的なガイド。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/omnichannel-customer-experience/" name="twitter:url"/>
+<meta content="オムニチャネル・カスタマーエクスペリエンス | SmartWeb" name="twitter:title"/>
+<meta content="シームレスなクロスチャネルエンゲージメントを実現するための、オムニチャネル・カスタマーエクスペリエンス戦略、実装方法、ベストプラクティスに関する包括的なガイド。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190816" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190816" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190816"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126096741115000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126096741115000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126096741115000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126096741115000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">オムニチャネル・カスタマーエクスペリエンス</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        オムニチャネル・カスタマーエクスペリエンス
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Omnichannel Customer Experience
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          シームレスなクロスチャネルエンゲージメントを実現するための、オムニチャネル・カスタマーエクスペリエンス戦略、実装方法、ベストプラクティスに関する包括的なガイド。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                オムニチャネル・カスタマーエクスペリエンス
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                クロスチャネル統合
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                カスタマージャーニーマッピング
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                統合顧客データ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                シームレスな顧客エンゲージメント
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="オムニチャネルカスタマーエクスペリエンスとは">オムニチャネルカスタマーエクスペリエンスとは?</h2>
+<p>オムニチャネルカスタマーエクスペリエンスは、利用可能なすべてのコミュニケーションチャネル、タッチポイント、プラットフォームをシームレスに統合し、統一された一貫性のある、パーソナライズされた顧客ジャーニーを創出する包括的な顧客エンゲージメントアプローチです。チャネルを個別に運用するマルチチャネル戦略とは異なり、オムニチャネルエクスペリエンスは、ウェブ、モバイル、ソーシャルメディア、メール、電話、実店舗など、すべてのチャネルにおけるあらゆるインタラクションが相互接続され、コンテキストを認識することを保証します。このアプローチは、現代の顧客が会話、好み、取引履歴の連続性を維持しながら、チャネル間を流動的に移動することを期待していることを認識しています。</p>
+<p>オムニチャネルカスタマーエクスペリエンスの基盤は、顧客データ、テクノロジーシステム、組織プロセスの統合にあり、顧客がどのように、どこでエンゲージメントを選択しても、一貫したブランドエクスペリエンスを提供します。この戦略には、部門、チャネル、データソース間の従来のサイロを打破し、すべてのインタラクションに情報を提供する顧客の単一ビューを作成することが必要です。オムニチャネルアプローチは、顧客が個別のチャネルという観点で考えるのではなく、オンラインでの閲覧、店舗訪問、カスタマーサービスへの電話、ソーシャルメディアでのエンゲージメントなど、すべてのタッチポイントにおいてブランドとの体験が一貫性があり、補完的であることを期待していることを認識しています。</p>
+<p>成功したオムニチャネルカスタマーエクスペリエンスは、顧客がチャネル間を移行する際にコンテキストと連続性を維持する能力、包括的な顧客プロファイルに基づいてパーソナライズされた推奨事項とコンテンツを提供する能力、すべてのタッチポイントで一貫したサービス品質とブランドメッセージングを提供する能力によって特徴付けられます。このアプローチは、デジタル時代における顧客期待の進化に伴い、ますます重要になっており、調査によると、複数のチャネルでブランドとエンゲージメントする顧客は、単一チャネルの顧客と比較して、より高いライフタイムバリュー、増加したロイヤルティ、より大きな満足度を示すことが示されています。オムニチャネル戦略は、チャネル中心から顧客中心の思考への根本的な転換を表し、組織の利便性や従来のチャネル境界よりも顧客の好みのジャーニーを優先します。</p>
+<h2 id="オムニチャネルの主要テクノロジーとコンポーネント">オムニチャネルの主要テクノロジーとコンポーネント</h2>
+<p><strong>カスタマーデータプラットフォーム(CDP)</strong><!-- -->は、すべてのタッチポイントとチャネルから顧客データを収集、統合、活用するための中心的なハブとして機能します。CDPは、行動、取引、人口統計データを統合することで包括的な顧客プロファイルを作成し、データプライバシーとコンプライアンス基準を維持しながら、すべてのチャネルでパーソナライズされた体験を可能にします。</p>
+<p><strong>顧客関係管理(CRM)統合</strong>は、すべてのチャネルにわたる顧客インタラクションと関係を管理するための運用バックボーンを提供します。最新のCRMシステムは、さまざまなタッチポイントと統合して会話履歴を維持し、顧客の好みを追跡し、すべてのチームメンバーがインタラクション中に完全な顧客コンテキストにアクセスできるようにします。</p>
+<p><strong>マーケティングオートメーションプラットフォーム</strong>は、顧客の行動、好み、ジャーニーステージに基づいて、複数のチャネルにわたるパーソナライズされたコミュニケーションとキャンペーンを調整します。これらのプラットフォームは、トリガーメッセージング、動的コンテンツ配信、個々の顧客ニーズとチャネルの好みに適応しながら一貫性を維持する調整されたキャンペーンを可能にします。</p>
+<p><strong>リアルタイム分析とビジネスインテリジェンス</strong>システムは、チャネル全体の顧客行動を理解し、最適化の機会を特定し、オムニチャネル戦略の有効性を測定するために必要な洞察を提供します。これらのツールは、データ駆動型の意思決定と顧客体験の継続的な改善を可能にします。</p>
+<p><strong>APIファーストアーキテクチャ</strong>は、標準化された通信プロトコルを提供することで、異なるシステム、プラットフォーム、チャネル間のシームレスな統合を保証します。このアーキテクチャアプローチは、リアルタイムのデータ共有、タッチポイント全体での一貫した機能性、新しいチャネルやテクノロジーが登場した際に追加する柔軟性を可能にします。</p>
+<p><strong>アイデンティティ解決テクノロジー</strong>は、異なるデバイス、チャネル、タッチポイント間の顧客インタラクションを接続し、統一された顧客アイデンティティを作成します。このテクノロジーは、顧客が匿名ブラウジング、認証されたセッション、オフラインインタラクション間を移動する際に連続性を維持するために不可欠です。</p>
+<p><strong>コンテンツ管理とパーソナライゼーションエンジン</strong>は、顧客データ、行動、好みに基づいて、すべてのチャネルで関連性のあるパーソナライズされたコンテンツと体験を提供します。これらのシステムは、チャネルやタッチポイントに関係なく、メッセージング、オファー、推奨事項が一貫性があり、コンテキストに適していることを保証します。</p>
+<h2 id="オムニチャネルカスタマーエクスペリエンスの仕組み">オムニチャネルカスタマーエクスペリエンスの仕組み</h2>
+<p>オムニチャネルカスタマーエクスペリエンスは、ウェブサイトのインタラクション、モバイルアプリの使用、ソーシャルメディアのエンゲージメント、メールの応答、電話、店舗訪問など、すべての顧客タッチポイントからの<strong>包括的なデータ収集</strong>から始まる洗練されたワークフローを通じて動作します。このデータは継続的に収集され、リアルタイムで処理されて顧客プロファイルを構築および更新します。</p>
+<p><strong>データ統合と統一</strong>は、収集された情報が中央のカスタマーデータプラットフォームに流れ込み、アイデンティティ解決テクノロジーがデバイスとチャネル全体で個々の顧客にインタラクションをマッチングする際に発生します。システムは、行動パターン、好み、購入履歴、コミュニケーションの好みを含む統一された顧客プロファイルを作成します。</p>
+<p><strong>リアルタイムプロファイルエンリッチメント</strong>は、新しいインタラクションとデータポイントが顧客プロファイルに自動的に追加されることで発生し、すべてのタッチポイントが最新かつ完全な顧客情報にアクセスできるようにします。これには、好みの更新、ジャーニーの進捗の追跡、サービスの問題や機会の記録が含まれます。</p>
+<p><strong>コンテキストに応じた体験提供</strong>は、顧客が任意のチャネルとエンゲージメントする際に活性化され、システムは自動的に完全なプロファイルとインタラクション履歴を取得して体験に情報を提供します。カスタマーサービス担当者、ウェブサイトのパーソナライゼーションエンジン、モバイルアプリ、マーケティングオートメーションプラットフォームはすべて、同じ統一された顧客ビューにアクセスします。</p>
+<p><strong>クロスチャネルオーケストレーション</strong>は、1つのチャネルで実行されたアクションが他のチャネルでの体験に適切に影響を与えることを保証します。たとえば、モバイルでカートに追加されたアイテムはウェブサイトに表示され、カスタマーサービスの電話は最近のオンライン行動を参照し、メールキャンペーンは店舗での購入履歴を反映します。</p>
+<p><strong>継続的な最適化</strong>は、顧客行動、チャネルパフォーマンス、体験の有効性の継続的な分析を通じて発生します。<a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>アルゴリズムはパターンを特定し、顧客のニーズを予測し、オムニチャネル戦略の改善を推奨します。</p>
+<p><strong>ワークフローの例</strong>:顧客がモバイルアプリで製品を調査し、閲覧行動に基づいてパーソナライズされたメール推奨を受け取り、スタッフがオンライン活動と好みにアクセスできる実店舗を訪問し、メールとモバイルプッシュ通知を通じて調整されたフォローアップコミュニケーションをトリガーする購入を行い、後にカスタマーサービスに連絡し、担当者が全体のジャーニーを完全に把握し、コンテキストに関連するサポートを提供できます。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>顧客満足度の向上</strong>は、チャネルを切り替える際に情報を繰り返したり、最初からやり直したりする必要がある摩擦やフラストレーションを排除する、シームレスで一貫した体験から生じます。顧客は、オムニチャネルアプローチが提供する利便性と<a data-lb="1" href="/ja/glossary/personalization/" title="AIチャットボットと自動化におけるパーソナライゼーションは、高度なアルゴリズムを使用して、個々のユーザーの嗜好や行動に合わせてサービス、コンテンツ、インタラクションをカスタマイズします。">パーソナライゼーション</a>を高く評価します。</p>
+<p><strong>顧客ライフタイムバリューの増加</strong>は、オムニチャネル顧客が通常、単一チャネルの顧客よりも多く支出し、より頻繁に購入し、より長くロイヤルであり続けることから発生します。顧客ニーズの包括的なビューにより、より効果的なクロスセルとアップセルの機会が可能になります。</p>
+<p><strong>顧客維持率の向上</strong>は、すべてのタッチポイントで一貫したパーソナライズされた体験を通じて構築されたより強い関係から生じます。顧客は、現在のプロバイダーから優れた統合サービスを受けている場合、競合他社に切り替える可能性が低くなります。</p>
+<p><strong>コンバージョン率の向上</strong>は、すべてのチャネルで障壁を取り除き、最適なタイミングで関連情報とオファーを提供しながら、顧客を好みのジャーニーを通じてガイドする能力から生じます。</p>
+<p><strong>より良い顧客インサイト</strong>は、すべてのタッチポイントにわたる包括的なデータ収集と分析から生まれ、戦略的意思決定に情報を提供する顧客の行動、好み、ニーズのより深い理解を提供します。</p>
+<p><strong>運用効率の向上</strong>は、統合されたシステムが重複作業を削減し、プロセスを合理化し、すべてのインタラクション中に完全な顧客コンテキストを持つことでスタッフがより効果的になることを可能にすることで改善されます。</p>
+<p><strong>競争上の差別化</strong>は、オムニチャネル体験を成功裏に実装する組織が、顧客がすべてのタッチポイントでシームレスで統合されたサービスをますます期待する市場で際立つことで発展します。</p>
+<p><strong>収益成長</strong>は、顧客支出の増加、コンバージョン率の向上、維持率の改善、包括的な顧客データとクロスチャネル調整を活用するより効果的なマーケティングキャンペーンを通じて加速します。</p>
+<p><strong>ブランドの一貫性</strong>は、オムニチャネルアプローチがすべてのタッチポイントでメッセージング、サービス品質、顧客体験が一貫していることを保証し、ブランドアイデンティティと価値を強化することで強化されます。</p>
+<p><strong>データ駆動型の意思決定</strong>は、すべてのチャネルからの包括的な顧客データにより、チャネル固有の洞察ではなく、完全な顧客行動パターンに基づいて情報に基づいた戦略的決定を行うことができるため、より効果的になります。</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p><strong>小売とEコマース</strong>組織は、オムニチャネル体験を使用して、顧客がオンラインで調査して店舗で購入したり、オンラインで購入して店舗で受け取ったり、実店舗でオンライン購入を返品したり、すべてのチャネルで一貫した価格設定とプロモーションを受け取ったりすることを可能にします。</p>
+<p><strong>金融サービス</strong>は、オムニチャネル戦略を実装して、顧客がオンラインでアプリケーションを開始して支店で完了したり、モバイルアプリとウェブサイトで一貫したアカウント情報を受け取ったり、電話、チャット、または対面訪問のいずれであっても同じレベルのサービスにアクセスしたりすることを可能にします。</p>
+<p><strong>医療システム</strong>は、ウェブと電話チャネルで予約スケジューリングを統合し、患者ポータルとモバイルアプリを通じて医療記録への一貫したアクセスを提供し、異なる部門とプロバイダー間のコミュニケーションを調整するオムニチャネル患者体験を作成します。</p>
+<p><strong>通信</strong>会社は、顧客がオンラインで問題をトラブルシューティングし、電話とチャットチャネルでサポート担当者との会話を続け、すべてのタッチポイントで一貫してアカウントを管理できるようにするオムニチャネルカスタマーサービスを提供します。</p>
+<p><strong>ホスピタリティと旅行</strong>組織は、顧客がモバイルデバイスで調査し、ウェブサイトで予約し、電話で予約を変更し、モバイルアプリでチェックインしながら、一貫したサービスと好みを維持できるようにするオムニチャネル予約体験を提供します。</p>
+<p><strong>自動車業界</strong>は、オムニチャネルアプローチを使用して、オンライン調査、ディーラー訪問、サービススケジューリング、継続的な顧客コミュニケーションを統合し、最初の関心から長期メンテナンスまでシームレスな所有体験を作成します。</p>
+<p><strong>保険会社</strong>は、オムニチャネル戦略を実装して、顧客がオンラインで見積もりを取得し、電話でエージェントと話し、モバイルアプリで請求を提出し、ポリシーライフサイクル全体を通じてすべてのタッチポイントで一貫した情報とサービスを受け取ることを可能にします。</p>
+<p><strong>B2B販売とマーケティング</strong>組織は、デジタルマーケティング、インサイドセールス、フィールドセールス、カスタマーサクセスチームを調整して、複雑なマルチステークホルダーの購買プロセス全体で一貫したメッセージングとサービスを提供するオムニチャネル体験を作成します。</p>
+<h2 id="チャネル統合の比較">チャネル統合の比較</h2>
+<table>
+<thead>
+<tr>
+<th>統合レベル</th>
+<th>データ共有</th>
+<th>顧客コンテキスト</th>
+<th>体験の一貫性</th>
+<th>実装の複雑さ</th>
+<th>ビジネスへの影響</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>サイロ化されたチャネル</strong></td>
+<td>なし</td>
+<td>チャネル固有のみ</td>
+<td>一貫性なし</td>
+<td>低</td>
+<td>限定的な成長可能性</td>
+</tr>
+<tr>
+<td><strong>クロスチャネル</strong></td>
+<td>基本的なレポート</td>
+<td>限定的な履歴</td>
+<td>やや一貫性あり</td>
+<td>中</td>
+<td>中程度の改善</td>
+</tr>
+<tr>
+<td><strong>マルチチャネル</strong></td>
+<td>共有データベース</td>
+<td>最近のインタラクション</td>
+<td>ほぼ一貫性あり</td>
+<td>中〜高</td>
+<td>良好な顧客満足度</td>
+</tr>
+<tr>
+<td><strong>オムニチャネル</strong></td>
+<td>リアルタイム統合</td>
+<td>完全な顧客ビュー</td>
+<td>完全に一貫性あり</td>
+<td>高</td>
+<td>最大の顧客価値</td>
+</tr>
+<tr>
+<td><strong>予測的オムニチャネル</strong></td>
+<td>AI強化された洞察</td>
+<td>予測的コンテキスト</td>
+<td>プロアクティブにパーソナライズ</td>
+<td>非常に高</td>
+<td>競争上の優位性</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>テクノロジー統合の複雑さ</strong>は、組織が異なる時期に異なるアーキテクチャと標準で構築された可能性のある複数のシステム、プラットフォーム、データベースを統合する必要があるため、重大な課題を提示し、相当な技術的専門知識とリソースを必要とします。</p>
+<p><strong>データプライバシーとコンプライアンス</strong>の懸念は、顧客データが複数のシステムとチャネル間を流れるオムニチャネル環境でより複雑になり、<a data-lb="1" href="/ja/glossary/gdpr/" title="EUの包括的なデータ保護規則であるGDPRについて理解しましょう。その原則、コンプライアンス要件、データ主体の権利、そしてAIチャットボットへの影響について学びます。">GDPR</a>、CCPA、業界固有のコンプライアンス要件などの規制に細心の注意を払う必要があります。</p>
+<p><strong>組織のサイロ</strong>は、部門がデータを共有したり、確立されたプロセスを変更したり、従来の境界を越えて協力したりすることに消極的である可能性があるため、オムニチャネルイニシアチブに抵抗することが多く、強力な変更管理と経営陣のサポートが必要です。</p>
+<p><strong>顧客データの品質</strong>の問題は、一貫性のない、不完全な、または不正確なデータが、チャネル全体で顧客体験の低下や効果のないパーソナライゼーションを引き起こす場合、オムニチャネルの有効性を損なう可能性があります。</p>
+<p><strong>リソース要件</strong>は、テクノロジー投資、スタッフトレーニング、プロセス再設計、継続的なメンテナンスコストを含むオムニチャネル実装にとって相当なものになる可能性があり、組織の予算と能力に負担をかける可能性があります。</p>
+<p><strong>パフォーマンスとスケーラビリティ</strong>の課題は、オムニチャネルシステムが、すべてのチャネルで高速な応答時間を維持しながら、増加したデータ量、リアルタイム処理要件、複雑な統合を処理する必要があるため発生します。</p>
+<p><strong>測定とアトリビューション</strong>は、顧客ジャーニーが複数のタッチポイントにまたがるオムニチャネル環境でより困難になり、チャネルの有効性と投資収益率を正確に測定することが困難になります。</p>
+<p><strong>スタッフトレーニングと変更管理</strong>の要件は、すべてのチャネルの従業員が新しいプロセスを理解し、新しいシステムにアクセスし、チャネル中心ではなく顧客中心のアプローチに適応する必要があるため、広範囲に及びます。</p>
+<p><strong>ベンダー管理の複雑さ</strong>は、オムニチャネル実装が複数のテクノロジーベンダーを含むことが多いため増加し、慎重な調整、統合計画、継続的な関係管理が必要になります。</p>
+<p><strong>セキュリティの考慮事項</strong>は、データが複数のシステムとチャネル間を流れるため、より複雑になり、包括的なセキュリティ戦略を通じて対処する必要がある追加の潜在的な脆弱性を作成します。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>カスタマージャーニーマッピングから始める</strong>ことで、現在の顧客体験を理解し、問題点と機会を特定し、テクノロジーソリューションやプロセス変更を実装する前に望ましい将来の状態を設計します。</p>
+<p><strong>経営陣のスポンサーシップを確立</strong>し、クロスファンクショナルなガバナンス構造を確立して、適切なリソースを確保し、組織のサイロを打破し、チャネル中心ではなく顧客中心の目標に焦点を維持します。</p>
+<p><strong>堅牢なデータガバナンス</strong>ポリシーと手順を実装して、組織全体のすべてのシステムとチャネルでデータ品質、プライバシーコンプライアンス、一貫した顧客情報を確保します。</p>
+<p><strong>スケーラブルなテクノロジーアーキテクチャを選択</strong>し、組織とともに成長し、変化する顧客ニーズに適応できるようにし、柔軟な統合と将来の拡張を可能にするAPIファースト、<a data-lb="1" href="/ja/glossary/cloud-based/" title="クラウドベース の用語集ページ">クラウドベース</a>のソリューションに焦点を当てます。</p>
+<p><strong>アイデンティティ解決機能を優先</strong>して、チャネルとデバイス全体で顧客インタラクションを正確に接続し、顧客が複数のタッチポイントを通じてエンゲージメントする際に顧客プロファイルが正確かつ完全であることを保証します。</p>
+<p><strong>スタッフトレーニングに投資</strong>し、変更管理プログラムを実施して、従業員がオムニチャネルの原則を理解し、新しいシステムを効果的に使用し、すべてのチャネルで一貫した顧客体験を提供できるようにします。</p>
+<p><strong>包括的なテスト戦略を開発</strong>して、すべてのチャネルとタッチポイントで顧客体験を検証し、単一チャネルのテストでは明らかにならない可能性のあるクロスチャネルシナリオとエッジケースを含めます。</p>
+<p><strong>一貫したブランドガイドライン</strong>とメッセージングフレームワークを作成して、すべてのチャネルが一貫したブランド体験を提供しながら、チャネル固有の最適化とパーソナライゼーションを可能にします。</p>
+<p><strong>リアルタイム<a data-lb="1" href="/ja/glossary/monitoring/" title="モニタリングとは、システム、アプリケーション、ネットワーク、ビジネスオペレーションに関するデータを収集、分析、対応する体系的かつ継続的なプロセスです。パフォーマンス、セキュリティ、ユーザーエクスペリエンスに関するリアルタイムの可視性を提供します。">モニタリング</a></strong>と分析機能を実装して、顧客体験の品質を追跡し、問題を迅速に特定し、実際の顧客行動とフィードバックに基づいてオムニチャネルパフォーマンスを継続的に最適化します。</p>
+<p><strong>反復的な実装を計画</strong>し、影響が大きく複雑さが低い統合から始め、学んだ教訓と実証されたビジネス価値に基づいてオムニチャネル機能を徐々に拡大します。</p>
+<h2 id="高度なテクニック">高度なテクニック</h2>
+<p><strong><a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>と機械学習</strong>は、予測的カスタマーサービス、自動化されたパーソナライゼーション、顧客のニーズと好みに基づいて最も適切なチャネルとリソースへの顧客インタラクションのインテリジェントなルーティングを可能にします。</p>
+<p><strong>リアルタイム意思決定エンジン</strong>は、顧客データとコンテキストを即座に処理して、すべてのチャネルでパーソナライズされたオファー、コンテンツ、体験を提供し、すべてのインタラクションが個々の顧客ニーズとビジネス目標に最適化されることを保証します。</p>
+<p><strong>高度な分析と顧客インテリジェンス</strong>プラットフォームは、洗練されたモデリング技術を使用して顧客セグメントを特定し、行動を予測し、すべてのチャネルで一貫して実行できる次善のアクションを推奨します。</p>
+<p><strong>モノのインターネット(IoT)統合</strong>は、物理的な製品、デバイス、環境をオムニチャネル体験に接続し、従来のデジタルおよび物理チャネルを超えた新しい形式の顧客インタラクションとサービス提供を可能にします。</p>
+<p><strong>音声と会話型AI</strong>テクノロジーは、既存の顧客データと統合し、必要に応じて人間のエージェントにシームレスに引き継ぐことができるスマートスピーカー、<a data-lb="1" href="/ja/glossary/chatbot/" title="チャットボットは、テキストまたは音声を通じて人間の会話をシミュレートするAI駆動のソフトウェアアプリケーションです。カスタマーサポート、情報検索、タスク自動化に使用されます。">チャットボット</a>、音声アシスタントを通じて新しいオムニチャネルタッチポイントを作成します。</p>
+<p><strong>拡張現実と仮想現実</strong>体験は、従来のチャネルと統合できる没入型の顧客インタラクションを提供し、顧客が製品を視覚化し、バーチャルアシスタンスを受け、まったく新しい方法でブランドとエンゲージメントすることを可能にします。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>ハイパーパーソナライゼーション</strong>は、高度なAIとリアルタイムデータ処理を活用して、すべてのチャネルとタッチポイントで顧客の行動、コンテキスト、好みに動的に適応する個別にカスタマイズされた体験を提供します。</p>
+<p><strong>予測的カスタマーエクスペリエンス</strong>は、機械学習と予測分析を使用して顧客のニーズを予測し、顧客が明示的に要求する前に関連情報、オファー、サポートをプロアクティブに提供します。</p>
+<p><strong>感情AI統合</strong>は、感情分析、感情認識、共感的応答機能を組み込んで、すべてのチャネルでより人間らしく感情的にインテリジェントな顧客インタラクションを作成します。</p>
+<p><strong>顧客データのためのブロックチェーン</strong>は、顧客データ管理、プライバシー、ポータビリティへの新しいアプローチを提供し、シームレスなオムニチャネル体験を可能にしながら、顧客が自分の情報をより制御できるようにする可能性があります。</p>
+<p><strong>拡張現実(XR)体験</strong>は、拡張現実、仮想現実、複合現実テクノロジーをオムニチャネル戦略に統合し、物理的およびデジタルインタラクションを融合させた没入型の顧客体験を作成します。</p>
+<p><strong>自律的カスタマーサービス</strong>は、高度なAIと自動化を使用して、すべてのチャネルでますます複雑な顧客インタラクションを処理しながら、適切な場合に人間のエージェントにシームレスに<a data-lb="1" href="/ja/glossary/escalation/" title="カスタマーサポート、IT、AIチャットボットにおけるエスカレーションについて学びます。種類、トリガー、ベストプラクティス、そして自動化が複雑な問題解決をどのように効率化するかを解説します。">エスカレーション</a>し、より効率的で効果的な顧客体験を作成します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Lemon, K. N., &amp; Verhoef, P. C. (2016). Understanding customer experience throughout the customer journey. Journal of Marketing, 80(6), 69-96.</p>
+</li>
+<li>
+<p>Verhoef, P. C., Kannan, P. K., &amp; Inman, J. J. (2015). From multi-channel retailing to omni-channel retailing: Introduction to the special issue on multi-channel retailing. Journal of Retailing, 91(2), 174-181.</p>
+</li>
+<li>
+<p>Piotrowicz, W., &amp; Cuthbertson, R. (2014). Introduction to the special issue information technology in retail: Toward omnichannel retailing. International Journal of Electronic Commerce, 18(4), 5-16.</p>
+</li>
+<li>
+<p>Rigby, D. (2011). The future of shopping. Harvard Business Review, 89(12), 65-76.</p>
+</li>
+<li>
+<p>Bell, D. R., Gallino, S., &amp; Moreno, A. (2014). How to win in an omnichannel world. MIT Sloan Management Review, 56(1), 45-53.</p>
+</li>
+<li>
+<p>Brynjolfsson, E., Hu, Y. J., &amp; Rahman, M. S. (2013). Competing in the age of omnichannel retailing. MIT Sloan Management Review, 54(4), 23-29.</p>
+</li>
+<li>
+<p>Neslin, S. A., Grewal, D., Leghorn, R., Shankar, V., Teerling, M. L., Thomas, J. S., &amp; Verhoef, P. C. (2006). Challenges and opportunities in multichannel customer management. Journal of Service Research, 9(2), 95-112.</p>
+</li>
+<li>
+<p>Payne, A., &amp; Frow, P. (2013). Strategic customer management: Integrating relationship marketing and CRM. Cambridge University Press.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/omnichannel-platform/">
+                    オムニチャネルプラットフォーム
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    オムニチャネルプラットフォームの包括的ガイド - 複数のタッチポイントを統合し、シームレスなコマースを実現する統合型カスタマーエクスペリエンスソリューション。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/omnichannel-platform/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/omnichannel-analytics/">
+                    オムニチャネル分析
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    オムニチャネル分析の包括的ガイド:統合されたカスタマージャーニートラッキング、クロスチャネルデータ統合、最適化戦略について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/omnichannel-analytics/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/omnichannel-strategy/">
+                    オムニチャネル戦略
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    すべてのタッチポイントでシームレスな顧客体験を実現するための、オムニチャネル戦略の実装、メリット、課題、ベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/omnichannel-strategy/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/customer-journey-mapping/">
+                    カスタマージャーニーマッピング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    カスタマージャーニーマッピングの包括的ガイド:プロセスの可視化、タッチポイント分析、ビジネスのための体験最適化戦略。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/customer-journey-mapping/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/customer-friction/">
+                    カスタマーフリクション
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    カスタマーフリクション:顧客が企業とやり取りする際に直面する障害や困難のこと。わかりにくいチェックアウトプロセス、遅いウェブサイト、不十分なカスタマーサービスなどが該当します。これらの障壁を取り除くこ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/customer-friction/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/journey-analytics/">
+                    ジャーニーアナリティクス
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ジャーニーアナリティクスの包括的ガイド - タッチポイント全体での顧客インタラクションの追跡、分析、最適化により、優れた体験を実現します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/journey-analytics/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/omnichannel-customer-experience/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190816"></script>
+</body>
+</html>

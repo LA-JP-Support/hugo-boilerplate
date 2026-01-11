@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>パンくずナビゲーション | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/breadcrumb-navigation/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="ウェブサイト内での現在位置を示すナビゲーション。ホームページから現在のページまでの階層構造を視覚的に表示し、ユーザーが迷わず目的のページに戻れるようにします。" name="description"/>
+<meta content="パンくずナビゲーション, ウェブサイトナビゲーション, ユーザーエクスペリエンス, 情報アーキテクチャ, ウェブユーザビリティ" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/breadcrumb-navigation/" property="og:url"/>
+<meta content="パンくずナビゲーション | SmartWeb" property="og:title"/>
+<meta content="ウェブサイト内での現在位置を示すナビゲーション。ホームページから現在のページまでの階層構造を視覚的に表示し、ユーザーが迷わず目的のページに戻れるようにします。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/breadcrumb-navigation/" name="twitter:url"/>
+<meta content="パンくずナビゲーション | SmartWeb" name="twitter:title"/>
+<meta content="ウェブサイト内での現在位置を示すナビゲーション。ホームページから現在のページまでの階層構造を視覚的に表示し、ユーザーが迷わず目的のページに戻れるようにします。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">パンくずナビゲーション</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        パンくずナビゲーション
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Breadcrumb Navigation
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          ウェブサイト内での現在位置を示すナビゲーション。ホームページから現在のページまでの階層構造を視覚的に表示し、ユーザーが迷わず目的のページに戻れるようにします。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                パンくずナビゲーション
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ウェブサイトナビゲーション
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ユーザーエクスペリエンス
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                情報アーキテクチャ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ウェブユーザビリティ
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="パンくずナビゲーションとは">パンくずナビゲーションとは?</h2>
+<p>パンくずナビゲーションは、ウェブサイトの階層構造内におけるユーザーの現在位置を表示する補助的なナビゲーションシステムであり、上位レベルのページへの明確な経路を提供します。童話「ヘンゼルとグレーテル」で、森の中で家に帰る道を見つけるためにパンくずを残したことにちなんで名付けられたこのナビゲーション要素は、サイト全体のアーキテクチャとの関係においてユーザーがどこにいるかを理解するのに役立つ視覚的な道標として機能します。パンくずは通常、大なり記号(&gt;)、矢印(→)、またはスラッシュ(/)などの記号で区切られたリンク付きページ名の水平リストとして表示され、メインナビゲーションメニューの下のウェブページ上部付近に配置されます。</p>
+<p>パンくずナビゲーションの基本的な目的は、単純な道案内を超えて、ユーザーエクスペリエンスの向上、検索エンジン最適化、情報アーキテクチャの明確化を包含します。ウェブサイトの主要セクションへのアクセスを提供するプライマリナビゲーションメニューとは異なり、パンくずはユーザーがたどった特定の経路、または現在のページとその親ページとの階層的関係を示します。このナビゲーション方法は、eコマースプラットフォーム、複数の部門を持つ企業ウェブサイト、ネストされたカテゴリを持つコンテンツ管理システムなど、深い階層構造を持つウェブサイトで特に有用です。ユーザーの位置の視覚的表現は、ナビゲーション経路を記憶する必要性を排除することで<a data-lb="1" href="/ja/glossary/cognitive-load/" title="認知負荷とは、情報を処理、保存、使用するために必要な精神的努力のことです。教育、UX、AIにおける認知負荷の種類、測定方法、軽減戦略について学びます。">認知負荷</a>を軽減し、より広いサイト構造内における現在のページの位置について即座にコンテキストを提供します。</p>
+<p>現代のパンくず実装は、レスポンシブデザインの原則、アクセシビリティ基準、検索エンジン最適化のベストプラクティスを取り入れ、さまざまなウェブサイトアーキテクチャとユーザー行動をサポートするように進化してきました。現代のパンくずシステムは、検索エンジンがサイト階層を理解するのに役立つ構造化データマークアップ、タッチフレンドリーなインターフェースを備えたモバイルデバイスのサポート、ページ関係に基づく自動生成のためのコンテンツ管理システムとの統合を含むことがよくあります。パンくずナビゲーションの効果は、インターフェースを圧倒することなく方向性を提供し、ユーザーに探索を促しながら馴染みのある領域への明確な経路を維持するセーフティネットを提供する能力にあります。このナビゲーションパターンは、ユーザーインターフェースデザインの標準コンポーネントとなり、異なるプラットフォーム間でユーザーに認識され、適切に実装された場合にウェブサイトのユーザビリティ指標を一貫して改善しています。</p>
+<h2 id="主要なナビゲーションタイプとコンポーネント">主要なナビゲーションタイプとコンポーネント</h2>
+<p>階層型パンくずは最も一般的なタイプで、ホームページから現在のページまでのウェブサイトの構造階層内におけるユーザーの位置を示します。これらのパンくずはサイトの情報アーキテクチャを反映し、ユーザーが現在のページにどのように到達したかに関係なく一貫性を保ちます。属性ベースのパンくずは、現在のページに至った特性やフィルターを表示し、eコマースや検索結果ページで一般的に使用されます。これらのパンくずは、階層的関係ではなく、選択されたカテゴリ、フィルター、または検索パラメータを示します。履歴ベースのパンくずは、ウェブサイト内でのユーザーの実際のナビゲーション経路を追跡し、現在のセッション中に訪問したページの順序を示します。このタイプはブラウザ履歴と同様に機能しますが、よりユーザーフレンドリーな視覚的表現を提供します。位置ベースのパンくずは、特定のセクションまたはアプリケーション領域内でのユーザーの位置を示し、複雑なウェブアプリケーションや複数ステップのプロセスで特に有用です。これらのパンくずは、ワークフローや手順を通じたユーザーの進捗を理解するのに役立ちます。動的パンくずは、ユーザー行動、コンテンツ関係、または<a data-lb="1" href="/ja/glossary/personalization/" title="AIチャットボットと自動化におけるパーソナライゼーションは、高度なアルゴリズムを使用して、個々のユーザーの嗜好や行動に合わせてサービス、コンテンツ、インタラクションをカスタマイズします。">パーソナライゼーション</a>要因に基づいて適応し、コンテキストに関連したナビゲーション経路を提供します。これらのシステムは、個々のユーザーに最も適切なパンくずトレイルを決定するためにアルゴリズムを使用します。ファセットパンくずは、複数のナビゲーション次元を組み合わせ、ユーザーが現在の位置のさまざまな側面を同時に確認および変更できるようにします。このアプローチは、複雑なフィルタリングシステムや多次元コンテンツ組織に適しています。セマンティックパンくずは、単純なページタイトルではなく、意味のあるラベルと説明を使用し、ナビゲーション階層の各レベルについて追加のコンテキストを提供します。これらのパンくずは、異なるセクション間の関係の理解を向上させます。</p>
+<h2 id="パンくずナビゲーションの仕組み">パンくずナビゲーションの仕組み</h2>
+<p>パンくずナビゲーションシステムは、ウェブサイトの情報アーキテクチャ分析とコンテンツ階層マッピングから始まる体系的なプロセスを通じて動作します。システムはページ間の親子関係を識別し、パンくずトレイルがどのように構築され、ユーザーに表示されるかを決定する構造的基盤を確立します。</p>
+<p>コンテンツ管理システムまたはカスタムスクリプトは、確立された階層に基づいてパンくずトレイルを自動的に生成し、ページタイトル、URL、関係データを取得してナビゲーションチェーンを作成します。システムは、通常はホームページまたはメインセクションのランディングページである適切な開始点を決定し、現在のページ位置への経路をトレースします。</p>
+<p>パンくずレンダリングエンジンは、区切り記号、タイポグラフィ、スペーシング、レスポンシブ動作を含む事前定義されたデザイン仕様に従ってナビゲーショントレイルをフォーマットします。システムは、現在のページを除く各パンくず要素がクリック可能なリンクとして機能することを保証します。現在のページは、プレーンテキストまたは異なるスタイリングで表示されます。</p>
+<p>ユーザーがウェブサイト内を移動すると、リアルタイム更新が発生し、パンくずシステムは新しい位置と経路を反映するように動的に調整されます。システムは、異なるページタイプ、コンテンツ構造、ユーザーコンテキストに適応しながら、プレゼンテーションの一貫性を維持します。</p>
+<p>アクセシビリティ機能は、適切なHTMLマークアップ、ARIAラベル、キーボードナビゲーションサポート、スクリーンリーダー互換性を含め、プロセス全体に統合されています。システムは、パンくずが障害を持つ個人のユーザーエクスペリエンスを妨げるのではなく向上させることを保証します。</p>
+<p>検索エンジン最適化要素は、構造化データマークアップ、セマンティックHTML、適切なリンクアーキテクチャを含め、パンくず構造内に埋め込まれています。これらの要素は、検索エンジンがサイト階層を理解するのに役立ち、検索結果表示の強化につながる可能性があります。</p>
+<p>階層的関係が不明確または欠落している場合、エラー処理とフォールバックメカニズムが作動し、ユーザーが常に意味のあるナビゲーション支援を受けられるようにします。システムは、標準的なパンくず生成が失敗した場合、簡略化されたパンくずまたは代替ナビゲーション支援を表示する場合があります。</p>
+<p>パフォーマンス最適化は、キャッシングメカニズム、効率的なデータベースクエリ、最小限のリソース使用を通じて行われ、パンくず生成がページ読み込み時間に影響を与えないことを保証します。システムは、最適なユーザーエクスペリエンスを維持するために、機能性と速度のバランスを取ります。</p>
+<p>ワークフローの例:ホーム &gt; 家電 &gt; コンピュータ &gt; <a data-lb="1" href="/ja/glossary/note/" title="社内チケットシステムにおけるノートとは何か、スタッフ専用コミュニケーションの目的、そしてドキュメント作成、コラボレーション、AI自動化にどのように使用されるかを学びます。">ノート</a>パソコン &gt; ゲーミングノートパソコン &gt; 製品名</p>
+<h2 id="主な利点">主な利点</h2>
+<p>ユーザーオリエンテーションの向上は、ウェブサイト構造内での位置の即座の理解をユーザーに提供し、混乱を減らし、ナビゲーションへの信頼を向上させます。ユーザーは自分の位置を素早く評価し、次のアクションについて情報に基づいた決定を下すことができます。ナビゲーション労力の削減は、ユーザーがブラウザの戻るボタンやメインナビゲーションメニューのみに依存して上位レベルのページに戻る必要性を排除します。この効率改善は、ユーザー満足度の向上とウェブサイトコンテンツへのエンゲージメント増加につながります。検索エンジン最適化の改善は、構造化データマークアップ、内部リンクの利点、検索エンジンへのより明確なサイトアーキテクチャシグナルを通じてウェブサイトの可視性を向上させます。パンくずは検索結果に表示されることが多く、潜在的な訪問者に追加のスペースとコンテキストを提供します。直帰率の低下は、関連セクションや親カテゴリへの簡単なアクセスを提供することで、ユーザーが追加のページを探索することを促します。明確なナビゲーション経路は、ユーザーが馴染みのないコンテンツに遭遇したときにサイトを離れる可能性を減らします。情報アーキテクチャコミュニケーションの向上は、ユーザーがウェブサイトコンテンツの論理的な組織と異なるセクション間の関係を理解するのに役立ちます。この理解は、全体的なサイトのユーザビリティとコンテンツ構造のユーザーメンタルモデルを改善します。ページビューの増加は、関連ページとセクション間のナビゲーションを容易にすることで、ウェブサイトコンテンツのより深い探索を促進します。ユーザーは、効果的にナビゲートできる能力に自信を持つと、複数のページを訪問する可能性が高くなります。モバイルエクスペリエンスの向上は、従来のナビゲーションメニューが非表示になったりアクセスが困難になったりする可能性がある小さな画面で、コンパクトなナビゲーション支援を提供します。パンくずは、デバイスや画面サイズに関係なく一貫したオリエンテーションを提供します。アクセシビリティの改善は、明確なナビゲーションランドマークとウェブサイトを通じた代替経路を提供することで、障害を持つユーザーをサポートします。適切に実装されたパンくずは、スクリーンリーダーの互換性とキーボードナビゲーションを向上させます。分析とユーザー行動インサイトは、ウェブサイト所有者がユーザーのナビゲーションパターンを追跡し、人気のあるコンテンツ経路を特定できるようにします。このデータは、情報アーキテクチャの決定とコンテンツ戦略の改善に役立ちます。ブランドの信頼とプロフェッショナリズムは、ユーザーエクスペリエンスの詳細とプロフェッショナルなウェブサイト開発実践への注意を示します。適切に実装されたパンくずは、全体的なサイトの信頼性とユーザーの信頼に貢献します。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p>eコマース製品ナビゲーションは、広範な製品グループから特定のアイテムまでのカテゴリ階層を通じて顧客を案内し、買い物客が製品関係を理解し、関連商品を発見するのに役立ちます。この実装は、閲覧と購入の両方の行動をサポートします。企業ウェブサイトセクションは、部門、サービス、コンテンツ領域にわたる複雑な組織情報を整理し、訪問者が関連するビジネス情報間をナビゲートするのに役立ちます。この構造は、内部と外部の両方のユーザーニーズをサポートします。コンテンツ管理システムは、編集者とコンテンツ作成者にネストされたコンテンツ構造を通じた明確なナビゲーションを提供し、ワークフロー効率とコンテンツ組織の理解を向上させます。このアプリケーションは、ユーザーと管理者の両方のエクスペリエンスを向上させます。教育機関ウェブサイトは、学校、学部、プログラム、コースにわたる学術情報を整理し、学生、教員、見込み学生が複雑な機関構造をナビゲートするのに役立ちます。この実装は、多様なユーザー目標と情報ニーズをサポートします。政府および自治体ウェブサイトは、部門、サービス、行政レベルにわたる公共情報を構造化し、市民が関連情報に効率的にアクセスできるようにします。この組織は、公共サービスの提供と情報アクセシビリティを改善します。ドキュメントと<a data-lb="1" href="/ja/glossary/knowledge-base/" title="ナレッジベースとは何かを解説します。顧客、従業員、または自動化システムによる迅速な情報検索とセルフサービスを実現する、一元化された整理された情報の集合体です。">ナレッジベース</a>は、技術情報、チュートリアル、サポートコンテンツを論理的な階層で整理し、ユーザーが関連情報を見つけ、コンテンツ関係を理解するのに役立ちます。この構造は、学習と問題解決プロセスをサポートします。ニュースとメディアウェブサイトは、トピック、セクション、公開日にわたって記事とコンテンツを分類し、読者が関連記事間をナビゲートし、追加コンテンツを発見するのに役立ちます。この組織は、カジュアルな閲覧とターゲットを絞った情報検索の両方をサポートします。ソフトウェアアプリケーションインターフェースは、複雑なアプリケーション内でナビゲーション支援を提供し、ユーザーが複数ステップのプロセスまたは階層的データ構造内での位置を理解するのに役立ちます。この実装は、アプリケーションのユーザビリティとユーザーの信頼を向上させます。</p>
+<h2 id="パンくずタイプの比較">パンくずタイプの比較</h2>
+<table>
+<thead>
+<tr>
+<th>タイプ</th>
+<th>最適な使用例</th>
+<th>利点</th>
+<th>欠点</th>
+<th>実装の複雑さ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>階層型</td>
+<td>明確な構造を持つ従来のウェブサイト</td>
+<td>一貫性があり、SEOフレンドリー、直感的</td>
+<td>ユーザーの実際の経路を反映しない場合がある</td>
+<td>低〜中</td>
+</tr>
+<tr>
+<td>属性ベース</td>
+<td>eコマース、フィルタリングシステム</td>
+<td>適用されたフィルターを表示、ファセット検索をサポート</td>
+<td>複雑になる可能性、ユーザーを混乱させる場合がある</td>
+<td>中〜高</td>
+</tr>
+<tr>
+<td>履歴ベース</td>
+<td>複雑なアプリケーション、リサーチサイト</td>
+<td>実際のユーザージャーニーを反映</td>
+<td>一貫性がない、予測が困難</td>
+<td>中</td>
+</tr>
+<tr>
+<td>位置ベース</td>
+<td>複数ステップのプロセス、アプリケーション</td>
+<td>明確な進捗表示</td>
+<td>特定のコンテキストに限定</td>
+<td>低〜中</td>
+</tr>
+<tr>
+<td>動的</td>
+<td>パーソナライズされたエクスペリエンス</td>
+<td>コンテキストに関連</td>
+<td>高度なロジックが必要</td>
+<td>高</td>
+</tr>
+<tr>
+<td>セマンティック</td>
+<td>コンテンツ重視のサイト、教育プラットフォーム</td>
+<td>理解の向上</td>
+<td>慎重なコンテンツ計画が必要</td>
+<td>中</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p>複雑な情報アーキテクチャは、コンテンツが複数のカテゴリに属する場合や階層的関係が不明確な場合に、適切なパンくず経路を決定する際の困難を生み出します。この複雑さは、曖昧さを解決するための慎重な計画と潜在的に高度なロジックを必要とします。モバイル画面スペースの制限は、小さなデバイスで効果的に表示できるパンくず情報の量を制限します。デザイナーは、包括的なナビゲーションと画面スペースの制約およびタッチインターフェース要件とのバランスを取る必要があります。動的コンテンツの課題は、ユーザー生成コンテンツ、検索結果、または従来の階層的関係が適用されない可能性のあるパーソナライズされたページのパンくず生成を複雑にします。これらのシナリオは、代替アプローチまたはハイブリッドソリューションを必要とします。メンテナンスと一貫性は、サイト構造が進化し、コンテンツが移動し、または新しいセクションが追加されるにつれて、パンくずが正確であり続けることを保証するための継続的な注意を要求します。一貫性のないパンくずは、ユーザーを混乱させ、サイトの信頼性を損なう可能性があります。パフォーマンスへの影響は、パンくず生成が複雑なデータベースクエリやリアルタイム計算を必要とする場合、特にトラフィックの多いウェブサイトで発生する可能性があります。最適化戦略は、機能性と読み込み速度要件のバランスを取る必要があります。ユーザー期待の管理は、パンくずがどのように動作し、どのような情報を伝えるかについて慎重に考慮する必要があり、サイトナビゲーションについて異なるメンタルモデルを持つ可能性のあるユーザーを混乱させないようにします。アクセシビリティコンプライアンスは、視覚的デザイン要件を維持しながら、ARIAラベル、キーボードナビゲーション、スクリーンリーダー互換性の適切な実装を要求します。このバランスは、技術的専門知識と異なる支援技術にわたるテストを必要とします。検索エンジン最適化のバランスは、ユーザーエクスペリエンスを損なったり、メンテナンスが困難な過度に複雑なマークアップを作成したりすることなく、検索エンジン向けにパンくずを最適化することを含みます。クロスプラットフォームの一貫性は、さまざまな技術的制約とユーザーインターフェースパターンに対応しながら、異なるデバイス、ブラウザ、プラットフォーム間でパンくずの動作と外観を維持するチームに課題を与えます。統合の複雑さは、異なるデータ構造や技術的制限を持つ可能性のある複数のシステム、コンテンツ管理プラットフォーム、またはレガシーアプリケーション間でパンくずを実装する際に発生します。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p>明確な視覚階層を使用することで、すべてのデバイスタイプで読みやすさと視覚的魅力を維持しながら、パンくずを他のページ要素と区別する一貫したタイポグラフィ、スペーシング、カラースキームを実装します。適切なHTML構造を実装することで、セマンティックマークアップ、順序付きリスト、適切なARIAラベルを使用して、クリーンで保守可能なコードを維持しながら、アクセシビリティコンプライアンスと検索エンジン最適化の利点を保証します。モバイルデバイス向けに最適化することで、インターフェースを圧倒することなく機能性を維持するために、切り捨て、スクロール、または折りたたみ可能な要素を使用する可能性のある、小さな画面に適応するレスポンシブパンくずレイアウトを設計します。構造化データマークアップを含めることで、検索エンジンがサイト階層を理解し、可視性を高めるために検索結果にパンくずを表示する可能性を助けるJSON-LDまたはmicrodataスキーマを実装します。一貫した区切り記号を維持することで、ウェブサイト全体でユーザーの期待と視覚的一貫性を確立し、異なるフォント、言語、文化的コンテキストで機能する記号を選択します。現在のページ表示を保証することで、最終的なパンくず要素をリンクされた要素とは異なるスタイルにし、通常はナビゲーション階層内のユーザーの現在の位置を明確に示すクリック不可能なテキストとして表示します。さまざまなシナリオでテストすることで、さまざまなページタイプ、ユーザー経路、エッジケースを含め、パンくずが表示されるすべての状況で正しく機能し、価値を提供することを保証します。分析トラッキングと統合することで、パンくずの使用パターンを監視し、ナビゲーションの問題を特定し、ナビゲーションシステムと全体的なユーザーエクスペリエンスの継続的改善のためのデータを収集します。コンテンツ管理を計画することで、コンテンツ管理ワークフローとシームレスに統合するパンくずシステムを設計し、コンテンツ作成者が必要に応じてパンくず生成を理解し、影響を与えることができるようにします。フォールバックオプションを提供することで、自動パンくず生成が失敗したり不明確な結果を生成したりする状況に対応し、技術的な問題に関係なく、ユーザーが常に意味のあるナビゲーション支援にアクセスできるようにします。</p>
+<h2 id="高度なテクニック">高度なテクニック</h2>
+<p><a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>最適化は、アルゴリズムを使用してユーザー行動パターンを分析し、実際のナビゲーション設定と成功したユーザージャーニーに基づいてパンくず経路を最適化します。このアプローチは、一貫性を維持しながらナビゲーションエクスペリエンスをパーソナライズします。プログレッシブエンハンスメント戦略は、基本的なHTMLとCSSで機能するパンくずを実装し、アクセシビリティを損なうことなく、改善されたユーザーインタラクション、アニメーション、動的更新のためにJavaScriptを通じて強化された機能を追加します。多次元パンくずは、複数のナビゲーション次元を同時に表示することで複雑なコンテンツ関係をサポートし、ユーザーが現在の位置と適用されたフィルターのさまざまな側面を理解および変更できるようにします。コンテキストパンくず適応は、ユーザーの役割、設定、または以前のインタラクションに基づいてパンくずのコンテンツと動作を調整し、馴染みのあるインタラクションパターンを維持しながら、より関連性の高いナビゲーション支援を提供します。音声インターフェースとの統合は、パンくず機能を音声制御デバイスとアプリケーションに拡張し、音声ナビゲーション支援を提供し、複雑なウェブサイト構造とのハンズフリーインタラクションをサポートします。リアルタイムコラボレーション機能は、複数のユーザーがコラボレーティブアプリケーションでパンくず状態を共有および同期できるようにし、複雑なワークフローでのチームベースのナビゲーションと共有<a data-lb="1" href="/ja/glossary/contextual-understanding/" title="AIにおけるコンテキスト理解を探る:システムが進行中の会話の中でユーザー入力をどのように解釈し、履歴、好み、リアルタイムデータを活用してパーソナライズされたインタラクションを実現するかを解説します。">コンテキスト理解</a>をサポートします。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>統合は、機械学習を使用して最適なナビゲーション経路を予測し、個々のユーザーのニーズと行動に基づいてパンくずプレゼンテーションを適応させることで、より高度なパンくずのパーソナライゼーションと最適化を可能にします。拡張現実ナビゲーションは、パンくずの概念を空間コンピューティング環境に拡張し、複合現実アプリケーションとインターフェースで三次元ナビゲーション支援と位置認識を提供する可能性があります。音声と会話型インターフェースは、パンくず機能を視覚的表示を超えて拡張し、音声ナビゲーション支援とウェブサイト階層およびコンテンツ構造との自然言語インタラクションを含めます。高度なパーソナライゼーションエンジンは、ナビゲーションパターンの一貫性と予測可能性を維持しながら、ユーザーの設定、アクセシビリティニーズ、コンテキスト要因に基づいて高度にカスタマイズされたパンくずエクスペリエンスを作成します。クロスプラットフォーム同期は、パンくず状態とナビゲーション設定をデバイスとプラットフォーム間で同期できるようにし、ユーザーが異なるインターフェースとアプリケーション間を移動する際にシームレスなナビゲーションエクスペリエンスを提供します。予測的ナビゲーション支援は、ユーザーのナビゲーションニーズを予測し、コンテンツ関係とユーザー行動分析に基づいて関連するパンくず経路または代替ナビゲーションルートを積極的に提案します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>Nielsen, J. (2007). Breadcrumb Navigation Increasingly Useful. Nielsen Norman Group.</li>
+<li>Krug, S. (2014). Don’t Make Me Think, Revisited: A Common Sense Approach to Web Usability. New Riders.</li>
+<li>Morville, P., &amp; Rosenfeld, L. (2015). Information Architecture: For the Web and Beyond. O’Reilly Media.</li>
+<li><a data-lb="1" href="/ja/glossary/google/" title="Google の用語集ページ">Google</a> Developers. (2023). Breadcrumb Structured Data Guidelines. Google Search Central.</li>
+<li>W3C Web Accessibility Initiative. (2023). ARIA Authoring Practices Guide - Breadcrumb Pattern.</li>
+<li>Baymard Institute. (2022). E-Commerce <a data-lb="1" href="/ja/glossary/ux/" title="ユーザーエクスペリエンス(UX)について、その定義、原則、プロセス、価値を網羅的に解説します。UXとUI、ユーザビリティ、CXの違いを学び、AIチャットボットと自動化の文脈におけるUXに焦点を当てます。">UX</a> Research on Navigation and Information Architecture.</li>
+<li>Smashing Magazine. (2023). Best Practices for Breadcrumb Navigation Design and Implementation.</li>
+<li>UX Planet. (2023). The Complete Guide to Breadcrumb Navigation in Modern Web Design.</li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/site-architecture/">
+                    サイトアーキテクチャ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    最適なユーザーエクスペリエンスとSEOパフォーマンスを実現するための、サイトアーキテクチャの原則、実装戦略、ベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/site-architecture/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/site-navigation/">
+                    サイトナビゲーション
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ウェブサイト内でユーザーが目的のページを見つけやすくするためのメニューやリンクなどの案内システム。サイト全体を効率よく移動できるようにします。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/site-navigation/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/information-architecture--ia-/">
+                    情報アーキテクチャ（IA）
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    情報アーキテクチャ（IA）の包括的ガイド - デジタルコンテンツを効果的に整理するための原則、方法論、メリット、ベストプラクティスを解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/information-architecture--ia-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/above-the-fold/">
+                    アバブ・ザ・フォールド
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    スクロールせずに表示されるウェブページの領域で、訪問者に強い第一印象を与えるために最も重要なコンテンツやコール・トゥ・アクション(CTA)が配置される部分。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/above-the-fold/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/welcome-message/">
+                    ウェルカムメッセージ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ウェルカムメッセージは、アプリやサービスに登録した新規ユーザーに最初に表示されるメッセージです。ユーザーに安心感を与え、サービスの使い方をガイドするために使われます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/welcome-message/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/error-message-design/">
+                    エラーメッセージデザイン
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    より良いユーザーエクスペリエンスとシステムのユーザビリティを実現するための、エラーメッセージデザインの原則、ベストプラクティス、実装戦略に関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/error-message-design/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/breadcrumb-navigation/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

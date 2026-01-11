@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Data Breach Response | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/data-breach-response/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="A systematic plan that organizations follow when hackers steal their data, including immediate actions to stop the damage, investigate what happened, and notify affected people while meeting legal requirements." name="description"/>
+<meta content="data breach response, incident response, cybersecurity management, breach containment, forensic investigation" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/data-breach-response/" property="og:url"/>
+<meta content="Data Breach Response | SmartWeb" property="og:title"/>
+<meta content="A systematic plan that organizations follow when hackers steal their data, including immediate actions to stop the damage, investigate what happened, and notify affected people while meeting legal requirements." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/data-breach-response/" name="twitter:url"/>
+<meta content="Data Breach Response | SmartWeb" name="twitter:title"/>
+<meta content="A systematic plan that organizations follow when hackers steal their data, including immediate actions to stop the damage, investigate what happened, and notify affected people while meeting legal requirements." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Data Breach Response</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Data Breach Response
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A systematic plan that organizations follow when hackers steal their data, including immediate actions to stop the damage, investigate what happened, and notify affected people while meeting legal requirements.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                data breach response
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                incident response
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                cybersecurity management
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                breach containment
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                forensic investigation
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-data-breach-response">What is a Data Breach Response?</h2>
+<p>A data breach response is a comprehensive, systematic approach to addressing and managing security incidents where unauthorized parties gain access to sensitive, protected, or confidential data. This critical cybersecurity discipline encompasses the immediate actions, investigative procedures, and recovery measures that organizations implement when they discover that their data security has been compromised. The response process involves multiple stakeholders, including IT security teams, legal counsel, executive leadership, and often external forensic specialists, all working together to minimize damage, preserve evidence, and restore normal operations while meeting regulatory and legal obligations.</p>
+<p>The modern data breach response framework has evolved significantly as cyber threats have become more sophisticated and regulatory requirements have intensified. Organizations today must navigate complex legal landscapes that include regulations such as the General Data Protection Regulation (<a data-lb="1" href="/en/glossary/gdpr/" title="GDPR glossary entry">GDPR</a>), California Consumer Privacy Act (CCPA), Health Insurance Portability and Accountability Act (HIPAA), and numerous industry-specific compliance requirements. Each of these frameworks imposes specific notification timelines, documentation requirements, and remediation standards that must be integrated into the organization’s response strategy. The financial implications of inadequate breach response can be devastating, with average costs reaching millions of dollars when factoring in regulatory fines, legal fees, remediation expenses, and long-term reputational damage.</p>
+<p>Effective data breach response requires a proactive approach that begins long before any incident occurs. Organizations must develop comprehensive incident response plans, establish clear communication protocols, train response teams, and regularly test their procedures through tabletop exercises and simulated breach scenarios. The response process typically involves several critical phases: detection and analysis, containment and eradication, recovery and post-incident activities, and lessons learned integration. Each phase requires specific expertise, tools, and decision-making frameworks to ensure that the organization can respond swiftly and effectively while maintaining business continuity and stakeholder confidence. The ultimate goal is not only to address the immediate security incident but also to strengthen the organization’s overall security posture and resilience against future threats.</p>
+<h2 id="core-data-breach-response-components">Core Data Breach Response Components</h2>
+<p><strong>Incident Detection and Classification</strong> - The systematic process of identifying potential security incidents through <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a> tools, user reports, or external notifications, followed by categorizing the severity and scope of the breach. This component establishes the foundation for all subsequent response activities and determines resource allocation priorities.</p>
+<p><strong>Containment and Isolation</strong> - Immediate actions taken to prevent further unauthorized access or data exfiltration by isolating affected systems, revoking compromised credentials, and implementing emergency security controls. These measures are critical for limiting the scope and impact of the breach while preserving evidence for investigation.</p>
+<p><strong>Forensic Investigation</strong> - The detailed technical analysis of compromised systems, networks, and data to determine the attack vector, timeline of events, and extent of data exposure. This component involves specialized tools and expertise to reconstruct the incident and gather evidence that may be required for legal proceedings.</p>
+<p><strong>Stakeholder Communication</strong> - The coordinated effort to notify affected individuals, regulatory authorities, business partners, and other stakeholders according to legal requirements and organizational policies. This includes crafting appropriate messaging, managing media relations, and maintaining transparency while protecting ongoing investigation efforts.</p>
+<p><strong>Legal and Regulatory Compliance</strong> - The process of ensuring all response activities meet applicable legal requirements, including notification timelines, documentation standards, and cooperation with regulatory investigations. This component requires close coordination between legal counsel and technical teams.</p>
+<p><strong>Recovery and Remediation</strong> - The systematic restoration of affected systems and implementation of additional security measures to prevent similar incidents, including system rebuilding, security control enhancements, and ongoing monitoring improvements. This phase focuses on returning to normal operations while strengthening overall security posture.</p>
+<p><strong>Post-Incident Analysis</strong> - The comprehensive review of the entire incident and response process to identify lessons learned, update procedures, and implement organizational improvements that enhance future incident response capabilities and overall security resilience.</p>
+<h2 id="how-data-breach-response-works">How Data Breach Response Works</h2>
+<p><strong>Step 1: Initial Detection and Alert</strong> - Security monitoring systems, users, or external parties identify potential unauthorized access or suspicious activity, triggering the formal incident response process through established notification channels.</p>
+<p><strong>Step 2: Incident Verification and Assessment</strong> - The response team conducts preliminary analysis to confirm whether a legitimate security incident has occurred and performs initial scoping to understand the potential impact and severity level.</p>
+<p><strong>Step 3: Response Team Activation</strong> - Key stakeholders including IT security, legal counsel, executive leadership, and external specialists are notified and mobilized according to the predetermined incident response plan and communication protocols.</p>
+<p><strong>Step 4: Immediate Containment Actions</strong> - Technical teams implement emergency measures to stop ongoing unauthorized access, isolate affected systems, and prevent further data exposure while preserving evidence for investigation.</p>
+<p><strong>Step 5: Detailed Investigation and Analysis</strong> - Forensic specialists conduct comprehensive analysis of affected systems to determine attack methods, timeline, data accessed, and potential ongoing threats requiring additional containment measures.</p>
+<p><strong>Step 6: Impact Assessment and Documentation</strong> - Teams evaluate the full scope of data exposure, affected individuals, regulatory implications, and business impact while maintaining detailed records of all findings and response actions.</p>
+<p><strong>Step 7: Regulatory and Stakeholder Notification</strong> - Legal and communications teams execute notification procedures for regulatory authorities, affected individuals, and other stakeholders according to applicable legal requirements and organizational policies.</p>
+<p><strong>Step 8: System Recovery and Security Enhancement</strong> - Technical teams restore affected systems with improved security controls, implement additional monitoring capabilities, and validate that all threats have been eliminated before returning to normal operations.</p>
+<p><strong>Example Workflow</strong>: A healthcare organization detects unusual database access patterns through their SIEM system at 2:00 AM. The security team verifies unauthorized access to patient records, immediately isolates the database server, activates the incident response team, conducts forensic analysis revealing 10,000 patient records were accessed, notifies HHS within 60 days as required by HIPAA, and implements enhanced access controls before system restoration.</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p><strong>Minimized Financial Impact</strong> - Rapid and effective breach response significantly reduces the total cost of incidents by limiting data exposure, reducing regulatory fines, and minimizing business disruption through faster recovery times.</p>
+<p><strong>Regulatory Compliance Assurance</strong> - Structured response processes ensure organizations meet all legal notification requirements and documentation standards, reducing the risk of additional penalties and regulatory sanctions.</p>
+<p><strong>Preserved Business Reputation</strong> - Professional incident handling and transparent communication help maintain stakeholder confidence and minimize long-term reputational damage that can affect customer relationships and market position.</p>
+<p><strong>Enhanced Evidence Preservation</strong> - Proper forensic procedures ensure that critical evidence is collected and maintained according to legal standards, supporting potential criminal prosecutions and civil litigation efforts.</p>
+<p><strong>Improved Security Posture</strong> - Post-incident analysis and remediation activities strengthen overall cybersecurity defenses and reduce the likelihood of similar future incidents through lessons learned integration.</p>
+<p><strong>Reduced Recovery Time</strong> - Well-planned response procedures enable faster system restoration and business continuity, minimizing operational disruptions and associated productivity losses.</p>
+<p><strong>Stakeholder Confidence Maintenance</strong> - Demonstrating competent incident management capabilities reassures customers, partners, and investors about the organization’s ability to protect sensitive information and manage risks effectively.</p>
+<p><strong>Legal Protection Enhancement</strong> - Documented compliance with industry standards and regulatory requirements provides legal protection and demonstrates due diligence in security incident management.</p>
+<p><strong>Operational Resilience Building</strong> - Regular response exercises and real incident experience develop organizational capabilities and team expertise that improve overall crisis management and business continuity.</p>
+<p><strong>Cost-Effective Resource Utilization</strong> - Structured response processes ensure efficient allocation of internal and external resources during high-stress incident situations, maximizing effectiveness while controlling expenses.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p><strong>Healthcare Data Breaches</strong> - Responding to unauthorized access to electronic health records, medical databases, or patient information systems while ensuring HIPAA compliance and patient notification requirements.</p>
+<p><strong>Financial Services Incidents</strong> - Managing breaches involving customer financial data, payment card information, or banking systems with strict regulatory oversight and customer protection requirements.</p>
+<p><strong>Retail Point-of-Sale Compromises</strong> - Addressing malware infections or unauthorized access to payment processing systems that may have exposed customer credit card information during transactions.</p>
+<p><strong><a data-lb="1" href="/en/glossary/cloud-service/" title="Cloud Service glossary entry">Cloud Service</a> Provider Breaches</strong> - Coordinating response efforts when third-party cloud services experience security incidents that affect multiple client organizations and their sensitive data.</p>
+<p><strong>Ransomware Attack Response</strong> - Managing incidents where attackers encrypt organizational data and demand payment, requiring careful balance between recovery efforts and law enforcement cooperation.</p>
+<p><strong>Insider Threat Incidents</strong> - Investigating and responding to data breaches caused by malicious or negligent employees with authorized access to sensitive information systems.</p>
+<p><strong>Supply Chain Security Breaches</strong> - Addressing incidents where business partners or vendors experience breaches that may affect shared data or interconnected systems and services.</p>
+<p><strong>Educational Institution Breaches</strong> - Managing incidents involving student records, research data, or administrative systems while meeting FERPA requirements and academic community expectations.</p>
+<p><strong>Government Agency Incidents</strong> - Responding to breaches of citizen data, classified information, or critical infrastructure systems with national security and public safety implications.</p>
+<p><strong>IoT Device Compromises</strong> - Addressing security incidents involving connected devices that may provide unauthorized access to organizational networks or sensitive operational data.</p>
+<h2 id="data-breach-response-comparison-table">Data Breach Response Comparison Table</h2>
+<table>
+<thead>
+<tr>
+<th>Response Approach</th>
+<th>Timeline</th>
+<th>Cost Level</th>
+<th>Complexity</th>
+<th>Regulatory Focus</th>
+<th>Recovery Speed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Internal Team Only</td>
+<td>2-4 weeks</td>
+<td>Low</td>
+<td>Moderate</td>
+<td>Basic</td>
+<td>Slow</td>
+</tr>
+<tr>
+<td>Hybrid Internal/External</td>
+<td>1-3 weeks</td>
+<td>Medium</td>
+<td>High</td>
+<td>Comprehensive</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>Full External Specialists</td>
+<td>1-2 weeks</td>
+<td>High</td>
+<td>Very High</td>
+<td>Expert Level</td>
+<td>Fast</td>
+</tr>
+<tr>
+<td>Automated Response Tools</td>
+<td>Hours-Days</td>
+<td>Medium</td>
+<td>Low</td>
+<td>Limited</td>
+<td>Very Fast</td>
+</tr>
+<tr>
+<td>Managed Security Services</td>
+<td>1-2 weeks</td>
+<td>Medium-High</td>
+<td>Moderate</td>
+<td>Comprehensive</td>
+<td>Fast</td>
+</tr>
+<tr>
+<td>Legal-First Approach</td>
+<td>2-6 weeks</td>
+<td>Very High</td>
+<td>Very High</td>
+<td>Maximum</td>
+<td>Slow</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p><strong>Resource Availability Constraints</strong> - Organizations often lack sufficient internal expertise and must rapidly engage external specialists while managing budget constraints and competing priorities during crisis situations.</p>
+<p><strong>Regulatory Complexity Navigation</strong> - Multiple overlapping regulations with different notification timelines and requirements create complex compliance challenges that require specialized legal and technical expertise.</p>
+<p><strong>Evidence Preservation Requirements</strong> - Balancing the need for rapid system recovery with forensic evidence preservation requirements can create operational tensions and extend recovery timelines.</p>
+<p><strong>Communication Coordination Difficulties</strong> - Managing consistent messaging across multiple stakeholder groups while protecting ongoing investigation details requires careful coordination and communication planning.</p>
+<p><strong>Technical Investigation Complexity</strong> - Modern cyber attacks often involve sophisticated techniques and multiple attack vectors that require advanced forensic capabilities and extended investigation periods.</p>
+<p><strong>Business Continuity Pressures</strong> - Maintaining essential business operations while conducting thorough incident response activities creates competing priorities and resource allocation challenges.</p>
+<p><strong>Third-Party Vendor Dependencies</strong> - Coordinating response efforts when incidents involve external service providers or supply chain partners adds complexity and potential delays to response activities.</p>
+<p><strong>Media and Public Relations Management</strong> - Controlling public narrative and managing media attention while maintaining transparency and stakeholder confidence requires specialized communications expertise.</p>
+<p><strong>Cost Management and Budgeting</strong> - Incident response costs can escalate rapidly, requiring organizations to balance thorough investigation and remediation with financial constraints and budget approvals.</p>
+<p><strong>Long-term Impact Assessment</strong> - Determining the full scope of potential future consequences and ongoing monitoring requirements while managing immediate response priorities and resource limitations.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p><strong>Develop Comprehensive Response Plans</strong> - Create detailed incident response procedures that address various breach scenarios, define roles and responsibilities, and establish clear decision-making authorities and <a data-lb="1" href="/en/glossary/escalation/" title="Escalation glossary entry">escalation</a> paths.</p>
+<p><strong>Establish Response Team Structure</strong> - Form dedicated incident response teams with clearly defined roles, including technical specialists, legal counsel, communications experts, and executive leadership representatives.</p>
+<p><strong>Implement Continuous Monitoring</strong> - Deploy advanced security monitoring tools and establish 24/7 security operations capabilities to enable rapid detection and initial response to potential security incidents.</p>
+<p><strong>Conduct Regular Training Exercises</strong> - Perform tabletop exercises and simulated breach scenarios to test response procedures, identify gaps, and maintain team readiness and expertise levels.</p>
+<p><strong>Maintain Updated Contact Lists</strong> - Keep current contact information for all response team members, external specialists, regulatory authorities, and key stakeholders readily accessible during emergencies.</p>
+<p><strong>Establish Legal Counsel Relationships</strong> - Develop relationships with specialized cybersecurity attorneys and ensure legal counsel is immediately available to guide response decisions and regulatory compliance efforts.</p>
+<p><strong>Create Communication Templates</strong> - Prepare draft notification letters, press releases, and stakeholder communications that can be quickly customized for specific incident circumstances and requirements.</p>
+<p><strong>Document All Response Activities</strong> - Maintain detailed records of all incident response actions, decisions, and communications to support regulatory compliance and post-incident analysis efforts.</p>
+<p><strong>Implement Secure Communication Channels</strong> - Establish encrypted communication methods for response team coordination to prevent additional information exposure during incident response activities.</p>
+<p><strong>Plan for Extended Response Operations</strong> - Develop procedures for sustaining response efforts over extended periods, including team rotation schedules and resource replenishment strategies for complex incidents.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p><strong>Threat Intelligence Integration</strong> - Incorporating real-time threat intelligence feeds and indicators of compromise to enhance detection capabilities and provide context for attribution and attack pattern analysis.</p>
+<p><strong>Automated Response Orchestration</strong> - Implementing security orchestration, automation, and response (SOAR) platforms to execute predefined response actions and coordinate complex multi-system containment procedures automatically.</p>
+<p><strong>Advanced Forensic Analytics</strong> - Utilizing machine learning and <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence glossary entry">artificial intelligence</a> tools to analyze large volumes of forensic data and identify subtle attack patterns and indicators.</p>
+<p><strong>Deception Technology Deployment</strong> - Implementing honeypots and deception networks to detect lateral movement and gather additional intelligence about attacker tactics and objectives during active incidents.</p>
+<p><strong>Cloud-Native Response Capabilities</strong> - Developing specialized procedures and tools for investigating and responding to incidents in cloud environments with ephemeral infrastructure and shared responsibility models.</p>
+<p><strong>Behavioral Analysis Integration</strong> - Leveraging user and entity behavior analytics (UEBA) to identify anomalous activities and potential insider threats that traditional security controls might miss.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p><strong>Artificial Intelligence Enhancement</strong> - Integration of AI and machine learning technologies will automate more response activities and provide predictive capabilities for incident prevention and impact assessment.</p>
+<p><strong>Zero Trust Architecture Integration</strong> - Response procedures will increasingly incorporate zero trust principles, enabling more granular containment and faster recovery through micro-segmentation and continuous verification.</p>
+<p><strong>Quantum-Safe Cryptography Preparation</strong> - Organizations will need to develop response capabilities for quantum computing threats and implement quantum-resistant encryption technologies and procedures.</p>
+<p><strong>Extended Reality Training</strong> - Virtual and augmented reality technologies will enhance incident response training through immersive simulation environments and realistic scenario-based exercises.</p>
+<p><strong>Regulatory Harmonization</strong> - International cooperation and standardization efforts will simplify compliance requirements and enable more efficient cross-border incident response coordination.</p>
+<p><strong>Ecosystem-Wide Response Coordination</strong> - Industry-wide threat sharing and coordinated response capabilities will enable faster collective defense against sophisticated multi-target attack campaigns.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>National Institute of Standards and Technology. (2012). Computer Security Incident Handling Guide. NIST Special Publication 800-61 Rev. 2.</p>
+</li>
+<li>
+<p>SANS Institute. (2023). Incident Response and Computer Forensics: Best Practices and Methodologies. SANS Press.</p>
+</li>
+<li>
+<p>European Union Agency for Cybersecurity. (2021). Guidelines on notification of personal data breaches under Regulation 2016/679. ENISA Publications.</p>
+</li>
+<li>
+<p>Ponemon Institute. (2023). Cost of a Data Breach Report 2023. IBM Security Research.</p>
+</li>
+<li>
+<p>International Organization for Standardization. (2018). Information security incident management. ISO/IEC 27035-1:2016.</p>
+</li>
+<li>
+<p>U.S. Department of Homeland Security. (2022). Cybersecurity Incident Response Guide. CISA Publications.</p>
+</li>
+<li>
+<p>Forum of Incident Response and Security Teams. (2023). FIRST Guidelines for Evidence Collection and Archiving. FIRST.org Publications.</p>
+</li>
+<li>
+<p>Payment Card Industry Security Standards Council. (2022). PCI DSS Data Breach Response Guidelines. PCI SSC Documentation.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/security-information-and-event-management--siem-/">
+                    Security Information and Event Management (SIEM)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A centralized security platform that collects and analyzes data from all your IT systems to detect t...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/security-information-and-event-management--siem-/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/data-breach-response/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

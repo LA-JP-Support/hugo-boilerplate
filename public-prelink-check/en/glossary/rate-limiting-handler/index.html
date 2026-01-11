@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Rate Limiting Handler | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/rate-limiting-handler/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/rate-limiting-handler/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/rate-limiting-handler/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/rate-limiting-handler/" hreflang="x-default" rel="alternate"/>
+<meta content="A Rate Limiting Handler is a tool that controls how many API requests can be made and automatically handles errors when limits are exceeded, preventing service disruptions." name="description"/>
+<meta content="Rate Limiting Handler, API Rate Limiting, 429 Too Many Requests, Retry Logic, Exponential Backoff" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/rate-limiting-handler/" property="og:url"/>
+<meta content="Rate Limiting Handler | SmartWeb" property="og:title"/>
+<meta content="A Rate Limiting Handler is a tool that controls how many API requests can be made and automatically handles errors when limits are exceeded, preventing service disruptions." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/rate-limiting-handler/" name="twitter:url"/>
+<meta content="Rate Limiting Handler | SmartWeb" name="twitter:title"/>
+<meta content="A Rate Limiting Handler is a tool that controls how many API requests can be made and automatically handles errors when limits are exceeded, preventing service disruptions." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Rate Limiting Handler</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            General
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Rate Limiting Handler
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A Rate Limiting Handler is a tool that controls how many API requests can be made and automatically handles errors when limits are exceeded, preventing service disruptions.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Rate Limiting Handler
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                API Rate Limiting
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                429 Too Many Requests
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Retry Logic
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Exponential Backoff
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-rate-limiting-handler">What is a Rate Limiting Handler?</h2>
+<p>A Rate Limiting Handler manages and enforces API request quotas transparently for both client and server applications. It detects when request thresholds are approached or breached, handles HTTP 429 “Too Many Requests” responses, and manages retry logic, queuing, or deferral to maintain compliance with API rate limits. Handlers can exist as middleware, libraries, proxy layers, or cloud-managed services.</p>
+<p>Rate limiting handlers are essential components in modern API ecosystems, particularly for SaaS, AI, social media, and cloud platforms where APIs impose limits to ensure fair usage and infrastructure stability. Without proper handling, unmanaged request bursts trigger HTTP 429 errors, temporary or permanent bans, workflow failures, user disruptions, and increased costs due to repeated or failed requests.</p>
+<h2 id="key-functions">Key Functions</h2>
+<p><strong>Request Tracking:</strong> Monitor and limit outgoing or incoming requests per user, key, or endpoint</p>
+<p><strong>Automatic Response Handling:</strong> Detect and respond to rate limiting signals (HTTP headers, error codes)</p>
+<p><strong>Intelligent Retry Logic:</strong> Implement sophisticated wait, queue, or retry mechanisms with exponential backoff</p>
+<p><strong>User Feedback:</strong> Provide developers and end-users with quota status and recovery information</p>
+<p><strong>Traffic Management:</strong> Batch, cache, or coalesce requests to optimize resource usage</p>
+<p><strong>Compliance Enforcement:</strong> Ensure adherence to API provider terms and usage policies</p>
+<h2 id="core-concepts">Core Concepts</h2>
+<h3 id="api-rate-limiting">API Rate Limiting</h3>
+<p>Restriction on the number of requests a client or user can make within a defined time window—typically expressed as “N requests per M seconds/minutes/hours.” Rate limits protect infrastructure, ensure fair resource distribution, and prevent abuse.</p>
+<h3 id="429-too-many-requests">429 Too Many Requests</h3>
+<p>Standard HTTP status code returned when a client exceeds permitted request rate. APIs typically include headers like <code>Retry-After</code>, <code>X-RateLimit-Reset</code>, <code>X-RateLimit-Limit</code>, and <code>X-RateLimit-Remaining</code> to guide recovery.</p>
+<h3 id="retry-logic-components">Retry Logic Components</h3>
+<p><strong>Capped Retries:</strong> Maximum number of retry attempts to prevent infinite loops</p>
+<p><strong>Exponential Backoff:</strong> Retry intervals increase exponentially (1s, 2s, 4s, 8s) to reduce load</p>
+<p><strong>Jitter:</strong> Randomized variance added to retry intervals to prevent synchronized retry storms</p>
+<p><strong>Adaptive Delays:</strong> Dynamic adjustment based on API response headers and current system load</p>
+<h3 id="time-windows">Time Windows</h3>
+<p><strong>Fixed Window:</strong> Counter resets at predetermined intervals (e.g., every minute at :00 seconds)</p>
+<p><strong>Sliding Window:</strong> Rolling window providing continuous, smooth enforcement</p>
+<p><strong>Token Bucket:</strong> Tokens refill at fixed rate, allowing burst traffic followed by steady flow</p>
+<p><strong>Leaky Bucket:</strong> Queued requests processed at fixed rate for consistent flow</p>
+<h2 id="how-rate-limiting-handlers-work">How Rate Limiting Handlers Work</h2>
+<h3 id="advanced-handler-lifecycle">Advanced Handler Lifecycle</h3>
+<p><strong>1. Traffic Pattern Analysis</strong><br/>
+Advanced handlers analyze historical and real-time data to predict and proactively manage quota consumption, identifying patterns and preventing limit breaches before they occur.</p>
+<p><strong>2. Dynamic Algorithm Selection</strong><br/>
+Handlers adapt between algorithms (fixed/sliding window, token/leaky bucket) based on traffic bursts, user types, or endpoint criticality for optimal performance.</p>
+<p><strong>3. Multi-Level Limit Enforcement</strong><br/>
+Limits can be set per-API key, per-user, per-IP, per-resource, or globally, supporting multi-tiered access and special cases (VIP, partner, or public users).</p>
+<p><strong>4. API Gateway Integration</strong><br/>
+Many handlers exist as plugins in API gateways (Kong, Zuplo, AWS API Gateway, Cloudflare), centralizing enforcement and observability across all API traffic.</p>
+<p><strong>5. Intelligent Header Parsing</strong><br/>
+Handlers interpret <code>Retry-After</code>, <code>X-RateLimit-Reset</code>, and other headers to schedule retries precisely rather than using arbitrary delays.</p>
+<p><strong>6. User Communication</strong><br/>
+Advanced systems inform clients of wait times, current quota, and anticipated recovery via dashboards, logs, or API responses for improved user experience.</p>
+<p><strong>7. Abuse Detection and Prevention</strong><br/>
+Handlers monitor for abnormal usage patterns, auto-block suspicious activity, and generate alerts for potential security threats or system abuse.</p>
+<h2 id="rate-limiting-algorithms-comparison">Rate Limiting Algorithms Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>Best For</th>
+<th>Key Features</th>
+<th>Trade-offs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fixed Window</strong></td>
+<td>Simple traffic patterns</td>
+<td>Counter resets at fixed intervals</td>
+<td>Burst at window boundaries</td>
+</tr>
+<tr>
+<td><strong>Sliding Window</strong></td>
+<td>Smoother traffic control</td>
+<td>Rolling window, continuous enforcement</td>
+<td>Higher memory usage</td>
+</tr>
+<tr>
+<td><strong>Token Bucket</strong></td>
+<td>Handling traffic bursts</td>
+<td>Tokens refill, allows burst then steady</td>
+<td>Complex implementation</td>
+</tr>
+<tr>
+<td><strong>Leaky Bucket</strong></td>
+<td>Consistent request flow</td>
+<td>Queued requests at fixed rate</td>
+<td>Can delay urgent requests</td>
+</tr>
+<tr>
+<td><strong>Sliding Log</strong></td>
+<td>High precision</td>
+<td>Timestamp log, highest accuracy</td>
+<td>Highest memory requirements</td>
+</tr>
+</tbody>
+</table>
+<h2 id="implementation-examples">Implementation Examples</h2>
+<h3 id="client-side-javascript-sliding-window">Client-Side JavaScript: Sliding Window</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">class</span> RateLimiter {
+</span></span><span style="display:flex;"><span>  constructor(maxRequests = <span style="color:#ff0;font-weight:bold">10</span>, windowMs = <span style="color:#ff0;font-weight:bold">60000</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">this</span>.maxRequests = maxRequests;
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">this</span>.windowMs = windowMs;
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">this</span>.requests = [];
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  canMakeRequest() {
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">const</span> now = <span style="color:#fff;font-weight:bold">Date</span>.now();
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">this</span>.requests = <span style="color:#fff;font-weight:bold">this</span>.requests.filter(time =&gt; now - time &lt; <span style="color:#fff;font-weight:bold">this</span>.windowMs);
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">this</span>.requests.length &lt; <span style="color:#fff;font-weight:bold">this</span>.maxRequests;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  recordRequest() {
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">this</span>.requests.push(<span style="color:#fff;font-weight:bold">Date</span>.now());
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  getWaitTime() {
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">if</span> (<span style="color:#fff;font-weight:bold">this</span>.requests.length === <span style="color:#ff0;font-weight:bold">0</span>) <span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">const</span> oldestRequest = <span style="color:#fff;font-weight:bold">Math</span>.min(...<span style="color:#fff;font-weight:bold">this</span>.requests);
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">const</span> timeToWait = <span style="color:#fff;font-weight:bold">this</span>.windowMs - (<span style="color:#fff;font-weight:bold">Date</span>.now() - oldestRequest);
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">Math</span>.max(<span style="color:#ff0;font-weight:bold">0</span>, timeToWait);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="server-side-python-fixed-window-with-flask--redis">Server-Side Python: Fixed Window with Flask + Redis</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">from</span> flask <span style="color:#fff;font-weight:bold">import</span> Flask, request, jsonify
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">from</span> flask_limiter <span style="color:#fff;font-weight:bold">import</span> Limiter
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">from</span> flask_limiter.util <span style="color:#fff;font-weight:bold">import</span> get_remote_address
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app = Flask(__name__)
+</span></span><span style="display:flex;"><span>limiter = Limiter(
+</span></span><span style="display:flex;"><span>    app=app,
+</span></span><span style="display:flex;"><span>    key_func=get_remote_address,
+</span></span><span style="display:flex;"><span>    storage_uri=<span style="color:#0ff;font-weight:bold">"redis://localhost:6379"</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@app.route(<span style="color:#0ff;font-weight:bold">"/api/resource"</span>, methods=[<span style="color:#0ff;font-weight:bold">"POST"</span>])
+</span></span><span style="display:flex;"><span>@limiter.limit(<span style="color:#0ff;font-weight:bold">"10/minute"</span>)
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">def</span> resource():
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">return</span> jsonify({<span style="color:#0ff;font-weight:bold">"message"</span>: <span style="color:#0ff;font-weight:bold">"Success"</span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@app.errorhandler(<span style="color:#ff0;font-weight:bold">429</span>)
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">def</span> ratelimit_handler(e):
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">return</span> jsonify(
+</span></span><span style="display:flex;"><span>        error=<span style="color:#0ff;font-weight:bold">f</span><span style="color:#0ff;font-weight:bold">"Too many attempts. Try again in </span><span style="color:#0ff;font-weight:bold">{</span><span style="color:#fff;font-weight:bold">int</span>(e.retry_after)<span style="color:#0ff;font-weight:bold">}</span><span style="color:#0ff;font-weight:bold"> seconds."</span>
+</span></span><span style="display:flex;"><span>    ), <span style="color:#ff0;font-weight:bold">429</span>
+</span></span></code></pre></div><h3 id="python-exponential-backoff-with-tenacity">Python: Exponential Backoff with Tenacity</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">from</span> tenacity <span style="color:#fff;font-weight:bold">import</span> retry, wait_random_exponential, stop_after_attempt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@retry(
+</span></span><span style="display:flex;"><span>    wait=wait_random_exponential(<span style="color:#fff;font-weight:bold">min</span>=<span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#fff;font-weight:bold">max</span>=<span style="color:#ff0;font-weight:bold">60</span>),
+</span></span><span style="display:flex;"><span>    stop=stop_after_attempt(<span style="color:#ff0;font-weight:bold">6</span>)
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">def</span> call_api():
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">return</span> client.api_call()
+</span></span></code></pre></div><h2 id="detecting-and-handling-429-errors">Detecting and Handling 429 Errors</h2>
+<h3 id="http-429-response-structure">HTTP 429 Response Structure</h3>
+<pre tabindex="0"><code>HTTP/1.1 429 TOO MANY REQUESTS
+Retry-After: 60
+X-RateLimit-Limit: 5
+X-RateLimit-Remaining: 0
+X-RateLimit-Reset: 1715276060
+</code></pre><h3 id="handler-response-actions">Handler Response Actions</h3>
+<p><strong>Parse Headers:</strong> Extract <code>Retry-After</code> or calculate delay using <code>X-RateLimit-Reset</code></p>
+<p><strong>Schedule Retry:</strong> Wait specified interval before retrying request</p>
+<p><strong>Exponential Backoff:</strong> Increase delay exponentially if repeated 429s occur</p>
+<p><strong>Add Jitter:</strong> Randomize delay slightly to prevent synchronized retries</p>
+<p><strong>Log and Alert:</strong> Record quota exhaustion for <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a> and capacity planning</p>
+<p><strong>User Notification:</strong> Inform users of temporary delay with estimated recovery time</p>
+<h2 id="best-practices-for-implementation">Best Practices for Implementation</h2>
+<p><strong>1. Analyze Traffic Patterns</strong><br/>
+Study real usage patterns to set realistic, resilient limits that balance protection and usability.</p>
+<p><strong>2. Select Appropriate Algorithm</strong><br/>
+Match enforcement approach to traffic characteristics and business requirements.</p>
+<p><strong>3. Implement Granular Limits</strong><br/>
+Enforce quotas per API key, user, endpoint, or resource for fine-grained control.</p>
+<p><strong>4. Centralize Through Gateways</strong><br/>
+Use API gateways or middleware for consistent enforcement and comprehensive observability.</p>
+<p><strong>5. Define Clear Recovery Periods</strong><br/>
+Establish explicit timeout and block durations for both accidental and abusive overuse.</p>
+<p><strong>6. Enable Dynamic Adjustment</strong><br/>
+Adapt limits in real time based on server load, user class, or business priorities.</p>
+<p><strong>7. Leverage Caching and CDN</strong><br/>
+Use Redis, CDN, or other caching layers to reduce redundant requests and improve performance.</p>
+<p><strong>8. Monitor and Alert</strong><br/>
+Track quota usage, error rates, and anomalous patterns for proactive management.</p>
+<p><strong>9. Provide Clear Feedback</strong><br/>
+Make quota status visible via response headers, dashboards, or user interface.</p>
+<p><strong>10. Use Managed Platforms</strong><br/>
+Consider API management platforms for built-in analytics, global enforcement, and automatic scaling.</p>
+<h2 id="common-pitfalls-to-avoid">Common Pitfalls to Avoid</h2>
+<p><strong>Ignoring Response Headers:</strong> Not reading <code>Retry-After</code> or reset headers leads to inefficient retries</p>
+<p><strong>Missing Jitter:</strong> Synchronized retries create thundering herd problems</p>
+<p><strong>Poor Distributed Coordination:</strong> Quotas not properly shared across multiple servers or serverless functions</p>
+<p><strong>Uniform Limit Assumptions:</strong> Treating all endpoints or keys identically when they have different limits</p>
+<p><strong>Unsafe Retry Patterns:</strong> Retrying non-idempotent operations risks data corruption or duplicate execution</p>
+<p><strong>Inadequate Logging:</strong> Insufficient monitoring prevents identifying and resolving quota issues</p>
+<h2 id="use-cases-and-applications">Use Cases and Applications</h2>
+<h3 id="ai-chatbots--automation">AI Chatbots &amp; Automation</h3>
+<p>Track and enforce per-user or per-key quotas when calling LLM APIs (<a data-lb="1" href="/en/glossary/openai/" title="OpenAI glossary entry">OpenAI</a>, <a data-lb="1" href="/en/glossary/anthropic/" title="Anthropic glossary entry">Anthropic</a>, Google). Queue or delay requests during peak usage, surface “please wait” messages to users, and prevent service disruptions.</p>
+<h3 id="social-media-automation">Social Media Automation</h3>
+<p>Enforce platform-specific quotas for Twitter/X, Facebook, LinkedIn APIs. Prevent account lockouts, shadow bans, or permanent suspensions from excessive API usage.</p>
+<h3 id="saas-integrations">SaaS Integrations</h3>
+<p>Coordinate polling and bulk data syncs within Salesforce, Atlassian, Jira API limits. Dynamically adjust request frequency based on endpoint type and user tier.</p>
+<h3 id="e-commerce-platforms">E-commerce Platforms</h3>
+<p>Manage product catalog updates, inventory synchronization, and order processing within rate limits. Ensure continuous operation during peak shopping periods.</p>
+<h2 id="key-handler-features">Key Handler Features</h2>
+<p><strong>Real-time request tracking</strong> per user, key, and endpoint</p>
+<p><strong>Configurable algorithms</strong> supporting multiple rate limiting strategies</p>
+<p><strong>Graceful error handling</strong> with clear user messaging</p>
+<p><strong>Automatic exponential backoff</strong> with jitter for all retries</p>
+<p><strong>Intelligent header parsing</strong> for <code>Retry-After</code> and related signals</p>
+<p><strong>Extensibility</strong> for new endpoints or changing API rules</p>
+<p><strong>Lightweight performance</strong> with minimal memory and CPU overhead</p>
+<p><strong>Comprehensive observability</strong> with centralized logging and alerting</p>
+<h2 id="related-terminology">Related Terminology</h2>
+<p><strong>API Throttling:</strong> Enforcement of request rate ceilings, often used interchangeably with rate limiting</p>
+<p><strong>Quota Management:</strong> Broader resource usage limits including storage, compute units, or bandwidth</p>
+<p><strong>Burst Rate:</strong> Short-term allowance for traffic spikes above steady-state limits</p>
+<p><strong>Distributed Rate Limiting:</strong> Coordinating enforcement across multiple servers, regions, or availability zones</p>
+<p><strong>Circuit Breaker:</strong> Pattern that prevents cascading failures by temporarily blocking requests to failing services</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://zuplo.com/learning-center/10-best-practices-for-api-rate-limiting-in-2025" rel="nofollow noopener noreferrer" target="_blank">Zuplo: 10 Best Practices for API Rate Limiting in 2025</a></li>
+<li><a href="https://zuplo.com/features/rate-limiting" rel="nofollow noopener noreferrer" target="_blank">Zuplo: What is API Rate Limiting?</a></li>
+<li><a href="https://zuplo.com/learning-center/subtle-art-of-rate-limiting-an-api" rel="nofollow noopener noreferrer" target="_blank">Zuplo: The Subtle Art of Rate Limiting</a></li>
+<li><a href="https://developers.cloudflare.com/waf/rate-limiting-rules/best-practices/" rel="nofollow noopener noreferrer" target="_blank">Cloudflare: Rate Limiting Best Practices</a></li>
+<li><a href="https://konghq.com/blog/learning-center/what-is-api-rate-limiting" rel="nofollow noopener noreferrer" target="_blank">KongHQ: What is API Rate Limiting?</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429" rel="nofollow noopener noreferrer" target="_blank">MDN: HTTP 429 Too Many Requests</a></li>
+<li><a href="https://www.solo.io/topics/rate-limiting" rel="nofollow noopener noreferrer" target="_blank">Solo.io: Rate Limiting Algorithms</a></li>
+<li><a href="https://datadome.co/bot-management-protection/what-is-api-rate-limiting/" rel="nofollow noopener noreferrer" target="_blank">DataDome: What is API Rate Limiting?</a></li>
+<li><a href="https://testfully.io/blog/api-rate-limit/" rel="nofollow noopener noreferrer" target="_blank">Testfully: API Rate Limit Explained</a></li>
+<li><a href="https://tenacity.readthedocs.io/en/latest/" rel="nofollow noopener noreferrer" target="_blank">Tenacity: Python Retry Library</a></li>
+<li><a href="https://www.reddit.com/r/node/comments/1hsrlrf/best_practices_for_handling_thirdparty_api_rate/" rel="nofollow noopener noreferrer" target="_blank">Reddit: Best Practices for Handling API Rate Limits</a></li>
+<li><a href="https://www.youtube.com/watch?v=F1YQ7YRjttI" rel="nofollow noopener noreferrer" target="_blank">YouTube: Rate Limiting System Design</a></li>
+<li><a href="https://www.youtube.com/watch?v=V4z1rJQyImM" rel="nofollow noopener noreferrer" target="_blank">YouTube: How to Design a Rate Limiter</a></li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/api-rate-limiting/">
+                    API Rate Limiting
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A system that controls how many requests can be sent to an API within a set time period, protecting ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/api-rate-limiting/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/rate-limiting-handler/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 title: "Hugo Pipes"
 date: 2025-12-19
 translationKey: Hugo-Pipes
-description: "Hugo Pipes is a built-in feature that automatically processes website files like stylesheets and scripts without needing separate software tools."
+description: "Hugo Pipes is a built-in tool that processes website assets like stylesheets and scripts automatically, eliminating the need for separate external software."
 keywords:
 - Hugo Pipes
 - asset processing
@@ -54,7 +54,9 @@ The Hugo Pipes workflow follows a systematic approach to asset processing:
 
 6. **Output Generation**: Processed assets are written to the public directory with appropriate directory structures and filenames. Hugo maintains a manifest of processed assets for reference by templates.
 
-7. **Template Integration**: Processed assets are made available to templates through resource variables, enabling dynamic inclusion of optimized assets in HTML output with proper cache-busting parameters.**Example Workflow**:
+7. **Template Integration**: Processed assets are made available to templates through resource variables, enabling dynamic inclusion of optimized assets in HTML output with proper cache-busting parameters.
+
+**Example Workflow**:
 ```
 {{ $scss := resources.Get "scss/main.scss" }}
 {{ $css := $scss | resources.ToCSS | resources.Minify | resources.Fingerprint }}
@@ -109,12 +111,12 @@ The Hugo Pipes workflow follows a systematic approach to asset processing:
 
 | Feature | Hugo Pipes | Webpack | Gulp | Parcel |
 |---------|------------|---------|------|--------|
-| **Configuration**| Template-based | Config files | Gulpfile.js | Zero-config |
-| **Learning Curve**| Low | High | Medium | Low |
-| **Processing Speed**| Very Fast | Medium | Medium | Fast |
-| **Built-in Optimizations**| Extensive | Plugin-based | Plugin-based | Built-in |
-| **Dependency Management**| Automatic | Manual/Loaders | Manual | Automatic |
-| **Integration Complexity**| Native | External | External | External |
+| **Configuration** | Template-based | Config files | Gulpfile.js | Zero-config |
+| **Learning Curve** | Low | High | Medium | Low |
+| **Processing Speed** | Very Fast | Medium | Medium | Fast |
+| **Built-in Optimizations** | Extensive | Plugin-based | Plugin-based | Built-in |
+| **Dependency Management** | Automatic | Manual/Loaders | Manual | Automatic |
+| **Integration Complexity** | Native | External | External | External |
 
 ## Challenges and Considerations
 

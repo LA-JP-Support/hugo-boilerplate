@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Hook | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hook/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="A mechanism that lets developers insert custom code at specific points in a program's execution without changing the core functionality, enabling flexible customization and automation." name="description"/>
+<meta content="hooks programming, React hooks, Git hooks, webhooks, lifecycle hooks" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hook/" property="og:url"/>
+<meta content="Hook | SmartWeb" property="og:title"/>
+<meta content="A mechanism that lets developers insert custom code at specific points in a program's execution without changing the core functionality, enabling flexible customization and automation." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hook/" name="twitter:url"/>
+<meta content="Hook | SmartWeb" name="twitter:title"/>
+<meta content="A mechanism that lets developers insert custom code at specific points in a program's execution without changing the core functionality, enabling flexible customization and automation." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Hook</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Hook
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A mechanism that lets developers insert custom code at specific points in a program's execution without changing the core functionality, enabling flexible customization and automation.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                hooks programming
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                React hooks
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Git hooks
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                webhooks
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                lifecycle hooks
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-hook">What is a Hook?</h2>
+<p>A hook in programming represents a mechanism that allows developers to intercept, modify, or extend the behavior of software applications at specific points during execution. The concept of hooks provides a way to “hook into” existing code or processes without directly modifying the core functionality, enabling extensibility, customization, and event-driven programming patterns. Hooks serve as predefined entry points where custom code can be executed, making them fundamental building blocks for creating flexible and maintainable software architectures.</p>
+<p>The term “hook” derives from the idea of providing a place where additional functionality can be “hooked” or attached to existing systems. This pattern has evolved across multiple domains in software development, from operating system callbacks to modern web development frameworks. Hooks enable separation of concerns by allowing core functionality to remain unchanged while providing mechanisms for extending behavior through well-defined interfaces. They facilitate loose coupling between components and promote code reusability by establishing standardized ways to inject custom logic into predetermined execution points.</p>
+<p>Modern software development heavily relies on various types of hooks, including React hooks for state management and lifecycle events, Git hooks for repository automation, webhooks for inter-service communication, and lifecycle hooks in frameworks and applications. Each implementation serves specific purposes but shares the common principle of providing controlled access points for extending functionality. Understanding hooks is essential for developers working with modern frameworks, version control systems, continuous integration pipelines, and distributed architectures where event-driven patterns and extensibility are crucial for building scalable and maintainable solutions.</p>
+<h2 id="core-hook-technologies-and-approaches">Core Hook Technologies and Approaches</h2>
+<p><strong>React Hooks</strong> are functions that allow developers to use state and other React features in functional components, providing a more direct API to React concepts and enabling better code reuse and composition patterns.</p>
+<p><strong>Git Hooks</strong> are scripts that Git executes automatically at specific points in the Git workflow, such as before commits, after pushes, or during merges, enabling automation of testing, validation, and deployment processes.</p>
+<p><strong>Webhooks</strong> are HTTP callbacks that applications send to other applications when specific events occur, enabling real-time communication and integration between distributed services and third-party systems.</p>
+<p><strong>Lifecycle Hooks</strong> are predefined methods or functions that frameworks call at specific stages of an object’s or component’s lifecycle, allowing developers to execute custom code during creation, updates, or destruction phases.</p>
+<p><strong>Event Hooks</strong> provide mechanisms for subscribing to and handling specific events within applications, enabling reactive programming patterns and decoupled communication between different parts of a system.</p>
+<p><strong>Database Hooks</strong> are triggers or procedures that execute automatically in response to database events such as insertions, updates, or deletions, enabling data validation, auditing, and automated processing.</p>
+<p><strong>Plugin Hooks</strong> are extension points in applications that allow third-party developers to add functionality without modifying the core codebase, commonly used in content management systems and development tools.</p>
+<h2 id="how-hook-works">How Hook Works</h2>
+<p>The fundamental workflow of hooks involves registration, triggering, and execution phases that create a standardized pattern for extending functionality:</p>
+<ol>
+<li>
+<p><strong>Hook Definition</strong>: Developers define hook points within the core application code at strategic locations where extensibility is desired, establishing the interface and parameters that hook handlers will receive.</p>
+</li>
+<li>
+<p><strong>Hook Registration</strong>: External code or plugins register handler functions with specific hook names or identifiers, creating associations between events and the code that should execute when those events occur.</p>
+</li>
+<li>
+<p><strong>Event Occurrence</strong>: The application reaches a predefined hook point during normal execution, such as a lifecycle transition, user action, or system event that triggers the hook mechanism.</p>
+</li>
+<li>
+<p><strong>Hook Invocation</strong>: The hook system identifies all registered handlers for the current hook point and prepares to execute them according to defined priority or registration order.</p>
+</li>
+<li>
+<p><strong>Handler Execution</strong>: Each registered handler function executes with access to relevant context data, parameters, and potentially the ability to modify the execution flow or data being processed.</p>
+</li>
+<li>
+<p><strong>Result Processing</strong>: The hook system collects results from handler executions and may aggregate them, use them to modify application behavior, or pass them back to the calling code.</p>
+</li>
+<li>
+<p><strong>Continuation</strong>: Normal application execution continues, potentially modified by the hook handlers’ actions, completing the hook workflow and maintaining the application’s intended functionality.</p>
+</li>
+</ol>
+<p><strong>Example Workflow</strong>: In a React component using the useState hook, the component calls useState during rendering, React’s hook system tracks the state value and setter function, the component receives the current state value and update function, user interactions trigger state updates through the setter function, React schedules re-renders when state changes, and the component re-renders with the new state value, demonstrating the complete hook lifecycle.</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p><strong>Enhanced Modularity</strong> enables developers to separate concerns by keeping core functionality isolated while providing well-defined extension points, resulting in more maintainable and testable codebases with clear boundaries between different system components.</p>
+<p><strong>Improved Code Reusability</strong> allows hook-based logic to be shared across multiple components or applications, reducing duplication and promoting consistent implementation patterns that can be easily distributed and maintained.</p>
+<p><strong>Event-Driven Architecture</strong> facilitates loose coupling between system components by enabling reactive programming patterns where components respond to events without direct dependencies on event sources, improving system flexibility and scalability.</p>
+<p><strong>Simplified State Management</strong> provides intuitive APIs for managing component state and side effects, reducing the complexity of state-related code and making it easier to reason about application behavior and data flow.</p>
+<p><strong>Automated Workflow Integration</strong> enables seamless integration of custom logic into existing processes, such as automated testing, deployment pipelines, and data validation, without requiring modifications to core system functionality.</p>
+<p><strong>Real-Time Communication</strong> supports immediate notification and response patterns between distributed services, enabling responsive user experiences and efficient data synchronization across multiple systems and platforms.</p>
+<p><strong>Extensible Plugin Architecture</strong> allows third-party developers to extend application functionality through standardized interfaces, creating ecosystems of plugins and extensions that enhance core application capabilities without compromising stability.</p>
+<p><strong>Consistent Lifecycle Management</strong> provides predictable patterns for resource allocation, cleanup, and state transitions, reducing memory leaks and ensuring proper resource management throughout application execution cycles.</p>
+<p><strong>Debugging and <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">Monitoring</a></strong> enables insertion of logging, metrics collection, and debugging code at strategic points without modifying core business logic, improving observability and troubleshooting capabilities.</p>
+<p><strong>Performance Optimization</strong> allows for targeted performance improvements through selective execution, caching strategies, and resource management techniques that can be applied at specific hook points without affecting overall system architecture.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p><strong>React Component State Management</strong> involves using useState, useEffect, and custom hooks to manage component state, side effects, and complex logic in functional components, replacing class-based component patterns with more concise and reusable solutions.</p>
+<p><strong>Git Repository Automation</strong> utilizes pre-commit, post-commit, and pre-push hooks to automatically run tests, lint code, validate commit messages, and trigger deployment processes, ensuring code quality and consistency across development teams.</p>
+<p><strong><a data-lb="1" href="/en/glossary/api-integration/" title="API Integration glossary entry">API Integration</a> and Notifications</strong> employs webhooks to receive real-time notifications from third-party services, process payment confirmations, handle repository events, and synchronize data between different systems and platforms.</p>
+<p><strong>Content Management System Extensions</strong> leverages plugin hooks to add custom functionality, modify content rendering, implement custom authentication, and integrate third-party services without modifying core CMS code.</p>
+<p><strong>Database Auditing and Validation</strong> uses database triggers and hooks to automatically log changes, validate data integrity, enforce business rules, and maintain audit trails for compliance and <a data-lb="1" href="/en/glossary/security-requirements/" title="Security Requirements glossary entry">security requirements</a>.</p>
+<p><strong>Continuous Integration Pipelines</strong> implements hooks to trigger automated builds, run test suites, deploy applications, and notify team members of build status and deployment results throughout the development lifecycle.</p>
+<p><strong>E-commerce Order Processing</strong> utilizes hooks to handle order status changes, inventory updates, payment processing, shipping notifications, and customer communication throughout the order fulfillment process.</p>
+<p><strong>User Authentication and Authorization</strong> employs lifecycle hooks to manage user sessions, validate permissions, log security events, and implement custom authentication flows that integrate with existing identity management systems.</p>
+<p><strong>Monitoring and Alerting Systems</strong> uses hooks to collect performance metrics, detect anomalies, trigger alerts, and generate reports based on application events and system behavior patterns.</p>
+<p><strong>Data Synchronization and ETL</strong> implements hooks to trigger data extraction, transformation, and loading processes when source data changes, ensuring data consistency across multiple systems and databases.</p>
+<h2 id="hook-types-comparison">Hook Types Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Hook Type</th>
+<th>Execution Context</th>
+<th>Primary Use Case</th>
+<th>Implementation Complexity</th>
+<th>Performance Impact</th>
+<th>Real-time Capability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>React Hooks</td>
+<td>Client-side rendering</td>
+<td>State management and effects</td>
+<td>Low to Medium</td>
+<td>Minimal</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Git Hooks</td>
+<td>Local/server repository</td>
+<td>Workflow automation</td>
+<td>Medium</td>
+<td>Low</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Webhooks</td>
+<td>HTTP network requests</td>
+<td>Service integration</td>
+<td>Medium to High</td>
+<td>Variable</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Database Hooks</td>
+<td>Database transactions</td>
+<td>Data validation and auditing</td>
+<td>High</td>
+<td>Medium to High</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Lifecycle Hooks</td>
+<td>Application runtime</td>
+<td>Component management</td>
+<td>Low to Medium</td>
+<td>Low</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Event Hooks</td>
+<td>Application events</td>
+<td>User interaction handling</td>
+<td>Medium</td>
+<td>Low to Medium</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p><strong>Debugging Complexity</strong> arises when multiple hooks interact or when hook execution order affects application behavior, making it difficult to trace issues and understand the complete execution flow, especially in complex applications with many registered handlers.</p>
+<p><strong>Performance Overhead</strong> can occur when hooks execute frequently or perform expensive operations, potentially impacting application responsiveness and requiring careful optimization and monitoring to maintain acceptable performance levels.</p>
+<p><strong>Error Handling and Recovery</strong> becomes challenging when hook handlers fail or throw exceptions, requiring robust error handling strategies to prevent cascading failures and ensure application stability and graceful degradation.</p>
+<p><strong>Security Vulnerabilities</strong> may emerge when hooks process untrusted input or when webhook endpoints lack proper authentication and validation, potentially exposing applications to injection attacks and unauthorized access.</p>
+<p><strong>Dependency Management</strong> complications arise when hooks rely on external services or resources that may be unavailable, requiring careful consideration of fallback strategies and dependency injection patterns.</p>
+<p><strong>Testing Difficulties</strong> occur when hooks interact with external systems or have complex dependencies, making it challenging to create isolated unit tests and requiring sophisticated mocking and testing strategies.</p>
+<p><strong>Documentation and Maintenance</strong> overhead increases as hook-based systems grow in complexity, requiring comprehensive documentation of hook interfaces, execution order, and interaction patterns to maintain code quality.</p>
+<p><strong>Version Compatibility</strong> issues can arise when hook interfaces change between versions, requiring careful versioning strategies and backward compatibility considerations to prevent breaking existing integrations.</p>
+<p><strong>Resource Leaks</strong> may occur when hooks create resources or subscriptions without proper cleanup, leading to memory leaks and performance degradation over time, especially in long-running applications.</p>
+<p><strong>Concurrency and Race Conditions</strong> can emerge when multiple hooks access shared resources simultaneously, requiring careful synchronization and locking strategies to ensure data consistency and prevent conflicts.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p><strong>Clear Hook Interfaces</strong> should define explicit parameters, return values, and expected behavior to ensure consistent implementation and usage across different parts of the application and development team members.</p>
+<p><strong>Proper Error Handling</strong> must include try-catch blocks, graceful degradation strategies, and comprehensive logging to prevent hook failures from affecting core application functionality and user experience.</p>
+<p><strong>Performance Monitoring</strong> requires implementing metrics collection and performance tracking for hook execution to identify <a data-lb="1" href="/en/glossary/bottlenecks/" title="Bottlenecks glossary entry">bottlenecks</a> and optimize critical paths that may impact overall application performance.</p>
+<p><strong>Security Validation</strong> should include input sanitization, authentication checks, and authorization verification for all hook handlers, especially those processing external data or user input.</p>
+<p><strong>Comprehensive Testing</strong> must cover hook functionality with unit tests, integration tests, and end-to-end tests that verify both individual hook behavior and interactions between multiple hooks.</p>
+<p><strong>Documentation Standards</strong> should maintain detailed documentation of hook purposes, parameters, usage examples, and integration guidelines to facilitate team collaboration and future maintenance efforts.</p>
+<p><strong>Resource Management</strong> requires implementing proper cleanup procedures, connection pooling, and resource disposal to prevent memory leaks and ensure efficient resource utilization throughout the application lifecycle.</p>
+<p><strong>Graceful Degradation</strong> should ensure that hook failures do not break core functionality by implementing fallback mechanisms and default behaviors when hooks are unavailable or fail to execute.</p>
+<p><strong>Version Control Integration</strong> must include hooks in version control systems with proper branching strategies and deployment procedures to maintain consistency across different environments and development stages.</p>
+<p><strong>Monitoring and Alerting</strong> should implement comprehensive logging, metrics collection, and alerting systems to track hook performance, detect failures, and provide visibility into hook-based system behavior.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p><strong>Custom Hook Development</strong> involves creating reusable hook functions that encapsulate complex logic, state management, and side effects, enabling better code organization and sharing of functionality across multiple components and applications.</p>
+<p><strong>Hook Composition Patterns</strong> utilize multiple hooks together to create sophisticated functionality, combining state management, effect handling, and custom logic to build powerful and flexible component behaviors.</p>
+<p><strong>Conditional Hook Execution</strong> implements dynamic hook registration and execution based on runtime conditions, enabling adaptive behavior and performance optimization through selective hook activation and deactivation.</p>
+<p><strong>Hook Middleware Systems</strong> create layered architectures where hooks can be processed through multiple middleware functions, enabling cross-cutting concerns like logging, authentication, and validation to be applied consistently.</p>
+<p><strong>Asynchronous Hook Handling</strong> manages complex asynchronous operations within hooks, including proper cleanup, cancellation, and error handling for promises, async/await patterns, and concurrent operations.</p>
+<p><strong>Hook Performance Optimization</strong> employs techniques like memoization, lazy loading, and selective execution to minimize hook overhead and improve application performance in high-frequency execution scenarios.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p><strong>Enhanced Developer Tools</strong> will provide better debugging, profiling, and <a data-lb="1" href="/en/glossary/visualization/" title="Visualization glossary entry">visualization</a> capabilities for hook-based applications, making it easier to understand hook execution flow and optimize performance.</p>
+<p><strong>Standardized Hook Protocols</strong> may emerge to create interoperable hook systems across different frameworks and platforms, enabling better integration and code sharing between different technologies and ecosystems.</p>
+<p><strong>AI-Powered Hook Optimization</strong> could automatically analyze hook usage patterns and suggest optimizations, identify potential issues, and recommend best practices based on application behavior and performance metrics.</p>
+<p><strong>Serverless Hook Integration</strong> will expand hook capabilities in serverless environments, enabling more sophisticated event-driven architectures and better integration with cloud-native services and platforms.</p>
+<p><strong>Real-time Collaboration Hooks</strong> may enable new patterns for collaborative applications, allowing multiple users to interact with shared state and receive real-time updates through sophisticated hook-based synchronization mechanisms.</p>
+<p><strong>Security-First Hook Design</strong> will incorporate advanced security features like automatic input validation, threat detection, and secure communication protocols directly into hook frameworks and implementation patterns.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>React Documentation: Hooks API Reference. Facebook Inc. <a href="https://reactjs.org/docs/hooks-reference.html" rel="nofollow noopener noreferrer" target="_blank">https://reactjs.org/docs/hooks-reference.html</a></li>
+<li>Git Documentation: Customizing Git - Git Hooks. Software Freedom Conservancy. <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks" rel="nofollow noopener noreferrer" target="_blank">https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks</a></li>
+<li>GitHub Webhooks Documentation. GitHub Inc. <a href="https://docs.github.com/en/developers/webhooks-and-events/webhooks" rel="nofollow noopener noreferrer" target="_blank">https://docs.github.com/en/developers/webhooks-and-events/webhooks</a></li>
+<li>Mozilla Developer Network: Web APIs and Hooks. Mozilla Foundation. <a href="https://developer.mozilla.org/en-US/docs/Web/API" rel="nofollow noopener noreferrer" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API</a></li>
+<li>Vue.js Composition API Documentation. Evan You. <a href="https://vuejs.org/guide/extras/composition-api-faq.html" rel="nofollow noopener noreferrer" target="_blank">https://vuejs.org/guide/extras/composition-api-faq.html</a></li>
+<li>WordPress Plugin API: Hooks. WordPress Foundation. <a href="https://developer.wordpress.org/plugins/hooks/" rel="nofollow noopener noreferrer" target="_blank">https://developer.wordpress.org/plugins/hooks/</a></li>
+<li>Node.js Event Emitter Documentation. Node.js Foundation. <a href="https://nodejs.org/api/events.html" rel="nofollow noopener noreferrer" target="_blank">https://nodejs.org/api/events.html</a></li>
+<li>AWS Lambda Hooks and Lifecycle Events. Amazon Web Services. <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-hooks.html" rel="nofollow noopener noreferrer" target="_blank">https://docs.aws.amazon.com/lambda/latest/dg/lambda-hooks.html</a></li>
+</ul>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/hook/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 title: "Softphone"
 date: 2025-12-19
 translationKey: Softphone
-description: "A software application that turns your computer or smartphone into a virtual phone, letting you make calls over the internet without needing a traditional phone line."
+description: "A software application that turns your computer or smartphone into a virtual phone, allowing you to make calls over the internet instead of using a traditional phone line."
 keywords:
 - softphone
 - VoIP software
@@ -56,7 +56,9 @@ The softphone communication process involves multiple coordinated steps that tra
 
 7. **Reception and Decoding**: Incoming RTP packets are received, buffered to compensate for network jitter, decoded using the appropriate codec, and converted back to analog audio for playback.
 
-8. **Call Termination**: When the call ends, the softphone sends SIP BYE messages to properly terminate the session and release network resources.**Example Workflow**: A remote employee uses a softphone to call a client. The application registers with the company's cloud PBX, initiates the call using SIP signaling, establishes encrypted RTP streams, and maintains high-quality audio throughout the conversation while integrating with CRM systems to log call details automatically.
+8. **Call Termination**: When the call ends, the softphone sends SIP BYE messages to properly terminate the session and release network resources.
+
+**Example Workflow**: A remote employee uses a softphone to call a client. The application registers with the company's cloud PBX, initiates the call using SIP signaling, establishes encrypted RTP streams, and maintains high-quality audio throughout the conversation while integrating with CRM systems to log call details automatically.
 
 ## Key Benefits
 
@@ -106,13 +108,13 @@ The softphone communication process involves multiple coordinated steps that tra
 
 | Feature | Softphone | Traditional Phone System |
 |---------|-----------|-------------------------|
-| **Hardware Requirements**| Uses existing computers/mobile devices | Requires dedicated desk phones and PBX equipment |
-| **Installation Complexity**| Software download and configuration | Physical wiring and hardware installation |
-| **Scalability**| Instant user addition/removal via software | Hardware procurement and installation required |
-| **Mobility**| Full functionality anywhere with internet | Limited to physical phone locations |
-| **Feature Set**| Video, messaging, screen sharing, integrations | Basic calling features, limited advanced options |
-| **Maintenance Costs**| Software updates and licensing fees | Hardware maintenance, replacement, and support contracts |
-| **Disaster Recovery**| Automatic failover and cloud redundancy | Manual failover procedures and backup systems |
+| **Hardware Requirements** | Uses existing computers/mobile devices | Requires dedicated desk phones and PBX equipment |
+| **Installation Complexity** | Software download and configuration | Physical wiring and hardware installation |
+| **Scalability** | Instant user addition/removal via software | Hardware procurement and installation required |
+| **Mobility** | Full functionality anywhere with internet | Limited to physical phone locations |
+| **Feature Set** | Video, messaging, screen sharing, integrations | Basic calling features, limited advanced options |
+| **Maintenance Costs** | Software updates and licensing fees | Hardware maintenance, replacement, and support contracts |
+| **Disaster Recovery** | Automatic failover and cloud redundancy | Manual failover procedures and backup systems |
 
 ## Challenges and Considerations
 

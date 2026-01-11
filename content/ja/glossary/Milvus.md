@@ -15,7 +15,9 @@ type: glossary
 draft: false
 e-title: Milvus
 term: ミルバス
-url: "/ja/glossary/Milvus/"
+url: "/ja/glossary/milvus/"
+aliases:
+- "/ja/glossary/Milvus/"
 ---
 ## Milvusとは?
 Milvusは、大規模な非構造化データセットに対するスケーラブルで高性能な類似性検索を目的として構築された、オープンソースのクラウドネイティブなベクトルデータベースです。Zillizによって開発され、Apache 2.0ライセンスの下で管理されているMilvusは、AIや機械学習モデルによって生成されたデータの数値表現である高次元ベクトル埋め込みを効率的に保存、インデックス化、クエリします。
@@ -36,7 +38,9 @@ Milvusは、大規模な非構造化データセットに対するスケーラ�
 
 ### 類似性検索とANN
 
-**類似性検索:**ベクトル距離メトリック(ユークリッド距離、コサイン類似度、内積)に基づいて、クエリアイテムに最も類似したデータセット内のアイテムを見つけること。**近似最近傍探索(ANN):**クエリベクトルに最も近いベクトルを持つアイテムを迅速に取得するアルゴリズムファミリー。わずかな精度を犠牲にして大幅な速度向上を実現—数十億規模のデータセットには不可欠。
+**類似性検索:** ベクトル距離メトリック(ユークリッド距離、コサイン類似度、内積)に基づいて、クエリアイテムに最も類似したデータセット内のアイテムを見つけること。
+
+**近似最近傍探索(ANN):** クエリベクトルに最も近いベクトルを持つアイテムを迅速に取得するアルゴリズムファミリー。わずかな精度を犠牲にして大幅な速度向上を実現—数十億規模のデータセットには不可欠。
 
 ## アーキテクチャ
 
@@ -46,62 +50,119 @@ Milvusは、ストレージとコンピュートを分離した多層マイク�
 
 **主要コンポーネント:**
 
-**アクセス層:**クライアントリクエストとAPI(RESTful、SDK)を処理するステートレスプロキシ。リクエストの検証、結果の集約を行います。**コーディネーターサービス:**ロードバランシング、メタデータ管理、システム状態、DDL/DCL操作、タスクスケジューリングを調整します。**ワーカーノード:**検索、データ挿入、インデックス化のためのステートレスエグゼキューター。
+**アクセス層:** クライアントリクエストとAPI(RESTful、SDK)を処理するステートレスプロキシ。リクエストの検証、結果の集約を行います。
+
+**コーディネーターサービス:** ロードバランシング、メタデータ管理、システム状態、DDL/DCL操作、タスクスケジューリングを調整します。
+
+**ワーカーノード:** 検索、データ挿入、インデックス化のためのステートレスエグゼキューター。
 - ストリーミングノード: リアルタイムデータ取り込みとストリーミング一貫性を処理
 - クエリノード: 履歴(シール済み)データをロードしてクエリ
 - データノード: コンパクションやインデックス構築などのバックグラウンドタスク
 
-**オブジェクトストレージ:**ベクトルデータ、インデックス、ログを永続化。MinIO、AWS S3、Azure Blobをサポート。**メタストレージ:**メタデータとクラスタ状態にetcdを使用。**WALストレージ:**データの耐久性と復旧のための先行書き込みログ(Kafka、Pulsar)。
+**オブジェクトストレージ:** ベクトルデータ、インデックス、ログを永続化。MinIO、AWS S3、Azure Blobをサポート。
+
+**メタストレージ:** メタデータとクラスタ状態にetcdを使用。
+
+**WALストレージ:** データの耐久性と復旧のための先行書き込みログ(Kafka、Pulsar)。
 
 ### デプロイメントオプション
 
 | モード | 説明 | ユースケース |
 |------|-------------|----------|
-| **Milvus Lite**| pip経由のPythonライブラリ;組み込みで実行 | プロトタイピング、ローカル開発 |
-| **スタンドアロン**| Dockerベースのシングルノードデプロイメント | テスト、小規模本番環境 |
-| **分散**| 水平スケーリングを備えたKubernetesベース | エンタープライズ、大規模 |
-| **Zilliz Cloud**| 10倍のパフォーマンス加速を備えた完全マネージドSaaS | 本番環境、手間なし |
+| **Milvus Lite** | pip経由のPythonライブラリ;組み込みで実行 | プロトタイピング、ローカル開発 |
+| **スタンドアロン** | Dockerベースのシングルノードデプロイメント | テスト、小規模本番環境 |
+| **分散** | 水平スケーリングを備えたKubernetesベース | エンタープライズ、大規模 |
+| **Zilliz Cloud** | 10倍のパフォーマンス加速を備えた完全マネージドSaaS | 本番環境、手間なし |
 
 ### スケーラビリティ
 
-**水平スケーリング:**コンピュートとストレージが独立してスケール。ステートレスマイクロサービスにより、Kubernetesによって調整される弾力的な復旧が可能。**ハードウェア最適化:**AVX512、SIMD、GPUアクセラレーション(NVIDIA CUDA、Cagra)、NVMe SSDサポート。**数十億規模のサポート:**主要企業の本番環境で使用されている数百億のベクトルを持つデータセットに対する実証済みの安定性。
+**水平スケーリング:** コンピュートとストレージが独立してスケール。ステートレスマイクロサービスにより、Kubernetesによって調整される弾力的な復旧が可能。
+
+**ハードウェア最適化:** AVX512、SIMD、GPUアクセラレーション(NVIDIA CUDA、Cagra)、NVMe SSDサポート。
+
+**数十億規模のサポート:** 主要企業の本番環境で使用されている数百億のベクトルを持つデータセットに対する実証済みの安定性。
 
 ## 主要機能
 
 ### サポートされるデータタイプ
 
-**密ベクトル:**float32、float16、int8配列(BERT、CLIP、ResNetから)。**疎ベクトル:**多くのゼロを持つ高次元データに効率的(テキスト検索、レコメンデーション)。**バイナリベクトル:**ハッシュ化やビジョンタスク用のコンパクトなビットパック表現。**プリミティブ:**整数、浮動小数点、文字列、ブール値。**JSON/配列/セット:**半構造化メタデータとマルチモーダルモデリング。
+**密ベクトル:** float32、float16、int8配列(BERT、CLIP、ResNetから)。
+
+**疎ベクトル:** 多くのゼロを持つ高次元データに効率的(テキスト検索、レコメンデーション)。
+
+**バイナリベクトル:** ハッシュ化やビジョンタスク用のコンパクトなビットパック表現。
+
+**プリミティブ:** 整数、浮動小数点、文字列、ブール値。
+
+**JSON/配列/セット:** 半構造化メタデータとマルチモーダルモデリング。
 
 ### インデックスアルゴリズム
 
 | アルゴリズム | 説明 | ユースケース |
 |-----------|-------------|----------|
-| **HNSW**| 階層的ナビゲート可能スモールワールド;グラフベース | 汎用性、高次元 |
-| **IVF**| 転置ファイルシステム;ベクトル空間を分割 | バランスの取れた速度/コスト |
-| **DiskANN**| 大規模データセット用のディスク上インデックス | 数十億のベクトル、SSD |
-| **Flat**| 最高精度のための線形スキャン | 小規模データセット、評価 |
-| **Cagra**| GPU最適化グラフベースインデックス | 高スループット、GPUインフラ |**重要なコンセプト:**- グラフベースインデックス(HNSW)は、低k、高再現率クエリでIVFを上回る
+| **HNSW** | 階層的ナビゲート可能スモールワールド;グラフベース | 汎用性、高次元 |
+| **IVF** | 転置ファイルシステム;ベクトル空間を分割 | バランスの取れた速度/コスト |
+| **DiskANN** | 大規模データセット用のディスク上インデックス | 数十億のベクトル、SSD |
+| **Flat** | 最高精度のための線形スキャン | 小規模データセット、評価 |
+| **Cagra** | GPU最適化グラフベースインデックス | 高スループット、GPUインフラ |
+
+**重要なコンセプト:**
+- グラフベースインデックス(HNSW)は、低k、高再現率クエリでIVFを上回る
 - IVFは大規模top-kクエリに最適
 - DiskANNはSSDバックアップの数十億規模データセットに理想的
 - 量子化(SQ8、PQ)はメモリ効率のためにベクトルを圧縮
 
 ### 検索機能
 
-**ANN検索:**クエリに最も類似したtop-Kベクトルを見つける。**フィルタリング検索:**ベクトル検索とメタデータフィルタリング(タグ、範囲)を組み合わせる。**範囲検索:**距離閾値内のベクトルを取得。**ハイブリッド検索:**クエリで複数のベクトルフィールド/モダリティを使用。**全文検索:**テキストフィールドのBM25ベース検索。**リランキング:**セカンダリアルゴリズムで初期結果を洗練。**IDによる取得:**プライマリキーまたは複雑な式でアイテムを取得。
+**ANN検索:** クエリに最も類似したtop-Kベクトルを見つける。
+
+**フィルタリング検索:** ベクトル検索とメタデータフィルタリング(タグ、範囲)を組み合わせる。
+
+**範囲検索:** 距離閾値内のベクトルを取得。
+
+**ハイブリッド検索:** クエリで複数のベクトルフィールド/モダリティを使用。
+
+**全文検索:** テキストフィールドのBM25ベース検索。
+
+**リランキング:** セカンダリアルゴリズムで初期結果を洗練。
+
+**IDによる取得:** プライマリキーまたは複雑な式でアイテムを取得。
 
 ### データ操作
 
-**コレクションとパーティション:**効率的なアクセスのためにデータを階層的に整理。**スキーマ進化:**ダウンタイムなしでコレクションスキーマを更新。**CRUD操作:**ベクトルとメタデータの挿入、更新、削除、アップサート。**バッチ処理:**一括インポート/エクスポートツール。**マルチテナンシー:**データベース、コレクション、またはパーティションキーによる分離。
+**コレクションとパーティション:** 効率的なアクセスのためにデータを階層的に整理。
+
+**スキーマ進化:** ダウンタイムなしでコレクションスキーマを更新。
+
+**CRUD操作:** ベクトルとメタデータの挿入、更新、削除、アップサート。
+
+**バッチ処理:** 一括インポート/エクスポートツール。
+
+**マルチテナンシー:** データベース、コレクション、またはパーティションキーによる分離。
 
 ### 一貫性とセキュリティ
 
-**設定可能な一貫性:**強い一貫性、境界付き陳腐化、セッション、結果整合性モデル。**認証とRBAC:**ユーザー認証、ロールベースのアクセス制御、きめ細かい権限。**TLS暗号化:**転送中のデータを保護。**階層型ストレージ:**コスト効率の高いパフォーマンスのためのホット/コールドストレージ。
+**設定可能な一貫性:** 強い一貫性、境界付き陳腐化、セッション、結果整合性モデル。
+
+**認証とRBAC:** ユーザー認証、ロールベースのアクセス制御、きめ細かい権限。
+
+**TLS暗号化:** 転送中のデータを保護。
+
+**階層型ストレージ:** コスト効率の高いパフォーマンスのためのホット/コールドストレージ。
 
 ## 統合エコシステム
 
 ### SDKとAPI
 
-**言語サポート:**Python(PyMilvus)、Java、Go、Node.js、C#、RESTful API。**AIフレームワーク統合:**LangChain、LlamaIndex、OpenAI、Hugging Face、DSPy、Haystack、Ragas、MemGPT。**データ処理:**MLパイプライン用のApache Sparkコネクタ。**可観測性:**監視用のPrometheusとGrafana。**管理ツール:**Attu(GUI)、Birdwatcher(デバッグ)、Milvus BackupとCDC、Vector Transmission Services(移行)。
+**言語サポート:** Python(PyMilvus)、Java、Go、Node.js、C#、RESTful API。
+
+**AIフレームワーク統合:** LangChain、LlamaIndex、OpenAI、Hugging Face、DSPy、Haystack、Ragas、MemGPT。
+
+**データ処理:** MLパイプライン用のApache Sparkコネクタ。
+
+**可観測性:** 監視用のPrometheusとGrafana。
+
+**管理ツール:** Attu(GUI)、Birdwatcher(デバッグ)、Milvus BackupとCDC、Vector Transmission Services(移行)。
 
 ### 例: OpenAI統合
 
@@ -132,7 +193,17 @@ results = client.search(
 
 ## ユースケース
 
-**検索拡張生成(RAG):**ベクトル検索を介してLLMを外部知識ベースに接続し、取得されたドキュメントに基づいた正確でコンテキストに関連するAI応答を可能にします。**レコメンデーションシステム:**ユーザー嗜好埋め込みとアイテム特徴に基づいてコンテンツ、製品、広告を表示。eコマース、ストリーミング、ニュースフィードで使用。**コンピュータビジョン:**視覚的埋め込みを使用した画像類似性検索、物体検出、分類。逆画像検索、医療画像検索、小売ビジュアル検索を可能にします。**自然言語処理:**テキスト埋め込みを使用したセマンティック検索、ドキュメントクラスタリング、チャットボット検索。法的文書検索、コンテキストチャットボット、FAQシステムに使用。**不正・異常検知:**トランザクションパターンやネットワークイベントをベクトル化し、金融詐欺やサイバーセキュリティにおけるリアルタイム異常検知を実現。**科学研究:**分子類似性検索、ゲノム解析、材料科学アプリケーション。
+**検索拡張生成(RAG):** ベクトル検索を介してLLMを外部知識ベースに接続し、取得されたドキュメントに基づいた正確でコンテキストに関連するAI応答を可能にします。
+
+**レコメンデーションシステム:** ユーザー嗜好埋め込みとアイテム特徴に基づいてコンテンツ、製品、広告を表示。eコマース、ストリーミング、ニュースフィードで使用。
+
+**コンピュータビジョン:** 視覚的埋め込みを使用した画像類似性検索、物体検出、分類。逆画像検索、医療画像検索、小売ビジュアル検索を可能にします。
+
+**自然言語処理:** テキスト埋め込みを使用したセマンティック検索、ドキュメントクラスタリング、チャットボット検索。法的文書検索、コンテキストチャットボット、FAQシステムに使用。
+
+**不正・異常検知:** トランザクションパターンやネットワークイベントをベクトル化し、金融詐欺やサイバーセキュリティにおけるリアルタイム異常検知を実現。
+
+**科学研究:** 分子類似性検索、ゲノム解析、材料科学アプリケーション。
 
 ## 業界での採用
 
@@ -142,51 +213,34 @@ Milvusを使用している組織には、NVIDIA、Salesforce、eBay、Walmart�
 
 | 機能 | Milvus | Pinecone | Weaviate | Qdrant | Chroma |
 |---------|--------|----------|----------|--------|--------|
-| **オープンソース**| はい(Apache) | いいえ(SaaS) | はい | はい | はい |
-| **デプロイメント**| セルフ、クラウド、K8s | SaaS | セルフ、クラウド | セルフ、クラウド | セルフ、クラウド |
-| **スケーラビリティ**| 優秀 | マネージド | 良好 | 良好 | 限定的 |
-| **インデックスタイプ**| HNSW、IVF、DiskANN、Cagra | プロプライエタリ | HNSW | HNSW、IVF | HNSW、Annoy |
-| **ベクトルタイプ**| 密、疎、バイナリ | 密 | 密 | 密 | 密 |
-| **メタデータフィルタリング**| 高度 | 基本 | GraphQL | 高度 | 基本 |
-| **GPUアクセラレーション**| はい(CUDA、SIMD、AVX) | 一部 | いいえ | いいえ | いいえ |**Milvusの利点:**豊富なインデックスの多様性、実証済みの数十億規模のパフォーマンス、オープンコミュニティ、幅広いSDKサポート、ハイブリッドおよびマルチモーダル検索、エンタープライズグレードのセキュリティ。
+| **オープンソース** | はい(Apache) | いいえ(SaaS) | はい | はい | はい |
+| **デプロイメント** | セルフ、クラウド、K8s | SaaS | セルフ、クラウド | セルフ、クラウド | セルフ、クラウド |
+| **スケーラビリティ** | 優秀 | マネージド | 良好 | 良好 | 限定的 |
+| **インデックスタイプ** | HNSW、IVF、DiskANN、Cagra | プロプライエタリ | HNSW | HNSW、IVF | HNSW、Annoy |
+| **ベクトルタイプ** | 密、疎、バイナリ | 密 | 密 | 密 | 密 |
+| **メタデータフィルタリング** | 高度 | 基本 | GraphQL | 高度 | 基本 |
+| **GPUアクセラレーション** | はい(CUDA、SIMD、AVX) | 一部 | いいえ | いいえ | いいえ |
+
+**Milvusの利点:** 豊富なインデックスの多様性、実証済みの数十億規模のパフォーマンス、オープンコミュニティ、幅広いSDKサポート、ハイブリッドおよびマルチモーダル検索、エンタープライズグレードのセキュリティ。
 
 ## 参考文献
 
-
-1. Milvus. (n.d.). Milvus Official Documentation. URL: https://milvus.io/docs/
-
-2. Milvus. (n.d.). Milvus Architecture Overview. URL: https://milvus.io/docs/architecture_overview.md
-
-3. Milvus. (n.d.). Milvus GitHub Repository. URL: https://github.com/milvus-io/milvus
-
-4. Zilliz. (n.d.). Zilliz Official Site. URL: https://zilliz.com/
-
-5. Milvus. (n.d.). Installation Overview. URL: https://milvus.io/docs/install-overview.md
-
-6. Milvus. (n.d.). Index Explained. URL: https://milvus.io/docs/index-explained.md
-
-7. Milvus. (n.d.). PyMilvus API Reference. URL: https://milvus.io/api-reference/pymilvus/v2.3.x/
-
-8. LangChain. (n.d.). Milvus Integration. URL: https://python.langchain.com/docs/integrations/vectorstores/milvus
-
-9. LlamaIndex. (n.d.). Milvus Integration. URL: https://gpt-index.readthedocs.io/en/latest/how_to/vector_stores/milvus.html
-
-10. Milvus. (n.d.). OpenAI Integration Guide. URL: https://milvus.io/docs/integrate_with_openai.md
-
-11. Milvus. (n.d.). Apache Spark Connector. URL: https://github.com/milvus-io/spark-connector
-
-12. Attu. (n.d.). Attu GUI Tool. URL: https://attu.zilliz.com/
-
-13. Prometheus. (n.d.). Prometheus Monitoring. URL: https://prometheus.io/
-
-14. Grafana. (n.d.). Grafana Dashboard. URL: https://grafana.com/
-
-15. Hugging Face. (n.d.). Hugging Face Hub. URL: https://huggingface.co/
-
-16. Stanford NLP. (n.d.). DSPy Framework. URL: https://github.com/stanfordnlp/dspy
-
-17. Deepset. (n.d.). Haystack Integration. URL: https://haystack.deepset.ai/
-
-18. Exploding Gradients. (n.d.). Ragas Framework. URL: https://github.com/explodinggradients/ragas
-
-19. MemGPT. (n.d.). MemGPT Project. URL: https://github.com/cpacker/MemGPT
+- [Milvus公式ドキュメント](https://milvus.io/docs/)
+- [Milvusアーキテクチャ概要](https://milvus.io/docs/architecture_overview.md)
+- [Milvus GitHubリポジトリ](https://github.com/milvus-io/milvus)
+- [Zilliz公式サイト](https://zilliz.com/)
+- [インストール概要](https://milvus.io/docs/install-overview.md)
+- [インデックスの説明](https://milvus.io/docs/index-explained.md)
+- [PyMilvus APIリファレンス](https://milvus.io/api-reference/pymilvus/v2.3.x/)
+- [LangChain統合](https://python.langchain.com/docs/integrations/vectorstores/milvus)
+- [LlamaIndex統合](https://gpt-index.readthedocs.io/en/latest/how_to/vector_stores/milvus.html)
+- [OpenAI統合ガイド](https://milvus.io/docs/integrate_with_openai.md)
+- [Apache Sparkコネクタ](https://github.com/milvus-io/spark-connector)
+- [Attu GUIツール](https://attu.zilliz.com/)
+- [Prometheus監視](https://prometheus.io/)
+- [Grafanaダッシュボード](https://grafana.com/)
+- [Hugging Face Hub](https://huggingface.co/)
+- [DSPyフレームワーク](https://github.com/stanfordnlp/dspy)
+- [Haystack統合](https://haystack.deepset.ai/)
+- [Ragasフレームワーク](https://github.com/explodinggradients/ragas)
+- [MemGPT](https://github.com/cpacker/MemGPT)

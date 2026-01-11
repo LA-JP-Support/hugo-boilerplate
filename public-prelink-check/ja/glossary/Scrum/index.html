@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>スクラム | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/scrum/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="スクラム手法の包括的ガイド:フレームワーク、役割、イベント、成果物、メリット、実装のベストプラクティス、アジャイル開発における今後のトレンド。" name="description"/>
+<meta content="スクラム手法, アジャイルフレームワーク, スプリント計画, プロダクトバックログ, スクラムマスター" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/scrum/" property="og:url"/>
+<meta content="スクラム | SmartWeb" property="og:title"/>
+<meta content="スクラム手法の包括的ガイド:フレームワーク、役割、イベント、成果物、メリット、実装のベストプラクティス、アジャイル開発における今後のトレンド。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/scrum/" name="twitter:url"/>
+<meta content="スクラム | SmartWeb" name="twitter:title"/>
+<meta content="スクラム手法の包括的ガイド:フレームワーク、役割、イベント、成果物、メリット、実装のベストプラクティス、アジャイル開発における今後のトレンド。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190816" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190816" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190816"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126096741115000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126096741115000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126096741115000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126096741115000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">スクラム</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        スクラム
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Scrum
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          スクラム手法の包括的ガイド:フレームワーク、役割、イベント、成果物、メリット、実装のベストプラクティス、アジャイル開発における今後のトレンド。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                スクラム手法
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                アジャイルフレームワーク
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                スプリント計画
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                プロダクトバックログ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                スクラムマスター
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="スクラムとは何か">スクラムとは何か?</h2>
+<p>スクラムは、チームがより効果的に協働できるよう、製品開発とプロジェクト管理に構造化されたアプローチを提供するために設計されたアジャイルフレームワークです。当初はソフトウェア開発のために開発されましたが、スクラムは様々な業界やプロジェクトタイプに適用可能な汎用的な方法論へと進化しました。このフレームワークは、スプリントと呼ばれる短いタイムボックス化された反復を通じて、反復的な進捗、チームコラボレーション、継続的改善を重視しています。スクラムは、複雑な製品開発には経験的プロセス制御が必要であるという原則に基づいて運用され、硬直的で事前に決定された計画ではなく、透明性、検査、適応が意思決定を導きます。</p>
+<p>スクラムフレームワークは、製品開発への経験的アプローチを支える3つの基本的な柱の上に構築されています。透明性は、プロセスのすべての側面が結果に責任を持つ人々に見えるようにし、チームメンバーとステークホルダー間で共通の理解を生み出します。検査は、スクラム成果物とスプリントゴールに向けた進捗を頻繁に調査し、開発プロセスの早い段階で望ましくない変動を検出することを含みます。適応は、検査によってプロセスの1つ以上の側面が許容限界を超えて逸脱していることが明らかになった場合に発生し、さらなる逸脱を最小限に抑えるための調整が必要になります。これらの柱は連携して、チームが変化する要件と市場状況に迅速に対応しながら、価値ある製品の提供に集中できる環境を作り出します。</p>
+<p>スクラムの人気は、現代の製品開発に固有の予測不可能性と複雑性に対処する能力に由来しています。従来のプロジェクト管理アプローチは、変化する要件、不明確な目標、進化する市場状況にしばしば苦労します。スクラムは、変化を混乱として扱うのではなく、開発プロセスの自然な一部として受け入れることで、これらの課題に対処します。このフレームワークは、過度に規範的にならずに構造を提供し、チームが効果的なコラボレーションと提供を確保する重要な要素を維持しながら、実践を適応させることを可能にします。作業を管理可能な増分に分割し、フィードバックと軌道修正のための定期的な機会を提供することで、スクラムはチームがより一貫して価値ある製品を提供し、顧客ニーズと市場機会により効果的に対応できるようにします。</p>
+<h2 id="スクラムの中核コンポーネント">スクラムの中核コンポーネント</h2>
+<p><strong>スクラムチーム</strong>は、製品増分を提供するために協力する3つの異なる役割で構成されています。プロダクトオーナーは、何を構築する必要があるかを定義し、ビジネス価値に基づいて機能を優先順位付けします。開発チームは、各スプリント中に実際の製品増分を作成します。スクラムマスターは、プロセスを促進し、チームの進捗を妨げる可能性のある障害を取り除きます。</p>
+<p><strong>プロダクトバックログ</strong>は、製品に加えられる変更のための要件の唯一の情報源として機能します。これには、将来のリリースで製品に加えられる変更を構成する機能、関数、要件、拡張、修正が含まれています。プロダクトオーナーは、その内容、可用性、順序付けを含むプロダクトバックログに責任を持ちます。</p>
+<p><strong>スプリント</strong>は、通常1週間から4週間続くタイムボックス化された反復を表し、その間に出荷可能な製品増分が作成されます。各スプリントは、開発作業全体を通じて一貫した期間を持ち、前のスプリントの終了直後に開始されます。スプリントには、スプリントプランニング、デイリースクラム、開発作業、スプリントレビュー、スプリントレトロスペクティブが含まれ、それらで構成されています。</p>
+<p><strong>スプリントプランニング</strong>は、チームが今後のスプリントで何を提供できるか、その作業をどのように達成するかを決定する協働イベントです。プロダクトオーナーは、順序付けられたプロダクトバックログアイテムを開発チームに提示し、スクラムチーム全体がスプリントの作業を理解するために協力します。</p>
+<p><strong>デイリースクラム</strong>は、開発チームが活動を同期し、次の24時間の計画を作成するための15分間のタイムボックス化されたイベントです。これは、前回のデイリースクラム以降の作業を検査し、次回までに実行できる作業を予測することによって行われます。</p>
+<p><strong>スプリントレビュー</strong>は、スプリントの終わりに開催され、増分を検査し、必要に応じてプロダクトバックログを適応させます。スプリントレビュー中、スクラムチームとステークホルダーは、スプリントで何が行われたか、次に何をすべきかについて協力します。</p>
+<p><strong>スプリントレトロスペクティブ</strong>は、スクラムチームが自己検査し、次のスプリント中に実施される改善計画を作成する機会を提供します。目的は、人、関係、プロセス、ツールに関して、前回のスプリントがどのように進んだかを調査することです。</p>
+<h2 id="スクラムの仕組み">スクラムの仕組み</h2>
+<p>スクラムプロセスは<strong>プロダクトバックログの作成</strong>から始まり、プロダクトオーナーがステークホルダーと協力して、製品に必要な機能、要件、改善を特定し、優先順位付けします。この生きたドキュメントは、新しい洞察が現れ、市場フィードバックとビジネスニーズに基づいて優先順位が変化するにつれて、プロジェクト全体を通じて進化します。</p>
+<p><strong>スプリントプランニング</strong>は各スプリントサイクルを開始し、スクラムチーム全体を集めてスプリントゴールを決定し、今後の反復のためのプロダクトバックログアイテムを選択します。チームは各アイテムに必要な労力を見積もり、スプリント終了までに特定の機能セットを提供することにコミットします。</p>
+<p><strong>デイリースクラムミーティング</strong>はスプリント全体を通じて行われ、チームメンバーが進捗を共有し、障害を特定し、努力を調整するための定期的な接点を提供します。これらの短いスタンドアップミーティングは、チームの整合性を維持し、問題が発生したときの迅速な問題解決を可能にします。</p>
+<p><strong>開発作業</strong>は、チームが選択した実践と基準に従って進行し、チームメンバーが協力してプロダクトバックログアイテムを動作するソフトウェアまたは製品機能に変換します。開発チームは、スプリントコミットメントを達成するための最良のアプローチを決定するために自己組織化します。</p>
+<p><strong>スプリントレビュー</strong>は、完成した作業をステークホルダーにデモンストレーションし、製品増分に関するフィードバックを収集することで、各スプリントを締めくくります。このイベントは、チームの進捗に対する透明性を提供し、ステークホルダーの意見が将来の開発優先順位を導くことを可能にします。</p>
+<p><strong>スプリントレトロスペクティブ</strong>は、スプリントレビューに続き、チームプロセスに内部的に焦点を当て、改善の機会を特定します。チームは、何がうまくいったか、何を改善できるかを調査し、次のスプリントのための具体的な変更にコミットします。</p>
+<p><strong>プロダクトバックログリファインメント</strong>は、プロダクトオーナーと開発チームが協力してプロダクトバックログアイテムに詳細、見積もり、順序を追加するため、スプリント全体を通じて継続的に行われます。この継続的な活動により、将来のスプリントが十分に理解された要件で開始できることが保証されます。</p>
+<p><strong>ワークフローの例</strong>:ソフトウェア開発チームは、2週間のスプリントをスプリントプランニングで開始し、40ストーリーポイント相当のユーザーストーリーを選択します。デイリースクラムは3日目に技術的な障害を明らかにし、スクラムマスターがそれを解決するのを助けます。10日目までに、チームはコミットしたすべての作業を完了し、スプリントレビュー中にステークホルダーに新機能をデモンストレーションします。スプリントレトロスペクティブはコミュニケーションの改善を特定し、次のスプリントのための実践の調整につながります。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>市場投入までの時間の短縮</strong>により、組織は反復的な開発サイクルを通じて、動作するソフトウェアや製品をより迅速に提供できます。チームは、完全な製品開発を待つのではなく、定期的に機能的な増分をリリースでき、企業がより早く市場機会を捉え、より早く収益を生み出すことができます。</p>
+<p><strong>製品品質の向上</strong>は、開発プロセス全体を通じた継続的なテスト、統合、フィードバックから生じます。定期的な検査と適応サイクルは、修正コストが低い早期に欠陥を捉え、頻繁なステークホルダーフィードバックは、製品が想定された要件ではなく実際のユーザーニーズを満たすことを保証します。</p>
+<p><strong>チームコラボレーションの強化</strong>は、スクラムが機能横断的なチームワークと共有責任を重視することから生まれます。日々のコミュニケーション、集団的な問題解決、共有されたスプリントゴールは、サイロを打破し、異なるスキルと視点を持つチームメンバー間でより強い作業関係を作り出します。</p>
+<p><strong>柔軟性と適応性の向上</strong>により、チームは変化する市場状況、顧客フィードバック、新しいビジネス優先順位に迅速に対応できます。スクラムの反復的な性質により、プロジェクト全体を脱線させたり、広範な手戻りを必要としたりすることなく、変更を組み込むことが容易になります。</p>
+<p><strong>ステークホルダーエンゲージメントの向上</strong>は、定期的なスプリントレビューとプロダクトオーナーとの継続的なコラボレーションを通じて発生します。ステークホルダーは頻繁に動作するソフトウェアを見ることができ、抽象的な仕様やドキュメントではなく、実際の機能に基づいて意味のあるフィードバックを提供できます。</p>
+<p><strong>リスク管理の改善</strong>は、動作する増分の早期かつ頻繁な提供を通じて発生し、潜在的な問題が大きな問題になる前に明らかにします。定期的な検査ポイントにより、チームは開発サイクルの後半で発見するのではなく、リスクを積極的に特定して対処できます。</p>
+<p><strong>チームの士気とモチベーションの向上</strong>は、スクラムが開発チームに提供する自律性、熟達、目的から発展します。自己組織化、スキル開発の機会、ビジネス価値への明確なつながりは、より魅力的で満足のいく仕事体験を生み出します。</p>
+<p><strong>予測可能性の向上</strong>は、チームが繰り返されるスプリントサイクルを通じてベロシティメトリクスとより良い見積もりスキルを開発するにつれて、時間とともに現れます。組織は、提供タイムラインについてより良い洞察を得て、リソース配分とプロジェクト計画についてより情報に基づいた意思決定を行うことができます。</p>
+<p><strong>継続的な学習と改善</strong>は、スプリントレトロスペクティブと経験的プロセス制御を通じてスクラムフレームワークに組み込まれています。チームは定期的に実践を調査し、調整を行い、開発プロセスと能力の継続的な最適化につながります。</p>
+<p><strong>プロジェクトリスクの削減</strong>は、増分提供と定期的なステークホルダーフィードバックを通じて発生し、チームが間違った製品を構築したり、長期間にわたって効果のないアプローチを追求したりすることを防ぎます。早期の軌道修正は、無駄な労力とリソースを最小限に抑えます。</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p><strong>ソフトウェア開発</strong>は、スクラムの元々の最も広範な適用を表し、開発チームがフレームワークを使用してWebアプリケーション、モバイルアプリ、エンタープライズソフトウェア、その他のデジタル製品を構築します。反復的なアプローチは、ソフトウェア要件の進化する性質と頻繁なリリースの必要性とよく一致します。</p>
+<p><strong>製品開発</strong>は、ソフトウェアを超えて物理的な製品を含むように拡張され、チームがスクラムを使用して研究、設計、プロトタイピング、製造プロセスを管理します。家電製品、自動車部品、医療機器を開発する企業は、スクラムの原則を開発サイクルにうまく適応させています。</p>
+<p><strong>マーケティングキャンペーン管理</strong>は、スクラムを適用して、複数のチャネルにわたるマーケティングイニシアチブを計画、実行、最適化します。マーケティングチームは、スプリントを使用してさまざまなアプローチをテストし、結果を測定し、パフォーマンスデータと市場反応に基づいて戦略を適応させます。</p>
+<p><strong>研究開発プロジェクト</strong>は、新しい技術を探求したり、実験を実施したり、革新的なソリューションを調査したりする際に、スクラムの経験的アプローチから恩恵を受けます。フレームワークの検査と適応への重点は、研究活動の不確実な性質とよく一致します。</p>
+<p><strong>イベント計画と管理</strong>は、スクラムを使用して、会議、製品発表、企業会議などの複雑なイベントを調整します。イベントチームは、タスクをスプリントに編成し、定期的なチェックインを実施し、ベンダーフィードバック、会場の制約、参加者の要件に基づいて計画を適応させます。</p>
+<p><strong>教育カリキュラム開発</strong>は、スクラムの原則を適用して、新しいコース、トレーニングプログラム、または教育イニシアチブを設計および実装します。教育チームは、反復サイクルを使用してコンテンツを開発し、教育方法をテストし、学生のフィードバックをカリキュラムの改善に組み込みます。</p>
+<p><strong>建設およびエンジニアリングプロジェクト</strong>は、建設プロジェクト、インフラ開発、エンジニアリングイニシアチブを管理するためにスクラムを適応させます。チームは、フレームワークを使用して複数の業種を調整し、依存関係を管理し、設計変更や現場条件に対応します。</p>
+<p><strong>医療プロセス改善</strong>は、スクラムを採用して患者ケアプロセスを強化し、新しい医療技術を実装し、病院運営を最適化します。医療チームは、短い改善サイクルを使用して変更をテストし、結果を測定し、患者とスタッフのフィードバックに基づいてアプローチを適応させます。</p>
+<p><strong>金融サービスイノベーション</strong>は、スクラムを使用して新しい金融商品を開発し、顧客サービスプロセスを改善し、規制コンプライアンスイニシアチブを実装します。金融機関は、フレームワークのリスク管理の利点とステークホルダーエンゲージメント機能を活用します。</p>
+<p><strong>政府および公共部門プロジェクト</strong>は、スクラムを適用して公共サービスを近代化し、政策変更を実装し、市民向けアプリケーションを開発します。政府チームは、公共リソースとステークホルダーの期待を管理しながら、スクラムが提供する透明性と説明責任から恩恵を受けます。</p>
+<h2 id="スクラムと従来のプロジェクト管理の比較">スクラムと従来のプロジェクト管理の比較</h2>
+<table>
+<thead>
+<tr>
+<th>側面</th>
+<th>スクラム</th>
+<th>従来型(ウォーターフォール)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>計画アプローチ</strong></td>
+<td>フィードバックと変化する要件に基づく定期的な調整を伴う適応的計画</td>
+<td>詳細なプロジェクトスケジュールと固定スコープを伴う包括的な事前計画</td>
+</tr>
+<tr>
+<td><strong>プロジェクトフェーズ</strong></td>
+<td>フィードバックの継続的な統合を伴う重複する活動を持つ反復サイクル</td>
+<td>異なるプロジェクトステージ間の明確なゲートと引き継ぎを伴う順次フェーズ</td>
+</tr>
+<tr>
+<td><strong>変更管理</strong></td>
+<td>変化を自然で有益なものとして受け入れ、適応のための組み込みメカニズムを持つ</td>
+<td>変化を正式な変更管理プロセスを必要とするスコープクリープとして扱う</td>
+</tr>
+<tr>
+<td><strong>リスク管理</strong></td>
+<td>頻繁な提供とフィードバックを通じた継続的なリスク特定と軽減</td>
+<td>主に計画フェーズ中のリスク評価と定期的なレビュー</td>
+</tr>
+<tr>
+<td><strong>ステークホルダーの関与</strong></td>
+<td>定期的なレビューと継続的なコラボレーションを伴う全体を通じた高いエンゲージメント</td>
+<td>要件収集後から最終提供と受け入れまでの限定的な関与</td>
+</tr>
+<tr>
+<td><strong>ドキュメンテーション</strong></td>
+<td>包括的なドキュメントよりも動作するソフトウェア、必要最小限のドキュメント</td>
+<td>次のステージに進む前の各フェーズでの広範なドキュメンテーション</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>組織文化の抵抗</strong>は、コマンドアンドコントロールの管理スタイルがスクラムの自己組織化と分散意思決定の重視と対立する、従来の階層的な組織でスクラムを実装する際にしばしば現れます。リーダーは統制を手放すのに苦労し、従業員は増加した説明責任とコラボレーション要件に抵抗する可能性があります。</p>
+<p><strong>不完全なスクラム実装</strong>は、組織が基礎となる原則と価値を受け入れることなく、特定のスクラム実践のみを採用する場合に発生します。この「スクラムだが」アプローチは、しばしば最適でない結果につながり、チームメンバーとステークホルダーの間でフレームワークの有効性に対する懐疑論を強化します。</p>
+<p><strong>適切なトレーニングの欠如</strong>は、チームメンバー、プロダクトオーナー、またはスクラムマスターが自分の役割と責任を完全に理解していない場合、スクラムの成功を損ないます。スクラムの原則と実践に関する不十分な知識は、実行の不備と改善の機会の逸失につながります。</p>
+<p><strong>ステークホルダーの可用性の問題</strong>は、プロダクトオーナーまたは主要なステークホルダーがスプリントサイクル中にタイムリーなフィードバックを提供したり、要件を明確にしたり、必要な決定を下したりできない場合に<a data-lb="1" href="/ja/glossary/bottlenecks-comprehensive-glossary-action-guide-for-business-automation-and-ai-chatbot-operations/" title="ビジネス、自動化、AIチャットボット運用におけるボトルネックを理解します。プロセス、リソース、容量の制約を特定、分析、解決し、効率を向上させる方法を学びます。">ボトルネック</a>を作り出します。限られた可用性は、スクラムの協働的な性質を混乱させ、進捗を大幅に遅らせる可能性があります。</p>
+<p><strong><a data-lb="1" href="/ja/glossary/technical-debt/" title="技術的負債とは、堅牢なアプローチではなく短期的な解決策を選択した際に発生する、将来的な作り直しに伴う潜在的なコストを指します。ソフトウェア開発やAIシステムにおいて、メンテナンス、複雑性、修復にかかるコストの増加につながります。">技術的負債</a>の蓄積</strong>は、チームがコード品質よりも機能提供を優先し、長期的なメンテナンスの課題を生み出すショートカットにつながる場合に発生します。技術的実践への適切な注意がなければ、技術的負債が開発を遅らせるにつれて、チームのベロシティが時間とともに低下する可能性があります。</p>
+<p><strong>スケーリングの課題</strong>は、複数のスクラムチームが大規模で複雑な製品で努力を調整しなければならない場合、または組織の依存関係が個々のチームの境界を超えて拡張される場合に発生します。調整のオーバーヘッドと統合の複雑さは、スクラムアプローチの利点を減少させる可能性があります。</p>
+<p><strong>非現実的な期待</strong>は、ステークホルダーがスクラムの利点がチームが成熟し実践を最適化するにつれて徐々に現れることを理解せずに、即座の改善や劇的な変化を期待する場合に発展します。スクラムの有効性の早すぎる判断は、利点が実現する前の放棄につながる可能性があります。</p>
+<p><strong>チーム構成の問題</strong>は、チームに必要なスキルが不足している場合、パートタイムメンバーが多すぎる場合、または協働的で自己組織化する作業スタイルに適応できない個人が含まれている場合に発生します。不適切なチーム構成は、スクラムが必要とする集団的責任を損ないます。</p>
+<p><strong>測定とメトリクスの混乱</strong>は、組織が間違ったメトリクスに焦点を当てたり、従来のプロジェクト管理の測定をスクラムチームに適用しようとしたりする場合に発生します。不適切なメトリクスは、逆効果的な行動を促進し、実際の進捗と価値提供を不明瞭にする可能性があります。</p>
+<p><strong>外部依存関係</strong>は、スクラムチームが外部ベンダー、他の部門、またはアジャイル原則に従って運用されていないサードパーティサービスに依存している場合に課題を生み出します。これらの依存関係は、外部の当事者が適切な速度と柔軟性で対応できない場合、スプリント計画と実行を混乱させる可能性があります。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>適切なトレーニングから始める</strong>ことで、すべてのチームメンバーが実装を開始する前にスクラムの役割、イベント、成果物を理解することを保証します。主要な役割のための認定スクラムトレーニングに投資し、実践中に学習を強化し、発生する質問に対処するための継続的な教育を提供します。</p>
+<p><strong>パイロットチームから始める</strong>ことで、組織は複数のチームにスケーリングする前にスクラムアプローチを学び、洗練することができます。成功を実証し、フレームワークに対する組織の信頼を構築するために、適切なプロジェクトを持つ意欲的なチームを選択します。</p>
+<p><strong>明確な完成の定義を確立する</strong>ことで、すべての作業アイテムの品質基準と完了基準についての共通理解を作り出します。この定義には、コーディング基準、テスト要件、ドキュメンテーションのニーズ、および出荷可能な増分に必要なその他の基準を含める必要があります。</p>
+<p><strong>一貫したスプリント長を維持する</strong>ことで、予測可能なリズムを提供し、時間の経過とともにより良い計画と測定を可能にします。コンテキストに基づいて1週間から4週間のスプリント長を選択し、パターンを確立し改善を測定するのに十分な期間それを維持します。</p>
+<p><strong>スプリント境界を保護する</strong>ことで、アクティブなスプリント中のスコープ変更を避け、チームメンバーが外部の中断なしにコミットした作業に集中できるようにします。緊急の要求とスプリント実行を混乱させる可能性のある緊急事態を処理するための明確なプロトコルを確立します。</p>
+<p><strong>ツールとインフラストラクチャへの投資</strong>により、協働開発、継続的統合、透明な進捗追跡をサポートします。スクラム実践を複雑にするのではなく促進するツールを選択し、すべてのチームメンバーが効果的にアクセスして使用できることを確認します。</p>
+<p><strong>機能横断的なコラボレーションを促進する</strong>ことで、開発チーム内での知識共有、ペアプログラミング、集団的コード所有権を奨励します。スキルサイロを打破し、チームメンバーがより広範な能力を開発するのを助け、柔軟性を高め、依存関係を減らします。</p>
+<p><strong>動作するソフトウェアを強調する</strong>ことで、ドキュメンテーションとプロセスコンプライアンスよりも、必要な品質基準と規制要件を維持しながら。製品の成功に貢献しない内部の官僚的要件を満たすのではなく、顧客に価値を提供することに焦点を当てます。</p>
+<p><strong>実験を奨励する</strong>ことで、スプリントレトロスペクティブ中に、チームが効果を向上させる可能性のある新しい実践、ツール、またはアプローチを試すことをサポートします。非難や罰なしに失敗と間違いから学ぶための安全な環境を作り出します。</p>
+<p><strong>進捗を測定および追跡する</strong>ことで、従来のプロジェクト管理の測定ではなく、ベロシティ、バーンダウンチャート、サイクルタイムなどの適切なアジャイルメトリクスを使用します。データを使用して傾向を特定し、改善を祝い、プロセス調整とチーム開発ニーズに関する意思決定を導きます。</p>
+<h2 id="高度なテクニック">高度なテクニック</h2>
+<p><strong>スケールドスクラムフレームワーク</strong>、SAFe(Scaled Agile Framework)、LeSS(Large-Scale Scrum)、Scrum@Scaleなどは、大規模で複雑な製品に取り組む複数のスクラムチームを調整するための構造化されたアプローチを提供します。これらのフレームワークは、コアスクラム原則を維持しながら、チーム間の依存関係、アーキテクチャの調整、組織の整合性の課題に対処します。</p>
+<p><strong>DevOps統合</strong>は、スクラムの反復的開発アプローチと継続的統合、継続的デリバリー、インフラストラクチャ自動化の実践を組み合わせます。この統合により、チームは品質基準を維持し、デリバリーパイプラインの手動オーバーヘッドを削減しながら、動作するソフトウェアをより頻繁かつ確実にデプロイできます。</p>
+<p><strong>ユーザーストーリーマッピング</strong>は、ユーザージャーニーを視覚化し、ユーザーワークフローとビジネス価値に従って機能を整理することで、プロダクトバックログ管理を強化します。このテクニックは、プロダクトオーナーがより効果的に機能を優先順位付けし、開発チームが全体的なユーザーエクスペリエンス内での作業のより広いコンテキストを理解するのを助けます。</p>
+<p><strong>振る舞い駆動開発(BDD)</strong><!-- -->は、期待されるシステムの振る舞いを記述する自然言語シナリオを使用することで、スクラムのコラボレーション原則を要件仕様とテストに拡張します。BDD実践は、技術的および非技術的なステークホルダー間のコミュニケーションを改善しながら、開発とテストの努力を導く実行可能な仕様を作成します。</p>
+<p><strong>継続的なステークホルダーフィードバック</strong>は、スプリントレビューを超えて、開発プロセス全体を通じた継続的なユーザー調査、A/Bテスト、分析駆動の意思決定を含みます。高度なチームは、ユーザーの行動と機能の有効性に関するリアルタイムの洞察を収集するために、フィードバックメカニズムを製品に直接統合します。</p>
+<p><strong>技術的負債管理</strong>は、開発中に蓄積されるコード品質の問題の体系的な特定、測定、修復を含みます。高度なスクラムチームは、各スプリントで技術的負債削減のための特定の容量を割り当て、自動化ツールを使用してコード品質メトリクスを監視し、リファクタリングの優先順位を導きます。</p>
+<h2 id="将来の方向性">将来の方向性</h2>
+<p><strong><a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>統合</strong>は、インテリジェントなプロジェクト分析、自動化されたテスト、チームパフォーマンスと提供タイムラインに関する予測的洞察を通じてスクラム実践を強化します。AI搭載ツールは、プロダクトオーナーがバックログをより効果的に優先順位付けし、スクラムマスターがチームの生産性に影響を与える前に潜在的な障害を特定するのを助けます。</p>
+<p><strong>リモートおよび分散チームの最適化</strong>は、組織がスクラムフレームワーク内での仮想コラボレーション、非同期コミュニケーション、分散意思決定のためのより良い実践を開発するにつれて進化し続けます。高度なデジタルツールとテクニックは、リモートスクラムチームの有効性をさらに向上させ、グローバルコラボレーションの新しいモデルを可能にします。</p>
+<p><strong>バリューストリーム最適化</strong>は、スクラムの焦点を個々のチームの生産性を超えて、コンセプトから顧客までの価値提供パイプライン全体を包含するように拡大します。組織は、複数のチームと部門にわたってフローを最適化し無駄を排除するために、スクラムをリーン原則とシステム思考とますます統合します。</p>
+<p><strong>持続可能性と社会的責任</strong>の統合により、スクラムチームは完成の定義と製品開発の決定に環境的および社会的影響の考慮事項を組み込むようになります。持続可能な開発実践と倫理的技術の考慮事項は、スクラム実装の標準的な要素になります。</p>
+<p><strong>継続的学習プラットフォーム</strong>は、スクラムチームメンバーの役割、経験レベル、キャリア目標に基づいて、パーソナライズされたスキル開発の推奨事項と学習パスを提供します。これらのプラットフォームは、スクラムツールと統合して、現在のプロジェクトの課題とチームのレトロスペクティブの洞察に基づいて関連する学習機会を提案します。</p>
+<p><strong>予測分析と予測</strong>は、履歴スクラムデータを活用して、より正確な提供予測を提供し、最適なチーム構成を特定し、複数のチームとプロジェクトにわたるパターンに基づいてプロセス改善を推奨します。高度な分析は、組織がスクラムの経験的アプローチを維持しながら、リソース配分とプロジェクト計画についてより良い決定を下すのを助けます。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Schwaber, K., &amp; Sutherland, J. (2020). The Scrum Guide: The Definitive Guide to Scrum: The Rules of the Game. Scrum.org.</p>
+</li>
+<li>
+<p>Rubin, K. S. (2012). Essential Scrum: A Practical Guide to the Most Popular Agile Process. Addison-Wesley Professional.</p>
+</li>
+<li>
+<p>Cohn, M. (2009). Succeeding with Agile: Software Development Using Scrum. Addison-Wesley Professional.</p>
+</li>
+<li>
+<p>Derby, E., &amp; Larsen, D. (2006). Agile Retrospectives: Making Good Teams Great. Pragmatic Bookshelf.</p>
+</li>
+<li>
+<p>Pichler, R. (2010). Agile Product Management with Scrum: Creating Products that Customers Love. Addison-Wesley Professional.</p>
+</li>
+<li>
+<p>Kniberg, H. (2015). Scrum and XP from the Trenches: How We Do Scrum. InfoQ Enterprise Software Development Series.</p>
+</li>
+<li>
+<p>Larman, C., &amp; Vodde, B. (2016). Large-Scale Scrum: More with LeSS. Addison-Wesley Professional.</p>
+</li>
+<li>
+<p>Sutherland, J. (2014). Scrum: The Art of Doing Twice the Work in Half the Time. Crown Business.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/product-backlog/">
+                    プロダクトバックログ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    アジャイル開発におけるプロダクトバックログの包括的ガイド。管理、優先順位付け、効果的な実装のためのベストプラクティスを網羅しています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/product-backlog/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/backlog-grooming/">
+                    バックログ・グルーミング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    アジャイル開発におけるバックログ・グルーミングの包括的ガイド。プロセス、メリット、ベストプラクティス、チームへの実装戦略を網羅しています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/backlog-grooming/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/burndown-chart/">
+                    バーンダウンチャート
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    アジャイルプロジェクト管理における視覚的ツールで、残作業量を時間軸に対して追跡し、理想的にはスプリント終了時にゼロに到達する下降線でプロジェクトの進捗を表示します。チームがコミットした作業を予定通りに...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/burndown-chart/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/velocity--agile-/">
+                    ベロシティ(アジャイル)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    アジャイルベロシティの包括的ガイド:測定方法、計算方法、メリット、スプリント計画とチームパフォーマンス追跡のベストプラクティス。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/velocity--agile-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/user-story/">
+                    ユーザーストーリー
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    アジャイル開発におけるユーザーストーリーの包括的ガイド - 定義、メリット、実装のベストプラクティス、およびチーム向けの高度なテクニック。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/user-story/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/scrum/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190816"></script>
+</body>
+</html>

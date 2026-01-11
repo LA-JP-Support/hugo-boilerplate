@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Model Stealing | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/model-stealing/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="Model stealing attacks extract proprietary AI models by querying them repeatedly, enabling attackers to replicate functionality and intellectual property." name="description"/>
+<meta content="model stealing, model extraction, machine learning security, adversarial attacks, intellectual property theft" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/model-stealing/" property="og:url"/>
+<meta content="Model Stealing | SmartWeb" property="og:title"/>
+<meta content="Model stealing attacks extract proprietary AI models by querying them repeatedly, enabling attackers to replicate functionality and intellectual property." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/model-stealing/" name="twitter:url"/>
+<meta content="Model Stealing | SmartWeb" name="twitter:title"/>
+<meta content="Model stealing attacks extract proprietary AI models by querying them repeatedly, enabling attackers to replicate functionality and intellectual property." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165525" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165525" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165525"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118125587168000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118125587168000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118125587168000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118125587168000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Model Stealing</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Model Stealing
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          Model stealing attacks extract proprietary AI models by querying them repeatedly, enabling attackers to replicate functionality and intellectual property.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                model stealing
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                model extraction
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                machine learning security
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                adversarial attacks
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                intellectual property theft
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: January 8, 2026
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-model-stealing">What is a Model Stealing?</h2>
+<p>Model stealing, also known as model extraction or model theft, represents a sophisticated class of <a data-lb="1" href="/en/glossary/adversarial-attack/" title="Adversarial Attack glossary entry">adversarial attacks</a> where malicious actors attempt to replicate the functionality, parameters, or decision boundaries of a target machine learning model without having direct access to its internal structure, training data, or proprietary algorithms. This cybersecurity threat involves systematically querying a deployed model through its public interface, analyzing the responses, and using this information to train a surrogate model that mimics the behavior of the original system. The stolen model can then be used to gain competitive advantages, bypass licensing restrictions, or serve as a foundation for launching more sophisticated attacks against the original system. Model stealing attacks exploit the fundamental tension between model accessibility and security, as organizations must provide sufficient functionality to users while protecting their intellectual property and maintaining competitive advantages in increasingly AI-driven markets.</p>
+<p>The phenomenon of model stealing differs fundamentally from traditional data breaches or software piracy because it targets the learned intelligence embedded within machine learning systems rather than static code or databases. Unlike conventional attacks that seek to access stored information, model stealing involves reverse-engineering the decision-making processes that represent millions of dollars in research, development, and <a data-lb="1" href="/en/glossary/computational-resources/" title="Computational Resources glossary entry">computational resources</a>. This type of attack transforms the very accessibility that makes machine learning services valuable into a vulnerability, as each prediction request provides information that can be aggregated to reconstruct the underlying model. The sophistication of modern model stealing techniques enables attackers to achieve near-perfect replication of target models using only black-box access, making detection extremely challenging and prevention increasingly complex. Furthermore, the democratization of machine learning tools and the availability of powerful computational resources have lowered the barriers to entry for conducting these attacks, expanding the threat landscape beyond traditional cybercriminal organizations to include competitors, researchers, and nation-state actors.</p>
+<p>The business impact of model stealing extends far beyond immediate financial losses, encompassing competitive disadvantage, intellectual property theft, regulatory compliance issues, and erosion of customer trust. Organizations invest substantial resources in developing proprietary algorithms, curating training datasets, and optimizing model performance, with the resulting intellectual property often representing core competitive advantages worth millions of dollars. When models are successfully stolen, competitors can bypass years of research and development, undermining the original organization’s market position and return on investment. Additionally, stolen models can be used to launch more sophisticated attacks, including adversarial examples designed to fool the original system, privacy attacks that extract sensitive information about training data, or economic attacks that manipulate market conditions. The measurable outcomes of model stealing attacks include direct revenue losses from competitive disadvantage, increased security costs for implementing protective measures, potential legal liabilities from intellectual property theft, and long-term damage to brand reputation and customer confidence in the organization’s ability to protect sensitive information and maintain technological leadership.</p>
+<h2 id="core-attack-methodologies">Core Attack Methodologies</h2>
+<p>Query-Based Extraction- This fundamental approach involves systematically sending carefully crafted inputs to the target model and analyzing the outputs to infer the model’s decision boundaries, parameters, or architectural characteristics. Attackers optimize their query strategies to maximize information gain while minimizing detection risk, often using techniques from active learning and experimental design to select the most informative input samples.Gradient-Based Attacks- When attackers have access to gradient information through the model’s API, they can exploit this additional data to accelerate the extraction process and improve the fidelity of the stolen model. These attacks leverage the mathematical relationship between gradients and model parameters to reconstruct internal representations more efficiently than purely black-box approaches.Membership Inference Integration- Advanced model stealing attacks incorporate membership inference techniques to determine whether specific data points were included in the target model’s training set, providing insights into the training data distribution and enabling more accurate replication of the model’s behavior on similar datasets.Architecture Reconstruction- Sophisticated attackers attempt to reverse-engineer not only the model’s functionality but also its underlying architecture, including layer structures, activation functions, and connectivity patterns. This information enables the creation of more faithful replicas and provides insights into the target organization’s technical capabilities and design philosophies.Ensemble Extraction- When targeting ensemble models or systems that combine multiple algorithms, attackers develop specialized techniques to identify individual component models, understand their weighting schemes, and reconstruct the ensemble’s decision-making process to create comprehensive replicas of complex systems.Transfer Learning Exploitation- Attackers leverage knowledge of common pre-trained models and transfer learning practices to accelerate the extraction process, using publicly available base models as starting points and focusing their efforts on extracting the task-specific adaptations and fine-tuning performed by the target organization.Watermark Removal- Advanced model stealing operations include techniques for detecting and removing watermarks, fingerprints, or other identification mechanisms embedded in the target model, enabling attackers to use stolen models without attribution or detection by the original developers.</p>
+<h2 id="how-model-stealing-works">How Model Stealing Works</h2>
+<ol>
+<li>
+<p>Target Identification and Reconnaissance- Attackers begin by identifying valuable machine learning models deployed as services, APIs, or applications, conducting reconnaissance to understand the model’s functionality, input requirements, output formats, and potential security measures. This phase involves analyzing documentation, testing basic functionality, and assessing the economic value of successfully stealing the target model.</p>
+</li>
+<li>
+<p>Access Method Establishment- The attacker establishes reliable access to the target model through legitimate channels such as API subscriptions, web interfaces, or mobile applications, often creating multiple accounts or using distributed access methods to avoid detection. This step may involve reverse-engineering client applications or bypassing rate limiting mechanisms to enable large-scale querying.</p>
+</li>
+<li>
+<p>Query Strategy Development- Based on the target model’s characteristics and constraints, attackers develop optimized query strategies that maximize information extraction while minimizing costs and detection risks. This involves selecting appropriate input distributions, determining optimal query volumes, and designing adaptive sampling techniques that focus on the most informative regions of the input space.</p>
+</li>
+<li>
+<p>Systematic Data Collection- The attacker executes their query strategy, systematically collecting input-output pairs from the target model while <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a> for signs of detection or defensive countermeasures. This phase often involves automated tools that can generate queries, parse responses, and maintain detailed logs of the extraction process over extended periods.</p>
+</li>
+<li>
+<p>Response Analysis and Feature Engineering- Collected responses are analyzed to extract maximum information about the target model’s behavior, including confidence scores, class probabilities, intermediate representations, or any additional metadata provided by the API. Advanced attacks may involve statistical analysis to infer model uncertainty, decision boundaries, or architectural characteristics from the response patterns.</p>
+</li>
+<li>
+<p>Surrogate Model Training- Using the collected data, attackers train surrogate models designed to replicate the target model’s functionality, experimenting with different architectures, hyperparameters, and training techniques to achieve optimal fidelity. This process may involve multiple iterations and validation against held-out query results to ensure accurate replication.</p>
+</li>
+<li>
+<p>Model Validation and Refinement- The stolen model undergoes extensive testing to verify its accuracy compared to the original, with attackers conducting additional targeted queries to address any identified discrepancies or performance gaps. This phase may involve fine-tuning the surrogate model or collecting additional training data in specific regions where performance differs from the target.</p>
+</li>
+<li>
+<p>Deployment and Utilization- Once validated, the stolen model is deployed for the attacker’s intended purposes, whether for competitive advantage, further research, or as a foundation for additional attacks against the original system or related targets.Example Workflow:A competitor targeting a proprietary image classification service begins by creating multiple API accounts and analyzing the service’s documentation to understand input requirements and output formats. They develop an automated system that generates diverse image queries, focusing on boundary cases and ambiguous examples that reveal the most information about decision boundaries. Over several weeks, they collect 50,000 input-output pairs while carefully managing query rates to avoid detection. The collected data is used to train a convolutional neural network that achieves 95% agreement with the original model. The attacker validates their surrogate model through targeted testing and deploys it as part of their own competing service, effectively bypassing years of research and development investment by the original company.</p>
+</li>
+</ol>
+<h2 id="key-benefits">Key Benefits</h2>
+<p>Competitive Intelligence Gathering- Model stealing provides organizations with detailed insights into competitors’ technical capabilities, algorithmic approaches, and performance benchmarks, enabling strategic decision-making and technology roadmap planning. This intelligence can inform research directions, identify market opportunities, and reveal competitive advantages or weaknesses that can be exploited through legitimate business strategies.Cost Reduction and Time Savings- By replicating existing models rather than developing solutions from scratch, attackers can significantly reduce research and development costs while accelerating time-to-market for competing products or services. This approach can save millions of dollars in development costs and months or years of research effort, providing substantial economic advantages in competitive markets.Reverse Engineering Capabilities- Model stealing enables detailed analysis of proprietary algorithms and techniques, providing insights into cutting-edge research and development that may not be publicly available. This reverse engineering capability can accelerate innovation, identify novel approaches, and enable the development of improved or derivative solutions based on stolen intellectual property.Market Entry Facilitation- Organizations can use stolen models as foundations for entering new markets or application domains without the substantial upfront investment typically required for developing competitive solutions. This capability is particularly valuable in rapidly evolving fields where first-mover advantages are critical for market success.Research and Development Acceleration- Stolen models can serve as starting points for further research and development, providing validated architectures and approaches that can be extended, modified, or combined with other techniques. This acceleration can significantly reduce the time required to achieve breakthrough results in competitive research environments.Benchmarking and Performance Analysis- Access to high-performing models enables detailed benchmarking and performance analysis that can inform optimization efforts and identify areas for improvement in existing systems. This capability provides valuable insights into state-of-the-art performance levels and implementation strategies.Educational and Training Value- Stolen models can provide educational value for training teams and developing internal expertise, offering concrete examples of successful implementations and design patterns. This knowledge transfer can improve organizational capabilities and inform future development efforts.Risk Assessment and Security Testing- Organizations may use model stealing techniques to assess the security of their own systems or evaluate the vulnerability of potential acquisition targets. This defensive application can identify security gaps and inform the development of protective measures.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p>Corporate Espionage and Competitive Intelligence- Companies in highly competitive industries use model stealing to gain insights into competitors’ proprietary algorithms, particularly in sectors like finance, healthcare, and technology where machine learning provides significant competitive advantages. This application enables organizations to understand market positioning, identify technological gaps, and develop competing solutions without substantial research investments.Academic Research and Benchmarking- Researchers use model extraction techniques to study proprietary systems, create benchmark datasets, and analyze the performance characteristics of commercial machine learning services. This application supports academic research, enables comparative studies, and contributes to the broader understanding of machine learning system capabilities and limitations.Intellectual Property Theft and Monetization- Criminal organizations and unethical competitors engage in model stealing to directly monetize stolen intellectual property, either by selling replicated models or by offering competing services based on stolen technology. This use case represents a significant threat to organizations that have invested heavily in machine learning research and development.Nation-State Cyber Operations- Government agencies and military organizations use model stealing as part of broader cyber operations to acquire foreign technology, assess adversary capabilities, and maintain technological competitiveness in strategic domains. These operations often target critical infrastructure, defense systems, and emerging technologies with national security implications.Startup and <a data-lb="1" href="/blog/start-using-ai-today/" title="A comprehensive guide to AI implementation for SMEs without IT staff. Achieve operational efficiency and improved customer satisfaction through ticket systems, AI email auto-response, and AI chatbots.">SME</a> Market Entry- Small organizations with limited resources use model stealing to compete with established players by replicating expensive proprietary systems without the associated development costs. This application enables rapid market entry and allows smaller organizations to offer competitive services despite resource constraints.Supply Chain and Vendor Assessment- Organizations evaluate potential suppliers, partners, or acquisition targets by analyzing their machine learning capabilities through model extraction techniques. This assessment provides insights into technical competencies, system performance, and intellectual property value that inform business decisions.Security Research and Vulnerability Assessment- Cybersecurity researchers and penetration testers use model stealing techniques to identify vulnerabilities in machine learning systems and develop defensive countermeasures. This application supports the development of more secure systems and helps organizations understand their exposure to model extraction attacks.Regulatory Compliance and Auditing- Regulatory bodies and auditing organizations may use model extraction techniques to assess compliance with algorithmic transparency requirements, fairness standards, and other regulatory obligations. This application ensures that deployed systems meet legal and ethical requirements while maintaining appropriate levels of accountability.</p>
+<h2 id="model-stealing-attack-comparison">Model Stealing Attack Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Attack Type</th>
+<th>Query Efficiency</th>
+<th>Fidelity Level</th>
+<th>Detection Risk</th>
+<th>Technical Complexity</th>
+<th>Resource Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Random Query</td>
+<td>Low</td>
+<td>Low-Medium</td>
+<td>Low</td>
+<td>Low</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Active Learning</td>
+<td>High</td>
+<td>High</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Gradient-Based</td>
+<td>Very High</td>
+<td>Very High</td>
+<td>High</td>
+<td>High</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Architecture Extraction</td>
+<td>Medium</td>
+<td>Very High</td>
+<td>Medium</td>
+<td>Very High</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Ensemble Extraction</td>
+<td>Low</td>
+<td>High</td>
+<td>Low</td>
+<td>High</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Transfer Learning</td>
+<td>High</td>
+<td>Medium-High</td>
+<td>Low</td>
+<td>Medium</td>
+<td>Low-Medium</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p>Detection and Attribution Difficulties- Model stealing attacks are inherently difficult to detect because they use legitimate API calls and normal user interactions, making it challenging to distinguish malicious extraction attempts from regular usage patterns. Organizations must develop sophisticated monitoring systems that can identify suspicious query patterns without generating excessive false positives that impact legitimate users.Legal and Regulatory Complexity- The legal landscape surrounding model stealing is complex and evolving, with unclear boundaries between legitimate reverse engineering, competitive intelligence, and intellectual property theft. Organizations must navigate varying international laws, licensing agreements, and regulatory requirements while developing appropriate legal protections and response strategies.Economic Impact Assessment- Quantifying the financial impact of model stealing attacks is challenging because the damage often manifests as lost competitive advantage, reduced market share, or diminished intellectual property value rather than direct monetary losses. Organizations struggle to justify security investments and legal actions without clear economic impact metrics.Technical Countermeasure Limitations- Many defensive techniques against model stealing introduce trade-offs between security and functionality, potentially degrading user experience, reducing model accuracy, or increasing operational costs. Organizations must balance protection requirements with business objectives and user satisfaction while maintaining competitive service levels.Scalability and Resource Constraints- Implementing comprehensive protection against model stealing requires significant computational resources, specialized expertise, and ongoing monitoring capabilities that may exceed the capacity of smaller organizations. The cost of protection may outweigh the value of the protected assets, creating difficult resource allocation decisions.Evolving Attack Sophistication- Model stealing techniques continue to evolve rapidly, with attackers developing increasingly sophisticated methods that can bypass existing defenses and extract models with higher fidelity using fewer queries. Organizations must continuously update their security measures and threat models to address emerging attack vectors.Cross-Domain and Transfer Vulnerabilities- Models trained for one domain may be vulnerable to extraction attacks that leverage knowledge from related domains or publicly available pre-trained models. These cross-domain vulnerabilities are difficult to anticipate and protect against, requiring comprehensive threat modeling and defense strategies.Insider Threat and <a data-lb="1" href="/en/glossary/access-control/" title="Access Control glossary entry">Access Control</a>- Model stealing risks are amplified by insider threats, where employees or contractors with legitimate access may extract models for personal gain or competitive advantage. Organizations must implement appropriate access controls, monitoring systems, and personnel security measures to mitigate these risks.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p>Query Rate Limiting and Anomaly Detection- Implement sophisticated rate limiting systems that consider not only query volume but also query patterns, user behavior, and temporal characteristics to identify potential extraction attempts. Deploy machine learning-based anomaly detection systems that can identify suspicious query sequences while minimizing false positives that impact legitimate users.Input and Output Perturbation- Add carefully calibrated noise to model inputs or outputs to reduce the fidelity of extracted models while maintaining acceptable performance for legitimate users. Implement dynamic perturbation strategies that vary the noise characteristics over time to prevent attackers from learning and compensating for consistent perturbation patterns.Model <a data-lb="1" href="/en/glossary/watermarking/" title="Watermarking glossary entry">Watermarking</a> and Fingerprinting- Embed cryptographic watermarks or unique fingerprints in model outputs that can be detected in stolen models, providing evidence of intellectual property theft and enabling legal action. Develop robust watermarking techniques that survive model extraction and fine-tuning attempts while remaining imperceptible to normal users.API Design and Access Control- Design APIs with security in mind, limiting the information exposed through responses and implementing strong authentication and authorization mechanisms. Provide different service tiers with varying levels of access and information disclosure based on user trust levels and business relationships.Monitoring and Logging Infrastructure- Implement comprehensive logging and monitoring systems that track all model interactions, user behaviors, and system performance metrics to enable forensic analysis and attack detection. Develop automated alerting systems that can identify potential extraction attempts and trigger appropriate response procedures.Legal and Contractual Protections- Establish clear terms of service, licensing agreements, and legal frameworks that explicitly prohibit model extraction and provide legal recourse for intellectual property theft. Work with legal experts to ensure enforceability across relevant jurisdictions and develop appropriate response strategies for detected violations.Differential Privacy Implementation- Apply differential privacy techniques to model outputs to provide mathematical guarantees about information leakage while maintaining utility for legitimate applications. Carefully calibrate privacy parameters to balance protection requirements with service quality and user satisfaction.Multi-Layer Defense Strategy- Implement defense-in-depth approaches that combine multiple protection mechanisms, including technical controls, legal protections, and business process safeguards. Ensure that the failure of any single protection mechanism does not compromise the overall security posture.Regular Security Assessments- Conduct regular penetration testing and security assessments specifically focused on model extraction vulnerabilities, using both automated tools and manual testing techniques. Engage external security experts to provide independent assessments and identify blind spots in internal security measures.Incident Response Planning- Develop comprehensive incident response plans specifically for model stealing attacks, including detection procedures, evidence collection protocols, legal notification requirements, and recovery strategies. Train security teams on the unique characteristics of model extraction attacks and appropriate response procedures.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p>Adversarial Query Generation- Sophisticated attackers use adversarial machine learning techniques to generate queries that maximize information extraction while evading detection systems, employing optimization algorithms to identify the most informative input regions. These techniques can significantly improve extraction efficiency and reduce the number of queries required to achieve high-fidelity model replication.Ensemble Disaggregation Methods- Advanced extraction techniques can identify and separate individual models within ensemble systems, understanding voting mechanisms and component contributions to enable more accurate replication of complex multi-model systems. This capability allows attackers to steal not only the overall system behavior but also the underlying architectural decisions and model combination strategies.Cryptographic Attack Integration- Cutting-edge model stealing attacks integrate cryptographic techniques to break privacy-preserving machine learning systems, including attacks against secure multi-party computation, homomorphic encryption, and federated learning protocols. These attacks represent the intersection of traditional cryptanalysis and machine learning security research.Cross-Modal Extraction- Advanced attackers develop techniques for extracting models across different modalities, using knowledge from text models to inform image model extraction or leveraging multi-modal systems to gain insights into individual component models. This cross-modal approach can significantly accelerate extraction and improve model fidelity.Temporal and Sequential Exploitation- Sophisticated extraction techniques exploit temporal dependencies and sequential patterns in model behavior, particularly relevant for recurrent <a data-lb="1" href="/en/glossary/neural-networks/" title="Neural Networks glossary entry">neural networks</a>, time series models, and systems that maintain state across interactions. These techniques can reveal internal state representations and improve extraction accuracy for complex sequential models.Hardware-Aware Extraction- Advanced attackers consider hardware constraints and optimization characteristics when designing extraction strategies, exploiting knowledge of target deployment platforms to infer architectural decisions and optimization strategies. This hardware-aware approach can provide additional insights into model design and implementation choices.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p>Automated Defense Systems- The development of fully automated defense systems that can detect, respond to, and adapt to model stealing attacks in real-time without human intervention, using machine learning to identify attack patterns and automatically deploy appropriate countermeasures. These systems will incorporate advanced anomaly detection, behavioral analysis, and adaptive response mechanisms.Blockchain-Based Model Protection- Integration of blockchain technology to create immutable records of model ownership, usage rights, and licensing agreements, enabling decentralized verification of intellectual property rights and automated enforcement of usage restrictions. This approach could provide transparent and tamper-proof protection mechanisms for valuable machine learning assets.Quantum-Resistant Security Measures- Development of model protection techniques that remain effective against quantum computing attacks, including quantum-resistant cryptographic methods for model watermarking and privacy-preserving techniques that can withstand quantum adversaries. This research area addresses long-term <a data-lb="1" href="/en/glossary/security-requirements/" title="Security Requirements glossary entry">security requirements</a> as quantum computing capabilities advance.Federated Learning Security- Advanced security mechanisms for federated learning systems that prevent model extraction while enabling collaborative training, including techniques for secure aggregation, privacy-preserving model updates, and protection against malicious participants. This research addresses the unique challenges of distributed machine learning systems.Regulatory Technology Integration- Development of automated compliance and auditing systems that can verify adherence to model protection regulations while maintaining operational efficiency, including tools for regulatory reporting, compliance monitoring, and automated policy enforcement. These systems will help organizations navigate complex regulatory requirements while maintaining security.Biometric and Behavioral Authentication- Integration of advanced authentication mechanisms that use biometric data and behavioral patterns to verify legitimate users and detect potential attackers, including continuous authentication systems that monitor user behavior throughout model interactions. This approach provides more sophisticated access control and attack detection capabilities.</p>
+<h2 id="references">References</h2>
+<p>Tramèr, F., Zhang, F., Juels, A., Reiter, M. K., &amp; Ristenpart, T. (2016). Stealing Machine Learning Models via Prediction APIs. Proceedings of the 25th USENIX Security Symposium.</p>
+<p>Papernot, N., McDaniel, P., Sinha, A., &amp; Wellman, M. P. (2018). SoK: Security and Privacy in Machine Learning. Proceedings of the IEEE European Symposium on Security and Privacy.</p>
+<p>Jagielski, M., Carlini, N., Berthelot, D., Kurakin, A., &amp; Papernot, N. (2020). High Accuracy and High Fidelity Extraction of Neural Networks. Proceedings of the 29th USENIX Security Symposium.</p>
+<p>Krishna, K., Tomar, G. S., Parikh, A. P., Papernot, N., &amp; Iyyer, M. (2020). Thieves on Sesame Street! Model Extraction of BERT-based APIs. Proceedings of the International Conference on Learning Representations.</p>
+<p>Orekondy, T., Schiele, B., &amp; Fritz, M. (2019). Knockoff Nets: Stealing Functionality of Black-Box Models. Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition.</p>
+<p>Juuti, M., Szyller, S., Marchal, S., &amp; Asokan, N. (2019). PRADA: Protecting Against DNN Model Stealing Attacks. Proceedings of the IEEE European Symposium on Security and Privacy.</p>
+<p>Wang, B., &amp; Gong, N. Z. (2018). Stealing Hyperparameters in Machine Learning. Proceedings of the IEEE Symposium on Security and Privacy.</p>
+<p>Chandrasekaran, V., Chaudhuri, K., Giacomelli, I., Jha, S., &amp; Yan, S. (2020). Exploring Connections Between Active Learning and Model Extraction. Proceedings of the 29th USENIX Security Symposium.</p>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/model-inversion/">
+                    Model Inversion
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Model inversion is a privacy attack that reconstructs training data from AI model outputs, posing ri...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/model-inversion/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/adversarial-robustness/">
+                    Adversarial Robustness
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    An AI model's ability to work correctly even when given deliberately manipulated or tricky inputs de...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/adversarial-robustness/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/data-poisoning/">
+                    Data Poisoning
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A cyberattack where attackers secretly corrupt training data to make <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI systems</a> produce wrong or bia...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/data-poisoning/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/model-robustness/">
+                    Model Robustness
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A model's ability to maintain accurate performance when facing unexpected or altered data in real-wo...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/model-robustness/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/red-teaming/">
+                    Red Teaming
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/en/glossary/red-teaming/" title="Red Teaming glossary entry">Red teaming</a> is a security testing method where expert teams deliberately attack AI systems to find w...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/red-teaming/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/model-stealing/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165525"></script>
+</body>
+</html>

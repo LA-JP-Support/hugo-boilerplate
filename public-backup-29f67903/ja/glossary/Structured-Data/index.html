@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>構造化データ | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/structured-data/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="検索エンジンやコンピュータがWebページのコンテンツをより適切に理解できるよう、標準化された形式で整理された情報。評価、価格、その他の詳細情報を含むリッチな検索結果の表示を可能にします。" name="description"/>
+<meta content="構造化データ, スキーママークアップ, JSON-LD, マイクロデータ, リッチスニペット" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/structured-data/" property="og:url"/>
+<meta content="構造化データ | SmartWeb" property="og:title"/>
+<meta content="検索エンジンやコンピュータがWebページのコンテンツをより適切に理解できるよう、標準化された形式で整理された情報。評価、価格、その他の詳細情報を含むリッチな検索結果の表示を可能にします。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/structured-data/" name="twitter:url"/>
+<meta content="構造化データ | SmartWeb" name="twitter:title"/>
+<meta content="検索エンジンやコンピュータがWebページのコンテンツをより適切に理解できるよう、標準化された形式で整理された情報。評価、価格、その他の詳細情報を含むリッチな検索結果の表示を可能にします。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">構造化データ</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        構造化データ
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Structured Data
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          検索エンジンやコンピュータがWebページのコンテンツをより適切に理解できるよう、標準化された形式で整理された情報。評価、価格、その他の詳細情報を含むリッチな検索結果の表示を可能にします。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                構造化データ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                スキーママークアップ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                JSON-LD
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                マイクロデータ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                リッチスニペット
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="構造化データとは何か">構造化データとは何か?</h2>
+<p>構造化データとは、標準化された予測可能な方法で整理およびフォーマットされた情報を指し、人間と機械の両方が容易に読み取り、解釈できるようにします。自由形式のテキストやマルチメディアコンテンツなどの非構造化データとは異なり、構造化データは異なるデータ要素間の関係を定義する特定のスキーマまたはフォーマットに従います。Web開発とデジタルマーケティングの文脈では、構造化データは通常、検索エンジンやその他の自動化システムがコンテンツの意味と文脈を理解するのに役立つ標準化されたマークアップをWebページに追加することを含みます。</p>
+<p>構造化データの概念は、セマンティックWebの成長と、機械がWebコンテンツを自動的に処理および理解する必要性の高まりとともに大きく進化してきました。<a data-lb="1" href="/ja/glossary/google/" title="Google の用語集ページ">Google</a>、Bing、Yahooなどの検索エンジンは、構造化データマークアップを解析して、リッチスニペットまたはリッチリザルトとして知られる拡張検索結果を作成できる高度なアルゴリズムを開発しています。これらの拡張表示には、評価、価格、在庫状況、画像、その他の関連詳細などの追加情報が含まれ、検索結果をユーザーにとってより有益で視覚的に魅力的なものにします。</p>
+<p>構造化データの実装には、標準化されたボキャブラリとフォーマットを使用して、Webページ内に機械可読コードを埋め込むことが含まれます。最も広く採用されているボキャブラリはSchema.orgで、製品やイベントから組織や創作物まで、さまざまなタイプのコンテンツを記述するための包括的なスキーマコレクションを提供しています。この標準化により、異なるプラットフォームやシステムがデータを一貫して解釈できるようになり、より相互接続された知的なWebエコシステムが構築されます。構造化データの実装は、オンラインでの可視性を向上させ、ユーザーエクスペリエンスを強化し、<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>と<a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>システムの成長する機能を活用しようとする企業にとって、ますます重要になっています。</p>
+<h2 id="構造化データの主要技術">構造化データの主要技術</h2>
+<p>JSON-LD(JavaScript Object Notation for Linked Data)は、構造化データを実装するための推奨フォーマットで、Googleやその他の主要検索エンジンによって推奨されています。スクリプトタグを使用して構造化データを別のコードブロックに埋め込むため、Webページの可視コンテンツに影響を与えることなく実装と保守が容易になります。Microdataは、開発者がitemscope、itemtype、itempropなどの特定の属性を使用してHTML要素内に直接構造化データを埋め込むことができるHTML仕様を表します。このフォーマットは、構造化データマークアップをコンテンツと直接統合し、HTML構造とより密接に結合させます。RDFa(Resource Description Framework in Attributes)は、構造化データを表現する属性を追加することで、HTML、XHTML、XMLドキュメントを拡張します。Webドキュメント内にリッチメタデータを埋め込む方法を提供し、複雑なデータ関係やセマンティックWebアプリケーションに特に有用です。Schema.orgボキャブラリは、構造化データマークアップの基礎となるボキャブラリとして機能し、エンティティ、アクション、関係を記述するための標準化されたスキーマを提供します。Web上で見られるほぼすべてのタイプのコンテンツをカバーする数千のタイプとプロパティを提供しています。Open Graphプロトコルは、Webページをソーシャルグラフ内のリッチオブジェクトにすることを可能にし、特にFacebookなどのソーシャルメディアプラットフォーム向けです。メタタグを使用して、ソーシャルネットワークで共有されたときにコンテンツがどのように表示されるかを定義し、タイトル、説明、画像を含みます。Twitter Cardsは、Open Graphと同様の機能を提供しますが、Twitter専用で、開発者がコンテンツにリンクするツイートにリッチメディア体験を添付できるようにします。サマリー、写真、動画、製品カードなど、さまざまなカードタイプをサポートしています。Microformatsは、連絡先の詳細、イベント、レビューなどの一般的な情報タイプをマークアップするために標準HTMLクラス名を使用する、構造化データへのよりシンプルなアプローチを表します。Schema.orgほど包括的ではありませんが、マイクロフォーマットは基本的な構造化データニーズに対する軽量な代替手段を提供します。</p>
+<h2 id="構造化データの仕組み">構造化データの仕組み</h2>
+<p>構造化データの実装プロセスは、コンテンツ分析とスキーマ選択から始まります。開発者はWebページ上のコンテンツのタイプを特定し、Product、Article、Event、Organizationなどの適切なSchema.orgタイプを選択します。この基礎的なステップは、どのプロパティと関係をマークアップする必要があるかを決定します。マークアップ生成には、選択したフォーマット(通常はJSON-LD)を使用して実際の構造化データコードを作成することが含まれます。開発者はコンテンツ要素をスキーマプロパティにマッピングし、すべての関連情報がボキャブラリ仕様に従って適切に構造化およびフォーマットされていることを確認します。コード実装では、HTMLドキュメント内に構造化データマークアップを埋め込む必要があります。JSON-LDの場合はheadセクション内に、microdataやRDFaの場合はコンテンツとインラインで配置します。マークアップは、検索エンジンによる解析を成功させるために、適切にフォーマットされ、構文的に正しくなければなりません。検証とテストでは、GoogleのRich Results Test、Schema Markup Validator、Structured Data Testing Toolなどのツールを使用して、マークアップが正しく実装され、検索エンジンやその他のシステムによって正常に解析できることを確認します。検索エンジンのクロールは、検索エンジンボットがWebページにアクセスし、通常のコンテンツとともに構造化データマークアップを解析するときに発生します。ボットは構造化情報を抽出し、処理と潜在的な表示強化のためにデータベースに保存します。リッチリザルトの生成は、検索エンジンが構造化データが品質ガイドラインを満たしていると判断し、拡張検索結果を表示することを決定したときに発生します。このプロセスには、マークアップの品質、コンテンツの関連性、ユーザーエクスペリエンス要因のアルゴリズム評価が含まれます。パフォーマンス監視には、検索エンジン結果ページでのリッチリザルトの表示とパフォーマンスの追跡、クリック率、インプレッション、その他の指標の監視が含まれ、構造化データ実装の効果を評価します。反復的最適化には、パフォーマンスデータ、検索エンジンガイドラインの更新、新しいスキーマボキャブラリのリリースに基づいた構造化データマークアップの継続的な改善が含まれ、リッチリザルトの適格性を維持および向上させます。</p>
+<h2 id="主な利点">主な利点</h2>
+<p>検索可視性の向上により、リッチリザルト、注目のスニペット、その他の拡張検索機能に表示される可能性が向上し、標準の検索結果よりも多くの視覚的スペースを占め、より多くのユーザーの注目を集めます。クリック率の向上は、ユーザーがクリックする前に追加のコンテキストと情報を提供する、より有益で視覚的に魅力的な検索リストから生じ、エンゲージメント率の向上につながります。コンテンツ理解の改善により、検索エンジンがWebコンテンツのコンテキストと意味をより正確に理解できるようになり、関連するクエリに対するランキングの向上とコンテンツ発見の改善につながる可能性があります。音声検索の最適化は、音声アシスタントとスマートスピーカーの使用の増加をサポートし、これらのシステムが音声クエリに応答して簡単に解析および提示できる明確で構造化された情報を提供します。ソーシャルメディアの強化により、Open GraphとTwitter Cardマークアップを通じて、ソーシャルプラットフォームで共有されたときにコンテンツがどのように表示されるかが改善され、より魅力的で有益なソーシャルメディア投稿につながります。Eコマースの利点により、製品情報が価格、在庫状況、評価、その他の重要な詳細とともに検索結果に直接表示され、ユーザーがWebサイトにアクセスする前に購入決定に影響を与えることができます。ローカルSEOの利点は、企業がローカル検索結果とGoogle My Businessリストに、場所、営業時間、連絡先の詳細、サービスに関する正確な情報とともに表示されるのに役立ちます。将来への備えは、新しいプラットフォームやアプリケーションで活用できる機械可読データの基盤を確立することで、新興技術や検索機能に対応できるようWebサイトを準備します。競争上の優位性は、構造化データを実装していない競合他社に対して優位性を提供し、特にリッチスニペットが可視性とユーザーエンゲージメントを大幅に向上させる検索結果において有効です。分析とインサイトは、Google Search Consoleのリッチリザルトレポートや構造化データの効果を追跡するその他の分析ツールを通じて、検索パフォーマンスを測定するための追加データポイントを提供します。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p>Eコマース製品マークアップにより、オンライン小売業者は価格、在庫状況、評価、レビューを含む製品情報を検索結果に直接表示でき、ショッピング体験とコンバージョンの可能性を大幅に向上させます。ローカルビジネス情報は、実店舗を持つ企業が住所、電話番号、営業時間、顧客評価などの重要な詳細をローカル検索結果とマップリストに表示するのに役立ちます。記事とブログコンテンツにより、出版社は公開日、著者情報、記事の見出し、注目画像を含むコンテンツリストを強化し、コンテンツの発見可能性とエンゲージメントを向上させることができます。イベントプロモーションにより、イベント主催者は日付、時間、場所、チケット価格、出演者情報を含むイベントの詳細を検索結果に直接表示でき、イベントの可視性と参加者数を増やすことができます。レシピと料理コンテンツは、料理ブロガーや料理Webサイトが調理時間、材料、栄養情報、評価を含むレシピ情報をリッチレシピカードに表示するのに役立ちます。レビューと評価システムにより、企業は顧客レビューと集計評価を検索結果に表示でき、潜在的な顧客がWebサイトにアクセスする前に信頼と信頼性を構築できます。求人情報の最適化により、雇用主と求人サイトは給与範囲、職務要件、会社情報、応募方法を含む詳細な求人情報をGoogle for Jobsやその他の求人検索プラットフォームに表示できます。FAQとハウツーコンテンツは、よくある質問とステップバイステップの指示コンテンツを適切にマークアップすることで、Webサイトが注目のスニペットとアンサーボックスに表示されるのに役立ちます。</p>
+<h2 id="構造化データフォーマットの比較">構造化データフォーマットの比較</h2>
+<table>
+<thead>
+<tr>
+<th>フォーマット</th>
+<th>実装方法</th>
+<th>複雑さ</th>
+<th>検索エンジンサポート</th>
+<th>メンテナンス</th>
+<th>最適な使用例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JSON-LD</td>
+<td>headタグ内のスクリプト</td>
+<td>低</td>
+<td>優秀</td>
+<td>容易</td>
+<td>ほとんどのWebサイト</td>
+</tr>
+<tr>
+<td>Microdata</td>
+<td>インラインHTML属性</td>
+<td>中</td>
+<td>良好</td>
+<td>中程度</td>
+<td>コンテンツ統合マークアップ</td>
+</tr>
+<tr>
+<td>RDFa</td>
+<td>HTML/XML属性</td>
+<td>高</td>
+<td>良好</td>
+<td>複雑</td>
+<td>セマンティックWebアプリケーション</td>
+</tr>
+<tr>
+<td>Open Graph</td>
+<td>メタタグ</td>
+<td>低</td>
+<td>ソーシャルプラットフォーム</td>
+<td>容易</td>
+<td>ソーシャルメディア最適化</td>
+</tr>
+<tr>
+<td>Twitter Cards</td>
+<td>メタタグ</td>
+<td>低</td>
+<td>Twitterのみ</td>
+<td>容易</td>
+<td>Twitter専用コンテンツ</td>
+</tr>
+<tr>
+<td>Microformats</td>
+<td>CSSクラス</td>
+<td>低</td>
+<td>限定的</td>
+<td>容易</td>
+<td>シンプルな連絡先/イベントデータ</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p>実装の複雑さは、構造化データの概念に不慣れな開発者を圧倒する可能性があり、スキーマボキャブラリ、構文要件、適切な実装のためのベストプラクティスについての重要な学習と理解が必要です。メンテナンスのオーバーヘッドは、Webサイトが成長しコンテンツが変化するにつれて増加し、進化する検索エンジンガイドラインとスキーマ仕様への正確性とコンプライアンスを確保するために、構造化データマークアップの継続的な更新が必要になります。品質管理の問題は、構造化データが実際のページコンテンツを正確に表していない場合に発生し、検索エンジンのペナルティやリッチリザルトの適格性からの削除につながる可能性があります。技術的検証要件は、マークアップが異なるプラットフォームや検索エンジン全体で有効かつ機能的であり続けることを確保するために、さまざまなツールを使用した定期的なテストと監視を要求します。スキーマ選択の課題には、数千の利用可能なオプションから最も適切なスキーマタイプとプロパティを選択することが含まれ、コンテンツとボキャブラリ仕様の両方についての深い理解が必要です。パフォーマンスへの影響の懸念は、広範な構造化データマークアップが実装された場合、特に複雑なスキーマや同じページ上の複数のマークアップフォーマットの場合、ページの読み込み時間に影響を与える可能性があります。検索エンジンガイドラインのコンプライアンスは、頻繁に変更される要件と異なる検索エンジンからのベストプラクティスを最新の状態に保つ必要があり、それぞれが独自の特定の実装設定を持っています。リッチリザルト適格性の不確実性は、適切に実装された構造化データが開発者の制御を超えたアルゴリズム要因により拡張検索リストにつながらない場合にフラストレーションを生み出します。クロスプラットフォーム互換性の問題は、異なるプラットフォームが構造化データマークアップを異なる方法で解釈する場合に発生する可能性があり、複数のシステムと検索エンジン全体でのテストが必要になります。コンテンツ重複のリスクは、構造化データが可視コンテンツに既に存在する情報を繰り返す場合に発生し、冗長性の問題や矛盾する情報シグナルを引き起こす可能性があります。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p>JSON-LDフォーマットを使用することは、主要な検索エンジンによって推奨されるフォーマットであり、実装と保守が容易で、Webコンテンツの視覚的表示に干渉しないため、可能な限り推奨されます。Schema.orgガイドラインに厳密に従うことで、利用可能な最も具体的なスキーマタイプを使用し、必須プロパティを実装し、最適な結果を得るためにボキャブラリの意図された使用パターンに従います。マークアップを定期的に検証するために、GoogleのRich Results Test、Schema Markup Validator、その他のテストツールを使用して、適切な構文、完全性、現在の標準へのコンプライアンスを確保します。可視コンテンツと一致させることで、すべての構造化データがページ上でユーザーに表示される情報を正確に表していることを確認し、検索エンジンのペナルティを引き起こす可能性のある不一致を回避します。包括的なカバレッジを実装することで、Webサイト上のすべての関連コンテンツタイプをマークアップし、すべてのページとコンテンツカテゴリ全体で一貫した構造化データの存在を作成します。パフォーマンス指標を監視するために、Google Search Consoleやその他の分析ツールを使用して、リッチリザルトの表示、クリック率、全体的な構造化データの効果を追跡します。ガイドラインの最新情報を把握するために、検索エンジンのブログ、ドキュメントの更新、業界ニュースをフォローして、進化する要件とベストプラクティスへのコンプライアンスを確保します。複数のプラットフォームでテストすることで、構造化データが異なる検索エンジン、ソーシャルメディアプラットフォーム、構造化データを消費するその他のシステムで正しく機能することを確認します。モバイル向けに最適化することで、構造化データマークアップがモバイルデバイスで適切に機能し、モバイルページのパフォーマンスやユーザーエクスペリエンスに悪影響を与えないことを確認します。実装の決定を文書化することで、スキーマの選択、実装アプローチ、マークアップ戦略の明確な記録を維持し、将来の更新とチームのコラボレーションを促進します。</p>
+<h2 id="高度なテクニック">高度なテクニック</h2>
+<p>ネストされたスキーマ実装には、組織内の製品や会場内のイベントなど、エンティティ間の詳細な関係を表す複雑な構造化データ階層の作成が含まれ、検索エンジンにより豊かなコンテキストを提供します。動的構造化データ生成は、サーバーサイドスクリプティングまたはコンテンツ管理システムを利用して、データベースコンテンツに基づいて構造化データマークアップを自動的に生成し、一貫性を確保し、手動メンテナンスのオーバーヘッドを削減します。マルチスキーマ統合は、単一ページ上で異なるスキーマタイプを組み合わせて包括的なマークアップカバレッジを提供し、著者署名と出版社情報のためにArticle、Person、Organizationスキーマを組み合わせるなどします。カスタムプロパティ拡張は、Schema.orgの拡張性機能を活用して、標準ボキャブラリでカバーされていない業界固有または独自のプロパティを追加しながら、既存のスキーマとの互換性を維持します。条件付きマークアップ戦略は、コンテンツタイプ、ユーザーの場所、またはデバイスタイプに基づいて異なる構造化データアプローチを実装し、特定の使用例と検索エンジン機能に対してマークアップを最適化します。API駆動型構造化データは、外部データソースとAPIと統合して、価格、在庫状況、イベントの詳細などのリアルタイム情報で構造化データマークアップを入力し、正確性と鮮度を確保します。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p>人工知能統合は、機械学習モデルをトレーニングし、AI搭載の検索機能を改善するために構造化データをますます活用するようになり、コンテンツの発見と理解のための適切なマークアップがさらに重要になります。音声検索の進化は、ユーザークエリに対する正確な音声応答を提供するために構造化データにより大きく依存するようになり、特にローカルビジネス情報、製品の詳細、事実コンテンツに対して重要になります。拡張現実アプリケーションは、構造化データを利用して物理空間にデジタル情報をオーバーレイし、現実世界のオブジェクトとそのオンライン構造化データ表現を接続して、強化されたユーザーエクスペリエンスを提供します。モノのインターネット接続は、構造化データの使用をWebページを超えてスマートデバイスとセンサーに拡大し、さまざまなプラットフォームとデバイス全体で機械可読情報の相互接続されたネットワークを作成します。強化されたEコマース機能は、3Dモデル統合、バーチャル試着機能、構造化データプロトコルを通じたリアルタイム在庫同期を含む、より洗練された製品マークアップ機能を導入します。セマンティックWebの進歩は、構造化データの関係について推論できるより知的なWebシステムの開発を継続し、より洗練された自動意思決定とコンテンツパーソナライゼーション機能を可能にします。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Schema.org Official Documentation. (2024). “Getting Started with Schema.org.” <a href="https://schema.org/docs/gs.html" rel="nofollow noopener noreferrer" target="_blank">https://schema.org/docs/gs.html</a></p>
+</li>
+<li>
+<p>Google Search Central. (2024). “Understand How Structured Data Works.” Google Developers Documentation.</p>
+</li>
+<li>
+<p>W3C Recommendation. (2024). “JSON-LD 1.1: A JSON-based Serialization for Linked Data.” World Wide Web Consortium.</p>
+</li>
+<li>
+<p>Moz SEO Learning Center. (2024). “Structured Data and Schema Markup Guide.” Moz.com.</p>
+</li>
+<li>
+<p>Search Engine Land. (2024). “The Complete Guide to Structured Data for SEO.” Search Engine Land Publications.</p>
+</li>
+<li>
+<p>Bing Webmaster Guidelines. (2024). “Markup Validation and Rich Snippets.” Microsoft Bing Documentation.</p>
+</li>
+<li>
+<p>Open Graph Protocol. (2024). “The Open Graph Protocol Specification.” Open Graph.org.</p>
+</li>
+<li>
+<p>Microformats Wiki. (2024). “Microformats Specifications and Documentation.” Microformats.org.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/schema-markup/">
+                    スキーママークアップ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    スキーママークアップの包括的ガイド - 検索エンジンがウェブサイトのコンテンツをより効果的に理解し表示するための構造化データボキャブラリー。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/schema-markup/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/rich-snippets/">
+                    リッチスニペット
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    リッチスニペットの包括的ガイド - 構造化データマークアップによって強化された検索結果で、SERPsにおける視認性とクリック率を向上させます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/rich-snippets/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/seo-metadata/">
+                    SEOメタデータ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    # 新しいdescription:
+ウェブページに隠れた情報を埋め込んで、検索エンジンにページの内容を正しく伝え、検索結果での表示を改善する仕組み。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/seo-metadata/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/schema/">
+                    スキーマ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    データベース、Web開発、データ構造におけるスキーマの包括的ガイド - 定義、種類、実装、ベストプラクティス。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/schema/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/semantic-markup/">
+                    セマンティックマークアップ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    セマンティックマークアップの包括的ガイド:HTML5要素、構造化データ、アクセシビリティ、意味のあるWebコンテンツ構造のためのSEO最適化について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/semantic-markup/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/output-parsing/">
+                    出力パース
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/output-parsing/" title="出力パースは、AI言語モデルのテキスト応答から構造化データ(JSON、Pythonオブジェクト)を抽出し、自動化、分析、システム統合に活用する技術です。">出力パース</a>は、AI言語モデルのテキスト応答から構造化データ(JSON、Pythonオブジェクト)を抽出し、自動化、分析、システム統合に活用する技術です。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/output-parsing/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/structured-data/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

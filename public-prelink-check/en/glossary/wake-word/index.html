@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Wake Word Technology | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/wake-word/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/wake-word/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/wake-word/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/wake-word/" hreflang="x-default" rel="alternate"/>
+<meta content="A specific word or phrase that activates voice-enabled devices like smart speakers, allowing hands-free control without touching them." name="description"/>
+<meta content="wake word, voice AI, hotword, speech recognition, AI assistants" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/wake-word/" property="og:url"/>
+<meta content="Wake Word Technology | SmartWeb" property="og:title"/>
+<meta content="A specific word or phrase that activates voice-enabled devices like smart speakers, allowing hands-free control without touching them." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/wake-word/" name="twitter:url"/>
+<meta content="Wake Word Technology | SmartWeb" name="twitter:title"/>
+<meta content="A specific word or phrase that activates voice-enabled devices like smart speakers, allowing hands-free control without touching them." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Wake Word Technology</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Wake Word Technology
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A specific word or phrase that activates voice-enabled devices like smart speakers, allowing hands-free control without touching them.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                wake word
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                voice AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                hotword
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                speech recognition
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI assistants
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-wake-word">What Is a Wake Word?</h2>
+<p>A wake word is a specific word or phrase recognized by voice-enabled devices as a signal to “wake up” from passive listening mode and begin actively processing commands. This technology forms the foundation of hands-free interaction with AI assistants and smart devices, enabling users to activate voice interfaces without physical contact. Wake word detection continuously analyzes ambient audio for the designated phrase, triggering the device’s transition from idle state to active command processing the moment it detects the phrase.</p>
+<p>Wake word technology represents the invisible infrastructure powering modern voice AI, making voice interfaces intuitive, seamless, and perpetually available. The technology is ubiquitous across smart speakers, mobile devices, automotive systems, home appliances, and IoT devices, fundamentally transforming how users interact with technology through natural language.</p>
+<p><strong>Common Synonyms:</strong> Hotword, Trigger Word, Wake Phrase, Activation Phrase, Keyword Spotting, Wake-up Word (WuW), Voice Trigger. These terms are interchangeable across technical documentation and product materials, all describing the core functionality of <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a> audio for predetermined activating phrases.</p>
+<h2 id="how-wake-words-enable-voice-interaction">How Wake Words Enable Voice Interaction</h2>
+<p>Wake words serve as the gateway to voice-first experiences, enabling frictionless, hands-free device control by maintaining devices in low-power passive listening until explicitly invoked.</p>
+<h3 id="primary-use-cases">Primary Use Cases</h3>
+<p><strong>Smart Home Devices</strong><br/>
+Seamless voice control of smart speakers, displays, lighting, thermostats, and connected appliances (“Alexa”, “Hey Google”)</p>
+<p><strong>Mobile Platforms</strong><br/>
+Convenient access to digital assistants on smartphones, tablets, and wearables (“Hey Siri”, “Hey Google”)</p>
+<p><strong>Automotive Systems</strong><br/>
+Hands-free navigation, entertainment control, and vehicle functions while driving (“Hey Mercedes”, “Hey BMW”, “OK Honda”)</p>
+<p><strong>Home Appliances</strong><br/>
+Voice-enabled control for televisions, refrigerators, washing machines, and kitchen appliances</p>
+<p><strong>Accessibility Solutions</strong><br/>
+Empowering users with limited mobility or disabilities to control technology independently through voice commands</p>
+<p><strong>Enterprise and Industrial</strong><br/>
+Voice-controlled machinery, factory automation systems, and field service applications requiring hands-free operation</p>
+<h3 id="standard-operational-workflow">Standard Operational Workflow</h3>
+<p><strong>1. Continuous Monitoring</strong><br/>
+Device listens passively using lightweight on-device wake word detection engine with minimal power consumption</p>
+<p><strong>2. Detection Trigger</strong><br/>
+Upon recognizing the wake word, device signals readiness through visual indicator (light), audio cue (tone), or UI change</p>
+<p><strong>3. Active Processing</strong><br/>
+System transitions to full <a data-lb="1" href="/en/glossary/speech-recognition/" title="Speech Recognition glossary entry">speech recognition</a>, processing subsequent user commands with complete NLP/ASR capabilities</p>
+<p><strong>Energy Efficiency:</strong> On-device wake word detection conserves battery power and maximizes privacy by ensuring full audio processing activates only when necessary, with no cloud transmission during passive listening.</p>
+<h3 id="popular-wake-word-examples">Popular Wake Word Examples</h3>
+<p><strong>Consumer Voice Assistants:</strong><br/>
+Apple (“Hey Siri”), Amazon (“Alexa”), Google (“OK Google”/“Hey Google”), Microsoft (“Hey Cortana”), Samsung (“Hi Bixby”), Huawei (“Hey Celia”)</p>
+<p><strong>Automotive Brands:</strong><br/>
+Mercedes-Benz (“Hey Mercedes”), BMW (“Hey BMW”), Porsche (“Hey Porsche”), Honda (“OK Honda”), Kia (“Hello Kia”)</p>
+<p><strong>Consumer Electronics:</strong><br/>
+LG (“Hi LG”/“OK LG”), Lloyd (“Hello Lloyd”)</p>
+<p><strong>Branded Custom:</strong><br/>
+Pandora (“Hey Pandora”), SoundHound (“Hey SoundHound”), Mycroft (“Hey Mycroft”)</p>
+<h2 id="technical-architecture-and-detection-process">Technical Architecture and Detection Process</h2>
+<p>Wake word detection functions as a binary classification problem where the system determines, for each audio segment, whether the wake word is present or absent. This process operates independently from general-purpose speech recognition, which transcribes all spoken content.</p>
+<h3 id="detection-pipeline">Detection Pipeline</h3>
+<p><strong>Audio Capture</strong><br/>
+Continuous audio streaming from device microphone at standard sampling rates (16kHz typical)</p>
+<p><strong>Feature Extraction</strong><br/>
+Audio conversion into acoustic features—typically Mel Frequency Cepstral Coefficients (MFCCs) or mel spectrograms—efficiently representing speech characteristics</p>
+<p><strong>Neural Network Processing</strong><br/>
+Deep <a data-lb="1" href="/en/glossary/neural-networks/" title="Neural Networks glossary entry">neural networks</a> analyze features to identify the unique acoustic signature of the wake word</p>
+<p><strong>Confidence Scoring</strong><br/>
+Model outputs confidence score indicating wake word presence likelihood</p>
+<p><strong>Activation Decision</strong><br/>
+If confidence exceeds predetermined threshold, system activates and transitions to full command processing</p>
+<h3 id="model-training-and-optimization">Model Training and Optimization</h3>
+<p><strong>Data Collection:</strong><br/>
+Recordings from hundreds of diverse speakers representing varied accents, ages, genders, and acoustic environments</p>
+<p><strong>Model Training:</strong><br/>
+Systems learn to distinguish wake word from similar-sounding phrases, background noise, and conversational speech</p>
+<p><strong>Transfer Learning:</strong><br/>
+Pre-trained models adapt rapidly to new wake phrases, dramatically reducing data requirements and deployment timelines</p>
+<p><strong>Performance Optimization:</strong><br/>
+Modern wake word engines (Porcupine, Sensory TrulyHandsfree) optimize for low <a data-lb="1" href="/en/glossary/latency/" title="Latency glossary entry">latency</a> (&lt;500ms), minimal CPU/memory usage, enabling deployment on embedded and battery-powered devices</p>
+<p><strong>Privacy Architecture:</strong><br/>
+On-device detection preferred for privacy, latency, and reliability. Only audio following wake word activation transmits to cloud servers when required for extended processing.</p>
+<h2 id="wake-words-vs-alternative-technologies">Wake Words vs. Alternative Technologies</h2>
+<h3 id="wake-word-vs-speech-recognition-asr">Wake Word vs. Speech Recognition (ASR)</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Wake Word Detection</th>
+<th>Automatic Speech Recognition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Function</strong></td>
+<td>Binary classifier (wake word present/absent)</td>
+<td>Full speech transcription to text</td>
+</tr>
+<tr>
+<td><strong>Complexity</strong></td>
+<td>Lightweight, specific phrase detection</td>
+<td>Complex, general-purpose transcription</td>
+</tr>
+<tr>
+<td><strong>Resource Usage</strong></td>
+<td>Minimal CPU/memory</td>
+<td>High computational requirements</td>
+</tr>
+<tr>
+<td><strong>Latency</strong></td>
+<td>&lt;500ms typical</td>
+<td>Higher latency (1-3 seconds)</td>
+</tr>
+<tr>
+<td><strong>Privacy</strong></td>
+<td>On-device, no recording until activation</td>
+<td>May require cloud processing, full recording</td>
+</tr>
+<tr>
+<td><strong>Battery Impact</strong></td>
+<td>Negligible drain</td>
+<td>Significant power consumption</td>
+</tr>
+<tr>
+<td><strong>Use Case</strong></td>
+<td>Always-listening activation</td>
+<td>Command processing after activation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why ASR Fails for Wake Words:</strong> ASR’s resource intensity, higher latency, privacy concerns, and battery drain make it unsuitable for continuous, always-listening wake word detection scenarios.</p>
+<h3 id="wake-word-vs-push-to-talk">Wake Word vs. Push-to-Talk</h3>
+<p><strong>Wake Word Advantages:</strong><br/>
+True hands-free interaction without physical buttons, ideal for accessibility, driving safety, and situations requiring hands-free operation</p>
+<p><strong>Push-to-Talk Advantages:</strong><br/>
+Eliminates false activations, provides explicit user control, reduces privacy concerns about continuous listening</p>
+<p><strong>Best Practice:</strong> Wake words superior for accessibility, natural interaction, and contexts where physical interaction is dangerous or impossible.</p>
+<h2 id="wake-word-design-best-practices">Wake Word Design Best Practices</h2>
+<h3 id="selection-criteria">Selection Criteria</h3>
+<p><strong>Optimal Length:</strong><br/>
+2-4 syllables balances uniqueness with usability (“Alexa” = 3 syllables, “Hey Siri” = 4 syllables)</p>
+<p><strong>Phonetic Diversity:</strong><br/>
+Mix vowels and consonants, avoid repeated sounds, ensure distinctive acoustic signature</p>
+<p><strong>Distinguishability:</strong><br/>
+Minimal overlap with common conversational words, reducing false activation rates</p>
+<p><strong>Pronounceability:</strong><br/>
+Easily articulated by users across accents, ages, speech patterns, and potential speech impairments</p>
+<p><strong>Brand Alignment:</strong><br/>
+Reinforces product or company identity while meeting technical requirements</p>
+<p><strong>Avoid:</strong><br/>
+Short generic terms (“Hi”, “OK”), commonly used phrases, words easily confused with conversation</p>
+<h3 id="multi-language-considerations">Multi-Language Considerations</h3>
+<p><strong>Cultural Appropriateness:</strong><br/>
+Verify phrases have no negative connotations or unintended meanings across target languages</p>
+<p><strong>Phonetic Adaptation:</strong><br/>
+Test pronunciation ease with native speakers from all target regions</p>
+<p><strong>Linguistic Validation:</strong><br/>
+Engage local linguistic experts and diverse user testing groups</p>
+<h3 id="custom-branded-wake-words">Custom Branded Wake Words</h3>
+<p><strong>Brand Benefits:</strong><br/>
+Increase brand recall, strengthen user experience, differentiate products in competitive markets</p>
+<p><strong>Implementation:</strong><br/>
+Major vendors (Porcupine, Sensory, SoundHound Houndify) support custom wake word creation</p>
+<p><strong>Creation Process:</strong><br/>
+Collect demographically diverse training data for custom phrase, use vendor tools for model training and deployment</p>
+<h2 id="performance-metrics-and-challenges">Performance Metrics and Challenges</h2>
+<h3 id="accuracy-measurement">Accuracy Measurement</h3>
+<p><strong>False Acceptance Rate (FAR)</strong><br/>
+Frequency of incorrect activations (false positives) requiring sensitivity tuning</p>
+<p><strong>False Rejection Rate (FRR)</strong><br/>
+Frequency of missed legitimate activations (false negatives) impacting user experience</p>
+<p><strong>Sensitivity Balancing</strong><br/>
+Trade-off between FAR and FRR based on application requirements and user expectations</p>
+<p><strong>Latency</strong><br/>
+Time from <a data-lb="1" href="/en/glossary/utterance/" title="Utterance glossary entry">utterance</a> completion to system activation, typically targeting &lt;500ms</p>
+<p><strong>Resource Efficiency</strong><br/>
+CPU/memory usage during continuous monitoring, critical for battery-powered devices</p>
+<p><strong>Robustness</strong><br/>
+Performance consistency across background noise, speaker diversity, acoustic environments, and distance variations</p>
+<h3 id="environmental-and-user-challenges">Environmental and User Challenges</h3>
+<p><strong>Acoustic Environments:</strong><br/>
+Background noise (music, conversations, appliances), far-field microphone challenges, room acoustics, device placement</p>
+<p><strong>User Diversity:</strong><br/>
+Age ranges (children often underrepresented), gender variations, accent diversity, speech disorders or impediments</p>
+<p><strong>Children’s Speech:</strong><br/>
+Often underrepresented in training data, requiring specialized models for family-friendly devices</p>
+<p><strong>Solutions:</strong><br/>
+Select vendors with proven robustness across diverse conditions, comprehensive testing with target demographic, continuous model refinement based on production data</p>
+<h3 id="device-and-power-constraints">Device and Power Constraints</h3>
+<p><strong>Always-Listening Requirement:</strong><br/>
+Continuous monitoring demands extreme energy efficiency for wearables, IoT devices, and mobile applications</p>
+<p><strong>Embedded Optimization:</strong><br/>
+Purpose-built solutions (Porcupine, Sensory) maximize battery life through efficient algorithms and hardware acceleration</p>
+<h2 id="privacy-and-security-considerations">Privacy and Security Considerations</h2>
+<p><strong>On-Device Processing:</strong><br/>
+Ensures ambient audio analysis occurs locally, with no cloud transmission during passive listening</p>
+<p><strong>Activation Transparency:</strong><br/>
+Clear visual/audible indicators when devices transition to active listening or recording</p>
+<p><strong>Regulatory Compliance:</strong><br/>
+Adherence to <a data-lb="1" href="/en/glossary/gdpr/" title="GDPR glossary entry">GDPR</a>, CCPA, and regional privacy regulations through documented data handling practices</p>
+<p><strong>User Control:</strong><br/>
+Options to disable wake word detection, adjust sensitivity, review activation history</p>
+<p><strong>Best Practice:</strong><br/>
+Avoid <a data-lb="1" href="/en/glossary/cloud-based/" title="Cloud-Based glossary entry">cloud-based</a> detection for privacy-sensitive applications, implement comprehensive privacy disclosures, provide clear user controls</p>
+<h2 id="implementation-guide">Implementation Guide</h2>
+<h3 id="platform-selection">Platform Selection</h3>
+<p><strong>Enterprise Solutions:</strong></p>
+<ul>
+<li>Picovoice Porcupine – Production-ready, cross-platform, highly optimized</li>
+<li>Sensory TrulyHandsfree – Embedded focus, automotive-grade reliability</li>
+<li>SoundHound Houndify – Enterprise voice AI suite with custom wake words</li>
+</ul>
+<p><strong>Open-Source Options:</strong></p>
+<ul>
+<li>openWakeWord – Community-driven, Python-based</li>
+<li>PocketSphinx – CMU Sphinx project, research applications</li>
+</ul>
+<h3 id="development-process">Development Process</h3>
+<p><strong>1. Engine Selection</strong><br/>
+Evaluate platforms based on target device, performance requirements, licensing, support</p>
+<p><strong>2. Wake Word Creation</strong><br/>
+Use vendor tools (Picovoice Console) to define custom phrase, generate training parameters</p>
+<p><strong>3. Training Data Collection</strong><br/>
+Gather diverse audio samples representing target user demographics and acoustic conditions</p>
+<p><strong>4. SDK Integration</strong><br/>
+Implement platform-specific SDKs for iOS, Android, Web, Desktop, or embedded systems</p>
+<p><strong>5. Testing and Tuning</strong><br/>
+Evaluate with real users across varied environments, adjust sensitivity balancing FAR/FRR trade-offs</p>
+<h3 id="code-example">Code Example</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">import</span> pvporcupine
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>porcupine = pvporcupine.create(
+</span></span><span style="display:flex;"><span>    access_key=<span style="color:#0ff;font-weight:bold">'$</span><span style="color:#0ff;font-weight:bold">{ACCESS_KEY}</span><span style="color:#0ff;font-weight:bold">'</span>,
+</span></span><span style="display:flex;"><span>    keywords=[<span style="color:#0ff;font-weight:bold">'picovoice'</span>, <span style="color:#0ff;font-weight:bold">'bumblebee'</span>]
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">def</span> get_next_audio_frame():
+</span></span><span style="display:flex;"><span>    <span style="color:#007f7f"># Microphone audio capture implementation</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">return</span> audio_frame
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">while</span> <span style="color:#fff;font-weight:bold">True</span>:
+</span></span><span style="display:flex;"><span>    audio_frame = get_next_audio_frame()
+</span></span><span style="display:flex;"><span>    keyword_index = porcupine.process(audio_frame)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">if</span> keyword_index == <span style="color:#ff0;font-weight:bold">0</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">"Detected 'picovoice'"</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#007f7f"># Trigger action</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">elif</span> keyword_index == <span style="color:#ff0;font-weight:bold">1</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">"Detected 'bumblebee'"</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#007f7f"># Trigger action</span>
+</span></span></code></pre></div><h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<p><strong>Can I create custom wake words?</strong><br/>
+Yes. Many platforms support custom wake word creation with appropriate training data and model generation tools.</p>
+<p><strong>Are wake words always processed on-device?</strong><br/>
+Best practice is on-device processing for privacy, speed, and efficiency, though some implementations use hybrid approaches.</p>
+<p><strong>What causes false activations?</strong><br/>
+Similar-sounding words, background conversations, media audio, or wake words set too sensitively can trigger false activations.</p>
+<p><strong>Can devices support multiple wake words?</strong><br/>
+Yes. Modern engines simultaneously monitor for multiple wake phrases, enabling multi-user or multi-function activation.</p>
+<p><strong>How can accuracy improve in noisy environments?</strong><br/>
+High-quality microphones, advanced noise reduction algorithms, beamforming, and training data including noisy conditions improve robustness.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://dictionary.cambridge.org/us/dictionary/english/wake-word" rel="nofollow noopener noreferrer" target="_blank">Cambridge Dictionary: Wake Word Definition</a></li>
+<li><a href="https://picovoice.ai/blog/complete-guide-to-wake-word/" rel="nofollow noopener noreferrer" target="_blank">Picovoice: Complete Guide to Wake Word</a></li>
+<li><a href="https://www.soundhound.com/voice-ai-blog/what-you-need-to-know-about-wake-word-detection/" rel="nofollow noopener noreferrer" target="_blank">SoundHound: What You Need to Know About Wake Word Detection</a></li>
+<li><a href="https://picovoice.ai/blog/using-asr-for-wake-word-recognition/" rel="nofollow noopener noreferrer" target="_blank">Picovoice: Using ASR for Wake Word Recognition</a></li>
+<li><a href="https://console.picovoice.ai/" rel="nofollow noopener noreferrer" target="_blank">Picovoice Console</a></li>
+<li><a href="https://picovoice.ai/platform/porcupine/" rel="nofollow noopener noreferrer" target="_blank">Picovoice Platform: Porcupine</a></li>
+<li><a href="https://www.sensory.com/wake-word/" rel="nofollow noopener noreferrer" target="_blank">Sensory: Wake Word Technology</a></li>
+<li><a href="https://www.houndify.com/products/wake-word" rel="nofollow noopener noreferrer" target="_blank">SoundHound Houndify: Wake Word</a></li>
+<li><a href="https://picovoice.ai/blog/open-source-keyword-spotting-data/" rel="nofollow noopener noreferrer" target="_blank">Picovoice: Open-Source Keyword Spotting Data</a></li>
+<li><a href="https://picovoice.ai/blog/how-to-add-custom-wake-words-to-any-web-app/" rel="nofollow noopener noreferrer" target="_blank">Picovoice: How to Add Custom Wake Words to Web Apps</a></li>
+<li><a href="https://picovoice.ai/blog/ios-speech-recognition/" rel="nofollow noopener noreferrer" target="_blank">Picovoice: iOS Speech Recognition</a></li>
+<li><a href="https://picovoice.ai/blog/android-speech-recognition/" rel="nofollow noopener noreferrer" target="_blank">Picovoice: Android Speech Recognition</a></li>
+<li><a href="https://picovoice.ai/blog/speech-recognition-on-raspberrypi/" rel="nofollow noopener noreferrer" target="_blank">Picovoice: Speech Recognition on Raspberry Pi</a></li>
+<li><a href="https://picovoice.ai/blog/arduino-voice-recognition-in-ten-minutes-or-less/" rel="nofollow noopener noreferrer" target="_blank">Picovoice: Arduino Voice Recognition</a></li>
+<li><a href="https://voices.soundhound.com/why-voice-assistants-need-to-understand-accents/" rel="nofollow noopener noreferrer" target="_blank">SoundHound Voices: Understanding Accents</a></li>
+<li><a href="https://github.com/dscripka/openWakeWord" rel="nofollow noopener noreferrer" target="_blank">openWakeWord GitHub</a></li>
+<li><a href="https://github.com/cmusphinx/pocketsphinx" rel="nofollow noopener noreferrer" target="_blank">PocketSphinx GitHub</a></li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/voice-cloning/">
+                    Voice Cloning
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI technology that analyzes a person's voice characteristics to create a digital replica capable of ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/voice-cloning/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/n-gram/">
+                    N-Gram
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    An <a data-lb="1" href="/en/glossary/n-gram/" title="N-Gram glossary entry">N-gram</a> is a sequence of consecutive words or characters used by computers to predict the next wor...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/n-gram/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/speech-recognition/">
+                    Speech Recognition
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Speech recognition is technology that converts spoken words into written text, enabling computers an...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/speech-recognition/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/wake-word/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+  });
+</script>
+</body>
+</html>

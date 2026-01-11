@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>モデル圧縮 | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/model-compression/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="機械学習アプリケーションにおいて、AIモデルのサイズを削減しながらパフォーマンスを維持するためのモデル圧縮技術に関する包括的なガイド。" name="description"/>
+<meta content="モデル圧縮, ニューラルネットワーク最適化, 量子化, プルーニング, 知識蒸留" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/model-compression/" property="og:url"/>
+<meta content="モデル圧縮 | SmartWeb" property="og:title"/>
+<meta content="機械学習アプリケーションにおいて、AIモデルのサイズを削減しながらパフォーマンスを維持するためのモデル圧縮技術に関する包括的なガイド。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/model-compression/" name="twitter:url"/>
+<meta content="モデル圧縮 | SmartWeb" name="twitter:title"/>
+<meta content="機械学習アプリケーションにおいて、AIモデルのサイズを削減しながらパフォーマンスを維持するためのモデル圧縮技術に関する包括的なガイド。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">モデル圧縮</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        モデル圧縮
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Model Compression
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          機械学習アプリケーションにおいて、AIモデルのサイズを削減しながらパフォーマンスを維持するためのモデル圧縮技術に関する包括的なガイド。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                モデル圧縮
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ニューラルネットワーク最適化
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                量子化
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                プルーニング
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                知識蒸留
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="モデル圧縮とは何か">モデル圧縮とは何か?</h2>
+<p>モデル圧縮は、<a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>モデルの予測性能を維持しながら、計算量とメモリ要件を削減するために設計された重要な技術群を表します。<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>アプリケーションがますます高度化するにつれて、それらを支えるモデルはサイズと複雑さにおいて指数関数的に成長してきました。現代の深層学習モデル、特に大規模言語モデルやコンピュータビジョンネットワークは、数十億から数兆のパラメータを含むことがあり、学習と推論の両方において膨大な<a data-lb="1" href="/ja/glossary/computational-resources/" title="CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。">計算リソース</a>を必要とします。モデル圧縮は、精度や機能を大幅に損なうことなく、モデルサイズ、メモリフットプリント、計算要求を体系的に削減することで、この課題に対処します。</p>
+<p>モデル圧縮の基本原理は、多くの機械学習モデル、特に深層<a data-lb="1" href="/ja/glossary/neural-networks/" title="ディープラーニングは、多層ニューラルネットワークを使用してデータから複雑なパターンを学習する高度なAI技術です。画像認識、自然言語処理、生成AIに不可欠な技術となっています。">ニューラルネットワーク</a>が、そのパラメータと計算において大きな冗長性を含んでいるという観察に基づいています。この冗長性は様々な形で現れます:最終出力への寄与が最小限のニューロン、ゼロに近い重み、または低精度で近似可能な中間表現などです。モデル圧縮技術は、数学的変換、構造的修正、最適化戦略を通じてこれらの冗長性を利用し、モデルの本質的な意思決定能力を維持しながら不要な要素を排除します。</p>
+<p>モデル圧縮の重要性は、単なる効率向上を超えて広がっています。AIアプリケーションが、高性能クラウドサーバーからリソース制約のあるモバイルデバイスやエッジコンピューティングプラットフォームまで、多様な展開環境で動作しなければならない時代において、利用可能なリソースにモデルの複雑さを適応させる能力が最も重要になります。圧縮されたモデルは、スマートフォンでのリアルタイム推論を可能にし、データセンターでのエネルギー消費を削減し、モデル配布に必要な帯域幅を低減し、計算インフラが限られた環境で高度なAI機能を利用可能にします。さらに、モデル圧縮は、計算予算が限られた組織の参入障壁を下げることでAI技術の民主化において重要な役割を果たし、環境的に持続可能な<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="人工知能(AI) の用語集ページ">AIシステム</a>の開発を支援します。</p>
+<h2 id="主要な圧縮技術">主要な圧縮技術</h2>
+<p>量子化は、モデルパラメータとアクティベーションの精度を、標準的な32ビット浮動小数点表現から8ビット整数やバイナリ値などの低ビット幅形式に削減することを含みます。この技術は、慎重な較正と最適化戦略を通じて、許容可能な精度レベルを維持しながら、大幅なメモリ削減と計算速度向上を達成できます。プルーニングは、様々な重要度基準に基づいて、ニューラルネットワークから冗長または重要度の低い接続、ニューロン、または層全体を体系的に削除します。構造化プルーニングはチャネルや層全体を削除し、非構造化プルーニングは個々の重みを排除します。両方のアプローチがモデルの複雑さと計算要件を削減します。知識蒸留は、特殊な学習手順を通じて、大規模で複雑な教師モデルから、より小さく効率的な生徒モデルへ知識を転送します。生徒モデルは、パラメータ数と計算フットプリントを大幅に削減しながら、教師の振る舞いと意思決定パターンを模倣することを学習します。低ランク近似は、多くのニューラルネットワーク層に存在する固有の低次元構造を利用して、重み行列をランクが削減されたより小さな行列の積に分解します。この数学的変換は、元の層によって実行される本質的な線形変換を保持しながら、パラメータ数を削減します。重み共有は、複数の接続や層に同一のパラメータ値を使用させることで、ネットワーク接続性を維持しながら一意のパラメータ数を効果的に削減し、モデルサイズを縮小します。この技術は、空間的な重み共有が自然に存在する畳み込みニューラルネットワークで特に効果的です。ハフマン符号化と疎表現は、データ圧縮の原理をモデルパラメータに適用し、可変長符号化スキームと疎行列表現を使用して、多くのゼロまたはゼロに近い重みを持つモデルのストレージ要件を削減します。</p>
+<h2 id="モデル圧縮の仕組み">モデル圧縮の仕組み</h2>
+<p>モデル圧縮のワークフローは通常、ベースラインモデル評価から始まります。ここでは、元の非圧縮モデルが、関連するベンチマークとデータセットにわたって精度、計算要件、メモリ使用量について徹底的に評価されます。これにより、後続の最適化ステップのための性能目標と圧縮目標が確立されます。圧縮技術の選択が続き、実務者は展開制約、ターゲットハードウェア機能、許容可能な性能トレードオフに基づいて適切な方法を選択します。最大の効果を得るために異なる技術を組み合わせることができ、それらの相互作用と累積効果を慎重に考慮する必要があります。パラメータ分析とプロファイリングは、冗長性と最適化の機会を特定するために、モデルの重み、アクティベーション、計算パターンの詳細な検査を含みます。この分析は、特定の圧縮技術の適用を導き、圧縮プロセスの適切なハイパーパラメータを確立するのに役立ちます。反復的圧縮適用は、選択された技術を複数回の最適化を通じて実装し、各反復で性能劣化を慎重に監視します。この段階的アプローチにより、最適な結果を達成するために圧縮パラメータの微調整と調整が可能になります。微調整と較正は、圧縮されたモデルが新しい構造とパラメータ制約に適応するのを助ける追加の学習または較正手順を通じて、モデル性能を回復します。このステップは、圧縮の利点を最大化しながら精度を維持するために重要です。検証とテストは、圧縮されたモデルがすべての関連メトリクスとユースケースにわたって許容可能な性能を維持することを保証します。包括的なテストには、現実的な展開条件下での精度評価、<a data-lb="1" href="/ja/glossary/latency/" title="レイテンシとは、リクエストとシステムの応答との間の時間遅延のことです。AIインフラストラクチャ、Webアプリケーション、リアルタイムシステムにおいて重要な要素です。その種類、原因、削減戦略について解説します。">レイテンシ</a>測定、メモリ使用量分析が含まれます。展開最適化は、圧縮されたモデルを特定のターゲットハードウェアとソフトウェア環境に適応させ、演算子融合、メモリレイアウト最適化、ランタイム固有の適応などの追加最適化を含む可能性があります。性能監視は、圧縮されたモデルが本番環境で性能要件を満たし続けることを保証するための継続的な評価手順を確立し、必要に応じてモデル更新または再圧縮の規定を設けます。</p>
+<h2 id="主な利点">主な利点</h2>
+<p>メモリフットプリントの削減により、リソース制約のあるデバイスへの展開が可能になり、メモリ帯域幅要件が削減され、モデルが利用可能なRAMとキャッシュ階層内により効果的に収まるようになります。推論速度の高速化は、パラメータ数の削減と演算の簡素化により計算時間を短縮し、リアルタイムアプリケーションを可能にし、様々な展開シナリオでユーザー体験を向上させます。エネルギー消費の低減は、推論とデータ移動の両方の電力要件を削減し、モバイルデバイスでのバッテリー寿命の延長とデータセンター環境での運用コストの削減に貢献します。ストレージ要件の削減は、モデルの配布と更新に必要なディスクスペースとネットワーク帯域幅を最小化し、より迅速な展開を促進し、インフラストラクチャコストを削減します。スケーラビリティの向上により、同じハードウェアリソースでより多くの同時リクエストを処理でき、本番環境でのシステムスループットが向上し、推論あたりのコストが削減されます。アクセシビリティの向上により、低スペックのハードウェアや帯域幅制約のある環境で高度なAI機能が利用可能になり、洗練された機械学習アプリケーションへのアクセスが民主化されます。コスト最適化は、計算インフラストラクチャ要件と関連する運用費用を削減し、予算が限られた組織にとってAI展開をより経済的に実行可能にします。環境持続可能性は、エネルギー消費と計算要件の削減を通じて炭素フットプリントを減少させ、環境に配慮したAI開発と展開の実践を支援します。エッジコンピューティングの実現は、接続性と計算リソースが制限される可能性がある分散コンピューティング環境での展開を促進し、オフライン動作とレイテンシの削減を可能にします。規制遵守は、ローカル処理を可能にし、<a data-lb="1" href="/ja/glossary/cloud-based/" title="クラウドベース の用語集ページ">クラウドベース</a>の推論サービスへの依存を減らすことで、データプライバシーと<a data-lb="1" href="/ja/glossary/security-requirements/" title="セキュリティ要件について学ぶ:情報の機密性、完全性、可用性(CIA)を確保するためにシステムが満たすべき明確で実行可能な条件。デジタル資産を保護するために不可欠です。">セキュリティ要件</a>をサポートします。</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p>モバイルアプリケーション最適化は、画像認識、自然言語処理、拡張現実などのアプリケーションにおいて、許容可能なバッテリー寿命と応答時間を維持しながら、スマートフォンやタブレット上で洗練されたAI機能を可能にします。エッジコンピューティング展開は、接続が断続的で計算リソースが厳しく制約されるIoTデバイス、自動運転車、産業センサーでのAI推論をサポートします。リアルタイムビデオ処理は、高スループットデータストリームの低レイテンシ処理を必要とするライブビデオ分析、物体検出、コンテンツモデレーションアプリケーションを促進します。自動運転車システムは、安全性が重要なアプリケーションが信頼性の高い低レイテンシ推論機能を要求する、知覚、意思決定、制御システムのための車載AI処理を可能にします。医療機器統合は、厳格な規制とリソース制約の中で動作しなければならない医療画像分析、患者<a data-lb="1" href="/ja/glossary/monitoring/" title="モニタリングとは、システム、アプリケーション、ネットワーク、ビジネスオペレーションに関するデータを収集、分析、対応する体系的かつ継続的なプロセスです。パフォーマンス、セキュリティ、ユーザーエクスペリエンスに関するリアルタイムの可視性を提供します。">モニタリング</a>、診断支援アプリケーションをサポートします。産業オートメーションは、計算インフラストラクチャが限られた製造環境において、AIを活用した品質管理、予知保全、プロセス最適化を可能にします。スマートホームとIoTアプリケーションは、常時クラウド接続なしでローカルに動作する、インテリジェントなデバイス動作、<a data-lb="1" href="/ja/glossary/speech-recognition/" title="音声認識(ASR)は、話し言葉をテキストに変換する技術です。このAI技術の仕組み、アルゴリズム、機能、応用分野、そして今後のトレンドについて解説します。">音声認識</a>、自動制御システムを促進します。金融サービス最適化は、機密性の高い金融データの高スループット、低レイテンシ処理を必要とする不正検出、リスク評価、アルゴリズム取引アプリケーションをサポートします。</p>
+<h2 id="圧縮技術の比較">圧縮技術の比較</h2>
+<table>
+<thead>
+<tr>
+<th>技術</th>
+<th>圧縮率</th>
+<th>精度への影響</th>
+<th>実装の複雑さ</th>
+<th>ハードウェア要件</th>
+<th>最適なユースケース</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>量子化</td>
+<td>2-4倍</td>
+<td>低~中</td>
+<td>中</td>
+<td>専用INT8サポート</td>
+<td>モバイル、エッジデバイス</td>
+</tr>
+<tr>
+<td>プルーニング</td>
+<td>2-10倍</td>
+<td>低~高</td>
+<td>高</td>
+<td>標準ハードウェア</td>
+<td>一般的な最適化</td>
+</tr>
+<tr>
+<td>知識蒸留</td>
+<td>5-50倍</td>
+<td>中</td>
+<td>高</td>
+<td>標準ハードウェア</td>
+<td>リソース制約のある展開</td>
+</tr>
+<tr>
+<td>低ランク近似</td>
+<td>2-5倍</td>
+<td>低~中</td>
+<td>中</td>
+<td>標準ハードウェア</td>
+<td>線形層の最適化</td>
+</tr>
+<tr>
+<td>重み共有</td>
+<td>2-8倍</td>
+<td>低</td>
+<td>中</td>
+<td>標準ハードウェア</td>
+<td>畳み込みネットワーク</td>
+</tr>
+<tr>
+<td>ハフマン符号化</td>
+<td>1.5-3倍</td>
+<td>なし</td>
+<td>低</td>
+<td>標準ハードウェア</td>
+<td>ストレージ最適化</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p>精度劣化は、モデル圧縮における主要なトレードオフを表し、体系的な評価と最適化手順を通じて、サイズ削減と性能維持の間の慎重なバランスを必要とします。ハードウェア互換性の問題は、圧縮されたモデルが、すべてのターゲット展開環境で利用できない可能性がある特定のハードウェア機能やソフトウェアライブラリを必要とする場合に発生します。圧縮の複雑さは、効果的な実装と検証のために専門知識と大きな計算リソースを必要とする洗練された最適化手順を含みます。検証のオーバーヘッドは、圧縮されたモデルがすべての関連シナリオで許容可能な性能を維持することを保証するために、複数のメトリクスとユースケースにわたる包括的なテストを要求します。メンテナンス負担は、圧縮されたモデルが、基礎となるモデルが変更または再学習される際に、特殊な更新手順と再圧縮を必要とする可能性があるため、増加します。ツールチェーン統合の課題は、既存の機械学習ワークフローと展開パイプラインに圧縮技術を組み込む際に発生します。性能のばらつきは、異なる入力タイプやエッジケースにわたって圧縮されたモデルでより顕著になる可能性があり、広範なテストと検証手順を必要とします。知的財産の懸念は、独自の教師モデルや圧縮アルゴリズムを含む知識蒸留やその他の技術を使用する際に生じる可能性があります。規制遵守要件は、特に安全性が重要または規制された業界において、圧縮技術に追加の制約を課す可能性があります。長期的な持続可能性の考慮事項には、ハードウェアとソフトウェア環境が進化するにつれて、圧縮されたモデルの継続的なメンテナンスと最適化が含まれます。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p>明確な圧縮目標を確立することで、圧縮プロセスを開始する前に、モデルサイズ、推論速度、精度保持の具体的な目標を定義します。包括的なベースライン測定を実装することで、すべての関連メトリクスとユースケースにわたって元のモデル性能を正確に評価します。適切な圧縮技術を選択することで、ターゲットハードウェア機能、展開制約、許容可能な性能トレードオフに基づきます。段階的な圧縮戦略を適用することで、最適化プロセス全体を通じて微調整と調整を可能にする反復的アプローチを使用します。広範な検証データセットを維持することで、徹底的な圧縮モデル評価のために、実世界の使用パターンとエッジケースを表現します。圧縮手順を徹底的に文書化することで、再現性を保証し、将来のモデル更新とメンテナンスを促進します。自動テストパイプラインを実装することで、開発と展開プロセス全体を通じて圧縮モデルの性能を継続的に検証します。ハードウェア固有の最適化を考慮することで、最大の圧縮利点と性能向上のためにターゲットプラットフォームの機能を活用します。モデル更新を計画することで、基礎となるアーキテクチャや学習データが変更された際にモデルを再圧縮する手順を確立します。本番性能を継続的に監視することで、圧縮されたモデルが実世界の展開環境で許容可能な性能を維持することを保証します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p>ニューラルアーキテクチャサーチ(NAS)は、特定の展開制約と性能要件に合わせた効率的なニューラルネットワーク構造の設計空間を探索することで、最適な圧縮アーキテクチャを自動的に発見します。動的圧縮は、利用可能な計算リソース、入力の複雑さ、または性能要件に基づいてリアルタイムでモデルの複雑さを適応させ、変化する動作条件にわたる柔軟な展開を可能にします。混合精度学習は、単一モデル内で複数の数値精度を組み合わせて、異なるモデルコンポーネントの計算効率と数値精度のトレードオフを最適化します。構造化疎パターンは、ハードウェアアクセラレーション機能と整合する重みプルーニングへの体系的アプローチを実装し、疎モデル表現の実用的な利点を最大化します。勾配圧縮は、収束特性と学習効果を維持しながら勾配情報を圧縮することで、分散学習シナリオにおける通信オーバーヘッドを削減します。連合学習最適化は、通信効率とプライバシー保護が最重要の関心事である分散学習環境向けに特別に設計された圧縮技術を適用します。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p>ハードウェア・ソフトウェア協調設計は、圧縮技術を専用ハードウェアアーキテクチャとますます統合し、協調開発アプローチを通じてより効率的で効果的なモデル最適化を可能にします。自動圧縮パイプラインは、機械学習技術を活用して、モデル特性と展開要件に基づいて最適な圧縮戦略を自動的に選択および適用します。圧縮を考慮した学習は、圧縮目標をモデル学習プロセスに直接組み込み、後続の圧縮技術により適したモデルを生成します。クロスモーダル圧縮は、複数のデータタイプを同時に処理するマルチモーダルモデルに圧縮技術を拡張し、複雑で統合されたAIシステムの独自の課題に対処します。量子インスパイア圧縮は、量子コンピューティングの原理とアルゴリズムを探求して、効率向上のために量子力学的特性を活用する新しい圧縮アプローチを開発します。持続可能性重視の最適化は、AIライフサイクル全体にわたってエネルギー消費と炭素フットプリントを最小化するために特別に設計された圧縮技術を通じて、環境への影響削減を優先します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Han, S., Mao, H., &amp; Dally, W. J. (2016). Deep compression: Compressing deep neural networks with pruning, trained quantization and huffman coding. International Conference on Learning Representations.</p>
+</li>
+<li>
+<p>Hinton, G., Vinyals, O., &amp; Dean, J. (2015). Distilling the knowledge in a neural network. Neural Information Processing Systems Deep Learning Workshop.</p>
+</li>
+<li>
+<p>Jacob, B., Kligys, S., Chen, B., Zhu, M., Tang, M., Howard, A., … &amp; Kalenichenko, D. (2018). Quantization and training of neural networks for efficient integer-arithmetic-only inference. Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition.</p>
+</li>
+<li>
+<p>Louizos, C., Welling, M., &amp; Kingma, D. P. (2018). Learning sparse neural networks through L0 regularization. International Conference on Learning Representations.</p>
+</li>
+<li>
+<p>Cheng, Y., Wang, D., Zhou, P., &amp; Zhang, T. (2017). A survey of model compression and acceleration for deep neural networks. IEEE Signal Processing Magazine, 35(1), 126-136.</p>
+</li>
+<li>
+<p>Denton, E. L., Zaremba, W., Bruna, J., LeCun, Y., &amp; Fergus, R. (2014). Exploiting linear structure within convolutional networks for efficient evaluation. Neural Information Processing Systems.</p>
+</li>
+<li>
+<p>Gou, J., Yu, B., Maybank, S. J., &amp; Tao, D. (2021). Knowledge distillation: A survey. International Journal of Computer Vision, 129(6), 1789-1819.</p>
+</li>
+<li>
+<p>Wang, K., Liu, Z., Lin, Y., Lin, J., &amp; Han, S. (2019). HAQ: Hardware-aware automated quantization with mixed precision. Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/student-models/">
+                    スチューデントモデル
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    スチューデントモデルとは、より大規模な「ティーチャーモデル」の動作を模倣するように訓練されたAIシステムで、リソースに制約のあるデバイス上での効率的なデプロイメント、モデル圧縮、転移学習を実現します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/student-models/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/model-compression/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

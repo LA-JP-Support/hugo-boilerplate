@@ -51,13 +51,21 @@ def find_language_files(linkbuilding_dir: Path, public_dir: Path) -> List[Dict]:
         # Extract language code from filename (e.g., 'en' from 'en_automatic.json')
         lang = auto_file.stem.replace('_automatic', '')
         
-        # Check for corresponding manual file (try .yaml first, then .json)
-        manual_file = linkbuilding_dir / f"{lang}.yaml"
-        if not manual_file.exists():
-            manual_file = linkbuilding_dir / f"{lang}.json"
-            if not manual_file.exists():
-                manual_file = None
-                logger.info(f"No manual file found for language {lang} - will use automatic only")
+        # Check for corresponding manual files (base + optional synonyms)
+        manual_files: List[str] = []
+        base_yaml = linkbuilding_dir / f"{lang}.yaml"
+        base_json = linkbuilding_dir / f"{lang}.json"
+        if base_yaml.exists():
+            manual_files.append(str(base_yaml))
+        elif base_json.exists():
+            manual_files.append(str(base_json))
+
+        synonyms_yaml = linkbuilding_dir / f"{lang}_synonyms.yaml"
+        if synonyms_yaml.exists():
+            manual_files.append(str(synonyms_yaml))
+
+        if not manual_files:
+            logger.info(f"No manual file found for language {lang} - will use automatic only")
         
         # Determine HTML directory
         # English content might be in public/en (if defaultContentLanguageInSubdir=true) or root
@@ -80,7 +88,7 @@ def find_language_files(linkbuilding_dir: Path, public_dir: Path) -> List[Dict]:
         
         languages.append({
             'lang': lang,
-            'manual_file': str(manual_file) if manual_file else None,
+            'manual_files': manual_files,
             'automatic_file': str(auto_file),
             'html_dir': str(html_dir)
         })
@@ -89,11 +97,21 @@ def find_language_files(linkbuilding_dir: Path, public_dir: Path) -> List[Dict]:
     if not languages and (public_dir / "index.html").exists():
         logger.warning("No language directories found, but found English content at root")
         en_auto = linkbuilding_dir / "en_automatic.json"
-        en_manual = linkbuilding_dir / "en.json"
         if en_auto.exists():
+            manual_files: List[str] = []
+            en_yaml = linkbuilding_dir / "en.yaml"
+            en_json = linkbuilding_dir / "en.json"
+            if en_yaml.exists():
+                manual_files.append(str(en_yaml))
+            elif en_json.exists():
+                manual_files.append(str(en_json))
+            synonyms_yaml = linkbuilding_dir / "en_synonyms.yaml"
+            if synonyms_yaml.exists():
+                manual_files.append(str(synonyms_yaml))
+
             languages.append({
                 'lang': 'en',
-                'manual_file': str(en_manual) if en_manual.exists() else None,
+                'manual_files': manual_files,
                 'automatic_file': str(en_auto),
                 'html_dir': str(public_dir)
             })
@@ -117,8 +135,8 @@ def run_linkbuilding(lang_config: Dict,
     cmd = [sys.executable, script_path]
     
     # Add keyword files
-    if lang_config['manual_file']:
-        cmd.extend(['-k', lang_config['manual_file']])
+    for mf in (lang_config.get('manual_files') or []):
+        cmd.extend(['-k', mf])
     if lang_config['automatic_file']:
         cmd.extend(['-a', lang_config['automatic_file']])
     

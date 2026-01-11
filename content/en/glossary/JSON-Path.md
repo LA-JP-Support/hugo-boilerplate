@@ -16,7 +16,8 @@ JSON Path is a query language designed for navigating, extracting, and evaluatin
 
 JSON Path was standardized in RFC 9535 by the IETF, providing uniform syntax and semantics for query expressions. The language has implementations across numerous programming environments including JavaScript, Python, Java, PHP, and SQL databases. Common applications span API testing and validation, ETL processes, database JSON column queries, configuration management, and chatbot data parsing.
 
-**Example Query:**```json
+**Example Query:**
+```json
 {
   "user": {
     "id": 123,
@@ -40,43 +41,54 @@ JSON Path dramatically simplifies extracting or validating data within deeply ne
 
 ### Root and Path Operators
 
-**Root Object (`$`)**Denotes the root of the JSON document. All paths start with `$`.**Child Access**- Dot notation: `$.user.name` (simple properties)
+**Root Object (`$`)**  
+Denotes the root of the JSON document. All paths start with `$`.
+
+**Child Access**  
+- Dot notation: `$.user.name` (simple properties)
 - Bracket notation: `$['user']['profile']` (special characters, spaces, reserved words)
 - Brackets always use single quotes
 
-**Array Access**- Index: `$.store.book[0]` (0-based indexing)
+**Array Access**  
+- Index: `$.store.book[0]` (0-based indexing)
 - Multiple indices: `$.store.book[0,2]` (union of elements)
 - Negative indices: `$.store.book[-1]` (last element)
 
-**Array Slicing**Python-style slicing: `[start:end:step]`
+**Array Slicing**  
+Python-style slicing: `[start:end:step]`
 - `$.store.book[0:2]` (first two books)
 - `$.store.book[::2]` (every other book)
 - `$.store.book[1:]` (all except first)
 
-**Wildcards and Recursion**- `*`: All elements at current level (`$.store.book[*].author`)
+**Wildcards and Recursion**  
+- `*`: All elements at current level (`$.store.book[*].author`)
 - `..`: Recursive descent, finds all matches at any depth (`$..price`)
 
 ### Filter Expressions
 
-**Basic Filters**Syntax: `[?(condition)]` where `@` refers to current element
+**Basic Filters**  
+Syntax: `[?(condition)]` where `@` refers to current element
 
 ```jsonpath
 $.store.book[?(@.price < 10)]        // Books under $10
 $.store.book[?(@.category == 'fiction')]  // Fiction books
 ```
 
-**Comparison Operators**- `==`, `!=`: Equality comparison
+**Comparison Operators**  
+- `==`, `!=`: Equality comparison
 - `>`, `>=`, `<`, `<=`: Numeric comparison
 - `=~`: Regex match (implementation-dependent)
 
-**Logical Operators**- `&&`: Logical AND
+**Logical Operators**  
+- `&&`: Logical AND
 - `||`: Logical OR
 
 ```jsonpath
 $.store.book[?(@.category=='fiction' && @.price < 10)]
 ```
 
-**Advanced Operators (Implementation-Specific)**- `in`, `nin`: Array membership
+**Advanced Operators (Implementation-Specific)**  
+- `in`, `nin`: Array membership
 - `subsetof`: Array subset checking
 - `contains`: String/array containment
 - `size`: Length checking
@@ -84,14 +96,16 @@ $.store.book[?(@.category=='fiction' && @.price < 10)]
 
 ### Union and References
 
-**Union Operator**Select multiple properties or indices: `[,]`
+**Union Operator**  
+Select multiple properties or indices: `[,]`
 
 ```jsonpath
 $.store.book[0,1]  // First two books
 $['name','age']    // Multiple properties
 ```
 
-**Current Object**Inside filters, `@` references the current item being tested.
+**Current Object**  
+Inside filters, `@` references the current item being tested.
 
 ## Syntax Quick Reference
 
@@ -153,22 +167,38 @@ Sample JSON for demonstrations:
 
 ### Common Query Patterns
 
-**All Book Titles:**```jsonpath
+**All Book Titles:**
+```jsonpath
 $.store.book[*].title
 // ["Sayings of the Century", "Sword of Honour", "Moby Dick", "The Lord of the Rings"]
-```**Fiction Authors:**```jsonpath
+```
+
+**Fiction Authors:**
+```jsonpath
 $.store.book[?(@.category == 'fiction')].author
 // ["Evelyn Waugh", "Herman Melville", "J. R. R. Tolkien"]
-```**Books Under $10:**```jsonpath
+```
+
+**Books Under $10:**
+```jsonpath
 $.store.book[?(@.price < 10)]
 // Returns two book objects
-```**All Prices (Recursive):**```jsonpath
+```
+
+**All Prices (Recursive):**
+```jsonpath
 $..price
 // [8.95, 12.99, 8.99, 22.99, 19.95]
-```**First Two Book Titles:**```jsonpath
+```
+
+**First Two Book Titles:**
+```jsonpath
 $.store.book[0:2].title
 // ["Sayings of the Century", "Sword of Honour"]
-```**All ISBN Numbers:**```jsonpath
+```
+
+**All ISBN Numbers:**
+```jsonpath
 $.store.book[*].isbn
 // ["0-553-21311-3", "0-395-19395-8"]
 ```
@@ -198,7 +228,7 @@ Note: Operator support varies by implementation. RFC 9535 defines core operators
 
 ### JavaScript (Node.js)
 
-**Library:**jsonpath
+**Library:** jsonpath
 
 ```javascript
 const jsonpath = require('jsonpath');
@@ -216,7 +246,7 @@ jsonpath.value(data, '$.store.bicycle.price', 25.00);
 
 ### Python
 
-**Library:**jsonpath-ng
+**Library:** jsonpath-ng
 
 ```python
 import json
@@ -236,7 +266,7 @@ cheap_books = [match.value for match in expression.find(data)]
 
 ### Java
 
-**Library:**JsonPath (Jayway)
+**Library:** JsonPath (Jayway)
 
 ```java
 import com.jayway.jsonpath.JsonPath;
@@ -254,7 +284,7 @@ List<Map<String, Object>> cheapBooks =
 
 ### PHP
 
-**Library:**Flow\JSONPath
+**Library:** Flow\JSONPath
 
 ```php
 use Flow\JSONPath\JSONPath;
@@ -271,7 +301,9 @@ $cheapBooks = (new JSONPath($data))
 
 ### SQL Server
 
-**Native JSON Path Support:**```sql
+**Native JSON Path Support:**
+
+```sql
 -- Query JSON column
 SELECT *
 FROM Products
@@ -287,13 +319,17 @@ WHERE JSON_VALUE(value, '$.price') < 10;
 
 ### API Testing and Automation
 
-**Postman Example:**```javascript
+**Postman Example:**
+```javascript
 // Test response contains expected value
 pm.test("User email is correct", function() {
     const email = jsonpath.query(pm.response.json(), '$.user.email')[0];
     pm.expect(email).to.eql("test@example.com");
 });
-```**Rest-Assured (Java):**```java
+```
+
+**Rest-Assured (Java):**
+```java
 given()
     .when().get("/api/users")
     .then()
@@ -302,7 +338,8 @@ given()
 
 ### Data Transformation (ETL)
 
-**Extract Errors from Logs:**```python
+**Extract Errors from Logs:**
+```python
 from jsonpath_ng import parse
 
 errors = [match.value 
@@ -311,7 +348,8 @@ errors = [match.value
 
 ### Database JSON Queries
 
-**PostgreSQL:**```sql
+**PostgreSQL:**
+```sql
 SELECT data->>'name' as name
 FROM users
 WHERE data @> '{"active": true}';
@@ -319,7 +357,8 @@ WHERE data @> '{"active": true}';
 
 ### Configuration Management
 
-**Update Config Values:**```javascript
+**Update Config Values:**
+```javascript
 const config = require('./config.json');
 jsonpath.value(config, '$.database.port', 5432);
 fs.writeFileSync('config.json', JSON.stringify(config, null, 2));
@@ -327,9 +366,13 @@ fs.writeFileSync('config.json', JSON.stringify(config, null, 2));
 
 ### Chatbot Data Parsing
 
-**Extract User Messages:**```jsonpath
+**Extract User Messages:**
+```jsonpath
 $.conversation[*].user_message
-```**Filter by Intent:**```jsonpath
+```
+
+**Filter by Intent:**
+```jsonpath
 $.messages[?(@.intent == 'purchase')].text
 ```
 
@@ -345,49 +388,45 @@ $.messages[?(@.intent == 'purchase')].text
 | Parent/Sibling | Not supported | Supported |
 | Axes | Limited | Comprehensive |
 
-**Key Differences:**- JSON Path designed specifically for JSON's simpler structure
+**Key Differences:**
+- JSON Path designed specifically for JSON's simpler structure
 - XPath offers more complex navigation (ancestors, siblings)
 - JSON Path focuses on forward traversal
 - Both use similar filter and predicate concepts
 
 ## Best Practices
 
-**Performance Optimization:**- Use specific paths over recursive descent when possible
+**Performance Optimization:**
+- Use specific paths over recursive descent when possible
 - Cache compiled expressions in performance-critical code
 - Consider indexing for repeated queries on large datasets
 
-**Error Handling:**- Always validate JSON before querying
+**Error Handling:**
+- Always validate JSON before querying
 - Use strict/lax modes appropriately (SQL Server)
 - Handle empty results gracefully
 - Catch parsing exceptions
 
-**Code Organization:**- Store complex paths as constants
+**Code Organization:**
+- Store complex paths as constants
 - Document path semantics
 - Use meaningful variable names for results
 - Test paths with sample data
 
-**Security Considerations:**- Validate and sanitize user-provided paths
+**Security Considerations:**
+- Validate and sanitize user-provided paths
 - Avoid exposing internal data structures
 - Use appropriate access controls
 - Log suspicious query patterns
 
 ## References
 
-
-1. IETF. (2023). RFC 9535: JSONPath Specification. IETF RFC.
-
-2. SmartBear. (n.d.). JSONPath Syntax Documentation. SmartBear Support.
-
-3. Microsoft. (n.d.). JSON Path Expressions in SQL Server. Microsoft Learn.
-
-4. Postman. (n.d.). JSONPath Variables. Postman Learning.
-
-5. ToolsQA. (n.d.). REST-Assured JSONPath. ToolsQA.
-
-6. jsonpath. JavaScript Library. URL: https://github.com/dchester/jsonpath
-
-7. jsonpath-ng. Python Library. URL: https://github.com/h2non/jsonpath-ng
-
-8. JsonPath. Java Library. URL: https://github.com/json-path/JsonPath
-
-9. Flow\JSONPath. PHP Library. URL: https://github.com/Flow-Communications/JSONPath
+- [RFC 9535: JSONPath Specification](https://datatracker.ietf.org/doc/html/rfc9535)
+- [SmartBear JSONPath Syntax Documentation](https://support.smartbear.com/alertsite/docs/monitors/api/endpoint/jsonpath.html)
+- [Microsoft: JSON Path Expressions in SQL Server](https://learn.microsoft.com/en-us/sql/relational-databases/json/json-path-expressions-sql-server?view=sql-server-ver17)
+- [Postman: JSONPath Variables](https://learning.postman.com/docs/writing-scripts/script-references/variables-list/)
+- [ToolsQA: REST-Assured JSONPath](https://toolsqa.com/rest-assured/jsonpath-and-query-json-using-jsonpath/)
+- [jsonpath (JavaScript Library)](https://github.com/dchester/jsonpath)
+- [jsonpath-ng (Python Library)](https://github.com/h2non/jsonpath-ng)
+- [JsonPath (Java Library)](https://github.com/json-path/JsonPath)
+- [Flow\JSONPath (PHP Library)](https://github.com/Flow-Communications/JSONPath)

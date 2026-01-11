@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Word2Vec | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/word2vec/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="# Word2Vec
+単語を数字の並びに変換して、コンピュータが言葉の意味を理解できるようにする技術。意味が似た単語は近い位置に配置されるため、感情分析や翻訳などのAI処理に活用されます。" name="description"/>
+<meta content="word2vec, 単語埋め込み, ニューラル言語モデル, skip-gram, CBOW" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/word2vec/" property="og:url"/>
+<meta content="Word2Vec | SmartWeb" property="og:title"/>
+<meta content="# Word2Vec
+単語を数字の並びに変換して、コンピュータが言葉の意味を理解できるようにする技術。意味が似た単語は近い位置に配置されるため、感情分析や翻訳などのAI処理に活用されます。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/word2vec/" name="twitter:url"/>
+<meta content="Word2Vec | SmartWeb" name="twitter:title"/>
+<meta content="# Word2Vec
+単語を数字の並びに変換して、コンピュータが言葉の意味を理解できるようにする技術。意味が似た単語は近い位置に配置されるため、感情分析や翻訳などのAI処理に活用されます。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Word2Vec</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Word2Vec
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Word2Vec
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          # Word2Vec
+単語を数字の並びに変換して、コンピュータが言葉の意味を理解できるようにする技術。意味が似た単語は近い位置に配置されるため、感情分析や翻訳などのAI処理に活用されます。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                word2vec
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                単語埋め込み
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ニューラル言語モデル
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                skip-gram
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                CBOW
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="word2vecとは何か">Word2Vecとは何か?</h2>
+<p>Word2Vecは、2013年に<a data-lb="1" href="/ja/glossary/google/" title="Google の用語集ページ">Google</a>のTomas Mikolovと彼のチームによって開発された画期的なニューラルネットワークアーキテクチャであり、単語の密なベクトル表現を作成することで自然言語処理に革命をもたらしました。この革新的なアプローチは、単語を離散的なシンボルから連続的なベクトル空間へと変換し、意味的に類似した単語が互いに近くに配置されます。Word2Vecの背後にある基本原理は分布仮説であり、これは類似した文脈に現れる単語は類似した意味を持つ傾向があるというものです。大規模なテキストコーパスを分析することで、Word2Vecは各単語をその意味的および構文的特性を捉える高次元ベクトルにマッピングすることを学習します。</p>
+<p>このアーキテクチャは、Continuous Bag of Words(CBOW)とSkip-gramという2つの主要なモデルで構成されています。CBOWは周囲の文脈単語に基づいてターゲット単語を予測し、Skip-gramはターゲット単語が与えられた場合に文脈単語を予測するという逆の処理を行います。両モデルとも単一の隠れ層を持つ浅い<a data-lb="1" href="/ja/glossary/neural-networks/" title="ディープラーニングは、多層ニューラルネットワークを使用してデータから複雑なパターンを学習する高度なAI技術です。画像認識、自然言語処理、生成AIに不可欠な技術となっています。">ニューラルネットワーク</a>を利用しており、計算効率が高く、非常に効果的な単語表現を生成します。結果として得られる単語ベクトルは通常100から300次元の範囲であり、「king」-「man」+「woman」≈「queen」という有名な例のように、魅力的な数学的特性を示し、モデルがベクトル演算を通じて意味的関係を捉えることを実証しています。</p>
+<p>Word2Vecが自然言語処理の分野に与えた影響は計り知れません。これは、その後のニューラル言語モデルにおける数多くの発展の基盤を提供し、多くのNLPタスクの標準的な前処理ステップとなりました。事前学習された単語ベクトルは、感情分析、機械翻訳、情報検索などの下流アプリケーションの入力特徴として使用でき、従来のbag-of-wordsアプローチと比較して性能を大幅に向上させます。意味的類似性と類推関係の両方を捉えるモデルの能力は、様々な領域でテキストデータを扱う研究者や実務者にとって不可欠なツールとなっています。</p>
+<h2 id="コアニューラルネットワークアーキテクチャ">コアニューラルネットワークアーキテクチャ</h2>
+<p>Continuous Bag of Words(CBOW)- このアーキテクチャは、固定されたウィンドウサイズ内の周囲の文脈単語に基づいてターゲット単語を予測します。CBOWは学習が高速で、小規模なデータセットでうまく機能するため、頻出単語に適しています。Skip-gramモデル- CBOWの逆で、このモデルはターゲット単語が与えられた場合に文脈単語を予測します。Skip-gramは低頻度単語でより良い性能を発揮し、通常、大規模データセットでより正確な表現を生成します。階層的ソフトマックス- 標準的なソフトマックス層を二分木構造に置き換える効率的な近似技術です。このアプローチは、計算複雑度をO(V)からO(log V)に削減します。ここでVは語彙サイズです。ネガティブサンプリング- 階層的ソフトマックスの代替手法で、学習中にネガティブサンプルをランダムにサンプリングします。この技術は、ネガティブサンプルの小さなサブセットに焦点を当てることで、モデルの品質を維持しながら学習を大幅に高速化します。頻出単語のサブサンプリング- 「the」や「a」などの頻出単語をランダムに削除して学習データのバランスを取る前処理技術です。このアプローチは、モデルがより意味のある意味的関係に焦点を当てるのに役立ちます。動的文脈ウィンドウ- 固定されたウィンドウサイズを使用する代わりに、学習中に文脈ウィンドウサイズをランダムに変化させる技術です。この変動により、モデルは異なるスケールで構文的および意味的関係の両方を学習できます。</p>
+<h2 id="word2vecの仕組み">Word2Vecの仕組み</h2>
+<p>Word2Vecの学習プロセスは、単語表現を学習するための体系的なアプローチに従います:</p>
+<ol>
+<li>
+<p>テキスト前処理- 入力コーパスをクリーニングしてトークン化し、句読点を削除し、小文字に変換し、特殊文字を処理して標準化された語彙を作成します。</p>
+</li>
+<li>
+<p>語彙構築- 各ユニークな単語をインデックスにマッピングする語彙辞書を構築し、通常、ノイズを減らすために最小閾値未満で出現する単語をフィルタリングします。</p>
+</li>
+<li>
+<p>学習データ生成- テキスト全体に文脈ウィンドウをスライドさせることで学習ペアを作成し、CBOWの場合は(文脈、ターゲット)ペア、Skip-gramの場合は(ターゲット、文脈)ペアを生成します。</p>
+</li>
+<li>
+<p>ニューラルネットワークの初期化- 2つの重み行列を初期化します:入力から隠れ層への重みと隠れ層から出力層への重みで、通常は小さなランダム値で初期化します。</p>
+</li>
+<li>
+<p>順伝播- 入力ベクトルをネットワークに通し、隠れ層の活性化と出力確率をソフトマックスまたは近似技術を使用して計算します。</p>
+</li>
+<li>
+<p>損失計算- 予測された単語分布と実際の単語分布の間のクロスエントロピーを使用して損失を計算し、モデルがターゲット単語をどれだけうまく予測するかを測定します。</p>
+</li>
+<li>
+<p>誤差逆伝播- 勾配降下法を使用してネットワークの重みを更新し、すべての学習例にわたって予測誤差を最小化するようにパラメータを調整します。</p>
+</li>
+<li>
+<p>ベクトル抽出- 学習完了後、入力から隠れ層への重み行列から学習された単語ベクトルを抽出します。これには最終的な単語埋め込みが含まれています。ワークフローの例: 「The cat sits on the mat」という文でウィンドウサイズ2の場合、Skip-gramはターゲット単語「sits」に対して(sits, the)、(sits, cat)、(sits, on)、(sits, the)のような学習ペアを生成します。</p>
+</li>
+</ol>
+<h2 id="主な利点">主な利点</h2>
+<p>意味的類似性の捕捉- Word2Vecは単語間の意味的関係を効果的に捕捉し、同義語や関連用語をベクトル空間内で近くに配置することで、コサイン距離による類似度計算を可能にします。類推推論- モデルは、首都と国の関係や動詞の時制変換など、ベクトル演算を通じて類推を解く驚くべき能力を示し、基礎となる言語パターンを明らかにします。計算効率- 従来の<a data-lb="1" href="/ja/glossary/n-gram/" title="N-gramとは、テキストや音声から抽出されるn個の連続したアイテム(単語、文字、記号)のシーケンスであり、自然言語処理における言語モデリングやテキスト分析の基礎となる手法です。">n-gram</a>モデルと比較して、Word2Vecは必要なメモリと<a data-lb="1" href="/ja/glossary/computational-resources/" title="CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。">計算リソース</a>が大幅に少なく、下流タスクに対してより優れた表現を生成します。転移学習能力- 事前学習されたWord2Vecモデルは、再学習なしで様々なNLPタスクに適用でき、感情分析、分類、その他のアプリケーションに堅固な基盤を提供します。次元削減- Word2Vecは、疎で高次元のワンホットエンコードされたベクトルを、より少ない次元でより多くの情報を捉える密な低次元表現に変換します。言語モデルの基盤- このアーキテクチャは、より複雑なモデルの構成要素として機能し、高度なニューラル言語モデルやトランスフォーマーアーキテクチャの発展に影響を与えています。多言語アプリケーション- Word2Vecは複数の言語で同時にまたは個別に学習でき、整列されたベクトル空間を通じて言語横断アプリケーションや翻訳タスクを可能にします。スケーラビリティ- モデルは大規模な語彙とコーパスにうまくスケールし、数百万の単語と文書を持つ実世界のアプリケーションに実用的です。解釈可能性- ブラックボックスモデルとは異なり、Word2Vec埋め込みは分析および可視化でき、研究者がモデルが学習した言語的特徴を理解できます。堅牢性- モデルは語彙外単語を適切に処理し、ソーシャルメディアやウェブコンテンツで一般的に見られるノイズの多い非公式なテキストデータでも性能を維持します。</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p>感情分析- Word2Vec埋め込みは感情分類モデルの入力特徴として機能し、従来のbag-of-wordsアプローチが見逃す意味的ニュアンスを捉えることで精度を向上させます。文書類似度- 文書内の単語ベクトルを平均化することで文書類似度を計算し、盗用検出、コンテンツ推薦、重複検出などのアプリケーションを可能にします。機械翻訳- 言語間で整列された単語埋め込みを使用して翻訳品質を向上させ、ニューラル機械翻訳システムで語彙外単語を処理します。情報検索- 意味的に類似した用語でクエリを拡張することで検索エンジンを強化し、完全一致キーワードマッチングでは見逃される同義語を処理して再現率を向上させます。推薦システム- ユーザーの嗜好とアイテムの説明をベクトルとして表現することでコンテンツベースの推薦システムを構築し、類似性に基づく推薦を可能にします。固有表現認識- 周囲の単語パターンに基づいて異なるエンティティタイプを区別するのに役立つ豊富な文脈特徴を提供することで、NERシステムを改善します。テキストクラスタリング- ベクトル表現をクラスタリングすることで類似した文書や文をグループ化し、大規模なテキストコレクションの整理やトピック発見に有用です。質問応答- 完全なキーワード重複ではなく意味的類似性に基づいて質問を関連する文章とマッチングすることで、QAシステムを強化します。<a data-lb="1" href="/ja/glossary/chatbot/" title="チャットボットは、テキストまたは音声を通じて人間の会話をシミュレートするAI駆動のソフトウェアアプリケーションです。カスタマーサポート、情報検索、タスク自動化に使用されます。">チャットボット</a>開発- 意味的類似性マッチングを通じてユーザーの意図を理解し、より文脈に適した応答を生成することで会話型AIを改善します。医療テキスト分析- 症状、治療、医療用語間の関係を捉えることで、医療文献や臨床<a data-lb="1" href="/ja/glossary/note/" title="社内チケットシステムにおけるノートとは何か、スタッフ専用コミュニケーションの目的、そしてドキュメント作成、コラボレーション、AI自動化にどのように使用されるかを学びます。">ノート</a>を分析し、ヘルスケアアプリケーションに活用します。</p>
+<h2 id="word2vecモデル比較">Word2Vecモデル比較</h2>
+<table>
+<thead>
+<tr>
+<th>側面</th>
+<th>CBOW</th>
+<th>Skip-gram</th>
+<th>階層的ソフトマックス</th>
+<th>ネガティブサンプリング</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>学習速度</td>
+<td>高速</td>
+<td>低速</td>
+<td>中程度</td>
+<td>高速</td>
+</tr>
+<tr>
+<td>メモリ使用量</td>
+<td>低い</td>
+<td>高い</td>
+<td>中程度</td>
+<td>低い</td>
+</tr>
+<tr>
+<td>低頻度単語の性能</td>
+<td>低い</td>
+<td>優秀</td>
+<td>良好</td>
+<td>良好</td>
+</tr>
+<tr>
+<td>頻出単語の性能</td>
+<td>優秀</td>
+<td>良好</td>
+<td>良好</td>
+<td>優秀</td>
+</tr>
+<tr>
+<td>計算複雑度</td>
+<td>O(log V)</td>
+<td>O(log V)</td>
+<td>O(log V)</td>
+<td>O(k)</td>
+</tr>
+<tr>
+<td>最適なユースケース</td>
+<td>大規模コーパス</td>
+<td>小規模データセット</td>
+<td>大規模語彙</td>
+<td>汎用目的</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p>語彙外単語- Word2Vecは学習中に見られなかった単語の埋め込みを生成できないため、新しい語彙を処理するためのサブワードモデリングやフォールバックメカニズムなどの戦略が必要です。文脈ウィンドウの選択- 適切なウィンドウサイズの選択はモデルの性能に大きく影響し、小さいウィンドウは構文的関係を捉え、大きいウィンドウは意味的関連を捉えます。学習データの品質- モデルの効果は学習コーパスの品質、サイズ、ドメインの関連性に大きく依存し、慎重なデータキュレーションと前処理が必要です。多義性の処理- Word2Vecは複数の意味を持つ単語に対して単一の表現を作成するため、異なる意味を混同し、曖昧な用語の精度を低下させる可能性があります。計算リソース要件- 大規模コーパスでの学習には、特に大規模語彙を持つSkip-gramモデルの場合、相当な計算リソースと時間が必要です。ハイパーパラメータの感度- モデルの性能は、学習率、ベクトル次元、ネガティブサンプリングパラメータなどのハイパーパラメータの選択によって大きく変化し、慎重な調整が必要です。評価の課題- 単語埋め込みの品質を評価するための標準化されたメトリクスが不足しており、評価は内在的尺度ではなく下流タスクの性能に依存することが多いです。<a data-lb="1" href="/ja/glossary/bias/" title="バイアス の用語集ページ">バイアス</a>の増幅- Word2Vecは学習データに存在する社会的バイアスを永続化し増幅する可能性があり、公平性と倫理的影響を慎重に考慮する必要があります。ドメイン適応- 一般的なコーパスで学習されたモデルは専門ドメインではうまく機能しない可能性があり、ドメイン固有の学習またはファインチューニングアプローチが必要です。時間的動態- 単語の意味は時間とともに進化しますが、静的なWord2Vecモデルは更新されたコーパスで再学習しない限り、これらの変化を捉えることができません。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p>コーパスの前処理- HTMLタグの削除、テキストエンコーディングの正規化、特殊文字の処理、一貫したトークン化戦略の適用により、学習データを徹底的にクリーニングします。語彙フィルタリング- 学習効率と埋め込み品質を向上させるために、極めて稀な単語(5回未満の出現)と非常に一般的なストップワードを削除します。ハイパーパラメータチューニング- 検証セットを使用して、ベクトル次元(100-300)、ウィンドウサイズ(5-15)、学習率(0.01-0.1)を体系的に実験します。学習データサイズ- 堅牢な埋め込みを確保するために十分に大きなコーパス(数百万語)を使用します。小規模データセットは品質の低い表現を生成することが多いです。モデル選択戦略- 特定の要件に基づいて、頻出単語と高速学習にはCBOW、低頻度単語とより良い意味表現にはSkip-gramを選択します。ネガティブサンプリング設定- 学習速度と品質のバランスを取るために、小規模データセットでは5-20サンプル、大規模データセットでは2-5サンプルの間でネガティブサンプリングを設定します。サブサンプリング閾値- 学習バランスと意味学習を向上させるために、1e-3から1e-5の間の閾値で頻出単語にサブサンプリングを適用します。反復学習- モデルが過学習せずに安定した表現を学習することを確保するために、収束を監視しながら複数のエポック(5-15)で学習します。埋め込み評価- 内在的尺度(単語類似性タスク)と外在的評価(下流タスクの性能)の両方を使用して埋め込みを検証します。バージョン管理- 再現性を確保し、モデル比較を可能にするために、学習パラメータ、データバージョン、モデルチェックポイントの詳細な記録を維持します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p>FastText拡張- 文字n-gramを使用してサブワード情報を組み込み、標準的なWord2Vecよりも語彙外単語や形態的に豊かな言語を効果的に処理します。多義埋め込み- 従来のWord2Vecモデルの多義性の制限に対処するために、単語ごとに複数のベクトルを生成して異なる意味と文脈を捉えます。言語横断埋め込み- バイリンガル辞書または並列コーパスを使用して複数の言語にわたって単語ベクトルを整列させ、言語横断アプリケーションと転移学習を可能にします。動的単語埋め込み- 時間的テキストスライスで個別のモデルを学習することで、単語の意味が時間とともにどのように変化するかを捉える時間認識埋め込みを作成します。文脈化事前学習- 静的表現と動的表現の両方の利点を得るために、Word2VecをELMoやBERTなどの文脈モデルと組み合わせたハイブリッドアプローチを作成します。ドメイン適応技術- 継続学習や埋め込み空間変換法などの技術を使用して、ドメイン固有のコーパスで事前学習された埋め込みをファインチューニングします。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p>トランスフォーマーモデルとの統合- 文脈理解と計算効率の向上のために、Word2Vecの効率性とトランスフォーマーのアテンションメカニズムを組み合わせたハイブリッドアーキテクチャを探求します。量子強化埋め込み- 単語埋め込み生成のための量子コンピューティングアプリケーションを調査し、大規模学習シナリオで指数関数的な高速化を提供する可能性があります。マルチモーダル拡張- 視覚、音声、テキスト情報を同時に組み込む埋め込みを開発し、マルチメディアコンテンツ理解のためのより豊かな表現を作成します。連合学習アプリケーション- プライバシーを保持しながら複数の組織にわたって分散Word2Vec学習を実装し、データ共有なしで協調的なモデル開発を可能にします。リアルタイム適応- 新しいテキストデータが到着するにつれて単語埋め込みを継続的に更新するオンライン学習システムを作成し、動的環境で最新の表現を維持します。説明可能なAI統合- 埋め込みベースの決定に対する明確な説明を提供する解釈可能性ツールを開発し、Word2Vecアプリケーションをより透明で信頼できるものにします。</p>
+<h2 id="参考文献">参考文献</h2>
+<p>Mikolov, T., Chen, K., Corrado, G., &amp; Dean, J. (2013). Efficient estimation of word representations in vector space. arXiv preprint arXiv:1301.3781.</p>
+<p>Mikolov, T., Sutskever, I., Chen, K., Corrado, G. S., &amp; Dean, J. (2013). Distributed representations of words and phrases and their compositionality. Advances in neural information processing systems, 26.</p>
+<p>Goldberg, Y., &amp; Levy, O. (2014). word2vec Explained: deriving Mikolov et al.’s negative-sampling word-embedding method. arXiv preprint arXiv:1402.3722.</p>
+<p>Rong, X. (2014). word2vec parameter learning explained. arXiv preprint arXiv:1411.2738.</p>
+<p>Levy, O., &amp; Goldberg, Y. (2014). Neural word embedding as implicit matrix factorization. Advances in neural information processing systems, 27.</p>
+<p>Pennington, J., Socher, R., &amp; Manning, C. D. (2014). Glove: Global vectors for word representation. Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP).</p>
+<p>Bojanowski, P., Grave, E., Joulin, A., &amp; Mikolov, T. (2017). Enriching word vectors with subword information. Transactions of the Association for Computational Linguistics, 5, 135-146.</p>
+<p>Rogers, A., Drozd, A., &amp; Li, B. (2017). The (too many) problems of analogical reasoning with word vectors. Proceedings of the 6th Joint Conference on Lexical and Computational Semantics.</p>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/word2vec/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

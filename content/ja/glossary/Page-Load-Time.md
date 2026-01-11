@@ -13,7 +13,9 @@ category: Application & Use-Cases
 type: glossary
 draft: false
 e-title: Page Load Time
-url: /ja/glossary/Page-Load-Time/
+url: /ja/glossary/page-load-time/
+aliases:
+- /ja/glossary/Page-Load-Time/
 term: ぺーじよみこみじかん
 ---
 

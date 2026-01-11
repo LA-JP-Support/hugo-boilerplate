@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Speculative Decoding | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/speculative-decoding/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/speculative-decoding/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/speculative-decoding/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/speculative-decoding/" hreflang="x-default" rel="alternate"/>
+<meta content="A technique that speeds up AI text generation by having a smaller, faster model propose tokens while a larger model verifies them, reducing wait time without sacrificing quality." name="description"/>
+<meta content="speculative decoding, LLM inference, draft model, target model, latency reduction" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/speculative-decoding/" property="og:url"/>
+<meta content="Speculative Decoding | SmartWeb" property="og:title"/>
+<meta content="A technique that speeds up AI text generation by having a smaller, faster model propose tokens while a larger model verifies them, reducing wait time without sacrificing quality." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/speculative-decoding/" name="twitter:url"/>
+<meta content="Speculative Decoding | SmartWeb" name="twitter:title"/>
+<meta content="A technique that speeds up AI text generation by having a smaller, faster model propose tokens while a larger model verifies them, reducing wait time without sacrificing quality." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Speculative Decoding</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Infrastructure &amp; Deployment
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Speculative Decoding
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A technique that speeds up AI text generation by having a smaller, faster model propose tokens while a larger model verifies them, reducing wait time without sacrificing quality.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                speculative decoding
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                LLM inference
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                draft model
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                target model
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                latency reduction
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-speculative-decoding">What is Speculative Decoding?</h2>
+<p>Speculative decoding is an inference optimization technique for <a data-lb="1" href="/en/glossary/large-language-models/" title="Large Language Models (LLMs) glossary entry">large language models (LLMs)</a> that enables faster token generation by leveraging a small, fast draft model to propose multiple tokens ahead of time, while a larger, accurate target model verifies the draft and accepts the longest matching prefix. This process maintains the target model’s output distribution, ensuring that the results are mathematically identical to pure sequential decoding, but with much lower <a data-lb="1" href="/en/glossary/latency/" title="Latency glossary entry">latency</a>.</p>
+<p>The key insight is that many tokens in LLM output sequences can be guessed correctly by a much smaller model, and verifying a batch of tokens together with the large model is more efficient than generating each token in strict sequence.</p>
+<p>Speculative decoding is structured as a <strong>draft-then-verify</strong> process that maintains the exact output quality of the target model while achieving 2–3x+ latency reduction in production systems.</p>
+<h2 id="how-speculative-decoding-works">How Speculative Decoding Works</h2>
+<h3 id="draft-then-verify-process">Draft-Then-Verify Process</h3>
+<p><strong>1. Draft Step</strong><br/>
+The draft model, which is a smaller and faster LLM, generates a batch of candidate next tokens (often 3–8 at a time). This model is designed to “guess ahead,” producing tokens that the target model is likely to accept.</p>
+<p><strong>2. Verification Step</strong><br/>
+The large, accurate target model evaluates the same context (input plus all generated tokens so far) and computes the probability distributions for the next batch of tokens. The target model checks which draft tokens match its own most probable next-token predictions. It accepts the longest matching prefix, which could be all, some, or none of the draft tokens.</p>
+<p><strong>3. Continuation</strong><br/>
+If the draft is fully accepted, output continues. If there is a mismatch, the target model generates the next token itself, which becomes the new context for the next speculative round.</p>
+<p><strong>4. Repeat</strong><br/>
+This process continues until the output sequence is complete.</p>
+<p><strong>Guarantee:</strong><br/>
+The final output is provably identical to what the target model would produce via naïve, sequential decoding.</p>
+<h2 id="core-terminology">Core Terminology</h2>
+<p><strong>Autoregressive Generation:</strong><br/>
+Generating tokens one at a time, with each depending on all previous tokens. This is the standard for LLMs like GPT, T5, Llama.</p>
+<p><strong>Draft Model:</strong><br/>
+Small, fast model used to propose candidate tokens in advance. Should be trained or fine-tuned to match the output distribution of the target model as closely as possible.</p>
+<p><strong>Target Model:</strong><br/>
+The large, accurate LLM whose output must be preserved exactly.</p>
+<p><strong>Draft Tokens:</strong><br/>
+Batch of tokens guessed by the draft model for the next sequence positions.</p>
+<p><strong>Rejection Sampling:</strong><br/>
+Statistical mechanism whereby the target model accepts only those draft tokens that match its own most probable predictions, thus preserving the target’s output distribution.</p>
+<p><strong>Acceptance Rate (α):</strong><br/>
+Fraction of draft tokens accepted by the target model. High α means the draft model is well aligned to the target model.</p>
+<p><strong>Speculative Token Count (γ):</strong><br/>
+Number of tokens generated by the draft model in each speculative round.</p>
+<p><strong>Acceptance Length (τ):</strong><br/>
+Average number of draft tokens accepted per speculative round: τ = (1 - α^(γ+1)) / (1 - α)</p>
+<p><strong>Inter-Token Latency (ITL):</strong><br/>
+Time between emitting one output token and the next.</p>
+<p><strong>EAGLE-3:</strong><br/>
+An advanced speculative decoding technique that attaches a lightweight prediction head to the internal layers of the target model itself, eliminating the need for a separate draft model.</p>
+<h2 id="motivation">Motivation</h2>
+<h3 id="llm-inference-bottleneck">LLM Inference Bottleneck</h3>
+<p><strong>Problem:</strong></p>
+<ul>
+<li>Generating each new token requires a full forward pass through the entire target model, which is slow (especially for models &gt;10B parameters)</li>
+<li>This sequential dependency results in high latency and underutilization of parallel compute in modern GPUs</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>By allowing a draft model to “guess ahead” and only invoking the large model for verification, token generation can be parallelized</li>
+<li>This reduces overall latency, increases throughput, and enables more responsive LLM-powered applications (chatbots, code assistants, real-time summarization)</li>
+</ul>
+<p><strong>Industry Need:</strong><br/>
+Real-world products such as Google Search’s AI Overviews rely on speculative decoding to serve billions of users with high-quality, low-latency results.</p>
+<h2 id="core-algorithm">Core Algorithm</h2>
+<h3 id="pseudocode">Pseudocode</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span>context = input_tokens
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">while</span> not finished:
+</span></span><span style="display:flex;"><span>    draft_tokens = draft_model.generate(context, num_tokens=γ)
+</span></span><span style="display:flex;"><span>    target_distributions = target_model.predict(context, num_tokens=γ)
+</span></span><span style="display:flex;"><span>    accepted = []
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">for</span> i in <span style="color:#fff;font-weight:bold">range</span>(γ):
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">if</span> draft_tokens[i] == argmax(target_distributions[i]):
+</span></span><span style="display:flex;"><span>            accepted.append(draft_tokens[i])
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#fff;font-weight:bold">break</span>
+</span></span><span style="display:flex;"><span>    context += accepted
+</span></span><span style="display:flex;"><span>    next_token = target_model.generate(context, num_tokens=<span style="color:#ff0;font-weight:bold">1</span>)
+</span></span><span style="display:flex;"><span>    context.append(next_token)
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">if</span> next_token == stop_token:
+</span></span><span style="display:flex;"><span>        finished = <span style="color:#fff;font-weight:bold">True</span>
+</span></span></code></pre></div><h3 id="detailed-algorithm">Detailed Algorithm</h3>
+<p><strong>1. Initialization:</strong><br/>
+The target model generates the first token using standard decoding.</p>
+<p><strong>2. Draft:</strong><br/>
+The draft model receives the current context and proposes γ tokens.</p>
+<p><strong>3. Verification:</strong><br/>
+The target model computes the probability distribution over the next γ tokens and compares with the draft’s proposal. Accepts the longest prefix of matching tokens. If a mismatch occurs, stops accepting further draft tokens.</p>
+<p><strong>4. Target Token Generation:</strong><br/>
+After accepting h tokens (h ≤ γ), the target model produces the next token.</p>
+<p><strong>5. Repeat:</strong><br/>
+Context is updated and the process continues until the sequence ends.</p>
+<h2 id="performance-metrics">Performance Metrics</h2>
+<h3 id="key-metrics">Key Metrics</h3>
+<p><strong>Acceptance Rate (α):</strong><br/>
+α = (number of accepted draft tokens) / (number of tokens proposed by draft model)</p>
+<p><strong>Speculative Token Count (γ):</strong><br/>
+Number of tokens proposed per speculative round. Tuning γ impacts speedup and resource use.</p>
+<p><strong>Acceptance Length (τ):</strong><br/>
+Average number of draft tokens accepted per speculative round</p>
+<p><strong>Inter-Token Latency (ITL):</strong><br/>
+Time between generated tokens</p>
+<p><strong>Throughput:</strong><br/>
+Number of tokens generated per second</p>
+<h3 id="practical-example">Practical Example</h3>
+<p>Suppose:</p>
+<ul>
+<li>Target model generation: 10 ms/token</li>
+<li>Draft model: 1 ms for γ=4 tokens</li>
+<li>Target verification: 1 ms for γ=4 tokens</li>
+</ul>
+<p>If average of 2.5 draft tokens are accepted per round, then in 15 ms (1 ms draft, 1 ms verify, 10 ms for non-accepted token), you get 3.5 tokens.</p>
+<p><strong>Effective token time:</strong> ≈4.3 ms/token (vs. 10 ms/token baseline)</p>
+<h3 id="key-factors">Key Factors</h3>
+<p><strong>Draft Model Alignment:</strong><br/>
+Higher acceptance rates come from draft models whose output distribution closely matches the target model’s.</p>
+<p><strong>Model Size/Architecture:</strong><br/>
+Larger models benefit more from speculative decoding; the draft model should be significantly faster, but not so small that it poorly predicts the target.</p>
+<p><strong>Hardware Constraints:</strong><br/>
+Both models and their key-value caches must fit in memory.</p>
+<p><strong>Batch Size:</strong><br/>
+Speculative decoding is most effective at low batch sizes (latency-critical applications).</p>
+<p><strong>Orchestration Overhead:</strong><br/>
+Efficient communication and scheduling between models is critical.</p>
+<h2 id="benefits">Benefits</h2>
+<p><strong>2–3x+ Latency Reduction:</strong><br/>
+Empirically demonstrated speedups in Google products and academic benchmarks.</p>
+<p><strong>Guaranteed Output Quality:</strong><br/>
+Outputs are mathematically identical to target model sequential decoding.</p>
+<p><strong>Better Hardware Utilization:</strong><br/>
+Unlocks latent compute power on GPUs/TPUs by batching token checks.</p>
+<p><strong>No Retraining Required:</strong><br/>
+Any pre-trained models can be used as draft/target, though fine-tuning the draft for higher α is beneficial.</p>
+<p><strong>Lower Serving Costs:</strong><br/>
+Fewer machines required for the same throughput.</p>
+<p><strong>Used in Major Production Systems:</strong><br/>
+Google Search AI Overviews, code assistants, summarization tools.</p>
+<h2 id="limitations-and-caveats">Limitations and Caveats</h2>
+<p><strong>Increased Memory Use:</strong><br/>
+Both models (with caches) must fit in memory, reducing batch size.</p>
+<p><strong>Throughput Tradeoffs:</strong><br/>
+At high batch sizes, speculative decoding may not improve and may even decrease throughput due to contention.</p>
+<p><strong>Waste if Draft is Poorly Aligned:</strong><br/>
+If acceptance rate is low (e.g., &lt;0.5), speculative decoding adds overhead without speedup.</p>
+<p><strong>Model Compatibility Constraints:</strong><br/>
+Draft and target should use the same tokenizer and similar architectures for best results.</p>
+<p><strong>Orchestration Complexity:</strong><br/>
+Requires careful engineering for efficient model interaction and cache management.</p>
+<p><strong>Less Effective for Small Models or High Batch Loads:</strong><br/>
+Speedup is most pronounced for large models and latency-sensitive applications.</p>
+<h2 id="implementation-guidance">Implementation Guidance</h2>
+<h3 id="when-to-use-speculative-decoding">When to Use Speculative Decoding</h3>
+<p><strong>Latency-Critical Applications:</strong><br/>
+Chatbots, code completion, real-time summarization.</p>
+<p><strong>Large Models:</strong></p>
+<blockquote>
+<p>10B parameters, where per-token latency is highest.</p>
+</blockquote>
+<p><strong>Low to Moderate Batch Sizes:</strong><br/>
+Where user-facing latency is more important than throughput.</p>
+<h3 id="when-to-avoid">When to Avoid</h3>
+<p><strong>GPU Memory Maxed Out:</strong><br/>
+Large batch sizes, long context windows.</p>
+<p><strong>Low Draft Acceptance Rate:</strong><br/>
+If draft model struggles to mimic the target.</p>
+<p><strong>Small LLMs:</strong><br/>
+Marginal gain does not justify complexity.</p>
+<h3 id="configuration--tuning">Configuration &amp; Tuning</h3>
+<p><strong>Draft Model Selection:</strong><br/>
+Start with a smaller version of your target, fine-tune if possible.</p>
+<p><strong>Speculative Token Count (γ):</strong><br/>
+Typical: 3–8 per round. Tune for your workload.</p>
+<p><strong>Acceptance Rate <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">Monitoring</a>:</strong><br/>
+Track α in production. If α &lt; 0.6, consider tuning or fallback.</p>
+<p><strong>Memory Management:</strong><br/>
+Monitor GPU memory; use quantization or split models if needed.</p>
+<h3 id="example-vllm-python-api">Example: vLLM Python API</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">from</span> vllm <span style="color:#fff;font-weight:bold">import</span> LLM, SamplingParams
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>llm = LLM(model=<span style="color:#0ff;font-weight:bold">"your-target-model"</span>, draft_model=<span style="color:#0ff;font-weight:bold">"your-draft-model"</span>)
+</span></span><span style="display:flex;"><span>params = SamplingParams(max_tokens=<span style="color:#ff0;font-weight:bold">100</span>, speculative_tokens=<span style="color:#ff0;font-weight:bold">4</span>)
+</span></span><span style="display:flex;"><span>output = llm.generate(<span style="color:#0ff;font-weight:bold">"Prompt text"</span>, sampling_params=params)
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">print</span>(output)
+</span></span></code></pre></div><h2 id="use-cases-and-examples">Use Cases and Examples</h2>
+<h3 id="real-world-deployments">Real-World Deployments</h3>
+<p><strong>Google Search AI Overviews:</strong><br/>
+Powers high-quality, low-latency summaries for billions of users.</p>
+<p><strong>Code Generation Tools:</strong><br/>
+Used by IDE assistants for fast code completion.</p>
+<p><strong>Enterprise Chatbots:</strong><br/>
+Improves user experience and reduces serving cost for high-volume <a data-lb="1" href="/en/glossary/customer-support/" title="Customer Support glossary entry">customer support</a>.</p>
+<p><strong>Batch Translation/Summarization:</strong><br/>
+Enables fast output for long documents with high per-sample latency.</p>
+<h3 id="research-benchmarks">Research Benchmarks</h3>
+<p><strong>T5-XXL (11B) with T5-small (60M):</strong><br/>
+Shows 2–3x speedup on translation tasks.</p>
+<p><strong>Llama 70B:</strong><br/>
+Reports significant latency improvements with speculative decoding.</p>
+<h2 id="best-practices-and-tuning">Best Practices and Tuning</h2>
+<p><strong>1. Draft Model Selection:</strong><br/>
+Use a smaller model from the same family and tokenizer; fine-tune for your use-case if possible.</p>
+<p><strong>2. Tune γ:</strong><br/>
+Start with γ=3–5, increase if α remains high.</p>
+<p><strong>3. Monitor α:</strong><br/>
+If α drops below 0.5, reduce γ or re-align draft model.</p>
+<p><strong>4. Optimize Memory:</strong><br/>
+Use quantization, multi-GPU, or reduce batch/context if needed.</p>
+<p><strong>5. Benchmark:</strong><br/>
+Test under real workload and hardware.</p>
+<p><strong>6. Automate Fallback:</strong><br/>
+Disable speculative decoding if α or memory pressure crosses thresholds.</p>
+<h2 id="open-source-tools-and-frameworks">Open Source Tools and Frameworks</h2>
+<p><strong>vLLM:</strong><br/>
+High-throughput LLM inference engine with speculative decoding.</p>
+<p><strong>BentoML:</strong><br/>
+Guides and framework integration.</p>
+<p><strong>Modular MAX:</strong><br/>
+Out-of-the-box support via config.</p>
+<p><strong>TensorRT-LLM (Baseten):</strong><br/>
+High-performance deployment with speculative decoding.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://research.google/blog/looking-back-at-speculative-decoding/" rel="nofollow noopener noreferrer" target="_blank">Google Research Blog: Looking Back at Speculative Decoding</a></li>
+<li><a href="https://arxiv.org/abs/2211.17192" rel="nofollow noopener noreferrer" target="_blank">arXiv: Fast Inference from Transformers via Speculative Decoding</a></li>
+<li><a href="https://developer.nvidia.com/blog/an-introduction-to-speculative-decoding-for-reducing-latency-in-ai-inference/" rel="nofollow noopener noreferrer" target="_blank">NVIDIA Technical Blog: An Introduction to Speculative Decoding</a></li>
+<li><a href="https://bentoml.com/llm/inference-optimization/speculative-decoding" rel="nofollow noopener noreferrer" target="_blank">BentoML: Speculative Decoding</a></li>
+<li><a href="https://www.baseten.co/blog/a-quick-introduction-to-speculative-decoding/" rel="nofollow noopener noreferrer" target="_blank">Baseten: A Quick Introduction to Speculative Decoding</a></li>
+<li><a href="https://arxiv.org/abs/1811.03115" rel="nofollow noopener noreferrer" target="_blank">arXiv: Speculative Sampling (Stern et al., 2018)</a></li>
+<li><a href="https://arxiv.org/abs/2302.01318" rel="nofollow noopener noreferrer" target="_blank">arXiv: Distributed Speculative Decoding</a></li>
+<li><a href="https://docs.vllm.ai/en/latest/features/spec_decode/" rel="nofollow noopener noreferrer" target="_blank">vLLM Documentation: Speculative Decoding</a></li>
+<li><a href="https://www.bentoml.com/blog/structured-decoding-in-vllm-a-gentle-introduction" rel="nofollow noopener noreferrer" target="_blank">BentoML Blog: Structured Decoding in vLLM</a></li>
+<li><a href="https://docs.modular.com/max/serve/speculative-decoding" rel="nofollow noopener noreferrer" target="_blank">Modular MAX: Speculative Decoding Documentation</a></li>
+<li><a href="https://github.com/vllm-project/vllm" rel="nofollow noopener noreferrer" target="_blank">GitHub: vLLM Project</a></li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/pagedattention/">
+                    PagedAttention
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A memory management technique that divides the AI model's cache into fixed blocks, allowing it to us...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/pagedattention/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/speculative-decoding/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

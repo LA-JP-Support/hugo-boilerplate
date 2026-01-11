@@ -15,12 +15,15 @@ type: glossary
 draft: false
 e-title: Cosine Similarity
 term: こさいんるいじど
-url: "/ja/glossary/Cosine-Similarity/"
+url: "/ja/glossary/cosine-similarity/"
+aliases:
+- "/ja/glossary/Cosine-Similarity/"
 ---
 ## コサイン類似度とは?
 コサイン類似度は、内積空間における2つの非ゼロベクトル間の角度のコサインを計算する定量的指標です。この指標は、データマイニング、機械学習、人工知能において広く使用され、2つのベクトルがどれだけ類似しているかを、大きさではなく方向性のみに基づいて評価します。方向性に焦点を当てることが根本的な利点であり、文書埋め込みや特徴ベクトルなどの高次元表現に最適です。
 
-**公式:**\[
+**公式:**  
+\[
 \text{Cosine Similarity} = \cos(\theta) = \frac{\mathbf{A} \cdot \mathbf{B}}{\|\mathbf{A}\| \times \|\mathbf{B}\|}
 \]
 
@@ -29,7 +32,8 @@ url: "/ja/glossary/Cosine-Similarity/"
 - \(\|\mathbf{A}\|\)、\(\|\mathbf{B}\|\): 各ベクトルのユークリッドノルム(大きさ)
 - \(\theta\): ベクトル間の角度
 
-**解釈:**- スコア**1**: ベクトルが同じ方向を向いている(完全な類似性)
+**解釈:**
+- スコア **1**: ベクトルが同じ方向を向いている(完全な類似性)
 - スコア **0**: ベクトルが直交している(類似性なし)
 - スコア **-1**: ベクトルが反対方向を向いている(最大の非類似性)
 
@@ -47,18 +51,21 @@ url: "/ja/glossary/Cosine-Similarity/"
 \mathbf{B} = [b_1, b_2, \ldots, b_n]
 \]
 
-**1. 内積:**\[
+**1. 内積:**  
+\[
 \mathbf{A} \cdot \mathbf{B} = \sum_{i=1}^{n} a_i b_i
 \]
 
-**2. 大きさ(ユークリッドノルム):**\[
+**2. 大きさ(ユークリッドノルム):**  
+\[
 \|\mathbf{A}\| = \sqrt{\sum_{i=1}^{n} a_i^2}
 \]
 \[
 \|\mathbf{B}\| = \sqrt{\sum_{i=1}^{n} b_i^2}
 \]
 
-**3. コサイン類似度:**\[
+**3. コサイン類似度:**  
+\[
 \cos(\theta) = \frac{\mathbf{A} \cdot \mathbf{B}}{\|\mathbf{A}\| \times \|\mathbf{B}\|}
 \]
 
@@ -71,21 +78,35 @@ url: "/ja/glossary/Cosine-Similarity/"
 - Bの大きさ: \(\sqrt{1^2 + 0^2 + 0^2 + 0^2} = 1\)
 - コサイン類似度: \(3 / (6.16 * 1) \approx 0.49\)
 
-**コサイン非類似度:**非類似度は\(1 - \text{Cosine Similarity}\)として計算されることが多いです。上記の例では、\(D_C(\mathbf{A}, \mathbf{B}) = 1 - 0.49 = 0.51\)となります。
+**コサイン非類似度:**  
+非類似度は\(1 - \text{Cosine Similarity}\)として計算されることが多いです。上記の例では、\(D_C(\mathbf{A}, \mathbf{B}) = 1 - 0.49 = 0.51\)となります。
 
 ## 視覚的直感
 
 多次元空間で同じ原点から始まる2本の矢印を想像してください:
 
-- **0°(コサイン = 1):**矢印が重なり、同一方向を示す
-- **90°(コサイン = 0):**矢印が直角で、関連性がない
-- **180°(コサイン = -1):**矢印が反対方向で、完全な非類似性を示す
+- **0°(コサイン = 1):** 矢印が重なり、同一方向を示す
+- **90°(コサイン = 0):** 矢印が直角で、関連性がない
+- **180°(コサイン = -1):** 矢印が反対方向で、完全な非類似性を示す
 
 ## 実装例
 
 ### 主要なライブラリ
 
-**NumPy**ベクトル化演算に効率的です。**scikit-learn**ペアワイズ類似度行列のための`sklearn.metrics.pairwise.cosine_similarity`。**TensorFlow**組み込みのCosineSimilarity損失関数。**PyTorch**`torch.nn.CosineSimilarity`。**ベクトルデータベース**PostgreSQL用のpgvectorなどの拡張機能。
+**NumPy**  
+ベクトル化演算に効率的です。
+
+**scikit-learn**  
+ペアワイズ類似度行列のための`sklearn.metrics.pairwise.cosine_similarity`。
+
+**TensorFlow**  
+組み込みのCosineSimilarity損失関数。
+
+**PyTorch**  
+`torch.nn.CosineSimilarity`。
+
+**ベクトルデータベース**  
+PostgreSQL用のpgvectorなどの拡張機能。
 
 ### Pythonの例(NumPy)
 
@@ -122,69 +143,88 @@ print("Cosine similarity:", similarity)  # Output: 0.9746318461970762
 
 ### 利点
 
-**大きさに非感応**方向のみが重要です。異なる長さのベクトルでも高い類似性を持つことができます。**高次元での堅牢性**スパースで高次元のデータセット(例:テキスト分析、埋め込み)でうまく機能します。**計算効率**計算は簡単で、主要な機械学習ライブラリで最適化されています。**正規化が組み込み**入力ベクトルを明示的に正規化する必要がありません。
+**大きさに非感応**  
+方向のみが重要です。異なる長さのベクトルでも高い類似性を持つことができます。
+
+**高次元での堅牢性**  
+スパースで高次元のデータセット(例:テキスト分析、埋め込み)でうまく機能します。
+
+**計算効率**  
+計算は簡単で、主要な機械学習ライブラリで最適化されています。
+
+**正規化が組み込み**  
+入力ベクトルを明示的に正規化する必要がありません。
 
 ### 制限事項
 
-**大きさを無視**同じ方向を向いている小さなベクトルと大きなベクトルを区別できません。**ゼロベクトルで未定義**いずれかのベクトルがゼロベクトルの場合、コサイン類似度は定義されません。**対称性**\(\text{CosineSimilarity}(A, B) = \text{CosineSimilarity}(B, A)\)であり、比較の方向性を考慮しません。**スパース性に敏感**非ゼロ要素の重なりが少ない極端にスパースなデータでは性能が低下する可能性があります。
+**大きさを無視**  
+同じ方向を向いている小さなベクトルと大きなベクトルを区別できません。
+
+**ゼロベクトルで未定義**  
+いずれかのベクトルがゼロベクトルの場合、コサイン類似度は定義されません。
+
+**対称性**  
+\(\text{CosineSimilarity}(A, B) = \text{CosineSimilarity}(B, A)\)であり、比較の方向性を考慮しません。
+
+**スパース性に敏感**  
+非ゼロ要素の重なりが少ない極端にスパースなデータでは性能が低下する可能性があります。
 
 ## 他の類似度指標との比較
 
 | 指標 | 焦点 | 大きさに敏感 | 最適な用途 |
 |--------|-------|------------------------|----------|
-| **コサイン類似度**| 方向 | いいえ | テキスト、埋め込み |
-| **ユークリッド距離**| 位置 | はい | 数値、物理データ |
-| **ジャッカード類似度**| 重複/集合 | いいえ | 集合、バイナリ属性 |**ユークリッド距離:**直線距離を測定し、方向と大きさの両方に影響されます。絶対的な差が重要な場合に有用です。**ジャッカード類似度:**集合間の重複を測定し、カテゴリカルまたはバイナリ特徴(例:共有タグ)に最適です。**内積:**大きさを含むため、スケールが異なる場合は誤解を招く可能性があります。
+| **コサイン類似度** | 方向 | いいえ | テキスト、埋め込み |
+| **ユークリッド距離** | 位置 | はい | 数値、物理データ |
+| **ジャッカード類似度** | 重複/集合 | いいえ | 集合、バイナリ属性 |
+
+**ユークリッド距離:** 直線距離を測定し、方向と大きさの両方に影響されます。絶対的な差が重要な場合に有用です。
+
+**ジャッカード類似度:** 集合間の重複を測定し、カテゴリカルまたはバイナリ特徴(例:共有タグ)に最適です。
+
+**内積:** 大きさを含むため、スケールが異なる場合は誤解を招く可能性があります。
 
 ## ベストプラクティスと実用的なヒント
 
-**1. データの正規化**ゼロベクトルを削除し、すべてのベクトルが非ゼロであることを確認して、未定義の結果を防ぎます。**2. スパースデータの処理**高次元でスパースなデータを扱う場合は、スパース行列に最適化されたライブラリを使用します。**3. 指標の組み合わせ**より豊かな類似性分析のために、コサイン類似度を他の指標とモデル特徴として組み合わせます。**4. 一貫した前処理**すべてのベクトルが同じプロセス/モデルから生成され、同じ次元数を持つことを確認します。**5. 慎重な解釈**高いコサイン類似度が常に意味的等価性を意味するわけではありません。文脈とドメイン知識が不可欠です。**6. 堅牢なライブラリの活用**NumPy、scikit-learn、TensorFlow、またはpgvectorの組み込み関数を使用します。
+**1. データの正規化**  
+ゼロベクトルを削除し、すべてのベクトルが非ゼロであることを確認して、未定義の結果を防ぎます。
+
+**2. スパースデータの処理**  
+高次元でスパースなデータを扱う場合は、スパース行列に最適化されたライブラリを使用します。
+
+**3. 指標の組み合わせ**  
+より豊かな類似性分析のために、コサイン類似度を他の指標とモデル特徴として組み合わせます。
+
+**4. 一貫した前処理**  
+すべてのベクトルが同じプロセス/モデルから生成され、同じ次元数を持つことを確認します。
+
+**5. 慎重な解釈**  
+高いコサイン類似度が常に意味的等価性を意味するわけではありません。文脈とドメイン知識が不可欠です。
+
+**6. 堅牢なライブラリの活用**  
+NumPy、scikit-learn、TensorFlow、またはpgvectorの組み込み関数を使用します。
 
 ## 参考文献
 
-
-1. GeeksforGeeks. (n.d.). Cosine Similarity. GeeksforGeeks.
-
-2. IBM. (n.d.). What is Cosine Similarity. IBM Think Topics.
-
-3. IBM. (n.d.). Natural Language Processing. IBM Think Topics.
-
-4. IBM. (n.d.). Recommendation Engines. IBM Think Topics.
-
-5. IBM. (n.d.). Embedding Techniques. IBM Think Topics.
-
-6. IBM. (n.d.). Image Recognition. IBM Think Topics.
-
-7. IBM. (n.d.). Fraud Detection. IBM Think Topics.
-
-8. IBM. (n.d.). Bag of Words (TF-IDF). IBM Think Topics.
-
-9. IBM. (n.d.). Principal Component Analysis. IBM Think Topics.
-
-10. Wikipedia. (n.d.). Cosine Similarity. Wikipedia.
-
-11. Wikipedia. (n.d.). Jaccard index. Wikipedia.
-
-12. Built In. (n.d.). Understanding Cosine Similarity. Built In.
-
-13. Tiger Data. (n.d.). A Guide to Cosine Similarity. Tiger Data.
-
-14. StatQuest. (n.d.). Cosine Similarity. YouTube.
-
-15. GeeksforGeeks. (n.d.). Python Measure Similarity Between Two Sentences Using Cosine Similarity. GeeksforGeeks.
-
-16. GeeksforGeeks. (n.d.). Euclidean Distance. GeeksforGeeks.
-
-17. scikit-learn. (n.d.). Cosine Similarity. URL: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html
-
-18. scikit-learn. (n.d.). Euclidean Distance. URL: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.euclidean_distances.html
-
-19. scikit-learn. (n.d.). Sparse Matrices. URL: https://scikit-learn.org/stable/modules/scipy_sparse.html
-
-20. NumPy. (n.d.). Linear Algebra (linalg). URL: https://numpy.org/doc/stable/reference/generated/numpy.linalg.norm.html
-
-21. TensorFlow. (n.d.). CosineSimilarity Loss. URL: https://www.tensorflow.org/api_docs/python/tf/keras/losses/CosineSimilarity
-
-22. PyTorch. (n.d.). CosineSimilarity. URL: https://pytorch.org/docs/stable/generated/torch.nn.CosineSimilarity.html
-
-23. pgvector. (n.d.). PostgreSQL Vector Search. URL: https://github.com/pgvector/pgvector
+- [GeeksforGeeks: Cosine Similarity](https://www.geeksforgeeks.org/dbms/cosine-similarity/)
+- [IBM: What is Cosine Similarity](https://www.ibm.com/think/topics/cosine-similarity)
+- [IBM: Natural Language Processing](https://www.ibm.com/think/topics/natural-language-processing)
+- [IBM: Recommendation Engines](https://www.ibm.com/think/topics/recommendation-engine)
+- [IBM: Embedding Techniques](https://www.ibm.com/think/topics/embedding)
+- [IBM: Image Recognition](https://www.ibm.com/think/topics/image-recognition)
+- [IBM: Fraud Detection](https://www.ibm.com/think/topics/fraud-detection)
+- [IBM: Bag of Words (TF-IDF)](https://www.ibm.com/think/topics/bag-of-words)
+- [IBM: Principal Component Analysis](https://www.ibm.com/think/topics/principal-component-analysis)
+- [Wikipedia: Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity)
+- [Wikipedia: Jaccard index](https://en.wikipedia.org/wiki/Jaccard_index)
+- [Built In: Understanding Cosine Similarity](https://builtin.com/machine-learning/cosine-similarity)
+- [Tiger Data: A Guide to Cosine Similarity](https://www.tigerdata.com/learn/understanding-cosine-similarity)
+- [YouTube: Cosine Similarity, StatQuest](https://www.youtube.com/watch?v=e9U0QAFbfLI)
+- [GeeksforGeeks: Python Measure Similarity Between Two Sentences](https://www.geeksforgeeks.org/machine-learning/python-measure-similarity-between-two-sentences-using-cosine-similarity/)
+- [GeeksforGeeks: Euclidean Distance](https://www.geeksforgeeks.org/maths/euclidean-distance/)
+- [scikit-learn: Cosine Similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html)
+- [scikit-learn: Euclidean Distance](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.euclidean_distances.html)
+- [scikit-learn: Sparse Matrices](https://scikit-learn.org/stable/modules/scipy_sparse.html)
+- [NumPy: Linear Algebra (linalg)](https://numpy.org/doc/stable/reference/generated/numpy.linalg.norm.html)
+- [TensorFlow: CosineSimilarity Loss](https://www.tensorflow.org/api_docs/python/tf/keras/losses/CosineSimilarity)
+- [PyTorch: CosineSimilarity](https://pytorch.org/docs/stable/generated/torch.nn.CosineSimilarity.html)
+- [pgvector: PostgreSQL Vector Search](https://github.com/pgvector/pgvector)

@@ -15,7 +15,9 @@ type: glossary
 draft: false
 e-title: Qdrant
 term: キュードラント
-url: "/ja/glossary/Qdrant/"
+url: "/ja/glossary/qdrant/"
+aliases:
+- "/ja/glossary/Qdrant/"
 ---
 ## Qdrantとは?
 Qdrant(クアドラントと発音)は、オープンソースのベクトル類似性検索エンジンおよびベクトルデータベースであり、機械学習およびディープラーニングモデルによって生成される高次元ベクトルデータ(埋め込み)の保存、インデックス作成、検索に特化して設計されています。高速でスケーラブルなセマンティック検索、レコメンデーションシステム、検索拡張生成(RAG)、異常検知、その他のAI/MLユースケースを実現することで、Qdrantは膨大な非構造化データセットを扱う現代のデータ駆動型アプリケーションの独自のニーズに対応します。
@@ -30,15 +32,19 @@ Qdrant(クアドラントと発音)は、オープンソースのベクトル類
 
 ベクトルは、埋め込みモデル(例:OpenAI、HuggingFace、CLIP)によって生成されたオブジェクトのセマンティック特徴を表す、通常は浮動小数点数の順序付きリストです。各数値は高次元空間における座標です。ベクトルは意味やコンテキストを「エンコード」し、数学的比較を可能にします。
 
-**タイプ:**-**密ベクトル:**ほとんどの要素がゼロ以外;通常はトランスフォーマーモデルから生成
-- **疎ベクトル:**ほとんどの要素がゼロ;キーワードベース(BM25)検索で一般的**例:**文の768次元ベクトル、製品説明の1536次元ベクトル
+**タイプ:**
+- **密ベクトル:** ほとんどの要素がゼロ以外;通常はトランスフォーマーモデルから生成
+- **疎ベクトル:** ほとんどの要素がゼロ;キーワードベース(BM25)検索で一般的
+
+**例:**  
+文の768次元ベクトル、製品説明の1536次元ベクトル
 
 ### ポイント
 
 Qdrantにおけるデータの原子単位で、各ポイントは以下で構成されます:
-- **ID:**一意のキー(整数またはUUID)
-- **ベクトル:**高次元埋め込み
-- **ペイロード:**オプションのスキーマレスJSONメタデータ
+- **ID:** 一意のキー(整数またはUUID)
+- **ベクトル:** 高次元埋め込み
+- **ペイロード:** オプションのスキーマレスJSONメタデータ
 
 ポイントはペイロードを介したフィルタリングとファセット検索をサポートし、SQLの「行」に類似していますが、ベクトルが主要データとなります。
 
@@ -50,7 +56,13 @@ Qdrantにおけるデータの原子単位で、各ポイントは以下で構�
 
 2つのベクトル間の「類似性」を測定する関数:
 
-**コサイン類似度:**ベクトル間の角度を測定;テキスト埋め込みで一般的**ドット積:**方向と大きさの両方に敏感;レコメンデーションで使用**ユークリッド距離:**直線距離;画像またはセンサー埋め込みに有用**マンハッタン距離:**絶対差の合計;疎データで時々使用
+**コサイン類似度:** ベクトル間の角度を測定;テキスト埋め込みで一般的
+
+**ドット積:** 方向と大きさの両方に敏感;レコメンデーションで使用
+
+**ユークリッド距離:** 直線距離;画像またはセンサー埋め込みに有用
+
+**マンハッタン距離:** 絶対差の合計;疎データで時々使用
 
 ### ペイロード
 
@@ -58,7 +70,11 @@ Qdrantにおけるデータの原子単位で、各ポイントは以下で構�
 
 ### ストレージオプション
 
-**RAMストレージ:**ベクトルをメモリに保存;利用可能なRAMに収まるデータセットに最速**Memmap(オンディスク)ストレージ:**ベクトルをディスクに保存し、効率的なアクセスのためにメモリマップ;RAMを超える大規模データセットに重要**量子化ストレージ:**ベクトルを圧縮してより少ないビット(例:8ビット、2ビット)を使用;精度とのトレードオフでより大規模なデータセットを可能に
+**RAMストレージ:** ベクトルをメモリに保存;利用可能なRAMに収まるデータセットに最速
+
+**Memmap(オンディスク)ストレージ:** ベクトルをディスクに保存し、効率的なアクセスのためにメモリマップ;RAMを超える大規模データセットに重要
+
+**量子化ストレージ:** ベクトルを圧縮してより少ないビット(例:8ビット、2ビット)を使用;精度とのトレードオフでより大規模なデータセットを可能に
 
 ## インデックス作成と検索
 
@@ -88,7 +104,17 @@ client.create_payload_index(
 
 ## 主要機能
 
-**サブミリ秒検索:**数十億のベクトル全体でもミリ秒単位で結果を返し、リアルタイムアプリケーションを可能に**サーバーレススケーリング:**使用状況に基づいてリソースが自動的にスケール;手動のシャーディングやプロビジョニングは不要**リアルタイムデータ取り込み:**新しいベクトルはアップサート後すぐに検索可能になり、動的アプリケーションをサポート**高度なフィルタリング:**類似性とメタデータフィルタを組み合わせて正確な結果を実現**マルチテナンシー:**名前空間により、インフラストラクチャを共有しながら顧客またはチームのデータを分離**セキュリティとコンプライアンス:**SOC 2、GDPR、ISO 27001、HIPAA認証取得済みで、保存時および転送時のデータ暗号化
+**サブミリ秒検索:** 数十億のベクトル全体でもミリ秒単位で結果を返し、リアルタイムアプリケーションを可能に
+
+**サーバーレススケーリング:** 使用状況に基づいてリソースが自動的にスケール;手動のシャーディングやプロビジョニングは不要
+
+**リアルタイムデータ取り込み:** 新しいベクトルはアップサート後すぐに検索可能になり、動的アプリケーションをサポート
+
+**高度なフィルタリング:** 類似性とメタデータフィルタを組み合わせて正確な結果を実現
+
+**マルチテナンシー:** 名前空間により、インフラストラクチャを共有しながら顧客またはチームのデータを分離
+
+**セキュリティとコンプライアンス:** SOC 2、GDPR、ISO 27001、HIPAA認証取得済みで、保存時および転送時のデータ暗号化
 
 ## 一般的なユースケース
 
@@ -96,13 +122,13 @@ client.create_payload_index(
 
 ユーザーがキーワードだけでなく意味によって膨大なドキュメントコレクションを検索できるようにします。すべてのアイテムのベクトル埋め込みを保存し、ユーザークエリを埋め込み、コサインまたは他のメトリクスを使用して高い類似性を持つベクトルを検索します。
 
-**例:**「このサポートチケットにセマンティックに類似したFAQを検索」
+**例:** 「このサポートチケットにセマンティックに類似したFAQを検索」
 
 ### レコメンデーションシステム
 
 ユーザーの行動と好みをベクトルとしてマッチングすることで、高度にパーソナライズされたレコメンデーションを提供します。ユーザーとアイテムの両方の埋め込みを保存し、ドット積またはコサイン類似度を使用して最適なマッチを見つけます。
 
-**例:**「このユーザーが視聴したものに類似した映画を推薦」
+**例:** 「このユーザーが視聴したものに類似した映画を推薦」
 
 ### 検索拡張生成(RAG)
 
@@ -173,11 +199,22 @@ for hit in results:
 
 ## ベストプラクティス
 
-**適切な距離メトリクスを選択:**データ特性に基づいて、テキストにはコサイン、レコメンデーションにはドット積、画像にはユークリッドを選択**ストレージを最適化:**速度にはRAM、大規模データセットにはmemmap、最大容量には量子化を使用**ペイロードを戦略的にインデックス化:**パフォーマンスのために頻繁にフィルタリングされるフィールドをインデックス化し、過度なインデックス化を避ける**HNSWパラメータを調整:**検索精度と速度のバランスを取るために`m`、`ef`、`ef_construct`を調整**マルチテナンシーを適切に実装:**ペイロードにテナントフィールドを持つ単一コレクションを使用し、すべての操作をテナントIDでフィルタリング**パフォーマンスを監視:**クエリレイテンシ、スループット、リソース使用率を追跡して設定を最適化
+**適切な距離メトリクスを選択:** データ特性に基づいて、テキストにはコサイン、レコメンデーションにはドット積、画像にはユークリッドを選択
+
+**ストレージを最適化:** 速度にはRAM、大規模データセットにはmemmap、最大容量には量子化を使用
+
+**ペイロードを戦略的にインデックス化:** パフォーマンスのために頻繁にフィルタリングされるフィールドをインデックス化し、過度なインデックス化を避ける
+
+**HNSWパラメータを調整:** 検索精度と速度のバランスを取るために`m`、`ef`、`ef_construct`を調整
+
+**マルチテナンシーを適切に実装:** ペイロードにテナントフィールドを持つ単一コレクションを使用し、すべての操作をテナントIDでフィルタリング
+
+**パフォーマンスを監視:** クエリレイテンシ、スループット、リソース使用率を追跡して設定を最適化
 
 ## サポート言語
 
-**利用可能なクライアントSDK:**- Python
+**利用可能なクライアントSDK:**
+- Python
 - Go
 - Rust
 - JavaScript/TypeScript
@@ -186,27 +223,36 @@ for hit in results:
 
 ## よくある質問
 
-**QdrantはFAISSやスタンドアロンのベクトルライブラリとどう違うのですか?**Qdrantは、リアルタイム更新、メタデータフィルタリング、アクセス制御、マルチテナンシー、サーバーレススケーリングを備えた、フルマネージドの本番グレードデータベースです。FAISSのようなライブラリはローカルベクトル検索には強力ですが、データベース機能、クラウドネイティブの信頼性、運用管理が欠けています。**どのようなデータを保存できますか?**ベクトルとして埋め込み可能な任意のデータ:テキスト、画像、音声、ユーザーイベント、時系列、製品カタログなど。**Qdrantはどのようにセキュリティとコンプライアンスを確保していますか?**データは保存時および転送時に階層的暗号化キーとプライベートネットワーキングで暗号化されます。QdrantはSOC 2、GDPR、ISO 27001、HIPAA認証を保持しています。**Qdrantはリレーショナルまたはドキュメントデータベースと併用できますか?**はい。Qdrantは通常、SQL/NoSQLストアを補完し、非構造化の高次元検索を処理しながら、構造化またはトランザクションデータは従来のシステムに残ります。
+**QdrantはFAISSやスタンドアロンのベクトルライブラリとどう違うのですか?**  
+Qdrantは、リアルタイム更新、メタデータフィルタリング、アクセス制御、マルチテナンシー、サーバーレススケーリングを備えた、フルマネージドの本番グレードデータベースです。FAISSのようなライブラリはローカルベクトル検索には強力ですが、データベース機能、クラウドネイティブの信頼性、運用管理が欠けています。
+
+**どのようなデータを保存できますか?**  
+ベクトルとして埋め込み可能な任意のデータ:テキスト、画像、音声、ユーザーイベント、時系列、製品カタログなど。
+
+**Qdrantはどのようにセキュリティとコンプライアンスを確保していますか?**  
+データは保存時および転送時に階層的暗号化キーとプライベートネットワーキングで暗号化されます。QdrantはSOC 2、GDPR、ISO 27001、HIPAA認証を保持しています。
+
+**Qdrantはリレーショナルまたはドキュメントデータベースと併用できますか?**  
+はい。Qdrantは通常、SQL/NoSQLストアを補完し、非構造化の高次元検索を処理しながら、構造化またはトランザクションデータは従来のシステムに残ります。
 
 ## 参考文献
 
-
-1. Qdrant. (n.d.). Qdrant Official Documentation. Qdrant Documentation.
-2. Qdrant. (n.d.). What is a Vector Database?. Qdrant Articles.
-3. Qdrant. (n.d.). Qdrant Product Page. Qdrant Website.
-4. Pinecone. (n.d.). Vector Embeddings Explanation. Pinecone Learn.
-5. Qdrant. (n.d.). Qdrant Architecture Documentation. Qdrant Documentation.
-6. Pinecone. (n.d.). HNSW Algorithm Explanation. Pinecone Learn.
-7. Qdrant. (n.d.). Qdrant Quick Start Guide. Qdrant Documentation.
-8. Qdrant. (n.d.). Creating and Managing Indexes. Qdrant Documentation.
-9. Qdrant. (n.d.). Filtering by Metadata. Qdrant Documentation.
-10. Qdrant. (n.d.). Qdrant Security. Qdrant Website.
-11. Qdrant. (n.d.). Qdrant Cloud Overview. Qdrant Documentation.
-12. Qdrant. (n.d.). Qdrant Collections Documentation. Qdrant Documentation.
-13. Qdrant. (n.d.). Distance Metrics Reference. Qdrant Documentation.
-14. Qdrant. (n.d.). Qdrant Payload. Qdrant Documentation.
-15. Qdrant. (n.d.). Quantization Guide. Qdrant Documentation.
-16. Qdrant. (n.d.). Hybrid Search Documentation. Qdrant Articles.
-17. Qdrant. (n.d.). Vector Search Resource Optimization. Qdrant Articles.
-18. Cohorte. (n.d.). A Developer's Friendly Guide to Qdrant Vector Database. Cohorte Blog.
-19. LangChain. (n.d.). LangChain Integration for RAG. LangChain Documentation.
+- [Qdrant公式ドキュメント](https://qdrant.tech/documentation/)
+- [ベクトルデータベースとは?](https://qdrant.tech/articles/what-is-a-vector-database/)
+- [Qdrant製品ページ](https://www.qdrant.tech/)
+- [ベクトル埋め込みの説明](https://www.pinecone.io/learn/vector-embeddings/)
+- [Qdrantアーキテクチャドキュメント](https://qdrant.tech/documentation/guides/get-started/database-architecture)
+- [HNSWアルゴリズムの説明](https://www.pinecone.io/learn/series/faiss/hnsw/)
+- [Qdrantクイックスタートガイド](https://qdrant.tech/documentation/quick-start/)
+- [インデックスの作成と管理](https://qdrant.tech/documentation/concepts/indexing/)
+- [メタデータによるフィルタリング](https://qdrant.tech/documentation/guides/search/filter-by-metadata)
+- [Qdrantセキュリティ](https://www.qdrant.tech/security/)
+- [Qdrant Cloud概要](https://qdrant.tech/cloud/)
+- [Qdrantコレクションドキュメント](https://qdrant.tech/documentation/concepts/collections/)
+- [距離メトリクスリファレンス](https://qdrant.tech/documentation/concepts/collections/#distance-metrics)
+- [Qdrantのペイロード](https://qdrant.tech/documentation/concepts/payload/)
+- [量子化ガイド](https://qdrant.tech/documentation/guides/quantization/)
+- [ハイブリッド検索ドキュメント](https://qdrant.tech/articles/hybrid-search/)
+- [ベクトル検索リソース最適化](https://qdrant.tech/articles/vector-search-resource-optimization/)
+- [開発者向けQdrantフレンドリーガイド](https://www.cohorte.co/blog/a-developers-friendly-guide-to-qdrant-vector-database)
+- [RAGのためのLangChain統合](https://docs.langchain.com/oss/python/integrations/vectorstores/qdrant)

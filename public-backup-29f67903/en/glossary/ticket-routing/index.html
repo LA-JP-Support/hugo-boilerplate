@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Ticket Routing | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ticket-routing/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="A system that automatically sends customer support requests to the right person or team based on the issue type and their skills, so problems get solved faster." name="description"/>
+<meta content="ticket routing, automated assignment, help desk workflow, customer support optimization, intelligent routing algorithms" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ticket-routing/" property="og:url"/>
+<meta content="Ticket Routing | SmartWeb" property="og:title"/>
+<meta content="A system that automatically sends customer support requests to the right person or team based on the issue type and their skills, so problems get solved faster." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ticket-routing/" name="twitter:url"/>
+<meta content="Ticket Routing | SmartWeb" name="twitter:title"/>
+<meta content="A system that automatically sends customer support requests to the right person or team based on the issue type and their skills, so problems get solved faster." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165525" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165525" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165525"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118125587168000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118125587168000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118125587168000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118125587168000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Ticket Routing</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Ticket Routing
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A system that automatically sends customer support requests to the right person or team based on the issue type and their skills, so problems get solved faster.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ticket routing
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                automated assignment
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                help desk workflow
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                customer support optimization
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                intelligent routing algorithms
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-ticket-routing">What is a Ticket Routing?</h2>
+<p>Ticket routing is a systematic process used in customer service and IT support environments to automatically or manually direct incoming support requests, complaints, or inquiries to the most appropriate agent, team, or department based on predefined criteria. This fundamental component of modern help desk and customer relationship management systems ensures that each ticket reaches the right person with the necessary skills, knowledge, and authority to resolve the issue efficiently. The routing process typically considers factors such as the nature of the problem, customer priority level, agent expertise, workload distribution, and service level agreements to make optimal assignment decisions.</p>
+<p>The evolution of ticket routing has transformed from simple manual assignment processes to sophisticated automated systems powered by <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence glossary entry">artificial intelligence</a> and machine learning algorithms. Modern ticket routing systems can analyze ticket content, customer history, agent performance metrics, and real-time availability to make intelligent routing decisions within seconds of ticket creation. These systems have become increasingly important as organizations handle growing volumes of customer interactions across multiple channels, including email, chat, phone, social media, and <a data-lb="1" href="/en/glossary/self-service/" title="Self-Service glossary entry">self-service</a> portals. The ability to route tickets effectively directly impacts customer satisfaction, agent productivity, and overall operational efficiency.</p>
+<p>Effective ticket routing serves as the backbone of successful <a data-lb="1" href="/en/glossary/customer-support/" title="Customer Support glossary entry">customer support</a> operations, enabling organizations to maintain consistent service quality while optimizing resource utilization. The process involves multiple layers of decision-making, from initial categorization and priority assessment to final agent assignment and <a data-lb="1" href="/en/glossary/escalation/" title="Escalation glossary entry">escalation</a> protocols. Advanced routing systems can also incorporate business rules, customer segmentation strategies, and dynamic load balancing to ensure optimal distribution of work across support teams. As customer expectations continue to rise and support volumes increase, the sophistication and accuracy of ticket routing systems have become critical differentiators for organizations seeking to deliver exceptional customer experiences while maintaining operational efficiency and cost-effectiveness.</p>
+<h2 id="core-routing-technologies-and-approaches">Core Routing Technologies and Approaches</h2>
+<p>Round-Robin Assignmentdistributes tickets sequentially among available agents in a predetermined order, ensuring equal workload distribution. This approach works well for teams with similar skill levels and ticket types of comparable complexity.Skills-Based Routingmatches tickets to agents based on specific competencies, certifications, or expertise areas defined in agent profiles. The system analyzes ticket content and requirements to identify the most qualified available agent for resolution.Priority-Based Routingconsiders customer tier, issue severity, and service level agreements to determine routing precedence. High-priority tickets from premium customers automatically receive preferential treatment and faster assignment to senior agents.Load Balancing Algorithmsmonitor agent workloads in real-time and distribute new tickets to maintain optimal capacity utilization across the team. These systems consider both ticket volume and complexity when making assignment decisions.Geographic Routingdirects tickets based on customer location, time zones, or regional preferences to ensure appropriate language support and business hours coverage. This approach is essential for global organizations with distributed support teams.Escalation Workflowsautomatically promote tickets to higher-level agents or supervisors when resolution times exceed predefined thresholds or when specific conditions are met. These workflows ensure that complex issues receive appropriate attention and expertise.AI-Powered Intelligent Routingleverages machine learning algorithms to analyze historical ticket data, resolution patterns, and agent performance to make predictive routing decisions that optimize both resolution time and customer satisfaction.</p>
+<h2 id="how-ticket-routing-works">How Ticket Routing Works</h2>
+<p>The ticket routing process begins when a customer submits a support request through any available channel, triggering the creation of a new ticket in the system. The routing engine immediately captures essential information including customer details, issue description, channel source, and timestamp to begin the classification process.</p>
+<p>Step 1: Ticket Intake and Initial Processing- The system receives the incoming request and performs basic validation, duplicate detection, and data normalization to ensure consistent formatting and completeness of ticket information.Step 2: Automatic Categorization and Classification- Advanced parsing algorithms analyze the ticket content, subject line, and customer-selected categories to determine the issue type, product area, and complexity level using predefined taxonomies and machine learning models.Step 3: Priority and Urgency Assessment- The system evaluates customer tier, service level agreements, issue impact, and business criticality to assign appropriate priority levels that will influence routing decisions and response time requirements.Step 4: Skills and Expertise Matching- The routing engine compares ticket requirements against agent skill profiles, certifications, and historical performance data to identify candidates with the highest probability of successful resolution.Step 5: Availability and Workload Analysis- Real-time <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a> systems assess agent availability, current workload, scheduled breaks, and capacity limits to ensure optimal distribution and prevent overallocation of resources.Step 6: Business Rules Application- The system applies organizational policies, customer preferences, geographic requirements, and escalation protocols to refine the routing decision and ensure compliance with established procedures.Step 7: Final Assignment and Notification- The selected agent receives the ticket assignment through their preferred notification method, while the customer receives confirmation with ticket number and expected response timeframe.Example Workflow: A premium customer reports a critical billing system error via email. The system automatically classifies it as high-priority, identifies billing specialists with current availability, applies the premium customer routing rule, and assigns the ticket to the most experienced available billing agent within 30 seconds of submission.</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p>Improved Response Timesreduce customer wait periods through automated assignment processes that eliminate manual routing delays and ensure immediate ticket distribution to appropriate agents based on availability and expertise.Enhanced Customer Satisfactionresults from faster issue resolution and more accurate initial assignments that reduce transfer rates and provide customers with knowledgeable agents who can address their specific needs effectively.Optimized Resource Utilizationmaximizes agent productivity by distributing workloads evenly, matching tickets to appropriate skill levels, and preventing both overallocation and underutilization of support resources across teams.Reduced Operational Costsminimize staffing requirements and overtime expenses through efficient workload distribution, improved first-call resolution rates, and automated processes that reduce manual administrative overhead.Consistent Service Qualityensures uniform customer experiences by applying standardized routing rules, maintaining service level agreement compliance, and reducing variability in agent assignment and response procedures.Scalability and Flexibilityaccommodate growing ticket volumes and changing business requirements without proportional increases in management overhead or degradation of service quality through automated scaling mechanisms.Data-Driven Insightsprovide valuable analytics on routing effectiveness, agent performance, customer satisfaction patterns, and operational <a data-lb="1" href="/en/glossary/bottlenecks/" title="Bottlenecks glossary entry">bottlenecks</a> that enable continuous improvement and strategic decision-making.Compliance and Audit Trailmaintain detailed records of routing decisions, assignment rationale, and process adherence that support regulatory compliance requirements and quality assurance initiatives.Reduced Agent Burnoutprevent excessive workloads and skill mismatches that contribute to job dissatisfaction by ensuring fair distribution of tickets and appropriate matching of agent capabilities to task requirements.Improved First-Contact Resolutionincrease the likelihood of resolving issues on initial contact by routing tickets to agents with relevant expertise and experience, reducing customer frustration and operational inefficiency.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p>IT Help Desk Operationsroute technical support requests based on hardware, software, or network specializations, ensuring that desktop issues reach PC specialists while server problems go to infrastructure teams with appropriate expertise and access privileges.Customer Service Centersdistribute inquiries across product specialists, billing experts, and general support agents based on customer needs, account status, and issue complexity to optimize resolution efficiency and customer satisfaction.E-commerce Supportchannel order issues, payment problems, shipping inquiries, and product questions to specialized teams with relevant knowledge and system access to provide accurate and timely assistance to online customers.Healthcare Support Systemsroute patient inquiries, appointment requests, billing questions, and clinical concerns to appropriate departments while maintaining HIPAA compliance and ensuring proper authorization levels for sensitive information access.Financial Services Supportdirect banking, investment, loan, and insurance inquiries to licensed specialists with appropriate credentials and regulatory compliance training to handle sensitive financial information and complex product questions.Software as a Service (SaaS) Supportcategorize technical issues, feature requests, billing inquiries, and integration problems to route them to development teams, account managers, or technical specialists based on complexity and customer tier.Telecommunications Supportdistribute network outage reports, billing disputes, service activation requests, and technical troubleshooting tickets to field technicians, billing specialists, or customer retention teams based on issue type and geographic location.Educational Institution Supportroute student inquiries, faculty requests, IT problems, and administrative questions to appropriate departments including registrar, financial aid, technical support, or academic advisors based on user role and request type.</p>
+<h2 id="routing-method-comparison">Routing Method Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Speed</th>
+<th>Accuracy</th>
+<th>Complexity</th>
+<th>Cost</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manual Assignment</td>
+<td>Low</td>
+<td>Variable</td>
+<td>Low</td>
+<td>High</td>
+<td>Small teams, specialized issues</td>
+</tr>
+<tr>
+<td>Round-Robin</td>
+<td>High</td>
+<td>Medium</td>
+<td>Low</td>
+<td>Low</td>
+<td>Equal skill levels, similar tickets</td>
+</tr>
+<tr>
+<td>Skills-Based</td>
+<td>Medium</td>
+<td>High</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Diverse expertise requirements</td>
+</tr>
+<tr>
+<td>Priority-Based</td>
+<td>High</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>SLA-driven environments</td>
+</tr>
+<tr>
+<td>AI-Powered</td>
+<td>High</td>
+<td>Very High</td>
+<td>High</td>
+<td>High</td>
+<td>Large volumes, complex routing</td>
+</tr>
+<tr>
+<td>Hybrid Approach</td>
+<td>Medium</td>
+<td>High</td>
+<td>High</td>
+<td>Medium</td>
+<td>Most enterprise environments</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p>Skills Assessment Accuracyrequires ongoing maintenance of agent skill profiles and competency databases to ensure routing decisions reflect current capabilities, training updates, and performance changes that affect assignment effectiveness.Dynamic Workload Managementpresents difficulties in accurately measuring agent capacity when tickets vary significantly in complexity, resolution time, and effort requirements, potentially leading to uneven distribution despite algorithmic attempts at balance.Customer Expectation Managementbecomes challenging when routing decisions prioritize efficiency over customer preferences, potentially creating dissatisfaction when customers are assigned to unfamiliar agents or experience longer wait times due to specialization requirements.Integration Complexityemerges when implementing routing systems across multiple platforms, legacy systems, and third-party applications that may have incompatible data formats, API limitations, or synchronization delays affecting routing accuracy.Real-Time Data Synchronizationposes technical challenges in maintaining current information about agent availability, skill updates, customer status changes, and system performance across distributed environments with potential network <a data-lb="1" href="/en/glossary/latency/" title="Latency glossary entry">latency</a> issues.Escalation Loop Preventionrequires careful design of routing rules and escalation paths to avoid circular assignments, infinite loops, or inappropriate de-escalation that can trap tickets in unproductive routing cycles.Performance Monitoring Complexityinvolves tracking multiple metrics simultaneously including routing accuracy, customer satisfaction, agent utilization, and system performance while identifying correlation patterns and optimization opportunities.Change Management Resistanceoccurs when implementing new routing systems that alter established workflows, agent responsibilities, or customer interaction patterns, requiring comprehensive training and cultural adaptation strategies.Compliance and Security Requirementsadd layers of complexity to routing decisions when handling sensitive data, regulated industries, or international customers with varying privacy laws and access restrictions.Cost-Benefit Optimizationchallenges organizations to balance routing sophistication with implementation costs, ongoing maintenance requirements, and measurable improvements in customer satisfaction and operational efficiency.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p>Comprehensive Skills Inventorymaintain detailed, current profiles of agent capabilities, certifications, and expertise levels with regular updates and validation to ensure accurate routing decisions and optimal ticket assignment.Gradual Rollout Strategyimplement routing systems in phases, starting with simple rules and basic automation before advancing to complex algorithms, allowing teams to adapt and providing opportunities for refinement.Continuous Monitoring and Adjustmentestablish regular review cycles for routing effectiveness, customer satisfaction metrics, and agent feedback to identify optimization opportunities and address emerging issues promptly.Clear Escalation Protocolsdefine specific criteria, timeframes, and procedures for ticket escalation to prevent delays and ensure appropriate expertise application when initial assignments prove insufficient.Customer Communication Standardsdevelop consistent messaging templates and notification procedures to keep customers informed about routing decisions, expected response times, and any transfers between agents or departments.Agent Training and Supportprovide comprehensive education on routing systems, ticket handling procedures, and escalation processes to ensure smooth adoption and optimal utilization of automated assignment capabilities.Performance Metrics Definitionestablish key performance indicators for routing effectiveness including first-contact resolution rates, customer satisfaction scores, and agent utilization metrics with regular reporting and analysis.Backup and Failover Proceduresimplement redundant systems and manual override capabilities to maintain service continuity during system outages, maintenance periods, or unexpected technical failures.Data Quality Managementensure accurate, complete, and timely data input for customer information, ticket details, and agent profiles to support effective routing decisions and prevent assignment errors.Regular System Optimizationschedule periodic reviews of routing rules, algorithm performance, and business requirement changes to maintain alignment between system capabilities and organizational objectives.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p>Machine Learning Optimizationemploys predictive algorithms that analyze historical ticket data, resolution patterns, and customer satisfaction scores to continuously improve routing accuracy and identify optimal agent-ticket matching strategies.<a data-lb="1" href="/en/glossary/sentiment-analysis/" title="Sentiment Analysis glossary entry">Sentiment Analysis</a> Integrationincorporates natural language processing to assess customer emotion and urgency levels from ticket content, enabling prioritized routing for frustrated customers or emotionally charged situations requiring experienced agents.Predictive Workload Forecastingutilizes historical data patterns, seasonal trends, and business intelligence to anticipate ticket volumes and proactively adjust routing algorithms to maintain optimal service levels during peak periods.Multi-Channel Routing Orchestrationcoordinates ticket assignment across email, chat, phone, and social media channels to provide consistent customer experiences and enable agents to handle multiple interaction types efficiently.Dynamic Skills Learningimplements systems that automatically update agent skill profiles based on successful resolution patterns, training completions, and performance metrics to maintain current routing accuracy without manual intervention.Customer Journey Integrationconnects routing decisions with broader customer relationship data, purchase history, and interaction preferences to provide personalized service experiences and improve satisfaction outcomes.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p>Artificial Intelligence Enhancementwill advance routing capabilities through deep learning algorithms that can understand context, predict customer needs, and make increasingly sophisticated assignment decisions based on complex pattern recognition and outcome prediction.Real-Time Collaboration Routingwill enable dynamic team formation where multiple agents with complementary skills are automatically assembled to handle complex issues requiring diverse expertise and collaborative problem-solving approaches.Predictive Customer Intentwill leverage advanced analytics to anticipate customer needs before they submit tickets, enabling proactive outreach and preventive support that reduces overall ticket volumes and improves satisfaction.Omnichannel Experience Optimizationwill create seamless routing across all customer touchpoints, maintaining context and continuity as customers move between channels while ensuring consistent service quality and agent preparedness.Autonomous Resolution Integrationwill combine routing systems with AI-powered resolution capabilities, automatically handling routine issues while routing only complex problems to human agents, dramatically improving efficiency and response times.Emotional Intelligence Routingwill incorporate advanced sentiment analysis and emotional state recognition to route tickets not only based on technical requirements but also on the emotional support needs of customers in distress or crisis situations.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Gartner Research. (2024). “Customer Service and Support Technologies Market Guide.” Gartner Inc.</p>
+</li>
+<li>
+<p>Forrester Research. (2024). “The State of Customer Service Technology: Routing and Automation Trends.” Forrester Research Inc.</p>
+</li>
+<li>
+<p>International Customer Management Institute. (2023). “Best Practices in Ticket Routing and Assignment Systems.” ICMI Publications.</p>
+</li>
+<li>
+<p>Journal of Service Management. (2024). “Artificial Intelligence in Customer Service Routing: Performance and Satisfaction Outcomes.” Emerald Publishing.</p>
+</li>
+<li>
+<p>Harvard Business Review. (2023). “Optimizing Customer Support Operations Through Intelligent Routing.” Harvard Business School Publishing.</p>
+</li>
+<li>
+<p>MIT Technology Review. (2024). “Machine Learning Applications in Customer Service Automation.” MIT Press.</p>
+</li>
+<li>
+<p>Customer Service Institute. (2024). “Routing System Implementation Guide: Strategies for Success.” CSI Professional Development.</p>
+</li>
+<li>
+<p>IEEE Transactions on Services Computing. (2023). “Algorithmic Approaches to Automated Ticket Routing in Enterprise Environments.” IEEE Computer Society.</p>
+</li>
+</ol>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/ticket-routing/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165525"></script>
+</body>
+</html>

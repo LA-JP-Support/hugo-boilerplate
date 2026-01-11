@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Voiceflow | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/voiceflow/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Voiceflow/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/Voiceflow/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Voiceflow/" hreflang="x-default" rel="alternate"/>
+<meta content="Voiceflowは、チャットボットや音声アシスタントなどの会話型AIエージェントを設計、構築、デプロイするためのノーコードプラットフォームです。複数のチャネルにわたって顧客とのやり取りやワークフローを自動化します。" name="description"/>
+<meta content="Voiceflow, 会話型AI, チャットボット, ノーコードプラットフォーム, AIエージェント" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/voiceflow/" property="og:url"/>
+<meta content="Voiceflow | SmartWeb" property="og:title"/>
+<meta content="Voiceflowは、チャットボットや音声アシスタントなどの会話型AIエージェントを設計、構築、デプロイするためのノーコードプラットフォームです。複数のチャネルにわたって顧客とのやり取りやワークフローを自動化します。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/voiceflow/" name="twitter:url"/>
+<meta content="Voiceflow | SmartWeb" name="twitter:title"/>
+<meta content="Voiceflowは、チャットボットや音声アシスタントなどの会話型AIエージェントを設計、構築、デプロイするためのノーコードプラットフォームです。複数のチャネルにわたって顧客とのやり取りやワークフローを自動化します。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Voiceflow</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Voiceflow
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Voiceflow
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          Voiceflowは、チャットボットや音声アシスタントなどの会話型AIエージェントを設計、構築、デプロイするためのノーコードプラットフォームです。複数のチャネルにわたって顧客とのやり取りやワークフローを自動化します。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Voiceflow
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                会話型AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                チャットボット
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ノーコードプラットフォーム
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AIエージェント
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="voiceflowとは">Voiceflowとは？</h2>
+<p>Voiceflowは、会話型<a data-lb="1" href="/ja/glossary/ai-agents/" title="Claude AIが自律的に自動販売機ビジネスを運営した実験「プロジェクト・ベンド」の詳細な探求。AIエージェントの限界、欺瞞、そして自律的なビジネス運営の未来について重要な洞察を明らかにする。">AIエージェント</a>（<a data-lb="1" href="/ja/glossary/chatbot/" title="チャットボットは、テキストまたは音声を通じて人間の会話をシミュレートするAI駆動のソフトウェアアプリケーションです。カスタマーサポート、情報検索、タスク自動化に使用されます。">チャットボット</a>や音声アシスタントを含む）を設計、プロトタイピング、構築、デプロイするための、コラボレーション型ノーコードSaaSプラットフォームです。Web、電話、モバイルアプリケーション、カスタムチャネル全体で展開可能です。このプラットフォームは、プロダクトチーム、<a data-lb="1" href="/ja/glossary/ux/" title="ユーザーエクスペリエンス(UX)について、その定義、原則、プロセス、価値を網羅的に解説します。UXとUI、ユーザビリティ、CXの違いを学び、AIチャットボットと自動化の文脈におけるUXに焦点を当てます。">UX</a>デザイナー、開発者、ビジネスユーザーに対応し、顧客インタラクション、リードジェネレーションワークフロー、社内業務プロセスの包括的な自動化をエンタープライズスケールで実現します。</p>
+<p>Voiceflowは、AI搭載のチャットおよび音声エージェントを構築、テスト、デプロイするための、一元化されたセキュアなワークスペースとして機能します。組織はこのプラットフォームを活用し、前例のないスピード、きめ細かな制御、シームレスなチームコラボレーションで、チャネル全体の会話を自動化します。視覚的なドラッグ&amp;ドロップインターフェースと強力な統合機能により、技術者・非技術者の両方にとって、高度な会話型AIが利用しやすくなっています。</p>
+<h2 id="コアプラットフォーム機能">コアプラットフォーム機能</h2>
+<h3 id="ビジュアル会話設計">ビジュアル会話設計</h3>
+<p>Voiceflowの直感的なドラッグ&amp;ドロップビルダーにより、ユーザーはコードを書かずに複雑な会話フローをマッピングできます。チームはエージェントの応答を定義し、トリガーとインテントを設定し、<a data-lb="1" href="/ja/glossary/dialogue-management/" title="会話スクリプトの包括的ガイド:チャットボット、音声アシスタント、インタラクティブシステムにおける対話フローを管理するための構造化されたフレームワーク。">対話管理</a>、条件分岐、開発者アクション用のモジュラーブロックを使用して高度なロジックを実装します。</p>
+<p>主な機能:-構造化ワークフロー– 条件ロジックと動的パスを持つ複数ステップのタスクを設計</p>
+<ul>
+<li>再利用可能なコンポーネント– プロジェクト全体でスケーラブルで一貫したロジックを実現するテンプレートとモジュラーブロックを作成</li>
+<li>組織ツール– フォルダと階層構造を通じて大規模プロジェクトとマルチエージェントデプロイメントを管理</li>
+<li>インタラクティブキャンバス– 迅速なプロトタイピング、反復、リアルタイムコラボレーションをサポートするビジュアルワークスペース</li>
+</ul>
+<h3 id="ナレッジベーストレーニング">ナレッジベーストレーニング</h3>
+<p>チームはPDF、Wordドキュメント、URL、ヘルプセンターコンテンツ、またはプレーンテキストをアップロードして、AIナレッジベースをトレーニングします。これにより、<a data-lb="1" href="/ja/glossary/rag/" title="RAG(Retrieval-Augmented Generation)は、外部データソースを統合することでLLMを強化します。正確でタイムリー、かつ文脈に関連したAI応答を提供し、ハルシネーションを削減します。">検索拡張生成</a>(<a data-lb="1" href="/ja/glossary/rag/" title="RAG(Retrieval-Augmented Generation)は、外部データソースを統合することでLLMを強化します。正確でタイムリー、かつ文脈に関連したAI応答を提供し、ハルシネーションを削減します。">RAG</a>)が可能になり、<a data-lb="1" href="/ja/glossary/hallucination/" title="ハルシネーション の用語集ページ">ハルシネーション</a>を大幅に削減しながら、権威あるソースに基づいたドメイン固有の正確な応答を保証します。</p>
+<p>サポートされるソース:- ドキュメントタイプ:PDF、テキストファイル、Wordドキュメント</p>
+<ul>
+<li>Webコンテンツ:URL、ヘルプセンター、ドキュメントサイト</li>
+<li>統合プラットフォーム:Notion、<a data-lb="1" href="/ja/glossary/google/" title="Google の用語集ページ">Google</a> Drive、Zendesk、Confluence</li>
+<li>LLMの柔軟性:OpenAI(GPT-3.5/4)、<a data-lb="1" href="/ja/glossary/anthropic/" title="AnthropicはClaudeファミリーのAIアシスタントを開発することで知られるAI研究企業です。Constitutional AI(憲法的AI)を通じて、AI安全性、解釈可能性、倫理的整合性を優先しています。">Anthropic</a>(Claude)、Google(<a data-lb="1" href="/ja/glossary/gemini/" title="Geminiは、テキスト、画像、音声、動画の理解に優れたGoogleの先進的なマルチモーダルAIモデルファミリーです。Gemini 2.5 Pro、機能、アプリケーションについて解説します。">Gemini</a>)、Meta(Llama)、またはカスタムエンタープライズモデル</li>
+<li>自動フォールバック:複数のLLM間でシームレスなフェイルオーバーを実現し、継続的な稼働を保証</li>
+</ul>
+<h3 id="マルチチャネルデプロイメント">マルチチャネルデプロイメント</h3>
+<p>Voiceflowで構築されたエージェントは、柔軟な統合オプションを通じて多様なチャネルにデプロイされます:</p>
+<p>デプロイメントチャネル:-Web統合– 最小限のコード要件でウィジェットとAPIを介して埋め込み</p>
+<ul>
+<li>テレフォニー/IVR– 電話ベースのインタラクションのためにTwilioまたはカスタムテレフォニープロバイダーを通じて接続</li>
+<li>モバイルアプリケーション– iOSおよびAndroidアプリ統合用のネイティブSDKとAPI</li>
+<li>カスタムインターフェース– 独自のユーザーインターフェースに埋め込むためのDialog API</li>
+<li>音声プラットフォーム– Alexa、Google Assistant、WhatsApp、その他の音声エコシステムへのデプロイ</li>
+</ul>
+<h3 id="チームコラボレーションとセキュリティ">チームコラボレーションとセキュリティ</h3>
+<p>Voiceflowは、包括的なセキュリティ制御を備えたエンタープライズグレードのリアルタイムコラボレーションをサポートします:</p>
+<p>コラボレーション機能:-ライブ編集– 複数のユーザーが競合解決機能を使用して同時にエージェントを設計およびテスト</p>
+<ul>
+<li>バージョン管理– 完全な履歴追跡、ブランチ機能、ロールバック機能</li>
+<li>ロールベース権限– SSOおよびSAML認証(エンタープライズプラン)によるロール別のきめ細かな<a data-lb="1" href="/ja/glossary/access-control/" title="認可システム、アクセス制御モデル、実装戦略、および最新アプリケーションのセキュリティベストプラクティスに関する包括的なガイド。">アクセス制御</a></li>
+<li>一元化プラットフォーム– ファイル、ワークフロー、統合、チームリソースのための統一ワークスペース</li>
+<li>監査ログ– エンタープライズコンプライアンス要件のための包括的なアクティビティ追跡</li>
+</ul>
+<h3 id="外部システム統合">外部システム統合</h3>
+<p>統合機能:-ネイティブコネクタ– Salesforce、HubSpot、Segment、Sigma、Snowflake、Shopify Plusとの事前構築済み統合</p>
+<ul>
+<li>APIおよび関数ブロック– カスタムコードの実行、ビジネスアクションのトリガー、独自システムの統合</li>
+<li>開発者ツールキット– 高度なAPI呼び出し、カスタムロジック、拡張性オプション</li>
+<li>ハイブリッドアプローチ– ノーコードビジュアルフローとプロコード開発者機能を融合</li>
+</ul>
+<h3 id="テストデバッグ分析">テスト、デバッグ、分析</h3>
+<p>品質保証ツール:-リアルタイムシミュレーション– ビジュアルフロー進行追跡を使用した会話のテスト</p>
+<ul>
+<li>トランスクリプトレビュー– 品質保証と継続的改善のための過去のインタラクションの分析</li>
+<li>基本分析– 使用パターン、会話量、ユーザー満足度メトリクスの追跡</li>
+<li>サードパーティ統合– 外部プラットフォーム接続を通じて利用可能な拡張分析</li>
+</ul>
+<h2 id="voiceflowプラットフォーム機能">Voiceflowプラットフォーム機能</h2>
+<table>
+<thead>
+<tr>
+<th>機能</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ビジュアルフロービルダー</td>
+<td>複雑な会話ロジックのための直感的なドラッグ&amp;ドロップインターフェース</td>
+</tr>
+<tr>
+<td>AIナレッジベース</td>
+<td>ドメイン固有の専門知識と精度のためにカスタムデータでエージェントをトレーニング</td>
+</tr>
+<tr>
+<td>インテントとエンティティ</td>
+<td>ユーザーの目標を定義し、パーソナライズされた応答のための重要な情報を抽出</td>
+</tr>
+<tr>
+<td>マルチエージェント管理</td>
+<td>統一ワークスペース内で複数のエージェントを構築、整理、制御</td>
+</tr>
+<tr>
+<td>LLM統合</td>
+<td><a data-lb="1" href="/ja/glossary/openai/" title="ChatGPTは、大規模言語モデルを活用したOpenAIの高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。">OpenAI</a>、Anthropic、Gemini、Llama、カスタムエンタープライズモデルのサポート</td>
+</tr>
+<tr>
+<td>リアルタイムコラボレーション</td>
+<td>ライブ編集、コメント、バージョン管理、承認ワークフロー</td>
+</tr>
+<tr>
+<td>APIおよびコードブロック</td>
+<td>高度な機能の追加、ビジネスアクションのトリガー、外部データの統合</td>
+</tr>
+<tr>
+<td>マルチチャネルデプロイメント</td>
+<td>Web、電話、モバイルアプリ、IVR、APIを介して起動</td>
+</tr>
+<tr>
+<td>セキュリティと権限</td>
+<td>ロールベースアクセス、SSO、SAML、SOC 2、ISO 27001コンプライアンス(エンタープライズ)</td>
+</tr>
+<tr>
+<td>テストツール</td>
+<td>ビジュアルフローシミュレーション、デバッグ機能、QAトランスクリプト</td>
+</tr>
+<tr>
+<td>分析ダッシュボード</td>
+<td>エージェントの有効性と使用パターンのパフォーマンスメトリクス</td>
+</tr>
+<tr>
+<td>コンポーネントライブラリ</td>
+<td>迅速なスケーリングと一貫した設計基準のための再利用可能なモジュール</td>
+</tr>
+<tr>
+<td>カスタムLLMサポート</td>
+<td>コンプライアンス、プライバシー、専門要件のためのBring-Your-Own-LLM</td>
+</tr>
+</tbody>
+</table>
+<h2 id="価格とプラン">価格とプラン</h2>
+<table>
+<thead>
+<tr>
+<th>プラン</th>
+<th>価格</th>
+<th>エージェント</th>
+<th>編集者</th>
+<th>ナレッジソース/エージェント</th>
+<th>主な機能</th>
+<th>最適な対象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Starter</td>
+<td>無料</td>
+<td>2</td>
+<td>1</td>
+<td>50 KB</td>
+<td>基本LLM、コア統合</td>
+<td>個人ユーザー、パイロット</td>
+</tr>
+<tr>
+<td>Pro</td>
+<td>$60/月</td>
+<td>最大20</td>
+<td>2</td>
+<td>200 KB</td>
+<td>すべてのLLM、高度なロジック</td>
+<td>スタートアップ、コンサルタント</td>
+</tr>
+<tr>
+<td>Team</td>
+<td>$125/月</td>
+<td>無制限</td>
+<td>5</td>
+<td>5,000 KB</td>
+<td>優先サポート、増加した制限</td>
+<td>成長中のチーム、中小企業</td>
+</tr>
+<tr>
+<td>Enterprise</td>
+<td>カスタム</td>
+<td>無制限</td>
+<td>無制限</td>
+<td>無制限</td>
+<td>SSO、監査ログ、プライベートクラウド、SLA</td>
+<td>大規模組織、規制業界</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>高度なセキュリティ(SSO、SAML、HIPAA)にはエンタープライズティアが必要</li>
+<li>音声使用は下位プランで同時通話制限がある場合があります</li>
+<li>カスタム統合と専用サポートはエンタープライズレベルで利用可能</li>
+</ul>
+<h2 id="実際の使用事例">実際の使用事例</h2>
+<h3 id="カスタマーサポート自動化">カスタマーサポート自動化</h3>
+<p>Trilogyの成功事例90製品にわたるレベル1サポートチケットの70%を自動化し、90日以内に$425,000のコスト削減を達成。Zendeskとシームレスに統合し、複数のヘルプセンターに展開。Roam Autoの実装基本的なチャットボットから文脈理解を備えた高度なVoiceflow AIエージェントにアップグレードすることで、週30時間のサポート作業負荷を削減。</p>
+<h3 id="リードジェネレーションと金融サービス">リードジェネレーションと金融サービス</h3>
+<p>Sanlam Financial <a data-lb="1" href="/ja/glossary/ai-copilot/" title="AIコパイロットは、人間のユーザーと並行して動作する高度なAI搭載デジタルアシスタントであり、生産性、創造性、意思決定をリアルタイムで強化します。">AIコパイロット</a>従来の開発の3倍の速さで金融アドバイザリーAIコパイロットを立ち上げ、エンタープライズコンプライアンス機能とカスタム会話ガードレールを使用して80%のリード転換率を達成。</p>
+<h3 id="社内自動化">社内自動化</h3>
+<p>組織は、オンボーディングアシスタント、HR FAQ自動化、プロセス自動化エージェント、セキュアな認証と文脈認識ワークフローを備えた従業員<a data-lb="1" href="/ja/glossary/self-service/" title="カスタマーサポートのためのセルフサービスソリューション、ツール、戦略を探求します。FAQ、ナレッジベース、AIチャットボットが顧客をエンパワーメントし、運用コストを削減する方法を学びます。">セルフサービス</a>プラットフォームにVoiceflowをデプロイします。</p>
+<h3 id="eコマースアプリケーション">Eコマースアプリケーション</h3>
+<p>Shopify Plus、決済ゲートウェイ、物流APIと統合された製品推奨エンジン、注文追跡アシスタント、ショッピングサポートエージェントを構築し、シームレスな顧客体験を実現。</p>
+<h2 id="利点と制限">利点と制限</h2>
+<h3 id="利点">利点</h3>
+<p>ノーコードアクセシビリティ– 非技術者と技術者の両方にとって、プログラミング要件なしで迅速なプロトタイピングが可能優れたコラボレーション– リアルタイム編集、包括的なバージョン管理、きめ細かな権限管理スケーラブルなナレッジ– インテリジェントなセグメンテーション機能を備えた大量データのサポートLLMの柔軟性– 複数のモデルとの統合、または制御のためのBring-Your-Own-LLMオムニチャネル– 単一の設計からWeb、電話、チャット、カスタムチャネル全体にデプロイAPI優先– 事実上あらゆるビジネスツールまたは独自システムと統合再利用可能なロジック– テンプレートとコンポーネントがスケーリングを加速し、メンテナンスを簡素化エンタープライズ実績– Amazon、Google、BMW、NASA、McDonald’s、Fortune 500企業から信頼</p>
+<h3 id="制限">制限</h3>
+<p>ライブチャットハンドオフ– シームレスな人間への<a data-lb="1" href="/ja/glossary/escalation/" title="カスタマーサポート、IT、AIチャットボットにおけるエスカレーションについて学びます。種類、トリガー、ベストプラクティス、そして自動化が複雑な問題解決をどのように効率化するかを解説します。">エスカレーション</a>にはサードパーティ統合またはカスタム開発が必要分析の深さ– 基本分析のみ。高度な会話インテリジェンスには追加ツールが必要音声サポート– パートナーベースのテレフォニー。完全にネイティブな音声インフラストラクチャではないシートベース価格– チームサイズに応じてコストが増加し、大規模チームの採用を制限する可能性コンプライアンス機能– 高度なセキュリティ(SSO、SAML、HIPAA)はエンタープライズプランに制限キャンバスパフォーマンス– 大規模で複雑なプロジェクトではインターフェースの遅延が発生する可能性プラットフォームロックイン– 代替プラットフォームへのフローのエクスポートには課題がある</p>
+<h2 id="技術概念">技術概念</h2>
+<p>インテント特定の会話フローと応答をトリガーするユーザーの目標または目的(例:「パスワードリセット」、「注文ステータス確認」)。エンティティユーザー入力から抽出される特定のデータポイント(例:「パリへのフライトを予約」の「パリ」、「明日ミーティングをスケジュール」の「明日」)。大規模言語モデル(LLM)自然な対話生成、文脈理解、動的な応答作成を可能にする高度なAIモデル(GPT-4、Claude、Gemini)。ナレッジベース権威あるソースに基づいた正確でドメイン固有の回答を可能にする、FAQ、ドキュメント、ビジネスデータの厳選されたリポジトリ。API統合CRM、データベース、分析プラットフォーム、運用ツールを含むビジネスシステムと会話エージェント間の接続。</p>
+<h2 id="プラットフォーム比較">プラットフォーム比較</h2>
+<table>
+<thead>
+<tr>
+<th>機能</th>
+<th>Voiceflow</th>
+<th>Synthflow</th>
+<th>GPTBots</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ノーコードビルダー</td>
+<td>はい</td>
+<td>はい</td>
+<td>はい</td>
+</tr>
+<tr>
+<td>価格モデル</td>
+<td>編集者/月単位</td>
+<td>使用量ベース</td>
+<td>カスタム/エンタープライズ</td>
+</tr>
+<tr>
+<td>音声デプロイメント</td>
+<td>API/テレフォニーパートナー</td>
+<td>ネイティブ、低レイテンシ</td>
+<td>はい、エンタープライズフォーカス</td>
+</tr>
+<tr>
+<td>ライブチャットハンドオフ</td>
+<td>いいえ(カスタムのみ)</td>
+<td>はい</td>
+<td>はい</td>
+</tr>
+<tr>
+<td>LLMサポート</td>
+<td>マルチLLM、BYO</td>
+<td>マルチLLM</td>
+<td>プロプライエタリ/BYO</td>
+</tr>
+<tr>
+<td>分析</td>
+<td>基本</td>
+<td>高度</td>
+<td>高度</td>
+</tr>
+<tr>
+<td>コンプライアンス</td>
+<td>SOC2/ISO、SSO/SAML(エンタープライズ)</td>
+<td>SOC2/ISO/HIPAA</td>
+<td>SAML/GDPR/プライベートクラウド</td>
+</tr>
+<tr>
+<td>最適な用途</td>
+<td>コラボレーティブ設計</td>
+<td>プロダクション音声AI</td>
+<td>エンタープライズ自動化</td>
+</tr>
+</tbody>
+</table>
+<h2 id="voiceflowを使用すべき場合">Voiceflowを使用すべき場合</h2>
+<p>理想的なシナリオ:- 迅速でコラボレーティブなエージェント設計とデプロイメントを必要とするプロダクトチーム</p>
+<ul>
+<li>広範なコーディングなしでサポート、リードジェネレーション、または社内業務を自動化する組織</li>
+<li>柔軟な統合を備えたセキュアで一元化されたマルチエージェント制御を必要とするエンタープライズ</li>
+</ul>
+<p>理想的でない場合:- 高度なネイティブライブチャットまたは深い会話分析を標準で必要とするビジネス</p>
+<ul>
+<li>非エンタープライズプランで深いコンプライアンス(HIPAA)またはオンプレミスデプロイメントを必要とするチーム</li>
+<li>外部パートナーなしでネイティブな低レイテンシテレフォニーを必要とする音声優先製品</li>
+</ul>
+<h2 id="始め方">始め方</h2>
+<p>クイックスタート手順:1. 無料アカウントを作成し、スターターエージェントでビジュアルビルダーを探索
+2. 迅速な開発のために事前構築されたテンプレートとコンポーネントを活用
+3. フローシミュレーションとトランスクリプト分析を使用して徹底的にテスト
+4. APIブロックとネイティブコネクタを通じてビジネスデータと統合
+5. コラボレーションとコンプライアンスのニーズが高まるにつれて、TeamまたはEnterpriseプランにアップグレード</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p>Voiceflowはチャットエージェントと音声エージェントの両方を構築できますか?はい、エージェントはWeb、電話、複数のチャネルにデプロイされます。音声にはAPI/テレフォニーパートナー統合が必要です。コーディングは必要ですか?ほとんどの機能には不要です。開発者はオプションのコードとAPIブロックを通じて機能を拡張できます。統合はどのように機能しますか?API、ネイティブコネクタ(Salesforce、Zendesk、Shopify)、またはカスタムシステム用の開発者ツールキットを介して。エンタープライズ対応ですか?エンタープライズプランはSOC2、ISO 27001、SSO/SAML、プライベートクラウド、専用サポートを提供します。複数の言語をサポートしていますか?はい、LLM選択と異なる地域向けのセグメント化されたナレッジベースを通じて。独自のAIモデルを使用できますか?はい、完全な制御とプライバシーのためのBring-Your-Own-LLMがEnterpriseプランで利用可能です。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Voiceflow. (n.d.). Official Website. URL: <a href="https://www.voiceflow.com/" rel="nofollow noopener noreferrer" target="_blank">https://www.voiceflow.com/</a></p>
+</li>
+<li>
+<p>Voiceflow. (n.d.). カスタマーサポート自動化ケーススタディ. Voiceflow Blog. URL: <a href="https://www.voiceflow.com/blog/automating-60-of-customer-support-for-90-products-in-12-weeks-how-ai-automation-transformed-trilogy" rel="nofollow noopener noreferrer" target="_blank">https://www.voiceflow.com/blog/automating-60-of-customer-support-for-90-products-in-12-weeks-how-ai-automation-transformed-trilogy</a></p>
+</li>
+<li>
+<p>Voiceflow. (n.d.). Roam Autoケーススタディ. Voiceflow Blog. URL: <a href="https://www.voiceflow.com/blog/how-roam-saved-30-hours-a-week-in-customer-support-hours" rel="nofollow noopener noreferrer" target="_blank">https://www.voiceflow.com/blog/how-roam-saved-30-hours-a-week-in-customer-support-hours</a></p>
+</li>
+<li>
+<p>Voiceflow. (n.d.). Sanlam Financial Servicesケーススタディ. Voiceflow Blog. URL: <a href="https://www.voiceflow.com/blog/how-sanlam-studios-ai-coach-drives-leads-and-financial-literacy" rel="nofollow noopener noreferrer" target="_blank">https://www.voiceflow.com/blog/how-sanlam-studios-ai-coach-drives-leads-and-financial-literacy</a></p>
+</li>
+<li>
+<p>Voiceflow. (n.d.). Pricing. URL: <a href="https://www.voiceflow.com/pricing" rel="nofollow noopener noreferrer" target="_blank">https://www.voiceflow.com/pricing</a></p>
+</li>
+<li>
+<p>Voiceflow. (n.d.). Salesforce Integration. URL: <a href="https://www.voiceflow.com/integrations/salesforce" rel="nofollow noopener noreferrer" target="_blank">https://www.voiceflow.com/integrations/salesforce</a></p>
+</li>
+<li>
+<p>Voiceflow. (n.d.). 会話設計入門. URL: <a href="https://www.voiceflow.com/pathways/getting-started-in-conversation-design-heres-what-you-need-to-know" rel="nofollow noopener noreferrer" target="_blank">https://www.voiceflow.com/pathways/getting-started-in-conversation-design-heres-what-you-need-to-know</a></p>
+</li>
+<li>
+<p>Voiceflow. (n.d.). 会話設計ソリューション. URL: <a href="https://www.voiceflow.com/solutions/conversation-design" rel="nofollow noopener noreferrer" target="_blank">https://www.voiceflow.com/solutions/conversation-design</a></p>
+</li>
+<li>
+<p>Voiceflow. (n.d.). Blog. URL: <a href="https://www.voiceflow.com/blog" rel="nofollow noopener noreferrer" target="_blank">https://www.voiceflow.com/blog</a></p>
+</li>
+<li>
+<p>Voiceflow. (n.d.). Demo. URL: <a href="https://www.voiceflow.com/demo" rel="nofollow noopener noreferrer" target="_blank">https://www.voiceflow.com/demo</a></p>
+</li>
+<li>
+<p>Voiceflow. (n.d.). Sign Up. URL: <a href="https://creator.voiceflow.com/signup" rel="nofollow noopener noreferrer" target="_blank">https://creator.voiceflow.com/signup</a></p>
+</li>
+<li>
+<p>Callpod AI. (n.d.). Voiceflowレビュー. URL: <a href="https://www.callpod.ai/blog/voiceflow-review" rel="nofollow noopener noreferrer" target="_blank">https://www.callpod.ai/blog/voiceflow-review</a></p>
+</li>
+<li>
+<p>Synthflow. (n.d.). Voiceflowレビュー. URL: <a href="https://synthflow.ai/blog/voiceflow-review" rel="nofollow noopener noreferrer" target="_blank">https://synthflow.ai/blog/voiceflow-review</a></p>
+</li>
+<li>
+<p>Pearl, Cathy. (n.d.). 音声ユーザーインターフェースの設計. URL: <a href="https://www.cathypearl.com/book" rel="nofollow noopener noreferrer" target="_blank">https://www.cathypearl.com/book</a></p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/gumloop/">
+                    Gumloop
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Gumloopは、反復的なタスクやワークフローを自動化するノーコードのAIファーストプラットフォームです。インテリジェントエージェントを使用してウェブを閲覧し、SaaSアプリと連携し、意思決定を行いま...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/gumloop/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/slot-filling/">
+                    スロットフィリング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    スロットフィリングは、会話型AIにおいてユーザーのクエリから特定のパラメータを抽出し、タスクを完了させる技術です。データ収集、自然な対話の実現、タスク完了の確実性を担保するために不可欠な機能です。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/slot-filling/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/dialogue-state-tracking/">
+                    対話状態追跡
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    対話状態追跡(DST)は、対話システムにおいてユーザーの目標、スロット値、会話履歴を推定し、一貫性のある適切なAI応答を可能にします。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/dialogue-state-tracking/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/utterance/">
+                    発話
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    会話型AIにおける発話とは何か、NLU/NLPにおける役割、種類、ワークフロー、課題、そしてチャットボットを効果的にトレーニングするためのベストプラクティスについて学びます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/utterance/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/ai-agents/">
+                    AIエージェント
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIエージェントは、環境を認識し、推論し、最小限の人間の介入で行動する自律的なソフトウェアシステムです。自動化と意思決定の強化を通じて、さまざまな業界を変革しています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/ai-agents/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/botpress/">
+                    Botpress
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Botpressは、ビジュアルフローエディタ、高度なAI、LLM統合を備えた、AIチャットボットと会話エージェントを構築するための開発者フレンドリーなプラットフォームです。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/botpress/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/voiceflow/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+  });
+</script>
+</body>
+</html>

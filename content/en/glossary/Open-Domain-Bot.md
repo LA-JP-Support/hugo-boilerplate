@@ -28,18 +28,18 @@ Subsequent transformer-based models, such as Google's Meena and Facebook's Blend
 
 ## Open-Domain vs. Closed-Domain
 
-**Open-domain chatbot:**Engages in unconstrained conversation, supporting any subject.
+**Open-domain chatbot:** Engages in unconstrained conversation, supporting any subject.
 - Examples: Meena, Blender, Mitsuku
 
-**Closed-domain chatbot:**Restricted to specific, predefined tasks or domains (e.g., flight booking, banking).
+**Closed-domain chatbot:** Restricted to specific, predefined tasks or domains (e.g., flight booking, banking).
 - Examples: LegalBot, medical triage bots
 
 | Aspect | Open-Domain Bot | Closed-Domain Bot |
 |--------|----------------|-------------------|
-| **Topic Coverage**| Any topic, unbounded | Specific, predefined domains |
-| **Response Generation**| Data-driven, generative/retrieval | Rule-based, structured templates |
-| **Evaluation**| Coherence, human-likeness, engagement | Task success, accuracy |
-| **Usecase**| Social chat, entertainment, general Q&A | Customer support, task automation |
+| **Topic Coverage** | Any topic, unbounded | Specific, predefined domains |
+| **Response Generation** | Data-driven, generative/retrieval | Rule-based, structured templates |
+| **Evaluation** | Coherence, human-likeness, engagement | Task success, accuracy |
+| **Usecase** | Social chat, entertainment, general Q&A | Customer support, task automation |
 
 ## Architectures
 
@@ -51,33 +51,49 @@ Seq2seq models are neural encoder-decoder architectures originally designed for 
 
 Transformers, introduced by Vaswani et al. (2017), utilize self-attention mechanisms to model long-range dependencies in text, dramatically improving context management and scalability.
 
-**Meena:**2.6B parameters, trained on 40B words from social media conversations.**Blender:**Up to 9.4B parameters, persona-conditioned, trained on Reddit and related corpora.
+**Meena:** 2.6B parameters, trained on 40B words from social media conversations.
+
+**Blender:** Up to 9.4B parameters, persona-conditioned, trained on Reddit and related corpora.
 
 ### Retrieval-Based and Generative Approaches
 
-**Retrieval-based:**Selects best-fit response from predefined set using similarity metrics. Reliable for accuracy but limited to existing data.**Generative models:**Compose responses one word at a time, allowing novel utterances but risking incoherence.
+**Retrieval-based:** Selects best-fit response from predefined set using similarity metrics. Reliable for accuracy but limited to existing data.
+
+**Generative models:** Compose responses one word at a time, allowing novel utterances but risking incoherence.
 
 ## Applications
 
 Open-domain bots are deployed for:
 
-**Social conversation & companionship:**Engaging users in casual, natural dialogue.**General information seeking:**Open-domain QA for broad topics.**Customer engagement:**Broad-topic chat for brand interaction.**AI research and benchmarking:**Testing limits of conversational AI.**Language practice:**Helping users practice languages through conversation.
+**Social conversation & companionship:** Engaging users in casual, natural dialogue.
+
+**General information seeking:** Open-domain QA for broad topics.
+
+**Customer engagement:** Broad-topic chat for brand interaction.
+
+**AI research and benchmarking:** Testing limits of conversational AI.
+
+**Language practice:** Helping users practice languages through conversation.
 
 ## Notable Systems
 
 | System | Description | Features / Benchmarks |
 |--------|-------------|----------------------|
-| **Meena**| Google's transformer-based bot | Sensibleness, specificity |
-| **Blender**| Facebook AI's large-scale persona chatbot | Empathy, knowledge, persona |
-| **Mitsuku**| Rule-based, AIML chatbot, Loebner Prize winner | Pattern-matching, small talk |
-| **DialoGPT**| Microsoft's conversational transformer | Reddit fine-tuning |
-| **BERT-based QA bots**| Open-domain QA using retrieval/transformers | High accuracy on SQuAD |
+| **Meena** | Google's transformer-based bot | Sensibleness, specificity |
+| **Blender** | Facebook AI's large-scale persona chatbot | Empathy, knowledge, persona |
+| **Mitsuku** | Rule-based, AIML chatbot, Loebner Prize winner | Pattern-matching, small talk |
+| **DialoGPT** | Microsoft's conversational transformer | Reddit fine-tuning |
+| **BERT-based QA bots** | Open-domain QA using retrieval/transformers | High accuracy on SQuAD |
 
 ## Speech Event Taxonomy
 
 Speech events represent categories of conversational activity (Goldsmith & Baxter, 1996):
 
-**Informal/Superficial:**Small talk, gossip, jokes.**Involving:**Complaints, relationship talk.**Goal-directed:**Decision making, instructions.
+**Informal/Superficial:** Small talk, gossip, jokes.
+
+**Involving:** Complaints, relationship talk.
+
+**Goal-directed:** Decision making, instructions.
 
 ### Empirical Findings
 
@@ -87,7 +103,9 @@ Most open-domain chatbot conversations are "small talk." In Meena's evaluation, 
 
 ### Human Likeness and Coherence
 
-**Coherence:**Logical connection and flow of conversation.**Human-likeness:**Degree to which bot responses are indistinguishable from human.
+**Coherence:** Logical connection and flow of conversation.
+
+**Human-likeness:** Degree to which bot responses are indistinguishable from human.
 
 ### Speech Event Evaluation
 
@@ -103,54 +121,61 @@ Blender is preferred over Meena in human evaluations, but human-human conversati
 
 ## Challenges
 
-**Contextual Understanding:**Limited, especially across long or complex exchanges.**Real-world Grounding:**Referencing live events or user context is unsolved.**Complex Speech Events:**Persuasion or collaborative planning remain rare.**Conversational Breadth:**Expanding beyond small talk to cover full range of human conversational events.**Contextual Memory:**Improving bots' ability to remember, recall, and reference prior exchanges.**Ethics and Safety:**Developing robust filtering and monitoring for responsible deployment.
+**Contextual Understanding:** Limited, especially across long or complex exchanges.
+
+**Real-world Grounding:** Referencing live events or user context is unsolved.
+
+**Complex Speech Events:** Persuasion or collaborative planning remain rare.
+
+**Conversational Breadth:** Expanding beyond small talk to cover full range of human conversational events.
+
+**Contextual Memory:** Improving bots' ability to remember, recall, and reference prior exchanges.
+
+**Ethics and Safety:** Developing robust filtering and monitoring for responsible deployment.
 
 ## Implementation Considerations
 
 ### Real-World Deployment Issues
 
-**Data Requirements:**Training open-domain bots needs massive, diverse conversational data.**Computation:**Transformers require extensive computing power.**Safety:**Risk of generating inappropriate, biased, or nonsensical output.
+**Data Requirements:** Training open-domain bots needs massive, diverse conversational data.
+
+**Computation:** Transformers require extensive computing power.
+
+**Safety:** Risk of generating inappropriate, biased, or nonsensical output.
 
 ### Rasa and Practical Limitations
 
-**Rasa:**Primarily designed for intent/entity-driven, task-oriented bots.**Challenges for open-domain in Rasa:**- Exhaustive intent/entity design is impractical for unbounded domains
+**Rasa:** Primarily designed for intent/entity-driven, task-oriented bots.
+
+**Challenges for open-domain in Rasa:**
+- Exhaustive intent/entity design is impractical for unbounded domains
 - Response selection and context tracking do not scale to open-domain needs
 
 ## Future Directions
 
-**Conversational Breadth:**Expanding beyond small talk to cover full range of human conversational events.**Contextual Memory:**Improving bots' ability to remember, recall, and reference prior exchanges.**Ethics and Safety:**Developing robust filtering and monitoring for responsible deployment.**Hybrid Models:**Combining retrieval, generation, and human-in-the-loop curation for improved dialogue quality.
+**Conversational Breadth:** Expanding beyond small talk to cover full range of human conversational events.
+
+**Contextual Memory:** Improving bots' ability to remember, recall, and reference prior exchanges.
+
+**Ethics and Safety:** Developing robust filtering and monitoring for responsible deployment.
+
+**Hybrid Models:** Combining retrieval, generation, and human-in-the-loop curation for improved dialogue quality.
 
 ## References
 
-
-1. ACL Anthology. (2021). How "open" are conversations with open-domain chatbots?. ACL Anthology.
-
-2. IJEAT. (n.d.). Research Perspectives in Open-Domain Chatbots. IJEAT.
-
-3. YouTube. (n.d.). Open Domain Q&A AI Chatbot DEMO. YouTube.
-
-4. Wisdomlib. (n.d.). Open-Domain Chatbot Concept. Wisdomlib.
-
-5. Facebook AI. (n.d.). Blender Project. Facebook AI.
-
-6. Google AI Blog. (2020). Meena. Google AI Blog.
-
-7. arXiv. (n.d.). ACUTE-Eval. arXiv.
-
-8. Symbl.ai. (n.d.). Open Domain vs. Closed Domain. Symbl.ai Blog.
-
-9. Rasa Forum. (n.d.). Open Domain Chatbot Discussion. Rasa Forum.
-
-10. Rasa Forum. (n.d.). Deployment and Integration Issues. Rasa Forum.
-
-11. ParlAI Platform. Open-source conversational AI platform. URL: https://parl.ai/
-
-12. OpenAI Research. AI research organization. URL: https://openai.com/research/
-
-13. SQuAD. Stanford Question Answering Dataset. URL: https://rajpurkar.github.io/SQuAD-explorer/
-
-14. Springer. (n.d.). Chatbot vs. Dialogue System. Springer.
-
-15. Wikipedia. (n.d.). Transformer (deep learning). Wikipedia.
-
-16. DataCamp. (n.d.). How Transformers Work. DataCamp.
+- [ACL Anthology: How "open" are conversations with open-domain chatbots?](https://aclanthology.org/2021.sigdial-1.41.pdf)
+- [IJEAT: Research Perspectives in Open-Domain Chatbots](https://www.ijeat.org/wp-content/uploads/papers/v9i4/D8734049420.pdf)
+- [YouTube: Open Domain Q&A AI Chatbot DEMO](https://www.youtube.com/watch?v=UTeErvuadbM)
+- [Wisdomlib: Open-Domain Chatbot Concept](https://www.wisdomlib.org/concept/open-domain-chatbot)
+- [Facebook AI: Blender Project](https://parl.ai/projects/blender/)
+- [Google AI Blog: Meena](https://ai.googleblog.com/2020/01/towards-conversational-agent-that-can.html)
+- [arXiv: ACUTE-Eval](https://arxiv.org/abs/1904.03461)
+- [Symbl.ai: Open Domain vs. Closed Domain](https://symbl.ai/blog/conversation-understanding-open-domain-vs-closed-domain/)
+- [Rasa Forum: Open Domain Chatbot Discussion](https://forum.rasa.com/t/open-domain-chatbot/24319)
+- [Rasa Forum: Deployment and Integration Issues](https://forum.rasa.com/t/rasa-chat-bot-deployment-and-integration-issues/47964)
+- [ParlAI Platform](https://parl.ai/)
+- [OpenAI Research](https://openai.com/research/)
+- [SQuAD: Stanford Question Answering Dataset](https://rajpurkar.github.io/SQuAD-explorer/)
+- [Springer: Chatbot vs. Dialogue System](https://link.springer.com/chapter/10.1007/978-981-15-1384-8_22)
+- [Wikipedia: Transformer (deep learning)](https://en.wikipedia.org/wiki/Transformer_(deep_learning))
+- [DataCamp: How Transformers Work](https://www.datacamp.com/tutorial/how-transformers-work)

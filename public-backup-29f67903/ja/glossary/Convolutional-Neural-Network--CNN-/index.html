@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>畳み込みニューラルネットワーク(CNN) | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/convolutional-neural-network--cnn-/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="CNNの包括的ガイド:ディープラーニング画像処理タスクのためのアーキテクチャ、応用、メリット、実装のベストプラクティスを解説します。" name="description"/>
+<meta content="畳み込みニューラルネットワーク, ディープラーニング, 画像認識, コンピュータビジョン, ニューラルネットワークアーキテクチャ" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/convolutional-neural-network--cnn-/" property="og:url"/>
+<meta content="畳み込みニューラルネットワーク(CNN) | SmartWeb" property="og:title"/>
+<meta content="CNNの包括的ガイド:ディープラーニング画像処理タスクのためのアーキテクチャ、応用、メリット、実装のベストプラクティスを解説します。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/convolutional-neural-network--cnn-/" name="twitter:url"/>
+<meta content="畳み込みニューラルネットワーク(CNN) | SmartWeb" name="twitter:title"/>
+<meta content="CNNの包括的ガイド:ディープラーニング画像処理タスクのためのアーキテクチャ、応用、メリット、実装のベストプラクティスを解説します。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">畳み込みニューラルネットワーク(CNN)</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        畳み込みニューラルネットワーク(CNN)
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Convolutional Neural Network (CNN)
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          CNNの包括的ガイド:ディープラーニング画像処理タスクのためのアーキテクチャ、応用、メリット、実装のベストプラクティスを解説します。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                畳み込みニューラルネットワーク
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ディープラーニング
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                画像認識
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                コンピュータビジョン
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ニューラルネットワークアーキテクチャ
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="畳み込みニューラルネットワークcnnとは">畳み込みニューラルネットワーク(CNN)とは?</h2>
+<p>畳み込み<a data-lb="1" href="/ja/glossary/neural-networks/" title="ディープラーニングは、多層ニューラルネットワークを使用してデータから複雑なパターンを学習する高度なAI技術です。画像認識、自然言語処理、生成AIに不可欠な技術となっています。">ニューラルネットワーク</a>(CNN)は、画像、動画、その他の多次元配列などのグリッド状のデータ構造を処理するために主に設計された、特殊なディープラーニングアーキテクチャです。CNNは動物の視覚野における生物学的プロセスに着想を得ており、個々のニューロンが受容野と呼ばれる視野の限定された領域内の刺激にのみ反応します。この生物学的着想により、畳み込み層、プーリング層、全結合層などの複数の構成要素を使用し、バックプロパゲーションを通じて入力データから空間的な特徴の階層を自動的かつ適応的に学習できる人工ニューラルネットワークが開発されました。</p>
+<p>CNNの基本原理は、入力データの小さな領域を使用して画像特徴を学習することで、ピクセル間の空間的関係を保持する能力にあります。全結合層を使用し入力特徴を独立して扱う従来のニューラルネットワークとは異なり、CNNは学習可能なフィルタを入力全体に適用する畳み込み演算を採用し、エッジ、コーナー、テクスチャなどの局所的な特徴を検出できるようにします。このアプローチにより、全結合ネットワークと比較してパラメータ数が大幅に削減され、画像などの高次元データを扱う際にCNNがより効率的で過学習しにくくなります。畳み込み層は特徴抽出器として機能し、特定のタスクに不可欠な関連パターンや特徴を自動的に識別することを学習します。</p>
+<p>CNNはコンピュータビジョンの分野に革命をもたらし、画像分類や物体検出から医療<a data-lb="1" href="/ja/glossary/image-analysis/" title="画像解析は、デジタル画像から意味のある情報を解釈・抽出するAI技術です。そのワークフロー、タスク、応用例、主要なモデルについて学びましょう。">画像解析</a>、自動運転車のナビゲーションに至るまで、数多くのアプリケーションのバックボーンとなっています。このアーキテクチャが平行移動不変な特徴を学習できることは、画像の一部で学習されたパターンを画像内の他の場所でも認識できることを意味し、CNNを視覚認識タスクに特に効果的にしています。CNNの階層構造により、ネットワークを通じてデータが流れるにつれて、初期層の単純なエッジや勾配から深い層の複雑なオブジェクトやシーンまで、ますます複雑な特徴を学習できます。この階層的特徴学習能力と、可変入力サイズを処理し空間的関係を維持するネットワークの能力により、CNNは現代の<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>システムにおけるほとんどのコンピュータビジョンアプリケーションのゴールドスタンダードとなっています。</p>
+<h2 id="cnnの主要コンポーネント">CNNの主要コンポーネント</h2>
+<p>畳み込み層は、CNNの基本的な構成要素として機能し、学習可能なフィルタまたはカーネルを入力データ全体に適用して局所的な特徴を検出します。これらの層は、異なる空間位置での重み共有を通じてパラメータ数を削減しながら、空間的関係を保持する畳み込み演算を実行します。プーリング層は、最大プーリングや平均プーリングなどの演算を通じて最も重要な情報を保持しながら、特徴マップの空間次元を削減します。これらの層は平行移動不変性を実現し、計算複雑性を削減するとともに、正則化の一形態を提供することで過学習を防ぎます。活性化関数は、ネットワークに非線形性を導入し、データ内の複雑なパターンや関係を学習できるようにします。一般的な活性化関数には、勾配消失問題を軽減し訓練収束を加速するReLU(正規化線形ユニット)があります。全結合層は通常、CNNアーキテクチャの最後に現れ、最終的な分類または回帰タスクを実行します。これらの層は、前の層のすべてのニューロンを現在の層のすべてのニューロンに接続し、畳み込み層によって抽出された特徴に基づく高レベルの推論を可能にします。バッチ正規化は各層への入力を正規化し、学習プロセスを安定化させ、より高い学習率を可能にします。この技術は内部共変量シフトを削減し、正則化器として機能し、一部のアーキテクチャではドロップアウトの必要性をなくすことがよくあります。ドロップアウト層は、訓練中に入力ユニットの一部をランダムにゼロに設定し、特定のニューロンへのネットワークの依存を減らすことで過学習を防ぎます。この正則化技術は、未見データに対する汎化性能を向上させます。スキップ接続は、初期層から後期層へ情報を直接流すことを可能にし、勾配消失問題を軽減することで非常に深いネットワークの訓練を可能にします。これらの接続は、ResNetやDenseNetなどのアーキテクチャの基礎となっています。</p>
+<h2 id="畳み込みニューラルネットワークcnnの動作原理">畳み込みニューラルネットワーク(CNN)の動作原理</h2>
+<p>ステップ1:入力処理- ネットワークは、通常、次元(高さ、幅、チャネル)を持つRGB画像などの多次元配列の形式で入力データを受け取り、正規化と拡張技術を通じてデータを前処理します。ステップ2:畳み込み演算- 学習可能なフィルタが入力データ全体をスライドし、要素ごとの乗算と総和を実行して、各フィルタによって検出されたエッジ、テクスチャ、形状などの特定のパターンを強調する特徴マップを作成します。ステップ3:活性化の適用- 非線形活性化関数が畳み込まれた特徴マップに適用され、ネットワークがデータ内の複雑なパターンや関係を学習できるようにする非線形性が導入されます。ステップ4:プーリング演算- プーリング層は、局所領域から最大値または平均値を選択することで特徴マップをダウンサンプリングし、重要な特徴を保持しながら空間次元を削減し、平行移動不変性を実現します。ステップ5:特徴マップの積み重ね- 複数の畳み込みとプーリング演算が積み重ねられて階層的表現が作成され、初期層が単純な特徴を検出し、深い層がこれらを組み合わせて複雑なパターンを認識します。ステップ6:平坦化- 最終畳み込み層からの多次元特徴マップが一次元ベクトルに平坦化され、全結合層への入力として機能します。ステップ7:密層処理- 全結合層は、畳み込み層によって抽出された階層的特徴に基づいて高レベルの推論とパターン認識を実行するために、平坦化された特徴を処理します。ステップ8:出力生成- 最終層は、分類タスクのクラス確率や回帰タスクの連続値など、softmaxや線形活性化などの適切な活性化関数を使用してネットワークの出力を生成します。ワークフロー例:画像分類CNNは、224x224x3のRGB画像を複数の3x3畳み込みフィルタで処理し、ReLU活性化を適用し、2x2最大プーリングを実行し、フィルタ深度を増やしながら(32→64→128→256)これらの演算を複数のブロックで繰り返し、最終特徴マップを平坦化し、ドロップアウトを含む密層を通過させ、softmax活性化を介してクラス確率を出力します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p>自動特徴学習- CNNは、手動での特徴エンジニアリングを必要とせずに生データから関連特徴を自動的に学習し、訓練プロセスを通じてデータセットとタスクの特定の特性に適応します。平行移動不変性- このアーキテクチャは、入力内の位置に関係なくパターンを認識でき、画像や他の空間データ内のオブジェクト位置の変動に対してCNNを堅牢にします。パラメータ共有- 畳み込み層は異なる空間位置で同じパラメータを使用し、全結合ネットワークと比較してパラメータの総数を大幅に削減し、計算効率を向上させます。階層的特徴抽出- 多層アーキテクチャは、単純なものから洗練されたものまで、ますます複雑な特徴を学習し、より単純なコンポーネントの組み合わせを通じて複雑なパターンの認識を可能にします。空間的関係の保持- 従来のニューラルネットワークとは異なり、CNNは入力データの空間構造を維持し、視覚的理解に不可欠な特徴間の重要な幾何学的関係を保持します。スケーラビリティ- CNNは可変サイズの入力を処理でき、<a data-lb="1" href="/ja/glossary/computational-resources/" title="CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。">計算リソース</a>とパフォーマンス要件に応じてスケールアップまたはダウンできるため、さまざまな展開シナリオに適応できます。アーキテクチャによる正則化- プーリング層やパラメータ共有を含むCNNの固有の構造は、過学習を防ぎ汎化を改善する自然な正則化を提供します。転移学習能力- 事前訓練されたCNNモデルは新しいタスクに微調整でき、大規模データセットから学習した特徴を活用して、限られた訓練データでも良好なパフォーマンスを達成できます。並列処理- 畳み込み演算は、GPUなどの最新ハードウェアで効率的に並列化でき、大規模データセットでの高速な訓練と推論を可能にします。入力変動への堅牢性- CNNは、回転、スケーリング、照明変化などのさまざまな入力変換に対する回復力を示し、可変条件下での実世界のアプリケーションに適しています。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p>画像分類- 写真整理から<a data-lb="1" href="/ja/glossary/content-moderation/" title="コンテンツモデレーションについて解説します。ユーザー生成コンテンツの監視、評価、管理を通じて、プラットフォームのガイドライン、コミュニティ基準、法的コンプライアンスを確保する仕組みです。">コンテンツモデレーション</a>までのアプリケーションのために、オブジェクト、動物、シーンの識別など、画像を事前定義されたクラスに分類します。物体検出- 検出されたアイテムの周りにバウンディングボックスを描画することで画像内の複数のオブジェクトを特定し、監視システム、自動運転車、小売分析に不可欠です。医療画像解析- X線、MRI、CTスキャンなどの医療スキャンを分析して、疾患診断、腫瘍検出、治療計画を支援し、多くの場合、人間の専門家に匹敵またはそれを超える精度を実現します。顔認識- セキュリティシステム、<a data-lb="1" href="/ja/glossary/access-control/" title="認可システム、アクセス制御モデル、実装戦略、および最新アプリケーションのセキュリティベストプラクティスに関する包括的なガイド。">アクセス制御</a>、ソーシャルメディアのタグ付けアプリケーションのために、顔の特徴に基づいて個人を識別および検証し、高精度と速度を実現します。自動運転車のビジョン- カメラフィードを処理して歩行者、車両、交通標識、道路状況を検出し、自動運転車が複雑な環境を安全にナビゲートできるようにします。製造における品質管理- 組立ラインで製品を検査して欠陥を検出し、品質基準を確保し、産業製造環境での品質保証プロセスを自動化します。農業<a data-lb="1" href="/ja/glossary/monitoring/" title="モニタリングとは、システム、アプリケーション、ネットワーク、ビジネスオペレーションに関するデータを収集、分析、対応する体系的かつ継続的なプロセスです。パフォーマンス、セキュリティ、ユーザーエクスペリエンスに関するリアルタイムの可視性を提供します。">モニタリング</a>- 衛星およびドローン画像を分析して作物の健康状態を監視し、病気を検出し、収量を推定し、精密農業アプリケーションのための農業実践を最適化します。文書解析- スキャンされた文書、手書きテキスト、フォームを処理して、光学文字認識(OCR)、文書分類、自動データ抽出システムを実現します。動画解析- エンターテインメントおよびセキュリティアプリケーションにおいて、アクション認識、行動分析、コンテンツ推奨、自動動画編集のために動画ストリームを分析します。アートとスタイル転送- 画像間でスタイルを転送し、新しいアートワークを生成し、デジタルアートおよびデザインツールでのクリエイティブなアプリケーションを可能にすることで、芸術的な画像を作成します。</p>
+<h2 id="cnnアーキテクチャの比較">CNNアーキテクチャの比較</h2>
+<table>
+<thead>
+<tr>
+<th>アーキテクチャ</th>
+<th>年</th>
+<th>主要な革新</th>
+<th>層数</th>
+<th>パラメータ数</th>
+<th>Top-1精度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LeNet-5</td>
+<td>1998</td>
+<td>最初の成功したCNN</td>
+<td>7</td>
+<td>60K</td>
+<td>N/A (MNIST)</td>
+</tr>
+<tr>
+<td>AlexNet</td>
+<td>2012</td>
+<td>ReLUを使用した深いCNN</td>
+<td>8</td>
+<td>62M</td>
+<td>57.1%</td>
+</tr>
+<tr>
+<td>VGGNet</td>
+<td>2014</td>
+<td>小さなフィルタを使用した非常に深い</td>
+<td>16-19</td>
+<td>138M</td>
+<td>71.3%</td>
+</tr>
+<tr>
+<td>ResNet</td>
+<td>2015</td>
+<td>スキップ接続</td>
+<td>50-152</td>
+<td>25M</td>
+<td>76.2%</td>
+</tr>
+<tr>
+<td>Inception</td>
+<td>2014</td>
+<td>マルチスケール畳み込み</td>
+<td>22</td>
+<td>7M</td>
+<td>74.8%</td>
+</tr>
+<tr>
+<td>EfficientNet</td>
+<td>2019</td>
+<td>複合スケーリング</td>
+<td>可変</td>
+<td>5-66M</td>
+<td>84.3%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p>計算要件- CNNは訓練と推論に大きな計算リソースを必要とし、強力なGPUと大量のメモリを必要とするため、リソースに制約のある環境での展開が制限される可能性があります。大規模データセットへの依存- 効果的なCNN訓練には通常、大量のラベル付きデータが必要であり、特に専門分野では収集とアノテーションに費用と時間がかかる可能性があります。過学習の感受性- 数百万のパラメータを持つ深いCNNは、特にデータセットが小さい場合、訓練データに容易に過学習する可能性があり、慎重な正則化と検証戦略が必要です。ハイパーパラメータの感度- CNNのパフォーマンスは、学習率、バッチサイズ、アーキテクチャの選択を含む適切なハイパーパラメータ調整に大きく依存し、広範な実験と専門知識が必要です。解釈可能性の制限- CNNは「ブラックボックス」として動作し、特定の決定がなぜ行われたかを理解することが難しく、医療診断や法的システムなどの重要なアプリケーションでは問題となる可能性があります。敵対的脆弱性- CNNは、人間には知覚できないが誤分類を引き起こす慎重に作成された敵対的例によって騙される可能性があり、展開のセキュリティ上の懸念を引き起こします。訓練の不安定性- 深いネットワークは勾配消失または爆発に悩まされる可能性があり、訓練を不安定にし、慎重な初期化、正規化、アーキテクチャ設計の考慮が必要です。ドメイン適応の課題- あるドメインで訓練されたCNNは、追加の訓練や適応なしには異なるドメインにうまく汎化しない可能性があり、アプリケーション間での汎用性が制限されます。メモリ消費- 大規模なCNNモデルは、パラメータと中間活性化を保存するために大量のメモリを必要とし、利用可能なハードウェアでのバッチサイズとモデルの複雑さを制限する可能性があります。<a data-lb="1" href="/ja/glossary/bias/" title="バイアス の用語集ページ">バイアス</a>と公平性の問題- CNNは訓練データに存在するバイアスを永続化する可能性があり、不公平または差別的な結果につながる可能性があるため、慎重なデータセットのキュレーションとバイアス軽減戦略が必要です。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p>データ前処理- 入力データを正規化し、適切な拡張技術を適用し、一貫したデータフォーマットを確保して、訓練の安定性を向上させ、さまざまな入力条件でのモデルの汎化を改善します。アーキテクチャの選択- タスク要件、計算制約、データセットの特性に基づいて適切なCNNアーキテクチャを選択し、精度、速度、リソース消費のトレードオフを考慮します。転移学習- 可能な限り事前訓練されたモデルを活用し、特定のタスクに微調整して訓練時間を短縮し、特に限られたデータセットで作業する場合にパフォーマンスを向上させます。正則化技術- ドロップアウト、バッチ正規化、重み減衰を実装して過学習を防ぎ汎化を改善し、データセットのサイズとモデルの複雑さに基づいて正則化の強度を調整します。学習率スケジューリング- 適応学習率スケジュール、ウォームアップ期間、学習率減衰を使用して訓練収束を最適化し、より良い最終パフォーマンスを達成します。バッチサイズの最適化- 訓練の安定性、メモリ使用量、収束速度のバランスをとる適切なバッチサイズを選択し、バッチサイズと学習率の関係を考慮します。勾配クリッピング- 深いネットワークでの勾配爆発を防ぐために勾配クリッピングを適用し、安定した訓練を確保し、バックプロパゲーション中の数値的不安定性を防ぎます。早期停止- 検証メトリクスを監視し、早期停止を実装して過学習を防ぎ、最良のモデルパフォーマンスを維持しながら不要な訓練時間を削減します。モデル検証- 適切なクロスバリデーション技術、ホールドアウトテストセット、複数の評価メトリクスを使用して、モデルのパフォーマンスを正確に評価し、堅牢な評価を確保します。ハードウェア最適化- 混合精度訓練、モデル並列化、効率的なデータロードを利用して、ハードウェアの利用を最大化し、利用可能な計算リソースでの訓練時間を短縮します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p>アテンションメカニズム- ネットワークが入力の関連部分に焦点を当てることを可能にするアテンション層を組み込み、複雑なタスクでのパフォーマンスを向上させ、モデルの意思決定プロセスへの解釈可能性の洞察を提供します。ニューラルアーキテクチャ探索(NAS)- <a data-lb="1" href="/ja/glossary/reinforcement-learning/" title="強化学習(RL)は、エージェントが環境と相互作用し、試行錯誤を通じて累積報酬を最大化することで、逐次的な意思決定を学習する機械学習の一種です。">強化学習</a>または進化的アルゴリズムを使用してアーキテクチャ空間を体系的に探索し、特定のタスクに最適なCNNアーキテクチャを発見する自動化された方法を採用します。知識蒸留- 大規模で複雑なモデルから小規模でより効率的なモデルへ知識を転送し、精度を維持しながらリソースに制約のある環境での高性能モデルの展開を可能にします。マルチスケール特徴融合- 異なるスケールと解像度からの特徴を組み合わせて、細かい詳細とグローバルコンテキストの両方を捉え、マルチスケール理解を必要とするタスクでのパフォーマンスを向上させます。敵対的訓練- 訓練中に敵対的例を組み込んで、<a data-lb="1" href="/ja/glossary/adversarial-attack/" title="敵対的ロバストネスとは、AI/ML モデルが、エラーや誤分類を引き起こすために意図的に作成された敵対的入力に対して、信頼性の高いパフォーマンスを維持する能力のことです。">敵対的攻撃</a>に対するモデルの堅牢性を向上させ、困難な実世界のシナリオへの汎化を強化します。プログレッシブ訓練- 訓練中に入力解像度またはモデルの複雑さを徐々に増やし、より単純なタスクから始めて徐々に複雑さを追加して、より良い収束と最終パフォーマンスを達成します。</p>
+<h2 id="将来の方向性">将来の方向性</h2>
+<p>ビジョントランスフォーマーの統合- CNNとトランスフォーマーメカニズムを組み合わせたハイブリッドアーキテクチャが登場しており、複雑な視覚タスクでのパフォーマンス向上のために両方のアプローチの強みを活用しています。効率的なアーキテクチャ設計- より良い精度と効率のトレードオフを達成する、より効率的なCNNアーキテクチャの開発に焦点を当て、限られた計算リソースを持つモバイルおよびエッジ展開シナリオに注目しています。自己<a data-lb="1" href="/ja/glossary/supervised-learning/" title="教師あり学習は、アルゴリズムがラベル付きデータから学習し、入力を望ましい出力にマッピングすることで、新しい未知のデータに対して正確な予測を行う、機械学習の基礎的なパラダイムです。">教師あり学習</a>- ラベル付きデータへの依存を減らす自己教師あり事前訓練方法の進歩により、CNNがラベルなし視覚データから意味のある表現を学習できるようになります。ニューロモーフィックコンピューティング- 脳のような処理を模倣するニューロモーフィックハードウェア用のCNNアルゴリズムの適応により、エネルギー効率とリアルタイム処理能力の大幅な改善が期待されます。説明可能なAIの統合- 本質的に解釈可能なCNNアーキテクチャと事後説明方法の開発により、重要なアプリケーションのためのモデルの意思決定プロセスへの洞察が提供されます。量子強化CNN- CNN訓練と推論における量子コンピューティングアプリケーションの探索により、特定のタイプの計算と最適化問題に対する指数関数的な高速化が期待されます。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>LeCun, Y., Bottou, L., Bengio, Y., &amp; Haffner, P. (1998). Gradient-based learning applied to document recognition. Proceedings of the IEEE, 86(11), 2278-2324.</p>
+</li>
+<li>
+<p>Krizhevsky, A., Sutskever, I., &amp; Hinton, G. E. (2012). ImageNet classification with deep convolutional neural networks. Advances in Neural Information Processing Systems, 25, 1097-1105.</p>
+</li>
+<li>
+<p>Simonyan, K., &amp; Zisserman, A. (2014). Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556.</p>
+</li>
+<li>
+<p>He, K., Zhang, X., Ren, S., &amp; Sun, J. (2016). Deep residual learning for image recognition. Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 770-778.</p>
+</li>
+<li>
+<p>Szegedy, C., Liu, W., Jia, Y., Sermanet, P., Reed, S., Anguelov, D., … &amp; Rabinovich, A. (2015). Going deeper with convolutions. Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 1-9.</p>
+</li>
+<li>
+<p>Tan, M., &amp; Le, Q. (2019). EfficientNet: Rethinking model scaling for convolutional neural networks. International Conference on Machine Learning, 6105-6114.</p>
+</li>
+<li>
+<p>Goodfellow, I., Bengio, Y., &amp; Courville, A. (2016). Deep Learning. MIT Press.</p>
+</li>
+<li>
+<p>Chollet, F. (2017). Deep Learning with Python. Manning Publications.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/transformer/">
+                    Transformer
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ディープラーニングにおけるTransformerアーキテクチャの包括的ガイド - アテンションメカニズム、ニューラルネットワーク、自然言語処理への応用について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/transformer/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/attention-mechanism/">
+                    アテンションメカニズム
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ディープラーニングにおけるアテンションメカニズムの包括的ガイド。Transformerアーキテクチャ、セルフアテンション、自然言語処理やコンピュータビジョンへの応用について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/attention-mechanism/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/zero-shot-learning/">
+                    ゼロショット学習
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ゼロショット学習の包括的ガイド:セマンティック埋め込みを通じて、訓練例なしで未知のカテゴリを分類できるAIモデルの実現方法を解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/zero-shot-learning/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/data-augmentation/">
+                    データ拡張
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    機械学習とAIアプリケーションのためのデータ拡張技術、メリット、実装戦略に関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/data-augmentation/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/backpropagation/">
+                    バックプロパゲーション
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ニューラルネットワークにおけるバックプロパゲーションアルゴリズムの包括的ガイド。実装方法、メリット、課題、ディープラーニングのベストプラクティスを網羅。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/backpropagation/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/batch-normalization/">
+                    バッチ正規化
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ディープラーニングにおけるバッチ正規化の包括的ガイド:ニューラルネットワークのための技術、メリット、実装戦略、ベストプラクティス。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/batch-normalization/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/convolutional-neural-network--cnn-/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

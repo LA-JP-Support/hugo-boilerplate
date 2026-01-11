@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Tree of Thoughts | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/tree-of-thoughts/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="An AI reasoning method that explores multiple solution paths simultaneously, like a decision tree, to solve complex problems more effectively than step-by-step approaches." name="description"/>
+<meta content="tree of thoughts, AI reasoning, problem solving, language models, deliberate search" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/tree-of-thoughts/" property="og:url"/>
+<meta content="Tree of Thoughts | SmartWeb" property="og:title"/>
+<meta content="An AI reasoning method that explores multiple solution paths simultaneously, like a decision tree, to solve complex problems more effectively than step-by-step approaches." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/tree-of-thoughts/" name="twitter:url"/>
+<meta content="Tree of Thoughts | SmartWeb" name="twitter:title"/>
+<meta content="An AI reasoning method that explores multiple solution paths simultaneously, like a decision tree, to solve complex problems more effectively than step-by-step approaches." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Tree of Thoughts</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Tree of Thoughts
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          An AI reasoning method that explores multiple solution paths simultaneously, like a decision tree, to solve complex problems more effectively than step-by-step approaches.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                tree of thoughts
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI reasoning
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                problem solving
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                language models
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                deliberate search
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-tree-of-thoughts">What is Tree of Thoughts?</h2>
+<p>Tree of Thoughts (ToT) represents a groundbreaking paradigm in <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence glossary entry">artificial intelligence</a> reasoning that fundamentally transforms how <a data-lb="1" href="/blog/how-to-use-large-language-models-effectively/" title="Learn practical applications of large language models like ChatGPT, explore different LLM platforms, understand how these models work under the hood, and discover how to leverage them effectively in your daily work and life.">large language models</a> approach complex problem-solving tasks. Unlike traditional linear reasoning approaches where models generate responses in a sequential, left-to-right manner, Tree of Thoughts enables <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI systems</a> to engage in deliberate, multi-step reasoning by exploring multiple solution pathways simultaneously. This framework treats thoughts as intermediate reasoning steps that can be systematically evaluated, compared, and refined through a structured search process that mirrors human deliberative thinking.</p>
+<p>The Tree of Thoughts framework emerged from the recognition that many complex problems require more than simple input-output transformations or even basic chain-of-thought reasoning. Instead, these challenges demand the ability to consider multiple approaches, backtrack from unsuccessful paths, and systematically explore alternative solutions. ToT addresses this need by organizing the reasoning process into a tree-like structure where each node represents a partial solution or intermediate thought, and branches represent different ways to extend or modify the current reasoning path. This structure allows AI systems to maintain multiple hypotheses simultaneously, evaluate their relative merits, and pursue the most promising directions while keeping alternative options available for exploration.</p>
+<p>The significance of Tree of Thoughts extends beyond mere technical innovation, representing a fundamental shift toward more human-like deliberative reasoning in artificial intelligence. By incorporating explicit search algorithms, state evaluation mechanisms, and backtracking capabilities, ToT enables AI systems to tackle problems that require strategic planning, creative exploration, and systematic analysis. This approach has proven particularly effective for tasks involving mathematical reasoning, creative writing, game playing, and complex decision-making scenarios where multiple valid approaches exist and the optimal solution may not be immediately apparent through linear reasoning alone.</p>
+<h2 id="core-reasoning-components">Core Reasoning Components</h2>
+<p>• <strong>Thought Decomposition</strong>: The process of breaking down complex problems into intermediate reasoning steps or “thoughts” that represent partial solutions, hypotheses, or decision points. Each thought serves as a building block in the overall reasoning process and can be independently evaluated and extended.</p>
+<p>• <strong>State Evaluation</strong>: A systematic mechanism for assessing the quality, promise, and validity of each thought or reasoning state. This evaluation helps determine which paths are worth pursuing further and which should be abandoned or deprioritized in favor of more promising alternatives.</p>
+<p>• <strong>Search Strategy</strong>: The algorithmic approach used to navigate through the tree of possible reasoning paths, including breadth-first search for comprehensive exploration, depth-first search for focused investigation, and best-first search for efficiency-oriented reasoning.</p>
+<p>• <strong>Backtracking Mechanism</strong>: The ability to return to previous reasoning states when current paths prove unproductive or lead to dead ends. This capability enables systematic exploration of alternative approaches without losing progress on promising partial solutions.</p>
+<p>• <strong>Lookahead Planning</strong>: The capacity to project potential future reasoning steps and their likely outcomes before committing to a particular path. This forward-looking capability helps optimize the search process and avoid predictably unsuccessful approaches.</p>
+<p>• <strong>Multi-Path Maintenance</strong>: The simultaneous management of multiple active reasoning threads, allowing the system to pursue several promising approaches in parallel while maintaining the ability to compare and integrate insights across different solution paths.</p>
+<p>• <strong>Pruning Strategies</strong>: Techniques for eliminating unpromising or redundant reasoning paths to maintain computational efficiency while preserving the most valuable exploration directions.</p>
+<h2 id="how-tree-of-thoughts-works">How Tree of Thoughts Works</h2>
+<p>The Tree of Thoughts framework operates through a systematic process that combines structured reasoning with intelligent search algorithms:</p>
+<ol>
+<li>
+<p><strong>Problem Initialization</strong>: The system begins by analyzing the input problem and determining appropriate thought decomposition strategies, establishing the root node of the reasoning tree with the initial problem state.</p>
+</li>
+<li>
+<p><strong>Thought Generation</strong>: From each active node, the system generates multiple candidate thoughts or reasoning steps, creating branches that represent different approaches to extending the current solution path.</p>
+</li>
+<li>
+<p><strong>State Evaluation</strong>: Each generated thought undergoes evaluation using predefined criteria or learned evaluation functions to assess its quality, feasibility, and potential for leading to successful solutions.</p>
+</li>
+<li>
+<p><strong>Path Selection</strong>: Based on evaluation scores and search strategy, the system selects which thoughts to pursue further, potentially maintaining multiple active paths simultaneously.</p>
+</li>
+<li>
+<p><strong>Recursive Expansion</strong>: Selected thoughts become new nodes in the tree, and the process repeats with further thought generation and evaluation, gradually building more complete solution paths.</p>
+</li>
+<li>
+<p><strong>Pruning and Optimization</strong>: The system periodically removes unpromising branches and optimizes the search space to maintain computational efficiency while preserving valuable reasoning directions.</p>
+</li>
+<li>
+<p><strong>Solution Synthesis</strong>: When complete solutions are found or search limits are reached, the system synthesizes the best available reasoning paths into final answers or recommendations.</p>
+</li>
+<li>
+<p><strong>Backtrack Integration</strong>: If needed, the system can backtrack to explore alternative paths or integrate insights from multiple successful reasoning branches.</p>
+</li>
+</ol>
+<p><strong>Example Workflow</strong>: For a mathematical word problem, ToT might first generate thoughts about different solution approaches (algebraic, geometric, numerical), evaluate each approach’s applicability, pursue the most promising methods while maintaining alternatives, and synthesize the most reliable solution path.</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p>• <strong>Enhanced Problem-Solving Capability</strong>: ToT enables AI systems to tackle complex, multi-step problems that require strategic thinking and systematic exploration of solution spaces, significantly expanding the range of tasks that can be effectively addressed.</p>
+<p>• <strong>Improved Solution Quality</strong>: By exploring multiple approaches and maintaining alternative paths, ToT often discovers higher-quality solutions than linear reasoning methods, leading to more accurate and comprehensive problem-solving outcomes.</p>
+<p>• <strong>Systematic Error Recovery</strong>: The backtracking mechanism allows systems to recover from reasoning errors or dead ends without starting over, making the overall problem-solving process more robust and efficient.</p>
+<p>• <strong>Transparent Reasoning Process</strong>: The tree structure provides clear visibility into the reasoning process, making it easier to understand how solutions were derived and to identify potential improvements or alternative approaches.</p>
+<p>• <strong>Flexible Search Strategies</strong>: ToT supports various search algorithms and evaluation criteria, allowing adaptation to different problem types and computational constraints while maintaining consistent reasoning quality.</p>
+<p>• <strong>Parallel Exploration</strong>: The ability to maintain multiple active reasoning paths enables more comprehensive exploration of solution spaces and reduces the risk of missing optimal solutions due to early commitment to suboptimal approaches.</p>
+<p>• <strong>Scalable Complexity Handling</strong>: ToT can handle problems of varying complexity by adjusting search depth, branching factors, and evaluation criteria, making it suitable for both simple and highly complex reasoning tasks.</p>
+<p>• <strong>Creative Solution Discovery</strong>: The systematic exploration of alternative paths often leads to creative or unexpected solutions that might not emerge through linear reasoning approaches.</p>
+<p>• <strong>Confidence Assessment</strong>: The comparative evaluation of multiple solution paths provides natural confidence measures, helping users understand the reliability of proposed solutions.</p>
+<p>• <strong>Iterative Refinement</strong>: The framework supports iterative improvement of solutions through multiple search passes and refinement cycles, leading to progressively better outcomes.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p>• <strong>Mathematical Problem Solving</strong>: Complex mathematical reasoning tasks including multi-step equations, geometric proofs, and optimization problems that benefit from exploring multiple solution approaches and verification strategies.</p>
+<p>• <strong>Strategic Game Playing</strong>: Board games, puzzles, and strategic scenarios where players must consider multiple moves ahead and evaluate alternative strategies while adapting to changing game states.</p>
+<p>• <strong>Creative Writing and Storytelling</strong>: Narrative generation tasks that require exploring different plot developments, character arcs, and thematic elements while maintaining consistency and narrative quality.</p>
+<p>• <strong>Code Generation and Debugging</strong>: Software development tasks involving algorithm design, code optimization, and debugging where multiple implementation approaches must be considered and evaluated.</p>
+<p>• <strong>Scientific Hypothesis Formation</strong>: Research scenarios requiring the systematic exploration of alternative hypotheses, experimental designs, and theoretical frameworks to address complex scientific questions.</p>
+<p>• <strong>Business Strategy Planning</strong>: Strategic decision-making processes involving market analysis, resource allocation, and risk assessment where multiple scenarios and approaches must be evaluated.</p>
+<p>• <strong>Educational Content Development</strong>: Creating instructional materials and learning pathways that require exploring different pedagogical approaches and adapting to various learning styles and objectives.</p>
+<p>• <strong>Legal Reasoning and Analysis</strong>: Complex legal cases requiring the exploration of multiple legal theories, precedents, and argumentation strategies to build comprehensive legal arguments.</p>
+<p>• <strong>Medical Diagnosis and Treatment</strong>: Healthcare scenarios involving differential diagnosis, treatment planning, and clinical decision-making where multiple possibilities must be systematically evaluated.</p>
+<p>• <strong>Engineering Design Optimization</strong>: Technical design problems requiring the exploration of alternative design approaches, trade-off analysis, and optimization across multiple competing objectives.</p>
+<h2 id="tree-of-thoughts-vs-alternative-reasoning-methods">Tree of Thoughts vs. Alternative Reasoning Methods</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Tree of Thoughts</th>
+<th>Chain of Thought</th>
+<th>Direct Generation</th>
+<th>Beam Search</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reasoning Structure</strong></td>
+<td>Hierarchical tree with backtracking</td>
+<td>Linear sequential steps</td>
+<td>Single-step output</td>
+<td>Parallel linear paths</td>
+</tr>
+<tr>
+<td><strong>Error Recovery</strong></td>
+<td>Full backtracking capability</td>
+<td>Limited error correction</td>
+<td>No error recovery</td>
+<td>Minimal backtracking</td>
+</tr>
+<tr>
+<td><strong>Solution Exploration</strong></td>
+<td>Systematic multi-path exploration</td>
+<td>Single reasoning chain</td>
+<td>Direct answer generation</td>
+<td>Multiple similar paths</td>
+</tr>
+<tr>
+<td><strong>Computational Cost</strong></td>
+<td>High due to tree search</td>
+<td>Moderate sequential cost</td>
+<td>Low single-pass cost</td>
+<td>Moderate parallel cost</td>
+</tr>
+<tr>
+<td><strong>Problem Complexity</strong></td>
+<td>Handles highly complex problems</td>
+<td>Moderate complexity tasks</td>
+<td>Simple to moderate tasks</td>
+<td>Moderate complexity</td>
+</tr>
+<tr>
+<td><strong>Solution Quality</strong></td>
+<td>Often highest quality</td>
+<td>Good for linear problems</td>
+<td>Variable quality</td>
+<td>Good average quality</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p>• <strong>Computational Complexity</strong>: ToT requires significantly more <a data-lb="1" href="/en/glossary/computational-resources/" title="Computational Resources glossary entry">computational resources</a> than linear reasoning approaches due to the need to generate, evaluate, and maintain multiple reasoning paths simultaneously.</p>
+<p>• <strong>Search Space Explosion</strong>: Complex problems can lead to exponentially growing search spaces, making it challenging to explore all relevant paths within reasonable computational limits.</p>
+<p>• <strong>Evaluation Function Design</strong>: Creating effective evaluation functions for assessing thought quality and promise requires domain expertise and careful calibration to avoid biasing the search process.</p>
+<p>• <strong>Optimal Search Strategy Selection</strong>: Choosing appropriate search algorithms and parameters for different problem types requires understanding of both the problem domain and the computational trade-offs involved.</p>
+<p>• <strong>Memory Management</strong>: Maintaining large reasoning trees requires efficient memory management strategies to prevent resource exhaustion while preserving important reasoning paths.</p>
+<p>• <strong>Convergence Guarantees</strong>: Ensuring that the search process will terminate with acceptable solutions within reasonable time bounds can be challenging for open-ended or poorly-defined problems.</p>
+<p>• <strong>Quality vs. Efficiency Trade-offs</strong>: Balancing thorough exploration with computational efficiency requires careful tuning of search parameters and pruning strategies.</p>
+<p>• <strong>Integration Complexity</strong>: Implementing ToT within existing AI systems requires significant architectural changes and careful integration with other reasoning components.</p>
+<p>• <strong>Evaluation Metrics</strong>: Developing appropriate metrics for assessing ToT performance across different problem domains remains an ongoing challenge in the field.</p>
+<p>• <strong>Scalability Limitations</strong>: Current implementations may struggle with very large-scale problems or real-time applications that require immediate responses.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p>• <strong>Problem-Specific Decomposition</strong>: Design thought decomposition strategies that align with the natural structure and requirements of the target problem domain for optimal reasoning effectiveness.</p>
+<p>• <strong>Hierarchical Evaluation</strong>: Implement multi-level evaluation functions that assess both local thought quality and global solution path promise to guide search effectively.</p>
+<p>• <strong>Adaptive Search Parameters</strong>: Use dynamic adjustment of search parameters based on problem characteristics and computational constraints to optimize performance.</p>
+<p>• <strong>Efficient Pruning Strategies</strong>: Implement intelligent pruning mechanisms that eliminate unpromising paths early while preserving potentially valuable alternative approaches.</p>
+<p>• <strong>Memory-Efficient Storage</strong>: Design data structures and storage mechanisms that minimize memory overhead while maintaining fast access to reasoning tree components.</p>
+<p>• <strong>Parallel Processing Optimization</strong>: Leverage parallel computing capabilities to explore multiple reasoning paths simultaneously and accelerate the overall search process.</p>
+<p>• <strong>Incremental Solution Building</strong>: Structure the reasoning process to build solutions incrementally, allowing for early termination when acceptable solutions are found.</p>
+<p>• <strong>Robust Error Handling</strong>: Implement comprehensive error handling and recovery mechanisms to manage failures in thought generation or evaluation processes.</p>
+<p>• <strong>Performance <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">Monitoring</a></strong>: Establish monitoring systems to track search progress, resource utilization, and solution quality throughout the reasoning process.</p>
+<p>• <strong>Domain-Specific Customization</strong>: Adapt the ToT framework to specific application domains by incorporating domain knowledge and specialized reasoning strategies.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p>• <strong>Multi-Objective Optimization</strong>: Extending ToT to handle problems with multiple competing objectives by incorporating Pareto optimization principles and multi-criteria decision-making frameworks.</p>
+<p>• <strong>Hierarchical Tree Structures</strong>: Implementing multi-level tree architectures that operate at different abstraction levels, enabling more efficient exploration of complex solution spaces.</p>
+<p>• <strong>Learning-Enhanced Evaluation</strong>: Incorporating machine learning techniques to improve evaluation functions over time based on feedback from successful and unsuccessful reasoning paths.</p>
+<p>• <strong>Collaborative Tree Search</strong>: Enabling multiple <a data-lb="1" href="/en/glossary/ai-agents/" title="AI Agents glossary entry">AI agents</a> to collaboratively explore different branches of the reasoning tree, sharing insights and coordinating search efforts.</p>
+<p>• <strong>Dynamic Tree Restructuring</strong>: Implementing mechanisms to reorganize and optimize tree structures during search based on emerging patterns and solution insights.</p>
+<p>• <strong>Probabilistic Path Selection</strong>: Using probabilistic methods to guide path selection and exploration, incorporating uncertainty quantification and risk assessment into the reasoning process.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p>• <strong>Automated Framework Adaptation</strong>: Development of systems that can automatically adapt ToT parameters and strategies based on problem characteristics and performance feedback.</p>
+<p>• <strong>Integration with Neural Architecture</strong>: Closer integration of ToT with neural network architectures to create hybrid systems that combine symbolic reasoning with deep learning capabilities.</p>
+<p>• <strong>Real-Time Reasoning Applications</strong>: Optimization of ToT for real-time applications requiring immediate responses while maintaining reasoning quality and depth.</p>
+<p>• <strong>Distributed Tree Search</strong>: Implementation of distributed ToT systems that can leverage <a data-lb="1" href="/en/glossary/cloud-computing/" title="Cloud Computing glossary entry">cloud computing</a> and edge devices for large-scale collaborative reasoning.</p>
+<p>• <strong>Explainable AI Enhancement</strong>: Further development of ToT’s natural explainability features to provide more detailed and accessible explanations of reasoning processes.</p>
+<p>• <strong>Cross-Domain Transfer Learning</strong>: Research into methods for transferring ToT reasoning strategies and evaluation functions across different problem domains and applications.</p>
+<h2 id="references">References</h2>
+<p>• Yao, S., Yu, D., Zhao, J., Shafran, I., Griffiths, T. L., Cao, Y., &amp; Narasimhan, K. (2023). Tree of Thoughts: Deliberate Problem Solving with Large Language Models. arXiv preprint arXiv:2305.10601.</p>
+<p>• Wei, J., Wang, X., Schuurmans, D., Bosma, M., Ichter, B., Xia, F., … &amp; Zhou, D. (2022). <a data-lb="1" href="/en/glossary/chain-of-thought-prompting/" title="Chain-of-Thought Prompting glossary entry">Chain-of-Thought Prompting</a> Elicits Reasoning in Large Language Models. Advances in Neural Information Processing Systems, 35, 24824-24837.</p>
+<p>• Russell, S., &amp; Norvig, P. (2020). Artificial Intelligence: A Modern Approach (4th ed.). Pearson Education Limited.</p>
+<p>• Huang, J., &amp; Chang, K. C. C. (2023). Towards Reasoning in Large Language Models: A Survey. Findings of the Association for Computational Linguistics: ACL 2023.</p>
+<p>• Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J. D., Dhariwal, P., … &amp; Amodei, D. (2020). Language Models are Few-Shot Learners. Advances in Neural Information Processing Systems, 33, 1877-1901.</p>
+<p>• Kojima, T., Gu, S. S., Reid, M., Matsuo, Y., &amp; Iwasawa, Y. (2022). Large Language Models are Zero-Shot Reasoners. Advances in Neural Information Processing Systems, 35, 22199-22213.</p>
+<p>• Wang, X., Wei, J., Schuurmans, D., Le, Q., Chi, E., Narang, S., … &amp; Zhou, D. (2023). Self-Consistency Improves Chain of Thought Reasoning in Language Models. International Conference on Learning Representations.</p>
+<p>• Zhou, D., Schärli, N., Hou, L., Wei, J., Scales, N., Wang, X., … &amp; Chi, E. (2023). Least-to-Most Prompting Enables Complex Reasoning in Large Language Models. International Conference on Learning Representations.</p>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/chain-of-thought-prompting/">
+                    Chain-of-Thought Prompt
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A technique that helps AI solve complex problems by breaking them down into step-by-step reasoning, ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/chain-of-thought-prompting/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/instruction-tuning/">
+                    Instruction Tuning
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A training technique that teaches AI language models to understand and follow human instructions acc...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/instruction-tuning/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/text-generation/">
+                    Text Generation
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI technology that automatically creates written text by learning patterns from human writing, used ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/text-generation/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/top-k-sampling/">
+                    Top-K Sampling
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A text generation technique that randomly selects the next word from only the most likely candidates...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/top-k-sampling/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/top-p-sampling/">
+                    Top-P Sampling
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A text generation technique that controls randomness by selecting words from the most likely options...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/top-p-sampling/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/tree-of-thoughts/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

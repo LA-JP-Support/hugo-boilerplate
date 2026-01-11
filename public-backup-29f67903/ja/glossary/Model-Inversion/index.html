@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>モデル反転攻撃 | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/model-inversion/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="モデル反転攻撃は、AIモデルの出力から学習データを再構築するプライバシー攻撃であり、機械学習システムにおける機密情報に対するリスクをもたらします。" name="description"/>
+<meta content="モデル反転攻撃, プライバシー攻撃, 機械学習セキュリティ, ニューラルネットワークの脆弱性, 敵対的攻撃" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/model-inversion/" property="og:url"/>
+<meta content="モデル反転攻撃 | SmartWeb" property="og:title"/>
+<meta content="モデル反転攻撃は、AIモデルの出力から学習データを再構築するプライバシー攻撃であり、機械学習システムにおける機密情報に対するリスクをもたらします。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/model-inversion/" name="twitter:url"/>
+<meta content="モデル反転攻撃 | SmartWeb" name="twitter:title"/>
+<meta content="モデル反転攻撃は、AIモデルの出力から学習データを再構築するプライバシー攻撃であり、機械学習システムにおける機密情報に対するリスクをもたらします。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">モデル反転攻撃</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        モデル反転攻撃
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Model Inversion
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          モデル反転攻撃は、AIモデルの出力から学習データを再構築するプライバシー攻撃であり、機械学習システムにおける機密情報に対するリスクをもたらします。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                モデル反転攻撃
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                プライバシー攻撃
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                機械学習セキュリティ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ニューラルネットワークの脆弱性
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                敵対的攻撃
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2026年1月8日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="モデル反転とは何か">モデル反転とは何か?</h2>
+<p>モデル反転は、<a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>モデルに対する高度なプライバシー攻撃の一種であり、攻撃者がモデルの学習済みパラメータや出力を悪用して、機密性の高い訓練データを再構築したり、プライベート情報を抽出したりする試みを表します。この技術は従来の機械学習プロセスを根本的に逆転させ、訓練済みモデルの予測、勾配、または内部表現を使用して、元の訓練データセットの特性を推測します。モデル反転攻撃は、機械学習モデルがサービスとして展開されたり、組織間で共有されたりするシナリオにおいて重大なプライバシーリスクをもたらします。これは、訓練プロセスで使用された個人のデータに関する機密情報を潜在的に明らかにする可能性があるためです。攻撃手法は通常、対象モデルに慎重に作成された入力でクエリを実行し、応答を分析して元の訓練サンプルの近似値を再構築したり、基礎となるデータセットに関する統計的特性を抽出したりすることを含みます。</p>
+<p>モデル反転は、標準的な訓練パイプラインの逆方向に動作することで、従来の機械学習アプローチとは根本的に異なります。従来の機械学習がデータからパターンを学習して新しい入力に対する予測を行うことに焦点を当てているのに対し、モデル反転はこれらの学習されたパターンを悪用して訓練データ自体に関する情報を再構築します。このパラダイムシフトは、モデルを予測ツールから潜在的なプライバシー漏洩の源に変換し、訓練済みモデルが機密訓練情報を露出することなく安全に共有できるという前提に挑戦します。この技術は、勾配ベースの再構築、敵対的生成アプローチ、統計的推論技術など、さまざまな数学的最適化手法を活用して、モデルパラメータや出力から意味のある情報を抽出します。データセットへの直接アクセスを必要とする従来のデータ分析手法とは異なり、モデル反転攻撃は訓練済みモデルへのブラックボックスまたはホワイトボックスアクセスのみで動作できるため、プライバシーの観点から特に懸念されます。</p>
+<p>モデル反転攻撃のビジネスへの影響は学術研究をはるかに超えており、医療、金融、個人データ処理などのプライバシーに敏感な領域で機械学習システムを展開する組織に実質的なリスクをもたらします。機械学習をサービスとして提供する企業(MLaaS)は、モデルが反転攻撃を通じて顧客情報を不注意に漏洩した場合、潜在的な責任に直面し、<a data-lb="1" href="/ja/glossary/gdpr/" title="EUの包括的なデータ保護規則であるGDPRについて理解しましょう。その原則、コンプライアンス要件、データ主体の権利、そしてAIチャットボットへの影響について学びます。">GDPR</a>、HIPAA、CCPAなどの枠組みの下での規制コンプライアンスの問題につながります。成功したモデル反転攻撃の測定可能な結果には、顔認識モデルからの顔画像の再構築、医療予測システムからの医療記録の抽出、信用スコアリングモデルからの金融情報の回復が含まれます。実世界での重要性は、組織がこれらの高度な攻撃から保護するために、堅牢なプライバシー保護技術を実装し、機械学習パイプラインの徹底的なセキュリティ評価を実施し、包括的な防御戦略を開発する必要性に現れています。モデル反転の脆弱性に対する認識の高まりは、責任あるAI展開の不可欠な要素として、差分プライバシー、連合学習、安全なマルチパーティ計算技術の開発を推進しています。</p>
+<h2 id="主要な攻撃手法">主要な攻撃手法</h2>
+<p>勾配ベースの再構築- このアプローチは、モデルの訓練または推論中に計算される勾配を悪用して入力データを再構築します。攻撃者は、入力の小さな変化がモデルの出力にどのように影響するかを分析し、勾配情報を使用して最適化技術を通じて元の訓練サンプルの再構築を反復的に改善します。敵対的生成反転- この手法は、生成的敵対ネットワークを使用して、特定のモデル出力を生成する入力の分布を学習することで、訓練データの現実的な再構築を作成します。この技術は、生成モデルの力と敵対的訓練を組み合わせて、高忠実度の再構築を生成します。統計的推論攻撃- これらの攻撃は、個々のサンプルを明示的に再構築することなく、訓練データセットの特性を推測するために、モデル出力の統計的特性を活用します。攻撃者は、出力分布、信頼度スコア、予測パターンを分析して、機密属性に関する集約情報を抽出します。メンバーシップ推論の統合- このアプローチは、モデル反転とメンバーシップ推論攻撃を組み合わせて、まず特定の個人が訓練セットに含まれていたかどうかを特定し、次に関連するデータレコードの再構築を試みます。この技術は、包括的なプライバシー侵害のための2段階攻撃フレームワークを提供します。特徴空間操作- この方法は、<a data-lb="1" href="/ja/glossary/neural-networks/" title="ディープラーニングは、多層ニューラルネットワークを使用してデータから複雑なパターンを学習する高度なAI技術です。画像認識、自然言語処理、生成AIに不可欠な技術となっています。">ニューラルネットワーク</a>内の中間特徴表現を操作して入力データを再構築することで動作します。攻撃者は特定の層や活性化パターンをターゲットにして、変換プロセスをリバースエンジニアリングし、学習された特徴から元の入力を回復します。クエリベースの再構築- この技術は、データ再構築のための十分な情報を収集するために、慎重に作成された入力で対象モデルに体系的にクエリを実行することを含みます。攻撃者は、モデルとの必要な相互作用の数を最小限に抑えながら、情報抽出を最大化するためにクエリ戦略を最適化します。補助データの悪用- このアプローチは、対象訓練データと類似した特性を共有する公開されている補助データセットを活用して、再構築精度を向上させます。攻撃者は、データ分布に関する事前知識を使用して反転プロセスを導き、攻撃の有効性を高めます。</p>
+<h2 id="モデル反転の仕組み">モデル反転の仕組み</h2>
+<ol>
+<li>
+<p>対象モデルの特定- 攻撃者はまず対象の機械学習モデルを特定してアクセスを取得し、利用可能なアクセスのタイプ(ブラックボックス、グレーボックス、またはホワイトボックス)を決定します。彼らはモデルアーキテクチャ、入出力仕様、利用可能なクエリインターフェースを分析して、攻撃面と潜在的な脆弱性を理解します。</p>
+</li>
+<li>
+<p>攻撃ベクトルの選択- 利用可能なアクセスレベルとモデルの特性に基づいて、攻撃者は勾配ベース、生成的、または統計的アプローチから最も適切な反転技術を選択します。彼らは、モデルの複雑さ、出力次元、<a data-lb="1" href="/ja/glossary/computational-resources/" title="CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。">計算リソース</a>などの要因を考慮して、攻撃戦略を最適化します。</p>
+</li>
+<li>
+<p>初期再構築のセットアップ- 攻撃者は反転プロセスの数学的フレームワークを確立し、目的関数、最適化制約、再構築品質メトリクスを定義します。彼らは再構築プロセスのためにランダムまたは情報に基づいた開始点を初期化し、必要な計算インフラストラクチャを構成します。</p>
+</li>
+<li>
+<p>反復最適化プロセス- コア反転アルゴリズムは、再構築されたデータに対する対象モデルの出力と期待される出力パターンとの差を最小化することで、再構築を反復的に改善します。このプロセスには、複数の反復にわたる勾配計算、パラメータ更新、収束監視が含まれます。</p>
+</li>
+<li>
+<p>品質評価と改善- 攻撃者は、ピクセル単位の類似性、知覚品質測定、意味的一貫性チェックなど、さまざまなメトリクスを使用して再構築されたデータの品質を評価します。彼らはこれらの評価に基づいてアプローチを改善し、最適化パラメータと再構築戦略を調整します。</p>
+</li>
+<li>
+<p>情報抽出と検証- 最終ステップには、再構築されたデータから意味のある情報を抽出し、利用可能な場合は既知のグラウンドトゥルースに対してその正確性を検証することが含まれます。攻撃者は再構築されたサンプルを分析して、元の訓練データセットから機密属性、個人情報、または機密パターンを特定します。ワークフローの例:セキュリティ会社が展開した顔認識モデルに対する攻撃を考えてみましょう。攻撃者は、さまざまな顔画像でモデルにクエリを実行して、その分類動作と信頼度パターンを理解することから始めます。勾配ベースの再構築を使用して、ランダムノイズ画像を初期化し、モデル内の特定のアイデンティティクラスの活性化を最大化するように反復的に最適化します。数百回の最適化反復を通じて、ノイズは徐々に訓練データセット内の個人に対応する認識可能な顔の特徴に変換されます。攻撃者は、知覚損失関数と敵対的正則化を使用して再構築を改善し、視覚的品質を向上させます。最後に、彼らは公開されている写真に対して再構築された顔を検証し、モデルの訓練データからプライベートな生体認証情報の抽出に成功したことを確認します。</p>
+</li>
+</ol>
+<h2 id="主な利点">主な利点</h2>
+<p>プライバシー脆弱性評価- モデル反転技術は、組織が展開前に機械学習システムのプライバシーリスクを評価するための強力なツールを提供します。これらの評価は、潜在的なデータ漏洩の脆弱性を特定し、適切なプライバシー保護措置の実装を導き、規制違反やデータ侵害のリスクを軽減するのに役立ちます。セキュリティ研究の進歩- モデル反転攻撃の開発と研究は、機械学習セキュリティ研究のより広い分野に大きく貢献します。これらの技術は、研究者が現在のMLアプローチの基本的なプライバシー制限を理解し、防御技術とプライバシー保護機械学習手法のイノベーションを推進するのに役立ちます。規制コンプライアンステスト- 組織は、GDPRの説明権やデータ保護要件などのプライバシー規制に対するシステムのコンプライアンスをテストするために、モデル反転技術を使用できます。この積極的なアプローチは、企業が規制上の罰則や法的課題につながる前にプライバシーの脆弱性を特定して対処するのに役立ちます。防御メカニズムの開発- モデル反転攻撃を理解することで、差分プライバシーの実装、敵対的訓練技術、安全な集約方法など、より効果的な防御戦略の開発が可能になります。この知識は、堅牢なプライバシー保護機械学習フレームワークの作成を推進します。フォレンジック分析機能- モデル反転技術は、機械学習モデルがどのような情報を学習したか、特定のデータセットの痕跡が含まれているかどうかを理解するために、正当なフォレンジックコンテキストで適用できます。この機能は、知的財産保護と不正なデータ使用の検出をサポートします。教育と啓発の利点- モデル反転攻撃を実証することは、機械学習実践者にプライバシーリスクと適切なセキュリティ対策を実装することの重要性について教育するのに役立ちます。この認識は、より責任あるAI開発実践と本番システムでのより良いプライバシー保護につながります。ベンチマークの開発- モデル反転技術は、プライバシー保護機械学習手法を評価するための標準化されたベンチマークの開発に貢献します。これらのベンチマークは、さまざまな防御アプローチを比較し、さまざまな攻撃シナリオに対するそれらの有効性を測定するための一貫した評価基準を提供します。研究方法論の検証- この技術は、防御措置をテストできる具体的な攻撃シナリオを提供することで、プライバシー保護機械学習手法の有効性を検証するのに役立ちます。この検証により、提案されたプライバシーソリューションが現実的な敵対的脅威に対して実際に意味のある保護を提供することが保証されます。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p>医療モデル監査- 医療機関は、診断および予測モデルの潜在的な患者データ漏洩を監査するために、モデル反転技術を使用します。これらの監査は、HIPAA規制へのコンプライアンスを確保し、モデル出力を通じた不正な再構築から機密医療情報を保護するのに役立ちます。金融サービスセキュリティテスト- 銀行や金融機関は、信用スコアリング、不正検出、リスク評価モデルの潜在的な顧客データ露出をテストするために、モデル反転攻撃を採用します。このテストは、機密金融情報を保護し、金融プライバシー規制へのコンプライアンスを確保するのに役立ちます。顔認識システムの評価- セキュリティ会社と法執行機関は、顔認識システムのプライバシーへの影響を評価するために、モデル反転技術を使用します。これらの評価は、展開されたモデルから生体認証データの不正な再構築につながる可能性のある脆弱性を特定するのに役立ちます。学術研究と出版- 機械学習セキュリティの研究者は、さまざまなモデルアーキテクチャのプライバシー脆弱性を研究し、新しい防御メカニズムを開発するために、モデル反転技術を使用します。この研究は、機械学習システムにおけるプライバシーリスクのより広い理解に貢献します。企業データ保護評価- 大企業は、従業員または顧客データを処理する内部機械学習システムのプライバシーリスクを評価するために、モデル反転攻撃を採用します。これらの評価は、潜在的なデータ漏洩の脆弱性を特定し、プライバシー保護戦略を導くのに役立ちます。クラウドサービスプロバイダーのセキュリティ- 主要なクラウドプラットフォームは、機械学習をサービスとして提供する(MLaaS)オファリングのセキュリティを評価するために、モデル反転技術を使用します。この評価は、マルチテナントクラウド環境で顧客のモデルとデータがプライバシー攻撃から保護されたままであることを確保するのに役立ちます。規制コンプライアンス監査- コンプライアンス担当者とプライバシー専門家は、規制機関に潜在的なプライバシーリスクを実証し、適切な保護措置の実装をサポートするために、モデル反転攻撃を使用します。これらの実証は、組織がプライバシー影響評価の規制要件を満たすのに役立ちます。競争情報保護- 企業は、独自の機械学習モデルが機密ビジネス情報や企業秘密を漏洩する可能性があるかどうかをテストするために、モデル反転技術を使用します。このテストは、訓練済みモデルに組み込まれた競争上の優位性と知的財産を保護するのに役立ちます。</p>
+<h2 id="モデル反転攻撃の比較">モデル反転攻撃の比較</h2>
+<table>
+<thead>
+<tr>
+<th>攻撃タイプ</th>
+<th>必要なアクセス</th>
+<th>再構築品質</th>
+<th>計算コスト</th>
+<th>検出難易度</th>
+<th>成功率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>勾配ベース</td>
+<td>ホワイトボックス</td>
+<td>高</td>
+<td>中</td>
+<td>低</td>
+<td>85-95%</td>
+</tr>
+<tr>
+<td>GANベース</td>
+<td>ブラックボックス</td>
+<td>非常に高</td>
+<td>高</td>
+<td>高</td>
+<td>70-85%</td>
+</tr>
+<tr>
+<td>統計的推論</td>
+<td>ブラックボックス</td>
+<td>中</td>
+<td>低</td>
+<td>非常に高</td>
+<td>60-75%</td>
+</tr>
+<tr>
+<td>クエリベース</td>
+<td>ブラックボックス</td>
+<td>中</td>
+<td>中</td>
+<td>中</td>
+<td>65-80%</td>
+</tr>
+<tr>
+<td>特徴操作</td>
+<td>グレーボックス</td>
+<td>高</td>
+<td>中</td>
+<td>中</td>
+<td>75-90%</td>
+</tr>
+<tr>
+<td>メンバーシップ誘導</td>
+<td>ブラックボックス</td>
+<td>高</td>
+<td>高</td>
+<td>高</td>
+<td>80-90%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p>計算リソース要件- モデル反転攻撃は、特に高次元データの再構築と反復最適化プロセスにおいて、重要な計算リソースを必要とすることがよくあります。組織は、包括的な評価のために、セキュリティ評価の徹底性と利用可能な計算予算および時間制約とのバランスを取る必要があります。攻撃検出と監視- 高度なモデル反転攻撃は、通常のモデルクエリや推論リクエストとして現れる可能性があるため、リアルタイムで検出することが困難な場合があります。効果的な監視システムを開発するには、悪意のある再構築の試みを示す可能性のあるクエリパターン、頻度、統計的異常の慎重な分析が必要です。法的および倫理的影響- 正当なセキュリティテストの目的であっても、モデル反転攻撃を実施することは、データプライバシー、同意、責任ある開示に関する複雑な法的および倫理的問題を提起します。組織は、セキュリティ研究が適用法と倫理的ガイドラインに準拠していることを確保するために、これらの考慮事項を慎重にナビゲートする必要があります。防御メカニズムのトレードオフ- モデル反転攻撃に対する防御を実装することは、プライバシー保護とモデルの有用性、精度、またはパフォーマンスとの間のトレードオフを伴うことがよくあります。組織は、適切なプライバシー保護を提供しながら効果的な機械学習システムを維持するために、これらの競合する要件を慎重にバランスさせる必要があります。進化する攻撃の高度化- モデル反転技術は急速に進化し続けており、新しい攻撃方法と改善された再構築品質が定期的に出現しています。セキュリティチームは、最新の研究に精通し、新たな脅威に対処するために防御戦略を継続的に更新する必要があります。クロスドメイン汎化- モデル反転攻撃は、さまざまなドメイン、データタイプ、モデルアーキテクチャにわたって異なる動作をする可能性があり、普遍的な防御戦略を開発することが困難になります。組織は、特定の使用例と展開コンテキストに合わせてセキュリティアプローチを調整する必要があります。スケーラビリティと自動化- 大規模な機械学習展開のためにモデル反転評価を手動で実施することは非実用的である可能性があり、自動化されたテストフレームワークとスケーラブルな評価方法論の開発が必要です。この自動化は、多様なモデルタイプと構成を処理しながら、評価品質を維持する必要があります。<a data-lb="1" href="/ja/glossary/false-positive/" title="偽陽性とは、AIシステム(チャットボット、検知ツール、プライバシーフィルター)が、状況やコンテンツを誤って基準に一致すると識別し、エラーを引き起こすことです。">偽陽性</a>管理- モデル反転技術を使用したセキュリティ評価は、実際には存在しないプライバシー脆弱性を誤って特定する偽陽性を生成する可能性があります。組織は、真のプライバシーリスクと評価アーティファクトを区別するための堅牢な検証手順を開発する必要があります。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p>包括的な脅威モデリング- 特定の使用例、データタイプ、展開環境に関連するさまざまなモデル反転攻撃シナリオを考慮した詳細な脅威モデルを開発します。潜在的な攻撃者、その能力、最も可能性の高い攻撃ベクトルの分析を含めて、防御戦略を効果的に導きます。多層防御戦略- 単一のプライバシー保護技術に依存するのではなく、複数の補完的な防御メカニズムを実装します。差分プライバシー、敵対的訓練、出力摂動、<a data-lb="1" href="/ja/glossary/access-control/" title="認可システム、アクセス制御モデル、実装戦略、および最新アプリケーションのセキュリティベストプラクティスに関する包括的なガイド。">アクセス制御</a>を組み合わせて、さまざまなモデル反転攻撃タイプに対する堅牢な保護を作成します。定期的なセキュリティ評価- 開発中、展開前、本番運用中など、機械学習ライフサイクル全体を通じて定期的なモデル反転評価を実施します。これらの評価は、さまざまな攻撃シナリオをカバーし、新たな脅威インテリジェンスとともに進化する必要があります。プライバシー保護訓練技術- モデル開発プロセスの最初から、差分プライバシー、連合学習、安全なマルチパーティ計算などのプライバシー保護訓練方法を組み込みます。これらの技術は、アルゴリズムレベルでモデル反転攻撃に対する基本的な保護を提供します。アクセス制御と監視- モデルクエリに対する厳格なアクセス制御と、潜在的なモデル反転攻撃を検出するための推論リクエストの包括的な監視を実装します。レート制限、クエリ分析、異常検出を使用して、再構築の試みを示す可能性のある疑わしいパターンを特定します。データ最小化の原則- 訓練データの収集と前処理中にデータ最小化の原則を適用して、成功したモデル反転攻撃の潜在的な影響を軽減します。不要な機密属性を削除し、可能な場合はデータ集約技術を使用して露出を制限します。安全なモデル展開- 攻撃者が詳細な分析を実行したり、モデルパラメータを抽出したりする能力を制限する安全なインフラストラクチャを使用してモデルを展開します。モデル暗号化、セキュアエンクレーブ、信頼できる実行環境などの技術を使用して、モデルの内部を保護します。<a data-lb="1" href="/ja/glossary/incidents/" title="インシデント の用語集ページ">インシデント</a>対応計画- モデル反転攻撃に特化して対処する包括的なインシデント対応計画を開発します。これには、検出手順、封じ込め戦略、通知要件が含まれます。モデルの悪用によるプライバシー侵害に迅速に対応できるようにチームを準備します。継続的な教育と訓練- 開発チーム、セキュリティ担当者、ステークホルダーに対して、モデル反転リスクと防御技術に関する継続的な教育と訓練を提供します。新たな攻撃方法とプライバシー保護のための進化するベストプラクティスについて、チームを最新の状態に保ちます。検証とテストフレームワーク- さまざまなモデル反転攻撃シナリオに対するプライバシー保護措置の有効性を体系的に評価できる堅牢な検証とテストフレームワークを確立します。自動化されたテストツールと手動評価手順の両方を含めます。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p>差分プライバシーの統合- 高度な実装は、モデル反転テストと差分プライバシーメカニズムを組み合わせて、機械学習モデルのプライバシー漏洩を定量化および制御します。これらの技術は、正式なプライバシー会計方法を使用して、反転攻撃を通じて抽出できる最大情報に関する数学的保証を提供します。敵対的訓練の強化- 高度な敵対的訓練アプローチは、再構築攻撃を訓練プロセスに直接組み込むことで、モデル反転の脆弱性を特にターゲットにします。この技術は、正当なタスクで高い精度を維持しながら、反転の試みに本質的に耐性のあるモデルを訓練します。連合学習セキュリティ- 高度なモデル反転技術は、訓練の分散性が独自のプライバシー課題を生み出す連合学習環境専用に開発されています。これらの方法は、連合設定における勾配ベースの再構築攻撃と安全な集約の脆弱性に対処します。準同型暗号の応用- 最先端の研究は、モデル反転攻撃を防ぎながらモデル推論を可能にするために、準同型暗号の使用を探求しています。これらの技術は、暗号化されたデータに対する計算を可能にし、攻撃者がモデル出力から意味のある情報を再構築することを理論的に不可能にします。安全なマルチパーティ計算- 高度な実装は、安全なマルチパーティ計算プロトコルを使用して、複数の当事者間でモデル推論を分散し、単一のエンティティが成功したモデル反転攻撃を実行するのに十分な情報を持つことを防ぎます。これらの技術は、強力な理論的プライバシー保証を提供します。適応的防御メカニズム- 高度な防御システムは、検出された攻撃パターンに基づいてプライバシー保護戦略を動的に適応させるために、機械学習技術を採用します。これらのシステムは、潜在的な脅威に応じて、プライバシーパラメータを自動的に調整したり、出力摂動を変更したり、追加のセキュリティ対策を実装したりできます。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p>量子耐性プライバシー保護- 研究は、量子コンピューティング機能によって強化されたモデル反転攻撃から防御できる量子耐性プライバシー保護メカニズムを探求しています。これらの技術は、量子アルゴリズムが将来的に再構築攻撃の有効性を劇的に向上させる可能性を予測しています。自動化されたプライバシー評価ツール- 広範な手動分析を必要とせずに、モデル反転の脆弱性について機械学習モデルを体系的に評価できる自動化ツールの開発。これらのツールは、機械学習コミュニティ全体でプライバシー評価実践の広範な採用を可能にします。標準化されたプライバシーメトリクス- モデル反転耐性を測定するための標準化されたメトリクスとベンチマークの確立により、さまざまなプライバシー保護アプローチの一貫した評価と比較が可能になります。これらの標準は、より効果的な防御技術の開発を促進します。リアルタイム防御システム- 将来のシステムは、モデル反転攻撃が発生したときにそれを特定して軽減できるリアルタイム検出および応答機能を組み込みます。これらのシステムは、高度な異常検出と自動応答メカニズムを使用して、即座の保護を提供します。クロスモーダル攻撃防止- 研究は、さまざまなデータモダリティとマルチモーダル機械学習システムにわたるモデル反転攻撃に対処するために拡大しています。これらの技術は、複数のタイプのデータを同時に処理する複雑な<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="人工知能(AI) の用語集ページ">AIシステム</a>に包括的な保護を提供します。規制フレームワークの進化- モデル反転リスクに対処する特定の規制フレームワークとコンプライアンス標準の開発は、業界全体で標準化されたプライバシー保護実践の採用を推進します。これらのフレームワークは、機械学習システムを展開する組織に明確なガイダンスを提供します。</p>
+<h2 id="参考文献">参考文献</h2>
+<p>Fredrikson, M., Jha, S., &amp; Ristenpart, T. (2015). Model Inversion Attacks that Exploit Confidence Information and Basic Countermeasures. Proceedings of the 22nd ACM SIGSAC Conference on Computer and Communications Security.</p>
+<p>Zhang, Y., Jia, R., Pei, H., Wang, W., Li, B., &amp; Song, D. (2020). The Secret Revealer: Generative Model-Inversion Attacks Against Deep Neural Networks. Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition.</p>
+<p>Geiping, J., Bauermeister, H., Dröge, H., &amp; Moeller, M. (2020). Inverting Gradients - How Easy Is It to Break Privacy in Federated Learning? Advances in Neural Information Processing Systems.</p>
+<p>Zhu, L., Liu, Z., &amp; Han, S. (2019). Deep Leakage from Gradients. Advances in Neural Information Processing Systems.</p>
+<p>Shokri, R., Stronati, M., Song, C., &amp; Shmatikov, V. (2017). Membership Inference Attacks Against Machine Learning Models. IEEE Symposium on Security and Privacy.</p>
+<p>Dwork, C., &amp; Roth, A. (2014). The Algorithmic Foundations of Differential Privacy. Foundations and Trends in Theoretical Computer Science.</p>
+<p>TensorFlow Privacy. Privacy-preserving machine learning library. URL: <a href="https://github.com/tensorflow/privacy" rel="nofollow noopener noreferrer" target="_blank">https://github.com/tensorflow/privacy</a></p>
+<p>Opacus. PyTorch library for differential privacy. URL: <a href="https://opacus.ai/" rel="nofollow noopener noreferrer" target="_blank">https://opacus.ai/</a></p>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/model-stealing/">
+                    モデル窃取
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    モデル窃取攻撃は、AIモデルに繰り返しクエリを送信することで、独自のAIモデルを抽出する手法です。攻撃者はこれにより、機能や知的財産を複製することが可能になります。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/model-stealing/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/data-poisoning/">
+                    データポイズニング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    データポイズニングとは、AI/MLの訓練データセットに破損したデータを注入し、モデルの動作を操作したり、パフォーマンスを低下させたり、隠れた脆弱性を埋め込んだりする悪意のある攻撃です。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/data-poisoning/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/model-robustness/">
+                    モデルロバストネス
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    モデルロバストネスとは、ML/AIモデルが予期しない入力、ノイズの多い入力、不完全な入力、または悪意を持って操作された入力に対しても、信頼性の高いパフォーマンスを維持する能力であり、信頼性と安全性を確...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/model-robustness/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/red-teaming/">
+                    レッドチーミング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/red-teaming/" title="レッドチーミング の用語集ページ">レッドチーミング</a>とは、AIシステムに対する現実世界の攻撃をシミュレートし、脆弱性、バイアス、悪用の可能性を発見する敵対的プロセスです。AIのセキュリティ、倫理、コンプライアンスにおいて不可欠な手法です...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/red-teaming/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/adversarial-robustness/">
+                    敵対的ロバストネス
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/adversarial-robustness/" title="敵対的ロバストネスとは、AI/ML モデルが、エラーや誤分類を引き起こすために意図的に作成された敵対的入力に対して、信頼性の高いパフォーマンスを維持する能力のことです。">敵対的ロバストネス</a>とは、AI/ML モデルが、エラーや誤分類を引き起こすために意図的に作成された敵対的入力に対して、信頼性の高いパフォーマンスを維持する能力のことです。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/adversarial-robustness/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/adversarial-attack/">
+                    敵対的攻撃
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    敵対的攻撃は、AI/ML モデルの入力を操作して誤った予測を引き起こし、脆弱性を悪用します。これらの攻撃は AI の信頼性を損ない、サイバーセキュリティ、自動運転車などに影響を及ぼします。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/adversarial-attack/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/model-inversion/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

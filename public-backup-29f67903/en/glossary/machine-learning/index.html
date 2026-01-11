@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Machine Learning | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/machine-learning/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/machine-learning/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/machine-learning/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/machine-learning/" hreflang="x-default" rel="alternate"/>
+<meta content="Machine Learning is technology that enables computers to learn patterns from data and make decisions automatically, improving their performance through experience rather than following pre-programmed instructions." name="description"/>
+<meta content="machine learning, artificial intelligence, deep learning, supervised learning, algorithms" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/machine-learning/" property="og:url"/>
+<meta content="Machine Learning | SmartWeb" property="og:title"/>
+<meta content="Machine Learning is technology that enables computers to learn patterns from data and make decisions automatically, improving their performance through experience rather than following pre-programmed instructions." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/machine-learning/" name="twitter:url"/>
+<meta content="Machine Learning | SmartWeb" name="twitter:title"/>
+<meta content="Machine Learning is technology that enables computers to learn patterns from data and make decisions automatically, improving their performance through experience rather than following pre-programmed instructions." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165525" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165525" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165525"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118125587168000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118125587168000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118125587168000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118125587168000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Machine Learning</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Machine Learning
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          Machine Learning is technology that enables computers to learn patterns from data and make decisions automatically, improving their performance through experience rather than following pre-programmed instructions.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                machine learning
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                artificial intelligence
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                deep learning
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                supervised learning
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                algorithms
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-machine-learning">What Is Machine Learning?</h2>
+<p>Machine learning (ML) is a domain within <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">artificial intelligence (AI)</a> focused on developing algorithms that enable computers to learn from and make predictions or decisions based on data, rather than relying on hard-coded instructions. These models identify complex patterns, classify information, and forecast future outcomes, forming the backbone of applications such as chatbots, recommendation engines, fraud detection, and autonomous vehicles.</p>
+<p>Core Principle:Systems improve performance through experience and data, automatically adapting without explicit programming for every scenario.</p>
+<h2 id="machine-learning-in-the-ai-landscape">Machine Learning in the AI Landscape</h2>
+<h3 id="relationship-to-ai-and-deep-learning">Relationship to AI and Deep Learning</h3>
+<table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Scope</th>
+<th>Focus</th>
+<th>Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artificial Intelligence (AI)</td>
+<td>Broadest</td>
+<td>Simulate human intelligence</td>
+<td>All cognitive tasks</td>
+</tr>
+<tr>
+<td>Machine Learning (ML)</td>
+<td>Subset of AI</td>
+<td>Learn from data</td>
+<td>Pattern recognition</td>
+</tr>
+<tr>
+<td>Deep Learning (DL)</td>
+<td>Subset of ML</td>
+<td>Multi-layer neural networks</td>
+<td>High-dimensional data</td>
+</tr>
+<tr>
+<td>Artificial Intelligence</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>├── Machine Learning</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>│   ├── Traditional ML (Decision Trees, SVM, etc.)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>│   └── Deep Learning</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>│       ├── Convolutional <a data-lb="1" href="/en/glossary/neural-networks/" title="Neural Networks glossary entry">Neural Networks</a> (CNNs)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>│       ├── Recurrent Neural Networks (RNNs)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>│       └── Transformers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>├── Expert Systems</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>├── Robotics</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>└── Computer Vision</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre tabindex="0"><code>
+### Historical Context
+
+| Year | Milestone | Impact |
+|------|-----------|--------|
+| **1959**| Arthur Samuel coins "machine learning" | Field established |
+| **1980s**| Expert systems boom | Rule-based AI |
+| **1997**| Deep Blue defeats chess champion | Game-playing AI |
+| **2012**| AlexNet wins ImageNet | Deep learning breakthrough |
+| **2016**| AlphaGo defeats Go champion | Reinforcement learning milestone |
+| **2020+**| Large language models | Generative AI era |
+
+## Types of Machine Learning
+
+### 1. Supervised Learning
+
+**Definition:**Algorithms learn from labeled training data where inputs are mapped to known outputs.**Key Characteristics:**| Aspect | Description |
+|--------|-------------|
+| **Data Requirement**| Labeled examples (input-output pairs) |
+| **Goal**| Predict outputs for new inputs |
+| **Feedback**| Explicit correction signal |
+| **Common Tasks**| Classification, regression |**Main Tasks:**| Task Type | Description | Output | Examples |
+|-----------|-------------|--------|----------|
+| **Classification**| Assign category labels | Discrete classes | Email spam detection, image recognition |
+| **Regression**| Predict numerical values | Continuous numbers | House price prediction, stock forecasting |**Popular Algorithms:**| Algorithm | Best For | Advantages | Limitations |
+|-----------|----------|------------|-------------|
+| **Linear Regression**| Continuous predictions | Simple, interpretable | Assumes linearity |
+| **Logistic Regression**| Binary classification | Fast, probabilistic | Linear decision boundary |
+| **Decision Trees**| Interpretable rules | Visual, non-linear | Overfitting risk |
+| **Random Forest**| Robust predictions | Accurate, handles non-linearity | Less interpretable |
+| **Support Vector Machines**| High-dimensional data | Effective in complex spaces | Slow on large datasets |
+| **Neural Networks**| Complex patterns | Highly flexible | Requires large data |**Training Process:**```
+Labeled Dataset
+    ↓
+Split: Train (70%) / Validation (15%) / Test (15%)
+    ↓
+Train Model on Training Set
+    ↓
+Tune Hyperparameters on Validation Set
+    ↓
+Evaluate on Test Set
+    ↓
+Deploy Model
+</code></pre><h3 id="2-unsupervised-learning">2. Unsupervised Learning</h3>
+<p>Definition:Algorithms discover patterns in unlabeled data without explicit target outputs.Key Characteristics:| Aspect | Description |
+|——–|————-|
+| Data Requirement| Unlabeled data only |
+| Goal| Find hidden structures |
+| Feedback| No explicit labels |</p>
+<p>| Common Tasks| Clustering, dimensionality reduction |Main Tasks:| Task | Purpose | Output | Applications |
+|——|———|——–|————–|
+| Clustering| Group similar items | Cluster assignments | Customer segmentation, document organization |
+| Dimensionality Reduction| Reduce feature space | Lower-dimensional representation | <a data-lb="1" href="/en/glossary/visualization/" title="Visualization glossary entry">Visualization</a>, noise reduction |</p>
+<p>| Anomaly Detection| Identify outliers | Anomaly scores | Fraud detection, system <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a> |Popular Algorithms:| Algorithm | Task | Use Case | Scalability |
+|———–|——|———-|————-|
+| K-Means| Clustering | Customer segments | High |
+| DBSCAN| Clustering | Spatial data, arbitrary shapes | Medium |
+| Hierarchical Clustering| Clustering | Taxonomy creation | Low |
+| PCA| Dimensionality reduction | Feature extraction | High |
+| t-SNE| Visualization | 2D/3D projection | Medium |
+| Autoencoders| Feature learning | Compression, denoising | High |</p>
+<h3 id="3-semi-supervised-learning">3. Semi-Supervised Learning</h3>
+<p>Definition:Combines small amounts of labeled data with large amounts of unlabeled data.Motivation:| Factor | Benefit |
+|——–|———|
+| Cost| Labeling is expensive and time-consuming |
+| Availability| Unlabeled data is abundant |</p>
+<p>| Performance| Often matches supervised with less labels |Typical Ratio:| Labeled | Unlabeled | Performance vs. Fully Supervised |
+|———|———–|——————————–|
+| 10% | 90% | 80-90% |
+| 20% | 80% | 90-95% |
+| 50% | 50% | 95-98% |</p>
+<p>Applications:| Domain | Use Case | Benefit |
+|——–|———-|———|
+| Computer Vision| Image classification | Millions of images, few labels |
+| NLP| Text classification | Large text corpora |
+| <a data-lb="1" href="/en/glossary/speech-recognition/" title="Speech Recognition glossary entry">Speech Recognition</a>| Transcription | Limited transcribed audio |</p>
+<h3 id="4-reinforcement-learning">4. Reinforcement Learning</h3>
+<p>Definition:Agents learn optimal behavior through trial and error, receiving rewards or penalties.Key Components:| Component | Description | Example |
+|———–|————-|———|
+| Agent| Decision-maker | Robot, game player |
+| Environment| World agent interacts with | Game board, physical space |
+| State| Current situation | Board position, sensor readings |
+| Action| Agent’s choice | Move piece, turn wheel |
+| Reward| Feedback signal | Points, penalties |
+| Policy| Strategy for choosing actions | Neural network, rules |Learning Loop:```
+Agent observes State
+↓
+Agent takes Action based on Policy
+↓
+Environment provides Reward
+↓
+Agent updates Policy to maximize future Rewards
+↓
+Repeat</p>
+<pre tabindex="0"><code class="language-**Popular" data-lang="**Popular">|-----------|------|----------|
+| **Q-Learning**| Value-based | Discrete actions |
+| **Deep Q-Networks (DQN)**| Value-based | Complex environments |
+| **Policy Gradients**| Policy-based | Continuous actions |
+| **Actor-Critic**| Hybrid | General purpose |
+| **PPO, A3C**| Advanced | Parallel training |**Applications:**| Domain | Application | Achievement |
+|--------|-------------|-------------|
+| **Gaming**| Game-playing AI | AlphaGo, Dota 2 |
+| **Robotics**| Task learning | Manipulation, navigation |
+| **Finance**| Trading strategies | Portfolio optimization |
+| **Resource Management**| Optimization | Data center cooling |
+
+### 5. Self-Supervised Learning
+
+**Definition:**Models generate their own supervision signals from unlabeled data.**Approach:**| Technique | Description | Example |
+|-----------|-------------|---------|
+| **Pretext Tasks**| Solve artificial problems | Predict next word, rotate images |
+| **Contrastive Learning**| Learn similar/different patterns | Image augmentation pairs |
+| **Masked Prediction**| Predict hidden portions | BERT masked language modeling |**Advantages:**| Benefit | Impact |
+|---------|--------|
+| **Scalability**| Leverage massive unlabeled datasets |
+| **Transfer Learning**| Pre-trained models adapt to new tasks |
+| **Data Efficiency**| Reduce labeling requirements |
+
+## Machine Learning Workflow
+
+### Complete Pipeline
+
+**Stage 1: Problem Definition**| Activity | Output |
+|----------|--------|
+| Define business objective | Success metrics (accuracy, ROI) |
+| Identify ML task type | Classification, regression, clustering |
+| Assess feasibility | Data availability, resources |
+
+**Stage 2: Data Collection**| Source Type | Examples | Considerations |
+|------------|----------|---------------|
+| **Internal**| Databases, logs, sensors | Privacy, access |
+| **External**| APIs, web scraping, public datasets | Licensing, quality |
+| **Synthetic**| Simulations, augmentation | Realism |**Stage 3: Data Preprocessing**
+
+**Data Cleaning:**| Task | Purpose | Techniques |
+|------|---------|------------|
+| **Handle Missing Values**| Completeness | Imputation, deletion |
+| **Remove Duplicates**| Data quality | Deduplication algorithms |
+| **Fix Errors**| Accuracy | Outlier detection, validation |
+| **Normalize Formats**| Consistency | Standardization |**Feature Engineering:**| Technique | Purpose | Example |
+|-----------|---------|---------|
+| **Scaling**| Normalize ranges | Min-max, standardization |
+| **Encoding**| Convert categories | One-hot, label encoding |
+| **Transformation**| Create new features | Log, polynomial |
+| **Selection**| Reduce dimensions | Filter methods, PCA |**Stage 4: Model Selection**
+
+**Selection Criteria:**| Factor | Considerations |
+|--------|---------------|
+| **Task Type**| Classification, regression, clustering |
+| **Data Size**| Small (&lt; 10K), medium (10K-1M), large (1M+) |
+| **Feature Count**| Low (&lt; 10), medium (10-100), high (100+) |
+| **Interpretability**| Business requirements for explainability |
+| **Performance**| Speed vs. accuracy trade-offs |**Algorithm Selection Matrix:**| Data Size | Task | Recommended Algorithms |
+|-----------|------|----------------------|
+| **Small**| Classification | Logistic regression, SVM, small trees |
+| **Medium**| Classification | Random forest, gradient boosting |
+| **Large**| Classification | Neural networks, deep learning |
+| **Small**| Regression | Linear regression, polynomial regression |
+| **Large**| Regression | Neural networks, gradient boosting |
+| **Any**| Clustering | K-means, DBSCAN, hierarchical |**Stage 5: Training**
+
+**Training Process:**```
+Initialize Model Parameters
+    ↓
+For each epoch:
+    For each batch:
+        1. Forward pass (make predictions)
+        2. Calculate loss (error)
+        3. Backward pass (compute gradients)
+        4. Update parameters
+    ↓
+    Evaluate on validation set
+    ↓
+Check convergence or max epochs
+    ↓
+Trained Model
+```**Hyperparameter Tuning:**| Method | Description | Efficiency |
+|--------|-------------|------------|
+| Grid Search| Try all combinations | Low (thorough) |
+| Random Search| Sample randomly | Medium |
+| Bayesian Optimization| Smart sampling | High |
+| Automated (AutoML)| Algorithm-driven | Very High |Stage 6: Evaluation
+
+Classification Metrics:| Metric | Formula | Use Case |
+|--------|---------|----------|
+| Accuracy| (TP+TN) / Total | Balanced datasets |
+| Precision| TP / (TP+FP) | Minimize false positives |
+| Recall| TP / (TP+FN) | Minimize false negatives |
+| F1 Score| 2 × (Precision × Recall) / (P+R) | Balanced metric |
+
+| AUC-ROC| Area under ROC curve | Overall performance |Regression Metrics:| Metric | Description | Sensitivity |
+|--------|-------------|-------------|
+| MAE| Mean Absolute Error | Linear to errors |
+| MSE| Mean Squared Error | Penalizes large errors |
+| RMSE| Root Mean Squared Error | Same units as target |
+| R²| Coefficient of determination | Proportion of variance explained |Stage 7: Deployment
+
+Deployment Options:| Method | Description | Use Case |
+|--------|-------------|----------|
+| Batch Prediction| Scheduled inference | Daily reports, recommendations |
+| Real-Time API| On-demand predictions | Interactive applications |
+| Edge Deployment| On-device inference | Mobile apps, IoT |
+| Streaming| Continuous processing | Fraud detection, monitoring |Stage 8: Monitoring and Maintenance
+
+Monitoring Metrics:| Metric | Purpose | Alert Threshold |
+|--------|---------|----------------|
+| Prediction Accuracy| Model performance | &lt; 90% of baseline |
+| Data Drift| Input distribution changes | Significant divergence |
+| Concept Drift| Relationship changes | Accuracy drop &gt; 5% |
+| Latency| Response time | &gt; SLA requirements |
+| Resource Usage| Infrastructure costs | Budget exceeded |
+
+## Key Algorithms Deep Dive
+
+### Linear Models
+
+| Algorithm | Type | Equation | Best For |
+|-----------|------|----------|----------|
+| Linear Regression| Regression | y = wx + b | Simple relationships |
+| Logistic Regression| Classification | σ(wx + b) | Binary classification |
+| Lasso/Ridge| Regularized | With L1/L2 penalty | Feature selection |
+
+### Tree-Based Models
+
+| Algorithm | Approach | Advantages | Disadvantages |
+|-----------|----------|------------|---------------|
+| Decision Tree| Single tree | Interpretable, handles non-linearity | Overfitting |
+| Random Forest| Ensemble of trees | Robust, accurate | Less interpretable |
+| Gradient Boosting| Sequential trees | State-of-the-art accuracy | Slow training |
+| XGBoost/LightGBM| Optimized boosting | Fast, scalable | Complexity |
+
+### Neural Networks
+
+| Type | Architecture | Use Case | Depth |
+|------|-------------|----------|-------|
+| Feedforward| Fully connected layers | Tabular data | 2-5 layers |
+| CNN| Convolutional layers | Images | 10-100+ layers |
+| RNN/LSTM| Recurrent connections | Sequences | 2-10 layers |
+| Transformer| Attention mechanisms | Language | 12-100+ layers |
+
+## Benefits and Advantages
+
+### Business Benefits
+
+| Benefit | Description | Measurable Impact |
+|---------|-------------|------------------|
+| Automation| Reduce manual work | 30-70% efficiency gain |
+| Accuracy| Better than human for specific tasks | 10-30% error reduction |
+| Scalability| Handle massive data volumes | Process millions of records |
+| Speed| Real-time decisions | Millisecond predictions |
+| Cost Reduction| Optimize operations | 20-50% cost savings |
+| Personalization| Tailored experiences | 10-30% engagement increase |
+
+### Technical Benefits
+
+| Benefit | Impact |
+|---------|--------|
+| Pattern Discovery| Find non-obvious relationships |
+| Continuous Improvement| Self-optimization over time |
+| Adaptability| Handle new scenarios |
+| Multi-dimensional Analysis| Process complex data |
+
+## Challenges and Limitations
+
+### Technical Challenges
+
+| Challenge | Description | Mitigation |
+|-----------|-------------|------------|
+| Data Quality| Garbage in, garbage out | Rigorous cleaning, validation |
+| Overfitting| Memorizing training data | Regularization, cross-validation |
+| Underfitting| Too simple model | Increase complexity, more features |
+| Bias-Variance Tradeoff| Balance accuracy and generalization | Model selection, ensemble |
+| Computational Cost| Training time and resources | Cloud computing, distributed training |
+
+### Data Challenges
+
+| Challenge | Impact | Solution |
+|-----------|--------|----------|
+| Insufficient Data| Poor performance | Data augmentation, transfer learning |
+| Imbalanced Classes| Bias toward majority | Resampling, weighted loss |
+| High Dimensionality| Curse of dimensionality | Feature selection, dimensionality reduction |
+| Noisy Labels| Incorrect learning | Label cleaning, robust algorithms |
+
+### Ethical and Social Challenges
+
+| Challenge | Risk | Responsibility |
+|-----------|------|----------------|
+| Bias and Fairness| Discriminatory outcomes | Bias audits, diverse training data |
+| Privacy| Data misuse | Differential privacy, federated learning |
+| Explainability| Black box decisions | Interpretable models, SHAP, LIME |
+| Job Displacement| Automation impact | Reskilling programs |
+
+## Industry Applications
+
+### Healthcare
+
+| Application | ML Type | Impact |
+|-------------|---------|--------|
+| Disease Diagnosis| Supervised classification | Early detection, accuracy |
+| Drug Discovery| Reinforcement learning | Accelerated research |
+| Patient Monitoring| Anomaly detection | Proactive intervention |
+| Treatment Personalization| Clustering, regression | Improved outcomes |
+
+### Finance
+
+| Application | ML Type | Benefit |
+|-------------|---------|---------|
+| Fraud Detection| Anomaly detection | 70-90% detection rate |
+| Credit Scoring| Supervised classification | Fair, accurate assessments |
+| Algorithmic Trading| Reinforcement learning | Optimized returns |
+| Risk Management| Regression, simulation | Better predictions |
+
+### Retail and E-commerce
+
+| Application | ML Type | Business Value |
+|-------------|---------|---------------|
+| Recommendation Systems| Collaborative filtering | 20-35% revenue increase |
+| Demand Forecasting| Time series regression | Inventory optimization |
+| Customer Segmentation| Clustering | Targeted marketing |
+| Dynamic Pricing| Reinforcement learning | Margin optimization |
+
+### Manufacturing
+
+| Application | ML Type | Outcome |
+|-------------|---------|---------|
+| Predictive Maintenance| Supervised learning | 30-50% downtime reduction |
+| Quality Control| Computer vision | 99%+ defect detection |
+| Supply Chain Optimization| Regression, optimization | Cost savings |
+| Process Optimization| Reinforcement learning | Efficiency gains |
+
+### Transportation
+
+| Application | ML Type | Progress |
+|-------------|---------|----------|
+| Autonomous Vehicles| Deep RL, computer vision | Level 2-4 autonomy |
+| Route Optimization| Reinforcement learning | Fuel/time savings |
+| Traffic Prediction| Time series forecasting | Congestion management |
+| Demand Prediction| Regression | Resource allocation |
+
+## Best Practices
+
+### Development Best Practices
+
+| Practice | Benefit |
+|----------|---------|
+| Start Simple| Establish baseline, faster iteration |
+| Version Control| Track experiments, reproducibility |
+| Cross-Validation| Robust evaluation |
+| Feature Engineering| Often more impactful than complex models |
+| Ensemble Methods| Combine models for better performance |
+| Regular Monitoring| Detect degradation early |
+
+### Operational Best Practices
+
+| Practice | Purpose |
+|----------|---------|
+| A/B Testing| Validate improvements |
+| Gradual Rollout| Minimize risk |
+| Model Registry| Track versions, reproducibility |
+| Automated Retraining| Keep models current |
+| Explainability Tools| Build trust, debug |
+| Security Audits| Protect against attacks |
+
+## Comparison: ML Types Summary
+
+| Type | Data Requirement | Goal | Use Case | Learning Signal |
+|------|-----------------|------|----------|----------------|
+| Supervised| Labeled | Predict labels | Classification, regression | Explicit labels |
+| Unsupervised| Unlabeled | Find structure | Clustering, dimensionality reduction | Internal patterns |
+| Semi-Supervised| Few labels + unlabeled | Leverage both | Large datasets, limited labels | Partial labels |
+| Reinforcement| Interactions | Maximize reward | Sequential decisions | Rewards/penalties |
+| Self-Supervised| Unlabeled | Learn representations | Transfer learning | Self-generated |
+
+## Frequently Asked Questions
+
+Q: What's the difference between machine learning and traditional programming?A: Traditional programming uses explicit rules ("if-then" logic). Machine learning learns patterns from data and creates its own rules.Q: How much data is needed for machine learning?A: Varies by task: simple tasks (100s of examples), standard supervised learning (1,000-100,000), deep learning (100,000-millions).Q: Can machine learning work with small datasets?A: Yes, using transfer learning, data augmentation, or simpler algorithms (linear models, small trees).Q: What skills are required for machine learning?A: Programming (Python), mathematics (statistics, linear algebra), domain knowledge, data wrangling, and ML theory.Q: Is machine learning always better than rule-based systems?A: No. Simple, well-understood problems often work better with rules. ML excels at complex, data-rich scenarios.Q: How do you prevent overfitting?A: Cross-validation, regularization, more data, simpler models, dropout, early stopping, and ensemble methods.
+
+## References
+
+
+1. IBM. (n.d.). What is Machine Learning?. IBM Topics.
+
+2. Google Developers. (n.d.). Machine Learning Glossary. Google Developers.
+
+3. Deepchecks. (n.d.). Machine Learning Glossary. Deepchecks.
+
+4. Syracuse University. (n.d.). What Is Machine Learning? Key Concepts and Real-World Uses. Syracuse University iSchool.
+
+5. AWS. (n.d.). What is Machine Learning?. Amazon Web Services.
+
+6. Columbia University. (n.d.). Data Science vs. ML. Columbia University.
+
+7. McKinsey. (n.d.). AI and Machine Learning. McKinsey Insights.
+
+8. Stanford University. (n.d.). Machine Learning Course. Coursera.
+
+9. Scikit-learn. Machine Learning Library. URL: https://scikit-learn.org/stable/
+
+10. TensorFlow. Machine Learning Platform. URL: https://www.tensorflow.org/
+</code></pre>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/artificial-intelligence/">
+                    Artificial Intelligence (AI)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Technology that enables computers to learn from experience and make decisions like humans do, rather...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/artificial-intelligence/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/deep-learning/">
+                    Deep Learning
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A machine learning technology that uses multiple layers of artificial networks inspired by the human...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/deep-learning/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/neural-networks/">
+                    Neural Networks
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A computer system inspired by the human brain that learns to recognize patterns in data by processin...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/neural-networks/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/data-augmentation/">
+                    Data Augmentation
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A technique that creates new training examples by modifying existing data, helping AI models learn b...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/data-augmentation/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ai-reporting/">
+                    AI Reporting
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI technology that automatically gathers data from multiple sources, analyzes it, and creates easy-t...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ai-reporting/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/supervised-learning/">
+                    Supervised Learning
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A machine learning approach where algorithms learn from examples labeled with correct answers, enabl...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/supervised-learning/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/machine-learning/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165525"></script>
+</body>
+</html>

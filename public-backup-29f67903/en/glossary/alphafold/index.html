@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>AlphaFold | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/alphafold/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="AlphaFold is DeepMind's AI system that predicts protein structures from amino acid sequences, revolutionizing structural biology and drug discovery." name="description"/>
+<meta content="AlphaFold, protein structure prediction, artificial intelligence, structural biology, drug discovery" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/alphafold/" property="og:url"/>
+<meta content="AlphaFold | SmartWeb" property="og:title"/>
+<meta content="AlphaFold is DeepMind's AI system that predicts protein structures from amino acid sequences, revolutionizing structural biology and drug discovery." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/alphafold/" name="twitter:url"/>
+<meta content="AlphaFold | SmartWeb" name="twitter:title"/>
+<meta content="AlphaFold is DeepMind's AI system that predicts protein structures from amino acid sequences, revolutionizing structural biology and drug discovery." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165525" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165525" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script defer="" src="/js/main.js?v=20260111165525"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118125587168000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118125587168000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118125587168000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118125587168000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">AlphaFold</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        AlphaFold
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          AlphaFold is DeepMind's AI system that predicts protein structures from amino acid sequences, revolutionizing structural biology and drug discovery.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AlphaFold
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                protein structure prediction
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                artificial intelligence
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                structural biology
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                drug discovery
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: January 8, 2026
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-an-alphafold">What is an AlphaFold?</h2>
+<p>AlphaFold is a groundbreaking <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence glossary entry">artificial intelligence</a> system developed by <a data-lb="1" href="/en/glossary/google-deepmind/" title="Google DeepMind is an AI research laboratory under Alphabet, known for breakthroughs like AlphaGo and AlphaFold that advance artificial general intelligence.">DeepMind</a> that predicts the three-dimensional structure of proteins from their amino acid sequences with unprecedented accuracy. This revolutionary deep learning system represents one of the most significant breakthroughs in computational biology, solving a fundamental challenge that has puzzled scientists for over fifty years known as the “protein folding problem.” The system utilizes advanced neural network architectures, particularly attention mechanisms and geometric deep learning, to analyze the complex relationships between amino acid sequences and their corresponding three-dimensional structures. AlphaFold’s predictions achieve atomic-level accuracy comparable to experimental methods, enabling researchers to understand protein function, design new therapeutics, and accelerate biological discoveries across multiple disciplines. The system has been trained on vast datasets of known protein structures and evolutionary information, allowing it to capture the intricate patterns and constraints that govern how proteins fold into their functional conformations.</p>
+<p>Traditional approaches to determining protein structure have relied heavily on experimental techniques such as X-ray crystallography, nuclear magnetic resonance spectroscopy, and cryo-electron microscopy, which are time-consuming, expensive, and technically challenging processes that can take months or years to complete for a single protein. AlphaFold fundamentally transforms this paradigm by providing accurate structural predictions in a matter of hours or days, democratizing access to structural information and enabling researchers worldwide to study proteins that were previously inaccessible through experimental methods. The system’s ability to predict structures for proteins across all domains of life, including those from understudied organisms and challenging membrane proteins, has opened new avenues for research in areas ranging from antibiotic resistance to crop improvement. Unlike traditional computational methods that relied on homology modeling or physics-based simulations with limited accuracy, AlphaFold leverages the power of artificial intelligence to learn directly from evolutionary patterns and structural principles encoded in protein databases, resulting in predictions that often surpass the accuracy of previous computational approaches by orders of magnitude.</p>
+<p>The business and scientific impact of AlphaFold extends far beyond academic research, creating substantial value across pharmaceutical, biotechnology, and agricultural industries while accelerating the pace of scientific discovery in ways that generate measurable economic and societal benefits. Pharmaceutical companies are utilizing AlphaFold predictions to identify new drug targets, optimize lead compounds, and reduce the time and cost associated with drug development pipelines, potentially saving billions of dollars in research and development expenses. The system has enabled the creation of the AlphaFold Protein Structure Database, which provides free access to over 200 million protein structure predictions covering nearly every known protein, representing a public resource valued at billions of dollars if generated through traditional experimental methods. Biotechnology companies are leveraging these predictions to engineer enzymes for industrial applications, develop new biomaterials, and create innovative therapeutic approaches, while agricultural researchers are using the structural insights to develop crops with improved nutritional content and resistance to environmental stresses. The democratization of protein structural information has accelerated research timelines, enabled smaller research groups to compete with well-funded laboratories, and fostered international collaboration on global health challenges, demonstrating how artificial intelligence can serve as a powerful tool for advancing human knowledge and addressing societal needs.</p>
+<h2 id="core-deep-learning-technologies">Core Deep Learning Technologies</h2>
+<p>Attention Mechanisms- AlphaFold employs sophisticated attention mechanisms that allow the neural network to focus on relevant parts of the protein sequence and identify long-range interactions between amino acids that are crucial for proper folding. These mechanisms enable the system to capture dependencies across the entire protein sequence, regardless of distance, which is essential for understanding how distant parts of a protein can influence each other’s structural arrangement.Evolutionary Multiple Sequence Alignments- The system leverages evolutionary information by analyzing multiple sequence alignments of related proteins across different species, extracting patterns that reveal which amino acid positions are conserved and which can vary while maintaining structural integrity. This evolutionary context provides crucial constraints that guide the folding prediction process and help distinguish between plausible and implausible structural configurations.Geometric Deep Learning- AlphaFold incorporates geometric deep learning principles that explicitly model the three-dimensional nature of protein structures, using specialized neural network architectures that can reason about spatial relationships, angles, and distances between atoms. This approach allows the system to maintain geometric consistency throughout the prediction process and generate physically realistic protein conformations.Transformer Architecture- The system builds upon transformer neural network architectures, originally developed for natural language processing, adapting them to understand the “language” of protein sequences and their structural relationships. These architectures excel at capturing complex patterns and dependencies in sequential data, making them particularly well-suited for analyzing protein sequences and predicting their folding patterns.End-to-End Differentiable Structure Module- AlphaFold features a sophisticated structure module that directly predicts atomic coordinates while maintaining differentiability throughout the entire pipeline, allowing for efficient training and optimization. This module incorporates physical constraints and geometric principles to ensure that predicted structures are chemically and physically plausible.Iterative Refinement Process- The system employs an iterative refinement approach that progressively improves structural predictions through multiple rounds of processing, similar to how proteins fold in nature through a series of intermediate states. This iterative process allows the system to correct initial errors and converge on increasingly accurate structural predictions.Multi-Scale Feature Integration- AlphaFold integrates features at multiple scales, from individual amino acid properties to secondary structure elements to global fold topology, creating a comprehensive representation that captures the hierarchical nature of protein structure. This multi-scale approach enables the system to make accurate predictions across different levels of structural organization.</p>
+<h2 id="how-alphafold-works">How AlphaFold Works</h2>
+<ol>
+<li>
+<p>Sequence Input and Preprocessing- The process begins with inputting the target protein’s amino acid sequence, which is then preprocessed to extract relevant features such as amino acid properties, sequence length, and compositional characteristics. The system also performs quality checks to ensure the sequence is valid and suitable for structural prediction.</p>
+</li>
+<li>
+<p>Multiple Sequence Alignment Generation- AlphaFold searches large protein databases to identify homologous sequences and generates multiple sequence alignments that reveal evolutionary relationships and conservation patterns. This step is crucial for understanding which parts of the protein are structurally important and which regions may be more flexible or variable.</p>
+</li>
+<li>
+<p>Evolutionary Feature Extraction- The system analyzes the multiple sequence alignments to extract evolutionary features, including co-evolution signals that indicate which amino acid positions tend to change together, suggesting potential structural contacts. These features provide valuable constraints that guide the folding prediction process.</p>
+</li>
+<li>
+<p>Neural Network Processing- The extracted features are fed into AlphaFold’s deep neural network, which processes the information through multiple layers of attention mechanisms and geometric reasoning modules. The network learns to identify patterns and relationships that are indicative of specific structural arrangements and folding motifs.</p>
+</li>
+<li>
+<p>Distance and Angle Prediction- The neural network generates predictions for inter-residue distances and backbone angles, creating a detailed map of spatial relationships between different parts of the protein. These predictions serve as constraints that define the overall shape and organization of the protein structure.</p>
+</li>
+<li>
+<p>Structure Assembly- Using the predicted distances and angles as constraints, AlphaFold assembles a three-dimensional protein structure through a differentiable structure module that optimizes atomic coordinates. This process ensures that the final structure satisfies both the predicted constraints and fundamental physical principles.</p>
+</li>
+<li>
+<p>Iterative Refinement- The system performs multiple rounds of refinement, progressively improving the structural prediction by identifying and correcting inconsistencies or errors. Each iteration allows the network to reconsider its predictions in light of the emerging overall structure.</p>
+</li>
+<li>
+<p>Confidence Assessment- AlphaFold generates confidence scores for different regions of the predicted structure, indicating which parts are likely to be accurate and which may be less reliable. This confidence assessment helps researchers understand the limitations and reliability of specific structural predictions.</p>
+</li>
+<li>
+<p>Final Structure Optimization- The system performs final optimization steps to ensure the predicted structure is physically realistic and chemically plausible, adjusting bond lengths, angles, and other geometric parameters as needed.</p>
+</li>
+<li>
+<p>Output Generation- AlphaFold produces the final protein structure in standard formats along with confidence scores and additional metadata, making the results accessible for further analysis and research applications.Example Workflow:A researcher studying a newly discovered enzyme from an extremophile organism inputs the 300-amino acid sequence into AlphaFold. The system searches protein databases and identifies 1,000 related sequences from various organisms, generating a multiple sequence alignment that reveals highly conserved active site residues and variable surface loops. The neural network processes this evolutionary information along with the target sequence, predicting that residues 45 and 156 are likely to be in close contact despite being distant in the sequence. The structure assembly module uses these distance predictions along with thousands of other constraints to build a three-dimensional model showing a classic enzyme fold with a deep active site pocket. The confidence assessment indicates high reliability for the core structure but lower confidence for several surface loops, guiding the researcher to focus experimental validation efforts on the most uncertain regions while using the high-confidence core structure for drug design efforts.</p>
+</li>
+</ol>
+<h2 id="key-benefits">Key Benefits</h2>
+<p>Unprecedented Speed- AlphaFold can predict protein structures in hours or days compared to months or years required for experimental determination, accelerating research timelines and enabling rapid hypothesis testing. This dramatic speed improvement allows researchers to study multiple protein variants or conduct large-scale structural surveys that would be impractical using traditional experimental approaches.Cost-Effective Structure Determination- The system eliminates the need for expensive experimental equipment and specialized facilities, reducing the cost of obtaining structural information from hundreds of thousands of dollars per protein to essentially free. This cost reduction democratizes access to structural biology and enables resource-constrained research groups to pursue ambitious structural studies.Global Accessibility- AlphaFold predictions are freely available through online databases, providing researchers worldwide with immediate access to structural information regardless of their institutional resources or geographic location. This global accessibility has particularly benefited researchers in developing countries and smaller institutions who previously lacked access to structural biology facilities.Coverage of Difficult Targets- The system can predict structures for proteins that are challenging or impossible to study experimentally, including membrane proteins, intrinsically disordered regions, and proteins from extremophile organisms. This expanded coverage opens new research opportunities and enables the study of previously inaccessible biological systems.Consistency and Reproducibility- Unlike experimental methods that can be affected by crystallization conditions or sample preparation artifacts, AlphaFold provides consistent and reproducible predictions that can be easily shared and validated across different research groups. This consistency facilitates collaborative research and enables more reliable comparative studies.Integration with Computational Workflows- AlphaFold predictions can be seamlessly integrated into computational drug discovery pipelines, molecular dynamics simulations, and other computational biology workflows, enhancing the efficiency and accuracy of these approaches. This integration capability makes structural information more actionable for downstream applications.Evolutionary Insights- The system’s reliance on evolutionary information provides insights into protein evolution and conservation patterns, helping researchers understand which structural features are essential for function and which can be modified. These evolutionary insights inform protein engineering efforts and help predict the effects of mutations.Scalability- AlphaFold can process large numbers of proteins simultaneously, enabling genome-wide structural studies and comparative analyses across entire proteomes. This scalability has enabled the creation of comprehensive structural databases covering millions of proteins from thousands of organisms.Quality Assessment- The system provides confidence scores that help researchers assess the reliability of different structural regions, enabling informed decision-making about which parts of a prediction are suitable for specific applications. This quality assessment feature helps prevent misinterpretation of uncertain structural predictions.Complementarity with Experiments- AlphaFold predictions serve as excellent starting points for experimental structure determination, providing initial models that can guide crystallization efforts and help interpret experimental data. This complementarity enhances rather than replaces experimental approaches, leading to more efficient and successful structural studies.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p>Drug Target Identification- Pharmaceutical companies use AlphaFold predictions to identify and characterize potential drug targets, particularly for diseases where traditional experimental approaches have been unsuccessful. The structural insights help researchers understand binding sites, allosteric mechanisms, and druggability assessments for novel therapeutic targets.Structure-Based Drug Design- Medicinal chemists leverage AlphaFold structures to design small molecule inhibitors and other therapeutic compounds, using the predicted binding sites to guide molecular docking and lead optimization efforts. This application has accelerated drug discovery timelines and improved the success rates of early-stage drug development programs.Protein Engineering and Design- Biotechnology companies utilize structural predictions to engineer enzymes with improved properties, design new protein functions, and optimize existing proteins for industrial applications. The structural insights guide rational design strategies and help predict the effects of specific mutations on protein stability and function.Understanding Disease Mechanisms- Researchers studying genetic diseases use AlphaFold predictions to understand how disease-causing mutations affect protein structure and function, providing insights into pathogenic mechanisms. This understanding helps develop targeted therapeutic strategies and improve genetic counseling for patients with inherited disorders.Agricultural Biotechnology- Agricultural researchers apply AlphaFold predictions to study plant proteins involved in stress resistance, nutritional content, and crop yield, enabling the development of improved crop varieties. These applications contribute to food security efforts and sustainable agriculture practices.Antibiotic Resistance Research- Microbiologists use structural predictions to understand resistance mechanisms in pathogenic bacteria and identify new targets for antimicrobial development. This research is crucial for addressing the growing global threat of antibiotic-resistant infections.Vaccine Development- Immunologists leverage AlphaFold structures to design more effective vaccines by understanding the three-dimensional organization of viral proteins and identifying optimal epitopes for immune recognition. This application has proven particularly valuable for emerging infectious diseases and pandemic preparedness.Evolutionary Biology Studies- Evolutionary biologists use structural predictions to study protein evolution, understand functional constraints, and trace the evolutionary history of protein families across different species. These studies provide insights into the fundamental principles governing protein evolution and adaptation.Membrane Protein Research- Researchers studying membrane proteins, which are notoriously difficult to crystallize, rely on AlphaFold predictions to understand their structure and function in cellular membranes. This research is essential for understanding cellular transport, signaling, and energy conversion processes.Structural Genomics Initiatives- Large-scale genomics projects incorporate AlphaFold predictions to provide structural annotations for newly sequenced genomes, enhancing the functional understanding of genetic information. These initiatives contribute to comprehensive biological databases and support comparative genomics research.</p>
+<h2 id="protein-structure-prediction-methods-comparison">Protein Structure Prediction Methods Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Accuracy</th>
+<th>Speed</th>
+<th>Cost</th>
+<th>Coverage</th>
+<th>Experimental Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X-ray Crystallography</td>
+<td>Very High</td>
+<td>Months-Years</td>
+<td>$100K-500K</td>
+<td>Limited</td>
+<td>Protein crystallization, synchrotron access</td>
+</tr>
+<tr>
+<td>NMR Spectroscopy</td>
+<td>High</td>
+<td>Months</td>
+<td>$50K-200K</td>
+<td>Small proteins</td>
+<td>Isotope labeling, specialized equipment</td>
+</tr>
+<tr>
+<td>Cryo-EM</td>
+<td>High</td>
+<td>Weeks-Months</td>
+<td>$20K-100K</td>
+<td>Large complexes</td>
+<td>Sample preparation, electron microscope</td>
+</tr>
+<tr>
+<td>AlphaFold</td>
+<td>High</td>
+<td>Hours-Days</td>
+<td>Free</td>
+<td>Universal</td>
+<td>Sequence only</td>
+</tr>
+<tr>
+<td>Homology Modeling</td>
+<td>Moderate</td>
+<td>Hours</td>
+<td>Low</td>
+<td>Template-dependent</td>
+<td>Known homolog structure</td>
+</tr>
+<tr>
+<td>Ab Initio Methods</td>
+<td>Low-Moderate</td>
+<td>Days-Weeks</td>
+<td>Moderate</td>
+<td>Universal</td>
+<td>Computational resources</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p>Confidence Assessment Interpretation- Users must carefully interpret AlphaFold’s confidence scores and understand that low-confidence regions may still contain valuable structural information, while high-confidence predictions are not guaranteed to be perfect. Proper interpretation requires understanding the relationship between confidence scores and actual structural accuracy for different types of protein regions.Dynamic and Flexible Regions- AlphaFold predictions represent static structures and may not accurately capture highly dynamic or intrinsically disordered regions that adopt multiple conformations in solution. Researchers must consider protein flexibility and dynamics when interpreting predictions and designing experiments based on structural models.Ligand Binding and Conformational Changes- The system predicts apo structures without bound ligands or cofactors, which may differ significantly from biologically relevant holo structures that undergo conformational changes upon binding. This limitation requires careful consideration when using predictions for drug design or understanding protein-ligand interactions.Membrane Protein Environment- While AlphaFold can predict membrane protein structures, these predictions do not account for the specific lipid environment or membrane composition that can significantly influence protein conformation and function. Researchers must consider the native membrane environment when interpreting predictions for membrane proteins.Protein-Protein Interactions- The system primarily predicts individual protein structures and has limited capability for modeling protein complexes or protein-protein interactions accurately. Understanding biological function often requires knowledge of how proteins interact with their partners, which may not be captured in individual structure predictions.Evolutionary <a data-lb="1" href="/en/glossary/bias/" title="Bias glossary entry">Bias</a>- AlphaFold’s reliance on evolutionary information means that predictions may be less accurate for proteins with few homologs or those from poorly studied organisms. This bias can limit the system’s effectiveness for studying novel protein families or proteins from understudied species.Validation and Experimental Confirmation- Despite high accuracy, AlphaFold predictions should be validated through experimental approaches when possible, particularly for critical applications such as drug design or understanding disease mechanisms. The predictions serve as hypotheses that require experimental testing rather than definitive structural determinations.Computational Resource Requirements- While using pre-computed predictions is free, running AlphaFold independently requires significant <a data-lb="1" href="/en/glossary/computational-resources/" title="Computational Resources glossary entry">computational resources</a> and technical expertise, potentially limiting access for some research groups. The computational demands may also limit the ability to predict structures for very large proteins or protein complexes.Version Control and Updates- As AlphaFold continues to improve, researchers must track which version of predictions they are using and understand how updates might affect their results. Version control becomes particularly important for reproducibility and when comparing results across different studies.Integration with Experimental Data- Effectively combining AlphaFold predictions with experimental data requires sophisticated approaches and careful consideration of the strengths and limitations of both computational and experimental methods. This integration challenge requires interdisciplinary expertise and collaborative approaches between computational and experimental researchers.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p>Confidence Score Analysis- Always examine confidence scores carefully and focus experimental validation efforts on regions with lower confidence while using high-confidence regions for computational analyses. Understand that confidence scores are region-specific and that different applications may require different confidence thresholds for reliable use.Comparative Structure Analysis- Compare AlphaFold predictions with available experimental structures of homologous proteins to assess local accuracy and identify potential discrepancies. This comparative approach helps calibrate expectations and identify regions where the prediction may be less reliable.Functional Annotation Integration- Combine structural predictions with functional annotations, sequence conservation data, and experimental evidence to develop comprehensive understanding of protein function. This integrated approach provides more robust insights than relying solely on structural information.Experimental Validation Planning- Design targeted experiments to validate critical aspects of AlphaFold predictions, particularly for regions that are functionally important or have lower confidence scores. Focus validation efforts on features that are most relevant to your specific research questions or applications.Multi-Template Modeling- When available, compare AlphaFold predictions with structures generated using other computational methods or experimental templates to identify consistent features and potential discrepancies. This multi-method approach increases confidence in reliable structural features.Dynamic Considerations- Supplement static AlphaFold predictions with molecular dynamics simulations or other methods to understand protein flexibility and dynamics. Consider how conformational changes might affect the biological relevance of the predicted structure.Literature Integration- Thoroughly review existing literature on the protein of interest and related family members to contextualize AlphaFold predictions within known functional and structural information. This integration helps identify potential inconsistencies and guides interpretation of predictions.Collaborative Validation- Engage with experimental collaborators early in the research process to design validation experiments and ensure that computational predictions address experimentally testable hypotheses. This collaborative approach maximizes the value of both computational and experimental efforts.Database Version Tracking- Maintain careful records of which version of AlphaFold predictions you are using and monitor for updates that might affect your results. Establish protocols for incorporating updated predictions into ongoing research projects.Quality Control Workflows- Develop standardized workflows for assessing prediction quality, including automated checks for geometric plausibility, comparison with known structures, and integration with experimental constraints. These workflows help ensure consistent and reliable use of structural predictions across different projects.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p>AlphaFold-Multimer Applications- Advanced users leverage AlphaFold’s multimer capabilities to predict protein complex structures and protein-protein interactions, though these predictions require careful validation and interpretation. The multimer version enables modeling of homo- and hetero-oligomeric complexes, providing insights into quaternary structure organization and interface regions.Confidence-Guided Molecular Dynamics- Researchers combine AlphaFold predictions with molecular dynamics simulations, using confidence scores to apply appropriate restraints and validate structural stability. This approach allows exploration of protein dynamics while maintaining structural integrity in high-confidence regions and permitting flexibility in uncertain areas.Hybrid Experimental-Computational Approaches- Advanced practitioners integrate AlphaFold predictions with experimental data from techniques like cross-linking mass spectrometry, small-angle X-ray scattering, or hydrogen-deuterium exchange to refine structural models. These hybrid approaches leverage the strengths of both computational predictions and experimental constraints to achieve higher accuracy.Structure-Based Virtual Screening- Computational biologists use AlphaFold structures as starting points for large-scale virtual screening campaigns, employing sophisticated docking algorithms and machine learning approaches to identify potential drug candidates. These applications require careful consideration of binding site accuracy and conformational flexibility.Evolutionary Coupling Analysis- Researchers combine AlphaFold predictions with evolutionary coupling analysis to identify functionally important residue networks and allosteric pathways within proteins. This approach provides insights into protein evolution and functional mechanisms that extend beyond static structural information.Machine Learning Feature Engineering- Advanced users extract structural features from AlphaFold predictions to train machine learning models for predicting protein function, stability, or other properties. These applications leverage the rich structural information encoded in AlphaFold predictions as input features for downstream predictive models.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p>Real-Time Conformational Sampling- Future developments aim to predict multiple protein conformations and dynamic states rather than single static structures, providing more complete pictures of protein behavior in biological systems. This advancement would enable better understanding of protein flexibility and conformational changes associated with function.Improved Complex Prediction- Ongoing research focuses on enhancing the accuracy of protein complex predictions and modeling larger multi-protein assemblies with greater reliability. These improvements will enable better understanding of cellular machinery and protein interaction networks.Integration with Cellular Context- Future versions may incorporate cellular environment factors such as pH, ionic strength, and crowding effects to provide more biologically relevant structural predictions. This contextual modeling would improve the accuracy of predictions for proteins in their native cellular environments.Enhanced Ligand Binding Prediction- Development efforts are directed toward predicting protein structures in complex with ligands, cofactors, and other binding partners to better support drug discovery applications. This capability would provide more relevant structural models for understanding protein function and designing therapeutic interventions.Temporal Structure Prediction- Research is progressing toward predicting how protein structures change over time, including folding pathways and conformational transitions associated with function. This temporal dimension would provide unprecedented insights into protein mechanisms and dynamics.Personalized Structure Prediction- Future applications may enable prediction of how genetic variants affect individual protein structures, supporting personalized medicine approaches and <a data-lb="1" href="/en/glossary/precision/" title="Precision glossary entry">precision</a> therapeutics. This capability would help predict the structural consequences of patient-specific mutations and guide treatment decisions.</p>
+<h2 id="references">References</h2>
+<p>Jumper, J., Evans, R., Pritzel, A., Green, T., Figurnov, M., Ronneberger, O., Tunyasuvunakool, K., Bates, R., Žídek, A., Potapenko, A., Bridgland, A., Meyer, C., Kohl, S. A. A., Ballard, A. J., Cowie, A., Romera-Paredes, B., Nikolov, S., Jain, R., Adler, J., Back, T., Petersen, S., Reiman, D., Clancy, E., Zielinski, M., Steinegger, M., Pacholska, M., Berghammer, T., Bodenstein, S., Silver, D., Vinyals, O., Senior, A. W., Kavukcuoglu, K., Kohli, P., &amp; Hassabis, D. (2021). Highly accurate protein structure prediction with AlphaFold. Nature, 596(7873), 583-589.</p>
+<p>Varadi, M., Anyango, S., Deshpande, M., Nair, S., Natassia, C., Yordanova, G., Yuan, D., Stroe, O., Wood, G., Laydon, A., Žídek, A., Green, T., Tunyasuvunakool, K., Petersen, S., Jumper, J., Clancy, E., Green, R., Vora, A., Lutfi, M., Figurnov, M., Cowie, A., Hobbs, N., Kohli, P., Kleywegt, G., Birney, E., Hassabis, D., &amp; Velankar, S. (2022). AlphaFold Protein Structure Database: massively expanding the structural coverage of protein-sequence space with high-accuracy models. Nucleic Acids Research, 50(D1), D439-D444.</p>
+<p>Senior, A. W., Evans, R., Jumper, J., Kirkpatrick, J., Sifre, L., Green, T., Qin, C., Žídek, A., Nelson, A. W. R., Bridgland, A., Penedones, H., Petersen, S., Simonyan, K., Crossan, S., Kohli, P., Jones, D. T., Silver, D., Kavukcuoglu, K., &amp; Hassabis, D. (2020). Improved protein structure prediction using potentials from deep learning. Nature, 577(7792), 706-710.</p>
+<p>Tunyasuvunakool, K., Adler, J., Wu, Z., Green, T., Zielinski, M., Žídek, A., Bridgland, A., Cowie, A., Meyer, C., Laydon, A., Velankar, S., Kleywegt, G. J., Bateman, A., Evans, R., Pritzel, A., Figurnov, M., Ronneberger, O., Bates, R., Kohl, S. A. A., Potapenko, A., Ballard, A. J., Romera-Paredes, B., Nikolov, S., Jain, R., Clancy, E., Reiman, D., Petersen, S., Senior, A. W., Kavukcuoglu, K., Birney, E., Kohli, P., Jumper, J., &amp; Hassabis, D. (2021). Highly accurate protein structure prediction for the human proteome. Nature, 596(7873), 590-596.</p>
+<p>Mirdita, M., Schütze, K., Moriwaki, Y., Heo, L., Ovchinnikov, S., &amp; Steinegger, M. (2022). ColabFold: making protein folding accessible to all. Nature Methods, 19(6), 679-682.</p>
+<p>Evans, R., O’Neill, M., Pritzel, A., Antropova, N., Senior, A., Green, T., Žídek, A., Bates, R., Blackwell, S., Yim, J., Ronneberger, O., Bodenstein, S., Zielinski, M., Bridgland, A., Potapenko, A., Cowie, A., Tunyasuvunakool, K., Jain, R., Clancy, E., Kohli, P., Jumper, J., &amp; Hassabis, D. (2022). Protein complex prediction with AlphaFold-Multimer. bioRxiv preprint.</p>
+<p>AlphaFold Protein Structure Database. Freely available database of protein structure predictions. URL: <a href="https://alphafold.ebi.ac.uk/" rel="nofollow noopener noreferrer" target="_blank">https://alphafold.ebi.ac.uk/</a></p>
+<p>ColabFold Server. Accessible interface for protein structure prediction using AlphaFold and related methods. URL: <a href="https://colab.research.google.com/github/deepmind/alphafold/" rel="nofollow noopener noreferrer" target="_blank">https://colab.research.google.com/github/deepmind/alphafold/</a></p>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/alphago/">
+                    AlphaGo
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/en/glossary/alphago/" title="AlphaGo is DeepMind's AI program that defeated the world Go champion in 2016, using deep reinforcement learning and Monte Carlo tree search.">AlphaGo</a> is DeepMind's AI program that defeated the world Go champion in 2016, using deep reinforceme...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/alphago/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/google-deepmind/">
+                    Google DeepMind
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/en/glossary/google-deepmind/" title="Google DeepMind is an AI research laboratory under Alphabet, known for breakthroughs like AlphaGo and AlphaFold that advance artificial general intelligence.">Google DeepMind</a> is an AI research laboratory under Alphabet, known for breakthroughs like AlphaGo an...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/google-deepmind/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/autonomous-systems/">
+                    Autonomous Systems
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Machines and devices that can think and act on their own by sensing their surroundings, making decis...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/autonomous-systems/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/dall-e/">
+                    DALL-E
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    An AI tool that creates original images from text descriptions, letting anyone generate artwork by s...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/dall-e/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/data-augmentation/">
+                    Data Augmentation
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A technique that creates new training examples by modifying existing data, helping AI models learn b...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/data-augmentation/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/few-shot-learning/">
+                    Few-Shot Learning
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    An AI learning method that allows models to quickly master new tasks using just a few examples, simi...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/few-shot-learning/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/alphafold/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165525"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+  });
+</script>
+</body>
+</html>

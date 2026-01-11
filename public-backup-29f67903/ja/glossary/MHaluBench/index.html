@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>MHaluBench | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/mhalubench/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/MHaluBench/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/MHaluBench/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/MHaluBench/" hreflang="x-default" rel="alternate"/>
+<meta content="MHaluBenchは、マルチモーダル大規模言語モデル(MLLM)におけるI2TおよびT2Iタスク全体での、きめ細かいクレームレベルのハルシネーション検出のためのメタ評価および注釈ベンチマークです。" name="description"/>
+<meta content="MHaluBench, ハルシネーション検出, マルチモーダルLLM, AIベンチマーク, I2T T2I" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/mhalubench/" property="og:url"/>
+<meta content="MHaluBench | SmartWeb" property="og:title"/>
+<meta content="MHaluBenchは、マルチモーダル大規模言語モデル(MLLM)におけるI2TおよびT2Iタスク全体での、きめ細かいクレームレベルのハルシネーション検出のためのメタ評価および注釈ベンチマークです。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/mhalubench/" name="twitter:url"/>
+<meta content="MHaluBench | SmartWeb" name="twitter:title"/>
+<meta content="MHaluBenchは、マルチモーダル大規模言語モデル(MLLM)におけるI2TおよびT2Iタスク全体での、きめ細かいクレームレベルのハルシネーション検出のためのメタ評価および注釈ベンチマークです。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">MHaluBench</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Multimodal AI
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        MHaluBench
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          MHaluBench
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          MHaluBenchは、マルチモーダル大規模言語モデル(MLLM)におけるI2TおよびT2Iタスク全体での、きめ細かいクレームレベルのハルシネーション検出のためのメタ評価および注釈ベンチマークです。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                MHaluBench
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ハルシネーション検出
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                マルチモーダルLLM
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AIベンチマーク
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                I2T T2I
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="mhalubenchとは">MHaluBenchとは?</h2>
+<p>MHaluBenchは、マルチモーダル<a data-lb="1" href="/ja/glossary/large-language-models/" title="大規模言語モデル(LLM) の用語集ページ">大規模言語モデル</a>(MLLM)における幻覚(<a data-lb="1" href="/ja/glossary/hallucination/" title="ハルシネーション の用語集ページ">ハルシネーション</a>)を、細粒度のクレームレベルで評価・検出するための包括的なベンチマークです。画像からテキスト(I2T)とテキストから画像(T2I)の両タスクにわたる標準化された評価を提供し、マルチモーダルコンテキストにおけるモデルの信頼性と精度を正確に評価できます。</p>
+<p>従来のベンチマークが応答文や文レベルで動作するのに対し、MHaluBenchはモデル出力を原子的な事実クレームに分解し、各クレームに幻覚タイプとカテゴリーを注釈付けし、検出システムのメタ評価のためのグラウンドトゥルースを提供します。この粒度の高いアプローチにより、<a data-lb="1" href="/ja/glossary/multimodal/" title="マルチモーダルAIは、テキスト、画像、音声などの多様なデータタイプを処理・統合し、より豊かな理解を実現します。そのアーキテクチャ、メリット、課題、応用例について解説します。">マルチモーダルAI</a>システムにおける特定の障害モードを的確に診断できます。</p>
+<p>このベンチマークは、医療画像診断、自律システム、<a data-lb="1" href="/ja/glossary/content-moderation/" title="コンテンツモデレーションについて解説します。ユーザー生成コンテンツの監視、評価、管理を通じて、プラットフォームのガイドライン、コミュニティ基準、法的コンプライアンスを確保する仕組みです。">コンテンツモデレーション</a>、支援技術など、精度と真実性が最重要となる本番環境でのMLLM展開における重要な課題に対処します。標準化された評価手法と高品質な注釈を提供することで、MHaluBenchはより信頼性の高いマルチモーダル<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="人工知能(AI) の用語集ページ">AIシステム</a>の研究開発を加速します。</p>
+<h2 id="マルチモーダルaiにおける幻覚の理解">マルチモーダルAIにおける幻覚の理解</h2>
+<p>MLLMにおける幻覚は、生成された出力コンテンツが構文的にはもっともらしいものの、提供された入力に対して意味的に不誠実であったり、確立された世界知識と矛盾したりする場合に発生します。この現象は視覚、テキスト、クロスモーダル出力全体に現れ、テキストのみの言語モデルと比較して独特の課題を提示します。</p>
+<h3 id="幻覚の分類体系">幻覚の分類体系</h3>
+<p>忠実性幻覚:出力が直接的な入力コンテキストと矛盾する。例:入力画像に存在しないオブジェクトや属性を記述すること。例えば、画像に猫しか写っていないのに「犬が走っている」と主張する場合。事実性幻覚:出力がもっともらしい外観にもかかわらず、確立された外部知識と矛盾する。例:キャプション生成や視覚的質問応答時に「エッフェル塔はロンドンにある」と主張する場合。モダリティ矛盾幻覚:入力または出力のモダリティ間の直接的な矛盾。例:テキスト記述が「赤い車」と述べているのに関連画像が青い車を示している場合、またはT2Iモデルが入力テキストプロンプトと矛盾する画像を生成する場合。事実矛盾幻覚:出力が合理的に見えるが、世界知識や常識に違反する。例:歴史的写真の人物がスマートフォンを使用していると主張したり、建物の建設年代を不可能な時期に設定したりする場合。</p>
+<h3 id="粒度レベル">粒度レベル</h3>
+<p>オブジェクトレベル:エンティティの誤認識、省略、または捏造。例:存在しない人物を検出する、主要な被写体を見逃す、またはオブジェクトカテゴリーを誤認識する場合。属性レベル:正しく識別されたオブジェクトに誤ったプロパティが割り当てられる。例:誤った色、不正確なサイズ、誤った材質、または不正確な空間関係。シーンレベル:全体的なコンテキスト、関係、またはイベントの誤表現。例:屋内シーンを屋外として記述する、活動やイベントを誤認識する、設定の特徴付けが不正確な場合。シーンテキスト:画像内のテキストの認識または生成におけるエラー。例:標識の誤読、テキストコンテンツの捏造、またはT2I出力における誤った書記言語の生成。</p>
+<h2 id="ベンチマーク構造">ベンチマーク構造</h2>
+<h3 id="データセット構成">データセット構成</h3>
+<p>MHaluBenchは、3つのタスクカテゴリーにわたる620の慎重に厳選されたインスタンスで構成され、各インスタンスは包括的な評価のためにセグメントレベルとクレームレベルの両方で注釈付けされています。</p>
+<p>画像キャプショニング(IC) - 200サンプル:- ソース: MS-COCO 2014 Validationデータセット</p>
+<ul>
+<li>出力生成元: mPLUG、LLaVA、MiniGPT-4</li>
+<li>注釈の焦点: 視覚コンテンツへの忠実性、オブジェクト/属性の精度</li>
+</ul>
+<p>視覚的質問応答(VQA) - 200サンプル:- ソース: TextVQAテストセット</p>
+<ul>
+<li>タスク: シーンテキスト認識、視覚的推論、属性識別</li>
+<li>注釈の焦点: 回答の精度、シーンテキスト幻覚、推論の正確性</li>
+</ul>
+<p>テキストから画像生成(T2I) - 220サンプル:- ソースプロンプト: DrawBench、T2I-CompBench</p>
+<ul>
+<li>評価モデル: DALL-E 2、DALL-E 3、Stable Diffusionバリアント</li>
+<li>注釈の焦点: プロンプトへの準拠、属性の忠実性、構成の精度</li>
+</ul>
+<p>総カバレッジ: 620インスタンスで二重レベル注釈(セグメントとクレーム)、全カテゴリーにわたり2,847の注釈付きクレームを提供。</p>
+<h3 id="注釈手法">注釈手法</h3>
+<p>クレーム抽出:- GPT-4Vと<a data-lb="1" href="/ja/glossary/gemini/" title="Geminiは、テキスト、画像、音声、動画の理解に優れたGoogleの先進的なマルチモーダルAIモデルファミリーです。Gemini 2.5 Pro、機能、アプリケーションについて解説します。">Gemini</a>を使用した自動抽出</p>
+<ul>
+<li>注釈者による手動検証と改良</li>
+<li>複雑な文から原子的事実主張を分離</li>
+<li>独立性を確保しながら意味的完全性を維持</li>
+</ul>
+<p>ラベリングプロセス:- 3名の大学院レベルの注釈者が各クレームを独立してラベル付け</p>
+<ul>
+<li>二値分類: 幻覚的 vs. 非幻覚的</li>
+<li>カテゴリー割り当て: オブジェクト、属性、シーンテキスト、事実</li>
+<li>不一致は多数決で解決</li>
+<li>注釈者間一致度: Fleissのカッパ κ = 0.822(強い一致)</li>
+</ul>
+<p>伝播ルール:- 含まれるクレームのいずれかが幻覚的であれば、セグメントは幻覚的とマーク</p>
+<ul>
+<li>いずれかのセグメントが幻覚的であれば、応答は幻覚的とマーク</li>
+<li>細粒度分析を保持しながら粗粒度評価を可能にする</li>
+</ul>
+<h3 id="データスキーマ">データスキーマ</h3>
+<p>各ベンチマークエントリには以下が含まれます:</p>
+<p>識別子:一意のID、タスクタイプ指定、ソースデータセット参照入力:元画像(I2Tタスク)またはテキストプロンプト(T2Iタスク)出力:生成されたテキスト(I2T)または合成画像(T2I)セグメント:幻覚ラベル付きの論理的テキスト分割(文または節)クレーム:詳細な注釈付き原子的事実主張。クレームテキスト、カテゴリー分類、幻覚ステータス、裏付け根拠を含むメタデータ:モデル情報、生成パラメータ、注釈タイムスタンプ</p>
+<h2 id="unihd検出フレームワーク">UNIHD検出フレームワーク</h2>
+<p>統合幻覚検出(UNIHD)は、クレーム抽出から検証までのエンドツーエンドパイプラインを提供する、自動幻覚検出の最先端アプローチを表します。</p>
+<h3 id="4段階パイプライン">4段階パイプライン</h3>
+<p>ステージ1 - 本質的クレーム抽出:- 複雑な出力を原子的事実クレームに分解</p>
+<ul>
+<li>クレームが独立して検証可能であることを保証</li>
+<li>コンテキスト依存クレームの意味的関係を維持</li>
+<li>非事実的コンテンツ(意見、質問、命令)をフィルタリング</li>
+</ul>
+<p>ステージ2 - 自律的ツール選択:- 各クレームの検証要件を分析</p>
+<ul>
+<li>検証のための的を絞ったクエリを策定</li>
+<li>ツールキットから適切な検証ツールを選択:
+<ul>
+<li>オブジェクト検出器(Grounding DINO、YOLO)</li>
+<li>属性分類器(色、サイズ、材質)</li>
+<li>OCRシステム(シーンテキスト認識)</li>
+<li>知識ベース(事実検証)</li>
+</ul>
+</li>
+</ul>
+<p>ステージ3 - 並列ツール実行:- 効率性のために選択されたツールを同時展開</p>
+<ul>
+<li>複数のソースから検証証拠を取得</li>
+<li>ツールの失敗と不確実な結果を適切に処理</li>
+<li>出所を維持しながら結果を集約</li>
+</ul>
+<p>ステージ4 - 幻覚検証:- クレームを検証証拠と比較</p>
+<ul>
+<li>決定に対する人間が読める根拠を生成</li>
+<li>検出に信頼度スコアを割り当て</li>
+<li>最終的な幻覚的/非幻覚的ラベルを生成</li>
+</ul>
+<h3 id="検出アプローチ">検出アプローチ</h3>
+<p>ブラックボックス手法:内部アクセスなしに入力出力ペアのみを使用してモデルを評価。例: FaithScore、GAVIE、HaELM。利点: モデル非依存、アーキテクチャ知識なしで展開可能。制限: 内部状態を活用できない、説明可能性が限定的。ホワイトボックス手法:モデル内部(注意重み、隠れ状態、トークン確率)を活用。例: DHCP、OPERA、ContextualLens。利点: 不確実性シグナルへの直接アクセス、詳細な解釈可能性。制限: モデル固有の実装、アーキテクチャ知識が必要。ツール拡張手法:証拠ベースの検出のために外部検証ツールを活用。例: UNIHD、FactChecker、CutPaste &amp; Find。利点: 外部証拠に基づく、新しいツールで拡張可能。制限: ツールの精度に依存、潜在的なスケーラビリティの課題。ハイブリッドアプローチ:シナリオと障害モード全体で堅牢なパフォーマンスを実現するために、複数の検出パラダイムを組み合わせる。</p>
+<h2 id="ベンチマークの位置づけ">ベンチマークの位置づけ</h2>
+<h3 id="関連ベンチマークとの比較">関連ベンチマークとの比較</h3>
+<table>
+<thead>
+<tr>
+<th>ベンチマーク</th>
+<th>モダリティ</th>
+<th>タスク</th>
+<th>粒度</th>
+<th>カテゴリー</th>
+<th>注釈</th>
+<th>独自の特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HaluEval</td>
+<td>テキスト</td>
+<td>QA、要約</td>
+<td>応答</td>
+<td>事実性</td>
+<td>応答レベル</td>
+<td>大規模テキスト焦点</td>
+</tr>
+<tr>
+<td>POPE</td>
+<td>画像+テキスト</td>
+<td>キャプショニング</td>
+<td>応答</td>
+<td>忠実性</td>
+<td>応答レベル</td>
+<td>視覚オブジェクトの存在</td>
+</tr>
+<tr>
+<td>HalluCode</td>
+<td>コード</td>
+<td>コード生成</td>
+<td>トークン</td>
+<td>マッピング、命名、ロジック</td>
+<td>トークンレベル</td>
+<td>実行ベースの検証</td>
+</tr>
+<tr>
+<td>CodeHalu</td>
+<td>コード</td>
+<td>コード生成</td>
+<td>スパン</td>
+<td>リソース、ロジック</td>
+<td>スパンレベル</td>
+<td>包括的コード分析</td>
+</tr>
+<tr>
+<td>Collu-Bench</td>
+<td>コード</td>
+<td>生成と修復</td>
+<td>トークン</td>
+<td>複数</td>
+<td>トークンレベル</td>
+<td>マルチLLM比較</td>
+</tr>
+<tr>
+<td>MHaluBench</td>
+<td>画像+テキスト</td>
+<td>I2T、T2I</td>
+<td>クレーム</td>
+<td>オブジェクト、属性、シーン、事実</td>
+<td>クレーム+セグメント</td>
+<td>統合マルチモーダルカバレッジ</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>クレームレベル注釈による最高粒度で的を絞った分析を可能にする</li>
+<li>モダリティ矛盾と事実矛盾を区別する明示的な分類体系</li>
+<li>検出システムのメタ評価専用に設計</li>
+<li>幻覚カテゴリーとタスクタイプ全体でバランスの取れたカバレッジ</li>
+</ul>
+<h2 id="実用的応用">実用的応用</h2>
+<h3 id="モデル開発">モデル開発</h3>
+<p>的を絞った改善:特定の障害モード(例:医療画像における属性幻覚)を特定し、焦点を絞ったモデル改良を可能にする。アブレーション研究:アーキテクチャの変更やトレーニング手順が特定の幻覚カテゴリーに与える影響を評価。比較分析:標準化された幻覚メトリクスで複数のモデルバリアントやアーキテクチャをベンチマーク。</p>
+<h3 id="検出システム評価">検出システム評価</h3>
+<p>メタ評価:グラウンドトゥルースに対して検出システムを評価し、カテゴリー全体で精度、再現率、F1を測定。堅牢性テスト:多様なシナリオ、ドメイン、幻覚タイプ全体で検出器のパフォーマンスを評価。ツール開発:特定の幻覚カテゴリー用の専門検出ツールの開発を導く。</p>
+<h3 id="本番展開">本番展開</h3>
+<p>品質保証:本番システムで許容可能な幻覚率の閾値と監視を確立。ユーザー信頼:展開決定とユーザー期待を通知する証拠ベースの信頼性メトリクスを提供。リスク軽減:人間の監視や追加検証が必要な高リスクシナリオを特定。</p>
+<h2 id="実例">実例</h2>
+<h3 id="画像からテキストへの幻覚">画像からテキストへの幻覚</h3>
+<p>入力:右側に青いユニフォームを着た選手を示すサッカー試合の写真モデル出力:「右側の選手は赤いユニフォームを着ており、クラブ・アメリカに所属しています。」抽出されたクレーム:1. 「右側の選手は赤いユニフォームを着ている」 - 幻覚的(属性レベル、モダリティ矛盾:画像は青いユニフォームを示している)
+2. 「選手はクラブ・アメリカに所属している」 - 事実確認が必要(事実レベル:チームメンバーシップの外部検証が必要)</p>
+<p>検出プロセス:オブジェクト検出器が選手の存在と位置を確認、属性分類器がクレーム1と矛盾する青いユニフォームを識別、知識ベースクエリがクレーム2のチーム情報を検証。</p>
+<h3 id="テキストから画像への幻覚">テキストから画像への幻覚</h3>
+<p>入力プロンプト:「パリのエッフェル塔の前に駐車された黄色いスクールバス」生成画像:未確認のランドマークの前の赤いバス抽出されたクレーム:1. 「画像には黄色いスクールバスが含まれている」 - 幻覚的(オブジェクト/属性レベル、モダリティ矛盾:画像は赤いバスを示している)
+2. 「バスはエッフェル塔の前に位置している」 - 幻覚的(事実レベル、モダリティ矛盾:ランドマークがエッフェル塔として識別できない)</p>
+<p>検出プロセス:オブジェクト検出がバスを識別するが色が間違っている、ランドマーク認識がエッフェル塔を確認できない、属性検証が黄色のクレームと矛盾。</p>
+<h2 id="制限と今後の方向性">制限と今後の方向性</h2>
+<p>規模の制約:現在の620インスタンスは大規模テキストベンチマークより小さい。より多くのドメインとモダリティにわたる数千のインスタンスへの拡張を計画中。注釈コスト:人間による注釈はリソース集約的で迅速なスケーリングを制限。将来の研究では人間検証を伴う半自動注釈を探求。モダリティカバレッジ:現在は画像テキストペアに限定。ビデオ、オーディオ、3D、センサーデータモダリティへの拡張を検討中。ツール依存性:検出パフォーマンスは外部ツールの精度に制約される。ツールの信頼性向上と専門検証システムの開発が進行中。動的評価:静的ベンチマークは実世界の展開課題を反映しない可能性。ライブシステム用の動的評価プロトコルの開発が必要。文化的・言語的多様性:現在は英語と一般的な画像ドメインに焦点。多言語設定と多様な文化的コンテキストへの拡張を計画中。緩和統合:ベンチマークは検出に焦点を当てている。修正および緩和システムとの統合は今後の方向性を表す。</p>
+<h2 id="実装リソース">実装リソース</h2>
+<p>データセットアクセス:包括的なドキュメント、評価スクリプト、ベースライン結果を備えたHuggingFace Datasetsプラットフォームで利用可能。評価ツール:検出メトリクスの計算、エラーパターンの分析、詳細レポートの生成のためのPythonツールキット。ベースライン実装:再現と拡張のためのUNIHDおよび他の検出アプローチの参照実装。コミュニティ貢献:公開リーダーボードへの検出システム提出、ベンチマークカバレッジの拡張への公開招待。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Shi, W., et al. (2024). Unified Hallucination Detection. ACL 2024 Proceedings.</p>
+</li>
+<li>
+<p>Anonymous. (2024). Multimodal Hallucination Survey. arXiv.</p>
+</li>
+<li>
+<p>OpenKG. (n.d.). MHaluBench Dataset. HuggingFace.</p>
+</li>
+<li>
+<p>COCO Consortium. (n.d.). MS-COCO Dataset. COCO Dataset.</p>
+</li>
+<li>
+<p>TextVQA Team. (n.d.). TextVQA Dataset. TextVQA.</p>
+</li>
+<li>
+<p>Anonymous. (2022). DrawBench Benchmark. arXiv.</p>
+</li>
+<li>
+<p>Anonymous. (2023). T2I-CompBench. arXiv.</p>
+</li>
+<li>
+<p>Anonymous. (2023). HaluEval Paper. arXiv.</p>
+</li>
+<li>
+<p>Anonymous. (2024). HalluCode Benchmark. arXiv.</p>
+</li>
+<li>
+<p>Anonymous. (2024). CodeHalu Benchmark. arXiv.</p>
+</li>
+<li>
+<p>Anonymous. (2024). Collu-Bench. arXiv.</p>
+</li>
+<li>
+<p>mPLUG. (n.d.). mPLUG Framework. URL: <a href="https://github.com/X-PLUG/mPLUG" rel="nofollow noopener noreferrer" target="_blank">https://github.com/X-PLUG/mPLUG</a></p>
+</li>
+<li>
+<p>LLaVA. (n.d.). LLaVA Model. URL: <a href="https://llava-vl.github.io/" rel="nofollow noopener noreferrer" target="_blank">https://llava-vl.github.io/</a></p>
+</li>
+<li>
+<p>MiniGPT-4. (n.d.). MiniGPT-4. URL: <a href="https://minigpt-4.github.io/" rel="nofollow noopener noreferrer" target="_blank">https://minigpt-4.github.io/</a></p>
+</li>
+<li>
+<p><a data-lb="1" href="/ja/glossary/openai/" title="ChatGPTは、大規模言語モデルを活用したOpenAIの高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。">OpenAI</a>. (n.d.). DALL-E 2. URL: <a href="https://openai.com/research/dall-e" rel="nofollow noopener noreferrer" target="_blank">https://openai.com/research/dall-e</a></p>
+</li>
+<li>
+<p>OpenAI. (n.d.). DALL-E 3. URL: <a href="https://openai.com/blog/dall-e-3" rel="nofollow noopener noreferrer" target="_blank">https://openai.com/blog/dall-e-3</a></p>
+</li>
+<li>
+<p>IDEA Research. (n.d.). Grounding DINO. URL: <a href="https://github.com/IDEA-Research/GroundingDINO" rel="nofollow noopener noreferrer" target="_blank">https://github.com/IDEA-Research/GroundingDINO</a></p>
+</li>
+<li>
+<p>OpenAI. (n.d.). GPT-4V Vision. URL: <a href="https://platform.openai.com/docs/guides/vision" rel="nofollow noopener noreferrer" target="_blank">https://platform.openai.com/docs/guides/vision</a></p>
+</li>
+<li>
+<p><a data-lb="1" href="/ja/glossary/google-deepmind/" title="Google DeepMindは、Alphabet傘下のAI研究機関であり、AlphaGoやAlphaFoldなどの画期的な成果で知られ、汎用人工知能の発展に貢献しています。">Google DeepMind</a>. (n.d.). Gemini Multimodal. URL: <a href="https://deepmind.google/technologies/gemini/" rel="nofollow noopener noreferrer" target="_blank">https://deepmind.google/technologies/gemini/</a></p>
+</li>
+<li>
+<p>Emergent Mind. (n.d.). MMHal-Bench. URL: <a href="https://www.emergentmind.com/topics/mmhal-bench" rel="nofollow noopener noreferrer" target="_blank">https://www.emergentmind.com/topics/mmhal-bench</a></p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hallucination-detection/">
+                    ハルシネーション検出
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ハルシネーション検出について探求します。AIモデル、特にLLMが生成する誤った情報や捏造された情報を識別するために使用される技術とワークフローを解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hallucination-detection/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/mhalubench/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

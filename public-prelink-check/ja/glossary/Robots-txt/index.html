@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Robots.txt | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/robots-txt/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="検索エンジンのクローラーに対して、ウェブサイトのどの部分にアクセスしてインデックス化できるか、またはできないかを指示するテキストファイルです。" name="description"/>
+<meta content="robots.txt, ウェブクローリング, SEO最適化, 検索エンジンボット, ウェブサイトインデックス" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/robots-txt/" property="og:url"/>
+<meta content="Robots.txt | SmartWeb" property="og:title"/>
+<meta content="検索エンジンのクローラーに対して、ウェブサイトのどの部分にアクセスしてインデックス化できるか、またはできないかを指示するテキストファイルです。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/robots-txt/" name="twitter:url"/>
+<meta content="Robots.txt | SmartWeb" name="twitter:title"/>
+<meta content="検索エンジンのクローラーに対して、ウェブサイトのどの部分にアクセスしてインデックス化できるか、またはできないかを指示するテキストファイルです。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190816" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190816" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script defer="" src="/js/main.js?v=20260111190816"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126096741115000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126096741115000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126096741115000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126096741115000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Robots.txt</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Robots.txt
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Robots.txt
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          検索エンジンのクローラーに対して、ウェブサイトのどの部分にアクセスしてインデックス化できるか、またはできないかを指示するテキストファイルです。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                robots.txt
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ウェブクローリング
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                SEO最適化
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                検索エンジンボット
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ウェブサイトインデックス
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="robotstxtとは何か">Robots.txtとは何か?</h2>
+<p>robots.txtファイルは、ウェブサイト所有者とウェブクローラー(ロボットまたはボットとも呼ばれる)の間のコミュニケーションプロトコルとして機能するシンプルなテキスト文書です。このファイルはウェブサイトのルートディレクトリに配置され、自動化されたプログラムに対して、サイトのどの部分へのアクセスとインデックス作成が許可または禁止されているかを指示します。robots.txtファイルは、1994年にMartijn Kosterによって導入されて以来、インターネット全体で広く採用されている標準であるRobots Exclusion Protocol(REP)に従っています。</p>
+<p>robots.txtファイルの主な目的は、検索エンジンクローラーがウェブサイトのコンテンツとどのように相互作用するかを管理・制御することです。ウェブクローラーがサイトを訪問すると、まず「www.example.com/robots.txt」というURLにアクセスしてrobots.txtファイルの存在を確認します。ファイルが存在する場合、クローラーはサイト上の他のページをクロールする前に、その中に含まれる指示を読み取り、従います。このメカニズムにより、ウェブサイト管理者はクローラーが機密エリアにアクセスするのを防ぎ、不要なクロールをブロックしてサーバー負荷を軽減し、検索エンジンを最も重要なコンテンツへと誘導することができます。</p>
+<p>robots.txtファイルは自主的な遵守の原則に基づいて動作します。つまり、適切に動作するクローラーは指示を尊重しますが、悪意のあるボットはそれを無視する可能性があります。ファイルは、ユーザーエージェント宣言、disallowおよびallowディレクティブ、crawl-delay指示、サイトマップ参照から成る分かりやすい構文を使用します。robots.txtファイルはSEOとウェブサイト管理にとって不可欠なツールですが、誰でも閲覧できる公開文書であることを理解することが重要です。そのため、真に機密性の高い情報を隠すには適していません。代わりに、クロール効率を最適化し、サーバーリソースを保護しながら、検索エンジンがウェブサイト上の最も価値のあるコンテンツを効果的にインデックスできるようにするトラフィック管理ツールとして使用すべきです。</p>
+<h2 id="robotstxtの主要コンポーネント">robots.txtの主要コンポーネント</h2>
+<p><strong>User-Agentディレクティブ</strong>: user-agent行は、以降のルールがどのウェブクローラーまたはボットに適用されるかを指定します。「Googlebot」のような特定のボット名、またはすべてのクローラーを対象とするワイルドカード「*」を使用します。このディレクティブにより、異なるタイプのボットとそのアクセス権限に対する詳細な制御が可能になります。</p>
+<p><strong>Disallowディレクティブ</strong>: disallowコマンドは、指定されたクローラーがウェブサイト上の特定のディレクトリ、ファイル、またはURLパターンにアクセスすることを明示的に禁止します。これは、管理エリア、プライベートコンテンツ、またはリソース負荷の高いセクションへのアクセスをブロックするために最も一般的に使用されるディレクティブです。</p>
+<p><strong>Allowディレクティブ</strong>: allowディレクティブは、より広範囲でブロックされたエリア内の特定のサブディレクトリまたはファイルに対するdisallowルールを上書きします。これにより、親ディレクトリのdisallowルールによって制限される可能性のある重要なコンテンツにクローラーがアクセスできるようにする例外が作成されます。</p>
+<p><strong>Crawl-Delayディレクティブ</strong>: このディレクティブは、クローラーがサーバーへの連続したリクエスト間で待機すべき最小秒数を指定します。サーバー負荷の管理に役立ち、人間のユーザーのウェブサイトパフォーマンスに影響を与える可能性のある積極的なクロールを防ぎます。</p>
+<p><strong>Sitemapディレクティブ</strong>: sitemap行は、クローラーにXMLサイトマップの場所を提供し、ウェブサイトの構造をより効率的に発見・理解するのに役立ちます。異なるタイプのコンテンツマップを参照するために、複数のsitemapディレクティブを含めることができます。</p>
+<p><strong>コメント行</strong>: ハッシュ記号(#)で始まる行は、人間の読者のためのコメントとして機能し、クローラーによって無視されます。これらは、robots.txt設定の選択に関する文書化と説明を提供します。</p>
+<p><strong>ワイルドカード文字</strong>: アスタリスク(*)とドル記号($)はパターンマッチングツールとして機能します。アスタリスクは任意の文字列を表し、ドル記号はURLの末尾を示し、より高度なURLパターンマッチングを可能にします。</p>
+<h2 id="robotstxtの動作方法">robots.txtの動作方法</h2>
+<p>robots.txtのワークフローは、ウェブクローラーがウェブサイトとの接触を開始し、アクセス許可を決定するための体系的なプロセスに従うところから始まります:</p>
+<ol>
+<li>
+<p><strong>初期リクエスト</strong>: クローラーは、サイト上の他のページにアクセスを試みる前に、ウェブサイトのルートディレクトリに対して特に「/robots.txt」を探すHTTPリクエストを送信します。</p>
+</li>
+<li>
+<p><strong>ファイル取得</strong>: robots.txtファイルが存在する場合、サーバーはHTTP 200ステータスコードとともにそれを返し、クローラーはコンテンツをダウンロードして解析し、アクセスルールを理解します。</p>
+</li>
+<li>
+<p><strong>ルール解析</strong>: クローラーはrobots.txtファイルを1行ずつ分析し、その特定のボットタイプに適用されるユーザーエージェント宣言を識別し、関連するディレクティブを抽出します。</p>
+</li>
+<li>
+<p><strong>許可評価</strong>: クローラーがアクセスしたい各URLについて、解析されたルールをチェックして、アクセスが許可されているか、禁止されているか、またはcrawl-delayのような特別な条件の対象となるかを判断します。</p>
+</li>
+<li>
+<p><strong>コンプライアンス実装</strong>: 適切に動作するクローラーは、禁止されたエリアを避け、crawl-delay指示に従い、インデックス作成のために許可されたコンテンツを優先することで、ディレクティブを尊重します。</p>
+</li>
+<li>
+<p><strong>サイトマップ発見</strong>: sitemapディレクティブが存在する場合、クローラーは参照されたXMLサイトマップを取得・処理して、ウェブサイトの構造と優先ページを理解します。</p>
+</li>
+<li>
+<p><strong>継続的な監視</strong>: クローラーは定期的にrobots.txtファイルを再チェックして、アクセスルールの変更を検出し、それに応じてクロール動作を調整します。</p>
+</li>
+</ol>
+<p><strong>ワークフローの例</strong>: Googlebotが「example.com」を訪問すると、まず「example.com/robots.txt」をリクエストし、「User-agent: Googlebot」に続いて「Disallow: /admin/」を指定するルールを見つけ、その後「/admin/」で始まるURLを避けながらサイトをクロールします。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>サーバーリソースの保護</strong>: robots.txtファイルは、リソース集約的なページの不要なクロールを防ぎ、サーバー負荷と帯域幅消費を削減しながら、人間の訪問者に対する最適なウェブサイトパフォーマンスを確保します。</p>
+<p><strong>SEO最適化</strong>: クローラーを重複コンテンツ、ステージングエリア、低価値ページから遠ざけることで、robots.txtは検索エンジンが最も重要で価値のあるコンテンツにクロールバジェットを集中させるのに役立ちます。</p>
+<p><strong>プライバシー制御</strong>: このファイルは、特定のディレクトリとファイルを検索エンジンのインデックスから遠ざけるメカニズムを提供し、セキュリティ上重要ではないが機密性のある情報を公開発見から保護します。</p>
+<p><strong>クロールバジェット管理</strong>: 大規模なウェブサイトは、robots.txtを使用して検索エンジンクローラーを優先コンテンツに誘導し、割り当てられたクロールバジェット内で重要なページが適切なクロール注意を受けることを保証できます。</p>
+<p><strong>管理エリアの保護</strong>: robots.txtは、バックエンド管理インターフェース、開発ディレクトリ、および検索結果に表示されるべきではない他の技術的エリアへのクローラーのアクセスを効果的にブロックします。</p>
+<p><strong>重複コンテンツの防止</strong>: URLパラメータ、セッションID、コンテンツの代替バージョンへのアクセスを禁止することで、robots.txtは検索エンジンが重複または準重複ページをインデックスするのを防ぐのに役立ちます。</p>
+<p><strong>帯域幅の節約</strong>: 大きなファイル、メディアディレクトリ、または頻繁に変更されるコンテンツへのクローラーのアクセスをブロックすることで、帯域幅を節約し、高トラフィックウェブサイトのホスティングコストを削減します。</p>
+<p><strong>検索結果の品質</strong>: 低品質または無関係なページのインデックス作成を防ぐことで、robots.txtはよりクリーンな検索結果に貢献し、検索エンジンを通じてウェブサイトを見つける人々のユーザーエクスペリエンスを向上させます。</p>
+<p><strong>開発環境の保護</strong>: robots.txtは、開発プロセス中にステージングサイト、テスト環境、開発バージョンが検索エンジンによって誤ってインデックスされるのを防ぐことができます。</p>
+<p><strong>法的コンプライアンス</strong>: 一部の管轄区域では、適切に設定されたrobots.txtファイルを持つことは、自動アクセスを制御するための誠実な努力を示し、データスクレイピングと不正アクセスに関する法的保護を提供する可能性があります。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong>Eコマース製品フィルタリング</strong>: オンラインストアは、robots.txtを使用して、フィルタリングされた製品ページ、パラメータ付き検索結果ページ、重複コンテンツ問題を引き起こすショッピングカートの内容のインデックス作成を防ぎます。</p>
+<p><strong>コンテンツ管理システムの保護</strong>: ウェブサイトは、CMSディレクトリ、プラグインフォルダ、テーマファイル、管理インターフェースへのアクセスをブロックして、これらの技術的要素が検索結果に表示されるのを防ぎます。</p>
+<p><strong>メディアとリソースの管理</strong>: 大規模なウェブサイトは、SEO価値を提供せずに大量の帯域幅を消費する画像ディレクトリ、ビデオファイル、PDF文書、その他のメディアのクロールを禁止します。</p>
+<p><strong>ステージングと開発サイト</strong>: 開発チームは、robots.txtを使用して、公開インデックスされるべきではないテスト環境、ベータバージョン、ステージングサイトへの検索エンジンアクセスを完全にブロックします。</p>
+<p><strong>ユーザー生成コンテンツの制御</strong>: ソーシャルプラットフォームとフォーラムは、robots.txtルールを実装して、ユーザープロファイル、プライベートメッセージ、インデックス作成に適さない可能性のある動的に生成されたコンテンツのクロールを管理します。</p>
+<p><strong>データベース駆動コンテンツのフィルタリング</strong>: 広範なデータベースを持つウェブサイトは、robots.txtを使用して、検索結果ページ、フィルタリングされたビュー、無限のクロールループを作成する動的に生成されたURLへのアクセスをブロックします。</p>
+<p><strong>メンバーシップとサブスクリプションサイト</strong>: 組織は、公開ページが通常通りインデックスされることを許可しながら、メンバー専用エリア、サブスクリプションコンテンツ、ログイン保護されたセクションへのクローラーアクセスを制限します。</p>
+<p><strong>国際および多言語サイト</strong>: グローバルウェブサイトは、robots.txtを使用して、異なる言語バージョン、地域コンテンツ、地理固有のページのクロールを管理し、ローカル検索パフォーマンスを最適化します。</p>
+<p><strong>ニュースと出版プラットフォーム</strong>: メディア組織は、現在のコンテンツが適切なクロール注意を受けることを保証しながら、記事アーカイブ、コメントセクション、編集インターフェースへのアクセスを制御します。</p>
+<p><strong>企業ウェブサイト管理</strong>: 企業は、マーケティングと顧客向けコンテンツの公開可視性を維持しながら、内部文書、従業員ディレクトリ、機密情報を保護します。</p>
+<h2 id="robotstxtディレクティブの比較">robots.txtディレクティブの比較</h2>
+<table>
+<thead>
+<tr>
+<th>ディレクティブ</th>
+<th>目的</th>
+<th>構文例</th>
+<th>スコープ</th>
+<th>コンプライアンス</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User-agent</td>
+<td>対象クローラーを指定</td>
+<td><code>User-agent: Googlebot</code></td>
+<td>ボット固有</td>
+<td>必須</td>
+</tr>
+<tr>
+<td>Disallow</td>
+<td>パスへのアクセスをブロック</td>
+<td><code>Disallow: /private/</code></td>
+<td>パスベース</td>
+<td>任意</td>
+</tr>
+<tr>
+<td>Allow</td>
+<td>アクセス例外を許可</td>
+<td><code>Allow: /private/public.html</code></td>
+<td>ファイル固有</td>
+<td>任意</td>
+</tr>
+<tr>
+<td>Crawl-delay</td>
+<td>リクエスト頻度を制御</td>
+<td><code>Crawl-delay: 10</code></td>
+<td>時間ベース</td>
+<td>ボット依存</td>
+</tr>
+<tr>
+<td>Sitemap</td>
+<td>XMLサイトマップを参照</td>
+<td><code>Sitemap: https://example.com/sitemap.xml</code></td>
+<td>サイト全体</td>
+<td>情報提供</td>
+</tr>
+<tr>
+<td>Wildcard</td>
+<td>パターンマッチング</td>
+<td><code>Disallow: /*.pdf$</code></td>
+<td>パターンベース</td>
+<td>限定的サポート</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>公開可視性</strong>: robots.txtファイルは誰でも公開アクセス可能であり、機密性の高いディレクトリ構造を潜在的に明らかにし、ウェブサイト所有者が非公開にしたいエリアに注意を引く可能性があります。</p>
+<p><strong>任意のコンプライアンス</strong>: 悪意のあるボットとスクレイパーはしばしばrobots.txtディレクティブを無視するため、サーバーレベルのブロッキングソリューションを必要とする積極的または不正なクロール試行に対してファイルは効果がありません。</p>
+<p><strong>構文の敏感性</strong>: robots.txtファイルの軽微な構文エラーは、重要なコンテンツを誤ってブロックしたり、機密エリアへのアクセス制限に失敗したりするなど、意図しない結果につながる可能性があります。</p>
+<p><strong>検索エンジンの違い</strong>: 異なる検索エンジンは、特にワイルドカードやcrawl-delay設定などの高度な機能について、robots.txtディレクティブをさまざまなレベルのサポートで解釈し、一貫性のない動作につながります。</p>
+<p><strong>過度のブロッキングリスク</strong>: 過度に制限的なrobots.txt設定は、検索エンジンが価値のあるコンテンツにアクセスするのを防ぎ、SEOパフォーマンスとオーガニック検索の可視性に悪影響を与える可能性があります。</p>
+<p><strong>メンテナンスの複雑さ</strong>: 複雑な構造を持つ大規模なウェブサイトは、新しいコンテンツエリアが適切に設定され、古いルールが削除または更新されることを保証するために、継続的なrobots.txtメンテナンスを必要とします。</p>
+<p><strong>モバイルとデスクトップの違い</strong>: モバイルとデスクトップのユーザーエージェントに対する個別のクロールルールの管理は、特に検索エンジンがモバイルファーストインデックスアプローチを優先するようになるにつれて、複雑さを増します。</p>
+<p><strong>国際SEOの複雑さ</strong>: 多言語および多地域ウェブサイトは、国際SEO戦略とローカル検索最適化を適切にサポートするrobots.txtファイルの設定において課題に直面します。</p>
+<p><strong>テストと検証の困難</strong>: robots.txtの有効性を検証するには、専門ツールと継続的な監視が必要です。誤った設定は、検索ランキングが影響を受けるまで明らかにならない可能性があります。</p>
+<p><strong>レガシーシステムの統合</strong>: 古いコンテンツ管理システムとウェブサイトは、動的または高度なrobots.txt設定を実装する柔軟性が限られている可能性があり、手動のメンテナンスと更新が必要です。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>ルートディレクトリへの配置</strong>: 適切なクローラーの発見とコンプライアンスのために、robots.txtファイルを常にウェブサイトのルートディレクトリに配置し、「domain.com/robots.txt」経由でアクセス可能であることを確認します。</p>
+<p><strong>構文の検証</strong>: <a data-lb="1" href="/ja/glossary/google/" title="Google の用語集ページ">Google</a> Search Consoleなどの検索エンジンツールを使用してrobots.txt構文を定期的に検証し、クロール動作に影響を与える可能性のあるエラーを特定・修正します。</p>
+<p><strong>特定のUser-Agentターゲティング</strong>: ワイルドカードのみに依存するのではなく、主要な検索エンジンに対して特定のユーザーエージェント宣言を使用して、異なるクローラー動作に対する正確な制御を確保します。</p>
+<p><strong>Allowディレクティブの活用</strong>: より広範なdisallowルール内に例外を作成するためにallowディレクティブを実装し、コンテンツアクセシビリティと検索エンジン最適化に対する細かい制御を可能にします。</p>
+<p><strong>サイトマップの統合</strong>: robots.txtファイルにサイトマップ参照を含めて、クローラーがウェブサイト構造を発見・理解するのを助け、インデックス作成効率とコンテンツ発見を改善します。</p>
+<p><strong>定期的な監視と更新</strong>: ウェブサイトの変更、新しいコンテンツエリア、進化するSEO戦略を反映するために、robots.txtファイルをレビュー・更新するスケジュールを確立します。</p>
+<p><strong>デプロイ前のテスト</strong>: 本番環境に変更をデプロイする前に、robots.txtテストツールを使用してディレクティブが意図したとおりに機能することを確認し、重要なコンテンツの誤ったブロッキングを防ぎます。</p>
+<p><strong>文書化とコメント</strong>: robots.txtファイルに明確なコメントを含めて各ディレクティブの目的を文書化し、チームメンバーにとって将来のメンテナンスとトラブルシューティングをより効率的にします。</p>
+<p><strong>バックアップとバージョン管理</strong>: robots.txtファイルのバックアップとバージョン管理を維持して、エラーからの迅速な復旧を可能にし、説明責任と分析のために時間の経過に伴う変更を追跡します。</p>
+<p><strong>パフォーマンス影響評価</strong>: robots.txt変更後にサーバーログとクローラー動作を監視して、修正が検索可視性に対する意図しない結果なしに望ましい結果を達成することを確認します。</p>
+<h2 id="高度なテクニック">高度なテクニック</h2>
+<p><strong>動的robots.txt生成</strong>: ユーザーエージェント、地理的位置、または時間ベースの条件に基づいてrobots.txtコンテンツを動的に生成するサーバーサイドスクリプトを実装し、高度なクロール制御を提供します。</p>
+<p><strong>条件付きUser-Agentブロッキング</strong>: 特定のクローラー特性に基づいて異なる制限を適用する複雑なルールセットを作成し、さまざまなタイプの自動アクセスに対する詳細な制御を可能にします。</p>
+<p><strong>パターンマッチングの最適化</strong>: サポートされている場合、高度なワイルドカードパターンと正規表現を活用して、過度なディレクティブの繰り返しなしに複数のURLバリエーションをカバーする効率的なルールを作成します。</p>
+<p><strong>Crawl-Delayの最適化</strong>: サーバー容量とトラフィックパターンに基づいてインテリジェントなcrawl-delay設定を実装し、検索エンジンアクセスとウェブサイトパフォーマンス要件のバランスを取ります。</p>
+<p><strong>マルチドメイン調整</strong>: 複数のドメインとサブドメイン間でrobots.txt設定を調整して、一貫したクロールポリシーを確保し、検索エンジンを混乱させる可能性のある矛盾するディレクティブを回避します。</p>
+<p><strong>クロールのA/Bテスト</strong>: 異なるrobots.txt設定を実験してクロールバジェット配分を最適化し、検索エンジンのインデックス作成とランキングパフォーマンスへの影響を測定します。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>強化されたプロトコル標準</strong>: Robots Exclusion Protocolは、より一貫性のある強力なクロール制御を提供するために、新しいディレクティブと検索エンジン間の改善された標準化の提案とともに進化し続けています。</p>
+<p><strong>AI駆動のクロールインテリジェンス</strong>: 検索エンジンは、ウェブサイトの意図とコンテンツ価値をより良く理解するより高度な<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="人工知能(AI) の用語集ページ">AIシステム</a>を開発しており、手動のrobots.txt設定への依存を潜在的に減らしています。</p>
+<p><strong>リアルタイムクロール調整</strong>: 将来の開発には、ウェブサイトとクローラー間の動的通信プロトコルが含まれる可能性があり、サーバー負荷とコンテンツ更新に基づいてクロール動作のリアルタイム調整を可能にします。</p>
+<p><strong>プライバシー重視のクロール制御</strong>: 新たなプライバシー規制とユーザーの期待は、検索エンジン機能を維持しながらユーザープライバシーを尊重する、より詳細なクロール制御の開発を推進しています。</p>
+<p><strong>モバイルファーストクロールの進化</strong>: モバイルファーストインデックスが標準になるにつれて、robots.txtプロトコルはモバイル固有のクロール要件とレスポンシブウェブサイトアーキテクチャをより良くサポートするために適応しています。</p>
+<p><strong>ウェブ標準との統合</strong>: 将来のrobots.txt実装は、包括的なクロール管理のために、構造化データ、HTTPヘッダー、プログレッシブウェブアプリテクノロジーなどの他のウェブ標準とより緊密に統合される可能性があります。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>Koster, M. (1994). “A Standard for Robot Exclusion.” The Web Robots Pages. Retrieved from robotstxt.org</li>
+<li>Google Developers. (2023). “Introduction to robots.txt.” Google Search Central Documentation.</li>
+<li>Bing Webmaster Guidelines. (2023). “How to create a robots.txt file.” Microsoft Bing Webmaster Tools.</li>
+<li>Internet Engineering Task Force. (2022). “The Robots Exclusion Protocol.” RFC 9309.</li>
+<li>Yandex Webmaster. (2023). “Using robots.txt.” Yandex Search Engine Documentation.</li>
+<li>W3C Web Accessibility Initiative. (2023). “Web Crawling and Accessibility.” World Wide Web Consortium.</li>
+<li>Search Engine Land. (2023). “The Complete Guide to Robots.txt.” Third Door Media Publications.</li>
+<li>Mozilla Developer Network. (2023). “Robots.txt Reference.” MDN Web Docs.</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/xml-sitemap/">
+                    XMLサイトマップ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    検索エンジンにウェブサイト上のすべてのページの場所を伝えるファイルで、コンテンツをより効率的に発見してインデックス化するのに役立ちます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/xml-sitemap/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/sitemap/">
+                    サイトマップ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ウェブサイト上のすべてのページをリスト化したファイルで、検索エンジンがコンテンツをより簡単に発見しインデックス化できるようにするためのものです。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/sitemap/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/nofollow-link/">
+                    Nofollowリンク
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Nofollowリンクは、検索エンジンにリンク先のウェブサイトへの支持票としてカウントしないよう指示する特殊なHTMLリンクです。推奨したくないコンテンツへのリンクや、スパム防止のために使用されます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/nofollow-link/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/url-slug/">
+                    URLスラッグ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    URLスラッグの包括的なガイド - ユーザー体験と検索エンジン最適化を向上させる、読みやすくSEOフレンドリーなURLの一部分について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/url-slug/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/url-structure/">
+                    URL構造
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Web開発とSEOパフォーマンスのためのURL構造コンポーネント、ベストプラクティス、最適化テクニックに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/url-structure/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/anchor-text/">
+                    アンカーテキスト
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ハイパーリンク内のクリック可能なテキストで、ユーザーと検索エンジンに対して、リンクをクリックした際にどのようなコンテンツが表示されるかを示します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/anchor-text/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/robots-txt/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190816"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+  });
+</script>
+</body>
+</html>

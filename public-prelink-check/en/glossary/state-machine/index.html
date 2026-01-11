@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>State Machine | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/state-machine/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/state-machine/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/state-machine/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/state-machine/" hreflang="x-default" rel="alternate"/>
+<meta content="A computational model that tracks how a system moves between different states based on triggers, commonly used to control chatbot conversations and automated workflows." name="description"/>
+<meta content="state machine, AI chatbot, automation, finite state machine, statecharts" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/state-machine/" property="og:url"/>
+<meta content="State Machine | SmartWeb" property="og:title"/>
+<meta content="A computational model that tracks how a system moves between different states based on triggers, commonly used to control chatbot conversations and automated workflows." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/state-machine/" name="twitter:url"/>
+<meta content="State Machine | SmartWeb" name="twitter:title"/>
+<meta content="A computational model that tracks how a system moves between different states based on triggers, commonly used to control chatbot conversations and automated workflows." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">State Machine</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            General
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        State Machine
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A computational model that tracks how a system moves between different states based on triggers, commonly used to control chatbot conversations and automated workflows.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                state machine
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI chatbot
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                automation
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                finite state machine
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                statecharts
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-state-machine">What is a State Machine?</h2>
+<p>A state machine is a formal computational model that describes how a system transitions between a finite set of states in response to external events or inputs. Each state represents a distinct situation during the system’s operation, and transitions define how the system moves from one state to another based on specific triggers.</p>
+<p>In <a data-lb="1" href="/en/glossary/chatbot/" title="Chatbot glossary entry">chatbot</a> development and automation, state machines explicitly track and control conversation flow, workflow steps, or process stages. They define the full structure of possible states (such as ‘waiting for user input’, ‘processing request’, or ‘awaiting payment’), the triggers that cause transitions, and the rules governing these transitions.</p>
+<h2 id="core-concepts">Core Concepts</h2>
+<h3 id="states">States</h3>
+<p>A state is a snapshot of the system at a given moment. In chatbots, states might include <code>GREETING</code>, <code>ASK_FOR_INFORMATION</code>, <code>PROCESSING</code>, <code>PROVIDE_SOLUTION</code>, or <code>GOODBYE</code>. The system is always in exactly one state at any time.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><strong>Order processing:</strong> <code>Pending</code>, <code>Shipped</code>, <code>Delivered</code>, <code>Returned</code></li>
+<li><strong>Chatbot conversation:</strong> <code>GREETING</code>, <code>ASK_FOR_ISSUE</code>, <code>PROCESS_ISSUE</code>, <code>PROVIDE_SOLUTION</code>, <code>GOODBYE</code></li>
+<li><strong>Music player:</strong> <code>Paused</code>, <code>Playing</code>, <code>Stopped</code></li>
+</ul>
+<h3 id="events">Events</h3>
+<p>Events are triggers—inputs, actions, or occurrences—that prompt state transitions. Events can be user messages, system actions, timers, or external signals.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>user says hello</code></li>
+<li><code>item shipped</code></li>
+<li><code>play button pressed</code></li>
+<li><code>timeout occurred</code></li>
+</ul>
+<h3 id="transitions">Transitions</h3>
+<p>A transition defines the movement from one state to another, triggered by an event. Transitions are directional and often labeled with the triggering event.</p>
+<p><strong>Example:</strong><br/>
+From <code>Pending</code> (state), on <code>item shipped</code> (event), to <code>Shipped</code> (state):<br/>
+<code>Pending</code> + <code>item shipped</code> → <code>Shipped</code></p>
+<p>State machines are often visualized as circles (states) connected by arrows (transitions), with each arrow labeled by the event that causes the transition.</p>
+<h2 id="types-of-state-machines">Types of State Machines</h2>
+<h3 id="finite-state-machines-fsm">Finite State Machines (FSM)</h3>
+<p>A Finite State Machine is the standard type, with a limited, known number of states. For each state and event, there is a defined transition, which ensures predictable, deterministic behavior.</p>
+<h3 id="hierarchical-state-machines">Hierarchical State Machines</h3>
+<p>Hierarchical state machines (also called statecharts) allow nesting of states. A parent state can encapsulate multiple child states, reducing complexity in large systems.</p>
+<p><strong>Example:</strong> A <code>Booking</code> parent state may include <code>FlightBooking</code>, <code>HotelBooking</code>, and <code>CarBooking</code> as sub-states.</p>
+<h3 id="deterministic-vs-non-deterministic">Deterministic vs Non-Deterministic</h3>
+<p><strong>Deterministic:</strong> Each combination of state and input leads to exactly one possible next state.</p>
+<p><strong>Non-Deterministic:</strong> Multiple transitions may be possible for a given state and input; more commonly used for theoretical models or pattern recognition.</p>
+<h2 id="how-state-machines-are-used">How State Machines Are Used</h2>
+<h3 id="ai-chatbots--conversation-flows">AI Chatbots &amp; Conversation Flows</h3>
+<p>State machines manage the “memory” and flow of chatbot conversations. Each conversational state reflects a unique stage (e.g., greeting, collecting issue details, processing, providing a solution). Events—typically user inputs—trigger transitions.</p>
+<p><strong>Example:</strong> A <a data-lb="1" href="/en/glossary/customer-support/" title="Customer Support glossary entry">customer support</a> chatbot might transition from <code>GREETING</code> to <code>ASK_FOR_ISSUE</code> upon receiving a user’s greeting.</p>
+<h3 id="automation--workflow-management">Automation &amp; Workflow Management</h3>
+<p>State machines are widely used in process automation and workflow management, representing steps like <code>Pending</code>, <code>Approved</code>, <code>Shipped</code>, etc. Events such as “approved” or “item shipped” progress the workflow by triggering transitions.</p>
+<h3 id="other-domains">Other Domains</h3>
+<p><strong>Game AI:</strong> Models NPC behaviors (idle, patrol, chase, attack)</p>
+<p><strong>Robotics:</strong> Controls sequences (move, pick, place, recharge)</p>
+<p><strong>Business Process Automation:</strong> Manages approvals, escalations, and task routing</p>
+<h2 id="practical-examples">Practical Examples</h2>
+<h3 id="example-1-order-processing">Example 1: Order Processing</h3>
+<p><strong>States:</strong> <code>Pending</code> → <code>Shipped</code> → <code>Delivered</code> → <code>Returned</code></p>
+<p><strong>Transitions:</strong></p>
+<ul>
+<li><code>Pending</code> + <code>item shipped</code> → <code>Shipped</code></li>
+<li><code>Shipped</code> + <code>item delivered</code> → <code>Delivered</code></li>
+<li><code>Delivered</code> + <code>item returned</code> → <code>Returned</code></li>
+</ul>
+<h3 id="example-2-chatbot-conversation">Example 2: Chatbot Conversation</h3>
+<p><strong>States:</strong> <code>GREETING</code> → <code>ASK_FOR_ISSUE</code> → <code>PROCESS_ISSUE</code> → <code>PROVIDE_SOLUTION</code> → <code>FOLLOW_UP</code> → <code>GOODBYE</code></p>
+<p><strong>Sample Python Implementation:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">class</span> ChatbotFSM:
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">def</span> __init__(<span style="color:#fff;font-weight:bold">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">self</span>.state = <span style="color:#0ff;font-weight:bold">'GREETING'</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">def</span> transition(<span style="color:#fff;font-weight:bold">self</span>, user_input):
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">if</span> <span style="color:#fff;font-weight:bold">self</span>.state == <span style="color:#0ff;font-weight:bold">'GREETING'</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">"Hello! How can I help you?"</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#fff;font-weight:bold">self</span>.state = <span style="color:#0ff;font-weight:bold">'ASK_FOR_ISSUE'</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">elif</span> <span style="color:#fff;font-weight:bold">self</span>.state == <span style="color:#0ff;font-weight:bold">'ASK_FOR_ISSUE'</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">f</span><span style="color:#0ff;font-weight:bold">"You mentioned: </span><span style="color:#0ff;font-weight:bold">{</span>user_input<span style="color:#0ff;font-weight:bold">}</span><span style="color:#0ff;font-weight:bold">. Let me process that."</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#fff;font-weight:bold">self</span>.state = <span style="color:#0ff;font-weight:bold">'PROCESS_ISSUE'</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">elif</span> <span style="color:#fff;font-weight:bold">self</span>.state == <span style="color:#0ff;font-weight:bold">'PROCESS_ISSUE'</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">"Here's what I found: [Solution]"</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#fff;font-weight:bold">self</span>.state = <span style="color:#0ff;font-weight:bold">'GOODBYE'</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">elif</span> <span style="color:#fff;font-weight:bold">self</span>.state == <span style="color:#0ff;font-weight:bold">'GOODBYE'</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">"Goodbye!"</span>)
+</span></span></code></pre></div><h3 id="example-3-music-player">Example 3: Music Player</h3>
+<ul>
+<li>Start in <code>Paused</code></li>
+<li>On “play”, transition to <code>Playing</code></li>
+<li>On “pause”, return to <code>Paused</code></li>
+<li>“Skip” works from any state</li>
+</ul>
+<h3 id="example-4-travel-booking-flow">Example 4: Travel Booking Flow</h3>
+<p><strong>States:</strong> <code>Idle</code>, <code>Booking Flight</code>, <code>Booking Hotel</code>, <code>Booking Car</code>, <code>Confirmation</code>, <code>Error</code></p>
+<p>Events like “flight booked”, “hotel booking failed”, or “timeout” trigger transitions. Hierarchical states can be used for error handling.</p>
+<h2 id="implementation-guidance">Implementation Guidance</h2>
+<h3 id="modular-design">Modular Design</h3>
+<p><strong>Separation of Concerns:</strong> Implement each state as a separate function or class for maintainability.</p>
+<p><strong>Mapping State Handlers:</strong> Use dictionaries or objects to map states to handler functions.</p>
+<h3 id="persisting-state-and-context">Persisting State and Context</h3>
+<p><strong>Session Management:</strong> Store the current state and context (such as user input, conversation history) using in-memory storage or a database.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span>user_sessions = {
+</span></span><span style="display:flex;"><span>    user_id: {
+</span></span><span style="display:flex;"><span>        <span style="color:#0ff;font-weight:bold">'state'</span>: <span style="color:#0ff;font-weight:bold">'PROCESS_ISSUE'</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#0ff;font-weight:bold">'issue'</span>: <span style="color:#0ff;font-weight:bold">'login problem'</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="tools-and-libraries">Tools and Libraries</h3>
+<p><strong>XState:</strong> JavaScript/TypeScript library for state machines and statecharts</p>
+<p><strong>Stately Editor:</strong> Visual editor for designing and exporting state machines</p>
+<p><strong>Mermaid:</strong> Diagramming tool for statecharts</p>
+<p><strong>Language-specific libraries</strong> for Python, Java, and other languages</p>
+<h3 id="sample-code-snippets">Sample Code Snippets</h3>
+<p><strong>Python FSM Skeleton:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">class</span> StateMachine:
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">def</span> __init__(<span style="color:#fff;font-weight:bold">self</span>, initial_state):
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">self</span>.state = initial_state
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">self</span>.transitions = {
+</span></span><span style="display:flex;"><span>            <span style="color:#0ff;font-weight:bold">'Pending'</span>: {<span style="color:#0ff;font-weight:bold">'item shipped'</span>: <span style="color:#0ff;font-weight:bold">'Shipped'</span>},
+</span></span><span style="display:flex;"><span>            <span style="color:#0ff;font-weight:bold">'Shipped'</span>: {<span style="color:#0ff;font-weight:bold">'item delivered'</span>: <span style="color:#0ff;font-weight:bold">'Delivered'</span>},
+</span></span><span style="display:flex;"><span>            <span style="color:#0ff;font-weight:bold">'Delivered'</span>: {<span style="color:#0ff;font-weight:bold">'item returned'</span>: <span style="color:#0ff;font-weight:bold">'Returned'</span>},
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">def</span> on_event(<span style="color:#fff;font-weight:bold">self</span>, event):
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">if</span> event in <span style="color:#fff;font-weight:bold">self</span>.transitions[<span style="color:#fff;font-weight:bold">self</span>.state]:
+</span></span><span style="display:flex;"><span>            <span style="color:#fff;font-weight:bold">self</span>.state = <span style="color:#fff;font-weight:bold">self</span>.transitions[<span style="color:#fff;font-weight:bold">self</span>.state][event]
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">"Invalid transition"</span>)
+</span></span></code></pre></div><p><strong>XState Example:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">import</span> { createMachine } from <span style="color:#0ff;font-weight:bold">'xstate'</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">const</span> orderMachine = createMachine({
+</span></span><span style="display:flex;"><span>  initial: <span style="color:#0ff;font-weight:bold">'pending'</span>,
+</span></span><span style="display:flex;"><span>  states: {
+</span></span><span style="display:flex;"><span>    pending: { on: { SHIP: <span style="color:#0ff;font-weight:bold">'shipped'</span> } },
+</span></span><span style="display:flex;"><span>    shipped: { on: { DELIVER: <span style="color:#0ff;font-weight:bold">'delivered'</span> } },
+</span></span><span style="display:flex;"><span>    delivered: { on: { RETURN: <span style="color:#0ff;font-weight:bold">'returned'</span> } },
+</span></span><span style="display:flex;"><span>    returned: {}
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="advantages-of-state-machines">Advantages of State Machines</h2>
+<p><strong>Clarity:</strong> State diagrams visualize logic and improve communication</p>
+<p><strong>Consistency:</strong> Explicit state and transition definitions prevent unexpected behaviors</p>
+<p><strong>Modularity:</strong> Each state’s logic is isolated, supporting easy maintenance and scalability</p>
+<p><strong>Exhaustive Testing:</strong> All paths can be enumerated and tested</p>
+<p><strong>Explicit Context:</strong> Maintains conversation or workflow state reliably</p>
+<p><strong>Predictability:</strong> Deterministic transitions ensure defined outcomes</p>
+<h2 id="challenges-and-limitations">Challenges and Limitations</h2>
+<p><strong>Complexity:</strong> Large numbers of states and transitions can lead to state explosion, making diagrams hard to manage</p>
+<p><strong>Scalability:</strong> Open-ended or highly dynamic systems may require hierarchical or compositional state machines</p>
+<p><strong>Flexibility:</strong> Strict state models can be rigid; creative or nonlinear flows may be harder to capture</p>
+<p><strong>Integration:</strong> Combining with databases, APIs, or external services adds complexity</p>
+<p><strong>Context Limitations:</strong> In LLM-powered bots, context window size may limit state recall; explicit context management is essential</p>
+<h3 id="mitigation-strategies">Mitigation Strategies</h3>
+<ul>
+<li>Use modular state handlers and hierarchical state machines</li>
+<li>Persist context in external storage</li>
+<li>Regularly refactor state diagrams to keep complexity manageable</li>
+</ul>
+<h2 id="advanced-concepts">Advanced Concepts</h2>
+<h3 id="hierarchical--nested-state-machines">Hierarchical &amp; Nested State Machines</h3>
+<p>Hierarchical state machines (statecharts) allow states to have nested sub-states, encapsulating complex flows and reducing redundancy. Statecharts add features like parallel states, history, and entry/exit actions.</p>
+<h3 id="integration-with-machine-learning">Integration with Machine Learning</h3>
+<p><strong>Hybrid Models:</strong> Combine state machines with ML models for adaptive transitions (e.g., ML classifies user intent; state machine manages conversation flow)</p>
+<p><strong><a data-lb="1" href="/en/glossary/reinforcement-learning/" title="Reinforcement Learning glossary entry">Reinforcement Learning</a>:</strong> Agents can learn optimal transitions from experience</p>
+<p><strong>Dynamic Transition Logic:</strong> ML models can predict next state based on rich context</p>
+<h3 id="dynamic-persona-generation">Dynamic Persona Generation</h3>
+<p>In complex chatbots, state machines can switch the bot’s persona or role based on context (e.g., from general agent to specialist).</p>
+<h2 id="best-practices">Best Practices</h2>
+<p><strong>Start Simple:</strong> Begin with basic FSM before adding hierarchical complexity</p>
+<p><strong>Document Thoroughly:</strong> Maintain clear documentation of states, events, and transitions</p>
+<p><strong>Test Rigorously:</strong> Validate all possible state transitions and edge cases</p>
+<p><strong>Monitor Performance:</strong> Track state transitions and identify <a data-lb="1" href="/en/glossary/bottlenecks/" title="Bottlenecks glossary entry">bottlenecks</a></p>
+<p><strong>Iterate Continuously:</strong> Refine state machine design based on real-world usage</p>
+<h2 id="use-case-scenarios">Use Case Scenarios</h2>
+<h3 id="customer-service-chatbot">Customer Service Chatbot</h3>
+<p>Manages conversation flow from greeting through issue resolution, maintaining context and providing consistent responses across interactions.</p>
+<h3 id="e-commerce-order-processing">E-commerce Order Processing</h3>
+<p>Tracks order lifecycle from placement through delivery, with clear state transitions and event handling for inventory, shipping, and customer notifications.</p>
+<h3 id="game-development">Game Development</h3>
+<p>Controls NPC behavior patterns, switching between idle, patrol, chase, and attack states based on player proximity and game events.</p>
+<h3 id="iot-device-management">IoT Device Management</h3>
+<p>Manages device states (active, standby, maintenance, error) with automated transitions based on sensor data and user commands.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.freecodecamp.org/news/state-machines-basics-of-computer-science-d42855debc66/" rel="nofollow noopener noreferrer" target="_blank">freeCodeCamp: Understanding State Machines</a></li>
+<li><a href="https://stately.ai/blog/2023-10-05-what-is-a-state-machine" rel="nofollow noopener noreferrer" target="_blank">Stately Blog: What is a State Machine?</a></li>
+<li><a href="https://promptengineering.org/guiding-ai-conversations-through-dynamic-state-transitions/" rel="nofollow noopener noreferrer" target="_blank">Prompt Engineering: Guiding AI Conversations</a></li>
+<li><a href="https://stately.ai/docs/xstate" rel="nofollow noopener noreferrer" target="_blank">XState Documentation</a></li>
+<li><a href="https://state.new" rel="nofollow noopener noreferrer" target="_blank">Stately Editor</a></li>
+<li><a href="https://www.tencentcloud.com/techpedia/127736" rel="nofollow noopener noreferrer" target="_blank">Tencent Cloud: Conversational FSM</a></li>
+<li><a href="https://www.youtube.com/watch?v=EzYIerEutgk" rel="nofollow noopener noreferrer" target="_blank">YouTube: Stately Introduction</a></li>
+<li><a href="https://rogerjunior.medium.com/how-to-build-a-chatbot-from-scratch-with-javascript-using-state-machines-95597c436517" rel="nofollow noopener noreferrer" target="_blank">Medium: Building a Chatbot with State Machines</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=statelyai.stately-vscode" rel="nofollow noopener noreferrer" target="_blank">XState VS Code Extension</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7266438/" rel="nofollow noopener noreferrer" target="_blank">NCBI: State Machine Based Human-Bot Conversation Model</a></li>
+<li><a href="https://mermaid-js.github.io/mermaid/" rel="nofollow noopener noreferrer" target="_blank">Mermaid Diagramming Tool</a></li>
+<li><a href="https://stately.ai/" rel="nofollow noopener noreferrer" target="_blank">Stately.ai</a></li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/cost-estimation/">
+                    Cost Estimation
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/en/glossary/cost-estimation/" title="Cost Estimation glossary entry">Cost estimation</a> is a method to predict how much money and computing resources you'll need to run an ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/cost-estimation/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/error-handler---try-catch/">
+                    Error Handler / Try-Catch
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    An error handler, often a Try-Catch block, manages unexpected failures in automation and AI chatbots...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/error-handler---try-catch/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/bottlenecks/">
+                    Bottlenecks
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    The slowest step in a process that limits how much work can be completed, like a bottle's narrow nec...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/bottlenecks/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/escalation/">
+                    Escalation
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    The process of transferring a difficult or urgent issue to someone with more expertise or authority ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/escalation/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/false-negative/">
+                    False Negative
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A <a data-lb="1" href="/en/glossary/false-negative/" title="False Negative glossary entry">False Negative</a> is when an <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI system</a> fails to detect a real problem or request that actually exists...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/false-negative/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hybrid-system/">
+                    Hybrid System
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A collaborative framework where AI and humans work together, combining machine speed and consistency...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hybrid-system/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/state-machine/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>RAG vs. CAG: AIモデルにおける知識拡張戦略の理解 | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/blog/rag-vs-cag-knowledge-augmentation/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="大規模言語モデルに外部知識を組み込む2つの強力な手法、Retrieval-Augmented Generation(RAG)とCache-Augmented Generation(CAG)の違いを探ります。それぞれのアプローチをいつ使用すべきか、そしてAIにおける知識ギャップの問題をどのように解決するかを学びましょう。" name="description"/>
+<meta content="RAG, CAG, 検索拡張生成, キャッシュ拡張生成, LLMの知識, AI拡張, ベクトルデータベース, KVキャッシュ, 知識検索" name="keywords"/>
+<meta content="article" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/blog/rag-vs-cag-knowledge-augmentation/" property="og:url"/>
+<meta content="RAG vs. CAG: AIモデルにおける知識拡張戦略の理解 | SmartWeb" property="og:title"/>
+<meta content="大規模言語モデルに外部知識を組み込む2つの強力な手法、Retrieval-Augmented Generation(RAG)とCache-Augmented Generation(CAG)の違いを探ります。それぞれのアプローチをいつ使用すべきか、そしてAIにおける知識ギャップの問題をどのように解決するかを学びましょう。" property="og:description"/>
+<meta content="https://img.youtube.com/vi/HdafI0t3sEY/maxresdefault.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/blog/rag-vs-cag-knowledge-augmentation/" name="twitter:url"/>
+<meta content="RAG vs. CAG: AIモデルにおける知識拡張戦略の理解 | SmartWeb" name="twitter:title"/>
+<meta content="大規模言語モデルに外部知識を組み込む2つの強力な手法、Retrieval-Augmented Generation(RAG)とCache-Augmented Generation(CAG)の違いを探ります。それぞれのアプローチをいつ使用すべきか、そしてAIにおける知識ギャップの問題をどのように解決するかを学びましょう。" name="twitter:description"/>
+<meta content="https://img.youtube.com/vi/HdafI0t3sEY/maxresdefault.jpg" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-8 sm:py-12">
+<div class="mx-auto max-w-5xl">
+<div class="mb-6">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center" href="/ja/">
+<img alt="Home" class="h-5 w-5" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2">/</span></li>
+<li><a class="hover:text-indigo-600 dark:hover:text-indigo-400" href="/ja/blog/">ブログ</a></li>
+<li><span class="mx-2">/</span></li>
+<li class="text-gray-900 dark:text-white truncate max-w-xs">RAG vs. CAG: AIモデルにおける知識拡張戦略の理解</li>
+</ol>
+</nav>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight">
+        RAG vs. CAG: AIモデルにおける知識拡張戦略の理解
+      </h1>
+<div class="mt-3 sm:mt-4 flex flex-wrap sm:flex-nowrap items-center gap-x-4 gap-y-2 text-sm text-gray-500">
+<div class="flex flex-wrap gap-2 sm:flex-1 min-w-0">
+<a class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors" href="/ja/tags/ai/">
+                AI
+              </a>
+<a class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors" href="/ja/tags/llm/">
+                LLM
+              </a>
+<a class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors" href="/ja/tags/%E3%83%8A%E3%83%AC%E3%83%83%E3%82%B8%E3%83%9E%E3%83%8D%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88/">
+                ナレッジマネジメント
+              </a>
+<a class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors" href="/ja/tags/%E7%94%9F%E6%88%90ai/">
+                生成AI
+              </a>
+<a class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors" href="/ja/tags/ai%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3/">
+                AIアーキテクチャ
+              </a>
+</div>
+<div class="w-full sm:w-auto sm:ml-auto">
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2026年1月5日
+      
+    </span>
+</div>
+</div>
+</div>
+<div class="mt-5 sm:mt-6 w-full">
+<img alt="RAG vs. CAG: AIモデルにおける知識拡張戦略の理解" class="w-full h-auto rounded-lg shadow-lg object-cover" src="https://img.youtube.com/vi/HdafI0t3sEY/maxresdefault.jpg" style="max-height: 400px; object-fit: cover;"/>
+</div>
+<p class="mt-3 sm:mt-5 text-base sm:text-lg leading-6 sm:leading-7 text-gray-600 dark:text-gray-400">
+          大規模言語モデルに外部知識を組み込む2つの強力な手法、Retrieval-Augmented Generation(RAG)とCache-Augmented Generation(CAG)の違いを探ります。それぞれのアプローチをいつ使用すべきか、そしてAIにおける知識ギャップの問題をどのように解決するかを学びましょう。
+        </p>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-5xl py-6 sm:py-8">
+<h2 id="はじめに">はじめに</h2>
+<p>大規模言語モデルは、私たちが<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>と対話する方法に革命をもたらしましたが、根本的な課題に直面しています。それは<strong>知識のカットオフ</strong>です。モデルの訓練データに含まれていない情報は、モデルは単純に思い出すことができません。最近のニュース、企業の機密データ、リアルタイム情報など、従来のLLMは訓練期間外の知識について正確な回答を提供することに苦労しています。この制限により、外部の知識ソースに接続することでAIモデルの能力を拡張する手法である、拡張生成技術の開発が促進されました。この問題を解決するために、2つの主要なアプローチが登場しました。<strong><a data-lb="1" href="/ja/glossary/rag/" title="RAG(Retrieval-Augmented Generation)は、外部データソースを統合することでLLMを強化します。正確でタイムリー、かつ文脈に関連したAI応答を提供し、ハルシネーションを削減します。">検索拡張生成</a>(<a data-lb="1" href="/ja/glossary/rag/" title="RAG(Retrieval-Augmented Generation)は、外部データソースを統合することでLLMを強化します。正確でタイムリー、かつ文脈に関連したAI応答を提供し、ハルシネーションを削減します。">RAG</a>)</strong>と<strong>キャッシュ拡張生成(CAG)</strong>です。それぞれが明確な利点とトレードオフを提供しており、効果的な<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="人工知能(AI) の用語集ページ">AIシステム</a>を構築するためには、どちらのアプローチをいつ使用するかを理解することが重要です。この包括的なガイドでは、両方の技術を深く掘り下げ、そのアーキテクチャ、能力、実世界での応用を検証します。</p>
+<div class="youtube-embed-wrapper">
+<div class="youtube-embed-container">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/HdafI0t3sEY" title="RAG vs. CAG: Solving Knowledge Gaps in AI Models">
+</iframe>
+</div>
+</div>
+<style>
+ 
+.youtube-embed-wrapper {
+  max-width: 768px !important;
+  margin: 2rem auto 3rem !important;
+  padding: 0 !important;
+}
+
+ 
+.youtube-embed-container {
+  position: relative !important;
+  width: 100% !important;
+  padding-top: 56.25% !important;  
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25) !important;
+  background: #000 !important;
+}
+
+ 
+.youtube-embed-container iframe {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+}
+
+ 
+.dark .youtube-embed-container {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5) !important;
+}
+
+ 
+@media (max-width: 768px) {
+  .youtube-embed-wrapper {
+    margin: 1.5rem auto 2rem !important;
+    padding: 0 1rem !important;
+  }
+  
+  .youtube-embed-container {
+    border-radius: 12px !important;
+  }
+}
+</style>
+<h2 id="大規模言語モデルにおける知識の問題">大規模言語モデルにおける知識の問題</h2>
+<p>解決策に入る前に、RAGとCAGが対処する核心的な問題を理解することが不可欠です。<a data-lb="1" href="/ja/glossary/large-language-models/" title="大規模言語モデル(LLM) の用語集ページ">大規模言語モデル</a>は、特定の時点で収集された膨大なデータセットで訓練されます。訓練が完了すると、モデルの知識は静的になります。新しい情報を学習したり、世界に対する理解を更新したりすることはできません。これにより、実世界のアプリケーションにおいていくつかの重大な問題が発生します。<strong>第一に</strong>、モデルは最近の出来事を認識していません。2025年のアカデミー賞作品賞の受賞者について尋ねても、訓練データが授賞式の前に収集された場合、モデルはこの情報を持っていない可能性があります。<strong>第二に</strong>、モデルは機密情報や独自情報にアクセスできません。カスタマーサービスチャットボットは、特定の顧客の購入履歴やアカウント詳細に関する質問に答えることができません。なぜなら、この情報は訓練データセットの一部ではなかったからです。<strong>第三に</strong>、事実が変化すると、モデルは古い情報を提供する可能性があります。医療ガイドライン、法的先例、製品仕様、企業ポリシーはすべて時間とともに進化しますが、静的なモデルはこれらの変化を反映できません。これらの制限により、現在の関連情報でモデルの知識を拡張する何らかのメカニズムなしに、多くの企業やミッションクリティカルなアプリケーションにLLMを展開することは不可能になります。</p>
+<h2 id="知識拡張の理解現代aiの基盤">知識拡張の理解:現代AIの基盤</h2>
+<p>知識拡張は、AIシステム設計へのアプローチにおけるパラダイムシフトを表しています。訓練中にモデルが学習した内容だけに依存するのではなく、拡張技術はモデルの固有の能力と外部情報ソースとの間に橋を架けます。このアプローチは、根本的な真実を認めています。<strong>最良のAIシステムは、最大の訓練データセットを持つものではなく、必要なときに関連情報に動的にアクセスして統合できるものです</strong>。知識拡張技術にはさまざまな形式がありますが、すべてが共通の目標を共有しています。それは、正確で文脈に即した最新の応答を提供するモデルの能力を強化することです。拡張の美しさは、知識の保存をモデルの訓練から切り離すことにあります。モデルを再訓練することなく<a data-lb="1" href="/ja/glossary/knowledge-base/" title="ナレッジベースとは何かを解説します。顧客、従業員、または自動化システムによる迅速な情報検索とセルフサービスを実現する、一元化された整理された情報の集合体です。">ナレッジベース</a>を更新でき、高価なファインチューニングプロセスなしに新しい情報を追加でき、単一のモデルが含むことができる範囲をはるかに超えてシステムの知識を拡張できます。この柔軟性により、情報が絶えず変化する動的な実世界環境で動作しなければならない本番グレードのAIシステムを構築するために、拡張技術が不可欠になっています。</p>
+<h2 id="実践における知識拡張">実践における知識拡張</h2>
+<p>このガイドで説明されているRAGとCAGの技術は、すでに実世界のAIプラットフォームで適用されています。FlowHuntは、Knowledge Sources機能を通じてRAGを実装しており、企業が企業文書、FAQ、ウェブサイトに<a data-lb="1" href="/ja/glossary/ai-chatbot/" title="SmartWebが提供するAIチャットボット・AIカスタマーサポートサービスの利用規約です">AIチャットボット</a>とワークフローを接続できるようにしています。これにより、一般的な訓練データではなく、検証済みの企業情報に基づいたAI応答が可能になります。<a data-lb="1" href="/ja/glossary/liveagent/" title="LiveAgentは、メール、チャット、電話、ソーシャルメディアを通じたすべての顧客とのやり取りを一元管理する高度なカスタマーサービス・ヘルプデスクソフトウェアプラットフォームで、サポート効率を向上させます。">LiveAgent</a>は、AI Answer ImproverやAI ChatbotなどのAI機能を統合しており、ナレッジベースを参照して正確な<a data-lb="1" href="/ja/glossary/customer-support/" title="カスタマーサポートのチケットシステムの基本から導入方法、AI活用まで詳しく解説。業務効率化と顧客満足度向上を実現する方法を紹介します。">カスタマーサポート</a>応答を提供できます。</p>
+<p><strong>SmartWeb</strong>は、両方のプラットフォームを活用して、制御された知識ソース(企業FAQ、製品マニュアル、サポートドキュメント)を使用するAIソリューションを構築し、応答が企業ポリシーと一致して正確で一貫性があることを保証します。知識拡張技術が進化し続けるにつれて、これらのプラットフォームもそれに伴って進化します。つまり、今日RAGベースのソリューションを実装する企業は、将来の検索精度と応答品質の改善から恩恵を受けることができます。</p>
+<h2 id="rag検索拡張生成の説明">RAG:検索拡張生成の説明</h2>
+<p>検索拡張生成は、知識拡張に対するより確立された広く採用されているアプローチを表しています。RAGは、シンプルながら強力な原則に基づいて動作します。<strong>必要な情報を、必要なときにのみ取得する</strong>。すべての知識を事前にロードするのではなく、RAGはナレッジベースの検索可能なインデックスを維持し、クエリプロセス中にオンデマンドで関連する部分を取得します。この2段階のアーキテクチャ(オフラインインデックス作成とオンライン検索)は、驚くべき柔軟性とスケーラビリティを提供します。</p>
+<h3 id="ragアーキテクチャオフラインフェーズとオンラインフェーズ">RAGアーキテクチャ:オフラインフェーズとオンラインフェーズ</h3>
+<p>RAGの力は、知識の準備とクエリ処理を分離するモジュラー設計から来ています。<strong>オフラインフェーズでは</strong>、ナレッジベースが効率的な検索のために準備されます。これは、すべての知識ソース(Word文書、PDF、ウェブページ、データベースレコード、またはモデルにアクセスさせたい情報を含むその他の形式)を収集するドキュメント取り込みから始まります。これらのドキュメントは、通常数文から数段落の範囲の管理可能なチャンクに分割されます。このチャンク化プロセスは、モデルが受け取る情報の粒度を決定するため、重要です。チャンクが大きすぎると無関係な情報が含まれる可能性があり、小さすぎると重要なコンテキストが断片化される可能性があります。ドキュメントがチャンク化されると、埋め込みモデル<strong>が各チャンクを数値ベクトル表現に変換します。この埋め込みはテキストの意味的意味を捉えます。類似した意味を持つチャンクは、異なる単語を使用していても類似した埋め込みを持ちます。これらの埋め込みは、類似性検索に最適化された特殊なデータベースである<a data-lb="1" href="/ja/glossary/vector-database/" title="Weaviateは、オブジェクトと高次元埋め込みを保存するオープンソースのクラウドネイティブなベクトルデータベースです。セマンティック検索、ハイブリッド検索、大規模なAI/MLアプリケーションを可能にします。">ベクトルデータベース</a>に保存されます。ベクトルデータベースは、ナレッジベース全体の検索可能なインデックスを作成し、関連情報の高速検索を可能にします。</strong>オンラインフェーズでは、ユーザーがクエリを送信すると、システムが動作を開始します。ユーザーの質問は、ドキュメントを処理したのと同じ埋め込みモデルを使用してベクトルに変換されます。このクエリベクトルは、ベクトルデータベースを検索するために使用され、最も類似したドキュメントチャンクを見つけます。システムは通常、上位K件の結果(多くの場合、答えを含む可能性が最も高い3〜5つのパッセージ)を取得します。これらの取得されたチャンクは、元のユーザークエリとともに、大規模言語モデルのコンテキストウィンドウに配置されます。モデルは、質問と関連するコンテキスト情報の両方を持つようになり、より正確で情報に基づいた応答を生成できます。重要なことに、モデルは情報がどこから来たかを見ることができるため、ソースを引用し、その推論について透明性を提供できます。</p>
+<h3 id="ragの主な利点">RAGの主な利点</h3>
+<p><strong>スケーラビリティ</strong>は、RAGの最も説得力のある利点です。システムはクエリごとにデータの小さなスライスのみを取得するため、膨大なナレッジベースを処理できます。RAGシステムは1,000万のドキュメントをインデックス化でき、それでも任意の質問に対して最も関連性の高いいくつかのドキュメントのみを取得します。言語モデルは1,000万のドキュメントすべてを一度に見ることはありません。取得されたサブセットのみを処理します。このスケーラビリティは、ナレッジベースが継続的に成長する企業アプリケーションにとって重要です。<strong>データの鮮度</strong>も重要な強みです。ナレッジベースが変更されると、RAGはインデックスを段階的に更新できます。新しいドキュメントを追加し、古い情報を削除でき、システムは再訓練や再計算なしにこの新しい知識をすぐに使用できます。これにより、RAGは情報が頻繁に変化する領域(新しい判例がある法的調査、更新された治療ガイドラインがある医療システム、進化する製品情報があるカスタマーサポート)に理想的です。<strong>透明性と引用</strong>は、規制された専門的なコンテキストで大きな価値を提供します。RAGは特定のドキュメントを取得するため、システムは情報がどこから来たかを正確に伝えることができます。法的調査にRAGを使用する弁護士は、特定の議論を支持するケースを確認できます。臨床決定にRAGを使用する医師は、推奨事項を通知した特定の研究論文やガイドラインを参照できます。このトレーサビリティは信頼を構築し、システムの推論の検証を可能にします。</p>
+<h3 id="ragの制限とトレードオフ">RAGの制限とトレードオフ</h3>
+<p>利点にもかかわらず、RAGは<strong>検索<a data-lb="1" href="/ja/glossary/latency/" title="レイテンシとは、リクエストとシステムの応答との間の時間遅延のことです。AIインフラストラクチャ、Webアプリケーション、リアルタイムシステムにおいて重要な要素です。その種類、原因、削減戦略について解説します。">レイテンシ</a></strong>を導入します。各クエリは、言語モデルが回答の生成を開始する前に、質問の埋め込み、ベクトルデータベースの検索、関連ドキュメントの取得を必要とします。これにより、検索を必要としないシステムと比較して、測定可能なオーバーヘッドが追加されます。応答時間が重要なアプリケーションでは、このレイテンシが問題になる可能性があります。<strong>検索品質</strong>も重要な考慮事項です。RAGの精度は、検索エンジンが関連ドキュメントを正常に見つけられるかどうかに完全に依存します。検索ステップが失敗した場合(埋め込み検索が答えを含むドキュメントを返さない場合)、言語モデルは正しく応答するために必要な情報を持ちません。不適切に構成された埋め込みモデルやベクトルデータベースは、システムのパフォーマンスを大幅に低下させる可能性があります。<strong>システムの複雑さ</strong>は、RAGの実装により増加します。埋め込みモデル、ベクトルデータベース、検索メカニズム、言語モデルという複数のコンポーネントを管理する必要があります。各コンポーネントは潜在的な障害点を導入し、慎重なチューニングと監視を必要とします。この複雑さにより、RAGシステムは、よりシンプルなアプローチと比較して、展開と保守がより困難になる可能性があります。</p>
+<h2 id="cagキャッシュ拡張生成の説明">CAG:キャッシュ拡張生成の説明</h2>
+<p>キャッシュ拡張生成は、知識の問題に対して根本的に異なるアプローチを取ります。オンデマンドで情報を取得するのではなく、CAGはクエリを処理する前に、すべての関連知識をモデルのコンテキストウィンドウに事前ロードします。この戦略は、柔軟性を速度と引き換えにし、固定されたナレッジベースで迅速で一貫した応答に最適化されたシステムを作成します。</p>
+<h3 id="cagアーキテクチャ事前ロードとkvキャッシング">CAGアーキテクチャ:事前ロードとKVキャッシング</h3>
+<p>CAGのアーキテクチャは、RAGと比較してエレガントにシンプルです。別個のベクトルデータベースと検索メカニズムを維持する代わりに、CAGは言語モデルの内部アーキテクチャと直接連携します。プロセスは、すべての知識をモデルのコンテキストウィンドウに収まる単一の巨大なプロンプトにフォーマットすることから始まります。これは数万、さらには数十万トークンになる可能性があります。製品マニュアルから法的文書、医療ガイドラインまで、すべてが1つの巨大な入力に連結されます。次に、言語モデルは、<a data-lb="1" href="/ja/glossary/neural-networks/" title="ディープラーニングは、多層ニューラルネットワークを使用してデータから複雑なパターンを学習する高度なAI技術です。画像認識、自然言語処理、生成AIに不可欠な技術となっています。">ニューラルネットワーク</a>を通じた単一のフォワードパスでこの知識ブロブ全体を処理します。モデルがこのすべての情報を読み取って処理すると、<a data-lb="1" href="/ja/glossary/kv-cache/" title="KVキャッシュは、TransformerモデルとLLMの推論時最適化技術であり、KeyとValueテンソルを保存することで、自己回帰的なトークン生成を劇的に高速化し、計算コストを削減します。">KVキャッシュ</a>(キー・バリューキャッシュ)と呼ばれる内部表現が作成されます。このキャッシュは、トランスフォーマーアーキテクチャの各自己注意層から作成され、事前ロードされたすべてのドキュメントに対するモデルのエンコードされた理解を表します。これは、モデルがすでにすべてのドキュメントを読んで記憶しているようなものと考えてください。KVキャッシュは、その知識に対するモデルの内部メモリです。</p>
+<p>KVキャッシュが作成されて保存されると、それがすべての後続のクエリの基盤になります。ユーザーが質問を送信すると、システムは何も取得したり、ドキュメントを再処理したりする必要はありません。代わりに、ユーザーのクエリをKVキャッシュに追加し、すべてを言語モデルに送信するだけです。トランスフォーマーのキャッシュにはすでにすべての知識トークンが含まれているため、モデルは元のドキュメントを再読み取りまたは再処理することなく、回答を生成する際に関連情報を参照できます。これは驚くほど効率的です。モデルは、検索や取得の計算コストなしに、事前ロードされたナレッジベースのどこからでも情報を使用して応答を生成できます。</p>
+<h3 id="cagの主な利点">CAGの主な利点</h3>
+<p>レイテンシの削減<strong>は、CAGの決定的な強みです。知識がキャッシュされると、クエリへの回答は、ユーザープロンプトと生成に対するモデルの単一のフォワードパスになります。検索ルックアップ時間、埋め込み計算、ベクトルデータベース検索はありません。応答時間は、外部検索メカニズムではなく、モデルの生成速度のみに依存します。速度が最優先のアプリケーション(リアルタイムの顧客対話、時間に敏感な意思決定支援、または大量のクエリ処理)では、CAGの低レイテンシは非常に貴重です。</strong>計算効率<strong>は、レイテンシの利点から自然に続きます。検索ステップを排除することにより、CAGは全体的な計算オーバーヘッドを削減します。別個の埋め込みモデルやベクトルデータベースを維持する必要はありません。類似性検索を実行する必要もありません。システムはよりシンプルで、より無駄がなく、よりリソース効率的です。この効率は、運用コストの削減に直接つながり、コストに敏感なアプリケーションにとってCAGを魅力的にします。</strong>展開のシンプルさは過小評価できません。CAGは、RAGよりも可動部品が少なくて済みます。ベクトルデータベース、埋め込みモデル、検索パイプラインを管理する必要はありません。システムは、実装、テスト、展開がより簡単です。このシンプルさにより、バグの表面積が減少し、システムの理解と保守が容易になります。</p>
+<h3 id="cagの制限とトレードオフ">CAGの制限とトレードオフ</h3>
+<p><strong>コンテキストウィンドウの制約</strong>は、CAGの根本的な制限を表しています。現代の言語モデルは、32,000から100,000トークンの範囲のコンテキストウィンドウを持ち、一部の大型モデルはこれを超えています。しかし、これはまだ有限です。モデルに知ってもらいたいすべてのものは、このウィンドウ内に収まる必要があります。100,000トークンのコンテキストウィンドウの場合、せいぜい数百のドキュメントしか収まらない可能性があります。このハードリミットは、CAGがRAGが楽々と処理する大規模なナレッジベースにスケールできないことを意味します。ナレッジベースがコンテキストウィンドウに収まる範囲を超えて成長すると、CAGは実用的でなくなります。<strong>静的な知識</strong>も重要な制約です。CAGは知識を一度事前ロードし、キャッシュします。ナレッジベースが変更された場合(新しいドキュメントが追加された、情報が更新された、または古いコンテンツを削除する必要がある場合)、KVキャッシュ全体を再計算する必要があります。この再計算は、キャッシングの利点を無効にし、大きなオーバーヘッドを導入します。情報が頻繁に変化する領域では、CAGの静的な性質が負債になります。<strong>モデルの応答における混乱の可能性</strong>は、微妙ですが重要な考慮事項です。すべての可能な関連情報を事前ロードすると、モデルに答えを与えるだけでなく、すべてを与えることになります。モデルは、この大きなコンテキストから正しい情報を抽出し、無関係な情報を混ぜないようにする必要があります。現代の言語モデルは一般的にこれが得意ですが、モデルが情報を混同したり、複数の無関係な知識を不適切にブレンドした回答を提供したりするリスクは常にあります。</p>
+<h2 id="ragとcagの比較精度レイテンシスケーラビリティデータの鮮度">RAGとCAGの比較:精度、レイテンシ、スケーラビリティ、データの鮮度</h2>
+<p>RAGとCAGのトレードオフを理解するには、実世界のアプリケーションにとって重要な複数の次元でそれらを検証する必要があります。</p>
+<h3 id="精度検索-vs-包括性">精度:検索 vs. 包括性</h3>
+<p><strong>RAGの精度</strong>は、検索コンポーネントに決定的に依存します。検索エンジンが関連ドキュメントを正常に見つけた場合、言語モデルは正しく回答するために必要な情報を持っています。検索エンジンはフィルターとして機能し、モデルを無関係な情報から保護し、重要なことに注意を集中させます。ただし、検索エンジンが失敗した場合(関連ドキュメントを見つけられない場合)、モデルは正確な回答に必要な事実を欠いています。RAGの精度は、検索メカニズムと同じくらい良いだけです。<strong>CAGの精度</strong>は異なる動作をします。すべての潜在的に関連する情報を事前ロードすることにより、CAGは情報がコンテキストのどこかに存在することを保証します。ナレッジベースに実際に質問に対する答えが含まれていると仮定すると、情報は確実にそこにあります。ただし、負担はモデルに移り、大きなコンテキストから正しい情報を抽出する必要があります。モデルが混乱したり、無関係な情報を混ぜたり、複数の知識を不適切にブレンドした回答を提供したりする可能性があります。CAGは、検索失敗のリスクをモデルの混乱のリスクと交換します。</p>
+<h3 id="レイテンシ速度が重要">レイテンシ:速度が重要</h3>
+<p><strong>RAGは検索ステップを通じてレイテンシを導入します</strong>。各クエリは、言語モデルが回答を生成する前に、質問の埋め込み、ベクトルデータベースの検索、関連ドキュメントの取得を必要とします。このオーバーヘッドは測定可能であり、ナレッジベースが成長するか、検索インフラストラクチャがより複雑になるにつれて、より重要になります。応答時間が重要なアプリケーションでは、このレイテンシが問題になる可能性があります。<strong>CAGは検索ステップを完全に排除することでレイテンシを最小化します</strong>。知識がキャッシュされると、クエリへの回答はモデルの1回のフォワードパスだけです。応答時間は、外部検索メカニズムではなく、モデルの生成速度のみによって決定されます。これにより、CAGはクエリ処理が大幅に高速になりますが、初期のキャッシングステップには事前に計算が必要です。</p>
+<h3 id="スケーラビリティナレッジベースのサイズ">スケーラビリティ:ナレッジベースのサイズ</h3>
+<p><strong>RAGは大規模なナレッジベースにスケールします</strong>。クエリごとに小さな部分のみを取得するためです。ベクトルデータベースに1,000万のドキュメントをインデックス化でき、モデルは任意の質問に対して最も関連性の高いいくつかのドキュメントのみを見ます。このスケーラビリティは、ナレッジベースが継続的に成長する企業アプリケーションにとって重要です。<strong>CAGには、モデルのコンテキストウィンドウサイズによって決定されるハードスケーラビリティ制限があります</strong>。典型的な32,000から100,000トークンのコンテキストウィンドウでは、せいぜい数百のドキュメントしか収まりません。コンテキストウィンドウが成長しても(そして成長すると予想されます)、RAGは検索メカニズムが任意に大きなナレッジベースを処理できるため、スケーラビリティで優位性を維持する可能性があります。</p>
+<h3 id="データの鮮度知識を最新に保つ">データの鮮度:知識を最新に保つ</h3>
+<p><strong>RAGはデータの鮮度をエレガントに処理します</strong>。ナレッジベースが変更されると、ベクトルデータベースを更新するだけです。新しいドキュメントを段階的に追加し、古いドキュメントを削除でき、システムはこの新しい情報をすぐに使用します。ダウンタイムは最小限であり、何も再計算する必要はありません。これにより、RAGは情報が頻繁に変化する領域に理想的です。<strong>CAGはデータが変更されると再計算が必要です</strong>。ナレッジベースが更新された場合、新しい情報を反映するためにKVキャッシュを再計算する必要があります。この再計算は、キャッシングの利点を無効にし、大きなオーバーヘッドを導入します。ナレッジベースが頻繁に変更される場合、CAGは魅力の多くを失います。なぜなら、常に再ロードと再計算を行っているため、キャッシングの目的が無効になるからです。</p>
+<h2 id="実世界のアプリケーションシナリオragかcagか">実世界のアプリケーションシナリオ:RAGかCAGか?</h2>
+<p>RAGとCAGの選択は抽象的ではありません。特定のユースケースに依存します。この決定を行う方法を理解するために、いくつかのシナリオを検証しましょう。</p>
+<h3 id="シナリオ1製品マニュアルを使用したitヘルプデスクボット">シナリオ1:製品マニュアルを使用したITヘルプデスクボット</h3>
+<p>製品マニュアルの200ページを使用して回答を拡張するITヘルプデスクチャットボットを構築していると想像してください。マニュアルは年に数回しか更新されず、ユーザーは製品の使用方法について質問を送信します。<strong>これはCAGシナリオです。</strong>ナレッジベースは、ほとんどの言語モデルのコンテキストウィンドウに快適に収まるほど小さいです。情報は静的であるため、KVキャッシュは頻繁な更新を必要としません。製品マニュアルをキャッシュすることにより、システムは最小限のレイテンシでユーザーの質問に回答でき、迅速なサポート応答を提供できます。CAG展開のシンプルさも、このユースケースに意味があります。小さな静的なナレッジベースに対して、ベクトルデータベースと検索パイプラインの複雑さは必要ありません。</p>
+<h3 id="シナリオ2法律事務所の法的調査アシスタント">シナリオ2:法律事務所の法的調査アシスタント</h3>
+<p>次に、新しい判決や修正で常に更新されている数千の法的ケースを検索する必要がある法律事務所の調査アシスタントを考えてみましょう。弁護士は、関連する法的文書への正確な引用を含む回答を必要とします。<strong>これは明らかにRAGシナリオです。</strong>ナレッジベースは大規模で動的であり、新しいコンテンツが継続的に追加されています。このすべての情報をキャッシュしようとすると、ほとんどのモデルのコンテキストウィンドウをすぐに超えてしまいます。ソース資料への正確な引用の要件は、RAGが検索メカニズムを通じて自然にサポートするものです。情報がどこから来たかを正確に伝えます。新しい法的文書が出現するにつれてベクトルデータベースを段階的に更新する能力は、システムが完全なキャッシュ再計算を必要とせずに常に最新の情報にアクセスできることを意味します。</p>
+<h3 id="シナリオ3病院の臨床意思決定支援システム">シナリオ3:病院の臨床意思決定支援システム</h3>
+<p>医師が患者記録、治療ガイド、薬物相互作用を照会する臨床意思決定支援システムを考えてみましょう。応答は包括的で非常に正確でなければなりません。なぜなら、患者の診察中に使用されるからです。医師はしばしば複雑なフォローアップの質問をします。<strong>これはハイブリッドシナリオです。</strong>システムは、最初にRAGを使用して、大規模なナレッジベースから最も関連性の高いサブセットを取得できます。医師のクエリに基づいて、患者の履歴の特定のセクションと関連する研究論文を引き出します。取得されたチャンクを単に言語モデルに渡すのではなく、システムは取得されたすべてのコンテンツをCAGを使用する長いコンテキストモデルにロードし、特定の患者ケースのための一時的な作業メモリを作成できます。このハイブリッドアプローチは、RAGの膨大なナレッジベースを効率的に検索する能力と、CAGのデータベースを繰り返し照会することなくフォローアップの質問に包括的な知識を提供する能力を組み合わせます。</p>
+<h2 id="高度な洞察ハイブリッドアプローチと将来の方向性">高度な洞察:ハイブリッドアプローチと将来の方向性</h2>
+<p>最も洗練されたAIシステムは、RAGとCAGのどちらかを選択するのではなく、両方を戦略的に使用します。<strong>ハイブリッドアーキテクチャ</strong>は、初期検索にRAGのスケーラビリティとデータの鮮度を活用し、詳細な処理にCAGの速度と包括性を使用します。このアプローチは、システムが大規模なナレッジベースにアクセスしながら、複数の質問にわたってコンテキストを維持する必要がある複雑な<a data-lb="1" href="/ja/glossary/multi-turn-conversation/" title="AIチャットボットと自動化におけるマルチターン会話について学びます。AIシステムがコンテキスト、状態、複数のやり取りを管理し、複雑なタスクを処理する方法を理解します。">マルチターン会話</a>に特に強力です。<strong>コンテキストウィンドウの拡張</strong>は、RAG対CAGの計算を変えています。言語モデルがより大きなコンテキストウィンドウを開発するにつれて(一部は現在200,000トークン以上をサポートしています)、CAGはより大きなナレッジベースに対して実行可能になります。ただし、拡張されたコンテキストウィンドウがあっても、RAGは真に大規模なナレッジベースと頻繁に更新される情報に対して利点を維持する可能性があります。<strong>検索の最適化</strong>は、RAGのレイテンシを改善し続けています。密なパッセージ検索、キーワードとセマンティック検索を組み合わせたハイブリッド検索、学習された検索メカニズムなどの技術により、RAGはより高速で正確になっています。これらの改善により、RAGとCAGの間のレイテンシギャップが狭まっています。<strong>キャッシングの革新</strong>により、CAGはより柔軟になっています。部分的なキャッシュ更新と選択的再計算の技術により、CAGは最終的に完全な再計算なしでより動的なナレッジベースを処理できるようになる可能性があります。将来は、両方の技術の強みを組み合わせた、ますます洗練されたハイブリッドアプローチを含む可能性があります。</p>
+<h2 id="結論">結論</h2>
+<p>RAGとCAGは、外部知識で言語モデルを拡張するための2つの根本的に異なる哲学を表しています。RAGは必要なものだけをオンデマンドで取得し、検索レイテンシを犠牲にして、比類のないスケーラビリティ、データの鮮度、透明性を提供します。CAGはすべての知識を事前にロードし、優れた速度とシンプルさを提供しますが、コンテキストウィンドウサイズと静的な知識によって制約されます。それらの間の選択、またはハイブリッドアプローチで両方を使用する決定は、特定の要件に依存します。ナレッジベースのサイズ、情報が変更される頻度、ソース引用が必要かどうか、アプリケーションにとって応答レイテンシがどれほど重要かです。現代のAIシステムは、これが二者択一ではなく、特定のユースケースに対して組み合わせて最適化できる戦略のスペクトルであることをますます認識しています。各アプローチの強みと制限を理解することにより、実世界のアプリケーションで精度と効率の両方を提供するAIシステムを設計できます。</p>
+</div>
+<div class="mt-10 sm:mt-14 border-t border-gray-200 dark:border-gray-700 pt-8 sm:pt-10">
+<h2 class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 sm:mb-8">
+        関連記事
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300">
+<div class="relative h-48 sm:h-52 w-full overflow-hidden">
+<img alt="AIが最新情報で正確に答える仕組み：RAG(検索拡張生成)入門" class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300" src="/images/blog/rag-paint.jpg"/>
+</div>
+<div class="flex flex-1 flex-col p-4 sm:p-5">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-2">
+<a class="hover:text-indigo-600 dark:hover:text-indigo-400" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/blog/introduction-to-rag/">
+                  AIが最新情報で正確に答える仕組み：RAG(検索拡張生成)入門
+                </a>
+</h3>
+<p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
+                  RAG（検索拡張生成）の基本と活用方法を解説。従来のAIとの違い、メリット、実際の活用例まで詳しく紹介します。...
+                </p>
+<div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
+<a class="inline-flex items-center text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/blog/introduction-to-rag/">
+                  続きを読む
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300">
+<div class="relative h-48 sm:h-52 w-full overflow-hidden">
+<img alt="AI言語モデルの評価基準完全ガイド：日本語ベンチマークと実践的活用" class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300" src="/images/blog/ai-evaluation-japanese-benchmarks.jpg"/>
+</div>
+<div class="flex flex-1 flex-col p-4 sm:p-5">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-2">
+<a class="hover:text-indigo-600 dark:hover:text-indigo-400" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/blog/ai-evaluation-japanese-benchmarks/">
+                  AI言語モデルの評価基準完全ガイド：日本語ベンチマークと実践的活用
+                </a>
+</h3>
+<p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
+                  LLMの自動評価手法から日本語評価ベンチマーク、ハルシネーション対策まで、企業のAI導入に必要な知識を完全解説。FlowHunt活用例も紹介。...
+                </p>
+<div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
+<a class="inline-flex items-center text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/blog/ai-evaluation-japanese-benchmarks/">
+                  続きを読む
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300">
+<div class="flex flex-1 flex-col p-4 sm:p-5">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-2">
+<a class="hover:text-indigo-600 dark:hover:text-indigo-400" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/blog/linkbuilding-repro/">
+                  Linkbuilding Reproduction Test
+                </a>
+</h3>
+<p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
+                  &lt;h1 id="linkbuilding-reproduction-test"&gt;Linkbuilding Reproduction Test&lt;/h1&gt;
+&lt;h2 id="user-reported-ca...
+                </p>
+<div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
+<a class="inline-flex items-center text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/blog/linkbuilding-repro/">
+                  続きを読む
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/blog/rag-vs-cag-knowledge-augmentation/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

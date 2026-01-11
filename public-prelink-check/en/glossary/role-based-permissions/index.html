@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Role-Based Permissions | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/role-based-permissions/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="A security system that controls what employees can access by assigning them job roles, rather than managing permissions individually for each person." name="description"/>
+<meta content="role-based access control, permission management, user authorization, security frameworks, access control systems" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/role-based-permissions/" property="og:url"/>
+<meta content="Role-Based Permissions | SmartWeb" property="og:title"/>
+<meta content="A security system that controls what employees can access by assigning them job roles, rather than managing permissions individually for each person." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/role-based-permissions/" name="twitter:url"/>
+<meta content="Role-Based Permissions | SmartWeb" name="twitter:title"/>
+<meta content="A security system that controls what employees can access by assigning them job roles, rather than managing permissions individually for each person." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Role-Based Permissions</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Role-Based Permissions
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A security system that controls what employees can access by assigning them job roles, rather than managing permissions individually for each person.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                role-based access control
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                permission management
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                user authorization
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                security frameworks
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                access control systems
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-role-based-permissions">What is Role-Based Permissions?</h2>
+<p>Role-Based Permissions, also known as Role-Based <a data-lb="1" href="/en/glossary/access-control/" title="Access Control glossary entry">Access Control</a> (RBAC), is a security framework that restricts system access to authorized users based on their assigned roles within an organization. This approach simplifies permission management by grouping users into roles and assigning specific permissions to those roles rather than managing individual user permissions. The system operates on the principle that users should only have access to the resources and functions necessary to perform their job responsibilities, implementing the concept of least privilege access.</p>
+<p>The foundation of role-based permissions lies in the separation of users, roles, and permissions into distinct entities. Users are assigned to one or more roles, and roles are granted specific permissions to access resources or perform actions within a system. This hierarchical structure creates a scalable and manageable security model that can adapt to organizational changes without requiring extensive reconfiguration. When an employee changes positions or departments, administrators simply modify their role assignments rather than individually adjusting dozens of permissions across multiple systems.</p>
+<p>Role-based permissions have become the standard approach for access control in modern enterprise applications, cloud platforms, and operating systems. The model provides a balance between security and usability, ensuring that users can efficiently perform their duties while maintaining strict control over sensitive resources. Organizations benefit from reduced administrative overhead, improved compliance with regulatory requirements, and enhanced security posture through consistent application of access policies. The system also supports audit trails and compliance reporting by clearly documenting who has access to what resources and when those permissions were granted or modified.</p>
+<h2 id="core-permission-management-components">Core Permission Management Components</h2>
+<p><strong>Role Definition</strong> - The fundamental building block that represents a job function or responsibility within an organization, containing a collection of permissions that enable users to perform specific tasks or access particular resources.</p>
+<p><strong>Permission Assignment</strong> - The process of granting specific access rights to roles, defining what actions can be performed on which resources, including read, write, execute, delete, and administrative privileges.</p>
+<p><strong>User-Role Mapping</strong> - The association between individual users and their assigned roles, which can be one-to-many relationships where users hold multiple roles simultaneously based on their organizational responsibilities.</p>
+<p><strong>Resource Protection</strong> - The mechanism that secures system resources, applications, data, and functions by requiring appropriate permissions before allowing access or operations to proceed.</p>
+<p><strong>Inheritance Hierarchies</strong> - The structured relationship between roles that allows permissions to flow from parent roles to child roles, creating efficient management of complex organizational structures.</p>
+<p><strong>Session Management</strong> - The dynamic application of role-based permissions during user sessions, including role activation, deactivation, and context-sensitive permission enforcement based on current activities.</p>
+<p><strong>Policy Enforcement</strong> - The runtime mechanisms that evaluate user requests against assigned permissions, making access control decisions and logging authorization events for audit purposes.</p>
+<h2 id="how-role-based-permissions-works">How Role-Based Permissions Works</h2>
+<p>The role-based permissions system operates through a systematic workflow that begins when a user attempts to access a protected resource or perform a specific action. The system first authenticates the user’s identity through credentials such as username and password, multi-factor authentication, or single sign-on tokens. Once authentication is confirmed, the system retrieves the user’s assigned roles from the authorization database or directory service.</p>
+<p>The authorization engine then evaluates the requested action against the permissions associated with the user’s roles. This evaluation process involves checking whether any of the user’s roles contain the specific permission required for the requested operation. The system may also consider contextual factors such as time of access, location, device type, or current system state when making authorization decisions.</p>
+<p>If the user possesses the necessary permissions through their assigned roles, the system grants access and logs the successful authorization event. The user can then proceed with their intended action while the system continues to monitor and enforce permissions for subsequent requests. If permissions are insufficient, the system denies access and may log the failed attempt for security <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a> purposes.</p>
+<p><strong>Example Workflow:</strong></p>
+<ol>
+<li>Marketing Manager logs into CRM system</li>
+<li>System authenticates user credentials</li>
+<li>System retrieves “Marketing Manager” and “Sales Team Member” roles</li>
+<li>User requests access to customer contact database</li>
+<li>System checks if either role has “Customer Data Read” permission</li>
+<li>Marketing Manager role contains required permission</li>
+<li>Access granted and activity logged</li>
+<li>User can view customer contacts within defined scope</li>
+</ol>
+<h2 id="key-benefits">Key Benefits</h2>
+<p><strong>Simplified Administration</strong> - Reduces administrative overhead by managing permissions at the role level rather than for individual users, making it easier to maintain consistent access policies across large organizations.</p>
+<p><strong>Enhanced Security</strong> - Implements the principle of least privilege by ensuring users only receive permissions necessary for their job functions, reducing the risk of unauthorized access to sensitive resources.</p>
+<p><strong>Improved Compliance</strong> - Facilitates regulatory compliance by providing clear documentation of who has access to what resources, supporting audit requirements and demonstrating proper access controls.</p>
+<p><strong>Scalable Management</strong> - Accommodates organizational growth and changes efficiently by allowing administrators to modify role definitions rather than updating individual user permissions across multiple systems.</p>
+<p><strong>Consistent Policy Enforcement</strong> - Ensures uniform application of access policies throughout the organization, reducing security gaps and inconsistencies that can arise from manual permission management.</p>
+<p><strong>Faster User Onboarding</strong> - Streamlines the process of granting appropriate access to new employees by simply assigning them to predefined roles that match their job responsibilities.</p>
+<p><strong>Reduced Human Error</strong> - Minimizes mistakes in permission assignment by using standardized roles and automated processes rather than manual configuration of individual user access rights.</p>
+<p><strong>Cost Effectiveness</strong> - Lowers operational costs by reducing the time and resources required for access management, user provisioning, and security administration tasks.</p>
+<p><strong>Audit Trail Clarity</strong> - Provides clear visibility into access patterns and permission usage, making it easier to identify potential security issues and demonstrate compliance with regulatory requirements.</p>
+<p><strong>Dynamic Access Control</strong> - Enables flexible permission management that can adapt to changing business needs, temporary assignments, and evolving organizational structures without compromising security.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p><strong>Enterprise Resource Planning (ERP) Systems</strong> - Managing access to financial data, human resources information, and operational systems based on departmental roles and job responsibilities.</p>
+<p><strong>Healthcare Information Systems</strong> - Controlling access to patient records, medical devices, and clinical applications while maintaining HIPAA compliance and protecting sensitive health information.</p>
+<p><strong>Financial Services Applications</strong> - Securing banking systems, trading platforms, and customer financial data with strict role-based controls that meet regulatory requirements and prevent unauthorized transactions.</p>
+<p><strong>Cloud Platform Management</strong> - Governing access to cloud resources, virtual machines, storage systems, and administrative functions based on <a data-lb="1" href="/en/glossary/user-roles/" title="User Roles glossary entry">user roles</a> and organizational hierarchy.</p>
+<p><strong>Document Management Systems</strong> - Controlling who can view, edit, approve, or delete documents based on their role in document workflows and organizational authority levels.</p>
+<p><strong>Customer Relationship Management (CRM)</strong> - Managing access to customer data, sales pipelines, and marketing campaigns based on team membership and functional responsibilities.</p>
+<p><strong>Manufacturing Control Systems</strong> - Securing access to production equipment, quality control systems, and operational technology based on operator certifications and job functions.</p>
+<p><strong>Educational Management Platforms</strong> - Controlling access to student records, grading systems, and administrative functions based on roles such as teacher, administrator, or staff member.</p>
+<p><strong>Government Security Systems</strong> - Managing access to classified information, secure facilities, and sensitive government resources based on security clearance levels and need-to-know principles.</p>
+<p><strong>Multi-tenant SaaS Applications</strong> - Providing role-based access control within and across different customer organizations while maintaining data isolation and security boundaries.</p>
+<h2 id="permission-models-comparison">Permission Models Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Model Type</th>
+<th>Complexity</th>
+<th>Scalability</th>
+<th>Flexibility</th>
+<th>Administrative Overhead</th>
+<th>Best Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Role-Based (RBAC)</td>
+<td>Medium</td>
+<td>High</td>
+<td>Medium</td>
+<td>Low</td>
+<td>Enterprise applications with defined job functions</td>
+</tr>
+<tr>
+<td>Attribute-Based (ABAC)</td>
+<td>High</td>
+<td>Very High</td>
+<td>Very High</td>
+<td>Medium</td>
+<td>Complex environments requiring contextual decisions</td>
+</tr>
+<tr>
+<td>Discretionary (DAC)</td>
+<td>Low</td>
+<td>Low</td>
+<td>High</td>
+<td>High</td>
+<td>Small organizations with simple access needs</td>
+</tr>
+<tr>
+<td>Mandatory (MAC)</td>
+<td>High</td>
+<td>Medium</td>
+<td>Low</td>
+<td>Medium</td>
+<td>High-security environments with strict classifications</td>
+</tr>
+<tr>
+<td>Rule-Based</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Systems requiring policy-driven access decisions</td>
+</tr>
+<tr>
+<td>Hybrid Models</td>
+<td>Very High</td>
+<td>High</td>
+<td>Very High</td>
+<td>High</td>
+<td>Large enterprises with diverse <a data-lb="1" href="/en/glossary/security-requirements/" title="Security Requirements glossary entry">security requirements</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p><strong>Role Explosion</strong> - Organizations may create too many granular roles, leading to complexity that defeats the purpose of simplified administration and makes the system difficult to manage effectively.</p>
+<p><strong>Permission Creep</strong> - Users may accumulate excessive permissions over time as they change roles or take on additional responsibilities without proper review and cleanup of unnecessary access rights.</p>
+<p><strong>Cross-Functional Complexity</strong> - Managing permissions for users who work across multiple departments or projects can be challenging when roles don’t align perfectly with organizational boundaries.</p>
+<p><strong>Dynamic Business Requirements</strong> - Rapidly changing business needs may require frequent role modifications, making it difficult to maintain stable and consistent permission structures.</p>
+<p><strong>Compliance Mapping</strong> - Ensuring that role definitions and permissions align with regulatory requirements and industry standards can be complex and require ongoing monitoring and adjustment.</p>
+<p><strong>Integration Challenges</strong> - Implementing role-based permissions across heterogeneous systems and applications may require significant integration effort and custom development work.</p>
+<p><strong>Performance Impact</strong> - Complex role hierarchies and permission evaluations can impact system performance, especially in high-transaction environments with frequent authorization checks.</p>
+<p><strong>User Experience Balance</strong> - Striking the right balance between security restrictions and user productivity can be challenging when roles are too restrictive or permissions are too granular.</p>
+<p><strong>Audit and Reporting Complexity</strong> - Generating meaningful reports and audit trails from complex role structures requires sophisticated tools and may be difficult to interpret for compliance purposes.</p>
+<p><strong>Emergency Access Procedures</strong> - Establishing proper break-glass procedures for emergency situations while maintaining security controls and audit trails requires careful planning and implementation.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p><strong>Start with Business Analysis</strong> - Conduct thorough analysis of job functions, business processes, and access requirements before designing roles to ensure alignment with organizational needs and objectives.</p>
+<p><strong>Follow Principle of Least Privilege</strong> - Grant only the minimum permissions necessary for users to perform their job functions, regularly reviewing and removing unnecessary access rights.</p>
+<p><strong>Design Role Hierarchies Carefully</strong> - Create logical role structures that reflect organizational hierarchy and business relationships while avoiding overly complex inheritance patterns that become difficult to manage.</p>
+<p><strong>Implement Regular Access Reviews</strong> - Establish periodic review processes to validate that users still require their assigned roles and that role permissions remain appropriate for business needs.</p>
+<p><strong>Document Role Definitions Clearly</strong> - Maintain comprehensive documentation of role purposes, permissions, and business justifications to support audit requirements and administrative decision-making.</p>
+<p><strong>Use Automated Provisioning</strong> - Implement automated user provisioning and deprovisioning processes to ensure timely and accurate role assignments based on HR systems and business workflows.</p>
+<p><strong>Monitor Permission Usage</strong> - Track how permissions are actually used to identify unused access rights, potential security risks, and opportunities for role optimization.</p>
+<p><strong>Plan for Exceptions Carefully</strong> - Establish clear processes for handling access requests that don’t fit standard roles while maintaining security controls and audit trails.</p>
+<p><strong>Test Role Changes Thoroughly</strong> - Implement proper testing procedures for role modifications to ensure that changes don’t inadvertently grant excessive permissions or break business processes.</p>
+<p><strong>Provide User Training</strong> - Educate users about their roles, responsibilities, and proper use of assigned permissions to promote security awareness and compliance with access policies.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p><strong>Dynamic Role Assignment</strong> - Implementing context-aware role activation based on factors such as location, time, device type, or current project assignments to provide more granular and situational access control.</p>
+<p><strong>Attribute-Based Enhancement</strong> - Combining role-based permissions with attribute-based access control (ABAC) to create more flexible and context-sensitive authorization decisions based on user, resource, and environmental attributes.</p>
+<p><strong>Machine Learning Integration</strong> - Using <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence glossary entry">artificial intelligence</a> and machine learning algorithms to analyze access patterns, detect anomalies, and recommend role optimizations or security policy adjustments.</p>
+<p><strong>Zero Trust Architecture</strong> - Implementing role-based permissions within a zero trust security model that continuously verifies user identity and device trustworthiness before granting access to resources.</p>
+<p><strong>Risk-Based Access Control</strong> - Incorporating risk assessment algorithms that evaluate the potential impact of access requests and adjust permission requirements based on calculated risk levels.</p>
+<p><strong>Blockchain-Based Permissions</strong> - Utilizing distributed ledger technology to create immutable audit trails of permission changes and role assignments while enabling decentralized access control decisions.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p><strong>AI-Driven Role Management</strong> - Artificial intelligence will increasingly automate role creation, optimization, and maintenance by analyzing user behavior patterns and business requirements to suggest optimal permission structures.</p>
+<p><strong>Contextual Access Intelligence</strong> - Advanced systems will incorporate real-time context analysis including user behavior, environmental factors, and threat intelligence to make more sophisticated authorization decisions.</p>
+<p><strong>Quantum-Safe Security</strong> - Role-based permission systems will need to adapt to quantum computing threats by implementing quantum-resistant cryptographic methods for securing authorization tokens and communications.</p>
+<p><strong>Decentralized Identity Integration</strong> - Integration with blockchain-based identity systems and self-sovereign identity models will enable more user-controlled and privacy-preserving permission management approaches.</p>
+<p><strong>IoT and Edge Computing</strong> - Role-based permissions will expand to cover Internet of Things devices and edge computing environments, requiring new approaches to manage permissions for non-human entities and distributed systems.</p>
+<p><strong>Regulatory Technology Automation</strong> - Advanced compliance automation will use role-based permission data to automatically generate regulatory reports, detect compliance violations, and suggest remediation actions.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Sandhu, R., Coyne, E., Feinstein, H., &amp; Youman, C. (1996). Role-based access control models. IEEE Computer, 29(2), 38-47.</p>
+</li>
+<li>
+<p>Ferraiolo, D. F., Sandhu, R., Gavrila, S., Kuhn, D. R., &amp; Chandramouli, R. (2001). Proposed NIST standard for role-based access control. ACM Transactions on Information and System Security, 4(3), 224-274.</p>
+</li>
+<li>
+<p>National Institute of Standards and Technology. (2004). Role Based Access Control (NIST INCITS 359-2004). American National Standards Institute.</p>
+</li>
+<li>
+<p>Hu, V. C., Ferraiolo, D., Kuhn, R., Schnitzer, A., Sandlin, K., Miller, R., &amp; Scarfone, K. (2014). Guide to attribute based access control (ABAC) definition and considerations. NIST Special Publication 800-162.</p>
+</li>
+<li>
+<p>Basin, D., Doser, J., &amp; Lodderstedt, T. (2006). Model driven security: From UML models to access control infrastructures. ACM Transactions on Software Engineering and Methodology, 15(1), 39-91.</p>
+</li>
+<li>
+<p>Kuhn, D. R., Coyne, E. J., &amp; Weil, T. R. (2010). Adding attributes to role-based access control. IEEE Computer, 43(6), 79-81.</p>
+</li>
+<li>
+<p>Jin, X., Krishnan, R., &amp; Sandhu, R. (2012). A unified attribute-based access control model covering DAC, MAC and RBAC. IFIP Annual Conference on Data and Applications Security and Privacy, 41-55.</p>
+</li>
+<li>
+<p>Servos, D., &amp; Osborn, S. L. (2017). Current research and open problems in attribute-based access control. ACM Computing Surveys, 49(4), 1-45.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/role-based-access-control--rbac-/">
+                    Role-Based Access Control (RBAC)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A security system that grants access to computer systems based on job roles rather than individual u...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/role-based-access-control--rbac-/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/role-based-permissions/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

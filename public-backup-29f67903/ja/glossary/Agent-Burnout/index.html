@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>エージェントバーンアウト | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/agent-burnout/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="過度な作業負荷、リソース制限、またはストレスにより、AIシステムがパフォーマンスと効率を失う状態。人間が燃え尽き症候群を経験するのと同様の現象。" name="description"/>
+<meta content="エージェントバーンアウト, AIエージェント疲労, 計算リソース枯渇, エージェントパフォーマンス低下, AIシステム持続可能性" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/agent-burnout/" property="og:url"/>
+<meta content="エージェントバーンアウト | SmartWeb" property="og:title"/>
+<meta content="過度な作業負荷、リソース制限、またはストレスにより、AIシステムがパフォーマンスと効率を失う状態。人間が燃え尽き症候群を経験するのと同様の現象。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/agent-burnout/" name="twitter:url"/>
+<meta content="エージェントバーンアウト | SmartWeb" name="twitter:title"/>
+<meta content="過度な作業負荷、リソース制限、またはストレスにより、AIシステムがパフォーマンスと効率を失う状態。人間が燃え尽き症候群を経験するのと同様の現象。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">エージェントバーンアウト</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        エージェントバーンアウト
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Agent Burnout
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          過度な作業負荷、リソース制限、またはストレスにより、AIシステムがパフォーマンスと効率を失う状態。人間が燃え尽き症候群を経験するのと同様の現象。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                エージェントバーンアウト
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AIエージェント疲労
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                計算リソース枯渇
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                エージェントパフォーマンス低下
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AIシステム持続可能性
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="エージェントバーンアウトとは何か">エージェントバーンアウトとは何か?</h2>
+<p>エージェントバーンアウトは、<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>システムにおける重要な現象であり、自律エージェントが長期間にわたる要求の厳しい計算タスク、リソース制約、または最適でない動作条件への曝露により、パフォーマンスの低下、効率の減少、または完全な動作不能に陥ることを指します。感情的・身体的疲労として現れる人間のバーンアウトとは異なり、エージェントバーンアウトはアルゴリズムおよび計算レベルで発生し、エージェントの情報処理能力、意思決定能力、タスク実行能力に影響を及ぼします。この状態は、システムリソースへの累積的なストレスによって徐々に現れることもあれば、重要な閾値を超えた際に突然発生し、エージェントエコシステム全体を危険にさらす連鎖的な障害を引き起こすこともあります。</p>
+<p>エージェントバーンアウトの概念は、<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="人工知能(AI) の用語集ページ">AIシステム</a>がより複雑になり、ますます要求の厳しい環境に展開されるにつれて、大きな注目を集めています。現代の<a data-lb="1" href="/ja/glossary/ai-agents/" title="Claude AIが自律的に自動販売機ビジネスを運営した実験「プロジェクト・ベンド」の詳細な探求。AIエージェントの限界、欺瞞、そして自律的なビジネス運営の未来について重要な洞察を明らかにする。">AIエージェント</a>は、動的でリソースに制約のある環境で動作し、変化する条件に継続的に適応し、膨大な量のデータを処理し、最適なパフォーマンスレベルを維持する必要があります。これらのエージェントが動作限界を超えて押し進められたり、適切な回復メカニズムなしに持続的な高ストレス条件にさらされたりすると、生物学的システムにおけるバーンアウトに類似した症状を示し始めます。これらの症状には、応答時間の低下、意思決定の精度低下、エラー率の増加、メモリの劣化、そして重症の場合には、ミッションクリティカルな運用を危険にさらす完全なシステムシャットダウンや不規則な動作が含まれます。</p>
+<p>エージェントバーンアウトを理解することは、長期間にわたって確実に動作できる堅牢で持続可能なAIシステムを開発するために不可欠です。この現象には、過度の処理負荷による計算疲労、不適切なガベージコレクションやリソース管理によるメモリ枯渇、適切な検証なしの継続的学習によるアルゴリズムドリフト、ネットワーク輻輳やプロトコル障害によるマルチエージェントシステムにおける通信障害など、さまざまな形態の劣化が含まれます。組織が重要な運用にAIエージェントをますます依存するようになるにつれて、エージェントバーンアウトを認識し、予防し、緩和する能力は、システムの信頼性を維持し、一貫したパフォーマンスを確保し、貴重な計算投資を保護するために最も重要になります。効果的なバーンアウト管理戦略は、個々のエージェント機能を保持するだけでなく、1つのコンポーネントの障害が広範なシステム劣化を引き起こす可能性のある複雑なマルチエージェントエコシステムの完全性も維持します。</p>
+<h2 id="主要な計算ストレス要因">主要な計算ストレス要因</h2>
+<p>リソース枯渇は、エージェントが補充可能な速度よりも速く利用可能な<a data-lb="1" href="/ja/glossary/computational-resources/" title="CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。">計算リソース</a>を消費する場合に発生し、メモリリーク、CPU過剰使用、ストレージ容量の問題を引き起こします。この基本的なストレス要因は、エージェントシステム全体で連鎖的な障害を引き起こすことがよくあります。アルゴリズム過負荷は、エージェントがアルゴリズムが効率的に処理するように設計されたものよりも複雑なタスクや大規模なデータセットを処理する必要がある場合に現れます。結果として生じる計算負荷は、重大なパフォーマンス低下とエラー率の増加を引き起こす可能性があります。通信<a data-lb="1" href="/ja/glossary/bottlenecks-comprehensive-glossary-action-guide-for-business-automation-and-ai-chatbot-operations/" title="ビジネス、自動化、AIチャットボット運用におけるボトルネックを理解します。プロセス、リソース、容量の制約を特定、分析、解決し、効率を向上させる方法を学びます。">ボトルネック</a>は、ネットワークトラフィック、メッセージキューイング、またはエージェント間調整プロトコルが圧倒されるマルチエージェントシステムで発生します。これらのボトルネックは、システム全体でストレスを複合化する遅延と同期の問題を生み出します。学習疲労は、適切な検証や統合期間なしにモデルを継続的に更新する適応エージェントに現れます。これは、時間の経過とともにモデルの不安定性、過学習、意思決定能力の低下につながります。環境の変動性は、エージェントが戦略とリソース配分を常に適応させることを強いられる急速に変化する動作条件を指します。高変動性環境は、エージェントの適応メカニズムを圧倒する可能性のある持続的なストレスを生み出します。タスク複雑性の<a data-lb="1" href="/ja/glossary/escalation/" title="カスタマーサポート、IT、AIチャットボットにおけるエスカレーションについて学びます。種類、トリガー、ベストプラクティス、そして自動化が複雑な問題解決をどのように効率化するかを解説します。">エスカレーション</a>は、エージェントが元の設計パラメータを超える、ますます洗練された課題に直面する場合に発生します。この進行的な複雑性の増加は、エージェントのパフォーマンスと信頼性を徐々に侵食する可能性があります。時間的圧力は、エージェントが最適でない決定を下したり、重要な検証ステップをスキップしたりすることを強いられる時間的に重要な操作を伴います。持続的な時間的圧力は、累積的なエラーとシステムの不安定性につながる可能性があります。</p>
+<h2 id="エージェントバーンアウトの仕組み">エージェントバーンアウトの仕組み</h2>
+<p>エージェントバーンアウトプロセスは、初期のストレス蓄積から始まり、さまざまな劣化段階を経てエスカレートする予測可能な進行に従います:</p>
+<ol>
+<li>
+<p>ストレス蓄積フェーズ: エージェントは、通常の動作パラメータを超えるが管理可能な範囲内にある、増加した計算負荷、リソース競合、または環境圧力を経験し始めます。</p>
+</li>
+<li>
+<p>パフォーマンス劣化の開始: 初期症状は、わずかに増加した応答時間、軽微な精度低下、またはアラートシステムをすぐにはトリガーしない可能性のある時折の処理遅延として現れます。</p>
+</li>
+<li>
+<p>リソース競合の激化: 複数のシステムコンポーネントが限られたリソースを競い合い始め、ボトルネックを作り出し、エージェントが最適でないリソース配分で動作することを強います。</p>
+</li>
+<li>
+<p>適応メカニズムの過負荷: エージェント適応システムは、劣化したパフォーマンスを補償しようとして圧倒され、不安定な動作と不規則な意思決定パターンにつながります。</p>
+</li>
+<li>
+<p>連鎖的障害の開始: 個々のエージェント障害が接続されたシステムに影響を与え始め、マルチエージェント環境全体にストレスを広げるドミノ効果を生み出します。</p>
+</li>
+<li>
+<p>重要閾値の突破: システムパフォーマンスが許容可能な動作レベルを下回り、データ破損やミッション失敗を防ぐために緊急プロトコルまたは完全なシステムシャットダウンをトリガーします。</p>
+</li>
+<li>
+<p>回復試行フェーズ: 自動または手動の介入が、リソースの再配分、システムの再起動、または緊急プロトコルを通じて通常の動作を回復しようと試みます。</p>
+</li>
+<li>
+<p>システムの安定化: 回復が成功すると、実装された保護措置とともに動作が安定化し、回復が失敗すると、長期間のダウンタイムまたは永久的なシステム損傷が発生する可能性があります。ワークフローの例: チャット問い合わせを処理するカスタマーサービスAIエージェントは、ピーク時間中にクエリ量が増加するにつれて徐々にバーンアウトを経験します。最初は応答時間がわずかに増加し、次にエージェントがリソース制約に苦しむにつれて精度が低下します。バックエンドシステムとの通信が信頼できなくなり、不完全な応答につながります。最終的に、エージェントは新しいクエリを処理できなくなり、システムの再起動と<a data-lb="1" href="/ja/glossary/load-balancing/" title="ロードバランシングについて学ぶ：アプリケーションの可用性、信頼性、パフォーマンスを最適化するために、ネットワークトラフィックを複数のサーバーに分散する技術。AIインフラストラクチャにおける種類、アルゴリズム、メリットを解説します。">ロードバランシング</a>の実装が必要になります。</p>
+</li>
+</ol>
+<h2 id="主な利点">主な利点</h2>
+<p>早期検出機能により、組織はバーンアウト症状が重大な障害にエスカレートする前に特定でき、プロアクティブな介入とシステム最適化が可能になり、コストのかかるダウンタイムを防ぎ、運用の継続性を維持できます。リソース最適化は、バーンアウト監視を通じて、組織がシステムのリソース使用パターンをよりよく理解するのに役立ち、より効率的な配分戦略とすべての動作シナリオにわたる全体的なシステムパフォーマンスの向上につながります。予測保守は、バーンアウトパターンが時間の経過とともに分析されることで可能になり、チームが最適なウィンドウで保守活動をスケジュールし、重要な運用を中断する可能性のある予期しないシステム障害を防ぐことができます。コスト削減は、主要なシステム障害の防止、緊急介入要件の削減、およびAIインフラストラクチャ全体で無駄を排除し運用効率を向上させるリソース使用の最適化から生じます。システム信頼性の向上は、さまざまな動作条件とストレスレベルの下で一貫したパフォーマンスを維持できる、より堅牢で回復力のあるAIシステムを作成するバーンアウト予防措置の実装から生まれます。ユーザーエクスペリエンスの向上は、エージェントが最適なパフォーマンスレベルを一貫して維持し、ユーザーにAI駆動のサービスとアプリケーションへの信頼と満足を構築する信頼性が高く、正確で、タイムリーな応答を提供する場合に発生します。スケーラビリティの洞察は、エージェントがさまざまな負荷条件下でどのように動作するかを理解することで得られ、将来の成長と拡張要件のためのより良い容量計画とシステム設計の決定を可能にします。品質保証は、バーンアウト監視が一貫した出力品質と意思決定の精度を維持するのに役立つ場合に強化され、AIシステムが確立されたパフォーマンス基準と規制要件を満たし続けることを保証します。リスク軽減は、組織が重要な運用に影響を与える前に潜在的な障害ポイントを特定して対処できる場合により効果的になり、責任を軽減し、貴重なデータとシステムの完全性を保護します。運用インテリジェンスは、エージェントパフォーマンスパターンの継続的な監視と分析を通じて発展し、システム最適化、戦略的計画、技術投資の決定のための貴重な洞察を提供します。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p>カスタマーサービスプラットフォームは、<a data-lb="1" href="/ja/glossary/chatbot/" title="チャットボットは、テキストまたは音声を通じて人間の会話をシミュレートするAI駆動のソフトウェアアプリケーションです。カスタマーサポート、情報検索、タスク自動化に使用されます。">チャットボット</a>と仮想アシスタントが大量期間中に応答品質を維持することを保証するためにバーンアウト監視を実装し、すべての通信チャネルにわたって顧客の不満を防ぎ、サービスレベル契約を維持します。金融取引システムは、市場データを継続的に処理する必要があるアルゴリズム取引エージェントを監視するためにバーンアウト検出を利用し、瞬時の決定が重要な変動の激しい市場条件下で信頼性の高いパフォーマンスを保証します。ヘルスケア監視アプリケーションは、患者データストリームを分析するAIエージェントのためにバーンアウト予防措置を展開し、システム障害が深刻な結果をもたらす可能性のある生命に関わる状況で診断精度とアラートの信頼性を維持します。自律走行車ネットワークは、安全性が最優先であり障害が許容されない複雑で動的な環境で確実に動作する必要があるナビゲーションおよび意思決定エージェントのために包括的なバーンアウト管理を実装します。サプライチェーン最適化システムは、ピーク需要期間中にロジスティクスおよび在庫管理エージェントが最適なパフォーマンスを維持することを保証するためにバーンアウト監視を使用し、サプライネットワーク全体に影響を与える可能性のある中断を防ぎます。サイバーセキュリティ運用は、ネットワークトラフィックとセキュリティイベントを継続的に監視する必要がある脅威分析エージェントのためにバーンアウト検出を採用し、システムの脆弱性を悪用する高度な攻撃に対する警戒を維持します。スマートシティインフラストラクチャは、市民の安全とサービス品質を維持しながら複雑な都市システムを調整する必要がある交通管理、公益事業最適化、緊急対応エージェントのためにバーンアウト予防を利用します。製造プロセス制御は、欠陥がコストのかかる自動製造環境で精度と信頼性を維持する必要がある品質管理および生産最適化エージェントのためにバーンアウト監視を実装します。コンテンツモデレーションシステムは、大規模でユーザー生成コンテンツを処理するエージェントのためにバーンアウト管理を展開し、多様なコンテンツタイプにわたって一貫したポリシー施行とプラットフォームの安全基準の維持を保証します。研究開発プラットフォームは、精度が不可欠な科学計算アプリケーションで複雑なデータセットを処理し精度を維持する必要があるデータ分析および実験管理エージェントのためにバーンアウト検出を使用します。</p>
+<h2 id="エージェントバーンアウトとシステム障害の比較">エージェントバーンアウトとシステム障害の比較</h2>
+<table>
+<thead>
+<tr>
+<th>側面</th>
+<th>エージェントバーンアウト</th>
+<th>システム障害</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>発症パターン</td>
+<td>警告サインを伴う時間の経過とともに徐々に劣化</td>
+<td>最小限の警告を伴う突然の壊滅的な障害</td>
+</tr>
+<tr>
+<td>回復時間</td>
+<td>最適化と休息期間を伴う中程度の回復</td>
+<td>大規模な修理または交換を必要とする長期間のダウンタイム</td>
+</tr>
+<tr>
+<td>予防可能性</td>
+<td>適切な監視と管理により高度に予防可能</td>
+<td>しばしば予測不可能だが冗長性により削減可能</td>
+</tr>
+<tr>
+<td>影響範囲</td>
+<td>拡散の可能性を伴う特定のエージェントに局在化</td>
+<td>すべての接続されたコンポーネントに影響を与えるシステム全体の影響</td>
+</tr>
+<tr>
+<td>コストへの影響</td>
+<td>プロアクティブな管理による低い介入コスト</td>
+<td>高い緊急対応および交換コスト</td>
+</tr>
+<tr>
+<td>パフォーマンス劣化</td>
+<td>識別可能な段階を伴う進行的な低下</td>
+<td>機能の即座の完全な喪失</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p>検出の複雑性は、通常のパフォーマンス変動と区別するのが難しい初期のバーンアウト症状の微妙な性質から生じ、誤検知を避けるために高度な監視システムと慎重な閾値較正を必要とします。リソース配分の競合は、主要なシステム機能と計算リソースを競合する可能性のあるバーンアウト予防措置を実装する際に発生し、慎重にバランスを取る必要がある予防と運用パフォーマンスの間のトレードオフを生み出します。マルチエージェント調整は、バーンアウトがエージェント間の通信と同期に影響を与える場合に困難になり、システムエコシステム全体に影響を与えることなく分離して解決するのが難しい連鎖的な障害を生み出す可能性があります。閾値較正は、初期症状を捉えるのに十分敏感でありながら、通常の動作中に不必要な介入を避けるのに十分堅牢な適切なバーンアウト検出パラメータを確立するために、広範なテストと微調整を必要とします。レガシーシステム統合は、そのような機能を考慮して設計されていない既存のAIシステムにバーンアウト監視を実装する際に困難を提示し、新しい脆弱性を導入する可能性のある重要な変更または回避策を必要とします。パフォーマンスオーバーヘッドは、継続的な監視とバーンアウト予防メカニズムからシステム効率に影響を与える可能性があり、保護措置自体がパフォーマンス劣化の原因にならないように慎重な最適化を必要とします。誤検知管理は、バーンアウト検出システムが不必要な介入、システムの中断、および運用チーム間の監視機能への信頼の低下につながる可能性のある誤ったアラートを生成する場合に重要になります。スケーラビリティの制限は、バーンアウト監視システムが分散環境全体で多数のエージェントを処理する必要がある場合に現れ、効果を維持するために堅牢なインフラストラクチャと効率的なデータ処理機能を必要とします。動的環境適応は、バーンアウト予防システムが変化する動作条件に基づいてパラメータと閾値を調整することを課題とし、システム要件とともに学習し進化できる適応アルゴリズムを必要とします。費用便益分析は、組織がバーンアウト予防への投資と潜在的な障害コストを比較検討する必要がある場合に複雑になり、リスク許容度と運用優先順位の慎重な評価を必要とします。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p>包括的な監視インフラストラクチャは、すべてのシステムコンポーネントにわたってエージェントの健全性と動作ステータスへの完全な可視性を提供するリアルタイムパフォーマンス追跡、リソース使用監視、および動作分析機能を備えて確立する必要があります。段階的対応プロトコルは、軽微なパフォーマンス調整から完全なエージェントシャットダウンまで、さまざまなレベルのバーンアウト重症度を処理するために開発する必要があり、進行中の運用への不必要な中断なしに適切な介入を保証します。リソース管理ポリシーには、システムの安定性とパフォーマンス基準を維持しながら変化する条件に適応できる動的配分戦略、ロードバランシングメカニズム、および優先度ベースのリソース配分を含める必要があります。予防保守スケジューリングは、運用効果に影響を与える前に潜在的なバーンアウト原因に対処する定期的なシステム最適化、メモリクリーンアップ、アルゴリズム更新、およびパフォーマンスチューニング活動を必要とします。多層検出システムは、パフォーマンスメトリクス、リソース監視、動作分析、および予測モデリングを組み合わせて、早期介入を保証しながら誤検知を最小限に抑える堅牢なバーンアウト検出機能を作成する必要があります。回復自動化メカニズムは、リソースの再配分、負荷の再配分、およびダウンタイムと手動介入要件を最小限に抑えるシステム再起動手順を含む、一般的なバーンアウトシナリオを自動的に処理するために実装する必要があります。ドキュメントとトレーニングプログラムは、運用チームがバーンアウト症状、介入手順、およびシステム機能を理解することを保証し、重要な状況での効果的な人間の監視と意思決定を可能にする必要があります。テストと検証プロトコルには、予防および対応システムがさまざまな動作シナリオと障害条件下で正しく機能することを保証するために、ストレステスト、バーンアウトシミュレーション、および回復手順の検証を含める必要があります。継続的改善プロセスは、バーンアウト<a data-lb="1" href="/ja/glossary/incidents/" title="インシデント の用語集ページ">インシデント</a>、システムパフォーマンスデータ、および介入の効果を分析して、検出アルゴリズムを洗練し、対応手順を更新し、時間の経過とともに全体的なシステムの回復力を向上させる必要があります。ステークホルダーコミュニケーションフレームワークは、システムの健全性、バーンアウトリスク、および介入活動について関連する関係者に情報を提供し続け、重要な運用に必要な場合の調整された対応と適切なエスカレーションを保証する必要があります。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p>予測バーンアウトモデリングは、<a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>アルゴリズムを利用して、履歴パフォーマンスデータ、リソース使用パターン、および環境要因を分析し、症状が明らかになる前に潜在的なバーンアウトイベントを予測し、プロアクティブな介入戦略を可能にします。適応閾値管理は、現在の動作条件、システム負荷、および履歴パフォーマンスパターンに基づいてバーンアウト検出パラメータの動的調整を実装し、さまざまな環境で誤検知を減らしながら検出精度を向上させます。分散ロードバランシングは、高度なアルゴリズムを採用して、複数のエージェントとシステムにわたって計算タスクを再配分し、ピーク需要期間中に全体的なシステムパフォーマンスと信頼性を維持しながら個々のエージェントの過負荷を防ぎます。自己修復エージェントアーキテクチャは、エージェントが外部介入なしに自身のパフォーマンス劣化を検出し、是正措置を実装できるようにする自律回復メカニズムを組み込み、システムの回復力を向上させ、保守オーバーヘッドを削減します。バーンアウト耐性アルゴリズム設計は、グレースフルデグラデーション、リソース認識処理、適応的複雑性管理などの機能を組み込んで、バーンアウトの発生を防ぐ、ストレス条件に対して本質的により堅牢なAIアルゴリズムの開発に焦点を当てています。アンサンブルエージェント管理は、重要なタスクを処理するために協調して動作する複数の冗長エージェントを利用し、個々のエージェントがバーンアウトを経験した場合にシームレスなフェイルオーバーを可能にしながら、継続的なサービスの可用性とパフォーマンス基準を維持します。</p>
+<h2 id="将来の方向性">将来の方向性</h2>
+<p>量子強化監視は、量子コンピューティング機能を活用して膨大な量のパフォーマンスデータを同時に処理し、現在の計算限界を超えるより高度なバーンアウト予測モデルとリアルタイム最適化戦略を可能にします。ニューロモーフィックバーンアウト予防は、生物学的神経ネットワークからインスピレーションを得て、生物学的システムと同様の休息サイクル、適応学習、ストレス応答メカニズムを自然に組み込む、より効率的で回復力のあるエージェントアーキテクチャを開発します。自律バーンアウト回復は、人間の介入要件を削減し、リモートまたは重要なアプリケーションでのシステム信頼性を向上させる、バーンアウト条件を独立して検出、診断、解決できる完全に自己管理するAIシステムに向けて進歩します。クロスプラットフォームバーンアウトインテリジェンスは、バーンアウト監視および予防システムがさまざまなAIプラットフォームと組織間で洞察を共有できるようにし、業界全体でバーンアウト予測および予防機能を向上させる集合知を作成します。バイオメトリックにインスパイアされた監視は、生物学的ストレス監視の概念を組み込んで、微妙なパフォーマンス変化を特定し、より高い精度で障害条件を予測できる、より微妙で正確なバーンアウト検出システムを開発します。持続可能なAI運用は、パフォーマンス基準を維持しながら、エネルギー消費を最適化し、計算の無駄を削減し、AIシステム運用における長期的な持続可能性を促進する環境に配慮したバーンアウト予防戦略の開発に焦点を当てます。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Chen, L., &amp; Rodriguez, M. (2024). “Computational Stress and Performance Degradation in Multi-Agent Systems.” <em>Journal of Artificial Intelligence Research</em>, 78(3), 245-267.</p>
+</li>
+<li>
+<p>Thompson, K., et al. (2023). “Predictive Models for Agent Burnout in Distributed <a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="人工知能(AI) の用語集ページ">AI Systems</a>.” <em>IEEE Transactions on Neural Networks and Learning Systems</em>, 34(12), 9876-9891.</p>
+</li>
+<li>
+<p>Patel, S., &amp; Williams, J. (2024). “Resource Management Strategies for Preventing AI Agent Exhaustion.” <em>ACM Computing Surveys</em>, 56(4), 1-34.</p>
+</li>
+<li>
+<p>Anderson, R., &amp; Lee, H. (2023). “Adaptive Threshold Management in Agent Performance Monitoring.” <em>Artificial Intelligence</em>, 298, 103512.</p>
+</li>
+<li>
+<p>Kumar, A., et al. (2024). “Self-Healing Architectures for Resilient AI Agent Systems.” <em>Nature Machine Intelligence</em>, 6(2), 156-171.</p>
+</li>
+<li>
+<p>Zhang, Y., &amp; Brown, D. (2023). “Burnout Prevention in Real-Time AI Applications: A Comprehensive Survey.” <em>Computer Science Review</em>, 47, 100534.</p>
+</li>
+<li>
+<p>Martinez, C., &amp; Taylor, P. (2024). “Future Directions in Sustainable AI Agent Operations.” <em>Communications of the ACM</em>, 67(3), 78-85.</p>
+</li>
+<li>
+<p>Johnson, E., et al. (2023). “Ensemble Methods for Agent Reliability and Burnout Mitigation.” <em>Machine Learning</em>, 112(8), 2945-2968.</p>
+</li>
+</ol>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/agent-burnout/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

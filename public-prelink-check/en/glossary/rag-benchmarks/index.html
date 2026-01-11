@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>RAG Benchmarks | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/rag-benchmarks/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/rag-benchmarks/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/rag-benchmarks/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/rag-benchmarks/" hreflang="x-default" rel="alternate"/>
+<meta content="RAG benchmarks are standardized tests that measure how well AI systems retrieve relevant information and generate accurate answers by combining external knowledge sources with language models." name="description"/>
+<meta content="RAG benchmarks, Retrieval-Augmented Generation, LLMs, AI evaluation, retrieval quality" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/rag-benchmarks/" property="og:url"/>
+<meta content="RAG Benchmarks | SmartWeb" property="og:title"/>
+<meta content="RAG benchmarks are standardized tests that measure how well AI systems retrieve relevant information and generate accurate answers by combining external knowledge sources with language models." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/rag-benchmarks/" name="twitter:url"/>
+<meta content="RAG Benchmarks | SmartWeb" name="twitter:title"/>
+<meta content="RAG benchmarks are standardized tests that measure how well AI systems retrieve relevant information and generate accurate answers by combining external knowledge sources with language models." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">RAG Benchmarks</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        RAG Benchmarks
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          RAG benchmarks are standardized tests that measure how well AI systems retrieve relevant information and generate accurate answers by combining external knowledge sources with language models.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                RAG benchmarks
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Retrieval-Augmented Generation
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                LLMs
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI evaluation
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                retrieval quality
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-are-rag-benchmarks">What Are RAG Benchmarks?</h2>
+<p><a data-lb="1" href="/blog/rag-vs-cag-knowledge-augmentation/" title="Explore the differences between Retrieval-Augmented Generation (RAG) and Cache-Augmented Generation (CAG), two powerful techniques for enhancing large language models with external knowledge. Learn when to use each approach and how they solve the knowledge gap problem in AI.">RAG</a> benchmarks are structured criteria, datasets, and metrics designed to evaluate the performance of <a data-lb="1" href="/blog/introduction-to-rag/" title="Learn the basics and practical applications of RAG (Retrieval-Augmented Generation). Detailed coverage from differences with traditional AI to benefits and real-world use cases.">Retrieval-Augmented Generation</a> (RAG) systems. RAG systems blend <a data-lb="1" href="/en/glossary/large-language-models/" title="Large Language Models (LLMs) glossary entry">large language models (LLMs)</a> with retrieval mechanisms, enabling AI to dynamically access and use external knowledge—such as documents, knowledge bases, or websites—while generating responses. This hybrid architecture introduces evaluation complexity, as both retrieval (are the right documents found?) and generation (are the answers accurate and grounded?) phases must be assessed.</p>
+<p>RAG benchmarks provide standardized and reproducible ways to measure how well retrieval and generation components work together to produce accurate, relevant, and trustworthy responses. They enable AI practitioners to compare architectures, diagnose weaknesses, monitor for regressions, and ensure reliable real-world deployment across <a data-lb="1" href="/en/glossary/customer-support/" title="Customer Support glossary entry">customer support</a>, enterprise search, healthcare, legal, and educational applications.</p>
+<h2 id="why-rag-benchmarking-matters">Why RAG Benchmarking Matters</h2>
+<p>RAG systems function as multi-stage pipelines: a retriever locates relevant documents from external sources, context assembly prepares and chunks the data, and a generator produces the final response by integrating user query and retrieved context. Evaluation is necessary at each stage because retrievers might miss crucial information or retrieve irrelevant content, while generators might hallucinate, omit key facts, or misinterpret retrieved context.</p>
+<p>Effective benchmarking enables organizations to guide development by comparing retrievers, generators, chunking strategies, and prompt formats; select optimal models and algorithms; catch performance drift and regressions before they impact users; continuously monitor live query performance; identify <a data-lb="1" href="/en/glossary/bottlenecks/" title="Bottlenecks glossary entry">bottlenecks</a> such as retrieval misses and hallucinations; and produce standardized, repeatable metrics for internal assessment or external publication.</p>
+<h2 id="core-evaluation-metrics">Core Evaluation Metrics</h2>
+<h3 id="retrieval-quality-metrics">Retrieval Quality Metrics</h3>
+<p><strong><a data-lb="1" href="/en/glossary/precision/" title="Precision glossary entry">Precision</a>@k:</strong> Proportion of retrieved items that are relevant (Relevant items in top-k / k)</p>
+<p><strong>Recall@k:</strong> Fraction of all relevant items retrieved in top-k (Relevant items in top-k / Total relevant items)</p>
+<p><strong>Mean Reciprocal Rank (MRR):</strong> How high the first relevant result appears (Average of 1/rank of first relevant document)</p>
+<p><strong>Mean Average Precision (MAP):</strong> Retrieval quality across all ranks (Average precision across recall levels)</p>
+<p><strong>NDCG@k:</strong> Graded relevance with ranking position weighting (Normalized Discounted Cumulative Gain)</p>
+<p><strong>Hit Rate:</strong> Basic coverage measure (Did at least one relevant item appear in top-k?)</p>
+<p><strong>Example Scenario:</strong><br/>
+Query: “What’s Air Canada’s refund policy?” retrieves 5 documents, 3 are relevant → Precision@5 = 0.6. If 4 relevant documents exist and 3 are found → Recall@5 = 0.75.</p>
+<h3 id="generation-quality-metrics">Generation Quality Metrics</h3>
+<p><strong>BLEU:</strong> <a data-lb="1" href="/en/glossary/n-gram/" title="N-Gram glossary entry">N-gram</a> overlap precision between generated and reference answers, measuring similarity to reference answers</p>
+<p><strong>ROUGE:</strong> N-gram overlap recall between generated and reference answers, assessing summarization quality and coverage</p>
+<p><strong>BERTScore:</strong> Semantic similarity using transformer embeddings for deep semantic matching</p>
+<p><strong>METEOR:</strong> Flexible similarity measure considering synonyms, paraphrase, and stemming</p>
+<p><strong>LLM-as-a-Judge:</strong> LLMs score outputs for factuality, relevance, coherence, and groundedness—scalable and captures nuanced errors</p>
+<p><strong><a data-lb="1" href="/en/glossary/hallucination/" title="Hallucination glossary entry">Hallucination</a> Rate:</strong> Percentage of outputs with unsupported or fabricated information, measuring faithfulness to context</p>
+<p><strong>Groundedness:</strong> Degree to which answers are directly supported by retrieved documents, ensuring source attribution and trustworthiness</p>
+<h3 id="hallucination-detection-approaches">Hallucination Detection Approaches</h3>
+<p><strong>Token Similarity Detector:</strong> Flags content absent from retrieved context</p>
+<p><strong>Semantic Similarity Detector:</strong> Checks if generated answers are semantically close to context</p>
+<p><strong>LLM Prompt-Based Detector:</strong> Uses LLMs to assess answer faithfulness with custom <a data-lb="1" href="/en/glossary/prompts/" title="Prompts glossary entry">prompts</a></p>
+<p><strong>BERT Stochastic Checker:</strong> Uses model uncertainty to identify likely hallucinations</p>
+<p>Combining fast detectors with occasional LLM scoring offers efficient compromise between speed and accuracy.</p>
+<h2 id="standard-benchmark-datasets">Standard Benchmark Datasets</h2>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Focus Area</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>NeedleInAHaystack (NIAH)</strong></td>
+<td>Long-context retrieval</td>
+<td>Tests ability to find planted facts in large irrelevant corpus</td>
+</tr>
+<tr>
+<td><strong>BEIR</strong></td>
+<td>Cross-domain retrieval</td>
+<td>18 diverse datasets covering fact-checking, QA, duplicate detection</td>
+</tr>
+<tr>
+<td><strong>FRAMES</strong></td>
+<td>Factuality, multi-hop reasoning</td>
+<td>Requires integrating information from multiple Wikipedia articles</td>
+</tr>
+<tr>
+<td><strong>RAGTruth</strong></td>
+<td>Hallucination, faithfulness</td>
+<td>18,000+ LLM-generated responses annotated for hallucination</td>
+</tr>
+<tr>
+<td><strong>RULER</strong></td>
+<td>Multi-hop, context window</td>
+<td>Synthetic testbed for retrieving and aggregating needles in complex docs</td>
+</tr>
+<tr>
+<td><strong>MMNeedle</strong></td>
+<td>Multimodal retrieval</td>
+<td>Find sub-images using text in large image sets</td>
+</tr>
+<tr>
+<td><strong>FEVER</strong></td>
+<td>Fact extraction, verification</td>
+<td>185,000+ claims requiring evidence from Wikipedia</td>
+</tr>
+<tr>
+<td><strong>Natural Questions (NQ)</strong></td>
+<td>Real search queries</td>
+<td>Real Google queries with Wikipedia answers</td>
+</tr>
+<tr>
+<td><strong>MS MARCO</strong></td>
+<td>Passage retrieval</td>
+<td>Bing search queries with passage retrieval tasks</td>
+</tr>
+<tr>
+<td><strong>HotpotQA</strong></td>
+<td>Multi-hop QA</td>
+<td>Combining sources for question answering</td>
+</tr>
+<tr>
+<td><strong>TriviaQA</strong></td>
+<td>Fact-rich questions</td>
+<td>Evidence from web and Wikipedia</td>
+</tr>
+</tbody>
+</table>
+<p>Standard datasets are essential for comparing to state-of-the-art performance, while custom datasets are vital for domain-specific and business-specific evaluation.</p>
+<h2 id="evaluation-methodologies">Evaluation Methodologies</h2>
+<h3 id="ground-truth-evaluation">Ground-Truth Evaluation</h3>
+<p>Pre-label correct documents/passages for each query, compare system retrievals to ground-truth, and compute metrics like precision@k and recall@k. Best for offline, controlled evaluation and regression testing.</p>
+<h3 id="manual-and-llm-judged-relevance">Manual and LLM-Judged Relevance</h3>
+<p><strong>Manual Labeling:</strong> Experts review and score document relevance for high-quality assessment</p>
+<p><strong>LLM-as-a-Judge:</strong> Automate scoring of relevance and groundedness using LLM prompts for scalability</p>
+<p>Best for scaling evaluation, open-ended tasks, and iterative improvement.</p>
+<h3 id="reference-based-generation-evaluation">Reference-Based Generation Evaluation</h3>
+<p>Compare generated answers to gold/reference answers using metrics like BLEU, ROUGE, or LLM-judged correctness. Best for tasks with clear correct answers, QA, and summarization.</p>
+<h3 id="reference-free-generation-evaluation">Reference-Free Generation Evaluation</h3>
+<p>Assess qualities like faithfulness, groundedness, fluency, tone, and structure using LLMs or human reviewers without reference answers. Best for open-ended or creative generation and customer support.</p>
+<h3 id="synthetic-test-data">Synthetic Test Data</h3>
+<p>Automatically generate Q&amp;A pairs from your corpus using LLMs or templates. Best for bootstrapping when labeled data is scarce.</p>
+<h3 id="adversarial-and-stress-testing">Adversarial and Stress Testing</h3>
+<p>Use edge-case, ambiguous, or “red team” prompts to test robustness, hallucination, and safety. Best for security, compliance, and reliability validation.</p>
+<h3 id="continuous-monitoring">Continuous Monitoring</h3>
+<p>Track live performance on user queries, watching for drift, regressions, or emerging issues in production environments.</p>
+<h2 id="interpreting-benchmark-results">Interpreting Benchmark Results</h2>
+<p><strong>Decompose results:</strong> Separate retrieval and generation scores to locate bottlenecks and identify which component needs improvement</p>
+<p><strong>Compare configurations:</strong> Test various retrievers, embedding models, chunking strategies, and prompt setups to find optimal combinations</p>
+<p><strong>Monitor over time:</strong> Use “golden datasets” for regression checks and drift detection across model updates</p>
+<p><strong>Balance trade-offs:</strong> High recall may increase <a data-lb="1" href="/en/glossary/latency/" title="Latency glossary entry">latency</a>; LLM judges catch subtle issues but cost more than automated metrics</p>
+<p><strong>Multi-metric analysis:</strong> Rely on dashboards showing multiple metrics rather than single scores for comprehensive assessment</p>
+<h2 id="real-world-applications">Real-World Applications</h2>
+<h3 id="customer-support">Customer Support</h3>
+<p>RAG-powered chatbots answer using manuals, FAQs, and support tickets, providing 24/7 accurate support while reducing agent workload.</p>
+<h3 id="enterprise-search">Enterprise Search</h3>
+<p>Agents retrieve and summarize <a data-lb="1" href="/en/glossary/knowledge-base/" title="Knowledge Base glossary entry">knowledge base</a> and policy documents, enabling employees to find information quickly across vast document repositories.</p>
+<h3 id="healthcare--legal">Healthcare &amp; Legal</h3>
+<p>Systems must cite evidence, avoid unsupported claims, and remain compliant with regulations. Rigorous benchmarking prevents costly errors like the Air Canada <a data-lb="1" href="/en/glossary/chatbot/" title="Chatbot glossary entry">chatbot</a> incident that misrepresented refund policies.</p>
+<h3 id="education">Education</h3>
+<p>Assistants answer from textbooks or curated sources, requiring high accuracy and comprehensive coverage for student learning.</p>
+<h3 id="financial-services">Financial Services</h3>
+<p>Retrieve regulations and filings for compliance queries and investment research, ensuring accurate, auditable information retrieval.</p>
+<p><strong>Industry Impact:</strong></p>
+<ul>
+<li>Retrieval-augmented models reduce factual inaccuracies by up to 30% compared to static LLMs</li>
+<li>Prompt engineering and tuning from RAG benchmarks can improve e-commerce conversion rates by up to 25%</li>
+<li>Chatbots can reduce customer support costs by 30% on average when properly benchmarked and optimized</li>
+</ul>
+<h2 id="tools-and-frameworks">Tools and Frameworks</h2>
+<p><strong>Evidently:</strong> Open-source library for RAG evaluation, <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a>, and over 100 checks</p>
+<p><strong>LangSmith (LangChain):</strong> Dataset creation, evaluation, and LLM-based metrics for RAG systems</p>
+<p><strong>RAGAS:</strong> Library for RAG metrics including context precision/recall and ground-truth mapping</p>
+<p><strong>Maxim:</strong> Dataset management, multimodal evaluation, and customizable evaluators</p>
+<p><strong>DeepEval &amp; <a data-lb="1" href="/en/glossary/openai/" title="OpenAI glossary entry">OpenAI</a> Evals:</strong> LLM-based evaluation tools for comprehensive assessment</p>
+<p><strong>ARES &amp; RAGAs:</strong> Synthetic data generation and automated scoring frameworks</p>
+<h2 id="best-practices">Best Practices</h2>
+<p><strong>Set clear objectives:</strong> Define specific measurement goals (relevance, factuality, safety, latency)</p>
+<p><strong>Use representative datasets:</strong> Blend standard and custom data matching real queries and documents</p>
+<p><strong>Balance evaluation approaches:</strong> Combine automated metrics (fast, scalable) with LLM/human review (nuanced, comprehensive)</p>
+<p><strong>Update benchmarks regularly:</strong> Keep pace with changes in data, business needs, and user expectations</p>
+<p><strong>Monitor for <a data-lb="1" href="/en/glossary/bias/" title="Bias glossary entry">bias</a> and fairness:</strong> Analyze performance across different users, topics, and information sources</p>
+<p><strong>Implement multi-metric dashboards:</strong> Track comprehensive suite of metrics rather than relying on single scores</p>
+<p><strong>Document and version:</strong> Maintain clear records of datasets, metrics, and criteria for reproducibility and compliance</p>
+<p><strong>Establish feedback loops:</strong> Use benchmark insights to drive continuous improvement in retrieval and generation</p>
+<h2 id="implementation-examples">Implementation Examples</h2>
+<h3 id="customer-support-chatbot">Customer Support Chatbot</h3>
+<p><strong>Dataset:</strong> 100 real customer refund questions mapped to policy documents</p>
+<p><strong>Retrieval Evaluation:</strong> Compute recall@3 to ensure top 3 documents cover relevant policies</p>
+<p><strong>Generation Evaluation:</strong> LLM-as-a-judge for correctness and grounding in source material</p>
+<p><strong>Production Monitoring:</strong> Track hallucination rate with alerts when exceeding 1%</p>
+<p><strong>Outcome:</strong> Continuous quality assurance preventing policy misrepresentation incidents</p>
+<h3 id="legal-document-assistant">Legal Document Assistant</h3>
+<p><strong>Dataset:</strong> Legal queries with annotated answers and supporting statutes</p>
+<p><strong>Metrics:</strong> MAP and NDCG for retrieval; BERTScore and faithfulness for generation</p>
+<p><strong>Optimization:</strong> 15% retrieval precision improvement after embedding model tuning</p>
+<p><strong>Outcome:</strong> Faster, more accurate legal research with proper source attribution</p>
+<h2 id="summary-rag-benchmarking-at-a-glance">Summary: RAG Benchmarking at a Glance</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Retrieval Evaluation</th>
+<th>Generation Evaluation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Metrics</strong></td>
+<td>Precision@k, Recall@k, MRR, MAP, NDCG, Hit Rate</td>
+<td>BLEU, ROUGE, BERTScore, LLM-as-judge, Hallucination Rate, Groundedness</td>
+</tr>
+<tr>
+<td><strong>Datasets</strong></td>
+<td>NIAH, BEIR, FRAMES, MS MARCO, HotpotQA, Custom</td>
+<td>FEVER, RAGTruth, Custom QA pairs</td>
+</tr>
+<tr>
+<td><strong>Methods</strong></td>
+<td>Ground-truth, LLM/human labeling, synthetic data</td>
+<td>Reference comparison, reference-free LLM scoring</td>
+</tr>
+<tr>
+<td><strong>Tools</strong></td>
+<td>Evidently, LangSmith, RAGAS, Maxim, OpenAI Evals</td>
+<td>Same tools plus human/LLM review workflows</td>
+</tr>
+<tr>
+<td><strong>Use Cases</strong></td>
+<td>Customer support, legal, enterprise search, education, healthcare</td>
+<td>Same applications with focus on answer correctness and faithfulness</td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-terminology">Key Terminology</h2>
+<p><strong>Retriever:</strong> Component searching for relevant information from external sources</p>
+<p><strong>Generator:</strong> LLM crafting final responses using user query and retrieved context</p>
+<p><strong>Ground Truth:</strong> Correct answer or context used for evaluation benchmarking</p>
+<p><strong>Hallucination:</strong> Model-generated information not grounded in retrieved sources</p>
+<p><strong>Faithfulness:</strong> Alignment of output to supporting evidence and context</p>
+<p><strong>Context Window:</strong> Amount of information available to LLM during response generation</p>
+<p><strong>Prompt Engineering:</strong> Designing input prompts to control LLM behavior and accuracy</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.evidentlyai.com/llm-guide/rag-evaluation" rel="nofollow noopener noreferrer" target="_blank">Evidently AI: A Complete Guide to RAG Evaluation</a></li>
+<li><a href="https://www.evidentlyai.com/blog/rag-benchmarks" rel="nofollow noopener noreferrer" target="_blank">Evidently AI: 7 RAG Benchmarks</a></li>
+<li><a href="https://www.statsig.com/perspectives/rag-evaluation-metrics-methods-benchmarks" rel="nofollow noopener noreferrer" target="_blank">Statsig: RAG Evaluation Metrics, Methods, and Benchmarks</a></li>
+<li><a href="https://www.braintrust.dev/articles/best-rag-evaluation-tools" rel="nofollow noopener noreferrer" target="_blank">Braintrust: The 5 Best RAG Evaluation Tools in 2025</a></li>
+<li><a href="https://www.braintrust.dev/articles/rag-evaluation-metrics" rel="nofollow noopener noreferrer" target="_blank">Braintrust: RAG Evaluation Metrics</a></li>
+<li><a href="https://github.com/gkamradt/LLMTest_NeedleInAHaystack" rel="nofollow noopener noreferrer" target="_blank">Greg Kamradt: Needle-in-a-Haystack GitHub Repository</a></li>
+<li><a href="https://www.youtube.com/watch?v=KwRRuiCCdmc" rel="nofollow noopener noreferrer" target="_blank">Greg Kamradt: Needle-in-a-Haystack Video</a></li>
+<li><a href="https://arxiv.org/abs/2104.08663" rel="nofollow noopener noreferrer" target="_blank">BEIR: Benchmark for Information Retrieval</a></li>
+<li><a href="https://fever.ai/" rel="nofollow noopener noreferrer" target="_blank">FEVER: Fact Extraction and Verification Dataset</a></li>
+<li><a href="https://ai.google.com/research/NaturalQuestions" rel="nofollow noopener noreferrer" target="_blank">Google AI: Natural Questions Dataset</a></li>
+<li><a href="https://microsoft.github.io/msmarco/" rel="nofollow noopener noreferrer" target="_blank">Microsoft: MS MARCO Dataset</a></li>
+<li><a href="https://hotpotqa.github.io/" rel="nofollow noopener noreferrer" target="_blank">HotpotQA Dataset</a></li>
+<li><a href="http://nlp.cs.washington.edu/triviaqa/" rel="nofollow noopener noreferrer" target="_blank">TriviaQA Dataset</a></li>
+<li><a href="https://www.evidentlyai.com/llm-evaluation-benchmarks-datasets" rel="nofollow noopener noreferrer" target="_blank">Evidently: LLM Evaluation Benchmarks Database</a></li>
+<li><a href="https://docs.langchain.com/langsmith/evaluate-rag-tutorial" rel="nofollow noopener noreferrer" target="_blank">LangChain: RAG Evaluation Tutorial</a></li>
+<li><a href="https://github.com/explodinggradients/ragas" rel="nofollow noopener noreferrer" target="_blank">RAGAS GitHub Repository</a></li>
+<li><a href="https://www.getmaxim.ai/blog/rag-evaluation-metrics/" rel="nofollow noopener noreferrer" target="_blank">Maxim: RAG Evaluation Metrics</a></li>
+<li><a href="https://github.com/confident-ai/deepeval" rel="nofollow noopener noreferrer" target="_blank">DeepEval GitHub Repository</a></li>
+<li><a href="https://platform.openai.com/docs/guides/evals" rel="nofollow noopener noreferrer" target="_blank">OpenAI: Evaluation Guide</a></li>
+<li><a href="https://www.cbc.ca/news/business/air-canada-chatbot-refund-1.7129533" rel="nofollow noopener noreferrer" target="_blank">CBC News: Air Canada Chatbot Case</a></li>
+<li><a href="https://www.evidentlyai.com/blog/rag-examples" rel="nofollow noopener noreferrer" target="_blank">Evidently AI: RAG Production Examples</a></li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ai-answer-assistant/">
+                    AI Answer Assistant
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    An AI answer assistant is an advanced AI-driven software system that clarifies, refines, and explain...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ai-answer-assistant/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/consistency-evaluation/">
+                    Consistency Evaluation
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A test that checks whether an AI chatbot gives the same reliable answers when asked the same questio...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/consistency-evaluation/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/context-switching/">
+                    Context Switching
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Context switching is when a user suddenly changes topics during a conversation, requiring AI chatbot...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/context-switching/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hallucination-mitigation-strategies/">
+                    Hallucination Mitigation Strategies
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Techniques and methods that prevent AI systems from generating false or made-up information by impro...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hallucination-mitigation-strategies/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/langflow/">
+                    LangFlow
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    LangFlow is an open-source, low-code visual interface for building, testing, and deploying AI applic...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/langflow/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/output-parsing/">
+                    Output Parsing
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A technique that converts unstructured text from AI models into organized, machine-readable formats ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/output-parsing/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/rag-benchmarks/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

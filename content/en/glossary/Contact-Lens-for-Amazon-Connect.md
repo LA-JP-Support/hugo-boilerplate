@@ -3,7 +3,7 @@ title: "Contact Lens for Amazon Connect"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "contact-lens-for-amazon-connect"
-description: "An AI service that automatically transcribes customer calls and chats, analyzes emotions and issues, and protects sensitive information for contact centers."
+description: "Contact Lens for Amazon Connect is an AI tool that automatically analyzes customer service calls and chats to provide transcripts, detect customer emotions, identify issues, and protect sensitive information."
 keywords: ["Contact Lens for Amazon Connect", "Amazon Connect", "conversational analytics", "sentiment analysis", "sensitive data redaction"]
 category: "AI-Driven Contact Center Analytics"
 type: "glossary"
@@ -16,7 +16,8 @@ Contact Lens for Amazon Connect delivers a comprehensive suite of machine learni
 
 Contact Lens is fully accessible within the Amazon Connect console—no third-party integration required—and supports granular configuration at the contact flow level. It enables compliance-focused organizations to mask sensitive data and audit interactions for regulatory adherence, while supervisors and analysts gain powerful search, reporting, and workflow automation tools.
 
-**Key Attributes:**- Native to Amazon Connect, available through a simple console toggle
+**Key Attributes:**
+- Native to Amazon Connect, available through a simple console toggle
 - Supports voice and chat, with real-time and post-call/post-chat analytics
 - Automated redaction of PII (personally identifiable information) in transcripts and audio
 - Actionable sentiment scoring, issue detection, and customizable categorization
@@ -26,7 +27,17 @@ Contact Lens is fully accessible within the Amazon Connect console—no third-pa
 
 Organizations use Contact Lens to automate and supercharge quality assurance, compliance monitoring, operational analytics, and customer experience improvement. It enables:
 
-**Automated QA and Compliance**Reviews 100% of interactions, flags compliance issues, and redacts sensitive data automatically.**Customer Experience Monitoring**Tracks customer sentiment and identifies pain points in real time and historically.**Workforce Optimization**Reduces manual after contact work (ACW) via automated summaries and highlights coaching opportunities.**Actionable Insights**Surfaces trends, emerging issues, and process bottlenecks using advanced metrics and customizable dashboards.
+**Automated QA and Compliance**  
+Reviews 100% of interactions, flags compliance issues, and redacts sensitive data automatically.
+
+**Customer Experience Monitoring**  
+Tracks customer sentiment and identifies pain points in real time and historically.
+
+**Workforce Optimization**  
+Reduces manual after contact work (ACW) via automated summaries and highlights coaching opportunities.
+
+**Actionable Insights**  
+Surfaces trends, emerging issues, and process bottlenecks using advanced metrics and customizable dashboards.
 
 Contact Lens is turned on at the flow level in Amazon Connect via the "Set Recording and Analytics Behavior" block, allowing organizations to tailor analytics to specific interaction types or scenarios.
 
@@ -34,35 +45,57 @@ Contact Lens is turned on at the flow level in Amazon Connect via the "Set Recor
 
 ### 1. Automated Transcription and Indexing
 
-**Functionality:**All voice and chat interactions are automatically transcribed using AWS's advanced speech-to-text and NLP engines.**Searchability:**Transcripts are indexed, enabling full-text search by keyword, phrase, or sentiment across all historical interactions.**Supervisor Benefits:**QA and compliance leads can locate relevant calls instantly, eliminating manual audio review.
+**Functionality:** All voice and chat interactions are automatically transcribed using AWS's advanced speech-to-text and NLP engines.
+
+**Searchability:** Transcripts are indexed, enabling full-text search by keyword, phrase, or sentiment across all historical interactions.
+
+**Supervisor Benefits:** QA and compliance leads can locate relevant calls instantly, eliminating manual audio review.
 
 ### 2. Sentiment Analysis
 
-**How It Works:**Each customer and agent utterance is scored for sentiment (positive, negative, or neutral). Scores are aggregated and visualized as sentiment trends throughout the interaction.**Use Cases:**Supervisors filter for negative sentiment contacts, identify at-risk customers, and monitor agent performance objectively.
+**How It Works:** Each customer and agent utterance is scored for sentiment (positive, negative, or neutral). Scores are aggregated and visualized as sentiment trends throughout the interaction.
+
+**Use Cases:** Supervisors filter for negative sentiment contacts, identify at-risk customers, and monitor agent performance objectively.
 
 ### 3. Issue Detection and Non-Talk Time Analytics
 
-**Capabilities:**Identifies call drivers, interruptions, long silences, hold durations, and overlapping speech.**Value:**Pinpoints root causes, agent or bot training opportunities, and workflow bottlenecks.**Visualization:**Graphs display talk time split by agent/customer, silence, and hold time.
+**Capabilities:** Identifies call drivers, interruptions, long silences, hold durations, and overlapping speech.
+
+**Value:** Pinpoints root causes, agent or bot training opportunities, and workflow bottlenecks.
+
+**Visualization:** Graphs display talk time split by agent/customer, silence, and hold time.
 
 ### 4. Automated Contact Categorization
 
-**How It Works:**Lets users define rules for tagging interactions based on keywords, phrases, or compliance criteria. E.g., script adherence, competitor mentions, escalation triggers.**Automated Reporting:**Enables dynamic aggregation and reporting for QA, compliance, escalation, and business outcomes.
+**How It Works:** Lets users define rules for tagging interactions based on keywords, phrases, or compliance criteria. E.g., script adherence, competitor mentions, escalation triggers.
+
+**Automated Reporting:** Enables dynamic aggregation and reporting for QA, compliance, escalation, and business outcomes.
 
 ### 5. Sensitive Data Redaction
 
-**PII Redaction:**Automatically detects and redacts PII such as names, addresses, credit card numbers, and social security numbers from both transcript and audio.**Compliance:**Supports PCI DSS, GDPR, and other data privacy standards by masking sensitive data in stored records and supervisor/agent views.**Configuration:**Choose which PII types to redact and whether to output only redacted or both redacted/original files.
+**PII Redaction:** Automatically detects and redacts PII such as names, addresses, credit card numbers, and social security numbers from both transcript and audio.
+
+**Compliance:** Supports PCI DSS, GDPR, and other data privacy standards by masking sensitive data in stored records and supervisor/agent views.
+
+**Configuration:** Choose which PII types to redact and whether to output only redacted or both redacted/original files.
 
 ### 6. Real-Time and Post-Call Analytics
 
-**Real-Time Analytics:**- Provides live metrics, sentiment tracking, and configurable alerts during active calls or chats
+**Real-Time Analytics:**
+- Provides live metrics, sentiment tracking, and configurable alerts during active calls or chats
 - Enables supervisors to intervene or coach agents based on negative sentiment or key phrase detection
 
-**Post-Call Analytics:**- Delivers detailed post-interaction summaries, insights, and categorization
+**Post-Call Analytics:**
+- Delivers detailed post-interaction summaries, insights, and categorization
 - Supports trend analysis, coaching, and root cause analysis
 
 ### 7. Customizable Workflows and Output
 
-**Language Support:**Supports multiple languages for transcription, sentiment, and redaction. Language can be set per flow or dynamically via Lambda/contact attributes.**Data Export & Integration:**Detailed analytics, transcripts, and metadata are exportable to Amazon S3. Integrates with BI tools (e.g., Amazon QuickSight, Tableau) and custom ML workflows (e.g., Amazon SageMaker).
+**Language Support:**  
+Supports multiple languages for transcription, sentiment, and redaction. Language can be set per flow or dynamically via Lambda/contact attributes.
+
+**Data Export & Integration:**  
+Detailed analytics, transcripts, and metadata are exportable to Amazon S3. Integrates with BI tools (e.g., Amazon QuickSight, Tableau) and custom ML workflows (e.g., Amazon SageMaker).
 
 ## Advanced Configuration and Deployment
 
@@ -70,18 +103,24 @@ Contact Lens is turned on at the flow level in Amazon Connect via the "Set Recor
 
 1. Access the Amazon Connect Console
 2. Navigate to your instance, go to the *Analytics Tools* section, and enable Contact Lens
-3. In the contact flow designer, insert a **Set Recording and Analytics Behavior**block where analytics is needed
+3. In the contact flow designer, insert a **Set Recording and Analytics Behavior** block where analytics is needed
 4. Set recording to *Agent and Customer* for voice analytics
 5. Enable Contact Lens analytics, selecting real-time, post-call, or both
 6. Configure language, redaction, and analytics settings as needed
 7. Save and deploy the flow
 8. Repeat for any transfer or specialized flows
 
-**Note:**Recording both agent and customer is mandatory for full voice analytics. For chat analytics, ensure chat recording is enabled.
+**Note:** Recording both agent and customer is mandatory for full voice analytics. For chat analytics, ensure chat recording is enabled.
 
 ### Redaction Parameter Options
 
-**Scope:**Redact all supported PII or only selected entities (credit card, address, etc.)**Output Handling:**Choose between storing only redacted files or both redacted and original versions**Replacement:**Specify placeholder text (e.g., "[PII]") for redacted sections**Important:**Automated redaction is not HIPAA-certified; always verify accuracy.
+**Scope:** Redact all supported PII or only selected entities (credit card, address, etc.)
+
+**Output Handling:** Choose between storing only redacted files or both redacted and original versions
+
+**Replacement:** Specify placeholder text (e.g., "[PII]") for redacted sections
+
+**Important:** Automated redaction is not HIPAA-certified; always verify accuracy.
 
 ### Sentiment Analysis Options
 
@@ -141,68 +180,60 @@ Neo Financial, a leading fintech company, reports a 10% reduction in hold times 
 
 ## Frequently Asked Questions
 
-**How is Contact Lens for Amazon Connect billed?**Billed per analyzed minute/message. Both real-time and post-call analytics are metered.**Which languages are supported?**See the Supported Languages for Contact Lens documentation.**Does Contact Lens analyze all interactions?**Yes, if enabled in relevant flows, all contacts are analyzed.**Can sentiment analysis be disabled?**Yes, it can be deselected in the analytics block.**Where are analytics results accessible?**Via the Amazon Connect Console (Contact Details, Contact Search), APIs, and as files in Amazon S3.**Is Contact Lens the same as Conversational Analytics?**The Contact Lens feature set is now part of Amazon Connect's conversational analytics suite.
+**How is Contact Lens for Amazon Connect billed?**  
+Billed per analyzed minute/message. Both real-time and post-call analytics are metered.
+
+**Which languages are supported?**  
+See the Supported Languages for Contact Lens documentation.
+
+**Does Contact Lens analyze all interactions?**  
+Yes, if enabled in relevant flows, all contacts are analyzed.
+
+**Can sentiment analysis be disabled?**  
+Yes, it can be deselected in the analytics block.
+
+**Where are analytics results accessible?**  
+Via the Amazon Connect Console (Contact Details, Contact Search), APIs, and as files in Amazon S3.
+
+**Is Contact Lens the same as Conversational Analytics?**  
+The Contact Lens feature set is now part of Amazon Connect's conversational analytics suite.
 
 ## Terminology Reference
 
 | Term | Definition |
 |------|------------|
-| **Contact Lens for Amazon Connect**| ML-powered call and chat analytics native to Amazon Connect |
-| **Conversational Analytics**| Suite including transcription, sentiment, redaction, categorization |
-| **Sentiment Score**| Numeric indication of positivity/negativity in conversation turns |
-| **Set Recording and Analytics Behavior**| Contact flow block enabling analytics in Amazon Connect |
-| **Redaction**| Detection and masking/removal of PII in transcripts and audio |
-| **PII**| Personally Identifiable Information (names, addresses, SSNs) |
-| **After Contact Work (ACW)**| Agent post-interaction documentation and follow-up |
-| **Contact Flow**| Logic/routing process for handling contacts in Amazon Connect |
+| **Contact Lens for Amazon Connect** | ML-powered call and chat analytics native to Amazon Connect |
+| **Conversational Analytics** | Suite including transcription, sentiment, redaction, categorization |
+| **Sentiment Score** | Numeric indication of positivity/negativity in conversation turns |
+| **Set Recording and Analytics Behavior** | Contact flow block enabling analytics in Amazon Connect |
+| **Redaction** | Detection and masking/removal of PII in transcripts and audio |
+| **PII** | Personally Identifiable Information (names, addresses, SSNs) |
+| **After Contact Work (ACW)** | Agent post-interaction documentation and follow-up |
+| **Contact Flow** | Logic/routing process for handling contacts in Amazon Connect |
 
 ## References
 
-
-1. Amazon. (n.d.). Contact Lens Admin Guide. Amazon Connect Documentation.
-
-2. Amazon. (n.d.). Enable Conversational Analytics. Amazon Connect Documentation.
-
-3. Amazon. (n.d.). Analyze Conversations. Amazon Connect Documentation.
-
-4. Amazon. (n.d.). Conversational Analytics Overview. AWS Connect.
-
-5. Amazon. (n.d.). Contact Lens for Amazon Connect GA. AWS Blog.
-
-6. Amazon. (n.d.). Pricing. Amazon Connect.
-
-7. Amazon. (n.d.). Supported Languages. Amazon Connect Documentation.
-
-8. Amazon. (n.d.). Data Privacy FAQs. AWS.
-
-9. Amazon. (n.d.). AI Services Opt-out Policies. AWS Organizations Documentation.
-
-10. Amazon. (n.d.). Set Recording and Analytics Behavior. Amazon Connect Documentation.
-
-11. Amazon. (n.d.). Sensitive Data Redaction. Amazon Connect Documentation.
-
-12. Amazon. (n.d.). Sentiment Scores Guide. Amazon Connect Documentation.
-
-13. Amazon. (n.d.). Real-time Alerts Guide. Amazon Connect Documentation.
-
-14. Amazon. (n.d.). Example Output Locations. Amazon Connect Documentation.
-
-15. Amazon. (n.d.). Contact Analysis Segment Streams. Amazon Connect Documentation.
-
-16. Amazon. (n.d.). Contact Lens API. Amazon Connect Documentation.
-
-17. Amazon. (n.d.). Contact Search. Amazon Connect Documentation.
-
-18. Amazon. (n.d.). Agent Workspace. Amazon Connect Documentation.
-
-19. Amazon. (n.d.). Wisdom. Amazon Connect.
-
-20. Amazon QuickSight. Business Intelligence Tool. URL: https://aws.amazon.com/quicksight/
-
-21. Amazon SageMaker. Machine Learning Platform. URL: https://aws.amazon.com/sagemaker/
-
-22. Amazon Connect Streams API. Open Source Streaming Library. URL: https://github.com/aws/amazon-connect-streams
-
-23. Amazon. (n.d.). Contact Lens for Amazon Connect Overview. YouTube Video.
-
-24. Amazon. (n.d.). Contact Center Case Studies. AWS Connect.
+- [Amazon Connect: Contact Lens Admin Guide](https://docs.aws.amazon.com/connect/latest/adminguide/contact-lens.html)
+- [Amazon Connect: Enable Conversational Analytics](https://docs.aws.amazon.com/connect/latest/adminguide/enable-analytics.html)
+- [Amazon Connect: Analyze Conversations](https://docs.aws.amazon.com/connect/latest/adminguide/analyze-conversations.html)
+- [Amazon Connect: Conversational Analytics Overview](https://aws.amazon.com/connect/conversational-analytics/)
+- [AWS Blog: Contact Lens for Amazon Connect GA](https://aws.amazon.com/blogs/contact-center/contact-lens-for-amazon-connect-ga/)
+- [Amazon Connect: Pricing](https://aws.amazon.com/connect/pricing/)
+- [Amazon Connect: Supported Languages](https://docs.aws.amazon.com/connect/latest/adminguide/supported-languages.html)
+- [AWS: Data Privacy FAQs](https://aws.amazon.com/compliance/data-privacy-faq/)
+- [AWS: AI Services Opt-out Policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_ai-opt-out.html)
+- [Amazon Connect: Set Recording and Analytics Behavior](https://docs.aws.amazon.com/connect/latest/adminguide/set-recording-behavior.html)
+- [Amazon Connect: Sensitive Data Redaction](https://docs.aws.amazon.com/connect/latest/adminguide/sensitive-data-redaction.html)
+- [Amazon Connect: Sentiment Scores Guide](https://docs.aws.amazon.com/connect/latest/adminguide/sentiment-scores.html)
+- [Amazon Connect: Real-time Alerts Guide](https://docs.aws.amazon.com/connect/latest/adminguide/add-rules-for-alerts.html)
+- [Amazon Connect: Example Output Locations](https://docs.aws.amazon.com/connect/latest/adminguide/example-contact-lens-output-locations.html)
+- [Amazon Connect: Contact Analysis Segment Streams](https://docs.aws.amazon.com/connect/latest/adminguide/contact-analysis-segment-streams.html)
+- [Amazon Connect: Contact Lens API](https://docs.aws.amazon.com/connect/latest/adminguide/contact-lens-api.html)
+- [Amazon Connect: Contact Search](https://docs.aws.amazon.com/connect/latest/adminguide/contact-search.html)
+- [Amazon Connect: Agent Workspace](https://docs.aws.amazon.com/connect/latest/adminguide/agent-workspace.html)
+- [Amazon Connect: Wisdom](https://aws.amazon.com/connect/wisdom/)
+- [Amazon QuickSight](https://aws.amazon.com/quicksight/)
+- [Amazon SageMaker](https://aws.amazon.com/sagemaker/)
+- [Amazon Connect Streams API (GitHub)](https://github.com/aws/amazon-connect-streams)
+- [Contact Lens for Amazon Connect: YouTube Overview](https://www.youtube.com/watch?v=HrGgI0bUuC8)
+- [AWS Contact Center: Case Studies](https://aws.amazon.com/connect/customers/)

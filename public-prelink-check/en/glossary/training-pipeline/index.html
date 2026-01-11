@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Training Pipeline | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/training-pipeline/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="An automated system that guides raw data through data cleaning, model training, and testing stages to create ready-to-use AI models efficiently and consistently." name="description"/>
+<meta content="training pipeline, machine learning workflow, model training automation, MLOps pipeline, data processing pipeline" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/training-pipeline/" property="og:url"/>
+<meta content="Training Pipeline | SmartWeb" property="og:title"/>
+<meta content="An automated system that guides raw data through data cleaning, model training, and testing stages to create ready-to-use AI models efficiently and consistently." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/training-pipeline/" name="twitter:url"/>
+<meta content="Training Pipeline | SmartWeb" name="twitter:title"/>
+<meta content="An automated system that guides raw data through data cleaning, model training, and testing stages to create ready-to-use AI models efficiently and consistently." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Training Pipeline</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Training Pipeline
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          An automated system that guides raw data through data cleaning, model training, and testing stages to create ready-to-use AI models efficiently and consistently.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                training pipeline
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                machine learning workflow
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                model training automation
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                MLOps pipeline
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                data processing pipeline
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-a-training-pipeline">What is a Training Pipeline?</h2>
+<p>A training pipeline represents a systematic, automated workflow that orchestrates the entire machine learning model development process from raw data ingestion to model deployment. This comprehensive framework encompasses data collection, preprocessing, feature engineering, model training, validation, and deployment stages, creating a reproducible and scalable approach to machine learning development. Training pipelines serve as the backbone of modern <a data-lb="1" href="/en/glossary/mlops/" title="MLOps glossary entry">MLOps</a> practices, enabling organizations to streamline their machine learning workflows while maintaining consistency, reliability, and efficiency across multiple projects and teams.</p>
+<p>The concept of training pipelines emerged from the need to address the complexity and repetitive nature of machine learning workflows. Traditional approaches to model development often involved manual, ad-hoc processes that were prone to errors, difficult to reproduce, and challenging to scale. Training pipelines solve these problems by codifying best practices into <a data-lb="1" href="/en/glossary/automated-workflows/" title="Automated Workflows glossary entry">automated workflows</a> that can be version-controlled, monitored, and optimized. These pipelines typically integrate various tools and technologies, including data storage systems, compute resources, <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a> platforms, and deployment infrastructure, creating a cohesive ecosystem that supports the entire machine learning lifecycle.</p>
+<p>Modern training pipelines incorporate advanced features such as automatic hyperparameter tuning, distributed computing capabilities, real-time monitoring, and continuous integration/continuous deployment (CI/CD) practices. They enable data scientists and machine learning engineers to focus on high-value activities like feature engineering and model architecture design while automating routine tasks such as data validation, model evaluation, and performance monitoring. The pipeline approach also facilitates collaboration between team members by providing standardized interfaces and clear separation of concerns, allowing different specialists to contribute to various stages of the machine learning workflow without interfering with each other’s work.</p>
+<h2 id="core-components-and-technologies">Core Components and Technologies</h2>
+<p><strong>Data Ingestion Layer</strong> manages the collection and initial processing of raw data from various sources including databases, APIs, file systems, and streaming platforms. This component handles data format conversion, initial validation, and routing to appropriate processing stages.</p>
+<p><strong>Data Preprocessing Engine</strong> performs essential data transformation tasks including cleaning, normalization, encoding, and feature extraction. This component ensures data quality and consistency while preparing datasets for model training through standardized preprocessing workflows.</p>
+<p><strong>Feature Engineering Framework</strong> automates the creation, selection, and transformation of features used in model training. This component includes feature stores, automated feature generation algorithms, and feature validation mechanisms to ensure optimal input representation.</p>
+<p><strong>Model Training Orchestrator</strong> coordinates the actual training process including algorithm selection, hyperparameter optimization, and distributed training coordination. This component manages compute resources and ensures efficient utilization of available hardware.</p>
+<p><strong>Validation and Testing Suite</strong> implements comprehensive model evaluation procedures including cross-validation, performance metrics calculation, and statistical significance testing. This component ensures model quality and reliability before deployment.</p>
+<p><strong>Deployment Manager</strong> handles model packaging, versioning, and deployment to production environments. This component manages <a data-lb="1" href="/en/glossary/model-serving/" title="Model Serving glossary entry">model serving</a> infrastructure, A/B testing frameworks, and rollback mechanisms.</p>
+<p><strong>Monitoring and Logging System</strong> provides comprehensive observability into pipeline execution including performance metrics, error tracking, and resource utilization monitoring. This component enables proactive maintenance and optimization of pipeline operations.</p>
+<h2 id="how-training-pipeline-works">How Training Pipeline Works</h2>
+<p>The training pipeline workflow begins with <strong>data ingestion</strong> where raw data is collected from various sources and validated for completeness and format consistency. The system performs initial quality checks and routes data to appropriate preprocessing stages based on predefined rules and data characteristics.</p>
+<p><strong>Data preprocessing</strong> follows, involving cleaning operations such as handling missing values, removing duplicates, and correcting data inconsistencies. The pipeline applies standardized transformation procedures including normalization, encoding categorical variables, and handling outliers according to predefined business rules.</p>
+<p><strong>Feature engineering</strong> creates new features from existing data through automated feature generation algorithms and domain-specific transformations. The system evaluates feature importance, performs feature selection, and maintains feature lineage for reproducibility and debugging purposes.</p>
+<p><strong>Model training</strong> initiates with algorithm selection based on problem type and data characteristics. The pipeline configures training parameters, allocates compute resources, and begins the iterative training process while monitoring convergence and performance metrics.</p>
+<p><strong>Hyperparameter optimization</strong> runs in parallel or sequentially, exploring different parameter combinations to identify optimal model configurations. The system uses techniques such as grid search, random search, or Bayesian optimization to efficiently navigate the hyperparameter space.</p>
+<p><strong>Model validation</strong> evaluates trained models using holdout datasets and cross-validation techniques. The pipeline calculates performance metrics, generates evaluation reports, and compares results against baseline models and acceptance criteria.</p>
+<p><strong>Model selection</strong> chooses the best-performing model based on predefined criteria including accuracy, interpretability, and computational efficiency. The system considers business constraints and deployment requirements when making selection decisions.</p>
+<p><strong>Deployment preparation</strong> packages the selected model with necessary dependencies, creates deployment artifacts, and performs final validation tests. The pipeline generates documentation and metadata required for production deployment.</p>
+<p><strong>Example Workflow</strong>: A retail recommendation system pipeline ingests customer transaction data, preprocesses purchase histories, engineers behavioral features, trains collaborative filtering models, optimizes hyperparameters, validates performance on test sets, and deploys the best model to production serving infrastructure.</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p><strong>Reproducibility and Consistency</strong> ensures that machine learning experiments can be reliably repeated with identical results, eliminating variability introduced by manual processes and enabling scientific rigor in model development.</p>
+<p><strong>Scalability and Efficiency</strong> enables automatic scaling of compute resources based on workload demands, optimizing resource utilization and reducing training time through parallel processing and distributed computing capabilities.</p>
+<p><strong>Quality Assurance</strong> implements systematic validation and testing procedures that catch errors early in the development process, ensuring high-quality models through automated quality gates and standardized evaluation metrics.</p>
+<p><strong>Version Control and Lineage</strong> maintains comprehensive tracking of data, code, and model versions, enabling easy rollback to previous versions and providing complete audit trails for regulatory compliance and debugging purposes.</p>
+<p><strong>Collaboration Enhancement</strong> facilitates team collaboration by providing standardized interfaces and clear separation of concerns, allowing multiple team members to work on different pipeline components simultaneously without conflicts.</p>
+<p><strong>Cost Optimization</strong> reduces operational costs through efficient resource management, automated scaling, and elimination of manual overhead, while preventing costly errors through systematic validation procedures.</p>
+<p><strong>Faster Time-to-Market</strong> accelerates model development cycles by automating routine tasks and providing reusable components, enabling rapid prototyping and faster deployment of machine learning solutions.</p>
+<p><strong>Monitoring and Observability</strong> provides comprehensive visibility into pipeline execution and model performance, enabling proactive identification and resolution of issues before they impact production systems.</p>
+<p><strong>Compliance and Governance</strong> ensures adherence to regulatory requirements and organizational policies through automated documentation, audit trails, and standardized approval workflows.</p>
+<p><strong>Risk Mitigation</strong> reduces operational risks through systematic testing, validation, and rollback capabilities, while providing safeguards against data quality issues and model degradation.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p><strong>Recommendation Systems</strong> leverage training pipelines to continuously update user preference models based on behavioral data, ensuring personalized recommendations remain relevant and accurate across e-commerce, streaming, and social media platforms.</p>
+<p><strong>Fraud Detection</strong> utilizes automated pipelines to process transaction data in real-time, train anomaly detection models, and deploy updated fraud prevention systems that adapt to evolving fraudulent patterns and techniques.</p>
+<p><strong>Computer Vision Applications</strong> employ pipelines for processing image datasets, training convolutional <a data-lb="1" href="/en/glossary/neural-networks/" title="Neural Networks glossary entry">neural networks</a>, and deploying vision models for applications such as medical imaging, autonomous vehicles, and quality control systems.</p>
+<p><strong>Natural Language Processing</strong> implements pipelines for text preprocessing, model training on large corpora, and deployment of language models for applications including <a data-lb="1" href="/en/glossary/sentiment-analysis/" title="Sentiment Analysis glossary entry">sentiment analysis</a>, chatbots, and document classification.</p>
+<p><strong>Predictive Maintenance</strong> uses training pipelines to analyze sensor data from industrial equipment, train failure prediction models, and deploy maintenance scheduling systems that optimize equipment uptime and reduce costs.</p>
+<p><strong>Financial Modeling</strong> applies pipelines to process market data, train risk assessment models, and deploy trading algorithms that adapt to changing market conditions while maintaining regulatory compliance.</p>
+<p><strong>Healthcare Analytics</strong> leverages pipelines for processing patient data, training diagnostic models, and deploying clinical decision support systems that assist healthcare providers in treatment planning and outcome prediction.</p>
+<p><strong>Supply Chain Optimization</strong> employs training pipelines to analyze logistics data, train demand forecasting models, and deploy inventory management systems that optimize stock levels and reduce operational costs.</p>
+<h2 id="pipeline-architecture-comparison">Pipeline Architecture Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Architecture Type</th>
+<th>Scalability</th>
+<th>Complexity</th>
+<th>Cost</th>
+<th>Flexibility</th>
+<th>Maintenance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monolithic Pipeline</td>
+<td>Low</td>
+<td>Low</td>
+<td>Low</td>
+<td>Low</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Microservices Pipeline</td>
+<td>High</td>
+<td>High</td>
+<td>Medium</td>
+<td>High</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Serverless Pipeline</td>
+<td>Very High</td>
+<td>Medium</td>
+<td>Variable</td>
+<td>Medium</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Hybrid Cloud Pipeline</td>
+<td>High</td>
+<td>High</td>
+<td>High</td>
+<td>Very High</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Edge Computing Pipeline</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Batch Processing Pipeline</td>
+<td>Medium</td>
+<td>Low</td>
+<td>Low</td>
+<td>Low</td>
+<td>Low</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p><strong>Data Quality Management</strong> requires continuous monitoring and validation of input data quality, as poor data quality can propagate through the entire pipeline and result in unreliable models that fail in production environments.</p>
+<p><strong>Scalability <a data-lb="1" href="/en/glossary/bottlenecks/" title="Bottlenecks glossary entry">Bottlenecks</a></strong> emerge when pipeline components cannot handle increasing data volumes or computational demands, requiring careful architecture design and resource planning to prevent performance degradation.</p>
+<p><strong>Version Control Complexity</strong> becomes challenging when managing multiple versions of data, code, models, and infrastructure components, requiring sophisticated versioning strategies and dependency management systems.</p>
+<p><strong>Resource Management</strong> involves optimizing compute and storage resources across different pipeline stages while balancing cost, performance, and availability requirements in dynamic cloud environments.</p>
+<p><strong>Security and Privacy</strong> concerns arise when handling sensitive data throughout the pipeline, requiring implementation of encryption, access controls, and privacy-preserving techniques while maintaining compliance with regulations.</p>
+<p><strong>Monitoring and Debugging</strong> becomes complex in distributed pipeline environments where failures can occur at multiple points, requiring comprehensive logging, alerting, and diagnostic capabilities.</p>
+<p><strong>Integration Challenges</strong> occur when connecting diverse tools and systems within the pipeline ecosystem, requiring careful attention to API compatibility, data format standardization, and error handling mechanisms.</p>
+<p><strong>Model Drift Detection</strong> requires continuous monitoring of model performance in production to identify when models become stale or biased, necessitating automated retraining and validation procedures.</p>
+<p><strong>Compliance and Governance</strong> demands implementation of audit trails, approval workflows, and documentation standards to meet regulatory requirements while maintaining operational efficiency.</p>
+<p><strong>Cost Management</strong> involves balancing <a data-lb="1" href="/en/glossary/computational-resources/" title="Computational Resources glossary entry">computational resources</a>, storage costs, and operational overhead while maintaining pipeline performance and reliability within budget constraints.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p><strong>Modular Design</strong> creates loosely coupled pipeline components that can be independently developed, tested, and deployed, enabling better maintainability and reusability across different projects and use cases.</p>
+<p><strong>Comprehensive Testing</strong> implements unit tests, integration tests, and end-to-end tests for all pipeline components, ensuring reliability and catching issues early in the development process.</p>
+<p><strong>Configuration Management</strong> externalizes all configuration parameters and hyperparameters, enabling easy modification without code changes and supporting different environments and deployment scenarios.</p>
+<p><strong>Error Handling and Recovery</strong> implements robust error handling mechanisms with automatic retry logic, graceful degradation, and clear error reporting to maintain pipeline reliability.</p>
+<p><strong>Documentation Standards</strong> maintains comprehensive documentation for all pipeline components, including data schemas, API specifications, and operational procedures to facilitate maintenance and knowledge transfer.</p>
+<p><strong>Security by Design</strong> incorporates security measures throughout the pipeline including encryption, authentication, authorization, and audit logging to protect sensitive data and maintain compliance.</p>
+<p><strong>Performance Optimization</strong> continuously monitors and optimizes pipeline performance through profiling, bottleneck identification, and resource allocation adjustments to maintain efficiency.</p>
+<p><strong>Data Validation</strong> implements comprehensive data validation checks at multiple pipeline stages to ensure data quality and catch issues before they impact model training or deployment.</p>
+<p><strong>Automated Deployment</strong> uses CI/CD practices to automate pipeline deployment and updates, reducing manual errors and enabling rapid iteration and rollback capabilities.</p>
+<p><strong>Monitoring and Alerting</strong> establishes comprehensive monitoring and alerting systems that provide visibility into pipeline health, performance metrics, and potential issues requiring attention.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p><strong>AutoML Integration</strong> incorporates automated machine learning capabilities that automatically select algorithms, optimize hyperparameters, and perform feature engineering, reducing manual effort and improving model performance.</p>
+<p><strong>Federated Learning</strong> enables training models across distributed datasets without centralizing data, addressing privacy concerns and enabling collaboration across organizational boundaries while maintaining data sovereignty.</p>
+<p><strong>Continuous Learning</strong> implements online learning algorithms that continuously update models with new data, enabling real-time adaptation to changing patterns and improving model performance over time.</p>
+<p><strong>Multi-Modal Processing</strong> handles diverse data types including text, images, audio, and structured data within unified pipelines, enabling development of sophisticated AI applications that leverage multiple information sources.</p>
+<p><strong>Explainable AI Integration</strong> incorporates model interpretability and explainability techniques throughout the pipeline, providing insights into model decisions and enabling compliance with regulatory requirements.</p>
+<p><strong>Edge Deployment</strong> extends pipelines to edge computing environments, enabling low-<a data-lb="1" href="/en/glossary/latency/" title="Latency glossary entry">latency</a> inference and reducing bandwidth requirements while maintaining model performance and reliability.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p><strong>Quantum Computing Integration</strong> will enable training of more complex models and solving optimization problems that are intractable with classical computing, revolutionizing machine learning capabilities and applications.</p>
+<p><strong>Neuromorphic Computing</strong> will introduce brain-inspired computing architectures that enable more efficient processing of certain types of machine learning workloads, particularly in edge computing scenarios.</p>
+<p><strong>Automated Pipeline Generation</strong> will use AI to automatically design and optimize training pipelines based on data characteristics and business requirements, reducing the expertise required for pipeline development.</p>
+<p><strong>Green AI Optimization</strong> will focus on reducing energy consumption and carbon footprint of training pipelines through efficient algorithms, hardware optimization, and renewable energy integration.</p>
+<p><strong>Real-Time Streaming ML</strong> will enable continuous model training and inference on streaming data with minimal latency, supporting applications requiring immediate responses to changing conditions.</p>
+<p><strong>Collaborative AI Platforms</strong> will facilitate seamless collaboration between human experts and <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI systems</a> in pipeline development, combining human creativity with AI efficiency and scale.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Sculley, D., et al. (2015). “Hidden <a data-lb="1" href="/en/glossary/technical-debt/" title="Technical Debt glossary entry">Technical Debt</a> in Machine Learning Systems.” Advances in Neural Information Processing Systems.</p>
+</li>
+<li>
+<p>Paleyes, A., Urma, R. G., &amp; Lawrence, N. D. (2022). “Challenges in Deploying Machine Learning: A Survey of Case Studies.” ACM Computing Surveys.</p>
+</li>
+<li>
+<p>Amershi, S., et al. (2019). “Software Engineering for Machine Learning: A Case Study.” International Conference on Software Engineering.</p>
+</li>
+<li>
+<p>Polyzotis, N., Roy, S., Whang, S. E., &amp; Zinkevich, M. (2017). “Data Management Challenges in Production Machine Learning.” Proceedings of the 2017 ACM International Conference on Management of Data.</p>
+</li>
+<li>
+<p>Breck, E., Cai, S., Nielsen, E., Salib, M., &amp; Sculley, D. (2017). “The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction.” IEEE Big Data.</p>
+</li>
+<li>
+<p>Chen, A., et al. (2020). “Developments in MLOps: A Survey.” IEEE Access.</p>
+</li>
+<li>
+<p>Kreuzberger, D., Kühl, N., &amp; Hirschl, S. (2023). “Machine Learning Operations (MLOps): Overview, Definition, and Architecture.” IEEE Access.</p>
+</li>
+<li>
+<p>Testi, M., et al. (2022). “MLOps: A Taxonomy and a Methodology.” IEEE Software.</p>
+</li>
+</ol>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/training-pipeline/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

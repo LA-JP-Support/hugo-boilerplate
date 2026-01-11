@@ -3,7 +3,7 @@ title: "Chroma"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "chroma"
-description: "An open-source database that stores AI data as numbers, helping applications find similar information and understand meaning quickly."
+description: "An open-source database designed to store and search AI-generated numerical data, enabling applications to understand meaning and find similar information quickly."
 keywords: ["Chroma", "vector database", "embeddings", "AI-native applications", "semantic search"]
 category: "General"
 type: "glossary"
@@ -16,7 +16,8 @@ Chroma is an open-source vector (embedding) database engineered for AI-native ap
 
 Chroma's core mission is to make it easy for developers and organizations to add semantic search, recommendation, RAG, and AI-native capabilities to their applications, with minimal setup and maximum flexibility.
 
-**Key Features:**- Native support for storing and searching embeddings alongside documents and metadata
+**Key Features:**
+- Native support for storing and searching embeddings alongside documents and metadata
 - Fast approximate nearest neighbor (ANN) search via HNSW indexing
 - Multimodal support (text, images, and more)
 - Hybrid queries: semantic + keyword search, plus metadata filtering
@@ -51,7 +52,8 @@ Supported operators include equality and inequality, range queries (`$gt`, `$lt`
 ### Vector Indexing & Similarity Search
 Chroma uses Hierarchical Navigable Small World (HNSW) graphs for fast, approximate nearest neighbor (ANN) search. HNSW is a state-of-the-art algorithm for high-dimensional vector similarity search, balancing recall (accuracy) and speed, and scaling to millions of vectors.
 
-**Key Properties:**- Sublinear search time for large datasets
+**Key Properties:**
+- Sublinear search time for large datasets
 - High recall/accuracy (configurable)
 - Supports dynamic inserts and efficient deletion
 
@@ -65,10 +67,10 @@ Chroma can store data:
 
 ### APIs and Client Libraries
 Chroma provides a minimal, intuitive API with four main operations:
-- **Add:**Insert documents (optionally with embeddings and metadata)
-- **Update:**Modify stored entries
-- **Delete:**Remove entries
-- **Query:**Retrieve similar documents via vector search, with optional metadata filters
+- **Add:** Insert documents (optionally with embeddings and metadata)
+- **Update:** Modify stored entries
+- **Delete:** Remove entries
+- **Query:** Retrieve similar documents via vector search, with optional metadata filters
 
 Client libraries exist for Python (`chromadb`) and JavaScript/TypeScript. Chroma integrates natively with frameworks like LangChain and LlamaIndex.
 
@@ -77,9 +79,17 @@ Client libraries exist for Python (`chromadb`) and JavaScript/TypeScript. Chroma
 ### Open-Source (Self-Hosted)
 Chroma can be run locally or on your own infrastructure in three modes:
 
-**In-memory:**Fast, ephemeral, ideal for prototyping or testing**Persistent:**Stores data on disk (SQLite + binary vector files), suitable for local/small production**Client-server:**Run as a standalone server, connect via HTTP API (supports multi-user, multi-process)**Example Server Start:**```shell
+**In-memory:** Fast, ephemeral, ideal for prototyping or testing  
+**Persistent:** Stores data on disk (SQLite + binary vector files), suitable for local/small production  
+**Client-server:** Run as a standalone server, connect via HTTP API (supports multi-user, multi-process)
+
+**Example Server Start:**
+```shell
 chroma run --path ./db --port 8000
-```**Python Client:**```python
+```
+
+**Python Client:**
+```python
 import chromadb
 client = chromadb.HttpClient(host="localhost", port=8000)
 ```
@@ -87,7 +97,8 @@ client = chromadb.HttpClient(host="localhost", port=8000)
 ### Chroma Cloud (Serverless)
 Chroma Cloud is a fully managed, serverless deployment. It handles elastic scaling, automatic backup & high availability, and maintenance and monitoring.
 
-**Connect Example:**```python
+**Connect Example:**
+```python
 import chromadb
 client = chromadb.HttpClient(
     host="api.trychroma.com",
@@ -99,7 +110,8 @@ client = chromadb.HttpClient(
 
 ### Installation
 
-**Python:**```bash
+**Python:**
+```bash
 pip install chromadb
 ```
 
@@ -155,7 +167,8 @@ collection = client.create_collection(
 ### LangChain Integration
 LangChain provides a native wrapper for Chroma, supporting advanced workflows like RAG, chatbots, and memory.
 
-**Example:**```python
+**Example:**
+```python
 from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings
 
@@ -169,7 +182,16 @@ vector_store = Chroma(
 
 ## Core Features
 
-**Open-source Apache 2.0**- No lock-in, extensible, community-driven (GitHub Stars 24k+)**Fast ANN search**- HNSW graph indexing for sublinear search time**Document & metadata storage**- Each embedding relates to a document and user-defined metadata**Hybrid search**- Combine semantic (vector) and keyword search**Multimodal support**- Store/search text, images, and more**Batch ops**- Bulk insert and query for efficiency**Simple API**- Add, update, delete, search**Integration**- Native with LangChain, LlamaIndex, OpenAI, HuggingFace, Cohere, OpenCLIP**Flexible deployment**- In-memory, persistent, client-server, and managed cloud**Active community**- Discord, GitHub, docs
+**Open-source Apache 2.0** - No lock-in, extensible, community-driven (GitHub Stars 24k+)  
+**Fast ANN search** - HNSW graph indexing for sublinear search time  
+**Document & metadata storage** - Each embedding relates to a document and user-defined metadata  
+**Hybrid search** - Combine semantic (vector) and keyword search  
+**Multimodal support** - Store/search text, images, and more  
+**Batch ops** - Bulk insert and query for efficiency  
+**Simple API** - Add, update, delete, search  
+**Integration** - Native with LangChain, LlamaIndex, OpenAI, HuggingFace, Cohere, OpenCLIP  
+**Flexible deployment** - In-memory, persistent, client-server, and managed cloud  
+**Active community** - Discord, GitHub, docs
 
 ## Key Use Cases
 
@@ -195,7 +217,13 @@ Support exploratory data analysis on high-dimensional data, anomaly detection in
 
 Chroma is designed for developer speed and efficiency, but optimization tips include:
 
-**Batch Operations**- Insert/query in bulk to reduce overhead**Embedding Dimensionality**- Lower-dimension vectors use less memory, faster search (at possible cost to accuracy)**Index Compaction**- Compact HNSW index after frequent deletes/updates**Metadata Pre-Filtering**- Filter by metadata before similarity to reduce computation**Example:**```python
+**Batch Operations** - Insert/query in bulk to reduce overhead  
+**Embedding Dimensionality** - Lower-dimension vectors use less memory, faster search (at possible cost to accuracy)  
+**Index Compaction** - Compact HNSW index after frequent deletes/updates  
+**Metadata Pre-Filtering** - Filter by metadata before similarity to reduce computation
+
+**Example:**
+```python
 collection.add(
     documents=large_document_list,
     ids=id_list,
@@ -209,40 +237,34 @@ collection.add(
 
 | Feature | Chroma | Pinecone | Faiss | Weaviate | Qdrant | Milvus |
 |---------|--------|----------|-------|----------|--------|--------|
-| **Open-source**| ✅ | ❌ | ✅ | ✅ | ✅ | ✅ |
-| **Ease of setup**| Very simple | Managed, easy | Complex | Moderate | Moderate | Moderate |
-| **Language support**| Python, JS | Python, JS, Go | Python, C++ | Python, JS, Go | Python, REST | Python, REST |
-| **Vector indexing**| HNSW | Multiple | Multiple | HNSW, others | HNSW | IVF, HNSW |
-| **Document storage**| Built-in | No | No | Built-in | Built-in | Built-in |
-| **Metadata filtering**| Yes | Yes | Limited | Yes | Yes | Yes |
-| **Hybrid search**| Yes | No | No | Yes | No | No |
-| **Cloud/serverless**| Chroma Cloud | Yes | No | Yes | Yes | Yes |
-| **RBAC/Multi-tenancy**| No | Yes | No | Yes | Yes | Yes |
-| **Scale**| Single-node | Distributed | Local, dist. | Distributed | Distributed | Distributed |
-| **Best for**| Dev velocity, prototyping | Large scale | Research, custom ML | Enterprise search | High perf | Massive scale |**Ecosystem Snapshot:**-**Chroma:**OSS, easy setup, hybrid search, best for prototyping/dev velocity
-- **Pinecone:**Managed, distributed, enterprise-grade, multi-index support, high scale
-- **Faiss:**OSS, research/ML focus, C++/Python, not a database (no doc/meta storage)
-- **Weaviate:**OSS, distributed, hybrid search, schema, multi-tenant
-- **Qdrant:**OSS, distributed, filtering, REST/gRPC, high perf
-- **Milvus:**OSS, cloud-native, GPU support, very high scale
+| **Open-source** | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ |
+| **Ease of setup** | Very simple | Managed, easy | Complex | Moderate | Moderate | Moderate |
+| **Language support** | Python, JS | Python, JS, Go | Python, C++ | Python, JS, Go | Python, REST | Python, REST |
+| **Vector indexing** | HNSW | Multiple | Multiple | HNSW, others | HNSW | IVF, HNSW |
+| **Document storage** | Built-in | No | No | Built-in | Built-in | Built-in |
+| **Metadata filtering** | Yes | Yes | Limited | Yes | Yes | Yes |
+| **Hybrid search** | Yes | No | No | Yes | No | No |
+| **Cloud/serverless** | Chroma Cloud | Yes | No | Yes | Yes | Yes |
+| **RBAC/Multi-tenancy** | No | Yes | No | Yes | Yes | Yes |
+| **Scale** | Single-node | Distributed | Local, dist. | Distributed | Distributed | Distributed |
+| **Best for** | Dev velocity, prototyping | Large scale | Research, custom ML | Enterprise search | High perf | Massive scale |
+
+**Ecosystem Snapshot:**
+- **Chroma:** OSS, easy setup, hybrid search, best for prototyping/dev velocity
+- **Pinecone:** Managed, distributed, enterprise-grade, multi-index support, high scale
+- **Faiss:** OSS, research/ML focus, C++/Python, not a database (no doc/meta storage)
+- **Weaviate:** OSS, distributed, hybrid search, schema, multi-tenant
+- **Qdrant:** OSS, distributed, filtering, REST/gRPC, high perf
+- **Milvus:** OSS, cloud-native, GPU support, very high scale
 
 ## References
 
-
-1. Chroma. (n.d.). Chroma GitHub Repository. GitHub. URL: https://github.com/chroma-core/chroma
-
-2. Chroma. (n.d.). Chroma Documentation. Chroma Docs. URL: https://docs.trychroma.com/
-
-3. LangChain. (n.d.). LangChain Chroma Integration. LangChain Documentation. URL: https://docs.langchain.com/oss/python/integrations/providers/chroma
-
-4. Netflix. (n.d.). Netflix Chaos Monkey. Netflix GitHub. URL: https://netflix.github.io/chaosmonkey/
-
-5. Pinecone. (n.d.). Pinecone Documentation. Pinecone. URL: https://www.pinecone.io/
-
-6. Facebook Research. (n.d.). Faiss GitHub Repository. GitHub. URL: https://github.com/facebookresearch/faiss
-
-7. Weaviate. (n.d.). Weaviate Documentation. Weaviate. URL: https://weaviate.io/
-
-8. Qdrant. (n.d.). Qdrant Documentation. Qdrant. URL: https://qdrant.tech/
-
-9. Milvus. (n.d.). Milvus Documentation. Milvus. URL: https://milvus.io/
+- [Chroma GitHub Repository](https://github.com/chroma-core/chroma)
+- [Chroma Documentation](https://docs.trychroma.com/)
+- [LangChain Chroma Integration](https://docs.langchain.com/oss/python/integrations/providers/chroma)
+- [Netflix Chaos Monkey](https://netflix.github.io/chaosmonkey/)
+- [Pinecone Documentation](https://www.pinecone.io/)
+- [Faiss GitHub Repository](https://github.com/facebookresearch/faiss)
+- [Weaviate Documentation](https://weaviate.io/)
+- [Qdrant Documentation](https://qdrant.tech/)
+- [Milvus Documentation](https://milvus.io/)

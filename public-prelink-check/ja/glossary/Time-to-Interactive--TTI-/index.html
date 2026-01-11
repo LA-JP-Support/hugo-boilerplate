@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Time to Interactive (TTI) | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/time-to-interactive--tti-/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="ウェブページが視覚的に完成したように見えるだけでなく、ユーザーのクリックや操作に完全に応答できるようになるタイミングを測定するウェブパフォーマンス指標です。" name="description"/>
+<meta content="time to interactive, ウェブパフォーマンス指標, ページ読み込み最適化, ユーザーエクスペリエンス測定, core web vitals" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/time-to-interactive--tti-/" property="og:url"/>
+<meta content="Time to Interactive (TTI) | SmartWeb" property="og:title"/>
+<meta content="ウェブページが視覚的に完成したように見えるだけでなく、ユーザーのクリックや操作に完全に応答できるようになるタイミングを測定するウェブパフォーマンス指標です。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/time-to-interactive--tti-/" name="twitter:url"/>
+<meta content="Time to Interactive (TTI) | SmartWeb" name="twitter:title"/>
+<meta content="ウェブページが視覚的に完成したように見えるだけでなく、ユーザーのクリックや操作に完全に応答できるようになるタイミングを測定するウェブパフォーマンス指標です。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190816" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190816" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190816"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126096741115000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126096741115000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126096741115000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126096741115000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Time to Interactive (TTI)</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Time to Interactive (TTI)
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Time to Interactive (TTI)
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          ウェブページが視覚的に完成したように見えるだけでなく、ユーザーのクリックや操作に完全に応答できるようになるタイミングを測定するウェブパフォーマンス指標です。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                time to interactive
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ウェブパフォーマンス指標
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ページ読み込み最適化
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ユーザーエクスペリエンス測定
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                core web vitals
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="time-to-interactive-ttiとは">Time to Interactive (TTI)とは?</h2>
+<p>Time to Interactive(TTI)は、Webページがユーザーにとって完全にインタラクティブになる時点を測定する重要なWebパフォーマンス指標です。視覚的な完成度に焦点を当てる他の読み込み指標とは異なり、TTIはメインスレッドがユーザーのインタラクションに確実に応答できるようになる時点を具体的に評価します。この指標は、ユーザーがクリック、タップ、キーボード入力、その他のインタラクティブ要素を通じて、遅延や無反応な動作を経験することなく、Webページと有意義に関わることができる瞬間を表します。</p>
+<p>TTIの重要性は、技術的な測定を超えて、ユーザーエクスペリエンスの質とビジネス成果を包含します。ページが視覚的に完成しているように見えても、ユーザーのインタラクションに対して無反応なままである場合、フラストレーションを生み出し、直帰率の増加、コンバージョンの減少、ネガティブなユーザー認識につながる可能性があります。TTIは、ユーザーがページ要素と正常にインタラクションできる実際の瞬間を特定することで、この重要なギャップに対処します。この指標は、メインスレッドが長時間タスクによってブロックされていない少なくとも5秒間の最初の期間を見つけることで計算され、ページが一貫して50ミリ秒以内にユーザー入力に応答できることを保証します。</p>
+<p>現代のWebアプリケーションは、JavaScriptヘビーなフレームワーク、サードパーティ統合、豊富なインタラクティブ機能により、TTIパフォーマンスに大きな影響を与える複雑さが増しています。TTIの理解と最適化は、多様なデバイスとネットワーク条件にわたって優れたユーザーエクスペリエンスを提供する必要がある開発者、パフォーマンスエンジニア、デジタルマーケターにとって不可欠となっています。この指標は、技術的なパフォーマンス最適化とユーザー中心の設計の橋渡しとして機能し、知覚的および実際のページ応答性の両方を改善するための実用的な洞察を提供します。</p>
+<h2 id="コアパフォーマンス測定コンポーネント">コアパフォーマンス測定コンポーネント</h2>
+<p><strong>メインスレッドの可用性</strong> - TTIを決定する主要な要因で、ブラウザのメインスレッドが応答性の高いユーザーインタラクションを妨げるブロッキングタスクから解放される時点を測定します。50ミリ秒を超える長時間タスクは、インタラクティブ性を遅延させ、TTIスコアに悪影響を与える可能性があります。</p>
+<p><strong>ネットワークアクティビティの監視</strong> - TTI計算は、不完全なページ機能を示す可能性のある進行中のネットワークリクエストを考慮します。この指標は、すべての重要なリソースが読み込まれたことを確認するために、最小限のネットワークアクティビティを持つ静穏期間を待ちます。</p>
+<p><strong>First Contentful Paint(FCP)ベースライン</strong> - TTI測定はFCP発生後に開始され、インタラクティブ性を評価する前に何らかのコンテンツがレンダリングされたことを確立します。これにより、ページが初期読み込みフェーズを超えて進行したことが保証されます。</p>
+<p><strong>長時間タスクの検出</strong> - ユーザーインタラクションへのタイムリーな応答を妨げる可能性のある、50ミリ秒を超えるJavaScript実行ブロックの識別と測定。これらのタスクは、最適なTTIパフォーマンスのために最小化する必要があります。</p>
+<p><strong>イベントハンドラーの登録</strong> - インタラクティブ要素が関連するイベントハンドラーを適切にアタッチし、ユーザーアクションに応答する準備ができていることを確認するプロセス。不完全なハンドラー登録は、真のインタラクティブ性を遅延させる可能性があります。</p>
+<p><strong>リソース読み込みの完了</strong> - JavaScriptバンドル、CSSファイル、必須のサードパーティスクリプトを含む重要なリソースが読み込みと実行を完了した状態。この完了は、完全なページ機能に必要です。</p>
+<p><strong>ユーザー入力の応答性</strong> - ページがユーザーインタラクションに許容可能な時間枠内(通常、最適なユーザーエクスペリエンスとTTI測定コンプライアンスのために100ミリ秒未満)で応答する能力。</p>
+<h2 id="time-to-interactivettiの仕組み">Time to Interactive(TTI)の仕組み</h2>
+<p>TTI測定プロセスは、インタラクティブ性評価の開始点としてFirst Contentful Paint(FCP)を確立することから始まります。これにより、ページが初期の空白状態を超えて、ユーザーに意味のあるコンテンツのレンダリングを開始したことが保証されます。</p>
+<p>FCP確立後、測定システムは50ミリ秒を超える長時間タスクについてメインスレッドを継続的に監視します。これらの長時間タスクは、ブラウザがユーザーインタラクションに迅速に応答できない期間を表し、非インタラクティブ状態を示します。</p>
+<p>アルゴリズムは、FCPから時間的に前方に検索して、長時間タスクが発生しない少なくとも5秒間の静穏ウィンドウを識別します。この静穏ウィンドウは、ページがユーザーインタラクションに一貫して応答できることを示すメインスレッドの可用性期間を表します。</p>
+<p>メインスレッドの監視と同時に、システムはネットワークアクティビティを追跡して、重要なリソースがまだ読み込み中でないことを確認します。TTI計算のためには、静穏ウィンドウと同時に、ネットワークアクティビティの減少期間(進行中のリクエストが2未満)が必要です。</p>
+<p>両方の条件が満たされた場合(長時間タスクのない5秒間の静穏ウィンドウと最小限のネットワークアクティビティ)、TTIタイムスタンプはこの静穏期間の開始時に確立されます。これは、ページが確実にインタラクティブになった瞬間を表します。</p>
+<p>測定システムは、すべての重要なページ機能が利用可能であり、インタラクティブ要素のイベントハンドラーが適切に登録され、ユーザーアクションに応答できることを確認することで、TTI計算を検証します。</p>
+<p><strong>ワークフローの例:</strong></p>
+<ul>
+<li>ページが0msで読み込みを開始</li>
+<li>FCPが1,200msで発生(測定ベースラインが確立)</li>
+<li>1,500ms、2,100ms、3,800msで長時間タスクが検出</li>
+<li>4,200msで静穏ウィンドウが開始し、その後長時間タスクなし</li>
+<li>4,500msでネットワークアクティビティが閾値を下回る</li>
+<li>すべての条件が満たされた4,500msでTTIが計算される</li>
+</ul>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>ユーザーエクスペリエンス測定の強化</strong> - TTIは、ユーザーが実際にページとインタラクションできる時点の正確な評価を提供し、視覚的指標を超えて機能的な使いやすさを測定し、パフォーマンス最適化の取り組みがユーザーのニーズと一致することを保証します。</p>
+<p><strong>コンバージョン率最適化の改善</strong> - TTI遅延を特定して削減することで、企業は重要なインタラクション時のユーザーフラストレーションを最小化し、エンゲージメント率の向上とコンバージョンファネルパフォーマンスの改善につながります。</p>
+<p><strong>包括的なパフォーマンス洞察</strong> - TTIは、他の指標では見逃される可能性のあるパフォーマンスのボトルネックを明らかにし、特に視覚的レンダリングに影響を与えずにインタラクティブ性に影響を与えるJavaScript実行の問題やリソース読み込みの問題を明らかにします。</p>
+<p><strong>モバイルエクスペリエンスの最適化</strong> - この指標は、処理能力とネットワーク条件が制限されているモバイルパフォーマンス評価に特に価値があり、視覚的完成とインタラクティブ準備の間に大きなギャップを生じさせる可能性があります。</p>
+<p><strong>サードパーティの影響評価</strong> - TTIは、外部スクリプト、ウィジェット、統合がページのインタラクティブ性にどのように影響するかを定量化し、サードパーティリソース管理と最適化の優先順位について情報に基づいた意思決定を可能にします。</p>
+<p><strong>開発チームの連携</strong> - この指標は、開発者、デザイナー、ステークホルダー間で、真に「読み込まれた」ページとは何かについての共通理解を提供し、コラボレーションとパフォーマンス目標設定を改善します。</p>
+<p><strong>競争優位性分析</strong> - 競合他社とのTTIベンチマークは、優れたインタラクティブパフォーマンスによる差別化の機会を明らかにし、業界標準に基づいてパフォーマンス目標を確立するのに役立ちます。</p>
+<p><strong>リソース配分のガイダンス</strong> - TTI遅延の特定の原因を特定することで、チームは最適化の取り組みに優先順位を付け、ユーザーエクスペリエンスに最大の影響を与える領域に開発リソースを割り当てることができます。</p>
+<p><strong>品質保証の統合</strong> - TTIは、自動テストと継続的インテグレーションパイプラインに組み込むことができ、パフォーマンスの後退を防ぎ、一貫したインタラクティブパフォーマンス基準を維持します。</p>
+<p><strong>ビジネスインパクトの相関</strong> - この指標により、技術的なパフォーマンス改善とビジネス成果の相関が可能になり、パフォーマンス最適化投資を正当化し、ROIを実証するのに役立ちます。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong>Eコマースチェックアウトの最適化</strong> - チェックアウトプロセス中のTTIを測定して、ユーザーが取引を完了する準備ができたときに、支払いフォームと購入ボタンが即座に応答することを確認します。</p>
+<p><strong>シングルページアプリケーション(SPA)のパフォーマンス</strong> - 初期レンダリングがインタラクティブ機能がユーザーに完全に利用可能になる前に完了する可能性のあるJavaScriptヘビーなアプリケーションのTTIを評価します。</p>
+<p><strong>モバイルファースト開発</strong> - 処理の制限が視覚的完成とインタラクティブ準備の間に大きな遅延を生じさせる可能性のあるモバイルデバイスでのTTIを評価します。</p>
+<p><strong>プログレッシブWebアプリ(PWA)の最適化</strong> - PWAのTTIを監視して、アプリのようなインタラクティブ性が異なるデバイスとネットワーク条件にわたって迅速かつ一貫して達成されることを確認します。</p>
+<p><strong>コンテンツ管理システム(CMS)のパフォーマンス</strong> - 複数のプラグインと動的コンテンツがインタラクティブ機能の可用性のタイミングに影響を与える可能性のあるCMS駆動サイトのTTIを評価します。</p>
+<p><strong>サードパーティ統合の評価</strong> - 広告スクリプト、分析ツール、ソーシャルメディアウィジェットのTTI影響を測定して、機能とパフォーマンス要件のバランスを取ります。</p>
+<p><strong>A/Bテストのパフォーマンス分析</strong> - TTI指標を使用して、異なるデザインバリエーションと機能実装がユーザーインタラクション準備と全体的なエクスペリエンス品質にどのように影響するかを評価します。</p>
+<p><strong>Core Web Vitalsコンプライアンス</strong> - Googleのユーザーエクスペリエンス基準と検索ランキング要因を満たすために、包括的なCore Web Vitals評価の一部としてTTI測定を組み込みます。</p>
+<p><strong>パフォーマンス後退の検出</strong> - 継続的インテグレーションパイプラインにTTI監視を実装して、デプロイ前にインタラクティブパフォーマンスに悪影響を与えるコード変更を特定します。</p>
+<p><strong>クロスブラウザ互換性テスト</strong> - 異なるブラウザとバージョンにわたってTTIを評価し、ユーザーのブラウザの選択と機能に関係なく、一貫したインタラクティブパフォーマンスを確保します。</p>
+<h2 id="ttiと他のパフォーマンス指標の比較">TTIと他のパフォーマンス指標の比較</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>測定焦点</th>
+<th>ユーザーへの影響</th>
+<th>最適化の優先度</th>
+<th>典型的な範囲</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time to Interactive(TTI)</td>
+<td>完全なインタラクティブ準備</td>
+<td>高 - 実際の使いやすさ</td>
+<td>エンゲージメントに重要</td>
+<td>2-8秒</td>
+</tr>
+<tr>
+<td>First Contentful Paint(FCP)</td>
+<td>初期コンテンツレンダリング</td>
+<td>中 - 視覚的フィードバック</td>
+<td>認識に重要</td>
+<td>0.5-2秒</td>
+</tr>
+<tr>
+<td>Largest Contentful Paint(LCP)</td>
+<td>メインコンテンツの可視性</td>
+<td>高 - 知覚される読み込み</td>
+<td>Core Web Vitalsに重要</td>
+<td>1-4秒</td>
+</tr>
+<tr>
+<td>First Input Delay(FID)</td>
+<td>最初のインタラクション応答</td>
+<td>高 - 即座のフィードバック</td>
+<td>インタラクティブ性に重要</td>
+<td>0-300ミリ秒</td>
+</tr>
+<tr>
+<td>Cumulative Layout Shift(CLS)</td>
+<td>視覚的安定性</td>
+<td>中 - ユーザーフラストレーション</td>
+<td>エクスペリエンスに重要</td>
+<td>0-0.25スコア</td>
+</tr>
+<tr>
+<td>Total Blocking Time(TBT)</td>
+<td>メインスレッドのブロッキング</td>
+<td>中 - インタラクション遅延</td>
+<td>最適化に重要</td>
+<td>0-600ミリ秒</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>測定の複雑さ</strong> - TTI計算には、メインスレッドアクティビティ、ネットワークリクエスト、リソース読み込み状態を含む複数の変数が関与し、開発チームにとって正確な測定と解釈が困難になります。</p>
+<p><strong>フレームワーク固有のバリエーション</strong> - 異なるJavaScriptフレームワークとライブラリは、さまざまなハイドレーションプロセス、コード分割戦略、レンダリングアプローチを通じてTTIに大きな影響を与える可能性があり、専門的な最適化技術が必要です。</p>
+<p><strong>サードパーティスクリプトの影響</strong> - 広告ネットワーク、分析プロバイダー、ソーシャルメディアプラットフォームからの外部スクリプトは、TTIに予測不可能な影響を与える可能性があり、直接的な開発制御を超えた最適化の課題を生み出します。</p>
+<p><strong>デバイスパフォーマンスの変動性</strong> - TTI測定は、異なるデバイス、プロセッサ、メモリ構成にわたって劇的に変化する可能性があり、普遍的なパフォーマンス目標と最適化戦略を確立することが困難になります。</p>
+<p><strong>ネットワーク条件の依存性</strong> - TTIパフォーマンスは、ネットワーク速度、レイテンシ、信頼性に大きく影響されるため、最適化計画において多様なユーザー接続シナリオを考慮する必要があります。</p>
+<p><strong>テスト環境の制限</strong> - ラボテスト条件は、デバイス機能、ネットワーク条件、ユーザー行動パターンの違いにより、実世界のTTIパフォーマンスを正確に反映しない可能性があります。</p>
+<p><strong>最適化のトレードオフ</strong> - TTIの改善には、初期バンドルサイズ、キャッシング戦略、機能の機能性など、他の領域での妥協が必要になる場合があり、最適化の決定において慎重なバランスが必要です。</p>
+<p><strong>監視とアラートの複雑さ</strong> - 効果的なTTI監視を確立するには、自然な変動を考慮しながら真のパフォーマンス問題を特定できる高度なツールとアラートシステムが必要です。</p>
+<p><strong>クロスブラウザの不整合</strong> - TTI測定と最適化技術は、異なるブラウザとバージョンにわたって変化する可能性があり、包括的なテストと潜在的にブラウザ固有の最適化アプローチが必要です。</p>
+<p><strong>ビジネスインパクトの帰属</strong> - TTI改善をコンバージョン率やユーザーエンゲージメントなどのビジネス指標と相関させることは、ユーザー行動と結果に影響を与える複数の変数のために困難な場合があります。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>ベースライン測定の確立</strong> - 代表的なユーザーシナリオ、デバイス、ネットワーク条件にわたって包括的なTTI監視を実装し、現在のパフォーマンスを理解し、最適化の機会を特定します。</p>
+<p><strong>JavaScript実行の最適化</strong> - コード分割、遅延読み込み、効率的なバンドリング戦略を実装して、長時間タスクの期間と頻度を削減し、メインスレッドのブロッキングを最小化します。</p>
+<p><strong>重要なリソース読み込みの優先順位付け</strong> - 視覚的完成とインタラクティブ性の間の時間を最小化するために、重要でない要素の前に必須のJavaScriptとCSSリソースが読み込まれて実行されることを確認します。</p>
+<p><strong>プログレッシブエンハンスメントの実装</strong> - 拡張機能が非同期で読み込まれる間に基本的な機能を迅速に提供するようにページを設計し、コアインタラクティブ性ができるだけ早く利用可能になるようにします。</p>
+<p><strong>サードパーティの影響の監視</strong> - 非同期読み込み、リソースヒント、ユーザーインタラクションまたはページコンテキストに基づく選択的読み込みなどの技術を通じて、サードパーティスクリプトを定期的に評価および最適化します。</p>
+<p><strong>パフォーマンスバジェットの使用</strong> - 開発ワークフローでTTIパフォーマンスバジェットを確立および実施して、後退を防ぎ、一貫したインタラクティブパフォーマンス基準を維持します。</p>
+<p><strong>モバイルデバイスの最適化</strong> - 処理の制限とネットワーク制約がインタラクティブパフォーマンスに大きな影響を与える可能性のあるモバイルデバイスのTTI最適化を優先します。</p>
+<p><strong>効率的なキャッシング戦略の実装</strong> - ブラウザキャッシング、サービスワーカー、CDN最適化を活用して、リソース読み込み時間を短縮し、リピーターユーザーのTTIを改善します。</p>
+<p><strong>定期的なパフォーマンス監査の実施</strong> - Lighthouse、WebPageTest、リアルユーザーモニタリングなどのツールを使用して体系的なTTI分析を実行し、トレンドと最適化の機会を特定します。</p>
+<p><strong>パフォーマンステストの統合</strong> - TTI測定を自動テストパイプラインと継続的インテグレーションプロセスに組み込み、本番環境に到達する前にパフォーマンスの後退をキャッチします。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>選択的ハイドレーション戦略</strong> - 初期TTIを改善するために、スクロールせずに見える範囲のコンテンツのインタラクティブ機能を優先し、重要度の低いインタラクティブ要素を延期する高度なハイドレーション技術を実装します。</p>
+<p><strong>予測的リソース読み込み</strong> - 機械学習とユーザー行動分析を活用して、インタラクティブ性に必要なリソースを予測して事前読み込みし、インテリジェントなリソース管理を通じてTTIを削減します。</p>
+<p><strong>Webワーカーの最適化</strong> - Webワーカーを活用して、メインスレッドから重い計算タスクをオフロードし、アプリケーション機能を維持しながらTTIを遅延させる可能性のある長時間タスクを防ぎます。</p>
+<p><strong>高度なコード分割</strong> - ルートベース、コンポーネントベース、動的分割を含む高度なコード分割戦略を実装して、初期JavaScriptバンドルサイズと実行時間を最小化します。</p>
+<p><strong>サービスワーカーのパフォーマンス強化</strong> - インテリジェントキャッシング、バックグラウンド処理、リソース最適化のための高度なサービスワーカー技術を活用して、リピート訪問とオフラインシナリオのTTIを改善します。</p>
+<p><strong>リアルユーザーモニタリング(RUM)の統合</strong> - 多様な条件にわたる実際のユーザーからTTIデータをキャプチャする包括的なRUMソリューションを展開し、合成テストの制限を超えた洞察を提供します。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>Core Web Vitalsの進化</strong> - TTI測定と最適化は、GoogleのCore Web Vitalsイニシアチブとともに進化し続け、潜在的なアルゴリズムの更新と新しいインタラクティブ性指標が登場します。</p>
+<p><strong>AI駆動の最適化</strong> - 機械学習アルゴリズムは、ユーザーパターンに基づくインテリジェントなリソース読み込み、予測的キャッシング、動的パフォーマンス調整を通じて、TTI最適化をますます自動化します。</p>
+<p><strong>エッジコンピューティングの統合</strong> - エッジコンピューティングとCDN技術は、分散処理と地理的に最適化されたリソース配信を通じて、TTI改善の新しい機会を提供します。</p>
+<p><strong>フレームワークネイティブの最適化</strong> - JavaScriptフレームワークは、自動コード分割、インテリジェントハイドレーション、パフォーマンス監視機能を含む、より洗練されたTTI最適化機能を組み込みます。</p>
+<p><strong>ブラウザパフォーマンスの強化</strong> - ブラウザベンダーは、より良いTTI結果をサポートするために、JavaScript実行効率、リソース読み込み最適化、パフォーマンス測定精度の改善を続けます。</p>
+<p><strong>総合的なパフォーマンス指標</strong> - 将来のパフォーマンス測定は、TTIを他のユーザーエクスペリエンス指標と統合して、ページ品質とユーザー満足度のより包括的な評価を提供します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li><a data-lb="1" href="/ja/glossary/google/" title="Google の用語集ページ">Google</a> Web Fundamentals: Time to Interactiveドキュメンテーション</li>
+<li>W3C Web Performance Working Group仕様</li>
+<li>Lighthouseパフォーマンス監査方法論</li>
+<li>WebPageTest TTI測定ガイドライン</li>
+<li>Chrome DevToolsパフォーマンス分析ドキュメンテーション</li>
+<li>Mozilla Developer Networkパフォーマンス最適化リソース</li>
+<li>Core Web Vitals研究と実装研究</li>
+<li>TTI評価のためのリアルユーザーモニタリングベストプラクティス</li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/fcp--first-contentful-paint-/">
+                    FCP (First Contentful Paint)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ユーザーがリンクをクリックした後、ウェブページ上にコンテンツが最初に表示されるまでの速度を測定するウェブパフォーマンス指標で、ユーザーの第一印象とエンゲージメントに影響を与えます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/fcp--first-contentful-paint-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/core-web-vitals/">
+                    Core Web Vitals
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Googleが定める3つの指標で、ウェブページの読み込み速度、クリックへの応答速度、読み込み中のレイアウトの安定性を測定します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/core-web-vitals/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/lcp--largest-contentful-paint-/">
+                    LCP (Largest Contentful Paint)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ページ上の最大のコンテンツがユーザーに表示されるまでの速度を測定するウェブパフォーマンス指標で、ユーザーの第一印象とエンゲージメントに直接影響します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/lcp--largest-contentful-paint-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/time-to-interactive--tti-/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190816"></script>
+</body>
+</html>

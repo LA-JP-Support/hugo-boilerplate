@@ -125,6 +125,10 @@ class LinkExtractor:
     def extract_keywords_from_file(self, file_path: Path) -> List[Dict]:
         """Extract keywords from a single markdown file"""
         try:
+            rel_parts = [p.lower() for p in file_path.relative_to(self.content_dir).parts]
+            if 'glossary' in rel_parts:
+                return []
+
             # Read and parse frontmatter (automatically detects YAML or TOML)
             with open(file_path, 'r', encoding='utf-8') as f:
                 content = f.read()

@@ -15,7 +15,9 @@ lastmod: '2025-12-19'
 draft: false
 e-title: Open-Domain Bot
 term: オープンドメインボット
-url: "/ja/glossary/Open-Domain-Bot/"
+url: "/ja/glossary/open-domain-bot/"
+aliases:
+- "/ja/glossary/Open-Domain-Bot/"
 ---
 ## オープンドメインボットとは?
 
@@ -35,18 +37,18 @@ url: "/ja/glossary/Open-Domain-Bot/"
 
 ## オープンドメイン vs. クローズドドメイン
 
-**オープンドメインチャットボット:**制約のない会話を行い、あらゆる主題をサポートします。
+**オープンドメインチャットボット:** 制約のない会話を行い、あらゆる主題をサポートします。
 - 例:Meena、Blender、Mitsuku
 
-**クローズドドメインチャットボット:**特定の事前定義されたタスクやドメイン(例:フライト予約、銀行業務)に限定されます。
+**クローズドドメインチャットボット:** 特定の事前定義されたタスクやドメイン(例:フライト予約、銀行業務)に限定されます。
 - 例:LegalBot、医療トリアージボット
 
 | 側面 | オープンドメインボット | クローズドドメインボット |
 |--------|----------------|-------------------|
-| **トピックカバレッジ**| あらゆるトピック、無制限 | 特定の事前定義されたドメイン |
-| **応答生成**| データ駆動型、生成/検索型 | ルールベース、構造化テンプレート |
-| **評価**| 一貫性、人間らしさ、エンゲージメント | タスク成功率、精度 |
-| **ユースケース**| ソーシャルチャット、エンターテインメント、一般的なQ&A | カスタマーサポート、タスク自動化 |
+| **トピックカバレッジ** | あらゆるトピック、無制限 | 特定の事前定義されたドメイン |
+| **応答生成** | データ駆動型、生成/検索型 | ルールベース、構造化テンプレート |
+| **評価** | 一貫性、人間らしさ、エンゲージメント | タスク成功率、精度 |
+| **ユースケース** | ソーシャルチャット、エンターテインメント、一般的なQ&A | カスタマーサポート、タスク自動化 |
 
 ## アーキテクチャ
 
@@ -58,33 +60,49 @@ Seq2seqモデルは、もともと機械翻訳用に設計されたニューラ�
 
 Vaswaniら(2017年)によって導入されたトランスフォーマーは、自己アテンションメカニズムを利用してテキスト内の長距離依存関係をモデル化し、コンテキスト管理とスケーラビリティを劇的に改善しました。
 
-**Meena:**26億パラメータ、ソーシャルメディアの会話から400億語で訓練。**Blender:**最大94億パラメータ、ペルソナ条件付き、Redditおよび関連コーパスで訓練。
+**Meena:** 26億パラメータ、ソーシャルメディアの会話から400億語で訓練。
+
+**Blender:** 最大94億パラメータ、ペルソナ条件付き、Redditおよび関連コーパスで訓練。
 
 ### 検索ベースと生成アプローチ
 
-**検索ベース:**類似度メトリクスを使用して、事前定義されたセットから最適な応答を選択します。精度は信頼できますが、既存のデータに限定されます。**生成モデル:**一度に一語ずつ応答を作成し、新しい発話を可能にしますが、一貫性を欠くリスクがあります。
+**検索ベース:** 類似度メトリクスを使用して、事前定義されたセットから最適な応答を選択します。精度は信頼できますが、既存のデータに限定されます。
+
+**生成モデル:** 一度に一語ずつ応答を作成し、新しい発話を可能にしますが、一貫性を欠くリスクがあります。
 
 ## 応用
 
 オープンドメインボットは以下の用途で展開されています:
 
-**ソーシャル会話とコンパニオンシップ:**ユーザーとカジュアルで自然な対話を行います。**一般的な情報検索:**幅広いトピックに対するオープンドメインQ&A。**カスタマーエンゲージメント:**ブランドとのやり取りのための幅広いトピックのチャット。**AI研究とベンチマーキング:**対話型AIの限界をテストします。**言語練習:**会話を通じてユーザーが言語を練習するのを支援します。
+**ソーシャル会話とコンパニオンシップ:** ユーザーとカジュアルで自然な対話を行います。
+
+**一般的な情報検索:** 幅広いトピックに対するオープンドメインQ&A。
+
+**カスタマーエンゲージメント:** ブランドとのやり取りのための幅広いトピックのチャット。
+
+**AI研究とベンチマーキング:** 対話型AIの限界をテストします。
+
+**言語練習:** 会話を通じてユーザーが言語を練習するのを支援します。
 
 ## 注目すべきシステム
 
 | システム | 説明 | 特徴/ベンチマーク |
 |--------|-------------|----------------------|
-| **Meena**| Googleのトランスフォーマーベースボット | 妥当性、具体性 |
-| **Blender**| Facebook AIの大規模ペルソナチャットボット | 共感、知識、ペルソナ |
-| **Mitsuku**| ルールベース、AIMLチャットボット、Loebner Prize受賞 | パターンマッチング、雑談 |
-| **DialoGPT**| Microsoftの会話型トランスフォーマー | Redditファインチューニング |
-| **BERTベースQAボット**| 検索/トランスフォーマーを使用したオープンドメインQ&A | SQuADで高精度 |
+| **Meena** | Googleのトランスフォーマーベースボット | 妥当性、具体性 |
+| **Blender** | Facebook AIの大規模ペルソナチャットボット | 共感、知識、ペルソナ |
+| **Mitsuku** | ルールベース、AIMLチャットボット、Loebner Prize受賞 | パターンマッチング、雑談 |
+| **DialoGPT** | Microsoftの会話型トランスフォーマー | Redditファインチューニング |
+| **BERTベースQAボット** | 検索/トランスフォーマーを使用したオープンドメインQ&A | SQuADで高精度 |
 
 ## スピーチイベント分類
 
 スピーチイベントは会話活動のカテゴリーを表します(Goldsmith & Baxter, 1996):
 
-**非公式/表面的:**雑談、ゴシップ、ジョーク。**関与型:**不満、関係の話。**目標指向型:**意思決定、指示。
+**非公式/表面的:** 雑談、ゴシップ、ジョーク。
+
+**関与型:** 不満、関係の話。
+
+**目標指向型:** 意思決定、指示。
 
 ### 実証的知見
 
@@ -94,7 +112,9 @@ Vaswaniら(2017年)によって導入されたトランスフォーマーは、�
 
 ### 人間らしさと一貫性
 
-**一貫性:**会話の論理的なつながりと流れ。**人間らしさ:**ボットの応答が人間と区別できない程度。
+**一貫性:** 会話の論理的なつながりと流れ。
+
+**人間らしさ:** ボットの応答が人間と区別できない程度。
 
 ### スピーチイベント評価
 
@@ -110,54 +130,61 @@ Blenderは人間評価でMeenaよりも好まれますが、人間同士の会�
 
 ## 課題
 
-**コンテキスト理解:**特に長く複雑なやり取りでは限定的です。**現実世界のグラウンディング:**ライブイベントやユーザーコンテキストの参照は未解決です。**複雑なスピーチイベント:**説得や協調的計画は依然として稀です。**会話の幅:**雑談を超えて、人間の会話イベントの全範囲をカバーするように拡大します。**コンテキストメモリ:**以前のやり取りを記憶、想起、参照するボットの能力を向上させます。**倫理と安全性:**責任ある展開のための堅牢なフィルタリングと監視を開発します。
+**コンテキスト理解:** 特に長く複雑なやり取りでは限定的です。
+
+**現実世界のグラウンディング:** ライブイベントやユーザーコンテキストの参照は未解決です。
+
+**複雑なスピーチイベント:** 説得や協調的計画は依然として稀です。
+
+**会話の幅:** 雑談を超えて、人間の会話イベントの全範囲をカバーするように拡大します。
+
+**コンテキストメモリ:** 以前のやり取りを記憶、想起、参照するボットの能力を向上させます。
+
+**倫理と安全性:** 責任ある展開のための堅牢なフィルタリングと監視を開発します。
 
 ## 実装上の考慮事項
 
 ### 実世界での展開の問題
 
-**データ要件:**オープンドメインボットの訓練には、大規模で多様な会話データが必要です。**計算:**トランスフォーマーには広範な計算能力が必要です。**安全性:**不適切、偏った、または無意味な出力を生成するリスクがあります。
+**データ要件:** オープンドメインボットの訓練には、大規模で多様な会話データが必要です。
+
+**計算:** トランスフォーマーには広範な計算能力が必要です。
+
+**安全性:** 不適切、偏った、または無意味な出力を生成するリスクがあります。
 
 ### Rasaと実用的な制限
 
-**Rasa:**主にインテント/エンティティ駆動型のタスク指向ボット用に設計されています。**Rasaでのオープンドメインの課題:**- 無制限のドメインに対する網羅的なインテント/エンティティ設計は非現実的です
+**Rasa:** 主にインテント/エンティティ駆動型のタスク指向ボット用に設計されています。
+
+**Rasaでのオープンドメインの課題:**
+- 無制限のドメインに対する網羅的なインテント/エンティティ設計は非現実的です
 - 応答選択とコンテキスト追跡はオープンドメインのニーズに対応できません
 
 ## 今後の方向性
 
-**会話の幅:**雑談を超えて、人間の会話イベントの全範囲をカバーするように拡大します。**コンテキストメモリ:**以前のやり取りを記憶、想起、参照するボットの能力を向上させます。**倫理と安全性:**責任ある展開のための堅牢なフィルタリングと監視を開発します。**ハイブリッドモデル:**検索、生成、人間参加型キュレーションを組み合わせて、対話品質を向上させます。
+**会話の幅:** 雑談を超えて、人間の会話イベントの全範囲をカバーするように拡大します。
+
+**コンテキストメモリ:** 以前のやり取りを記憶、想起、参照するボットの能力を向上させます。
+
+**倫理と安全性:** 責任ある展開のための堅牢なフィルタリングと監視を開発します。
+
+**ハイブリッドモデル:** 検索、生成、人間参加型キュレーションを組み合わせて、対話品質を向上させます。
 
 ## 参考文献
 
-
-1. ACL Anthology. (2021). How "open" are conversations with open-domain chatbots?. ACL Anthology.
-
-2. IJEAT. (n.d.). Research Perspectives in Open-Domain Chatbots. IJEAT.
-
-3. YouTube. (n.d.). Open Domain Q&A AI Chatbot DEMO. YouTube.
-
-4. Wisdomlib. (n.d.). Open-Domain Chatbot Concept. Wisdomlib.
-
-5. Facebook AI. (n.d.). Blender Project. Facebook AI.
-
-6. Google AI Blog. (2020). Meena. Google AI Blog.
-
-7. arXiv. (n.d.). ACUTE-Eval. arXiv.
-
-8. Symbl.ai. (n.d.). Open Domain vs. Closed Domain. Symbl.ai Blog.
-
-9. Rasa Forum. (n.d.). Open Domain Chatbot Discussion. Rasa Forum.
-
-10. Rasa Forum. (n.d.). Deployment and Integration Issues. Rasa Forum.
-
-11. ParlAI Platform. Open-source conversational AI platform. URL: https://parl.ai/
-
-12. OpenAI Research. AI research organization. URL: https://openai.com/research/
-
-13. SQuAD. Stanford Question Answering Dataset. URL: https://rajpurkar.github.io/SQuAD-explorer/
-
-14. Springer. (n.d.). Chatbot vs. Dialogue System. Springer.
-
-15. Wikipedia. (n.d.). Transformer (deep learning). Wikipedia.
-
-16. DataCamp. (n.d.). How Transformers Work. DataCamp.
+- [ACL Anthology: How "open" are conversations with open-domain chatbots?](https://aclanthology.org/2021.sigdial-1.41.pdf)
+- [IJEAT: Research Perspectives in Open-Domain Chatbots](https://www.ijeat.org/wp-content/uploads/papers/v9i4/D8734049420.pdf)
+- [YouTube: Open Domain Q&A AI Chatbot DEMO](https://www.youtube.com/watch?v=UTeErvuadbM)
+- [Wisdomlib: Open-Domain Chatbot Concept](https://www.wisdomlib.org/concept/open-domain-chatbot)
+- [Facebook AI: Blender Project](https://parl.ai/projects/blender/)
+- [Google AI Blog: Meena](https://ai.googleblog.com/2020/01/towards-conversational-agent-that-can.html)
+- [arXiv: ACUTE-Eval](https://arxiv.org/abs/1904.03461)
+- [Symbl.ai: Open Domain vs. Closed Domain](https://symbl.ai/blog/conversation-understanding-open-domain-vs-closed-domain/)
+- [Rasa Forum: Open Domain Chatbot Discussion](https://forum.rasa.com/t/open-domain-chatbot/24319)
+- [Rasa Forum: Deployment and Integration Issues](https://forum.rasa.com/t/rasa-chat-bot-deployment-and-integration-issues/47964)
+- [ParlAI Platform](https://parl.ai/)
+- [OpenAI Research](https://openai.com/research/)
+- [SQuAD: Stanford Question Answering Dataset](https://rajpurkar.github.io/SQuAD-explorer/)
+- [Springer: Chatbot vs. Dialogue System](https://link.springer.com/chapter/10.1007/978-981-15-1384-8_22)
+- [Wikipedia: Transformer (deep learning)](https://en.wikipedia.org/wiki/Transformer_(deep_learning))
+- [DataCamp: How Transformers Work](https://www.datacamp.com/tutorial/how-transformers-work)

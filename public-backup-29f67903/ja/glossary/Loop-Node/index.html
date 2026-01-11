@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>ループノード | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/loop-node/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Loop-Node/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/Loop-Node/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Loop-Node/" hreflang="x-default" rel="alternate"/>
+<meta content="ループノードは、ワークフロー内で反復的なアクションを自動化し、条件が満たされるまで、固定回数、またはコレクション内の各アイテムに対してタスクを繰り返します。自動化に不可欠な機能です。" name="description"/>
+<meta content="ループノード, ワークフロー自動化, AIチャットボット, RPA, 反復処理" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/loop-node/" property="og:url"/>
+<meta content="ループノード | SmartWeb" property="og:title"/>
+<meta content="ループノードは、ワークフロー内で反復的なアクションを自動化し、条件が満たされるまで、固定回数、またはコレクション内の各アイテムに対してタスクを繰り返します。自動化に不可欠な機能です。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/loop-node/" name="twitter:url"/>
+<meta content="ループノード | SmartWeb" name="twitter:title"/>
+<meta content="ループノードは、ワークフロー内で反復的なアクションを自動化し、条件が満たされるまで、固定回数、またはコレクション内の各アイテムに対してタスクを繰り返します。自動化に不可欠な機能です。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">ループノード</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        ループノード
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Loop Node
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          ループノードは、ワークフロー内で反復的なアクションを自動化し、条件が満たされるまで、固定回数、またはコレクション内の各アイテムに対してタスクを繰り返します。自動化に不可欠な機能です。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ループノード
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ワークフロー自動化
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AIチャットボット
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                RPA
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                反復処理
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="ループノードとは">ループノードとは?</h2>
+<p>ループノードは、ワークフロー内でアクションの繰り返しを自動化し、特定の条件が満たされるまで、コレクション内の各アイテムを処理するまで、または所定の回数のサイクルを完了するまで、タスクを反復的に実行します。ループノードは、ワークフロー自動化、RPA(ロボティック・プロセス・オートメーション)、AIチャットボットプラットフォームにおける基本的なコンポーネントであり、手動で実行すると非実用的またはエラーが発生しやすい反復操作を効率的に処理できます。</p>
+<p>ループノードは、線形ワークフローを強力でスケーラブルな自動化システムに変換し、可変長データセットの処理、リトライロジックの実装、複数回の試行を通じたユーザー入力の検証、大量データにわたる複雑な多段階操作の調整を可能にします。</p>
+<p>主要な用途:リストとコレクションの処理(顧客セグメントへのパーソナライズされたメール送信)、反復タスクの自動化(複数部門の月次レポート生成)、<a data-lb="1" href="/ja/glossary/batch-processing/" title="バッチ処理は、大量のデータを収集し、設定された期間ごとにグループ単位で処理するデータアプローチです。高スループットのAI、分析、ビジネスオペレーションに最適です。">バッチ処理</a>(レート制限を回避するための管理可能なチャンクでのAPI呼び出し処理)、入力検証(有効なデータが受信されるまでユーザーにプロンプト表示)、リトライロジック(成功または最大試行回数に達するまで失敗した操作を再試行)、動的ワークフロー実行(実行時の条件とデータ特性への適応)。</p>
+<h2 id="ループノードの動作原理">ループノードの動作原理</h2>
+<p>ループノードの基本的な動作は、各反復サイクルで継続基準を評価し、別の反復を続行するかループを終了するかを決定することです。この評価メカニズムはループタイプによって異なりますが、プラットフォーム全体で一貫した原則に従います。</p>
+<h3 id="一般的なループ実行フロー">一般的なループ実行フロー</h3>
+<p>入力受信:ループノードは、前のワークフローステップからデータを受信します—反復処理するコレクション、カウントパラメータ、または初期状態値のいずれかです。条件評価:システムは、現在の反復回数、コレクションの境界、または論理条件に基づいて、継続基準が満たされているかどうかをチェックします。アクション実行:継続基準が満たされている場合、含まれるアクションとサブノードが現在の反復コンテキストで実行されます。状態の進行:システムは、コレクション内の次のアイテムに進むか、カウンターをインクリメントするか、次の評価サイクルのために状態変数を更新します。ループ終了:終了条件が満たされた場合—コレクションが使い果たされた、カウンターが制限に達した、または条件がfalseと評価された—ループは終了し、ワークフローは次のステップに進みます。出力処理:すべての反復からの集約結果が、後続のワークフローステップで利用可能になります。通常は配列または統合された値として提供されます。</p>
+<h2 id="ループノードのタイプ">ループノードのタイプ</h2>
+<h3 id="固定回数ループシンプルループ">固定回数ループ(シンプルループ)</h3>
+<p>開始値、終了値、増分設定に基づいて、所定の回数だけアクションを実行します。設計時に既知の予測可能な反復回数を必要とするシナリオに最適です。</p>
+<p>設定:開始インデックス(通常1または0)、終了値、増分サイズ(通常1ですが、任意の正の整数が可能)。使用例:日数をまたいで3回のリマインダーメールを送信、四半期1〜4のレポート生成、失敗した操作を最大5回まで再試行。</p>
+<h3 id="for-each--loop-over-items">For Each / Loop Over Items</h3>
+<p>コレクション(配列、リスト、テーブル行、ファイルセット)内の各要素を反復処理し、サイクルごとに1つのアイテムを処理します。データ処理ワークフローで最も一般的なループタイプです。</p>
+<p>設定:入力コレクションまたは配列、現在の要素を参照するためのオプションのアイテム変数名。使用例:新規購読者リストへのパーソナライズされたウェルカムメール送信、アップロードされた請求書を1つずつ処理、CSVインポートから在庫レコードを更新。</p>
+<h3 id="条件付きループwhileuntil">条件付きループ(While/Until)</h3>
+<p>指定された条件が真のままである限り反復を続ける(whileループ)、または条件が真になるまで反復する(untilループ)。動的なシナリオに最大限の柔軟性を提供します。</p>
+<p>設定:各反復の前に評価される、変数、演算子、値を使用した論理式。使用例:正しい形式が入力されるまで有効なメールアドレスをプロンプト表示、ジョブが完了するまでAPIエンドポイントをポーリング、成功またはタイムアウトまでデータベース接続を再試行。</p>
+<h3 id="バッチループ">バッチループ</h3>
+<p>個別にではなくグループでアイテムを処理し、バッチAPI、レート制限、またはパフォーマンス制約を持つ操作の効率的な処理を可能にします。</p>
+<p>設定:バッチサイズ(グループあたりのアイテム数)、処理するコレクション。使用例:レート制限内に収めるためにAPI呼び出しごとに100レコードを送信、効率的なメモリ使用のために10個のグループで画像を処理、1000個のバッチでデータベーストランザクションをコミット。</p>
+<h2 id="実装ガイド">実装ガイド</h2>
+<h3 id="共通の設定手順">共通の設定手順</h3>
+<p>ループノードの挿入:ワークフローデザイナーにアクセスし、ノードパレットのロジック/フロー制御セクションでループノードを見つけます。ループタイプの選択:使用例の要件に基づいて、固定回数、for each、条件付き、またはバッチから選択します。パラメータの設定:-固定回数:開始、終了、増分値を指定</p>
+<ul>
+<li>For Each:反復するコレクション/配列を選択、アイテム変数名を定義</li>
+<li>条件付き:終了条件の論理式を定義</li>
+<li>バッチ:バッチサイズと入力コレクションを設定反復アクションの追加:ワークフローノードをループ境界内にドラッグするか、ループノードに接続し、各サイクルで実行される操作を定義します。データフローのマッピング:反復データ(現在のアイテム、インデックス、カウンター)が含まれるアクションにどのように流れ、結果がどのように集約されるかを設定します。終了処理の定義:ループが完了したときの動作を指定します—結果の集約、最終状態の受け渡し、または特定のアクションのトリガー。サンプルデータでのテスト:代表的なデータでループを実行し、正しい反復回数、データ処理、終了条件を検証します。</li>
+</ul>
+<h3 id="プラットフォーム固有の実装">プラットフォーム固有の実装</h3>
+<p>MindPal:- 「For each item in」フィールドで入力リストを定義</p>
+<ul>
+<li>処理エージェント(AIモデルまたは自動化ロジック)を選択</li>
+<li>現在のアイテムを参照する変数を使用して指示を記述</li>
+<li>出力集約方法を設定</li>
+</ul>
+<p><a data-lb="1" href="/ja/glossary/n8n/" title="n8nは、ソースコードが公開されたノードベースのワークフロー自動化ツールで、高度なAI統合機能を備え、アプリ、API、サービスを接続します。">n8n</a>:- ほとんどのノードは、すべての入力アイテムを自動的に個別に処理</p>
+<ul>
+<li>明示的なバッチ処理またはチャンキングには「Loop Over Items」ノードを使用</li>
+<li>IF条件を使用して手動でループを作成するために、出力を以前のノードに戻す</li>
+<li>反復動作についてはノード固有のドキュメントを参照</li>
+</ul>
+<p>Power Automate:- 「ループ」(固定回数)、「ループ条件」(while/until)、または「For Each」(コレクション反復)から選択</p>
+<ul>
+<li>ループタイプに基づいてプロパティパネルでパラメータを設定</li>
+<li>早期に中断するには「ループの終了」アクション、現在の反復をスキップするには「次のループ」を使用</li>
+<li>含まれるアクション内でループ変数(インデックス、現在のアイテム)にアクセス</li>
+</ul>
+<h3 id="nodejsイベントループ概念的な区別">Node.jsイベントループ(概念的な区別)</h3>
+<p>Node.jsイベントループは、根本的に異なる概念を表します—ワークフロー反復制御ではなく、非同期でノンブロッキングな操作を可能にする低レベルのJavaScriptランタイムメカニズムです。</p>
+<p>イベントループフェーズ:タイマー(setTimeout、setIntervalコールバック)、保留中のコールバック(I/O操作の完了)、ポーリング(新しいI/Oイベントの取得)、チェック(setImmediateコールバック)、クローズコールバック(ソケットのクリーンアップ)。自動化との関連性:カスタム自動化コードにおける非同期パターンの基盤ですが、高レベルの反復制御を提供するワークフローループノードとは異なります。</p>
+<h2 id="設定パラメータ">設定パラメータ</h2>
+<table>
+<thead>
+<tr>
+<th>パラメータ</th>
+<th>説明</th>
+<th>例の値</th>
+<th>ループタイプ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start From</td>
+<td>初期カウンター値</td>
+<td>1</td>
+<td>固定回数</td>
+</tr>
+<tr>
+<td>End To</td>
+<td>最終カウンター値(包含)</td>
+<td>10</td>
+<td>固定回数</td>
+</tr>
+<tr>
+<td>Increment By</td>
+<td>反復ごとのカウンター増分</td>
+<td>1、5</td>
+<td>固定回数</td>
+</tr>
+<tr>
+<td>Collection</td>
+<td>反復する配列/リスト</td>
+<td><code>[{name:"Alice"}, {name:"Bob"}]</code></td>
+<td>For Each</td>
+</tr>
+<tr>
+<td>Batch Size</td>
+<td>バッチグループあたりのアイテム数</td>
+<td>5、100</td>
+<td>バッチ</td>
+</tr>
+<tr>
+<td>Exit Condition</td>
+<td>終了の論理式</td>
+<td><code>attempts &gt; 3 OR success == true</code></td>
+<td>条件付き</td>
+</tr>
+<tr>
+<td>Current Item</td>
+<td>現在の要素を参照する変数</td>
+<td><code>item.email</code></td>
+<td>For Each</td>
+</tr>
+<tr>
+<td>Index/Counter</td>
+<td>現在の反復番号</td>
+<td><code>i</code>、<code>counter</code></td>
+<td>すべてのタイプ</td>
+</tr>
+<tr>
+<td>Output Aggregation</td>
+<td>結果の結合方法</td>
+<td>array、sum、last</td>
+<td>すべてのタイプ</td>
+</tr>
+</tbody>
+</table>
+<h2 id="実用例">実用例</h2>
+<h3 id="バッチメール配信">バッチメール配信</h3>
+<p>シナリオ:メールサービスに負荷をかけずに、10,000人の購読者にパーソナライズされたニュースレターを送信。実装:1. データベースから購読者リストを取得
+2. ループノード(バッチサイズ100のFor Each)
+3. 各バッチに対して: パーソナライズされたメールを作成 → API経由で送信
+4. 結果をログ記録 → <a data-lb="1" href="/ja/glossary/bounce-rate/" title="バウンス率について理解しましょう。これは重要なウェブ解析指標です。計算方法、ユーザーエンゲージメントとSEOへの影響、そして高いバウンス率を削減してサイトパフォーマンスを向上させるための戦略を学びます。">バウンス率</a>を監視</p>
+<p>メリット:レート制限の遵守、進捗追跡、失敗時の再開可能性。</p>
+<h3 id="入力検証ワークフロー">入力検証ワークフロー</h3>
+<p>シナリオ:<a data-lb="1" href="/ja/glossary/chatbot/" title="チャットボットは、テキストまたは音声を通じて人間の会話をシミュレートするAI駆動のソフトウェアアプリケーションです。カスタマーサポート、情報検索、タスク自動化に使用されます。">チャットボット</a>が有効な電話番号を要求し、<a data-lb="1" href="/ja/glossary/escalation/" title="カスタマーサポート、IT、AIチャットボットにおけるエスカレーションについて学びます。種類、トリガー、ベストプラクティス、そして自動化が複雑な問題解決をどのように効率化するかを解説します。">エスカレーション</a>前に3回の試行を許可。実装:1. ユーザーに電話番号をプロンプト表示
+2. ループノード(条件付き: <code>attempts &lt; 3 AND !valid</code>)
+3. 形式を検証 → 無効な場合: 試行回数をインクリメント、再試行を要求
+4. ループ終了: 有効な番号を受信 OR 最大試行回数 → 続行またはエスカレート</p>
+<p>メリット:データ品質の向上、明確なフィードバックによるフラストレーションの軽減、自動エスカレーション。</p>
+<h3 id="apiリクエストリトライロジック">APIリクエストリトライロジック</h3>
+<p>シナリオ:外部APIが時折一時的なエラーを返し、指数バックオフでの再試行が必要。実装:1. 初期APIリクエスト
+2. ループノード(条件付き: <code>attempts &lt; 5 AND response != 200</code>)
+3. 待機(遅延は各反復で増加: 1秒、2秒、4秒、8秒、16秒)
+4. API呼び出しを再試行 → レスポンスをチェック
+5. 終了: 成功 OR 最大試行回数 → 結果を処理または失敗をログ記録</p>
+<p>メリット:一時的な障害への耐性、自動回復、明確な失敗処理。</p>
+<h3 id="在庫同期">在庫同期</h3>
+<p>シナリオ:Eコマースプラットフォームが複数の販売チャネル間で製品在庫を毎晩同期。実装:1. データベースから製品カタログを取得
+2. ループノード(各製品に対してFor Each)
+3. 各製品に対して: 現在の在庫を取得 → Shopifyを更新 → Amazonを更新 → eBayを更新 → 同期ステータスをログ記録
+4. 結果を集約 → 同期レポートを生成 → 失敗時にアラート</p>
+<p>メリット:チャネル間での一貫した在庫、詳細な監査証跡、自動エラー検出。</p>
+<h2 id="使用例">使用例</h2>
+<h3 id="データ処理">データ処理</h3>
+<p>リスト処理:データベースクエリ結果またはスプレッドシートの各エントリに対して、通知の送信、レコードの更新、レポートの生成。変換パイプライン:コレクション内の各ドキュメントに複数の変換ステップを適用—解析、検証、エンリッチ、フォーマット、保存。集約操作:大規模データセット全体で統計の計算、合計の集計、パターンの識別を反復的に実行。</p>
+<h3 id="システム統合">システム統合</h3>
+<p>バッチAPI呼び出し:APIレート制限またはペイロードサイズ制約に一致するグループでレコードを処理し、ページネーションを自動的に処理。データ同期:変更を反復的に伝播し、競合を処理し、監査ログを維持することで、複数のシステムの一貫性を保つ。移行操作:各ステップで検証、変換、エラー回復を行いながら、システム間でアイテムごとにデータを転送。</p>
+<h3 id="ユーザーインタラクション">ユーザーインタラクション</h3>
+<p>複数回試行の検証:ユーザーが受け入れ可能な入力を提供するまでプロンプトを続け、試行回数を追跡し、適切にエスカレート。アンケート完了:質問セットを反復処理し、回答に基づいて適応し、すべての必須フィールドが完了していることを確認。オンボーディングシーケンス:複数ステップのプロセスを通じてユーザーをガイドし、熟練度が実証されるまで説明または支援を繰り返す。</p>
+<h3 id="運用自動化">運用自動化</h3>
+<p>スケジュールされたレポート:単一のワークフロー実行で、複数の部門、地域、または期間のレポートを生成および配布。システムヘルスチェック:サービスエンドポイント、データベース、重要なパスを反復処理し、可用性とパフォーマンスを検証。クリーンアップ操作:分散システム全体で古いレコードをアーカイブ、一時ファイルをパージ、古いキャッシュエントリを期限切れにする。</p>
+<h2 id="ベストプラクティス">ベストプラクティス</h2>
+<p>明確な終了条件の定義:リソースを無期限に消費する無限ループを防ぐために、常に明示的な終了基準を指定します。最大反復制限の実装:条件付きループであっても、ロジックエラーや予期しないデータに対する安全メカニズムとして上限を設定します。エラーの適切な処理:ループ内でエラー処理を設定—単一の失敗がループ全体を中止すべきか、ログ記録して続行すべきかを決定します。バッチサイズの最適化:効率性とリソース制約のバランスを取る—大きなバッチはスループットを向上させますが、メモリ使用量と失敗の影響が増加します。パフォーマンスの監視:反復回数、処理時間、成功率を追跡し、<a data-lb="1" href="/ja/glossary/bottlenecks-comprehensive-glossary-action-guide-for-business-automation-and-ai-chatbot-operations/" title="ビジネス、自動化、AIチャットボット運用におけるボトルネックを理解します。プロセス、リソース、容量の制約を特定、分析、解決し、効率を向上させる方法を学びます。">ボトルネック</a>と最適化の機会を特定します。適切なループタイプの使用:使用例にループタイプを一致させる—既知の反復には固定回数、コレクションにはfor each、動的なシナリオには条件付き。変数スコープの管理:ループ変数(カウンター、現在のアイテム)が適切にスコープされ、競合や意図しない副作用を防ぐことを確認します。エッジケースのテスト:空のコレクション、単一アイテム、最大サイズ、異常なデータパターンで正しい動作を検証します。進捗追跡の実装:長時間実行されるループの場合、進捗インジケーター、中間チェックポイント、再開機能を提供します。並列化の検討:反復が独立している場合、大規模データセットのスループットを向上させる並列処理オプションを評価します。</p>
+<h2 id="プラットフォーム機能">プラットフォーム機能</h2>
+<h3 id="mindpal">MindPal</h3>
+<p>ループノード機能:エージェントベースのロジック、変数駆動の指示、組み込みの結果集約でリストを処理。統合:ループ反復と後続のワークフローステップ間のシームレスな変数受け渡し。最適な用途:AI駆動のデータ処理、コンテンツ生成、LLM機能を必要とするインテリジェント自動化。</p>
+<h3 id="n8n">n8n</h3>
+<p>暗黙的な反復:ほとんどのノードは、明示的なループ設定なしで、すべての入力アイテムを自動的に個別に処理。Loop Over Itemsノード:レート制限またはメモリ管理のための明示的なバッチ処理とチャンキング。手動ループ:最大限の柔軟性のために、ノード配線とIF条件を使用したカスタムループ作成。ノードの例外:一部のノード(特定のモードのHTTPリクエスト、特定のトリガーノード)は手動ループ実装が必要。最適な用途:複雑なデータパイプライン、<a data-lb="1" href="/ja/glossary/api-integration/" title="複数の異なるAPIやサービスを標準化された一貫性のあるレイヤーに統合する単一のインターフェース。通信プロトコル、データフォーマット、認証メカニズムを正規化することで複雑性を抽象化し、開発者が各APIを個別に学習することなく、さまざまなサードパーティサービスと統合できるようにします。">API統合</a>、イベント駆動ワークフロー。</p>
+<h3 id="power-automate">Power Automate</h3>
+<p>3つのループタイプ:シンプルループ(固定回数)、ループ条件(while/until)、For Each(コレクション反復)。制御アクション:「ループの終了」は実行を早期に中断、「次のループ」は現在の反復をスキップして次に続行。変数アクセス:含まれるアクション内で自動ループ変数(インデックス、現在のアイテム)が利用可能。最適な用途:Microsoftエコシステム統合、ビジネスプロセス自動化、エンタープライズワークフロー。</p>
+<h2 id="パフォーマンスの考慮事項">パフォーマンスの考慮事項</h2>
+<p>反復制限:プラットフォームは実行ごとの最大反復回数を課します—n8n: 通常デフォルト1000、Power Automate: プラン制限で設定可能。実行時間:長時間実行されるループはワークフローのタイムアウト制限に達する可能性があり、より小さな実行へのチャンキングまたは非同期パターンが必要。メモリ使用量:単一のループで処理される大規模なコレクションはメモリを使い果たす可能性があります—大規模データセットにはバッチ処理またはページネーションを使用。レート制限:ループ内の外部API呼び出しはレート制限を尊重する必要があります—遅延の実装、リクエストのバッチ処理、またはサービスクォータの使用。並行性:並列ループ実行はパフォーマンスを向上させることができますが、プラットフォームのサポートと慎重なリソース管理が必要。</p>
+<h2 id="トラブルシューティング">トラブルシューティング</h2>
+<p>無限ループ:終了条件が達成可能であり、各反復で正しく更新されることを確認—最大反復セーフガードを追加。パフォーマンス低下:実行時間をプロファイリングしてボトルネックを特定—データクエリの最適化、API呼び出しの削減、キャッシングの実装。部分的な失敗:失敗タイプに基づいて、中止、再試行、スキップ、またはログ記録して続行するかを決定するエラー処理を実装。データの不整合:ループの失敗がシステムを不整合な状態に残す可能性がある場合、適切なトランザクション処理を確保。リソースの枯渇:ループ実行中のメモリ使用量、接続数、APIクォータを監視—バックプレッシャーメカニズムを実装。</p>
+<h2 id="参考資料">参考資料</h2>
+<ol>
+<li>MindPal. (n.d.). Loop Node Documentation. MindPal Docs.</li>
+<li>n8n. (n.d.). Looping Documentation. n8n Docs.</li>
+<li>n8n. (n.d.). Node Exceptions. n8n Docs.</li>
+<li>Microsoft. (n.d.). Loops Reference. Power Automate Learn.</li>
+<li>Microsoft. (n.d.). Using Loops. Power Automate Learn.</li>
+<li>Node.js. (n.d.). Event Loop Guide. Node.js Learn.</li>
+<li>GeeksforGeeks. (n.d.). Node.js Event Loop. GeeksforGeeks.</li>
+<li>Unknown. (n.d.). Master Loop Node in n8n. YouTube.</li>
+<li>Unknown. (n.d.). Loops in Power Automate. YouTube.</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/aggregator/">
+                    Aggregator（アグリゲーター）
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    複数の実行パスやループからの出力を収集し、単一の結果に統合するノード。効率的なデータ処理を実現します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/aggregator/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/automation-platform/">
+                    オートメーションプラットフォーム
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/automation-platform/" title="オートメーションプラットフォームとは何か、その使用方法、種類、主要機能、主なメリットについて解説します。ビジネスに最適なソリューションの選定と導入方法を学びましょう。">オートメーションプラットフォーム</a>とは何か、その使用方法、種類、主要機能、主なメリットについて解説します。ビジネスに最適なソリューションの選定と導入方法を学びましょう。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/automation-platform/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/node-grouping/">
+                    ノードグルーピング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ノードグルーピングについて学びましょう。これは、AIシステム、ワークフロー自動化、インフラストラクチャオーケストレーションにおいて、関連するノードをクラスタリングする手法であり、明確性、管理性、モジュ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/node-grouping/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/parallel-execution/">
+                    並列実行
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/parallel-execution/" title="並列実行について学ぶ:複数のタスクを同時に実行することで、処理を高速化し、リソース利用を最大化し、ワークフロー、テスト、チャットボットにおけるフィードバックループを短縮します。">並列実行</a>について学ぶ:複数のタスクを同時に実行することで、処理を高速化し、リソース利用を最大化し、ワークフロー、テスト、チャットボットにおけるフィードバックループを短縮します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/parallel-execution/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/automated-workflows/">
+                    自動化ワークフロー
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    自動化ワークフローとは、事前に定義されたルールに基づいてタスク、アクティビティ、または意思決定を実行する技術対応プロセスであり、人的介入を最小限に抑え、効率性を最適化します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/automated-workflows/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/conditional-router/">
+                    コンディショナルルーター
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/conditional-router/" title="コンディショナルルーターは、データをルールに照らして評価し、特定のルートに振り分けます。自動化パイプライン、AIチャットボット、ソフトウェアにおける動的でルールベースの分岐処理に不可欠です。">コンディショナルルーター</a>は、データをルールに照らして評価し、特定のルートに振り分けます。自動化パイプライン、AIチャットボット、ソフトウェアにおける動的でルールベースの分岐処理に不可欠です。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/conditional-router/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/loop-node/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

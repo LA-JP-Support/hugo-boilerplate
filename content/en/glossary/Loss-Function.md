@@ -2,7 +2,7 @@
 title: "Loss Function"
 date: 2025-12-19
 translationKey: Loss-Function
-description: "A mathematical tool that measures how far a machine learning model's predictions are from actual answers, helping the model learn and improve during training."
+description: "A mathematical tool that measures how far a machine learning model's predictions are from the actual answers, guiding the model to improve during training."
 keywords:
 - loss function
 - machine learning optimization
@@ -56,7 +56,9 @@ The loss function operates through a systematic process that forms the backbone 
 
 7. **Convergence Monitoring**: The loss function value serves as a key metric for determining when the model has sufficiently learned from the training data.
 
-8. **Validation Assessment**: Separate validation datasets help evaluate whether the loss function optimization has led to genuine learning or overfitting.**Example Workflow**: In image classification, a convolutional neural network processes an image of a cat, outputs probability scores for different animal classes, and the cross-entropy loss function compares these probabilities with the true label (cat=1, others=0), generating gradients that adjust the network weights to increase the probability assigned to the correct class.
+8. **Validation Assessment**: Separate validation datasets help evaluate whether the loss function optimization has led to genuine learning or overfitting.
+
+**Example Workflow**: In image classification, a convolutional neural network processes an image of a cat, outputs probability scores for different animal classes, and the cross-entropy loss function compares these probabilities with the true label (cat=1, others=0), generating gradients that adjust the network weights to increase the probability assigned to the correct class.
 
 ## Key Benefits
 

@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Unsupervised Consistency Metrics | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/unsupervised-consistency-metrics/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Unsupervised-consistency-metrics/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/Unsupervised-consistency-metrics/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Unsupervised-consistency-metrics/" hreflang="x-default" rel="alternate"/>
+<meta content="Unsupervised consistency metrics evaluate AI reliability by analyzing response consistency without ground truth data. Essential for unsupervised learning, video analysis, and conversational AI." name="description"/>
+<meta content="unsupervised consistency metrics, AI reliability, clustering metrics, temporal consistency, chatbot evaluation" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/unsupervised-consistency-metrics/" property="og:url"/>
+<meta content="Unsupervised Consistency Metrics | SmartWeb" property="og:title"/>
+<meta content="Unsupervised consistency metrics evaluate AI reliability by analyzing response consistency without ground truth data. Essential for unsupervised learning, video analysis, and conversational AI." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/unsupervised-consistency-metrics/" name="twitter:url"/>
+<meta content="Unsupervised Consistency Metrics | SmartWeb" name="twitter:title"/>
+<meta content="Unsupervised consistency metrics evaluate AI reliability by analyzing response consistency without ground truth data. Essential for unsupervised learning, video analysis, and conversational AI." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165525" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165525" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165525"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118125587168000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118125587168000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118125587168000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118125587168000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Unsupervised Consistency Metrics</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Unsupervised Consistency Metrics
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          Unsupervised consistency metrics evaluate AI reliability by analyzing response consistency without ground truth data. Essential for unsupervised learning, video analysis, and conversational AI.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                unsupervised consistency metrics
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI reliability
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                clustering metrics
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                temporal consistency
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                chatbot evaluation
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-are-unsupervised-consistency-metrics">What Are Unsupervised Consistency Metrics?</h2>
+<p>Unsupervised consistency metrics are quantitative tools designed to evaluate the reliability, stability, and consistency of <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI system</a> outputs without requiring ground truth labels. Unlike supervised metrics that compare predictions against known answers, these metrics assess whether models behave consistently when presented with similar or repeated input conditions. They are essential in domains such as <a data-lb="1" href="/en/glossary/unsupervised-learning/" title="Unsupervised Learning glossary entry">unsupervised learning</a>, clustering, semantic segmentation, video analysis, and conversational agents—particularly when obtaining labeled data is cost-prohibitive, infeasible, or unavailable.</p>
+<p>These metrics enable practitioners to analyze model internal structure and decision-making processes by focusing on output similarity, stability, and logical coherence. Traditional evaluation approaches like accuracy, <a data-lb="1" href="/en/glossary/f1-score/" title="F1 Score glossary entry">F1 score</a>, and mean Intersection over Union rely on labeled ground truth data, but in production environments, large-scale video datasets, and open-ended conversational interfaces, such data often doesn’t exist. Unsupervised consistency metrics bridge this critical gap, enabling continuous <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a>, early detection of performance degradation, and identification of unstable prediction scenarios without the prohibitive cost of labeling every output.</p>
+<p>The importance of these metrics has grown dramatically with the deployment of <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI systems</a> in safety-critical applications like autonomous vehicles, where continuous label-free monitoring is essential for compliance and safety. Similarly, <a data-lb="1" href="/en/glossary/conversational-ai/" title="Conversational AI glossary entry">conversational AI</a> systems serving millions of users require robust quality monitoring, though labeling every interaction is impractical. Unsupervised consistency metrics provide the scalable solution these applications demand.</p>
+<h2 id="why-unsupervised-consistency-metrics-are-needed">Why Unsupervised Consistency Metrics Are Needed</h2>
+<p>Traditional model evaluation metrics depend on having labeled ground truth data for comparison. In many practical scenarios, labels are unavailable, incomplete, or too expensive to obtain. This challenge is particularly acute in several contexts.</p>
+<p>Large-Scale Video and Time-Series DatasetsSemantic segmentation for autonomous vehicles or industrial automation generates enormous volumes of predictions. Manually labeling every frame for validation is unrealistic and creates an unsustainable annotation bottleneck.Conversational AI DeploymentUser interactions with chatbots are open-ended and continuously evolving. Many conversational turns have no single “correct” answer, making traditional supervised evaluation insufficient.Production Environment MonitoringAI systems deployed in production require continuous monitoring for model drift and instability. Labeling every output for ongoing validation is impractical in both cost and time.Early Performance DetectionUnsupervised metrics enable early detection of performance degradation even without labels, allowing teams to identify and address issues before they significantly impact users.</p>
+<p>Unsupervised consistency metrics address these challenges by eliminating annotation <a data-lb="1" href="/en/glossary/bottlenecks/" title="Bottlenecks glossary entry">bottlenecks</a>, enabling scalable AI deployment, supporting continuous monitoring for drift and instability, and mitigating risk in safety-critical applications through constant quality evaluation.</p>
+<h2 id="core-metric-categories-and-applications">Core Metric Categories and Applications</h2>
+<h3 id="clustering-and-unsupervised-learning-metrics">Clustering and Unsupervised Learning Metrics</h3>
+<p>Unsupervised learning algorithms group data points without reference to labeled outcomes. Internal clustering metrics evaluate the quality of these groupings without ground truth data.</p>
+<p>Silhouette ScoreEvaluates how similar each data point is to its own cluster compared to other clusters. For point i, calculate average intra-cluster distance a(i) and average nearest-cluster distance b(i). Silhouette score is computed as s(i) = (b(i) - a(i)) / max(a(i), b(i)). Interpretation: Values near 1 indicate good cluster assignment, 0 indicates borderline cases, and -1 suggests possible misassignment.Davies-Bouldin IndexMeasures average similarity between clusters, considering intra-cluster scatter and inter-cluster separation. Lower DBI values indicate better cluster separation and cohesion. The formula computes the average maximum ratio of within-cluster to between-cluster distances.Dunn IndexRatio of minimum inter-cluster distance to maximum intra-cluster distance. Higher values indicate well-defined, well-separated clusters.Practical Application Example:Data scientists use Silhouette Score and Davies-Bouldin Index to select optimal cluster numbers for customer segmentation and validate grouping quality without labeled customer categories.</p>
+<h3 id="temporal-consistency-in-video-segmentation">Temporal Consistency in Video Segmentation</h3>
+<p>In computer vision applications, particularly autonomous vehicles and surveillance systems, models must provide temporally stable predictions across video frames. Standard accuracy metrics cannot capture prediction consistency over time when labels are unavailable.</p>
+<p>Unsupervised Temporal Consistency MetricsUse warping techniques to align predictions and measure model prediction similarity as the same scene evolves across consecutive frames.Process Steps:1. Generate semantic segmentation predictions for consecutive frames t-1 and t
+2. Estimate pixel-wise motion between frames using optical flow
+3. Warp prediction from t-1 using optical flow to align with frame t
+4. Calculate mean Intersection over Union between current prediction and warped previous prediction: TC_t = mIoU(y_t, warped_y_{t-1})
+5. Aggregate across all frame pairs to compute average temporal consistency</p>
+<p>Interpretation:High temporal consistency indicates stable, reliable segmentation. Low scores reveal unstable predictions, indicating potential perception failures or model drift.Use Case:Automotive engineers monitor sudden drops in temporal consistency, flagging instances where pedestrian or vehicle boundaries become unstable, potentially indicating safety-critical issues.</p>
+<h3 id="consistency-in-ai-agents-and-chatbots">Consistency in AI Agents and Chatbots</h3>
+<p>Conversational AI systems must maintain consistent, logically coherent behavior across interactions, even when user queries are paraphrased or repeated. Since natural dialogue often lacks a single “correct” answer, unsupervised consistency metrics become critical.</p>
+<p>Response ConsistencyMeasures how consistently an agent responds to semantically similar or repeated queries. Implementation includes sending repeated or paraphrased queries and calculating semantic similarity of responses using embeddings and <a data-lb="1" href="/en/glossary/cosine-similarity/" title="Cosine Similarity glossary entry">cosine similarity</a> for deterministic testing.Context AdherenceTracks whether agents maintain references and logical flow across multi-turn conversations, ensuring chatbots don’t lose previous context or contradict earlier statements.Practical Example:Production chatbots are evaluated by sampling paraphrased user questions (“How do I return a product?” vs. “What’s your return policy?”). If response content or intent differs significantly, the bot is flagged for review and potential retraining.Additional Metrics:-Tool Selection Accuracy:Measures whether bots select correct functions or APIs based on user intent</p>
+<ul>
+<li>Function Argument Accuracy:Checks correctness of argument extraction (dates, amounts, entities)</li>
+</ul>
+<h3 id="performance-monitoring-and-drift-detection">Performance Monitoring and Drift Detection</h3>
+<p>Unsupervised consistency metrics are essential in reliability monitoring pipelines, supporting automated detection of data drift, model degradation, and edge case failures.</p>
+<p>Temporal Drift Monitoringtracks consistency score changes over time, identifying gradual performance degradation due to data or model drift. By establishing baseline consistency metrics and monitoring statistically significant deviations, proactive intervention becomes possible.Uncertainty Quantificationcombines consistency metrics with uncertainty measurements to escalate ambiguous or unstable cases to human review, optimizing the balance between automation and quality assurance.Example:AI operations teams monitor <a data-lb="1" href="/en/glossary/chatbot/" title="Chatbot glossary entry">chatbot</a> response consistency across thousands of user interactions. Sustained drops in consistency scores indicate needs for retraining, data quality review, or investigation of emerging user needs not covered by current training data.</p>
+<h2 id="metrics-comparison-table">Metrics Comparison Table</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Domain</th>
+<th>Purpose</th>
+<th>Typical Range</th>
+<th>Key Characteristics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Silhouette Score</td>
+<td>Clustering</td>
+<td>Cluster cohesion/separation</td>
+<td>-1 to 1</td>
+<td>Higher is better; measures point-cluster fit</td>
+</tr>
+<tr>
+<td>Davies-Bouldin Index</td>
+<td>Clustering</td>
+<td>Cluster similarity</td>
+<td>0 to ∞</td>
+<td>Lower is better; evaluates separation</td>
+</tr>
+<tr>
+<td>Dunn Index</td>
+<td>Clustering</td>
+<td>Cluster separation</td>
+<td>0 to ∞</td>
+<td>Higher is better; ratio-based measure</td>
+</tr>
+<tr>
+<td>Temporal Consistency</td>
+<td>Video Segmentation</td>
+<td>Stability over time</td>
+<td>0 to 1</td>
+<td>Higher is better; uses warped frame comparison</td>
+</tr>
+<tr>
+<td>Response Consistency</td>
+<td>Chatbot/Agent</td>
+<td>Response reliability</td>
+<td>0 to 1 or qualitative</td>
+<td>Semantic similarity of responses to similar queries</td>
+</tr>
+<tr>
+<td>Context Retention</td>
+<td>AI Agent</td>
+<td>Conversational consistency</td>
+<td>Qualitative/quantitative</td>
+<td>Tracks references across dialogue turns</td>
+</tr>
+<tr>
+<td>Uncertainty Calibration</td>
+<td>General</td>
+<td>Confidence alignment</td>
+<td>0 to 1</td>
+<td>Compares stated confidence with empirical accuracy</td>
+</tr>
+</tbody>
+</table>
+<h2 id="application-scenarios-and-industry-use-cases">Application Scenarios and Industry Use Cases</h2>
+<p>Autonomous Vehicles and Self-DrivingTemporal consistency metrics ensure stable pixel-level segmentation of roads, vehicles, and pedestrians without ground truth labels. Sudden consistency drops highlight perception failures, supporting safety-critical decisions. Continuous monitoring enables real-time quality assessment during operation.Video Surveillance and Industrial AutomationMonitor stability of object detection and segmentation in continuous video feeds, discovering anomalies, tracking objects consistently across frames, and identifying unusual patterns that may indicate security threats or equipment failures.Conversational AI and ChatbotsResponse consistency ensures chatbots provide predictable, reliable answers to similar queries. Drift monitoring detects behavioral drift as conversation patterns and data distributions change over time, enabling timely model updates.Data Analytics and Customer SegmentationInternal clustering metrics validate customer groupings for marketing and analytics applications, ensuring meaningful, actionable customer categories while avoiding the need for labeled segments.</p>
+<h2 id="supervised-vs-unsupervised-metrics-comparison">Supervised vs. Unsupervised Metrics Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Supervised Metrics</th>
+<th>Unsupervised Consistency Metrics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Label Requirements</td>
+<td>Requires labeled ground truth data</td>
+<td>No labels needed</td>
+</tr>
+<tr>
+<td>Interpretability</td>
+<td>Direct measure of correctness</td>
+<td>Indirect; measures stability/consistency</td>
+</tr>
+<tr>
+<td>Primary Applications</td>
+<td>Model development, benchmarking</td>
+<td>Production monitoring, data-scarce settings</td>
+</tr>
+<tr>
+<td>Main Limitations</td>
+<td>Infeasible without labeled data</td>
+<td>May miss “consistently wrong” outputs</td>
+</tr>
+<tr>
+<td>Core Strengths</td>
+<td>High validity when labels are correct</td>
+<td>Enables continuous monitoring, drift detection</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>High labeling costs</td>
+<td>Low operational costs</td>
+</tr>
+<tr>
+<td>Scalability</td>
+<td>Limited by labeling capacity</td>
+<td>Highly scalable</td>
+</tr>
+</tbody>
+</table>
+<p>Best Practice:Combine both supervised and unsupervised metrics for robust evaluation. Use unsupervised metrics for real-time production monitoring and apply supervised metrics for validation when labeled data becomes available or can be strategically sampled.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p>Integration into Continuous Monitoring PipelinesAutomate metric calculation and alerting to capture performance degradation in production. Establish baseline metrics and thresholds that trigger investigation when exceeded.Context-Appropriate Metric SelectionUse temporal consistency for video applications, response consistency for chatbots, and clustering metrics for segmentation tasks. Tailor metric selection to specific domains and use cases.Regular Drift AnalysisMonitor consistency scores over time and investigate root causes of significant deviations. Establish regular review cycles rather than only reactive investigation after user complaints.Combination with Uncertainty QuantificationCombine consistency metrics with model confidence scores to determine when to trigger human review. Low consistency combined with low confidence indicates cases requiring expert attention.Documentation of LimitationsRecognize that consistent outputs are not always correct. Models may be consistently wrong under distribution shifts or adversarial conditions. Maintain awareness of edge cases and failure modes.Establishment of Feedback LoopsWhen human review identifies issues flagged by consistency metrics, incorporate these findings into training data or model improvement processes.</p>
+<h2 id="challenges-and-limitations">Challenges and Limitations</h2>
+<p>Sensitivity to Consistent ErrorsUnsupervised metrics may not capture systematic, repeated mistakes. Models consistently making the same error will show high consistency despite being wrong.Dependence on Auxiliary ModelsMetrics like temporal consistency depend on accurate optical flow estimation, which can itself introduce errors. Quality of auxiliary components affects overall metric reliability.Interpretation ComplexityLow consistency may arise from legitimate uncertainty rather than failure. Distinguishing acceptable variation from problematic instability requires domain expertise.Computational OverheadSome consistency metrics require additional computation (optical flow, embedding generation, similarity calculation), adding <a data-lb="1" href="/en/glossary/latency/" title="Latency glossary entry">latency</a> and resource requirements.Mitigation Strategies:Combine unsupervised and supervised approaches, validate auxiliary model quality, establish domain-specific interpretation guidelines, and optimize computational efficiency through <a data-lb="1" href="/en/glossary/batch-processing/" title="Batch Processing glossary entry">batch processing</a> and hardware acceleration.</p>
+<h2 id="related-concepts">Related Concepts</h2>
+<ul>
+<li>Semantic Segmentation:Assigning class labels to each pixel in an image</li>
+<li>Performance Metrics:Measures of model quality including reliability and efficiency</li>
+<li>Uncertainty Quantification:Measuring confidence or reliability of predictions</li>
+<li>Data Drift:Changes in data distribution that may degrade model performance</li>
+<li>Model Calibration:Alignment of predicted probabilities with actual outcomes</li>
+<li>Speaker Diarization:Identifying “who spoke when” in audio recordings</li>
+</ul>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<p>Can unsupervised consistency metrics completely replace supervised metrics?No. Unsupervised metrics don’t directly measure correctness. They’re best used in combination with supervised metrics when ground truth data becomes available, providing complementary insights.Are these metrics specific to deep learning models?No. Unsupervised consistency metrics apply to all AI and machine learning models, including classical algorithms and neural approaches.How do these metrics relate to uncertainty quantification?Consistency metrics monitor output stability while uncertainty quantification measures prediction confidence. Both enhance production reliability and work well together.What consistency scores indicate problems?This varies by domain and application. Establish baselines during initial deployment and monitor for significant deviations rather than absolute thresholds.How frequently should consistency be measured?For production systems, continuous or near-continuous monitoring is ideal. Batch systems can use periodic sampling based on deployment frequency and risk tolerance.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>GeeksforGeeks. (n.d.). Clustering Metrics in Machine Learning. GeeksforGeeks.</p>
+</li>
+<li>
+<p>Varghese, et al. (2020). Unsupervised Temporal Consistency Metric for Video Segmentation in Highly-Automated Driving. CVPRW 2020.</p>
+</li>
+<li>
+<p>Galileo AI. (n.d.). Metrics for Evaluating LLM Chatbot Agents. Galileo AI Blog.</p>
+</li>
+<li>
+<p>Wiley. (n.d.). An Overview of Unsupervised Drift Detection Methods. Wiley Online Library.</p>
+</li>
+<li>
+<p>Towards <a data-lb="1" href="/en/glossary/data-science/" title="Data Science glossary entry">Data Science</a>. (n.d.). Open-ended Evaluations with LLMs. Towards Data Science.</p>
+</li>
+<li>
+<p>Weights &amp; Biases. (n.d.). <a data-lb="1" href="/blog/ai-evaluation-japanese-benchmarks/" title="From automatic LLM evaluation methods to Japanese-specific benchmarks and hallucination mitigation strategies—comprehensive knowledge essential for enterprise AI adoption. Includes FlowHunt case studies.">LLM Evaluation</a>: Metrics, Frameworks, and Best Practices. Weights &amp; Biases Reports.</p>
+</li>
+<li>
+<p>AlmaBetter. (n.d.). Metrics for Unsupervised Learning. AlmaBetter Bytes.</p>
+</li>
+</ol>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/unsupervised-consistency-metrics/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165525"></script>
+</body>
+</html>

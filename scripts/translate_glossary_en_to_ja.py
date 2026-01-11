@@ -313,7 +313,7 @@ def translate_markdown_file(
     fm_ja["e-title"] = e_title or title_en
     
     filename_stem = src_path.stem
-    fm_ja["url"] = f"/ja/glossary/{filename_stem}/"
+    fm_ja["url"] = f"/ja/glossary/{filename_stem.lower()}/"
     
     if "term" not in fm_ja or not fm_ja.get("term"):
         fm_ja["term"] = term_ja or title_ja

@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>ウェイクワード技術 | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/wake-word/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/wake-word/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/wake-word/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/wake-word/" hreflang="x-default" rel="alternate"/>
+<meta content="ウェイクワード技術について解説します。AIアシスタントやスマートデバイスとのハンズフリー音声対話に不可欠なコンポーネントです。ウェイクワードの仕組み、ユースケース、実装方法について学びましょう。" name="description"/>
+<meta content="ウェイクワード, 音声AI, ホットワード, 音声認識, AIアシスタント" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/wake-word/" property="og:url"/>
+<meta content="ウェイクワード技術 | SmartWeb" property="og:title"/>
+<meta content="ウェイクワード技術について解説します。AIアシスタントやスマートデバイスとのハンズフリー音声対話に不可欠なコンポーネントです。ウェイクワードの仕組み、ユースケース、実装方法について学びましょう。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/wake-word/" name="twitter:url"/>
+<meta content="ウェイクワード技術 | SmartWeb" name="twitter:title"/>
+<meta content="ウェイクワード技術について解説します。AIアシスタントやスマートデバイスとのハンズフリー音声対話に不可欠なコンポーネントです。ウェイクワードの仕組み、ユースケース、実装方法について学びましょう。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190816" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190816" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script defer="" src="/js/main.js?v=20260111190816"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126096741115000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126096741115000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126096741115000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126096741115000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">ウェイクワード技術</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        ウェイクワード技術
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Wake Word Technology
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          ウェイクワード技術について解説します。AIアシスタントやスマートデバイスとのハンズフリー音声対話に不可欠なコンポーネントです。ウェイクワードの仕組み、ユースケース、実装方法について学びましょう。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ウェイクワード
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                音声AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ホットワード
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                音声認識
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AIアシスタント
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="ウェイクワードとは何か">ウェイクワードとは何か?</h2>
+<p>ウェイクワードとは、音声対応デバイスが受動的なリスニングモードから「起動」し、コマンドの積極的な処理を開始する信号として認識する特定の単語またはフレーズです。この技術は、AIアシスタントやスマートデバイスとのハンズフリーインタラクションの基盤を形成し、ユーザーが物理的な接触なしに音声インターフェースを起動できるようにします。ウェイクワード検出は、指定されたフレーズを求めて周囲の音声を継続的に分析し、フレーズを検出した瞬間にデバイスをアイドル状態からアクティブなコマンド処理へと移行させます。</p>
+<p>ウェイクワード技術は、現代の音声AIを支える目に見えないインフラストラクチャを表し、音声インターフェースを直感的でシームレス、かつ常時利用可能なものにしています。この技術は、スマートスピーカー、モバイルデバイス、自動車システム、家電製品、IoTデバイス全体に普及しており、ユーザーが自然言語を通じてテクノロジーと対話する方法を根本的に変革しています。</p>
+<p><strong>一般的な同義語:</strong> ホットワード、トリガーワード、ウェイクフレーズ、アクティベーションフレーズ、キーワードスポッティング、ウェイクアップワード(WuW)、ボイストリガー。これらの用語は、技術文書や製品資料全体で互換的に使用され、すべて事前に決定されたアクティベーションフレーズを監視する中核機能を説明しています。</p>
+<h2 id="ウェイクワードが音声インタラクションを可能にする仕組み">ウェイクワードが音声インタラクションを可能にする仕組み</h2>
+<p>ウェイクワードは、音声ファーストエクスペリエンスへの入口として機能し、明示的に呼び出されるまでデバイスを低電力の受動的リスニング状態に維持することで、摩擦のないハンズフリーのデバイス制御を可能にします。</p>
+<h3 id="主な使用例">主な使用例</h3>
+<p><strong>スマートホームデバイス</strong><br/>
+スマートスピーカー、ディスプレイ、照明、サーモスタット、接続された家電製品のシームレスな音声制御(「Alexa」、「Hey Google」)</p>
+<p><strong>モバイルプラットフォーム</strong><br/>
+スマートフォン、タブレット、ウェアラブルデバイス上のデジタルアシスタントへの便利なアクセス(「Hey Siri」、「Hey Google」)</p>
+<p><strong>自動車システム</strong><br/>
+運転中のハンズフリーナビゲーション、エンターテインメント制御、車両機能(「Hey Mercedes」、「Hey BMW」、「OK Honda」)</p>
+<p><strong>家電製品</strong><br/>
+テレビ、冷蔵庫、洗濯機、キッチン家電の音声対応制御</p>
+<p><strong>アクセシビリティソリューション</strong><br/>
+移動能力が制限されているユーザーや障害を持つユーザーが、音声コマンドを通じて独立してテクノロジーを制御できるようにする</p>
+<p><strong>エンタープライズおよび産業</strong><br/>
+音声制御機械、工場自動化システム、ハンズフリー操作を必要とするフィールドサービスアプリケーション</p>
+<h3 id="標準的な動作ワークフロー">標準的な動作ワークフロー</h3>
+<p><strong>1. 継続的な監視</strong><br/>
+デバイスは、最小限の電力消費で軽量なオンデバイスウェイクワード検出エンジンを使用して受動的にリスニングします</p>
+<p><strong>2. 検出トリガー</strong><br/>
+ウェイクワードを認識すると、デバイスは視覚的インジケーター(ライト)、音声キュー(トーン)、またはUI変更を通じて準備完了を通知します</p>
+<p><strong>3. アクティブ処理</strong><br/>
+システムは完全な音声認識に移行し、完全なNLP/ASR機能を使用して後続のユーザーコマンドを処理します</p>
+<p><strong>エネルギー効率:</strong> オンデバイスウェイクワード検出は、バッテリー電力を節約し、受動的リスニング中にクラウド送信がないことを保証することでプライバシーを最大化し、必要な場合にのみ完全な音声処理を起動します。</p>
+<h3 id="人気のあるウェイクワードの例">人気のあるウェイクワードの例</h3>
+<p><strong>コンシューマー音声アシスタント:</strong><br/>
+Apple(「Hey Siri」)、Amazon(「Alexa」)、Google(「OK Google」/「Hey Google」)、Microsoft(「Hey Cortana」)、Samsung(「Hi Bixby」)、Huawei(「Hey Celia」)</p>
+<p><strong>自動車ブランド:</strong><br/>
+Mercedes-Benz(「Hey Mercedes」)、BMW(「Hey BMW」)、Porsche(「Hey Porsche」)、Honda(「OK Honda」)、Kia(「Hello Kia」)</p>
+<p><strong>家電製品:</strong><br/>
+LG(「Hi LG」/「OK LG」)、Lloyd(「Hello Lloyd」)</p>
+<p><strong>ブランドカスタム:</strong><br/>
+Pandora(「Hey Pandora」)、SoundHound(「Hey SoundHound」)、Mycroft(「Hey Mycroft」)</p>
+<h2 id="技術アーキテクチャと検出プロセス">技術アーキテクチャと検出プロセス</h2>
+<p>ウェイクワード検出は、システムが各音声セグメントについて、ウェイクワードが存在するか否かを判断する二値分類問題として機能します。このプロセスは、すべての<a data-lb="1" href="/ja/glossary/utterance/" title="会話型AIにおける発話とは何か、NLU/NLPにおける役割、種類、ワークフロー、課題、そしてチャットボットを効果的にトレーニングするためのベストプラクティスについて学びます。">発話</a>内容を文字起こしする汎用<a data-lb="1" href="/ja/glossary/speech-recognition/" title="音声認識(ASR)は、話し言葉をテキストに変換する技術です。このAI技術の仕組み、アルゴリズム、機能、応用分野、そして今後のトレンドについて解説します。">音声認識</a>とは独立して動作します。</p>
+<h3 id="検出パイプライン">検出パイプライン</h3>
+<p><strong>音声キャプチャ</strong><br/>
+標準サンプリングレート(通常16kHz)でデバイスマイクから継続的な音声ストリーミング</p>
+<p><strong>特徴抽出</strong><br/>
+音声を音響特徴に変換—通常はメル周波数ケプストラム係数(MFCC)またはメルスペクトログラム—音声特性を効率的に表現</p>
+<p><strong><a data-lb="1" href="/ja/glossary/neural-networks/" title="ディープラーニングは、多層ニューラルネットワークを使用してデータから複雑なパターンを学習する高度なAI技術です。画像認識、自然言語処理、生成AIに不可欠な技術となっています。">ニューラルネットワーク</a>処理</strong><br/>
+ディープニューラルネットワークが特徴を分析し、ウェイクワードの独自の音響シグネチャを識別</p>
+<p><strong>信頼度スコアリング</strong><br/>
+モデルがウェイクワード存在の可能性を示す信頼度スコアを出力</p>
+<p><strong>起動判定</strong><br/>
+信頼度が事前に決定された閾値を超えると、システムが起動し、完全なコマンド処理に移行</p>
+<h3 id="モデルトレーニングと最適化">モデルトレーニングと最適化</h3>
+<p><strong>データ収集:</strong><br/>
+多様なアクセント、年齢、性別、音響環境を代表する数百人の多様な話者からの録音</p>
+<p><strong>モデルトレーニング:</strong><br/>
+システムは、類似した音のフレーズ、背景ノイズ、会話音声からウェイクワードを区別することを学習</p>
+<p><strong>転移学習:</strong><br/>
+事前トレーニング済みモデルは新しいウェイクフレーズに迅速に適応し、データ要件と展開タイムラインを劇的に削減</p>
+<p><strong>パフォーマンス最適化:</strong><br/>
+最新のウェイクワードエンジン(Porcupine、Sensory TrulyHandsfree)は、低レイテンシ(&lt;500ms)、最小限のCPU/メモリ使用量を最適化し、組み込みおよびバッテリー駆動デバイスへの展開を可能にします</p>
+<p><strong>プライバシーアーキテクチャ:</strong><br/>
+プライバシー、レイテンシ、信頼性のためにオンデバイス検出が推奨されます。拡張処理が必要な場合にのみ、ウェイクワード起動後の音声がクラウドサーバーに送信されます。</p>
+<h2 id="ウェイクワードと代替技術の比較">ウェイクワードと代替技術の比較</h2>
+<h3 id="ウェイクワード-vs-音声認識asr">ウェイクワード vs. 音声認識(ASR)</h3>
+<table>
+<thead>
+<tr>
+<th>側面</th>
+<th>ウェイクワード検出</th>
+<th>自動音声認識</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>機能</strong></td>
+<td>二値分類器(ウェイクワードの有無)</td>
+<td>完全な音声のテキスト文字起こし</td>
+</tr>
+<tr>
+<td><strong>複雑性</strong></td>
+<td>軽量、特定フレーズ検出</td>
+<td>複雑、汎用文字起こし</td>
+</tr>
+<tr>
+<td><strong>リソース使用量</strong></td>
+<td>最小限のCPU/メモリ</td>
+<td>高い計算要件</td>
+</tr>
+<tr>
+<td><strong><a data-lb="1" href="/ja/glossary/latency/" title="レイテンシとは、リクエストとシステムの応答との間の時間遅延のことです。AIインフラストラクチャ、Webアプリケーション、リアルタイムシステムにおいて重要な要素です。その種類、原因、削減戦略について解説します。">レイテンシ</a></strong></td>
+<td>通常&lt;500ms</td>
+<td>より高いレイテンシ(1-3秒)</td>
+</tr>
+<tr>
+<td><strong>プライバシー</strong></td>
+<td>オンデバイス、起動まで録音なし</td>
+<td>クラウド処理が必要な場合あり、完全録音</td>
+</tr>
+<tr>
+<td><strong>バッテリー影響</strong></td>
+<td>無視できる消費</td>
+<td>大きな電力消費</td>
+</tr>
+<tr>
+<td><strong>使用例</strong></td>
+<td>常時リスニング起動</td>
+<td>起動後のコマンド処理</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ASRがウェイクワードに失敗する理由:</strong> ASRのリソース集約性、より高いレイテンシ、プライバシーの懸念、バッテリー消費により、継続的な常時リスニングウェイクワード検出シナリオには不適切です。</p>
+<h3 id="ウェイクワード-vs-プッシュトゥトーク">ウェイクワード vs. プッシュ・トゥ・トーク</h3>
+<p><strong>ウェイクワードの利点:</strong><br/>
+物理的なボタンなしの真のハンズフリーインタラクション、アクセシビリティ、運転の安全性、ハンズフリー操作が必要な状況に最適</p>
+<p><strong>プッシュ・トゥ・トークの利点:</strong><br/>
+誤起動を排除、明示的なユーザー制御を提供、継続的リスニングに関するプライバシーの懸念を軽減</p>
+<p><strong>ベストプラクティス:</strong> ウェイクワードは、アクセシビリティ、自然なインタラクション、物理的なインタラクションが危険または不可能なコンテキストに優れています。</p>
+<h2 id="ウェイクワード設計のベストプラクティス">ウェイクワード設計のベストプラクティス</h2>
+<h3 id="選択基準">選択基準</h3>
+<p><strong>最適な長さ:</strong><br/>
+2-4音節が独自性と使いやすさのバランスをとる(「Alexa」= 3音節、「Hey Siri」= 4音節)</p>
+<p><strong>音韻的多様性:</strong><br/>
+母音と子音を混合、繰り返し音を避ける、独特の音響シグネチャを確保</p>
+<p><strong>識別可能性:</strong><br/>
+一般的な会話語との重複を最小限に抑え、誤起動率を削減</p>
+<p><strong>発音しやすさ:</strong><br/>
+アクセント、年齢、発話パターン、潜在的な発話障害を持つユーザーが容易に発音できる</p>
+<p><strong>ブランド整合性:</strong><br/>
+技術要件を満たしながら製品または会社のアイデンティティを強化</p>
+<p><strong>避けるべき:</strong><br/>
+短い一般的な用語(「Hi」、「OK」)、よく使用されるフレーズ、会話と混同しやすい単語</p>
+<h3 id="多言語の考慮事項">多言語の考慮事項</h3>
+<p><strong>文化的適切性:</strong><br/>
+対象言語全体でフレーズに否定的な意味合いや意図しない意味がないことを確認</p>
+<p><strong>音韻的適応:</strong><br/>
+すべての対象地域のネイティブスピーカーで発音の容易さをテスト</p>
+<p><strong>言語的検証:</strong><br/>
+現地の言語専門家と多様なユーザーテストグループを関与させる</p>
+<h3 id="カスタムブランドウェイクワード">カスタムブランドウェイクワード</h3>
+<p><strong>ブランドの利点:</strong><br/>
+ブランド想起を高め、ユーザーエクスペリエンスを強化し、競争市場で製品を差別化</p>
+<p><strong>実装:</strong><br/>
+主要ベンダー(Porcupine、Sensory、SoundHound Houndify)がカスタムウェイクワード作成をサポート</p>
+<p><strong>作成プロセス:</strong><br/>
+カスタムフレーズのために人口統計学的に多様なトレーニングデータを収集、ベンダーツールを使用してモデルトレーニングと展開を実施</p>
+<h2 id="パフォーマンス指標と課題">パフォーマンス指標と課題</h2>
+<h3 id="精度測定">精度測定</h3>
+<p><strong>誤受理率(FAR)</strong><br/>
+誤った起動(偽陽性)の頻度、感度調整が必要</p>
+<p><strong>誤拒否率(FRR)</strong><br/>
+正当な起動を見逃す(<a data-lb="1" href="/ja/glossary/false-negative/" title="偽陰性とは、チャットボットのようなAIシステムが実際の問題や意図を検出できない状態を指します。自動化における影響、原因、削減戦略について解説します。">偽陰性</a>)頻度、ユーザーエクスペリエンスに影響</p>
+<p><strong>感度バランシング</strong><br/>
+アプリケーション要件とユーザー期待に基づくFARとFRRのトレードオフ</p>
+<p><strong>レイテンシ</strong><br/>
+発話完了からシステム起動までの時間、通常&lt;500msを目標</p>
+<p><strong>リソース効率</strong><br/>
+継続的監視中のCPU/メモリ使用量、バッテリー駆動デバイスにとって重要</p>
+<p><strong>堅牢性</strong><br/>
+背景ノイズ、話者の多様性、音響環境、距離変動全体でのパフォーマンスの一貫性</p>
+<h3 id="環境およびユーザーの課題">環境およびユーザーの課題</h3>
+<p><strong>音響環境:</strong><br/>
+背景ノイズ(音楽、会話、家電製品)、遠距離マイクの課題、部屋の音響、デバイスの配置</p>
+<p><strong>ユーザーの多様性:</strong><br/>
+年齢範囲(子供はしばしば過小代表)、性別の変動、アクセントの多様性、発話障害または障害</p>
+<p><strong>子供の音声:</strong><br/>
+トレーニングデータでしばしば過小代表、家族向けデバイスには専門モデルが必要</p>
+<p><strong>ソリューション:</strong><br/>
+多様な条件全体で実証された堅牢性を持つベンダーを選択、対象人口統計での包括的なテスト、本番データに基づく継続的なモデル改良</p>
+<h3 id="デバイスと電力の制約">デバイスと電力の制約</h3>
+<p><strong>常時リスニング要件:</strong><br/>
+継続的監視は、ウェアラブル、IoTデバイス、モバイルアプリケーションにとって極端なエネルギー効率を要求</p>
+<p><strong>組み込み最適化:</strong><br/>
+専用ソリューション(Porcupine、Sensory)は、効率的なアルゴリズムとハードウェアアクセラレーションを通じてバッテリー寿命を最大化</p>
+<h2 id="プライバシーとセキュリティの考慮事項">プライバシーとセキュリティの考慮事項</h2>
+<p><strong>オンデバイス処理:</strong><br/>
+周囲の音声分析がローカルで行われることを保証し、受動的リスニング中のクラウド送信なし</p>
+<p><strong>起動の透明性:</strong><br/>
+デバイスがアクティブリスニングまたは録音に移行する際の明確な視覚的/聴覚的インジケーター</p>
+<p><strong>規制コンプライアンス:</strong><br/>
+文書化されたデータ処理慣行を通じたGDPR、CCPA、地域プライバシー規制への準拠</p>
+<p><strong>ユーザー制御:</strong><br/>
+ウェイクワード検出の無効化、感度調整、起動履歴の確認オプション</p>
+<p><strong>ベストプラクティス:</strong><br/>
+プライバシーに敏感なアプリケーションではクラウドベースの検出を避け、包括的なプライバシー開示を実装し、明確なユーザー制御を提供</p>
+<h2 id="実装ガイド">実装ガイド</h2>
+<h3 id="プラットフォーム選択">プラットフォーム選択</h3>
+<p><strong>エンタープライズソリューション:</strong></p>
+<ul>
+<li>Picovoice Porcupine – 本番環境対応、クロスプラットフォーム、高度に最適化</li>
+<li>Sensory TrulyHandsfree – 組み込みフォーカス、自動車グレードの信頼性</li>
+<li>SoundHound Houndify – カスタムウェイクワードを備えたエンタープライズ音声AIスイート</li>
+</ul>
+<p><strong>オープンソースオプション:</strong></p>
+<ul>
+<li>openWakeWord – コミュニティ主導、Pythonベース</li>
+<li>PocketSphinx – CMU Sphinxプロジェクト、研究アプリケーション</li>
+</ul>
+<h3 id="開発プロセス">開発プロセス</h3>
+<p><strong>1. エンジン選択</strong><br/>
+対象デバイス、パフォーマンス要件、ライセンス、サポートに基づいてプラットフォームを評価</p>
+<p><strong>2. ウェイクワード作成</strong><br/>
+ベンダーツール(Picovoice Console)を使用してカスタムフレーズを定義し、トレーニングパラメータを生成</p>
+<p><strong>3. トレーニングデータ収集</strong><br/>
+対象ユーザー人口統計と音響条件を代表する多様な音声サンプルを収集</p>
+<p><strong>4. SDK統合</strong><br/>
+iOS、Android、Web、Desktop、または組み込みシステム用のプラットフォーム固有のSDKを実装</p>
+<p><strong>5. テストとチューニング</strong><br/>
+多様な環境で実際のユーザーと評価し、FAR/FRRトレードオフのバランスをとる感度を調整</p>
+<h3 id="コード例">コード例</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">import</span> pvporcupine
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>porcupine = pvporcupine.create(
+</span></span><span style="display:flex;"><span>    access_key=<span style="color:#0ff;font-weight:bold">'$</span><span style="color:#0ff;font-weight:bold">{ACCESS_KEY}</span><span style="color:#0ff;font-weight:bold">'</span>,
+</span></span><span style="display:flex;"><span>    keywords=[<span style="color:#0ff;font-weight:bold">'picovoice'</span>, <span style="color:#0ff;font-weight:bold">'bumblebee'</span>]
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">def</span> get_next_audio_frame():
+</span></span><span style="display:flex;"><span>    <span style="color:#007f7f"># マイク音声キャプチャ実装</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">return</span> audio_frame
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">while</span> <span style="color:#fff;font-weight:bold">True</span>:
+</span></span><span style="display:flex;"><span>    audio_frame = get_next_audio_frame()
+</span></span><span style="display:flex;"><span>    keyword_index = porcupine.process(audio_frame)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">if</span> keyword_index == <span style="color:#ff0;font-weight:bold">0</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">"Detected 'picovoice'"</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#007f7f"># アクションをトリガー</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">elif</span> keyword_index == <span style="color:#ff0;font-weight:bold">1</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">"Detected 'bumblebee'"</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#007f7f"># アクションをトリガー</span>
+</span></span></code></pre></div><h2 id="よくある質問">よくある質問</h2>
+<p><strong>カスタムウェイクワードを作成できますか?</strong><br/>
+はい。多くのプラットフォームが、適切なトレーニングデータとモデル生成ツールを使用したカスタムウェイクワード作成をサポートしています。</p>
+<p><strong>ウェイクワードは常にオンデバイスで処理されますか?</strong><br/>
+ベストプラクティスは、プライバシー、速度、効率のためのオンデバイス処理ですが、一部の実装ではハイブリッドアプローチを使用します。</p>
+<p><strong>誤起動の原因は何ですか?</strong><br/>
+類似した音の単語、背景会話、メディア音声、または感度が高すぎるウェイクワード設定が誤起動を引き起こす可能性があります。</p>
+<p><strong>デバイスは複数のウェイクワードをサポートできますか?</strong><br/>
+はい。最新のエンジンは複数のウェイクフレーズを同時に監視し、マルチユーザーまたはマルチ機能起動を可能にします。</p>
+<p><strong>騒がしい環境で精度を向上させるにはどうすればよいですか?</strong><br/>
+高品質マイク、高度なノイズ低減アルゴリズム、ビームフォーミング、騒がしい条件を含むトレーニングデータが堅牢性を向上させます。</p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li><a href="https://dictionary.cambridge.org/us/dictionary/english/wake-word" rel="nofollow noopener noreferrer" target="_blank">Cambridge Dictionary: Wake Word Definition</a></li>
+<li><a href="https://picovoice.ai/blog/complete-guide-to-wake-word/" rel="nofollow noopener noreferrer" target="_blank">Picovoice: Complete Guide to Wake Word</a></li>
+<li><a href="https://www.soundhound.com/voice-ai-blog/what-you-need-to-know-about-wake-word-detection/" rel="nofollow noopener noreferrer" target="_blank">SoundHound: What You Need to Know About Wake Word Detection</a></li>
+<li><a href="https://picovoice.ai/blog/using-asr-for-wake-word-recognition/" rel="nofollow noopener noreferrer" target="_blank">Picovoice: Using ASR for Wake Word Recognition</a></li>
+<li><a href="https://console.picovoice.ai/" rel="nofollow noopener noreferrer" target="_blank">Picovoice Console</a></li>
+<li><a href="https://picovoice.ai/platform/porcupine/" rel="nofollow noopener noreferrer" target="_blank">Picovoice Platform: Porcupine</a></li>
+<li><a href="https://www.sensory.com/wake-word/" rel="nofollow noopener noreferrer" target="_blank">Sensory: Wake Word Technology</a></li>
+<li><a href="https://www.houndify.com/products/wake-word" rel="nofollow noopener noreferrer" target="_blank">SoundHound Houndify: Wake Word</a></li>
+<li><a href="https://picovoice.ai/blog/open-source-keyword-spotting-data/" rel="nofollow noopener noreferrer" target="_blank">Picovoice: Open-Source Keyword Spotting Data</a></li>
+<li><a href="https://picovoice.ai/blog/how-to-add-custom-wake-words-to-any-web-app/" rel="nofollow noopener noreferrer" target="_blank">Picovoice: How to Add Custom Wake Words to Web Apps</a></li>
+<li><a href="https://picovoice.ai/blog/ios-speech-recognition/" rel="nofollow noopener noreferrer" target="_blank">Picovoice: iOS Speech Recognition</a></li>
+<li><a href="https://picovoice.ai/blog/android-speech-recognition/" rel="nofollow noopener noreferrer" target="_blank">Picovoice: Android Speech Recognition</a></li>
+<li><a href="https://picovoice.ai/blog/speech-recognition-on-raspberrypi/" rel="nofollow noopener noreferrer" target="_blank">Picovoice: Speech Recognition on Raspberry Pi</a></li>
+<li><a href="https://picovoice.ai/blog/arduino-voice-recognition-in-ten-minutes-or-less/" rel="nofollow noopener noreferrer" target="_blank">Picovoice: Arduino Voice Recognition</a></li>
+<li><a href="https://voices.soundhound.com/why-voice-assistants-need-to-understand-accents/" rel="nofollow noopener noreferrer" target="_blank">SoundHound Voices: Understanding Accents</a></li>
+<li><a href="https://github.com/dscripka/openWakeWord" rel="nofollow noopener noreferrer" target="_blank">openWakeWord GitHub</a></li>
+<li><a href="https://github.com/cmusphinx/pocketsphinx" rel="nofollow noopener noreferrer" target="_blank">PocketSphinx GitHub</a></li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/claude/">
+                    Claude
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Claudeは<a data-lb="1" href="/ja/glossary/anthropic/" title="AnthropicはClaudeファミリーのAIアシスタントを開発することで知られるAI研究企業です。Constitutional AI(憲法的AI)を通じて、AI安全性、解釈可能性、倫理的整合性を優先しています。">Anthropic</a>が開発した、安全性、信頼性、有用性を重視した先進的なAIアシスタントファミリーです。Claude 4の機能、価格設定、エンタープライズ向けアプリケーションについて解説し...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/claude/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/n-gram/">
+                    N-gram
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    N-gramとは、テキストや音声から抽出されるn個の連続したアイテム(単語、文字、記号)のシーケンスであり、自然言語処理における言語モデリングやテキスト分析の基礎となる手法です。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/n-gram/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/voice-cloning/">
+                    ボイスクローニング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    音声クローニング技術、アプリケーション、および合成音声生成システムの実装ベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/voice-cloning/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/bot-avatar/">
+                    ボットアバター
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ボットアバターとは何か、そのメリット、種類、作成方法について解説します。これらの視覚的表現がAIチャットボットを人間らしくし、ユーザーエクスペリエンスを向上させ、ブランドアイデンティティを強化する方法...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/bot-avatar/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/speech-to-text/">
+                    音声テキスト変換
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    音声テキスト変換技術の包括的ガイド。ASRシステム、実装方法、メリット、課題、音声認識の将来トレンドを網羅しています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/speech-to-text/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/speech-recognition/">
+                    音声認識
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    音声認識(ASR)は、話し言葉をテキストに変換する技術です。このAI技術の仕組み、アルゴリズム、機能、応用分野、そして今後のトレンドについて解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/speech-recognition/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/wake-word/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190816"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+  });
+</script>
+</body>
+</html>

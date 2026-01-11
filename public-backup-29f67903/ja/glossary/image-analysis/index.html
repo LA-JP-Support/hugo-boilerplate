@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>画像解析 | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/image-analysis/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/image-analysis/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/image-analysis/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/image-analysis/" hreflang="x-default" rel="alternate"/>
+<meta content="画像解析は、デジタル画像から意味のある情報を解釈・抽出するAI技術です。そのワークフロー、タスク、応用例、主要なモデルについて学びましょう。" name="description"/>
+<meta content="画像解析, AI, コンピュータビジョン, 物体検出, 画像セグメンテーション" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/image-analysis/" property="og:url"/>
+<meta content="画像解析 | SmartWeb" property="og:title"/>
+<meta content="画像解析は、デジタル画像から意味のある情報を解釈・抽出するAI技術です。そのワークフロー、タスク、応用例、主要なモデルについて学びましょう。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/image-analysis/" name="twitter:url"/>
+<meta content="画像解析 | SmartWeb" name="twitter:title"/>
+<meta content="画像解析は、デジタル画像から意味のある情報を解釈・抽出するAI技術です。そのワークフロー、タスク、応用例、主要なモデルについて学びましょう。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">画像解析</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        画像解析
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Image Analysis
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          画像解析は、デジタル画像から意味のある情報を解釈・抽出するAI技術です。そのワークフロー、タスク、応用例、主要なモデルについて学びましょう。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                画像解析
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                コンピュータビジョン
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                物体検出
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                画像セグメンテーション
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="画像解析とは何か">画像解析とは何か?</h2>
+<p>画像解析とは、<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能(AI)</a>システムがデジタル画像から意味のある情報を解釈、抽出、理解する自動化されたプロセスです。これには、コンピュータが「見る」ことを可能にする技術が含まれ、写真、X線、衛星画像、ビデオフレームなどの視覚データを理解します。主なタスクには、画像内のオブジェクト、人物、構造、テキスト、活動の識別、およびこの理解から意思決定や出力の生成が含まれます。</p>
+<p>範囲:コンピュータビジョン(より広範なAI分野)と密接に関連していますが、画像解析は特に静止画像から実用的な洞察を抽出することに焦点を当てています。</p>
+<h2 id="画像解析-vs-コンピュータビジョン">画像解析 vs. コンピュータビジョン</h2>
+<table>
+<thead>
+<tr>
+<th>側面</th>
+<th>コンピュータビジョン</th>
+<th>画像解析</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>範囲</td>
+<td>すべての視覚理解をカバーする広範な分野</td>
+<td>コンピュータビジョン内の特定のアプリケーション</td>
+</tr>
+<tr>
+<td>データタイプ</td>
+<td>画像、ビデオ、3Dデータ、リアルタイムストリーム</td>
+<td>主に静止画像</td>
+</tr>
+<tr>
+<td>アプリケーション</td>
+<td>ロボティクス、自動運転車、AR/VR</td>
+<td>医療画像、文書処理、品質検査</td>
+</tr>
+<tr>
+<td>処理</td>
+<td>リアルタイムおよびオフライン</td>
+<td>通常はオフラインまたはバッチ処理</td>
+</tr>
+<tr>
+<td>複雑性</td>
+<td>完全な視覚シーン理解を包含</td>
+<td>特定の画像解釈タスクに焦点</td>
+</tr>
+</tbody>
+</table>
+<h2 id="画像解析の基本ワークフロー">画像解析の基本ワークフロー</h2>
+<h3 id="ステージ1-データ取得と入力">ステージ1: データ取得と入力</h3>
+<p>画像ソース:| ソースタイプ | 例 | ユースケース |
+|————|———-|———–|
+| 医療機器| X線、MRI、CTスキャン、超音波 | 診断、治療計画 |
+| カメラ| スマートフォン、デジタル一眼レフ、監視カメラ | セキュリティ、ソーシャルメディア、記録 |
+| 衛星| リモートセンシング画像 | 農業、都市計画、環境 |
+| スキャナー| 文書スキャナー、バーコードリーダー | <a data-lb="1" href="/ja/glossary/digitalization/" title="デジタル化の定義、デジタイゼーションや自動化との違い、実際の応用例、メリット、課題、そして社会への影響について包括的に解説します。">デジタル化</a>、在庫管理 |
+| 産業用| 品質管理カメラ、顕微鏡 | 製造、研究 |</p>
+<h3 id="ステージ2-前処理">ステージ2: 前処理</h3>
+<p>目的:画像品質を向上させ、解析用にフォーマットを標準化する。一般的な技術:| 技術 | 目的 | 例 |
+|———–|———|———|
+| リサイズ| 寸法を標準化 | <a data-lb="1" href="/ja/glossary/neural-networks/" title="ディープラーニングは、多層ニューラルネットワークを使用してデータから複雑なパターンを学習する高度なAI技術です。画像認識、自然言語処理、生成AIに不可欠な技術となっています。">ニューラルネットワーク</a>用に224×224、512×512 |
+| 正規化| ピクセル値をスケーリング | 0-1の範囲に変換または標準化 |
+| ノイズ除去| アーティファクトを除去 | ガウシアンぼかし、メディアンフィルタリング |
+| 色調整| 視認性を向上 | コントラスト、明るさ、ヒストグラム均等化 |
+| グレースケール変換| 色が不要な場合に簡素化 | 3チャンネルから1チャンネルに削減 |
+| 拡張| トレーニングデータを拡大 | 回転、反転、クロッピング、スケーリング |前処理パイプライン:```
+生画像
+↓
+標準寸法にリサイズ
+↓
+ピクセル値を正規化
+↓
+ノイズ除去を適用(必要に応じて)
+↓
+色/コントラスト調整
+↓
+拡張(トレーニングフェーズ)
+↓
+モデル用の標準化された入力</p>
+<pre tabindex="0"><code>
+### ステージ3: 特徴抽出
+
+**古典的アプローチ(従来のML):**- ドメイン専門知識を使用した手作りの特徴
+- フィルター: Sobel(エッジ)、Gabor(テクスチャ)、SIFT/SURF(キーポイント)
+- カラーヒストグラム、テクスチャ記述子
+- 手動の特徴エンジニアリング
+
+**ディープラーニングアプローチ:**- 自動化された階層的特徴学習
+- 畳み込み層が段階的にパターンを抽出
+- 低レベル(エッジ、色) → 中レベル(形状) → 高レベル(オブジェクト)
+- 手動の特徴エンジニアリング不要
+
+**特徴表現:**| レベル | 古典的ML | ディープラーニング |
+|-------|-------------|---------------|
+| **低レベル**| エッジ検出フィルター | 畳み込み層1-2(エッジ、コーナー) |
+| **中レベル**| テクスチャ記述子 | 畳み込み層3-5(形状、部品) |
+| **高レベル**| オブジェクトテンプレート | 畳み込み層6以上(完全なオブジェクト) |
+
+### ステージ4: モデルトレーニングと学習
+
+**教師あり学習:**```
+ラベル付きデータセット(画像 + アノテーション)
+    ↓
+モデルが特徴 → ラベルのマッピングを学習
+    ↓
+トレーニング済みモデルが新しい画像を予測
+```**トレーニングアプローチ:**| アプローチ | 説明 | ユースケース |
+|----------|-------------|----------|
+| ゼロから| 完全に新しいモデルをトレーニング | 大規模データセット、独自ドメイン |
+| 転移学習| 事前トレーニング済みモデルを適応 | 限られたデータ、高速トレーニング |
+| ファインチューニング| 事前トレーニング済み重みを調整 | ドメイン固有の適応 |
+
+| Few-Shot学習| 最小限の例から学習 | 稀なクラス、限られたラベル |人気のアーキテクチャ:| アーキテクチャタイプ | 例 | 強み |
+|------------------|----------|-----------|
+| CNN| ResNet、VGG、EfficientNet | 強力な空間特徴抽出 |
+| Vision Transformer| ViT、SWIN、DeiT | グローバルコンテキスト、アテンション機構 |
+| 検出モデル| YOLO、Faster R-CNN、DETR | オブジェクトの位置特定 + 分類 |
+| セグメンテーションモデル| U-Net、Mask R-CNN、DeepLab | ピクセルレベルのラベリング |
+
+### ステージ5: 検証とテスト
+
+データセット分割:| 分割 | 目的 | 一般的なサイズ |
+|-------|---------|-------------|
+| トレーニング| モデル学習 | 70-80% |
+| 検証| ハイパーパラメータ調整 | 10-15% |
+
+| テスト| 最終評価 | 10-15% |評価指標:| 指標 | ユースケース | 式/説明 |
+|--------|----------|-------------------|
+| 精度| 分類 | 正しい予測 / 総予測数 |
+| 適合率| オブジェクト検出 | 真陽性 / (真陽性 + 偽陽性) |
+| 再現率| オブジェクト検出 | 真陽性 / (真陽性 + 偽陰性) |
+| F1スコア| バランス指標 | 2 × (適合率 × 再現率) / (適合率 + 再現率) |
+| IoU| セグメンテーション、検出 | 予測と正解の交差 / 和集合 |
+| mAP| オブジェクト検出 | クラス全体の平均適合率の平均 |
+
+### ステージ6: デプロイと推論
+
+デプロイオプション:| プラットフォーム | 特性 | ユースケース |
+|----------|----------------|-----------|
+| クラウドAPI| スケーラブル、管理型 | 大量アプリケーション |
+| エッジデバイス| 低レイテンシ、オフライン | IoT、モバイルアプリ、自律システム |
+| Webアプリケーション| アクセス可能、クロスプラットフォーム | 消費者向けアプリケーション |
+| 組み込みシステム| リソース制約 | 産業、自動車 |最適化技術:- モデル量子化(精度を削減)
+- プルーニング(不要な重みを削除)
+- 知識蒸留(より小さなモデルを作成)
+- ハードウェアアクセラレーション(GPU、TPU、専用チップ)
+
+### ステージ7: 継続的改善
+
+メンテナンス活動:- 本番環境でのパフォーマンス監視
+- 実世界の使用から新しいデータを収集
+- 定期的なモデル再トレーニング
+- コンセプトドリフトへの更新
+- 新しいモデルバージョンのA/Bテスト
+- ユーザーフィードバックの統合
+
+## 主要な画像解析タスク
+
+### 1. 画像分類
+
+定義:画像全体に単一のカテゴリラベルを割り当てる。アプリケーション:| ドメイン | タスク | 出力 |
+|--------|------|--------|
+| Eコマース| 製品カテゴリ化 | 「シャツ」、「靴」、「電子機器」 |
+| ヘルスケア| 疾患検出 | 「正常」、「肺炎」、「COVID-19」 |
+| 農業| 作物識別 | 「小麦」、「トウモロコシ」、「大豆」 |
+| 野生生物| 種の認識 | 「ライオン」、「ゾウ」、「シマウマ」 |モデルアーキテクチャ:```
+入力画像 → CNNバックボーン → グローバル平均プーリング → 
+全結合層 → ソフトマックス → クラス確率
+</code></pre><h3 id="2-オブジェクト検出">2. オブジェクト検出</h3>
+<p>**定義:**バウンディングボックスを使用して画像内の複数のオブジェクトを識別し位置を特定する。<strong>出力フォーマット:</strong>```
+[
+{“class”: “car”, “confidence”: 0.95, “bbox”: [x, y, width, height]},
+{“class”: “person”, “confidence”: 0.88, “bbox”: [x, y, width, height]},
+{“class”: “traffic_light”, “confidence”: 0.92, “bbox”: [x, y, width, height]}
+]</p>
+<pre tabindex="0"><code class="language-**人気のモデル:**|" data-lang="**人気のモデル:**|">|-------|-------|----------|----------|
+| YOLO v8| 非常に高速 | 高 | リアルタイムアプリケーション |
+| Faster R-CNN| 中程度 | 非常に高 | 精度重視のタスク |
+| DETR| 中程度 | 高 | Transformerベースの検出 |
+| RetinaNet| 高速 | 高 | クラス不均衡の処理 |アプリケーション:- 自動運転車(歩行者、車両、標識)
+- 監視(人物検出、行動分析)
+- 小売(製品認識、棚監視)
+- 製造(欠陥検出)
+
+### 3. 画像セグメンテーション
+
+定義:画像内のすべてのピクセルをクラスまたはインスタンスに従ってラベル付けする。セグメンテーションタイプ:| タイプ | 説明 | ユースケース |
+|------|-------------|----------|
+| セマンティック| ピクセルごとのクラス、インスタンス区別なし | 土地利用マッピング、医療画像 |
+| インスタンス| 同じクラスの個別インスタンス | オブジェクトのカウント、ロボット操作 |
+
+| パノプティック| セマンティック + インスタンスの組み合わせ | 包括的なシーン理解 |モデル例:| モデル | タイプ | 強み |
+|-------|------|-----------|
+| U-Net| セマンティック | 医療画像、小規模データセット |
+| Mask R-CNN| インスタンス | 正確な境界を持つオブジェクトインスタンス |
+| DeepLab| セマンティック | 高精度、アトラス畳み込み |
+| YOLOv8-seg| インスタンス | リアルタイムセグメンテーション |アプリケーション:- 医療: 腫瘍セグメンテーション、臓器描出
+- 自動運転: 道路、車線、歩道のセグメンテーション
+- 農業: 作物と雑草の識別
+- 衛星: 土地被覆分類
+
+### 4. 光学文字認識(OCR)
+
+定義:印刷および手書きソースを含む画像からテキストを検出し抽出する。パイプライン:```
+画像 → テキスト検出 → テキスト認識 → 
+後処理 → 構造化テキスト出力
+```**機能:**| 機能 | 説明 |
+|---------|-------------|
+| **多言語**| 100以上の言語をサポート |
+| **手書き**| 筆記体および印刷手書き |
+| **混合コンテンツ**| テキスト + 画像 + 表 |
+| **レイアウト分析**| 文書構造を保持 |
+| **品質向上**| 低品質スキャンを処理 |**一般的なツール:**| ツール | 強み | ユースケース |
+|------|-----------|----------|
+| **Tesseract**| オープンソース、多言語 | 一般的なOCR |
+| **Google Vision OCR**| 高精度、クラウドベース | エンタープライズアプリケーション |
+| **Azure OCR**| レイアウト理解 | 複雑な文書 |
+| **Amazon Textract**| フォームと表の抽出 | 文書自動化 |**アプリケーション:**- 文書デジタル化
+- ナンバープレート読み取り
+- レシート処理
+- ID検証
+- フォーム自動化
+
+### 5. 顔認識と分析
+
+**機能:**| タスク | 説明 | アプリケーション |
+|------|-------------|-------------|
+| **顔検出**| 画像内の顔を位置特定 | 写真整理、セキュリティ |
+| **顔認識**| 特定の個人を識別 | 認証、タグ付け |
+| **ランドマーク検出**| キーポイント(目、鼻、口)を見つける | フィルター、感情分析 |
+| **属性分析**| 年齢、性別、感情を推定 | 人口統計、マーケティング |
+| **顔検証**| 身元の一致を確認 | バイオメトリックシステム |**プライバシーに関する考慮事項:**- 同意とデータ保護規制
+- 認識精度のバイアス
+- バイオメトリックデータのセキュリティ
+- 倫理的使用ガイドライン
+
+### 6. 画像キャプションと説明
+
+**定義:**画像コンテンツの自然言語説明を生成する。**アーキテクチャ:**```
+画像 → CNNエンコーダー → 視覚特徴 → 
+LSTM/Transformerデコーダー → テキスト生成 → キャプション
+```**出力例:**```
+画像: [ビーチシーン、人々]
+キャプション: 「晴れた日にビーチを楽しむ人々のグループ、
+          背景に波があり、砂の上にパラソルがある。」
+```**モデル:**-**CLIP:**Contrastive Language-Image Pre-training
+- **BLIP-2:**Bootstrapped Language-Image Pre-training
+- **PaliGemma:**Googleのビジョン言語モデル
+- **GPT-4V:**OpenAIのマルチモーダルモデル**アプリケーション:**- アクセシビリティ(視覚障害者向けの画像説明)
+- ソーシャルメディア(自動代替テキスト)
+- Eコマース(製品説明)
+- コンテンツモデレーション
+- 画像検索
+
+### 7. マルチモーダル埋め込みと検索
+
+**定義:**画像とテキストを共有ベクトル空間に変換してセマンティック検索を行う。**ユースケース:**| アプリケーション | 説明 |
+|-------------|-------------|
+| **ビジュアル検索**| テキストクエリを使用して画像を検索 |
+| **逆画像検索**| 類似画像を検索 |
+| **クロスモーダル検索**| テキストで画像を検索、逆も可 |
+| **コンテンツ推薦**| 視覚的に類似したアイテムを提案 |**アーキテクチャ:**```
+テキスト → テキストエンコーダー → 埋め込みベクトル
+画像 → 画像エンコーダー → 埋め込みベクトル
+    ↓
+コサイン類似度 → 関連性スコア
+</code></pre><h2 id="業界アプリケーション">業界アプリケーション</h2>
+<h3 id="ヘルスケアと医療画像">ヘルスケアと医療画像</h3>
+<p>アプリケーション:| タスク | 技術 | 影響 |
+|——|————|——–|
+| 疾患検出| 分類、セグメンテーション | 早期診断、治療計画 |
+| 腫瘍分析| セグメンテーション、測定 | 正確な治療ターゲティング |
+| 組織分類| 分類 | 病理診断 |
+| 治療<a data-lb="1" href="/ja/glossary/monitoring/" title="モニタリングとは、システム、アプリケーション、ネットワーク、ビジネスオペレーションに関するデータを収集、分析、対応する体系的かつ継続的なプロセスです。パフォーマンス、セキュリティ、ユーザーエクスペリエンスに関するリアルタイムの可視性を提供します。">モニタリング</a>| 変化検出 | 疾患進行の追跡 |ワークフロー例:```
+X線画像 → 前処理 → CNN分析 →
+異常検出 → 信頼度スコア →
+放射線科医レビュー → 診断</p>
+<pre tabindex="0"><code class="language-**規制上の考慮事項:**-" data-lang="**規制上の考慮事項:**-">- 患者データのHIPAAコンプライアンス
+- 臨床検証要件
+- 責任と保険
+
+### 自動運転車とロボティクス
+
+**重要なタスク:**| タスク | 目的 | 技術 |
+|------|---------|------------|
+| **オブジェクト検出**| 車両、歩行者、障害物を識別 | YOLO、R-CNN |
+| **車線検出**| 車両を車線内に保つ | セグメンテーション |
+| **交通標識認識**| 交通ルールに従う | 分類 |
+| **深度推定**| 距離を判断 | ステレオビジョン、単眼深度 |
+| **セマンティックセグメンテーション**| シーンレイアウトを理解 | DeepLab、U-Net |**安全要件:**- リアルタイム処理(&lt;100msレイテンシ)
+- 高精度(重要タスクで&gt;99.9%)
+- 冗長性とフェイルセーフ
+- エッジケース処理
+
+### 小売とEコマース
+
+**アプリケーション:**| アプリケーション | 技術 | メリット |
+|-------------|------------|---------|
+| **ビジュアル検索**| 埋め込みモデル | 製品発見の改善 |
+| **在庫管理**| オブジェクト検出 | 自動在庫追跡 |
+| **品質管理**| 欠陥検出 | 手動検査の削減 |
+| **顧客分析**| 人口統計分析 | ターゲットマーケティング |
+| **棚監視**| 検出、セグメンテーション | 製品配置の最適化 |**ROI推進要因:**- 人件費の削減
+- 在庫精度の向上
+- 顧客体験の向上
+- より速い製品発見
+
+### 農業と環境モニタリング
+
+**ユースケース:**| ドメイン | アプリケーション | 技術 |
+|--------|-------------|------------|
+| **作物の健康**| 病気、害虫検出 | 分類、セグメンテーション |
+| **収量予測**| 収穫を推定 | 回帰モデル |
+| **精密農業**| ターゲット処理 | セグメンテーション、検出 |
+| **土地利用**| 地形タイプをマッピング | セマンティックセグメンテーション |
+| **森林破壊**| 森林損失を追跡 | 変化検出 |**データソース:**- ドローン画像
+- 衛星画像(マルチスペクトル)
+- 地上ベースセンサー
+- 時系列分析
+
+### セキュリティと監視
+
+**アプリケーション:**| タスク | 技術 | 目的 |
+|------|------------|---------|
+| **人物検出**| オブジェクト検出 | 群衆監視 |
+| **行動分析**| アクション認識 | 脅威検出 |
+| **顔認識**| 顔検証 | アクセス制御 |
+| **異常検出**| 教師なし学習 | 異常な活動のフラグ付け |
+| **車両追跡**| オブジェクト追跡 | 交通管理 |**プライバシーと倫理:**- データ保護コンプライアンス
+- 同意要件
+- バイアス軽減
+- 透明性と説明責任
+
+## AIモデルとアーキテクチャ
+
+### 畳み込みニューラルネットワーク(CNN)
+
+**主要アーキテクチャ:**| モデル | 年 | イノベーション | ユースケース |
+|-------|------|------------|----------|
+| **LeNet**| 1998 | 最初の成功したCNN | 数字認識 |
+| **AlexNet**| 2012 | ディープCNNのブレークスルー | ImageNet分類 |
+| **VGG**| 2014 | 非常に深いネットワーク | 特徴抽出 |
+| **ResNet**| 2015 | スキップ接続 | 非常に深いネットワーク(50-152層) |
+| **Inception**| 2015 | マルチスケール処理 | 効率的な計算 |
+| **EfficientNet**| 2019 | 複合スケーリング | モバイル/エッジデプロイ |
+| **MobileNet**| 2017 | 深さ方向分離可能畳み込み | リソース制約デバイス |
+
+### Vision Transformer
+
+**CNNに対する利点:**- 最初からグローバルコンテキスト
+- 帰納的バイアスなし
+- スケーラブルなアーキテクチャ
+- 転移学習の有効性
+
+**注目すべきモデル:**| モデル | 組織 | 特性 |
+|-------|-------------|----------------|
+| **ViT**| Google | オリジナルのビジョントランスフォーマー |
+| **SWIN**| Microsoft | 階層的、ウィンドウ化されたアテンション |
+| **DeiT**| Facebook | データ効率的なトレーニング |
+| **BEiT**| Microsoft | マスク画像モデリング |
+
+### マルチモーダルモデル
+
+**ビジョン言語モデル:**| モデル | 機能 | トレーニングデータ |
+|-------|-----------|---------------|
+| **CLIP**| 画像-テキストアライメント | 4億の画像-テキストペア |
+| **BLIP-2**| 視覚的質問応答 | 混合ビジョン言語データセット |
+| **GPT-4V**| マルチモーダル理解 | 独自の大規模データ |
+| **PaliGemma**| 視覚的推論 | キュレーションされたマルチモーダルコーパス |
+
+## メリットと利点
+
+### 自動化と効率性
+
+| メリット | 影響 | 例 |
+|---------|--------|---------|
+| **速度**| 数百万の画像を迅速に処理 | 生産速度での品質検査 |
+| **一貫性**| 人間のばらつきを排除 | 標準化された医療診断 |
+| **スケーラビリティ**| 大規模データセットを処理 | 衛星画像分析 |
+| **コスト削減**| 手作業を削減 | 自動文書処理 |
+
+### 精度と正確性
+
+**AIが人間を上回るドメイン:**- 大量の反復タスク
+- 微妙なパターンの検出
+- 複雑な視覚データの処理
+- 長時間の集中力維持
+- 複数の画像の同時分析
+
+**統計的証拠:**- 医療画像: AIは特定のタスクで放射線科医のパフォーマンスに匹敵または上回る
+- 製造: 最適条件で99%以上の欠陥検出
+- OCR: クリーンな印刷テキストで&gt;95%の精度
+
+### 新しい機能と洞察
+
+**新しいアプリケーションの実現:**- 大規模なリアルタイムビデオ分析
+- 24時間365日の自動監視
+- 数十億の画像にわたる即座のビジュアル検索
+- 視覚障害者向けのアクセシビリティツール
+- 自動コンテンツモデレーション
+
+## 制限と課題
+
+### 技術的制限
+
+| 課題 | 説明 | 影響 |
+|-----------|-------------|--------|
+| **データ依存性**| 大規模なラベル付きデータセットが必要 | 高いデータ収集コスト |
+| **ドメイン特異性**| モデルはドメイン間で汎化しない | 各ユースケースに個別のモデル |
+| **敵対的脆弱性**| 作成された入力で騙される可能性 | セキュリティ上の懸念 |
+| **ブラックボックス性**| 決定の解釈が困難 | 規制上の課題 |
+| **計算コスト**| リソース集約的なトレーニング | 高いインフラコスト |
+
+### データ品質の問題
+
+**一般的な問題:**| 問題 | 影響 | 軽減策 |
+|-------|--------|------------|
+| **バイアス**| 不公平または不正確な結果 | 多様でバランスの取れたデータセット |
+| **不十分なラベル**| モデルパフォーマンスの低下 | 能動学習、半教師あり学習 |
+| **低品質**| 精度の低下 | 前処理、データ拡張 |
+| **クラス不均衡**| マイノリティクラスのパフォーマンス低下 | オーバーサンプリング、重み付き損失 |
+
+### プライバシーと倫理的懸念
+
+**主要な問題:**- 顔認識のプライバシー
+- 監視と市民の自由
+- 人口統計分析のバイアス
+- データ保護コンプライアンス(GDPR、CCPA)
+- トレーニングデータの同意
+- ディープフェイクと操作の可能性
+
+## ベストプラクティス
+
+### データ管理
+
+**収集:**- 多様で代表的なデータセット
+- 明確なラベリングガイドライン
+- 品質管理プロセス
+- 適切な同意とライセンス
+- 定期的なデータ監査
+
+**前処理:**- 標準化されたパイプライン
+- 適切な拡張
+- ノイズ除去
+- 品質フィルタリング
+- バージョン管理
+
+### モデル開発
+
+**選択基準:**| 要因 | 考慮事項 |
+|--------|---------------|
+| **タスク要件**| 分類、検出、セグメンテーション |
+| **パフォーマンスニーズ**| 速度と精度のトレードオフ |
+| **リソース制約**| 利用可能な計算、レイテンシ要件 |
+| **データ可用性**| データセットサイズ、ラベリング品質 |
+| **解釈可能性**| 説明可能性要件 |**トレーニングのベストプラクティス:**- 事前トレーニング済みモデルから開始(転移学習)
+- 適切なデータ拡張を使用
+- 過学習を監視
+- ホールドアウトデータで検証
+- 適切な評価指標を使用
+- 実験を体系的に追跡
+
+### デプロイと運用
+
+**デプロイ前:**- 多様なデータでの徹底的なテスト
+- パフォーマンスベンチマーク
+- セキュリティレビュー
+- バイアス評価
+- エッジケース処理
+
+**デプロイ後:**- 継続的な監視
+- A/Bテスト
+- ユーザーフィードバック収集
+- 定期的な再トレーニング
+- パフォーマンス追跡
+- インシデント対応手順
+
+### 倫理ガイドライン
+
+**責任あるAI原則:**- AI使用の透明性
+- 公平性とバイアス軽減
+- プライバシー保護
+- 決定に対する説明責任
+- 適切な場合の人間の監視
+- 明確な制限の開示
+
+## よくある質問
+
+**Q: 画像解析と画像処理の違いは何ですか?**A: 画像処理は画像の操作(リサイズ、フィルタリング、強調)を含みますが、画像解析は画像から意味を解釈し抽出します。解析は処理の上に構築されますが、コンテンツの理解に焦点を当てています。**Q: 画像解析にはどのくらいのデータが必要ですか?**A: 複雑さと転移学習の使用によって異なります:
+- 転移学習: クラスあたり100-1,000画像
+- ゼロからのトレーニング: 10,000-1,000,000以上の画像
+- Few-Shot学習: クラスあたり5-50画像
+
+**Q: 画像解析はリアルタイムで機能しますか?**A: はい、適切なモデルとハードウェアで:
+- YOLO: GPUで30-60 FPS
+- モバイルモデル: スマートフォンで15-30 FPS
+- エッジデバイス: 最適化されたモデルで10-30 FPS
+
+**Q: 画像解析の精度はどのくらいですか?**A: タスクと条件によって異なります:
+- 制御された環境: 95-99%以上の精度
+- 実世界のシナリオ: 複雑さに応じて70-95%
+- 医療画像: 人間の専門家のパフォーマンスに近づくか一致
+
+**Q: 主なコスト要因は何ですか?**A: 主なコストには以下が含まれます:
+- データ収集とラベリング
+- トレーニング用の計算リソース
+- モデル開発の専門知識
+- デプロイインフラ
+- 継続的なメンテナンスと再トレーニング
+
+## 参考文献
+
+
+1. HDWEBSOFT. (n.d.). AI Image Analysis Guide. HDWEBSOFT Blog.
+
+2. ZEISS. (n.d.). AI for Advanced Image Analysis. ZEISS eBook.
+
+3. Microsoft. (n.d.). Computer Vision Concepts. Microsoft Azure Documentation.
+
+4. Google Cloud. (n.d.). Vision AI. Google Cloud Platform.
+
+5. Amazon Web Services. (n.d.). Amazon Rekognition. AWS Services.
+
+6. PyTorch. (n.d.). Torchvision Models. PyTorch Documentation.
+
+7. TensorFlow. (n.d.). Computer Vision Tutorials. TensorFlow Tutorials.
+</code></pre>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/multimodal-technology/">
+                    マルチモーダル技術
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    マルチモーダル技術について探求します。テキスト、画像、音声などの多様なデータ形式を処理・統合し、より豊かな理解とインタラクションを実現するAIシステムです。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/multimodal-technology/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/continuous-learning/">
+                    AIにおける継続学習
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIにおける継続学習を探求します。システムが忘却することなく段階的に適応し知識を獲得できるようにする技術です。そのプロセス、破滅的忘却などの課題、実世界での応用について理解を深めます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/continuous-learning/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/scenarios/">
+                    シナリオ(事前準備された会話フロー)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIチャットボットおよび自動化システムにおけるシナリオ(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/scenarios/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/student-models/">
+                    スチューデントモデル
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    スチューデントモデルとは、より大規模な「ティーチャーモデル」の動作を模倣するように訓練されたAIシステムで、リソースに制約のあるデバイス上での効率的なデプロイメント、モデル圧縮、転移学習を実現します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/student-models/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/self-healing-knowledge/">
+                    セルフヒーリング・ナレッジ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    セルフヒーリング・ナレッジは、AI、機械学習、自動化を活用して、ナレッジマネジメントシステム内の古くなった情報や誤った情報を自律的に検出、診断、修正し、正確性を確保します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/self-healing-knowledge/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/task-oriented-bot/">
+                    タスク指向型ボット
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    タスク指向型ボットは、予約、追跡、スケジューリングなどの特定の構造化されたプロセスを自動化するために設計された専門的なチャットボットで、自然言語処理とバックエンド統合を活用します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/task-oriented-bot/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/image-analysis/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

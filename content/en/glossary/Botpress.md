@@ -2,7 +2,7 @@
 title: "Botpress"
 lastmod: 2025-12-18
 translationKey: "botpress"
-description: "A platform that lets businesses build AI chatbots through a visual drag-and-drop interface, automating customer conversations without requiring coding skills."
+description: "A platform for building AI chatbots using a visual drag-and-drop editor, enabling businesses to automate customer conversations without extensive coding."
 keywords: ["Botpress", "AI chatbot", "LLM", "conversational AI", "visual flow editor"]
 category: "AI Chatbot & Automation"
 type: "glossary"
@@ -16,7 +16,8 @@ Botpress is a comprehensive platform for designing, building, deploying, and man
 
 Designed for both developers and non-technical users, Botpress offers a robust, scalable solution for automating conversations across customer support, sales, HR, and more.
 
-**Key Characteristics:**- Visual, drag-and-drop conversation and automation design
+**Key Characteristics:**
+- Visual, drag-and-drop conversation and automation design
 - AI-powered NLU and NLP capabilities
 - Seamless integration with enterprise systems and external data sources
 - Omnichannel deployment (websites, messaging apps, internal tools)
@@ -28,7 +29,8 @@ Designed for both developers and non-technical users, Botpress offers a robust, 
 
 The Botpress Flow Editor enables users to design conversations and automation logic visually. Unlike code-based platforms, it allows teams to map user journeys and structure interactions without deep programming knowledge.
 
-**Key Functionalities:**- Modular blocks (nodes and cards) for messages, questions, logic, and actions
+**Key Functionalities:**
+- Modular blocks (nodes and cards) for messages, questions, logic, and actions
 - Conditional logic with if-then branching and complex expressions
 - Reusable flows for scalability and efficient maintenance
 - Balance of no-code interface and pro-code extensibility
@@ -41,45 +43,52 @@ Botpress enables native integration with leading LLMs:
 - Google Gemini
 - Meta Llama, Mistral, and more
 
-**Capabilities:**- Natural language understanding for intent recognition and entity extraction
+**Capabilities:**
+- Natural language understanding for intent recognition and entity extraction
 - Autonomous nodes letting LLMs choose actions dynamically
 - RAG (Retrieval-Augmented Generation) grounding responses in your documents and knowledge bases
 - Google AI Gemini integration for content generation and real-time services
 
-**RAG Details:**RAG combines LLMs with retrieval from trusted data sources like PDFs and knowledge bases, ensuring accurate and up-to-date answers without hallucinations—critical for compliance-driven use cases.
+**RAG Details:**  
+RAG combines LLMs with retrieval from trusted data sources like PDFs and knowledge bases, ensuring accurate and up-to-date answers without hallucinations—critical for compliance-driven use cases.
 
 ### Knowledge Base Support
 
 Botpress provides advanced knowledge base functionality leveraging vector databases and semantic search.
 
-**Capabilities:**- Website and file ingestion (URLs, PDFs, documents, tables)
+**Capabilities:**
+- Website and file ingestion (URLs, PDFs, documents, tables)
 - Vector database storage for semantic representations
 - Live updates as business information changes
 - Autonomous node for automatic search and answer retrieval
 
-**Best Practices:**- Prioritize structured data and ensure data quality
+**Best Practices:**
+- Prioritize structured data and ensure data quality
 - Use automated ingestion tools and organize knowledge logically
 - Apply ROT (Redundant, Obsolete, Trivial) analysis to maintain clean data
 
 ### Omnichannel Deployment
 
 Botpress supports deployment across 10+ channels:
-- **Web chat:**Embed via iframe, React, or API
-- **Messaging apps:**WhatsApp, Facebook Messenger, Slack, Telegram, Instagram, SMS
-- **Internal tools:**Intranet, HR portals, custom apps**Features:**- Multilingual support with automatic translation
+- **Web chat:** Embed via iframe, React, or API
+- **Messaging apps:** WhatsApp, Facebook Messenger, Slack, Telegram, Instagram, SMS
+- **Internal tools:** Intranet, HR portals, custom apps
+
+**Features:**
+- Multilingual support with automatic translation
 - Consistent UX—build once, deploy everywhere
 
 ### Advanced Analytics & Monitoring
 
-- **Conversation analytics:**Track engagement, drop-off points, and popular topics
-- **Testing tools:**Built-in emulator, event debugger, flow simulation
-- **Continuous improvement:**Data-driven insights to refine flows and optimize performance
+- **Conversation analytics:** Track engagement, drop-off points, and popular topics
+- **Testing tools:** Built-in emulator, event debugger, flow simulation
+- **Continuous improvement:** Data-driven insights to refine flows and optimize performance
 
 ### Integrations and Extensibility
 
-- **Pre-built connectors:**Salesforce, HubSpot, Zendesk, Notion, Jira, Calendly
-- **Custom code:**Inject JavaScript for advanced logic and API calls
-- **API & SDK:**Extend Botpress within your own applications
+- **Pre-built connectors:** Salesforce, HubSpot, Zendesk, Notion, Jira, Calendly
+- **Custom code:** Inject JavaScript for advanced logic and API calls
+- **API & SDK:** Extend Botpress within your own applications
 
 ### Security & Compliance
 
@@ -88,7 +97,8 @@ Botpress supports deployment across 10+ channels:
 - Self-hosting options available on Enterprise plans
 - LLM Safety Suite with guardrails against prompt injection and misinformation
 
-**Security Guardrails:**- Data encryption at rest and in transit
+**Security Guardrails:**
+- Data encryption at rest and in transit
 - Secure cloud infrastructure (AWS, KPMG-penetration tested)
 - Version history, audit logs, and robust file management
 
@@ -96,20 +106,20 @@ Botpress supports deployment across 10+ channels:
 
 ### Step-by-Step: Building with Botpress
 
-1. **Sign Up & Workspace Setup:**Create account and set up workspace
-2. **Define Bot Purpose:**Clarify automation goals (support, sales, HR)
-3. **Design Conversation Flows:**Use visual flow builder to map dialog
-4. **Import Knowledge Bases:**Add websites, documents, or FAQs
-5. **Configure Integrations:**Connect CRMs, helpdesks, or databases
-6. **Test & Refine:**Simulate conversations, debug, and polish flows
-7. **Deploy Across Channels:**Publish on websites, messaging apps, or internal tools
-8. **Monitor & Optimize:**Use analytics to improve over time
+1. **Sign Up & Workspace Setup:** Create account and set up workspace
+2. **Define Bot Purpose:** Clarify automation goals (support, sales, HR)
+3. **Design Conversation Flows:** Use visual flow builder to map dialog
+4. **Import Knowledge Bases:** Add websites, documents, or FAQs
+5. **Configure Integrations:** Connect CRMs, helpdesks, or databases
+6. **Test & Refine:** Simulate conversations, debug, and polish flows
+7. **Deploy Across Channels:** Publish on websites, messaging apps, or internal tools
+8. **Monitor & Optimize:** Use analytics to improve over time
 
 ### Deployment Scenarios
 
-- **Websites:**Chat widgets, embedded bots, or headless APIs
-- **Messaging Apps:**WhatsApp, Messenger, Slack, Telegram, SMS
-- **Internal Tools:**Intranet, HR, and IT support bots
+- **Websites:** Chat widgets, embedded bots, or headless APIs
+- **Messaging Apps:** WhatsApp, Messenger, Slack, Telegram, SMS
+- **Internal Tools:** Intranet, HR, and IT support bots
 
 ## Use Cases and Examples
 
@@ -119,7 +129,7 @@ Botpress supports deployment across 10+ channels:
 - Multi-step workflows for troubleshooting and onboarding
 - Human-in-the-loop for escalation to live agents
 
-**Case Studies:**Windstream and American Eagle use Botpress to scale support to millions.
+**Case Studies:** Windstream and American Eagle use Botpress to scale support to millions.
 
 ### Sales and Lead Generation
 
@@ -139,13 +149,13 @@ Botpress supports deployment across 10+ channels:
 
 ### Industry-Specific Implementations
 
-- **Healthcare:**Appointment booking, symptom triage, insurance inquiries
-- **Education:**Admissions, campus info, student support
-- **Government:**Forms, status updates, public information
+- **Healthcare:** Appointment booking, symptom triage, insurance inquiries
+- **Education:** Admissions, campus info, student support
+- **Government:** Forms, status updates, public information
 
 ## Botpress vs. Other Platforms
 
-| Feature | **Botpress**| Chatfuel/ManyChat | Rasa/Open Source | GPTBots |
+| Feature | **Botpress** | Chatfuel/ManyChat | Rasa/Open Source | GPTBots |
 |---|---|---|---|---|
 | Visual flow builder | Yes | Yes | No | Yes |
 | LLM/AI integration | Advanced (GPT-4, Claude, etc.) | Limited | Customizable | Advanced |
@@ -177,62 +187,61 @@ Botpress supports deployment across 10+ channels:
 
 ## Pricing Overview
 
-- **Pay-as-you-go (Free):**Free AI credits for prototyping
-- **Plus Plan ($89/mo):**Live-agent handoff, advanced KB indexing
-- **Team Plan ($495/mo):**Enhanced collaboration, access control, priority support
-- **Enterprise:**Custom pricing, advanced security, self-hosting
+- **Pay-as-you-go (Free):** Free AI credits for prototyping
+- **Plus Plan ($89/mo):** Live-agent handoff, advanced KB indexing
+- **Team Plan ($495/mo):** Enhanced collaboration, access control, priority support
+- **Enterprise:** Custom pricing, advanced security, self-hosting
 
 Channel fees and AI token usage billed separately.
 
 ## FAQs
 
-**Is Botpress open source?**Yes, core Botpress is open-source and can be self-hosted on Enterprise plans.**Can I use Botpress without coding?**Most features are accessible via visual builder. Advanced logic may require scripting.**What AI models does Botpress support?**GPT-4, Claude, Gemini, Llama, and more. Bring your own API key or use Botpress-managed AI.**How does Botpress connect to my data?**Import websites, upload documents, or connect external systems via API or integrations.**Is Botpress safe and compliant?**Yes: SOC II, GDPR, encrypted storage, RBAC, and self-hosting options.**What makes Botpress different?**Focuses on extensibility, advanced AI, and developer APIs.**Can I migrate my existing chatbot?**Manual rebuild of flows and integrations required.**Who should use Botpress?**Developers, enterprises, and SMBs needing flexible, scalable, secure AI agents.
+**Is Botpress open source?**  
+Yes, core Botpress is open-source and can be self-hosted on Enterprise plans.
+
+**Can I use Botpress without coding?**  
+Most features are accessible via visual builder. Advanced logic may require scripting.
+
+**What AI models does Botpress support?**  
+GPT-4, Claude, Gemini, Llama, and more. Bring your own API key or use Botpress-managed AI.
+
+**How does Botpress connect to my data?**  
+Import websites, upload documents, or connect external systems via API or integrations.
+
+**Is Botpress safe and compliant?**  
+Yes: SOC II, GDPR, encrypted storage, RBAC, and self-hosting options.
+
+**What makes Botpress different?**  
+Focuses on extensibility, advanced AI, and developer APIs.
+
+**Can I migrate my existing chatbot?**  
+Manual rebuild of flows and integrations required.
+
+**Who should use Botpress?**  
+Developers, enterprises, and SMBs needing flexible, scalable, secure AI agents.
 
 ## References
 
-
-1. Botpress. Service for AI Chatbot Development Platform. URL: https://botpress.com/
-
-2. Botpress. (n.d.). How to Build Your Own AI Chatbot. Botpress Blog.
-
-3. Botpress. (n.d.). AI Chatbot Overview. Botpress Blog.
-
-4. Botpress. (n.d.). Best Large Language Models. Botpress Blog.
-
-5. Botpress. (n.d.). What is RAG?. Botpress Blog.
-
-6. Botpress. (n.d.). Vector Database Explained. Botpress Blog.
-
-7. Botpress. (n.d.). Chatbot Security Guide. Botpress Blog.
-
-8. GPTBots. (n.d.). GPTBots Review of Botpress. GPTBots Blog.
-
-9. Chatimize. (n.d.). Chatimize Review of Botpress. Chatimize Reviews.
-
-10. AIToolsTribe. (n.d.). Overview of Botpress. AIToolsTribe.
-
-11. Voiceflow. (n.d.). Voiceflow Independent Review of Botpress. Voiceflow Blog.
-
-12. Botpress. Service Documentation. URL: https://botpress.com/docs/
-
-13. Botpress. Knowledge Base Documentation. URL: https://botpress.com/docs/knowledge-base
-
-14. Botpress. Pricing Information. URL: https://botpress.com/pricing
-
-15. Botpress. Google AI Integration. URL: https://botpress.com/integrations/google-ai
-
-16. Botpress. Vector Database Storage. URL: https://botpress.com/academy-lesson/vector-database-storage
-
-17. Botpress. Knowledge Base Best Practices. URL: https://botpress.com/docs/studio/concepts/knowledge-base/knowledge-base-best-practices
-
-18. Botpress. All Supported Channels. URL: https://www.botpress.com/hub?type_equal=%5B%22Channel%22%5D
-
-19. Botpress. Integration Hub. URL: https://www.botpress.com/hub?type_equal=%5B%22Integration%22%5D
-
-20. Botpress. SDK Overview. URL: https://botpress.com/docs/for-developers/sdk/overview
-
-21. Botpress. Enterprise Security. URL: https://botpress.com/enterprise
-
-22. Botpress. Flow Editor. URL: https://botpress.com/academy-lesson/studio-ui-flow-editor
-
-23. Botpress. Community Discord. URL: https://discord.com/invite/botpress
+- [Botpress Homepage](https://botpress.com)
+- [Botpress Documentation](https://botpress.com/docs/)
+- [Knowledge Base Documentation](https://botpress.com/docs/knowledge-base)
+- [How to Build Your Own AI Chatbot (Botpress Blog)](https://botpress.com/blog/how-to-build-your-own-ai-chatbot)
+- [Botpress Pricing](https://botpress.com/pricing)
+- [AI Chatbot Overview](https://botpress.com/blog/ai-chatbot)
+- [Best Large Language Models](https://botpress.com/blog/best-large-language-models)
+- [What is RAG?](https://botpress.com/blog/rag-in-ai)
+- [Google AI Integration](https://botpress.com/integrations/google-ai)
+- [Vector Database Explained](https://botpress.com/blog/vector-database)
+- [Vector Database Storage](https://botpress.com/academy-lesson/vector-database-storage)
+- [Knowledge Base Best Practices](https://botpress.com/docs/studio/concepts/knowledge-base/knowledge-base-best-practices)
+- [All Supported Channels](https://www.botpress.com/hub?type_equal=%5B%22Channel%22%5D)
+- [Integration Hub](https://www.botpress.com/hub?type_equal=%5B%22Integration%22%5D)
+- [SDK Overview](https://botpress.com/docs/for-developers/sdk/overview)
+- [Enterprise Security](https://botpress.com/enterprise)
+- [Chatbot Security Guide](https://botpress.com/blog/chatbot-security)
+- [GPTBots Review of Botpress](https://www.gptbots.ai/blog/botpress-alternatives)
+- [Chatimize Review](https://chatimize.com/reviews/botpress/)
+- [AIToolsTribe Overview](https://www.aitoolstribe.com/what-is-botpress/)
+- [Voiceflow Independent Review](https://www.voiceflow.com/blog/botpress)
+- [Botpress Flow Editor](https://botpress.com/academy-lesson/studio-ui-flow-editor)
+- [Botpress Community on Discord](https://discord.com/invite/botpress)

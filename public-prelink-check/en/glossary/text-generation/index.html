@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Text Generation | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/text-generation/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="AI technology that automatically creates written text by learning patterns from human writing, used to generate articles, summaries, and other content." name="description"/>
+<meta content="text generation, natural language processing, AI content creation, language models, automated writing" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/text-generation/" property="og:url"/>
+<meta content="Text Generation | SmartWeb" property="og:title"/>
+<meta content="AI technology that automatically creates written text by learning patterns from human writing, used to generate articles, summaries, and other content." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/text-generation/" name="twitter:url"/>
+<meta content="Text Generation | SmartWeb" name="twitter:title"/>
+<meta content="AI technology that automatically creates written text by learning patterns from human writing, used to generate articles, summaries, and other content." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Text Generation</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Text Generation
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          AI technology that automatically creates written text by learning patterns from human writing, used to generate articles, summaries, and other content.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                text generation
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                natural language processing
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI content creation
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                language models
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                automated writing
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-text-generation">What is Text Generation?</h2>
+<p>Text generation represents one of the most transformative applications of <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence glossary entry">artificial intelligence</a> and natural language processing, encompassing the automated creation of human-readable text through computational methods. This technology leverages sophisticated algorithms, machine learning models, and deep <a data-lb="1" href="/en/glossary/neural-networks/" title="Neural Networks glossary entry">neural networks</a> to produce coherent, contextually relevant, and linguistically accurate written content across diverse domains and applications. At its core, text generation involves training computational models on vast corpora of human-written text to learn patterns, structures, and relationships within language, enabling these systems to generate new text that mimics human writing styles while maintaining semantic coherence and grammatical correctness.</p>
+<p>The evolution of text generation has progressed from simple template-based systems and rule-driven approaches to sophisticated neural language models capable of producing remarkably human-like text across multiple genres, styles, and formats. Modern text generation systems utilize advanced architectures such as transformers, recurrent neural networks, and attention mechanisms to understand context, maintain narrative consistency, and generate text that demonstrates creativity, factual accuracy, and stylistic appropriateness. These systems can produce everything from short responses and summaries to lengthy articles, creative fiction, technical documentation, and specialized content tailored to specific audiences and purposes.</p>
+<p>The significance of text generation extends far beyond mere automation of writing tasks, representing a fundamental shift in how humans interact with information, create content, and augment cognitive capabilities. Contemporary applications span content marketing, customer service automation, educational materials development, creative writing assistance, code documentation, and personalized communication systems. As these technologies continue advancing, text generation is becoming increasingly integrated into business workflows, creative processes, and everyday digital interactions, offering unprecedented opportunities for scaling content production while maintaining quality and relevance across diverse use cases and industries.</p>
+<h2 id="core-technologies-and-approaches">Core Technologies and Approaches</h2>
+<p><strong>Transformer Architecture</strong> - The foundational neural network architecture that revolutionized text generation through self-attention mechanisms and parallel processing capabilities. Transformers enable models to understand long-range dependencies in text and generate coherent content by attending to relevant parts of the input sequence simultaneously.</p>
+<p><strong><a data-lb="1" href="/en/glossary/large-language-models/" title="Large Language Models (LLMs) glossary entry">Large Language Models (LLMs)</a></strong> - Massive neural networks trained on extensive text datasets that demonstrate emergent capabilities in text generation, reasoning, and language understanding. These models, such as GPT, BERT, and T5, serve as the backbone for most modern text generation applications.</p>
+<p><strong>Autoregressive Generation</strong> - A sequential text generation approach where models predict the next token based on previously generated tokens, creating text one word or character at a time. This method ensures grammatical consistency and maintains narrative flow throughout the generation process.</p>
+<p><strong>Fine-tuning and Adaptation</strong> - Techniques for customizing pre-trained language models for specific domains, styles, or tasks by training on specialized datasets. Fine-tuning allows models to generate text that adheres to particular formats, terminologies, or writing conventions.</p>
+<p><strong>Prompt Engineering</strong> - The strategic design of input <a data-lb="1" href="/en/glossary/prompts/" title="Prompts glossary entry">prompts</a> to guide text generation models toward producing desired outputs. Effective prompt engineering involves crafting instructions, examples, and context that elicit high-quality, relevant generated text.</p>
+<p><strong><a data-lb="1" href="/blog/introduction-to-rag/" title="Learn the basics and practical applications of RAG (Retrieval-Augmented Generation). Detailed coverage from differences with traditional AI to benefits and real-world use cases.">Retrieval-Augmented Generation</a> (<a data-lb="1" href="/blog/rag-vs-cag-knowledge-augmentation/" title="Explore the differences between Retrieval-Augmented Generation (RAG) and Cache-Augmented Generation (CAG), two powerful techniques for enhancing large language models with external knowledge. Learn when to use each approach and how they solve the knowledge gap problem in AI.">RAG</a>)</strong> - A hybrid approach that combines text generation with information retrieval, allowing models to access external knowledge sources during generation. RAG systems enhance factual accuracy and enable generation of up-to-date, domain-specific content.</p>
+<p><strong>Controllable Generation</strong> - Advanced techniques that enable precise control over generated text attributes such as style, sentiment, length, and topic focus. These methods allow users to specify desired characteristics and constraints for the generated content.</p>
+<h2 id="how-text-generation-works">How Text Generation Works</h2>
+<p>The text generation process begins with <strong>data preprocessing and tokenization</strong>, where raw text is cleaned, normalized, and converted into numerical tokens that neural networks can process. This step involves handling various text formats, removing irrelevant content, and creating vocabulary mappings that represent words, subwords, or characters as numerical identifiers.</p>
+<p><strong>Model training</strong> constitutes the core learning phase where neural networks analyze patterns in large text corpora through iterative optimization processes. During training, models learn statistical relationships between words, grammatical structures, semantic associations, and contextual dependencies by predicting masked or subsequent tokens in training sequences.</p>
+<p><strong>Context encoding</strong> occurs when the trained model receives input prompts or seed text, processing this information through multiple neural network layers to create rich contextual representations. The model builds internal representations that capture semantic meaning, stylistic elements, and relevant background knowledge from its training data.</p>
+<p><strong>Token prediction and sampling</strong> represents the generation phase where models calculate probability distributions over possible next tokens and select outputs using various sampling strategies. Common approaches include greedy decoding, beam search, nucleus sampling, and temperature-controlled sampling to balance creativity with coherence.</p>
+<p><strong>Iterative generation</strong> continues the process by feeding newly generated tokens back into the model as additional context for subsequent predictions. This autoregressive approach maintains consistency and allows models to build upon previously generated content while adapting to evolving narrative or argumentative structures.</p>
+<p><strong>Post-processing and refinement</strong> involves applying filters, quality checks, and formatting adjustments to ensure generated text meets specified requirements. This stage may include grammar correction, fact-checking, style normalization, and <a data-lb="1" href="/en/glossary/content-moderation/" title="Content Moderation glossary entry">content moderation</a> to enhance output quality and appropriateness.</p>
+<p><strong>Example workflow</strong>: A content marketing team inputs a product description prompt → the model processes the context and generates multiple draft paragraphs → sampling algorithms select diverse, high-quality outputs → post-processing ensures brand voice consistency → final content undergoes human review and editing before publication.</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p><strong>Scalable Content Production</strong> - Text generation enables organizations to produce large volumes of written content efficiently, addressing the growing demand for personalized, timely, and diverse textual materials across multiple channels and platforms without proportional increases in human resources.</p>
+<p><strong>Cost-Effective Automation</strong> - Automated text generation significantly reduces content creation costs by minimizing manual writing time, enabling businesses to allocate human creativity to higher-value tasks while maintaining consistent output quality and meeting tight deadlines.</p>
+<p><strong>Consistency and Standardization</strong> - Generated text maintains uniform style, tone, and formatting across all outputs, ensuring brand voice consistency and adherence to organizational guidelines while eliminating variations that typically occur in human-written content.</p>
+<p><strong>Rapid Prototyping and Iteration</strong> - Text generation facilitates quick creation of multiple content variations, enabling rapid testing of different messaging approaches, styles, and formats to optimize engagement and effectiveness through data-driven experimentation.</p>
+<p><strong>Multilingual Capabilities</strong> - Advanced text generation models can produce content in multiple languages simultaneously, enabling global organizations to create localized content efficiently while maintaining message consistency across diverse markets and cultural contexts.</p>
+<p><strong>24/7 Availability</strong> - Automated text generation systems operate continuously without breaks, enabling real-time content creation for customer service, social media responses, and dynamic website content that adapts to user interactions and changing conditions.</p>
+<p><strong><a data-lb="1" href="/en/glossary/personalization/" title="Personalization glossary entry">Personalization</a> at Scale</strong> - Text generation enables mass customization of content based on user preferences, demographics, and behavioral data, creating personalized experiences that would be impossible to achieve manually across large user bases.</p>
+<p><strong>Creative Inspiration and Assistance</strong> - Generated text serves as a creative catalyst for human writers, providing inspiration, overcoming writer’s block, and offering alternative perspectives that enhance the creative writing process and expand ideation possibilities.</p>
+<p><strong>Quality Baseline Establishment</strong> - Text generation provides consistent quality baselines for content creation, ensuring minimum standards are met while human editors focus on refinement, fact-checking, and strategic content optimization.</p>
+<p><strong>Accessibility Enhancement</strong> - Automated text generation can create alternative text descriptions, simplified language versions, and format adaptations that make content more accessible to users with different abilities and reading levels.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p><strong>Content Marketing and SEO</strong> - Generating blog posts, product descriptions, meta descriptions, and social media content that drives organic traffic and engages target audiences while maintaining brand consistency across digital marketing channels.</p>
+<p><strong>Customer Service Automation</strong> - Creating personalized responses to customer inquiries, generating FAQ content, and producing support documentation that addresses common issues while maintaining helpful and professional communication standards.</p>
+<p><strong>E-commerce Product Descriptions</strong> - Automatically generating compelling, informative product descriptions for large inventories, ensuring consistent quality and SEO optimization while highlighting key features and benefits for diverse product categories.</p>
+<p><strong>News and Media Content</strong> - Producing news summaries, sports reports, financial updates, and breaking news alerts that deliver timely information while maintaining journalistic standards and factual accuracy.</p>
+<p><strong>Educational Content Creation</strong> - Developing learning materials, quiz questions, explanations, and personalized feedback that adapts to different learning styles and educational levels while supporting curriculum objectives.</p>
+<p><strong>Creative Writing Assistance</strong> - Supporting authors, screenwriters, and content creators with plot development, character dialogue, scene descriptions, and creative brainstorming that enhances the creative writing process.</p>
+<p><strong>Technical Documentation</strong> - Generating API documentation, user manuals, code comments, and technical specifications that maintain accuracy and clarity while reducing the burden on technical teams.</p>
+<p><strong>Email Marketing Campaigns</strong> - Creating personalized email content, subject lines, and call-to-action text that increases engagement rates while maintaining relevance to subscriber preferences and behaviors.</p>
+<p><strong>Social Media Management</strong> - Producing posts, captions, hashtags, and engagement responses across multiple platforms while maintaining brand voice and adapting content to platform-specific requirements and audience expectations.</p>
+<p><strong>Legal and Compliance Documentation</strong> - Generating contract templates, policy documents, and compliance reports that maintain legal accuracy while ensuring consistency and completeness across organizational documentation needs.</p>
+<h2 id="text-generation-model-comparison">Text Generation Model Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Model Type</th>
+<th>Strengths</th>
+<th>Limitations</th>
+<th>Best Use Cases</th>
+<th>Training Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GPT-based Models</strong></td>
+<td>High creativity, coherent long-form text, versatile applications</td>
+<td>Potential factual errors, high computational costs</td>
+<td>Creative writing, general content creation, <a data-lb="1" href="/en/glossary/conversational-ai/" title="Conversational AI glossary entry">conversational AI</a></td>
+<td>Massive datasets, extensive compute resources</td>
+</tr>
+<tr>
+<td><strong>BERT-based Models</strong></td>
+<td>Strong understanding, bidirectional context, factual accuracy</td>
+<td>Limited generation length, less creative output</td>
+<td>Question answering, text completion, structured content</td>
+<td>Supervised fine-tuning, domain-specific data</td>
+</tr>
+<tr>
+<td><strong>T5 Models</strong></td>
+<td>Text-to-text flexibility, task versatility, consistent performance</td>
+<td>Complex setup, resource intensive, requires task framing</td>
+<td>Summarization, translation, structured generation</td>
+<td>Task-specific training, diverse format examples</td>
+</tr>
+<tr>
+<td><strong>Specialized Domain Models</strong></td>
+<td>High accuracy in specific fields, terminology <a data-lb="1" href="/en/glossary/precision/" title="Precision glossary entry">precision</a>, compliance</td>
+<td>Limited versatility, narrow application scope, maintenance overhead</td>
+<td>Technical documentation, legal content, medical writing</td>
+<td>Domain expertise, specialized corpora, expert validation</td>
+</tr>
+<tr>
+<td><strong>Lightweight Models</strong></td>
+<td>Fast inference, low resource requirements, easy deployment</td>
+<td>Reduced quality, limited capabilities, shorter context</td>
+<td>Mobile applications, real-time generation, embedded systems</td>
+<td>Efficient architectures, model compression, optimization</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p><strong>Factual Accuracy and <a data-lb="1" href="/en/glossary/hallucination/" title="Hallucination glossary entry">Hallucination</a></strong> - Generated text may contain inaccurate information, fabricated facts, or misleading statements that appear credible, requiring robust fact-checking mechanisms and human oversight to ensure content reliability and trustworthiness.</p>
+<p><strong><a data-lb="1" href="/en/glossary/bias/" title="Bias glossary entry">Bias</a> and Fairness Issues</strong> - Training data biases can propagate through generated text, potentially reinforcing stereotypes, discrimination, or unfair representations that require careful <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">monitoring</a> and mitigation strategies to ensure equitable content creation.</p>
+<p><strong>Quality Control and Consistency</strong> - Maintaining consistent output quality across different prompts, contexts, and use cases presents ongoing challenges that require comprehensive evaluation frameworks and continuous model refinement processes.</p>
+<p><strong>Computational Resource Requirements</strong> - Large-scale text generation models demand significant computational power, memory, and energy resources, creating cost and environmental considerations that impact deployment decisions and operational sustainability.</p>
+<p><strong>Intellectual Property and Copyright</strong> - Generated text may inadvertently reproduce copyrighted material or raise questions about ownership and attribution, requiring clear policies and legal frameworks to address intellectual property concerns.</p>
+<p><strong>Context Length Limitations</strong> - Most models have finite context windows that limit their ability to maintain coherence across very long documents, requiring strategies for handling extended content generation and maintaining narrative consistency.</p>
+<p><strong>Prompt Sensitivity and Robustness</strong> - Model outputs can vary significantly based on minor prompt changes, creating challenges for reliable and predictable text generation that meets specific requirements and quality standards.</p>
+<p><strong>Content Moderation and Safety</strong> - Generated text may contain inappropriate, harmful, or offensive content that requires comprehensive filtering and safety measures to prevent publication of problematic material.</p>
+<p><strong>Model Interpretability and Explainability</strong> - Understanding why models generate specific outputs remains challenging, limiting the ability to debug issues, improve performance, and ensure accountability in content creation processes.</p>
+<p><strong>Integration and Workflow Complexity</strong> - Incorporating text generation into existing content workflows requires careful planning, technical integration, and change management to ensure smooth adoption and effective utilization.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p><strong>Define Clear Objectives and Success Metrics</strong> - Establish specific goals, quality standards, and measurable outcomes for text generation projects to guide model selection, training approaches, and evaluation criteria throughout the implementation process.</p>
+<p><strong>Implement Robust Data Governance</strong> - Ensure training data quality, diversity, and compliance with privacy regulations while maintaining comprehensive documentation of data sources, preprocessing steps, and potential biases or limitations.</p>
+<p><strong>Design Comprehensive Evaluation Frameworks</strong> - Develop multi-faceted assessment approaches that evaluate generated text across dimensions including accuracy, coherence, relevance, style consistency, and alignment with intended objectives and brand guidelines.</p>
+<p><strong>Establish Human-in-the-Loop Workflows</strong> - Create processes that combine automated generation with human oversight, review, and refinement to maintain quality standards while leveraging the efficiency benefits of automation.</p>
+<p><strong>Implement Gradual Deployment Strategies</strong> - Begin with low-risk applications and gradually expand to more critical use cases, allowing teams to build expertise, refine processes, and address challenges before full-scale implementation.</p>
+<p><strong>Maintain Version Control and Model Management</strong> - Establish systematic approaches for tracking model versions, managing updates, and maintaining reproducibility to ensure consistent performance and enable rollback capabilities when necessary.</p>
+<p><strong>Create Comprehensive Documentation and Training</strong> - Develop detailed documentation for technical implementation, user guidelines, and best practices while providing training for team members who will interact with text generation systems.</p>
+<p><strong>Monitor Performance and Bias Continuously</strong> - Implement ongoing monitoring systems that track output quality, detect bias or drift, and identify areas for improvement to maintain system effectiveness over time.</p>
+<p><strong>Ensure Scalability and Performance Optimization</strong> - Design systems that can handle increasing demand while maintaining response times and quality standards through efficient architectures, caching strategies, and resource management.</p>
+<p><strong>Develop Incident Response and Quality Assurance Procedures</strong> - Create protocols for handling problematic outputs, addressing quality issues, and maintaining system reliability to minimize risks and ensure consistent performance.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p><strong>Multi-Modal Text Generation</strong> - Integration of text generation with image, audio, and video inputs to create rich, contextually aware content that responds to diverse media types and creates comprehensive multimedia experiences.</p>
+<p><strong>Few-Shot and Zero-Shot Learning</strong> - Advanced prompting techniques that enable models to perform new tasks with minimal or no task-specific training examples, leveraging pre-trained knowledge to adapt to novel requirements quickly.</p>
+<p><strong>Chain-of-Thought Reasoning</strong> - Structured generation approaches that guide models through step-by-step reasoning processes, improving accuracy and transparency in complex problem-solving and analytical content creation.</p>
+<p><strong>Constitutional AI and Value Alignment</strong> - Methods for training models to generate content that adheres to specific ethical principles, safety guidelines, and organizational values while maintaining creativity and usefulness.</p>
+<p><strong><a data-lb="1" href="/en/glossary/reinforcement-learning/" title="Reinforcement Learning glossary entry">Reinforcement Learning</a> from Human Feedback (RLHF)</strong> - Advanced training techniques that use human preferences and feedback to fine-tune model behavior, improving output quality and alignment with human expectations and requirements.</p>
+<p><strong>Mixture of Experts (MoE) Architectures</strong> - Sophisticated model designs that activate different specialized components based on input characteristics, enabling more efficient and targeted text generation across diverse domains and tasks.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p><strong>Enhanced Multimodal Integration</strong> - Evolution toward seamless integration of text generation with visual, audio, and sensory inputs, enabling creation of comprehensive content experiences that span multiple media types and interaction modalities.</p>
+<p><strong>Improved Factual Accuracy and Grounding</strong> - Development of advanced techniques for ensuring generated content accuracy through real-time fact-checking, <a data-lb="1" href="/en/glossary/knowledge-base/" title="Knowledge Base glossary entry">knowledge base</a> integration, and dynamic information verification systems.</p>
+<p><strong>Personalized and Adaptive Generation</strong> - Advancement of systems that learn individual user preferences, writing styles, and requirements to provide increasingly personalized and contextually appropriate content generation experiences.</p>
+<p><strong>Energy-Efficient and Sustainable Models</strong> - Focus on developing more efficient architectures and training methods that reduce computational requirements and environmental impact while maintaining or improving generation quality.</p>
+<p><strong>Real-Time Collaborative Generation</strong> - Evolution of systems that enable seamless human-AI collaboration in real-time content creation, supporting interactive editing, suggestion refinement, and collaborative writing processes.</p>
+<p><strong>Domain-Specific Specialization</strong> - Continued development of highly specialized models for specific industries, professions, and use cases that demonstrate expert-level knowledge and adherence to domain-specific requirements and standards.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Brown, T., et al. (2020). “Language Models are Few-Shot Learners.” Advances in Neural Information Processing Systems, 33, 1877-1901.</p>
+</li>
+<li>
+<p>Vaswani, A., et al. (2017). “Attention is All You Need.” Advances in Neural Information Processing Systems, 30, 5998-6008.</p>
+</li>
+<li>
+<p>Radford, A., et al. (2019). “Language Models are Unsupervised Multitask Learners.” OpenAI Technical Report.</p>
+</li>
+<li>
+<p>Lewis, P., et al. (2020). “Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.” Advances in Neural Information Processing Systems, 33, 9459-9474.</p>
+</li>
+<li>
+<p>Raffel, C., et al. (2020). “Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer.” Journal of Machine Learning Research, 21(140), 1-67.</p>
+</li>
+<li>
+<p>Holtzman, A., et al. (2019). “The Curious Case of Neural Text Degeneration.” International Conference on Learning Representations.</p>
+</li>
+<li>
+<p>Ouyang, L., et al. (2022). “Training Language Models to Follow Instructions with Human Feedback.” Advances in Neural Information Processing Systems, 35, 27730-27744.</p>
+</li>
+<li>
+<p>Zhang, S., et al. (2022). “OPT: Open Pre-trained Transformer Language Models.” arXiv preprint arXiv:2205.01068.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/top-k-sampling/">
+                    Top-K Sampling
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A text generation technique that randomly selects the next word from only the most likely candidates...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/top-k-sampling/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/top-p-sampling/">
+                    Top-P Sampling
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A text generation technique that controls randomness by selecting words from the most likely options...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/top-p-sampling/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ai-copywriting/">
+                    AI Copywriting
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI technology that automatically writes marketing content like ads and promotional materials by lear...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/ai-copywriting/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/aspect-based-sentiment-analysis/">
+                    Aspect-Based Sentiment Analysis
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A technique that analyzes opinions about specific features in text, such as identifying positive sen...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/aspect-based-sentiment-analysis/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/automated-content-generation/">
+                    Automated Content Generation
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI technology that automatically creates written and visual content like articles, social media post...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/automated-content-generation/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/bert/">
+                    BERT
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    An AI model developed by Google that understands language by reading text in both directions at once...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/bert/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/text-generation/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

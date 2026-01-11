@@ -15,7 +15,9 @@ type: glossary
 draft: false
 e-title: Autoscaling
 term: オートスケーリング
-url: "/ja/glossary/Autoscaling/"
+url: "/ja/glossary/autoscaling/"
+aliases:
+- "/ja/glossary/Autoscaling/"
 ---
 ## オートスケーリングとは?
 
@@ -27,37 +29,47 @@ url: "/ja/glossary/Autoscaling/"
 
 **主要コンポーネント**
 
-**起動設定**- 新しいリソースのプロビジョニング方法を定義
+**起動設定**
+- 新しいリソースのプロビジョニング方法を定義
 - AMI、インスタンスタイプ、ストレージ、ネットワーキング、セキュリティ、IAMロール、ブートストラップスクリプトを指定
 
-**Auto Scaling Group (ASG)**- 一緒に管理されるリソースの論理グループ
+**Auto Scaling Group (ASG)**
+- 一緒に管理されるリソースの論理グループ
 - 最小、最大、希望容量を設定
 
-**スケーリングポリシー**- リソースの追加/削除のタイミングと方法を制御するルール
+**スケーリングポリシー**
+- リソースの追加/削除のタイミングと方法を制御するルール
 - タイプ:ターゲット追跡、ステップスケーリング、シンプルスケーリング、スケジュールスケーリング
 - CPU、メモリ、ネットワークI/O、リクエスト数、カスタムメトリクスによってトリガー
 
-**ヘルスチェック**- EC2およびELBチェックを使用してインスタンスの健全性を継続的に監視
+**ヘルスチェック**
+- EC2およびELBチェックを使用してインスタンスの健全性を継続的に監視
 - 不健全なインスタンスを自動的に終了して置き換え
 
-**容量設定**- 希望容量:目標インスタンス数
+**容量設定**
+- 希望容量:目標インスタンス数
 - 最小容量:維持される最低数
 - 最大容量:過剰プロビジョニングを防ぐ上限
 
-**インスタンスタイプと購入オプション**- 複数のインスタンスタイプをサポート
+**インスタンスタイプと購入オプション**
+- 複数のインスタンスタイプをサポート
 - 購入モデル:オンデマンド、リザーブド、スポットインスタンス
 
-**アベイラビリティゾーン**- 高可用性のために複数のAZ間でインスタンスを分散
+**アベイラビリティゾーン**
+- 高可用性のために複数のAZ間でインスタンスを分散
 - 有効化されたゾーン間でインスタンスをバランス
 
-**Elastic Load Balancing統合**- 健全なASGインスタンス間でトラフィックを分散
+**Elastic Load Balancing統合**
+- 健全なASGインスタンス間でトラフィックを分散
 - タイプ:ALB、NLB、CLB
 - インスタンスを自動的に登録/登録解除
 
-**ライフサイクルフック**- 特定のライフサイクルポイントでカスタムスクリプトを実行
+**ライフサイクルフック**
+- 特定のライフサイクルポイントでカスタムスクリプトを実行
 - 設定、ドレイン、クリーンアップタスクを処理
 
-**プロセス**1.**監視**:すべてのリソースからリアルタイムメトリクスを収集
+**プロセス**
+1. **監視**:すべてのリソースからリアルタイムメトリクスを収集
 2. **評価**:メトリクスをスケーリングポリシーのしきい値と比較
 3. **決定**:スケールアウト(追加)またはスケールイン(削除)アクションを決定
 4. **アクション**:インスタンスをプロビジョニングまたは終了
@@ -67,12 +79,14 @@ url: "/ja/glossary/Autoscaling/"
 
 ## オートスケーリングのタイプ
 
-**水平スケーリング(スケールアウト/イン)**- リソースインスタンスの数を調整
+**水平スケーリング(スケールアウト/イン)**
+- リソースインスタンスの数を調整
 - 例:トラフィック急増時にWebサーバーを追加
 - 利点:ダウンタイムなし、高いスケーラビリティ、フォールトトレランスの向上
 - 最適用途:マイクロサービス、Webアプリ、API、コンテナ
 
-**垂直スケーリング(スケールアップ/ダウン)**- 既存インスタンスのリソース割り当てを変更
+**垂直スケーリング(スケールアップ/ダウン)**
+- 既存インスタンスのリソース割り当てを変更
 - 例:VMを2 vCPU/8GBから8 vCPU/32GBに増強
 - 利点:モノリシックまたはステートフルアプリケーションに有用
 - 制限:ダウンタイムが必要な場合あり、ハードウェアによる制限
@@ -87,56 +101,90 @@ url: "/ja/glossary/Autoscaling/"
 
 ## スケーリングポリシー
 
-**しきい値ベース(リアクティブ)**- メトリクスが定義されたしきい値を超えたときにトリガー
+**しきい値ベース(リアクティブ)**
+- メトリクスが定義されたしきい値を超えたときにトリガー
 - 例:CPUが5分間80%超
 
-**ターゲット追跡**- 特定のメトリクスの目標値を維持
+**ターゲット追跡**
+- 特定のメトリクスの目標値を維持
 - 例:平均CPUを60%に保つ
 
-**予測型(プロアクティブ)**- 履歴パターンまたはMLを使用して需要を予測
+**予測型(プロアクティブ)**
+- 履歴パターンまたはMLを使用して需要を予測
 - 予想されるスパイクに先立ってスケール
 
-**スケジュールスケーリング**- 事前に決められた時間にリソースをスケール
+**スケジュールスケーリング**
+- 事前に決められた時間にリソースをスケール
 - 例:営業時間中にスケールアップ
 
-**手動スケーリング**- 管理者制御の調整
+**手動スケーリング**
+- 管理者制御の調整
 - フォールバックまたは計画されたイベントに使用
 
 ## 主な利点
 
-**パフォーマンス最適化**- 需要急増時にアプリケーション速度を維持
+**パフォーマンス最適化**
+- 需要急増時にアプリケーション速度を維持
 - 速度低下や停止を防止
 
-**コスト効率**- アイドルリソースへの支払いを排除
+**コスト効率**
+- アイドルリソースへの支払いを排除
 - クラウドの無駄を削減
 
-**可用性と信頼性の向上**- 障害が発生したリソースを自動的に置き換え
+**可用性と信頼性の向上**
+- 障害が発生したリソースを自動的に置き換え
 - サービス継続性を維持
 
-**運用の俊敏性**- 手動介入なしで動的なワークロード変化に対応**ユーザーエクスペリエンス**- 一貫したサービス品質
+**運用の俊敏性**
+- 手動介入なしで動的なワークロード変化に対応
+
+**ユーザーエクスペリエンス**
+- 一貫したサービス品質
 - パフォーマンス低下を防止
 
-**エネルギー効率**- 不要な電力消費を最小化
+**エネルギー効率**
+- 不要な電力消費を最小化
 
 ## 一般的な課題
 
-**設定の複雑さ**- 効果的なポリシーを設計するには専門知識が必要**反応の遅延**- プロビジョニング時間により、急激なスパイク時にパフォーマンス遅延が発生する可能性**メトリクス選択**- 非効果的な選択(例:メモリがボトルネックの場合にCPU)は非効率を引き起こす**コストの予期しない増加**- 過度に積極的なスケーリングまたは設定ミスにより予期しない費用が発生**アプリケーション設計の制約**- ステートレスで水平スケーラブルなアーキテクチャに最も効果的**監視と可観測性**- 可視性の低さはスケーリング問題を不明瞭にする
+**設定の複雑さ**
+- 効果的なポリシーを設計するには専門知識が必要
+
+**反応の遅延**
+- プロビジョニング時間により、急激なスパイク時にパフォーマンス遅延が発生する可能性
+
+**メトリクス選択**
+- 非効果的な選択(例:メモリがボトルネックの場合にCPU)は非効率を引き起こす
+
+**コストの予期しない増加**
+- 過度に積極的なスケーリングまたは設定ミスにより予期しない費用が発生
+
+**アプリケーション設計の制約**
+- ステートレスで水平スケーラブルなアーキテクチャに最も効果的
+
+**監視と可観測性**
+- 可視性の低さはスケーリング問題を不明瞭にする
 
 ## 実世界のユースケース
 
-**Eコマースプラットフォーム**- ブラックフライデーのトラフィック急増には追加サーバーが必要
+**Eコマースプラットフォーム**
+- ブラックフライデーのトラフィック急増には追加サーバーが必要
 - 可用性と高速チェックアウトを確保
 
-**メディアストリーミングサービス**- バイラルイベントにより同時視聴者が増加
+**メディアストリーミングサービス**
+- バイラルイベントにより同時視聴者が増加
 - スムーズな再生のためにストリーミングサーバーをスケール
 
-**SaaSスタートアップ**- バイラルマーケティングにより突然のユーザー増加
+**SaaSスタートアップ**
+- バイラルマーケティングにより突然のユーザー増加
 - 過剰プロビジョニングなしでバックエンドをスケール
 
-**ビッグデータとAI/MLワークロード**- モデルトレーニングには変動するコンピューティングが必要
+**ビッグデータとAI/MLワークロード**
+- モデルトレーニングには変動するコンピューティングが必要
 - 並列処理のためにクラスターをスケール
 
-**APIとマイクロサービス**- エンドポイント間で変動するリクエストレート
+**APIとマイクロサービス**
+- エンドポイント間で変動するリクエストレート
 - 各サービスが独立してオートスケール
 
 ## ベストプラクティス
@@ -168,31 +216,33 @@ url: "/ja/glossary/Autoscaling/"
 
 | プロバイダー | サービス | 主な機能 |
 |----------|---------|--------------|
-| **AWS**| EC2 Auto Scaling、Application Auto Scaling | EC2、ECS、DynamoDB、Aurora;ターゲット/予測/スケジュールポリシー |
-| **Azure**| VM Scale Sets、Azure Autoscale | VM、App Services;メトリクスベースおよびスケジュール |
-| **GCP**| Managed Instance Groups、GKE Cluster Autoscaler | Compute Engine、Kubernetes;カスタムメトリクス、HTTP負荷 |
-| **IBM Cloud**| VPC Auto Scaling、Kubernetes Autoscaler | VM、Kubernetesクラスター |
-| **Oracle Cloud**| Instance Pools & Autoscaling | コンピューティングプール;メトリクスベースおよびスケジュール |
+| **AWS** | EC2 Auto Scaling、Application Auto Scaling | EC2、ECS、DynamoDB、Aurora;ターゲット/予測/スケジュールポリシー |
+| **Azure** | VM Scale Sets、Azure Autoscale | VM、App Services;メトリクスベースおよびスケジュール |
+| **GCP** | Managed Instance Groups、GKE Cluster Autoscaler | Compute Engine、Kubernetes;カスタムメトリクス、HTTP負荷 |
+| **IBM Cloud** | VPC Auto Scaling、Kubernetes Autoscaler | VM、Kubernetesクラスター |
+| **Oracle Cloud** | Instance Pools & Autoscaling | コンピューティングプール;メトリクスベースおよびスケジュール |
 
 ## よくある質問
 
-**良いオートスケーリング戦略とは?**予測可能なワークロードにはターゲット追跡から始め、既知のパターンには予測型を組み合わせ、セーフティネットとしてリアクティブを使用します。**オートスケーリングでどれくらい節約できますか?**節約額はワークロードによって異なりますが、インフラストラクチャコストの30〜50%の削減が一般的です。**オートスケーリングはコンテナで機能しますか?**はい。Kubernetesおよびコンテナオーケストレーションプラットフォームは、ポッドとノードに対する堅牢なオートスケーリングを提供します。**どのメトリクスを監視すべきですか?**CPU、メモリ、ネットワークスループット、アプリケーション固有のメトリクス(リクエスト数、キュー深度、データベース接続)。
+**良いオートスケーリング戦略とは?**
+予測可能なワークロードにはターゲット追跡から始め、既知のパターンには予測型を組み合わせ、セーフティネットとしてリアクティブを使用します。
+
+**オートスケーリングでどれくらい節約できますか?**
+節約額はワークロードによって異なりますが、インフラストラクチャコストの30〜50%の削減が一般的です。
+
+**オートスケーリングはコンテナで機能しますか?**
+はい。Kubernetesおよびコンテナオーケストレーションプラットフォームは、ポッドとノードに対する堅牢なオートスケーリングを提供します。
+
+**どのメトリクスを監視すべきですか?**
+CPU、メモリ、ネットワークスループット、アプリケーション固有のメトリクス(リクエスト数、キュー深度、データベース接続)。
 
 ## 参考文献
 
-
-1. IBM. (n.d.). What is Auto Scaling?. IBM Think Topics. URL: https://www.ibm.com/think/topics/autoscaling
-
-2. AWS. (n.d.). Auto Scaling Overview. AWS Documentation. URL: https://aws.amazon.com/autoscaling/
-
-3. DigitalOcean. (n.d.). Cloud Auto Scaling Techniques. DigitalOcean Community Tutorials. URL: https://www.digitalocean.com/community/tutorials/auto-scaling-techniques-guide
-
-4. Datadog. (n.d.). Auto-scaling Knowledge Center. Datadog Knowledge Base. URL: https://www.datadoghq.com/knowledge-center/auto-scaling/
-
-5. GeeksforGeeks. (n.d.). What is Auto Scaling?. GeeksforGeeks System Design. URL: https://www.geeksforgeeks.org/system-design/what-is-auto-scaling/
-
-6. Hydrolix. (n.d.). Autoscaling in Cloud Computing. Hydrolix Glossary. URL: https://hydrolix.io/glossary/autoscaling/
-
-7. Middleware. (n.d.). What is Autoscaling?. Middleware Blog. URL: https://middleware.io/blog/what-is-autoscaling/
-
-8. Zesty. (n.d.). Autoscaling Glossary. Zesty FinOps Glossary. URL: https://zesty.co/finops-glossary/autoscaling/
+- [IBM: What is Auto Scaling?](https://www.ibm.com/think/topics/autoscaling)
+- [AWS Auto Scaling Overview](https://aws.amazon.com/autoscaling/)
+- [DigitalOcean: Cloud Auto Scaling Techniques](https://www.digitalocean.com/community/tutorials/auto-scaling-techniques-guide)
+- [Datadog: Auto-scaling Knowledge Center](https://www.datadoghq.com/knowledge-center/auto-scaling/)
+- [GeeksforGeeks: What is Auto Scaling?](https://www.geeksforgeeks.org/system-design/what-is-auto-scaling/)
+- [Hydrolix: Autoscaling in Cloud Computing](https://hydrolix.io/glossary/autoscaling/)
+- [Middleware: What is Autoscaling?](https://middleware.io/blog/what-is-autoscaling/)
+- [Zesty: Autoscaling Glossary](https://zesty.co/finops-glossary/autoscaling/)

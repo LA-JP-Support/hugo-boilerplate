@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Market Basket Analysis | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/market-basket-analysis/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/" hreflang="x-default" rel="alternate"/>
+<meta content="A data analysis technique that identifies which products customers tend to buy together, helping businesses optimize product placement, create targeted promotions, and make personalized recommendations." name="description"/>
+<meta content="market basket analysis, association rules, product recommendations, cross-selling, retail analytics, purchase patterns, data mining, recommendation systems" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/market-basket-analysis/" property="og:url"/>
+<meta content="Market Basket Analysis | SmartWeb" property="og:title"/>
+<meta content="A data analysis technique that identifies which products customers tend to buy together, helping businesses optimize product placement, create targeted promotions, and make personalized recommendations." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/market-basket-analysis/" name="twitter:url"/>
+<meta content="Market Basket Analysis | SmartWeb" name="twitter:title"/>
+<meta content="A data analysis technique that identifies which products customers tend to buy together, helping businesses optimize product placement, create targeted promotions, and make personalized recommendations." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190821" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190821" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190821"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126101320965000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126101320965000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126101320965000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126101320965000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Market Basket Analysis</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Market Basket Analysis
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A data analysis technique that identifies which products customers tend to buy together, helping businesses optimize product placement, create targeted promotions, and make personalized recommendations.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                market basket analysis
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                association rules
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                product recommendations
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                cross-selling
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                retail analytics
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                purchase patterns
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                data mining
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                recommendation systems
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-market-basket-analysis">What is Market Basket Analysis?</h2>
+<p>Market basket analysis is a data mining technique that examines large datasets of customer transactions to identify patterns in product purchasing behavior, revealing which items are frequently bought together, which products lead to purchases of other items, and what combinations of products appear in shopping baskets more often than would occur by random chance. Originally developed for retail applications—literally analyzing what products customers place in physical shopping baskets—the methodology has expanded across industries to uncover valuable associations in transaction data, clickstream behavior, content consumption patterns, service usage, and any scenario where understanding co-occurrence relationships provides business value. Modern market basket analysis employs sophisticated algorithms including association rule mining, collaborative filtering, and machine learning to process millions of transactions, identify statistically significant patterns invisible to human observation, generate actionable insights for merchandising and marketing, and power recommendation engines that drive substantial revenue increases through effective cross-selling and upselling.</p>
+<p>The analytical approach centers on discovering association rules expressing relationships like “customers who buy Product A are X times more likely to also buy Product B.” These rules, quantified through metrics like support (how frequently items appear together), confidence (probability of buying B given purchase of A), and lift (how much more likely B is purchased when A is in basket compared to B’s overall purchase rate), enable data-driven business decisions. A rule like “bread → butter” with 70% confidence and 2.5× lift indicates that 70% of bread buyers also purchase butter, and butter is 2.5 times more likely to be purchased when bread is in the basket than by shoppers generally. Organizations leverage these insights to optimize store layouts placing associated items near each other to encourage impulse purchases, create effective product bundles combining frequently co-purchased items, design targeted promotions offering discounts on complementary products, personalize recommendations showing shoppers items commonly purchased with their current selections, manage inventory ensuring adequate stock of associated items, and develop new products filling gaps in existing product ecosystems.</p>
+<p>The business impact spans multiple dimensions. For retailers, optimized product placement based on purchase associations increases sales by making complementary items more visible when customers are primed to buy. Bundle pricing on frequently co-purchased items improves transaction values and perceived value. Promotional campaigns targeting likely buyers of associated products achieve higher response rates and ROI. Personalized recommendations based on current basket contents lift conversion rates and average order values. For e-commerce platforms, recommendation engines powered by market basket analysis drive 10-35% of revenue, with companies like Amazon attributing significant sales to “customers who bought this also bought” suggestions. For inventory management, understanding product associations prevents stockouts of complementary items and optimizes warehouse placement of related goods. For product development, identifying gaps in association networks reveals opportunities for new products completing customer needs. For customer understanding, purchase pattern analysis segments customers by buying behavior, predicts future purchases, and identifies high-value customer profiles. As transaction data volumes grow and competitive pressure intensifies, sophisticated market basket analysis has evolved from optional analytical exercise to essential capability for data-driven merchandising, marketing, and customer experience optimization.</p>
+<h2 id="core-concepts">Core Concepts</h2>
+<p><strong>Support</strong><br/>
+Measures how frequently an itemset appears in the transaction database. High support indicates the itemset is popular. Calculated as: (transactions containing itemset) / (total transactions). A rule “beer → diapers” with 5% support means 5% of all transactions contain both items.</p>
+<p><strong>Confidence</strong><br/>
+Indicates likelihood of item B being purchased given item A is purchased. Measures reliability of the association rule. Calculated as: (transactions containing A and B) / (transactions containing A). A rule “bread → butter” with 70% confidence means 70% of bread buyers also buy butter.</p>
+<p><strong>Lift</strong><br/>
+Measures how much more likely item B is purchased when item A is purchased, compared to B’s baseline popularity. Lift &gt; 1 indicates positive association, lift &lt; 1 indicates negative association. Calculated as: confidence(A→B) / support(B). A lift of 2.5 means B is 2.5× more likely with A than without.</p>
+<p><strong>Conviction</strong><br/>
+Measures how dependent the rule is—how much purchasing behavior would violate expectation if A and B were independent. High conviction indicates strong rule reliability even when support is moderate.</p>
+<p><strong>Association Rules</strong><br/>
+IF-THEN relationships expressing co-occurrence patterns: “IF customer buys {laptop, mouse} THEN they also buy {laptop bag}” with specified support, confidence, and lift values. Rules guide merchandising, recommendations, and promotions.</p>
+<p><strong>Frequent Itemsets</strong><br/>
+Sets of items appearing together frequently in transactions. Finding frequent itemsets is the first step in association rule generation. The Apriori algorithm efficiently identifies frequent itemsets from large transaction databases.</p>
+<p><strong>Collaborative Filtering</strong><br/>
+Related technique using market basket principles to recommend items based on similarity between users or items. “Customers who bought what you bought also liked…” leverages collective purchase patterns for <a data-lb="1" href="/en/glossary/personalization/" title="Personalization glossary entry">personalization</a>.</p>
+<h2 id="how-market-basket-analysis-works">How Market Basket Analysis Works</h2>
+<p>The analytical process follows structured stages:</p>
+<p><strong>Data Collection</strong><br/>
+Gather transaction data including transaction IDs, timestamps, customer identifiers (if available), items purchased (SKUs, product names, categories), quantities, prices, and contextual information (store location, season, promotion status).</p>
+<p><strong>Data Preprocessing</strong><br/>
+Clean transaction data by removing returns and cancellations, handling duplicate entries, normalizing product identifiers, aggregating product variants (different sizes of same item), and filtering noise (very rare items, test transactions).</p>
+<p><strong>Transaction Formatting</strong><br/>
+Convert data into basket format where each transaction is a list of items. Example: Transaction_1: {bread, butter, milk}, Transaction_2: {beer, chips, soda}.</p>
+<p><strong>Frequent Itemset Mining</strong><br/>
+Apply algorithms like Apriori or FP-Growth to identify itemsets (combinations of items) appearing together frequently in transactions above minimum support threshold. Start with individual items, progressively find larger frequent itemsets.</p>
+<p><strong>Association Rule Generation</strong><br/>
+From frequent itemsets, generate all possible association rules. Filter rules by minimum confidence and lift thresholds to identify statistically significant and practically meaningful associations.</p>
+<p><strong>Rule Evaluation</strong><br/>
+Assess rules using multiple metrics: support (frequency), confidence (reliability), lift (strength of association), conviction (dependency), and business-specific criteria (profitability, inventory availability, strategic goals).</p>
+<p><strong>Rule Ranking and Selection</strong><br/>
+Sort rules by relevance and actionability. Prioritize high-lift rules with sufficient support indicating strong, reliable, and common associations worth acting upon.</p>
+<p><strong>Insight Interpretation</strong><br/>
+Translate statistical rules into business insights. “Laptop → laptop bag” (confidence: 65%, lift: 3.2) suggests prominently displaying bags near laptops and bundling them in promotions.</p>
+<p><strong>Action Implementation</strong><br/>
+Deploy insights through: store layout optimization, online recommendation engines, promotional campaigns, product bundling, inventory management, and personalized marketing.</p>
+<p><strong>Performance <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">Monitoring</a></strong><br/>
+Track impact of implemented strategies on sales, basket size, conversion rates, and profitability. Continuously refine analysis and actions based on outcomes.</p>
+<p><strong>Example Workflow:</strong><br/>
+A grocery retailer analyzes 1 million transactions. Apriori algorithm identifies frequent itemsets: {bread, butter}, {pasta, sauce}, {wine, cheese}. Association rules generated include: “bread → butter” (support: 15%, confidence: 70%, lift: 2.5), “pasta → sauce” (support: 12%, confidence: 75%, lift: 3.1). The retailer relocates butter displays near bread, creates “pasta night” bundles, and emails wine buyers with cheese recommendations. Sales of butter increase 8% following placement change, pasta sauce bundle sales exceed forecasts by 15%, and wine-cheese cross-promotions achieve 22% conversion rate.</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p><strong>Increased Revenue</strong><br/>
+Strategic product placement, effective bundling, and personalized recommendations drive incremental sales. E-commerce recommendation engines using market basket analysis typically lift revenue 10-35%.</p>
+<p><strong>Improved Cross-Selling</strong><br/>
+Data-driven identification of complementary products enables targeted cross-sell campaigns with significantly higher success rates than generic promotions.</p>
+<p><strong>Optimized Store Layout</strong><br/>
+Physical placement of associated items near each other encourages impulse purchases and improves customer convenience, increasing basket size and satisfaction.</p>
+<p><strong>Effective Promotional Strategies</strong><br/>
+Promotions on items frequently purchased together (discounting bread to drive butter sales) or strategically discounting low-lift items to boost basket totals prove more effective than random discounting.</p>
+<p><strong>Enhanced Inventory Management</strong><br/>
+Understanding product associations ensures complementary items are stocked together, prevents stockouts of popular combinations, and optimizes warehouse organization.</p>
+<p><strong>Better Customer Understanding</strong><br/>
+Purchase patterns reveal customer segments, predict future buying behavior, identify high-value customers, and inform product development aligned with actual usage patterns.</p>
+<p><strong>Personalized Customer Experience</strong><br/>
+Recommendation engines delivering relevant suggestions based on current basket improve user experience, increase conversion, and build loyalty through perceived personalization.</p>
+<p><strong>Data-Driven Merchandising</strong><br/>
+Replace intuition-based decisions with quantitative insights about what products to promote together, where to place items, and how to design bundles.</p>
+<p><strong>Competitive Advantage</strong><br/>
+Sophisticated use of purchase pattern analysis differentiates retailers, improves margins, and creates barriers to competition through superior customer understanding.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p><strong>Retail Store Layout</strong><br/>
+Groceries placing beer near chips after discovering strong association. Placing impulse items (candy, magazines) near checkout. Organizing clothing departments by outfit combinations.</p>
+<p><strong>E-commerce Recommendations</strong><br/>
+Amazon’s “frequently bought together” and “customers who bought this also bought” suggestions. Personalized homepage featuring items associated with recent purchases.</p>
+<p><strong>Product Bundling</strong><br/>
+Creating value bundles of associated items (laptop + mouse + bag). Meal kits combining frequently co-purchased ingredients. Electronics packages (camera + memory card + case).</p>
+<p><strong>Promotional Campaigns</strong><br/>
+Targeted email offers: “You bought running shoes, here’s 20% off athletic socks.” Cross-category promotions like “Buy lawn mower, save on lawn care products.”</p>
+<p><strong>Inventory Management</strong><br/>
+Ensuring associated items are stocked together. Predicting demand for complementary products based on sales of primary items. Optimizing safety stock levels.</p>
+<p><strong>Personalized Marketing</strong><br/>
+Segmenting customers by purchase patterns. Sending personalized catalogs featuring items associated with past purchases. Timing promotions based on expected reorder patterns.</p>
+<p><strong>Menu Engineering (Restaurants)</strong><br/>
+Analyzing which appetizers, entrees, and desserts are ordered together. Optimizing menu layout to highlight profitable combinations. Creating tasting menus based on popular pairings.</p>
+<p><strong>Financial Services</strong><br/>
+Banks identifying which products customers use together (checking + savings + credit card). Insurance companies bundling frequently purchased coverage types.</p>
+<p><strong>Healthcare and Pharmaceuticals</strong><br/>
+Analyzing which medications are prescribed together. Understanding treatment regimens. Identifying potential drug interactions.</p>
+<p><strong>Content Recommendations</strong><br/>
+Streaming services suggesting movies based on viewing patterns. News sites recommending articles based on reading behavior. Music platforms creating playlists.</p>
+<h2 id="analysis-techniques-comparison">Analysis Techniques Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Technique</th>
+<th>Best For</th>
+<th>Strengths</th>
+<th>Computational Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Apriori Algorithm</strong></td>
+<td>Small-medium datasets</td>
+<td>Simple, interpretable</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>FP-Growth</strong></td>
+<td>Large datasets</td>
+<td>Fast, scalable</td>
+<td>Medium-High</td>
+</tr>
+<tr>
+<td><strong>Eclat</strong></td>
+<td>Vertical data format</td>
+<td>Efficient for long transactions</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>Collaborative Filtering</strong></td>
+<td>Personalization</td>
+<td>Handles sparse data well</td>
+<td>High</td>
+</tr>
+<tr>
+<td><strong>Deep Learning</strong></td>
+<td>Complex patterns, large scale</td>
+<td>Captures non-linear relationships</td>
+<td>Very High</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p><strong>Large Transaction Volumes</strong><br/>
+Processing millions of transactions with thousands of products creates computational challenges. Efficient algorithms and distributed computing often necessary.</p>
+<p><strong>Rare but Important Items</strong><br/>
+High-value, low-frequency items may be filtered out by minimum support thresholds but represent significant revenue opportunities. Separate analysis strategies may be needed.</p>
+<p><strong>Spurious Correlations</strong><br/>
+Statistical significance doesn’t guarantee causation or actionability. Some discovered associations may be coincidental or already well-known, offering little business value.</p>
+<p><strong>Temporal Patterns</strong><br/>
+Purchase associations change over time—seasonal variations, trend shifts, product lifecycle stages. Analysis must account for temporal dynamics.</p>
+<p><strong>Customer Heterogeneity</strong><br/>
+Different customer segments exhibit different purchase patterns. Aggregate analysis may obscure valuable segment-specific associations.</p>
+<p><strong>Implementation Complexity</strong><br/>
+Translating analytical insights into operational changes (store layouts, inventory systems, recommendation engines) requires cross-functional coordination and technical integration.</p>
+<p><strong>Privacy Concerns</strong><br/>
+Detailed analysis of individual purchase patterns raises privacy considerations, particularly when combined with customer identity. <a data-lb="1" href="/en/glossary/gdpr/" title="GDPR glossary entry">GDPR</a> and other regulations impose constraints.</p>
+<p><strong>Dynamic Catalogs</strong><br/>
+New products, discontinued items, and constantly changing inventory complicate analysis. Models must adapt to evolving product portfolios.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p><strong>Define Clear Objectives</strong><br/>
+Specify what analysis should achieve—improve store layout, power recommendations, optimize promotions. Tailor methodology to objectives.</p>
+<p><strong>Ensure Data Quality</strong><br/>
+Clean, accurate transaction data is foundational. Address duplicate entries, returns, test transactions, and product identifier inconsistencies.</p>
+<p><strong>Set Appropriate Thresholds</strong><br/>
+Minimum support, confidence, and lift thresholds affect rule quantity and quality. Balance between too many spurious rules and too few actionable insights.</p>
+<p><strong>Segment Analysis</strong><br/>
+Perform separate analyses for different customer segments, store locations, seasons, or product categories to uncover segment-specific patterns.</p>
+<p><strong>Validate Insights</strong><br/>
+Test discovered associations for business relevance and causality. Not all statistical associations represent actionable opportunities.</p>
+<p><strong>Start with High-Impact Areas</strong><br/>
+Focus initial implementation on areas with clear ROI—e-commerce recommendations, high-traffic product placements, top-selling product bundles.</p>
+<p><strong>Integrate with Business Processes</strong><br/>
+Connect analytical insights to operational systems—inventory management, promotional planning, e-commerce platforms, CRM systems.</p>
+<p><strong>Monitor and Iterate</strong><br/>
+Track performance of implemented strategies. Continuously refine analysis and actions based on results. Purchase patterns evolve; analysis must adapt.</p>
+<p><strong>Consider Context</strong><br/>
+Supplement transactional analysis with external context—promotions, seasonality, competitive actions, economic conditions—to interpret patterns accurately.</p>
+<p><strong>Combine with Other Analytics</strong><br/>
+Integrate market basket insights with customer segmentation, lifetime value analysis, churn prediction for comprehensive customer understanding.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p><strong>Sequential Pattern Mining</strong><br/>
+Analyzes order of purchases over time rather than co-occurrence in single transaction. Discovers patterns like “customers who buy X typically buy Y three weeks later.”</p>
+<p><strong>Hierarchical Association Rules</strong><br/>
+Works with product category hierarchies, discovering associations at multiple levels of abstraction (brand level, product type level, category level).</p>
+<p><strong>Multi-Dimensional Analysis</strong><br/>
+Incorporates additional dimensions beyond just products—time, location, customer demographics, creating conditional rules like “millennials in urban areas buying X also buy Y.”</p>
+<p><strong>Negative Association Rules</strong><br/>
+Identifies substitution effects where purchasing one item decreases likelihood of purchasing another, informing competitive product strategies.</p>
+<p><strong>Network Analysis</strong><br/>
+Represents products as network nodes with associations as edges, visualizing product ecosystems and identifying central products with many strong associations.</p>
+<p><strong>Deep Learning Embeddings</strong><br/>
+<a data-lb="1" href="/en/glossary/neural-networks/" title="Neural Networks glossary entry">Neural networks</a> learning dense vector representations of products capturing complex, non-linear relationships for sophisticated recommendation systems.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p><strong>Real-Time Analysis</strong><br/>
+Moving from batch analysis to streaming analytics enabling dynamic, real-time recommendations and immediate response to emerging purchase patterns.</p>
+<p><strong>AI-Powered Prescriptive Analytics</strong><br/>
+Beyond descriptive patterns to prescriptive recommendations—AI suggesting optimal actions (promotions, placements, bundles) predicted to maximize outcomes.</p>
+<p><strong>Cross-Channel Integration</strong><br/>
+Analyzing purchase patterns across online, mobile, and physical channels for unified understanding of omnichannel customer behavior.</p>
+<p><strong>Causal Inference</strong><br/>
+Advanced statistical methods distinguishing correlation from causation, understanding why associations exist, and predicting how interventions affect purchase behavior.</p>
+<p><strong>Personalized Basket Analysis</strong><br/>
+Individual-level analysis creating unique purchase pattern models for each customer enabling hyper-personalized recommendations and marketing.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-market-basket-analysis/" rel="nofollow noopener noreferrer" target="_blank">Microsoft: Market Basket Analysis</a></li>
+<li><a href="https://www.ibm.com/topics/association-rules" rel="nofollow noopener noreferrer" target="_blank">IBM: Association Rule Mining</a></li>
+<li><a href="https://hbr.org/1993/01/customer-intimacy-and-other-value-disciplines" rel="nofollow noopener noreferrer" target="_blank">Harvard Business Review: The Discipline of Market Leaders</a></li>
+<li><a href="http://www.mmds.org/" rel="nofollow noopener noreferrer" target="_blank">Stanford: Mining of Massive Datasets - Association Rules</a></li>
+<li><a href="https://towardsdatascience.com/a-gentle-introduction-on-market-basket-analysis-association-rules-fa4b986a40ce" rel="nofollow noopener noreferrer" target="_blank">Towards Data Science: Market Basket Analysis Guide</a></li>
+<li><a href="https://www.sas.com/en_us/insights/analytics/market-basket-analysis.html" rel="nofollow noopener noreferrer" target="_blank">SAS: Market Basket Analysis</a></li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/cross-sell/">
+                    Cross-Sell
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A sales technique that offers customers additional products or services that complement what they're...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/cross-sell/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/decision-tree/">
+                    Decision Tree
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A machine learning algorithm that makes predictions by asking a series of yes-or-no questions about ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/decision-tree/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/knowledge-analytics/">
+                    Knowledge Analytics
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Knowledge Analytics is a method that combines <a data-lb="1" href="/en/glossary/data-science/" title="Data Science glossary entry">data science</a> and AI to extract useful insights from la...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/knowledge-analytics/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/retail-demand-forecasting/">
+                    Retail Demand Forecasting
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A method retailers use to predict future customer purchases by analyzing sales history, trends, and ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/retail-demand-forecasting/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/upsell/">
+                    Upsell
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A sales technique where businesses encourage existing customers to buy a higher-value or premium ver...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/upsell/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/cosine-similarity/">
+                    Cosine Similarity
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A metric that measures how similar two sets of data are by comparing their direction rather than siz...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/cosine-similarity/">
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/market-basket-analysis/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190821"></script>
+</body>
+</html>

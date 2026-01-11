@@ -1,0 +1,57 @@
+keywords:
+  - keyword: AIシステム
+    url: /ja/glossary/artificial-intelligence/
+    exact: false
+    priority: 5
+    title: 人工知能(AI) の用語集ページ
+  - keyword: AI システム
+    url: /ja/glossary/artificial-intelligence/
+    exact: false
+    priority: 5
+    title: 人工知能(AI) の用語集ページ
+  - keyword: AI system
+    url: /ja/glossary/artificial-intelligence/
+    exact: false
+    priority: 5
+    title: 人工知能(AI) の用語集ページ
+  - keyword: AI systems
+    url: /ja/glossary/artificial-intelligence/
+    exact: false
+    priority: 5
+    title: 人工知能(AI) の用語集ページ
+  - keyword: 大規模言語モデル
+    url: /ja/glossary/large-language-models/
+    exact: false
+    priority: 5
+    title: 大規模言語モデル(LLM) の用語集ページ
+  - keyword: 汎用人工知能
+    url: /ja/glossary/agi/
+    exact: false
+    priority: 5
+    title: AGI の用語集ページ
+  - keyword: プロンプトインジェクション
+    url: /ja/glossary/prompt-injection/
+    exact: false
+    priority: 5
+    title: プロンプトインジェクション の用語集ページ
+
+  - keyword: OpenAI
+    url: /ja/glossary/openai/
+    exact: false
+    priority: 5
+    title: OpenAI の用語集ページ
+  - keyword: Google
+    url: /ja/glossary/google/
+    exact: false
+    priority: 5
+    title: Google の用語集ページ
+  - keyword: Anthropic
+    url: /ja/glossary/anthropic/
+    exact: false
+    priority: 5
+    title: Anthropic の用語集ページ
+  - keyword: Meta
+    url: /ja/glossary/meta/
+    exact: false
+    priority: 5
+    title: Meta の用語集ページ

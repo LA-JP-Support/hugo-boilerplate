@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>技術的負債 | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/technical-debt/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/technical-debt/" hreflang="en" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/technical-debt/" hreflang="ja" rel="alternate"/>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/glossary/technical-debt/" hreflang="x-default" rel="alternate"/>
+<meta content="技術的負債とは、堅牢なアプローチではなく短期的な解決策を選択した際に発生する、将来的な作り直しに伴う潜在的なコストを指します。ソフトウェア開発やAIシステムにおいて、メンテナンス、複雑性、修復にかかるコストの増加につながります。" name="description"/>
+<meta content="技術的負債, ソフトウェア開発, AIインフラストラクチャ, コード品質, リファクタリング" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/technical-debt/" property="og:url"/>
+<meta content="技術的負債 | SmartWeb" property="og:title"/>
+<meta content="技術的負債とは、堅牢なアプローチではなく短期的な解決策を選択した際に発生する、将来的な作り直しに伴う潜在的なコストを指します。ソフトウェア開発やAIシステムにおいて、メンテナンス、複雑性、修復にかかるコストの増加につながります。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/technical-debt/" name="twitter:url"/>
+<meta content="技術的負債 | SmartWeb" name="twitter:title"/>
+<meta content="技術的負債とは、堅牢なアプローチではなく短期的な解決策を選択した際に発生する、将来的な作り直しに伴う潜在的なコストを指します。ソフトウェア開発やAIシステムにおいて、メンテナンス、複雑性、修復にかかるコストの増加につながります。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111190816" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111190816" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111190816"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768126096741115000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768126096741115000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768126096741115000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768126096741115000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">技術的負債</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Infrastructure &amp; Deployment
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        技術的負債
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Technical Debt
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          技術的負債とは、堅牢なアプローチではなく短期的な解決策を選択した際に発生する、将来的な作り直しに伴う潜在的なコストを指します。ソフトウェア開発やAIシステムにおいて、メンテナンス、複雑性、修復にかかるコストの増加につながります。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                技術的負債
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ソフトウェア開発
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AIインフラストラクチャ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                コード品質
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                リファクタリング
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="技術的負債とは">技術的負債とは?</h2>
+<p>技術的負債とは、ソフトウェアシステムに変更を加える際に必要となる追加のコストと労力のことで、チームがより堅牢で保守性の高いアプローチを実装する代わりに、手っ取り早い短期的な解決策を選択した際に発生します。この用語は金融上の負債に例えられています。迅速な解決策は即座に価値を提供しますが、時間の経過とともに保守、複雑性、将来の修復コストの増加という形で「利息」が発生します。</p>
+<p>この用語を生み出したWard Cunninghamは、「後でより多くの作業を行う代償として今すぐ速く進むこと」から生じるコストと説明しました。技術的負債はコードに限定されず、アーキテクチャ、ドキュメント、インフラストラクチャ、テスト、プロセスなど、ソフトウェアシステムのあらゆる側面を包含します。</p>
+<p><strong>例:</strong> データベース接続文字列をハードコーディングすると迅速なデプロイが可能になりますが、将来の変更には複数の場所で手動編集が必要となり、リスクと保守のオーバーヘッドが増加します。</p>
+<p>技術的負債は、ビジネス上の優先事項のために意識的に管理される場合は戦略的ですが、可視性や修復なしに蓄積されると問題となります。</p>
+<h2 id="技術的負債が発生する理由">技術的負債が発生する理由</h2>
+<p><strong>厳しい納期:</strong> チームは配信速度を優先し、近道を取ったりリファクタリングを省略したりする</p>
+<p><strong>要件の変更:</strong> スコープの変更により以前の解決策が最適でなくなり、回避策やパッチが必要になる</p>
+<p><strong>スキルギャップ:</strong> ベストプラクティスに不慣れな開発者が、非効率的で拡張性がなく、エラーが発生しやすいコードを導入する可能性がある</p>
+<p><strong>リソースの制約:</strong> 限られた予算、人員、時間により、品質と持続可能性のトレードオフを余儀なくされる</p>
+<p><strong>コミュニケーション不足:</strong> ステークホルダー間の不整合が誤解、手戻り、重複作業につながる</p>
+<p><strong>レガシーシステム:</strong> 古いシステムの保守は、時代遅れの基盤の上に新しい機能を重ねることを意味することが多い</p>
+<p><strong>ドキュメントの欠如:</strong> 不十分なドキュメントはオンボーディング時間を増加させ、偶発的なエラーのリスクを高める</p>
+<p><strong>実例:</strong> スタートアップが市場参入のために最小限の実用可能な製品(MVP)を迅速に開発します。時間を節約するため、自動テストとコードレビューをスキップします。コードベースが成長するにつれて、テストインフラストラクチャの欠如が繰り返しバグを引き起こし、新機能の追加を遅らせます。これは技術的負債が螺旋状に増大する典型的なケースです。</p>
+<h2 id="技術的負債の種類">技術的負債の種類</h2>
+<h3 id="意図と認識による分類martin-fowlerの技術的負債の4象限">意図と認識による分類(Martin Fowlerの技術的負債の4象限)</h3>
+<p><strong>意図的な負債:</strong> ビジネス目標を達成するために意図的に発生させ、修復計画を持つ</p>
+<p><strong>偶発的(不注意による)負債:</strong> 間違い、経験不足、予期しない結果から生じる</p>
+<p><strong>無謀な負債:</strong> 品質や将来への影響を無視して取られた近道</p>
+<p><strong>慎重な負債:</strong> よく理解されたトレードオフで、意識的に管理される</p>
+<h3 id="起源または領域による分類">起源または領域による分類</h3>
+<p><strong>アーキテクチャ負債:</strong> 拡張性、保守性、柔軟性を妨げるシステム構造の欠陥(例:モジュール化されたサービスではなく、密結合なモノリシックシステム)</p>
+<p><strong>コード負債:</strong> 不適切なコーディング慣行、一貫性のないスタイル、重複したロジック、標準への不遵守(例:再利用可能な関数の代わりに繰り返されるコードブロック)</p>
+<p><strong>設計負債:</strong> 不適切な継承やカプセル化の欠如など、設計原則の違反</p>
+<p><strong>欠陥負債:</strong> 将来の解決のために延期された既知のバグや問題</p>
+<p><strong>ドキュメント負債:</strong> 欠落、古い、または不十分な技術ドキュメント</p>
+<p><strong>ビルド負債:</strong> 非効率的、信頼性が低い、または手動のビルドおよびデプロイプロセス</p>
+<p><strong>インフラストラクチャ負債:</strong> 古いサーバー、スクリプト、または構成</p>
+<p><strong>プロセス負債:</strong> 非効率的なワークフロー、自動化の欠如、または不明確なプロセス</p>
+<p><strong>人材負債:</strong> 不十分なトレーニング、知識のサイロ化、または不十分なオンボーディング</p>
+<p><strong>要件負債:</strong> 不完全、不明確、または部分的に実装された要件</p>
+<p><strong>セキュリティ負債:</strong> 無視または延期されたセキュリティのベストプラクティスと脆弱性パッチ</p>
+<p><strong>テスト負債:</strong> 自動化または包括的なテストの欠如</p>
+<p><strong>テスト自動化負債:</strong> 拡張性と信頼性のために自動化すべき手動テスト</p>
+<p><strong>データ負債:</strong> 不適切なデータモデル、レガシースキーマ、またはデータガバナンスの欠如</p>
+<h2 id="技術的負債の使用方法コンテキストとユースケース">技術的負債の使用方法(コンテキストとユースケース)</h2>
+<p><strong>ソフトウェア開発:</strong> Jiraなどのツールを使用して、機能開発やバグ修正と並行して負債項目を追跡する</p>
+<p><strong>プロジェクト管理:</strong> プロダクトオーナーが計画時に負債修復と新機能のコスト/ベネフィットを比較検討する</p>
+<p><strong>DevOpsとインフラストラクチャ:</strong> チームが自動化、リファクタリング、デプロイパイプラインの更新を行い、将来の負債を最小限に抑える</p>
+<p><strong>AIインフラストラクチャとデプロイ:</strong> 機械学習システムは隠れた技術的負債の影響を受けやすいため、特別な注意が必要</p>
+<h3 id="ユースケースの例">ユースケースの例</h3>
+<p><strong>スプリント計画:</strong> リファクタリングと負債対応のためにスプリント容量(例:20%)を割り当てる</p>
+<p><strong>セキュリティ監査:</strong> 古いライブラリと脆弱性をセキュリティ負債として記録し、優先順位を付ける</p>
+<p><strong>オンボーディング:</strong> ドキュメント負債を削減し、新しい開発者の立ち上がりを加速する</p>
+<p><strong>AIワークロード:</strong> データパイプラインのモジュール化と自動化に投資し、インフラストラクチャとプロセスの負債に対処する</p>
+<h2 id="技術的負債の影響">技術的負債の影響</h2>
+<p><strong>開発速度の低下:</strong> コードベースの複雑性が増すにつれて機能追加が遅くなる</p>
+<p><strong>保守コストの増加:</strong> イノベーションではなく、問題の修正と回避策により多くのリソースが費やされる</p>
+<p><strong>ソフトウェア品質の低下:</strong> 蓄積された近道がより多くのバグと信頼性の問題につながる</p>
+<p><strong>拡張性の低下:</strong> システムが変化するニーズに拡張または適応することが困難になる</p>
+<p><strong>セキュリティ脆弱性:</strong> 古いコンポーネントと無視された制御により、攻撃への露出が増加する</p>
+<p><strong>リソースの消耗:</strong> ITの予算とエンジニアリング時間の最大20〜33%が技術的負債によって消費される</p>
+<p><strong>ビジネスリスク:</strong> 遅延、機会損失、コンプライアンス違反、評判の損害</p>
+<p><strong>チームの士気:</strong> 繰り返される消火活動が燃え尽き症候群と離職につながる</p>
+<h2 id="技術的負債の特定方法">技術的負債の特定方法</h2>
+<p><strong>コードレビュー:</strong> 近道、複雑性、欠落したテストを明らかにする</p>
+<p><strong>自動コード分析:</strong> SonarQubeやCodeClimateなどのツールがコードの臭い、重複、複雑性にフラグを立てる</p>
+<p><strong>開発者のフィードバック:</strong> 特定のモジュールに関する繰り返しの苦情は負債のホットスポットを示す</p>
+<p><strong>課題追跡:</strong> 同じ領域での頻繁なバグレポート</p>
+<p><strong>パフォーマンス監視:</strong> リソースのスパイクや応答時間の低下を特定する</p>
+<p><strong>ユーザーフィードバック:</strong> パフォーマンスや信頼性の低下に関するレポートは隠れた負債を示す可能性がある</p>
+<h2 id="技術的負債の測定方法">技術的負債の測定方法</h2>
+<h3 id="技術的負債比率tdr">技術的負債比率(TDR)</h3>
+<p>修復コストと開発コストの比率:</p>
+<ul>
+<li>TDR = (コードベースの修正コスト) / (コードベースの構築コスト)</li>
+</ul>
+<h3 id="sqale法">SQALE法</h3>
+<p>修復コストとビジネスへの影響を見積もるフレームワークで、負債を開発者時間または金銭的価値で表現する。</p>
+<h3 id="gartner法">Gartner法</h3>
+<p>リスク、ビジネスへの影響、可能性、修復コストによって負債項目を評価する。</p>
+<h3 id="その他の指標">その他の指標</h3>
+<p><strong>コードの複雑性:</strong> 高い循環的複雑度や結合度は負債を示す</p>
+<p><strong>バグ解決時間:</strong> 特定のモジュールでの修正時間の長さ</p>
+<p><strong>レガシーコードの割合:</strong> テストされていない、またはサポートされていないコードの比率</p>
+<p><strong>未解決の負債項目:</strong> 記録された負債タスクの数と重大度</p>
+<h2 id="技術的負債の管理と削減方法">技術的負債の管理と削減方法</h2>
+<p><strong>1. 負債を認識し定義する</strong><br/>
+すべてのステークホルダーが技術的負債を構成するものを理解するようにする。</p>
+<p><strong>2. 負債を可視化する</strong><br/>
+通常の開発作業と並行して負債を追跡する。</p>
+<p><strong>3. 修復の優先順位を付ける</strong><br/>
+リスクとコストのフレームワーク(例:SQALE、Gartner)を使用して優先順位を付ける。</p>
+<p><strong>4. 修復を統合する</strong><br/>
+負債削減のために専用のスプリント容量を割り当てる。</p>
+<p><strong>5. テストと検証を自動化する</strong><br/>
+CI/CDパイプラインと自動テストを実装する。</p>
+<p><strong>6. 段階的にリファクタリングする</strong><br/>
+大きな項目を分解し、影響の大きい領域に焦点を当てる。</p>
+<p><strong>7. チームを教育する</strong><br/>
+開発者とプロダクトオーナーに長期的なコストとリスクについてトレーニングする。</p>
+<p><strong>8. 進捗を監視する</strong><br/>
+負債削減を追跡し報告する。</p>
+<p><strong>9. 新しい負債を防ぐ</strong><br/>
+標準、ピアレビュー、自動化を実施する。</p>
+<h2 id="実践における技術的負債の例">実践における技術的負債の例</h2>
+<p><strong>ハードコーディングされた値:</strong> コードに埋め込まれた認証情報により、環境変更が複雑になる</p>
+<p><strong>スキップされたエラー処理:</strong> 急いでリリースされたものには堅牢なエラー処理が欠けており、クラッシュを引き起こす</p>
+<p><strong>密結合されたコンポーネント:</strong> 相互依存するレガシー機能が独立した更新を妨げる</p>
+<p><strong>古い依存関係:</strong> パッチが適用されていないライブラリがセキュリティと保守のリスクをもたらす</p>
+<p><strong>手動デプロイ:</strong> スクリプトに手動介入が必要で、配信が遅くなりエラー率が増加する</p>
+<h2 id="aiインフラストラクチャとデプロイにおける技術的負債">AIインフラストラクチャとデプロイにおける技術的負債</h2>
+<p><a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>と<a data-lb="1" href="/ja/glossary/artificial-intelligence/" title="人工知能(AI) の用語集ページ">AIシステム</a>は、迅速なプロトタイピングと実験的な開発により、特に隠れた技術的負債の影響を受けやすくなっています。</p>
+<p><strong>境界の侵食:</strong> MLモデルがモジュール性を侵食し、厳密な抽象化境界を維持することが困難になる</p>
+<p><strong>もつれ:</strong> モデルの特徴とデータの依存関係が密結合になり、「何かを変更するとすべてが変更される」(CACE原則)</p>
+<p><strong>修正カスケード:</strong> モデルや修正レイヤーを積み重ねることでシステムの複雑性と相互依存性が増加する</p>
+<p><strong>宣言されていない消費者:</strong> 下流システムがMLの出力に暗黙的に依存し、保守リスクが増加する</p>
+<p><strong>データ依存性:</strong> データパイプラインやトレーニングデータの変更がモデルを静かに破壊する可能性がある</p>
+<p><strong>構成と外部ドリフト:</strong> 外部世界が変化したり構成が一貫していない場合、モデルの動作が変わる可能性がある</p>
+<h3 id="特定のaimlの例">特定のAI/MLの例</h3>
+<ul>
+<li>プロトタイプの研究コードがモジュール化やテストなしに本番環境にデプロイされる</li>
+<li>データパイプラインが手動または脆弱で、一貫性のない結果と再現性の問題につながる</li>
+<li>モデルとデータのバージョン管理の欠如が更新と監査を複雑にする</li>
+<li>モデルが古いインフラストラクチャ上で実行され、拡張性と保守を妨げる</li>
+</ul>
+<h2 id="技術的負債を管理するためのツールとテンプレート">技術的負債を管理するためのツールとテンプレート</h2>
+<p><strong>Jira:</strong> 機能やバグと並行して負債を追跡し優先順位を付ける</p>
+<p><strong>Ardoq:</strong> ポートフォリオ全体で負債を可視化し定量化する</p>
+<p><strong>SonarQube:</strong> 自動化されたコード品質と負債分析</p>
+<p><strong>SQALE法:</strong> 負債の定量化とレポートのためのフレームワーク</p>
+<p><strong>AWS Transform Custom:</strong> 大規模なコードとインフラストラクチャの近代化を自動化</p>
+<h2 id="よくある質問faq">よくある質問(FAQ)</h2>
+<p><strong>技術的負債とバグの違いは何ですか?</strong><br/>
+技術的負債は近道や妥協の累積的な影響であり、バグは誤った動作を引き起こす欠陥です。一部のバグは技術的負債によって引き起こされますが、すべての負債がバグというわけではありません。</p>
+<p><strong>技術的負債は常に悪いものですか?</strong><br/>
+いいえ。戦略的な技術的負債は、コストが螺旋状に増大する前に管理され修復される場合、ビジネスの俊敏性を可能にします。</p>
+<p><strong>技術的負債の責任は誰にありますか?</strong><br/>
+責任は開発者、マネージャー、ビジネスステークホルダー間で共有されます。開発者は多くの場合特定と修復を行い、プロダクトオーナーが優先順位を付けます。</p>
+<p><strong>技術的負債はどのように防ぐことができますか?</strong><br/>
+現実的な期限を設定し、コードレビューを実施し、テストを自動化し、長期的なコードの健全性を重視する文化を育成します。</p>
+<p><strong>技術的負債をどのように測定しますか?</strong><br/>
+定性的(レビュー、フィードバック)と定量的(メトリクス、SQALE、TDR)な方法を組み合わせ、未解決項目、修復コスト、ビジネスリスクを追跡します。</p>
+<p><strong>AIは技術的負債の管理に役立ちますか?</strong><br/>
+はい。AIツールはコードの臭いを特定し、コードの近代化を自動化し、リファクタリングを提案できますが、常に人間の監視が必要です。</p>
+<p><strong>技術的負債の文脈における「コードの臭い」とは何ですか?</strong><br/>
+ソースコードの症状(例:重複コード、長いメソッド、過度の結合)で、より深い問題を示し、しばしば技術的負債につながります。</p>
+<h2 id="重要なポイント">重要なポイント</h2>
+<ul>
+<li>技術的負債は、便宜的な決定によって生じる将来の作業のコストを反映する</li>
+<li>意図的なトレードオフと偶発的な間違いの両方から生じる</li>
+<li>負債は種類(アーキテクチャ、コード、プロセス、セキュリティ)と意図(意図的/慎重 vs. 無謀/偶発的)によって分類できる</li>
+<li>管理されていない負債は開発を遅らせ、リスクを増加させ、リソースを消耗させる</li>
+<li>特定と測定はコードレビュー、メトリクス、専門ツールに依存する</li>
+<li>管理には可視性、優先順位付け、ワークフローへの統合、文化的整合性が必要</li>
+<li>AI/MLシステムは迅速なプロトタイピングと複雑な依存関係により特に影響を受けやすい</li>
+<li>プロジェクト管理、コード品質、自動化ツールを使用して技術的負債を定量化し制御する</li>
+</ul>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li><a href="https://www.atlassian.com/agile/software-development/technical-debt" rel="nofollow noopener noreferrer" target="_blank">Atlassian: What is Tech Debt?</a></li>
+<li><a href="https://www.ibm.com/think/topics/technical-debt" rel="nofollow noopener noreferrer" target="_blank">IBM: What is Technical Debt?</a></li>
+<li><a href="https://www.ardoq.com/knowledge-hub/technical-debt" rel="nofollow noopener noreferrer" target="_blank">Ardoq: An Introduction to Tech Debt</a></li>
+<li><a href="https://martinfowler.com/bliki/TechnicalDebtQuadrant.html" rel="nofollow noopener noreferrer" target="_blank">Martin Fowler: Technical Debt Quadrant</a></li>
+<li><a href="https://wiki.c2.com/?WardExplainsDebtMetaphor" rel="nofollow noopener noreferrer" target="_blank">Ward Cunningham Explains Debt Metaphor</a></li>
+<li><a href="https://www.softwareimprovementgroup.com/five-types-of-technical-debt-that-are-often-overlooked/" rel="nofollow noopener noreferrer" target="_blank">SIG: Five Types of Technical Debt</a></li>
+<li><a href="https://papers.neurips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf" rel="nofollow noopener noreferrer" target="_blank">NeurIPS: Hidden Technical Debt in Machine Learning Systems (PDF)</a></li>
+<li><a href="http://www.sqale.org/wp-content/uploads/2016/08/SQALE-Method-EN-V1-1.pdf" rel="nofollow noopener noreferrer" target="_blank">SQALE Technical Debt Framework (PDF)</a></li>
+<li><a href="https://aws.amazon.com/transform/custom" rel="nofollow noopener noreferrer" target="_blank">AWS Transform Custom for Code Modernization</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Technical_debt" rel="nofollow noopener noreferrer" target="_blank">Wikipedia: Technical Debt</a></li>
+<li><a href="https://www.productplan.com/glossary/technical-debt/" rel="nofollow noopener noreferrer" target="_blank">ProductPlan: Technical Debt</a></li>
+<li><a href="https://www.mendix.com/blog/what-is-technical-debt/" rel="nofollow noopener noreferrer" target="_blank">Mendix: What is Technical Debt?</a></li>
+<li><a href="https://www.forbes.com/sites/forbestechcouncil/2022/08/10/measuring-and-managing-technical-debt/?sh=34d418472c23" rel="nofollow noopener noreferrer" target="_blank">Forbes: Measuring and Managing Technical Debt</a></li>
+<li><a href="https://aws.amazon.com/blogs/aws/introducing-aws-transform-custom-crush-tech-debt-with-ai-powered-code-modernization/" rel="nofollow noopener noreferrer" target="_blank">AWS Blog: Introducing AWS Transform Custom</a></li>
+<li><a href="https://circleci.com/blog/manage-and-measure-technical-debt/" rel="nofollow noopener noreferrer" target="_blank">CircleCI: Manage and Measure Technical Debt</a></li>
+<li><a href="https://www.opslevel.com/resources/how-to-measure-technical-debt-a-step-by-step-introduction" rel="nofollow noopener noreferrer" target="_blank">OpsLevel: How to Measure Technical Debt</a></li>
+<li><a href="https://vfunction.com/blog/how-to-measure-technical-debt/" rel="nofollow noopener noreferrer" target="_blank">vFunction: How to Measure Technical Debt</a></li>
+<li><a href="https://www.researchgate.net/publication/286010286_Towards_an_Ontology_of_Terms_on_Technical_Debt" rel="nofollow noopener noreferrer" target="_blank">ResearchGate: Towards an Ontology of Terms on Technical Debt</a></li>
+<li><a href="https://www.atlassian.com/software/jira/templates" rel="nofollow noopener noreferrer" target="_blank">Atlassian: Jira Templates</a></li>
+<li><a href="https://www.atlassian.com/software/jira" rel="nofollow noopener noreferrer" target="_blank">Atlassian: Jira Software</a></li>
+<li><a href="https://www.sonarqube.org/" rel="nofollow noopener noreferrer" target="_blank">SonarQube</a></li>
+<li><a href="https://codeclimate.com/" rel="nofollow noopener noreferrer" target="_blank">CodeClimate</a></li>
+<li><a href="http://www.sqale.org/" rel="nofollow noopener noreferrer" target="_blank">SQALE Method</a></li>
+<li><a href="https://www.atlassian.com/agile/software-development" rel="nofollow noopener noreferrer" target="_blank">Atlassian: Agile Software Development</a></li>
+<li><a href="https://www.atlassian.com/agile/project-management" rel="nofollow noopener noreferrer" target="_blank">Atlassian: Agile Project Management</a></li>
+<li><a href="https://www.ibm.com/think/topics/artificial-intelligence" rel="nofollow noopener noreferrer" target="_blank">IBM Think: Artificial Intelligence</a></li>
+<li><a href="https://www.ibm.com/think/topics/devops" rel="nofollow noopener noreferrer" target="_blank">IBM Think: DevOps</a></li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/finops-for-ai/">
+                    AI向けFinOps
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI向けFinOpsは、財務管理、クラウド運用、AIインフラストラクチャガバナンスを統合し、AIリソースの財務パフォーマンスを最適化および管理する規律です。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/finops-for-ai/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/latency/">
+                    レイテンシ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    レイテンシとは、リクエストとシステムの応答との間の時間遅延のことで、AIインフラストラクチャ、Webアプリケーション、リアルタイムシステムにおいて重要な要素です。その種類、原因、削減戦略について解説し...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/latency/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/cloud-computing/">
+                    クラウドコンピューティング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    クラウドコンピューティングを探る:オンデマンドITリソース、サービスモデル(IaaS、PaaS、SaaS)、デプロイメントオプション(パブリック、プライベート、ハイブリッド)、そしてAIインフラストラ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/cloud-computing/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/sandbox-mode/">
+                    サンドボックスモード
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    コード、フロー、またはソフトウェアを本番システムに影響を与えることなく安全に実行するための、隔離された使い捨てのテスト環境。開発、セキュリティ、品質保証に最適です。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/sandbox-mode/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/batch-processing/">
+                    バッチ処理
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    バッチ処理は、大量のデータを収集し、設定された期間ごとにグループ単位で処理するデータアプローチです。高スループットのAI、分析、ビジネスオペレーションに最適です。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/batch-processing/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/user-story/">
+                    ユーザーストーリー
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    アジャイル開発におけるユーザーストーリーの包括的ガイド - 定義、メリット、実装のベストプラクティス、およびチーム向けの高度なテクニック。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/user-story/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/technical-debt/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111190816"></script>
+</body>
+</html>

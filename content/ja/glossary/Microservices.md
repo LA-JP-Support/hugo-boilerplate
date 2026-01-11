@@ -15,7 +15,9 @@ type: glossary
 draft: false
 e-title: 'Microservices Architecture: Comprehensive'
 term: まいくろさーびすあーきてくちゃ ほうかつてきがいど
-url: "/ja/glossary/Microservices/"
+url: "/ja/glossary/microservices/"
+aliases:
+- "/ja/glossary/Microservices/"
 ---
 ## マイクロサービスアーキテクチャとは?
 
@@ -55,7 +57,9 @@ url: "/ja/glossary/Microservices/"
 
 ### コマンドとクエリ
 
-**コマンド:**データまたは状態を変更する操作で、通常は副作用を伴います。**クエリ:**副作用なしにデータを取得する操作で、読み取り専用のセマンティクスに従います。
+**コマンド:** データまたは状態を変更する操作で、通常は副作用を伴います。
+
+**クエリ:** 副作用なしにデータを取得する操作で、読み取り専用のセマンティクスに従います。
 
 ### コンテナ
 
@@ -171,22 +175,39 @@ url: "/ja/glossary/Microservices/"
 
 ## アーキテクチャの利点
 
-**独立したデプロイ:**サービスはアプリケーション全体でリリースを調整することなく、個別にデプロイできます。**技術の柔軟性:**チームは各サービスの特定の要件に最適な技術を選択できます。**スケーラビリティ:**個々のサービスは需要に基づいて独立してスケールできます。**障害分離:**障害はアプリケーション全体をダウンさせるのではなく、サービス内に封じ込められます。**チームの自律性:**小規模なチームが完全なサービスを所有でき、速度と説明責任が向上します。**保守の容易さ:**より小さなコードベースは理解、変更、テストが容易です。
+**独立したデプロイ:** サービスはアプリケーション全体でリリースを調整することなく、個別にデプロイできます。
+
+**技術の柔軟性:** チームは各サービスの特定の要件に最適な技術を選択できます。
+
+**スケーラビリティ:** 個々のサービスは需要に基づいて独立してスケールできます。
+
+**障害分離:** 障害はアプリケーション全体をダウンさせるのではなく、サービス内に封じ込められます。
+
+**チームの自律性:** 小規模なチームが完全なサービスを所有でき、速度と説明責任が向上します。
+
+**保守の容易さ:** より小さなコードベースは理解、変更、テストが容易です。
 
 ## 一般的な課題
 
-**分散システムの複雑さ:**ネットワークレイテンシ、部分的な障害、結果整合性には慎重な処理が必要です。**運用オーバーヘッド:**より多くのサービスは、より多くのデプロイパイプライン、監視、管理を意味します。**データ整合性:**サービス間で整合性を維持するには、Sagaやイベントソーシングなどのパターンが必要です。**テストの複雑さ:**複数の独立してデプロイされたサービスでは、エンドツーエンドテストがより困難になります。**ネットワークオーバーヘッド:**サービス間通信はレイテンシと潜在的な障害ポイントを導入します。
+**分散システムの複雑さ:** ネットワークレイテンシ、部分的な障害、結果整合性には慎重な処理が必要です。
+
+**運用オーバーヘッド:** より多くのサービスは、より多くのデプロイパイプライン、監視、管理を意味します。
+
+**データ整合性:** サービス間で整合性を維持するには、Sagaやイベントソーシングなどのパターンが必要です。
+
+**テストの複雑さ:** 複数の独立してデプロイされたサービスでは、エンドツーエンドテストがより困難になります。
+
+**ネットワークオーバーヘッド:** サービス間通信はレイテンシと潜在的な障害ポイントを導入します。
 
 ## 参考文献
 
-
-1. Microservices.io. (n.d.). Glossary. Microservices.io.
-2. AWS. (n.d.). Microservices Glossary. AWS Documentation.
-3. Microsoft. (n.d.). Microservices Architecture. Azure Learn.
-4. Google Cloud. (n.d.). Microservices Architecture. Google Cloud.
-5. GeeksforGeeks. (n.d.). Microservices System Design. GeeksforGeeks.
-6. Microservices.io. (n.d.). Patterns. Microservices.io.
-7. Microservices.io. (n.d.). Anti-Patterns. Microservices.io.
-8. Eventuate. (n.d.). Distributed Data Patterns. Eventuate.
-9. GeeksforGeeks. (n.d.). System Design Fundamentals. GeeksforGeeks.
-10. YouTube. (n.d.). Microservices Explained. YouTube.
+- [Microservices.io: Glossary](https://microservices.io/articles/glossary)
+- [AWS Microservices Glossary](https://docs.aws.amazon.com/whitepapers/latest/microservices-on-aws/glossary.html)
+- [Azure: Microservices Architecture](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices)
+- [Google Cloud: Microservices Architecture](https://cloud.google.com/learn/what-is-microservices-architecture)
+- [GeeksforGeeks: Microservices System Design](https://www.geeksforgeeks.org/system-design/microservices/)
+- [Microservices.io: Patterns](https://microservices.io/patterns/index.html)
+- [Microservices.io: Anti-Patterns](https://microservices.io/patterns/anti-patterns/index.html)
+- [Eventuate: Distributed Data Patterns](https://eventuate.io/)
+- [GeeksforGeeks: System Design Fundamentals](https://www.geeksforgeeks.org/system-design/get)
+- [YouTube: Microservices Explained](https://www.youtube.com/watch?v=lL_j7ilk7rc)

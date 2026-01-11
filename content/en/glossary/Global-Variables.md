@@ -1,7 +1,7 @@
 ---
 title: "Global Variables"
 translationKey: "global-variables"
-description: "A variable accessible throughout an entire program that enables data sharing across different functions and processes, persisting during program execution."
+description: "A variable that can be accessed and used from anywhere in a program or automation workflow, enabling data sharing across different functions and processes."
 keywords: ["Global Variables", "AI Chatbot", "Automation Platform", "Programming Variables", "Variable Scope"]
 category: "AI Chatbot & Automation"
 type: "glossary"
@@ -18,15 +18,21 @@ Global variables enable data sharing across modules, maintaining user session da
 
 ## Scope and Accessibility
 
-**Global Scope:**Variables defined in global scope are accessible from every function, node, or topic in the application after declaration.**Local vs Global Comparison:**-**Local variables**– Confined to function, block, or node where declared
-- **Global variables**– Accessible anywhere in code after declaration
-- **Shadowing**– Local variables with same name can shadow global variables within their scope
+**Global Scope:**  
+Variables defined in global scope are accessible from every function, node, or topic in the application after declaration.
+
+**Local vs Global Comparison:**
+
+- **Local variables** – Confined to function, block, or node where declared
+- **Global variables** – Accessible anywhere in code after declaration
+- **Shadowing** – Local variables with same name can shadow global variables within their scope
 
 ## Programming Language Examples
 
 ### Python
 
-**Defining and Accessing:**```python
+**Defining and Accessing:**
+```python
 x = "awesome"  # Global variable
 
 def myfunc():
@@ -34,7 +40,10 @@ def myfunc():
 
 myfunc()
 print("Python is " + x)
-```**Modifying Global Variables:**```python
+```
+
+**Modifying Global Variables:**
+```python
 x = "awesome"
 
 def myfunc():
@@ -49,7 +58,8 @@ The `global` keyword is necessary to modify global variables from within functio
 
 ### C Language
 
-**Declaration and Use:**```c
+**Declaration and Use:**
+```c
 #include <stdio.h>
 int x = 5; // global variable
 
@@ -58,7 +68,10 @@ int main() {
     printf("%d", x + y); // x accessible here
     return 0;
 }
-```**Multiple Function Access:**```c
+```
+
+**Multiple Function Access:**
+```c
 #include <stdio.h>
 int a, b; // global variables
 
@@ -80,87 +93,151 @@ C global variables are initialized to zero by default if not explicitly initiali
 
 ### Microsoft Copilot Studio
 
-**Creating Global Variables:**1. Create a variable in the variable panel
+**Creating Global Variables:**
+
+1. Create a variable in the variable panel
 2. Set scope to "Global (any topic can access)"
 3. Variable receives prefix (e.g., `Global.UserName`)
 4. Accessible and modifiable across all topics and automation nodes
 
-**Using Global Variables:**- Access via variable picker or type prefixed name
+**Using Global Variables:**
+
+- Access via variable picker or type prefixed name
 - Set values from user input, API calls, or query strings
 - Initialize from external sources via URL parameters
 
-**Example URL Initialization:**```
+**Example URL Initialization:**
+```
 https://web.powerva.microsoft.com/webchat/bots/12345?UserName=Ana
 ```
 
 This sets `Global.UserName` to "Ana" before session starts.
 
-**Resetting:**Use "Reset Conversation" system topic to clear all global variables, restoring initial state.
+**Resetting:**  
+Use "Reset Conversation" system topic to clear all global variables, restoring initial state.
 
 ### ServiceNow
 
-**Catalog Item Variables:**Setting variable as global makes it available across multiple workflows or catalog items.**Caution:**Improper use can cause resource usage spikes and data integrity issues through accidental overwrites.
+**Catalog Item Variables:**  
+Setting variable as global makes it available across multiple workflows or catalog items.
+
+**Caution:**  
+Improper use can cause resource usage spikes and data integrity issues through accidental overwrites.
 
 ## Lifecycle and Persistence
 
-**Lifetime:**-**Programs**– Entire runtime duration
-- **Chatbot sessions**– Duration of user session
-- **Cross-session**– Requires external storage (database)**Initialization:**-**C**– Uninitialized globals default to zero
-- **Python**– Must be assigned before use
-- **Chatbot platforms**– Initialized at conversation start or from external parameters**Persistence:**- Standard global variables reset when application/session ends
+**Lifetime:**
+
+- **Programs** – Entire runtime duration
+- **Chatbot sessions** – Duration of user session
+- **Cross-session** – Requires external storage (database)
+
+**Initialization:**
+
+- **C** – Uninitialized globals default to zero
+- **Python** – Must be assigned before use
+- **Chatbot platforms** – Initialized at conversation start or from external parameters
+
+**Persistence:**
+
+- Standard global variables reset when application/session ends
 - Cross-session persistence requires database or external storage
 - Platform-specific mechanisms for long-term data retention
 
 ## Common Use Cases
 
-**User Data Persistence:**Store user information (name, email, preferences) once and reuse across topics without repeated prompts.**Session Management:**Maintain state or session attributes throughout conversation or workflow execution.**Configuration Settings:**Hold feature flags or environment settings accessed by multiple flows or modules.**Context Sharing:**Pass data between subflows, scripts, or branches for coordinated workflows.**External Integration:**Accept initial context or session data from external systems or web applications.
+**User Data Persistence:**  
+Store user information (name, email, preferences) once and reuse across topics without repeated prompts.
+
+**Session Management:**  
+Maintain state or session attributes throughout conversation or workflow execution.
+
+**Configuration Settings:**  
+Hold feature flags or environment settings accessed by multiple flows or modules.
+
+**Context Sharing:**  
+Pass data between subflows, scripts, or branches for coordinated workflows.
+
+**External Integration:**  
+Accept initial context or session data from external systems or web applications.
 
 ## Advantages and Disadvantages
 
 ### Advantages
 
-- **Accessibility**– Access and modify from any part of application or flow
-- **Data Sharing**– Simplifies information sharing across isolated modules
-- **Reduced Redundancy**– One-time declaration avoids repeated user prompts
-- **Session Data Handling**– Ideal for session-level data in chatbots and automation
+- **Accessibility** – Access and modify from any part of application or flow
+- **Data Sharing** – Simplifies information sharing across isolated modules
+- **Reduced Redundancy** – One-time declaration avoids repeated user prompts
+- **Session Data Handling** – Ideal for session-level data in chatbots and automation
 
 ### Disadvantages
 
-- **Side Effects Risk**– Any part can modify, potentially causing unintended behaviors
-- **Debugging Complexity**– Difficult to trace changes in large codebases
-- **Naming Conflicts**– Accidental overwrites without careful naming conventions
-- **Resource Usage**– Excessive globals can increase memory consumption
-- **Concurrency Issues**– Multi-user environments may experience data inconsistency
+- **Side Effects Risk** – Any part can modify, potentially causing unintended behaviors
+- **Debugging Complexity** – Difficult to trace changes in large codebases
+- **Naming Conflicts** – Accidental overwrites without careful naming conventions
+- **Resource Usage** – Excessive globals can increase memory consumption
+- **Concurrency Issues** – Multi-user environments may experience data inconsistency
 
 ## Best Practices
 
-**Limit Use:**Use global variables sparingly. Prefer local variables for non-shared data.**Unique Naming:**Use clear, unique names with prefixes (e.g., `Global.`, `bot.`) to avoid conflicts.**Controlled Modification:**Limit places where global variables can be changed. Document all modification points.**Always Initialize:**Set default values to avoid undefined states and unexpected behavior.**Document Usage:**Clearly document which flows or modules use each global variable for maintenance.**Reset Appropriately:**Provide mechanisms to reset globals at appropriate points (session end, logout).**Security Considerations:**Avoid storing sensitive data in global variables unless properly protected with encryption.
+**Limit Use:**  
+Use global variables sparingly. Prefer local variables for non-shared data.
+
+**Unique Naming:**  
+Use clear, unique names with prefixes (e.g., `Global.`, `bot.`) to avoid conflicts.
+
+**Controlled Modification:**  
+Limit places where global variables can be changed. Document all modification points.
+
+**Always Initialize:**  
+Set default values to avoid undefined states and unexpected behavior.
+
+**Document Usage:**  
+Clearly document which flows or modules use each global variable for maintenance.
+
+**Reset Appropriately:**  
+Provide mechanisms to reset globals at appropriate points (session end, logout).
+
+**Security Considerations:**  
+Avoid storing sensitive data in global variables unless properly protected with encryption.
 
 ## Platform-Specific Features
 
 ### Microsoft Copilot Studio
 
-- **Prefix System**– `Global.` or `bot.` prefix for identification
-- **Scope Setting**– Configure via variable properties panel
-- **Session Duration**– Persists throughout user session
-- **External Initialization**– Set via URL parameters or programmatic calls
-- **Reset Topic**– "Reset Conversation" clears all global variables
+- **Prefix System** – `Global.` or `bot.` prefix for identification
+- **Scope Setting** – Configure via variable properties panel
+- **Session Duration** – Persists throughout user session
+- **External Initialization** – Set via URL parameters or programmatic calls
+- **Reset Topic** – "Reset Conversation" clears all global variables
 
 ### ServiceNow
 
-- **Cross-Workflow Access**– Global variables available across catalog tasks and flows
-- **Resource Monitoring**– Track usage to prevent resource spikes
-- **Access Control**– Implement proper permissions to prevent unauthorized modifications
+- **Cross-Workflow Access** – Global variables available across catalog tasks and flows
+- **Resource Monitoring** – Track usage to prevent resource spikes
+- **Access Control** – Implement proper permissions to prevent unauthorized modifications
 
 ## Related Concepts
 
-**Local Variables:**Confined to specific function, node, or topic scope.**Session Variables:**Persist only for session duration, often equivalent to globals in chatbot contexts.**Environment Variables:**System or environment-level settings, typically for configuration.**Constants:**Variables with unchangeable values, often implemented as globals.**State Management:**Techniques for managing application state using both local and global variables.
+**Local Variables:**  
+Confined to specific function, node, or topic scope.
+
+**Session Variables:**  
+Persist only for session duration, often equivalent to globals in chatbot contexts.
+
+**Environment Variables:**  
+System or environment-level settings, typically for configuration.
+
+**Constants:**  
+Variables with unchangeable values, often implemented as globals.
+
+**State Management:**  
+Techniques for managing application state using both local and global variables.
 
 ## References
 
-
-1. W3Schools. (n.d.). Python Global Variables. W3Schools.
-2. GeeksforGeeks. (n.d.). Global Variables in C. GeeksforGeeks.
-3. Microsoft. (n.d.). Work with Global Variables. Microsoft Copilot Studio.
-4. ServiceNow Community. (n.d.). Global Variables Discussion. ServiceNow Community.
-5. YouTube. (n.d.). Python Global Variables. YouTube.
+- [W3Schools: Python Global Variables](https://www.w3schools.com/python/python_variables_global.asp)
+- [GeeksforGeeks: Global Variables in C](https://www.geeksforgeeks.org/c/global-variables-in-c/)
+- [Microsoft Copilot Studio: Work with Global Variables](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-variables-bot)
+- [ServiceNow Community: Global Variables Discussion](https://www.servicenow.com/community/developer-forum/global-variables/m-p/2608732#M1014639)
+- [YouTube: Python Global Variables](https://youtu.be/VZW9CGZymqU&list=PLP9IO4UYNF0UgPfkTBECSKIJGdc_9FYZ9)

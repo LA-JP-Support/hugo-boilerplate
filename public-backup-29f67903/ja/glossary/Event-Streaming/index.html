@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>イベントストリーミング | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/event-streaming/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="イベントストリーミングの包括的ガイド:リアルタイムデータ処理、アーキテクチャ、メリット、および最新アプリケーションの実装ベストプラクティス。" name="description"/>
+<meta content="event streaming, リアルタイムデータ処理, Apache Kafka, ストリーム処理, イベント駆動アーキテクチャ" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/event-streaming/" property="og:url"/>
+<meta content="イベントストリーミング | SmartWeb" property="og:title"/>
+<meta content="イベントストリーミングの包括的ガイド:リアルタイムデータ処理、アーキテクチャ、メリット、および最新アプリケーションの実装ベストプラクティス。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/event-streaming/" name="twitter:url"/>
+<meta content="イベントストリーミング | SmartWeb" name="twitter:title"/>
+<meta content="イベントストリーミングの包括的ガイド:リアルタイムデータ処理、アーキテクチャ、メリット、および最新アプリケーションの実装ベストプラクティス。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">イベントストリーミング</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        イベントストリーミング
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Event Streaming
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          イベントストリーミングの包括的ガイド:リアルタイムデータ処理、アーキテクチャ、メリット、および最新アプリケーションの実装ベストプラクティス。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                event streaming
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                リアルタイムデータ処理
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Apache Kafka
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ストリーム処理
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                イベント駆動アーキテクチャ
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="イベントストリーミングとは">イベントストリーミングとは</h2>
+<p>イベントストリーミングは、データイベントの継続的なキャプチャ、処理、配信を、発生と同時にリアルタイムで実現するデータ処理パラダイムです。定期的なスケジュールで大量のデータを収集・処理する従来の<a data-lb="1" href="/ja/glossary/batch-processing/" title="バッチ処理は、大量のデータを収集し、設定された期間ごとにグループ単位で処理するデータアプローチです。高スループットのAI、分析、ビジネスオペレーションに最適です。">バッチ処理</a>システムとは異なり、イベントストリーミングはデータを連続的なイベントフローとして扱い、到着と同時に即座に処理できます。このアプローチにより、組織はビジネスイベントに瞬時に対応できるため、リアルタイムの洞察と変化する状況への即座の反応を必要とする現代のアプリケーションには不可欠です。</p>
+<p>イベントストリーミングの中核には、イベントストリーム(特定の時点で発生した何かを表すデータレコードのシーケンス)の作成があります。これらのイベントは、ウェブサイト上のユーザーインタラクション、IoTデバイスからのセンサー読み取り値、金融取引、システムログなど多岐にわたります。各イベントには通常、タイムスタンプ、イベントタイプ、関連するデータペイロードが含まれます。ストリーミングプラットフォームは、これらのイベントをさまざまなソースからキャプチャし、耐障害性のある方法で保存し、複数のコンシューマーが同時に処理できるようにします。この疎結合アーキテクチャにより、異なるアプリケーションやサービスが同じイベントに独立して反応でき、システム設計のスケーラビリティと柔軟性が促進されます。</p>
+<p>イベントストリーミングプラットフォームは、従来のメッセージングシステムと区別されるいくつかの重要な機能を提供します。イベントストリームの永続的なストレージを提供し、コンシューマーが過去のイベントを再生したり、任意の時点から処理を開始したりできます。また、パーティション内での順序保証を提供し、関連するイベントが正しい順序で処理されることを保証します。さらに、これらのプラットフォームは水平スケーリングをサポートし、分散クラスター全体で膨大な量のイベントを処理できます。リアルタイム処理機能、耐障害性、スケーラビリティの組み合わせにより、イベントストリーミングは、変化するビジネス条件やユーザー要件に迅速に適応できる、応答性の高いデータ駆動型アプリケーションを構築するための理想的な基盤となります。</p>
+<h2 id="イベントストリーミングの主要コンポーネント">イベントストリーミングの主要コンポーネント</h2>
+<p>イベントプロデューサーは、ストリーミングプラットフォームにイベントを生成・公開するアプリケーションまたはシステムです。プロデューサーは、ユーザーインタラクションをキャプチャするウェブアプリケーション、テレメトリデータを送信するIoTセンサー、データ変更を追跡するデータベース変更ログなどがあります。イベントデータのシリアライズと、各イベントに適切なトピックまたはストリームの決定を担当します。イベントブローカーは、プロデューサーとコンシューマー間でイベントを受信、保存、配信する中心的なインフラストラクチャとして機能します。Apache Kafkaのような最新のブローカーは、設定可能な保持ポリシーを持つ分散型の耐障害性ストレージを提供します。高可用性とパフォーマンスを確保するために、パーティショニング、レプリケーション、負荷分散を処理します。イベントコンシューマーは、イベントストリームをサブスクライブし、受信データを処理するアプリケーションです。コンシューマーは独立して動作し、独自のペースでイベントを処理し、独自の処理状態を維持できます。複数のコンシューマーグループが、異なる目的で同じイベントを同時に処理できます。トピックとパーティションは、イベントを論理的なカテゴリに整理し、並列処理を可能にします。トピックはイベントカテゴリを表し、トピック内のパーティションは水平スケーリングと順序保証を可能にします。同じパーティションキーを持つイベントは、順序通りに処理されることが保証されます。ストリーム処理エンジンは、フィルタリング、集約、結合、ウィンドウ操作など、イベントストリームに対する複雑な操作を実行するためのフレームワークを提供します。Apache Kafka Streams、Apache Flink、Apache Stormなどがあり、リアルタイム分析とイベント変換を可能にします。スキーマレジストリは、時間の経過に伴うイベントスキーマの進化を管理し、プロデューサーとコンシューマー間の互換性を確保します。集中型のスキーマストレージと検証を提供し、既存のアプリケーションを壊すことなく安全なスキーマ進化を可能にします。イベントストアは、イベントのための永続的な追記専用ストレージを提供し、多くの場合、分散ログとして実装されます。このストレージにより、イベントの再生、監査証跡、過去のイベントからのアプリケーション状態の再構築が可能になります。</p>
+<h2 id="イベントストリーミングの仕組み">イベントストリーミングの仕組み</h2>
+<p>イベントストリーミングのワークフローは、イベントプロデューサーがイベントを生成することから始まります。これらのイベントは、ビジネス活動、ユーザーインタラクション、またはシステム変更に基づいています。イベントは標準形式にシリアライズされ、ストリーミングプラットフォーム上の特定のトピックに公開されます。イベントブローカーがイベントを受信し、パーティション分割します。パーティションキーに基づいて、関連するイベントがグループ化され、並列処理が可能になります。ブローカーは、耐障害性と耐久性のために、複数のノード間でイベントをレプリケートします。コンシューマーがトピックをサブスクライブし、新しいイベントのポーリングを開始します。各コンシューマーグループは独自のオフセットを維持し、最後に処理されたイベントの位置を追跡します。これにより、複数のアプリケーションが同じイベントを独立して処理できます。ストリーム処理エンジンが変換を適用します。フィルタリング、マッピング、集約、複数のストリームからのイベントの結合などです。これらの操作はステートレスまたはステートフルであり、状態は分散ストレージシステムで維持されます。イベントが下流システムにルーティングされます。データベース、分析プラットフォーム、通知サービス、または他のアプリケーションなどです。これにより、同じソースイベントに基づいて複数のシステムへのリアルタイム更新が可能になります。監視とアラートシステムが追跡します。ストリームの健全性、処理<a data-lb="1" href="/ja/glossary/latency/" title="レイテンシとは、リクエストとシステムの応答との間の時間遅延のことです。AIインフラストラクチャ、Webアプリケーション、リアルタイムシステムにおいて重要な要素です。その種類、原因、削減戦略について解説します。">レイテンシ</a>、エラー率などです。イベントフロー全体の可視性を提供し、潜在的な問題をオペレーターに警告します。ワークフロー例:eコマースプラットフォームがユーザークリックイベントをキャプチャし、レコメンデーションエンジンを通じて処理してパーソナライズされた商品提案を更新し、購入イベントを在庫管理システムにルーティングし、高額取引に対してカスタマーサービス担当者へのリアルタイム通知をトリガーします。</p>
+<h2 id="主な利点">主な利点</h2>
+<p>リアルタイム処理により、ビジネスイベントへの即座の対応が可能になり、組織はバッチ処理サイクルの完了を待つのではなく、機会や脅威が発生した時点で反応できます。スケーラビリティとパフォーマンスは、水平スケーリングと並列処理を通じて膨大なイベント量をサポートします。最新のストリーミングプラットフォームは、分散クラスター全体で毎秒数百万のイベントを処理できます。耐障害性と耐久性により、システム障害時でもイベントが失われないことが保証されます。レプリケーションと永続的ストレージがデータ損失から保護し、任意の時点からの復旧を可能にします。疎結合アーキテクチャにより、プロデューサーとコンシューマーが独立して進化できます。既存のシステムに影響を与えることなく新しいコンシューマーを追加でき、プロデューサーは下流のコンシューマーを知らなくてもイベントを公開できます。イベント再生機能により、デバッグ、新しいアルゴリズムのテスト、処理エラーからの復旧のために、過去のイベントを再処理できます。この時間的柔軟性は、データ整合性の維持に不可欠です。複数コンシューマーサポートにより、異なるアプリケーションが同じイベントを同時に処理できます。これにより、データの重複なしに同じソースデータから複数のビューと分析を構築できます。レイテンシの削減により、バッチ処理や従来のリクエスト-レスポンスパターンに関連する遅延が排除されます。イベントは到着時に処理され、エンドツーエンドのレイテンシが最小化されます。監査証跡とコンプライアンスは、規制遵守とフォレンジック分析のための完全なイベント履歴を提供します。不変のイベントログは、ビジネス活動の信頼できる監査証跡として機能します。コスト効率は、効率的なリソース利用と複雑なETLプロセスの排除により、インフラストラクチャコストを削減します。ストリーム処理は、複数のバッチジョブをリアルタイムパイプラインに置き換えることができます。ビジネスアジリティにより、既存のイベントストリームを活用して新機能や分析を迅速に開発できます。新しいユースケースは、既存のストリームに新しいコンシューマーを追加するだけで実装できます。</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p>リアルタイム分析と<a data-lb="1" href="/ja/glossary/dashboard/" title="ダッシュボードとは、複数のソースから主要なデータ、KPI、トレンドを表示するビジュアルインターフェースです。迅速な監視、分析、情報に基づいた意思決定を可能にします。">ダッシュボード</a>は、ストリーミングデータを処理してライブビジネスメトリクス、運用ダッシュボード、パフォーマンス監視を提供します。組織はKPIを追跡し、トレンドに即座に対応できます。不正検出とセキュリティ監視は、取引パターンとユーザー行動をリアルタイムで分析して疑わしい活動を特定します。<a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>モデルは、取引発生から数ミリ秒以内に潜在的な不正をフラグ付けできます。IoTデータ処理は、接続されたデバイスからの膨大な量のセンサーデータを処理し、リアルタイム監視、予知保全、環境変化への自動応答を可能にします。マイクロサービス通信は、イベント駆動型アーキテクチャを通じて分散サービス間の非同期通信を促進します。サービスは、密結合なしにビジネスイベントに反応できます。顧客体験の<a data-lb="1" href="/ja/glossary/personalization/" title="AIチャットボットと自動化におけるパーソナライゼーションは、高度なアルゴリズムを使用して、個々のユーザーの嗜好や行動に合わせてサービス、コンテンツ、インタラクションをカスタマイズします。">パーソナライゼーション</a>は、ユーザーインタラクションイベントを処理して、パーソナライズされたコンテンツ、レコメンデーション、オファーをリアルタイムで提供します。これにより、エンゲージメントとコンバージョン率が向上します。サプライチェーン最適化は、在庫移動、出荷、需要シグナルを追跡して物流を最適化し、コストを削減します。リアルタイムの可視性により、プロアクティブなサプライチェーン管理が可能になります。金融取引とリスク管理は、市場データと取引イベントを処理して、アルゴリズム取引戦略を実行し、リスクエクスポージャーをリアルタイムで監視します。ログ集約と監視は、アプリケーションログ、システムメトリクス、パフォーマンスデータを収集・処理して、運用監視とトラブルシューティングを行います。イベントソーシングとCQRSは、アプリケーション状態がイベントのシーケンスから導出されるイベントソーシングパターンを実装します。これにより、監査証跡と時間的クエリが可能になります。リアルタイムレコメンデーションは、ユーザーの行動と好みを分析して、パーソナライズされたレコメンデーションを即座に生成します。これにより、ユーザー体験とビジネス成果が向上します。</p>
+<h2 id="イベントストリーミングプラットフォームの比較">イベントストリーミングプラットフォームの比較</h2>
+<table>
+<thead>
+<tr>
+<th>プラットフォーム</th>
+<th>スループット</th>
+<th>レイテンシ</th>
+<th>耐久性</th>
+<th>エコシステム</th>
+<th>複雑性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apache Kafka</td>
+<td>非常に高い</td>
+<td>低い</td>
+<td>高い</td>
+<td>広範囲</td>
+<td>中程度</td>
+</tr>
+<tr>
+<td>Amazon Kinesis</td>
+<td>高い</td>
+<td>低い</td>
+<td>高い</td>
+<td>AWSネイティブ</td>
+<td>低い</td>
+</tr>
+<tr>
+<td>Apache Pulsar</td>
+<td>非常に高い</td>
+<td>非常に低い</td>
+<td>高い</td>
+<td>成長中</td>
+<td>中程度</td>
+</tr>
+<tr>
+<td>Google Pub/Sub</td>
+<td>高い</td>
+<td>低い</td>
+<td>高い</td>
+<td>GCPネイティブ</td>
+<td>低い</td>
+</tr>
+<tr>
+<td>Azure Event Hubs</td>
+<td>高い</td>
+<td>低い</td>
+<td>高い</td>
+<td>Azureネイティブ</td>
+<td>低い</td>
+</tr>
+<tr>
+<td>Redis Streams</td>
+<td>中程度</td>
+<td>非常に低い</td>
+<td>中程度</td>
+<td>限定的</td>
+<td>低い</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p>データ整合性と順序付けは、分散ストリーミングシステムでは複雑になります。正確に1回の処理を保証し、パーティション間でイベントの順序を維持するには、慎重な設計と実装が必要です。スキーマ進化管理は、イベント形式が時間とともに変化する際に課題を提示します。既存のコンシューマーを壊さないために、後方互換性と前方互換性を維持する必要があります。監視と可観測性には、分散コンポーネント全体でイベントフロー、処理レイテンシ、システムの健全性を追跡するための高度なツールが必要です。従来の監視アプローチでは不十分な場合があります。エラー処理とデッドレターキューは、処理失敗を適切に処理するために慎重な設計が必要です。失敗したイベントは、ストリーム処理パイプライン全体をブロックすることなく管理する必要があります。リソース管理とスケーリングには、パーティション戦略、コンシューマーグループ管理、クラスターサイジングの理解が必要です。不適切な構成は、パフォーマンスの<a data-lb="1" href="/ja/glossary/bottlenecks-comprehensive-glossary-action-guide-for-business-automation-and-ai-chatbot-operations/" title="ビジネス、自動化、AIチャットボット運用におけるボトルネックを理解します。プロセス、リソース、容量の制約を特定、分析、解決し、効率を向上させる方法を学びます。">ボトルネック</a>につながる可能性があります。セキュリティと<a data-lb="1" href="/ja/glossary/access-control/" title="認可システム、アクセス制御モデル、実装戦略、および最新アプリケーションのセキュリティベストプラクティスに関する包括的なガイド。">アクセス制御</a>は、イベントストリームの認証、認可、暗号化に対処する必要があります。イベント内の機密データには、パイプライン全体で適切な保護が必要です。運用の複雑性は、分散ストリーミングシステムで増加します。チームには、ストリーム処理の概念、クラスター管理、分散システムのトラブルシューティングに関する専門知識が必要です。コスト管理は、大量のストリームと複数の処理パイプラインで困難になる可能性があります。価格モデルを理解し、リソース使用を最適化することが重要です。テストとデバッグのストリーミングアプリケーションには、専門的なツールと技術が必要です。従来のテストアプローチは、連続的なデータフローではうまく機能しない場合があります。データ品質と検証は、不正な形式のイベントを処理し、データ整合性を確保するために実装する必要があります。不良データは、ストリーミングパイプライン全体に伝播する可能性があります。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p>冪等性を考慮した設計により、同じイベントを複数回処理しても同じ結果が得られることが保証されます。これは、正確に1回の処理セマンティクスとエラー復旧に不可欠です。適切なパーティショニング戦略の実装により、均等な負荷分散と順序要件の維持が保証されます。適切な分散を提供しながら必要な順序を保持するパーティションキーを選択します。スキーマレジストリの使用により、イベントスキーマの進化を管理し、プロデューサーとコンシューマー間の互換性を確保します。スキーマを慎重にバージョン管理し、後方互換性を計画します。ストリームの健全性を継続的に監視します。スループット、レイテンシ、エラー率、コンシューマーラグのメトリクスを使用します。重要なしきい値とパフォーマンス低下に対するアラートを設定します。サーキットブレーカーの実装とバルクヘッドパターンにより、カスケード障害を防ぎます。異なる処理パイプラインを分離して、障害の影響を制限します。容量とスケーリングの計画により、トラフィックパターンと成長予測を理解します。ピーク負荷を処理するためのパーティション戦略とクラスターサイジングを設計します。イベントストリームの保護には、適切な認証、認可、暗号化が必要です。コンプライアンス要件のためのアクセス制御と監査ログを実装します。ステートフル処理の慎重な設計により、適切なステートストアを選択し、適切なチェックポイントを実装します。状態サイズと復旧時間の要件を考慮します。包括的なテストの実装には、単体テスト、統合テスト、<a data-lb="1" href="/ja/glossary/chaos-engineering/" title="カオスエンジニアリングは、システムの弱点を発見し、その回復力に対する信頼性を構築するために、意図的にシステムに実験を行う手法です。脆弱性を事前に特定する方法を学びましょう。">カオスエンジニアリング</a>が含まれます。障害シナリオと復旧手順を定期的にテストします。イベントスキーマとコントラクトの文書化により、チーム間のコラボレーションを促進し、適切なイベント使用を確保します。イベントセマンティクスと処理保証の明確なドキュメントを維持します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p>複合イベント処理(CEP)は、時間的ロジックと相関ルールを使用して、複数のイベントストリーム間のパターン検出を可能にします。これにより、高度なビジネス<a data-lb="1" href="/ja/glossary/rules-engine/" title="ルールエンジンは、事前定義された「if-then」ルールに対してデータを評価することで意思決定を自動化し、ビジネスロジックをコードから分離して効率的な管理と更新を実現します。">ルールエンジン</a>と異常検出がサポートされます。イベントソーシングアーキテクチャは、すべての変更をイベントのシーケンスとして保存し、アプリケーション状態の完全な再構築を可能にします。これにより、監査証跡が提供され、時間的クエリが可能になります。ストリーム-ストリーム結合は、時間ウィンドウと結合条件に基づいて、複数のストリームからのイベントを結合します。これにより、異なるデータソース間の複雑な分析と相関が可能になります。正確に1回の処理は、障害が発生した場合でも、各イベントが正確に1回処理されることを保証します。これには、プロデューサー、ブローカー、コンシューマー間の慎重な調整が必要です。マルチリージョンレプリケーションは、災害復旧とグローバル配信機能を提供します。イベントは、高可用性とレイテンシ削減のために地理的リージョン間でレプリケートできます。機械学習統合により、ストリーミングデータからのリアルタイムモデル推論とオンライン学習が可能になります。これにより、時間とともに改善する適応型システムがサポートされます。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p>サーバーレスストリーム処理は、マネージドサービスと自動スケーリング機能を通じて、ストリーミングアプリケーションのデプロイとスケーリングを簡素化します。これにより、運用オーバーヘッドとコストが削減されます。エッジコンピューティング統合により、データソースに近い場所でのストリーム処理が可能になり、レイテンシと帯域幅要件が削減されます。これは、IoTとモバイルアプリケーションに特に重要です。AI駆動型ストリーム分析は、ストリーミングデータに対する自動パターン検出、異常識別、予測分析を提供します。機械学習は、ストリーム処理とより統合されるようになります。バッチとストリーム処理の統合は、バッチとストリーミングの両方のワークロードに対して一貫したAPIとセマンティクスを提供します。これにより、開発が簡素化され、複雑性が軽減されます。強化されたセキュリティとプライバシーには、ストリーミングデータの高度な暗号化、差分プライバシー、セキュアマルチパーティ計算が含まれます。プライバシー保護分析がより重要になります。量子耐性暗号は、将来の量子コンピューティングの脅威から保護するために、ストリーミングプラットフォームに統合されます。これにより、機密イベントデータの長期的なセキュリティが確保されます。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>Kleppmann, M. (2017). <em>Designing Data-Intensive Applications</em>. O’Reilly Media.</li>
+<li>Stopford, B. (2018). <em>Designing Event-Driven Systems</em>. O’Reilly Media.</li>
+<li>Apache Software Foundation. (2024). <em>Apache Kafka Documentation</em>. <a href="https://kafka.apache.org/documentation/" rel="nofollow noopener noreferrer" target="_blank">https://kafka.apache.org/documentation/</a></li>
+<li>Narkhede, N., Shapira, G., &amp; Palino, T. (2017). <em>Kafka: The Definitive Guide</em>. O’Reilly Media.</li>
+<li>Akidau, T., Chernyak, S., &amp; Lax, R. (2018). <em>Streaming Systems</em>. O’Reilly Media.</li>
+<li>Fowler, M. (2017). <em>Event Sourcing</em>. Martin Fowler’s Blog.</li>
+<li>Confluent Inc. (2024). <em>Event Streaming Platform Best Practices</em>. Confluent Documentation.</li>
+<li>Amazon Web Services. (2024). <em>Amazon Kinesis Developer Guide</em>. AWS Documentation.</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/streaming-analytics/">
+                    ストリーミング分析
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ストリーミング分析の包括的ガイド:リアルタイムデータ処理、コア技術、実装戦略、および継続的分析における将来のトレンド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/streaming-analytics/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/event-driven-architecture/">
+                    イベント駆動アーキテクチャ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    イベント駆動アーキテクチャの包括的ガイド:スケーラブルなシステムのためのコアコンセプト、実装パターン、メリット、ベストプラクティス。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/event-driven-architecture/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/message-queue/">
+                    メッセージキュー
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    メッセージキューの包括的ガイド:分散アプリケーションとサービス間で信頼性の高いデータ交換を可能にする非同期通信システムについて解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/message-queue/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/real-time-analytics/">
+                    リアルタイム分析
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    リアルタイム分析の包括的ガイド:即座のデータ処理とインサイト獲得のための技術、実装方法、メリット、ベストプラクティスを解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/real-time-analytics/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/batch-processing/">
+                    バッチ処理
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    バッチ処理は、大量のデータを収集し、設定された期間ごとにグループ単位で処理するデータアプローチです。高スループットのAI、分析、ビジネスオペレーションに最適です。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/batch-processing/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/microservices/">
+                    マイクロサービスアーキテクチャ:包括的ガイド
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    API Gateway、Bounded Context、CQRSなど、マイクロサービスアーキテクチャの重要な概念、パターン、テクノロジーを網羅した包括的な用語集をご覧ください。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/microservices/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/event-streaming/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

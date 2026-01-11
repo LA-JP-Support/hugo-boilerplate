@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Agent Efficiency | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/agent-efficiency/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="Agent efficiency is how well an AI system completes its tasks while using time and resources wisely, measured by speed, decision quality, and ability to adapt to new situations." name="description"/>
+<meta content="agent efficiency, AI performance optimization, autonomous agent metrics, intelligent agent productivity, multi-agent system efficiency" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/agent-efficiency/" property="og:url"/>
+<meta content="Agent Efficiency | SmartWeb" property="og:title"/>
+<meta content="Agent efficiency is how well an AI system completes its tasks while using time and resources wisely, measured by speed, decision quality, and ability to adapt to new situations." property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/agent-efficiency/" name="twitter:url"/>
+<meta content="Agent Efficiency | SmartWeb" name="twitter:title"/>
+<meta content="Agent efficiency is how well an AI system completes its tasks while using time and resources wisely, measured by speed, decision quality, and ability to adapt to new situations." name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165525" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165525" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165525"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/en/">Home</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/blog/">Blog</a><a class="text-sm/6 font-semibold text-gray-900" href="/en/glossary/">Glossary</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">Support</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118125587168000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118125587168000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/en/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/en/blog/">Get Started</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/">Home</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/blog/">Blog</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/en/glossary/">Glossary</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">Company</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118125587168000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118125587168000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/en/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/en/glossary/">
+                Glossary
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Agent Efficiency</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Agent Efficiency
+      </h1>
+<div class="mb-6"></div>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          Agent efficiency is how well an AI system completes its tasks while using time and resources wisely, measured by speed, decision quality, and ability to adapt to new situations.
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                agent efficiency
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI performance optimization
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                autonomous agent metrics
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                intelligent agent productivity
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                multi-agent system efficiency
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="what-is-an-agent-efficiency">What is an Agent Efficiency?</h2>
+<p>Agent efficiency represents the measure of how effectively an autonomous agent or <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI system</a> accomplishes its designated tasks while optimizing resource utilization, time consumption, and goal achievement. In the context of <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence glossary entry">artificial intelligence</a> and autonomous systems, agent efficiency encompasses multiple dimensions including computational performance, decision-making speed, resource allocation, task completion rates, and the overall quality of outcomes produced. This concept extends beyond simple productivity metrics to include sophisticated evaluations of how well an agent adapts to changing environments, learns from experience, and maintains consistent performance across diverse scenarios.</p>
+<p>The measurement of agent efficiency involves analyzing the relationship between inputs and outputs within an agent’s operational framework. This includes evaluating how efficiently an agent processes information, makes decisions, executes actions, and achieves predefined objectives. Modern <a data-lb="1" href="/en/glossary/ai-agents/" title="AI Agents glossary entry">AI agents</a> operate in complex environments where efficiency is not merely about speed or computational power, but rather about intelligent resource management, strategic decision-making, and adaptive behavior. Efficient agents demonstrate the ability to prioritize tasks, allocate <a data-lb="1" href="/en/glossary/computational-resources/" title="Computational Resources glossary entry">computational resources</a> appropriately, minimize unnecessary actions, and maximize value creation while operating within defined constraints and limitations.</p>
+<p>Agent efficiency has become increasingly critical as <a data-lb="1" href="/en/glossary/artificial-intelligence/" title="Artificial Intelligence (AI) glossary entry">AI systems</a> are deployed in real-world applications where performance directly impacts business outcomes, user satisfaction, and operational costs. Organizations implementing AI agents must consider efficiency from multiple perspectives including technical performance metrics, economic value generation, user experience quality, and long-term sustainability. The pursuit of agent efficiency drives innovation in algorithm design, system architecture, learning methodologies, and performance optimization techniques. As AI agents become more sophisticated and autonomous, the ability to measure, monitor, and improve efficiency becomes essential for successful deployment and scaling of intelligent systems across various industries and applications.</p>
+<h2 id="core-performance-optimization-components">Core Performance Optimization Components</h2>
+<p>Resource Allocation Managementinvolves the strategic distribution of computational resources, memory, and processing power to maximize agent performance while minimizing waste. Effective resource allocation ensures that agents can handle multiple tasks simultaneously without degrading overall system performance.Decision-Making Algorithmsencompass the core logic and reasoning mechanisms that enable agents to make optimal choices in complex environments. These algorithms must balance accuracy, speed, and computational efficiency to ensure timely and effective decision-making processes.Learning Efficiency Mechanismsfocus on how quickly and effectively agents can acquire new knowledge, adapt to changing conditions, and improve performance over time. Efficient learning reduces the time and data required for agents to reach optimal performance levels.Task Prioritization Systemsenable agents to identify and focus on the most important or time-sensitive tasks while managing multiple competing objectives. These systems ensure that critical tasks receive appropriate attention and resources.Communication Protocolsin multi-agent environments facilitate efficient information sharing, coordination, and collaboration between multiple agents. Streamlined communication reduces overhead and improves collective performance.Performance <a data-lb="1" href="/en/glossary/monitoring/" title="Monitoring glossary entry">Monitoring</a> Infrastructureprovides real-time visibility into agent behavior, resource utilization, and outcome quality. Continuous monitoring enables proactive optimization and rapid identification of performance issues.Adaptive Optimization Frameworksallow agents to automatically adjust their behavior, strategies, and resource allocation based on changing conditions and performance feedback. These frameworks enable continuous improvement without human intervention.</p>
+<h2 id="how-agent-efficiency-works">How Agent Efficiency Works</h2>
+<p>The agent efficiency process begins with Performance Baseline Establishmentwhere initial metrics are captured to understand current agent capabilities, resource consumption patterns, and outcome quality. This baseline serves as the foundation for all subsequent optimization efforts.Real-time Monitoring Implementationinvolves deploying comprehensive tracking systems that continuously collect data on agent behavior, resource utilization, task completion rates, and quality metrics. This monitoring provides the data necessary for efficiency analysis and optimization.Bottleneck Identification and Analysisexamines the collected performance data to identify constraints, inefficiencies, and areas where agents are underperforming or consuming excessive resources. This analysis reveals specific opportunities for improvement.Optimization Strategy Developmentcreates targeted approaches to address identified inefficiencies, including algorithm improvements, resource reallocation, task restructuring, and system architecture modifications. These strategies are designed to maximize performance gains while minimizing implementation complexity.Implementation and Testinginvolves deploying optimization strategies in controlled environments to validate their effectiveness and identify any unintended consequences. This phase ensures that improvements actually enhance overall agent efficiency.Performance Validation and Measurementcompares post-optimization performance against established baselines to quantify improvements and identify areas requiring further attention. This validation confirms the success of optimization efforts.Continuous Improvement Integrationestablishes ongoing processes for monitoring, analyzing, and optimizing agent performance to ensure sustained efficiency gains and adaptation to changing requirements.Feedback Loop Establishmentcreates mechanisms for agents to learn from efficiency improvements and automatically apply similar optimizations to new situations or tasks.</p>
+<p>Example workflow: An AI customer service agent monitors response times, identifies slow database queries as a bottleneck, implements query optimization, validates improved response times, and applies similar optimizations to related processes.</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p>Reduced Operational Coststhrough optimized resource utilization, decreased computational requirements, and minimized waste in agent operations. Efficient agents require fewer resources to achieve the same or better outcomes.Improved Response Timesenable agents to process requests, make decisions, and execute actions more quickly, leading to better user experiences and increased system throughput.Enhanced Scalabilityallows organizations to deploy more agents or handle increased workloads without proportional increases in infrastructure costs or resource requirements.Better Resource Utilizationensures that computational power, memory, and other system resources are used optimally, reducing waste and maximizing return on infrastructure investments.Increased Task Completion Ratesresult from improved prioritization, better resource allocation, and more effective decision-making processes that enable agents to successfully complete more tasks.Higher Quality Outcomesemerge from optimized decision-making processes, better data utilization, and improved learning mechanisms that enable agents to produce superior results.Improved User Satisfactionstems from faster response times, more accurate results, and more reliable agent performance that meets or exceeds user expectations.Enhanced System Reliabilityresults from more efficient resource usage, reduced system stress, and better error handling that minimizes downtime and performance degradation.Competitive Advantagethrough superior agent performance that enables organizations to deliver better services, reduce costs, and respond more effectively to market demands.Sustainable Operationsachieved through efficient resource usage that supports long-term scalability and environmental responsibility while maintaining high performance standards.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p>Customer Service Automationwhere efficient agents handle multiple customer inquiries simultaneously while maintaining high response quality and minimizing wait times.Financial Trading Systemsthat require rapid decision-making, real-time market analysis, and efficient execution of trading strategies while managing risk and maximizing returns.Supply Chain Optimizationinvolving agents that coordinate inventory management, logistics planning, and demand forecasting to minimize costs and maximize efficiency.Healthcare Diagnosis Supportwhere agents efficiently process patient data, medical histories, and diagnostic information to provide timely and accurate clinical decision support.Manufacturing Process Controlutilizing agents that monitor production lines, optimize resource allocation, and maintain quality standards while maximizing throughput.Content Recommendation Systemsthat efficiently analyze user preferences, content characteristics, and engagement patterns to deliver personalized recommendations at scale.Cybersecurity Monitoringemploying agents that efficiently scan network traffic, identify threats, and respond to security incidents while minimizing false positives.Smart City Managementinvolving agents that optimize traffic flow, energy consumption, and public service delivery while managing complex urban systems.E-commerce Personalizationwhere agents efficiently process customer behavior data to provide personalized shopping experiences and optimize conversion rates.Autonomous Vehicle Navigationrequiring agents that efficiently process sensor data, make real-time driving decisions, and optimize route planning while ensuring safety.</p>
+<h2 id="agent-efficiency-comparison-table">Agent Efficiency Comparison Table</h2>
+<table>
+<thead>
+<tr>
+<th>Efficiency Metric</th>
+<th>Traditional Agents</th>
+<th>Optimized Agents</th>
+<th>Advanced AI Agents</th>
+<th>Autonomous Systems</th>
+<th>Multi-Agent Networks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Response Time</td>
+<td>2-5 seconds</td>
+<td>0.5-1 second</td>
+<td>0.1-0.3 seconds</td>
+<td>Real-time</td>
+<td>Distributed processing</td>
+</tr>
+<tr>
+<td>Resource Usage</td>
+<td>High baseline</td>
+<td>30-50% reduction</td>
+<td>60-80% reduction</td>
+<td>Dynamic allocation</td>
+<td>Shared optimization</td>
+</tr>
+<tr>
+<td>Task Completion</td>
+<td>70-80%</td>
+<td>85-90%</td>
+<td>95-98%</td>
+<td>Near 100%</td>
+<td>Collaborative enhancement</td>
+</tr>
+<tr>
+<td>Learning Speed</td>
+<td>Manual updates</td>
+<td>Batch learning</td>
+<td>Continuous learning</td>
+<td>Adaptive learning</td>
+<td>Collective intelligence</td>
+</tr>
+<tr>
+<td>Scalability</td>
+<td>Limited</td>
+<td>Moderate</td>
+<td>High</td>
+<td>Elastic</td>
+<td>Unlimited horizontal</td>
+</tr>
+<tr>
+<td>Error Rate</td>
+<td>5-10%</td>
+<td>2-5%</td>
+<td>0.5-2%</td>
+<td>&lt;0.5%</td>
+<td>Self-correcting</td>
+</tr>
+</tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p>Measurement Complexityarises from the difficulty of defining and quantifying efficiency across multiple dimensions, making it challenging to establish comprehensive performance metrics.Resource Allocation Trade-offsrequire balancing competing demands for computational resources, memory, and processing power while maintaining optimal performance across all agent functions.Dynamic Environment Adaptationpresents challenges in maintaining efficiency as operating conditions, requirements, and constraints change over time.Multi-objective Optimizationinvolves managing conflicting goals such as speed versus accuracy, cost versus quality, and short-term versus long-term performance.Scalability Limitationsemerge when efficiency optimizations that work well for individual agents or small systems fail to scale effectively to larger deployments.Data Quality Dependenciesaffect agent efficiency when poor quality input data leads to suboptimal decision-making and reduced overall performance.Integration Complexityarises when implementing efficiency improvements across existing systems, legacy infrastructure, and diverse technology stacks.Performance Monitoring Overheadcan paradoxically reduce efficiency if monitoring systems consume significant resources or introduce <a data-lb="1" href="/en/glossary/latency/" title="Latency glossary entry">latency</a> into agent operations.Security and Privacy Constraintsmay limit optimization opportunities when efficiency improvements conflict with <a data-lb="1" href="/en/glossary/security-requirements/" title="Security Requirements glossary entry">security requirements</a> or privacy protection measures.Human-Agent Interaction Challengesoccur when efficiency optimizations reduce transparency or interpretability, making it difficult for humans to understand and trust agent decisions.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p>Establish Clear Performance Metricsthat align with business objectives and provide measurable indicators of agent efficiency across all relevant dimensions.Implement Comprehensive Monitoringsystems that provide real-time visibility into agent performance, resource utilization, and outcome quality without introducing significant overhead.Design Modular Architecturethat enables independent optimization of different agent components and facilitates testing and deployment of efficiency improvements.Prioritize Bottleneck Resolutionby focusing optimization efforts on the most significant performance constraints and resource limitations first.Adopt Iterative Optimizationapproaches that implement improvements incrementally, validate results, and build upon successful optimizations over time.Ensure Robust Testingprocedures that validate efficiency improvements across diverse scenarios, edge cases, and operating conditions before full deployment.Maintain Performance Baselinesthat enable accurate measurement of improvement and provide reference points for ongoing optimization efforts.Implement Automated Optimizationwhere possible to enable continuous improvement without requiring constant human intervention or oversight.Document Optimization Strategiesto facilitate knowledge sharing, enable replication of successful approaches, and support troubleshooting efforts.Plan for Scalabilityby designing efficiency improvements that will continue to provide benefits as agent deployments grow and requirements evolve.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p><a data-lb="1" href="/en/glossary/reinforcement-learning/" title="Reinforcement Learning glossary entry">Reinforcement Learning</a> Optimizationemploys advanced learning algorithms that enable agents to discover optimal strategies through trial and error while maximizing efficiency rewards.Distributed Computing Integrationleverages parallel processing, cloud resources, and edge computing to distribute agent workloads and optimize resource utilization across multiple systems.Predictive Performance Modelinguses machine learning to forecast agent performance, identify potential <a data-lb="1" href="/en/glossary/bottlenecks/" title="Bottlenecks glossary entry">bottlenecks</a>, and proactively implement optimizations before problems occur.Dynamic Resource Allocationimplements intelligent systems that automatically adjust resource distribution based on real-time demand, performance requirements, and availability constraints.Federated Learning Implementationenables multiple agents to share learning experiences and optimizations while maintaining data privacy and reducing individual training requirements.Quantum Computing Integrationexplores the potential for quantum algorithms and quantum computing resources to dramatically improve agent efficiency in specific problem domains.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p>Autonomous Efficiency Optimizationwill enable agents to automatically identify, implement, and validate their own efficiency improvements without human intervention or oversight.Cross-Domain Efficiency Transferwill allow agents to apply efficiency optimizations learned in one domain to improve performance in completely different application areas.Neuromorphic Computing Integrationpromises to revolutionize agent efficiency through brain-inspired computing architectures that dramatically reduce power consumption and increase processing speed.Quantum-Enhanced Decision Makingwill leverage quantum computing capabilities to solve complex optimization problems and enable unprecedented levels of agent efficiency.Collective Intelligence Optimizationwill enable networks of agents to collaboratively optimize their collective efficiency through shared learning and coordinated resource allocation.Sustainable AI Efficiencywill focus on developing efficiency improvements that minimize environmental impact while maximizing performance and value creation.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Russell, S., &amp; Norvig, P. (2020). Artificial Intelligence: A Modern Approach. Pearson Education.</p>
+</li>
+<li>
+<p>Wooldridge, M. (2019). An Introduction to MultiAgent Systems. John Wiley &amp; Sons.</p>
+</li>
+<li>
+<p>Stone, P., &amp; Veloso, M. (2021). “Multiagent Systems: A Survey from a Machine Learning Perspective.” Autonomous Robots, 8(3), 345-383.</p>
+</li>
+<li>
+<p>Sutton, R. S., &amp; Barto, A. G. (2018). Reinforcement Learning: An Introduction. MIT Press.</p>
+</li>
+<li>
+<p>Weiss, G. (Ed.). (2020). Multiagent Systems: A Modern Approach to Distributed Artificial Intelligence. MIT Press.</p>
+</li>
+<li>
+<p>Jennings, N. R., Sycara, K., &amp; Wooldridge, M. (2019). “A Roadmap of Agent Research and Development.” Autonomous Agents and Multi-Agent Systems, 1(1), 7-38.</p>
+</li>
+<li>
+<p>Tambe, M. (2021). “Towards Flexible Teamwork in Persistent Teams.” Proceedings of the International Conference on Multi-Agent Systems, 277-284.</p>
+</li>
+<li>
+<p>Durfee, E. H. (2020). “Distributed Problem Solving and Planning.” Lecture Notes in Computer Science, 1600, 118-149.</p>
+</li>
+</ol>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/en/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        Back to Glossary
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/en/blog/">Get started</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AI Solutions</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Web Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">System Development</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Consulting</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">Support Portal</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">About</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/blog/">Blog</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Careers</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">News</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/privacy-policy/">Privacy Policy</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/en/ai-chatbot-terms-of-use/">AI Chatbot Terms of Use</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a aria-label="日本語" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/ja/glossary/agent-efficiency/" hreflang="ja" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</a>
+<span class="inline-flex items-center text-sm opacity-50" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br/> We use cookies to enhance your browsing experience and analyze our traffic. See our <a class="font-semibold text-primary hover:text-primary-500" href="/en/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="Accept All" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      Accept All
+      
+      
+    </a>
+<a aria-label="Reject All" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      Reject All
+      
+      
+    </a>
+<a aria-label="Cookie Settings" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      Cookie Settings
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">Close</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+<p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+<p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="Cancel" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      Cancel
+      
+      
+    </a>
+<a aria-label="Save Preferences" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      Save Preferences
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165525"></script>
+</body>
+</html>

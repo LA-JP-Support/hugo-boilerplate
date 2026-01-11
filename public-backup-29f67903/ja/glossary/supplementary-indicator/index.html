@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>補助指標 | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/supplementary-indicator/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/supplementary-indicator/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/supplementary-indicator/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/supplementary-indicator/" hreflang="x-default" rel="alternate"/>
+<meta content="補助指標は、AIと自動化における主要な評価指標に対して重要な文脈と検証を提供します。これらは、堅牢なシステムパフォーマンス評価のための詳細な洞察を提供します。" name="description"/>
+<meta content="補助指標, AI, 自動化, 評価指標, 主要指標" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/supplementary-indicator/" property="og:url"/>
+<meta content="補助指標 | SmartWeb" property="og:title"/>
+<meta content="補助指標は、AIと自動化における主要な評価指標に対して重要な文脈と検証を提供します。これらは、堅牢なシステムパフォーマンス評価のための詳細な洞察を提供します。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/supplementary-indicator/" name="twitter:url"/>
+<meta content="補助指標 | SmartWeb" name="twitter:title"/>
+<meta content="補助指標は、AIと自動化における主要な評価指標に対して重要な文脈と検証を提供します。これらは、堅牢なシステムパフォーマンス評価のための詳細な洞察を提供します。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260111165522" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260111165522" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260111165522"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1768118122019187000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1768118122019187000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png">
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</source></picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1768118122019187000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1768118122019187000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">補助指標</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        補助指標
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Supplementary Indicator
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          補助指標は、AIと自動化における主要な評価指標に対して重要な文脈と検証を提供します。これらは、堅牢なシステムパフォーマンス評価のための詳細な洞察を提供します。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                補助指標
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                自動化
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                評価指標
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                主要指標
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="補助指標とは何か">補助指標とは何か?</h2>
+<p>補助指標とは、主要な評価指標と並行して、文脈、検証、または追加の視点を提供するために、パフォーマンス評価フレームワークに統合される補助的な測定基準または定性的な尺度です。主要指標が中核的な目標や成果を直接測定するのに対し、補助指標は主要な結果の理解を説明、限定、支援することで解釈を豊かにします。</p>
+<p>現代のAIおよび自動化システムにおいて、単一の指標だけでパフォーマンス、ユーザー体験、または運用効果の全体的な複雑さを捉えることはほとんどありません。<a data-lb="1" href="/ja/glossary/chatbot/" title="チャットボットは、テキストまたは音声を通じて人間の会話をシミュレートするAI駆動のソフトウェアアプリケーションです。カスタマーサポート、情報検索、タスク自動化に使用されます。">チャットボット</a>が回答提供において高い精度を達成しても、応答時間、ユーザー満足度、または<a data-lb="1" href="/ja/glossary/escalation/" title="カスタマーサポート、IT、AIチャットボットにおけるエスカレーションについて学びます。種類、トリガー、ベストプラクティス、そして自動化が複雑な問題解決をどのように効率化するかを解説します。">エスカレーション</a>頻度に関する文脈がなければ、その精度指標は不完全な物語しか語りません。補助指標はこれらのギャップを埋め、関係者が過度に単純化された単一数値評価ではなく、多次元的な理解に基づいて情報に基づいた意思決定を行えるようにします。</p>
+<p>これらの指標は評価フレームワークにおいて重要な機能を果たします:結果が曖昧または境界線上にある場合に主要指標を文脈化すること、高い主要指標スコアがゲーミングや測定アーティファクトではなく真の成功を反映していることを検証すること、パフォーマンス成果の背後にあるメカニズムを詳述すること、競合する目標間のトレードオフを明らかにすること、主要指標が悪化する前に潜在的な問題の早期警告信号を提供することです。</p>
+<h2 id="補助指標と関連する指標タイプ">補助指標と関連する指標タイプ</h2>
+<p>指標タイプ間の区別を理解することで、包括的な評価システムにおける役割が明確になります。</p>
+<h3 id="主要指標">主要指標</h3>
+<p>主要指標は中心的な目標を直接測定します。「目標を達成したか?」という基本的な質問に答えます。カスタマーサポートチャットボットの場合、解決率は顧客の問題を解決するという中核目標を直接測定します。分類モデルの場合、精度は予測の正確性を直接測定します。主要指標は重要な意思決定を推進し、プロジェクトの成功または失敗を決定することがよくあります。</p>
+<h3 id="補助指標">補助指標</h3>
+<p>補助指標は主要指標の解釈に役立つ支援的な文脈を提供します。「どのように、そしてなぜこの結果を達成したか?」に答えます。応答時間は速度を明らかにすることで解決率を補完します。ユーザー満足度は体験の質を捉えることで精度を補完します。これらの指標は主要指標を置き換えるのではなく、意味のある実行可能なものにします。</p>
+<h3 id="補完指標">補完指標</h3>
+<p>補完指標はパフォーマンスの異なるが関連する側面を捉え、主要指標が測定する範囲を超えて評価範囲を拡大します。「他に何が重要か?」に対処します。解決率が問題解決に焦点を当てる一方で、補完指標は顧客維持率、再連絡率、またはインタラクションあたりのサービスコストを測定する可能性があります。主要指標と補完指標を合わせることで、包括的なパフォーマンスビューが提供されます。</p>
+<h3 id="代理指標">代理指標</h3>
+<p>代理指標は、直接測定が実用的でない、高価、または不可能な場合に間接的な測定として機能します。「代わりに何を測定できるか?」に答えます。真の顧客満足度を大規模に調査することが困難な場合、リピート購入数が代理として機能する可能性があります。直接的な収益への影響が不明確な場合、ユーザーエンゲージメント指標がビジネス価値の代理となる可能性があります。</p>
+<h2 id="指標タイプの比較">指標タイプの比較</h2>
+<table>
+<thead>
+<tr>
+<th>指標タイプ</th>
+<th>主な目的</th>
+<th>目標との関係</th>
+<th>AIチャットボットでの例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主要指標</td>
+<td>中核目標の測定</td>
+<td>直接測定</td>
+<td>解決率</td>
+</tr>
+<tr>
+<td>補助指標</td>
+<td>文脈と検証</td>
+<td>支援的証拠</td>
+<td>応答時間、満足度</td>
+</tr>
+<tr>
+<td>補完指標</td>
+<td>評価範囲の拡大</td>
+<td>関連する次元</td>
+<td>インタラクションあたりのコスト</td>
+</tr>
+<tr>
+<td>代理指標</td>
+<td>間接測定の実現</td>
+<td>直接測定が不可能な場合の代替</td>
+<td>再連絡頻度</td>
+</tr>
+</tbody>
+</table>
+<h2 id="補助指標が重要な理由">補助指標が重要な理由</h2>
+<h3 id="単一指標の限界の克服">単一指標の限界の克服</h3>
+<p>主要指標のみに依存すると、盲点とインセンティブの不整合が生じます。応答に数分かかる場合、チャットボットの高い精度はほとんど意味がありません。リコールが悲惨な場合、強力な分類精度は空虚です。品質が崩壊する場合、優れたスループットは無意味です。補助指標はこれらの病的な最適化を防ぎます。</p>
+<h3 id="多次元的理解の提供">多次元的理解の提供</h3>
+<p>複雑なシステムは、単一の数値では捉えられない多次元的なパフォーマンスを示します。補助指標は三角測量を可能にし、複数の視点を通じて結果を確認します。精度、速度、満足度がすべて一緒に改善する場合、真の進歩への信頼が高まります。指標が矛盾する場合、補助指標は意識的な決定を必要とするトレードオフを明らかにします。</p>
+<h3 id="文脈的解釈の実現">文脈的解釈の実現</h3>
+<p>同じ主要指標値が、文脈に応じて成功または失敗を示す可能性があります。85%の精度は、新しいシステムにとっては優れている可能性があり、成熟したシステムにとっては適切であり、安全性が重要なアプリケーションにとっては壊滅的である可能性があります。補助指標は、パフォーマンスが要件を満たしているかどうかを決定する文脈を提供します。</p>
+<h3 id="根本原因分析の支援">根本原因分析の支援</h3>
+<p>主要指標が低下した場合、補助指標が診断を導きます。チャットボットの解決率が低下したのは、応答精度が低下したため、処理時間がユーザーの忍耐を超えたため、またはユーザーが体験の悪さによりエスカレートしたためでしょうか?補助指標は特定の問題領域を特定し、的を絞った改善を可能にします。</p>
+<h2 id="効果的な補助指標の選択">効果的な補助指標の選択</h2>
+<p>体系的な選択プロセスにより、補助指標が測定オーバーヘッドを生じることなく価値を追加することが保証されます。</p>
+<h3 id="選択基準">選択基準</h3>
+<p>直接性指標は、評価を意図する特定の側面を測定する必要があります。曖昧または間接的な測定は、洞察なしにノイズを追加します。応答時間は速度を直接測定します。CPU使用率は容量制約を間接的に示唆しますが、ユーザー体験を直接測定しません。客観性測定は明確で再現可能である必要があります。定量的指標は一般的に主観的評価よりも客観性を提供しますが、慎重に設計された定性的測定にも役割があります。システムログに記録された応答時間は客観的です。速度に対するユーザーの印象は主観的ですが価値があります。適切性補助指標の完全なセットは、主要指標で捉えられないパフォーマンスのすべての重要な側面をカバーする必要があります。カバレッジのギャップは盲点を残します。冗長な指標は情報を追加せずに測定リソースを浪費します。実用性データ収集は、利用可能なツール、リソース、およびシステムを考慮して実現可能でなければなりません。広範な手作業、高価な計測、または侵襲的な監視を必要とする指標は、その価値を正当化しない可能性があります。システム指標の自動ログは実用的です。すべてのインタラクションについてすべてのユーザーを調査することは、しばしば実用的ではありません。信頼性測定は安定し信頼できる必要があります。激しく変動するノイズの多い指標は、実際のパフォーマンス変化を覆い隠します。不安定なセンサー、一貫性のない収集プロセス、または偏った測定方法は、指標の価値を損ないます。</p>
+<h3 id="選択プロセス">選択プロセス</h3>
+<p>ステップ1:中核目標の定義主要指標が何を測定し、成功したパフォーマンスがどのようなものかを明確に表現します。関係者のニーズとシステム要件を理解します。ステップ2:評価ギャップの特定主要指標が捉えないパフォーマンスの側面を分析します。速度、品質、コスト、ユーザー体験、信頼性、公平性、持続可能性の次元を考慮します。ステップ3:候補指標の生成特定されたギャップに対処する潜在的な測定をブレインストーミングします。ドメインの専門家に相談し、関連文献をレビューし、比較可能なシステムを調査します。必要以上の候補を生成します。ステップ4:選択基準の適用直接性、客観性、適切性、実用性、信頼性の基準に対して各候補を体系的に評価します。複数の基準に失敗する指標を排除します。ステップ5:優先順位付けと検証残りの候補を価値と実現可能性でランク付けします。測定システムを圧倒することなく包括的なカバレッジを提供する管理可能なセットを選択します。選択した指標をパイロットして有用性を検証します。ステップ6:実装と監視指標を<a data-lb="1" href="/ja/glossary/dashboard/" title="ダッシュボードとは、複数のソースから主要なデータ、KPI、トレンドを表示するビジュアルインターフェースです。迅速な監視、分析、情報に基づいた意思決定を可能にします。">ダッシュボード</a>とレポートシステムに統合します。関係者に解釈についてトレーニングします。システムと要件が進化するにつれて、指標が価値を提供し続けているかどうかを定期的にレビューします。</p>
+<h2 id="aiおよび自動化における応用">AIおよび自動化における応用</h2>
+<h3 id="機械学習モデル評価">機械学習モデル評価</h3>
+<p>主要指標:全体的な精度または<a data-lb="1" href="/ja/glossary/f1-score/" title="F1スコアは、機械学習における重要な評価指標であり、適合率と再現率の調和平均を表します。偽陽性と偽陰性のバランスを取るため、不均衡なデータセットに最適です。">F1スコア</a>補助指標:- カテゴリごとのパフォーマンスを明らかにするクラス固有の精度とリコール</p>
+<ul>
+<li>体系的なエラーパターンを示す混同行列</li>
+<li>信頼性の信頼性を測定するキャリブレーション指標</li>
+<li>デプロイの実現可能性を示す処理レイテンシ</li>
+<li>運用コストを測定するリソース消費</li>
+<li>公平なパフォーマンスを確保する人口統計グループ全体の公平性指標</li>
+</ul>
+<p>これらの補助指標は、使用不可能または不公平なモデルを作成しながら、見出しの精度を最適化することを防ぎます。非常に正確だが偏ったモデル、またはリアルタイム使用には遅すぎるモデルは、強力な主要指標にもかかわらず失敗します。</p>
+<h3 id="チャットボットパフォーマンス評価">チャットボットパフォーマンス評価</h3>
+<p>主要指標:解決率(エスカレーションなしで解決されたクエリの割合)補助指標:- 速度を測定する平均応答時間</p>
+<ul>
+<li>体験の質を捉えるユーザー満足度スコア</li>
+<li>複雑さの処理を明らかにするエスカレーション頻度</li>
+<li>効率を示す会話の長さ</li>
+<li>能力の幅を示すトピックカバレッジ</li>
+<li>システムの確実性を反映する信頼度スコア</li>
+</ul>
+<p>これらの指標を合わせることで、チャットボットが迅速で満足のいく体験を提供するか、または長時間のイライラするインタラクションを通じて単に解決を達成するかが明らかになります。</p>
+<h3 id="自動化プロセス監視">自動化プロセス監視</h3>
+<p>主要指標:タスク完了率補助指標:- 効率を測定するタスクあたりの処理時間</p>
+<ul>
+<li>自動化の信頼性を示す例外率</li>
+<li>真の自動化レベルを示す手動介入頻度</li>
+<li>品質を測定するエラー率</li>
+<li>経済的実行可能性のためのトランザクションあたりのコスト</li>
+<li>可用性のためのシステム稼働時間</li>
+</ul>
+<p>これらは、広範な手動介入または低品質でのみタスクが完了する場合に自動化の成功を宣言することを防ぎます。</p>
+<h3 id="医療aiシステム">医療AIシステム</h3>
+<p>主要指標:診断精度補助指標:- 異なる状態に対する偽陽性率と<a data-lb="1" href="/ja/glossary/false-negative/" title="偽陰性とは、チャットボットのようなAIシステムが実際の問題や意図を検出できない状態を指します。自動化における影響、原因、削減戦略について解説します。">偽陰性</a>率</p>
+<ul>
+<li>臨床ワークフローへの影響を測定する診断までの時間</li>
+<li>推奨事項に対する臨床医の信頼</li>
+<li>臨床的有用性を検証する患者の転帰指標</li>
+<li>臨床意思決定支援のための説明の質</li>
+<li>公平なケアを確保する人口統計学的パフォーマンスの変動</li>
+</ul>
+<p>医療AIは、生死に関わる重大性を考慮して、補助指標を通じた例外的な精査を必要とします。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<h3 id="ダッシュボード設計">ダッシュボード設計</h3>
+<p>主要指標を目立たせ、補助指標がドリルダウンの詳細を提供する階層的に指標を提示します。指標間の関係を明らかにする視覚化技術を使用します。期間、ユーザーセグメント、またはシステムコンポーネントによる柔軟なフィルタリングを可能にします。</p>
+<h3 id="関係者とのコミュニケーション">関係者とのコミュニケーション</h3>
+<p>異なる関係者は異なる指標サブセットを必要とします。経営幹部は主要指標とビジネス成果に影響を与える主要な補助指標に焦点を当てます。エンジニアはデバッグと最適化のための詳細な技術指標を必要とします。プロダクトマネージャーはユーザー体験と運用効率の指標のバランスを取ります。</p>
+<h3 id="アラート設定">アラート設定</h3>
+<p>主要指標が許容範囲内にとどまっていても、補助指標が問題を明らかにした場合にアラートをトリガーするしきい値を設定します。エスカレーション率の上昇は、解決率が低下する前にチームに警告する必要があります。応答時間の増加は、ユーザー満足度が低下する前に調査を促す必要があります。</p>
+<h3 id="定期的なレビューサイクル">定期的なレビューサイクル</h3>
+<p>選択した補助指標が価値を提供し続けているかどうかを定期的に評価します。意思決定にほとんど影響を与えない指標を廃止します。新たに特定されたギャップに対処する指標を追加します。ベースラインパフォーマンスが進化するにつれてしきい値を更新します。</p>
+<h3 id="情報過多の回避">情報過多の回避</h3>
+<p>より多くの指標が常により良いとは限りません。過剰な指標は認知的過負荷、分析麻痺、およびメンテナンス負担を生み出します。実行可能な洞察を提供する指標を優先します。経験則として、主要指標ごとに3〜7の補助指標を維持します。</p>
+<h2 id="一般的な課題">一般的な課題</h2>
+<h3 id="矛盾する指標">矛盾する指標</h3>
+<p>補助指標は時々矛盾する信号を提供します。解決率は改善するが満足度は低下します。精度は向上するが<a data-lb="1" href="/ja/glossary/latency/" title="レイテンシとは、リクエストとシステムの応答との間の時間遅延のことです。AIインフラストラクチャ、Webアプリケーション、リアルタイムシステムにおいて重要な要素です。その種類、原因、削減戦略について解説します。">レイテンシ</a>が許容できなくなります。これらの矛盾は、優先順位に関する関係者の決定を必要とするトレードオフを明らかにします。</p>
+<h3 id="測定バイアス">測定バイアス</h3>
+<p>指標収集方法は<a data-lb="1" href="/ja/glossary/bias/" title="バイアス の用語集ページ">バイアス</a>を導入する可能性があります。任意の満足度調査はエンゲージメントの高いユーザーを過剰に代表します。システムログに記録された指標はオフラインの影響を見逃します。合成テストデータは実世界の複雑さを反映しません。結果を解釈する際に測定の制限を認識します。</p>
+<h3 id="ゲーミングとグッドハートの法則">ゲーミングとグッドハートの法則</h3>
+<p>指標が目標になると、良い指標ではなくなります。測定された補助指標を最適化するチームは、測定されていない側面を犠牲にしながらそれらをゲーミングする可能性があります。どの補助指標が意思決定を推進するかを定期的にローテーションします。狭い最適化を防ぐ全体的な評価を維持します。</p>
+<h3 id="リソース制約">リソース制約</h3>
+<p>包括的な測定には、計測、ストレージ、分析ツール、および人員の時間が必要です。小規模な組織は、限られたリソースを考慮して、最も価値の高い指標を慎重に選択する必要があります。実現可能な場合は、自動化された収集と分析がコストを削減します。</p>
+<h3 id="データ品質の問題">データ品質の問題</h3>
+<p>信頼性の低いデータは指標の価値を損ないます。不安定なセンサー、ログのギャップ、および収集の不整合は、実際のパフォーマンス変化を隠すノイズを生み出します。信頼できるデータを提供する堅牢な測定インフラストラクチャに投資します。</p>
+<h2 id="高度な応用">高度な応用</h2>
+<h3 id="複合補助指数">複合補助指数</h3>
+<p>研究では、<a data-lb="1" href="/ja/glossary/machine-learning/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>を使用して複数の補助指標を集約するAI駆動の複合指数を探求しています。これらの指数は、コンポーネント指標を調査する能力を維持しながら、多次元の補助情報を要約する単一のスコアを提供します。応用には、景気循環予測、システムヘルス監視、および自動品質評価が含まれます。</p>
+<h3 id="予測指標">予測指標</h3>
+<p>一部の補助指標は、主要指標の変化が発生する前に予測します。エラー率の上昇はユーザー満足度の低下を予測する可能性があります。応答時間の分散の増加は今後の停止を予測する可能性があります。これらの先行指標は積極的な介入を可能にします。</p>
+<h3 id="因果分析">因果分析</h3>
+<p>高度な統計技術は、補助指標と主要指標の間の因果関係を特定します。どの補助要因が主要な成果を推進するかを理解することで、改善努力を最も影響力のある介入に集中させます。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p>いくつの補助指標を使用すべきですか?適切な文脈を提供するために必要な最小限を使用します。主要指標ごとに3〜5から始め、明確なギャップが存在する場合にのみ追加します。指標が多すぎるとユーザーを圧倒し、焦点が薄れます。補助指標には目標またはしきい値を設定すべきですか?適切な場合は、はい。しきい値は、補助指標が問題を示す場合にアラートをトリガーします。ただし、ゲーミングを防ぐために、すべての補助指標を正式な目標として扱うことは避けてください。補助指標は主要指標になることができますか?はい、組織の優先順位が変わる場合。指標の分類は、固有の特性ではなく、現在の評価フレームワークにおける役割を反映しています。今日のユーザー満足度を測定する補助指標は、戦略が維持に向かってシフトする場合、明日の主要指標になる可能性があります。矛盾する指標をどのように処理しますか?矛盾はトレードオフを明らかにします。優先順位を決定する必要がある関係者に明示的に表面化します。時には矛盾は調査を必要とする測定問題を示します。他の場合、それらは明示的な選択を必要とする真の緊張を反映しています。理想的な補助指標を測定できない場合はどうしますか?代理を使用するか、カバレッジのギャップを受け入れます。結果を解釈する際に制限を認識します。重要な指標の測定能力の向上に投資します。定量的測定が実現不可能な場合は、定性的評価方法を検討します。指標選択をどのくらいの頻度でレビューすべきですか?安定したシステムの場合は四半期ごとまたは半年ごと。急速に進化するシステムまたは大きな変更中はより頻繁に。主要指標が変更されたとき、新しい関係者が参加したとき、または戦略的優先順位が変わったときにレビューします。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p><a data-lb="1" href="/ja/glossary/google/" title="Google の用語集ページ">Google</a> Cloud. (2024). KPIs for Gen AI: Measuring Your AI Success. Google Cloud Blog.</p>
+</li>
+<li>
+<p>Sendbird. (2024). AI Metrics: How to Measure and Evaluate AI Performance. Sendbird Blog.</p>
+</li>
+<li>
+<p>Neontri. (2024). How to Measure AI Performance: Key Metrics and Best Practices. Neontri Blog.</p>
+</li>
+<li>
+<p>Korea Science. (n.d.). A Study on AI-based Composite Supplementary Index. Korea Science.</p>
+</li>
+<li>
+<p>USAID. (n.d.). Selecting Performance Indicators. USAID.</p>
+</li>
+<li>
+<p>scikit-learn. Classification Metrics. URL: <a href="https://scikit-learn.org/stable/modules/model_evaluation.html#classification-metrics" rel="nofollow noopener noreferrer" target="_blank">https://scikit-learn.org/stable/modules/model_evaluation.html#classification-metrics</a></p>
+</li>
+<li>
+<p>ISO. (2011). ISO/IEC 25010:2011 Software Quality Models. ISO 25000.</p>
+</li>
+<li>
+<p>Sendbird. (2024). AI Transparency Guide. Sendbird Blog.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/scenarios/">
+                    シナリオ(事前準備された会話フロー)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIチャットボットおよび自動化システムにおけるシナリオ(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/scenarios/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/self-healing-knowledge/">
+                    セルフヒーリング・ナレッジ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    セルフヒーリング・ナレッジは、AI、機械学習、自動化を活用して、ナレッジマネジメントシステム内の古くなった情報や誤った情報を自律的に検出、診断、修正し、正確性を確保します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/self-healing-knowledge/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/task-oriented-bot/">
+                    タスク指向型ボット
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    タスク指向型ボットは、予約、追跡、スケジューリングなどの特定の構造化されたプロセスを自動化するために設計された専門的なチャットボットで、自然言語処理とバックエンド統合を活用します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/task-oriented-bot/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/chatbot/">
+                    チャットボット
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    チャットボットは、テキストまたは音声を使用して人間の会話をシミュレートするソフトウェアプログラムで、24時間365日利用可能です。チャットボットの種類、用途、メリット、そしてAI、自然言語処理、機械学...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/chatbot/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/explicit-knowledge/">
+                    形式知
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/explicit-knowledge/" title="形式知とは、文書化された情報であり、容易に言語化、体系化され、マニュアル、データベース、デジタルファイルを通じて共有できる知識です。AI、自動化、組織学習において不可欠な要素となっています。">形式知</a>とは、文書化された情報であり、容易に言語化、体系化され、マニュアル、データベース、デジタルファイルを通じて共有できる知識です。AI、自動化、組織学習において不可欠な要素となっています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/explicit-knowledge/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hybrid-support/">
+                    ハイブリッドサポート
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ハイブリッドサポートは、AI(チャットボット、自動化)と人間のエージェントを統合した顧客サービスモデルで、効率的で共感性のある、スケーラブルな顧客体験を提供します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/hybrid-support/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp">
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</source></picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/supplementary-indicator/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260111165522"></script>
+</body>
+</html>

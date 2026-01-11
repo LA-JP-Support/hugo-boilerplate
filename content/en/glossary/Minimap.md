@@ -1,7 +1,7 @@
 ---
 title: "Minimap"
 translationKey: "minimap"
-description: "A small overview map that shows your entire workspace at a glance, helping you navigate large or complex content without losing your place."
+description: "A small overview map positioned at the screen's edge that shows a bird's-eye view of large, complex content, helping users quickly navigate and stay oriented without losing context."
 keywords: ["minimap", "AI chatbot", "automation platforms", "flow navigation", "UI/UX"]
 category: "AI Chatbot & Automation"
 type: "glossary"
@@ -40,7 +40,9 @@ Large datasets and graphs (mind maps, network diagrams) employ minimaps for cont
 
 React Flow and Svelte Flow provide customizable `<MiniMap />` component for node-based editors, rendering each node as SVG element and visualizing current viewport relative to flow.
 
-**React Flow Example:**```jsx
+**React Flow Example:**
+
+```jsx
 import { ReactFlow, MiniMap } from '@xyflow/react';
 
 export default function Flow() {
@@ -50,7 +52,11 @@ export default function Flow() {
     </ReactFlow>
   );
 }
-```**Svelte Flow Example:**```svelte
+```
+
+**Svelte Flow Example:**
+
+```svelte
 <script lang="ts">
   import { SvelteFlow, MiniMap } from '@xyflow/svelte';
 </script>
@@ -87,7 +93,9 @@ export default function Flow() {
 
 ### Customization Examples
 
-**Color by Node Type:**```jsx
+**Color by Node Type:**
+
+```jsx
 function nodeColor(node) {
   switch (node.type) {
     case 'input': return '#6ede87';
@@ -97,13 +105,21 @@ function nodeColor(node) {
 }
 
 <MiniMap nodeColor={nodeColor} />
-```**Custom Node Rendering:**```jsx
+```
+
+**Custom Node Rendering:**
+
+```jsx
 function MiniMapNode({ x, y }) {
   return <circle cx={x} cy={y} r="50" />;
 }
 
 <MiniMap nodeComponent={MiniMapNode} />
-```**Interactive Minimap:**```jsx
+```
+
+**Interactive Minimap:**
+
+```jsx
 <MiniMap pannable zoomable />
 ```
 
@@ -127,32 +143,84 @@ Complex network diagram uses minimap for navigating thousands of interconnected 
 
 ## Benefits
 
-**Spatial Awareness:**Maintain orientation within large workspaces preventing users from getting lost in complex flows.**Efficient Navigation:**Jump instantly to distant sections without scrolling or searching, improving workflow efficiency.**Context Preservation:**See overall structure while focusing on specific details, understanding how parts relate to whole.**Visual Overview:**Quickly assess flow complexity, identify patterns, spot potential issues in layout or structure.**Reduced Cognitive Load:**External memory aid reducing mental effort required to track position within large systems.
+**Spatial Awareness:** Maintain orientation within large workspaces preventing users from getting lost in complex flows.
+
+**Efficient Navigation:** Jump instantly to distant sections without scrolling or searching, improving workflow efficiency.
+
+**Context Preservation:** See overall structure while focusing on specific details, understanding how parts relate to whole.
+
+**Visual Overview:** Quickly assess flow complexity, identify patterns, spot potential issues in layout or structure.
+
+**Reduced Cognitive Load:** External memory aid reducing mental effort required to track position within large systems.
 
 ## Accessibility Considerations
 
-**Accessible Labels:**Set `ariaLabel` prop describing minimap's purpose for screen readers.**Keyboard Navigation:**Ensure keyboard interaction support for users unable to use mouse.**Color Contrast:**Use color schemes with sufficient contrast for visually impaired users.**Responsive Sizing:**Make minimap visible but unobtrusive across different screen sizes.**Alternative Navigation:**Provide complementary navigation methods (search, breadcrumbs) for users who cannot effectively use visual minimaps.
+**Accessible Labels:** Set `ariaLabel` prop describing minimap's purpose for screen readers.
+
+**Keyboard Navigation:** Ensure keyboard interaction support for users unable to use mouse.
+
+**Color Contrast:** Use color schemes with sufficient contrast for visually impaired users.
+
+**Responsive Sizing:** Make minimap visible but unobtrusive across different screen sizes.
+
+**Alternative Navigation:** Provide complementary navigation methods (search, breadcrumbs) for users who cannot effectively use visual minimaps.
 
 ## Best Practices
 
-**Appropriate Sizing:**Large enough to be useful but small enough not to obscure primary content.**Clear Visual Hierarchy:**Distinguish between viewport indicator and content through color, opacity, borders.**Performance Optimization:**Optimize rendering for large node counts using virtualization or simplified representations.**Consistent Positioning:**Place minimap in consistent location (typically bottom-right) matching user expectations.**Progressive Disclosure:**Hide or collapse minimap when not needed, especially on smaller screens.**Visual Clarity:**Ensure minimap representation clearly corresponds to main view with consistent styling.
+**Appropriate Sizing:** Large enough to be useful but small enough not to obscure primary content.
+
+**Clear Visual Hierarchy:** Distinguish between viewport indicator and content through color, opacity, borders.
+
+**Performance Optimization:** Optimize rendering for large node counts using virtualization or simplified representations.
+
+**Consistent Positioning:** Place minimap in consistent location (typically bottom-right) matching user expectations.
+
+**Progressive Disclosure:** Hide or collapse minimap when not needed, especially on smaller screens.
+
+**Visual Clarity:** Ensure minimap representation clearly corresponds to main view with consistent styling.
 
 ## Common Pitfalls
 
-**Too Small:**Minimap so small it's unusable, defeating purpose of providing overview.**Too Large:**Obscures significant portion of working area, hindering primary task.**Poor Contrast:**Insufficient visual distinction between elements making minimap difficult to read.**Missing Accessibility:**No keyboard access or screen reader support excluding users with disabilities.**Performance Issues:**Unoptimized rendering causing lag or stuttering with large datasets.
+**Too Small:** Minimap so small it's unusable, defeating purpose of providing overview.
+
+**Too Large:** Obscures significant portion of working area, hindering primary task.
+
+**Poor Contrast:** Insufficient visual distinction between elements making minimap difficult to read.
+
+**Missing Accessibility:** No keyboard access or screen reader support excluding users with disabilities.
+
+**Performance Issues:** Unoptimized rendering causing lag or stuttering with large datasets.
 
 ## Frequently Asked Questions
 
-**What is the main purpose of a minimap?**Provides condensed, navigable overview of large area helping users maintain context and move efficiently within complex interfaces.**How does minimap enhance chatbot builder experience?**Allows creators to see entire automation flow at glance, quickly locate and edit nodes, avoid losing context in complex branching logic.**Can minimap appearance be customized?**Yes. Customize colors, shapes, node rendering, position, interactivity (panning, zooming), and more using configuration properties or custom components.**Is minimap interactive by default?**No. In React Flow and Svelte Flow, minimap is non-interactive unless `pannable` or `zoomable` properties set to `true`.**How does minimap improve efficiency?**Enables instant navigation across distant sections, provides visual structure identification, maintains spatial awareness when editing or debugging.**Is minimap accessible?**Depends on implementation. Use `ariaLabel` for screen readers, ensure keyboard navigation, provide strong color contrast.**Can minimaps be used outside chatbot builders?**Yes. Widely used in code editors, data visualization, mapping applications, and games.
+**What is the main purpose of a minimap?**
+Provides condensed, navigable overview of large area helping users maintain context and move efficiently within complex interfaces.
+
+**How does minimap enhance chatbot builder experience?**
+Allows creators to see entire automation flow at glance, quickly locate and edit nodes, avoid losing context in complex branching logic.
+
+**Can minimap appearance be customized?**
+Yes. Customize colors, shapes, node rendering, position, interactivity (panning, zooming), and more using configuration properties or custom components.
+
+**Is minimap interactive by default?**
+No. In React Flow and Svelte Flow, minimap is non-interactive unless `pannable` or `zoomable` properties set to `true`.
+
+**How does minimap improve efficiency?**
+Enables instant navigation across distant sections, provides visual structure identification, maintains spatial awareness when editing or debugging.
+
+**Is minimap accessible?**
+Depends on implementation. Use `ariaLabel` for screen readers, ensure keyboard navigation, provide strong color contrast.
+
+**Can minimaps be used outside chatbot builders?**
+Yes. Widely used in code editors, data visualization, mapping applications, and games.
 
 ## References
 
-
-1. React Flow. (n.d.). MiniMap Component. React Flow API Reference.
-2. Svelte Flow. (n.d.). MiniMap Component. Svelte Flow API Reference.
-3. Lenovo. (n.d.). Minimap. Lenovo Glossary.
-4. Crisp. (n.d.). AI Chatbot & Automations. Crisp Help Center.
-5. Game UI Database. (n.d.). Minimap. Game UI Database.
-6. Reddit. (n.d.). How Games Code Minimaps. Reddit Discussion.
-7. EqualWeb. (n.d.). Accessible Navigation Design: Best Practices for 2025. EqualWeb.
-8. Google. (n.d.). Accessibility. Material Design Guidelines.
+- [React Flow: MiniMap Component](https://reactflow.dev/api-reference/components/minimap)
+- [Svelte Flow: MiniMap Component](https://svelteflow.dev/api-reference/components/mini-map)
+- [Lenovo Glossary: Minimap](https://www.lenovo.com/us/en/glossary/mini-map/)
+- [Crisp AI Chatbot & Automations](https://help.crisp.chat/en/category/ai-chatbot-automations-1yxt4vb/)
+- [Game UI Database: Minimap](https://www.gameuidatabase.com/index.php?scrn=135)
+- [Reddit: How Games Code Minimaps](https://www.reddit.com/r/howdidtheycodeit/comments/zxg62w/how_do_most_games_code_minimaps_and_your_movement/)
+- [EqualWeb: Accessible Navigation Design](https://www.equalweb.com/a/44195/11527/accessible_navigation_design:_best_practices_for_2025)
+- [Material Design: Accessibility](https://m2.material.io/design/usability/accessibility.html)

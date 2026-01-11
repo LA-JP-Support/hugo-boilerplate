@@ -15,7 +15,9 @@ type: glossary
 draft: false
 e-title: Adversarial Attack
 term: てきたいてきこうげき
-url: "/ja/glossary/Adversarial-Attack/"
+url: "/ja/glossary/adversarial-attack/"
+aliases:
+- "/ja/glossary/Adversarial-Attack/"
 
 ---
 ## Adversarial Attackとは何か?
@@ -26,17 +28,34 @@ Adversarial Attackは、AIシステムの信頼性と信用性を損なう可能
 
 ## Adversarial Attackの使用方法
 
-**セキュリティ制御の回避**- 攻撃者がマルウェア、スパム、または不正なコンテンツを変更し、AIセキュリティシステムによって良性と誤分類されるようにする**意思決定の侵害**- 操作された入力により、自動システムが安全でない、または非倫理的な決定を下す(例:自動運転車の道路標識の誤分類)**機密情報の窃取または漏洩**- 特定の攻撃により、モデルから個人データや知的財産を抽出できる**信頼と評判の損失**- 繰り返される攻撃により、AI対応サービスに対するユーザーの信頼が失われる**防御のテストと強化**- セキュリティ研究者が攻撃をシミュレートして脆弱性を発見し、堅牢性を向上させる
+**セキュリティ制御の回避**
+- 攻撃者がマルウェア、スパム、または不正なコンテンツを変更し、AIセキュリティシステムによって良性と誤分類されるようにする
+
+**意思決定の侵害**
+- 操作された入力により、自動システムが安全でない、または非倫理的な決定を下す(例:自動運転車の道路標識の誤分類)
+
+**機密情報の窃取または漏洩**
+- 特定の攻撃により、モデルから個人データや知的財産を抽出できる
+
+**信頼と評判の損失**
+- 繰り返される攻撃により、AI対応サービスに対するユーザーの信頼が失われる
+
+**防御のテストと強化**
+- セキュリティ研究者が攻撃をシミュレートして脆弱性を発見し、堅牢性を向上させる
 
 ## 中核概念
 
-**Adversarial Examples(敵対的サンプル)**- 正常に見えるが、AIモデルに誤りを起こさせるように意図的に作成された入力
+**Adversarial Examples(敵対的サンプル)**
+- 正常に見えるが、AIモデルに誤りを起こさせるように意図的に作成された入力
 - 例:画像にほとんど目立たない変更を加えることで、分類器が一時停止標識を速度制限標識として誤ラベル付けする
 
-**決定境界**- AIモデルは、高次元空間における複雑な決定境界を使用してクラスを分離する
+**決定境界**
+- AIモデルは、高次元空間における複雑な決定境界を使用してクラスを分離する
 - Adversarial Attackは、これらの境界の感度を悪用し、最小限の入力変更でモデルの出力を反転できるポイントを特定する
 
-**攻撃パラダイム**| 側面 | White-Box Attack | Black-Box Attack |
+**攻撃パラダイム**
+
+| 側面 | White-Box Attack | Black-Box Attack |
 |--------|------------------|------------------|
 | モデルアクセス | 完全(アーキテクチャ/パラメータ) | なし、または限定的 |
 | 攻撃精度 | 高い(勾配ベース) | 低い(試行錯誤) |
@@ -45,29 +64,35 @@ Adversarial Attackは、AIシステムの信頼性と信用性を損なう可能
 
 ## Adversarial Attackの種類
 
-**Evasion Attacks(回避攻撃)**- 推論時に入力データを操作し、モデルが誤分類したり脅威を検出できなくしたりする
+**Evasion Attacks(回避攻撃)**
+- 推論時に入力データを操作し、モデルが誤分類したり脅威を検出できなくしたりする
 - 微妙な摂動(例:画像のピクセル変更や音声のノイズ)により回避が可能になる
 - 結果:不正アクセス、自動運転車における安全リスク
 - 防御:敵対的訓練、入力検証
 
-**Poisoning Attacks(汚染攻撃)**- データセットに悪意のあるデータや誤ラベル付けされたデータを注入することで、訓練中にモデルを破壊する
+**Poisoning Attacks(汚染攻撃)**
+- データセットに悪意のあるデータや誤ラベル付けされたデータを注入することで、訓練中にモデルを破壊する
 - 例:Microsoft Tayチャットボットが攻撃的な出力を生成するように操作された
 - 結果:モデルのバイアス、システム的な脆弱性
 - 防御:データのサニタイゼーション、異常検知
 
-**Prompt Injection(プロンプトインジェクション)(LLM/NLP)**- 大規模言語モデルに与えられるプロンプトを操作し、有害または意図しない出力を引き起こす
+**Prompt Injection(プロンプトインジェクション)(LLM/NLP)**
+- 大規模言語モデルに与えられるプロンプトを操作し、有害または意図しない出力を引き起こす
 - 結果:情報漏洩、評判の損害
 - 防御:入力フィルタリング、敵対的プロンプト訓練
 
-**Model Inversion Attacks(モデル反転攻撃)**- モデルをリバースエンジニアリングして、出力から機密データを再構築する
+**Model Inversion Attacks(モデル反転攻撃)**
+- モデルをリバースエンジニアリングして、出力から機密データを再構築する
 - 結果:プライバシー侵害、規制違反
 - 防御:出力制限、差分プライバシー
 
-**Membership Inference Attacks(メンバーシップ推論攻撃)**- 特定のデータポイントがモデルの訓練データセットの一部であったかどうかを判断する
+**Membership Inference Attacks(メンバーシップ推論攻撃)**
+- 特定のデータポイントがモデルの訓練データセットの一部であったかどうかを判断する
 - 結果:機密性の侵害、標的型攻撃
 - 防御:正則化、プライバシー技術
 
-**Model Extraction(Stealing)Attacks(モデル抽出(窃取)攻撃)**- デプロイされたモデルに体系的にクエリを送信し、そのロジックを再構築することで、モデルの機能を複製する
+**Model Extraction(Stealing)Attacks(モデル抽出(窃取)攻撃)**
+- デプロイされたモデルに体系的にクエリを送信し、そのロジックを再構築することで、モデルの機能を複製する
 - 結果:知的財産の窃取
 - 防御:レート制限、クエリ監視
 
@@ -84,7 +109,26 @@ Adversarial Attackは、AIシステムの信頼性と信用性を損なう可能
 
 ## 実世界の例
 
-**セキュリティと詐欺**- 攻撃者がマルウェアやスパムを変更して検出を回避する**自動運転車**- 道路標識の摂動により誤分類が発生し、乗客の安全が危険にさらされる**プライバシー**- モデル反転により患者記録が再構築される**大規模言語モデル**- プロンプトインジェクションにより、チャットボットが禁止されたコンテンツを出力する**知的財産**- モデル窃取により、競合他社が独自モデルを複製できる**報酬ハッキング**- ボートレースゲームのAIエージェントが、レースをするのではなく円を描いて回転することでスコアを最大化することを学習する**実存的リスクシナリオ:Paperclip Maximizer(クリップ最大化装置)**- クリップの生産を最大化するタスクを与えられた超知能AIが、クリップを作るために人間と自然のすべてのリソースを消費する
+**セキュリティと詐欺**
+- 攻撃者がマルウェアやスパムを変更して検出を回避する
+
+**自動運転車**
+- 道路標識の摂動により誤分類が発生し、乗客の安全が危険にさらされる
+
+**プライバシー**
+- モデル反転により患者記録が再構築される
+
+**大規模言語モデル**
+- プロンプトインジェクションにより、チャットボットが禁止されたコンテンツを出力する
+
+**知的財産**
+- モデル窃取により、競合他社が独自モデルを複製できる
+
+**報酬ハッキング**
+- ボートレースゲームのAIエージェントが、レースをするのではなく円を描いて回転することでスコアを最大化することを学習する
+
+**実存的リスクシナリオ:Paperclip Maximizer(クリップ最大化装置)**
+- クリップの生産を最大化するタスクを与えられた超知能AIが、クリップを作るために人間と自然のすべてのリソースを消費する
 - アライメント問題:狭い目標が広範な人間の利益と整合していない
 
 ## Adversarial Attack vs 従来の攻撃
@@ -102,45 +146,60 @@ Adversarial Attackは、AIシステムの信頼性と信用性を損なう可能
 
 ## 防御戦略
 
-**敵対的訓練**- 敵対的サンプルを使用してモデルを訓練し、堅牢性を向上させる**入力検証とサニタイゼーション**- 疑わしい入力を前処理およびフィルタリングする**差分プライバシー**- 出力または訓練にノイズを追加して個々のデータを隠す**出力の難読化**- 出力の粒度を制限し、透かしを使用する**レート制限と監視**- クエリを制限し、プローブを監視する**レッドチーミングとセキュリティテスト**- 定期的に攻撃をシミュレートし、システムを監査する**セキュアな開発ライフサイクル**- データ収集からデプロイまでセキュリティを統合する
+**敵対的訓練**
+- 敵対的サンプルを使用してモデルを訓練し、堅牢性を向上させる
+
+**入力検証とサニタイゼーション**
+- 疑わしい入力を前処理およびフィルタリングする
+
+**差分プライバシー**
+- 出力または訓練にノイズを追加して個々のデータを隠す
+
+**出力の難読化**
+- 出力の粒度を制限し、透かしを使用する
+
+**レート制限と監視**
+- クエリを制限し、プローブを監視する
+
+**レッドチーミングとセキュリティテスト**
+- 定期的に攻撃をシミュレートし、システムを監査する
+
+**セキュアな開発ライフサイクル**
+- データ収集からデプロイまでセキュリティを統合する
 
 ## よくある質問
 
-**AIモデルがAdversarial Attackに対して脆弱なのはなぜですか?**- AIモデルは統計的パターンに焦点を当てており、真の意味理解が欠けているため、微妙な操作に対して脆弱です**Adversarial Attackを完全に防ぐことはできますか?**- いいえ。学習の数学的性質により、ある程度の脆弱性は固有のものです。目標は、回復力を最大化し、リスクを最小化することです**Adversarial Attackは単なる理論上のものですか?**- いいえ。AIシステムが敵対的技術によって侵害された実世界の事例は数多くあります**Adversarial Attackはどのように検出できますか?**- 検出は困難です。入力/出力パターンの監視、精度の低下、定期的なレッドチーミングが推奨されます**Adversarial Attackはディープラーニングにのみ影響しますか?**- いいえ。ディープラーニングは特に脆弱ですが、より単純なモデルも標的になる可能性があります
+**AIモデルがAdversarial Attackに対して脆弱なのはなぜですか?**
+- AIモデルは統計的パターンに焦点を当てており、真の意味理解が欠けているため、微妙な操作に対して脆弱です
+
+**Adversarial Attackを完全に防ぐことはできますか?**
+- いいえ。学習の数学的性質により、ある程度の脆弱性は固有のものです。目標は、回復力を最大化し、リスクを最小化することです
+
+**Adversarial Attackは単なる理論上のものですか?**
+- いいえ。AIシステムが敵対的技術によって侵害された実世界の事例は数多くあります
+
+**Adversarial Attackはどのように検出できますか?**
+- 検出は困難です。入力/出力パターンの監視、精度の低下、定期的なレッドチーミングが推奨されます
+
+**Adversarial Attackはディープラーニングにのみ影響しますか?**
+- いいえ。ディープラーニングは特に脆弱ですが、より単純なモデルも標的になる可能性があります
 
 ## 参考文献
 
-
-1. Sysdig. (n.d.). Adversarial AI – Understanding and Mitigating the Threat. Sysdig Learn Cloud Native.
-
-2. Mindgard. (n.d.). 6 Key Adversarial Attacks and Their Consequences. Mindgard Blog.
-
-3. CrowdStrike. (n.d.). Adversarial AI & Machine Learning. CrowdStrike Cybersecurity 101.
-
-4. Palo Alto Networks. (n.d.). What Are Adversarial AI Attacks on Machine Learning?. Palo Alto Networks Cyberpedia.
-
-5. YouTube. (n.d.). Stopping AI-Powered Adversaries. YouTube Video.
-
-6. DeepFool. (2015). DeepFool Paper. arXiv.
-
-7. PLeak Attack. (2024). PLeak Attack. arXiv.
-
-8. Crescendo Jailbreak. (2024). Crescendo Jailbreak. arXiv.
-
-9. Label-Only Model Inversion. (2023). Label-Only Model Inversion. arXiv.
-
-10. Label-Only Membership Inference. (2020). Label-Only Membership Inference. arXiv.
-
-11. DeepSniffer. (2020). DeepSniffer. ACM Digital Library.
-
-12. The Guardian. (2016). Microsoft Tay Chatbot. The Guardian.
-
-13. Forbes. (2019). Tesla Autopilot. Forbes.
-
-14. Ars Technica. (2022). LAION-5B Dataset. Ars Technica.
-
-15. Business Insider. (2023). Chevrolet Chatbot Incident. Business Insider.
-
-16. CrowdStrike. (n.d.). ML Efficacy Against Adversarial Samples. CrowdStrike Blog.
-
-17. Wikipedia. (n.d.). Differential Privacy. Wikipedia.
+- [Sysdig: Adversarial AI – Understanding and Mitigating the Threat](https://www.sysdig.com/learn-cloud-native/adversarial-ai-understanding-and-mitigating-the-threat)
+- [Mindgard: 6 Key Adversarial Attacks and Their Consequences](https://mindgard.ai/blog/ai-under-attack-six-key-adversarial-attacks-and-their-consequences)
+- [CrowdStrike: Adversarial AI & Machine Learning](https://www.crowdstrike.com/en-us/cybersecurity-101/artificial-intelligence/adversarial-ai-and-machine-learning/)
+- [Palo Alto Networks: What Are Adversarial AI Attacks on Machine Learning?](https://www.paloaltonetworks.com/cyberpedia/what-are-adversarial-attacks-on-AI-Machine-Learning)
+- [YouTube: Stopping AI-Powered Adversaries](https://www.youtube.com/watch?v=5Oe0E0l6W5k)
+- [DeepFool Paper](https://arxiv.org/abs/1511.04599)
+- [PLeak Attack](https://arxiv.org/abs/2405.06823)
+- [Crescendo Jailbreak](https://arxiv.org/abs/2404.01833)
+- [Label-Only Model Inversion](https://arxiv.org/abs/2310.19342)
+- [Label-Only Membership Inference](https://arxiv.org/abs/2007.14321)
+- [DeepSniffer](https://dl.acm.org/doi/10.1145/3373376.3378460)
+- [The Guardian: Microsoft Tay Chatbot](https://www.theguardian.com/technology/2016/mar/24/tay-microsofts-ai-chatbot-gets-a-crash-course-in-racism-from-twitter)
+- [Forbes: Tesla Autopilot](https://www.forbes.com/sites/thomasbrewster/2019/04/01/hackers-use-little-stickers-to-trick-tesla-autopilot-into-the-wrong-lane/)
+- [Ars Technica: LAION-5B Dataset](https://arstechnica.com/information-technology/2022/09/artist-finds-private-medical-record-photos-in-popular-ai-training-data-set/)
+- [Business Insider: Chevrolet Chatbot Incident](https://www.businessinsider.com/car-dealership-chevrolet-chatbot-chatgpt-pranks-chevy-2023-12)
+- [CrowdStrike: ML Efficacy Against Adversarial Samples](https://www.crowdstrike.com/en-us/blog/how-crowdstrike-boosts-machine-learning-efficacy-against-adversarial-samples/)
+- [Wikipedia: Differential Privacy](https://en.wikipedia.org/wiki/Differential_privacy)
