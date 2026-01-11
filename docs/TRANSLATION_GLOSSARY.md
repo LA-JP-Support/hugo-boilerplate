@@ -25,7 +25,9 @@ Translate the content while strictly following these term translations.
 | English | Japanese | Notes |
 |---------|----------|-------|
 | AI | AI | Keep in English |
+| AGI | AGI | Keep abbreviation in English |
 | Artificial Intelligence | 人工知能 | Use kanji form |
+| Artificial General Intelligence | 汎用人工知能 | Use kanji form |
 | Machine Learning | 機械学習 | Use kanji form |
 | Deep Learning | ディープラーニング | Use katakana |
 | Neural Network | ニューラルネットワーク | Use katakana |

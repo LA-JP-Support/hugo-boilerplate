@@ -1,6 +1,8 @@
 english,japanese,type,category,notes,usage_context
 AI,AI,keep_english,ai_ml,Universal acronym,Always use English
+AGI,AGI,keep_english,ai_ml,Universal acronym,Always use English
 Artificial Intelligence,人工知能,translate,ai_ml,Standard Japanese term exists,Use kanji form
+Artificial General Intelligence,汎用人工知能,translate,ai_ml,Standard Japanese term exists,Use kanji form
 Machine Learning,機械学習,translate,ai_ml,Standard Japanese term exists,Use kanji form
 Deep Learning,ディープラーニング,katakana,ai_ml,Commonly used in katakana,Technical term
 Neural Network,ニューラルネットワーク,katakana,ai_ml,Technical term katakana standard,Use katakana

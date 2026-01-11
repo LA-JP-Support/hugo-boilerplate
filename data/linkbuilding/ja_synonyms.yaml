@@ -19,11 +19,38 @@ keywords:
     exact: false
     priority: 5
     title: 人工知能(AI) の用語集ページ
+
+  - keyword: AGI
+    url: /ja/glossary/agi/
+    exact: true
+    priority: 12
+    title: AGI の用語集ページ
+  - keyword: エージーアイ
+    url: /ja/glossary/agi/
+    exact: false
+    priority: 10
+    title: AGI の用語集ページ
   - keyword: 大規模言語モデル
     url: /ja/glossary/large-language-models/
     exact: false
     priority: 5
     title: 大規模言語モデル(LLM) の用語集ページ
+
+  - keyword: NLP
+    url: /ja/glossary/natural-language-processing/
+    exact: true
+    priority: 12
+    title: 自然言語処理（NLP） の用語集ページ
+  - keyword: エヌエルピー
+    url: /ja/glossary/natural-language-processing/
+    exact: false
+    priority: 10
+    title: 自然言語処理（NLP） の用語集ページ
+  - keyword: 自然言語処理
+    url: /ja/glossary/natural-language-processing/
+    exact: false
+    priority: 8
+    title: 自然言語処理（NLP） の用語集ページ
   - keyword: 汎用人工知能
     url: /ja/glossary/agi/
     exact: false
