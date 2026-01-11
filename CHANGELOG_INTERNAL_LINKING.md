@@ -1,5 +1,25 @@
 # Changelog - Internal Linking System
 
+## [2.1.3] - 2026-01-11
+
+### 🐛 Fixed
+
+- **hreflang の `href` に `%!s(<nil>)` が混入する問題を修正**
+  - `layouts/partials/helpers/get-language-url.html`: `site.BaseURL` ベースで安全にURLを組み立てるように変更
+
+### 🔄 Changed
+
+- **glossary 配下リンクの小文字正規化を強化**
+  - `scripts/linkbuilding.py`: 既存の `<a href>` について、`/glossary/` を含むURLは path を小文字に正規化
+  - これにより、既存HTMLに残っていた mixed-case glossary URL も後処理で統一
+
+- **用語集翻訳スクリプトの `url` を小文字生成に統一**
+  - `scripts/translate_glossary_en_to_ja.py`: `url: "/ja/glossary/<slug>/"` を小文字で生成
+
+### 📝 Documentation
+
+- `docs/SCRIPTS_USAGE_GUIDE.md`: `translate_glossary_en_to_ja.py` の実際のCLI引数に合わせて更新（model / max-workers / batch-size / skip-existing / csv-path など）
+
 ## [2.1.2] - 2026-01-10
 
 ### 📝 Documentation

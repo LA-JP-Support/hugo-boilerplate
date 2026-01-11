@@ -204,6 +204,11 @@ AIチャットボットは自然言語処理を使用します。
 - `--max-keyword 1`: 同じキーワードは1回のみ
 - `--max-url 3`: 同じURLへは最大3回
 
+### 5. glossary のURLは小文字に統一する
+
+- `public/{en,ja}` のHTML後処理では、`/glossary/` 配下の `href` を小文字に正規化します（ケースセンシティブ環境での404対策）。
+- `linkbuilding_parallel.py` は基本的に `public/en` と `public/ja` を処理対象とします。`public/files` などの別フォルダに置いたHTMLは対象外なので、必要なら別途 `scripts/linkbuilding.py -d <dir>` で処理してください。
+
 ---
 
 ## 🐛 トラブルシューティング
