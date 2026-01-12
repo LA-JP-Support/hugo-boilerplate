@@ -17,18 +17,38 @@
       "logoAlt" "SmartWeb Logo"
       "logoHeight" "h-6 sm:h-10 md:h-12"
       "siteTitle" "SmartWeb"
-      "ctaText" "今すぐ始める"
-      "ctaUrl" "/ja/blog/"
+      "ctaText" "無料相談"
+      "ctaUrl" "/ja/contact/"
       "ctaBgColor" "bg-indigo-600"
       "ctaHoverBgColor" "hover:bg-indigo-500"
       "ctaTextColor" "text-white"
       "loginText" "サポート"
       "loginUrl" "https://support.smartweb.jp/"
       "menuItems" (slice 
-        (dict "title" "ホーム" "url" "/ja/")
+        (dict 
+          "title" "AIカスタマーサポート" 
+          "url" "/ja/#customer-support" 
+          "dropdown" "flyout_menu_simple_with_descriptions"
+          "buttonText" "AIカスタマーサポート"
+          "menuItems" (slice 
+            (dict "title" "AIチャットボット" "description" "100言語対応・24時間365日稼働" "url" "/ja/services/ai-chatbot/")
+            (dict "title" "AI連携チケットシステム" "description" "すべての問い合わせを一画面で管理" "url" "/ja/services/ticket-system/")
+            (dict "title" "AIメール回答作成" "description" "受信から回答案作成まで自動化" "url" "/ja/services/email-automation/")
+            (dict "title" "AI回答アシスト" "description" "オペレーターの文章作成をAIが支援" "url" "/ja/services/ai-answer-assistant/")
+          )
+        )
+        (dict 
+          "title" "AIコンテンツ・Web" 
+          "url" "/ja/#content-creation" 
+          "dropdown" "flyout_menu_simple_with_descriptions"
+          "buttonText" "AIコンテンツ・Web"
+          "menuItems" (slice 
+            (dict "title" "AIコンテンツ作成" "description" "ブログ・用語集をAIが自動生成" "url" "/ja/services/ai-content/")
+            (dict "title" "Hugo高速Web構築" "description" "世界最速の静的サイトジェネレーター" "url" "/ja/services/hugo-web/")
+          )
+        )
         (dict "title" "ブログ" "url" "/ja/blog/")
         (dict "title" "用語集" "url" "/ja/glossary/")
-        (dict "title" "会社情報" "url" "https://www.intwk.co.jp/about/")
       )
   ) }}
 {{ else }}
@@ -38,18 +58,38 @@
       "logoAlt" "SmartWeb Logo"
       "logoHeight" "h-6 sm:h-10 md:h-12"
       "siteTitle" "SmartWeb"
-      "ctaText" "Get Started"
-      "ctaUrl" "/en/blog/"
+      "ctaText" "Contact Us"
+      "ctaUrl" "/en/contact/"
       "ctaBgColor" "bg-indigo-600"
       "ctaHoverBgColor" "hover:bg-indigo-500"
       "ctaTextColor" "text-white"
       "loginText" "Support"
       "loginUrl" "https://support.smartweb.jp/"
       "menuItems" (slice 
-        (dict "title" "Home" "url" "/en/")
+        (dict 
+          "title" "AI Customer Support" 
+          "url" "/en/#customer-support" 
+          "dropdown" "flyout_menu_simple_with_descriptions"
+          "buttonText" "AI Customer Support"
+          "menuItems" (slice 
+            (dict "title" "AI Chatbot" "description" "100+ languages, 24/7 availability" "url" "/en/services/ai-chatbot/")
+            (dict "title" "AI Ticket System" "description" "Manage all inquiries in one place" "url" "/en/services/ticket-system/")
+            (dict "title" "AI Answer Composer" "description" "Auto-generate email responses" "url" "/en/services/email-automation/")
+            (dict "title" "AI Answer Improver" "description" "AI-powered response refinement" "url" "/en/services/ai-answer-assistant/")
+          )
+        )
+        (dict 
+          "title" "AI Content & Web" 
+          "url" "/en/#content-creation" 
+          "dropdown" "flyout_menu_simple_with_descriptions"
+          "buttonText" "AI Content & Web"
+          "menuItems" (slice 
+            (dict "title" "AI Content Creation" "description" "AI-generated blogs & glossaries" "url" "/en/services/ai-content/")
+            (dict "title" "Hugo Web Development" "description" "World's fastest static site generator" "url" "/en/services/hugo-web/")
+          )
+        )
         (dict "title" "Blog" "url" "/en/blog/")
         (dict "title" "Glossary" "url" "/en/glossary/")
-        (dict "title" "Company" "url" "https://www.intwk.co.jp/about/")
       )
   ) }}
 {{ end }}

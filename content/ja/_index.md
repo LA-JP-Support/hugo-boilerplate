@@ -96,17 +96,34 @@ pillars_support:
       label: "すべての問い合わせを一画面で管理"
       image: "/images/pillars/ticket-system.jpg"
       url: "/ja/services/ticket-system/"
-      description: "メール、チャット、電話、SNS…複数の窓口から届く問い合わせを一つの画面で一元管理。自動チケット化で対応漏れゼロを実現し、AI回答アシスタントとの連携で担当者の負荷を大幅に軽減します。"
-    - title: "メール自動回答"
+      description: "メール、チャット、電話、SNS…複数の窓口から届く問い合わせを一つの画面で一元管理。自動チケット化で対応漏れゼロを実現し、AI回答アシストとの連携で担当者の負荷を大幅に軽減します。"
+    - title: "AIメール回答作成"
       label: "受信から回答案作成まで自動化"
       image: "/images/pillars/email-automation.jpg"
       url: "/ja/services/email-automation/"
       description: "お問い合わせメールを受信すると、AIが内容を分析し、御社のナレッジベースを参照して回答案を自動作成。担当者は内容を確認して送信するだけ。1通あたりの対応時間を大幅に短縮し、より多くのお客様に迅速な対応が可能になります。"
-    - title: "AI回答アシスタント"
+    - title: "AI回答アシスト"
       label: "オペレーターの文章作成をAIが支援"
       image: "/images/pillars/ai-answer-assistant.jpg"
       url: "/ja/services/ai-answer-assistant/"
-      description: "チケットの会話履歴をAIが分析し、文脈に沿った回答案を自動作成。「もっと丁寧に」「簡潔に」といった指示で瞬時にブラッシュアップも可能。新人オペレーターでもベテラン並みの回答品質を実現し、対応時間を大幅に短縮します。"
+      description: "担当者が作成した回答文を、AIが瞬時にブラッシュアップ。「もっと丁寧に」「簡潔に」「専門用語に解説を追加」といった指示で文章を改善・拡張・簡略化。カジュアルからビジネスまで文体調整も可能で、一貫した品質の高い対応を実現します。"
+
+# AI Content Creation & Web - 2 Pillars
+pillars_content:
+  label: "AIコンテンツ作成・Web構築"
+  heading: "2つの柱"
+  description: "コンテンツマーケティングとWebサイト構築をAIで加速。FlowHuntのAI技術でSEO最適化されたコンテンツを効率的に作成し、Hugoの静的サイト生成で超高速・高セキュリティのWebサイトを構築します。"
+  items:
+    - title: "AIコンテンツ作成"
+      label: "ブログ・用語集をAIが自動生成"
+      image: "/images/pillars/ai-content.jpg"
+      url: "/ja/services/ai-content/"
+      description: "FlowHuntのマルチエージェントAIが、SEO最適化されたブログ記事や専門用語集を自動生成。リサーチから執筆、校正までを自動化し、記事作成時間を70%削減。このサイトでは1,200以上の用語を日英で作成し、検索エンジンからの継続的な集客を実現しています。"
+    - title: "Hugo高速Web構築"
+      label: "世界最速の静的サイトジェネレーター"
+      image: "/images/pillars/hugo-web.jpg"
+      url: "/ja/services/hugo-web/"
+      description: "Go言語で開発されたHugoは、ミリ秒単位でページを生成する世界最速の静的サイトジェネレーター。データベース不要でセキュリティリスクを排除し、CDN配信による超高速表示を実現。Smashing Magazine、Cloudflareなど世界12,900以上のサイトで採用されています。"
 
 # CTA Section (Bottom)
 showCTA: true

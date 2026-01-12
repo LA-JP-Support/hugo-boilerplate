@@ -118,7 +118,7 @@
 {{- $headerId := printf "header-menu-%d" (now.UnixNano) -}}
 {{- $mobileMenuId := printf "mobile-menu-%d" (now.UnixNano) -}}
 
-<header class="bg-white">
+<header class="bg-white relative z-50">
   <nav class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8" aria-label="Global">
     <div class="flex lg:flex-1">
       <a href="{{ "/" | relLangURL }}" class="-m-1.5 p-1.5">
@@ -156,6 +156,50 @@
     <div class="flex flex-1 items-center justify-end gap-x-6">
       <a href="{{ partial "helpers/get-translated-url.html" (dict "url" $loginUrl) }}" class="hidden text-sm/6 font-semibold text-gray-900 lg:block">{{ $loginText }}</a>
       <a href="{{ partial "helpers/get-translated-url.html" (dict "url" $ctaUrl) }}" class="rounded-md {{ $ctaBgColor }} px-3 py-2 text-sm font-semibold {{ $ctaTextColor }} shadow-xs {{ $ctaHoverBgColor }} focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{ $ctaText }}</a>
+      
+      {{/* Language Selector Dropdown */}}
+      {{ if gt (len site.Home.AllTranslations) 1 }}
+      <div class="relative hidden lg:block" id="lang-selector-desktop">
+        <button type="button" class="inline-flex items-center gap-x-1.5 text-sm font-semibold text-gray-900 hover:text-gray-600 transition-colors" aria-expanded="false" aria-haspopup="true">
+          {{ if eq site.Language.Lang "ja" }}
+            <span class="text-base">🇯🇵</span>
+            <span>JA</span>
+          {{ else if eq site.Language.Lang "en" }}
+            <span class="text-base">🇬🇧</span>
+            <span>EN</span>
+          {{ else }}
+            <span class="text-base">🌐</span>
+            <span>{{ site.Language.Lang | upper }}</span>
+          {{ end }}
+          <svg class="size-4 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        
+        {{/* Dropdown Menu */}}
+        <div class="absolute right-0 z-[100] mt-2 w-40 origin-top-right rounded-xl bg-white py-2 shadow-lg ring-1 ring-gray-900/5 opacity-0 invisible translate-y-1 transition-all duration-200" id="lang-dropdown-menu">
+          {{ range site.Home.AllTranslations }}
+          <a href="{{ .Permalink }}" class="flex items-center gap-x-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 {{ if eq .Lang $.Site.Language.Lang }}bg-gray-50 font-semibold{{ end }}">
+            {{ if eq .Lang "ja" }}
+              <span class="text-base">🇯🇵</span>
+              <span>日本語</span>
+            {{ else if eq .Lang "en" }}
+              <span class="text-base">🇬🇧</span>
+              <span>English</span>
+            {{ else }}
+              <span class="text-base">🌐</span>
+              <span>{{ .Language.LanguageName }}</span>
+            {{ end }}
+            {{ if eq .Lang $.Site.Language.Lang }}
+            <svg class="ml-auto size-4 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            {{ end }}
+          </a>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
     </div>
     <div class="flex lg:hidden">
       <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" aria-expanded="false" aria-controls="{{ $mobileMenuId }}">
@@ -199,6 +243,32 @@
           <div class="py-6">
             <a href="{{ partial "helpers/get-translated-url.html" (dict "url" $loginUrl) }}" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">{{ $loginText }}</a>
           </div>
+          
+          {{/* Mobile Language Selector */}}
+          {{ if gt (len site.Home.AllTranslations) 1 }}
+          <div class="py-6 border-t border-gray-200">
+            <p class="px-3 text-sm font-semibold text-gray-500 mb-2">言語 / Language</p>
+            {{ range site.Home.AllTranslations }}
+            <a href="{{ .Permalink }}" class="-mx-3 flex items-center gap-x-3 rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 {{ if eq .Lang $.Site.Language.Lang }}bg-indigo-50 text-indigo-600{{ end }}">
+              {{ if eq .Lang "ja" }}
+                <span class="text-lg">🇯🇵</span>
+                <span>日本語</span>
+              {{ else if eq .Lang "en" }}
+                <span class="text-lg">🇬🇧</span>
+                <span>English</span>
+              {{ else }}
+                <span class="text-lg">🌐</span>
+                <span>{{ .Language.LanguageName }}</span>
+              {{ end }}
+              {{ if eq .Lang $.Site.Language.Lang }}
+              <svg class="ml-auto size-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              {{ end }}
+            </a>
+            {{ end }}
+          </div>
+          {{ end }}
         </div>
       </div>
     </div>
@@ -207,6 +277,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu functionality
     const mobileMenuButton = document.querySelector('[aria-controls="{{ $mobileMenuId }}"]');
     const mobileMenu = document.getElementById('{{ $mobileMenuId }}');
     const closeButtons = document.querySelectorAll('.close-mobile-menu');
@@ -260,6 +331,45 @@
           mobileMenu.classList.add('hidden');
           document.body.classList.remove('overflow-hidden');
         }, 300);
+      }
+    }
+    
+    // Language selector dropdown functionality
+    const langSelector = document.getElementById('lang-selector-desktop');
+    if (langSelector) {
+      const langButton = langSelector.querySelector('button');
+      const langDropdown = document.getElementById('lang-dropdown-menu');
+      
+      if (langButton && langDropdown) {
+        langButton.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const isOpen = langButton.getAttribute('aria-expanded') === 'true';
+          
+          if (isOpen) {
+            closeLangDropdown();
+          } else {
+            openLangDropdown();
+          }
+        });
+        
+        // Close when clicking outside
+        document.addEventListener('click', function(event) {
+          if (!langSelector.contains(event.target)) {
+            closeLangDropdown();
+          }
+        });
+        
+        function openLangDropdown() {
+          langButton.setAttribute('aria-expanded', 'true');
+          langDropdown.classList.remove('opacity-0', 'invisible', 'translate-y-1');
+          langDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+        }
+        
+        function closeLangDropdown() {
+          langButton.setAttribute('aria-expanded', 'false');
+          langDropdown.classList.add('opacity-0', 'invisible', 'translate-y-1');
+          langDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+        }
       }
     }
   });

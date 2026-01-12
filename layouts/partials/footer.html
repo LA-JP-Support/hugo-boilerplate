@@ -1,6 +1,6 @@
 {{/*
 @component: Footer
-@description: Standard page footer with 4 columns of links, CTA section, social icons, and copyright.
+@description: Standard page footer with 4 columns of links, CTA section, social icons, and copyright information.
 @params:
   None - all parameters are preset and passed to the layout/footers/4-column_with_call-to-action_on_dark component
 @example:
@@ -15,34 +15,39 @@
   {{ partial "layout/footers/4-column_with_call-to-action_on_dark" (dict 
       "logoUrl" "/images/interwork-logo-white-1.webp"
       "logoAlt" "Interwork"
+      "companyDescription" "株式会社インターワークは、LiveAgent ならびに FlowHunt の開発元 Quality Unit社の日本総代理店です。"
+      "ismsLogoUrl" "https://www.smartweb.jp/wp-content/uploads/39cb6640_iao27001.jpg.webp"
+      "ismsText" "認証登録番号 ISMS/0393<br>本認証は、JISSAの仕組みにて認証取得"
       "ctaTagline" "今すぐ始めませんか？"
       "ctaHeading" "SmartWebで未来を創る"
-      "ctaDescription" "数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。"
-      "ctaButtonText" "無料で始める"
-      "ctaButtonUrl" "/ja/blog/"
-      "column1Title" "サービス"
+      "ctaDescription" "AIカスタマーサポートとコンテンツマーケティングで、ビジネスを次のステージへ。"
+      "ctaButtonText" "無料相談を予約"
+      "ctaButtonUrl" "/ja/contact/"
+      "column1Title" "AIカスタマーサポート"
       "column1Links" (slice 
-          (dict "text" "AIソリューション" "url" "#")
-          (dict "text" "Webサイト制作" "url" "#")
-          (dict "text" "システム開発" "url" "#")
-          (dict "text" "コンサルティング" "url" "#")
+          (dict "text" "AIチャットボット" "url" "/ja/services/ai-chatbot/")
+          (dict "text" "AI連携チケットシステム" "url" "/ja/services/ticket-system/")
+          (dict "text" "AIメール回答作成" "url" "/ja/services/email-automation/")
+          (dict "text" "AI回答アシスト" "url" "/ja/services/ai-answer-assistant/")
       )
-      "column2Title" "サポート"
+      "column2Title" "AIコンテンツ・Web"
       "column2Links" (slice 
-          (dict "text" "サポートポータル" "url" "https://support.smartweb.jp/")
-          (dict "text" "ドキュメント" "url" "#")
+          (dict "text" "AIコンテンツ作成" "url" "/ja/services/ai-content/")
+          (dict "text" "Hugo高速Web構築" "url" "/ja/services/hugo-web/")
       )
-      "column3Title" "会社情報"
+      "column3Title" "リソース"
       "column3Links" (slice 
-          (dict "text" "会社概要" "url" "https://www.intwk.co.jp/about/")
           (dict "text" "ブログ" "url" "/ja/blog/")
-          (dict "text" "採用情報" "url" "#")
-          (dict "text" "ニュース" "url" "#")
+          (dict "text" "用語集" "url" "/ja/glossary/")
+          (dict "text" "サポートポータル" "url" "https://support.smartweb.jp/")
       )
-      "column4Title" "ポリシー"
+      "column4Title" "会社情報・ポリシー"
       "column4Links" (slice 
-          (dict "text" "プライバシーポリシー" "url" "/privacy-policy/")
-          (dict "text" "AIチャットボット利用規約" "url" "/ai-chatbot-terms-of-use/")
+          (dict "text" "会社概要" "url" "https://www.intwk.co.jp/about/")
+          (dict "text" "適格請求書発行事業者登録番号" "url" "https://www.intwk.co.jp/2022/10/25/invoice-system/")
+          (dict "text" "情報セキュリティ基本方針" "url" "https://www.intwk.co.jp/about/isms/")
+          (dict "text" "プライバシーポリシー" "url" "/ja/privacy-policy/")
+          (dict "text" "AIチャットボット利用規約" "url" "/ja/ai-chatbot-terms-of-use/")
       )
       "socialLinks" (slice 
           (dict "name" "GitHub" "url" "https://github.com" "icon" "github")
@@ -57,32 +62,37 @@
   {{ partial "layout/footers/4-column_with_call-to-action_on_dark" (dict 
       "logoUrl" "/images/interwork-logo-white-1.webp"
       "logoAlt" "Interwork"
+      "companyDescription" "Interwork Corporation is the exclusive distributor in Japan for Quality Unit, the developer of LiveAgent and FlowHunt."
+      "ismsLogoUrl" "https://www.smartweb.jp/wp-content/uploads/39cb6640_iao27001.jpg.webp"
+      "ismsText" "Certification No. ISMS/0393<br>Certified under JISSA framework"
       "ctaTagline" "Ready to get started?"
-      "ctaHeading" "Start using our services today"
-      "ctaDescription" "Join thousands of satisfied customers who have transformed their business with our solutions."
-      "ctaButtonText" "Get started"
-      "ctaButtonUrl" "/en/blog/"
-      "column1Title" "Services"
+      "ctaHeading" "Transform your business with SmartWeb"
+      "ctaDescription" "AI-powered customer support and content marketing to take your business to the next level."
+      "ctaButtonText" "Schedule a Free Consultation"
+      "ctaButtonUrl" "/en/contact/"
+      "column1Title" "AI Customer Support"
       "column1Links" (slice 
-          (dict "text" "AI Solutions" "url" "#")
-          (dict "text" "Web Development" "url" "#")
-          (dict "text" "System Development" "url" "#")
-          (dict "text" "Consulting" "url" "#")
+          (dict "text" "AI Chatbot" "url" "/en/services/ai-chatbot/")
+          (dict "text" "AI Ticket System" "url" "/en/services/ticket-system/")
+          (dict "text" "AI Answer Composer" "url" "/en/services/email-automation/")
+          (dict "text" "AI Answer Improver" "url" "/en/services/ai-answer-assistant/")
       )
-      "column2Title" "Support"
+      "column2Title" "AI Content & Web"
       "column2Links" (slice 
-          (dict "text" "Support Portal" "url" "https://support.smartweb.jp/")
-          (dict "text" "Documentation" "url" "#")
+          (dict "text" "AI Content Creation" "url" "/en/services/ai-content/")
+          (dict "text" "Hugo Web Development" "url" "/en/services/hugo-web/")
       )
-      "column3Title" "Company"
+      "column3Title" "Resources"
       "column3Links" (slice 
-          (dict "text" "About" "url" "https://www.intwk.co.jp/about/")
           (dict "text" "Blog" "url" "/en/blog/")
-          (dict "text" "Careers" "url" "#")
-          (dict "text" "News" "url" "#")
+          (dict "text" "Glossary" "url" "/en/glossary/")
+          (dict "text" "Support Portal" "url" "https://support.smartweb.jp/")
       )
-      "column4Title" "Legal"
+      "column4Title" "Company & Legal"
       "column4Links" (slice 
+          (dict "text" "About Us" "url" "https://www.intwk.co.jp/about/")
+          (dict "text" "Invoice Registration Number" "url" "https://www.intwk.co.jp/2022/10/25/invoice-system/")
+          (dict "text" "Information Security Policy" "url" "https://www.intwk.co.jp/about/isms/")
           (dict "text" "Privacy Policy" "url" "/en/privacy-policy/")
           (dict "text" "AI Chatbot Terms of Use" "url" "/en/ai-chatbot-terms-of-use/")
       )

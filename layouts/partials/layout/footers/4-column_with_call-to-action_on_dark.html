@@ -252,14 +252,30 @@
   </script>
   
   <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
-    <div class="mt-24 border-t {{ $borderColor }} pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
-      {{ partial "components/media/lazyimg.html" (dict 
-        "src" $logoUrl 
-        "alt" $logoAlt
-        "class" $logoHeight
-        "maxWidth" 200
-      ) }}
-      <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+{{/* Company Info */}}
+{{ $companyDescription := .companyDescription | default "" }}
+{{ $ismsLogoUrl := .ismsLogoUrl | default "" }}
+{{ $ismsText := .ismsText | default "" }}
+
+    <div class="mt-24 border-t {{ $borderColor }} pt-12 xl:grid xl:grid-cols-4 xl:gap-8">
+      <div class="xl:col-span-1">
+        {{ partial "components/media/lazyimg.html" (dict 
+          "src" $logoUrl 
+          "alt" $logoAlt
+          "class" $logoHeight
+          "maxWidth" 200
+        ) }}
+        {{ if $companyDescription }}
+        <p class="mt-4 text-sm/6 text-gray-400">{{ $companyDescription }}</p>
+        {{ end }}
+        {{ if and $ismsLogoUrl $ismsText }}
+        <div class="mt-6 flex items-start gap-3">
+          <img src="{{ $ismsLogoUrl }}" alt="ISMS認証" class="h-16 w-auto" />
+          <p class="text-xs text-gray-500 leading-relaxed">{{ $ismsText | safeHTML }}</p>
+        </div>
+        {{ end }}
+      </div>
+      <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-3 xl:mt-0">
         <div class="md:grid md:grid-cols-2 md:gap-8">
           {{ if $column1Title }}
           <div>

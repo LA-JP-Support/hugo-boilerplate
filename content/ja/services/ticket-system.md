@@ -1,6 +1,6 @@
 ---
 title: "AI連携チケットシステム"
-description: "メール、チャット、電話、SNS…複数の窓口から届く問い合わせを一つの画面で一元管理。自動チケット化で対応漏れゼロを実現し、AI回答アシスタントとの連携で担当者の負荷を大幅に軽減します。"
+description: "メール、チャット、電話、SNS…複数の窓口から届く問い合わせを一つの画面で一元管理。自動チケット化で対応漏れゼロを実現し、AI回答アシストとの連携で担当者の負荷を大幅に軽減します。"
 type: "services"
 
 # Hero Section
@@ -29,8 +29,8 @@ features:
     image: "/images/services/ticket-system/feature-automation.jpg"
   
   - label: "AI連携"
-    title: "AI回答アシスタントで負荷を大幅軽減"
-    description: "チケットシステムとAI回答アシスタントを組み合わせることで、担当者は「ゼロから文章を書く」のではなく、「AIの案を確認・調整する」だけの運用に切り替えられます。過去の対応履歴やナレッジベースをもとに、AIが下書き案を自動生成。トーンやルールに沿ったテンプレート返信も一元管理できます。<br><br>繰り返し質問の多いFAQ対応をAIに任せ、人は例外対応や高付加価値業務に集中できます。AIを「人の代わり」ではなく「サポート担当の分身」として活用することで、小さなチームでも安定した品質のサポート体制を構築できます。"
+    title: "AI回答アシストで負荷を大幅軽減"
+    description: "チケットシステムとAI回答アシストを組み合わせることで、担当者は「ゼロから文章を書く」のではなく、「AIの案を確認・調整する」だけの運用に切り替えられます。過去の対応履歴やナレッジベースをもとに、AIが下書き案を自動生成。トーンやルールに沿ったテンプレート返信も一元管理できます。<br><br>繰り返し質問の多いFAQ対応をAIに任せ、人は例外対応や高付加価値業務に集中できます。AIを「人の代わり」ではなく「サポート担当の分身」として活用することで、小さなチームでも安定した品質のサポート体制を構築できます。"
     image: "/images/services/ticket-system/feature-ai-assist.jpg"
   
   - label: "外部連携"
@@ -67,11 +67,11 @@ related_services:
     description: "24時間365日、100言語対応の自動学習型AIサポート"
     url: "/ja/services/ai-chatbot/"
     image: "/images/pillars/ai-chatbot.jpg"
-  - title: "メール自動回答"
+  - title: "AIメール回答作成"
     description: "受信から回答案作成まで自動化"
     url: "/ja/services/email-automation/"
     image: "/images/pillars/email-automation.jpg"
-  - title: "AI回答アシスタント"
+  - title: "AI回答アシスト"
     description: "オペレーターの文章作成をAIが支援"
     url: "/ja/services/ai-answer-assistant/"
     image: "/images/pillars/ai-answer-assistant.jpg"
