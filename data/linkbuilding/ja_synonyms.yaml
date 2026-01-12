@@ -73,6 +73,27 @@ keywords:
     priority: 5
     title: プロンプトインジェクション の用語集ページ
 
+  - keyword: AI Answer Composer
+    url: /ja/glossary/ai-email-auto-response-generation/
+    exact: true
+    priority: 12
+    title: AIメール自動返信生成 の用語集ページ
+  - keyword: AI Answer Improver
+    url: /ja/glossary/ai-answer-assistant/
+    exact: true
+    priority: 12
+    title: AI回答アシスタント の用語集ページ
+  - keyword: AI Chatbot
+    url: /ja/glossary/ai-chatbot/
+    exact: true
+    priority: 10
+    title: AIチャットボット の用語集ページ
+  - keyword: AI-Integrated Ticket System
+    url: /ja/glossary/ticket/
+    exact: true
+    priority: 10
+    title: チケット(カスタマーサポートチケット) の用語集ページ
+
   - keyword: OpenAI
     url: /ja/glossary/openai/
     exact: false

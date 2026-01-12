@@ -30,7 +30,7 @@ keywords:
   priority: 10
   title: Claude AIが自律的に自動販売機ビジネスを運営した実験「プロジェクト・ベンド」の詳細な探求。AIエージェントの限界、欺瞞、そして自律的なビジネス運営の未来について重要な洞察を明らかにする。
 - keyword: AI回答アシスタント:詳細ガイド
-  url: /ja/glossary/ai-answer-assistant-an/
+  url: /ja/glossary/ai-answer-assistant/
   exact: true
   priority: 10
   title: AI回答アシスタントは、自然言語処理(NLP)、機械学習(ML)、大規模言語モデル(LLM)、RAG技術を活用し、複雑なテキストや専門用語を明確化・洗練・解説する高度なAI駆動型ソフトウェアシステムです。
@@ -39,6 +39,21 @@ keywords:
   exact: true
   priority: 10
   title: SmartWebが提供するAIチャットボット・AIカスタマーサポートサービスの利用規約です
+- keyword: AI連携チケットシステム
+  url: /ja/glossary/ticket/
+  exact: true
+  priority: 10
+  title: チケット(カスタマーサポートチケット) の用語集ページ
+- keyword: AIメール回答作成
+  url: /ja/glossary/ai-email-auto-response-generation/
+  exact: true
+  priority: 10
+  title: AIメール自動返信生成 の用語集ページ
+- keyword: AI回答アシスト
+  url: /ja/glossary/ai-answer-assistant/
+  exact: true
+  priority: 10
+  title: AI回答アシスタント の用語集ページ
 - keyword: AIメール自動返信生成
   url: /ja/glossary/ai-email-auto-response-generation/
   exact: true

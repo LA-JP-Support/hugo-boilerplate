@@ -37,6 +37,7 @@
 3. **内部リンクは全てHTML後処理で作成する**
    - Hugoビルド後の `public/` に対して `scripts/linkbuilding_parallel.py` を実行する
    - Markdown（`content/` / `content-clean/`）に内部リンクを直接挿入しない
+   - 内部リンクのリンク先は **用語集（`/ja/glossary/` / `/en/glossary/`）に統一**し、`/ja/services/` にはリンクしない
 4. **Markdownを書き換えるスクリプトは原則使用しない。例外的に使う場合は安全柵を必須とする**
    - `--dry-run` がある場合は必ず先に実行
    - まず1ファイル、次に少数ファイルで検証してから全体適用
@@ -87,6 +88,10 @@
 
 - `docs/TRANSLATION_GUIDELINES.md`
 - `docs/TRANSLATION_GLOSSARY.md`
+
+### F. サービスページの名称定義（JP/EN対応表）を確認したい
+
+- `docs/SERVICE_NAME_DEFINITIONS.md`
 
 ---
 
