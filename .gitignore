@@ -1,6 +1,7 @@
 # Hugo default output directory
 /public/
 /public-test/
+/public-services/
 /resources/_gen/
 /assets/jsconfig.json
 hugo_stats.json
