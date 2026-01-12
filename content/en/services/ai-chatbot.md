@@ -21,12 +21,17 @@ features:
   - label: "Core Features"
     title: "24/7 Support & Full Chat Integration"
     description: "Respond instantly to customer inquiries outside business hours and on holidays. Available as anonymous chat for casual use, or with email registration for continuous support linked to customer history. All AI conversations are automatically converted to tickets for complete visibility into support status.<br><br>AI and human agents switch seamlessly within the same live chat UI, minimizing operator training requirements. All chat history is centrally managed, enabling context-aware responses based on inquiry background."
-    image: "/images/services/ai-chatbot/feature-24h-chat.jpg"
+    images:
+      - src: "/images/services/ai-chatbot/feature-24h-chat.jpg"
+        caption: "AI Chat Screen"
+        size: "small"
+      - src: "/images/services/ai-chatbot/feature-24h-chat2.jpg"
+        caption: "Agent Dashboard"
   
   - label: "Knowledge Integration"
     title: "Auto-Learning & Multilingual Support"
     description: "Automatically crawls your knowledge base and website content regularly, learning new information to always respond with the latest content. Existing materials like Word documents, PDFs, and text files can be used as-is, minimizing setup effort.<br><br>Even when trained on Japanese data, the AI automatically responds in the questioner's language when asked in English, Chinese, or other languages. Provide multilingual support without additional operators, perfect for multi-location or international businesses."
-    image: "/images/services/ai-chatbot/feature-multilingual.jpg"
+    image: "/images/pillars/ai-chatbot.jpg"
   
   - label: "Complex Inquiries"
     title: "Handle Complex Questions with Expanded Knowledge"
@@ -49,15 +54,18 @@ features:
     image: "/images/services/ai-chatbot/feature-escalation.jpg"
 
 # Stats Section
-stats_heading: "Implementation Results"
-stats_description: "Proven business improvements with AI chatbot"
+stats_heading: "Customer Results"
+stats_description: "Real improvements from LiveAgent and FlowHunt integration"
 stats:
-  - value: "82%"
-    label: "Support workload reduction"
-  - value: "70-80%"
-    label: "Inquiries handled by AI"
+  - value: "80%"
+    label: "Engagement Increase"
+    description: "Financial services company M4Markets saw 80% improvement in customer engagement in international regions after AI chatbot implementation. Multilingual AI responding instantly in customers' native languages strengthened trust with their global customer base."
+  - value: "40%"
+    label: "Operator Workload Reduced"
+    description: "Travel industry CVFR Travel Group reduced agent workload by 40% with AI chatbot and automated workflows. This resulted in 30% team productivity improvement and 28% better first-contact resolution."
   - value: "24/7"
-    label: "Year-round availability"
+    label: "Year-Round AI Support"
+    description: "Provide instant multilingual support regardless of time zones or business hours. AI continuously learns, automatically incorporating new FAQs and content to always respond with the latest information."
 
 # CTA Section
 cta_section:
@@ -70,10 +78,10 @@ cta_section:
 related_services_heading: "Other AI Customer Support Features"
 related_services_description: "Comprehensive customer support through SmartWeb's four pillars"
 related_services:
-  - title: "LiveAgent Integration"
-    description: "Manage AI chatbot and ticket system from one unified interface"
-    url: "/en/services/liveagent-integration/"
-    image: "/images/pillars/liveagent-integration.jpg"
+  - title: "AI-Integrated Ticket System"
+    description: "Manage all inquiries in one screen with zero missed responses"
+    url: "/en/services/ticket-system/"
+    image: "/images/pillars/ticket-system.jpg"
   - title: "Email Auto-Response"
     description: "Automate from receipt to draft response"
     url: "/en/services/email-automation/"

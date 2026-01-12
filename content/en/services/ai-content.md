@@ -1,0 +1,78 @@
+---
+title: "AI Content Creation"
+description: "Leverage FlowHunt's AI technology to efficiently create SEO-optimized blog posts and glossary pages. Accelerate content marketing and drive continuous organic traffic from search engines."
+type: "services"
+
+# Hero Section
+badge: "Accelerate Content Marketing with AI"
+hero_heading: "Blogs and Glossaries.<br>AI Creates the Draft"
+hero_description: "From blog posts to technical glossaries, AI auto-generates SEO-optimized content. Reduce content creation time by 70% and drive continuous organic traffic from search engines."
+
+# CTAs
+cta_primary:
+  text: "Book a Free Consultation"
+  url: "/en/contact/"
+
+# Introduction
+introduction: "Content marketing is a powerful approach for driving continuous organic traffic from search engines. However, consistently creating high-quality articles requires significant time and expertise.<br><br>SmartWeb's AI Content Creation leverages FlowHunt's advanced AI technology to efficiently produce SEO-optimized blog posts and glossary pages. A multi-agent system automates research, writing, and editing—letting humans focus on review and final adjustments.<br><br>This very site features over 1,200 AI customer support terms created in both Japanese and English using this technology. As a content marketing foundation, it continues driving organic search traffic."
+
+# Features (4 sections with alternating layout)
+features:
+  - label: "Blog Generation"
+    title: "Auto-Create SEO-Optimized Blog Posts"
+    description: "FlowHunt's Advanced Blog Generator coordinates multiple AI agents to produce high-quality blog posts. An SEO Researcher analyzes keywords, an AI Copywriter crafts the article, and a Humanizer refines it into natural prose.<br><br>Automatically gather the latest information from Google Search and Wikipedia, generating 1,500-2,000 word SEO-optimized articles. Title tags, meta descriptions, heading structure, internal link suggestions—everything needed for publishing is included. Reduce content creation time by 70% while continuously producing high-quality content that ranks in search engines."
+    image: "/images/services/ai-content/feature-blog.jpg"
+  
+  - label: "Glossary Generation"
+    title: "Build Topical Authority with Expert Glossaries"
+    description: "FlowHunt's Glossary Article Generator auto-creates detailed glossary articles of 3,000-5,000+ words. Simply input keywords, and it researches up to 24+ authoritative sources. Definitions, use cases, related concepts, FAQ-style explanations—comprehensive content is created automatically.<br><br>SEO keyword analysis automatically suggests structures that rank well in search engines. Systematically building a glossary establishes industry expertise (topical authority), dramatically increasing search traffic for related keywords."
+    image: "/images/services/ai-content/feature-glossary.jpg"
+  
+  - label: "Proven Results"
+    title: "1,200+ Terms Created with AI"
+    description: "SmartWeb's glossary of AI customer support terminology was created using FlowHunt's AI technology. Currently, over 1,200 terms are published in both Japanese and English, contributing to continuous organic search traffic.<br><br>Each term includes detailed explanations of 2,600-2,800 words, delivered in a structured format with definitions, use cases, related terms, and FAQs. Once created, the glossary automatically attracts prospects to your site 24/7/365. As a content marketing 'asset,' it delivers long-term value."
+    image: "/images/services/ai-content/feature-showcase.jpg"
+  
+  - label: "AI-Human Collaboration"
+    title: "AI Drafts, Humans Refine"
+    description: "AI is ultimately an efficient drafting tool. Final article quality and responsibility are ensured by human review and editing. Fact-checking, legal/copyright review, and adding proprietary case studies or customer testimonials are human responsibilities that AI cannot judge.<br><br>SmartWeb provides support from effective prompt creation to operational guidance. Through AI-human collaboration, achieve maximum results with minimal resources. Delegate simple content creation to AI while focusing on strategy and quality control—high-value work only humans can do."
+    image: "/images/services/ai-content/feature-collaboration.jpg"
+
+# Stats Section
+stats_heading: "AI Content Creation Impact"
+stats_description: "Content marketing improvements with FlowHunt"
+stats:
+  - value: "70%"
+    label: "Content Creation Time Reduced"
+    description: "Articles that previously took 3+ hours are now completed in under an hour with AI drafts. Reallocate internal resources to other priorities and dramatically increase content publishing frequency."
+  - value: "1,200+"
+    label: "Glossary Terms in Japanese & English"
+    description: "SmartWeb created 1,200+ AI customer support terms in both Japanese and English. With detailed 2,600-2,800 word explanations per term, it drives continuous organic search traffic."
+  - value: "24/7"
+    label: "Content Keeps Attracting Traffic"
+    description: "Once created, articles and glossaries continue ranking in search engines, attracting prospects to your site 24/7/365. Achieve continuous lead generation without advertising costs."
+
+# CTA Section
+cta_section:
+  heading: "Ready to Get Started?"
+  description: "Streamline your content marketing with SmartWeb's AI Content Creation. Book a free consultation and we'll propose the optimal plan for your needs."
+  button_text: "Book a Free Consultation"
+  button_url: "/en/contact/"
+
+# Related Services
+related_services_heading: "Other Services"
+related_services_description: "SmartWeb's comprehensive solutions"
+related_services:
+  - title: "Hugo High-Speed Web Build"
+    description: "Build ultra-fast websites with the world's fastest static site generator"
+    url: "/en/services/hugo-web/"
+    image: "/images/pillars/hugo-web.jpg"
+  - title: "AI Chatbot"
+    description: "24/7 self-learning AI support in 100+ languages"
+    url: "/en/services/ai-chatbot/"
+    image: "/images/pillars/ai-chatbot.jpg"
+  - title: "AI-Integrated Ticket System"
+    description: "Manage all inquiries in one screen with zero missed responses"
+    url: "/en/services/ticket-system/"
+    image: "/images/pillars/ticket-system.jpg"
+---
