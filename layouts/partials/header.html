@@ -13,6 +13,7 @@
 {{ if $isJapanese }}
   {{/* 日本語版ヘッダー */}}
   {{ partial "components/menus/header_menu" (dict 
+      "page" .
       "logoUrl" "/images/smartweb-logo.png"
       "logoAlt" "SmartWeb Logo"
       "logoHeight" "h-6 sm:h-10 md:h-12"
@@ -54,6 +55,7 @@
 {{ else }}
   {{/* 英語版ヘッダー */}}
   {{ partial "components/menus/header_menu" (dict 
+      "page" .
       "logoUrl" "/images/smartweb-logo.png"
       "logoAlt" "SmartWeb Logo"
       "logoHeight" "h-6 sm:h-10 md:h-12"

@@ -48,6 +48,7 @@
 {{- $ctaTextColor := .ctaTextColor | default "text-white" -}}
 {{- $loginText := .loginText | default "Log in" -}}
 {{- $loginUrl := .loginUrl | default "#" -}}
+{{- $currentPage := .page | default nil -}}
 
 {{- $menuItems := .menuItems | default (slice 
   (dict 
@@ -179,18 +180,28 @@
         {{/* Dropdown Menu */}}
         <div class="absolute right-0 z-[100] mt-2 w-40 origin-top-right rounded-xl bg-white py-2 shadow-lg ring-1 ring-gray-900/5 opacity-0 invisible translate-y-1 transition-all duration-200" id="lang-dropdown-menu">
           {{ range site.Home.AllTranslations }}
-          <a href="{{ .Permalink }}" class="flex items-center gap-x-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 {{ if eq .Lang $.Site.Language.Lang }}bg-gray-50 font-semibold{{ end }}">
-            {{ if eq .Lang "ja" }}
+          {{ $langHome := . }}
+          {{ $lang := .Lang }}
+          {{ $targetUrl := $langHome.RelPermalink }}
+          {{ if $currentPage }}
+            {{ range $currentPage.AllTranslations }}
+              {{ if eq .Lang $lang }}
+                {{ $targetUrl = .RelPermalink }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          <a href="{{ $targetUrl }}" class="flex items-center gap-x-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 {{ if eq $lang site.Language.Lang }}bg-gray-50 font-semibold{{ end }}">
+            {{ if eq $lang "ja" }}
               <span class="text-base">🇯🇵</span>
               <span>日本語</span>
-            {{ else if eq .Lang "en" }}
+            {{ else if eq $lang "en" }}
               <span class="text-base">🇬🇧</span>
               <span>English</span>
             {{ else }}
               <span class="text-base">🌐</span>
-              <span>{{ .Language.LanguageName }}</span>
+              <span>{{ $langHome.Language.LanguageName }}</span>
             {{ end }}
-            {{ if eq .Lang $.Site.Language.Lang }}
+            {{ if eq $lang site.Language.Lang }}
             <svg class="ml-auto size-4 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
             </svg>
@@ -249,18 +260,28 @@
           <div class="py-6 border-t border-gray-200">
             <p class="px-3 text-sm font-semibold text-gray-500 mb-2">言語 / Language</p>
             {{ range site.Home.AllTranslations }}
-            <a href="{{ .Permalink }}" class="-mx-3 flex items-center gap-x-3 rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 {{ if eq .Lang $.Site.Language.Lang }}bg-indigo-50 text-indigo-600{{ end }}">
-              {{ if eq .Lang "ja" }}
+            {{ $langHome := . }}
+            {{ $lang := .Lang }}
+            {{ $targetUrl := $langHome.RelPermalink }}
+            {{ if $currentPage }}
+              {{ range $currentPage.AllTranslations }}
+                {{ if eq .Lang $lang }}
+                  {{ $targetUrl = .RelPermalink }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+            <a href="{{ $targetUrl }}" class="-mx-3 flex items-center gap-x-3 rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 {{ if eq $lang site.Language.Lang }}bg-indigo-50 text-indigo-600{{ end }}">
+              {{ if eq $lang "ja" }}
                 <span class="text-lg">🇯🇵</span>
                 <span>日本語</span>
-              {{ else if eq .Lang "en" }}
+              {{ else if eq $lang "en" }}
                 <span class="text-lg">🇬🇧</span>
                 <span>English</span>
               {{ else }}
                 <span class="text-lg">🌐</span>
-                <span>{{ .Language.LanguageName }}</span>
+                <span>{{ $langHome.Language.LanguageName }}</span>
               {{ end }}
-              {{ if eq .Lang $.Site.Language.Lang }}
+              {{ if eq $lang site.Language.Lang }}
               <svg class="ml-auto size-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
               </svg>

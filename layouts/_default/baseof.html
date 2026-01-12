@@ -20,7 +20,7 @@
   ) }}
 {{ end }}
 
-{{ partialCached "header.html" . (printf "header-%s" site.Language.Lang) }}
+{{ partialCached "header.html" . (printf "header-%s-%s" site.Language.Lang .Permalink) }}
 <main class="w-full">
   {{ block "main" . }}{{ end }}
 </main>
