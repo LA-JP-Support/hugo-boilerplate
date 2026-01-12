@@ -35,6 +35,9 @@ ignoreFiles = ['(?i)glossary-backup']
   description = "次世代のWeb体験をあなたに"
   author = "SmartWeb"
   mainSections = ["blog"]
+  
+  # Google Analytics 4
+  gaMeasurementID = "G-P4WY3NT5SD"
   dateFormat = "2006年1月2日"
   
   [params.imaging]

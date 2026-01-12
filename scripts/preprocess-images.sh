@@ -12,7 +12,7 @@ set -e
 # Get the root directory of the Hugo site
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 THEME_DIR="$(dirname "$SCRIPT_DIR")"
-HUGO_ROOT="$(dirname "$(dirname "$THEME_DIR")")"
+HUGO_ROOT="$THEME_DIR"
 
 SOURCE_DIR="$HUGO_ROOT/static/images"
 TARGET_DIR="$HUGO_ROOT/static/images/processed"

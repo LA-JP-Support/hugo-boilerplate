@@ -20,10 +20,10 @@
 {{ partialCached "head/variables.html" . }}
 <!-- Preload fonts early -->
 <link rel="preload" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<!-- Google Fonts -->
+<!-- Google Fonts - Optimized: reduced weights for faster loading -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
 <!-- Classic CSS loading for immediate styling -->
 <link rel="stylesheet" href="/css/main.css?v={{ partialCached "helpers/build-timestamp.html" . }}" crossorigin="anonymous">
 <!-- Custom CSS for code blocks and blockquotes -->
