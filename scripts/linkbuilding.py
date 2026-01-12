@@ -718,7 +718,7 @@ class LinkBuilder:
                 start, end = match.span()
                 
                 # Check morphological boundaries for Japanese
-                if valid_boundaries is not None:
+                if valid_boundaries is not None and keyword.is_cjk:
                     if start not in valid_boundaries or end not in valid_boundaries:
                         continue
 
