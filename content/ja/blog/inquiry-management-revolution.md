@@ -1,9 +1,16 @@
 ---
+
 title: "「あの問い合わせ、誰が対応してたっけ？」がなくなる日 - 企業のための問い合わせ管理革命"
 date: 2025-11-19
 draft: false
 image: "/images/blog/inquiry-management-revolution.png"
-url: "/ja/blog/inquiry-management-revolution/"
+
+translationKey: "inquiry-management-revolution"
+lastmod: 2025-11-19
+keywords: []
+
+url: "blog/inquiry-management-revolution/"
+
 
 ---
 # 月曜朝の悪夢：メールの海で溺れる前に

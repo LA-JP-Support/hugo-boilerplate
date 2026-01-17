@@ -1,4 +1,5 @@
 ---
+
 title: "2025 AI Customer Support Guide: Success Strategies from Amazon, Salesforce to SMEs"
 date: 2025-11-20
 draft: false
@@ -6,6 +7,11 @@ description: "Comprehensive guide to AI customer support trends and success stor
 tags: ["AI", "Customer Support", "Chatbot", "Generative AI", "Business Efficiency", "Customer Experience"]
 categories: ["AI & Machine Learning", "Business Efficiency"]
 image: "/images/blog/ai-customer-support-2025-guide.png"
+
+translationKey: "ai-customer-support-2025-guide"
+lastmod: 2025-11-20
+keywords: []
+url: "blog/ai-customer-support-2025-guide/"
 ---
 ## What is AI Customer Support?
 

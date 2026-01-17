@@ -1,4 +1,5 @@
 ---
+
 title: "How AI Answers Accurately with Latest Information: Introduction to RAG (Retrieval-Augmented Generation)"
 date: 2025-11-19
 draft: false
@@ -8,6 +9,9 @@ keywords: ["RAG", "Retrieval-Augmented Generation", "AI", "Generative AI", "Chat
 image: "/images/blog/rag-paint.jpg"
 tags: ["AI Technology", "RAG", "Chatbot"]
 categories: ["Technology"]
+
+lastmod: 2025-11-19
+url: "blog/introduction-to-rag/"
 ---
 ## Basics and Applications of RAG (Retrieval-Augmented Generation)
 

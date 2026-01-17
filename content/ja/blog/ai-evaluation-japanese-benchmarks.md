@@ -1,4 +1,5 @@
 ---
+
 title: "AI言語モデルの評価基準完全ガイド：日本語ベンチマークと実践的活用"
 date: 2025-11-19
 draft: false
@@ -8,7 +9,11 @@ keywords: ["LLM評価", "日本語ベンチマーク", "ハルシネーション
 image: "/images/blog/ai-evaluation-japanese-benchmarks.jpg"
 tags: ["AI技術", "LLM評価", "ベンチマーク"]
 categories: ["テクノロジー"]
-url: "/ja/blog/ai-evaluation-japanese-benchmarks/"
+
+lastmod: 2025-11-19
+
+url: "blog/ai-evaluation-japanese-benchmarks/"
+
 
 ---
 AI技術の急速な発展により、大規模言語モデル（LLM）の評価方法も日々進化しています。本記事では、最新の評価手法から日本語モデル特有の課題、実践的な活用方法まで、中小企業のAI導入に必要な知識を完全解説します。

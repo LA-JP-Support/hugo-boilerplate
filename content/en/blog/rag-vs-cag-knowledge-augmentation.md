@@ -1,4 +1,5 @@
-+++ 
++++
+
 title = "RAG vs. CAG: Understanding Knowledge Augmentation Strategies for AI Models"
 youtubeTitle = "RAG vs. CAG: Solving Knowledge Gaps in AI Models"
 youtubeVideoID = "HdafI0t3sEY"
@@ -25,8 +26,10 @@ answer = "Yes, a hybrid approach can combine both techniques. For example, RAG c
 [[faq]]
 question = "What are the scalability limits of CAG?"
 answer = "CAG is constrained by the model's context window size, typically 32,000 to 100,000 tokens in modern models. This limits CAG to handling a few hundred documents at most, whereas RAG can scale to millions of documents since it only retrieves small relevant pieces per query."
-+++
 
+translationKey = "rag-vs-cag-knowledge-augmentation"
+url = "blog/rag-vs-cag-knowledge-augmentation/"
++++
 ## Introduction
 
 Large language models have revolutionized how we interact with artificial intelligence, but they face a fundamental challenge: <strong>knowledge cutoff</strong>. If information wasn't included in a model's training data, the model simply cannot recall it. Whether it's recent news events, proprietary business data, or real-time information, traditional LLMs struggle to provide accurate answers about knowledge beyond their training window. This limitation has sparked the development of augmented generation techniques—methods that extend an AI model's capabilities by connecting it to external knowledge sources. Two prominent approaches have emerged to solve this problem: <strong>Retrieval-Augmented Generation (RAG)</strong>and <strong>Cache-Augmented Generation (CAG)</strong>. Each offers distinct advantages and trade-offs, and understanding when to use each approach is crucial for building effective AI systems. This comprehensive guide explores both techniques in depth, examining their architectures, capabilities, and real-world applications.

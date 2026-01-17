@@ -36,7 +36,7 @@ AIは以下のルールに従って記事を修正します。
 #### 3.2 Frontmatter (YAML)
 以下の項目を必須として設定します。`layout: single-youtube`が特に重要です。
 
-**重要**: 日付が未設定だと `Created: January 1, 0001` のような不正な表示になるため、`date`（作成日）は必ず設定してください。更新を行った場合は `lastmod` も更新してください。
+**重要**: 日付が未設定だと `Created: January 1, 0001` のような不正な表示になるため、`date`（作成日）は必ず設定してください。記事内容を大きく更新した場合は `lastmod` を手動で更新してください。
 
 ```yaml
 ---
@@ -45,6 +45,7 @@ date: 2025-01-01
 lastmod: 2025-01-01
 draft: false
 translationKey: "unique-translation-key"  # ファイル名と同じものを推奨
+url: "blog/unique-translation-key/"        # 例: blog/how-to-crack-the-youtube-algorithm-data-driven-insights/
 layout: single-youtube                    # 必須：これにより「Staff-Selected Featured Video」が表示される
 youtubeTitle: "動画のタイトル"
 youtubeVideoID: "VIDEO_ID"                # 例: 5KTHvKCrQ00
@@ -97,15 +98,15 @@ FAQはFrontmatterではなく、**記事の最後（Conclusionの後）にMarkdo
 ```
 
 #### 3.5 内部リンクの適用
-記事内のキーワードを用語集（Glossary）への内部リンクに変換します。以下のコマンドを実行してください。
+内部リンクは Markdown（`content/`）を書き換えず、Hugoビルド後の `public/` HTMLに対して付与します（HTML後処理方式）。
 
 ```bash
-python3 scripts/add_internal_links.py content/en/blog --glossary-dir content/en/glossary --lang en
+# 1) Hugoビルド
+hugo --minify --cleanDestinationDir
+
+# 2) 内部リンク付与（HTML後処理）
+python3 scripts/linkbuilding_parallel.py --linkbuilding-dir data/linkbuilding --public-dir public --denylist-dir databases
 ```
-
-※日本語記事の場合はパスと言語コード（`--lang ja`）を変更してください。
-
-**重要**: スクリプト実行後、YouTube埋め込みコード（`<iframe>`）内のURLが変更されていないことを必ず確認してください。特に `src` 属性内のURLがMarkdownリンク形式（`[YouTube](...)`）に変換されてしまっていないか注意が必要です。
 
 ### ステップ 4: 確認
 修正が完了したら、ユーザーはローカルサーバー（http://localhost:1313/）で記事を表示し、以下の点を確認します。
@@ -128,6 +129,5 @@ python3 scripts/add_internal_links.py content/en/blog --glossary-dir content/en/
 - [ ] FAQは記事末尾にMarkdown形式 (`## FAQ`) で記述されているか？
 - [ ] 日付 (`date`) は適切か？（未来の日付になっていないか確認）
 - [ ] `lastmod` が設定されているか？（更新した場合は `lastmod` を更新）
-- [ ] 内部リンク適用スクリプト (`scripts/add_internal_links.py`) を実行したか？
-- [ ] 内部リンク適用後、YouTube埋め込み (`<iframe>`) のURLが破損していないか確認したか？
+- [ ] 内部リンク（HTML後処理）を実行したか？（`scripts/linkbuilding_parallel.py`）
 

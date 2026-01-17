@@ -1,4 +1,5 @@
 ---
+
 title: "問い合わせ対応に1日2時間？統合プラットフォームで時間を取り戻す"
 date: 2025-11-20
 draft: false
@@ -8,7 +9,11 @@ keywords: ["メール対応効率化", "統合プラットフォーム", "チケ
 image: "/images/blog/email-response-automation-platform.jpg"
 tags: ["業務効率化", "AI技術", "カスタマーサポート"]
 categories: ["ビジネス"]
-url: "/ja/blog/email-response-automation-platform/"
+
+lastmod: 2025-11-20
+
+url: "blog/email-response-automation-platform/"
+
 
 ---
 ビジネスメールの問合せ対応に膨大な時間を費やしていませんか？テンプレート管理、チケットシステム、チャットボット…個別に導入すると、コストも管理負担も膨らむばかり。本記事では、科学的アプローチに基づく効率化手法から、それらを一つのプラットフォームで実現する統合ソリューションまで、メール対応の革新的な改善方法をご紹介します。

@@ -61,3 +61,5 @@ content-drafts/**/*.md
 tmp_batch_*/
 .local_archive/
 **/__pycache__/
+
+*.bak.*

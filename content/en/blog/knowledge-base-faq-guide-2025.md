@@ -1,4 +1,5 @@
 ---
+
 title: "What is a Knowledge Base (FAQ)? Understanding the Fundamentals and Importance"
 date: 2025-11-19
 draft: false
@@ -6,6 +7,11 @@ description: "Comprehensive guide from Knowledge Base (FAQ) fundamentals to the 
 tags: ["AI", "Knowledge Base", "FAQ", "Customer Support", "Operational Efficiency"]
 categories: ["Operational Efficiency", "AI & Machine Learning"]
 image: "/images/blog/knowledge-base-faq-guide-2025.png"
+
+translationKey: "knowledge-base-faq-guide-2025"
+lastmod: 2025-11-19
+keywords: []
+url: "blog/knowledge-base-faq-guide-2025/"
 ---
 ## Definition and Role of Knowledge Base
 

@@ -1,4 +1,5 @@
 ---
+
 title: "2025年版AIカスタマーサポートガイド：Amazon･Salesforceから中小企業まで学ぶ成功戦略"
 date: 2025-11-20
 draft: false
@@ -6,7 +7,13 @@ description: "AIカスタマーサポートの最新動向と成功事例を徹�
 tags: ["AI", "カスタマーサポート", "チャットボット", "生成AI", "業務効率化", "顧客体験"]
 categories: ["AI・機械学習", "業務効率化"]
 image: "/images/blog/ai-customer-support-2025-guide.png"
-url: "/ja/blog/ai-customer-support-2025-guide/"
+
+translationKey: "ai-customer-support-2025-guide"
+lastmod: 2025-11-20
+keywords: []
+
+url: "blog/ai-customer-support-2025-guide/"
+
 
 ---
 ## AIカスタマーサポートとは何か

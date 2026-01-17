@@ -1,4 +1,5 @@
 ---
+
 title: "Achieve Business Efficiency with Centralized Social Media Management - Implementation Guide for SMEs"
 date: 2025-11-19
 draft: false
@@ -6,6 +7,11 @@ description: "Business revolution through centralized social media management! A
 tags: ["Social Media Management", "Business Efficiency", "LiveAgent", "Customer Support", "SME"]
 categories: ["Business Efficiency"]
 image: "/images/blog/centralised-social-media-management.png"
+
+translationKey: "centralised-social-media-management"
+lastmod: 2025-11-19
+keywords: []
+url: "blog/centralised-social-media-management/"
 ---
 ## Challenges of Decentralized Social Media Management
 

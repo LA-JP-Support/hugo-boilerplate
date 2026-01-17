@@ -57,6 +57,7 @@
 
 - **クイックスタート**: `docs/INTERNAL_LINKING_QUICK_START.md`
 - **システム全体**: `docs/INTERNAL_LINK_SYSTEM_GUIDE.md`
+- **他プロジェクトへ導入したい**: `docs/INTERNAL_LINKING_ADOPTION_GUIDE.md`
 
 標準フロー（要点）:
 

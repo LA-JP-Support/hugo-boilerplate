@@ -509,19 +509,32 @@ Create a new blog post with:
 hugo new content/en/blog/my-post.md
 ```
 
+For Japanese:
+
+```bash
+hugo new content/ja/blog/my-post.md
+```
+
+For YouTube video introduction posts, follow:
+
+`docs/youtube-article-workflow.md`
+
 Front matter example:
 
 ```yaml
-+++
-title = 'My Post Title'
-date = 2025-04-03T07:43:16+02:00
-draft = false
-description = "A comprehensive description for SEO purposes"
-keywords = ["keyword1", "keyword2", "keyword3"]
-image = "/images/blog/featured-image.jpg"
-tags = ["tag1", "tag2"]
-categories = ["category1"]
-+++
+---
+title: "My Post Title"
+date: 2025-01-01
+lastmod: 2025-01-01
+draft: true
+translationKey: "my-post"
+description: "A comprehensive description for SEO purposes"
+keywords: ["keyword1", "keyword2", "keyword3"]
+image: "/images/blog/featured-image.jpg"
+tags: ["tag1", "tag2"]
+categories: ["category1"]
+url: "blog/my-post/"
+---
 
 Your post content here...
 ```

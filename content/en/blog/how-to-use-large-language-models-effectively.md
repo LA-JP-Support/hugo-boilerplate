@@ -1,4 +1,5 @@
 +++
+
 title = "How to Use Large Language Models Effectively: A Practical Guide to ChatGPT and Beyond"
 youtubeTitle = "How I use LLMs"
 youtubeVideoID = "EWvNQjAaOHw"
@@ -22,8 +23,10 @@ answer = "A knowledge cutoff is the date up to which a language model was traine
 [[faq]]
 question = "What are the main differences between pre-training and post-training?"
 answer = "Pre-training is where the model learns knowledge by reading internet documents and predicting the next token, compressing all that knowledge into its parameters. Post-training is where the model is fine-tuned to behave like a helpful assistant through human feedback and example conversations, giving it its personality and conversational style."
-+++
 
+translationKey = "how-to-use-large-language-models-effectively"
+url = "blog/how-to-use-large-language-models-effectively/"
++++
 ## Introduction
 
 Large language models have fundamentally transformed how we interact with artificial intelligence. What began with ChatGPT's viral launch in 2022 has evolved into a rich ecosystem of powerful AI tools that can assist with writing, coding, analysis, research, and countless other tasks. Whether you're a professional looking to enhance your productivity, a student seeking research assistance, or simply curious about how these technologies work, understanding how to effectively use language models is becoming an essential skill. This comprehensive guide walks you through the practical applications of large language models, explores the different platforms available, explains how these models function at a fundamental level, and provides actionable insights on how you can leverage them in your own work and life. By the end of this article, you'll have a clear understanding of not just what these tools can do, but how to use them strategically to achieve your goals.

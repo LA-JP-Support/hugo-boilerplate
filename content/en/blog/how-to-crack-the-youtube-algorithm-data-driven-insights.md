@@ -1,4 +1,5 @@
 ---
+
 title: "How to Crack the YouTube Algorithm: Data-Driven Insights from 93,421 Videos"
 date: 2025-11-21
 lastmod: 2025-12-12
@@ -28,6 +29,8 @@ youtubeVideoID: "P2aJ9Br1JRc"
 showCTA: true
 ctaHeading: "Ready to Optimize Your YouTube Strategy?"
 ctaDescription: "Apply these data-driven insights to your channel and start seeing real growth. Test these proven tactics from the world's top creators."
+
+url: "blog/how-to-crack-the-youtube-algorithm-data-driven-insights/"
 ---
 ## Introduction
 

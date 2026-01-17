@@ -1,4 +1,5 @@
 ---
+
 title: "AIが最新情報で正確に答える仕組み：RAG(検索拡張生成)入門"
 date: 2025-11-19
 draft: false
@@ -8,7 +9,11 @@ keywords: ["RAG", "検索拡張生成", "AI", "生成AI", "チャットボット
 image: "/images/blog/rag-paint.jpg"
 tags: ["AI技術", "RAG", "チャットボット"]
 categories: ["テクノロジー"]
-url: "/ja/blog/introduction-to-rag/"
+
+lastmod: 2025-11-19
+
+url: "blog/introduction-to-rag/"
+
 
 ---
 ## RAG（Retrieval-Augmented Generation）の基本と活用方法
