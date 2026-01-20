@@ -28,9 +28,9 @@ features:
     description: "AIチャットボットに事前学習させた製品情報、FAQ、対応マニュアルなどのナレッジベースを、メール自動回答にも活用できます。FlowHuntのナレッジソース機能により、Webサイトの定期クロール（Schedules）、Q&A、ドキュメントなど多様な情報源を設定可能。<br><br>一度学習させた情報がチャットとメール対応の両方で共有されるため、情報の二重管理が不要になります。チャネルを問わず一貫性のある高品質な顧客対応を効率的に実現。ナレッジの更新も一箇所で完了するため、運用負荷を最小限に抑えられます。"
     image: "/images/services/email-automation/feature-knowledge.jpg"
   
-  - label: "AI Answer Improver"
+  - label: "AI回答アシスト(AI Answer Improver)"
     title: "生成した回答をさらにブラッシュアップ"
-    description: "Answer Composerで生成された回答案は、シームレスにAI Answer Improver画面へ引き継がれます。「改善（Improve）」「拡張（Extend）」「簡略化（Simplify）」の3つの機能で、文章をより明確に、より詳細に、またはより簡潔に調整可能。<br><br>カスタム指示を使えば、専門用語に解説を付ける、敬語のレベルを調整する、要点を箇条書きにするなど、細かな調整も自在です。すべての編集履歴が保存されるため、複数のバージョンから最適な回答を選択できます。満足したら「Use in ticket reply」ボタンでチケット返信に挿入できます。"
+    description: "Answer Composerで生成された回答案は、シームレスにAI回答アシスト(AI Answer Improver)画面へ引き継がれます。「改善（Improve）」「拡張（Extend）」「簡略化（Simplify）」の3つの機能で、文章をより明確に、より詳細に、またはより簡潔に調整可能。<br><br>カスタム指示を使えば、専門用語に解説を付ける、敬語のレベルを調整する、要点を箇条書きにするなど、細かな調整も自在です。すべての編集履歴が保存されるため、複数のバージョンから最適な回答を選択できます。満足したら「Use in ticket reply」ボタンでチケット返信に挿入できます。"
     image: "/images/services/email-automation/feature-improver.jpg"
   
   - label: "自動振り分け"

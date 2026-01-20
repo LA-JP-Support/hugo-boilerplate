@@ -1,13 +1,13 @@
 ---
 title: "AIチャットボットの価値は「裏側」にある：記録とバックオフィス運用が成功の鍵"
-date: 2025-01-17
-lastmod: 2025-01-17
+date: 2026-01-17
+lastmod: 2026-01-17
 draft: false
 translationKey: "ai-chatbot-backend-value"
-description: "AIチャットボットの真の価値は自動応答ではなく、顧客とのやり取りを記録・分析・改善につなげる「裏側の仕組み」にあります。バックオフィス統合がなぜ重要なのか、SmartWebのLiveAgent統合による解決策を解説します。"
+description: "AIチャットボットの真の価値は自動応答ではなく、顧客とのやり取りを記録・分析・改善につなげる「裏側の仕組み」にあります。バックオフィス統合がなぜ重要なのか、SmartWebのチケットシステムとの統合による解決策を解説します。"
 keywords: ["AIチャットボット", "カスタマーサポート", "バックオフィス", "顧客体験", "LiveAgent", "ログ管理", "顧客満足度"]
-image: "/images/blog/ai-chatbot-backend-value.png"
-tags: ["AI", "カスタマーサポート", "チャットボット", "業務効率化", "顧客体験"]
+image: "/images/blog/ai-chatbot-backend-value.jpg"
+tags: ["AI", "カスタマーサポート", "チャットボット", "チケットシステム", "顧客体験"]
 categories: ["AI・機械学習", "業務効率化"]
 url: "blog/ai-chatbot-backend-value/"
 ---
@@ -284,19 +284,14 @@ SmartWebのAIチャットボットは、こうしたバックオフィスの価�
 ## 参考資料
 
 1. "Effectiveness of Using AI-Based Chatbots in Increasing Customer Engagement," ResearchHub, 2025.  
-   https://researchhub.id/index.php/optimal/article/download/6516/3664/20216
 
 2. M. F. Shahzad et al., "Assessing the impact of AI-chatbot service quality on user e-brand loyalty," *Journal of Retailing and Consumer Services*, 2024.  
-   https://www.sciencedirect.com/science/article/abs/pii/S0969698924001632
 
 3. "Revolutionizing Customer Support with AI Chatbots," SuperAGI, 2025.  
-   https://superagi.com/revolutionizing-customer-support-with-ai-chatbots-trends-and-best-practices-for-2025/
 
 4. "AI Chatbot Statistics 2025," Fullview, 2025.  
-   https://www.fullview.io/blog/ai-chatbot-statistics
 
 5. "Chatbot Statistics 2025," Zoho SalesIQ, 2025.  
-   https://www.zoho.com/salesiq/chatbot/statistics.html
 
 6. SmartWeb – AIチャットボットプラン  
-   https://www.smartweb.jp/ai-chatbot-plan/
+
