@@ -1,0 +1,391 @@
+{{/*
+  Drift-style Tabbed Pillars Section
+  
+  Parameters:
+  - label: Section label (e.g., "AIカスタマーサポート")
+  - heading: Section heading (e.g., "4つの柱")
+  - description: Section description
+  - items: Array of pillar items
+  - accentColor: Color theme ("indigo" or "emerald")
+  
+  Usage:
+  {{ partial "sections/features/pillars_tabs.html" (dict
+    "label" .Params.pillars_support.label
+    "heading" .Params.pillars_support.heading
+    "description" .Params.pillars_support.description
+    "items" .Params.pillars_support.items
+    "accentColor" "indigo"
+    "sectionId" "customer-support-tabs"
+  ) }}
+*/}}
+
+{{ $label := .label | default "" }}
+{{ $heading := .heading | default "Features" }}
+{{ $description := .description | default "" }}
+{{ $items := .items | default slice }}
+{{ $accentColor := .accentColor | default "indigo" }}
+{{ $sectionId := .sectionId | default "pillars-tabs" }}
+
+{{ $colorClasses := dict 
+  "indigo" (dict "text" "text-indigo-600 dark:text-indigo-400" "bg" "bg-indigo-600" "border" "border-indigo-600" "hover" "hover:bg-indigo-50 dark:hover:bg-indigo-900/30")
+  "emerald" (dict "text" "text-emerald-600 dark:text-emerald-400" "bg" "bg-emerald-600" "border" "border-emerald-600" "hover" "hover:bg-emerald-50 dark:hover:bg-emerald-900/30")
+}}
+{{ $colors := index $colorClasses $accentColor }}
+
+<section id="{{ $sectionId }}" class="pillars-tabs-section py-24 sm:py-32 bg-white dark:bg-gray-900">
+  <style>
+    /* Pillars Tabs Section Styles */
+    .pillars-tabs-section {
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    }
+    .dark .pillars-tabs-section {
+      background: linear-gradient(180deg, #111827 0%, #0f172a 100%);
+    }
+    
+    /* Tab Navigation */
+    .pillars-tab-nav {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+      scrollbar-width: thin;
+    }
+    
+    .pillars-tab-btn {
+      flex-shrink: 0;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: left;
+      min-width: 180px;
+      max-width: 220px;
+    }
+    
+    .dark .pillars-tab-btn {
+      background: #1f2937;
+      border-color: #374151;
+    }
+    
+    .pillars-tab-btn:hover {
+      border-color: #6366f1;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+    }
+    
+    .pillars-tab-btn.active {
+      border-color: #6366f1;
+      border-width: 2px;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+    }
+    
+    .pillars-tab-btn.emerald:hover,
+    .pillars-tab-btn.emerald.active {
+      border-color: #059669;
+      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.15);
+    }
+    
+    .pillars-tab-thumb {
+      width: 100%;
+      height: 80px;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+    }
+    
+    .pillars-tab-thumb.emerald {
+      background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    }
+    
+    .dark .pillars-tab-thumb {
+      background: linear-gradient(135deg, #312e81 0%, #1e1b4b 100%);
+    }
+    
+    .dark .pillars-tab-thumb.emerald {
+      background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
+    }
+    
+    .pillars-tab-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .pillars-tab-title {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: #111827;
+      line-height: 1.4;
+    }
+    
+    .dark .pillars-tab-title {
+      color: #f9fafb;
+    }
+    
+    /* Tab Content Panel */
+    .pillars-tab-content {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+    
+    .pillars-tab-content.active {
+      display: block;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .pillars-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    
+    @media (max-width: 1024px) {
+      .pillars-content-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+    
+    .pillars-content-text {
+      order: 1;
+    }
+    
+    .pillars-content-image {
+      order: 2;
+    }
+    
+    @media (max-width: 1024px) {
+      .pillars-content-image {
+        order: 1;
+      }
+      .pillars-content-text {
+        order: 2;
+      }
+    }
+    
+    .pillars-content-label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    
+    .pillars-content-title {
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+    
+    .dark .pillars-content-title {
+      color: #f9fafb;
+    }
+    
+    .pillars-content-description {
+      font-size: 1.0625rem;
+      color: #4b5563;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+    
+    .dark .pillars-content-description {
+      color: #9ca3af;
+    }
+    
+    .pillars-content-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .pillars-content-cta:hover {
+      transform: translateX(4px);
+    }
+    
+    .pillars-image-wrapper {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    }
+    
+    .dark .pillars-image-wrapper {
+      background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.4);
+    }
+    
+    .pillars-image-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Decorative Elements */
+    .pillars-decor {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.3;
+      pointer-events: none;
+    }
+    
+    .pillars-decor-1 {
+      top: -50px;
+      right: -50px;
+      background: #6366f1;
+    }
+    
+    .pillars-decor-2 {
+      bottom: -50px;
+      left: -50px;
+      background: #0ea5e9;
+    }
+    
+    /* Mobile Tab Nav */
+    @media (max-width: 640px) {
+      .pillars-tab-nav {
+        gap: 0.75rem;
+      }
+      .pillars-tab-btn {
+        min-width: 150px;
+        padding: 0.75rem;
+      }
+      .pillars-tab-thumb {
+        height: 60px;
+      }
+      .pillars-content-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+  
+  <div class="wrapper">
+    <!-- Section Header -->
+    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-12">
+      <div class="lg:max-w-xl">
+        {{ if $label }}
+        <p class="text-base font-semibold {{ $colors.text }} mb-3">
+          {{ $label }}
+        </p>
+        {{ end }}
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+          {{ $heading }}
+        </h2>
+      </div>
+      {{ if $description }}
+      <div class="lg:max-w-lg">
+        <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+          {{ $description }}
+        </p>
+      </div>
+      {{ end }}
+    </div>
+    
+    <!-- Tab Navigation -->
+    <div class="pillars-tab-nav mb-10" role="tablist" aria-label="{{ $heading }}">
+      {{ range $index, $item := $items }}
+      <button 
+        class="pillars-tab-btn {{ if eq $index 0 }}active{{ end }} {{ $accentColor }}"
+        role="tab"
+        aria-selected="{{ if eq $index 0 }}true{{ else }}false{{ end }}"
+        aria-controls="{{ $sectionId }}-panel-{{ $index }}"
+        data-tab-index="{{ $index }}"
+        onclick="switchPillarsTab('{{ $sectionId }}', {{ $index }})"
+      >
+        <div class="pillars-tab-thumb {{ $accentColor }}">
+          {{ if $item.image }}
+          <img src="{{ partial "functions/get-localized-image.html" $item.image }}" alt="{{ $item.title }}" loading="lazy">
+          {{ end }}
+        </div>
+        <div class="pillars-tab-title">{{ $item.title }}</div>
+      </button>
+      {{ end }}
+    </div>
+    
+    <!-- Tab Content Panels -->
+    <div class="pillars-tab-panels relative">
+      <!-- Decorative Elements -->
+      <div class="pillars-decor pillars-decor-1"></div>
+      <div class="pillars-decor pillars-decor-2"></div>
+      
+      {{ range $index, $item := $items }}
+      <div 
+        class="pillars-tab-content {{ if eq $index 0 }}active{{ end }}"
+        id="{{ $sectionId }}-panel-{{ $index }}"
+        role="tabpanel"
+        aria-labelledby="{{ $sectionId }}-tab-{{ $index }}"
+      >
+        <div class="pillars-content-grid">
+          <!-- Text Content -->
+          <div class="pillars-content-text">
+            {{ if $item.label }}
+            <p class="pillars-content-label {{ $colors.text }}">{{ $item.label }}</p>
+            {{ end }}
+            <h3 class="pillars-content-title">{{ $item.title }}</h3>
+            <p class="pillars-content-description">{{ $item.description }}</p>
+            {{ if $item.url }}
+            <a href="{{ $item.url }}" class="pillars-content-cta {{ $colors.text }} {{ $colors.hover }} border {{ $colors.border }}">
+              詳しく見る
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+            {{ end }}
+          </div>
+          
+          <!-- Image -->
+          <div class="pillars-content-image">
+            <div class="pillars-image-wrapper">
+              {{ if $item.image }}
+              <img src="{{ partial "functions/get-localized-image.html" $item.image }}" alt="{{ $item.title }}" loading="lazy">
+              {{ else }}
+              <div class="aspect-[4/3] flex items-center justify-center">
+                <svg class="w-20 h-20 {{ $colors.text }} opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                </svg>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<script>
+function switchPillarsTab(sectionId, index) {
+  const section = document.getElementById(sectionId);
+  if (!section) return;
+  
+  // Update tab buttons
+  const buttons = section.querySelectorAll('.pillars-tab-btn');
+  buttons.forEach((btn, i) => {
+    btn.classList.toggle('active', i === index);
+    btn.setAttribute('aria-selected', i === index ? 'true' : 'false');
+  });
+  
+  // Update content panels
+  const panels = section.querySelectorAll('.pillars-tab-content');
+  panels.forEach((panel, i) => {
+    panel.classList.toggle('active', i === index);
+  });
+}
+</script>

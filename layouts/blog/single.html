@@ -10,7 +10,7 @@
           <ol class="flex items-center space-x-2 text-gray-500">
             <li class="flex items-center">
               <a href="/{{ .Language.Lang }}/" class="hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center">
-                <img src="/images/home-icon.png" alt="Home" class="h-5 w-5">
+                <img src="{{ partial "functions/get-localized-image.html" "/images/home-icon.png" }}" alt="Home" class="h-5 w-5">
               </a>
             </li>
             <li><span class="mx-2">/</span></li>
@@ -50,7 +50,7 @@
       {{ if .Params.image }}
         <div class="mt-5 sm:mt-6 w-full">
           <img 
-            src="{{ .Params.image }}" 
+            src="{{ partial "functions/get-localized-image.html" .Params.image }}" 
             alt="{{ .Title }}" 
             class="w-full h-auto rounded-lg shadow-lg object-cover"
             style="max-height: 400px; object-fit: cover;"
@@ -109,7 +109,7 @@
             {{ if .Params.image }}
               <div class="relative h-48 sm:h-52 w-full overflow-hidden">
                 <img 
-                  src="{{ .Params.image }}" 
+                  src="{{ partial "functions/get-localized-image.html" .Params.image }}" 
                   alt="{{ .Title }}" 
                   class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
                 >

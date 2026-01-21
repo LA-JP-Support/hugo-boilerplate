@@ -36,7 +36,9 @@ features:
   - label: "セキュリティ"
     title: "多言語対応と安全な運用"
     description: "日本語と多言語間の翻訳機能により、グローバルなお客様への対応が可能です。専門用語を分かりやすく説明したり、初心者向けの表現に変更するなど、顧客のレベルに応じた文章調整も自動で実行できます。<br><br>AI回答アシスタントは、FlowHuntまたはOpenAIと連携して動作します。OpenAI連携の場合は、お客様独自のAPIキーを使用するため、機密情報の外部漏洩を防止し、安全に運用できます。<br><br><small>※AI回答アシスタントのご利用には別途OpenAI社との契約が必要です。別料金がかかります。</small>"
-    image: "/images/services/ai-answer-assistant/feature-security.jpg"
+    images:
+      - src: "/images/services/ai-answer-assistant/feature-security1.jpg"
+      - src: "/images/services/ai-answer-assistant/feature-security2.jpg"
 
 # Stats Section
 stats_heading: "導入企業の実績"

@@ -1,0 +1,23 @@
+{{/*
+@function: Get Localized Image
+@description: Checks if an English version of the image exists (suffix -e) and returns it if the current site language is English.
+@params:
+  - src: Path to the image (e.g. /images/foo.jpg)
+@returns: The localized path (e.g. /images/foo-e.jpg) if it exists and lang is en, otherwise the original path.
+*/}}
+{{ $src := . }}
+{{ $result := $src }}
+
+{{ if and (eq site.Language.Lang "en") $src (not (hasPrefix $src "http")) }}
+  {{ $ext := path.Ext $src }}
+  {{ $base := strings.TrimSuffix $ext $src }}
+  {{ $candidate := printf "%s-e%s" $base $ext }}
+  {{/* Assuming static files are served from root, check in static/ directory */}}
+  {{ $checkPath := path.Join "static" $candidate }}
+  
+  {{ if fileExists $checkPath }}
+    {{ $result = $candidate }}
+  {{ end }}
+{{ end }}
+
+{{ return $result }}

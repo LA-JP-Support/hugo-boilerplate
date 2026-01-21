@@ -65,6 +65,7 @@
 
 {{/* Logo */}}
 {{ $logoUrl := .logoUrl | default "https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" }}
+{{ $logoUrl = partial "functions/get-localized-image.html" $logoUrl }}
 {{ $logoHeight := .logoHeight | default "h-9" }}
 {{ $logoAlt := .logoAlt | default "Company name" }}
 
@@ -255,6 +256,7 @@
 {{/* Company Info */}}
 {{ $companyDescription := .companyDescription | default "" }}
 {{ $ismsLogoUrl := .ismsLogoUrl | default "" }}
+{{ $ismsLogoUrl = partial "functions/get-localized-image.html" $ismsLogoUrl }}
 {{ $ismsText := .ismsText | default "" }}
 
     <div class="mt-24 border-t {{ $borderColor }} pt-12 xl:grid xl:grid-cols-4 xl:gap-8">

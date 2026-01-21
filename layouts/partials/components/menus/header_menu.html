@@ -38,6 +38,7 @@
 */}}
 
 {{- $logoUrl := .logoUrl | default "https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" -}}
+{{- $logoUrl = partial "functions/get-localized-image.html" $logoUrl -}}
 {{- $logoAlt := .logoAlt | default "Company Logo" -}}
 {{- $logoHeight := .logoHeight | default "h-8" -}}
 {{- $siteTitle := .siteTitle | default "Your Company" -}}

@@ -156,7 +156,7 @@ Design Tokens:
             <a href="{{ $link }}" target="{{ $linkTarget }}" class="w-full flex items-center justify-center">
           {{ end }}
               {{ partial "components/media/lazyimg.html" (dict
-                "src" $image
+                "src" (partial "functions/get-localized-image.html" $image)
                 "alt" $imageAlt
                 "class" "object-contain rounded-lg"
               ) }}
@@ -258,7 +258,7 @@ Design Tokens:
               </blockquote>
               <figcaption class="mt-6 flex gap-x-4 text-sm/6">
                 {{ if $quote.avatar }}
-                <img src="{{ $quote.avatar }}" alt="{{ $quote.author }}" class="size-6 flex-none rounded-full" />
+                <img src="{{ partial "functions/get-localized-image.html" $quote.avatar }}" alt="{{ $quote.author }}" class="size-6 flex-none rounded-full" />
                 {{ end }}
                 <div>
                   <span class="font-semibold text-heading">{{ $quote.author }}</span>

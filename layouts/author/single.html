@@ -5,7 +5,7 @@
     {{/* Author Info Section */}}
     <div class="text-center mb-12">
       {{ if .Params.image }}
-        <img class="mx-auto h-32 w-32 rounded-full object-cover" src="{{ .Params.image }}" alt="{{ .Title }}">
+        <img class="mx-auto h-32 w-32 rounded-full object-cover" src="{{ partial "functions/get-localized-image.html" .Params.image }}" alt="{{ .Title }}">
       {{ end }}
       <h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ .Title }}</h1>
       {{ if .Params.role }}

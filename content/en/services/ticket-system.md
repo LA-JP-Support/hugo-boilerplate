@@ -29,12 +29,12 @@ features:
     image: "/images/services/ticket-system/feature-automation.jpg"
   
   - label: "AI Integration"
-    title: "AI Response Assistance Dramatically Reduces Workload"
-    description: "Combining the ticket system with AI response assistance transforms operations—agents no longer 'write from scratch' but simply 'review and adjust AI drafts.' AI auto-generates draft responses based on conversation history and knowledge base. Template responses matching your tone and rules are also centrally managed.<br><br>Let AI handle repetitive FAQ responses while humans focus on exceptions and high-value work. Using AI as 'agent support' rather than 'agent replacement,' even small teams can deliver consistently high-quality support."
-    image: "/images/services/ticket-system/feature-ai-assist.jpg"
+    title: "Reduce Workload with AI Answer Assist"
+    description: "By combining the ticket system with AI Answer Assist, agents can shift from \"writing from scratch\" to simply \"reviewing and refining AI suggestions.\" Based on past responses and the knowledge base, AI automatically generates draft replies. Tone and rule-based template responses can also be centrally managed.<br><br>Let AI handle repetitive FAQ inquiries while humans focus on exceptions and high-value work. Using AI not as a replacement but as an \"agent's assistant\" enables even small teams to build a stable, high-quality support operation."
+    image: "/images/services/ai-answer-assistant/feature-usecase.jpg"
   
   - label: "Integrations"
-    title: "Seamlessly Connect with Existing Systems"
+    title: "Smooth Integration with Existing Systems"
     description: "SmartWeb's ticket system is designed to integrate easily with existing workflows. Connect with WordPress and various CMS platforms to use your existing contact forms. Integrate with e-commerce platforms and CRMs to view customer info and purchase history while responding.<br><br>With 200+ external service integrations available, implement gradually while leveraging your current tools. Rather than 'replacing everything,' build on your current environment and progressively organize and automate inquiry handling. Connect with Slack, Teams, Zapier, and other daily-use tools."
     image: "/images/services/ticket-system/feature-integrations.jpg"
 

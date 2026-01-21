@@ -32,6 +32,9 @@
 {{ $duration := .duration | default "PT0M0S" }}
 {{ $noLazy := .noLazy | default false }}
 {{ $poster := .poster }}
+{{ if $poster }}
+  {{ $poster = partial "functions/get-localized-image.html" $poster }}
+{{ end }}
 {{ $posterHeight := .posterHeight | default "" }}
 {{ $useAspectRatio := .useAspectRatio | default true }}
 {{ $loading := cond $noLazy "eager" "lazy" }}

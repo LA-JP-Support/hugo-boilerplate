@@ -321,19 +321,19 @@
   }
 </style>
 
-<div class="antigravity-hero gradient-support" id="antigravityHero" data-gradients="{{ if .Params.hero_slides }}{{ range $index, $slide := .Params.hero_slides }}{{ if $index }},{{ end }}{{ $slide.gradient | default "support" }}{{ end }}{{ end }}" data-backgrounds="{{ if .Params.hero_slides }}{{ range $index, $slide := .Params.hero_slides }}{{ if $index }},{{ end }}{{ $slide.background_image | default $slide.background_video | default "/images/hero-customer-support.jpg" }}{{ end }}{{ end }}" data-background-types="{{ if .Params.hero_slides }}{{ range $index, $slide := .Params.hero_slides }}{{ if $index }},{{ end }}{{ if $slide.background_video }}video{{ else }}image{{ end }}{{ end }}{{ end }}">
+<div class="antigravity-hero gradient-support" id="antigravityHero" data-gradients="{{ if .Params.hero_slides }}{{ range $index, $slide := .Params.hero_slides }}{{ if $index }},{{ end }}{{ $slide.gradient | default "support" }}{{ end }}{{ end }}" data-backgrounds="{{ if .Params.hero_slides }}{{ range $index, $slide := .Params.hero_slides }}{{ if $index }},{{ end }}{{ partial "functions/get-localized-image.html" ($slide.background_image | default $slide.background_video | default "/images/hero-customer-support.jpg") }}{{ end }}{{ end }}" data-background-types="{{ if .Params.hero_slides }}{{ range $index, $slide := .Params.hero_slides }}{{ if $index }},{{ end }}{{ if $slide.background_video }}video{{ else }}image{{ end }}{{ end }}{{ end }}">
   <!-- Background Media -->
   <div class="hero-background-image">
     {{ if .Params.hero_slides }}
       {{ range $index, $slide := .Params.hero_slides }}
         {{ if $slide.background_video }}
-          <video class="hero-bg-media{{ if eq $index 0 }} active{{ end }}" data-slide="{{ $index }}" src="{{ $slide.background_video }}" autoplay loop muted playsinline preload="auto"></video>
+          <video class="hero-bg-media{{ if eq $index 0 }} active{{ end }}" data-slide="{{ $index }}" src="{{ partial "functions/get-localized-image.html" $slide.background_video }}" autoplay loop muted playsinline preload="auto"></video>
         {{ else }}
-          <img class="hero-bg-media{{ if eq $index 0 }} active{{ end }}" data-slide="{{ $index }}" src="{{ $slide.background_image | default "/images/hero-customer-support.jpg" }}" alt="Hero Background" loading="eager">
+          <img class="hero-bg-media{{ if eq $index 0 }} active{{ end }}" data-slide="{{ $index }}" src="{{ partial "functions/get-localized-image.html" ($slide.background_image | default "/images/hero-customer-support.jpg") }}" alt="Hero Background" loading="eager">
         {{ end }}
       {{ end }}
     {{ else }}
-      <img class="hero-bg-media active" src="/images/hero-customer-support.jpg" alt="Hero Background" loading="eager">
+      <img class="hero-bg-media active" src="{{ partial "functions/get-localized-image.html" "/images/hero-customer-support.jpg" }}" alt="Hero Background" loading="eager">
     {{ end }}
   </div>
   
@@ -448,7 +448,7 @@
         {{ if .Params.hero_image }}
           <div class="mt-16 flow-root sm:mt-20">
             <div class="rounded-xl bg-white/10 backdrop-blur-sm p-2 ring-1 ring-inset ring-white/20 lg:-m-4 lg:rounded-2xl lg:p-4">
-              <img src="{{ .Params.hero_image }}" 
+              <img src="{{ partial "functions/get-localized-image.html" .Params.hero_image }}" 
                    alt="{{ .Params.hero_image_alt | default "Hero Image" }}" 
                    class="w-full rounded-md shadow-2xl ring-1 ring-white/10">
             </div>
@@ -516,6 +516,18 @@
 
 <!-- AI Customer Support - 4 Pillars Section -->
 {{ if .Params.pillars_support }}
+  {{/* Check for style parameter: "tabs" = Drift-style tabs, default = grid */}}
+  {{ if eq .Params.pillars_support.style "tabs" }}
+    {{ partial "sections/features/pillars_tabs.html" (dict
+      "label" .Params.pillars_support.label
+      "heading" .Params.pillars_support.heading
+      "description" .Params.pillars_support.description
+      "items" .Params.pillars_support.items
+      "accentColor" "indigo"
+      "sectionId" "customer-support"
+    ) }}
+  {{ else }}
+  {{/* Original Grid Style */}}
 <section id="customer-support" class="pillars-section py-24 sm:py-32 bg-gray-50 dark:bg-gray-900">
   <style>
     #customer-support {
@@ -661,7 +673,7 @@
       <div class="pillar-card">
         <div class="pillar-image-container">
           {{ if .image }}
-          <img src="{{ .image }}" alt="{{ .title }}" loading="lazy" onerror="this.style.display='none'">
+          <img src="{{ partial "functions/get-localized-image.html" .image }}" alt="{{ .title }}" loading="lazy" onerror="this.style.display='none'">
           {{ else }}
           <div class="pillar-image-placeholder">
             <svg class="w-16 h-16 text-indigo-300 dark:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -683,6 +695,7 @@
     </div>
   </div>
 </section>
+  {{ end }}
 {{ end }}
 
 <!-- AI Content Creation & Web - 2 Pillars Section -->
@@ -745,7 +758,7 @@
       <div class="pillar-card">
         <div class="pillar-image-container">
           {{ if .image }}
-          <img src="{{ .image }}" alt="{{ .title }}" loading="lazy" onerror="this.style.display='none'">
+          <img src="{{ partial "functions/get-localized-image.html" .image }}" alt="{{ .title }}" loading="lazy" onerror="this.style.display='none'">
           {{ else }}
           <div class="pillar-image-placeholder">
             <svg class="w-16 h-16 text-emerald-300 dark:text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -30,7 +30,7 @@
   "readingTime" .ReadingTime
   "date" (.Date.Format "Jan 2, 2006")
   "dir" $dir
-  "image" .Params.image
+  "image" (partial "functions/get-localized-image.html" .Params.image)
   "lang" .Lang
 ) -}}
 {{- end -}}
@@ -60,7 +60,7 @@
       "readingTime" $term.Page.ReadingTime
       "date" ($term.Page.Date.Format "Jan 2, 2006")
       "dir" $dir
-      "image" $term.Page.Params.image
+      "image" (partial "functions/get-localized-image.html" $term.Page.Params.image)
       "lang" $term.Page.Lang
     ) -}}
   {{- end -}}

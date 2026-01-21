@@ -31,7 +31,7 @@ features:
   - label: "AI連携"
     title: "AI回答アシストで負荷を大幅軽減"
     description: "チケットシステムとAI回答アシストを組み合わせることで、担当者は「ゼロから文章を書く」のではなく、「AIの案を確認・調整する」だけの運用に切り替えられます。過去の対応履歴やナレッジベースをもとに、AIが下書き案を自動生成。トーンやルールに沿ったテンプレート返信も一元管理できます。<br><br>繰り返し質問の多いFAQ対応をAIに任せ、人は例外対応や高付加価値業務に集中できます。AIを「人の代わり」ではなく「サポート担当の分身」として活用することで、小さなチームでも安定した品質のサポート体制を構築できます。"
-    image: "/images/services/ticket-system/feature-ai-assist.jpg"
+    image: "/images/services/ai-answer-assistant/feature-usecase.jpg"
   
   - label: "外部連携"
     title: "既存システムとスムーズに統合"

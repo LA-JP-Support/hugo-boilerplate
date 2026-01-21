@@ -31,6 +31,8 @@
   {{ if or (hasPrefix $src "http://") (hasPrefix $src "https://") }}
     {{ partial "components/media/lazyimg_external.html" . }}
   {{ else }}
-    {{ partial "components/media/lazyimg_internal.html" . }}
+    {{ $localizedSrc := partial "functions/get-localized-image.html" $src }}
+    {{ $ctx := merge . (dict "src" $localizedSrc) }}
+    {{ partial "components/media/lazyimg_internal.html" $ctx }}
   {{ end }}
 {{ end }}

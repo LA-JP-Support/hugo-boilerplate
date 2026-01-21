@@ -26,7 +26,7 @@ features:
   - label: "Four Adjustment Functions"
     title: "Versatile Text Optimization Options"
     description: "AI Answer Improver offers four powerful options to optimize existing text. 'Improve' polishes text to be clearer and more professional. 'Extend' enriches content with detailed explanations and additional information. 'Simplify' condenses complex content into concise, understandable summaries.<br><br>'Custom Instructions' let you request specific adjustments—add explanations for technical terms, adjust formality levels, convert to bullet points, and more. Choose from three tones—Casual, Neutral, or Business—for the optimal voice for each customer and situation."
-    image: "/images/services/ai-answer-assistant/feature-options.jpg"
+    image: "/images/services/ai-answer-assistant/feature-options-e.jpg"
   
   - label: "Answer Composer Integration"
     title: "Even More Efficient with Email Auto-Response"
@@ -36,7 +36,9 @@ features:
   - label: "Security"
     title: "Multilingual Support with Secure Operations"
     description: "Translation between Japanese and other languages enables global customer support. Automatically explain technical terms in plain language or adjust for beginner-level expressions—text adaptation to customer level executes automatically.<br><br>AI Answer Assistant operates through FlowHunt or OpenAI integration. With OpenAI integration, use your own API key to prevent confidential information leakage and ensure secure operations.<br><br><small>*AI Answer Assistant requires a separate OpenAI contract. Additional fees apply.</small>"
-    image: "/images/services/ai-answer-assistant/feature-security.jpg"
+    images:
+      - src: "/images/services/ai-answer-assistant/feature-security1.jpg"
+      - src: "/images/services/ai-answer-assistant/feature-security2.jpg"
 
 # Stats Section
 stats_heading: "Customer Results"
