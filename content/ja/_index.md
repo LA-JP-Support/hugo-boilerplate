@@ -83,6 +83,7 @@ features:
 
 # AI Customer Support - 4 Pillars
 pillars_support:
+  style: "tabs"  # "tabs" = Drift風タブ式, 削除または空 = 従来のグリッド表示
   label: "AIカスタマーサポート"
   heading: "4つの柱"
   description: "御社のナレッジを賢いAIに変える。SmartWebはRAG（検索拡張生成）技術を採用し、マニュアル・FAQ・ドキュメントから最適な情報を検索・参照しながら回答を生成。常に最新の正確な情報に基づいた、御社専用のAIが誕生します。"
