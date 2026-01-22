@@ -36,10 +36,22 @@
   <style>
     /* Pillars Tabs Section Styles */
     .pillars-tabs-section {
-      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      background: #1e3a5f;
     }
     .dark .pillars-tabs-section {
-      background: linear-gradient(180deg, #111827 0%, #0f172a 100%);
+      background: #1e3a5f;
+    }
+    
+    /* Unified Panel Container */
+    .pillars-unified-panel {
+      background: transparent;
+      border: none;
+      border-radius: 18px;
+      overflow: hidden;
+    }
+    
+    .dark .pillars-unified-panel {
+      background: transparent;
     }
     
     /* Tab Navigation */
@@ -47,43 +59,43 @@
       display: flex;
       gap: 1rem;
       overflow-x: auto;
-      padding-bottom: 0.5rem;
+      padding: 1.5rem 1.5rem 0 0;
       scrollbar-width: thin;
+      justify-content: flex-start;
     }
     
     .pillars-tab-btn {
       flex-shrink: 0;
-      background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
+      background: transparent;
+      border: none;
+      border-radius: 10px;
       padding: 1rem;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
       text-align: left;
       min-width: 180px;
       max-width: 220px;
-    }
-    
-    .dark .pillars-tab-btn {
-      background: #1f2937;
-      border-color: #374151;
+      position: relative;
     }
     
     .pillars-tab-btn:hover {
-      border-color: #6366f1;
-      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+      background: rgba(255, 255, 255, 0.3);
+    }
+    
+    .dark .pillars-tab-btn:hover {
+      background: rgba(255, 255, 255, 0.05);
     }
     
     .pillars-tab-btn.active {
-      border-color: #6366f1;
-      border-width: 2px;
-      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+      background: #dbeafe;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      padding: 1.25rem 1.5rem;
+      border-radius: 10px 10px 0 0;
     }
     
-    .pillars-tab-btn.emerald:hover,
-    .pillars-tab-btn.emerald.active {
-      border-color: #059669;
-      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.15);
+    .dark .pillars-tab-btn.active {
+      background: rgba(59, 130, 246, 0.2);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
     
     .pillars-tab-thumb {
@@ -92,19 +104,7 @@
       border-radius: 8px;
       overflow: hidden;
       margin-bottom: 0.75rem;
-      background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
-    }
-    
-    .pillars-tab-thumb.emerald {
-      background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-    }
-    
-    .dark .pillars-tab-thumb {
-      background: linear-gradient(135deg, #312e81 0%, #1e1b4b 100%);
-    }
-    
-    .dark .pillars-tab-thumb.emerald {
-      background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
+      background: transparent;
     }
     
     .pillars-tab-thumb img {
@@ -116,15 +116,33 @@
     .pillars-tab-title {
       font-size: 0.9375rem;
       font-weight: 600;
-      color: #111827;
+      color: #d1d5db;
       line-height: 1.4;
     }
     
-    .dark .pillars-tab-title {
-      color: #f9fafb;
+    .pillars-tab-btn.active .pillars-tab-title {
+      color: #111827;
     }
     
     /* Tab Content Panel */
+    .pillars-tab-panels {
+      background: #dbeafe;
+      border-top: 1px solid #93c5fd;
+      border-radius: 0 10px 0 0;
+      padding: 2.5rem;
+      position: relative;
+      transition: border-radius 0.2s ease;
+    }
+    
+    .pillars-tab-panels.round-top-left {
+      border-radius: 10px 10px 0 0;
+    }
+    
+    .dark .pillars-tab-panels {
+      background: rgba(59, 130, 246, 0.2);
+      border-top-color: #1e40af;
+    }
+    
     .pillars-tab-content {
       display: none;
       animation: fadeIn 0.4s ease;
@@ -217,15 +235,15 @@
     
     .pillars-image-wrapper {
       position: relative;
-      border-radius: 16px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
-      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      background: #ffffff;
     }
     
     .dark .pillars-image-wrapper {
-      background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
-      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.4);
+      background: #1f2937;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     }
     
     .pillars-image-wrapper img {
@@ -240,21 +258,21 @@
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      filter: blur(60px);
-      opacity: 0.3;
+      opacity: 0.03;
       pointer-events: none;
+      z-index: 0;
     }
     
     .pillars-decor-1 {
       top: -50px;
       right: -50px;
-      background: #6366f1;
+      background: #059669;
     }
     
     .pillars-decor-2 {
       bottom: -50px;
       left: -50px;
-      background: #0ea5e9;
+      background: #10b981;
     }
     
     /* Mobile Tab Nav */
@@ -269,6 +287,9 @@
       .pillars-tab-thumb {
         height: 60px;
       }
+      .pillars-tab-panels {
+        padding: 1.5rem;
+      }
       .pillars-content-title {
         font-size: 1.5rem;
       }
@@ -278,48 +299,49 @@
   <div class="wrapper">
     <!-- Section Header -->
     <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-12">
-      <div class="lg:max-w-xl">
+      <div class="lg:max-w-2xl">
         {{ if $label }}
-        <p class="text-base font-semibold {{ $colors.text }} mb-3">
+        <p class="text-xl font-semibold text-blue-300 mb-4">
           {{ $label }}
         </p>
         {{ end }}
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+        <h2 class="text-5xl font-bold tracking-tight text-white sm:text-6xl" style="font-family: 'Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', serif;">
           {{ $heading }}
         </h2>
       </div>
       {{ if $description }}
       <div class="lg:max-w-lg">
-        <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+        <p class="text-lg text-gray-300 leading-relaxed">
           {{ $description }}
         </p>
       </div>
       {{ end }}
     </div>
     
-    <!-- Tab Navigation -->
-    <div class="pillars-tab-nav mb-10" role="tablist" aria-label="{{ $heading }}">
-      {{ range $index, $item := $items }}
-      <button 
-        class="pillars-tab-btn {{ if eq $index 0 }}active{{ end }} {{ $accentColor }}"
-        role="tab"
-        aria-selected="{{ if eq $index 0 }}true{{ else }}false{{ end }}"
-        aria-controls="{{ $sectionId }}-panel-{{ $index }}"
-        data-tab-index="{{ $index }}"
-        onclick="switchPillarsTab('{{ $sectionId }}', {{ $index }})"
-      >
-        <div class="pillars-tab-thumb {{ $accentColor }}">
-          {{ if $item.image }}
-          <img src="{{ partial "functions/get-localized-image.html" $item.image }}" alt="{{ $item.title }}" loading="lazy">
-          {{ end }}
-        </div>
-        <div class="pillars-tab-title">{{ $item.title }}</div>
-      </button>
-      {{ end }}
-    </div>
-    
-    <!-- Tab Content Panels -->
-    <div class="pillars-tab-panels relative">
+    <!-- Unified Panel: Tabs + Content -->
+    <div class="pillars-unified-panel">
+      <!-- Tab Navigation -->
+      <div class="pillars-tab-nav" role="tablist" aria-label="{{ $heading }}">
+        {{ range $index, $item := $items }}
+        <button 
+          class="pillars-tab-btn {{ if eq $index 0 }}active{{ end }} {{ $accentColor }}"
+          role="tab"
+          aria-selected="{{ if eq $index 0 }}true{{ else }}false{{ end }}"
+          aria-controls="{{ $sectionId }}-panel-{{ $index }}"
+          data-tab-index="{{ $index }}"
+        >
+          <div class="pillars-tab-thumb {{ $accentColor }}">
+            {{ if $item.image }}
+            <img src="{{ partial "functions/get-localized-image.html" $item.image }}" alt="{{ $item.title }}" loading="lazy">
+            {{ end }}
+          </div>
+          <div class="pillars-tab-title">{{ $item.title }}</div>
+        </button>
+        {{ end }}
+      </div>
+      
+      <!-- Tab Content Panels -->
+      <div class="pillars-tab-panels relative">
       <!-- Decorative Elements -->
       <div class="pillars-decor pillars-decor-1"></div>
       <div class="pillars-decor pillars-decor-2"></div>
@@ -366,6 +388,7 @@
         </div>
       </div>
       {{ end }}
+      </div>
     </div>
   </div>
 </section>
@@ -387,5 +410,28 @@ function switchPillarsTab(sectionId, index) {
   panels.forEach((panel, i) => {
     panel.classList.toggle('active', i === index);
   });
+  
+  // Update content area border-radius based on active tab
+  const contentArea = section.querySelector('.pillars-tab-panels');
+  if (contentArea) {
+    if (index === 0) {
+      contentArea.classList.remove('round-top-left');
+    } else {
+      contentArea.classList.add('round-top-left');
+    }
+  }
 }
+
+// Initialize tab click handlers
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('.pillars-tabs-section');
+  sections.forEach(section => {
+    const buttons = section.querySelectorAll('.pillars-tab-btn');
+    buttons.forEach((button, index) => {
+      button.addEventListener('click', function() {
+        switchPillarsTab(section.id, index);
+      });
+    });
+  });
+});
 </script>

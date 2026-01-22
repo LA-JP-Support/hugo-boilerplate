@@ -83,6 +83,7 @@ features:
 
 # AI Customer Support - 4 Pillars
 pillars_support:
+  style: "tabs"
   label: "AI Customer Support"
   heading: "Four Pillars"
   description: "Transform your knowledge into intelligent AI. SmartWeb uses RAG (Retrieval-Augmented Generation) technology to search and reference your manuals, FAQs, and documents while generating responses. Your own AI, always based on the latest and most accurate information."
