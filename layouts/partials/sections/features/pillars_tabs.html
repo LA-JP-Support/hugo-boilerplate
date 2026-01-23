@@ -332,7 +332,12 @@
         >
           <div class="pillars-tab-thumb {{ $accentColor }}">
             {{ if $item.image }}
-            <img src="{{ partial "functions/get-localized-image.html" $item.image }}" alt="{{ $item.title }}" loading="lazy">
+            {{ partial "components/media/lazyimg_internal.html" (dict
+              "src" (partial "functions/get-localized-image.html" $item.image)
+              "alt" $item.title
+              "maxWidth" 300
+              "class" ""
+            ) }}
             {{ end }}
           </div>
           <div class="pillars-tab-title">{{ $item.title }}</div>
@@ -375,7 +380,12 @@
           <div class="pillars-content-image">
             <div class="pillars-image-wrapper">
               {{ if $item.image }}
-              <img src="{{ partial "functions/get-localized-image.html" $item.image }}" alt="{{ $item.title }}" loading="lazy">
+              {{ partial "components/media/lazyimg_internal.html" (dict
+                "src" (partial "functions/get-localized-image.html" $item.image)
+                "alt" $item.title
+                "maxWidth" 800
+                "class" ""
+              ) }}
               {{ else }}
               <div class="aspect-[4/3] flex items-center justify-center">
                 <svg class="w-20 h-20 {{ $colors.text }} opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
