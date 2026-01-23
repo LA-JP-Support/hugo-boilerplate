@@ -6,6 +6,7 @@ This theme includes Tailwind CSS integration, comprehensive SEO features, respon
 ## Start Here (必読)
 
 - `docs/00_START_HERE.md`
+- `docs/IMAGE_OPTIMIZATION.md` - 画像最適化ガイド（画像アップロード時の自動最適化）
 
 
 ## Projects running this theme
