@@ -168,15 +168,23 @@
                 {{ if $feature.videoTitle }}
                   <h3 class="mb-4 text-base font-semibold text-gray-900">{{ $feature.videoTitle }}</h3>
                 {{ end }}
-                <div class="relative w-full rounded-lg overflow-hidden shadow-xl" style="padding-top: 56.25%;">
-                  <iframe 
-                    class="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube.com/embed/{{ $feature.video }}?rel=0" 
-                    title="{{ $feature.title }}"
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                  </iframe>
+                {{/* Lite YouTube - Click to load */}}
+                <div class="lite-youtube-feature relative w-full rounded-lg overflow-hidden shadow-xl cursor-pointer" 
+                     data-videoid="{{ $feature.video }}" 
+                     data-title="{{ $feature.videoTitle | default $feature.title }}"
+                     style="padding-top: 56.25%;">
+                  <picture>
+                    <source type="image/webp" srcset="https://i.ytimg.com/vi_webp/{{ $feature.video }}/maxresdefault.webp">
+                    <img src="https://i.ytimg.com/vi/{{ $feature.video }}/maxresdefault.jpg" 
+                         alt="{{ $feature.videoTitle | default $feature.title }}"
+                         loading="lazy"
+                         class="absolute inset-0 w-full h-full object-cover transition-all duration-300 hover:brightness-90">
+                  </picture>
+                  <button type="button" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-12 bg-red-600 rounded-lg hover:bg-red-700 hover:scale-110 transition-all duration-200 z-10 flex items-center justify-center" aria-label="Play video">
+                    <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </button>
                 </div>
               {{ else }}
                 {{ partial "components/media/lazyimg.html" (dict 
@@ -249,15 +257,23 @@
                 {{ if $feature.videoTitle }}
                   <h3 class="mb-4 text-base font-semibold text-gray-900">{{ $feature.videoTitle }}</h3>
                 {{ end }}
-                <div class="relative w-full rounded-lg overflow-hidden shadow-xl" style="padding-top: 56.25%;">
-                  <iframe 
-                    class="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube.com/embed/{{ $feature.video }}?rel=0" 
-                    title="{{ $feature.title }}"
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                  </iframe>
+                {{/* Lite YouTube - Click to load */}}
+                <div class="lite-youtube-feature relative w-full rounded-lg overflow-hidden shadow-xl cursor-pointer" 
+                     data-videoid="{{ $feature.video }}" 
+                     data-title="{{ $feature.videoTitle | default $feature.title }}"
+                     style="padding-top: 56.25%;">
+                  <picture>
+                    <source type="image/webp" srcset="https://i.ytimg.com/vi_webp/{{ $feature.video }}/maxresdefault.webp">
+                    <img src="https://i.ytimg.com/vi/{{ $feature.video }}/maxresdefault.jpg" 
+                         alt="{{ $feature.videoTitle | default $feature.title }}"
+                         loading="lazy"
+                         class="absolute inset-0 w-full h-full object-cover transition-all duration-300 hover:brightness-90">
+                  </picture>
+                  <button type="button" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-12 bg-red-600 rounded-lg hover:bg-red-700 hover:scale-110 transition-all duration-200 z-10 flex items-center justify-center" aria-label="Play video">
+                    <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </button>
                 </div>
               {{ else }}
                 {{ partial "components/media/lazyimg.html" (dict 

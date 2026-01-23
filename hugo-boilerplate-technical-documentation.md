@@ -722,10 +722,74 @@ rm -rf scripts/.venv
 - FID（First Input Delay）: < 100ms
 - CLS（Cumulative Layout Shift）: < 0.1
 
+### 5. Google Fonts最適化（2025-01更新）
+
+**問題**: Google Fontsがレンダリングをブロック（-620ms影響）
+
+**解決策**: media="print" onload方式で非同期読み込み
+
+```html
+<!-- layouts/partials/head.html -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?...">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?..." 
+      media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?..."></noscript>
+```
+
+### 6. YouTube埋め込み最適化（2025-01更新）
+
+**問題**: YouTube iframeが777 KiBのJavaScriptを読み込み、TBT +490ms
+
+**解決策**: Lite YouTube方式（クリック時にのみiframe読み込み）
+
+**変更ファイル**:
+- `/layouts/shortcodes/youtube.html` - Lite YouTube対応
+- `/layouts/partials/sections/features/with_alternating_sections.html`
+- `/static/js/app.js` - 初期化スクリプト
+
+**使用方法**:
+```markdown
+{{</* youtube videoID="frmB19r0k58" */>}}  <!-- Lite YouTube -->
+{{</* youtube videoID="frmB19r0k58" autoload=true */>}}  <!-- 従来方式 -->
+```
+
+**注意**: 再生回数は正常にカウントされます
+
+### 7. クリティカルCSS（2025-01更新）
+
+**問題**: CSSがレンダリングをブロック
+
+**解決策**: フォントフォールバックと初期レイアウトCSSをインライン化
+
+```html
+<!-- layouts/partials/head.html -->
+<style>
+@font-face {
+  font-family: 'Inter';
+  font-display: swap;
+  src: url('/fonts/inter/Inter-VariableFont_opsz,wght.woff2') format('woff2');
+}
+.font-sans { font-family: Inter, 'Noto Sans JP', system-ui, sans-serif; }
+.font-serif, .font-mincho { font-family: 'Noto Serif JP', Georgia, serif; }
+</style>
+```
+
+### 8. PageSpeed最適化結果サマリー
+
+| 指標 | 改善前 | 改善後 | 効果 |
+|------|--------|--------|------|
+| パフォーマンススコア | 53 | 75-85 | +20-30pt |
+| LCP | 3.3s | ~1.5s | -55% |
+| TBT | 490ms | ~50ms | -90% |
+| FCP | 1.6s | ~1.0s | -38% |
+
+**詳細**: [PAGESPEED-OPTIMIZATION.md](./PAGESPEED-OPTIMIZATION.md)
+
 ---
 
 ## 更新履歴
 
+- **2025-01-23**: PageSpeed最適化（Google Fonts非同期化、Lite YouTube、クリティカルCSS）
 - **2025-11-22**: 初版作成
 - **2025-11-20**: ツールチップシステム統合
 - **2025-11-19**: 多言語対応強化

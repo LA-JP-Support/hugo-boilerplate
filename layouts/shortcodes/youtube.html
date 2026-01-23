@@ -1,5 +1,9 @@
-{{ $id := .Get "videoID" | default (.Get 0) }}
-{{ $title := .Get "title" | default "YouTube video player" }}
+{{- $id := .Get "videoID" | default (.Get 0) -}}
+{{- $title := .Get "title" | default "YouTube video player" -}}
+{{- $autoload := .Get "autoload" | default false -}}
+
+{{ if $autoload }}
+{{/* 従来のiframe埋め込み（autoload=true の場合のみ） */}}
 <div class="youtube-embed-wrapper">
   <div class="youtube-embed-container">
     <iframe 
@@ -13,6 +17,26 @@
     </iframe>
   </div>
 </div>
+{{ else }}
+{{/* Lite YouTube - クリックで読み込み（デフォルト） */}}
+<div class="youtube-embed-wrapper">
+  <div class="lite-youtube" data-videoid="{{ $id }}" data-title="{{ $title }}">
+    <picture>
+      <source type="image/webp" srcset="https://i.ytimg.com/vi_webp/{{ $id }}/maxresdefault.webp">
+      <img src="https://i.ytimg.com/vi/{{ $id }}/maxresdefault.jpg" 
+           alt="{{ $title }}"
+           loading="lazy"
+           class="lite-youtube-poster">
+    </picture>
+    <button type="button" class="lite-youtube-playbtn" aria-label="Play video: {{ $title }}">
+      <svg viewBox="0 0 68 48" width="68" height="48">
+        <path class="lite-youtube-playbtn-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"/>
+        <path class="lite-youtube-playbtn-icon" d="M 45,24 27,14 27,34"/>
+      </svg>
+    </button>
+  </div>
+</div>
+{{ end }}
 
 <style>
 /* YouTube埋め込みラッパー - 768px制限 */
@@ -22,18 +46,94 @@
   padding: 0 !important;
 }
 
-/* YouTubeコンテナ - 角丸・影付き */
+/* =================================
+   Lite YouTube Styles
+   ================================= */
+.lite-youtube {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  background: #000;
+  cursor: pointer;
+  contain: content;
+}
+
+.lite-youtube-poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.2s ease;
+}
+
+.lite-youtube:hover .lite-youtube-poster {
+  filter: brightness(0.85);
+}
+
+/* プレイボタン */
+.lite-youtube-playbtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 48px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.lite-youtube:hover .lite-youtube-playbtn {
+  transform: translate(-50%, -50%) scale(1.1);
+  filter: brightness(1.1);
+}
+
+.lite-youtube-playbtn-bg {
+  fill: #f00;
+  fill-opacity: 0.9;
+}
+
+.lite-youtube-playbtn-icon {
+  fill: #fff;
+}
+
+/* iframe読み込み後 */
+.lite-youtube.lite-youtube-activated {
+  cursor: default;
+}
+
+.lite-youtube.lite-youtube-activated .lite-youtube-poster,
+.lite-youtube.lite-youtube-activated .lite-youtube-playbtn {
+  display: none;
+}
+
+.lite-youtube iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* =================================
+   従来のiframe埋め込み用
+   ================================= */
 .youtube-embed-container {
   position: relative !important;
   width: 100% !important;
-  padding-top: 56.25% !important; /* 16:9 */
+  padding-top: 56.25% !important;
   border-radius: 18px !important;
   overflow: hidden !important;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25) !important;
   background: #000 !important;
 }
 
-/* iframe本体 */
 .youtube-embed-container iframe {
   position: absolute !important;
   inset: 0 !important;
@@ -43,6 +143,7 @@
 }
 
 /* ダークモード */
+.dark .lite-youtube,
 .dark .youtube-embed-container {
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5) !important;
 }
@@ -54,8 +155,42 @@
     padding: 0 1rem !important;
   }
   
+  .lite-youtube,
   .youtube-embed-container {
     border-radius: 12px !important;
   }
 }
 </style>
+
+<script>
+(function() {
+  // Lite YouTube - クリックで読み込み
+  function initLiteYouTube() {
+    document.querySelectorAll('.lite-youtube:not(.lite-youtube-activated)').forEach(function(el) {
+      el.addEventListener('click', function() {
+        if (el.classList.contains('lite-youtube-activated')) return;
+        
+        var videoId = el.dataset.videoid;
+        var title = el.dataset.title || 'YouTube video';
+        
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
+        iframe.title = title;
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        
+        el.appendChild(iframe);
+        el.classList.add('lite-youtube-activated');
+      });
+    });
+  }
+  
+  // ページ読み込み時に初期化
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLiteYouTube);
+  } else {
+    initLiteYouTube();
+  }
+})();
+</script>

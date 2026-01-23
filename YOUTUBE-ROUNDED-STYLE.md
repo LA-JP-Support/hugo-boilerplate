@@ -1,93 +1,172 @@
-# 🎬 YouTube動画 角丸スタイル - 実装完了
+# 🎬 YouTube動画 角丸スタイル - 実装ガイド
 
-## ✅ 完了した作業
+## ✅ 現在の実装
 
-1. ✅ 「準備中」セクションの文章を削除
-2. ✅ YouTube動画を角丸スタイル（Googleスタイル）に変更
-3. ✅ カスタムYouTubeショートコードを作成
+**2025年1月更新**: Lite YouTube方式とともに角丸スタイルを実装。
 
----
+### 適用されるスタイル
 
-## 📝 更新したファイル
-
-### 新規作成
-- ✅ `/layouts/shortcodes/youtube.html` - 角丸スタイル対応のカスタムショートコード
-
-### 更新
-- ✅ `/content/ja/_index.md` - 文章を削除、動画のみに
-- ✅ `/content/en/_index.md` - 文章を削除、動画のみに
+| プロパティ | 値 | 説明 |
+|-----------|-----|------|
+| border-radius | 18px | 角丸 |
+| box-shadow | 0 25px 60px rgba(0,0,0,0.25) | 影 |
+| max-width | 768px | 最大幅制限 |
+| aspect-ratio | 16:9 | アスペクト比 |
 
 ---
 
-## 🎨 実装内容
+## 📝 対象ファイル
 
-### カスタムYouTubeショートコード
+### ショートコード
+- `/layouts/shortcodes/youtube.html`
 
-**場所:** `/layouts/shortcodes/youtube.html`
+### パーシャル
+- `/layouts/partials/sections/features/with_alternating_sections.html`
 
-**特徴:**
-- ✅ **角丸デザイン** - `border-radius: 1.5rem` (24px)
-- ✅ **影付き** - Googleスタイルの洗練された影
-- ✅ **レスポンシブ** - 16:9のアスペクト比を維持
-- ✅ **ダークモード対応** - 影の濃さを自動調整
-- ✅ **遅延読み込み** - `loading="lazy"` で最適化
+---
 
-### スタイル詳細
+## 🎨 CSS詳細
+
+### Lite YouTube用スタイル
 
 ```css
-.youtube-video-container {
-  border-radius: 1.5rem;           /* 角丸 24px */
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 
-              0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  margin: 2rem auto;               /* 上下の余白 */
+/* ラッパー */
+.youtube-embed-wrapper {
+  max-width: 768px !important;
+  margin: 2rem auto 3rem !important;
+}
+
+/* Lite YouTubeコンテナ */
+.lite-youtube {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  background: #000;
+  cursor: pointer;
+}
+
+/* サムネイル画像 */
+.lite-youtube-poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.2s ease;
+}
+
+.lite-youtube:hover .lite-youtube-poster {
+  filter: brightness(0.85);
+}
+
+/* プレイボタン */
+.lite-youtube-playbtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 48px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.lite-youtube:hover .lite-youtube-playbtn {
+  transform: translate(-50%, -50%) scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* プレイボタン背景（赤） */
+.lite-youtube-playbtn-bg {
+  fill: #f00;
+  fill-opacity: 0.9;
+}
+
+/* プレイボタンアイコン（白） */
+.lite-youtube-playbtn-icon {
+  fill: #fff;
+}
+
+/* iframe読み込み後 */
+.lite-youtube.lite-youtube-activated {
+  cursor: default;
+}
+
+.lite-youtube.lite-youtube-activated .lite-youtube-poster,
+.lite-youtube.lite-youtube-activated .lite-youtube-playbtn {
+  display: none;
+}
+
+.lite-youtube iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 ```
 
 ---
 
-## 🚀 確認手順
+## 🌙 ダークモード対応
 
-### 1. Hugoサーバーを起動
-
-```bash
-cd /Users/taka/Documents/GitHub/hugo-boilerplate
-hugo server
+```css
+.dark .lite-youtube,
+.dark .youtube-embed-container {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5) !important;
+}
 ```
-
-### 2. ブラウザで確認
-
-- **日本語:** http://localhost:1313/
-- **英語:** http://localhost:1313/en/
-
-### 3. 確認ポイント
-
-- ✅ 動画の四隅が角丸になっている
-- ✅ 動画に影が付いている
-- ✅ 余計な文章が表示されていない
-- ✅ モバイルでも正しく表示される
 
 ---
 
-## 🎨 角丸のサイズを調整
+## 📱 レスポンシブ対応
+
+```css
+@media (max-width: 768px) {
+  .youtube-embed-wrapper {
+    margin: 1.5rem auto 2rem !important;
+    padding: 0 1rem !important;
+  }
+  
+  .lite-youtube,
+  .youtube-embed-container {
+    border-radius: 12px !important;
+  }
+}
+```
+
+---
+
+## 🎯 角丸のカスタマイズ
 
 ### より丸くしたい場合
 
-**`/layouts/shortcodes/youtube.html`** を編集：
-
 ```css
-border-radius: 2rem;  /* 32px - より丸く */
+.lite-youtube {
+  border-radius: 24px; /* デフォルト18pxより大きく */
+}
 ```
 
-### より四角くしたい場合
+### より控えめにしたい場合
 
 ```css
-border-radius: 1rem;  /* 16px - 控えめに */
+.lite-youtube {
+  border-radius: 12px; /* デフォルト18pxより小さく */
+}
 ```
 
-### 完全に四角にしたい場合
+### 角丸なし
 
 ```css
-border-radius: 0;  /* 角丸なし */
+.lite-youtube {
+  border-radius: 0;
+}
 ```
 
 ---
@@ -97,205 +176,99 @@ border-radius: 0;  /* 角丸なし */
 ### より濃い影
 
 ```css
-box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+.lite-youtube {
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+}
 ```
 
 ### より薄い影
 
 ```css
-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 
-            0 4px 6px -2px rgba(0, 0, 0, 0.05);
+.lite-youtube {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
 ```
 
 ### 影なし
 
 ```css
-box-shadow: none;
-```
-
----
-
-## 📐 動画のサイズを調整
-
-### 最大幅を制限したい場合
-
-**`/layouts/shortcodes/youtube.html`** のCSSに追加：
-
-```css
-.youtube-video-container {
-  max-width: 800px;  /* 最大幅を800pxに */
-  margin: 2rem auto; /* 中央配置 */
-}
-```
-
-### さらに大きく表示したい場合
-
-```css
-.youtube-video-container {
-  max-width: 100%;  /* 画面幅いっぱい */
+.lite-youtube {
+  box-shadow: none;
 }
 ```
 
 ---
 
-## 🔄 元の標準スタイルに戻したい場合
+## 📐 サイズのカスタマイズ
 
-**`/layouts/shortcodes/youtube.html`** を削除するだけです：
-
-```bash
-rm /Users/taka/Documents/GitHub/hugo-boilerplate/layouts/shortcodes/youtube.html
-```
-
-Hugoは自動的に標準のYouTubeショートコードを使用します。
-
----
-
-## 📱 レスポンシブ対応
-
-カスタムショートコードは完全にレスポンシブです：
-
-- ✅ **デスクトップ** - 大きく美しく表示
-- ✅ **タブレット** - 画面幅に自動調整
-- ✅ **スマートフォン** - 縦向き・横向き対応
-
----
-
-## 🌙 ダークモード
-
-影の濃さが自動的に調整されます：
+### 最大幅を変更
 
 ```css
-/* ライトモード */
-box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+.youtube-embed-wrapper {
+  max-width: 640px; /* より小さく */
+}
+```
 
-/* ダークモード */
-.dark .youtube-video-container {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+または
+
+```css
+.youtube-embed-wrapper {
+  max-width: 100%; /* 画面幅いっぱい */
 }
 ```
 
 ---
 
-## 🔧 トラブルシューティング
+## 🎬 プレイボタンのカスタマイズ
 
-### 角丸が表示されない
-
-1. **ブラウザのキャッシュをクリア:**
-   - Chrome: `Ctrl+Shift+R` (Windows) / `Cmd+Shift+R` (Mac)
-   - Firefox: `Ctrl+F5` (Windows) / `Cmd+Shift+R` (Mac)
-
-2. **Hugoサーバーを再起動:**
-   ```bash
-   hugo server --disableFastRender
-   ```
-
-3. **ブラウザの開発者ツールで確認:**
-   - F12を押す
-   - 動画要素を右クリック → 検証
-   - `border-radius` が適用されているか確認
-
-### 動画が表示されない
-
-ショートコードの構文を確認：
-```markdown
-{{< youtube frmB19r0k58 >}}
-```
-- スペースに注意
-- `<` と `>` の向きに注意
-- ビデオIDが正しいか確認
-
----
-
-## 🎯 表示例
-
-### 変更前
-```
-## 準備中
-
-現在、新しいサービスの準備を進めています。近日公開予定ですので、お楽しみに！
-
-[YouTube動画 - 角丸なし]
-
-最新の情報はブログでご確認いただけます。
-```
-
-### 変更後
-```
-[YouTube動画 - 角丸あり、影付き]
-```
-
----
-
-## 🔄 Git操作
-
-### コミット＆プッシュ
-
-GitHub Desktopで：
-1. Fetch origin
-2. Pull origin
-3. 変更を確認（3つのファイル）
-   - `layouts/shortcodes/youtube.html` (新規)
-   - `content/ja/_index.md` (更新)
-   - `content/en/_index.md` (更新)
-4. Commit（例：「Add rounded YouTube video, remove text」）
-5. Push origin
-
-または、コマンドライン：
-```bash
-cd /Users/taka/Documents/GitHub/hugo-boilerplate
-git add layouts/shortcodes/youtube.html
-git add content/ja/_index.md content/en/_index.md
-git commit -m "Add rounded YouTube video style, remove Coming Soon text"
-git push origin main
-```
-
----
-
-## 📚 参考情報
-
-### Tailwindの角丸クラス（参考）
-
-もしTailwindを使う場合：
-- `rounded` - 4px
-- `rounded-lg` - 8px
-- `rounded-xl` - 12px
-- `rounded-2xl` - 16px
-- `rounded-3xl` - 24px (今回使用)
-
-### CSSの影（box-shadow）構文
+### 色を変更
 
 ```css
-box-shadow: [横の位置] [縦の位置] [ぼかし] [広がり] [色];
+.lite-youtube-playbtn-bg {
+  fill: #4f46e5; /* 紫色に */
+}
 ```
 
-例：
+### サイズを変更
+
 ```css
-box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-/*          ↑  ↑   ↑    ↑    ↑
-            横  縦  ぼかし 広がり 色（透明度0.1） */
+.lite-youtube-playbtn {
+  width: 80px;
+  height: 56px;
+}
 ```
 
 ---
 
-## 🎉 完了！
+## 📚 Tailwindクラス参照
 
-YouTube動画が以下の仕様で表示されるようになりました：
+もしTailwindクラスを直接使う場合:
 
-- ✅ 余計な文章なし（動画のみ）
-- ✅ 角丸デザイン（24px）
-- ✅ 洗練された影付き
-- ✅ Googleスタイルの美しい見た目
-- ✅ レスポンシブ対応
-- ✅ ダークモード対応
-
----
-
-次にやること：
-1. ✅ `hugo server` で確認
-2. ✅ ブラウザで角丸を確認
-3. ✅ モバイルでも確認
-4. ✅ Gitでコミット＆プッシュ
+| クラス | 値 |
+|--------|-----|
+| `rounded` | 4px |
+| `rounded-lg` | 8px |
+| `rounded-xl` | 12px |
+| `rounded-2xl` | 16px |
+| `rounded-3xl` | 24px |
 
 ---
 
-**実装完了！** 🎬✨
+## 🔄 更新履歴
+
+| 日付 | 変更内容 |
+|------|---------|
+| 2025-01-23 | Lite YouTube方式対応のスタイル追加 |
+| 2025-01-23 | プレイボタンスタイル追加 |
+| (以前) | 初期実装 |
+
+---
+
+## 📚 関連ドキュメント
+
+- [YOUTUBE-IMPLEMENTATION.md](./YOUTUBE-IMPLEMENTATION.md) - 実装詳細
+- [hugo-boilerplate-technical-documentation.md](./hugo-boilerplate-technical-documentation.md) - 全体技術仕様
+
+---
+
+**スタイル実装完了！** 🎨

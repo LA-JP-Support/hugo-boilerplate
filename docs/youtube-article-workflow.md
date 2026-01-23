@@ -117,7 +117,33 @@ python3 scripts/linkbuilding_parallel.py --linkbuilding-dir data/linkbuilding --
 
 ---
 
-## 3. チェックリスト (AI用)
+## 3. パフォーマンス最適化について
+
+### Lite YouTube方式（推奨）
+
+ブログ記事以外（ホームページの特集セクションなど）では、パフォーマンス向上のためにLite YouTube方式を使用できます。
+
+```markdown
+{{</* youtube videoID="VIDEO_ID" */>}}
+```
+
+**特徴**:
+- 初期読み込み時はサムネイル画像のみ表示
+- クリック時にiframeを動的生成
+- JavaScript 777 KiB削減、TBT -490ms
+- **再生回数は正常にカウントされます**
+
+### ブログ記事での埋め込み
+
+`layout: single-youtube`を使用するブログ記事では、上記のレスポンシブHTML方式を推奨します。これは記事のメインコンテンツとして動画が表示されるため、即座に読み込む方がユーザー体験が良い場合があります。
+
+**関連ドキュメント**:
+- [YOUTUBE-IMPLEMENTATION.md](../YOUTUBE-IMPLEMENTATION.md) - YouTube実装詳細
+- [PAGESPEED-OPTIMIZATION.md](../PAGESPEED-OPTIMIZATION.md) - パフォーマンス最適化
+
+---
+
+## 4. チェックリスト (AI用)
 
 修正を行う前に、AIはこのチェックリストを確認してください。
 

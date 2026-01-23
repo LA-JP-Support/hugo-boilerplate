@@ -94,6 +94,21 @@
 
 - `docs/SERVICE_NAME_DEFINITIONS.md`
 
+### G. パフォーマンス最適化（PageSpeed改善）
+
+- **全体ガイド**: `PAGESPEED-OPTIMIZATION.md`
+- **YouTube実装**: `YOUTUBE-IMPLEMENTATION.md`
+- **YouTubeスタイル**: `YOUTUBE-ROUNDED-STYLE.md`
+
+主要な最適化:
+- Google Fonts非同期読み込み（`layouts/partials/head.html`）
+- Lite YouTube方式（`layouts/shortcodes/youtube.html`、`static/js/app.js`）
+- クリティカルCSSインライン化
+
+### H. YouTube動画紹介記事を作成したい
+
+- `docs/youtube-article-workflow.md`
+
 ---
 
 ## ディレクトリ新設時のルール（必須）
