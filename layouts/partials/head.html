@@ -20,10 +20,12 @@
 {{ partialCached "head/variables.html" . }}
 <!-- Preload fonts early -->
 <link rel="preload" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<!-- Google Fonts - Async loading to prevent render blocking -->
+<!-- Google Fonts - Optimized for performance -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@500;700&display=swap">
+<!-- Preload critical font (Noto Serif JP for LCP h1) -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700&display=swap&text=%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E5%AF%BE%E5%BF%9C%E3%82%92%E3%80%81AIE3%81%A7%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB%E3%80%82">
+<!-- Async load full Google Fonts -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@500;700&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@500;700&display=swap"></noscript>
 <!-- Critical CSS - Font fallback and initial layout -->
@@ -36,21 +38,55 @@
   font-display: swap;
   src: url('/fonts/inter/Inter-VariableFont_opsz,wght.woff2') format('woff2');
 }
-/* Fallback fonts while web fonts load */
-.font-sans { font-family: Inter, 'Noto Sans JP', system-ui, -apple-system, sans-serif; }
-.font-serif, .font-mincho { font-family: 'Noto Serif JP', Georgia, 'Times New Roman', serif; }
+/* System font stack for immediate LCP - Japanese fallback optimized */
+.font-sans { font-family: Inter, 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, system-ui, -apple-system, sans-serif; }
+.font-serif, .font-mincho { font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', Georgia, serif; }
 /* Critical layout - prevent CLS */
 html { scroll-behavior: smooth; }
-body { margin: 0; -webkit-font-smoothing: antialiased; }
+body { margin: 0; -webkit-font-smoothing: antialiased; background-color: #fff; color: #1f2937; }
 .antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-/* Hero section critical styles */
-.antigravity-hero { min-height: 50vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+/* Header critical styles */
+header { position: sticky; top: 0; z-index: 50; background-color: #fff; }
+.bg-white { background-color: #fff; }
+.text-white { color: #fff; }
+.text-gray-900 { color: #111827; }
+/* Hero section critical styles - LCP optimization */
+.antigravity-hero { min-height: 50vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; background-color: #0f172a; }
 .wrapper { width: 100%; max-width: 80rem; margin: 0 auto; padding: 0 1.5rem; }
+/* LCP element - ensure text is visible immediately */
+.hero-content h1, .hero-slide h1 { 
+  font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', Georgia, serif;
+  font-display: swap;
+  color: #fff;
+}
+/* Tailwind critical utilities */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.flex { display: flex; }
+.hidden { display: none; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.text-center { text-align: center; }
+.font-bold { font-weight: 700; }
+.overflow-hidden { overflow: hidden; }
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  .hero-content h1, .hero-slide h1 { font-size: 1.875rem; line-height: 1.2; }
+  .md\:flex { display: none; }
+  .md\:hidden { display: block; }
+}
+@media (min-width: 768px) {
+  .md\:flex { display: flex; }
+  .md\:hidden { display: none; }
+}
 </style>
-<!-- Classic CSS loading for immediate styling -->
-<link rel="stylesheet" href="/css/main.css?v={{ partialCached "helpers/build-timestamp.html" . }}" crossorigin="anonymous">
-<!-- Custom CSS for code blocks and blockquotes -->
-<link rel="stylesheet" href="/css/custom-code-blockquote.css?v={{ partialCached "helpers/build-timestamp.html" . }}" crossorigin="anonymous">
+<!-- Main CSS - Async loading to prevent render blocking -->
+<link rel="preload" href="/css/main.css?v={{ partialCached "helpers/build-timestamp.html" . }}" as="style">
+<link rel="stylesheet" href="/css/main.css?v={{ partialCached "helpers/build-timestamp.html" . }}" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/main.css?v={{ partialCached "helpers/build-timestamp.html" . }}"></noscript>
+<!-- Custom CSS for code blocks and blockquotes - Async -->
+<link rel="stylesheet" href="/css/custom-code-blockquote.css?v={{ partialCached "helpers/build-timestamp.html" . }}" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/custom-code-blockquote.css?v={{ partialCached "helpers/build-timestamp.html" . }}"></noscript>
 <!-- KaTeX for math rendering -->
 {{ partial "head/katex.html" . }}
 <!-- Critical theme JS - loaded early with defer -->
