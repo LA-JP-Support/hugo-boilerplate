@@ -23,9 +23,7 @@
 <!-- Google Fonts - Optimized for performance -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Preload critical font (Noto Serif JP for LCP h1) -->
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700&display=swap&text=%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E5%AF%BE%E5%BF%9C%E3%82%92%E3%80%81AIE3%81%A7%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%81%AB%E3%80%82">
-<!-- Async load full Google Fonts -->
+<!-- Async load Google Fonts (non-critical, for body text) -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@500;700&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@500;700&display=swap"></noscript>
 <!-- Critical CSS - Font fallback and initial layout -->
@@ -53,10 +51,10 @@ header { position: sticky; top: 0; z-index: 50; background-color: #fff; }
 /* Hero section critical styles - LCP optimization */
 .antigravity-hero { min-height: 50vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; background-color: #0f172a; }
 .wrapper { width: 100%; max-width: 80rem; margin: 0 auto; padding: 0 1.5rem; }
-/* LCP element - ensure text is visible immediately */
+/* LCP element - System serif fonts only for instant rendering */
 .hero-content h1, .hero-slide h1 { 
-  font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', Georgia, serif;
-  font-display: swap;
+  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', Georgia, 'Times New Roman', serif;
+  font-weight: 700;
   color: #fff;
 }
 /* Tailwind critical utilities */
