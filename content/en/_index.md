@@ -42,8 +42,8 @@ detailed_features:
       imageAlt: "AI Customer Support Dashboard"
       imagePosition: "right"
       logos:
-        - "/images/liveagent-logo.png"
-        - "/images/flowhunt-logo.png"
+        - "/images/liveagent-logo.webp"
+        - "/images/flowhunt-logo.webp"
       listItems:
         - "Instant answers with AI chatbot supporting 100+ languages"
         - "High-accuracy responses generated from historical support data"
