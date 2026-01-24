@@ -1,10 +1,16 @@
 {{ define "main" }}
+<style>
+/* 用語集ページではモバイルのみヘッダーを固定しない */
+@media (max-width: 1023px) {
+  header.bg-white { position: relative !important; }
+}
+</style>
 <article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
   <!-- ヘッダーセクション（改善版） -->
-  <header class="py-12 sm:py-16">
+  <header class="py-6 sm:py-12">
     <div class="mx-auto max-w-4xl">
       <!-- パンくずリスト -->
-      <div class="mb-8">
+      <div class="mb-4 sm:mb-8">
         <nav class="text-sm hidden sm:block">
           <ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
             <li class="flex items-center">

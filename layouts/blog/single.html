@@ -1,4 +1,10 @@
 {{ define "main" }}
+<style>
+/* ブログページではモバイルのみヘッダーを固定しない */
+@media (max-width: 1023px) {
+  header.bg-white { position: relative !important; }
+}
+</style>
 <article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
   <!-- ヘッダーセクション -->
   <header class="py-8 sm:py-12">
