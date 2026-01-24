@@ -20,12 +20,7 @@
 {{ partialCached "head/variables.html" . }}
 <!-- Preload fonts early -->
 <link rel="preload" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<!-- Google Fonts - Optimized for performance -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Async load Google Fonts (non-critical, for body text) -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@500;700&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@500;700&display=swap"></noscript>
+<!-- Google Fonts removed for performance - using system fonts only -->
 <!-- Critical CSS - Font fallback and initial layout -->
 <style>
 /* Font fallback system - prevents FOIT */
@@ -37,8 +32,8 @@
   src: url('/fonts/inter/Inter-VariableFont_opsz,wght.woff2') format('woff2');
 }
 /* System font stack for immediate LCP - Japanese fallback optimized */
-.font-sans { font-family: Inter, 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, system-ui, -apple-system, sans-serif; }
-.font-serif, .font-mincho { font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', 'Noto Serif JP', Georgia, serif; }
+.font-sans { font-family: Inter, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', Meiryo, system-ui, -apple-system, sans-serif; }
+.font-serif, .font-mincho { font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', Georgia, 'Times New Roman', serif; }
 /* Critical layout - prevent CLS */
 html { scroll-behavior: smooth; }
 body { margin: 0; -webkit-font-smoothing: antialiased; background-color: #fff; color: #1f2937; }
@@ -51,9 +46,9 @@ header { position: sticky; top: 0; z-index: 50; background-color: #fff; }
 /* Hero section critical styles - LCP optimization */
 .antigravity-hero { min-height: 50vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; background-color: #0f172a; }
 .wrapper { width: 100%; max-width: 80rem; margin: 0 auto; padding: 0 1.5rem; }
-/* LCP element - System serif fonts only for instant rendering */
+/* LCP element - System serif fonts only (NO Noto Serif JP) for instant rendering */
 .hero-content h1, .hero-slide h1 { 
-  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', Georgia, 'Times New Roman', serif;
+  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', Georgia, 'Times New Roman', serif !important;
   font-weight: 700;
   color: #fff;
 }

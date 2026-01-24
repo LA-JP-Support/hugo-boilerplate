@@ -15,9 +15,9 @@
   font-display: swap;
 }
 
-/* Mincho font class - System fonts for LCP, Noto Serif JP loads async */
+/* Mincho font class - System fonts only for performance */
 .font-mincho {
-  font-family: "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Yu Mincho", "游明朝", "MS P明朝", "Noto Serif JP", Georgia, serif;
+  font-family: "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Yu Mincho", "游明朝", "MS P明朝", Georgia, "Times New Roman", serif;
 }
 
 /* 🎯 TAILWIND LAYERS */

@@ -10,9 +10,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', '"Noto Sans JP"', 'system-ui', 'sans-serif'],
-        serif: ['"Hiragino Mincho ProN"', '"Yu Mincho"', '"MS PMincho"', '"Noto Serif JP"', 'Georgia', 'serif'],
-        mincho: ['"Hiragino Mincho ProN"', '"Yu Mincho"', '"MS PMincho"', '"Noto Serif JP"', 'Georgia', 'serif'],
+        sans: ['Inter', '"Hiragino Kaku Gothic ProN"', '"Hiragino Sans"', '"Yu Gothic"', 'Meiryo', 'system-ui', 'sans-serif'],
+        serif: ['"Hiragino Mincho ProN"', '"Yu Mincho"', '"MS PMincho"', 'Georgia', '"Times New Roman"', 'serif'],
+        mincho: ['"Hiragino Mincho ProN"', '"Yu Mincho"', '"MS PMincho"', 'Georgia', '"Times New Roman"', 'serif'],
       },
       colors: {
         primary: {
