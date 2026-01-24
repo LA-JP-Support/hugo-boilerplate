@@ -1,0 +1,96 @@
+{{/*
+  Home News List (Hero Version) - ヒーローセクション内用お知らせ欄
+  
+  表示内容：
+  - blog セクションの記事 → BLOG タグ
+  - news セクション + category: news → NEWS タグ
+  - news セクション + category: press-release → PRESS RELEASE タグ
+  
+  Parameters:
+  - limit: 表示件数（デフォルト: 5）
+  - page: ページコンテキスト
+*/}}
+
+{{ $limit := .limit | default 5 }}
+{{ $page := .page }}
+{{ $lang := $page.Language.Lang }}
+
+{{/* blog と news の記事を取得 */}}
+{{ $blogPages := where (where $page.Site.RegularPages "Section" "blog") "Language.Lang" $lang }}
+{{ $newsPages := where (where $page.Site.RegularPages "Section" "news") "Language.Lang" $lang }}
+
+{{/* 全記事を結合してスライスを作成 */}}
+{{ $allPages := slice }}
+{{ range $blogPages }}
+  {{ $allPages = $allPages | append . }}
+{{ end }}
+{{ range $newsPages }}
+  {{ $allPages = $allPages | append . }}
+{{ end }}
+
+{{/* 日付順でソートして最新N件を取得 */}}
+{{ $sortedPages := sort $allPages "Date" "desc" }}
+{{ $latestPages := first $limit $sortedPages }}
+
+{{ if gt (len $latestPages) 0 }}
+<div class="mt-12 w-full max-w-4xl mx-auto">
+  <!-- セクションヘッダー -->
+  <div class="flex items-center justify-between mb-4 px-4">
+    <h2 class="text-lg font-bold tracking-tight text-white sm:text-xl drop-shadow-md">
+      {{ i18n "news_section_title" | default "お知らせ" }}
+    </h2>
+    <a href="/{{ $lang }}/news/" class="inline-flex items-center text-sm font-medium text-white/80 hover:text-white transition-colors">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- お知らせリスト -->
+  <div class="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 divide-y divide-white/10">
+    {{ range $latestPages }}
+      <a href="{{ .RelPermalink }}" class="group flex items-center gap-3 sm:gap-5 py-3 px-4 hover:bg-white/10 transition-colors first:rounded-t-xl last:rounded-b-xl">
+        <!-- 日付 -->
+        <time datetime="{{ .Date.Format "2006-01-02" }}" class="flex-shrink-0 text-xs sm:text-sm text-white/70 w-20 sm:w-24 font-medium">
+          {{ .Date.Format "2006.01.02" }}
+        </time>
+        
+        <!-- カテゴリータグ -->
+        <div class="flex-shrink-0 w-20 sm:w-28">
+          {{ if eq .Section "blog" }}
+            {{/* ブログ記事 */}}
+            <span class="inline-flex items-center rounded-full bg-emerald-500/20 border border-emerald-400/50 px-2 py-0.5 text-[10px] sm:text-xs font-medium text-emerald-300">
+              BLOG
+            </span>
+          {{ else if eq .Section "news" }}
+            {{ $category := .Params.category | default "news" }}
+            {{ if eq $category "press-release" }}
+              {{/* プレスリリース */}}
+              <span class="inline-flex items-center rounded-full bg-blue-500/20 border border-blue-400/50 px-2 py-0.5 text-[10px] sm:text-xs font-medium text-blue-300 whitespace-nowrap">
+                PRESS
+              </span>
+            {{ else }}
+              {{/* ニュース */}}
+              <span class="inline-flex items-center rounded-full bg-violet-500/20 border border-violet-400/50 px-2 py-0.5 text-[10px] sm:text-xs font-medium text-violet-300">
+                NEWS
+              </span>
+            {{ end }}
+          {{ end }}
+        </div>
+        
+        <!-- タイトル -->
+        <h3 class="flex-1 text-xs sm:text-sm font-medium text-white/90 group-hover:text-white transition-colors truncate min-w-0">
+          {{ .Title }}
+        </h3>
+        
+        <!-- 矢印 -->
+        <span class="flex-shrink-0 text-white/50 group-hover:text-white/80 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </span>
+      </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

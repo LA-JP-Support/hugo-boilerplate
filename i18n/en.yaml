@@ -140,3 +140,8 @@ related_posts: "Related Posts"
 # Promotional offers
 promo_offer: "Black Friday"
 promo_offer_in_menu: "-75% OFF"
+
+# News translations
+news_title: "News"
+news_section_title: "News"
+back_to_news_list: "Back to news list"

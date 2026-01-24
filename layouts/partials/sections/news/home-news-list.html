@@ -1,0 +1,96 @@
+{{/*
+  Home News List - ホームページ用お知らせ欄
+  
+  表示内容：
+  - blog セクションの記事 → BLOG タグ
+  - news セクション + category: news → NEWS タグ
+  - news セクション + category: press-release → PRESS RELEASE タグ
+  
+  Parameters:
+  - limit: 表示件数（デフォルト: 5）
+  - page: ページコンテキスト
+*/}}
+
+{{ $limit := .limit | default 5 }}
+{{ $page := .page }}
+{{ $lang := $page.Language.Lang }}
+
+{{/* blog と news の記事を取得 */}}
+{{ $blogPages := where (where $page.Site.RegularPages "Section" "blog") "Language.Lang" $lang }}
+{{ $newsPages := where (where $page.Site.RegularPages "Section" "news") "Language.Lang" $lang }}
+
+{{/* 全記事を結合してスライスを作成 */}}
+{{ $allPages := slice }}
+{{ range $blogPages }}
+  {{ $allPages = $allPages | append . }}
+{{ end }}
+{{ range $newsPages }}
+  {{ $allPages = $allPages | append . }}
+{{ end }}
+
+{{/* 日付順でソートして最新N件を取得 */}}
+{{ $sortedPages := sort $allPages "Date" "desc" }}
+{{ $latestPages := first $limit $sortedPages }}
+
+<section class="bg-white dark:bg-gray-900 py-12 sm:py-16">
+  <div class="mx-auto max-w-5xl px-6 lg:px-8">
+    <!-- セクションヘッダー -->
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-2xl">
+        {{ i18n "news_section_title" | default "お知らせ" }}
+      </h2>
+      <a href="/{{ $lang }}/news/" class="inline-flex items-center text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- お知らせリスト -->
+    <div class="divide-y divide-gray-200 dark:divide-gray-700 border-t border-b border-gray-200 dark:border-gray-700">
+      {{ range $latestPages }}
+        <a href="{{ .RelPermalink }}" class="group flex items-center gap-3 sm:gap-6 py-4 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors -mx-4 px-4">
+          <!-- 日付 -->
+          <time datetime="{{ .Date.Format "2006-01-02" }}" class="flex-shrink-0 text-sm text-gray-500 dark:text-gray-400 w-20 sm:w-24 font-medium">
+            {{ .Date.Format "2006.01.02" }}
+          </time>
+          
+          <!-- カテゴリータグ -->
+          <div class="flex-shrink-0 w-24 sm:w-32">
+            {{ if eq .Section "blog" }}
+              {{/* ブログ記事 */}}
+              <span class="inline-flex items-center rounded-full border border-emerald-500 px-2 sm:px-2.5 py-0.5 text-[10px] sm:text-xs font-medium text-emerald-600 dark:text-emerald-400">
+                BLOG
+              </span>
+            {{ else if eq .Section "news" }}
+              {{ $category := .Params.category | default "news" }}
+              {{ if eq $category "press-release" }}
+                {{/* プレスリリース */}}
+                <span class="inline-flex items-center rounded-full border border-blue-500 px-2 sm:px-2.5 py-0.5 text-[10px] sm:text-xs font-medium text-blue-600 dark:text-blue-400 whitespace-nowrap">
+                  PRESS RELEASE
+                </span>
+              {{ else }}
+                {{/* ニュース */}}
+                <span class="inline-flex items-center rounded-full border border-violet-500 px-2 sm:px-2.5 py-0.5 text-[10px] sm:text-xs font-medium text-violet-600 dark:text-violet-400">
+                  NEWS
+                </span>
+              {{ end }}
+            {{ end }}
+          </div>
+          
+          <!-- タイトル -->
+          <h3 class="flex-1 text-sm sm:text-base font-medium text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors truncate min-w-0">
+            {{ .Title }}
+          </h3>
+          
+          <!-- 矢印 -->
+          <span class="flex-shrink-0 text-gray-400 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</section>

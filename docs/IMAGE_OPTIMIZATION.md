@@ -188,8 +188,80 @@ preBuild:
 
 **注意**: ビルド時間が大幅に増加します。
 
+## CLS（レイアウトシフト）対策
+
+画像にwidth/height属性がないと、読み込み時にレイアウトがシフトし、PageSpeedのCLSスコアが悪化します。
+
+### 基本ルール
+
+**すべての`<img>`タグに`width`と`height`属性を指定する**
+
+```html
+<!-- 悪い例 -->
+<img src="/images/logo.png" alt="Logo" class="h-full w-auto">
+
+<!-- 良い例 -->
+<img src="/images/logo.png" alt="Logo" class="h-full w-auto" width="150" height="40">
+```
+
+### 実装済みの対策
+
+#### Partner Logo（with_alternating_sections.html）
+
+```html
+<div class="h-8 md:h-10 w-auto" style="min-width: 120px;">
+  <img src="{{ . }}" alt="Partner Logo" 
+       class="h-full w-auto object-contain" 
+       loading="lazy" 
+       width="150" 
+       height="40">
+</div>
+```
+
+#### YouTubeサムネイル
+
+```html
+<img src="https://i.ytimg.com/vi/{{ $videoId }}/maxresdefault.jpg" 
+     alt="{{ $title }}"
+     loading="lazy"
+     width="1280"
+     height="720"
+     class="absolute inset-0 w-full h-full object-cover">
+```
+
+### アスペクト比を維持するコンテナ
+
+動的なサイズの画像には、コンテナでアスペクト比を予約：
+
+```html
+<!-- 16:9アスペクト比 -->
+<div class="relative" style="padding-top: 56.25%;">
+  <img class="absolute inset-0 w-full h-full object-cover" 
+       src="..." alt="..." width="1280" height="720">
+</div>
+
+<!-- 3:2アスペクト比 -->
+<div class="aspect-3/2">
+  <img class="w-full h-full object-cover" 
+       src="..." alt="..." width="1200" height="800">
+</div>
+```
+
+### 確認方法
+
+1. **PageSpeed Insightsでテスト**
+   - 「レイアウト シフトの原因」セクションを確認
+   - CLSスコアが0.1以下か確認
+
+2. **Chrome DevToolsで確認**
+   - Performanceタブ → 「Layout Shift」を確認
+   - ExperienceセクションでCLSを確認
+
+---
+
 ## 参考
 
 - スクリプト: `scripts/preprocess-images.sh`
 - パーシャル: `layouts/partials/components/media/lazyimg_internal.html`
 - 使用例: `layouts/partials/sections/features/pillars_tabs.html`
+- **PageSpeed最適化**: `docs/PAGESPEED_OPTIMIZATION.md`

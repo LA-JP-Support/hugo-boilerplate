@@ -1,0 +1,69 @@
+{{ define "main" }}
+<article class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+  <!-- ヘッダーセクション -->
+  <header class="py-8 sm:py-12">
+    <div class="mx-auto max-w-4xl">
+      <!-- パンくずリスト -->
+      <div class="mb-6">
+        <nav class="text-sm">
+          <ol class="flex items-center space-x-2 text-gray-500">
+            <li class="flex items-center">
+              <a href="/{{ .Language.Lang }}/" class="hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center">
+                <img src="{{ partial "functions/get-localized-image.html" "/images/home-icon.png" }}" alt="Home" class="h-5 w-5">
+              </a>
+            </li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="/{{ .Language.Lang }}/news/" class="hover:text-indigo-600 dark:hover:text-indigo-400">{{ i18n "news_title" | default "お知らせ" }}</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li class="text-gray-900 dark:text-white truncate max-w-xs">{{ .Title }}</li>
+          </ol>
+        </nav>
+      </div>
+
+      <!-- カテゴリータグと日付 -->
+      <div class="flex items-center gap-4 mb-4">
+        {{ $category := .Params.category | default "news" }}
+        {{ if eq $category "press-release" }}
+          <span class="inline-flex items-center rounded-full border border-blue-500 px-3 py-1 text-sm font-medium text-blue-600 dark:text-blue-400">
+            PRESS RELEASE
+          </span>
+        {{ else }}
+          <span class="inline-flex items-center rounded-full border border-violet-500 px-3 py-1 text-sm font-medium text-violet-600 dark:text-violet-400">
+            NEWS
+          </span>
+        {{ end }}
+        <time datetime="{{ .Date.Format "2006-01-02" }}" class="text-sm text-gray-500 dark:text-gray-400">
+          {{ .Date.Format "2006.01.02" }}
+        </time>
+      </div>
+
+      <!-- タイトル -->
+      <h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight">
+        {{ .Title }}
+      </h1>
+
+      <!-- 説明 -->
+      {{ if .Description }}
+        <p class="mt-4 text-base sm:text-lg leading-7 text-gray-600 dark:text-gray-400">
+          {{ .Description }}
+        </p>
+      {{ end }}
+    </div>
+  </header>
+
+  <!-- 記事本文 -->
+  <div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8 border-t border-gray-200 dark:border-gray-700">
+    {{ .Content }}
+  </div>
+
+  <!-- 戻るリンク -->
+  <div class="py-8 border-t border-gray-200 dark:border-gray-700">
+    <a href="/{{ .Language.Lang }}/news/" class="inline-flex items-center text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-500">
+      <svg class="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      {{ i18n "back_to_news_list" | default "お知らせ一覧に戻る" }}
+    </a>
+  </div>
+</article>
+{{ end }}

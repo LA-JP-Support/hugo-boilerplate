@@ -252,14 +252,19 @@
   })();
   </script>
   
-  <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+  <!-- News Section - お知らせ欄（白背景） -->
+  {{ if $currentPage.IsHome }}
+  {{ partial "sections/news/home-news-list.html" (dict "page" $currentPage "limit" 5) }}
+  {{ end }}
+  
+  <div class="mx-auto max-w-7xl px-6 py-8 sm:py-12 lg:px-8">
 {{/* Company Info */}}
 {{ $companyDescription := .companyDescription | default "" }}
 {{ $ismsLogoUrl := .ismsLogoUrl | default "" }}
 {{ $ismsLogoUrl = partial "functions/get-localized-image.html" $ismsLogoUrl }}
 {{ $ismsText := .ismsText | default "" }}
 
-    <div class="mt-24 border-t {{ $borderColor }} pt-12 xl:grid xl:grid-cols-4 xl:gap-8">
+    <div class="border-t {{ $borderColor }} pt-8 xl:grid xl:grid-cols-4 xl:gap-8">
       <div class="xl:col-span-1">
         {{ partial "components/media/lazyimg.html" (dict 
           "src" $logoUrl 

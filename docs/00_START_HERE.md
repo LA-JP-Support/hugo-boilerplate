@@ -96,14 +96,19 @@
 
 ### G. パフォーマンス最適化（PageSpeed改善）
 
-- **全体ガイド**: `PAGESPEED-OPTIMIZATION.md`
-- **YouTube実装**: `YOUTUBE-IMPLEMENTATION.md`
-- **YouTubeスタイル**: `YOUTUBE-ROUNDED-STYLE.md`
+- **全体ガイド**: `docs/PAGESPEED_OPTIMIZATION.md`
+- **画像最適化**: `docs/IMAGE_OPTIMIZATION.md`
 
 主要な最適化:
-- Google Fonts非同期読み込み（`layouts/partials/head.html`）
-- Lite YouTube方式（`layouts/shortcodes/youtube.html`、`static/js/app.js`）
-- クリティカルCSSインライン化
+- **CLS改善**: 画像に`width`/`height`属性を明示的に指定
+- **フォント最適化**: `font-display: swap`でクリティカルCSSにインライン化
+- **Lite YouTube方式**: クリック時のみiframeを読み込み
+- **モバイル対応**: blog/glossaryページでヘッダーを条件付きsticky
+
+関連ファイル:
+- `layouts/partials/head.html` - クリティカルCSS
+- `layouts/partials/sections/features/with_alternating_sections.html` - CLS対策済み
+- `layouts/blog/single.html`, `layouts/glossary/single.html` - モバイルヘッダー対応
 
 ### H. YouTube動画紹介記事を作成したい
 
