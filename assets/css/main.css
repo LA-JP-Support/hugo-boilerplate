@@ -15,9 +15,9 @@
   font-display: swap;
 }
 
-/* Explicit Mincho font class to force Noto Serif JP application */
+/* Mincho font class - System fonts for LCP, Noto Serif JP loads async */
 .font-mincho {
-  font-family: "Noto Serif JP", "游明朝", "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "MS P明朝", serif !important;
+  font-family: "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Yu Mincho", "游明朝", "MS P明朝", "Noto Serif JP", Georgia, serif;
 }
 
 /* 🎯 TAILWIND LAYERS */

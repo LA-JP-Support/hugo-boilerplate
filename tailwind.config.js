@@ -11,8 +11,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter', '"Noto Sans JP"', 'system-ui', 'sans-serif'],
-        serif: ['"Noto Serif JP"', 'serif'],
-        mincho: ['"Noto Serif JP"', 'serif'],
+        serif: ['"Hiragino Mincho ProN"', '"Yu Mincho"', '"MS PMincho"', '"Noto Serif JP"', 'Georgia', 'serif'],
+        mincho: ['"Hiragino Mincho ProN"', '"Yu Mincho"', '"MS PMincho"', '"Noto Serif JP"', 'Georgia', 'serif'],
       },
       colors: {
         primary: {
