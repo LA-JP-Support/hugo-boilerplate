@@ -114,8 +114,8 @@
                   <p class="text-[10px] font-bold uppercase tracking-widest mb-4" style="color: #737373;">Powered by</p>
                   <div class="flex items-center gap-8">
                     {{ range $feature.logos }}
-                      <div class="h-8 md:h-10 w-auto relative grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 ease-in-out">
-                        <img src="{{ partial "functions/get-localized-image.html" . }}" alt="Partner Logo" class="h-full w-auto object-contain" loading="lazy">
+                      <div class="h-8 md:h-10 w-auto relative grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 ease-in-out" style="min-width: 120px;">
+                        <img src="{{ partial "functions/get-localized-image.html" . }}" alt="Partner Logo" class="h-full w-auto object-contain" loading="lazy" width="150" height="40">
                       </div>
                     {{ end }}
                   </div>
@@ -178,6 +178,8 @@
                     <img src="https://i.ytimg.com/vi/{{ $feature.video }}/maxresdefault.jpg" 
                          alt="{{ $feature.videoTitle | default $feature.title }}"
                          loading="lazy"
+                         width="1280"
+                         height="720"
                          class="absolute inset-0 w-full h-full object-cover transition-all duration-300 hover:brightness-90">
                   </picture>
                   <button type="button" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-12 bg-red-600 rounded-lg hover:bg-red-700 hover:scale-110 transition-all duration-200 z-10 flex items-center justify-center" aria-label="Play video">
@@ -205,8 +207,8 @@
                   <p class="text-[10px] font-bold uppercase tracking-widest mb-4" style="color: #737373;">Powered by</p>
                   <div class="flex items-center gap-8">
                     {{ range $feature.logos }}
-                      <div class="h-8 md:h-10 w-auto relative grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 ease-in-out">
-                        <img src="{{ partial "functions/get-localized-image.html" . }}" alt="Partner Logo" class="h-full w-auto object-contain" loading="lazy">
+                      <div class="h-8 md:h-10 w-auto relative grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 ease-in-out" style="min-width: 120px;">
+                        <img src="{{ partial "functions/get-localized-image.html" . }}" alt="Partner Logo" class="h-full w-auto object-contain" loading="lazy" width="150" height="40">
                       </div>
                     {{ end }}
                   </div>
@@ -267,6 +269,8 @@
                     <img src="https://i.ytimg.com/vi/{{ $feature.video }}/maxresdefault.jpg" 
                          alt="{{ $feature.videoTitle | default $feature.title }}"
                          loading="lazy"
+                         width="1280"
+                         height="720"
                          class="absolute inset-0 w-full h-full object-cover transition-all duration-300 hover:brightness-90">
                   </picture>
                   <button type="button" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-12 bg-red-600 rounded-lg hover:bg-red-700 hover:scale-110 transition-all duration-200 z-10 flex items-center justify-center" aria-label="Play video">
