@@ -282,11 +282,10 @@
         </div>
         {{ end }}
       </div>
-      <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-3 xl:mt-0">
-        <div class="md:grid md:grid-cols-2 md:gap-8">
+      <div class="mt-16 grid grid-cols-2 gap-6 md:grid-cols-4 xl:col-span-3 xl:mt-0">
           {{ if $column1Title }}
-          <div>
-            <h3 class="text-sm/6 font-semibold {{ $headingColor }}">{{ $column1Title }}</h3>
+          <div class="min-w-0">
+            <h3 class="text-xs font-semibold {{ $headingColor }} whitespace-nowrap">{{ $column1Title }}</h3>
             <ul role="list" class="mt-6 space-y-4">
               {{ range $column1Links }}
               <li>
@@ -297,8 +296,8 @@
           </div>
           {{ end }}
           {{ if $column2Title }}
-          <div class="mt-10 md:mt-0">
-            <h3 class="text-sm/6 font-semibold {{ $headingColor }}">{{ $column2Title }}</h3>
+          <div class="min-w-0">
+            <h3 class="text-xs font-semibold {{ $headingColor }} whitespace-nowrap">{{ $column2Title }}</h3>
             <ul role="list" class="mt-6 space-y-4">
               {{ range $column2Links }}
               <li>
@@ -308,12 +307,10 @@
             </ul>
           </div>
           {{ end }}
-        </div>
         
-        <div class="md:grid md:grid-cols-2 md:gap-8">
           {{ if $column3Title }}
-          <div>
-            <h3 class="text-sm/6 font-semibold {{ $headingColor }}">{{ $column3Title }}</h3>
+          <div class="min-w-0">
+            <h3 class="text-xs font-semibold {{ $headingColor }} whitespace-nowrap">{{ $column3Title }}</h3>
             <ul role="list" class="mt-6 space-y-4">
               {{ range $column3Links }}
               <li>
@@ -324,8 +321,8 @@
           </div>
           {{ end }}
           {{ if $column4Title }}
-          <div class="mt-10 md:mt-0">
-            <h3 class="text-sm/6 font-semibold {{ $headingColor }}">{{ $column4Title }}</h3>
+          <div class="min-w-0">
+            <h3 class="text-xs font-semibold {{ $headingColor }} whitespace-nowrap">{{ $column4Title }}</h3>
             <ul role="list" class="mt-6 space-y-4">
               {{ range $column4Links }}
               <li>
@@ -335,7 +332,6 @@
             </ul>
           </div>
           {{ end }}
-        </div>
       </div>
     </div>
     <div class="language-selector mt-12 border-t {{ $borderColor }} pt-8 md:flex md:items-center md:justify-between">
