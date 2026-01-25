@@ -104,9 +104,14 @@
 - **フォント最適化**: `font-display: swap`でクリティカルCSSにインライン化
 - **Lite YouTube方式**: クリック時のみiframeを読み込み
 - **モバイル対応**: blog/glossaryページでヘッダーを条件付きsticky
+- **GA遅延読み込み**: Google Analyticsを3秒後またはユーザー操作時に読み込み
+- **WebP変換**: ロゴ画像をWebP形式に変換（最大85%削減）
+
+**重要**: Critical CSSを変更するとCLSが悪化する可能性がある。詳細は`docs/PAGESPEED_OPTIMIZATION.md`の「Critical CSSとCLSの関係」セクションを参照。
 
 関連ファイル:
 - `layouts/partials/head.html` - クリティカルCSS
+- `layouts/partials/utils/analytics/google-analytics-consent.html` - GA遅延読み込み
 - `layouts/partials/sections/features/with_alternating_sections.html` - CLS対策済み
 - `layouts/blog/single.html`, `layouts/glossary/single.html` - モバイルヘッダー対応
 

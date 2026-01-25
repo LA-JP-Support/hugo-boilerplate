@@ -188,6 +188,34 @@ preBuild:
 
 **注意**: ビルド時間が大幅に増加します。
 
+### 手動WebP変換（ロゴ画像等）
+
+自動最適化システム外の画像（ロゴ等）を手動でWebPに変換する場合：
+
+```bash
+# ImageMagickを使用
+convert input.png -resize 524x -quality 85 output.webp
+
+# cwebpを使用
+cwebp -q 85 -resize 524 0 input.png -o output.webp
+```
+
+#### 実績（2026-01-25）
+
+| ファイル | 元サイズ | 最適化後 | 削減率 |
+|---------|---------|---------|-------|
+| flowhunt-logo.png | 42.8KB (2112x452) | 6.2KB (523x112 WebP) | 85% |
+| liveagent-logo.png | 13.8KB (941x218) | 10.5KB (524x121 WebP) | 24% |
+
+**注意:** コンテンツファイル（`_index.md`）内の画像パスも更新が必要
+```yaml
+logos:
+  - "/images/liveagent-logo.webp"  # .png → .webp
+  - "/images/flowhunt-logo.webp"
+```
+
+---
+
 ## CLS（レイアウトシフト）対策
 
 画像にwidth/height属性がないと、読み込み時にレイアウトがシフトし、PageSpeedのCLSスコアが悪化します。

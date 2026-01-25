@@ -252,10 +252,142 @@ document.querySelectorAll('.lite-youtube').forEach(el => {
 
 ---
 
+## Critical CSSとCLSの関係（重要）
+
+### なぜCritical CSS変更でCLSが発生するのか
+
+Critical CSSを変更すると、しばしばCLSが悪化します。これは以下のメカニズムによります：
+
+```
+[ブラウザの処理順序]
+1. HTMLをパース開始
+2. Critical CSS（head.html内のインライン）を適用 → 初期レイアウト確定
+3. main.cssを非同期でダウンロード
+4. main.css適用 → スタイルが異なるとレイアウト再計算 → CLS発生
+```
+
+### Critical CSS変更時の注意点
+
+| やってはいけないこと | 理由 |
+|---------------------|------|
+| main.cssと異なる値を指定 | 読み込み後にレイアウトが変わる |
+| font-size/line-heightを指定 | Tailwindクラスと競合する |
+| position/display を変更 | 要素の配置が変わる |
+| margin/padding を追加 | スペーシングが変わる |
+
+### 安全なCritical CSS項目
+
+```css
+/* ✅ 安全：背景色・基本的なフォント指定 */
+body { background-color: #fff; color: #1f2937; }
+.bg-white { background-color: #fff; }
+
+/* ✅ 安全：フォントファミリーのみ（サイズは指定しない） */
+.hero-content h1 { 
+  font-family: 'Hiragino Mincho ProN', serif !important;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* ❌ 危険：サイズやレイアウトを指定 */
+.hero-slide h1 { 
+  font-size: 3rem;      /* main.cssと競合 */
+  line-height: 1.1;     /* main.cssと競合 */
+}
+.hero-slide { 
+  position: absolute;   /* JSで変更される可能性 */
+  opacity: 0;           /* アニメーションと競合 */
+}
+```
+
+### LCP vs CLS のトレードオフ
+
+| 最適化手法 | LCPへの効果 | CLSリスク |
+|-----------|------------|----------|
+| CSS非同期読み込み | ✅ 改善 | ⚠️ 高い |
+| Critical CSS追加 | ✅ 改善 | ⚠️ 中〜高 |
+| フォントpreload | ✅ 改善 | ⚠️ 低い |
+| 画像にwidth/height | ー | ✅ 改善 |
+
+### 推奨アプローチ
+
+1. **Critical CSSは最小限に保つ**
+   - フォントファミリー、背景色、基本的なdisplay/positionのみ
+   - サイズ指定（font-size, width, height, margin, padding）は避ける
+
+2. **変更前後で必ずCLSを測定**
+   - PageSpeed Insightsのモバイルテストを実行
+   - CLS 0.1以下を維持
+
+3. **問題発生時は変更を戻す**
+   - LCP改善よりCLS維持を優先（ユーザー体験への影響が大きい）
+
+---
+
+## Google Analytics遅延読み込み
+
+### 実装（2026-01-25）
+
+Google Analyticsをページ読み込み後に遅延ロードし、初期レンダリングをブロックしないようにする。
+
+**ファイル:** `layouts/partials/utils/analytics/google-analytics-consent.html`
+
+```javascript
+// 3秒後、またはユーザー操作時にGAを読み込み
+const loadGA = () => {
+  if (window.gaLoaded) return;
+  window.gaLoaded = true;
+  const script = document.createElement('script');
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_ID';
+  script.async = true;
+  document.head.appendChild(script);
+};
+
+// 3秒後に自動読み込み
+setTimeout(loadGA, 3000);
+
+// ユーザー操作時に即時読み込み
+['scroll', 'click', 'touchstart', 'mousemove', 'keydown'].forEach(event => {
+  window.addEventListener(event, loadGA, { once: true, passive: true });
+});
+```
+
+**効果:**
+- 未使用JavaScriptの削減: 約55 KiB
+- TBT改善
+
+---
+
+## 画像最適化（WebP変換）
+
+### ロゴ画像のWebP変換（2026-01-25）
+
+| ファイル | 元サイズ | 最適化後 | 削減率 |
+|---------|---------|---------|-------|
+| flowhunt-logo.png | 42.8KB (2112x452) | 6.2KB (523x112 WebP) | 85% |
+| liveagent-logo.png | 13.8KB (941x218) | 10.5KB (524x121 WebP) | 24% |
+
+**変換コマンド:**
+```bash
+# ImageMagickを使用
+convert input.png -resize 524x -quality 85 output.webp
+```
+
+**注意:** コンテンツファイル（_index.md）内の画像パスも更新が必要
+```yaml
+logos:
+  - "/images/liveagent-logo.webp"  # .png → .webp
+  - "/images/flowhunt-logo.webp"
+```
+
+---
+
 ## 更新履歴
 
 | 日付 | 内容 |
 |------|------|
+| 2026-01-25 | Critical CSSとCLSの関係について追記 |
+| 2026-01-25 | GA遅延読み込み実装、ロゴWebP変換 |
 | 2026-01-24 | CLS改善（Partner Logo、YouTubeサムネイルにwidth/height追加） |
 | 2026-01-24 | モバイル用ヘッダー条件付きsticky実装 |
 | 2026-01-24 | 初版作成 |
