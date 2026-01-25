@@ -44,22 +44,14 @@ header.bg-white { position: sticky !important; top: 0; z-index: 50; background-c
 .text-white { color: #fff; }
 .text-gray-900 { color: #111827; }
 /* Hero section critical styles - LCP optimization */
-.antigravity-hero { min-height: 50vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; background-color: #0f172a; background: linear-gradient(135deg, #2a3d78 0%, #3a2d65 25%, #8b4db5 50%, #2d6da4 75%, #0097a9 100%); }
+.antigravity-hero { min-height: 50vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; background-color: #0f172a; }
 .wrapper { width: 100%; max-width: 80rem; margin: 0 auto; padding: 0 1.5rem; }
-/* Hero Carousel critical styles - prevent FOUC */
-.hero-carousel { position: relative; width: 100%; }
-.hero-slide { position: absolute; top: 0; left: 0; width: 100%; opacity: 0; visibility: hidden; }
-.hero-slide.active { position: relative; opacity: 1; visibility: visible; }
 /* LCP element - System serif fonts only (NO Noto Serif JP) for instant rendering */
 .hero-content h1, .hero-slide h1 { 
   font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', Georgia, 'Times New Roman', serif !important;
   font-weight: 700;
   color: #fff;
-  font-size: 3rem;
-  line-height: 1.1;
 }
-.hero-slide p { color: #fff; margin-top: 2.25rem; }
-.hero-slide .cta-buttons { margin-top: 2.25rem; }
 /* Tailwind critical utilities */
 .relative { position: relative; }
 .absolute { position: absolute; }

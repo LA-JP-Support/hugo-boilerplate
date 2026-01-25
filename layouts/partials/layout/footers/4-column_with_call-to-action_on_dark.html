@@ -277,7 +277,7 @@
         {{ end }}
         {{ if and $ismsLogoUrl $ismsText }}
         <div class="mt-6 flex items-start gap-3">
-          <img src="{{ $ismsLogoUrl }}" alt="ISMS認証" class="h-16 w-auto" />
+          <img src="{{ $ismsLogoUrl }}" alt="ISMS認証" class="h-16 w-auto" width="64" height="64" />
           <p class="text-xs text-gray-500 leading-relaxed">{{ $ismsText | safeHTML }}</p>
         </div>
         {{ end }}
