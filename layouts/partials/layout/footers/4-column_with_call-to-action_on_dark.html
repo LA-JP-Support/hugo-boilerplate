@@ -59,8 +59,8 @@
 {{ $ctaDescriptionColor := .ctaDescriptionColor | default "text-gray-400" }}
 {{ $ctaButtonText := .ctaButtonText | default "Get started" }}
 {{ $ctaButtonUrl := .ctaButtonUrl | default "#" }}
-{{ $ctaButtonBgColor := .ctaButtonBgColor | default "bg-indigo-500" }}
-{{ $ctaButtonHoverBgColor := .ctaButtonHoverBgColor | default "bg-indigo-400" }}
+{{ $ctaButtonBgColor := .ctaButtonBgColor | default "bg-indigo-600" }}
+{{ $ctaButtonHoverBgColor := .ctaButtonHoverBgColor | default "bg-indigo-500" }}
 {{ $ctaButtonTextColor := .ctaButtonTextColor | default "text-white" }}
 
 {{/* Logo */}}
@@ -83,7 +83,7 @@
 {{ $column4Links := .column4Links }}
 
 {{ $headingColor := .headingColor | default "text-white" }}
-{{ $linkColor := .linkColor | default "text-gray-400" }}
+{{ $linkColor := .linkColor | default "text-gray-300" }}
 {{ $linkHoverColor := .linkHoverColor | default "text-white" }}
 
 {{/* Social links */}}
@@ -100,7 +100,7 @@
 
 {{/* Copyright */}}
 {{ $copyrightText := .copyrightText | default "&copy; 2024 Your Company, Inc. All rights reserved." }}
-{{ $copyrightColor := .copyrightColor | default "text-gray-400" }}
+{{ $copyrightColor := .copyrightColor | default "text-gray-300" }}
 
 {{ $showLanguageSelector := .showLanguageSelector | default true }}
 {{ $languageSelectorTitle := .languageSelectorTitle | default (i18n "language_selector_title") }}
@@ -278,7 +278,7 @@
         {{ if and $ismsLogoUrl $ismsText }}
         <div class="mt-6 flex items-start gap-3">
           <img src="{{ $ismsLogoUrl }}" alt="ISMS認証" class="h-16 w-auto" width="64" height="64" />
-          <p class="text-xs text-gray-500 leading-relaxed">{{ $ismsText | safeHTML }}</p>
+          <p class="text-xs text-gray-400 leading-relaxed">{{ $ismsText | safeHTML }}</p>
         </div>
         {{ end }}
       </div>
