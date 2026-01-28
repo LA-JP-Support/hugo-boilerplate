@@ -111,6 +111,8 @@ wantMore: "Want more?"
 learnMore: "Learn more"
 learn_more: "Learn more"
 learn_more_about: "Learn more about"
+learn_more_about_prefix: "Learn more about "
+learn_more_about_suffix: ""
 view_details: "View details"
 
 # Post type translations
