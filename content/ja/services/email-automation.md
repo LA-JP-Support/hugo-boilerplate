@@ -21,7 +21,7 @@ features:
   - label: "AI Answer Composer"
     title: "会話履歴を理解し、最適な回答を生成"
     description: "AIメール自動回答作成機能(AI Answer Composer)は、チケットの会話履歴を自動的に分析し、文脈を理解したうえで適切な回答案を生成するインテリジェントな回答作成ツールです。担当者がゼロから文章を考える必要がなく、AIが提案する下書きを確認・調整するだけで、プロフェッショナルな返信が完成します。<br><br>回答のトーンは「カジュアル」「ニュートラル」「ビジネス」の3段階から選択可能。顧客との関係性や問い合わせ内容に応じて、最適なフォーマリティで回答を生成できます。さらにカスタム指示を追加することで、特定の情報を含めるなど細かな調整も可能です。"
-    image: "/images/services/email-automation/feature-composer.jpg"
+    image: "/images/services/email-automation/feature-composer.gif"
   
   - label: "ナレッジ連携"
     title: "学習済み情報でメール対応"
@@ -30,8 +30,8 @@ features:
   
   - label: "AI回答アシスト(AI Answer Improver)"
     title: "生成した回答をさらにブラッシュアップ"
-    description: "AIメール自動回答作成機能で生成された回答案は、シームレスにAI回答アシスト画面へ引き継がれます。「改善（Improve）」「拡張（Extend）」「簡略化（Simplify）」の3つの機能で、文章をより明確に、より詳細に、またはより簡潔に調整可能。<br><br>カスタム指示を使えば、専門用語に解説を付ける、敬語のレベルを調整する、要点を箇条書きにするなど、細かな調整も自在です。すべての編集履歴が保存されるため、複数のバージョンから最適な回答を選択できます。満足したら「チケット返信で使用」ボタンでチケット返信に挿入できます。"
-    image: "/images/services/email-automation/feature-improver.jpg"
+    description: "AIメール自動回答作成機能で生成された回答案は、シームレスにAI回答アシスト画面へ引き継がれます。「改善（Improve）」「拡張（Extend）」「簡略化（Simplify）」の3つの機能で、文章をより明確に、より詳細に、またはより簡潔に調整可能。<br><br>カスタム指示では、翻訳、専門用語の解説追加、敬語レベルの調整、要点の箇条書き化など、様々な作業が可能です。例えば「英語に翻訳して」と指示すれば、日本語の回答を瞬時に英訳。海外顧客への対応もスムーズに行えます。満足したら「回答に使用」ボタンでチケット返信に挿入できます。"
+    image: "/images/services/email-automation/feature-improver.gif"
   
   - label: "自動振り分け"
     title: "自動化ルールで情報を自動切替"
