@@ -700,6 +700,19 @@
 
 <!-- AI Content Creation & Web - 2 Pillars Section -->
 {{ if .Params.pillars_content }}
+  {{/* Check for style parameter: "tabs" = Drift-style tabs, default = grid */}}
+  {{ if eq .Params.pillars_content.style "tabs" }}
+    {{ partial "sections/features/pillars_tabs.html" (dict
+      "label" .Params.pillars_content.label
+      "heading" .Params.pillars_content.heading
+      "description" .Params.pillars_content.description
+      "items" .Params.pillars_content.items
+      "accentColor" "indigo"
+      "bgStyle" "light"
+      "sectionId" "content-creation"
+    ) }}
+  {{ else }}
+  {{/* Original Grid Style */}}
 <section id="content-creation" class="pillars-section py-24 sm:py-32 bg-white dark:bg-gray-800">
   <style>
     .pillars-section-content {
@@ -721,13 +734,19 @@
     }
     .pillars-grid-2 {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
       gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
     }
-    @media (max-width: 768px) {
-      .pillars-grid-2 {
-        grid-template-columns: 1fr;
-      }
+    .pillars-grid-2 .pillar-card {
+      display: flex;
+      flex-direction: column;
+    }
+    .pillars-grid-2 .pillar-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
   </style>
   
@@ -751,14 +770,14 @@
       {{ end }}
     </div>
     
-    <!-- 2 Column Grid -->
+    <!-- Alternating Layout -->
     <div class="pillars-grid-2 max-w-5xl mx-auto">
-      {{ range .Params.pillars_content.items }}
-      {{ if .url }}<a href="{{ .url }}" class="pillar-card-link">{{ end }}
+      {{ range $index, $item := .Params.pillars_content.items }}
+      {{ if $item.url }}<a href="{{ $item.url }}" class="pillar-card-link">{{ end }}
       <div class="pillar-card">
         <div class="pillar-image-container">
-          {{ if .image }}
-          <img src="{{ partial "functions/get-localized-image.html" .image }}" alt="{{ .title }}" loading="lazy" onerror="this.style.display='none'">
+          {{ if $item.image }}
+          <img src="{{ partial "functions/get-localized-image.html" $item.image }}" alt="{{ $item.title }}" loading="lazy" onerror="this.style.display='none'">
           {{ else }}
           <div class="pillar-image-placeholder">
             <svg class="w-16 h-16 text-emerald-300 dark:text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -767,19 +786,46 @@
           </div>
           {{ end }}
         </div>
-        <div class="pillar-content">
-          {{ if .label }}
-          <p class="pillar-label" style="color: #059669;">{{ .label }}</p>
-          {{ end }}
-          <h3 class="pillar-title">{{ .title }}</h3>
-          <p class="pillar-description">{{ .description }}</p>
+        
+        {{ if $item.descriptionImage }}
+        <!-- Images always on the right side -->
+        <div class="flex flex-col lg:flex-row gap-6 items-start">
+          <!-- Text Content -->
+          <div class="flex-1">
+            {{ if $item.label }}
+            <p class="pillar-label" style="color: #4f46e5;">{{ $item.label }}</p>
+            {{ end }}
+            <h3 class="pillar-title">{{ $item.title }}</h3>
+            <p class="pillar-description">{{ $item.description }}</p>
+            {{ if $item.descriptionLogo }}
+            <div class="mt-4">
+              <img src="{{ partial "functions/get-localized-image.html" $item.descriptionLogo }}" alt="{{ $item.title }} logo" loading="lazy" class="h-8 w-auto">
+            </div>
+            {{ end }}
+          </div>
+          
+          <!-- Description Image -->
+          <div class="lg:w-64 flex-shrink-0">
+            <img src="{{ partial "functions/get-localized-image.html" $item.descriptionImage }}" alt="{{ $item.title }}" loading="lazy" class="w-full h-auto rounded-lg shadow-sm">
+          </div>
         </div>
+        {{ else }}
+        <!-- No description image, standard layout -->
+        <div class="pillar-content">
+          {{ if $item.label }}
+          <p class="pillar-label" style="color: #4f46e5;">{{ $item.label }}</p>
+          {{ end }}
+          <h3 class="pillar-title">{{ $item.title }}</h3>
+          <p class="pillar-description">{{ $item.description }}</p>
+        </div>
+        {{ end }}
       </div>
-      {{ if .url }}</a>{{ end }}
+      {{ if $item.url }}</a>{{ end }}
       {{ end }}
     </div>
   </div>
 </section>
+  {{ end }}
 {{ end }}
 
 <!-- Content from Markdown -->

@@ -39,8 +39,8 @@
       <h2 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-2xl">
         {{ i18n "news_section_title" | default "お知らせ" }}
       </h2>
-      <a href="/{{ $lang }}/news/" class="inline-flex items-center text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 transition-colors">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <a href="/{{ $lang }}/news/" class="inline-flex items-center text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 transition-colors" aria-label="{{ i18n "view_all_news" | default "すべてのお知らせを見る" }}">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
       </a>

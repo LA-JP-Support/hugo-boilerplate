@@ -111,20 +111,24 @@ pillars_support:
 
 # AI Content Creation & Web - 2 Pillars
 pillars_content:
-  label: "AI Content Creation & Web Build"
-  heading: "Two Pillars"
-  description: "Accelerate content marketing and website development with AI. FlowHunt's AI technology efficiently creates SEO-optimized content, while Hugo's static site generation builds ultra-fast, highly secure websites."
+  style: "tabs"
+  label: "AI-Powered High-Quality Content × Lightning-Fast Web"
+  heading: "Create, Deliver, Grow"
+  description: "FlowHunt AI efficiently auto-generates drafts for glossaries, blog posts, and video summaries. SEO-essential metadata and structured data are automatically applied, enabling you to produce search-engine-optimized content at speed. Combined with Hugo's static site generation, you get blazing-fast page loads and rock-solid security. With serverless architecture keeping operational costs low, we support your ongoing content marketing efforts."
   items:
     - title: "AI Content Creation"
       label: "AI Auto-Generates Blogs & Glossaries"
-      image: "/images/pillars/ai-content.jpg"
+      image: "/images/services/ai-content/ai-contents-e.jpg"
       url: "/en/services/ai-content/"
-      description: "FlowHunt's multi-agent AI automatically generates SEO-optimized blog posts and glossary pages. Automate research, writing, and editing to reduce content creation time by 70%. This site features 1,200+ terms created in both Japanese and English, driving continuous organic traffic."
+      description: "FlowHunt's multi-agent AI automatically generates SEO-optimized blog posts and glossary pages. Automate research, writing, and editing to reduce content creation time by 70%. This site features 1,200+ terms created in both Japanese and English, driving continuous organic traffic from search engines."
+      descriptionImage: "/images/services/ai-content/ai-contents-e.jpg"
     - title: "Hugo High-Speed Web Build"
       label: "World's Fastest Static Site Generator"
-      image: "/images/pillars/hugo-web.jpg"
+      image: "/images/services/hugo-web/hugo-process-e.jpg"
       url: "/en/services/hugo-web/"
       description: "Built with Go, Hugo generates pages in milliseconds—the world's fastest static site generator. Eliminate security risks with no database required, and achieve ultra-fast delivery via CDN. Trusted by 12,900+ sites worldwide including Smashing Magazine and Cloudflare."
+      descriptionLogo: "/images/services/hugo-web/hugo-logo-wide.svg"
+      descriptionImage: "/images/services/hugo-web/hugo-process-e.jpg"
 
 # CTA Section (Bottom)
 showCTA: true

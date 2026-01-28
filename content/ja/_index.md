@@ -115,20 +115,24 @@ SmartWebは RAG（検索拡張生成）技術により、マニュアル・FAQ�
 
 # AI Content Creation & Web - 2 Pillars
 pillars_content:
-  label: "AIコンテンツ作成・Web構築"
-  heading: "2つの柱"
-  description: "コンテンツマーケティングとWebサイト構築をAIで加速。FlowHuntのAI技術でSEO最適化されたコンテンツを効率的に作成し、Hugoの静的サイト生成で超高速・高セキュリティのWebサイトを構築します。"
+  style: "tabs"
+  label: "AIが生み出す高品質コンテンツ × 爆速Web構築"
+  heading: "作る、届ける、伸ばす"
+  description: "FlowHunt AIで、専門用語集・ブログ記事・動画要約記事の原稿を効率的に自動生成。SEO対策に必要なメタデータや構造化データも自動で付与されるため、検索エンジンに強いコンテンツをスピーディに仕上げられます。さらに、Hugoの静的サイト生成により、圧倒的な表示速度と堅牢なセキュリティを実現。サーバーレス構成で運用コストも抑えながら、継続的なコンテンツマーケティングを支援します。"
   items:
     - title: "AIコンテンツ作成"
       label: "ブログ・用語集をAIが自動生成"
-      image: "/images/pillars/ai-content.jpg"
+      image: "/images/services/ai-content/ai-contents.jpg"
       url: "/ja/services/ai-content/"
       description: "FlowHuntのマルチエージェントAIが、SEO最適化されたブログ記事や専門用語集を自動生成。リサーチから執筆、校正までを自動化し、記事作成時間を70%削減。このサイトでは1,200以上の用語を日英で作成し、検索エンジンからの継続的な集客を実現しています。"
+      descriptionImage: "/images/services/ai-content/ai-contents.jpg"
     - title: "Hugo高速Web構築"
       label: "世界最速の静的サイトジェネレーター"
-      image: "/images/pillars/hugo-web.jpg"
+      image: "/images/services/hugo-web/hugo-process.jpg"
       url: "/ja/services/hugo-web/"
       description: "Go言語で開発されたHugoは、ミリ秒単位でページを生成する世界最速の静的サイトジェネレーター。データベース不要でセキュリティリスクを排除し、CDN配信による超高速表示を実現。Smashing Magazine、Cloudflareなど世界12,900以上のサイトで採用されています。"
+      descriptionLogo: "/images/services/hugo-web/hugo-logo-wide.svg"
+      descriptionImage: "/images/services/hugo-web/hugo-process.jpg"
 
 # CTA Section (Bottom)
 showCTA: true
