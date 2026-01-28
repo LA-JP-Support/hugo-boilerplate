@@ -2,6 +2,8 @@
  * Dynamic Font Sizing for H1 Elements
  * Client-side enhancement for responsive font sizing
  * Works in conjunction with server-side font class mapping
+ * 
+ * Performance optimized: Uses requestAnimationFrame to avoid blocking
  */
 
 class DynamicFontSizing {
@@ -38,21 +40,33 @@ class DynamicFontSizing {
         this.elements = document.querySelectorAll('[data-dynamic-font]');
         if (!this.elements.length) return;
 
-        this.apply();
+        // PERFORMANCE FIX: Use requestAnimationFrame to avoid blocking main thread
+        requestAnimationFrame(() => {
+            this.apply();
+        });
 
-        window.addEventListener('resize', this.debounce(() => this.apply(), 250));
+        // Use passive event listener for better scroll performance
+        window.addEventListener('resize', this.debounce(() => {
+            requestAnimationFrame(() => this.apply());
+        }, 250), { passive: true });
     }
 
     apply() {
-        this.elements.forEach(el => this.adjustFontSize(el));
-    }
-
-    adjustFontSize(el) {
-        const textLength = el.textContent.trim().length;
-        const rule = this.breakpoints.find(b => textLength > b.max) || this.breakpoints.at(-1);
-
-        this.removeFontClasses(el);
-        el.classList.add(...rule.classes);
+        // Batch all DOM reads first, then writes
+        const updates = [];
+        
+        // Read phase - collect all text lengths
+        this.elements.forEach(el => {
+            const textLength = el.textContent.trim().length;
+            const rule = this.breakpoints.find(b => textLength > b.max) || this.breakpoints.at(-1);
+            updates.push({ el, rule });
+        });
+        
+        // Write phase - apply all changes
+        updates.forEach(({ el, rule }) => {
+            this.removeFontClasses(el);
+            el.classList.add(...rule.classes);
+        });
     }
 
     removeFontClasses(el) {
@@ -68,5 +82,9 @@ class DynamicFontSizing {
     }
 }
 
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => new DynamicFontSizing());
+// Initialize when DOM is ready, using requestAnimationFrame for non-blocking init
+document.addEventListener('DOMContentLoaded', () => {
+    requestAnimationFrame(() => {
+        new DynamicFontSizing();
+    });
+});

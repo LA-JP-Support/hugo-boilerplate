@@ -840,156 +840,209 @@
 {{ end }}
 
 <script>
-// Hero Carousel Functions
-let currentSlide = 0;
-let slideCount = 0;
-let autoSlideInterval = null;
-let gradients = [];
-let backgrounds = [];
-let backgroundTypes = [];
-const AUTO_SLIDE_DELAY = 6000; // 6 seconds
-
-function initCarousel() {
-  const slides = document.querySelectorAll('.hero-slide');
-  slideCount = slides.length;
+// Hero Carousel Functions - Performance Optimized
+(function() {
+  'use strict';
   
-  // Get gradient, background, and type data
-  const hero = document.getElementById('antigravityHero');
-  if (hero) {
-    if (hero.dataset.gradients) {
-      gradients = hero.dataset.gradients.split(',');
-    }
-    if (hero.dataset.backgrounds) {
-      backgrounds = hero.dataset.backgrounds.split(',');
-    }
-    if (hero.dataset.backgroundTypes) {
-      backgroundTypes = hero.dataset.backgroundTypes.split(',');
-    }
-  }
+  let currentSlide = 0;
+  let slideCount = 0;
+  let autoSlideInterval = null;
+  let gradients = [];
+  let backgrounds = [];
+  let backgroundTypes = [];
+  const AUTO_SLIDE_DELAY = 6000; // 6 seconds
   
-  if (slideCount > 1) {
-    startAutoSlide();
+  // Cache DOM elements
+  let heroElement = null;
+  let slidesCache = null;
+  let indicatorsCache = null;
+  let mediaCache = null;
+  
+  function initCarousel() {
+    // Cache all DOM elements once
+    heroElement = document.getElementById('antigravityHero');
+    slidesCache = document.querySelectorAll('.hero-slide');
+    indicatorsCache = document.querySelectorAll('.hero-indicator');
+    mediaCache = document.querySelectorAll('.hero-bg-media');
+    slideCount = slidesCache.length;
     
-    // Pause on hover
-    const carousel = document.getElementById('heroCarousel');
-    if (carousel) {
-      carousel.addEventListener('mouseenter', stopAutoSlide);
-      carousel.addEventListener('mouseleave', startAutoSlide);
-    }
-  }
-}
-
-function updateGradient(index) {
-  const hero = document.getElementById('antigravityHero');
-  if (!hero || gradients.length === 0) return;
-  
-  // Remove all gradient classes
-  hero.classList.remove('gradient-support', 'gradient-content');
-  
-  // Add the appropriate gradient class
-  const gradient = gradients[index] || 'support';
-  hero.classList.add('gradient-' + gradient);
-}
-
-function updateBackground(index) {
-  const allMedia = document.querySelectorAll('.hero-bg-media');
-  allMedia.forEach((media, i) => {
-    const slideIndex = parseInt(media.dataset.slide);
-    if (slideIndex === index) {
-      media.classList.add('active');
-      // 動画の場合は再生位置をリセット
-      if (media.tagName === 'VIDEO') {
-        media.currentTime = 0;
+    // Get gradient, background, and type data
+    if (heroElement) {
+      if (heroElement.dataset.gradients) {
+        gradients = heroElement.dataset.gradients.split(',');
       }
-    } else {
-      media.classList.remove('active');
+      if (heroElement.dataset.backgrounds) {
+        backgrounds = heroElement.dataset.backgrounds.split(',');
+      }
+      if (heroElement.dataset.backgroundTypes) {
+        backgroundTypes = heroElement.dataset.backgroundTypes.split(',');
+      }
     }
-  });
-}
-
-function goToSlide(index) {
-  const slides = document.querySelectorAll('.hero-slide');
-  const indicators = document.querySelectorAll('.hero-indicator');
-  
-  if (index < 0) index = slideCount - 1;
-  if (index >= slideCount) index = 0;
-  
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
-  });
-  
-  indicators.forEach((indicator, i) => {
-    indicator.classList.toggle('active', i === index);
-  });
-  
-  // Update gradient and background
-  updateGradient(index);
-  updateBackground(index);
-  
-  currentSlide = index;
-  resetAutoSlide();
-}
-
-function nextSlide() {
-  goToSlide(currentSlide + 1);
-}
-
-function prevSlide() {
-  goToSlide(currentSlide - 1);
-}
-
-function startAutoSlide() {
-  if (autoSlideInterval) return;
-  autoSlideInterval = setInterval(nextSlide, AUTO_SLIDE_DELAY);
-}
-
-function stopAutoSlide() {
-  if (autoSlideInterval) {
-    clearInterval(autoSlideInterval);
-    autoSlideInterval = null;
+    
+    if (slideCount > 1) {
+      startAutoSlide();
+      
+      // Pause on hover
+      const carousel = document.getElementById('heroCarousel');
+      if (carousel) {
+        carousel.addEventListener('mouseenter', stopAutoSlide, { passive: true });
+        carousel.addEventListener('mouseleave', startAutoSlide, { passive: true });
+      }
+    }
   }
-}
-
-function resetAutoSlide() {
-  stopAutoSlide();
-  startAutoSlide();
-}
-
-// Initialize carousel when DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initCarousel);
-} else {
-  initCarousel();
-}
+  
+  function updateGradient(index) {
+    if (!heroElement || gradients.length === 0) return;
+    
+    // Batch class changes
+    requestAnimationFrame(function() {
+      heroElement.classList.remove('gradient-support', 'gradient-content');
+      const gradient = gradients[index] || 'support';
+      heroElement.classList.add('gradient-' + gradient);
+    });
+  }
+  
+  function updateBackground(index) {
+    if (!mediaCache) return;
+    
+    requestAnimationFrame(function() {
+      mediaCache.forEach(function(media) {
+        const slideIndex = parseInt(media.dataset.slide, 10);
+        if (slideIndex === index) {
+          media.classList.add('active');
+          if (media.tagName === 'VIDEO') {
+            media.currentTime = 0;
+          }
+        } else {
+          media.classList.remove('active');
+        }
+      });
+    });
+  }
+  
+  function goToSlide(index) {
+    if (!slidesCache || !indicatorsCache) return;
+    
+    if (index < 0) index = slideCount - 1;
+    if (index >= slideCount) index = 0;
+    
+    // Batch all DOM updates in a single RAF
+    requestAnimationFrame(function() {
+      slidesCache.forEach(function(slide, i) {
+        slide.classList.toggle('active', i === index);
+      });
+      
+      indicatorsCache.forEach(function(indicator, i) {
+        indicator.classList.toggle('active', i === index);
+      });
+    });
+    
+    updateGradient(index);
+    updateBackground(index);
+    
+    currentSlide = index;
+    resetAutoSlide();
+  }
+  
+  // Expose functions globally for onclick handlers
+  window.nextSlide = function() {
+    goToSlide(currentSlide + 1);
+  };
+  
+  window.prevSlide = function() {
+    goToSlide(currentSlide - 1);
+  };
+  
+  window.goToSlide = goToSlide;
+  
+  function startAutoSlide() {
+    if (autoSlideInterval) return;
+    autoSlideInterval = setInterval(window.nextSlide, AUTO_SLIDE_DELAY);
+  }
+  
+  function stopAutoSlide() {
+    if (autoSlideInterval) {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = null;
+    }
+  }
+  
+  function resetAutoSlide() {
+    stopAutoSlide();
+    startAutoSlide();
+  }
+  
+  // Initialize carousel with RAF to avoid blocking
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      requestAnimationFrame(initCarousel);
+    });
+  } else {
+    requestAnimationFrame(initCarousel);
+  }
+})();
 </script>
 
 <script>
 (function() {
   'use strict';
   
-  // Glow Orb Effect
+  // Glow Orb Effect - Performance Optimized
   function setupGlowOrb() {
     const glowOrb = document.getElementById('heroGlowOrb');
     const heroGlow = document.getElementById('heroGlow');
     
     if (!glowOrb || !heroGlow) return;
     
+    // Cache the bounding rect and update on resize only
+    let glowRect = null;
+    let rafId = null;
+    let mouseX = 0;
+    let mouseY = 0;
+    
+    function updateGlowRect() {
+      glowRect = heroGlow.getBoundingClientRect();
+    }
+    
+    function updateGlowPosition() {
+      if (!glowRect) return;
+      glowOrb.style.left = mouseX + 'px';
+      glowOrb.style.top = mouseY + 'px';
+      rafId = null;
+    }
+    
+    // Initial rect calculation (deferred)
+    requestAnimationFrame(updateGlowRect);
+    
+    // Update rect on resize with debounce
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(updateGlowRect, 100);
+    }, { passive: true });
+    
+    // Throttled mousemove with RAF
     document.addEventListener('mousemove', function(e) {
-      const glowRect = heroGlow.getBoundingClientRect();
-      const relativeX = e.clientX - glowRect.left;
-      const relativeY = e.clientY - glowRect.top;
+      if (!glowRect) return;
       
-      requestAnimationFrame(function() {
-        glowOrb.style.left = relativeX + 'px';
-        glowOrb.style.top = relativeY + 'px';
-      });
-    });
+      mouseX = e.clientX - glowRect.left;
+      mouseY = e.clientY - glowRect.top;
+      
+      // Only schedule RAF if not already scheduled
+      if (!rafId) {
+        rafId = requestAnimationFrame(updateGlowPosition);
+      }
+    }, { passive: true });
   }
   
-  // Initialize
-  document.addEventListener('DOMContentLoaded', function() {
-    setupGlowOrb();
-  });
+  // Initialize with RAF to avoid blocking
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      requestAnimationFrame(setupGlowOrb);
+    });
+  } else {
+    requestAnimationFrame(setupGlowOrb);
+  }
 })();
 </script>
 {{ end }}

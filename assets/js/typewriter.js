@@ -2,6 +2,9 @@
  * Typewriter Effect Component
  * Creates a typewriter animation effect for the last N words in a heading,
  * with an option to cycle through alternative words/phrases.
+ * 
+ * Performance optimized: Uses requestAnimationFrame and batched DOM operations
+ * to avoid forced reflows.
  */
 class TypewriterEffect {
   constructor(element, options = {}) {
@@ -106,24 +109,29 @@ class TypewriterEffect {
     }
     this.element.appendChild(this.typewriterContainer);
     
-    // Pre-render all possible words to calculate max width
-    this.calculateMaxWidth();
+    // PERFORMANCE FIX: Use CSS-based width estimation instead of forced reflow
+    // Calculate width based on character count (approximate)
+    this.setMinWidthWithoutReflow();
   }
   
-  calculateMaxWidth() {
-    let maxWidth = 0;
-    if (this.animationSequence.length > 0) {
-        this.animationSequence.forEach(text => {
-          this.typewriterText.textContent = text;
-          const rect = this.typewriterText.getBoundingClientRect();
-          if (rect.width > maxWidth) {
-            maxWidth = rect.width;
-          }
-        });
-    }
-
-    this.typewriterContainer.style.minWidth = Math.ceil(maxWidth + 20) + 'px';
-    this.typewriterText.textContent = '';
+  /**
+   * PERFORMANCE OPTIMIZED: Set min-width without causing forced reflow
+   * Uses character-based estimation instead of getBoundingClientRect()
+   */
+  setMinWidthWithoutReflow() {
+    if (this.animationSequence.length === 0) return;
+    
+    // Find the longest text in the animation sequence
+    let maxLength = 0;
+    this.animationSequence.forEach(text => {
+      if (text.length > maxLength) {
+        maxLength = text.length;
+      }
+    });
+    
+    // Use CSS ch unit for character-based width (more accurate for monospace-like estimation)
+    // Add extra space for cursor and padding
+    this.typewriterContainer.style.minWidth = `calc(${maxLength}ch + 1.5rem)`;
   }
   
   startAnimation() {
@@ -182,26 +190,29 @@ class TypewriterEffect {
   }
 }
 
-// Auto-initialize typewriter effects
+// Auto-initialize typewriter effects with requestAnimationFrame to avoid blocking
 document.addEventListener('DOMContentLoaded', function() {
-  const typewriterElements = document.querySelectorAll('[data-typewriter]');
-  
-  typewriterElements.forEach(element => {
-    const alternativesString = element.dataset.typewriterWordAlternatives || '';
-    const wordAlternatives = alternativesString
-      ? alternativesString.split(',').map(s => s.trim()).filter(s => s.length > 0)
-      : [];
-
-    const options = {
-      words: parseInt(element.dataset.typewriterWords) || 1,
-      typingSpeed: parseInt(element.dataset.typewriterSpeed) || 100,
-      deletingSpeed: parseInt(element.dataset.typewriterDeleteSpeed) || 50,
-      pauseDuration: parseInt(element.dataset.typewriterPause) || 2000,
-      color: element.dataset.typewriterColor || 'text-primary',
-      wordAlternatives: wordAlternatives
-    };
+  // Use requestAnimationFrame to defer initialization and avoid blocking main thread
+  requestAnimationFrame(() => {
+    const typewriterElements = document.querySelectorAll('[data-typewriter]');
     
-    new TypewriterEffect(element, options);
+    typewriterElements.forEach(element => {
+      const alternativesString = element.dataset.typewriterWordAlternatives || '';
+      const wordAlternatives = alternativesString
+        ? alternativesString.split(',').map(s => s.trim()).filter(s => s.length > 0)
+        : [];
+
+      const options = {
+        words: parseInt(element.dataset.typewriterWords) || 1,
+        typingSpeed: parseInt(element.dataset.typewriterSpeed) || 100,
+        deletingSpeed: parseInt(element.dataset.typewriterDeleteSpeed) || 50,
+        pauseDuration: parseInt(element.dataset.typewriterPause) || 2000,
+        color: element.dataset.typewriterColor || 'text-primary',
+        wordAlternatives: wordAlternatives
+      };
+      
+      new TypewriterEffect(element, options);
+    });
   });
 });
 

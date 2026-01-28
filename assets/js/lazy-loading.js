@@ -1,4 +1,5 @@
 // Lazy loading implementation for images, videos, and SVGs
+// Performance optimized: Uses requestAnimationFrame and batched DOM operations
 document.addEventListener('DOMContentLoaded', function() {
   // Throttle function to limit how often a function can run
   function throttle(callback, limit) {
@@ -87,30 +88,11 @@ document.addEventListener('DOMContentLoaded', function() {
       lazyLoadSVGs();
     }
   }
-// Initialize lazy loading for images
+
+  // Initialize lazy loading for images
   function initLazyImages() {
     const lazyImages = document.querySelectorAll('img.lazy-image[data-src]');
     
-    // For Core Web Vitals optimization, immediately load images that are currently visible
-    function loadVisibleImagesImmediately() {
-      lazyImages.forEach(function(image) {
-        if (isInViewport(image)) {
-          processImage(image);
-        }
-      });
-    }
-    
-    // Helper function to check if an element is in the viewport
-    function isInViewport(element) {
-      const rect = element.getBoundingClientRect();
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-    }
-
     if ('IntersectionObserver' in window) {
       // Function for processing images
       function processImage(image) {
@@ -121,18 +103,17 @@ document.addEventListener('DOMContentLoaded', function() {
           if (picture) {
             const sources = picture.querySelectorAll('source[data-srcset]');
 
-                // Process all source elements first
-                Promise.all(Array.from(sources).map(function(source) {
-                  return new Promise(function(resolve) {
-                    source.srcset = source.dataset.srcset;
-                    source.removeAttribute('data-srcset');
-                    // Resolve immediately as modern browsers can handle this efficiently
-                    resolve();
-                  });
-                })).then(function() {
-                  // Only after all sources are processed, set the img src
-                  image.src = image.dataset.src;
-                  image.removeAttribute('data-src');
+            // Process all source elements first
+            Promise.all(Array.from(sources).map(function(source) {
+              return new Promise(function(resolve) {
+                source.srcset = source.dataset.srcset;
+                source.removeAttribute('data-srcset');
+                resolve();
+              });
+            })).then(function() {
+              // Only after all sources are processed, set the img src
+              image.src = image.dataset.src;
+              image.removeAttribute('data-src');
 
               // Add loaded class when image is loaded
               image.onload = function() {
@@ -155,27 +136,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
       
-      // Observer for images
-      const imageObserver = new IntersectionObserver(function(entries, observer) {
+      // Observer for images with rootMargin: '0px' to load visible images immediately
+      const immediateObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            const image = entry.target;
+            // Use requestAnimationFrame to avoid blocking
+            requestAnimationFrame(function() {
+              processImage(image);
+            });
+            immediateObserver.unobserve(image);
+          }
+        });
+      }, {
+        rootMargin: '0px', // Load immediately when visible
+        threshold: 0
+      });
+      
+      // Observer for images with larger rootMargin for preloading
+      const preloadObserver = new IntersectionObserver(function(entries, observer) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
             const image = entry.target;
             processImage(image);
-            imageObserver.unobserve(image);
+            preloadObserver.unobserve(image);
           }
         });
       }, {
         rootMargin: '400px 0px', // Loads images 400px before they enter the viewport
-        threshold: 0.1 // Triggers when 10% of the image is visible
+        threshold: 0.1
       });
 
-      // Register images with the observer
+      // Register images with both observers
       lazyImages.forEach(function(image) {
-        imageObserver.observe(image);
+        immediateObserver.observe(image);
+        preloadObserver.observe(image);
       });
-      
-      // Immediately load visible images to improve LCP (Largest Contentful Paint)
-      loadVisibleImagesImmediately();
     } else {
       // Fallback for browsers that don't support IntersectionObserver
       let lazyImageTimeout;
@@ -190,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
           
           // Loading images
           lazyImages.forEach(function(image) {
-            if (image.offsetTop < (window.innerHeight + scrollTop + 200)) { // Standard margin
+            if (image.offsetTop < (window.innerHeight + scrollTop + 200)) {
               if (image.dataset.src) {
                 const picture = image.closest('picture');
 
@@ -203,7 +199,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     return new Promise(function(resolve) {
                       source.srcset = source.dataset.srcset;
                       source.removeAttribute('data-srcset');
-                      // Resolve immediately as modern browsers can handle this efficiently
                       resolve();
                     });
                   })).then(function() {
@@ -245,22 +240,18 @@ document.addEventListener('DOMContentLoaded', function() {
       // Apply throttling to scroll event handler for better performance
       const throttledLazyLoadImages = throttle(lazyLoadImages, 100);
 
-      document.addEventListener('scroll', throttledLazyLoadImages);
-      window.addEventListener('resize', throttledLazyLoadImages);
-      window.addEventListener('orientationChange', throttledLazyLoadImages);
+      document.addEventListener('scroll', throttledLazyLoadImages, { passive: true });
+      window.addEventListener('resize', throttledLazyLoadImages, { passive: true });
+      window.addEventListener('orientationChange', throttledLazyLoadImages, { passive: true });
 
-      // Initial load
-      lazyLoadImages();
-      
-      // Immediately load visible images to improve LCP (Largest Contentful Paint)
-      loadVisibleImagesImmediately();
+      // Initial load with requestAnimationFrame
+      requestAnimationFrame(lazyLoadImages);
     }
   }
   
   // Add loaded class to all images when they finish loading
   function initImageLoadedClass() {
     const lazyImages = document.querySelectorAll('img.lazy-image:not([data-src])');
-    const lazyPictures = document.querySelectorAll('picture.lazy-picture');
     
     // Add loaded class to images when they finish loading
     lazyImages.forEach(function(image) {
@@ -288,8 +279,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Initialize lazy loading
-  initLazySVGs();
-  initLazyImages();
-  initImageLoadedClass();
+  // Initialize lazy loading with requestAnimationFrame to avoid blocking
+  requestAnimationFrame(function() {
+    initLazySVGs();
+    initLazyImages();
+    initImageLoadedClass();
+  });
 });
