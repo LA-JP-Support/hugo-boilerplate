@@ -22,22 +22,30 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+    z-index: 0;
   }
   
   /* First slide is relative by default to establish height */
   .hero-slide:first-child {
     position: relative;
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
   }
   
   .hero-slide.active {
     position: relative;
     opacity: 1;
     visibility: visible;
+    z-index: 2;
   }
   
-  /* When another slide is active, first slide becomes absolute */
-  .hero-slide:first-child:not(.active) {
+  /* When another slide is active, first slide becomes absolute and hidden */
+  .hero-slide:not(.active) {
     position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
   }
   
   .hero-slide h1,

@@ -50,9 +50,10 @@ main.w-full { min-height: 100vh; }
 @media (max-width: 640px) { .antigravity-hero { min-height: 500px; } }
 /* Hero carousel - prevent CLS */
 .hero-carousel { position: relative; width: 100%; min-height: 300px; }
-.hero-slide { position: absolute; top: 0; left: 0; width: 100%; opacity: 0; visibility: hidden; }
-.hero-slide:first-child { position: relative; opacity: 1; visibility: visible; }
-.hero-slide.active { position: relative; opacity: 1; visibility: visible; }
+.hero-slide { position: absolute; top: 0; left: 0; width: 100%; opacity: 0; visibility: hidden; z-index: 0; }
+.hero-slide:first-child { position: relative; opacity: 1; visibility: visible; z-index: 1; }
+.hero-slide.active { position: relative; opacity: 1; visibility: visible; z-index: 2; }
+.hero-slide:not(.active) { position: absolute; opacity: 0; visibility: hidden; z-index: 0; }
 /* Hero text sizing - prevent font CLS */
 .hero-slide h1, .hero-content h1 { font-size: 3rem; line-height: 1.1; }
 @media (min-width: 640px) { 
