@@ -112,12 +112,54 @@
   }
 
   /* Internal links on dark backgrounds - HIGHEST PRIORITY */
+  /* Covers all dark background colors: gray, blue, indigo, slate, etc. */
   .section-bg-dark a[data-lb="1"],
   .bg-gray-900 a[data-lb="1"],
-  div[class*="bg-gray-900"] a[data-lb="1"],
+  .bg-gray-800 a[data-lb="1"],
+  .bg-blue-900 a[data-lb="1"],
+  .bg-blue-800 a[data-lb="1"],
+  .bg-indigo-900 a[data-lb="1"],
+  .bg-indigo-800 a[data-lb="1"],
+  .bg-slate-900 a[data-lb="1"],
+  .bg-slate-800 a[data-lb="1"],
+  div[class*="bg-gray-9"] a[data-lb="1"],
+  div[class*="bg-gray-8"] a[data-lb="1"],
+  div[class*="bg-blue-9"] a[data-lb="1"],
+  div[class*="bg-blue-8"] a[data-lb="1"],
+  div[class*="bg-indigo-9"] a[data-lb="1"],
+  div[class*="bg-indigo-8"] a[data-lb="1"],
+  div[class*="bg-slate-9"] a[data-lb="1"],
+  div[class*="bg-slate-8"] a[data-lb="1"],
   div[class*="section-bg-dark"] a[data-lb="1"] {
-    @apply text-white hover:text-blue-200 font-semibold underline decoration-blue-300 decoration-2 underline-offset-2 !important;
-    @apply transition-colors duration-200;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    text-decoration: underline !important;
+    text-decoration-color: #93c5fd !important;
+    text-decoration-thickness: 2px !important;
+    text-underline-offset: 2px !important;
+    transition: color 0.2s ease-in-out !important;
+  }
+  
+  .section-bg-dark a[data-lb="1"]:hover,
+  .bg-gray-900 a[data-lb="1"]:hover,
+  .bg-gray-800 a[data-lb="1"]:hover,
+  .bg-blue-900 a[data-lb="1"]:hover,
+  .bg-blue-800 a[data-lb="1"]:hover,
+  .bg-indigo-900 a[data-lb="1"]:hover,
+  .bg-indigo-800 a[data-lb="1"]:hover,
+  .bg-slate-900 a[data-lb="1"]:hover,
+  .bg-slate-800 a[data-lb="1"]:hover,
+  div[class*="bg-gray-9"] a[data-lb="1"]:hover,
+  div[class*="bg-gray-8"] a[data-lb="1"]:hover,
+  div[class*="bg-blue-9"] a[data-lb="1"]:hover,
+  div[class*="bg-blue-8"] a[data-lb="1"]:hover,
+  div[class*="bg-indigo-9"] a[data-lb="1"]:hover,
+  div[class*="bg-indigo-8"] a[data-lb="1"]:hover,
+  div[class*="bg-slate-9"] a[data-lb="1"]:hover,
+  div[class*="bg-slate-8"] a[data-lb="1"]:hover,
+  div[class*="section-bg-dark"] a[data-lb="1"]:hover {
+    color: #bfdbfe !important;
+    text-decoration-color: #dbeafe !important;
   }
 
   /* Internal links in prose content */
@@ -133,8 +175,48 @@
 
   /* Internal links in prose on dark backgrounds */
   .section-bg-dark .prose a[data-lb="1"],
-  .bg-gray-900 .prose a[data-lb="1"] {
-    @apply text-white hover:text-blue-200 border-blue-300 hover:border-blue-200 !important;
+  .bg-gray-900 .prose a[data-lb="1"],
+  .bg-gray-800 .prose a[data-lb="1"],
+  .bg-blue-900 .prose a[data-lb="1"],
+  .bg-blue-800 .prose a[data-lb="1"],
+  .bg-indigo-900 .prose a[data-lb="1"],
+  .bg-indigo-800 .prose a[data-lb="1"],
+  .bg-slate-900 .prose a[data-lb="1"],
+  .bg-slate-800 .prose a[data-lb="1"],
+  div[class*="bg-gray-9"] .prose a[data-lb="1"],
+  div[class*="bg-gray-8"] .prose a[data-lb="1"],
+  div[class*="bg-blue-9"] .prose a[data-lb="1"],
+  div[class*="bg-blue-8"] .prose a[data-lb="1"],
+  div[class*="bg-indigo-9"] .prose a[data-lb="1"],
+  div[class*="bg-indigo-8"] .prose a[data-lb="1"],
+  div[class*="bg-slate-9"] .prose a[data-lb="1"],
+  div[class*="bg-slate-8"] .prose a[data-lb="1"] {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    border-bottom: 2px solid #93c5fd !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease-in-out !important;
+  }
+  
+  .section-bg-dark .prose a[data-lb="1"]:hover,
+  .bg-gray-900 .prose a[data-lb="1"]:hover,
+  .bg-gray-800 .prose a[data-lb="1"]:hover,
+  .bg-blue-900 .prose a[data-lb="1"]:hover,
+  .bg-blue-800 .prose a[data-lb="1"]:hover,
+  .bg-indigo-900 .prose a[data-lb="1"]:hover,
+  .bg-indigo-800 .prose a[data-lb="1"]:hover,
+  .bg-slate-900 .prose a[data-lb="1"]:hover,
+  .bg-slate-800 .prose a[data-lb="1"]:hover,
+  div[class*="bg-gray-9"] .prose a[data-lb="1"]:hover,
+  div[class*="bg-gray-8"] .prose a[data-lb="1"]:hover,
+  div[class*="bg-blue-9"] .prose a[data-lb="1"]:hover,
+  div[class*="bg-blue-8"] .prose a[data-lb="1"]:hover,
+  div[class*="bg-indigo-9"] .prose a[data-lb="1"]:hover,
+  div[class*="bg-indigo-8"] .prose a[data-lb="1"]:hover,
+  div[class*="bg-slate-9"] .prose a[data-lb="1"]:hover,
+  div[class*="bg-slate-8"] .prose a[data-lb="1"]:hover {
+    color: #bfdbfe !important;
+    border-bottom-color: #dbeafe !important;
   }
 
   /* ================================================================ */
