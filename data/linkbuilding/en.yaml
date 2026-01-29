@@ -1700,7 +1700,7 @@ keywords:
   url: /en/glossary/Hugo/
   exact: true
   priority: 1000
-  title: Hugo static site generator
+  title: A fast, open-source tool that builds websites by converting content into static HTML files, ideal for blogs, documentation, and large sites.
 - keyword: AWS
   url: /en/glossary/AWS/
   exact: true

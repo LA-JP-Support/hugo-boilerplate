@@ -30,3 +30,4 @@ Ticketing-System,ticketing-system,Deleted - consolidated to ticket.md,0,denylist
 unsupervised-consistency-evaluation,unsupervised-consistency-evaluation,Deleted - replaced by Unsupervised-consistency-metrics.mdd,0,denylist
 Workflow,workflow,Generic noun; appears frequently in business/tech text,60,seed
 Token,token,Generic noun; appears frequently in AI/tech text,60,seed
+Go-based web framework,Go-based web framework,Too descriptive phrase - prone to false positives,90,manual
