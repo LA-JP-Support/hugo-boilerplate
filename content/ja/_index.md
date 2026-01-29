@@ -42,8 +42,8 @@ detailed_features:
       imageAlt: "AI Customer Support Dashboard"
       imagePosition: "right"
       logos:
-        - "/images/liveagent-logo.webp"
-        - "/images/flowhunt-logo.webp"
+        - "/images/liveagent-logo-200.webp"
+        - "/images/flowhunt-logo-200.webp"
       listItems:
         - "100言語以上に対応したAIチャットボットによる即時回答"
         - "過去の対応履歴を学習し、高精度な回答を自動生成"

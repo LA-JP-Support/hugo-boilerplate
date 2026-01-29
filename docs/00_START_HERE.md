@@ -98,6 +98,7 @@
 
 - **全体ガイド**: `docs/PAGESPEED_OPTIMIZATION.md`
 - **画像最適化**: `docs/IMAGE_OPTIMIZATION.md`
+- **デプロイチェックリスト**: `docs/DEPLOYMENT_CHECKLIST.md` ⭐新規
 
 主要な最適化:
 - **CLS改善**: 画像に`width`/`height`属性を明示的に指定
@@ -107,7 +108,9 @@
 - **GA遅延読み込み**: Google Analyticsを3秒後またはユーザー操作時に読み込み
 - **WebP変換**: ロゴ画像をWebP形式に変換（最大85%削減）
 
-**重要**: Critical CSSを変更するとCLSが悪化する可能性がある。詳細は`docs/PAGESPEED_OPTIMIZATION.md`の「Critical CSSとCLSの関係」セクションを参照。
+**重要**: 
+- Critical CSSを変更するとCLSが悪化する可能性がある。詳細は`docs/PAGESPEED_OPTIMIZATION.md`の「Critical CSSとCLSの関係」セクションを参照。
+- **デプロイ後は必ずPageSpeed Insightsで確認**する（`docs/DEPLOYMENT_CHECKLIST.md`参照）
 
 関連ファイル:
 - `layouts/partials/head.html` - クリティカルCSS

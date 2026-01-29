@@ -183,6 +183,27 @@
     const mouseInfluence = 150;
     const mouseStrength = 80;
     
+    // PERFORMANCE FIX: Cache dimensions to avoid forced reflow
+    let containerRect = null;
+    let svgWidth = 0;
+    let svgHeight = 0;
+    
+    function updateDimensions() {
+      containerRect = container.getBoundingClientRect();
+      svgWidth = svg.clientWidth;
+      svgHeight = svg.clientHeight;
+    }
+    
+    // Initial dimension calculation (deferred)
+    requestAnimationFrame(updateDimensions);
+    
+    // Update dimensions on resize with debounce
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(updateDimensions, 100);
+    }, { passive: true });
+    
     const curveData = Array.from(curves).map((curve, i) => {
       const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
       return {
@@ -194,16 +215,17 @@
       };
     });
     
-    container.addEventListener('mousemove', (e) => {
-      const rect = container.getBoundingClientRect();
-      targetMouseX = e.clientX - rect.left;
-      targetMouseY = e.clientY - rect.top;
-    });
+    // PERFORMANCE FIX: Use cached rect instead of calling getBoundingClientRect every mousemove
+    container.addEventListener('mousemove', function(e) {
+      if (!containerRect) return;
+      targetMouseX = e.clientX - containerRect.left;
+      targetMouseY = e.clientY - containerRect.top;
+    }, { passive: true });
     
-    container.addEventListener('mouseleave', () => {
+    container.addEventListener('mouseleave', function() {
       targetMouseX = -1000;
       targetMouseY = -1000;
-    });
+    }, { passive: true });
     
     let time = 0;
     
@@ -213,14 +235,17 @@
       mouseX += (targetMouseX - mouseX) * 0.15;
       mouseY += (targetMouseY - mouseY) * 0.15;
       
-      const width = svg.clientWidth;
-      const height = svg.clientHeight;
+      // PERFORMANCE FIX: Use cached dimensions instead of reading every frame
+      const width = svgWidth;
       
-      curveData.forEach((data, index) => {
-        const { baseY, offset, speed, amplitude } = data;
+      curveData.forEach(function(data) {
+        const baseY = data.baseY;
+        const offset = data.offset;
+        const speed = data.speed;
+        const amplitude = data.amplitude;
         const phase = time * speed + offset;
         
-        let path = `M -200,${baseY}`;
+        let path = 'M -200,' + baseY;
         
         for (let x = -200; x <= width + 200; x += 50) {
           const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
@@ -238,8 +263,7 @@
           
           const nextX = x + 50;
           const controlX = x + 25;
-          const controlY = y;
-          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+          path += ' Q ' + controlX + ',' + y + ' ' + nextX + ',' + y;
         }
         
         data.element.setAttribute('d', path);
@@ -277,7 +301,9 @@
         {{ end }}
         {{ if and $ismsLogoUrl $ismsText }}
         <div class="mt-6 flex items-start gap-3">
-          <img src="{{ $ismsLogoUrl }}" alt="ISMS認証" class="h-16 w-auto" width="64" height="64" />
+          <div style="width: 64px; height: 64px; flex-shrink: 0;">
+            <img src="{{ $ismsLogoUrl }}" alt="ISMS認証" class="h-16 w-auto object-contain" width="64" height="64" loading="lazy" decoding="async" />
+          </div>
           <p class="text-xs text-gray-400 leading-relaxed">{{ $ismsText | safeHTML }}</p>
         </div>
         {{ end }}

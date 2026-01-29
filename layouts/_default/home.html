@@ -4,6 +4,14 @@
   .hero-carousel {
     position: relative;
     width: 100%;
+    /* Prevent CLS by setting minimum height */
+    min-height: 300px;
+  }
+  
+  @media (min-width: 640px) {
+    .hero-carousel {
+      min-height: 350px;
+    }
   }
   
   .hero-slide {
@@ -16,10 +24,20 @@
     transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
   }
   
+  /* First slide is relative by default to establish height */
+  .hero-slide:first-child {
+    position: relative;
+  }
+  
   .hero-slide.active {
     position: relative;
     opacity: 1;
     visibility: visible;
+  }
+  
+  /* When another slide is active, first slide becomes absolute */
+  .hero-slide:first-child:not(.active) {
+    position: absolute;
   }
   
   .hero-slide h1,
@@ -185,13 +203,20 @@
       #0097a9 100%);
     background-size: 400% 400%;
     animation: gradientShift 12s ease infinite;
-    min-height: 50vh;
+    /* Fixed height to prevent CLS */
+    min-height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
     transition: background 1s ease-in-out;
+  }
+  
+  @media (max-width: 640px) {
+    .antigravity-hero {
+      min-height: 500px;
+    }
   }
   
   /* Background Image Layer with darker overlay */
