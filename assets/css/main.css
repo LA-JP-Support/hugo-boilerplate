@@ -100,7 +100,34 @@
   }
 
   /* ================================================================ */
-  /* 📦 WRAPPER CLASSES */
+  /* � INTERNAL LINKS (data-lb) STYLES */
+  /* ================================================================ */
+  
+  /* Base internal link styles */
+  a[data-lb="1"] {
+    @apply text-blue-700 hover:text-blue-800 font-semibold underline decoration-blue-400 decoration-2 underline-offset-2;
+    @apply transition-colors duration-200;
+    cursor: help; /* Show help cursor to indicate tooltip */
+  }
+
+  /* Dark mode internal links */
+  .dark a[data-lb="1"] {
+    @apply text-blue-400 hover:text-blue-300 decoration-blue-500;
+  }
+
+  /* Internal links in prose content */
+  .prose a[data-lb="1"] {
+    @apply text-blue-700 hover:text-blue-800 font-semibold no-underline;
+    @apply border-b-2 border-blue-400 hover:border-blue-600;
+    @apply transition-all duration-200;
+  }
+
+  .dark .prose a[data-lb="1"] {
+    @apply text-blue-400 hover:text-blue-300 border-blue-500 hover:border-blue-400;
+  }
+
+  /* ================================================================ */
+  /* �📦 WRAPPER CLASSES */
   /* ================================================================ */
   
   .wrapper {

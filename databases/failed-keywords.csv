@@ -1,0 +1,6 @@
+keyword,definition,category,filename
+Active Learning,A machine learning approach where the algorithm actively selects the most informative examples to learn from,Technical,active-learning.md
+Aspect-Based Sentiment Analysis,A sentiment analysis technique that identifies opinions about specific aspects or features of a product or service,Technical,aspect-based-sentiment-analysis.md
+Demand Forecasting,The process of predicting future customer demand using historical data and analytics,Technical,demand-forecasting.md
+Netlify,A cloud platform for deploying and hosting static websites and serverless functions with continuous deployment,Platform/Service,netlify.md
+PageSpeed Insights,A Google tool that analyzes web page performance and provides optimization recommendations for Core Web Vitals,Technical,pagespeed-insights.md

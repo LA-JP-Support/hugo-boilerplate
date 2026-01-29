@@ -198,6 +198,74 @@
     border-radius: 12px;
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   }
+
+  /* Zoomable Image Container */
+  .zoomable-image-container {
+    position: relative;
+    display: inline-block;
+    cursor: zoom-in;
+  }
+
+  .zoomable-image-container:hover img {
+    filter: brightness(0.95);
+  }
+
+  /* Image Lightbox Modal */
+  .image-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.9);
+    cursor: zoom-out;
+    padding: 2rem;
+  }
+
+  .image-lightbox.active {
+    display: flex;
+  }
+
+  .image-lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    animation: lightboxFadeIn 0.3s ease;
+  }
+
+  @keyframes lightboxFadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .lightbox-close svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+  }
   
   .feature-image-placeholder img.size-small {
     max-width: 320px;
@@ -334,7 +402,7 @@
 </style>
 
 <!-- Hero Section -->
-<section class="service-hero">
+<section class="service-hero" data-no-linkbuilding="true">
   <div class="relative isolate z-10 w-full">
     <div class="wrapper py-16 sm:py-20">
       <div class="mx-auto max-w-4xl text-center">
@@ -424,13 +492,15 @@
               <div class="feature-slideshow-slide{{ if eq $imgIndex 0 }} active{{ end }}">
                 <img src="{{ partial "functions/get-localized-image.html" $img.src }}" alt="{{ $feature.title }}" loading="lazy" class="{{ with $img.size }}size-{{ . }}{{ end }}">
                 {{ if $img.caption }}
-                <span class="feature-slideshow-caption">{{ $img.caption }}</span>
+                <span class="feature-slideshow-caption">{{ $img.caption | safeHTML }}</span>
                 {{ end }}
               </div>
               {{ end }}
             </div>
             {{ else if $feature.image }}
-            <img src="{{ partial "functions/get-localized-image.html" $feature.image }}" alt="{{ $feature.title }}" loading="lazy" class="{{ with $feature.image_size }}size-{{ . }}{{ end }}">
+            <div class="zoomable-image-container" onclick="openLightbox(this.querySelector('img').src)">
+              <img src="{{ partial "functions/get-localized-image.html" $feature.image }}" alt="{{ $feature.title }}" loading="lazy" class="{{ with $feature.image_size }}size-{{ . }}{{ end }}">
+            </div>
             {{ else }}
             <svg class="w-24 h-24 text-indigo-300 dark:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -475,13 +545,15 @@
               <div class="feature-slideshow-slide{{ if eq $imgIndex 0 }} active{{ end }}">
                 <img src="{{ partial "functions/get-localized-image.html" $img.src }}" alt="{{ $feature.title }}" loading="lazy" class="{{ with $img.size }}size-{{ . }}{{ end }}">
                 {{ if $img.caption }}
-                <span class="feature-slideshow-caption">{{ $img.caption }}</span>
+                <span class="feature-slideshow-caption">{{ $img.caption | safeHTML }}</span>
                 {{ end }}
               </div>
               {{ end }}
             </div>
             {{ else if $feature.image }}
-            <img src="{{ partial "functions/get-localized-image.html" $feature.image }}" alt="{{ $feature.title }}" loading="lazy" class="{{ with $feature.image_size }}size-{{ . }}{{ end }}">
+            <div class="zoomable-image-container" onclick="openLightbox(this.querySelector('img').src)">
+              <img src="{{ partial "functions/get-localized-image.html" $feature.image }}" alt="{{ $feature.title }}" loading="lazy" class="{{ with $feature.image_size }}size-{{ . }}{{ end }}">
+            </div>
             {{ else }}
             <svg class="w-24 h-24 text-indigo-300 dark:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -588,6 +660,16 @@
 </section>
 {{ end }}
 
+<!-- Image Lightbox Modal -->
+<div id="imageLightbox" class="image-lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">
+    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+  <img id="lightboxImage" src="" alt="Enlarged image" onclick="event.stopPropagation()">
+</div>
+
 <script>
 // Feature Image Slideshow
 document.addEventListener('DOMContentLoaded', function() {
@@ -606,6 +688,28 @@ document.addEventListener('DOMContentLoaded', function() {
       slides[currentIndex].classList.add('active');
     }, interval);
   });
+});
+
+// Image Lightbox Functions
+function openLightbox(imageSrc) {
+  const lightbox = document.getElementById('imageLightbox');
+  const lightboxImage = document.getElementById('lightboxImage');
+  lightboxImage.src = imageSrc;
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('imageLightbox');
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Close lightbox with Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeLightbox();
+  }
 });
 </script>
 

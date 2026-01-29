@@ -1,0 +1,36 @@
+Category,English Keyword,Japanese Keyword,Description
+Platform/Service,GitHub,GitHub,A web-based platform for version control and collaboration using Git that enables developers to store and manage code repositories
+Platform/Service,GitHub Pages,GitHub Pages,A static site hosting service from GitHub that publishes websites directly from a repository
+Platform/Service,GitHub Actions,GitHub Actions,A CI/CD platform integrated into GitHub that automates build test and deployment workflows
+Platform/Service,Cloudflare,Cloudflare,A web infrastructure and security company providing CDN services DDoS protection and DNS management
+Platform/Service,AWS,AWS,Amazon Web Services - a comprehensive cloud computing platform offering infrastructure and application services
+Platform/Service,AWS Amplify,AWS Amplify,A development platform from AWS for building and deploying full-stack web and mobile applications
+Platform/Service,Amazon S3,Amazon S3,Amazon Simple Storage Service - a scalable object storage service for data backup and static website hosting
+Platform/Service,CloudFront,CloudFront,Amazon CloudFront - a content delivery network (CDN) service that delivers data with low latency globally
+Platform/Service,Netlify,Netlify,A cloud platform for deploying and hosting static websites and serverless functions with continuous deployment
+Platform/Service,Shopify,Shopify,An e-commerce platform that enables businesses to create online stores and manage sales across multiple channels
+Platform/Service,Amazon Connect,Amazon Connect,A cloud-based contact center service from AWS that provides omnichannel customer engagement
+Platform/Service,Gartner,Gartner,A global research and advisory company providing insights on IT and business technology trends
+Platform/Service,BotStar,BotStar,A chatbot development platform for creating AI-powered conversational experiences across multiple channels
+Platform/Service,Tidio,Tidio,A customer service platform combining live chat chatbots and email marketing tools for businesses
+Platform/Service,Bootstrap,Bootstrap,A popular open-source CSS framework for building responsive and mobile-first websites
+Platform/Service,Gatsby,Gatsby,A React-based static site generator that creates fast websites using GraphQL and modern web technologies
+Technical,Topical Authority,トピカルオーソリティ,A measure of a websites expertise and credibility on a specific topic as perceived by search engines
+Technical,CAG,CAG（キャッシュ拡張生成）,Cache-Augmented Generation - a technique that preloads all knowledge into a models context window for faster inference
+Technical,Multi-Agent System,マルチエージェントシステム,An AI architecture where multiple specialized agents collaborate to solve complex tasks through coordination
+Technical,PageSpeed Insights,PageSpeed Insights,A Google tool that analyzes web page performance and provides optimization recommendations for Core Web Vitals
+Technical,Lighthouse CI,Lighthouse CI,A continuous integration tool that runs Lighthouse audits automatically to monitor web performance over time
+Technical,Go Language,Go言語,A statically typed compiled programming language designed by Google known for simplicity and high performance
+Technical,SQL Injection,SQLインジェクション,A code injection technique that exploits security vulnerabilities in database-driven applications
+Technical,Quantum Computing,量子コンピューティング,A type of computation using quantum mechanical phenomena like superposition and entanglement for processing
+Technical,Nuclear Fusion Energy,核融合エネルギー,Energy produced by fusing atomic nuclei - a potential source of clean and virtually unlimited power
+Technical,Web Crawling,Webクローリング,The automated process of systematically browsing websites to index content for search engines or data extraction
+Technical,AI Scaling,AIスケーリング,The process of increasing AI model size computational resources and training data to improve performance
+Technical,Specification Problem,仕様問題,The challenge of precisely defining AI system goals to ensure alignment with actual human intentions
+Technical,Jagged Intelligence,ギザギザした知能,The phenomenon where AI systems excel at some difficult tasks while failing at seemingly simpler ones
+Technical,Thinking Systems,思考システム,AI models that spend more computation time on reasoning before generating responses for improved accuracy
+Technical,Goal Alignment,目標整合性,The challenge of ensuring AI systems pursue objectives that truly match human values and intentions
+Business/Marketing,Hybrid Support,ハイブリッドサポート,A customer service model combining AI chatbots with human agents for optimal support coverage
+Business/Marketing,Back Office,バックオフィス,Administrative and support functions that operate behind the scenes to manage business operations
+Business/Marketing,Customer Lifetime Value,顧客生涯価値,The total revenue a business can expect from a single customer account throughout their relationship
+Business/Marketing,Root Node Problem,ルートノード問題,Fundamental challenges whose solutions unlock cascading benefits across multiple domains and industries

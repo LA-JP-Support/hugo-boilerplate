@@ -21,7 +21,9 @@ features:
   - label: "Unmatched Speed"
     title: "Millisecond Page Generation"
     description: "Built with Go, Hugo generates sites with thousands of pages in seconds—each page in mere milliseconds. This incredible speed streamlines everything from development previews to production builds.<br><br>Generated static files are served via CDNs like Cloudflare or AWS CloudFront. Cached on edge servers worldwide, users experience ultra-fast loading regardless of geographic location. Faster loading not only improves user experience but directly boosts Google search rankings."
-    image: "/images/services/hugo-web/feature-speed.jpg"
+    images:
+      - src: "/images/services/hugo-web/feature-speed.jpg"
+        caption: "PageSpeed Insights score for SmartWeb site (Desktop)<br>*Results may vary depending on test timing"
   
   - label: "Security"
     title: "No Database, No Vulnerabilities"

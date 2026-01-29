@@ -1,0 +1,214 @@
+{{/* LiveAgent Multi-Widget - お問い合わせ・AIチャットボット・ライブチャット */}}
+{{ if site.Params.liveagent.multiwidget.enable }}
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;800&display=swap');
+
+/* Reset styles for multiwidget */
+.la-multiwidget,
+.la-multiwidget *,
+.la-main-button,
+.la-main-button * {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Button */
+.la-main-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #ffbd39 0%, #fa9531 100%);
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  z-index: 9998;
+  transition: all 0.3s ease;
+}
+
+.la-main-button:hover {
+  background: linear-gradient(90deg, #ffbd39 0%, #ffbd39 100%);
+  transform: scale(1.02);
+}
+
+.la-main-button-text {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  white-space: nowrap;
+}
+
+.la-main-button-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Multiwidget Panel */
+.la-multiwidget {
+  position: fixed;
+  right: 20px;
+  bottom: -300px;
+  opacity: 0;
+  width: 280px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+  font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  z-index: 9999;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.la-multiwidget.is-open {
+  bottom: 90px;
+  opacity: 1;
+}
+
+/* Close Button */
+.la-multiwidget-close {
+  display: block;
+  text-align: right;
+  padding: 8px 12px 0;
+  font-size: 28px;
+  font-weight: 300;
+  color: #999;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.la-multiwidget-close:hover {
+  color: #333;
+}
+
+/* Menu List */
+.la-multiwidget-list {
+  list-style: none !important;
+  padding: 8px 12px 16px !important;
+  margin: 0 !important;
+}
+
+.la-multiwidget-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 12px;
+  padding: 10px 12px !important;
+  margin: 0 0 8px 0 !important;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  list-style: none !important;
+}
+
+.la-multiwidget-item:last-child {
+  margin-bottom: 0 !important;
+}
+
+.la-multiwidget-item-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.la-multiwidget-item-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+/* Hover Colors */
+.la-multiwidget-item.form:hover {
+  background-color: #e8f4fd;
+}
+
+.la-multiwidget-item.bot:hover {
+  background-color: #f3e8fd;
+}
+
+.la-multiwidget-item.chat:hover {
+  background-color: #fef3e8;
+}
+</style>
+
+<!-- Multiwidget Panel -->
+<div id="laMultiwidget" class="la-multiwidget">
+  <span class="la-multiwidget-close" onclick="toggleLaMultiwidget();">&times;</span>
+  <ul class="la-multiwidget-list">
+    <li id="laElementForm" class="la-multiwidget-item form" onclick="contactForm.onClick(); toggleLaMultiwidget();">
+      <span class="la-multiwidget-item-text">お問い合わせフォーム</span>
+      <img class="la-multiwidget-item-icon" src="https://files.intwk.co.jp/SmartWeb/form.svg" alt="Form" />
+    </li>
+    <li id="laElementBot" class="la-multiwidget-item bot" onclick="botButton.onClick(); toggleLaMultiwidget();">
+      <span class="la-multiwidget-item-text">AI チャットボット</span>
+      <img class="la-multiwidget-item-icon" src="https://files.intwk.co.jp/SmartWeb/bot.svg" alt="Bot" />
+    </li>
+    <li id="laElementChat" class="la-multiwidget-item chat" onclick="chatButton.onClick(); toggleLaMultiwidget();">
+      <span class="la-multiwidget-item-text">ライブチャット</span>
+      <img class="la-multiwidget-item-icon" src="https://files.intwk.co.jp/SmartWeb/chat.svg" alt="Chat" />
+    </li>
+  </ul>
+</div>
+
+<!-- Main Button -->
+<div id="laMainButton" class="la-main-button" onclick="toggleLaMultiwidget();">
+  <span class="la-main-button-text">お問い合わせ</span>
+  <img class="la-main-button-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkFnGM_CtOsOzloGOge47HQ7-U4gnyhrryn2iA7dmf0A&s" alt="Contact" />
+</div>
+
+<!-- LiveAgent Scripts -->
+<script type="text/javascript">
+var contactForm;
+(function(d, src, c) { var t=d.scripts[d.scripts.length - 1],s=d.createElement('script');s.id='la_x2s6df8d';s.defer=true;s.src=src;s.onload=s.onreadystatechange=function(){var rs=this.readyState;if(rs&&(rs!='complete')&&(rs!='loaded')){return;}c(this);};t.parentElement.insertBefore(s,t.nextSibling);})(document,
+'https://support.intwk.co.jp/scripts/track.js',
+function(e){
+  contactForm = LiveAgent.createButton('s141buj5', e);
+});
+</script>
+
+<script type="text/javascript">
+var chatButton;
+(function(d, src, c) { var t=d.scripts[d.scripts.length - 1],s=d.createElement('script');s.id='la_x2s6df8d';s.defer=true;s.src=src;s.onload=s.onreadystatechange=function(){var rs=this.readyState;if(rs&&(rs!='complete')&&(rs!='loaded')){return;}c(this);};t.parentElement.insertBefore(s,t.nextSibling);})(document,
+'https://support.intwk.co.jp/scripts/track.js',
+function(e){
+  chatButton = LiveAgent.createButton('qm5v7e5y', e);
+});
+</script>
+
+<script type="text/javascript">
+var botButton;
+(function(d, src, c) { var t=d.scripts[d.scripts.length - 1],s=d.createElement('script');s.id='la_x2s6df8d';s.defer=true;s.src=src;s.onload=s.onreadystatechange=function(){var rs=this.readyState;if(rs&&(rs!='complete')&&(rs!='loaded')){return;}c(this);};t.parentElement.insertBefore(s,t.nextSibling);})(document,
+'https://support.intwk.co.jp/scripts/track.js',
+function(e){
+  botButton = LiveAgent.createButton('tasrn8qe', e);
+});
+</script>
+
+<script>
+var laWidgetOpen = false;
+function toggleLaMultiwidget() {
+  var widget = document.getElementById("laMultiwidget");
+  var button = document.getElementById("laMainButton");
+  
+  if (!laWidgetOpen) {
+    widget.classList.add("is-open");
+    button.style.background = "linear-gradient(90deg, #ffbd39 0%, #ffbd39 100%)";
+    laWidgetOpen = true;
+  } else {
+    widget.classList.remove("is-open");
+    button.style.background = "linear-gradient(90deg, #ffbd39 0%, #fa9531 100%)";
+    laWidgetOpen = false;
+  }
+}
+</script>
+
+{{ end }}

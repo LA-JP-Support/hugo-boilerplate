@@ -629,6 +629,9 @@ class LinkBuilder:
                         # Skip if inside ANY link to avoid nested anchors
                         if child.parent.name == 'a' or child.parent.find_parent('a') is not None:
                             continue
+                        # Skip if inside element with data-no-linkbuilding attribute
+                        if child.parent.find_parent(attrs={'data-no-linkbuilding': True}):
+                            continue
                         new_content = self.process_text_node(child, child.parent)
                         if new_content != str(child):
                             # Replace the text node with new content
@@ -640,6 +643,9 @@ class LinkBuilder:
                     if child.name not in self.SKIP_TAGS:
                         # Skip ANY link element and anything inside a link
                         if child.name == 'a' or child.find_parent('a') is not None:
+                            continue
+                        # Skip if inside element with data-no-linkbuilding attribute
+                        if child.find_parent(attrs={'data-no-linkbuilding': True}):
                             continue
                         if self.process_element(child):
                             modified = True

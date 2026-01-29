@@ -1,0 +1,3 @@
+keyword,definition,category,filename
+Active Learning,A machine learning approach where the algorithm actively selects the most informative examples to learn from,Technical,active-learning.md
+Demand Forecasting,The process of predicting future customer demand using historical data and analytics,Technical,demand-forecasting.md

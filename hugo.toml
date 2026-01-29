@@ -58,6 +58,12 @@ ignoreFiles = ['(?i)glossary-backup']
     mobilePosition = "center"
     debug = false
 
+  # ========================================
+  # LiveAgent マルチウィジェット
+  # ========================================
+  [params.liveagent.multiwidget]
+    enable = true
+
 [languages]
   [languages.ja]
     languageName = "日本語"

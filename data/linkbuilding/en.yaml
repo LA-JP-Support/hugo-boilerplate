@@ -1694,3 +1694,55 @@ keywords:
   exact: true
   priority: 12
   title: "AlphaZero is a general game-playing AI that mastered chess, shogi, and Go through pure self-play reinforcement learning without human knowledge."
+
+# Main Keywords - High Priority (1000+)
+- keyword: Hugo
+  url: /en/glossary/Hugo/
+  exact: true
+  priority: 1000
+  title: Hugo static site generator
+- keyword: AWS
+  url: /en/glossary/AWS/
+  exact: true
+  priority: 1000
+  title: Amazon Web Services (AWS) - comprehensive cloud computing platform offering scalable infrastructure, application services, and enterprise solutions worldwide.
+- keyword: Google
+  url: /en/glossary/Google/
+  exact: true
+  priority: 1000
+  title: Google - multinational technology company specializing in Internet-related services and products, including search, cloud computing, software, and hardware.
+- keyword: GitHub
+  url: /en/glossary/GitHub/
+  exact: true
+  priority: 1000
+  title: GitHub - web-based platform for version control and collaboration using Git, enabling developers to host, review, and manage code repositories.
+- keyword: Cloudflare
+  url: /en/glossary/Cloudflare/
+  exact: true
+  priority: 1000
+  title: Cloudflare - global network designed to make everything you connect to the Internet secure, private, fast, and reliable.
+- keyword: Netlify
+  url: /en/glossary/Netlify/
+  exact: true
+  priority: 1000
+  title: Netlify - cloud computing company offering hosting and serverless backend services for web applications and static websites.
+- keyword: Shopify
+  url: /en/glossary/Shopify/
+  exact: true
+  priority: 1000
+  title: Shopify - e-commerce platform that allows individuals and businesses to create online stores and sell products.
+- keyword: Bootstrap
+  url: /en/glossary/Bootstrap/
+  exact: true
+  priority: 1000
+  title: Bootstrap - popular open-source CSS framework for developing responsive and mobile-first websites.
+- keyword: Gatsby
+  url: /en/glossary/Gatsby/
+  exact: true
+  priority: 1000
+  title: Gatsby - open-source static site generator built on React, enabling developers to build fast, secure, and powerful websites.
+- keyword: Go language
+  url: /en/glossary/go-language/
+  exact: false
+  priority: 500
+  title: Go is a statically typed, compiled programming language designed at Google for simplicity, performance, and addressing modern software development challenges.

@@ -1,0 +1,31 @@
+keyword,definition,category,filename
+GitHub,A web-based platform for version control and collaboration using Git that enables developers to store and manage code repositories,Platform/Service,github.md
+GitHub Pages,A static site hosting service from GitHub that publishes websites directly from a repository,Platform/Service,github-pages.md
+GitHub Actions,A CI/CD platform integrated into GitHub that automates build test and deployment workflows,Platform/Service,github-actions.md
+Cloudflare,A web infrastructure and security company providing CDN services DDoS protection and DNS management,Platform/Service,cloudflare.md
+AWS,Amazon Web Services - a comprehensive cloud computing platform offering infrastructure and application services,Platform/Service,aws.md
+AWS Amplify,A development platform from AWS for building and deploying full-stack web and mobile applications,Platform/Service,aws-amplify.md
+Amazon S3,Amazon Simple Storage Service - a scalable object storage service for data backup and static website hosting,Platform/Service,amazon-s3.md
+CloudFront,Amazon CloudFront - a content delivery network (CDN) service that delivers data with low latency globally,Platform/Service,cloudfront.md
+Netlify,A cloud platform for deploying and hosting static websites and serverless functions with continuous deployment,Platform/Service,netlify.md
+Shopify,An e-commerce platform that enables businesses to create online stores and manage sales across multiple channels,Platform/Service,shopify.md
+Amazon Connect,A cloud-based contact center service from AWS that provides omnichannel customer engagement,Platform/Service,amazon-connect.md
+Gartner,A global research and advisory company providing insights on IT and business technology trends,Platform/Service,gartner.md
+BotStar,A chatbot development platform for creating AI-powered conversational experiences across multiple channels,Platform/Service,botstar.md
+Tidio,A customer service platform combining live chat chatbots and email marketing tools for businesses,Platform/Service,tidio.md
+Bootstrap,A popular open-source CSS framework for building responsive and mobile-first websites,Platform/Service,bootstrap.md
+Gatsby,A React-based static site generator that creates fast websites using GraphQL and modern web technologies,Platform/Service,gatsby.md
+Topical Authority,A measure of a websites expertise and credibility on a specific topic as perceived by search engines,Technical,topical-authority.md
+CAG,Cache-Augmented Generation - a technique that preloads all knowledge into a models context window for faster inference,Technical,cag.md
+Multi-Agent System,An AI architecture where multiple specialized agents collaborate to solve complex tasks through coordination,Technical,multi-agent-system.md
+PageSpeed Insights,A Google tool that analyzes web page performance and provides optimization recommendations for Core Web Vitals,Technical,pagespeed-insights.md
+Lighthouse CI,A continuous integration tool that runs Lighthouse audits automatically to monitor web performance over time,Technical,lighthouse-ci.md
+Go Language,A statically typed compiled programming language designed by Google known for simplicity and high performance,Technical,go-language.md
+SQL Injection,A code injection technique that exploits security vulnerabilities in database-driven applications,Technical,sql-injection.md
+Quantum Computing,A type of computation using quantum mechanical phenomena like superposition and entanglement for processing,Technical,quantum-computing.md
+Nuclear Fusion Energy,Energy produced by fusing atomic nuclei - a potential source of clean and virtually unlimited power,Technical,nuclear-fusion-energy.md
+Web Crawling,The automated process of systematically browsing websites to index content for search engines or data extraction,Technical,web-crawling.md
+AI Scaling,The process of increasing AI model size computational resources and training data to improve performance,Technical,ai-scaling.md
+Specification Problem,The challenge of precisely defining AI system goals to ensure alignment with actual human intentions,Technical,specification-problem.md
+Jagged Intelligence,The phenomenon where AI systems excel at some difficult tasks while failing at seemingly simpler ones,Technical,jagged-intelligence.md
+Thinking Systems,AI models that spend more computation time on reasoning before generating responses for improved accuracy,Technical,thinking-systems.md

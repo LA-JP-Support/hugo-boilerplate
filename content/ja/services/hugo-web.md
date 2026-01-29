@@ -21,7 +21,9 @@ features:
   - label: "圧倒的な速度"
     title: "ミリ秒単位のページ生成"
     description: "Hugoは Go言語で開発され、数千ページのサイトを数秒で生成します。1ページあたりの生成時間はミリ秒単位。この圧倒的な速度は、開発時のプレビュー確認から本番サイトのビルドまで、あらゆる作業を効率化します。<br><br>生成された静的ファイルは、CloudflareやAWS CloudFrontなどのCDNから配信。世界中のエッジサーバーにキャッシュされることで、ユーザーの地理的な位置に関係なく、超高速な表示を実現します。表示速度の向上は、ユーザー体験の改善だけでなく、Google検索でのランキング向上にも直結します。"
-    image: "/images/services/hugo-web/feature-speed.jpg"
+    images:
+      - src: "/images/services/hugo-web/feature-speed.jpg"
+        caption: "SmartWebサイトのPageSpeed Insightsスコア（デスクトップ）<br>※測定タイミングにより変動します"
   
   - label: "セキュリティ"
     title: "データベース不要で脆弱性リスクを排除"

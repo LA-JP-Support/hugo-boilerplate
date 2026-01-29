@@ -1,97 +1,195 @@
 {
   "completed": [
     {
-      "keyword": "Adaptive Cards",
+      "keyword": "Demand Forecasting",
       "success": true,
-      "word_count": 3040,
-      "file_path": "content/en/glossary/Adaptive-Cards.md",
+      "word_count": 2839,
+      "file_path": "content/en/glossary/Demand-Forecasting.md",
       "error": "",
       "retries": 0,
-      "generation_time": 92.41579604148865
+      "generation_time": 82.08477902412415
     },
     {
-      "keyword": "Aggregator",
+      "keyword": "Active Learning",
       "success": true,
-      "word_count": 2201,
-      "file_path": "content/en/glossary/Aggregator.md",
-      "error": "",
-      "retries": 2,
-      "generation_time": 208.06876397132874
-    },
-    {
-      "keyword": "Code Generation",
-      "success": true,
-      "word_count": 2945,
-      "file_path": "content/en/glossary/Code-Generation.md",
+      "word_count": 3075,
+      "file_path": "content/en/glossary/Active-Learning.md",
       "error": "",
       "retries": 0,
-      "generation_time": 89.24686002731323
+      "generation_time": 100.8294107913971
     },
     {
-      "keyword": "Code Interpreter",
+      "keyword": "GitHub",
       "success": true,
-      "word_count": 2446,
-      "file_path": "content/en/glossary/Code-Interpreter.md",
-      "error": "",
-      "retries": 2,
-      "generation_time": 224.46415305137634
-    },
-    {
-      "keyword": "Content Summarization",
-      "success": true,
-      "word_count": 3062,
-      "file_path": "content/en/glossary/Content-Summarization.md",
-      "error": "",
-      "retries": 2,
-      "generation_time": 252.3973741531372
-    },
-    {
-      "keyword": "EdTech Personalized Learning",
-      "success": true,
-      "word_count": 3141,
-      "file_path": "content/en/glossary/EdTech-Personalized-Learning.md",
+      "word_count": 2289,
+      "file_path": "content/ja/glossary/GitHub.md",
       "error": "",
       "retries": 0,
-      "generation_time": 91.64294600486755
+      "generation_time": 66.44375586509705
     },
     {
-      "keyword": "FinTech Fraud Detection",
+      "keyword": "Cloudflare",
       "success": true,
-      "word_count": 2814,
-      "file_path": "content/en/glossary/FinTech-Fraud-Detection.md",
+      "word_count": 2556,
+      "file_path": "content/ja/glossary/Cloudflare.md",
       "error": "",
-      "retries": 2,
-      "generation_time": 237.74685192108154
+      "retries": 0,
+      "generation_time": 82.46518683433533
+    },
+    {
+      "keyword": "GitHub Actions",
+      "success": true,
+      "word_count": 2680,
+      "file_path": "content/ja/glossary/GitHub-Actions.md",
+      "error": "",
+      "retries": 0,
+      "generation_time": 83.90077424049377
+    },
+    {
+      "keyword": "AWS Amplify",
+      "success": true,
+      "word_count": 2756,
+      "file_path": "content/ja/glossary/AWS-Amplify.md",
+      "error": "",
+      "retries": 0,
+      "generation_time": 78.53357696533203
+    },
+    {
+      "keyword": "GitHub Pages",
+      "success": true,
+      "word_count": 2723,
+      "file_path": "content/ja/glossary/GitHub-Pages.md",
+      "error": "",
+      "retries": 1,
+      "generation_time": 147.37960624694824
+    },
+    {
+      "keyword": "Amazon S3",
+      "success": true,
+      "word_count": 2730,
+      "file_path": "content/ja/glossary/Amazon-S3.md",
+      "error": "",
+      "retries": 0,
+      "generation_time": 81.60528421401978
+    },
+    {
+      "keyword": "Shopify",
+      "success": true,
+      "word_count": 2298,
+      "file_path": "content/ja/glossary/Shopify.md",
+      "error": "",
+      "retries": 0,
+      "generation_time": 69.78698229789734
+    },
+    {
+      "keyword": "Netlify",
+      "success": true,
+      "word_count": 2522,
+      "file_path": "content/ja/glossary/Netlify.md",
+      "error": "",
+      "retries": 0,
+      "generation_time": 81.61003112792969
+    },
+    {
+      "keyword": "Amazon Connect",
+      "success": true,
+      "word_count": 2449,
+      "file_path": "content/ja/glossary/Amazon-Connect.md",
+      "error": "",
+      "retries": 0,
+      "generation_time": 72.8987169265747
+    },
+    {
+      "keyword": "CloudFront",
+      "success": true,
+      "word_count": 3029,
+      "file_path": "content/ja/glossary/CloudFront.md",
+      "error": "",
+      "retries": 1,
+      "generation_time": 181.0999310016632
+    },
+    {
+      "keyword": "Tidio",
+      "success": true,
+      "word_count": 2182,
+      "file_path": "content/ja/glossary/Tidio.md",
+      "error": "",
+      "retries": 0,
+      "generation_time": 66.72708892822266
+    },
+    {
+      "keyword": "Gartner",
+      "success": true,
+      "word_count": 2416,
+      "file_path": "content/ja/glossary/Gartner.md",
+      "error": "",
+      "retries": 0,
+      "generation_time": 81.94359302520752
+    },
+    {
+      "keyword": "Bootstrap",
+      "success": true,
+      "word_count": 2737,
+      "file_path": "content/ja/glossary/Bootstrap.md",
+      "error": "",
+      "retries": 0,
+      "generation_time": 82.34823489189148
+    },
+    {
+      "keyword": "BotStar",
+      "success": true,
+      "word_count": 3123,
+      "file_path": "content/ja/glossary/BotStar.md",
+      "error": "",
+      "retries": 0,
+      "generation_time": 93.35469388961792
+    },
+    {
+      "keyword": "Gatsby",
+      "success": true,
+      "word_count": 3120,
+      "file_path": "content/ja/glossary/Gatsby.md",
+      "error": "",
+      "retries": 0,
+      "generation_time": 92.66540122032166
+    },
+    {
+      "keyword": "CAG",
+      "success": true,
+      "word_count": 2465,
+      "file_path": "content/ja/glossary/CAG.md",
+      "error": "",
+      "retries": 0,
+      "generation_time": 75.33160495758057
     }
   ],
   "failed": [
     {
-      "keyword": "Active Learning",
+      "keyword": "AWS",
       "success": false,
       "word_count": 0,
       "file_path": "",
       "error": "Failed after 3 retries",
       "retries": 3,
-      "generation_time": 276.26188111305237
-    },
-    {
-      "keyword": "Aspect-Based Sentiment Analysis",
-      "success": false,
-      "word_count": 0,
-      "file_path": "",
-      "error": "Failed after 3 retries",
-      "retries": 3,
-      "generation_time": 274.00069403648376
-    },
-    {
-      "keyword": "Demand Forecasting",
-      "success": false,
-      "word_count": 0,
-      "file_path": "",
-      "error": "Failed after 3 retries",
-      "retries": 3,
-      "generation_time": 232.59596800804138
+      "generation_time": 229.24490189552307
     }
   ],
-  "pending": []
+  "pending": [
+    "トピカルオーソリティ",
+    "マルチエージェントシステム",
+    "PageSpeed Insights",
+    "Lighthouse CI",
+    "Go言語",
+    "SQLインジェクション",
+    "量子コンピューティング",
+    "核融合エネルギー",
+    "Webクローリング",
+    "AIスケーリング",
+    "仕様問題",
+    "ギザギザした知能",
+    "思考システム",
+    "アスペクトベース感情分析",
+    "能動学習",
+    "需要予測"
+  ]
 }

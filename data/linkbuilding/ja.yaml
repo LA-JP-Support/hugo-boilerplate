@@ -1623,3 +1623,55 @@ keywords:
   exact: true
   priority: 12
   title: AlphaZeroは、人間の知識を用いることなく、純粋な自己対戦型強化学習を通じてチェス、将棋、囲碁を習得した汎用ゲームプレイAIです。
+
+# メインキーワード - 高優先度 (1000+)
+- keyword: Hugo
+  url: /ja/glossary/Hugo/
+  exact: true
+  priority: 1000
+  title: Hugo静的サイトジェネレーター
+- keyword: Google
+  url: /ja/glossary/Google/
+  exact: true
+  priority: 1000
+  title: Google - インターネット関連のサービスと製品（検索、クラウドコンピューティング、ソフトウェア、ハードウェアなど）を専門とする多国籍テクノロジー企業。
+- keyword: GitHub
+  url: /ja/glossary/GitHub/
+  exact: true
+  priority: 1000
+  title: GitHub - Gitを使用したバージョン管理とコラボレーションのためのWebベースのプラットフォーム。開発者がコードリポジトリをホスト、レビュー、管理できる。
+- keyword: AWS
+  url: /ja/glossary/AWS/
+  exact: true
+  priority: 1000
+  title: Amazon Web Services(AWS) - 世界中でスケーラブルなインフラストラクチャ、アプリケーションサービス、エンタープライズソリューションを提供する包括的なクラウドコンピューティングプラットフォーム。
+- keyword: Cloudflare
+  url: /ja/glossary/Cloudflare/
+  exact: true
+  priority: 1000
+  title: Cloudflare - インターネットに接続するすべてのものを安全、プライベート、高速、信頼性の高いものにするために設計されたグローバルネットワーク。
+- keyword: Netlify
+  url: /ja/glossary/Netlify/
+  exact: true
+  priority: 1000
+  title: Netlify - Webアプリケーションと静的Webサイトのためのホスティングとサーバーレスバックエンドサービスを提供するクラウドコンピューティング企業。
+- keyword: Shopify
+  url: /ja/glossary/Shopify/
+  exact: true
+  priority: 1000
+  title: Shopify - 個人や企業がオンラインストアを作成し、製品を販売できるeコマースプラットフォーム。
+- keyword: Bootstrap
+  url: /ja/glossary/Bootstrap/
+  exact: true
+  priority: 1000
+  title: Bootstrap - レスポンシブでモバイルファーストのWebサイトを開発するための人気のオープンソースCSSフレームワーク。
+- keyword: Gatsby
+  url: /ja/glossary/Gatsby/
+  exact: true
+  priority: 1000
+  title: Gatsby - Reactをベースに構築されたオープンソースの静的サイトジェネレーター。開発者が高速で安全かつ強力なWebサイトを構築できる。
+- keyword: Go言語
+  url: /ja/glossary/go-language/
+  exact: false
+  priority: 500
+  title: Goは、シンプルさ、パフォーマンス、そして現代のソフトウェア開発における課題に対応するために設計された、Googleの静的型付けコンパイル型プログラミング言語です。

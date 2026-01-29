@@ -1,0 +1,34 @@
+keyword,definition,category,filename
+GitHub,Gitを使用したバージョン管理とコラボレーションのためのWebベースプラットフォームで、開発者が世界中でコードリポジトリを保存・管理・共有できます,Platform/Service,GitHub.md
+GitHub Pages,GitHubのリポジトリから直接ウェブサイトを公開する静的サイトホスティングサービス,Platform/Service,GitHub-Pages.md
+GitHub Actions,ビルド・テスト・デプロイワークフローを自動化するGitHub統合のCI/CDプラットフォーム,Platform/Service,GitHub-Actions.md
+Cloudflare,CDNサービス、DDoS保護、DNS管理を提供するWebインフラストラクチャおよびセキュリティ企業,Platform/Service,Cloudflare.md
+AWS,インフラストラクチャとアプリケーションサービスを提供する包括的なクラウドコンピューティングプラットフォーム - Amazon Web Services,Platform/Service,AWS.md
+AWS Amplify,フルスタックWebおよびモバイルアプリケーションを構築・デプロイするためのAWSの開発プラットフォーム,Platform/Service,AWS-Amplify.md
+Amazon S3,データバックアップと静的ウェブサイトホスティングのためのスケーラブルなオブジェクトストレージサービス - Amazon Simple Storage Service,Platform/Service,Amazon-S3.md
+CloudFront,グローバルに低遅延でデータを配信するコンテンツ配信ネットワーク（CDN）サービス - Amazon CloudFront,Platform/Service,CloudFront.md
+Netlify,継続的デプロイメントを備えた静的ウェブサイトとサーバーレス関数をデプロイ・ホスティングするためのクラウドプラットフォーム,Platform/Service,Netlify.md
+Shopify,企業がオンラインストアを作成し、複数のチャネルで販売を管理できるeコマースプラットフォーム,Platform/Service,Shopify.md
+Amazon Connect,オムニチャネルの顧客エンゲージメントを提供するAWSのクラウドベースのコンタクトセンターサービス,Platform/Service,Amazon-Connect.md
+Gartner,ITおよびビジネステクノロジーのトレンドに関する洞察を提供するグローバルな調査・アドバイザリー企業,Platform/Service,Gartner.md
+BotStar,複数のチャネルでAI駆動の会話体験を作成するためのチャットボット開発プラットフォーム,Platform/Service,BotStar.md
+Tidio,ライブチャット・チャットボット・メールマーケティングツールを組み合わせた企業向けカスタマーサービスプラットフォーム,Platform/Service,Tidio.md
+Bootstrap,レスポンシブでモバイルファーストのウェブサイトを構築するための人気のオープンソースCSSフレームワーク,Platform/Service,Bootstrap.md
+Gatsby,GraphQLと最新のWeb技術を使用して高速なウェブサイトを作成するReactベースの静的サイトジェネレーター,Platform/Service,Gatsby.md
+トピカルオーソリティ,検索エンジンによって認識される、特定のトピックに関するウェブサイトの専門性と信頼性の尺度,Technical,Topical-Authority.md
+CAG,より高速な推論のためにモデルのコンテキストウィンドウにすべての知識を事前ロードする技術 - キャッシュ拡張生成,Technical,CAG.md
+マルチエージェントシステム,複数の専門エージェントが協調して複雑なタスクを解決するAIアーキテクチャ,Technical,Multi-Agent-System.md
+PageSpeed Insights,Webページのパフォーマンスを分析し、Core Web Vitalsの最適化推奨事項を提供するGoogleツール,Technical,PageSpeed-Insights.md
+Lighthouse CI,Lighthouseの監査を自動的に実行してWebパフォーマンスを経時的に監視する継続的統合ツール,Technical,Lighthouse-CI.md
+Go言語,Googleが設計した、シンプルさと高性能で知られる静的型付けコンパイル型プログラミング言語,Technical,Go-Language.md
+SQLインジェクション,データベース駆動アプリケーションのセキュリティ脆弱性を悪用するコードインジェクション技術,Technical,SQL-Injection.md
+量子コンピューティング,重ね合わせやもつれなどの量子力学現象を処理に使用する計算の一種,Technical,Quantum-Computing.md
+核融合エネルギー,原子核を融合させることで生成されるエネルギー - クリーンでほぼ無限の電力源となる可能性,Technical,Nuclear-Fusion-Energy.md
+Webクローリング,検索エンジンやデータ抽出のためにウェブサイトを体系的にブラウジングしてコンテンツをインデックス化する自動化プロセス,Technical,Web-Crawling.md
+AIスケーリング,パフォーマンスを向上させるためにAIモデルのサイズ・計算リソース・トレーニングデータを増やすプロセス,Technical,AI-Scaling.md
+仕様問題,AIシステムの目標を正確に定義して実際の人間の意図との整合性を確保するという課題,Technical,Specification-Problem.md
+ギザギザした知能,AIシステムが一部の難しいタスクで優れている一方で、一見簡単なタスクで失敗する現象,Technical,Jagged-Intelligence.md
+思考システム,精度向上のために応答を生成する前に推論により多くの計算時間を費やすAIモデル,Technical,Thinking-Systems.md
+アスペクトベース感情分析,製品やサービスの特定の側面や特徴に関する意見を識別する感情分析技術,Technical,Aspect-Based-Sentiment-Analysis.md
+能動学習,アルゴリズムが学習するために最も有益な例を積極的に選択する機械学習アプローチ,Technical,Active-Learning.md
+需要予測,過去のデータと分析を使用して将来の顧客需要を予測するプロセス,Technical,Demand-Forecasting.md
