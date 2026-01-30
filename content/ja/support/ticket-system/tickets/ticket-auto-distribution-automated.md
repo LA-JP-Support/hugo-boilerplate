@@ -1,0 +1,26 @@
+---
+title: "自動チケット配分（Automated ticket distribution）"
+date: 2026-01-30
+lastmod: 2026-01-30
+draft: false
+translationKey: "ticket-auto-distribution-automated"
+description: "チケットを自動的にエージェントに振り分ける機能です。作業負荷を均等化し、エージェントがチケットを選ぶことが出来ないので、効率的で公平なサポート体制を実現します。"
+keywords: ["distribution", "Automated", "チケット", "エージェント", "問い合わせ"]
+type: support
+category: "ticket-system/tickets"
+e-title: "Auto - Ticket - Distribution - Automated"
+---
+
+チケットを自動的にエージェントに振り分ける機能です。作業負荷を均等化し、エージェントがチケットを選ぶことが出来ないので、効率的で公平なサポート体制を実現します。
+
+例えば問い合わせが急増した場合でも、自動配分機能によりチケットは適切なエージェントに割り振られます。
+
+スキルに応じた配分も可能で、専門知識を持つ担当者に優先的に割り当てることもできます。
+
+**ポイント：**
+
+- 問い合わせを自動でエージェントに振り分け
+- 作業負荷を均等化して効率を向上
+- スキルに応じた配分も可能
+- チーム全体のリソースを最適化
+- 応答の遅延を防止する

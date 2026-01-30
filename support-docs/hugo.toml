@@ -1,0 +1,65 @@
+baseURL = 'https://support.smartweb.com/'
+languageCode = 'ja'
+title = 'SmartWeb Support'
+theme = 'lotusdocs'
+timeZone = "Asia/Tokyo"
+defaultContentLanguage = "ja"
+defaultContentLanguageInSubdir = true
+
+# LotusDocs Configuration
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.100.0"
+  [[module.imports]]
+    path = "github.com/colinwilson/lotusdocs"
+  [[module.imports]]
+    path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
+
+[params]
+  description = "SmartWeb サポートドキュメント"
+  
+  # Custom CSS
+  [params.assets]
+    css = ["css/custom.css"]
+
+[languages]
+  [languages.ja]
+    languageName = "日本語"
+    title = "SmartWeb サポート"
+    weight = 1
+    contentDir = "content/ja"
+    [languages.ja.params]
+      description = "SmartWeb サポートドキュメント"
+      
+  [languages.en]
+    languageName = "English"
+    title = "SmartWeb Support"
+    weight = 2
+    contentDir = "content/en"
+    [languages.en.params]
+      description = "SmartWeb Support Documentation"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    lineNos = false
+    lineNumbersInTable = false
+    style = "monokai"
+    tabWidth = 4
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5

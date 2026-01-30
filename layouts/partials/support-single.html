@@ -1,0 +1,281 @@
+{{ define "main" }}
+<div class="flex min-h-screen bg-gray-50 dark:bg-gray-900">
+  <!-- Left Sidebar -->
+  <aside class="hidden lg:block fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 overflow-y-auto border-r border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 z-20">
+    <nav class="p-4">
+      <div class="mb-4">
+        <a href="/{{ .Language.Lang }}/support/" class="text-lg font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300">
+          {{ if eq .Language.Lang "ja" }}📚 サポート{{ else }}📚 Support{{ end }}
+        </a>
+      </div>
+      
+      {{ $currentPage := . }}
+      {{ $supportSection := .Site.GetPage (printf "/%s/support" .Language.Lang) }}
+      
+      {{ range $supportSection.Sections.ByWeight }}
+        {{ $section := . }}
+        {{ $isOpen := or (eq $currentPage.CurrentSection.RelPermalink .RelPermalink) (hasPrefix $currentPage.RelPermalink .RelPermalink) }}
+        
+        <div class="mb-2">
+          <details {{ if $isOpen }}open{{ end }} class="group">
+            <summary class="flex items-center justify-between cursor-pointer p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 font-medium text-gray-900 dark:text-white">
+              <span class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+                </svg>
+                {{ .Title }}
+              </span>
+              <svg class="w-4 h-4 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </summary>
+            
+            <ul class="ml-6 mt-1 space-y-1">
+              {{ range .Pages.ByWeight }}
+                {{ $isActive := eq $currentPage.RelPermalink .RelPermalink }}
+                <li>
+                  <a href="{{ .Permalink }}" class="block p-2 text-sm rounded {{ if $isActive }}bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 font-medium{{ else }}text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50{{ end }}">
+                    {{ .Title }}
+                  </a>
+                </li>
+              {{ end }}
+            </ul>
+          </details>
+        </div>
+      {{ end }}
+    </nav>
+  </aside>
+
+  <!-- Mobile Menu Button -->
+  <div class="lg:hidden fixed top-16 left-0 right-0 z-30 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-3">
+    <button onclick="toggleMobileSidebar()" class="flex items-center text-gray-700 dark:text-gray-300">
+      <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+      <span>{{ if eq .Language.Lang "ja" }}メニュー{{ else }}Menu{{ end }}</span>
+    </button>
+  </div>
+
+  <!-- Mobile Sidebar -->
+  <div id="mobileSidebar" class="lg:hidden fixed inset-0 z-50 hidden">
+    <div class="fixed inset-0 bg-black/50" onclick="toggleMobileSidebar()"></div>
+    <aside class="fixed left-0 top-0 h-full w-64 bg-white dark:bg-gray-800 overflow-y-auto">
+      <div class="p-4">
+        <div class="flex items-center justify-between mb-4">
+          <a href="/{{ .Language.Lang }}/support/" class="text-lg font-bold text-indigo-600 dark:text-indigo-400">
+            {{ if eq .Language.Lang "ja" }}📚 サポート{{ else }}📚 Support{{ end }}
+          </a>
+          <button onclick="toggleMobileSidebar()" class="text-gray-500">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        
+        <nav>
+          {{ $currentPage := . }}
+          {{ $supportSection := .Site.GetPage (printf "/%s/support" .Language.Lang) }}
+          
+          {{ range $supportSection.Sections.ByWeight }}
+            {{ $section := . }}
+            {{ $isOpen := or (eq $currentPage.CurrentSection.RelPermalink .RelPermalink) (hasPrefix $currentPage.RelPermalink .RelPermalink) }}
+            
+            <div class="mb-2">
+              <details {{ if $isOpen }}open{{ end }} class="group">
+                <summary class="flex items-center justify-between cursor-pointer p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 font-medium text-gray-900 dark:text-white">
+                  <span class="flex items-center">
+                    <svg class="w-4 h-4 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+                    </svg>
+                    {{ .Title }}
+                  </span>
+                  <svg class="w-4 h-4 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </summary>
+                
+                <ul class="ml-6 mt-1 space-y-1">
+                  {{ range .Pages.ByWeight }}
+                    {{ $isActive := eq $currentPage.RelPermalink .RelPermalink }}
+                    <li>
+                      <a href="{{ .Permalink }}" class="block p-2 text-sm rounded {{ if $isActive }}bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 font-medium{{ else }}text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50{{ end }}">
+                        {{ .Title }}
+                      </a>
+                    </li>
+                  {{ end }}
+                </ul>
+              </details>
+            </div>
+          {{ end }}
+        </nav>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex-1 lg:ml-64 pt-20 lg:pt-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <!-- Breadcrumb -->
+      <nav class="mb-6 text-sm text-gray-500 dark:text-gray-400">
+        <a href="/{{ .Language.Lang }}/" class="hover:text-indigo-600 dark:hover:text-indigo-400">{{ if eq .Language.Lang "ja" }}ホーム{{ else }}Home{{ end }}</a>
+        <span class="mx-2">/</span>
+        <a href="/{{ .Language.Lang }}/support/" class="hover:text-indigo-600 dark:hover:text-indigo-400">{{ if eq .Language.Lang "ja" }}サポート{{ else }}Support{{ end }}</a>
+        {{ with .CurrentSection }}
+          {{ if ne .Section "support" }}
+            <span class="mx-2">/</span>
+            <a href="{{ .Permalink }}" class="hover:text-indigo-600 dark:hover:text-indigo-400">{{ .Title }}</a>
+          {{ end }}
+        {{ end }}
+        <span class="mx-2">/</span>
+        <span class="text-gray-900 dark:text-white">{{ .Title }}</span>
+      </nav>
+
+      <!-- Article -->
+      <article class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 lg:p-8">
+        <header class="mb-8 pb-6 border-b border-gray-200 dark:border-gray-700">
+          <h1 class="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            {{ .Title }}
+          </h1>
+          
+          {{ if or .Date .Lastmod }}
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 space-x-4">
+              {{ if .Date }}
+                <span>📅 {{ .Date.Format "2006-01-02" }}</span>
+              {{ end }}
+              {{ if .Lastmod }}
+                <span>🔄 {{ if eq .Language.Lang "ja" }}更新:{{ else }}Updated:{{ end }} {{ .Lastmod.Format "2006-01-02" }}</span>
+              {{ end }}
+            </div>
+          {{ end }}
+        </header>
+
+        <div class="prose prose-lg dark:prose-invert max-w-none">
+          {{ .Content }}
+        </div>
+
+        <!-- Navigation -->
+        {{ $pages := .CurrentSection.Pages.ByWeight }}
+        {{ $currentIndex := 0 }}
+        {{ range $index, $page := $pages }}
+          {{ if eq $page.RelPermalink $.RelPermalink }}
+            {{ $currentIndex = $index }}
+          {{ end }}
+        {{ end }}
+        
+        {{ $prevPage := index $pages (sub $currentIndex 1) }}
+        {{ $nextPage := index $pages (add $currentIndex 1) }}
+        
+        {{ if or $prevPage $nextPage }}
+          <nav class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 grid grid-cols-1 md:grid-cols-2 gap-4">
+            {{ if $prevPage }}
+              <a href="{{ $prevPage.Permalink }}" class="flex items-center p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-indigo-500 dark:hover:border-indigo-400 hover:shadow-md transition-all">
+                <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                <div>
+                  <div class="text-xs text-gray-500 dark:text-gray-400 mb-1">{{ if eq .Language.Lang "ja" }}前へ{{ else }}Previous{{ end }}</div>
+                  <div class="font-medium text-gray-900 dark:text-white">{{ $prevPage.Title }}</div>
+                </div>
+              </a>
+            {{ end }}
+            
+            {{ if $nextPage }}
+              <a href="{{ $nextPage.Permalink }}" class="flex items-center justify-end p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-indigo-500 dark:hover:border-indigo-400 hover:shadow-md transition-all {{ if not $prevPage }}md:col-start-2{{ end }}">
+                <div class="text-right">
+                  <div class="text-xs text-gray-500 dark:text-gray-400 mb-1">{{ if eq .Language.Lang "ja" }}次へ{{ else }}Next{{ end }}</div>
+                  <div class="font-medium text-gray-900 dark:text-white">{{ $nextPage.Title }}</div>
+                </div>
+                <svg class="w-5 h-5 ml-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            {{ end }}
+          </nav>
+        {{ end }}
+      </article>
+    </div>
+  </main>
+
+  <!-- Right TOC -->
+  {{ if .TableOfContents }}
+    <aside class="hidden xl:block fixed right-4 top-24 w-64 max-h-[calc(100vh-8rem)] overflow-y-auto">
+      <div class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-4 shadow-sm">
+        <h3 class="text-xs font-bold text-gray-900 dark:text-white mb-3 uppercase tracking-wider flex items-center">
+          <svg class="w-4 h-4 mr-2 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/>
+          </svg>
+          {{ if eq .Language.Lang "ja" }}目次{{ else }}On This Page{{ end }}
+        </h3>
+        <nav class="toc-nav text-sm">
+          {{ .TableOfContents }}
+        </nav>
+      </div>
+    </aside>
+  {{ end }}
+</div>
+
+<script>
+function toggleMobileSidebar() {
+  document.getElementById('mobileSidebar').classList.toggle('hidden');
+}
+</script>
+
+<style>
+.toc-nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.toc-nav ul ul {
+  padding-left: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.toc-nav li {
+  margin-bottom: 0.375rem;
+}
+
+.toc-nav a {
+  color: #6b7280;
+  text-decoration: none;
+  display: block;
+  padding: 0.375rem 0.5rem;
+  border-left: 2px solid transparent;
+  border-radius: 0.25rem;
+  transition: all 0.15s;
+}
+
+.toc-nav a:hover {
+  color: #4f46e5;
+  background-color: #f3f4f6;
+  border-left-color: #4f46e5;
+}
+
+.dark .toc-nav a {
+  color: #9ca3af;
+}
+
+.dark .toc-nav a:hover {
+  color: #818cf8;
+  background-color: #374151;
+  border-left-color: #818cf8;
+}
+
+.prose {
+  max-width: none;
+}
+
+.prose h2 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  scroll-margin-top: 6rem;
+}
+
+.prose h3 {
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+  scroll-margin-top: 6rem;
+}
+</style>
+{{ end }}

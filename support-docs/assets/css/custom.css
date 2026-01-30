@@ -1,0 +1,34 @@
+/* Custom styles for SmartWeb Support site */
+
+/* Article title (h1) - increase bottom margin and reduce font size */
+.docs-content h1 {
+    margin-bottom: 2rem !important;
+    font-size: 1.4rem !important; /* Significantly reduced */
+}
+
+/* Subtitle h2 - reduce font size */
+.docs-content h2 {
+    font-size: 1.2rem !important; /* Significantly reduced */
+}
+
+/* Subtitle h3 - reduce font size */
+.docs-content h3 {
+    font-size: 1.05rem !important; /* Significantly reduced */
+}
+
+/* Alternative selectors if above doesn't work */
+article h1,
+.content h1 {
+    margin-bottom: 2rem !important;
+    font-size: 1.4rem !important;
+}
+
+article h2,
+.content h2 {
+    font-size: 1.2rem !important;
+}
+
+article h3,
+.content h3 {
+    font-size: 1.05rem !important;
+}

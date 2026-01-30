@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partialCached "head.html" . .Permalink }}
+</head>
+<body class="antialiased bg-gray-50 dark:bg-gray-900">
+
+{{ partialCached "header.html" . (printf "header-%s-%s" site.Language.Lang .Permalink) }}
+
+{{ block "main" . }}{{ end }}
+
+{{ partial "footer.html" . }}
+
+<!-- Cookie Consent Banner -->
+{{ partialCached "cookies-bar" (dict
+  "policyText" "privacy policy"
+  "policyUrl" "/privacy-policy/"
+  "theme" "dark"
+) }}
+
+<!-- App JavaScript - non-critical interactions -->
+<script src="/js/app.js?v={{ partialCached "helpers/build-timestamp.html" . }}"></script>
+
+<!-- KaTeX render call -->
+{{ partial "head/katex-render.html" . }}
+
+<!-- LiveAgent Multi-Widget -->
+{{ if eq .Lang "en" }}
+  {{ partial "components/liveagent-multiwidget.en.html" . }}
+{{ else }}
+  {{ partial "components/liveagent-multiwidget.html" . }}
+{{ end }}
+
+</body>
+</html>
