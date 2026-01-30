@@ -122,6 +122,21 @@
 
 - `docs/youtube-article-workflow.md`
 
+### I. LiveAgentマルチウィジェット（お問い合わせ・チャットボタン）
+
+- **ガイド**: `docs/LIVEAGENT_MULTIWIDGET_GUIDE.md`
+
+設定ファイル:
+- `layouts/partials/components/liveagent-multiwidget.html`（日本語版）
+- `layouts/partials/components/liveagent-multiwidget.en.html`（英語版）
+- `hugo.toml` の `[params.liveagent.multiwidget]` セクション
+
+有効/無効の切り替え:
+```toml
+[params.liveagent.multiwidget]
+  enable = true   # false で非表示
+```
+
 ---
 
 ## ディレクトリ新設時のルール（必須）

@@ -24,11 +24,13 @@ code {
    7. Glossary internal links (linkbuilding)
    ========================================================================== */
 
-/* 用語集リンク - 下線なし、青いテキスト */
+/* 用語集リンク - 下線なし、青いテキスト、太字 */
+a[data-lb="1"],
 .prose a[href^="/en/glossary/"],
 .prose a[href^="/ja/glossary/"],
 .prose a[data-lb="1"] {
     color: #2563eb !important;
+    font-weight: 600 !important;
     text-decoration: none !important;
     border-bottom: none !important;
     background-color: transparent;
@@ -39,6 +41,7 @@ code {
 }
 
 /* ホバー時 - 薄い背景色で強調 */
+a[data-lb="1"]:hover,
 .prose a[href^="/en/glossary/"]:hover,
 .prose a[href^="/ja/glossary/"]:hover,
 .prose a[data-lb="1"]:hover {
@@ -46,6 +49,54 @@ code {
     background-color: rgba(37, 99, 235, 0.08);
     text-decoration: none !important;
     border-bottom: none !important;
+}
+
+/* 暗い背景での内部リンク - 白色・太字で視認性向上 */
+.pillars-tabs-dark a[data-lb="1"],
+.bg-blue-900 a[data-lb="1"],
+.bg-blue-800 a[data-lb="1"],
+.bg-indigo-900 a[data-lb="1"],
+.bg-indigo-800 a[data-lb="1"],
+.bg-slate-900 a[data-lb="1"],
+.bg-slate-800 a[data-lb="1"],
+.bg-gray-900 a[data-lb="1"],
+.bg-gray-800 a[data-lb="1"],
+div[class*="bg-blue-9"] a[data-lb="1"],
+div[class*="bg-blue-8"] a[data-lb="1"],
+div[class*="bg-indigo-9"] a[data-lb="1"],
+div[class*="bg-indigo-8"] a[data-lb="1"],
+div[class*="bg-slate-9"] a[data-lb="1"],
+div[class*="bg-slate-8"] a[data-lb="1"],
+div[class*="bg-gray-9"] a[data-lb="1"],
+div[class*="bg-gray-8"] a[data-lb="1"] {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.pillars-tabs-dark a[data-lb="1"]:hover,
+.bg-blue-900 a[data-lb="1"]:hover,
+.bg-blue-800 a[data-lb="1"]:hover,
+.bg-indigo-900 a[data-lb="1"]:hover,
+.bg-indigo-800 a[data-lb="1"]:hover,
+.bg-slate-900 a[data-lb="1"]:hover,
+.bg-slate-800 a[data-lb="1"]:hover,
+.bg-gray-900 a[data-lb="1"]:hover,
+.bg-gray-800 a[data-lb="1"]:hover,
+div[class*="bg-blue-9"] a[data-lb="1"]:hover,
+div[class*="bg-blue-8"] a[data-lb="1"]:hover,
+div[class*="bg-indigo-9"] a[data-lb="1"]:hover,
+div[class*="bg-indigo-8"] a[data-lb="1"]:hover,
+div[class*="bg-slate-9"] a[data-lb="1"]:hover,
+div[class*="bg-slate-8"] a[data-lb="1"]:hover,
+div[class*="bg-gray-9"] a[data-lb="1"]:hover,
+div[class*="bg-gray-8"] a[data-lb="1"]:hover {
+    color: #bfdbfe !important;
+    background-color: transparent !important;
 }
 
 /* ダークモード対応 */
