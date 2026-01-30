@@ -1,4 +1,14 @@
 keywords:
+- keyword: SEO
+  url: /ja/glossary/search-engine-optimization--seo-/
+  exact: true
+  priority: 11
+  title: SEOとは、コンテンツ、構造、技術的要素を最適化することで、Googleなどの検索エンジンからより多くのオーガニックトラフィックを獲得するために、ウェブサイトの検索結果における可視性を向上させる実践手法です。
+- keyword: 検索エンジン最適化
+  url: /ja/glossary/search-engine-optimization--seo-/
+  exact: false
+  priority: 11
+  title: SEOとは、コンテンツ、構造、技術的要素を最適化することで、Googleなどの検索エンジンからより多くのオーガニックトラフィックを獲得するために、ウェブサイトの検索結果における可視性を向上させる実践手法です。
 - keyword: キャッシュ拡張生成
   url: /ja/blog/rag-vs-cag-knowledge-augmentation/
   exact: false

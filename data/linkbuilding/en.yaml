@@ -1,4 +1,14 @@
 keywords:
+- keyword: SEO
+  url: /en/glossary/search-engine-optimization--seo-/
+  exact: true
+  priority: 11
+  title: SEO is the practice of improving a website's visibility in search results through optimizing content, structure, and technical elements to attract more organic traffic from search engines like Google.
+- keyword: Search Engine Optimization
+  url: /en/glossary/search-engine-optimization--seo-/
+  exact: false
+  priority: 11
+  title: SEO is the practice of improving a website's visibility in search results through optimizing content, structure, and technical elements to attract more organic traffic from search engines like Google.
 - keyword: AI Reporting
   url: /en/glossary/ai-reporting/
   exact: true
