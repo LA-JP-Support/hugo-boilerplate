@@ -37,6 +37,9 @@ applications:
             - wget https://go.dev/dl/go1.21.5.linux-amd64.tar.gz
             - tar -xzf go1.21.5.linux-amd64.tar.gz
             - export PATH="$PWD/go/bin:$PATH"
+            - export GOPATH="$PWD/go-workspace"
+            - export GOCACHE="$PWD/go-cache"
+            - mkdir -p "$GOPATH" "$GOCACHE"
             - go version
             - echo "Installing Hugo Extended..."
             - wget https://github.com/gohugoio/hugo/releases/download/v0.152.2/hugo_extended_0.152.2_Linux-64bit.tar.gz
@@ -48,6 +51,8 @@ applications:
           commands:
             - echo "Building SmartWeb Support Documentation..."
             - export PATH="$PWD/go/bin:$PWD:$PATH"
+            - export GOPATH="$PWD/go-workspace"
+            - export GOCACHE="$PWD/go-cache"
             - hugo --minify --cleanDestinationDir
       artifacts:
         baseDirectory: public
