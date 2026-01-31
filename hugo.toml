@@ -106,7 +106,7 @@ ignoreFiles = ['(?i)glossary-backup']
     [[languages.ja.menu.main]]
       identifier = "support"
       name = "サポート"
-      url = "/support/"
+      url = "https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/"
       weight = 7
     [[languages.ja.menu.main]]
       identifier = "company"
@@ -155,7 +155,7 @@ ignoreFiles = ['(?i)glossary-backup']
     [[languages.en.menu.main]]
       identifier = "support"
       name = "Support"
-      url = "/support/"
+      url = "https://main.d2b65nc0n0a17p.amplifyapp.com/en/docs/"
       weight = 7
     [[languages.en.menu.main]]
       identifier = "company"
