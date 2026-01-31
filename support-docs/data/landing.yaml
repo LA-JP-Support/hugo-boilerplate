@@ -1,0 +1,16 @@
+# SmartWeb Support Landing Page
+
+hero:
+  enable: true
+  weight: 10
+  template: hero
+
+  title: "SmartWeb Support"
+  subtitle: "SmartWeb サポートドキュメントへようこそ。製品の使い方、トラブルシューティング、よくある質問などをご覧いただけます。"
+
+  ctaButton:
+    icon: menu_book
+    btnText: "🇯🇵 日本語ドキュメント"
+    url: "/ja/docs/"
+
+  info: "SmartWeb カスタマーサポート"
