@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- 背景グラデーション（水彩風） -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fbff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fff8f5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f4fc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4e8f7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff0e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffe4d4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f8f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4f0e4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4a9fd4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8844a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1280" height="720" fill="url(#bgGradient)"/>
+  
+  <!-- タイトル -->
+  <text x="640" y="65" text-anchor="middle" font-size="36" fill="#333" font-weight="700" font-family="sans-serif">AIを活用したコンテンツ作成ワークフロー</text>
+  <text x="640" y="100" text-anchor="middle" font-size="18" fill="#666" font-family="sans-serif">マルチエージェントAI × SEO最適化</text>
+  
+  <!-- メインフロー矢印（背景） -->
+  <path d="M200 360 L1080 360" stroke="url(#arrowGradient)" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.3"/>
+  
+  <!-- ステップ1: 調査・分析 -->
+  <g transform="translate(160, 200)">
+    <!-- カード -->
+    <rect x="0" y="0" width="280" height="280" rx="20" fill="url(#blueGradient)" stroke="#4a9fd4" stroke-width="2"/>
+    
+    <!-- アイコン：虫眼鏡とグラフ -->
+    <circle cx="140" cy="80" r="40" fill="none" stroke="#4a9fd4" stroke-width="3"/>
+    <line x1="168" y1="108" x2="190" y2="130" stroke="#4a9fd4" stroke-width="3" stroke-linecap="round"/>
+    <rect x="115" y="60" width="12" height="25" fill="#4a9fd4" rx="2"/>
+    <rect x="132" y="50" width="12" height="35" fill="#4a9fd4" rx="2"/>
+    <rect x="149" y="65" width="12" height="20" fill="#4a9fd4" rx="2"/>
+    
+    <!-- テキスト -->
+    <text x="140" y="160" text-anchor="middle" font-size="24" fill="#2c5aa0" font-weight="700" font-family="sans-serif">調査・分析</text>
+    <text x="140" y="195" text-anchor="middle" font-size="14" fill="#555" font-family="sans-serif">キーワード調査</text>
+    <text x="140" y="218" text-anchor="middle" font-size="14" fill="#555" font-family="sans-serif">競合分析</text>
+    <text x="140" y="241" text-anchor="middle" font-size="14" fill="#555" font-family="sans-serif">トレンド把握</text>
+    
+    <!-- ステップ番号 -->
+    <circle cx="40" cy="40" r="20" fill="#4a9fd4"/>
+    <text x="40" y="47" text-anchor="middle" font-size="18" fill="white" font-weight="700" font-family="sans-serif">1</text>
+  </g>
+  
+  <!-- 矢印1 -->
+  <g transform="translate(460, 340)">
+    <path d="M0 20 L60 20" stroke="#4a9fd4" stroke-width="4" fill="none"/>
+    <path d="M50 10 L65 20 L50 30" fill="#4a9fd4"/>
+  </g>
+  
+  <!-- ステップ2: AI生成 -->
+  <g transform="translate(500, 200)">
+    <!-- カード -->
+    <rect x="0" y="0" width="280" height="280" rx="20" fill="url(#orangeGradient)" stroke="#e8844a" stroke-width="2"/>
+    
+    <!-- アイコン：AIロボット -->
+    <rect x="105" y="45" width="70" height="55" rx="10" fill="none" stroke="#e8844a" stroke-width="3"/>
+    <circle cx="125" cy="70" r="8" fill="#e8844a"/>
+    <circle cx="155" cy="70" r="8" fill="#e8844a"/>
+    <line x1="120" y1="85" x2="160" y2="85" stroke="#e8844a" stroke-width="2"/>
+    <rect x="130" y="100" width="20" height="15" fill="none" stroke="#e8844a" stroke-width="2"/>
+    <line x1="140" y1="115" x2="140" y2="125" stroke="#e8844a" stroke-width="2"/>
+    <line x1="125" y1="125" x2="155" y2="125" stroke="#e8844a" stroke-width="2"/>
+    
+    <!-- テキスト -->
+    <text x="140" y="160" text-anchor="middle" font-size="24" fill="#c55a20" font-weight="700" font-family="sans-serif">AI生成</text>
+    <text x="140" y="195" text-anchor="middle" font-size="14" fill="#555" font-family="sans-serif">ブログ記事作成</text>
+    <text x="140" y="218" text-anchor="middle" font-size="14" fill="#555" font-family="sans-serif">用語集生成</text>
+    <text x="140" y="241" text-anchor="middle" font-size="14" fill="#555" font-family="sans-serif">SEO最適化</text>
+    
+    <!-- ステップ番号 -->
+    <circle cx="40" cy="40" r="20" fill="#e8844a"/>
+    <text x="40" y="47" text-anchor="middle" font-size="18" fill="white" font-weight="700" font-family="sans-serif">2</text>
+  </g>
+  
+  <!-- 矢印2 -->
+  <g transform="translate(800, 340)">
+    <path d="M0 20 L60 20" stroke="#e8844a" stroke-width="4" fill="none"/>
+    <path d="M50 10 L65 20 L50 30" fill="#e8844a"/>
+  </g>
+  
+  <!-- ステップ3: 多言語出力 -->
+  <g transform="translate(840, 200)">
+    <!-- カード -->
+    <rect x="0" y="0" width="280" height="280" rx="20" fill="url(#greenGradient)" stroke="#3a9a6a" stroke-width="2"/>
+    
+    <!-- アイコン：地球と言語 -->
+    <circle cx="140" cy="75" r="35" fill="none" stroke="#3a9a6a" stroke-width="3"/>
+    <ellipse cx="140" cy="75" rx="15" ry="35" fill="none" stroke="#3a9a6a" stroke-width="2"/>
+    <line x1="105" y1="75" x2="175" y2="75" stroke="#3a9a6a" stroke-width="2"/>
+    <text x="115" y="65" font-size="14" fill="#3a9a6a" font-weight="700" font-family="sans-serif">あ</text>
+    <text x="150" y="90" font-size="14" fill="#3a9a6a" font-weight="700" font-family="sans-serif">A</text>
+    
+    <!-- テキスト -->
+    <text x="140" y="160" text-anchor="middle" font-size="24" fill="#2a7a5a" font-weight="700" font-family="sans-serif">多言語出力</text>
+    <text x="140" y="195" text-anchor="middle" font-size="14" fill="#555" font-family="sans-serif">日本語・英語対応</text>
+    <text x="140" y="218" text-anchor="middle" font-size="14" fill="#555" font-family="sans-serif">自動翻訳</text>
+    <text x="140" y="241" text-anchor="middle" font-size="14" fill="#555" font-family="sans-serif">グローバル展開</text>
+    
+    <!-- ステップ番号 -->
+    <circle cx="40" cy="40" r="20" fill="#3a9a6a"/>
+    <text x="40" y="47" text-anchor="middle" font-size="18" fill="white" font-weight="700" font-family="sans-serif">3</text>
+  </g>
+  
+  <!-- 成果セクション -->
+  <g transform="translate(0, 520)">
+    <!-- 成果バー背景 -->
+    <rect x="100" y="0" width="1080" height="120" rx="15" fill="#f5f9fc" stroke="#ddd" stroke-width="1"/>
+    
+    <!-- 成果1 -->
+    <g transform="translate(200, 20)">
+      <text x="80" y="30" text-anchor="middle" font-size="42" fill="#4a9fd4" font-weight="700" font-family="sans-serif">70%</text>
+      <text x="80" y="60" text-anchor="middle" font-size="16" fill="#555" font-family="sans-serif">作成時間削減</text>
+      <text x="80" y="85" text-anchor="middle" font-size="13" fill="#888" font-family="sans-serif">リサーチから校正まで自動化</text>
+    </g>
+    
+    <!-- 区切り線 -->
+    <line x1="440" y1="20" x2="440" y2="100" stroke="#ddd" stroke-width="1"/>
+    
+    <!-- 成果2 -->
+    <g transform="translate(540, 20)">
+      <text x="80" y="30" text-anchor="middle" font-size="42" fill="#e8844a" font-weight="700" font-family="sans-serif">1,200+</text>
+      <text x="80" y="60" text-anchor="middle" font-size="16" fill="#555" font-family="sans-serif">用語を日英で作成</text>
+      <text x="80" y="85" text-anchor="middle" font-size="13" fill="#888" font-family="sans-serif">専門用語集を自動生成</text>
+    </g>
+    
+    <!-- 区切り線 -->
+    <line x1="780" y1="20" x2="780" y2="100" stroke="#ddd" stroke-width="1"/>
+    
+    <!-- 成果3 -->
+    <g transform="translate(880, 20)">
+      <text x="80" y="30" text-anchor="middle" font-size="42" fill="#3a9a6a" font-weight="700" font-family="sans-serif">24/7</text>
+      <text x="80" y="60" text-anchor="middle" font-size="16" fill="#555" font-family="sans-serif">継続的な集客</text>
+      <text x="80" y="85" text-anchor="middle" font-size="13" fill="#888" font-family="sans-serif">検索エンジンからの流入</text>
+    </g>
+  </g>
+</svg>

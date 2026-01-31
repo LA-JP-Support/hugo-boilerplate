@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 480">
+  <!-- Background -->
+  <rect width="700" height="480" fill="#fafafa"/>
+  
+  <!-- Title -->
+  <text x="350" y="35" text-anchor="middle" font-size="18" fill="#222" font-weight="600">Operational Cost Comparison</text>
+  
+  <!-- Header: HUGO / WordPress -->
+  <text x="250" y="70" text-anchor="middle" font-size="16" fill="#2c5aa0" font-weight="600">HUGO</text>
+  <text x="490" y="70" text-anchor="middle" font-size="16" fill="#a04a4a" font-weight="600">WordPress</text>
+  
+  <!-- Row labels -->
+  <text x="20" y="135" text-anchor="start" font-size="15" fill="#333" font-weight="600">Cost</text>
+  <text x="20" y="153" text-anchor="start" font-size="13" fill="#555">(Hosting)</text>
+  
+  <text x="20" y="255" text-anchor="start" font-size="15" fill="#333" font-weight="600">Maintenance</text>
+  <text x="20" y="273" text-anchor="start" font-size="13" fill="#555">(Updates/Backups)</text>
+  
+  <text x="20" y="375" text-anchor="start" font-size="15" fill="#333" font-weight="600">Complexity</text>
+  <text x="20" y="393" text-anchor="start" font-size="13" fill="#555">(Components)</text>
+  
+  <!-- Card 1-1: HUGO Cost -->
+  <rect x="150" y="95" width="200" height="100" fill="#e8f4fc" stroke="#4a9fd4" stroke-width="1.5" rx="8"/>
+  <!-- Coin icon -->
+  <circle cx="175" cy="120" r="12" fill="none" stroke="#4a9fd4" stroke-width="2"/>
+  <text x="175" y="125" text-anchor="middle" font-size="12" fill="#4a9fd4" font-weight="600">$</text>
+  <text x="200" y="128" font-size="15" fill="#2c5aa0" font-weight="700">Low Cost</text>
+  <text x="170" y="155" font-size="13" fill="#444">• Free hosting available</text>
+  <text x="170" y="178" font-size="13" fill="#444">• Domain fee only</text>
+  
+  <!-- Card 1-2: WordPress Cost -->
+  <rect x="390" y="95" width="200" height="100" fill="#fce8e8" stroke="#d46a6a" stroke-width="1.5" rx="8"/>
+  <!-- Coin icon -->
+  <circle cx="415" cy="120" r="12" fill="none" stroke="#d46a6a" stroke-width="2"/>
+  <text x="415" y="125" text-anchor="middle" font-size="12" fill="#d46a6a" font-weight="600">$</text>
+  <text x="440" y="128" font-size="15" fill="#a04a4a" font-weight="700">Mid-High Cost</text>
+  <text x="410" y="155" font-size="13" fill="#444">• Server required</text>
+  <text x="410" y="178" font-size="13" fill="#444">• $30-60+/year typical</text>
+  
+  <!-- Card 2-1: HUGO Maintenance -->
+  <rect x="150" y="215" width="200" height="100" fill="#e8f4fc" stroke="#4a9fd4" stroke-width="1.5" rx="8"/>
+  <!-- Check icon -->
+  <circle cx="175" cy="240" r="12" fill="none" stroke="#4a9fd4" stroke-width="2"/>
+  <path d="M168 240 L173 245 L183 235" fill="none" stroke="#4a9fd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="200" y="248" font-size="15" fill="#2c5aa0" font-weight="700">Minimal</text>
+  <text x="170" y="275" font-size="13" fill="#444">• Almost no updates</text>
+  <text x="170" y="298" font-size="13" fill="#444">• Easy backups</text>
+  
+  <!-- Card 2-2: WordPress Maintenance -->
+  <rect x="390" y="215" width="200" height="100" fill="#fce8e8" stroke="#d46a6a" stroke-width="1.5" rx="8"/>
+  <!-- Gear icon -->
+  <circle cx="415" cy="240" r="10" fill="none" stroke="#d46a6a" stroke-width="2"/>
+  <circle cx="415" cy="240" r="4" fill="none" stroke="#d46a6a" stroke-width="2"/>
+  <text x="440" y="248" font-size="15" fill="#a04a4a" font-weight="700">Regular Required</text>
+  <text x="410" y="275" font-size="13" fill="#444">• Core/plugin updates</text>
+  <text x="410" y="298" font-size="13" fill="#444">• Regular DB backups</text>
+  
+  <!-- Card 3-1: HUGO Complexity -->
+  <rect x="150" y="335" width="200" height="100" fill="#e8f4fc" stroke="#4a9fd4" stroke-width="1.5" rx="8"/>
+  <!-- Simple square -->
+  <rect x="165" y="352" width="20" height="16" fill="none" stroke="#4a9fd4" stroke-width="2" rx="2"/>
+  <text x="200" y="368" font-size="15" fill="#2c5aa0" font-weight="700">Simple</text>
+  <text x="170" y="395" font-size="13" fill="#444">• Static files only</text>
+  <text x="170" y="418" font-size="13" fill="#444">• Few moving parts</text>
+  
+  <!-- Card 3-2: WordPress Complexity -->
+  <rect x="390" y="335" width="200" height="100" fill="#fce8e8" stroke="#d46a6a" stroke-width="1.5" rx="8"/>
+  <!-- Stacked squares (layers) -->
+  <rect x="405" y="350" width="18" height="12" fill="none" stroke="#d46a6a" stroke-width="2" rx="2"/>
+  <rect x="410" y="355" width="18" height="12" fill="none" stroke="#d46a6a" stroke-width="2" rx="2"/>
+  <rect x="415" y="360" width="18" height="12" fill="none" stroke="#d46a6a" stroke-width="2" rx="2"/>
+  <text x="445" y="368" font-size="15" fill="#a04a4a" font-weight="700">Multiple Parts</text>
+  <text x="410" y="395" font-size="13" fill="#444">• PHP/DB/Plugins</text>
+  <text x="410" y="418" font-size="13" fill="#444">• Dependency mgmt</text>
+  
+  <!-- Bottom note -->
+  <text x="350" y="465" text-anchor="middle" font-size="12" fill="#555">*Costs and workload vary by configuration and scale</text>
+</svg>

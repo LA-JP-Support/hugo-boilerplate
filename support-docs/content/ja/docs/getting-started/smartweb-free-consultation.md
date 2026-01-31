@@ -1,21 +1,33 @@
 ---
 title: "SmartWebの無料相談"
 date: 2026-01-30
-lastmod: 2026-01-30
+lastmod: 2026-01-31
 draft: false
 translationKey: "smartweb-free-consultation"
-description: "SmartWebの導入を検討されている企業様向けに、約20分程度のオンライン相談を無料で提供しています。Zoom、Microsoft Teams、Google Meetなどのオンライン会議ツールを使用し、完全無料でご相談いただけます。"
-keywords: ["SmartWeb", "無料", "相談", "カスタマーサポート", "LiveAgent"]
+description: "SmartWebの導入を検討されている企業様向けに、約20分程度のオンライン相談を無料で提供しています。AIカスタマーサポートやAIコンテンツ作成・Web構築について、お気軽にご相談ください。"
+keywords: ["SmartWeb", "無料", "相談", "AIカスタマーサポート", "LiveAgent", "FlowHunt"]
 category: "getting-started"
 ---
 ## SmartWebの無料相談概要
+
 SmartWebの導入を検討されている企業様向けに、約20分程度のオンライン相談を無料で提供しています。Zoom、Microsoft Teams、Google Meetなどのオンライン会議ツールを使用し、完全無料でご相談いただけます。
 
 ### 相談可能な内容
 
-- SmartWebの機能や料金プランの詳細
-- 現在の顧客対応課題とSmartWebでの解決方法
-- SNS対応やAIチャットボット活用の具体策
+**AIカスタマーサポートについて:**
+- AIチャットボットの機能と活用方法
+- AI連携チケットシステムの導入効果
+- AIメール回答作成の仕組み
+- AI回答アシストの活用シーン
+
+**AIコンテンツ作成・Web構築について:**
+- AIコンテンツ作成の自動化プロセス
+- Hugo高速Web構築のメリット
+- SEO対策と多言語対応
+
+**その他:**
+- 料金プランの詳細
+- 現在の課題とSmartWebでの解決方法
 - 導入スケジュールや初期設定の流れ
 - 他社事例や導入効果のご紹介
 - 既存システムとの連携可否

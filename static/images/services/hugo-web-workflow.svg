@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- 背景グラデーション（水彩風） -->
+  <defs>
+    <linearGradient id="bgGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f8ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fff5f8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="tealGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f6f8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4ecef;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pinkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffe8f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffd4e4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0e8ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e4d4f7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="arrowGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3a9a9a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9a5aaa;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1280" height="720" fill="url(#bgGradient2)"/>
+  
+  <!-- タイトル -->
+  <text x="640" y="65" text-anchor="middle" font-size="36" fill="#333" font-weight="700" font-family="sans-serif">スマートな静的ウェブサイトアーキテクチャ</text>
+  <text x="640" y="100" text-anchor="middle" font-size="18" fill="#666" font-family="sans-serif">Hugo + AI + グローバル展開</text>
+  
+  <!-- メインフロー矢印（背景） -->
+  <path d="M200 360 L1080 360" stroke="url(#arrowGradient2)" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.3"/>
+  
+  <!-- ステップ1: コンテンツ作成 -->
+  <g transform="translate(160, 200)">
+    <!-- カード -->
+    <rect x="0" y="0" width="280" height="280" rx="20" fill="url(#tealGradient)" stroke="#3a9a9a" stroke-width="2"/>
+    
+    <!-- アイコン：Markdownファイル -->
+    <rect x="100" y="40" width="80" height="100" rx="5" fill="none" stroke="#3a9a9a" stroke-width="3"/>
+    <path d="M100 40 L100 60 L120 60 L120 40" fill="#3a9a9a"/>
+    <text x="140" y="85" text-anchor="middle" font-size="16" fill="#3a9a9a" font-weight="700" font-family="monospace">MD</text>
+    <line x1="115" y1="105" x2="165" y2="105" stroke="#3a9a9a" stroke-width="2"/>
+    <line x1="115" y1="118" x2="155" y2="118" stroke="#3a9a9a" stroke-width="2"/>
+    <line x1="115" y1="131" x2="160" y2="131" stroke="#3a9a9a" stroke-width="2"/>
+    
+    <!-- テキスト -->
+    <text x="140" y="170" text-anchor="middle" font-size="24" fill="#2a7a7a" font-weight="700" font-family="sans-serif">コンテンツ作成</text>
+    <text x="140" y="205" text-anchor="middle" font-size="14" fill="#555" font-family="sans-serif">Markdownで執筆</text>
+    <text x="140" y="228" text-anchor="middle" font-size="14" fill="#555" font-family="sans-serif">画像・動画追加</text>
+    <text x="140" y="251" text-anchor="middle" font-size="14" fill="#555" font-family="sans-serif">Git管理</text>
+    
+    <!-- ステップ番号 -->
+    <circle cx="40" cy="40" r="20" fill="#3a9a9a"/>
+    <text x="40" y="47" text-anchor="middle" font-size="18" fill="white" font-weight="700" font-family="sans-serif">1</text>
+  </g>
+  
+  <!-- 矢印1 -->
+  <g transform="translate(460, 340)">
+    <path d="M0 20 L60 20" stroke="#3a9a9a" stroke-width="4" fill="none"/>
+    <path d="M50 10 L65 20 L50 30" fill="#3a9a9a"/>
+  </g>
+  
+  <!-- ステップ2: 自動ビルド -->
+  <g transform="translate(500, 200)">
+    <!-- カード -->
+    <rect x="0" y="0" width="280" height="280" rx="20" fill="url(#pinkGradient)" stroke="#d46a8a" stroke-width="2"/>
+    
+    <!-- アイコン：稲妻（高速） -->
+    <path d="M155 35 L125 80 L145 80 L125 130 L175 70 L150 70 L170 35 Z" fill="none" stroke="#d46a8a" stroke-width="3" stroke-linejoin="round"/>
+    
+    <!-- テキスト -->
+    <text x="140" y="170" text-anchor="middle" font-size="24" fill="#a44a6a" font-weight="700" font-family="sans-serif">自動ビルド</text>
+    <text x="140" y="205" text-anchor="middle" font-size="14" fill="#555" font-family="sans-serif">ミリ秒でHTML生成</text>
+    <text x="140" y="228" text-anchor="middle" font-size="14" fill="#555" font-family="sans-serif">GitHub連携</text>
+    <text x="140" y="251" text-anchor="middle" font-size="14" fill="#555" font-family="sans-serif">CI/CD自動化</text>
+    
+    <!-- ステップ番号 -->
+    <circle cx="40" cy="40" r="20" fill="#d46a8a"/>
+    <text x="40" y="47" text-anchor="middle" font-size="18" fill="white" font-weight="700" font-family="sans-serif">2</text>
+  </g>
+  
+  <!-- 矢印2 -->
+  <g transform="translate(800, 340)">
+    <path d="M0 20 L60 20" stroke="#d46a8a" stroke-width="4" fill="none"/>
+    <path d="M50 10 L65 20 L50 30" fill="#d46a8a"/>
+  </g>
+  
+  <!-- ステップ3: グローバルCDN -->
+  <g transform="translate(840, 200)">
+    <!-- カード -->
+    <rect x="0" y="0" width="280" height="280" rx="20" fill="url(#purpleGradient)" stroke="#8a5aaa" stroke-width="2"/>
+    
+    <!-- アイコン：地球とCDNノード -->
+    <circle cx="140" cy="75" r="35" fill="none" stroke="#8a5aaa" stroke-width="3"/>
+    <ellipse cx="140" cy="75" rx="35" ry="15" fill="none" stroke="#8a5aaa" stroke-width="2"/>
+    <line x1="140" y1="40" x2="140" y2="110" stroke="#8a5aaa" stroke-width="2"/>
+    <!-- CDNノード -->
+    <circle cx="108" cy="55" r="6" fill="#8a5aaa"/>
+    <circle cx="172" cy="55" r="6" fill="#8a5aaa"/>
+    <circle cx="115" cy="95" r="6" fill="#8a5aaa"/>
+    <circle cx="165" cy="95" r="6" fill="#8a5aaa"/>
+    
+    <!-- テキスト -->
+    <text x="140" y="170" text-anchor="middle" font-size="24" fill="#6a4a8a" font-weight="700" font-family="sans-serif">グローバルCDN</text>
+    <text x="140" y="205" text-anchor="middle" font-size="14" fill="#555" font-family="sans-serif">世界中に高速配信</text>
+    <text x="140" y="228" text-anchor="middle" font-size="14" fill="#555" font-family="sans-serif">セキュリティ強化</text>
+    <text x="140" y="251" text-anchor="middle" font-size="14" fill="#555" font-family="sans-serif">ダウンタイムゼロ</text>
+    
+    <!-- ステップ番号 -->
+    <circle cx="40" cy="40" r="20" fill="#8a5aaa"/>
+    <text x="40" y="47" text-anchor="middle" font-size="18" fill="white" font-weight="700" font-family="sans-serif">3</text>
+  </g>
+  
+  <!-- 成果セクション -->
+  <g transform="translate(0, 520)">
+    <!-- 成果バー背景 -->
+    <rect x="100" y="0" width="1080" height="120" rx="15" fill="#f5f8fc" stroke="#ddd" stroke-width="1"/>
+    
+    <!-- 成果1 -->
+    <g transform="translate(200, 20)">
+      <text x="80" y="30" text-anchor="middle" font-size="38" fill="#3a9a9a" font-weight="700" font-family="sans-serif">ミリ秒</text>
+      <text x="80" y="60" text-anchor="middle" font-size="16" fill="#555" font-family="sans-serif">ページ生成速度</text>
+      <text x="80" y="85" text-anchor="middle" font-size="13" fill="#888" font-family="sans-serif">世界最速の静的サイト生成</text>
+    </g>
+    
+    <!-- 区切り線 -->
+    <line x1="440" y1="20" x2="440" y2="100" stroke="#ddd" stroke-width="1"/>
+    
+    <!-- 成果2 -->
+    <g transform="translate(540, 20)">
+      <text x="80" y="30" text-anchor="middle" font-size="38" fill="#d46a8a" font-weight="700" font-family="sans-serif">12,900+</text>
+      <text x="80" y="60" text-anchor="middle" font-size="16" fill="#555" font-family="sans-serif">採用サイト数</text>
+      <text x="80" y="85" text-anchor="middle" font-size="13" fill="#888" font-family="sans-serif">Cloudflare, 1Passwordなど</text>
+    </g>
+    
+    <!-- 区切り線 -->
+    <line x1="780" y1="20" x2="780" y2="100" stroke="#ddd" stroke-width="1"/>
+    
+    <!-- 成果3 -->
+    <g transform="translate(880, 20)">
+      <text x="80" y="30" text-anchor="middle" font-size="38" fill="#8a5aaa" font-weight="700" font-family="sans-serif">DB不要</text>
+      <text x="80" y="60" text-anchor="middle" font-size="16" fill="#555" font-family="sans-serif">セキュリティリスク排除</text>
+      <text x="80" y="85" text-anchor="middle" font-size="13" fill="#888" font-family="sans-serif">攻撃対象面を最小化</text>
+    </g>
+  </g>
+</svg>

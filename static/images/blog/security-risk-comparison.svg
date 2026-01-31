@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400">
+  <!-- 背景 -->
+  <rect width="700" height="400" fill="#fafafa"/>
+  
+  <!-- タイトル -->
+  <text x="350" y="35" text-anchor="middle" font-size="18" fill="#222" font-weight="600">セキュリティリスク比較（攻撃面の違い）</text>
+  
+  <!-- 左側：HUGO（静的） -->
+  <text x="150" y="70" text-anchor="middle" font-size="16" fill="#2c5aa0" font-weight="600">静的（HUGO）</text>
+  
+  <!-- HUGO：1層のみ -->
+  <rect x="50" y="140" width="200" height="80" fill="#d4e8f7" stroke="#4a9fd4" stroke-width="2" rx="5"/>
+  <text x="150" y="175" text-anchor="middle" font-size="15" fill="#333" font-weight="500">静的ファイル配信</text>
+  <text x="150" y="200" text-anchor="middle" font-size="12" fill="#555">HTML / CSS / JS のみ</text>
+  
+  <!-- HUGO：メリットラベル -->
+  <text x="150" y="250" text-anchor="middle" font-size="13" fill="#2e7d32">✓ DBなし</text>
+  <text x="150" y="272" text-anchor="middle" font-size="13" fill="#2e7d32">✓ 管理画面なし</text>
+  <text x="150" y="294" text-anchor="middle" font-size="13" fill="#2e7d32">✓ 実行環境なし</text>
+  <text x="150" y="320" text-anchor="middle" font-size="12" fill="#666">攻撃面が最小限</text>
+  
+  <!-- 中央：矢印と説明（大きく） -->
+  <text x="350" y="175" text-anchor="middle" font-size="18" fill="#444" font-weight="600">攻撃面の違い</text>
+  <text x="350" y="220" text-anchor="middle" font-size="48" fill="#666">⟷</text>
+  
+  <!-- 右側：WordPress（動的） -->
+  <text x="550" y="70" text-anchor="middle" font-size="16" fill="#a04a4a" font-weight="600">動的（WordPress）</text>
+  
+  <!-- WordPress：4層積み上げ（下から広がる形） -->
+  <!-- 層1：プラグイン・テーマ（最上部・最も広い） -->
+  <rect x="430" y="95" width="240" height="50" fill="#f7d4d4" stroke="#d46a6a" stroke-width="2" rx="5"/>
+  <text x="550" y="120" text-anchor="middle" font-size="14" fill="#333" font-weight="500">プラグイン・テーマ</text>
+  <text x="550" y="137" text-anchor="middle" font-size="10" fill="#777">定期更新が必要</text>
+  
+  <!-- 層2：管理画面 -->
+  <rect x="440" y="150" width="220" height="50" fill="#f7d4d4" stroke="#d46a6a" stroke-width="2" rx="5"/>
+  <text x="550" y="175" text-anchor="middle" font-size="14" fill="#333" font-weight="500">管理画面</text>
+  <text x="550" y="192" text-anchor="middle" font-size="10" fill="#777">アクセス制限が必要</text>
+  
+  <!-- 層3：PHP実行環境 -->
+  <rect x="450" y="205" width="200" height="50" fill="#f7d4d4" stroke="#d46a6a" stroke-width="2" rx="5"/>
+  <text x="550" y="230" text-anchor="middle" font-size="14" fill="#333" font-weight="500">PHP実行環境</text>
+  <text x="550" y="247" text-anchor="middle" font-size="10" fill="#777">脆弱性対策が必要</text>
+  
+  <!-- 層4：データベース（最下部・最も狭い） -->
+  <rect x="460" y="260" width="180" height="50" fill="#f7d4d4" stroke="#d46a6a" stroke-width="2" rx="5"/>
+  <text x="550" y="285" text-anchor="middle" font-size="14" fill="#333" font-weight="500">データベース</text>
+  <text x="550" y="302" text-anchor="middle" font-size="10" fill="#777">バックアップが必要</text>
+  
+  <!-- WordPress：注意ラベル -->
+  <text x="550" y="335" text-anchor="middle" font-size="12" fill="#666">層が多い＝適切な対策が重要</text>
+  
+  <!-- 下部注釈 -->
+  <line x1="50" y1="360" x2="650" y2="360" stroke="#ddd" stroke-width="1"/>
+  <text x="350" y="385" text-anchor="middle" font-size="12" fill="#555">※どちらも適切に運用すれば安全に利用できます。構成に応じた対策を行ってください。</text>
+</svg>

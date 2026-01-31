@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 480">
+  <!-- 背景 -->
+  <rect width="700" height="480" fill="#fafafa"/>
+  
+  <!-- タイトル -->
+  <text x="350" y="35" text-anchor="middle" font-size="18" fill="#222" font-weight="600">運用コスト比較</text>
+  
+  <!-- ヘッダー：HUGO / WordPress -->
+  <text x="250" y="70" text-anchor="middle" font-size="16" fill="#2c5aa0" font-weight="600">HUGO</text>
+  <text x="490" y="70" text-anchor="middle" font-size="16" fill="#a04a4a" font-weight="600">WordPress</text>
+  
+  <!-- 行ラベル -->
+  <text x="20" y="135" text-anchor="start" font-size="15" fill="#333" font-weight="600">費用</text>
+  <text x="20" y="153" text-anchor="start" font-size="13" fill="#555">（ホスティング）</text>
+  
+  <text x="20" y="255" text-anchor="start" font-size="15" fill="#333" font-weight="600">保守作業</text>
+  <text x="20" y="273" text-anchor="start" font-size="13" fill="#555">（更新・バックアップ）</text>
+  
+  <text x="20" y="375" text-anchor="start" font-size="15" fill="#333" font-weight="600">運用の複雑さ</text>
+  <text x="20" y="393" text-anchor="start" font-size="13" fill="#555">（構成要素）</text>
+  
+  <!-- カード1-1：HUGO 費用 -->
+  <rect x="150" y="95" width="200" height="100" fill="#e8f4fc" stroke="#4a9fd4" stroke-width="1.5" rx="8"/>
+  <!-- コインアイコン（シンプル） -->
+  <circle cx="175" cy="120" r="12" fill="none" stroke="#4a9fd4" stroke-width="2"/>
+  <text x="175" y="125" text-anchor="middle" font-size="12" fill="#4a9fd4" font-weight="600">¥</text>
+  <text x="200" y="128" font-size="15" fill="#2c5aa0" font-weight="700">低コスト</text>
+  <text x="170" y="155" font-size="13" fill="#444">• 無料ホスティング可</text>
+  <text x="170" y="178" font-size="13" fill="#444">• ドメイン代のみ</text>
+  
+  <!-- カード1-2：WordPress 費用 -->
+  <rect x="390" y="95" width="200" height="100" fill="#fce8e8" stroke="#d46a6a" stroke-width="1.5" rx="8"/>
+  <!-- コインアイコン（シンプル） -->
+  <circle cx="415" cy="120" r="12" fill="none" stroke="#d46a6a" stroke-width="2"/>
+  <text x="415" y="125" text-anchor="middle" font-size="12" fill="#d46a6a" font-weight="600">¥</text>
+  <text x="440" y="128" font-size="15" fill="#a04a4a" font-weight="700">中〜高コスト</text>
+  <text x="410" y="155" font-size="13" fill="#444">• サーバー契約必須</text>
+  <text x="410" y="178" font-size="13" fill="#444">• 年間3,000〜6,000円〜</text>
+  
+  <!-- カード2-1：HUGO 保守作業 -->
+  <rect x="150" y="215" width="200" height="100" fill="#e8f4fc" stroke="#4a9fd4" stroke-width="1.5" rx="8"/>
+  <!-- チェックマークアイコン -->
+  <circle cx="175" cy="240" r="12" fill="none" stroke="#4a9fd4" stroke-width="2"/>
+  <path d="M168 240 L173 245 L183 235" fill="none" stroke="#4a9fd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="200" y="248" font-size="15" fill="#2c5aa0" font-weight="700">最小限</text>
+  <text x="170" y="275" font-size="13" fill="#444">• 更新作業ほぼ不要</text>
+  <text x="170" y="298" font-size="13" fill="#444">• バックアップ簡単</text>
+  
+  <!-- カード2-2：WordPress 保守作業 -->
+  <rect x="390" y="215" width="200" height="100" fill="#fce8e8" stroke="#d46a6a" stroke-width="1.5" rx="8"/>
+  <!-- 歯車アイコン -->
+  <circle cx="415" cy="240" r="10" fill="none" stroke="#d46a6a" stroke-width="2"/>
+  <circle cx="415" cy="240" r="4" fill="none" stroke="#d46a6a" stroke-width="2"/>
+  <text x="440" y="248" font-size="15" fill="#a04a4a" font-weight="700">定期的に必要</text>
+  <text x="410" y="275" font-size="13" fill="#444">• 本体・プラグイン更新</text>
+  <text x="410" y="298" font-size="13" fill="#444">• DB定期バックアップ</text>
+  
+  <!-- カード3-1：HUGO 運用の複雑さ -->
+  <rect x="150" y="335" width="200" height="100" fill="#e8f4fc" stroke="#4a9fd4" stroke-width="1.5" rx="8"/>
+  <!-- シンプルな四角1つ -->
+  <rect x="165" y="352" width="20" height="16" fill="none" stroke="#4a9fd4" stroke-width="2" rx="2"/>
+  <text x="200" y="368" font-size="15" fill="#2c5aa0" font-weight="700">シンプル</text>
+  <text x="170" y="395" font-size="13" fill="#444">• 静的ファイルのみ</text>
+  <text x="170" y="418" font-size="13" fill="#444">• 管理対象が少ない</text>
+  
+  <!-- カード3-2：WordPress 運用の複雑さ -->
+  <rect x="390" y="335" width="200" height="100" fill="#fce8e8" stroke="#d46a6a" stroke-width="1.5" rx="8"/>
+  <!-- 積み重なった四角（レイヤー） -->
+  <rect x="405" y="350" width="18" height="12" fill="none" stroke="#d46a6a" stroke-width="2" rx="2"/>
+  <rect x="410" y="355" width="18" height="12" fill="none" stroke="#d46a6a" stroke-width="2" rx="2"/>
+  <rect x="415" y="360" width="18" height="12" fill="none" stroke="#d46a6a" stroke-width="2" rx="2"/>
+  <text x="445" y="368" font-size="15" fill="#a04a4a" font-weight="700">複数要素</text>
+  <text x="410" y="395" font-size="13" fill="#444">• PHP/DB/プラグイン</text>
+  <text x="410" y="418" font-size="13" fill="#444">• 依存関係の管理</text>
+  
+  <!-- 下部注釈 -->
+  <text x="350" y="465" text-anchor="middle" font-size="12" fill="#555">※費用・作業量は構成や規模によって異なります</text>
+</svg>

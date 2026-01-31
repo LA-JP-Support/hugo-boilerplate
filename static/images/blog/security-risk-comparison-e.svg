@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400">
+  <!-- Background -->
+  <rect width="700" height="400" fill="#fafafa"/>
+  
+  <!-- Title -->
+  <text x="350" y="35" text-anchor="middle" font-size="18" fill="#222" font-weight="600">Security Risk Comparison (Attack Surface)</text>
+  
+  <!-- Left side: HUGO (Static) -->
+  <text x="150" y="70" text-anchor="middle" font-size="16" fill="#2c5aa0" font-weight="600">Static (HUGO)</text>
+  
+  <!-- HUGO: Single layer -->
+  <rect x="50" y="140" width="200" height="80" fill="#d4e8f7" stroke="#4a9fd4" stroke-width="2" rx="5"/>
+  <text x="150" y="175" text-anchor="middle" font-size="15" fill="#333" font-weight="500">Static File Delivery</text>
+  <text x="150" y="200" text-anchor="middle" font-size="12" fill="#555">HTML / CSS / JS only</text>
+  
+  <!-- HUGO: Benefits -->
+  <text x="150" y="250" text-anchor="middle" font-size="13" fill="#2e7d32">✓ No Database</text>
+  <text x="150" y="272" text-anchor="middle" font-size="13" fill="#2e7d32">✓ No Admin Panel</text>
+  <text x="150" y="294" text-anchor="middle" font-size="13" fill="#2e7d32">✓ No Runtime</text>
+  <text x="150" y="320" text-anchor="middle" font-size="12" fill="#666">Minimal Attack Surface</text>
+  
+  <!-- Center: Arrow and description -->
+  <text x="350" y="175" text-anchor="middle" font-size="18" fill="#444" font-weight="600">Attack Surface</text>
+  <text x="350" y="220" text-anchor="middle" font-size="48" fill="#666">⟷</text>
+  
+  <!-- Right side: WordPress (Dynamic) -->
+  <text x="550" y="70" text-anchor="middle" font-size="16" fill="#a04a4a" font-weight="600">Dynamic (WordPress)</text>
+  
+  <!-- WordPress: 4 stacked layers -->
+  <!-- Layer 1: Plugins/Themes -->
+  <rect x="430" y="95" width="240" height="50" fill="#f7d4d4" stroke="#d46a6a" stroke-width="2" rx="5"/>
+  <text x="550" y="120" text-anchor="middle" font-size="14" fill="#333" font-weight="500">Plugins &amp; Themes</text>
+  <text x="550" y="137" text-anchor="middle" font-size="10" fill="#777">Regular updates required</text>
+  
+  <!-- Layer 2: Admin Panel -->
+  <rect x="440" y="150" width="220" height="50" fill="#f7d4d4" stroke="#d46a6a" stroke-width="2" rx="5"/>
+  <text x="550" y="175" text-anchor="middle" font-size="14" fill="#333" font-weight="500">Admin Panel</text>
+  <text x="550" y="192" text-anchor="middle" font-size="10" fill="#777">Access control required</text>
+  
+  <!-- Layer 3: PHP Runtime -->
+  <rect x="450" y="205" width="200" height="50" fill="#f7d4d4" stroke="#d46a6a" stroke-width="2" rx="5"/>
+  <text x="550" y="230" text-anchor="middle" font-size="14" fill="#333" font-weight="500">PHP Runtime</text>
+  <text x="550" y="247" text-anchor="middle" font-size="10" fill="#777">Vulnerability patches required</text>
+  
+  <!-- Layer 4: Database -->
+  <rect x="460" y="260" width="180" height="50" fill="#f7d4d4" stroke="#d46a6a" stroke-width="2" rx="5"/>
+  <text x="550" y="285" text-anchor="middle" font-size="14" fill="#333" font-weight="500">Database</text>
+  <text x="550" y="302" text-anchor="middle" font-size="10" fill="#777">Backups required</text>
+  
+  <!-- WordPress: Note -->
+  <text x="550" y="335" text-anchor="middle" font-size="12" fill="#666">More layers = Proper measures essential</text>
+  
+  <!-- Bottom note -->
+  <line x1="50" y1="360" x2="650" y2="360" stroke="#ddd" stroke-width="1"/>
+  <text x="350" y="385" text-anchor="middle" font-size="12" fill="#555">*Both can be secure with proper management. Apply measures based on your setup.</text>
+</svg>

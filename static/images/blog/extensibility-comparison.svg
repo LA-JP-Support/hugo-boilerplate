@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420">
+  <!-- 背景 -->
+  <rect width="700" height="420" fill="#fafafa"/>
+  
+  <!-- タイトル -->
+  <text x="350" y="35" text-anchor="middle" font-size="18" fill="#222" font-weight="600">拡張性・カスタマイズ性の違い</text>
+  
+  <!-- ヘッダー -->
+  <text x="175" y="70" text-anchor="middle" font-size="16" fill="#2c5aa0" font-weight="600">HUGO</text>
+  <text x="525" y="70" text-anchor="middle" font-size="16" fill="#a04a4a" font-weight="600">WordPress</text>
+  
+  <!-- 左側：HUGO フロー -->
+  <!-- ステップ1 -->
+  <rect x="75" y="95" width="200" height="45" fill="#e8f4fc" stroke="#4a9fd4" stroke-width="1.5" rx="6"/>
+  <text x="175" y="123" text-anchor="middle" font-size="14" fill="#333" font-weight="500">テンプレート / コード</text>
+  
+  <!-- 矢印1 -->
+  <path d="M175 140 L175 155" stroke="#4a9fd4" stroke-width="2" fill="none"/>
+  <path d="M170 150 L175 158 L180 150" fill="#4a9fd4"/>
+  
+  <!-- ステップ2 -->
+  <rect x="75" y="160" width="200" height="45" fill="#e8f4fc" stroke="#4a9fd4" stroke-width="1.5" rx="6"/>
+  <text x="175" y="188" text-anchor="middle" font-size="14" fill="#333" font-weight="500">ビルド</text>
+  
+  <!-- 矢印2 -->
+  <path d="M175 205 L175 220" stroke="#4a9fd4" stroke-width="2" fill="none"/>
+  <path d="M170 215 L175 223 L180 215" fill="#4a9fd4"/>
+  
+  <!-- ステップ3 -->
+  <rect x="75" y="225" width="200" height="45" fill="#e8f4fc" stroke="#4a9fd4" stroke-width="1.5" rx="6"/>
+  <text x="175" y="253" text-anchor="middle" font-size="14" fill="#333" font-weight="500">API / JS連携</text>
+  
+  <!-- 矢印3 -->
+  <path d="M175 270 L175 285" stroke="#4a9fd4" stroke-width="2" fill="none"/>
+  <path d="M170 280 L175 288 L180 280" fill="#4a9fd4"/>
+  
+  <!-- ステップ4 -->
+  <rect x="75" y="290" width="200" height="45" fill="#d4e8f7" stroke="#4a9fd4" stroke-width="2" rx="6"/>
+  <text x="175" y="318" text-anchor="middle" font-size="14" fill="#2c5aa0" font-weight="600">機能実現</text>
+  
+  <!-- HUGO 注記 -->
+  <text x="175" y="360" text-anchor="middle" font-size="13" fill="#2e7d32" font-weight="500">✓ 自由度が高い</text>
+  <text x="175" y="380" text-anchor="middle" font-size="13" fill="#666">開発知識が必要</text>
+  
+  <!-- 右側：WordPress フロー -->
+  <!-- ステップ1 -->
+  <rect x="425" y="95" width="200" height="45" fill="#fce8e8" stroke="#d46a6a" stroke-width="1.5" rx="6"/>
+  <text x="525" y="123" text-anchor="middle" font-size="14" fill="#333" font-weight="500">管理画面</text>
+  
+  <!-- 矢印1 -->
+  <path d="M525 140 L525 155" stroke="#d46a6a" stroke-width="2" fill="none"/>
+  <path d="M520 150 L525 158 L530 150" fill="#d46a6a"/>
+  
+  <!-- ステップ2 -->
+  <rect x="425" y="160" width="200" height="45" fill="#fce8e8" stroke="#d46a6a" stroke-width="1.5" rx="6"/>
+  <text x="525" y="188" text-anchor="middle" font-size="14" fill="#333" font-weight="500">プラグイン追加</text>
+  
+  <!-- 矢印2 -->
+  <path d="M525 205 L525 220" stroke="#d46a6a" stroke-width="2" fill="none"/>
+  <path d="M520 215 L525 223 L530 215" fill="#d46a6a"/>
+  
+  <!-- ステップ3 -->
+  <rect x="425" y="225" width="200" height="45" fill="#fce8e8" stroke="#d46a6a" stroke-width="1.5" rx="6"/>
+  <text x="525" y="253" text-anchor="middle" font-size="14" fill="#333" font-weight="500">設定</text>
+  
+  <!-- 矢印3 -->
+  <path d="M525 270 L525 285" stroke="#d46a6a" stroke-width="2" fill="none"/>
+  <path d="M520 280 L525 288 L530 280" fill="#d46a6a"/>
+  
+  <!-- ステップ4 -->
+  <rect x="425" y="290" width="200" height="45" fill="#f7d4d4" stroke="#d46a6a" stroke-width="2" rx="6"/>
+  <text x="525" y="318" text-anchor="middle" font-size="14" fill="#a04a4a" font-weight="600">機能実現</text>
+  
+  <!-- WordPress 注記 -->
+  <text x="525" y="360" text-anchor="middle" font-size="13" fill="#2e7d32" font-weight="500">✓ 手軽に導入</text>
+  <text x="525" y="380" text-anchor="middle" font-size="13" fill="#666">プラグイン依存</text>
+  
+  <!-- 下部注釈 -->
+  <text x="350" y="410" text-anchor="middle" font-size="12" fill="#555">※どちらも目的に応じた選択が重要です</text>
+</svg>

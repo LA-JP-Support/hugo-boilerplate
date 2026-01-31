@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420">
+  <!-- Background -->
+  <rect width="700" height="420" fill="#fafafa"/>
+  
+  <!-- Title -->
+  <text x="350" y="35" text-anchor="middle" font-size="18" fill="#222" font-weight="600">Extensibility &amp; Customization</text>
+  
+  <!-- Header -->
+  <text x="175" y="70" text-anchor="middle" font-size="16" fill="#2c5aa0" font-weight="600">HUGO</text>
+  <text x="525" y="70" text-anchor="middle" font-size="16" fill="#a04a4a" font-weight="600">WordPress</text>
+  
+  <!-- Left side: HUGO Flow -->
+  <!-- Step 1 -->
+  <rect x="75" y="95" width="200" height="45" fill="#e8f4fc" stroke="#4a9fd4" stroke-width="1.5" rx="6"/>
+  <text x="175" y="123" text-anchor="middle" font-size="14" fill="#333" font-weight="500">Templates / Code</text>
+  
+  <!-- Arrow 1 -->
+  <path d="M175 140 L175 155" stroke="#4a9fd4" stroke-width="2" fill="none"/>
+  <path d="M170 150 L175 158 L180 150" fill="#4a9fd4"/>
+  
+  <!-- Step 2 -->
+  <rect x="75" y="160" width="200" height="45" fill="#e8f4fc" stroke="#4a9fd4" stroke-width="1.5" rx="6"/>
+  <text x="175" y="188" text-anchor="middle" font-size="14" fill="#333" font-weight="500">Build</text>
+  
+  <!-- Arrow 2 -->
+  <path d="M175 205 L175 220" stroke="#4a9fd4" stroke-width="2" fill="none"/>
+  <path d="M170 215 L175 223 L180 215" fill="#4a9fd4"/>
+  
+  <!-- Step 3 -->
+  <rect x="75" y="225" width="200" height="45" fill="#e8f4fc" stroke="#4a9fd4" stroke-width="1.5" rx="6"/>
+  <text x="175" y="253" text-anchor="middle" font-size="14" fill="#333" font-weight="500">API / JS Integration</text>
+  
+  <!-- Arrow 3 -->
+  <path d="M175 270 L175 285" stroke="#4a9fd4" stroke-width="2" fill="none"/>
+  <path d="M170 280 L175 288 L180 280" fill="#4a9fd4"/>
+  
+  <!-- Step 4 -->
+  <rect x="75" y="290" width="200" height="45" fill="#d4e8f7" stroke="#4a9fd4" stroke-width="2" rx="6"/>
+  <text x="175" y="318" text-anchor="middle" font-size="14" fill="#2c5aa0" font-weight="600">Feature Ready</text>
+  
+  <!-- HUGO Notes -->
+  <text x="175" y="360" text-anchor="middle" font-size="13" fill="#2e7d32" font-weight="500">✓ High flexibility</text>
+  <text x="175" y="380" text-anchor="middle" font-size="13" fill="#666">Dev knowledge required</text>
+  
+  <!-- Right side: WordPress Flow -->
+  <!-- Step 1 -->
+  <rect x="425" y="95" width="200" height="45" fill="#fce8e8" stroke="#d46a6a" stroke-width="1.5" rx="6"/>
+  <text x="525" y="123" text-anchor="middle" font-size="14" fill="#333" font-weight="500">Admin Panel</text>
+  
+  <!-- Arrow 1 -->
+  <path d="M525 140 L525 155" stroke="#d46a6a" stroke-width="2" fill="none"/>
+  <path d="M520 150 L525 158 L530 150" fill="#d46a6a"/>
+  
+  <!-- Step 2 -->
+  <rect x="425" y="160" width="200" height="45" fill="#fce8e8" stroke="#d46a6a" stroke-width="1.5" rx="6"/>
+  <text x="525" y="188" text-anchor="middle" font-size="14" fill="#333" font-weight="500">Add Plugin</text>
+  
+  <!-- Arrow 2 -->
+  <path d="M525 205 L525 220" stroke="#d46a6a" stroke-width="2" fill="none"/>
+  <path d="M520 215 L525 223 L530 215" fill="#d46a6a"/>
+  
+  <!-- Step 3 -->
+  <rect x="425" y="225" width="200" height="45" fill="#fce8e8" stroke="#d46a6a" stroke-width="1.5" rx="6"/>
+  <text x="525" y="253" text-anchor="middle" font-size="14" fill="#333" font-weight="500">Configure</text>
+  
+  <!-- Arrow 3 -->
+  <path d="M525 270 L525 285" stroke="#d46a6a" stroke-width="2" fill="none"/>
+  <path d="M520 280 L525 288 L530 280" fill="#d46a6a"/>
+  
+  <!-- Step 4 -->
+  <rect x="425" y="290" width="200" height="45" fill="#f7d4d4" stroke="#d46a6a" stroke-width="2" rx="6"/>
+  <text x="525" y="318" text-anchor="middle" font-size="14" fill="#a04a4a" font-weight="600">Feature Ready</text>
+  
+  <!-- WordPress Notes -->
+  <text x="525" y="360" text-anchor="middle" font-size="13" fill="#2e7d32" font-weight="500">✓ Easy to implement</text>
+  <text x="525" y="380" text-anchor="middle" font-size="13" fill="#666">Plugin dependency</text>
+  
+  <!-- Bottom note -->
+  <text x="350" y="410" text-anchor="middle" font-size="12" fill="#555">*Choose based on your goals and requirements</text>
+</svg>

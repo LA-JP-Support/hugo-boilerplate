@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 220">
+  <!-- 背景 -->
+  <rect width="650" height="220" fill="#fafafa"/>
+  
+  <!-- グリッド線 -->
+  <line x1="120" y1="50" x2="120" y2="150" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="220" y1="50" x2="220" y2="150" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="320" y1="50" x2="320" y2="150" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="420" y1="50" x2="420" y2="150" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="520" y1="50" x2="520" y2="150" stroke="#e0e0e0" stroke-width="1"/>
+  
+  <!-- X軸 -->
+  <line x1="120" y1="150" x2="570" y2="150" stroke="#999" stroke-width="1"/>
+  
+  <!-- X軸ラベル（大きく・濃く） -->
+  <text x="120" y="175" text-anchor="middle" font-size="15" fill="#333" font-weight="500">0</text>
+  <text x="220" y="175" text-anchor="middle" font-size="15" fill="#333" font-weight="500">0.5</text>
+  <text x="320" y="175" text-anchor="middle" font-size="15" fill="#333" font-weight="500">1.0</text>
+  <text x="420" y="175" text-anchor="middle" font-size="15" fill="#333" font-weight="500">1.5</text>
+  <text x="520" y="175" text-anchor="middle" font-size="15" fill="#333" font-weight="500">2.0</text>
+  <text x="580" y="175" text-anchor="middle" font-size="15" fill="#333" font-weight="500">秒</text>
+  
+  <!-- Y軸ラベル（大きく・濃く） -->
+  <text x="55" y="82" text-anchor="middle" font-size="16" fill="#222" font-weight="600">HUGO</text>
+  <text x="55" y="132" text-anchor="middle" font-size="16" fill="#222" font-weight="600">WordPress</text>
+  
+  <!-- HUGO バー (0.2-0.5秒) -->
+  <rect x="160" y="62" width="60" height="32" fill="#a8d5f7" rx="3"/>
+  <circle cx="160" cy="78" r="6" fill="none" stroke="#4a9fd4" stroke-width="2"/>
+  <circle cx="220" cy="78" r="6" fill="none" stroke="#4a9fd4" stroke-width="2"/>
+  
+  <!-- WordPress バー (1.2-2.0秒) -->
+  <rect x="360" y="112" width="160" height="32" fill="#f7b8b8" rx="3"/>
+  <circle cx="360" cy="128" r="6" fill="none" stroke="#d46a6a" stroke-width="2"/>
+  <circle cx="520" cy="128" r="6" fill="none" stroke="#d46a6a" stroke-width="2"/>
+  
+  <!-- 注釈（大きく・濃く） -->
+  <text x="325" y="205" text-anchor="middle" font-size="13" fill="#555">※図は概念図／数値は構成や計測条件で変動します</text>
+</svg>
