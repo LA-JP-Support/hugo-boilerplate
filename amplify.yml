@@ -1,25 +1,63 @@
 version: 1
-frontend:
-  phases:
-    preBuild:
-      commands:
-        - npm ci || npm install
-        - python3 -m pip install --upgrade pip
-        - pip3 install beautifulsoup4 lxml pyyaml janome
-    build:
-      commands:
-        - npm run build
-        - export HUGO_CACHEDIR="$(pwd)/.hugo_cache"
-        - mkdir -p "$HUGO_CACHEDIR"
-        - hugo --minify --cacheDir "$HUGO_CACHEDIR"
-        - python3 scripts/linkbuilding_parallel.py --linkbuilding-dir data/linkbuilding --public-dir public --denylist-dir databases --max-links 9999 --max-keyword 1 --max-url 1
-  artifacts:
-    baseDirectory: public
-    files:
-      - "**/*"
-  cache:
-    paths:
-      - node_modules/**/*
-      - ~/.cache/pip/**/*
-      - .hugo_cache/**/*
-      - resources/**/*
+applications:
+  # Main site (hugo-boilerplate) - appRoot: .
+  - appRoot: .
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm ci || npm install
+            - python3 -m pip install --upgrade pip
+            - pip3 install beautifulsoup4 lxml pyyaml janome
+        build:
+          commands:
+            - npm run build
+            - export HUGO_CACHEDIR="$(pwd)/.hugo_cache"
+            - mkdir -p "$HUGO_CACHEDIR"
+            - hugo --minify --cacheDir "$HUGO_CACHEDIR"
+            - python3 scripts/linkbuilding_parallel.py --linkbuilding-dir data/linkbuilding --public-dir public --denylist-dir databases --max-links 9999 --max-keyword 1 --max-url 1
+      artifacts:
+        baseDirectory: public
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - node_modules/**/*
+          - ~/.cache/pip/**/*
+          - .hugo_cache/**/*
+          - resources/**/*
+  # Support docs site (smartweb-support-docs) - appRoot: support-docs
+  - appRoot: support-docs
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - echo "Installing Go..."
+            - wget https://go.dev/dl/go1.21.5.linux-amd64.tar.gz
+            - tar -xzf go1.21.5.linux-amd64.tar.gz
+            - export PATH="$PWD/go/bin:$PATH"
+            - export GOPATH="$PWD/go-workspace"
+            - export GOCACHE="$PWD/go-cache"
+            - mkdir -p "$GOPATH" "$GOCACHE"
+            - go version
+            - echo "Installing Hugo Extended..."
+            - wget https://github.com/gohugoio/hugo/releases/download/v0.152.2/hugo_extended_0.152.2_Linux-64bit.tar.gz
+            - tar -xzf hugo_extended_0.152.2_Linux-64bit.tar.gz
+            - chmod +x hugo
+            - export PATH="$PWD:$PATH"
+            - hugo version
+        build:
+          commands:
+            - echo "Building SmartWeb Support Documentation..."
+            - export PATH="$PWD/go/bin:$PWD:$PATH"
+            - export GOPATH="$PWD/go-workspace"
+            - export GOCACHE="$PWD/go-cache"
+            - hugo --minify --cleanDestinationDir
+      artifacts:
+        baseDirectory: public
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - resources/**/*
+          - .hugo_cache/**/*
