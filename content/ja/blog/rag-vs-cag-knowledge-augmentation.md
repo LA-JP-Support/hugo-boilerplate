@@ -1,6 +1,8 @@
 ---
 
 title: 'RAG vs. CAG: AIモデルにおける知識拡張戦略の理解'
+date: 2026-02-01
+lastmod: 2026-02-01
 youtubeTitle: RAG vs. CAG:AIモデルにおける知識ギャップの解決
 youtubeVideoID: HdafI0t3sEY
 description: 大規模言語モデルに外部知識を組み込む2つの強力な手法、Retrieval-Augmented Generation(RAG)とCache-Augmented
@@ -38,9 +40,6 @@ faq:
   answer: はい、ハイブリッドアプローチで両方の技術を組み合わせることができます。たとえば、RAGが大規模な知識ベースから最も関連性の高いサブセットを取得し、その後CAGがその取得されたコンテンツを長文コンテキストモデルにロードして包括的な処理を行うことができます。これは、臨床意思決定支援システムのような複雑なシナリオで特に効果的です。
 - question: CAGのスケーラビリティの限界は何ですか?
   answer: CAGは、モデルのコンテキストウィンドウサイズによって制約されます。現代のモデルでは通常32,000から100,000トークンです。これにより、CAGは最大でも数百のドキュメントしか処理できませんが、RAGはクエリごとに小さな関連部分のみを取得するため、数百万のドキュメントまでスケールできます。
-date: '2026-01-05'
-lastmod: '2026-01-05'
-
 translationKey: "rag-vs-cag-knowledge-augmentation"
 url: "blog/rag-vs-cag-knowledge-augmentation/"
 ---

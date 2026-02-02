@@ -1,7 +1,7 @@
 ---
 
 title: "AI Chatbot Types and Selection Guide | Comprehensive Analysis of 5 Types and Implementation Points"
-date: 2025-11-19
+date: 2026-02-01
 draft: false
 translationKey: "ai-chatbot-types-guide"
 description: "A comprehensive guide to the 5 types of AI chatbots (rule-based, AI-powered, generative AI, RAG, and hybrid). Learn their characteristics, advantages and disadvantages, selection criteria by use case, and implementation considerations to confidently deploy chatbots even for small and medium-sized businesses."
@@ -10,7 +10,7 @@ image: "/images/blog/ai-chatbot-types-guide.jpg"
 tags: ["AI Chatbot", "Chatbot Types", "Implementation Guide"]
 categories: ["Technology", "Business Efficiency"]
 
-lastmod: 2025-11-19
+lastmod: 2026-02-01
 url: "blog/ai-chatbot-types-guide/"
 ---
 ## AI Chatbot Fundamentals

@@ -1,7 +1,7 @@
 ---
 
 title: "Can AI Really Write Email Responses? Examining Accuracy and Capabilities Through Real Examples"
-date: 2025-11-20
+date: 2026-02-01
 draft: false
 translationKey: "ai-email-response-examples"
 description: "Examining the true capabilities of AI-powered automated response generation through real examples. A thorough analysis of accuracy and practicality through complex technical inquiries and complaint handling cases."
@@ -10,7 +10,7 @@ image: "/images/blog/AI-Email-Auto-Response-Generator-image.png"
 tags: ["AI Technology", "Customer Support", "Operational Efficiency"]
 categories: ["Business"]
 
-lastmod: 2025-11-20
+lastmod: 2026-02-01
 url: "blog/ai-email-response-examples/"
 ---
 ### "Does AI-powered automated response generation really work?" "Can it only produce template-like replies?"

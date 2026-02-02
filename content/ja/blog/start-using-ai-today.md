@@ -1,7 +1,7 @@
 ---
 
 title: "IT担当者がいなくても安心！中小企業が今すぐ始められるAI活用術"
-date: 2025-11-20
+date: 2025-11-10
 draft: false
 translationKey: "start-using-ai-today"
 description: "中小企業がIT担当者なしで始められるAI活用術を徹底解説。チケットシステム、AIメール自動回答、AIチャットボットで業務効率化と顧客満足度向上を実現。"
@@ -10,7 +10,7 @@ image: "/images/blog/start-using-ai-today.jpg"
 tags: ["AI技術", "中小企業", "業務効率化"]
 categories: ["ビジネス"]
 
-lastmod: 2025-11-20
+lastmod: 2026-02-01
 
 url: "blog/start-using-ai-today/"
 

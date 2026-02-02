@@ -1,8 +1,8 @@
 ---
 
 title: AI セキュリティの習得:脅威、脆弱性、防御戦略の包括的ガイド
-date: 2026-01-05
-lastmod: 2026-01-05
+date: 2026-02-01
+lastmod: 2026-02-01
 draft: false
 layout: single-youtube
 translationKey: mastering-ai-security-threats-vulnerabilities-and-defense-strategies

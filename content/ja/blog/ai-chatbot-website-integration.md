@@ -1,7 +1,7 @@
 ---
 title: "AIチャットボットの成果は「回答精度」だけで決まらない—Webサイトとの一体設計が問われる理由"
-date: 2026-01-20
-lastmod: 2026-01-20
+date: 2026-02-01
+lastmod: 2026-02-01
 draft: false
 translationKey: "ai-chatbot-website-integration"
 description: "AIチャットボットの導入効果を最大化するには、回答精度だけでなくWebサイトとの連携設計が不可欠です。多言語対応の落とし穴と、チャットボットとWebサイトを一体で設計するSmartWebのアプローチを解説します。"

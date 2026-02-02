@@ -1,7 +1,7 @@
 ---
 title: "HUGOとWordPressの違いを徹底比較！表示速度・セキュリティ・運用コストで選ぶべきCMS"
-date: 2026-01-31
-lastmod: 2026-01-31
+date: 2026-02-01
+lastmod: 2026-02-01
 draft: false
 translationKey: "hugo-vs-wordpress-comparison"
 description: "HUGOとWordPressの基本的な違いから表示速度、セキュリティ、運用コスト、拡張性まで詳しく比較。静的サイトジェネレーターとCMSのメリット・デメリットを解説し、あなたに最適な選択をサポートします。"

@@ -1,7 +1,7 @@
 ---
 
 title: "問い合わせ対応に1日2時間？統合プラットフォームで時間を取り戻す"
-date: 2025-11-20
+date: 2025-11-18
 draft: false
 translationKey: "email-response-automation-platform"
 description: "ビジネスメール対応に時間を取られていませんか？科学的アプローチから統合プラットフォームまで、効率的なメール対応の革新的な改善方法を解説します。"
@@ -10,7 +10,7 @@ image: "/images/blog/email-response-automation-platform.jpg"
 tags: ["業務効率化", "AI技術", "カスタマーサポート"]
 categories: ["ビジネス"]
 
-lastmod: 2025-11-20
+lastmod: 2026-02-01
 
 url: "blog/email-response-automation-platform/"
 

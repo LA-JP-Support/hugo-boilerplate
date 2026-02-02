@@ -1,7 +1,7 @@
 ---
 
 title: "AIは本当に問合せメールの返事を書けるのか？実例で見る精度と実力"
-date: 2025-11-20
+date: 2025-10-28
 draft: false
 translationKey: "ai-email-response-examples"
 description: "AIによる自動回答案作成の実力を実例で検証。複雑な技術的問い合わせやクレーム対応の実例を通じて、その精度と実用性を徹底解説します。"
@@ -10,7 +10,7 @@ image: "/images/blog/AI-Email-Auto-Response-Generator-image.png"
 tags: ["AI技術", "カスタマーサポート", "業務効率化"]
 categories: ["ビジネス"]
 
-lastmod: 2025-11-20
+lastmod: 2026-02-01
 
 url: "blog/ai-email-response-examples/"
 

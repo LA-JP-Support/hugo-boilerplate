@@ -1,7 +1,7 @@
 ---
 
 title: "No IT Staff? No Problem! AI Solutions SMEs Can Start Using Today"
-date: 2025-11-20
+date: 2026-02-01
 draft: false
 translationKey: "start-using-ai-today"
 description: "A comprehensive guide to AI implementation for SMEs without IT staff. Achieve operational efficiency and improved customer satisfaction through ticket systems, AI email auto-response, and AI chatbots."
@@ -10,7 +10,7 @@ image: "/images/blog/start-using-ai-today.jpg"
 tags: ["AI Technology", "SME", "Operational Efficiency"]
 categories: ["Business"]
 
-lastmod: 2025-11-20
+lastmod: 2026-02-01
 url: "blog/start-using-ai-today/"
 ---
 In recent years, AI implementation for small and medium-sized enterprises (SMEs) has gained attention as a realistic option for achieving operational efficiency and digital transformation.

@@ -1,8 +1,8 @@
 ---
 
 title: 知能の未来:スケーリング、イノベーション、そしてAGIへの道
-date: 2026-01-05
-lastmod: 2026-01-05
+date: 2026-02-01
+lastmod: 2026-02-01
 draft: false
 layout: single-youtube
 translationKey: the-future-of-intelligence-scaling-innovation-and-the-path-to-agi

@@ -1,12 +1,12 @@
 ---
 
 title: "The End of 'Who Was Handling That Inquiry?' - A Customer Inquiry Management Revolution for Businesses"
-date: 2025-11-20
+date: 2026-02-01
 draft: false
 image: "/images/blog/inquiry-management-revolution.png"
 
 translationKey: "inquiry-management-revolution"
-lastmod: 2025-11-20
+lastmod: 2026-02-01
 keywords: []
 url: "blog/inquiry-management-revolution/"
 ---

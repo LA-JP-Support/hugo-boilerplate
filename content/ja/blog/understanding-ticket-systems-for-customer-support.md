@@ -1,7 +1,7 @@
 ---
 
 title: "カスタマーサポートにおけるチケットシステムとは？"
-date: 2025-11-19
+date: 2025-10-23
 draft: false
 translationKey: "understanding-ticket-systems-for-customer-support"
 description: "カスタマーサポートのチケットシステムの基本から導入方法、AI活用まで詳しく解説。業務効率化と顧客満足度向上を実現する方法を紹介します。"
@@ -10,7 +10,7 @@ image: "/images/blog/ticket-systems-for-customer-support.png"
 tags: ["カスタマーサポート", "チケットシステム", "AI技術"]
 categories: ["ビジネス"]
 
-lastmod: 2025-11-19
+lastmod: 2026-02-01
 
 url: "blog/understanding-ticket-systems-for-customer-support/"
 

@@ -1,7 +1,7 @@
 ---
 
 title: "How AI Answers Accurately with Latest Information: Introduction to RAG (Retrieval-Augmented Generation)"
-date: 2025-11-19
+date: 2026-02-01
 draft: false
 translationKey: "introduction-to-rag"
 description: "Learn the basics and practical applications of RAG (Retrieval-Augmented Generation). Detailed coverage from differences with traditional AI to benefits and real-world use cases."
@@ -10,7 +10,7 @@ image: "/images/blog/rag-paint.jpg"
 tags: ["AI Technology", "RAG", "Chatbot"]
 categories: ["Technology"]
 
-lastmod: 2025-11-19
+lastmod: 2026-02-01
 url: "blog/introduction-to-rag/"
 ---
 ## Basics and Applications of RAG (Retrieval-Augmented Generation)

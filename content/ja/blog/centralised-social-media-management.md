@@ -1,7 +1,7 @@
 ---
 
 title: "SNS一元管理で業務効率化を実現 - 中小企業向け導入ガイド"
-date: 2025-11-19
+date: 2025-10-20
 draft: false
 description: "SNS一元管理で業務革命！作業時間30-50%削減、対応時間30%短縮、顧客満足度10%向上を実現。Facebook、Instagram、X、メール、電話を一画面管理。LiveAgentで対応漏れゼロ、チケットシステムで自動振り分け。中小企業向け導入ガイド。"
 tags: ["SNS管理", "業務効率化", "LiveAgent", "カスタマーサポート", "中小企業"]
@@ -9,7 +9,7 @@ categories: ["業務効率化"]
 image: "/images/blog/centralised-social-media-management.png"
 
 translationKey: "centralised-social-media-management"
-lastmod: 2025-11-19
+lastmod: 2026-02-01
 keywords: []
 
 url: "blog/centralised-social-media-management/"

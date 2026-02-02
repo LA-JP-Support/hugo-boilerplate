@@ -1,7 +1,7 @@
 ---
 
 title: "ナレッジベース（FAQ）とは何か？その基礎と重要性を理解しよう"
-date: 2025-11-19
+date: 2025-10-19
 draft: false
 description: "ナレッジベース(FAQ)の基礎から2025年最新のAI活用手法まで徹底解説。作成ステップ、KCS運用、LiveAgent連携など、業務効率化と顧客満足度向上を実現する実践的ガイド。"
 tags: ["AI", "ナレッジベース", "FAQ", "カスタマーサポート", "業務効率化"]
@@ -9,7 +9,7 @@ categories: ["業務効率化", "AI・機械学習"]
 image: "/images/blog/knowledge-base-faq-guide-2025.png"
 
 translationKey: "knowledge-base-faq-guide-2025"
-lastmod: 2025-11-19
+lastmod: 2026-02-01
 keywords: []
 
 url: "blog/knowledge-base-faq-guide-2025/"

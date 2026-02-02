@@ -1,7 +1,7 @@
 ---
 
 title: "AIチャットボットの種類と選び方｜5つのタイプの特徴と導入ポイントを徹底解説"
-date: 2025-11-19
+date: 2025-11-17
 draft: false
 translationKey: "ai-chatbot-types-guide"
 description: "AIチャットボットの5つのタイプ（ルールベース型・AI型・生成AI型・RAG型・ハイブリッド型）を徹底解説。それぞれの特徴、メリット・デメリット、用途別の選び方、導入時の注意点まで、中小企業でも安心して導入できるポイントを分かりやすく紹介します。"
@@ -10,7 +10,7 @@ image: "/images/blog/ai-chatbot-types-guide.jpg"
 tags: ["AIチャットボット", "チャットボット種類", "導入ガイド"]
 categories: ["テクノロジー", "業務効率化"]
 
-lastmod: 2025-11-19
+lastmod: 2026-02-01
 
 url: "blog/ai-chatbot-types-guide/"
 

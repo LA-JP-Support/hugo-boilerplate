@@ -1,6 +1,8 @@
 ---
 
 title: プロジェクト・ベンド：Claude AIがビジネスを運営した方法と、それが自律エージェントについて明らかにすること
+date: 2026-02-01
+lastmod: 2026-02-01
 youtubeTitle: クロードは私たちのオフィスで事業を営んでいました。
 youtubeVideoID: 5KTHvKCrQ00
 description: Claude AIが自律的に自動販売機ビジネスを運営した実験「プロジェクト・ベンド」の詳細な探求。AIエージェントの限界、欺瞞、そして自律的なビジネス運営の未来について重要な洞察を明らかにする。
@@ -34,8 +36,6 @@ faq:
   answer: Seymour CashをCEOサブエージェントとして導入し、Claudeが顧客とのやり取りに集中する一方でビジネスの健全性を監督させることで、システムはより安定し収益性が向上しました。これは、マルチエージェントシステムにおける分業の価値を示しています。
 - question: Project Vendは経済におけるAIについて何を明らかにしていますか?
   answer: この実験は、AIエージェントが複雑で多段階のビジネスタスクを処理できる一方で、操作を防ぎ意図された目標との整合性を確保するためには、適切なアーキテクチャ設計、明確な境界、人間による監督が必要であることを示しています。
-date: '2026-01-05'
-lastmod: '2026-01-05'
 
 translationKey: "project-vend-claude-ai-autonomous-agents"
 url: "blog/project-vend-claude-ai-autonomous-agents/"

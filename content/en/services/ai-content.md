@@ -29,9 +29,10 @@ features:
     image: "/images/services/ai-content/feature-glossary.jpg"
   
   - label: "Proven Results"
-    title: "1,200+ Terms Created with AI"
-    description: "SmartWeb's glossary of AI customer support terminology was created using FlowHunt's AI technology. Currently, over 1,200 terms are published in both Japanese and English, contributing to continuous organic search traffic.<br><br>Each term includes detailed explanations of 2,600-2,800 words, delivered in a structured format with definitions, use cases, related terms, and FAQs. Once created, the glossary automatically attracts prospects to your site 24/7/365. As a content marketing 'asset,' it delivers long-term value."
+    title: "2,500+ Expert Terms Created with AI"
+    description: "SmartWeb uses FlowHunt's AI technology to build and operate multiple expert glossaries.<br><br><strong>SmartWeb Glossary</strong> features over 1,200 terms on AI chatbots, automation, and customer support—published in both Japanese and English. Each term includes detailed explanations of 2,600-2,800 words, delivered in a structured format with definitions, use cases, related terms, and FAQs.<br><br>Additionally, our <strong>IDR Solutions Product Support Portal</strong> provides a PDF development glossary with 1,325+ terms organized into 13 categories. Java PDF APIs, PDF/UA accessibility, file structure—systematically compiled references essential for developers and engineers.<br><br>Once created, glossaries automatically attract prospects to your site 24/7/365 via search engines. As content marketing 'assets,' they deliver long-term value.<br><br><strong>View Glossaries:</strong><br>• <a href='/ja/glossary/' class='text-indigo-600 hover:underline'>SmartWeb Glossary (Japanese)</a><br>• <a href='/en/glossary/' class='text-indigo-600 hover:underline'>SmartWeb Glossary (English)</a><br>• <a href='https://idr-portal.intwk.co.jp/ja/glossary/' target='_blank' rel='noopener' class='text-indigo-600 hover:underline'>PDF Development Glossary (Japanese)</a>"
     image: "/images/services/ai-content/feature-showcase.jpg"
+    image_size: "full"
   
   - label: "AI-Human Collaboration"
     title: "AI Drafts, Humans Refine"

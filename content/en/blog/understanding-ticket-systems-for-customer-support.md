@@ -1,7 +1,7 @@
 ---
 
 title: "What is a Ticket System in Customer Support?"
-date: 2025-11-19
+date: 2026-02-01
 draft: false
 translationKey: "understanding-ticket-systems-for-customer-support"
 description: "A comprehensive guide to customer support ticket systems, from basics to implementation and AI integration. Learn how to achieve operational efficiency and improve customer satisfaction."
@@ -10,7 +10,7 @@ image: "/images/blog/ticket-systems-for-customer-support.png"
 tags: ["Customer Support", "Ticket System", "AI Technology"]
 categories: ["Business"]
 
-lastmod: 2025-11-19
+lastmod: 2026-02-01
 url: "blog/understanding-ticket-systems-for-customer-support/"
 ---
 ## Centralized Management Through the "Ticket" Approach

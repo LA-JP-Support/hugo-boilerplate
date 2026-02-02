@@ -1,8 +1,8 @@
 ---
 
 title: "Mastering AI Security: A Comprehensive Guide to Threats, Vulnerabilities, and Defense Strategies"
-date: 2026-01-05
-lastmod: 2026-01-05
+date: 2026-02-01
+lastmod: 2026-02-01
 draft: false
 layout: single-youtube
 translationKey: "mastering-ai-security-threats-vulnerabilities-and-defense-strategies"

@@ -1,7 +1,7 @@
 ---
 
 title: "What is a Knowledge Base (FAQ)? Understanding the Fundamentals and Importance"
-date: 2025-11-19
+date: 2026-02-01
 draft: false
 description: "Comprehensive guide from Knowledge Base (FAQ) fundamentals to the latest AI utilization methods in 2025. Practical guide covering creation steps, KCS operations, LiveAgent integration, and more to achieve operational efficiency and customer satisfaction improvement."
 tags: ["AI", "Knowledge Base", "FAQ", "Customer Support", "Operational Efficiency"]
@@ -9,7 +9,7 @@ categories: ["Operational Efficiency", "AI & Machine Learning"]
 image: "/images/blog/knowledge-base-faq-guide-2025.png"
 
 translationKey: "knowledge-base-faq-guide-2025"
-lastmod: 2025-11-19
+lastmod: 2026-02-01
 keywords: []
 url: "blog/knowledge-base-faq-guide-2025/"
 ---

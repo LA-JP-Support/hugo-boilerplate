@@ -29,9 +29,10 @@ features:
     image: "/images/services/ai-content/feature-glossary.jpg"
   
   - label: "導入実績"
-    title: "1,200以上の用語をAIで作成"
-    description: "SmartWebでは、AIカスタマーサポートに関する専門用語集を、FlowHuntのAI技術を活用して作成しています。現在、1,200以上の用語が日本語・英語の両言語で公開されており、検索エンジンからの継続的な集客に貢献しています。<br><br>各用語は2,600〜2,800語の詳細な解説を含み、定義、活用例、関連用語、FAQなど構造化されたフォーマットで提供。一度作成した用語集は、24時間365日、見込み客を自動的にサイトへ誘導し続けます。コンテンツマーケティングの「資産」として長期的な価値を発揮します。"
+    title: "2,500以上の専門用語をAIで作成"
+    description: "SmartWebでは、FlowHuntのAI技術を活用して、複数の専門用語集を構築・運用しています。<br><br><strong>SmartWeb 用語集</strong>では、AIチャットボット、自動化、カスタマーサポートに関する1,200以上の用語を日本語・英語の両言語で公開。各用語は2,600〜2,800語の詳細な解説を含み、定義、活用例、関連用語、FAQなど構造化されたフォーマットで提供しています。<br><br>また、当社が運営する<strong>IDR Solutions製品サポートポータル</strong>では、PDF開発者向けの専門用語集として1,325以上の用語を13カテゴリに分類して公開。Java PDF APIs、PDF/UAアクセシビリティ、ファイル構造など、開発者・技術者に必要なリファレンスを体系的に整備しています。<br><br>一度作成した用語集は、24時間365日、検索エンジン経由で見込み客を自動的にサイトへ誘導し続けます。コンテンツマーケティングの「資産」として、長期的な価値を発揮しています。<br><br><strong>用語集を見る：</strong><br>・<a href='/ja/glossary/' class='text-indigo-600 hover:underline'>SmartWeb 用語集（日本語）</a><br>・<a href='/en/glossary/' class='text-indigo-600 hover:underline'>SmartWeb 用語集（英語）</a><br>・<a href='https://idr-portal.intwk.co.jp/ja/glossary/' target='_blank' rel='noopener' class='text-indigo-600 hover:underline'>PDF開発用語集（日本語）</a>"
     image: "/images/services/ai-content/feature-showcase.jpg"
+    image_size: "full"
   
   - label: "AIと人間の協働"
     title: "AIは下書き、人間が仕上げる"

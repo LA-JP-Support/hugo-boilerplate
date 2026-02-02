@@ -1,8 +1,8 @@
 ---
 
 title: YouTubeアルゴリズムを攻略する方法:93,421本の動画から得たデータ駆動型インサイト
-date: 2025-11-21
-lastmod: 2025-12-12
+date: 2026-02-01
+lastmod: 2026-02-01
 draft: false
 layout: single-youtube
 translationKey: how-to-crack-the-youtube-algorithm-data-driven-insights

@@ -1,7 +1,7 @@
 ---
 
 title: "Achieve Business Efficiency with Centralized Social Media Management - Implementation Guide for SMEs"
-date: 2025-11-19
+date: 2026-02-01
 draft: false
 description: "Business revolution through centralized social media management! Achieve 30-50% reduction in work time, 30% shorter response time, and 10% improvement in customer satisfaction. Manage Facebook, Instagram, X, email, and phone calls on a single screen. Zero missed responses with LiveAgent, automatic ticket assignment system. Implementation guide for small and medium enterprises."
 tags: ["Social Media Management", "Business Efficiency", "LiveAgent", "Customer Support", "SME"]
@@ -9,7 +9,7 @@ categories: ["Business Efficiency"]
 image: "/images/blog/centralised-social-media-management.png"
 
 translationKey: "centralised-social-media-management"
-lastmod: 2025-11-19
+lastmod: 2026-02-01
 keywords: []
 url: "blog/centralised-social-media-management/"
 ---

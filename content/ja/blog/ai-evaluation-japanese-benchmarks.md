@@ -1,7 +1,7 @@
 ---
 
 title: "AI言語モデルの評価基準完全ガイド：日本語ベンチマークと実践的活用"
-date: 2025-11-19
+date: 2025-10-24
 draft: false
 translationKey: "ai-evaluation-japanese-benchmarks"
 description: "LLMの自動評価手法から日本語評価ベンチマーク、ハルシネーション対策まで、企業のAI導入に必要な知識を完全解説。FlowHunt活用例も紹介。"
@@ -10,7 +10,7 @@ image: "/images/blog/ai-evaluation-japanese-benchmarks.jpg"
 tags: ["AI技術", "LLM評価", "ベンチマーク"]
 categories: ["テクノロジー"]
 
-lastmod: 2025-11-19
+lastmod: 2026-02-01
 
 url: "blog/ai-evaluation-japanese-benchmarks/"
 
