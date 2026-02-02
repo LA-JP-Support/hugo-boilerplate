@@ -48,16 +48,15 @@ main.w-full { min-height: 100vh; }
 /* Hero section critical styles - LCP optimization */
 .antigravity-hero { min-height: 600px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; background-color: #0f172a; }
 @media (max-width: 640px) { .antigravity-hero { min-height: 500px; } }
-/* Hero carousel - prevent CLS */
-.hero-carousel { position: relative; width: 100%; min-height: 300px; }
-.hero-slide { position: absolute; top: 0; left: 0; width: 100%; opacity: 0; visibility: hidden; z-index: 0; }
-.hero-slide:first-child { position: relative; opacity: 1; visibility: visible; z-index: 1; }
-.hero-slide.active { position: relative; opacity: 1; visibility: visible; z-index: 2; }
-.hero-slide:not(.active) { position: absolute; opacity: 0; visibility: hidden; z-index: 0; }
+/* Hero carousel - fixed height prevents CLS on slide change */
+.hero-carousel { position: relative; width: 100%; height: 280px; }
+.hero-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; visibility: hidden; z-index: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.hero-slide:first-child { opacity: 1; visibility: visible; z-index: 1; }
+.hero-slide.active { opacity: 1; visibility: visible; z-index: 2; }
 /* Hero text sizing - prevent font CLS */
 .hero-slide h1, .hero-content h1 { font-size: 3rem; line-height: 1.1; }
 @media (min-width: 640px) { 
-  .hero-carousel { min-height: 350px; } 
+  .hero-carousel { height: 340px; } 
   .hero-slide h1, .hero-content h1 { font-size: 4.5rem; }
 }
 .wrapper { width: 100%; max-width: 80rem; margin: 0 auto; padding: 0 1.5rem; }
