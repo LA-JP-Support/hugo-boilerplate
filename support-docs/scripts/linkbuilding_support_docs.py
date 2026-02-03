@@ -20,7 +20,7 @@ import html
 
 
 # Base URL for external links to main site
-DEFAULT_BASE_URL = "https://smartweb.co.jp"
+DEFAULT_BASE_URL = "https://www.smartweb.jp"
 
 
 @dataclass

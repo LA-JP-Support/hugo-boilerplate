@@ -1,152 +1,570 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>セキュリティ on SmartWeb サポート</title>
-    <link>http://localhost:1313/ja/docs/security/</link>
-    <description>Recent content in セキュリティ on SmartWeb サポート</description>
-    <generator>Hugo</generator>
-    <language>ja</language>
-    <lastBuildDate>Tue, 03 Feb 2026 00:00:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/ja/docs/security/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>データセンターの場所は？</title>
-      <link>http://localhost:1313/ja/docs/security/datacenter/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/datacenter/</guid>
-      <description>&lt;h2 id=&#34;データセンターリージョン&#34;&gt;データセンターリージョン &lt;a href=&#34;#%e3%83%87%e3%83%bc%e3%82%bf%e3%82%bb%e3%83%b3%e3%82%bf%e3%83%bc%e3%83%aa%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;SmartWebのデータセンターは、&lt;strong&gt;アジア（シンガポール）、US、EU&lt;/strong&gt;​から選択可能です。&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;リージョン&lt;/th&gt;&#xA;          &lt;th&gt;場所&lt;/th&gt;&#xA;          &lt;th&gt;推奨用途&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;アジア&lt;/strong&gt;​&lt;/td&gt;&#xA;          &lt;td&gt;シンガポール&lt;/td&gt;&#xA;          &lt;td&gt;日本のお客様（推奨）​&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;US&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;アメリカ&lt;/td&gt;&#xA;          &lt;td&gt;北米向けサービス&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;EU&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;ヨーロッパ&lt;/td&gt;&#xA;          &lt;td&gt;GDPR対応が必要な場合&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;日本のお客様への推奨&#34;&gt;日本のお客様への推奨 &lt;a href=&#34;#%e6%97%a5%e6%9c%ac%e3%81%ae%e3%81%8a%e5%ae%a2%e6%a7%98%e3%81%b8%e3%81%ae%e6%8e%a8%e5%a5%a8&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;日本のお客様には&lt;strong&gt;アジアリージョン（シンガポール）&lt;/strong&gt;​を推奨しています。&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;メリット&lt;/th&gt;&#xA;          &lt;th&gt;説明&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;低遅延&lt;/strong&gt;​&lt;/td&gt;&#xA;          &lt;td&gt;日本に地理的に近く、レスポンスタイムが短い&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;データ主権&lt;/strong&gt;​&lt;/td&gt;&#xA;          &lt;td&gt;アジア圏内でのデータ保管が可能&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;高信頼性&lt;/strong&gt;​&lt;/td&gt;&#xA;          &lt;td&gt;最新のデータセンター技術と安定したネットワーク&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;リージョン選択のポイント&#34;&gt;リージョン選択のポイント &lt;a href=&#34;#%e3%83%aa%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e9%81%b8%e6%8a%9e%e3%81%ae%e3%83%9d%e3%82%a4%e3%83%b3%e3%83%88&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;リージョンを選択する際は、以下の要素を考慮してください。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;地理的近接性&lt;/strong&gt;​ - ユーザーとの距離&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;コンプライアンス要件&lt;/strong&gt;​ - データ保管場所の規制&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;データ転送速度&lt;/strong&gt;​ - 業務効率への影響&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;ネットワークレイテンシ&lt;/strong&gt;​ - リアルタイム対応の品質&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;関連情報&#34;&gt;関連情報 &lt;a href=&#34;#%e9%96%a2%e9%80%a3%e6%83%85%e5%a0%b1&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/ja/docs/security/uptime/&#34;&gt;稼働率（アップタイム）&lt;/a&gt; - サービスの信頼性&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/ja/docs/security/system-maintenance/&#34;&gt;システムのメンテナンス&lt;/a&gt; - 自動アップデート&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>稼働率（アップタイム）は？</title>
-      <link>http://localhost:1313/ja/docs/security/uptime/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/uptime/</guid>
-      <description>&lt;h2 id=&#34;稼働率の目標&#34;&gt;稼働率の目標 &lt;a href=&#34;#%e7%a8%bc%e5%83%8d%e7%8e%87%e3%81%ae%e7%9b%ae%e6%a8%99&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;SmartWebは&lt;strong&gt;99.9%以上の月間アップタイム&lt;/strong&gt;を目標に運営しています。&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;項目&lt;/th&gt;&#xA;          &lt;th&gt;内容&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;目標稼働率&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;99.9%以上&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;計測期間&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;月間&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;実績&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;目標を一貫して達成&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;高稼働率を実現する仕組み&#34;&gt;高稼働率を実現する仕組み &lt;a href=&#34;#%e9%ab%98%e7%a8%bc%e5%83%8d%e7%8e%87%e3%82%92%e5%ae%9f%e7%8f%be%e3%81%99%e3%82%8b%e4%bb%95%e7%b5%84%e3%81%bf&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;対策&lt;/th&gt;&#xA;          &lt;th&gt;説明&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;冗長構成&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;データセンターでの複数サーバー構成&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;自動フェイルオーバー&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;障害発生時の自動切り替え&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;24時間監視&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;システム状態の常時監視&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;定期バックアップ&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;データの安全な保管&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;リアルタイムステータス確認&#34;&gt;リアルタイムステータス確認 &lt;a href=&#34;#%e3%83%aa%e3%82%a2%e3%83%ab%e3%82%bf%e3%82%a4%e3%83%a0%e3%82%b9%e3%83%86%e3%83%bc%e3%82%bf%e3%82%b9%e7%a2%ba%e8%aa%8d&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;システムの稼働状況はリアルタイムで確認できます。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;ステータスページ&lt;/strong&gt;: &lt;a href=&#34;https://status.liveagent.com/&#34; rel=&#34;external&#34; target=&#34;_blank&#34;&gt;https://status.liveagent.com/&lt;svg width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path fill=&#34;currentColor&#34; d=&#34;M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>システムのメンテナンスは？</title>
-      <link>http://localhost:1313/ja/docs/security/system-maintenance/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/system-maintenance/</guid>
-      <description>&lt;h2 id=&#34;自動アップデート&#34;&gt;自動アップデート &lt;a href=&#34;#%e8%87%aa%e5%8b%95%e3%82%a2%e3%83%83%e3%83%97%e3%83%87%e3%83%bc%e3%83%88&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;SmartWebはクラウドサービス（SaaS）のため、&lt;strong&gt;アップデートは自動実施&lt;/strong&gt;されます。&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;項目&lt;/th&gt;&#xA;          &lt;th&gt;内容&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;バージョン管理&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;不要（自動）&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;セキュリティパッチ&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;即時適用&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;新機能追加&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;自動反映&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;ダウンタイム&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;最小限&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;自動アップデートのメリット&#34;&gt;自動アップデートのメリット &lt;a href=&#34;#%e8%87%aa%e5%8b%95%e3%82%a2%e3%83%83%e3%83%97%e3%83%87%e3%83%bc%e3%83%88%e3%81%ae%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;メリット&lt;/th&gt;&#xA;          &lt;th&gt;説明&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;常に最新&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;最新の機能とセキュリティを利用可能&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;運用負荷ゼロ&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;サーバー管理・保守が不要&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;セキュリティ強化&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;脆弱性への即時対応&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;安定性向上&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;パフォーマンス改善の自動実装&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;アップデート情報の確認&#34;&gt;アップデート情報の確認 &lt;a href=&#34;#%e3%82%a2%e3%83%83%e3%83%97%e3%83%87%e3%83%bc%e3%83%88%e6%83%85%e5%a0%b1%e3%81%ae%e7%a2%ba%e8%aa%8d&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;アップデート内容は以下で確認できます。&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;情報源&lt;/th&gt;&#xA;          &lt;th&gt;URL&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;公式チェンジログ&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;a href=&#34;https://changelog.liveagent.com/&#34; rel=&#34;external&#34; target=&#34;_blank&#34;&gt;changelog.liveagent.com&lt;svg width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path fill=&#34;currentColor&#34; d=&#34;M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h3 id=&#34;確認できる内容&#34;&gt;確認できる内容 &lt;a href=&#34;#%e7%a2%ba%e8%aa%8d%e3%81%a7%e3%81%8d%e3%82%8b%e5%86%85%e5%ae%b9&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;新機能の追加&lt;/li&gt;&#xA;&lt;li&gt;既存機能の改善&lt;/li&gt;&#xA;&lt;li&gt;セキュリティ強化&lt;/li&gt;&#xA;&lt;li&gt;バグ修正&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;計画メンテナンス&#34;&gt;計画メンテナンス &lt;a href=&#34;#%e8%a8%88%e7%94%bb%e3%83%a1%e3%83%b3%e3%83%86%e3%83%8a%e3%83%b3%e3%82%b9&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;計画メンテナンスが必要な場合は、事前にステータスページで告知されます。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>オンプレミス版はありますか？</title>
-      <link>http://localhost:1313/ja/docs/security/cloud-service/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/cloud-service/</guid>
-      <description>&lt;h2 id=&#34;サービス提供形態&#34;&gt;サービス提供形態 &lt;a href=&#34;#%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e6%8f%90%e4%be%9b%e5%bd%a2%e6%85%8b&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;SmartWebは&lt;strong&gt;クラウドサービス（SaaS）のみ&lt;/strong&gt;で提供しています。&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;提供形態&lt;/th&gt;&#xA;          &lt;th&gt;対応状況&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;クラウド版（SaaS）&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;✓ 提供中&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;オンプレミス版&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;✗ 未提供&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;クラウド版のメリット&#34;&gt;クラウド版のメリット &lt;a href=&#34;#%e3%82%af%e3%83%a9%e3%82%a6%e3%83%89%e7%89%88%e3%81%ae%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;すぐに始められる&#34;&gt;すぐに始められる &lt;a href=&#34;#%e3%81%99%e3%81%90%e3%81%ab%e5%a7%8b%e3%82%81%e3%82%89%e3%82%8c%e3%82%8b&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;メリット&lt;/th&gt;&#xA;          &lt;th&gt;説明&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;即時利用開始&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;サーバー構築不要、申込後すぐに利用可能&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;自動アップデート&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;常に最新機能を利用できる&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;スケーラビリティ&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;利用量に応じて自動でスケール&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h3 id=&#34;運用負荷の軽減&#34;&gt;運用負荷の軽減 &lt;a href=&#34;#%e9%81%8b%e7%94%a8%e8%b2%a0%e8%8d%b7%e3%81%ae%e8%bb%bd%e6%b8%9b&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;メリット&lt;/th&gt;&#xA;          &lt;th&gt;説明&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;サーバー管理不要&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;ハードウェア・OS管理が不要&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;保守作業不要&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;パッチ適用・バックアップは自動&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;高可用性&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;データセンターでの冗長構成&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;データセンター&#34;&gt;データセンター &lt;a href=&#34;#%e3%83%87%e3%83%bc%e3%82%bf%e3%82%bb%e3%83%b3%e3%82%bf%e3%83%bc&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;クラウド版でも、データの保管場所は選択可能です。&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;リージョン&lt;/th&gt;&#xA;          &lt;th&gt;場所&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;アジア&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;シンガポール（日本のお客様推奨）&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;US&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;アメリカ&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;EU&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;ヨーロッパ&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;関連情報&#34;&gt;関連情報 &lt;a href=&#34;#%e9%96%a2%e9%80%a3%e6%83%85%e5%a0%b1&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/ja/docs/security/datacenter/&#34;&gt;データセンターの場所&lt;/a&gt; - リージョン選択&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/ja/docs/security/&#34;&gt;セキュリティ対策&lt;/a&gt; - データ保護について&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>二要素認証（2FA）は使えますか？</title>
-      <link>http://localhost:1313/ja/docs/security/two-factor-auth/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/two-factor-auth/</guid>
-      <description>&lt;p&gt;はい、SmartWebのAIカスタマーサポートで使用するLiveAgentでは、Google Authenticatorを使った二要素認証（2FA）をご利用いただけます。&lt;/p&gt;&#xA;&lt;h2 id=&#34;二要素認証のメリット&#34;&gt;二要素認証のメリット &lt;a href=&#34;#%e4%ba%8c%e8%a6%81%e7%b4%a0%e8%aa%8d%e8%a8%bc%e3%81%ae%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;ログイン時にパスワードに加えて6桁のワンタイムコードを要求することで、アカウントの安全性を大幅に強化します。万が一パスワードが漏洩した場合でも、不正アクセスを防止できます。&lt;/p&gt;&#xA;&lt;h2 id=&#34;利用可能な認証方法&#34;&gt;利用可能な認証方法 &lt;a href=&#34;#%e5%88%a9%e7%94%a8%e5%8f%af%e8%83%bd%e3%81%aa%e8%aa%8d%e8%a8%bc%e6%96%b9%e6%b3%95&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Google Authenticator&lt;/strong&gt;などの認証アプリと連携&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GoogleやMicrosoftアカウントによるSSO連携&lt;/strong&gt;（シングルサインオン）により、間接的に2段階認証も適用可能&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;セキュリティリスクを軽減し、安心してカスタマーサポート業務を行えます。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>IPアドレスでログインを制限できますか？</title>
-      <link>http://localhost:1313/ja/docs/security/ip-address-restriction/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/ip-address-restriction/</guid>
-      <description>&lt;p&gt;はい、SmartWebのAI連携チケットシステムでは、サポート担当者のログイン環境をIPアドレスで制限できます。&lt;/p&gt;&#xA;&lt;h2 id=&#34;利用可能な制限方法&#34;&gt;利用可能な制限方法 &lt;a href=&#34;#%e5%88%a9%e7%94%a8%e5%8f%af%e8%83%bd%e3%81%aa%e5%88%b6%e9%99%90%e6%96%b9%e6%b3%95&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;特定のIPアドレス指定&lt;/strong&gt;：許可するIPアドレスを個別に設定&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;ワイルドカード指定&lt;/strong&gt;：192.168.1.* のような範囲指定&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;アドレス範囲指定&lt;/strong&gt;：開始IPから終了IPまでの範囲&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;サブネットマスク指定&lt;/strong&gt;：ネットワーク単位での制限&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;活用場面&#34;&gt;活用場面 &lt;a href=&#34;#%e6%b4%bb%e7%94%a8%e5%a0%b4%e9%9d%a2&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;オフィスからのみアクセスを許可したい場合&lt;/li&gt;&#xA;&lt;li&gt;リモートワーク時に特定のVPN経由のみ許可したい場合&lt;/li&gt;&#xA;&lt;li&gt;セキュリティポリシーに基づくアクセス制御&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;不正アクセスのリスクを軽減し、セキュアなカスタマーサポート運用を実現します。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AI活用における安全対策</title>
-      <link>http://localhost:1313/ja/docs/security/ai-safety/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/ai-safety/</guid>
-      <description>&lt;h2 id=&#34;smartwebのセキュリティアプローチ&#34;&gt;SmartWebのセキュリティアプローチ &lt;a href=&#34;#smartweb%e3%81%ae%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e3%82%a2%e3%83%97%e3%83%ad%e3%83%bc%e3%83%81&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;SmartWebは、FlowHuntとLiveAgentの連携により構成され、AIチャットボットやナレッジベース、チケット管理を統合的に提供します。お客様のデータを安全に扱うため、以下のような多層的なセキュリティ対策を実施しています。&lt;/p&gt;&#xA;&lt;h2 id=&#34;データ保護戦略&#34;&gt;データ保護戦略 &lt;a href=&#34;#%e3%83%87%e3%83%bc%e3%82%bf%e4%bf%9d%e8%ad%b7%e6%88%a6%e7%95%a5&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;データ通信とストレージのセキュリティ&#34;&gt;データ通信とストレージのセキュリティ &lt;a href=&#34;#%e3%83%87%e3%83%bc%e3%82%bf%e9%80%9a%e4%bf%a1%e3%81%a8%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b8%e3%81%ae%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;通信の暗号化：すべての通信はTLS（HTTPS）で暗号化され、データ転送経路を保護します。&lt;/li&gt;&#xA;&lt;li&gt;保存データの暗号化：データベースおよびバックアップは暗号化され、安全なストレージに保存されます。&lt;/li&gt;&#xA;&lt;li&gt;外部サービスへの流出防止：FlowHuntとLiveAgentの間でのみデータをやり取りし、第三者サービスへのデータ流出リスクを防止します。&lt;/li&gt;&#xA;&lt;li&gt;アクセス制御：権限ベースのアクセス管理により、認可されたユーザーのみがデータへアクセス可能です。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;詳しくは以下をご覧ください：&lt;/strong&gt;&#xA;➡ FlowHuntのセキュリティ対策&lt;/p&gt;&#xA;&lt;h2 id=&#34;プライバシー保護の取り組み&#34;&gt;プライバシー保護の取り組み &lt;a href=&#34;#%e3%83%97%e3%83%a9%e3%82%a4%e3%83%90%e3%82%b7%e3%83%bc%e4%bf%9d%e8%ad%b7%e3%81%ae%e5%8f%96%e3%82%8a%e7%b5%84%e3%81%bf&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;法令遵守とデータ管理&#34;&gt;法令遵守とデータ管理 &lt;a href=&#34;#%e6%b3%95%e4%bb%a4%e9%81%b5%e5%ae%88%e3%81%a8%e3%83%87%e3%83%bc%e3%82%bf%e7%ae%a1%e7%90%86&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;GDPR準拠：欧州一般データ保護規則（GDPR）に準拠し、データの処理・保存・削除を適正に行います。&lt;/li&gt;&#xA;&lt;li&gt;日本の個人情報保護法に対応：国内法に準拠した取り扱い体制を整備しています。&lt;/li&gt;&#xA;&lt;li&gt;データの最小化：業務上必要な最小限のデータのみを収集・処理します。&lt;/li&gt;&#xA;&lt;li&gt;ユーザーの削除権に対応：お客様からの要請により、登録データを安全に削除できます。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;関連ページ：&lt;/strong&gt;&#xA;➡ AIチャットボットのセキュリティ対策とデータ保護&lt;/p&gt;&#xA;&lt;h2 id=&#34;システムセキュリティ対策&#34;&gt;システムセキュリティ対策 &lt;a href=&#34;#%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e5%af%be%e7%ad%96&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;多層的セキュリティ防御&#34;&gt;多層的セキュリティ防御 &lt;a href=&#34;#%e5%a4%9a%e5%b1%a4%e7%9a%84%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e9%98%b2%e5%be%a1&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;多層防御（Defense in Depth）：ファイアウォール、WAF、侵入検知、DDoS防御など複数レイヤーで保護。&lt;/li&gt;&#xA;&lt;li&gt;異常検知システム：不正アクセスや挙動を自動検出し、早期に対応。&lt;/li&gt;&#xA;&lt;li&gt;セキュリティパッチの自動適用：脆弱性対策を継続的に実施。&lt;/li&gt;&#xA;&lt;li&gt;バックアップと復旧体制：定期的な自動バックアップにより、障害時も迅速にデータを復旧可能。&lt;/li&gt;&#xA;&lt;li&gt;国際認証：ISO 27001 などの国際標準に準拠したセキュリティ管理体制を運用。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;aiの安全な運用&#34;&gt;AIの安全な運用 &lt;a href=&#34;#ai%e3%81%ae%e5%ae%89%e5%85%a8%e3%81%aa%e9%81%8b%e7%94%a8&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;rag技術によるセキュアな情報生成&#34;&gt;RAG技術によるセキュアな情報生成 &lt;a href=&#34;#rag%e6%8a%80%e8%a1%93%e3%81%ab%e3%82%88%e3%82%8b%e3%82%bb%e3%82%ad%e3%83%a5%e3%82%a2%e3%81%aa%e6%83%85%e5%a0%b1%e7%94%9f%e6%88%90&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;SmartWebのAIは、RAG（Retrieval-Augmented Generation）技術を採用しています。この技術により、AIが回答を生成する際に次のような安全性と精度を確保します。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;限定された情報参照：AIはインターネット全体を検索せず、御社のWebサイトや社内資料など、指定された情報源のみを参照します。&lt;/li&gt;&#xA;&lt;li&gt;正確で信頼性の高い回答：外部の不確かな情報に依存せず、最新かつ正確な自社データに基づいて応答します。&lt;/li&gt;&#xA;&lt;li&gt;学習データの分離：登録された社内データは、OpenAIや他社のLLMに再利用・共有されません。&lt;/li&gt;&#xA;&lt;li&gt;情報漏えい防止：AIは閉じた環境で動作し、社内専用ナレッジのみを活用します。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;運用管理のベストプラクティス&#34;&gt;運用管理のベストプラクティス &lt;a href=&#34;#%e9%81%8b%e7%94%a8%e7%ae%a1%e7%90%86%e3%81%ae%e3%83%99%e3%82%b9%e3%83%88%e3%83%97%e3%83%a9%e3%82%af%e3%83%86%e3%82%a3%e3%82%b9&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;セキュリティ運用ガイドライン&#34;&gt;セキュリティ運用ガイドライン &lt;a href=&#34;#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e9%81%8b%e7%94%a8%e3%82%ac%e3%82%a4%e3%83%89%e3%83%a9%e3%82%a4%e3%83%b3&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;ナレッジデータの選定：公開範囲を限定し、機密資料は別ワークスペースで管理。&lt;/li&gt;&#xA;&lt;li&gt;アクセス権の分離：管理者・運用者・閲覧者を明確に分け、最小権限で運用。&lt;/li&gt;&#xA;&lt;li&gt;データ保持ポリシー：履歴保持期間を明確化し、不要データは自動削除。&lt;/li&gt;&#xA;&lt;li&gt;監査ログの活用：アクセス・操作ログを定期的に確認し、不正利用を防止。&lt;/li&gt;&#xA;&lt;li&gt;ファイル安全性の確保：添付ファイルやアップロードデータにはウイルススキャンを実施。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;セキュリティ方針の総括&#34;&gt;セキュリティ方針の総括 &lt;a href=&#34;#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e6%96%b9%e9%87%9d%e3%81%ae%e7%b7%8f%e6%8b%ac&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;smartwebのセキュリティコミットメント&#34;&gt;SmartWebのセキュリティコミットメント &lt;a href=&#34;#smartweb%e3%81%ae%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e3%82%b3%e3%83%9f%e3%83%83%e3%83%88%e3%83%a1%e3%83%b3%e3%83%88&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;TLS暗号化通信とデータベース暗号化で情報を保護&lt;/li&gt;&#xA;&lt;li&gt;GDPR・個人情報保護法など国際・国内法令に準拠&lt;/li&gt;&#xA;&lt;li&gt;FlowHuntとLiveAgentの安全な連携による閉じたデータ処理&lt;/li&gt;&#xA;&lt;li&gt;RAGによる限定的AI応答で誤情報・情報漏えいを防止&lt;/li&gt;&#xA;&lt;li&gt;ISO 27001に基づくセキュリティ管理体制の運用&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>FlowHuntのセキュリティ対策</title>
-      <link>http://localhost:1313/ja/docs/security/flowhunt/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/flowhunt/</guid>
-      <description>&lt;h2 id=&#34;flowhuntのセキュリティ対策概要&#34;&gt;FlowHuntのセキュリティ対策概要 &lt;a href=&#34;#flowhunt%e3%81%ae%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e5%af%be%e7%ad%96%e6%a6%82%e8%a6%81&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;セキュリティの包括的アプローチ&#34;&gt;セキュリティの包括的アプローチ &lt;a href=&#34;#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e3%81%ae%e5%8c%85%e6%8b%ac%e7%9a%84%e3%82%a2%e3%83%97%e3%83%ad%e3%83%bc%e3%83%81&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;FlowHuntは、インフラ、データ、組織、製品のすべてのレベルでセキュリティを確保しており、特に中小企業向けに高い信頼性とセキュリティを提供しています。&lt;/p&gt;&#xA;&lt;h2 id=&#34;インフラストラクチャセキュリティ&#34;&gt;インフラストラクチャセキュリティ &lt;a href=&#34;#%e3%82%a4%e3%83%b3%e3%83%95%e3%83%a9%e3%82%b9%e3%83%88%e3%83%a9%e3%82%af%e3%83%81%e3%83%a3%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;データセンターの物理セキュリティ&#34;&gt;データセンターの物理セキュリティ &lt;a href=&#34;#%e3%83%87%e3%83%bc%e3%82%bf%e3%82%bb%e3%83%b3%e3%82%bf%e3%83%bc%e3%81%ae%e7%89%a9%e7%90%86%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;FlowHuntのサーバーは、Tier IV または III+、PCI DSS、SSAE-16、または ISO 27001 準拠の施設でホストされています。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;マルチレベルセキュリティゾーンを持つセキュア境界&lt;/li&gt;&#xA;&lt;li&gt;24時間365日の有人警備、CCTV監視システム&lt;/li&gt;&#xA;&lt;li&gt;バイオメトリクス認証アクセスコントロール&lt;/li&gt;&#xA;&lt;li&gt;物理的ロックとセキュリティ侵害アラーム&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;ネットワークセキュリティ&#34;&gt;ネットワークセキュリティ &lt;a href=&#34;#%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;冗長化されたファイアウォール、最高クラスのルータ技術&lt;/li&gt;&#xA;&lt;li&gt;HTTPS暗号化によるセキュアな通信&lt;/li&gt;&#xA;&lt;li&gt;侵入検知・防御システム（IDS/IPS）による24時間監視&lt;/li&gt;&#xA;&lt;li&gt;DDoS攻撃に対する業界最先端の防御システム&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;データ保護と暗号化&#34;&gt;データ保護と暗号化 &lt;a href=&#34;#%e3%83%87%e3%83%bc%e3%82%bf%e4%bf%9d%e8%ad%b7%e3%81%a8%e6%9a%97%e5%8f%b7%e5%8c%96&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;データ暗号化戦略&#34;&gt;データ暗号化戦略 &lt;a href=&#34;#%e3%83%87%e3%83%bc%e3%82%bf%e6%9a%97%e5%8f%b7%e5%8c%96%e6%88%a6%e7%95%a5&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;すべてのFlowHuntデータベースと機密顧客データを含むデータベースバックアップは暗号化されています&lt;/li&gt;&#xA;&lt;li&gt;カラムレベル暗号化により、APIキーなどの機密フィールドを保護&lt;/li&gt;&#xA;&lt;li&gt;SSL・TLS プロトコルによる通信暗号化&lt;/li&gt;&#xA;&lt;li&gt;決済データの暗号化は決済処理業者（Stripe）により処理&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;データセンターの地理的配置&#34;&gt;データセンターの地理的配置 &lt;a href=&#34;#%e3%83%87%e3%83%bc%e3%82%bf%e3%82%bb%e3%83%b3%e3%82%bf%e3%83%bc%e3%81%ae%e5%9c%b0%e7%90%86%e7%9a%84%e9%85%8d%e7%bd%ae&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;FlowHuntサービスは主に欧州連合（フランクフルト・データセンター）でデータをホストしており、顧客は米国専用または欧州専用でのサービスデータの設置を選択可能です。&lt;/p&gt;&#xA;&lt;h2 id=&#34;組織的セキュリティ&#34;&gt;組織的セキュリティ &lt;a href=&#34;#%e7%b5%84%e7%b9%94%e7%9a%84%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;従業員とコンプライアンス&#34;&gt;従業員とコンプライアンス &lt;a href=&#34;#%e5%be%93%e6%a5%ad%e5%93%a1%e3%81%a8%e3%82%b3%e3%83%b3%e3%83%97%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%82%b9&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;新規従業員は入社前に徹底的な身元調査を受けます&lt;/li&gt;&#xA;&lt;li&gt;すべての従業員と契約者は行動規範への同意が必要&lt;/li&gt;&#xA;&lt;li&gt;採用時および年1回のセキュリティ意識向上研修を実施&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;アクセス制御&#34;&gt;アクセス制御 &lt;a href=&#34;#%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e5%88%b6%e5%be%a1&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;暗号化キーへのアクセスは、業務上の必要性を持つ認可されたユーザーのみに制限&lt;/li&gt;&#xA;&lt;li&gt;本番環境へのアクセスは認可された担当者のみに制限&lt;/li&gt;&#xA;&lt;li&gt;退職時にはSLA内でアクセス権を確実に無効化&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;セキュリティ評価&#34;&gt;セキュリティ評価 &lt;a href=&#34;#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e8%a9%95%e4%be%a1&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;セキュリティ監査とテスト&#34;&gt;セキュリティ監査とテスト &lt;a href=&#34;#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e7%9b%a3%e6%9f%bb%e3%81%a8%e3%83%86%e3%82%b9%e3%83%88&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;FlowHuntは定期的なペネトレーションテストを実施し、外部セキュリティ研究者による脆弱性発見を奨励するバグ報奨金プログラムを運営しています。&lt;/p&gt;&#xA;&lt;h3 id=&#34;コンプライアンス対応&#34;&gt;コンプライアンス対応 &lt;a href=&#34;#%e3%82%b3%e3%83%b3%e3%83%97%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%82%b9%e5%af%be%e5%bf%9c&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;GDPR、HIPAA、SOX法などの規制要件への対応&lt;/li&gt;&#xA;&lt;li&gt;データプライバシー影響評価の実施&lt;/li&gt;&#xA;&lt;li&gt;差分プライバシーなどの高度な手法によるデータ保護&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;追加リソース&#34;&gt;追加リソース &lt;a href=&#34;#%e8%bf%bd%e5%8a%a0%e3%83%aa%e3%82%bd%e3%83%bc%e3%82%b9&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.flowhunt.io/ja/security-policy/&#34; rel=&#34;external&#34; target=&#34;_blank&#34;&gt;セキュリティポリシー&lt;svg width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path fill=&#34;currentColor&#34; d=&#34;M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.flowhunt.io/ja/glossary/compliance-reporting/&#34; rel=&#34;external&#34; target=&#34;_blank&#34;&gt;コンプライアンス報告&lt;svg width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path fill=&#34;currentColor&#34; d=&#34;M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>GDPR準拠（GDPR）</title>
-      <link>http://localhost:1313/ja/docs/security/gdpr-compliance/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/gdpr-compliance/</guid>
-      <description>&lt;h2 id=&#34;gdprとは&#34;&gt;GDPRとは &lt;a href=&#34;#gdpr%e3%81%a8%e3%81%af&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;GDPRは、EUのデータ保護規定であり、データ管理・プライバシー保護のための重要な法的枠組みです。&lt;/p&gt;&#xA;&lt;h2 id=&#34;liveagentのgdpr対応機能&#34;&gt;LiveAgentのGDPR対応機能 &lt;a href=&#34;#liveagent%e3%81%aegdpr%e5%af%be%e5%bf%9c%e6%a9%9f%e8%83%bd&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;gdpr準拠の設計&#34;&gt;GDPR準拠の設計 &lt;a href=&#34;#gdpr%e6%ba%96%e6%8b%a0%e3%81%ae%e8%a8%ad%e8%a8%88&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;LiveAgentは、データ保護・セキュリティ・コンプライアンスを重視し、GDPRの要件に適合する設計が施されています。&lt;/p&gt;&#xA;&lt;h3 id=&#34;コンプライアンスの主な特徴&#34;&gt;コンプライアンスの主な特徴 &lt;a href=&#34;#%e3%82%b3%e3%83%b3%e3%83%97%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%82%b9%e3%81%ae%e4%b8%bb%e3%81%aa%e7%89%b9%e5%be%b4&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;EUのデータ保護規定であるGDPRに準拠したデータ管理・プライバシー保護を実現する機能群です。規制対応に追加費用不要で、透明性の高い運用が可能です。&lt;/p&gt;&#xA;&lt;h2 id=&#34;主な利点&#34;&gt;主な利点 &lt;a href=&#34;#%e4%b8%bb%e3%81%aa%e5%88%a9%e7%82%b9&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;eu圏での運用安全性&#34;&gt;EU圏での運用安全性 &lt;a href=&#34;#eu%e5%9c%8f%e3%81%a7%e3%81%ae%e9%81%8b%e7%94%a8%e5%ae%89%e5%85%a8%e6%80%a7&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;個人情報の取り扱いに関する透明性を確保し、EU圏での運用も安心して行える環境を提供します。サーバー配置やデータ処理の観点からも、顧客信頼性を強化します。&lt;/p&gt;&#xA;&lt;h3 id=&#34;gdprコンプライアンスのポイント&#34;&gt;GDPRコンプライアンスのポイント &lt;a href=&#34;#gdpr%e3%82%b3%e3%83%b3%e3%83%97%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%82%b9%e3%81%ae%e3%83%9d%e3%82%a4%e3%83%b3%e3%83%88&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;GDPRに準拠した設計でEU対応が可能&lt;/li&gt;&#xA;&lt;li&gt;追加費用なしでコンプライアンス要件を満たす&lt;/li&gt;&#xA;&lt;li&gt;個人情報の保護と透明性を確保&lt;/li&gt;&#xA;&lt;li&gt;EU圏での法規制対応を容易化&lt;/li&gt;&#xA;&lt;li&gt;顧客からの信頼を高める基盤になる&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>IPアドレス禁止（Ban IPs）</title>
-      <link>http://localhost:1313/ja/docs/security/ip-address/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/ip-address/</guid>
-      <description>&lt;h2 id=&#34;ipアドレス禁止機能の概要&#34;&gt;IPアドレス禁止機能の概要 &lt;a href=&#34;#ip%e3%82%a2%e3%83%89%e3%83%ac%e3%82%b9%e7%a6%81%e6%ad%a2%e6%a9%9f%e8%83%bd%e3%81%ae%e6%a6%82%e8%a6%81&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;機能説明&#34;&gt;機能説明 &lt;a href=&#34;#%e6%a9%9f%e8%83%bd%e8%aa%ac%e6%98%8e&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;特定の訪問者IPアドレスをチャット、問い合わせフォーム、通話、提案ボード、フォーラム投稿からブロックし、不正行為や迷惑行為を防止する機能です。迷惑アクセスはボイスメールやスパムとしてリダイレクトされ、管理画面には禁止の履歴が保存されます。&lt;/p&gt;&#xA;&lt;h2 id=&#34;主な機能と利点&#34;&gt;主な機能と利点 &lt;a href=&#34;#%e4%b8%bb%e3%81%aa%e6%a9%9f%e8%83%bd%e3%81%a8%e5%88%a9%e7%82%b9&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;アクセスブロック&#34;&gt;アクセスブロック &lt;a href=&#34;#%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e3%83%96%e3%83%ad%e3%83%83%e3%82%af&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;例えば、不正アクセスやスパム投稿を頻繁に行うIPを禁止リストに追加すれば、一切のやり取りが停止され、安全かつ効率的に対応が可能になります。&lt;/p&gt;&#xA;&lt;h3 id=&#34;自動スパム対応&#34;&gt;自動スパム対応 &lt;a href=&#34;#%e8%87%aa%e5%8b%95%e3%82%b9%e3%83%91%e3%83%a0%e5%af%be%e5%bf%9c&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;通話やチャットが自動的にスパム扱いされ、エージェントの手を煩わせません。&lt;/p&gt;&#xA;&lt;h3 id=&#34;管理と追跡&#34;&gt;管理と追跡 &lt;a href=&#34;#%e7%ae%a1%e7%90%86%e3%81%a8%e8%bf%bd%e8%b7%a1&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;管理画面には、禁止日時や理由、担当者、関連チケットIDなどの情報が記録されるため、対応の透明性も確保できます。&lt;/p&gt;&#xA;&lt;h2 id=&#34;主要な利点&#34;&gt;主要な利点 &lt;a href=&#34;#%e4%b8%bb%e8%a6%81%e3%81%aa%e5%88%a9%e7%82%b9&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;マルチチャネル保護&#34;&gt;マルチチャネル保護 &lt;a href=&#34;#%e3%83%9e%e3%83%ab%e3%83%81%e3%83%81%e3%83%a3%e3%83%8d%e3%83%ab%e4%bf%9d%e8%ad%b7&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;複数チャネルにわたる標的IPのアクセスを一括でブロック&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;運用効率の向上&#34;&gt;運用効率の向上 &lt;a href=&#34;#%e9%81%8b%e7%94%a8%e5%8a%b9%e7%8e%87%e3%81%ae%e5%90%91%e4%b8%8a&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;スパム行為の自動処理によりエージェント負荷を軽減&lt;/li&gt;&#xA;&lt;li&gt;エージェントへの影響を最小限にし、安全性を強化&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;監査と管理&#34;&gt;監査と管理 &lt;a href=&#34;#%e7%9b%a3%e6%9f%bb%e3%81%a8%e7%ae%a1%e7%90%86&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;禁止履歴により監査や再評価も可能&lt;/li&gt;&#xA;&lt;li&gt;チケットIDと紐づけて対応履歴を管理&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>LiveAgentのセキュリティ対策は？</title>
-      <link>http://localhost:1313/ja/docs/security/liveagent/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/liveagent/</guid>
-      <description>&lt;h2 id=&#34;liveagentのセキュリティ-包括的な顧客データ保護&#34;&gt;LiveAgentのセキュリティ: 包括的な顧客データ保護 &lt;a href=&#34;#liveagent%e3%81%ae%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3-%e5%8c%85%e6%8b%ac%e7%9a%84%e3%81%aa%e9%a1%a7%e5%ae%a2%e3%83%87%e3%83%bc%e3%82%bf%e4%bf%9d%e8%ad%b7&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;セキュリティ機能の概要&#34;&gt;セキュリティ機能の概要 &lt;a href=&#34;#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e6%a9%9f%e8%83%bd%e3%81%ae%e6%a6%82%e8%a6%81&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;LiveAgentのヘルプデスクセキュリティとは、カスタマーサービスにおいて顧客データと企業情報を包括的に保護する多層防御システムです。&lt;/p&gt;&#xA;&lt;h3 id=&#34;主要なセキュリティ対策&#34;&gt;主要なセキュリティ対策 &lt;a href=&#34;#%e4%b8%bb%e8%a6%81%e3%81%aa%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e5%af%be%e7%ad%96&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4 id=&#34;ipアドレス制限&#34;&gt;IPアドレス制限 &lt;a href=&#34;#ip%e3%82%a2%e3%83%89%e3%83%ac%e3%82%b9%e5%88%b6%e9%99%90&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;&#xA;&lt;li&gt;不適切な問い合わせや時間浪費を行う特定IPを禁止&lt;/li&gt;&#xA;&lt;li&gt;カスタマーサービスの効率性確保&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;多要素認証&#34;&gt;多要素認証 &lt;a href=&#34;#%e5%a4%9a%e8%a6%81%e7%b4%a0%e8%aa%8d%e8%a8%bc&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;&#xA;&lt;li&gt;Google Authenticatorによる6桁コード認証&lt;/li&gt;&#xA;&lt;li&gt;不正ログイン防止の追加セキュリティ層&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;通信暗号化&#34;&gt;通信暗号化 &lt;a href=&#34;#%e9%80%9a%e4%bf%a1%e6%9a%97%e5%8f%b7%e5%8c%96&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;&#xA;&lt;li&gt;HTTPS暗号化によるブラウザーとLiveAgent間の全通信保護&lt;/li&gt;&#xA;&lt;li&gt;データ傍受・改ざんの防止&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;インフラストラクチャセキュリティ&#34;&gt;インフラストラクチャセキュリティ &lt;a href=&#34;#%e3%82%a4%e3%83%b3%e3%83%95%e3%83%a9%e3%82%b9%e3%83%88%e3%83%a9%e3%82%af%e3%83%81%e3%83%a3%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;&#xA;&lt;li&gt;複数データセンターによる地理的分散と冗長性確保&lt;/li&gt;&#xA;&lt;li&gt;顧客の場所に最適化されたサーバー配置&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;コンプライアンス対応&#34;&gt;コンプライアンス対応 &lt;a href=&#34;#%e3%82%b3%e3%83%b3%e3%83%97%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%82%b9%e5%af%be%e5%bf%9c&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;&#xA;&lt;li&gt;GDPR（EU一般データ保護規則）への完全対応&lt;/li&gt;&#xA;&lt;li&gt;個人データの適切な処理と保護&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;アクセス管理&#34;&gt;アクセス管理 &lt;a href=&#34;#%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e7%ae%a1%e7%90%86&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;&#xA;&lt;li&gt;役割ベースのアクセス制御&lt;/li&gt;&#xA;&lt;li&gt;部門・職位に応じた適切な権限設定&lt;/li&gt;&#xA;&lt;li&gt;機密情報への不正アクセス防止&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;セキュリティ対策の効果&#34;&gt;セキュリティ対策の効果 &lt;a href=&#34;#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e5%af%be%e7%ad%96%e3%81%ae%e5%8a%b9%e6%9e%9c&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4 id=&#34;企業にとってのメリット&#34;&gt;企業にとってのメリット &lt;a href=&#34;#%e4%bc%81%e6%a5%ad%e3%81%ab%e3%81%a8%e3%81%a3%e3%81%a6%e3%81%ae%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;&#xA;&lt;li&gt;顧客データ漏洩リスクの最小化&lt;/li&gt;&#xA;&lt;li&gt;法規制遵守によるコンプライアンス確保&lt;/li&gt;&#xA;&lt;li&gt;内部セキュリティの強化&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;顧客にとってのメリット&#34;&gt;顧客にとってのメリット &lt;a href=&#34;#%e9%a1%a7%e5%ae%a2%e3%81%ab%e3%81%a8%e3%81%a3%e3%81%a6%e3%81%ae%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;&#xA;&lt;li&gt;個人情報の安全な保護&lt;/li&gt;&#xA;&lt;li&gt;安心してサービスを利用できる環境&lt;/li&gt;&#xA;&lt;li&gt;プライバシー権の尊重&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;総括&#34;&gt;総括 &lt;a href=&#34;#%e7%b7%8f%e6%8b%ac&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;LiveAgentのセキュリティ機能は、技術的保護手段と法的要件遵守を統合した包括的なソリューションです。多層防御により、顧客の信頼獲得とビジネスの継続性を同時に実現し、現代のデジタルビジネス環境における「必須の基盤」として機能します。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>データの暗号化は？</title>
-      <link>http://localhost:1313/ja/docs/security/data-encryption/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/data-encryption/</guid>
-      <description>&lt;h2 id=&#34;データ暗号化の概要&#34;&gt;データ暗号化の概要 &lt;a href=&#34;#%e3%83%87%e3%83%bc%e3%82%bf%e6%9a%97%e5%8f%b7%e5%8c%96%e3%81%ae%e6%a6%82%e8%a6%81&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;データセキュリティは、デジタル時代において最も重要な課題の一つです。SmartWebでは、お客様のデータを最高レベルの暗号化技術で保護し、安全な利用環境を提供しています。通信時と保存時のデータは、最新の暗号化標準に従って厳重に守られており、情報漏洩のリスクを最小限に抑えています。&lt;/p&gt;&#xA;&lt;h2 id=&#34;通信セキュリティ&#34;&gt;通信セキュリティ &lt;a href=&#34;#%e9%80%9a%e4%bf%a1%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;tls暗号化&#34;&gt;TLS暗号化 &lt;a href=&#34;#tls%e6%9a%97%e5%8f%b7%e5%8c%96&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;インターネット上のデータ通信を保護するため、TLS 1.2および1.3プロトコルを採用しています。これにより、データ送信中の盗聴や改ざんを防ぎ、安全な通信を実現します。すべてのAPI通信はHTTPSを必須とし、エンドツーエンドの暗号化を徹底しています。&lt;/p&gt;&#xA;&lt;h2 id=&#34;データ保護&#34;&gt;データ保護 &lt;a href=&#34;#%e3%83%87%e3%83%bc%e3%82%bf%e4%bf%9d%e8%ad%b7&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;ファイルシステム暗号化&#34;&gt;ファイルシステム暗号化 &lt;a href=&#34;#%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e6%9a%97%e5%8f%b7%e5%8c%96&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;AES-256（Advanced Encryption Standard）の暗号化アルゴリズムを使用し、ファイルシステム全体を保護しています。この方式は、軍事および金融機関でも採用される高セキュリティな暗号化技術で、外部からの不正アクセスを防ぎます。&lt;/p&gt;&#xA;&lt;h3 id=&#34;データベース保護&#34;&gt;データベース保護 &lt;a href=&#34;#%e3%83%87%e3%83%bc%e3%82%bf%e3%83%99%e3%83%bc%e3%82%b9%e4%bf%9d%e8%ad%b7&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;データベースに保存される全ての情報を暗号化し、データの機密性を確保しています。バックアップデータも同様に暗号化され、万が一の情報漏洩リスクに備えています。これにより、お客様の重要な情報を常に安全に管理できます。&lt;/p&gt;&#xA;&lt;h2 id=&#34;セキュリティ監視&#34;&gt;セキュリティ監視 &lt;a href=&#34;#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e7%9b%a3%e8%a6%96&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;セキュリティ対策&#34;&gt;セキュリティ対策 &lt;a href=&#34;#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e5%af%be%e7%ad%96&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;専門チームによる定期的なセキュリティ監査と脆弱性診断を実施しています。すべてのアクセスログを詳細に記録・監視し、異常を素早く検知・対応できる体制を整えています。継続的な監視により、常に最新のセキュリティ対策を実現しています。&lt;/p&gt;&#xA;&lt;p&gt;詳しくはセキュリティページをご覧ください。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>データの保存期間は？</title>
-      <link>http://localhost:1313/ja/docs/security/data-storage-period/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/data-storage-period/</guid>
-      <description>&lt;h2 id=&#34;データの保存期間について&#34;&gt;データの保存期間について &lt;a href=&#34;#%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e4%bf%9d%e5%ad%98%e6%9c%9f%e9%96%93%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;デフォルトの保存設定&#34;&gt;デフォルトの保存設定 &lt;a href=&#34;#%e3%83%87%e3%83%95%e3%82%a9%e3%83%ab%e3%83%88%e3%81%ae%e4%bf%9d%e5%ad%98%e8%a8%ad%e5%ae%9a&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;LiveAgentで取り扱った全てのデータは削除機能を有効にしない限り基本的に無期限で保持されます。データには以下のようなものが含まれます：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;チケット履歴&lt;/li&gt;&#xA;&lt;li&gt;顧客コミュニケーション記録&lt;/li&gt;&#xA;&lt;li&gt;エージェント対応ログ&lt;/li&gt;&#xA;&lt;li&gt;メッセージやファイル添付情報&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;これらのデータは、企業の記録管理や顧客サポート品質の向上に役立ちます。&lt;/p&gt;&#xA;&lt;h3 id=&#34;データ削除の設定方法&#34;&gt;データ削除の設定方法 &lt;a href=&#34;#%e3%83%87%e3%83%bc%e3%82%bf%e5%89%8a%e9%99%a4%e3%81%ae%e8%a8%ad%e5%ae%9a%e6%96%b9%e6%b3%95&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;削除したい場合は、データベースからの削除機能を有効にして日数を設定することで、指定した期間が経過した削除済みチケットを自動的にデータベースから完全に削除できます。具体的な手順は以下の通りです：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;管理者パネルから「データ保持設定」を選択&lt;/li&gt;&#xA;&lt;li&gt;削除期間（例：30日、90日、365日）を設定&lt;/li&gt;&#xA;&lt;li&gt;自動削除機能を有効化&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;データ削除の設定は、プライバシー保護やストレージ管理の観点から重要な機能です。古いデータを定期的に整理することで、システムのパフォーマンスを維持し、必要な情報に効率的にアクセスできます。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>シングルサインオン（Single Sign-On: SSO）</title>
-      <link>http://localhost:1313/ja/docs/security/sso/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/sso/</guid>
-      <description>&lt;h2 id=&#34;シングルサインオンssoとは&#34;&gt;シングルサインオン（SSO）とは &lt;a href=&#34;#%e3%82%b7%e3%83%b3%e3%82%b0%e3%83%ab%e3%82%b5%e3%82%a4%e3%83%b3%e3%82%aa%e3%83%b3sso%e3%81%a8%e3%81%af&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;ssoの基本概念&#34;&gt;SSOの基本概念 &lt;a href=&#34;#sso%e3%81%ae%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Google、Microsoft、Facebook、Oktaなどの認証プロバイダーを活用し、LiveAgentを含む複数システムへ一度のログインでアクセスできる認証機能です。セキュリティと利便性を高次元で両立します。&lt;/p&gt;&#xA;&lt;h2 id=&#34;ssoのメリット&#34;&gt;SSOのメリット &lt;a href=&#34;#sso%e3%81%ae%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;ログイン作業の簡略化&#34;&gt;ログイン作業の簡略化 &lt;a href=&#34;#%e3%83%ad%e3%82%b0%e3%82%a4%e3%83%b3%e4%bd%9c%e6%a5%ad%e3%81%ae%e7%b0%a1%e7%95%a5%e5%8c%96&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;SSOを導入すると、複数パスワードの記憶や管理の手間がなくなり、ログイン作業が簡略化されます。ユーザーは一つの安全な認証で複数アプリケーションへのアクセスが可能になり、企業のセキュリティポリシーとも整合します。&lt;/p&gt;&#xA;&lt;h3 id=&#34;セキュリティ強化&#34;&gt;セキュリティ強化 &lt;a href=&#34;#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e5%bc%b7%e5%8c%96&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;また、二要素認証と併せることで、さらなる強固なセキュリティを実現できます。&lt;/p&gt;&#xA;&lt;h2 id=&#34;ssoの主な特徴&#34;&gt;SSOの主な特徴 &lt;a href=&#34;#sso%e3%81%ae%e4%b8%bb%e3%81%aa%e7%89%b9%e5%be%b4&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;サポート対象プロバイダー&#34;&gt;サポート対象プロバイダー &lt;a href=&#34;#%e3%82%b5%e3%83%9d%e3%83%bc%e3%83%88%e5%af%be%e8%b1%a1%e3%83%97%e3%83%ad%e3%83%90%e3%82%a4%e3%83%80%e3%83%bc&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;Microsoft&lt;/li&gt;&#xA;&lt;li&gt;Google&lt;/li&gt;&#xA;&lt;li&gt;Facebook&lt;/li&gt;&#xA;&lt;li&gt;Okta&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;主要な利点&#34;&gt;主要な利点 &lt;a href=&#34;#%e4%b8%bb%e8%a6%81%e3%81%aa%e5%88%a9%e7%82%b9&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;複数システムを一つのIDで利用可能&lt;/li&gt;&#xA;&lt;li&gt;ログインの利便性とセキュリティを両立&lt;/li&gt;&#xA;&lt;li&gt;多要素認証との連携で防御力も強化&lt;/li&gt;&#xA;&lt;li&gt;管理コスト削減とユーザー体験向上に貢献&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>パスワード検証＆監査ログ（Password Validator &amp; Audit Log）</title>
-      <link>http://localhost:1313/ja/docs/security/password-audit-log/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/password-audit-log/</guid>
-      <description>&lt;h2 id=&#34;パスワード検証監査ログの概要&#34;&gt;パスワード検証＆監査ログの概要 &lt;a href=&#34;#%e3%83%91%e3%82%b9%e3%83%af%e3%83%bc%e3%83%89%e6%a4%9c%e8%a8%bc%e7%9b%a3%e6%9f%bb%e3%83%ad%e3%82%b0%e3%81%ae%e6%a6%82%e8%a6%81&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;パスワードの強度を自動検証し、過去の漏洩・流出情報にも照らして安全性を確保できる機能。加えて、認証周りの操作を監査ログとして記録し、トラブル時の調査に活用可能です。&lt;/p&gt;&#xA;&lt;h3 id=&#34;主な機能&#34;&gt;主な機能 &lt;a href=&#34;#%e4%b8%bb%e3%81%aa%e6%a9%9f%e8%83%bd&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;ユーザーが弱いパスワードを設定しようとするとエラーや改善案が表示され、流出が疑われるパスワードの場合も警告が出されます。加えて、いつ誰がパスワード設定・変更を行ったのかがログに残るため、不正アクセス時の原因特定や再発防止に役立ちます。&lt;/p&gt;&#xA;&lt;h2 id=&#34;主要な特徴&#34;&gt;主要な特徴 &lt;a href=&#34;#%e4%b8%bb%e8%a6%81%e3%81%aa%e7%89%b9%e5%be%b4&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;パスワードセキュリティ強化&#34;&gt;パスワードセキュリティ強化 &lt;a href=&#34;#%e3%83%91%e3%82%b9%e3%83%af%e3%83%bc%e3%83%89%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e5%bc%b7%e5%8c%96&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;パスワードの強度と流出履歴を自動チェック&lt;/li&gt;&#xA;&lt;li&gt;弱いパスワードや流出パスワードの使用を防止&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;運用監査と透明性&#34;&gt;運用監査と透明性 &lt;a href=&#34;#%e9%81%8b%e7%94%a8%e7%9b%a3%e6%9f%bb%e3%81%a8%e9%80%8f%e6%98%8e%e6%80%a7&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;ログにより認証操作の透明性を確保&lt;/li&gt;&#xA;&lt;li&gt;セキュリティ事故時の迅速な原因追跡に貢献&lt;/li&gt;&#xA;&lt;li&gt;アカウント保護と運用監査の両方をサポート&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>監査ログ（Audit log）</title>
-      <link>http://localhost:1313/ja/docs/security/audit-log/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/audit-log/</guid>
-      <description>&lt;h2 id=&#34;監査ログとは&#34;&gt;監査ログとは &lt;a href=&#34;#%e7%9b%a3%e6%9f%bb%e3%83%ad%e3%82%b0%e3%81%a8%e3%81%af&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;システム内で行われたすべての操作を記録する機能です。誰が、いつ、どの操作をしたかを確認でき、セキュリティ管理や問題解決に役立ちます。&lt;/p&gt;&#xA;&lt;h3 id=&#34;監査ログの主な特徴&#34;&gt;監査ログの主な特徴 &lt;a href=&#34;#%e7%9b%a3%e6%9f%bb%e3%83%ad%e3%82%b0%e3%81%ae%e4%b8%bb%e3%81%aa%e7%89%b9%e5%be%b4&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;たとえばチケットの削除や設定変更など重要なアクションもすべて記録されるため、トラブル発生時に責任の所在を特定できます。コンプライアンスや内部統制を強化する上でも重要です。&lt;/p&gt;&#xA;&lt;h2 id=&#34;監査ログの重要なポイント&#34;&gt;監査ログの重要なポイント &lt;a href=&#34;#%e7%9b%a3%e6%9f%bb%e3%83%ad%e3%82%b0%e3%81%ae%e9%87%8d%e8%a6%81%e3%81%aa%e3%83%9d%e3%82%a4%e3%83%b3%e3%83%88&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;記録される情報&#34;&gt;記録される情報 &lt;a href=&#34;#%e8%a8%98%e9%8c%b2%e3%81%95%e3%82%8c%e3%82%8b%e6%83%85%e5%a0%b1&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;すべての操作履歴を自動的に記録&lt;/li&gt;&#xA;&lt;li&gt;トラブル発生時に原因追跡が可能&lt;/li&gt;&#xA;&lt;li&gt;不正利用やミスの防止に役立つ&lt;/li&gt;&#xA;&lt;li&gt;コンプライアンス強化に必須の機能&lt;/li&gt;&#xA;&lt;li&gt;管理者が状況を把握しやすい&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>監査ログは保存されますか？</title>
-      <link>http://localhost:1313/ja/docs/security/audit-log-storage/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/audit-log-storage/</guid>
-      <description>&lt;h2 id=&#34;監査ログの概要&#34;&gt;監査ログの概要 &lt;a href=&#34;#%e7%9b%a3%e6%9f%bb%e3%83%ad%e3%82%b0%e3%81%ae%e6%a6%82%e8%a6%81&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;はい、操作ログ、変更履歴、アクセスログなど監査に必要な情報が記録・保存されます。&lt;/p&gt;&#xA;&lt;h2 id=&#34;監査ログで追跡される詳細アクション&#34;&gt;監査ログで追跡される詳細アクション &lt;a href=&#34;#%e7%9b%a3%e6%9f%bb%e3%83%ad%e3%82%b0%e3%81%a7%e8%bf%bd%e8%b7%a1%e3%81%95%e3%82%8c%e3%82%8b%e8%a9%b3%e7%b4%b0%e3%82%a2%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;ユーザー関連アクション&#34;&gt;ユーザー関連アクション &lt;a href=&#34;#%e3%83%a6%e3%83%bc%e3%82%b6%e3%83%bc%e9%96%a2%e9%80%a3%e3%82%a2%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;ユーザー - 状態変更&lt;/li&gt;&#xA;&lt;li&gt;ユーザー - ログイン&lt;/li&gt;&#xA;&lt;li&gt;ユーザー - ログアウト&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;チケット関連アクション&#34;&gt;チケット関連アクション &lt;a href=&#34;#%e3%83%81%e3%82%b1%e3%83%83%e3%83%88%e9%96%a2%e9%80%a3%e3%82%a2%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;一般アクション&lt;/li&gt;&#xA;&lt;li&gt;ユーザー - チケットを表示&lt;/li&gt;&#xA;&lt;li&gt;ユーザー - チケットを離脱&lt;/li&gt;&#xA;&lt;li&gt;チケット - ステータス&lt;/li&gt;&#xA;&lt;li&gt;チケット - メッセージ&lt;/li&gt;&#xA;&lt;li&gt;チケット - 内部メッセージ&lt;/li&gt;&#xA;&lt;li&gt;チケット - ファイル&lt;/li&gt;&#xA;&lt;li&gt;チケット - 転送&lt;/li&gt;&#xA;&lt;li&gt;チケット - システムメッセージ&lt;/li&gt;&#xA;&lt;li&gt;チケット - タグの変更&lt;/li&gt;&#xA;&lt;li&gt;チケット - 音声メッセージ&lt;/li&gt;&#xA;&lt;li&gt;チケット - メモ&lt;/li&gt;&#xA;&lt;li&gt;チケット - ランキング&lt;/li&gt;&#xA;&lt;li&gt;チケット - 分割&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;チャネル固有のアクション&#34;&gt;チャネル固有のアクション &lt;a href=&#34;#%e3%83%81%e3%83%a3%e3%83%8d%e3%83%ab%e5%9b%ba%e6%9c%89%e3%81%ae%e3%82%a2%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;チケット - その他&lt;/li&gt;&#xA;&lt;li&gt;チケット - 通話&lt;/li&gt;&#xA;&lt;li&gt;チケット - チャット&lt;/li&gt;&#xA;&lt;li&gt;チケット - Facebook&lt;/li&gt;&#xA;&lt;li&gt;チケット - ナレッジベース&lt;/li&gt;&#xA;&lt;li&gt;チケット - オフライン&lt;/li&gt;&#xA;&lt;li&gt;チケット - ツイート&lt;/li&gt;&#xA;&lt;li&gt;チケット - Tencent&lt;/li&gt;&#xA;&lt;li&gt;チケット - Weibo&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;コール関連アクション&#34;&gt;コール関連アクション &lt;a href=&#34;#%e3%82%b3%e3%83%bc%e3%83%ab%e9%96%a2%e9%80%a3%e3%82%a2%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;コール - 通話終了&lt;/li&gt;&#xA;&lt;li&gt;コール - 着信応答&lt;/li&gt;&#xA;&lt;li&gt;コール - 転送&lt;/li&gt;&#xA;&lt;li&gt;コール - 着信中&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>個人情報の取り扱いは？</title>
-      <link>http://localhost:1313/ja/docs/security/personal-data-handling/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/personal-data-handling/</guid>
-      <description>&lt;h2 id=&#34;個人情報の取り扱いと保護&#34;&gt;個人情報の取り扱いと保護 &lt;a href=&#34;#%e5%80%8b%e4%ba%ba%e6%83%85%e5%a0%b1%e3%81%ae%e5%8f%96%e3%82%8a%e6%89%b1%e3%81%84%e3%81%a8%e4%bf%9d%e8%ad%b7&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;liveagentのデータ管理&#34;&gt;LiveAgentのデータ管理 &lt;a href=&#34;#liveagent%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e7%ae%a1%e7%90%86&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;LiveAgentのデータは、GDPRに準拠し、暗号化されたデータベースで厳重に管理されます。お客様の個人情報は、最新のセキュリティ技術を用いて保護され、不正アクセスや漏洩から守られています。データは常に暗号化され、厳格なアクセス制御が行われています。&lt;/p&gt;&#xA;&lt;h3 id=&#34;gdprの概要&#34;&gt;GDPRの概要 &lt;a href=&#34;#gdpr%e3%81%ae%e6%a6%82%e8%a6%81&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4 id=&#34;gdprとは&#34;&gt;GDPRとは &lt;a href=&#34;#gdpr%e3%81%a8%e3%81%af&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;GDPR（General Data Protection Regulation: EU一般データ保護規則）は、EU（欧州連合）域内の個人データ保護と取り扱いに関する規則です。2018年5月25日に施行され、EU域内の個人データを扱うすべての組織に適用されます。GDPRにより個人が自身のデータに対する権利が強化され、企業はより厳格な個人データ保護が求められるようになりました。&lt;/p&gt;&#xA;&lt;p&gt;主な特徴は以下の通りです：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;個人データの透明性と同意&lt;/li&gt;&#xA;&lt;li&gt;データ主体の権利強化&lt;/li&gt;&#xA;&lt;li&gt;データ保護に関する厳格な規制&lt;/li&gt;&#xA;&lt;li&gt;違反に対する高額な罰則&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;SmartWebでは、以下のような対策を講じています：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;データ暗号化&lt;/li&gt;&#xA;&lt;li&gt;定期的なセキュリティ監査&lt;/li&gt;&#xA;&lt;li&gt;アクセス権限の厳密な管理&lt;/li&gt;&#xA;&lt;li&gt;プライバシーポリシーの明確な開示&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;個人情報の保護は、私たちにとって最も重要な責任の一つです。お客様の信頼を守るため、継続的にセキュリティ対策を強化しています。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>二要素認証は使えますか？</title>
-      <link>http://localhost:1313/ja/docs/security/two-factor-auth-2/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/two-factor-auth-2/</guid>
-      <description>&lt;h2 id=&#34;二要素認証の利用可否&#34;&gt;二要素認証の利用可否 &lt;a href=&#34;#%e4%ba%8c%e8%a6%81%e7%b4%a0%e8%aa%8d%e8%a8%bc%e3%81%ae%e5%88%a9%e7%94%a8%e5%8f%af%e5%90%a6&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;google-authenticatorによる二段階認証&#34;&gt;Google Authenticatorによる二段階認証 &lt;a href=&#34;#google-authenticator%e3%81%ab%e3%82%88%e3%82%8b%e4%ba%8c%e6%ae%b5%e9%9a%8e%e8%aa%8d%e8%a8%bc&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;SmartWebでは、Google Authenticatorを使った2FA（二要素認証）を完全にサポートしています。この機能により、アカウントのセキュリティを大幅に強化することができます。二要素認証は、通常のパスワード入力に加えて、スマートフォンアプリから生成される6桁の一時的なコードを要求することで、不正アクセスから守ります。&lt;/p&gt;&#xA;&lt;p&gt;主な利点は以下の通りです：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;リアルタイムのセキュリティコード生成&lt;/li&gt;&#xA;&lt;li&gt;スマートフォンアプリとの簡単な連携&lt;/li&gt;&#xA;&lt;li&gt;不正ログイン防止&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;シングルサインオンssoを利用した認証&#34;&gt;シングルサインオン（SSO）を利用した認証 &lt;a href=&#34;#%e3%82%b7%e3%83%b3%e3%82%b0%e3%83%ab%e3%82%b5%e3%82%a4%e3%83%b3%e3%82%aa%e3%83%b3sso%e3%82%92%e5%88%a9%e7%94%a8%e3%81%97%e3%81%9f%e8%aa%8d%e8%a8%bc&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;GoogleやMicrosoftアカウントによるSSO連携（シングルサインオン）も提供しており、これにより間接的に2段階認証を適用できます。このアプローチは、既存のアカウントを活用してログインプロセスをよりシンプルかつ安全にします。&lt;/p&gt;&#xA;&lt;p&gt;SSO認証のメリット：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;複数のサービス間で共通のログイン情報を使用&lt;/li&gt;&#xA;&lt;li&gt;追加のパスワード管理不要&lt;/li&gt;&#xA;&lt;li&gt;クラウドベースの統合セキュリティ&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;どちらの認証方法も、ユーザーのデータとプライバシーを最優先に保護します。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>複数データセンター（Multiple Data Centers）</title>
-      <link>http://localhost:1313/ja/docs/security/multiple-datacenter/</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/ja/docs/security/multiple-datacenter/</guid>
-      <description>&lt;h2 id=&#34;複数データセンターの概要&#34;&gt;複数データセンターの概要 &lt;a href=&#34;#%e8%a4%87%e6%95%b0%e3%83%87%e3%83%bc%e3%82%bf%e3%82%bb%e3%83%b3%e3%82%bf%e3%83%bc%e3%81%ae%e6%a6%82%e8%a6%81&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;データセンター展開の目的&#34;&gt;データセンター展開の目的 &lt;a href=&#34;#%e3%83%87%e3%83%bc%e3%82%bf%e3%82%bb%e3%83%b3%e3%82%bf%e3%83%bc%e5%b1%95%e9%96%8b%e3%81%ae%e7%9b%ae%e7%9a%84&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;世界中に複数のデータセンター（例：アメリカ・フランクフルト・シンガポール）を展開し、ユーザーの所在地に最適なサーバーで運用することで、安定性とセキュリティを両立する機能です。&lt;/p&gt;&#xA;&lt;h3 id=&#34;リージョン選択のメリット&#34;&gt;リージョン選択のメリット &lt;a href=&#34;#%e3%83%aa%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e9%81%b8%e6%8a%9e%e3%81%ae%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;ユーザー登録時に最適なリージョンでアカウントが構築され、アクセス速度の最適化と法規制（例：居住国のデータ法）への準拠も可能です。単一拠点では実現しづらい拡張性と可用性を高め、多地域での事業展開においても信頼性の高いサービスを提供します。&lt;/p&gt;&#xA;&lt;h3 id=&#34;日本ユーザーの利用リージョン&#34;&gt;日本ユーザーの利用リージョン &lt;a href=&#34;#%e6%97%a5%e6%9c%ac%e3%83%a6%e3%83%bc%e3%82%b6%e3%83%bc%e3%81%ae%e5%88%a9%e7%94%a8%e3%83%aa%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;なお、日本国内の利用者はお申し出がない場合をのぞき、&lt;strong&gt;シンガポールのデータセンターが利用&lt;/strong&gt;されます。&lt;/p&gt;&#xA;&lt;h2 id=&#34;主要な特徴&#34;&gt;主要な特徴 &lt;a href=&#34;#%e4%b8%bb%e8%a6%81%e3%81%aa%e7%89%b9%e5%be%b4&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;リージョン展開&#34;&gt;リージョン展開 &lt;a href=&#34;#%e3%83%aa%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e5%b1%95%e9%96%8b&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;複数の主要リージョンにデータセンターを展開&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;サーバー最適化&#34;&gt;サーバー最適化 &lt;a href=&#34;#%e3%82%b5%e3%83%bc%e3%83%90%e3%83%bc%e6%9c%80%e9%81%a9%e5%8c%96&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;ユーザー所在地に応じた最適サーバー選定&lt;/li&gt;&#xA;&lt;li&gt;アクセス速度とレスポンスを向上&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;コンプライアンス&#34;&gt;コンプライアンス &lt;a href=&#34;#%e3%82%b3%e3%83%b3%e3%83%97%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%82%b9&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;国ごとの法規制への準拠を促進&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;グローバル対応&#34;&gt;グローバル対応 &lt;a href=&#34;#%e3%82%b0%e3%83%ad%e3%83%bc%e3%83%90%e3%83%ab%e5%af%be%e5%bf%9c&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;グローバル展開時の信頼性と可用性を強化&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>セキュリティ on SmartWeb サポート</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/</link><description>Recent content in セキュリティ on SmartWeb サポート</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Tue, 03 Feb 2026 00:00:00 +0900</lastBuildDate><atom:link href="https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/index.xml" rel="self" type="application/rss+xml"/><item><title>データセンターの場所は？</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/datacenter/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/datacenter/</guid><description>&lt;h2 id="データセンターリージョン"&gt;データセンターリージョン &lt;a href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%82%bb%e3%83%b3%e3%82%bf%e3%83%bc%e3%83%aa%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;SmartWebのデータセンターは、&lt;strong&gt;アジア（シンガポール）、US、EU&lt;/strong&gt;​から選択可能です。&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;リージョン&lt;/th&gt;
+ &lt;th&gt;場所&lt;/th&gt;
+ &lt;th&gt;推奨用途&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;アジア&lt;/strong&gt;​&lt;/td&gt;
+ &lt;td&gt;シンガポール&lt;/td&gt;
+ &lt;td&gt;日本のお客様（推奨）​&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;US&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;アメリカ&lt;/td&gt;
+ &lt;td&gt;北米向けサービス&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;EU&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;ヨーロッパ&lt;/td&gt;
+ &lt;td&gt;GDPR対応が必要な場合&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="日本のお客様への推奨"&gt;日本のお客様への推奨 &lt;a href="#%e6%97%a5%e6%9c%ac%e3%81%ae%e3%81%8a%e5%ae%a2%e6%a7%98%e3%81%b8%e3%81%ae%e6%8e%a8%e5%a5%a8" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;日本のお客様には&lt;strong&gt;アジアリージョン（シンガポール）&lt;/strong&gt;​を推奨しています。&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;メリット&lt;/th&gt;
+ &lt;th&gt;説明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;低遅延&lt;/strong&gt;​&lt;/td&gt;
+ &lt;td&gt;日本に地理的に近く、レスポンスタイムが短い&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;データ主権&lt;/strong&gt;​&lt;/td&gt;
+ &lt;td&gt;アジア圏内でのデータ保管が可能&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;高信頼性&lt;/strong&gt;​&lt;/td&gt;
+ &lt;td&gt;最新のデータセンター技術と安定したネットワーク&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="リージョン選択のポイント"&gt;リージョン選択のポイント &lt;a href="#%e3%83%aa%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e9%81%b8%e6%8a%9e%e3%81%ae%e3%83%9d%e3%82%a4%e3%83%b3%e3%83%88" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;リージョンを選択する際は、以下の要素を考慮してください。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;地理的近接性&lt;/strong&gt;​ - ユーザーとの距離&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;コンプライアンス要件&lt;/strong&gt;​ - データ保管場所の規制&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;データ転送速度&lt;/strong&gt;​ - 業務効率への影響&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ネットワークレイテンシ&lt;/strong&gt;​ - リアルタイム対応の品質&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="関連情報"&gt;関連情報 &lt;a href="#%e9%96%a2%e9%80%a3%e6%83%85%e5%a0%b1" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/uptime/"&gt;稼働率（アップタイム）&lt;/a&gt; - サービスの信頼性&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/system-maintenance/"&gt;システムのメンテナンス&lt;/a&gt; - 自動アップデート&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>稼働率（アップタイム）は？</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/uptime/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/uptime/</guid><description>&lt;h2 id="稼働率の目標"&gt;稼働率の目標 &lt;a href="#%e7%a8%bc%e5%83%8d%e7%8e%87%e3%81%ae%e7%9b%ae%e6%a8%99" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;SmartWebは&lt;strong&gt;99.9%以上の月間アップタイム&lt;/strong&gt;​を目標に運営しています。&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;項目&lt;/th&gt;
+ &lt;th&gt;内容&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;目標稼働率&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;99.9%以上&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;計測期間&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;月間&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;実績&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;目標を一貫して達成&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="高稼働率を実現する仕組み"&gt;高稼働率を実現する仕組み &lt;a href="#%e9%ab%98%e7%a8%bc%e5%83%8d%e7%8e%87%e3%82%92%e5%ae%9f%e7%8f%be%e3%81%99%e3%82%8b%e4%bb%95%e7%b5%84%e3%81%bf" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;対策&lt;/th&gt;
+ &lt;th&gt;説明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;冗長構成&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;データセンターでの複数サーバー構成&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;自動フェイルオーバー&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;障害発生時の自動切り替え&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;24時間監視&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;システム状態の常時監視&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;定期バックアップ&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;データの安全な保管&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="リアルタイムステータス確認"&gt;リアルタイムステータス確認 &lt;a href="#%e3%83%aa%e3%82%a2%e3%83%ab%e3%82%bf%e3%82%a4%e3%83%a0%e3%82%b9%e3%83%86%e3%83%bc%e3%82%bf%e3%82%b9%e7%a2%ba%e8%aa%8d" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;システムの稼働状況はリアルタイムで確認できます。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ステータスページ&lt;/strong&gt;: &lt;a href="https://status.liveagent.com/" rel="external" target="_blank"&gt;https://status.liveagent.com/&lt;svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>システムのメンテナンスは？</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/system-maintenance/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/system-maintenance/</guid><description>&lt;h2 id="自動アップデート"&gt;自動アップデート &lt;a href="#%e8%87%aa%e5%8b%95%e3%82%a2%e3%83%83%e3%83%97%e3%83%87%e3%83%bc%e3%83%88" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;SmartWebはクラウドサービス（SaaS）のため、&lt;strong&gt;アップデートは自動実施&lt;/strong&gt;​されます。&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;項目&lt;/th&gt;
+ &lt;th&gt;内容&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;バージョン管理&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;不要（自動）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;セキュリティパッチ&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;即時適用&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;新機能追加&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;自動反映&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;ダウンタイム&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;最小限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="自動アップデートのメリット"&gt;自動アップデートのメリット &lt;a href="#%e8%87%aa%e5%8b%95%e3%82%a2%e3%83%83%e3%83%97%e3%83%87%e3%83%bc%e3%83%88%e3%81%ae%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;メリット&lt;/th&gt;
+ &lt;th&gt;説明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;常に最新&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;最新の機能とセキュリティを利用可能&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;運用負荷ゼロ&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;サーバー管理・保守が不要&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;セキュリティ強化&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;脆弱性への即時対応&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;安定性向上&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;パフォーマンス改善の自動実装&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="アップデート情報の確認"&gt;アップデート情報の確認 &lt;a href="#%e3%82%a2%e3%83%83%e3%83%97%e3%83%87%e3%83%bc%e3%83%88%e6%83%85%e5%a0%b1%e3%81%ae%e7%a2%ba%e8%aa%8d" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;アップデート内容は以下で確認できます。&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;情報源&lt;/th&gt;
+ &lt;th&gt;URL&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;公式チェンジログ&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://changelog.liveagent.com/" rel="external" target="_blank"&gt;changelog.liveagent.com&lt;svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="確認できる内容"&gt;確認できる内容 &lt;a href="#%e7%a2%ba%e8%aa%8d%e3%81%a7%e3%81%8d%e3%82%8b%e5%86%85%e5%ae%b9" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;新機能の追加&lt;/li&gt;
+&lt;li&gt;既存機能の改善&lt;/li&gt;
+&lt;li&gt;セキュリティ強化&lt;/li&gt;
+&lt;li&gt;バグ修正&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="計画メンテナンス"&gt;計画メンテナンス &lt;a href="#%e8%a8%88%e7%94%bb%e3%83%a1%e3%83%b3%e3%83%86%e3%83%8a%e3%83%b3%e3%82%b9" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;計画メンテナンスが必要な場合は、事前にステータスページで告知されます。&lt;/p&gt;</description></item><item><title>オンプレミス版はありますか？</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/cloud-service/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/cloud-service/</guid><description>&lt;h2 id="サービス提供形態"&gt;サービス提供形態 &lt;a href="#%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e6%8f%90%e4%be%9b%e5%bd%a2%e6%85%8b" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;SmartWebは&lt;strong&gt;クラウドサービス（SaaS）のみ&lt;/strong&gt;​で提供しています。&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;提供形態&lt;/th&gt;
+ &lt;th&gt;対応状況&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;クラウド版（SaaS）&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;✓ 提供中&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;オンプレミス版&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;✗ 未提供&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="クラウド版のメリット"&gt;クラウド版のメリット &lt;a href="#%e3%82%af%e3%83%a9%e3%82%a6%e3%83%89%e7%89%88%e3%81%ae%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="すぐに始められる"&gt;すぐに始められる &lt;a href="#%e3%81%99%e3%81%90%e3%81%ab%e5%a7%8b%e3%82%81%e3%82%89%e3%82%8c%e3%82%8b" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;メリット&lt;/th&gt;
+ &lt;th&gt;説明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;即時利用開始&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;サーバー構築不要、申込後すぐに利用可能&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;自動アップデート&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;常に最新機能を利用できる&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;スケーラビリティ&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;利用量に応じて自動でスケール&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="運用負荷の軽減"&gt;運用負荷の軽減 &lt;a href="#%e9%81%8b%e7%94%a8%e8%b2%a0%e8%8d%b7%e3%81%ae%e8%bb%bd%e6%b8%9b" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;メリット&lt;/th&gt;
+ &lt;th&gt;説明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;サーバー管理不要&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;ハードウェア・OS管理が不要&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;保守作業不要&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;パッチ適用・バックアップは自動&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;高可用性&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;データセンターでの冗長構成&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="データセンター"&gt;データセンター &lt;a href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%82%bb%e3%83%b3%e3%82%bf%e3%83%bc" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;クラウド版でも、データの保管場所は選択可能です。&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;リージョン&lt;/th&gt;
+ &lt;th&gt;場所&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;アジア&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;シンガポール（日本のお客様推奨）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;US&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;アメリカ&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;EU&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;ヨーロッパ&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="関連情報"&gt;関連情報 &lt;a href="#%e9%96%a2%e9%80%a3%e6%83%85%e5%a0%b1" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/datacenter/"&gt;データセンターの場所&lt;/a&gt; - リージョン選択&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/"&gt;セキュリティ対策&lt;/a&gt; - データ保護について&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>二要素認証（2FA）は使えますか？</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/two-factor-auth/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/two-factor-auth/</guid><description>&lt;p&gt;はい、SmartWebのAIカスタマーサポートで使用するLiveAgentでは、Google Authenticatorを使った二要素認証（2FA）をご利用いただけます。&lt;/p&gt;
+&lt;h2 id="二要素認証のメリット"&gt;二要素認証のメリット &lt;a href="#%e4%ba%8c%e8%a6%81%e7%b4%a0%e8%aa%8d%e8%a8%bc%e3%81%ae%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;ログイン時にパスワードに加えて6桁のワンタイムコードを要求することで、アカウントの安全性を大幅に強化します。万が一パスワードが漏洩した場合でも、不正アクセスを防止できます。&lt;/p&gt;
+&lt;h2 id="利用可能な認証方法"&gt;利用可能な認証方法 &lt;a href="#%e5%88%a9%e7%94%a8%e5%8f%af%e8%83%bd%e3%81%aa%e8%aa%8d%e8%a8%bc%e6%96%b9%e6%b3%95" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Google Authenticator&lt;/strong&gt;​などの認証アプリと連携&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GoogleやMicrosoftアカウントによるSSO連携&lt;/strong&gt;（シングルサインオン）により、間接的に2段階認証も適用可能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;セキュリティリスクを軽減し、安心してカスタマーサポート業務を行えます。&lt;/p&gt;</description></item><item><title>IPアドレスでログインを制限できますか？</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/ip-address-restriction/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/ip-address-restriction/</guid><description>&lt;p&gt;はい、SmartWebのAI連携チケットシステムでは、サポート担当者のログイン環境をIPアドレスで制限できます。&lt;/p&gt;
+&lt;h2 id="利用可能な制限方法"&gt;利用可能な制限方法 &lt;a href="#%e5%88%a9%e7%94%a8%e5%8f%af%e8%83%bd%e3%81%aa%e5%88%b6%e9%99%90%e6%96%b9%e6%b3%95" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;特定のIPアドレス指定&lt;/strong&gt;：許可するIPアドレスを個別に設定&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ワイルドカード指定&lt;/strong&gt;：192.168.1.* のような範囲指定&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;アドレス範囲指定&lt;/strong&gt;：開始IPから終了IPまでの範囲&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;サブネットマスク指定&lt;/strong&gt;：ネットワーク単位での制限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="活用場面"&gt;活用場面 &lt;a href="#%e6%b4%bb%e7%94%a8%e5%a0%b4%e9%9d%a2" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;オフィスからのみアクセスを許可したい場合&lt;/li&gt;
+&lt;li&gt;リモートワーク時に特定のVPN経由のみ許可したい場合&lt;/li&gt;
+&lt;li&gt;セキュリティポリシーに基づくアクセス制御&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不正アクセスのリスクを軽減し、セキュアなカスタマーサポート運用を実現します。&lt;/p&gt;</description></item><item><title>AI活用における安全対策</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/ai-safety/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/ai-safety/</guid><description>&lt;h2 id="smartwebのセキュリティアプローチ"&gt;SmartWebのセキュリティアプローチ &lt;a href="#smartweb%e3%81%ae%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e3%82%a2%e3%83%97%e3%83%ad%e3%83%bc%e3%83%81" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;SmartWebは、FlowHuntとLiveAgentの連携により構成され、AIチャットボットやナレッジベース、チケット管理を統合的に提供します。お客様のデータを安全に扱うため、以下のような多層的なセキュリティ対策を実施しています。&lt;/p&gt;
+&lt;h2 id="データ保護戦略"&gt;データ保護戦略 &lt;a href="#%e3%83%87%e3%83%bc%e3%82%bf%e4%bf%9d%e8%ad%b7%e6%88%a6%e7%95%a5" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="データ通信とストレージのセキュリティ"&gt;データ通信とストレージのセキュリティ &lt;a href="#%e3%83%87%e3%83%bc%e3%82%bf%e9%80%9a%e4%bf%a1%e3%81%a8%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b8%e3%81%ae%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;通信の暗号化：すべての通信はTLS（HTTPS）で暗号化され、データ転送経路を保護します。&lt;/li&gt;
+&lt;li&gt;保存データの暗号化：データベースおよびバックアップは暗号化され、安全なストレージに保存されます。&lt;/li&gt;
+&lt;li&gt;外部サービスへの流出防止：FlowHuntとLiveAgentの間でのみデータをやり取りし、第三者サービスへのデータ流出リスクを防止します。&lt;/li&gt;
+&lt;li&gt;アクセス制御：権限ベースのアクセス管理により、認可されたユーザーのみがデータへアクセス可能です。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;詳しくは以下をご覧ください：&lt;/strong&gt;
+➡ FlowHuntのセキュリティ対策&lt;/p&gt;
+&lt;h2 id="プライバシー保護の取り組み"&gt;プライバシー保護の取り組み &lt;a href="#%e3%83%97%e3%83%a9%e3%82%a4%e3%83%90%e3%82%b7%e3%83%bc%e4%bf%9d%e8%ad%b7%e3%81%ae%e5%8f%96%e3%82%8a%e7%b5%84%e3%81%bf" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="法令遵守とデータ管理"&gt;法令遵守とデータ管理 &lt;a href="#%e6%b3%95%e4%bb%a4%e9%81%b5%e5%ae%88%e3%81%a8%e3%83%87%e3%83%bc%e3%82%bf%e7%ae%a1%e7%90%86" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;GDPR準拠：欧州一般データ保護規則（GDPR）に準拠し、データの処理・保存・削除を適正に行います。&lt;/li&gt;
+&lt;li&gt;日本の個人情報保護法に対応：国内法に準拠した取り扱い体制を整備しています。&lt;/li&gt;
+&lt;li&gt;データの最小化：業務上必要な最小限のデータのみを収集・処理します。&lt;/li&gt;
+&lt;li&gt;ユーザーの削除権に対応：お客様からの要請により、登録データを安全に削除できます。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;関連ページ：&lt;/strong&gt;
+➡ AIチャットボットのセキュリティ対策とデータ保護&lt;/p&gt;
+&lt;h2 id="システムセキュリティ対策"&gt;システムセキュリティ対策 &lt;a href="#%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e5%af%be%e7%ad%96" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="多層的セキュリティ防御"&gt;多層的セキュリティ防御 &lt;a href="#%e5%a4%9a%e5%b1%a4%e7%9a%84%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e9%98%b2%e5%be%a1" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;多層防御（Defense in Depth）：ファイアウォール、WAF、侵入検知、DDoS防御など複数レイヤーで保護。&lt;/li&gt;
+&lt;li&gt;異常検知システム：不正アクセスや挙動を自動検出し、早期に対応。&lt;/li&gt;
+&lt;li&gt;セキュリティパッチの自動適用：脆弱性対策を継続的に実施。&lt;/li&gt;
+&lt;li&gt;バックアップと復旧体制：定期的な自動バックアップにより、障害時も迅速にデータを復旧可能。&lt;/li&gt;
+&lt;li&gt;国際認証：ISO 27001 などの国際標準に準拠したセキュリティ管理体制を運用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="aiの安全な運用"&gt;AIの安全な運用 &lt;a href="#ai%e3%81%ae%e5%ae%89%e5%85%a8%e3%81%aa%e9%81%8b%e7%94%a8" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="rag技術によるセキュアな情報生成"&gt;RAG技術によるセキュアな情報生成 &lt;a href="#rag%e6%8a%80%e8%a1%93%e3%81%ab%e3%82%88%e3%82%8b%e3%82%bb%e3%82%ad%e3%83%a5%e3%82%a2%e3%81%aa%e6%83%85%e5%a0%b1%e7%94%9f%e6%88%90" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;SmartWebのAIは、RAG（Retrieval-Augmented Generation）技術を採用しています。この技術により、AIが回答を生成する際に次のような安全性と精度を確保します。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;限定された情報参照：AIはインターネット全体を検索せず、御社のWebサイトや社内資料など、指定された情報源のみを参照します。&lt;/li&gt;
+&lt;li&gt;正確で信頼性の高い回答：外部の不確かな情報に依存せず、最新かつ正確な自社データに基づいて応答します。&lt;/li&gt;
+&lt;li&gt;学習データの分離：登録された社内データは、OpenAIや他社のLLMに再利用・共有されません。&lt;/li&gt;
+&lt;li&gt;情報漏えい防止：AIは閉じた環境で動作し、社内専用ナレッジのみを活用します。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="運用管理のベストプラクティス"&gt;運用管理のベストプラクティス &lt;a href="#%e9%81%8b%e7%94%a8%e7%ae%a1%e7%90%86%e3%81%ae%e3%83%99%e3%82%b9%e3%83%88%e3%83%97%e3%83%a9%e3%82%af%e3%83%86%e3%82%a3%e3%82%b9" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="セキュリティ運用ガイドライン"&gt;セキュリティ運用ガイドライン &lt;a href="#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e9%81%8b%e7%94%a8%e3%82%ac%e3%82%a4%e3%83%89%e3%83%a9%e3%82%a4%e3%83%b3" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;ナレッジデータの選定：公開範囲を限定し、機密資料は別ワークスペースで管理。&lt;/li&gt;
+&lt;li&gt;アクセス権の分離：管理者・運用者・閲覧者を明確に分け、最小権限で運用。&lt;/li&gt;
+&lt;li&gt;データ保持ポリシー：履歴保持期間を明確化し、不要データは自動削除。&lt;/li&gt;
+&lt;li&gt;監査ログの活用：アクセス・操作ログを定期的に確認し、不正利用を防止。&lt;/li&gt;
+&lt;li&gt;ファイル安全性の確保：添付ファイルやアップロードデータにはウイルススキャンを実施。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="セキュリティ方針の総括"&gt;セキュリティ方針の総括 &lt;a href="#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e6%96%b9%e9%87%9d%e3%81%ae%e7%b7%8f%e6%8b%ac" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="smartwebのセキュリティコミットメント"&gt;SmartWebのセキュリティコミットメント &lt;a href="#smartweb%e3%81%ae%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e3%82%b3%e3%83%9f%e3%83%83%e3%83%88%e3%83%a1%e3%83%b3%e3%83%88" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;TLS暗号化通信とデータベース暗号化で情報を保護&lt;/li&gt;
+&lt;li&gt;GDPR・個人情報保護法など国際・国内法令に準拠&lt;/li&gt;
+&lt;li&gt;FlowHuntとLiveAgentの安全な連携による閉じたデータ処理&lt;/li&gt;
+&lt;li&gt;RAGによる限定的AI応答で誤情報・情報漏えいを防止&lt;/li&gt;
+&lt;li&gt;ISO 27001に基づくセキュリティ管理体制の運用&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>FlowHuntのセキュリティ対策</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/flowhunt/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/flowhunt/</guid><description>&lt;h2 id="flowhuntのセキュリティ対策概要"&gt;FlowHuntのセキュリティ対策概要 &lt;a href="#flowhunt%e3%81%ae%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e5%af%be%e7%ad%96%e6%a6%82%e8%a6%81" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="セキュリティの包括的アプローチ"&gt;セキュリティの包括的アプローチ &lt;a href="#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e3%81%ae%e5%8c%85%e6%8b%ac%e7%9a%84%e3%82%a2%e3%83%97%e3%83%ad%e3%83%bc%e3%83%81" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;FlowHuntは、インフラ、データ、組織、製品のすべてのレベルでセキュリティを確保しており、特に中小企業向けに高い信頼性とセキュリティを提供しています。&lt;/p&gt;
+&lt;h2 id="インフラストラクチャセキュリティ"&gt;インフラストラクチャセキュリティ &lt;a href="#%e3%82%a4%e3%83%b3%e3%83%95%e3%83%a9%e3%82%b9%e3%83%88%e3%83%a9%e3%82%af%e3%83%81%e3%83%a3%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="データセンターの物理セキュリティ"&gt;データセンターの物理セキュリティ &lt;a href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%82%bb%e3%83%b3%e3%82%bf%e3%83%bc%e3%81%ae%e7%89%a9%e7%90%86%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;FlowHuntのサーバーは、Tier IV または III+、PCI DSS、SSAE-16、または ISO 27001 準拠の施設でホストされています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;マルチレベルセキュリティゾーンを持つセキュア境界&lt;/li&gt;
+&lt;li&gt;24時間365日の有人警備、CCTV監視システム&lt;/li&gt;
+&lt;li&gt;バイオメトリクス認証アクセスコントロール&lt;/li&gt;
+&lt;li&gt;物理的ロックとセキュリティ侵害アラーム&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="ネットワークセキュリティ"&gt;ネットワークセキュリティ &lt;a href="#%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;冗長化されたファイアウォール、最高クラスのルータ技術&lt;/li&gt;
+&lt;li&gt;HTTPS暗号化によるセキュアな通信&lt;/li&gt;
+&lt;li&gt;侵入検知・防御システム（IDS/IPS）による24時間監視&lt;/li&gt;
+&lt;li&gt;DDoS攻撃に対する業界最先端の防御システム&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="データ保護と暗号化"&gt;データ保護と暗号化 &lt;a href="#%e3%83%87%e3%83%bc%e3%82%bf%e4%bf%9d%e8%ad%b7%e3%81%a8%e6%9a%97%e5%8f%b7%e5%8c%96" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="データ暗号化戦略"&gt;データ暗号化戦略 &lt;a href="#%e3%83%87%e3%83%bc%e3%82%bf%e6%9a%97%e5%8f%b7%e5%8c%96%e6%88%a6%e7%95%a5" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;すべてのFlowHuntデータベースと機密顧客データを含むデータベースバックアップは暗号化されています&lt;/li&gt;
+&lt;li&gt;カラムレベル暗号化により、APIキーなどの機密フィールドを保護&lt;/li&gt;
+&lt;li&gt;SSL・TLS プロトコルによる通信暗号化&lt;/li&gt;
+&lt;li&gt;決済データの暗号化は決済処理業者（Stripe）により処理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="データセンターの地理的配置"&gt;データセンターの地理的配置 &lt;a href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%82%bb%e3%83%b3%e3%82%bf%e3%83%bc%e3%81%ae%e5%9c%b0%e7%90%86%e7%9a%84%e9%85%8d%e7%bd%ae" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;FlowHuntサービスは主に欧州連合（フランクフルト・データセンター）でデータをホストしており、顧客は米国専用または欧州専用でのサービスデータの設置を選択可能です。&lt;/p&gt;
+&lt;h2 id="組織的セキュリティ"&gt;組織的セキュリティ &lt;a href="#%e7%b5%84%e7%b9%94%e7%9a%84%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="従業員とコンプライアンス"&gt;従業員とコンプライアンス &lt;a href="#%e5%be%93%e6%a5%ad%e5%93%a1%e3%81%a8%e3%82%b3%e3%83%b3%e3%83%97%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%82%b9" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;新規従業員は入社前に徹底的な身元調査を受けます&lt;/li&gt;
+&lt;li&gt;すべての従業員と契約者は行動規範への同意が必要&lt;/li&gt;
+&lt;li&gt;採用時および年1回のセキュリティ意識向上研修を実施&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="アクセス制御"&gt;アクセス制御 &lt;a href="#%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e5%88%b6%e5%be%a1" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;暗号化キーへのアクセスは、業務上の必要性を持つ認可されたユーザーのみに制限&lt;/li&gt;
+&lt;li&gt;本番環境へのアクセスは認可された担当者のみに制限&lt;/li&gt;
+&lt;li&gt;退職時にはSLA内でアクセス権を確実に無効化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="セキュリティ評価"&gt;セキュリティ評価 &lt;a href="#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e8%a9%95%e4%be%a1" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="セキュリティ監査とテスト"&gt;セキュリティ監査とテスト &lt;a href="#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e7%9b%a3%e6%9f%bb%e3%81%a8%e3%83%86%e3%82%b9%e3%83%88" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;FlowHuntは定期的なペネトレーションテストを実施し、外部セキュリティ研究者による脆弱性発見を奨励するバグ報奨金プログラムを運営しています。&lt;/p&gt;
+&lt;h3 id="コンプライアンス対応"&gt;コンプライアンス対応 &lt;a href="#%e3%82%b3%e3%83%b3%e3%83%97%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%82%b9%e5%af%be%e5%bf%9c" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;GDPR、HIPAA、SOX法などの規制要件への対応&lt;/li&gt;
+&lt;li&gt;データプライバシー影響評価の実施&lt;/li&gt;
+&lt;li&gt;差分プライバシーなどの高度な手法によるデータ保護&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="追加リソース"&gt;追加リソース &lt;a href="#%e8%bf%bd%e5%8a%a0%e3%83%aa%e3%82%bd%e3%83%bc%e3%82%b9" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.flowhunt.io/ja/security-policy/" rel="external" target="_blank"&gt;セキュリティポリシー&lt;svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.flowhunt.io/ja/glossary/compliance-reporting/" rel="external" target="_blank"&gt;コンプライアンス報告&lt;svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>GDPR準拠（GDPR）</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/gdpr-compliance/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/gdpr-compliance/</guid><description>&lt;h2 id="gdprとは"&gt;GDPRとは &lt;a href="#gdpr%e3%81%a8%e3%81%af" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;GDPRは、EUのデータ保護規定であり、データ管理・プライバシー保護のための重要な法的枠組みです。&lt;/p&gt;
+&lt;h2 id="liveagentのgdpr対応機能"&gt;LiveAgentのGDPR対応機能 &lt;a href="#liveagent%e3%81%aegdpr%e5%af%be%e5%bf%9c%e6%a9%9f%e8%83%bd" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="gdpr準拠の設計"&gt;GDPR準拠の設計 &lt;a href="#gdpr%e6%ba%96%e6%8b%a0%e3%81%ae%e8%a8%ad%e8%a8%88" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;LiveAgentは、データ保護・セキュリティ・コンプライアンスを重視し、GDPRの要件に適合する設計が施されています。&lt;/p&gt;
+&lt;h3 id="コンプライアンスの主な特徴"&gt;コンプライアンスの主な特徴 &lt;a href="#%e3%82%b3%e3%83%b3%e3%83%97%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%82%b9%e3%81%ae%e4%b8%bb%e3%81%aa%e7%89%b9%e5%be%b4" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;EUのデータ保護規定であるGDPRに準拠したデータ管理・プライバシー保護を実現する機能群です。規制対応に追加費用不要で、透明性の高い運用が可能です。&lt;/p&gt;
+&lt;h2 id="主な利点"&gt;主な利点 &lt;a href="#%e4%b8%bb%e3%81%aa%e5%88%a9%e7%82%b9" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="eu圏での運用安全性"&gt;EU圏での運用安全性 &lt;a href="#eu%e5%9c%8f%e3%81%a7%e3%81%ae%e9%81%8b%e7%94%a8%e5%ae%89%e5%85%a8%e6%80%a7" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;個人情報の取り扱いに関する透明性を確保し、EU圏での運用も安心して行える環境を提供します。サーバー配置やデータ処理の観点からも、顧客信頼性を強化します。&lt;/p&gt;
+&lt;h3 id="gdprコンプライアンスのポイント"&gt;GDPRコンプライアンスのポイント &lt;a href="#gdpr%e3%82%b3%e3%83%b3%e3%83%97%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%82%b9%e3%81%ae%e3%83%9d%e3%82%a4%e3%83%b3%e3%83%88" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;GDPRに準拠した設計でEU対応が可能&lt;/li&gt;
+&lt;li&gt;追加費用なしでコンプライアンス要件を満たす&lt;/li&gt;
+&lt;li&gt;個人情報の保護と透明性を確保&lt;/li&gt;
+&lt;li&gt;EU圏での法規制対応を容易化&lt;/li&gt;
+&lt;li&gt;顧客からの信頼を高める基盤になる&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>IPアドレス禁止（Ban IPs）</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/ip-address/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/ip-address/</guid><description>&lt;h2 id="ipアドレス禁止機能の概要"&gt;IPアドレス禁止機能の概要 &lt;a href="#ip%e3%82%a2%e3%83%89%e3%83%ac%e3%82%b9%e7%a6%81%e6%ad%a2%e6%a9%9f%e8%83%bd%e3%81%ae%e6%a6%82%e8%a6%81" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="機能説明"&gt;機能説明 &lt;a href="#%e6%a9%9f%e8%83%bd%e8%aa%ac%e6%98%8e" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;特定の訪問者IPアドレスをチャット、問い合わせフォーム、通話、提案ボード、フォーラム投稿からブロックし、不正行為や迷惑行為を防止する機能です。迷惑アクセスはボイスメールやスパムとしてリダイレクトされ、管理画面には禁止の履歴が保存されます。&lt;/p&gt;
+&lt;h2 id="主な機能と利点"&gt;主な機能と利点 &lt;a href="#%e4%b8%bb%e3%81%aa%e6%a9%9f%e8%83%bd%e3%81%a8%e5%88%a9%e7%82%b9" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="アクセスブロック"&gt;アクセスブロック &lt;a href="#%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e3%83%96%e3%83%ad%e3%83%83%e3%82%af" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;例えば、不正アクセスやスパム投稿を頻繁に行うIPを禁止リストに追加すれば、一切のやり取りが停止され、安全かつ効率的に対応が可能になります。&lt;/p&gt;
+&lt;h3 id="自動スパム対応"&gt;自動スパム対応 &lt;a href="#%e8%87%aa%e5%8b%95%e3%82%b9%e3%83%91%e3%83%a0%e5%af%be%e5%bf%9c" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;通話やチャットが自動的にスパム扱いされ、エージェントの手を煩わせません。&lt;/p&gt;
+&lt;h3 id="管理と追跡"&gt;管理と追跡 &lt;a href="#%e7%ae%a1%e7%90%86%e3%81%a8%e8%bf%bd%e8%b7%a1" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;管理画面には、禁止日時や理由、担当者、関連チケットIDなどの情報が記録されるため、対応の透明性も確保できます。&lt;/p&gt;
+&lt;h2 id="主要な利点"&gt;主要な利点 &lt;a href="#%e4%b8%bb%e8%a6%81%e3%81%aa%e5%88%a9%e7%82%b9" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="マルチチャネル保護"&gt;マルチチャネル保護 &lt;a href="#%e3%83%9e%e3%83%ab%e3%83%81%e3%83%81%e3%83%a3%e3%83%8d%e3%83%ab%e4%bf%9d%e8%ad%b7" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;複数チャネルにわたる標的IPのアクセスを一括でブロック&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="運用効率の向上"&gt;運用効率の向上 &lt;a href="#%e9%81%8b%e7%94%a8%e5%8a%b9%e7%8e%87%e3%81%ae%e5%90%91%e4%b8%8a" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;スパム行為の自動処理によりエージェント負荷を軽減&lt;/li&gt;
+&lt;li&gt;エージェントへの影響を最小限にし、安全性を強化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="監査と管理"&gt;監査と管理 &lt;a href="#%e7%9b%a3%e6%9f%bb%e3%81%a8%e7%ae%a1%e7%90%86" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;禁止履歴により監査や再評価も可能&lt;/li&gt;
+&lt;li&gt;チケットIDと紐づけて対応履歴を管理&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>LiveAgentのセキュリティ対策は？</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/liveagent/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/liveagent/</guid><description>&lt;h2 id="liveagentのセキュリティ-包括的な顧客データ保護"&gt;LiveAgentのセキュリティ: 包括的な顧客データ保護 &lt;a href="#liveagent%e3%81%ae%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3-%e5%8c%85%e6%8b%ac%e7%9a%84%e3%81%aa%e9%a1%a7%e5%ae%a2%e3%83%87%e3%83%bc%e3%82%bf%e4%bf%9d%e8%ad%b7" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="セキュリティ機能の概要"&gt;セキュリティ機能の概要 &lt;a href="#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e6%a9%9f%e8%83%bd%e3%81%ae%e6%a6%82%e8%a6%81" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;LiveAgentのヘルプデスクセキュリティとは、カスタマーサービスにおいて顧客データと企業情報を包括的に保護する多層防御システムです。&lt;/p&gt;
+&lt;h3 id="主要なセキュリティ対策"&gt;主要なセキュリティ対策 &lt;a href="#%e4%b8%bb%e8%a6%81%e3%81%aa%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e5%af%be%e7%ad%96" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4 id="ipアドレス制限"&gt;IPアドレス制限 &lt;a href="#ip%e3%82%a2%e3%83%89%e3%83%ac%e3%82%b9%e5%88%b6%e9%99%90" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;不適切な問い合わせや時間浪費を行う特定IPを禁止&lt;/li&gt;
+&lt;li&gt;カスタマーサービスの効率性確保&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="多要素認証"&gt;多要素認証 &lt;a href="#%e5%a4%9a%e8%a6%81%e7%b4%a0%e8%aa%8d%e8%a8%bc" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Google Authenticatorによる6桁コード認証&lt;/li&gt;
+&lt;li&gt;不正ログイン防止の追加セキュリティ層&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="通信暗号化"&gt;通信暗号化 &lt;a href="#%e9%80%9a%e4%bf%a1%e6%9a%97%e5%8f%b7%e5%8c%96" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;HTTPS暗号化によるブラウザーとLiveAgent間の全通信保護&lt;/li&gt;
+&lt;li&gt;データ傍受・改ざんの防止&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="インフラストラクチャセキュリティ"&gt;インフラストラクチャセキュリティ &lt;a href="#%e3%82%a4%e3%83%b3%e3%83%95%e3%83%a9%e3%82%b9%e3%83%88%e3%83%a9%e3%82%af%e3%83%81%e3%83%a3%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;複数データセンターによる地理的分散と冗長性確保&lt;/li&gt;
+&lt;li&gt;顧客の場所に最適化されたサーバー配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="コンプライアンス対応"&gt;コンプライアンス対応 &lt;a href="#%e3%82%b3%e3%83%b3%e3%83%97%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%82%b9%e5%af%be%e5%bf%9c" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;GDPR（EU一般データ保護規則）への完全対応&lt;/li&gt;
+&lt;li&gt;個人データの適切な処理と保護&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="アクセス管理"&gt;アクセス管理 &lt;a href="#%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e7%ae%a1%e7%90%86" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;役割ベースのアクセス制御&lt;/li&gt;
+&lt;li&gt;部門・職位に応じた適切な権限設定&lt;/li&gt;
+&lt;li&gt;機密情報への不正アクセス防止&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="セキュリティ対策の効果"&gt;セキュリティ対策の効果 &lt;a href="#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e5%af%be%e7%ad%96%e3%81%ae%e5%8a%b9%e6%9e%9c" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4 id="企業にとってのメリット"&gt;企業にとってのメリット &lt;a href="#%e4%bc%81%e6%a5%ad%e3%81%ab%e3%81%a8%e3%81%a3%e3%81%a6%e3%81%ae%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;顧客データ漏洩リスクの最小化&lt;/li&gt;
+&lt;li&gt;法規制遵守によるコンプライアンス確保&lt;/li&gt;
+&lt;li&gt;内部セキュリティの強化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="顧客にとってのメリット"&gt;顧客にとってのメリット &lt;a href="#%e9%a1%a7%e5%ae%a2%e3%81%ab%e3%81%a8%e3%81%a3%e3%81%a6%e3%81%ae%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;個人情報の安全な保護&lt;/li&gt;
+&lt;li&gt;安心してサービスを利用できる環境&lt;/li&gt;
+&lt;li&gt;プライバシー権の尊重&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="総括"&gt;総括 &lt;a href="#%e7%b7%8f%e6%8b%ac" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;LiveAgentのセキュリティ機能は、技術的保護手段と法的要件遵守を統合した包括的なソリューションです。多層防御により、顧客の信頼獲得とビジネスの継続性を同時に実現し、現代のデジタルビジネス環境における「必須の基盤」として機能します。&lt;/p&gt;</description></item><item><title>データの暗号化は？</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/data-encryption/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/data-encryption/</guid><description>&lt;h2 id="データ暗号化の概要"&gt;データ暗号化の概要 &lt;a href="#%e3%83%87%e3%83%bc%e3%82%bf%e6%9a%97%e5%8f%b7%e5%8c%96%e3%81%ae%e6%a6%82%e8%a6%81" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;データセキュリティは、デジタル時代において最も重要な課題の一つです。SmartWebでは、お客様のデータを最高レベルの暗号化技術で保護し、安全な利用環境を提供しています。通信時と保存時のデータは、最新の暗号化標準に従って厳重に守られており、情報漏洩のリスクを最小限に抑えています。&lt;/p&gt;
+&lt;h2 id="通信セキュリティ"&gt;通信セキュリティ &lt;a href="#%e9%80%9a%e4%bf%a1%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="tls暗号化"&gt;TLS暗号化 &lt;a href="#tls%e6%9a%97%e5%8f%b7%e5%8c%96" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;インターネット上のデータ通信を保護するため、TLS 1.2および1.3プロトコルを採用しています。これにより、データ送信中の盗聴や改ざんを防ぎ、安全な通信を実現します。すべてのAPI通信はHTTPSを必須とし、エンドツーエンドの暗号化を徹底しています。&lt;/p&gt;
+&lt;h2 id="データ保護"&gt;データ保護 &lt;a href="#%e3%83%87%e3%83%bc%e3%82%bf%e4%bf%9d%e8%ad%b7" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="ファイルシステム暗号化"&gt;ファイルシステム暗号化 &lt;a href="#%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e6%9a%97%e5%8f%b7%e5%8c%96" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;AES-256（Advanced Encryption Standard）の暗号化アルゴリズムを使用し、ファイルシステム全体を保護しています。この方式は、軍事および金融機関でも採用される高セキュリティな暗号化技術で、外部からの不正アクセスを防ぎます。&lt;/p&gt;
+&lt;h3 id="データベース保護"&gt;データベース保護 &lt;a href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%83%99%e3%83%bc%e3%82%b9%e4%bf%9d%e8%ad%b7" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;データベースに保存される全ての情報を暗号化し、データの機密性を確保しています。バックアップデータも同様に暗号化され、万が一の情報漏洩リスクに備えています。これにより、お客様の重要な情報を常に安全に管理できます。&lt;/p&gt;
+&lt;h2 id="セキュリティ監視"&gt;セキュリティ監視 &lt;a href="#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e7%9b%a3%e8%a6%96" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="セキュリティ対策"&gt;セキュリティ対策 &lt;a href="#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e5%af%be%e7%ad%96" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;専門チームによる定期的なセキュリティ監査と脆弱性診断を実施しています。すべてのアクセスログを詳細に記録・監視し、異常を素早く検知・対応できる体制を整えています。継続的な監視により、常に最新のセキュリティ対策を実現しています。&lt;/p&gt;
+&lt;p&gt;詳しくはセキュリティページをご覧ください。&lt;/p&gt;</description></item><item><title>データの保存期間は？</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/data-storage-period/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/data-storage-period/</guid><description>&lt;h2 id="データの保存期間について"&gt;データの保存期間について &lt;a href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e4%bf%9d%e5%ad%98%e6%9c%9f%e9%96%93%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="デフォルトの保存設定"&gt;デフォルトの保存設定 &lt;a href="#%e3%83%87%e3%83%95%e3%82%a9%e3%83%ab%e3%83%88%e3%81%ae%e4%bf%9d%e5%ad%98%e8%a8%ad%e5%ae%9a" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;LiveAgentで取り扱った全てのデータは削除機能を有効にしない限り基本的に無期限で保持されます。データには以下のようなものが含まれます：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;チケット履歴&lt;/li&gt;
+&lt;li&gt;顧客コミュニケーション記録&lt;/li&gt;
+&lt;li&gt;エージェント対応ログ&lt;/li&gt;
+&lt;li&gt;メッセージやファイル添付情報&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;これらのデータは、企業の記録管理や顧客サポート品質の向上に役立ちます。&lt;/p&gt;
+&lt;h3 id="データ削除の設定方法"&gt;データ削除の設定方法 &lt;a href="#%e3%83%87%e3%83%bc%e3%82%bf%e5%89%8a%e9%99%a4%e3%81%ae%e8%a8%ad%e5%ae%9a%e6%96%b9%e6%b3%95" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;削除したい場合は、データベースからの削除機能を有効にして日数を設定することで、指定した期間が経過した削除済みチケットを自動的にデータベースから完全に削除できます。具体的な手順は以下の通りです：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;管理者パネルから「データ保持設定」を選択&lt;/li&gt;
+&lt;li&gt;削除期間（例：30日、90日、365日）を設定&lt;/li&gt;
+&lt;li&gt;自動削除機能を有効化&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;データ削除の設定は、プライバシー保護やストレージ管理の観点から重要な機能です。古いデータを定期的に整理することで、システムのパフォーマンスを維持し、必要な情報に効率的にアクセスできます。&lt;/p&gt;</description></item><item><title>シングルサインオン（Single Sign-On: SSO）</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/sso/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/sso/</guid><description>&lt;h2 id="シングルサインオンssoとは"&gt;シングルサインオン（SSO）とは &lt;a href="#%e3%82%b7%e3%83%b3%e3%82%b0%e3%83%ab%e3%82%b5%e3%82%a4%e3%83%b3%e3%82%aa%e3%83%b3sso%e3%81%a8%e3%81%af" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="ssoの基本概念"&gt;SSOの基本概念 &lt;a href="#sso%e3%81%ae%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Google、Microsoft、Facebook、Oktaなどの認証プロバイダーを活用し、LiveAgentを含む複数システムへ一度のログインでアクセスできる認証機能です。セキュリティと利便性を高次元で両立します。&lt;/p&gt;
+&lt;h2 id="ssoのメリット"&gt;SSOのメリット &lt;a href="#sso%e3%81%ae%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="ログイン作業の簡略化"&gt;ログイン作業の簡略化 &lt;a href="#%e3%83%ad%e3%82%b0%e3%82%a4%e3%83%b3%e4%bd%9c%e6%a5%ad%e3%81%ae%e7%b0%a1%e7%95%a5%e5%8c%96" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;SSOを導入すると、複数パスワードの記憶や管理の手間がなくなり、ログイン作業が簡略化されます。ユーザーは一つの安全な認証で複数アプリケーションへのアクセスが可能になり、企業のセキュリティポリシーとも整合します。&lt;/p&gt;
+&lt;h3 id="セキュリティ強化"&gt;セキュリティ強化 &lt;a href="#%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e5%bc%b7%e5%8c%96" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;また、二要素認証と併せることで、さらなる強固なセキュリティを実現できます。&lt;/p&gt;
+&lt;h2 id="ssoの主な特徴"&gt;SSOの主な特徴 &lt;a href="#sso%e3%81%ae%e4%b8%bb%e3%81%aa%e7%89%b9%e5%be%b4" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="サポート対象プロバイダー"&gt;サポート対象プロバイダー &lt;a href="#%e3%82%b5%e3%83%9d%e3%83%bc%e3%83%88%e5%af%be%e8%b1%a1%e3%83%97%e3%83%ad%e3%83%90%e3%82%a4%e3%83%80%e3%83%bc" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Microsoft&lt;/li&gt;
+&lt;li&gt;Google&lt;/li&gt;
+&lt;li&gt;Facebook&lt;/li&gt;
+&lt;li&gt;Okta&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="主要な利点"&gt;主要な利点 &lt;a href="#%e4%b8%bb%e8%a6%81%e3%81%aa%e5%88%a9%e7%82%b9" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;複数システムを一つのIDで利用可能&lt;/li&gt;
+&lt;li&gt;ログインの利便性とセキュリティを両立&lt;/li&gt;
+&lt;li&gt;多要素認証との連携で防御力も強化&lt;/li&gt;
+&lt;li&gt;管理コスト削減とユーザー体験向上に貢献&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>パスワード検証＆監査ログ（Password Validator &amp; Audit Log）</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/password-audit-log/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/password-audit-log/</guid><description>&lt;h2 id="パスワード検証監査ログの概要"&gt;パスワード検証＆監査ログの概要 &lt;a href="#%e3%83%91%e3%82%b9%e3%83%af%e3%83%bc%e3%83%89%e6%a4%9c%e8%a8%bc%e7%9b%a3%e6%9f%bb%e3%83%ad%e3%82%b0%e3%81%ae%e6%a6%82%e8%a6%81" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;パスワードの強度を自動検証し、過去の漏洩・流出情報にも照らして安全性を確保できる機能。加えて、認証周りの操作を監査ログとして記録し、トラブル時の調査に活用可能です。&lt;/p&gt;
+&lt;h3 id="主な機能"&gt;主な機能 &lt;a href="#%e4%b8%bb%e3%81%aa%e6%a9%9f%e8%83%bd" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;ユーザーが弱いパスワードを設定しようとするとエラーや改善案が表示され、流出が疑われるパスワードの場合も警告が出されます。加えて、いつ誰がパスワード設定・変更を行ったのかがログに残るため、不正アクセス時の原因特定や再発防止に役立ちます。&lt;/p&gt;
+&lt;h2 id="主要な特徴"&gt;主要な特徴 &lt;a href="#%e4%b8%bb%e8%a6%81%e3%81%aa%e7%89%b9%e5%be%b4" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="パスワードセキュリティ強化"&gt;パスワードセキュリティ強化 &lt;a href="#%e3%83%91%e3%82%b9%e3%83%af%e3%83%bc%e3%83%89%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e5%bc%b7%e5%8c%96" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;パスワードの強度と流出履歴を自動チェック&lt;/li&gt;
+&lt;li&gt;弱いパスワードや流出パスワードの使用を防止&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="運用監査と透明性"&gt;運用監査と透明性 &lt;a href="#%e9%81%8b%e7%94%a8%e7%9b%a3%e6%9f%bb%e3%81%a8%e9%80%8f%e6%98%8e%e6%80%a7" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;ログにより認証操作の透明性を確保&lt;/li&gt;
+&lt;li&gt;セキュリティ事故時の迅速な原因追跡に貢献&lt;/li&gt;
+&lt;li&gt;アカウント保護と運用監査の両方をサポート&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>監査ログ（Audit log）</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/audit-log/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/audit-log/</guid><description>&lt;h2 id="監査ログとは"&gt;監査ログとは &lt;a href="#%e7%9b%a3%e6%9f%bb%e3%83%ad%e3%82%b0%e3%81%a8%e3%81%af" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;システム内で行われたすべての操作を記録する機能です。誰が、いつ、どの操作をしたかを確認でき、セキュリティ管理や問題解決に役立ちます。&lt;/p&gt;
+&lt;h3 id="監査ログの主な特徴"&gt;監査ログの主な特徴 &lt;a href="#%e7%9b%a3%e6%9f%bb%e3%83%ad%e3%82%b0%e3%81%ae%e4%b8%bb%e3%81%aa%e7%89%b9%e5%be%b4" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;たとえばチケットの削除や設定変更など重要なアクションもすべて記録されるため、トラブル発生時に責任の所在を特定できます。コンプライアンスや内部統制を強化する上でも重要です。&lt;/p&gt;
+&lt;h2 id="監査ログの重要なポイント"&gt;監査ログの重要なポイント &lt;a href="#%e7%9b%a3%e6%9f%bb%e3%83%ad%e3%82%b0%e3%81%ae%e9%87%8d%e8%a6%81%e3%81%aa%e3%83%9d%e3%82%a4%e3%83%b3%e3%83%88" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="記録される情報"&gt;記録される情報 &lt;a href="#%e8%a8%98%e9%8c%b2%e3%81%95%e3%82%8c%e3%82%8b%e6%83%85%e5%a0%b1" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;すべての操作履歴を自動的に記録&lt;/li&gt;
+&lt;li&gt;トラブル発生時に原因追跡が可能&lt;/li&gt;
+&lt;li&gt;不正利用やミスの防止に役立つ&lt;/li&gt;
+&lt;li&gt;コンプライアンス強化に必須の機能&lt;/li&gt;
+&lt;li&gt;管理者が状況を把握しやすい&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>監査ログは保存されますか？</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/audit-log-storage/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/audit-log-storage/</guid><description>&lt;h2 id="監査ログの概要"&gt;監査ログの概要 &lt;a href="#%e7%9b%a3%e6%9f%bb%e3%83%ad%e3%82%b0%e3%81%ae%e6%a6%82%e8%a6%81" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;はい、操作ログ、変更履歴、アクセスログなど監査に必要な情報が記録・保存されます。&lt;/p&gt;
+&lt;h2 id="監査ログで追跡される詳細アクション"&gt;監査ログで追跡される詳細アクション &lt;a href="#%e7%9b%a3%e6%9f%bb%e3%83%ad%e3%82%b0%e3%81%a7%e8%bf%bd%e8%b7%a1%e3%81%95%e3%82%8c%e3%82%8b%e8%a9%b3%e7%b4%b0%e3%82%a2%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="ユーザー関連アクション"&gt;ユーザー関連アクション &lt;a href="#%e3%83%a6%e3%83%bc%e3%82%b6%e3%83%bc%e9%96%a2%e9%80%a3%e3%82%a2%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;ユーザー - 状態変更&lt;/li&gt;
+&lt;li&gt;ユーザー - ログイン&lt;/li&gt;
+&lt;li&gt;ユーザー - ログアウト&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="チケット関連アクション"&gt;チケット関連アクション &lt;a href="#%e3%83%81%e3%82%b1%e3%83%83%e3%83%88%e9%96%a2%e9%80%a3%e3%82%a2%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;一般アクション&lt;/li&gt;
+&lt;li&gt;ユーザー - チケットを表示&lt;/li&gt;
+&lt;li&gt;ユーザー - チケットを離脱&lt;/li&gt;
+&lt;li&gt;チケット - ステータス&lt;/li&gt;
+&lt;li&gt;チケット - メッセージ&lt;/li&gt;
+&lt;li&gt;チケット - 内部メッセージ&lt;/li&gt;
+&lt;li&gt;チケット - ファイル&lt;/li&gt;
+&lt;li&gt;チケット - 転送&lt;/li&gt;
+&lt;li&gt;チケット - システムメッセージ&lt;/li&gt;
+&lt;li&gt;チケット - タグの変更&lt;/li&gt;
+&lt;li&gt;チケット - 音声メッセージ&lt;/li&gt;
+&lt;li&gt;チケット - メモ&lt;/li&gt;
+&lt;li&gt;チケット - ランキング&lt;/li&gt;
+&lt;li&gt;チケット - 分割&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="チャネル固有のアクション"&gt;チャネル固有のアクション &lt;a href="#%e3%83%81%e3%83%a3%e3%83%8d%e3%83%ab%e5%9b%ba%e6%9c%89%e3%81%ae%e3%82%a2%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;チケット - その他&lt;/li&gt;
+&lt;li&gt;チケット - 通話&lt;/li&gt;
+&lt;li&gt;チケット - チャット&lt;/li&gt;
+&lt;li&gt;チケット - Facebook&lt;/li&gt;
+&lt;li&gt;チケット - ナレッジベース&lt;/li&gt;
+&lt;li&gt;チケット - オフライン&lt;/li&gt;
+&lt;li&gt;チケット - ツイート&lt;/li&gt;
+&lt;li&gt;チケット - Tencent&lt;/li&gt;
+&lt;li&gt;チケット - Weibo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="コール関連アクション"&gt;コール関連アクション &lt;a href="#%e3%82%b3%e3%83%bc%e3%83%ab%e9%96%a2%e9%80%a3%e3%82%a2%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;コール - 通話終了&lt;/li&gt;
+&lt;li&gt;コール - 着信応答&lt;/li&gt;
+&lt;li&gt;コール - 転送&lt;/li&gt;
+&lt;li&gt;コール - 着信中&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>個人情報の取り扱いは？</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/personal-data-handling/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/personal-data-handling/</guid><description>&lt;h2 id="個人情報の取り扱いと保護"&gt;個人情報の取り扱いと保護 &lt;a href="#%e5%80%8b%e4%ba%ba%e6%83%85%e5%a0%b1%e3%81%ae%e5%8f%96%e3%82%8a%e6%89%b1%e3%81%84%e3%81%a8%e4%bf%9d%e8%ad%b7" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="liveagentのデータ管理"&gt;LiveAgentのデータ管理 &lt;a href="#liveagent%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e7%ae%a1%e7%90%86" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;LiveAgentのデータは、GDPRに準拠し、暗号化されたデータベースで厳重に管理されます。お客様の個人情報は、最新のセキュリティ技術を用いて保護され、不正アクセスや漏洩から守られています。データは常に暗号化され、厳格なアクセス制御が行われています。&lt;/p&gt;
+&lt;h3 id="gdprの概要"&gt;GDPRの概要 &lt;a href="#gdpr%e3%81%ae%e6%a6%82%e8%a6%81" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4 id="gdprとは"&gt;GDPRとは &lt;a href="#gdpr%e3%81%a8%e3%81%af" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;GDPR（General Data Protection Regulation: EU一般データ保護規則）は、EU（欧州連合）域内の個人データ保護と取り扱いに関する規則です。2018年5月25日に施行され、EU域内の個人データを扱うすべての組織に適用されます。GDPRにより個人が自身のデータに対する権利が強化され、企業はより厳格な個人データ保護が求められるようになりました。&lt;/p&gt;
+&lt;p&gt;主な特徴は以下の通りです：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;個人データの透明性と同意&lt;/li&gt;
+&lt;li&gt;データ主体の権利強化&lt;/li&gt;
+&lt;li&gt;データ保護に関する厳格な規制&lt;/li&gt;
+&lt;li&gt;違反に対する高額な罰則&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SmartWebでは、以下のような対策を講じています：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;データ暗号化&lt;/li&gt;
+&lt;li&gt;定期的なセキュリティ監査&lt;/li&gt;
+&lt;li&gt;アクセス権限の厳密な管理&lt;/li&gt;
+&lt;li&gt;プライバシーポリシーの明確な開示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;個人情報の保護は、私たちにとって最も重要な責任の一つです。お客様の信頼を守るため、継続的にセキュリティ対策を強化しています。&lt;/p&gt;</description></item><item><title>二要素認証は使えますか？</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/two-factor-auth-2/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/two-factor-auth-2/</guid><description>&lt;h2 id="二要素認証の利用可否"&gt;二要素認証の利用可否 &lt;a href="#%e4%ba%8c%e8%a6%81%e7%b4%a0%e8%aa%8d%e8%a8%bc%e3%81%ae%e5%88%a9%e7%94%a8%e5%8f%af%e5%90%a6" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="google-authenticatorによる二段階認証"&gt;Google Authenticatorによる二段階認証 &lt;a href="#google-authenticator%e3%81%ab%e3%82%88%e3%82%8b%e4%ba%8c%e6%ae%b5%e9%9a%8e%e8%aa%8d%e8%a8%bc" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;SmartWebでは、Google Authenticatorを使った2FA（二要素認証）を完全にサポートしています。この機能により、アカウントのセキュリティを大幅に強化することができます。二要素認証は、通常のパスワード入力に加えて、スマートフォンアプリから生成される6桁の一時的なコードを要求することで、不正アクセスから守ります。&lt;/p&gt;
+&lt;p&gt;主な利点は以下の通りです：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;リアルタイムのセキュリティコード生成&lt;/li&gt;
+&lt;li&gt;スマートフォンアプリとの簡単な連携&lt;/li&gt;
+&lt;li&gt;不正ログイン防止&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="シングルサインオンssoを利用した認証"&gt;シングルサインオン（SSO）を利用した認証 &lt;a href="#%e3%82%b7%e3%83%b3%e3%82%b0%e3%83%ab%e3%82%b5%e3%82%a4%e3%83%b3%e3%82%aa%e3%83%b3sso%e3%82%92%e5%88%a9%e7%94%a8%e3%81%97%e3%81%9f%e8%aa%8d%e8%a8%bc" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;GoogleやMicrosoftアカウントによるSSO連携（シングルサインオン）も提供しており、これにより間接的に2段階認証を適用できます。このアプローチは、既存のアカウントを活用してログインプロセスをよりシンプルかつ安全にします。&lt;/p&gt;
+&lt;p&gt;SSO認証のメリット：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;複数のサービス間で共通のログイン情報を使用&lt;/li&gt;
+&lt;li&gt;追加のパスワード管理不要&lt;/li&gt;
+&lt;li&gt;クラウドベースの統合セキュリティ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;どちらの認証方法も、ユーザーのデータとプライバシーを最優先に保護します。&lt;/p&gt;</description></item><item><title>複数データセンター（Multiple Data Centers）</title><link>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/multiple-datacenter/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>https://main.d2b65nc0n0a17p.amplifyapp.com/ja/docs/security/multiple-datacenter/</guid><description>&lt;h2 id="複数データセンターの概要"&gt;複数データセンターの概要 &lt;a href="#%e8%a4%87%e6%95%b0%e3%83%87%e3%83%bc%e3%82%bf%e3%82%bb%e3%83%b3%e3%82%bf%e3%83%bc%e3%81%ae%e6%a6%82%e8%a6%81" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="データセンター展開の目的"&gt;データセンター展開の目的 &lt;a href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%82%bb%e3%83%b3%e3%82%bf%e3%83%bc%e5%b1%95%e9%96%8b%e3%81%ae%e7%9b%ae%e7%9a%84" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;世界中に複数のデータセンター（例：アメリカ・フランクフルト・シンガポール）を展開し、ユーザーの所在地に最適なサーバーで運用することで、安定性とセキュリティを両立する機能です。&lt;/p&gt;
+&lt;h3 id="リージョン選択のメリット"&gt;リージョン選択のメリット &lt;a href="#%e3%83%aa%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e9%81%b8%e6%8a%9e%e3%81%ae%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;ユーザー登録時に最適なリージョンでアカウントが構築され、アクセス速度の最適化と法規制（例：居住国のデータ法）への準拠も可能です。単一拠点では実現しづらい拡張性と可用性を高め、多地域での事業展開においても信頼性の高いサービスを提供します。&lt;/p&gt;
+&lt;h3 id="日本ユーザーの利用リージョン"&gt;日本ユーザーの利用リージョン &lt;a href="#%e6%97%a5%e6%9c%ac%e3%83%a6%e3%83%bc%e3%82%b6%e3%83%bc%e3%81%ae%e5%88%a9%e7%94%a8%e3%83%aa%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;なお、日本国内の利用者はお申し出がない場合をのぞき、&lt;strong&gt;シンガポールのデータセンターが利用&lt;/strong&gt;​されます。&lt;/p&gt;
+&lt;h2 id="主要な特徴"&gt;主要な特徴 &lt;a href="#%e4%b8%bb%e8%a6%81%e3%81%aa%e7%89%b9%e5%be%b4" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="リージョン展開"&gt;リージョン展開 &lt;a href="#%e3%83%aa%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e5%b1%95%e9%96%8b" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;複数の主要リージョンにデータセンターを展開&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="サーバー最適化"&gt;サーバー最適化 &lt;a href="#%e3%82%b5%e3%83%bc%e3%83%90%e3%83%bc%e6%9c%80%e9%81%a9%e5%8c%96" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;ユーザー所在地に応じた最適サーバー選定&lt;/li&gt;
+&lt;li&gt;アクセス速度とレスポンスを向上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="コンプライアンス"&gt;コンプライアンス &lt;a href="#%e3%82%b3%e3%83%b3%e3%83%97%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%82%b9" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;国ごとの法規制への準拠を促進&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="グローバル対応"&gt;グローバル対応 &lt;a href="#%e3%82%b0%e3%83%ad%e3%83%bc%e3%83%90%e3%83%ab%e5%af%be%e5%bf%9c" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;グローバル展開時の信頼性と可用性を強化&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
