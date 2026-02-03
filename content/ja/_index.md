@@ -36,7 +36,7 @@ detailed_features:
   description: "SmartWebは、最新のAI技術と高速なWeb基盤を組み合わせ、ビジネスの成長を加速させる2つの強力なソリューションを提供します。"
   items:
     - title: "AIカスタマーサポート"
-      description: "LiveAgentとFlowHunt AIを完全統合。24時間365日、多言語で顧客対応を自動化し、サポート品質を落とすことなく業務効率を劇的に改善します。"
+      description: "SmartWebのAIカスタマーサポートはチケットシステムのLiveAgentとAIプラットフォームのFlowHuntを完全統合。24時間365日、多言語で顧客対応を自動化し、サポート品質を落とすことなく業務効率を劇的に改善します。"
       video: "frmB19r0k58"
       videoTitle: "10分でわかる、Smartなカスタマーサポート"
       imageAlt: "AI Customer Support Dashboard"
@@ -44,26 +44,45 @@ detailed_features:
       logos:
         - "/images/liveagent-logo-200.webp"
         - "/images/flowhunt-logo-200.webp"
-      listItems:
-        - "100言語以上に対応したAIチャットボットによる即時回答"
-        - "過去の対応履歴を学習し、高精度な回答を自動生成"
-        - "複雑な案件はスムーズに有人対応へエスカレーション"
-        - "対応工数を最大82%削減し、顧客満足度を向上"
-      ctaText: "サポート機能を見る"
+      # 4つの機能カード（案B）
+      featureCards:
+        - icon: "chatbot"
+          title: "AIチャットボット"
+          description: "100言語対応・24時間365日稼働"
+          url: "/ja/services/ai-chatbot/"
+        - icon: "ticket"
+          title: "チケットシステム"
+          description: "全チャネルを一画面で一元管理"
+          url: "/ja/services/ticket-system/"
+        - icon: "email"
+          title: "メール回答作成"
+          description: "受信→回答案作成を完全自動化"
+          url: "/ja/services/email-automation/"
+        - icon: "assist"
+          title: "回答アシスト"
+          description: "オペレーターの文章をAIが改善"
+          url: "/ja/services/ai-answer-assistant/"
+      ctaText: "4つの機能を詳しく見る"
       ctaUrl: "#customer-support"
       ctaStyle: "bg-indigo-600 hover:bg-indigo-500 text-white"
 
     - title: "AIコンテンツ作成・Web構築"
-      description: "コンテンツマーケティングのすべてをAIで自動化。ブログ記事や用語集の作成から、Hugoを用いた超高速Webサイトの構築までを一気通貫で提供します。"
+      description: "SmartWebのAIコンテンツ作成・Web構築はAIプラットフォームのFlowHuntと静的サイトジェネレーターのHugoを活用。ブログ記事や用語集の自動生成から超高速Webサイトの構築までを一気通貫で提供します。"
       imageUrl: "/images/hero-content-creation.jpg"
       imageAlt: "AI Content Creation Tools"
       imagePosition: "left"
-      listItems:
-        - "専門用語集・ブログ記事・動画要約記事の自動生成"
-        - "SEOに最適化されたメタデータと構造化データを自動付与"
-        - "Hugoによる静的サイト生成で、圧倒的な表示速度を実現"
-        - "サーバーレス構成による強固なセキュリティと低コスト運用"
-      ctaText: "制作機能を見る"
+      logos:
+        - "/images/flowhunt-logo-200.webp"
+        - "/images/hugo-logo-wide.svg"
+      # 2つの機能カード
+      featureCards:
+        - icon: "content"
+          title: "AIコンテンツ作成"
+          description: "ブログ・用語集の原稿をAIが自動生成"
+        - icon: "web"
+          title: "Hugo高速Web構築"
+          description: "世界最速の静的サイトジェネレーター"
+      ctaText: "2つの機能を詳しく見る"
       ctaUrl: "#content-creation"
       ctaStyle: "bg-indigo-600 hover:bg-indigo-500 text-white"
 

@@ -159,6 +159,38 @@ git submodule add https://github.com/qualityunit/hugo-boilerplate.git themes/boi
 echo 'theme = "boilerplate"' >> hugo.toml
 ```
 
+## Submodules
+
+This repository contains the following submodules:
+
+### support-docs/themes/lotusdocs
+
+- **URL**: `https://github.com/LA-JP-Support/lotusdocs.git`
+- **Branch**: `release`
+- **Original**: Forked from [colinwilson/lotusdocs](https://github.com/colinwilson/lotusdocs)
+- **Purpose**: Hugo theme for support documentation site
+
+#### Cloning with Submodules
+
+```bash
+# Clone with submodules
+git clone --recursive https://github.com/LA-JP-Support/hugo-boilerplate.git
+
+# Or if already cloned, initialize submodules
+git submodule update --init --recursive
+```
+
+#### Updating Submodules
+
+```bash
+# Update all submodules to latest commit
+git submodule update --remote
+
+# Or update specific submodule
+cd support-docs/themes/lotusdocs
+git pull origin release
+```
+
 ### Option 2: Manual Download
 
 If you prefer not to use Git submodules:

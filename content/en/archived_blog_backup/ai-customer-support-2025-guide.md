@@ -2,6 +2,7 @@
 title: "2025 AI Customer Support Guide: Success Strategies from Amazon, Salesforce to SMEs"
 date: 2025-11-20
 draft: false
+type: blog
 description: "Comprehensive guide to AI customer support trends and success stories. Learn winning strategies in the global market from Salesforce, Amazon, and SME examples. Complete coverage of multilingual support, multimodal AI, and generative AI applications."
 tags: ["AI", "Customer Support", "Chatbot", "Generative AI", "Business Efficiency", "Customer Experience"]
 categories: ["AI & Machine Learning", "Business Efficiency"]

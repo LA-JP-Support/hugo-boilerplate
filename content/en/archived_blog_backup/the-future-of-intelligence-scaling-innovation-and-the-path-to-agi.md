@@ -3,6 +3,7 @@ title: "The Future of Intelligence: Scaling, Innovation, and the Path to AGI"
 date: 2026-01-05
 lastmod: 2026-01-05
 draft: false
+type: blog
 layout: single-youtube
 translationKey: "the-future-of-intelligence-scaling-innovation-and-the-path-to-agi"
 description: "Explore the future of artificial intelligence with DeepMind's CEO Demis Hassabis as he discusses the balance between scaling and innovation, the pursuit of AGI, and breakthrough applications in science and technology."

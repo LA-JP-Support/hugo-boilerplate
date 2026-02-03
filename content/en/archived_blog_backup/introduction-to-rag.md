@@ -2,6 +2,7 @@
 title: "How AI Answers Accurately with Latest Information: Introduction to RAG (Retrieval-Augmented Generation)"
 date: 2025-11-19
 draft: false
+type: blog
 translationKey: "introduction-to-rag"
 description: "Learn the basics and practical applications of RAG (Retrieval-Augmented Generation). Detailed coverage from differences with traditional AI to benefits and real-world use cases."
 keywords: ["RAG", "Retrieval-Augmented Generation", "AI", "Generative AI", "Chatbot", "FlowHunt"]
@@ -51,7 +52,7 @@ On the other hand, RAG enables AI to search for necessary information in real-ti
 
 RAG creates answers through three steps: "question understanding", "retrieval", and "generation".
 
-! [Three Steps of RAG](/images/blog/RAG-123.jpg)
+![Three Steps of RAG](/images/blog/RAG-123.jpg)
 
 1. <strong>Question Understanding</strong>Generative AI understands user questions and determines what information is needed. At this stage, it analyzes question intent and required answer type.
 

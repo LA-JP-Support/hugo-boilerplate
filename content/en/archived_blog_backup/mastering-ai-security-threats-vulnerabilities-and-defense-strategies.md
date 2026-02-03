@@ -3,6 +3,7 @@ title: "Mastering AI Security: A Comprehensive Guide to Threats, Vulnerabilities
 date: 2026-01-05
 lastmod: 2026-01-05
 draft: false
+type: blog
 layout: single-youtube
 translationKey: "mastering-ai-security-threats-vulnerabilities-and-defense-strategies"
 description: "Learn the critical security risks in AI systems, from data poisoning to prompt injection and jailbreaks. Discover how to evaluate vulnerabilities across the AI lifecycle and build resilient AI architectures."

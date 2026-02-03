@@ -1,6 +1,9 @@
 <!-- CTA Section -->
 {{ $ctaHeading := .Params.ctaHeading | default (i18n "cta_default_heading") }}
-{{ $showCTA := .Params.showCTA | default $ctaHeading }}
+{{ $showCTA := true }}
+{{ if isset .Params "showCTA" }}
+  {{ $showCTA = .Params.showCTA }}
+{{ end }}
 
 {{ if $showCTA }}
     {{ $ctaDescription := .Params.ctaDescription | default (i18n "cta_default_description") }}

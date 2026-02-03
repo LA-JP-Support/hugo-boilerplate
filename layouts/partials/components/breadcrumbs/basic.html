@@ -20,7 +20,7 @@
 {{- $items := .items -}}
 {{- $homeUrl := .homeUrl | default "/" -}}
 
-<nav class="wrapper flex gap-2 py-8" aria-label="Breadcrumb">
+<nav class="wrapper flex gap-2 py-8 relative z-10" aria-label="Breadcrumb">
   <ol role="list" class="flex flex-wrap items-center gap-y-2">
     <li class="flex items-center">
       <a href="{{ partial "helpers/get-translated-url.html" (dict "url" $homeUrl) }}" class="icon-on-gray">
@@ -32,7 +32,7 @@
       {{- end -}}
     </li>
     {{- range $index, $item := $items -}}
-    {{- if not (and (eq $index 0) (or (eq $item.title "Home") (eq $item.title "home"))) -}}
+    {{- if not (and (eq $index 0) (or (eq $item.title "Home") (eq $item.title "home") (eq $item.title "ホーム"))) -}}
     {{- $isLast := eq (add $index 1) (len $items) -}}
     <li class="flex items-center">
       {{- if $isLast -}}

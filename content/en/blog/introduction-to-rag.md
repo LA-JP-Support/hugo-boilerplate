@@ -55,7 +55,7 @@ On the other hand, RAG enables AI to search for necessary information in real-ti
 
 RAG creates answers through three steps: "question understanding", "retrieval", and "generation".
 
-! [Three Steps of RAG](/images/blog/RAG-123.jpg)
+![Three Steps of RAG](/images/blog/RAG-123.jpg)
 
 1. <strong>Question Understanding</strong>Generative AI understands user questions and determines what information is needed. At this stage, it analyzes question intent and required answer type.
 
@@ -94,7 +94,7 @@ Recent scientific papers and technical developments predict that RAG will advanc
 
 ### RAG Use Cases at SmartWeb
 
-SmartWeb develops AI [chatbot](/en/glossary/AI-chatbot/) and AI email auto-response services combining LiveAgent and FlowHunt. Using RAG technology, it immediately searches and provides the latest information from manuals, FAQs, and specialized documents collected for each company. It is used in scenarios like:
+SmartWeb develops AI chatbot and AI email auto-response services combining LiveAgent and FlowHunt. Using RAG technology, it immediately searches and provides the latest information from manuals, FAQs, and specialized documents collected for each company. It is used in scenarios like:
 
 - <strong>24/7/365 Auto-Response with Latest Information</strong>Even outside business hours or late at night, AI immediately answers customer questions. It cross-searches the latest manuals and FAQs to return optimal answers on the spot.
 

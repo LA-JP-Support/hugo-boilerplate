@@ -1,0 +1,198 @@
+{{/*
+@component: Animated Gradient Hero
+@description: Unified hero section with animated gradient background, floating orbs, and glow effect.
+@params:
+  - title: Main heading text
+  - description: Subheading text
+  - colorScheme: Color scheme name (blog, glossary, pricing)
+  - showSearch: Whether to show search field
+  - searchType: Type of search (blog-archive-search, glossary-archive-search)
+  - searchDirectories: Directories to search in
+@example:
+  {{ partial "sections/hero/animated_gradient.html" (dict
+    "title" "ブログ"
+    "description" "最新の技術情報をお届けします"
+    "colorScheme" "blog"
+    "showSearch" true
+    "searchType" "blog-archive-search"
+    "searchDirectories" (slice "blog")
+  ) }}
+*/}}
+
+{{- $title := .title | default "Title" -}}
+{{- $description := .description | default "" -}}
+{{- $colorScheme := .colorScheme | default "blog" -}}
+{{- $showSearch := .showSearch | default false -}}
+{{- $searchType := .searchType | default "" -}}
+{{- $searchDirectories := .searchDirectories | default (slice) -}}
+
+{{/* Color scheme definitions */}}
+{{- $bgClass := "" -}}
+{{- if eq $colorScheme "blog" -}}
+  {{- $bgClass = "hero-animated-bg-blog" -}}
+{{- else if eq $colorScheme "glossary" -}}
+  {{- $bgClass = "hero-animated-bg-glossary" -}}
+{{- else if eq $colorScheme "pricing" -}}
+  {{- $bgClass = "hero-animated-bg-pricing" -}}
+{{- else -}}
+  {{- $bgClass = "hero-animated-bg-blog" -}}
+{{- end -}}
+
+<div class="relative overflow-visible z-10">
+  <div class="{{ $bgClass }} absolute inset-0 z-0"></div>
+  <div class="hero-animated-overlay absolute inset-0 z-0"></div>
+  <div class="hero-animated-glow absolute inset-0 z-[5]">
+    <div class="hero-animated-glow-orb"></div>
+  </div>
+  <div class="relative z-10 py-12 sm:py-16">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h1 class="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+          {{ $title }}
+        </h1>
+        {{ if $description }}
+        <p class="mt-4 sm:mt-6 text-base sm:text-lg leading-7 text-gray-200">
+          {{ $description }}
+        </p>
+        {{ end }}
+        
+        {{ if $showSearch }}
+        <div class="mt-6 sm:mt-8 max-w-xl mx-auto">
+          {{ partial "search_field.html" (dict
+            "type" $searchType
+            "marginClass" "mt-4"
+            "directories" $searchDirectories
+          ) }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Shared animation keyframes */
+@keyframes heroGradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes heroFloat {
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(30px, -50px); }
+  50% { transform: translate(-20px, -100px); }
+  75% { transform: translate(-50px, -50px); }
+}
+
+/* Blog color scheme - Blue/Purple/Pink/Cyan */
+.hero-animated-bg-blog {
+  background: linear-gradient(135deg, #1d4ed8 0%, #7c3aed 25%, #db2777 50%, #06b6d4 75%, #1d4ed8 100%);
+  background-size: 400% 400%;
+  animation: heroGradientShift 10s ease infinite;
+}
+
+.hero-animated-bg-blog::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+  animation: heroFloat 20s ease-in-out infinite;
+}
+
+.hero-animated-bg-blog::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);
+  animation: heroFloat 25s ease-in-out infinite reverse;
+}
+
+/* Glossary color scheme - Green/Teal/Emerald */
+.hero-animated-bg-glossary {
+  background: linear-gradient(135deg, #059669 0%, #0d9488 25%, #10b981 50%, #14b8a6 75%, #059669 100%);
+  background-size: 400% 400%;
+  animation: heroGradientShift 10s ease infinite;
+}
+
+.hero-animated-bg-glossary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+  animation: heroFloat 20s ease-in-out infinite;
+}
+
+.hero-animated-bg-glossary::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);
+  animation: heroFloat 25s ease-in-out infinite reverse;
+}
+
+/* Pricing color scheme - Indigo/Purple/Pink */
+.hero-animated-bg-pricing {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 25%, #a855f7 50%, #ec4899 75%, #4f46e5 100%);
+  background-size: 400% 400%;
+  animation: heroGradientShift 10s ease infinite;
+}
+
+.hero-animated-bg-pricing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+  animation: heroFloat 20s ease-in-out infinite;
+}
+
+.hero-animated-bg-pricing::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);
+  animation: heroFloat 25s ease-in-out infinite reverse;
+}
+
+/* Shared overlay */
+.hero-animated-overlay {
+  background: linear-gradient(180deg, rgba(2, 6, 23, 0.12) 0%, rgba(2, 6, 23, 0.26) 100%);
+  pointer-events: none;
+}
+
+/* Glow effect */
+.hero-animated-glow {
+  pointer-events: none;
+}
+
+.hero-animated-glow-orb {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  filter: blur(40px);
+  opacity: 0.6;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>

@@ -2,6 +2,7 @@
 title: "The End of 'Who Was Handling That Inquiry?' - A Customer Inquiry Management Revolution for Businesses"
 date: 2025-11-20
 draft: false
+type: blog
 image: "/images/blog/inquiry-management-revolution.png"
 ---
 # Monday Morning Nightmare: Before Drowning in a Sea of Emails

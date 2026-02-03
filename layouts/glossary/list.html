@@ -4,26 +4,33 @@
 {{ $cardHeight := 252 }}
 
   <div class="bg-white dark:bg-gray-900">
-    {{/* 用語集専用のシンプルヒーロー */}}
-    <div class="bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-700 dark:from-gray-800 dark:via-gray-900 dark:to-black py-12 sm:py-16">
-      <div class="wrapper">
-        <div class="mx-auto max-w-2xl text-center">
-          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            {{ .Title }}
-          </h1>
-          {{ if .Description }}
-            <p class="mt-4 text-lg text-white/90">
-              {{ .Description }}
-            </p>
-          {{ end }}
-        </div>
+    {{/* 用語集専用ヒーロー - アニメーション背景付き */}}
+    <div class="relative overflow-visible z-10">
+      <div class="glossary-hero-animated-bg absolute inset-0 z-0"></div>
+      <div class="glossary-hero-overlay absolute inset-0 z-0"></div>
+      <div class="glossary-hero-glow absolute inset-0 z-[5]">
+        <div class="glossary-hero-glow-orb"></div>
+      </div>
+      <div class="relative z-10 py-12 sm:py-16">
+        <div class="wrapper">
+          <div class="mx-auto max-w-2xl text-center">
+            <h1 class="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+              {{ .Title }}
+            </h1>
+            {{ if .Description }}
+              <p class="mt-4 sm:mt-6 text-base sm:text-lg leading-7 text-gray-200">
+                {{ .Description }}
+              </p>
+            {{ end }}
+          </div>
 
-        <div class="mt-8 max-w-xl mx-auto">
-          {{ partial "search_field.html" (dict
-            "type" "glossary-archive-search"
-            "marginClass" "mt-4"
-            "directories" (slice "glossary")
-          ) }}
+          <div class="mt-6 sm:mt-8 max-w-xl mx-auto">
+            {{ partial "search_field.html" (dict
+              "type" "glossary-archive-search"
+              "marginClass" "mt-4"
+              "directories" (slice "glossary")
+            ) }}
+          </div>
         </div>
       </div>
     </div>
@@ -812,5 +819,72 @@
       handleScroll();
     });
   </script>
+
+<style>
+@keyframes glossaryGradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glossaryFloat {
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(30px, -50px); }
+  50% { transform: translate(-20px, -100px); }
+  75% { transform: translate(-50px, -50px); }
+}
+
+.glossary-hero-animated-bg {
+  background: linear-gradient(135deg, #059669 0%, #0d9488 25%, #10b981 50%, #14b8a6 75%, #059669 100%);
+  background-size: 400% 400%;
+  animation: glossaryGradientShift 10s ease infinite;
+}
+
+.glossary-hero-animated-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 420px;
+  height: 420px;
+  background: rgba(255,255,255,0.10);
+  border-radius: 50%;
+  animation: glossaryFloat 20s ease-in-out infinite;
+}
+
+.glossary-hero-animated-bg::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 320px;
+  height: 320px;
+  background: rgba(255,255,255,0.10);
+  border-radius: 50%;
+  animation: glossaryFloat 25s ease-in-out infinite reverse;
+}
+
+.glossary-hero-overlay {
+  background: linear-gradient(180deg, rgba(2, 6, 23, 0.12) 0%, rgba(2, 6, 23, 0.26) 100%);
+  pointer-events: none;
+}
+
+.glossary-hero-glow {
+  pointer-events: none;
+}
+
+.glossary-hero-glow-orb {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.00) 70%);
+  border-radius: 50%;
+  filter: blur(44px);
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+  top: 50%;
+  left: 50%;
+}
+</style>
   
 {{ end }}

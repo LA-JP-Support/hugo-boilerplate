@@ -2,6 +2,7 @@
 title: "No IT Staff? No Problem! AI Solutions SMEs Can Start Using Today"
 date: 2025-11-20
 draft: false
+type: blog
 translationKey: "start-using-ai-today"
 description: "A comprehensive guide to AI implementation for SMEs without IT staff. Achieve operational efficiency and improved customer satisfaction through ticket systems, AI email auto-response, and AI chatbots."
 keywords: ["AI implementation", "SME", "ticket system", "AI email response", "AI chatbot", "digital transformation"]

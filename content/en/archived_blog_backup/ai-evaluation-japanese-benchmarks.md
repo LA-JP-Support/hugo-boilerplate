@@ -2,6 +2,7 @@
 title: "Complete Guide to AI Language Model Evaluation: Japanese Benchmarks and Practical Implementation"
 date: 2025-11-19
 draft: false
+type: blog
 translationKey: "ai-evaluation-japanese-benchmarks"
 description: "From automatic LLM evaluation methods to Japanese-specific benchmarks and hallucination mitigation strategies—comprehensive knowledge essential for enterprise AI adoption. Includes FlowHunt case studies."
 keywords: ["LLM evaluation", "Japanese benchmarks", "hallucination mitigation", "RAG", "prompt optimization", "FlowHunt"]

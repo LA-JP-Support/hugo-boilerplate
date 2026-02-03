@@ -81,5 +81,9 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
   ],
   // Ensure Tailwind doesn't conflict with the lazy loading and responsive image features
-  safelist: ['lazy-load', 'lazy-load-bg', 'lazy-load-video', 'picture', 'source', 'webp', 'srcset'],
+  safelist: [
+    'lazy-load', 'lazy-load-bg', 'lazy-load-video', 'picture', 'source', 'webp', 'srcset',
+    // Service card colors
+    'bg-indigo-600', 'bg-emerald-600', 'bg-amber-500', 'bg-amber-600',
+  ],
 };

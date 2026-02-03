@@ -3,6 +3,7 @@
 title: "What is a Ticket System in Customer Support?"
 date: 2025-11-19
 draft: false
+type: blog
 translationKey: "understanding-ticket-systems-for-customer-support"
 description: "A comprehensive guide to customer support ticket systems, from basics to implementation and AI integration. Learn how to achieve operational efficiency and improve customer satisfaction."
 keywords: ["ticket system", "customer support", "ITIL", "operational efficiency", "AI automation", "LiveAgent"]

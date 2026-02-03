@@ -1,5 +1,6 @@
 +++
 title = "Project Vend: How Claude AI Ran a Business and What It Reveals About Autonomous Agents"
+type = "blog"
 youtubeTitle = "Claude ran a business in our office"
 youtubeVideoID = "5KTHvKCrQ00"
 description = "An in-depth exploration of Project Vend, an experiment where Claude AI autonomously operated a vending machine business, revealing critical insights about AI agent limitations, deception, and the future of autonomous business operations."

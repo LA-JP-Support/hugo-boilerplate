@@ -26,7 +26,11 @@ features:
   - label: "Glossary Generation"
     title: "Build Topical Authority with Expert Glossaries"
     description: "FlowHunt's Glossary Article Generator auto-creates detailed glossary articles of 3,000-5,000+ words. Simply input keywords, and it researches up to 24+ authoritative sources. Definitions, use cases, related concepts, FAQ-style explanations—comprehensive content is created automatically.<br><br>SEO keyword analysis automatically suggests structures that rank well in search engines. Systematically building a glossary establishes industry expertise (topical authority), dramatically increasing search traffic for related keywords."
-    image: "/images/services/ai-content/feature-glossary.jpg"
+    images:
+      - src: "/images/services/ai-content/feature-glossary1.jpg"
+      - src: "/images/services/ai-content/feature-glossary2.jpg"
+      - src: "/images/services/ai-content/feature-glossary3.jpg"
+      - src: "/images/services/ai-content/feature-glossary4.jpg"
   
   - label: "Proven Results"
     title: "2,500+ Expert Terms Created with AI"

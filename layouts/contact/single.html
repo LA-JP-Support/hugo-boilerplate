@@ -1,0 +1,225 @@
+{{ define "main" }}
+
+<!-- Hero Section - アニメーション背景付き -->
+<div class="relative overflow-visible z-10">
+  <div class="contact-hero-animated-bg absolute inset-0 z-0"></div>
+  <div class="contact-hero-overlay absolute inset-0 z-0"></div>
+  <div class="contact-hero-glow absolute inset-0 z-[5]">
+    <div class="contact-hero-glow-orb"></div>
+  </div>
+  <div class="relative z-10 py-12 sm:py-16">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <h1 class="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+          {{ .Params.hero_heading | default .Title }}
+        </h1>
+        <p class="mt-4 sm:mt-6 text-base sm:text-lg leading-7 text-gray-200">
+          {{ .Params.hero_description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="bg-gray-50 py-16 sm:py-24">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="grid grid-cols-1 gap-12 lg:grid-cols-2">
+      
+      <!-- Left Column: Benefits -->
+      <div>
+        {{ with .Params.benefits.intro }}
+        <p class="text-xl text-gray-800 mb-8 leading-relaxed">
+          {{ . }}
+        </p>
+        {{ end }}
+
+        <h2 class="text-2xl font-bold tracking-tight text-gray-900 mb-8">
+          {{ .Params.benefits.heading }}
+        </h2>
+        
+        <div class="space-y-6">
+          {{ range .Params.benefits.items }}
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-600">
+                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="{{ .icon }}" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900">{{ .title }}</h3>
+              <p class="mt-2 text-gray-600">{{ .description }}</p>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+
+      </div>
+
+      <!-- Right Column: Form -->
+      <div>
+        <div class="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-200">
+          <h2 class="text-xl font-bold tracking-tight text-gray-900 mb-2 text-center">
+            {{ .Params.form.heading }}
+          </h2>
+          <p class="text-sm text-gray-900 mb-6 text-center">
+            {{ .Params.form.description }}
+          </p>
+          
+          <!-- LiveAgent Contact Form -->
+          <div id="liveagent-contact-form" class="min-h-[800px] flex justify-center">
+            {{ .Params.form.embed_code | safeHTML }}
+          </div>
+        </div>
+
+        <!-- Alternative Contact Methods -->
+        {{ with .Params.alternative_contact }}
+        <div class="mt-8 rounded-2xl bg-white p-6 ring-1 ring-gray-200">
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">{{ .heading }}</h3>
+          <div class="space-y-4">
+            {{ range .methods }}
+            <div class="flex items-center gap-3">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100">
+                <svg class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="{{ .icon }}" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-gray-900">{{ .title }}</p>
+                {{ if .url }}
+                <a href="{{ .url }}" class="text-sm text-indigo-600 hover:text-indigo-500">{{ .value }}</a>
+                {{ else }}
+                <p class="text-sm text-gray-900">{{ .value }}</p>
+                {{ end }}
+              </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Services Overview -->
+{{ with .Params.services_overview }}
+<div class="bg-white py-16 sm:py-24">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center mb-12">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900">
+        {{ .heading }}
+      </h2>
+      <p class="mt-4 text-gray-600">
+        {{ .description }}
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {{ range .services }}
+      <a href="{{ .url }}" class="group rounded-2xl bg-gray-50 p-6 hover:bg-indigo-50 transition-colors">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl transition-colors" style="background-color: {{ .bg_color | default "#4f46e5" }};">
+          <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="{{ .icon }}" />
+          </svg>
+        </div>
+        <h3 class="mt-4 text-lg font-semibold text-gray-900">{{ .title }}</h3>
+        <p class="mt-2 text-sm text-gray-600">{{ .description }}</p>
+      </a>
+      {{ end }}
+    </div>
+
+    <!-- Link to Pricing -->
+    {{ if .pricing_link }}
+    <div class="mt-12 text-center">
+      <a href="{{ .pricing_link.url }}" class="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-500 font-medium">
+        {{ .pricing_link.text }}
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </svg>
+      </a>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+
+<!-- FAQ Section -->
+{{ if .Params.faq }}
+{{ partial "sections/faq/side-by-side" (dict
+  "title" (i18n "faq_heading")
+  "description" (i18n "faq_description")
+  "items" .Params.faq
+) }}
+{{ end }}
+
+<style>
+@keyframes contactGradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes contactFloat {
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(30px, -50px); }
+  50% { transform: translate(-20px, -100px); }
+  75% { transform: translate(-50px, -50px); }
+}
+
+.contact-hero-animated-bg {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 25%, #4f46e5 50%, #7c3aed 75%, #1e1b4b 100%);
+  background-size: 400% 400%;
+  animation: contactGradientShift 10s ease infinite;
+}
+
+.contact-hero-animated-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 420px;
+  height: 420px;
+  background: rgba(255,255,255,0.10);
+  border-radius: 50%;
+  animation: contactFloat 20s ease-in-out infinite;
+}
+
+.contact-hero-animated-bg::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 320px;
+  height: 320px;
+  background: rgba(255,255,255,0.10);
+  border-radius: 50%;
+  animation: contactFloat 25s ease-in-out infinite reverse;
+}
+
+.contact-hero-overlay {
+  background: linear-gradient(180deg, rgba(2, 6, 23, 0.12) 0%, rgba(2, 6, 23, 0.26) 100%);
+  pointer-events: none;
+}
+
+.contact-hero-glow {
+  pointer-events: none;
+}
+
+.contact-hero-glow-orb {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.00) 70%);
+  border-radius: 50%;
+  filter: blur(44px);
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+  top: 50%;
+  left: 50%;
+}
+</style>
+
+{{ end }}

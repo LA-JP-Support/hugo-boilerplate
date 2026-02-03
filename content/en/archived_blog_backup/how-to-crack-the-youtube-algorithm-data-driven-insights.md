@@ -3,6 +3,7 @@ title: "How to Crack the YouTube Algorithm: Data-Driven Insights from 93,421 Vid
 date: 2025-11-21
 lastmod: 2025-12-12
 draft: false
+type: blog
 layout: single-youtube
 translationKey: "how-to-crack-the-youtube-algorithm-data-driven-insights"
 description: "Discover the exact strategies top 100 YouTubers use to get millions of views. Based on analysis of 93,421 videos, learn the data-backed secrets of thumbnail design, title optimization, and content structure that drive YouTube success."

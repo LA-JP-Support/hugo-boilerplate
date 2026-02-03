@@ -2,6 +2,7 @@
 title: "Can AI Really Write Email Responses? Examining Accuracy and Capabilities Through Real Examples"
 date: 2025-11-20
 draft: false
+type: blog
 translationKey: "ai-email-response-examples"
 description: "Examining the true capabilities of AI-powered automated response generation through real examples. A thorough analysis of accuracy and practicality through complex technical inquiries and complaint handling cases."
 keywords: ["AI automated responses", "email auto-reply", "customer support", "LiveAgent", "FlowHunt", "AI implementation"]

@@ -1,5 +1,6 @@
 +++
 title = "How to Use Large Language Models Effectively: A Practical Guide to ChatGPT and Beyond"
+type = "blog"
 youtubeTitle = "How I use LLMs"
 youtubeVideoID = "EWvNQjAaOHw"
 description = "Learn practical applications of large language models like ChatGPT, explore different LLM platforms, understand how these models work under the hood, and discover how to leverage them effectively in your daily work and life."

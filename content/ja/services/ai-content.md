@@ -23,10 +23,19 @@ features:
     description: "FlowHuntのAdvanced Blog Generatorは、複数のAIエージェントが連携して高品質なブログ記事を生成します。SEOリサーチャーがキーワードを分析し、AIコピーライターが記事を執筆、ヒューマナイザーが自然な文章に仕上げます。<br><br>Google検索やWikipediaから最新情報を自動収集し、1,500〜2,000語のSEO最適化された記事を生成。タイトルタグ、メタディスクリプション、見出し構成、内部リンク提案まで、公開に必要な要素が一式揃います。記事作成時間を70%削減しながら、検索エンジンで上位表示される高品質なコンテンツを継続的に生産できます。"
     image: "/images/services/ai-content/feature-blog.jpg"
   
+  - label: "AIと人間の協働"
+    title: "AIは下書き、人間が仕上げる"
+    description: "AIはあくまで効率的な下書き作成ツールです。最終的な記事の品質と責任は、人間の確認と編集によって担保されます。事実関係の最終確認、法律・著作権のチェック、自示独自の事例や顧客の声の追加は、AIには判断できない人間の役割です。<br><br>SmartWebでは、効果的なプロンプトの作り方から、運用方法のサポートまで提供。AIと人間の協働により、少ないリソースで最大の成果を実現します。単純な記事作成作業をAIに任せ、戦略立案や品質管理など、人間にしかできない高付加価値業務に集中できます。"
+    image: "/images/services/ai-content/feature-collaboration.jpg"
+
   - label: "用語集生成"
     title: "専門用語集でトピカルオーソリティを確立"
     description: "FlowHuntのGlossary Article Generatorは、3,000〜5,000語以上の詳細な用語集記事を自動生成します。キーワードを入力するだけで、最大24以上の権威あるソースからリサーチを実施。定義、活用例、関連概念、FAQ形式の解説まで、包括的なコンテンツを作成します。<br><br>SEOキーワード分析により、検索エンジンで上位表示されやすい構成を自動提案。用語集を体系的に構築することで、業界における専門性（トピカルオーソリティ）を確立し、関連キーワードでの検索流入を大幅に増加させます。"
-    image: "/images/services/ai-content/feature-glossary.jpg"
+    images:
+      - src: "/images/services/ai-content/feature-glossary1.jpg"
+      - src: "/images/services/ai-content/feature-glossary2.jpg"
+      - src: "/images/services/ai-content/feature-glossary3.jpg"
+      - src: "/images/services/ai-content/feature-glossary4.jpg"
   
   - label: "導入実績"
     title: "2,500以上の専門用語をAIで作成"
@@ -34,11 +43,6 @@ features:
     image: "/images/services/ai-content/feature-showcase.jpg"
     image_size: "full"
   
-  - label: "AIと人間の協働"
-    title: "AIは下書き、人間が仕上げる"
-    description: "AIはあくまで効率的な下書き作成ツールです。最終的な記事の品質と責任は、人間の確認と編集によって担保されます。事実関係の最終確認、法律・著作権のチェック、自社独自の事例や顧客の声の追加は、AIには判断できない人間の役割です。<br><br>SmartWebでは、効果的なプロンプトの作り方から、運用方法のサポートまで提供。AIと人間の協働により、少ないリソースで最大の成果を実現します。単純な記事作成作業をAIに任せ、戦略立案や品質管理など、人間にしかできない高付加価値業務に集中できます。"
-    image: "/images/services/ai-content/feature-collaboration.jpg"
-
 # Stats Section
 stats_heading: "AIコンテンツ作成の効果"
 stats_description: "FlowHuntによるコンテンツマーケティングの改善事例"
