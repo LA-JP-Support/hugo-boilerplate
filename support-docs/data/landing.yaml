@@ -12,6 +12,11 @@ hero:
     icon: menu_book
     btnText: "🇯🇵 日本語ドキュメント"
     url: "/ja/docs/"
+  
+  cta2Button:
+    icon: menu_book
+    btnText: "🇺🇸 English Documentation"
+    url: "/en/docs/"
 
   info: "SmartWeb カスタマーサポート"
 

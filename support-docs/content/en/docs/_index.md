@@ -1,8 +1,7 @@
 ---
 title: "SmartWeb Support"
-description: "Welcome to SmartWeb Support Help Center."
+description: "This is the help center for SmartWeb Support."
 weight: 10
-type: support
 ---
 
-Welcome to SmartWeb Support Help Center.
+This is the help center for SmartWeb Support.

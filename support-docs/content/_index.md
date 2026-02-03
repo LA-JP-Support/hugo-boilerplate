@@ -12,5 +12,8 @@ layout: "landing"
     <a href="/ja/docs/" style="display: inline-block; padding: 1rem 2rem; background-color: #0066cc; color: white; text-decoration: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; transition: background-color 0.3s;">
       🇯🇵 日本語ドキュメント
     </a>
+    <a href="/en/docs/" style="display: inline-block; padding: 1rem 2rem; background-color: #28a745; color: white; text-decoration: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; transition: background-color 0.3s;">
+      🇺🇸 English Documentation
+    </a>
   </div>
 </div>

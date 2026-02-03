@@ -4,7 +4,7 @@ title = 'SmartWeb Support'
 theme = 'lotusdocs'
 timeZone = "Asia/Tokyo"
 defaultContentLanguage = "ja"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 
 # LotusDocs Configuration
 [module]

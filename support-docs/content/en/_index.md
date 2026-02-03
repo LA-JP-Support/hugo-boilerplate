@@ -1,12 +1,8 @@
 ---
 title: "SmartWeb Support"
 description: "SmartWeb Support Documentation - Help Center"
+type: "redirect"
+redirect: "/en/docs/"
 ---
-
-# SmartWeb Support
-
-Welcome to SmartWeb Support Help Center.
-
-Find product guides, troubleshooting tips, and frequently asked questions.
-
-[View Documentation](/en/docs/)
+<meta http-equiv="refresh" content="0; url=/en/docs/">
+<script>window.location.href = "/en/docs/";</script>

@@ -1,12 +1,8 @@
 ---
 title: "SmartWeb サポート"
 description: "SmartWeb サポートドキュメント - ヘルプセンター"
+type: "redirect"
+redirect: "/ja/docs/"
 ---
-
-# SmartWeb サポート
-
-SmartWeb Supportのヘルプセンターへようこそ。
-
-製品の使い方、トラブルシューティング、よくある質問などをご覧いただけます。
-
-[ドキュメントを見る](/ja/docs/)
+<meta http-equiv="refresh" content="0; url=/ja/docs/">
+<script>window.location.href = "/ja/docs/";</script>
