@@ -14,3 +14,10 @@ hero:
     url: "/ja/docs/"
 
   info: "SmartWeb カスタマーサポート"
+
+# Disable default Lotus Docs sections
+featureGrid:
+  enable: false
+
+imageCompare:
+  enable: false

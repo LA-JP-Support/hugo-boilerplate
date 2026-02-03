@@ -7,6 +7,7 @@ translationKey: "multiple-brand-management"
 description: "はい、一つのアカウントで複数ブランドのサポート運用が可能です。"
 keywords: ["ブランド", "管理", "複数", "カスタマーポータル", "デパートメント"]
 category: "getting-started"
+weight: 90
 ---
 ## マルチブランド対応の概要
 はい、一つのアカウントで複数ブランドのサポート運用が可能です。

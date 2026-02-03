@@ -7,6 +7,7 @@ translationKey: "smartweb-reasons"
 description: "SmartWebを選ぶべき理由は、LiveAgentとFlowHunt AIの完全統合、2つのソリューションの一気通貫提供、初期設定完了状態での納品、そして継続的な運用サポートの4点です。"
 keywords: ["SmartWeb", "理由", "LiveAgent", "FlowHunt", "AIチャットボット", "Hugo"]
 category: "getting-started"
+weight: 20
 ---
 ## SmartWebを選ぶべき5つの理由
 

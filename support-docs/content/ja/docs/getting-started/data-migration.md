@@ -7,6 +7,7 @@ translationKey: "data-migration"
 description: "はい、ZendeskやFreshdeskなど主要システムからの移行プラグインも用意されています。プラグインを利用すれば既存のFAQデータやチケット履歴をインポート可能です。"
 keywords: ["データ", "移行", "プラグイン", "インポート", "チケット"]
 category: "getting-started"
+weight: 65
 ---
 ## データ移行の可能性
 

@@ -25,7 +25,44 @@ This document provides guidelines for translating English content to Japanese us
 
 **Rule**: Japanese particles (の、は、が、を、に、へ、と、から、まで、より、で、や) should NEVER be included inside bold markdown syntax.
 
-### 2. Bold Markdown Closure
+### 2. Bold Syntax with Japanese Punctuation (Brackets, Parentheses)
+
+**IMPORTANT**: CommonMark specification causes bold syntax to fail when Japanese punctuation (括弧、句読点) is adjacent to `**`. Use **Zero Width Space** (`&#8203;`) instead of `<strong>` tags.
+
+**Problem**: Japanese punctuation (約物) like `）`、`」`、`。` prevents `**` from being recognized as emphasis markers.
+
+❌ **WRONG** (bold not rendered):
+```markdown
+**アジアリージョン（シンガポール）**を推奨
+**「強調表示」**と**「太字」**で表示
+```
+
+✅ **CORRECT** (using Zero Width Space `&#8203;`):
+```markdown
+**アジアリージョン（シンガポール）**&#8203;を推奨
+**「強調表示」**&#8203;と**「太字」**&#8203;で表示
+```
+
+**Rule**: Add `&#8203;` (Zero Width Space) immediately after the closing `**` when:
+- The bold text ends with Japanese punctuation: `）`、`」`、`】`、`》`、`。`、`、`
+- The bold text is followed by Japanese text without space
+
+**Why Zero Width Space instead of `<strong>` tags?**
+
+| Method | Pros | Cons |
+|--------|------|------|
+| `&#8203;` | Markdown readable, minimal change | Invisible character (may confuse copy-paste) |
+| `<strong>` | Always works | Harder to read in Markdown, verbose |
+
+**Recommendation**: Use `&#8203;` for cleaner Markdown source. The zero-width character is invisible in rendered output.
+
+**HTML Entity Reference**:
+| Entity | Name | Unicode |
+|--------|------|------|
+| `&#8203;` | Zero Width Space | U+200B |
+| `&#65279;` | Zero Width No-Break Space | U+FEFF |
+
+### 3. Bold Markdown Closure
 
 **IMPORTANT**: Every opening `**` must have a corresponding closing `**`.
 
@@ -41,7 +78,7 @@ This document provides guidelines for translating English content to Japanese us
 
 **Rule**: Always close bold markdown syntax immediately after the word or phrase that should be bold.
 
-### 3. Proper Nouns and Technical Terms
+### 4. Proper Nouns and Technical Terms
 
 **IMPORTANT**: Keep proper nouns and technical terms in their original form when they are commonly used in English.
 
@@ -72,7 +109,7 @@ This document provides guidelines for translating English content to Japanese us
 
 **Rule**: Do not translate widely-recognized technical terms and brand names.
 
-### 4. Line Length and Readability
+### 5. Line Length and Readability
 
 **IMPORTANT**: Break long paragraphs into multiple lines for better readability in Markdown editors.
 
@@ -90,7 +127,7 @@ This document provides guidelines for translating English content to Japanese us
 
 **Rule**: Break paragraphs at natural sentence boundaries. Aim for 1-3 sentences per line.
 
-### 5. Hugo Frontmatter
+### 6. Hugo Frontmatter
 
 **IMPORTANT**: Preserve the structure and format of Hugo frontmatter.
 
@@ -116,7 +153,7 @@ tags:
 - Maintain YAML/TOML syntax
 - Keep array/list formatting intact
 
-### 6. Links and URLs
+### 7. Links and URLs
 
 **IMPORTANT**: Do not translate URLs or link syntax.
 
@@ -127,7 +164,7 @@ tags:
 
 **Rule**: Keep all URLs, anchor links, and Markdown link syntax unchanged.
 
-### 7. Code Blocks and Inline Code
+### 8. Code Blocks and Inline Code
 
 **IMPORTANT**: Never translate content inside code blocks or inline code.
 
@@ -154,20 +191,24 @@ Translate the following English Markdown content to Japanese. Follow these criti
    - WRONG: **Anthropicの**
    - CORRECT: **Anthropic**の
 
-2. CLOSURE: Every opening ** must have a closing **
+2. JAPANESE PUNCTUATION: Add &#8203; after closing ** when bold ends with brackets/punctuation
+   - WRONG: **アジア（シンガポール）**を (bold fails)
+   - CORRECT: **アジア（シンガポール）**&#8203;を
+
+3. CLOSURE: Every opening ** must have a closing **
    - WRONG: **トークンと呼ばれます。
    - CORRECT: **トークン**と呼ばれます。
 
-3. PROPER NOUNS: Keep technical terms and brand names in English
+4. PROPER NOUNS: Keep technical terms and brand names in English
    - Keep: ChatGPT, API, Claude, Gemini, GitHub, etc.
 
-4. LINE BREAKS: Break long paragraphs at sentence boundaries for readability
+5. LINE BREAKS: Break long paragraphs at sentence boundaries for readability
 
-5. FRONTMATTER: Translate only values, keep keys and syntax unchanged
+6. FRONTMATTER: Translate only values, keep keys and syntax unchanged
 
-6. LINKS: Do not translate URLs or link syntax
+7. LINKS: Do not translate URLs or link syntax
 
-7. CODE: Never translate content in code blocks or inline code
+8. CODE: Never translate content in code blocks or inline code
 
 Content to translate:
 [PASTE CONTENT HERE]
@@ -179,6 +220,7 @@ After translation, verify:
 
 - [ ] All bold syntax (`**`) is properly opened and closed
 - [ ] Japanese particles are outside bold syntax
+- [ ] Bold text ending with Japanese punctuation has `&#8203;` after closing `**`
 - [ ] Technical terms and brand names remain in English
 - [ ] Frontmatter structure is intact
 - [ ] URLs and links are unchanged
@@ -206,13 +248,21 @@ After translation, verify:
 ✅ ChatGPT
 ```
 
-### Mistake 4: Breaking markdown links
+### Mistake 4: Bold not rendered with Japanese brackets
+```markdown
+❌ **アジアリージョン（シンガポール）**を推奨
+   (Bold syntax ignored because of Japanese parentheses)
+✅ **アジアリージョン（シンガポール）**&#8203;を推奨
+   (Zero Width Space enables bold rendering)
+```
+
+### Mistake 5: Breaking markdown links
 ```markdown
 ❌ [チャットGPT](https://チャット.openai.com/)
 ✅ [ChatGPT](https://chat.openai.com/)
 ```
 
-### Mistake 5: Very long lines
+### Mistake 6: Very long lines
 ```markdown
 ❌ 複数の言語モデルが利用可能になったため、特定のニーズに適したものを選択するには、異なるオプションの長所と短所を理解する必要があります。**ChatGPT**は、正当な理由で最も人気のある選択肢であり続けています—機能が豊富で、広く利用可能で、幅広いタスクで優れたパフォーマンスを発揮します。言語モデルを始めたばかりの場合、安全なデフォルトの選択です。
 
@@ -238,6 +288,12 @@ Consider using these regex patterns to validate translations:
 
 ## Version History
 
+- **v1.1.0** (2026-02-03): Added Zero Width Space rule for Japanese punctuation
+  - New section: "Bold Syntax with Japanese Punctuation"
+  - `&#8203;` as alternative to `<strong>` tags
+  - Updated prompt template and quality checklist
+  - Added Mistake 4 example
+
 - **v1.0.0** (2026-01-07): Initial guidelines created
   - Bold syntax rules
   - Proper noun handling
@@ -246,5 +302,5 @@ Consider using these regex patterns to validate translations:
 
 ---
 
-**Last Updated**: 2026-01-07  
+**Last Updated**: 2026-02-03  
 **Maintainer**: SmartWeb Team

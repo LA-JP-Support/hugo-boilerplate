@@ -7,6 +7,7 @@ translationKey: "expert-knowledge-required"
 description: "設定は当社のスタッフが行います。お客さま側で設定が必要な作業は設定方法やご支援しますのでご安心ください。"
 keywords: ["必要", "専門", "知識", "メール", "管理"]
 category: "getting-started"
+weight: 105
 ---
 ## ITの専門知識は必要ありません
 

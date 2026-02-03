@@ -7,6 +7,7 @@ translationKey: "smartweb-about-service"
 description: "SmartWebは、AIカスタマーサポートとAIコンテンツ作成・Web構築の2つのソリューションを提供するサービスです。LiveAgentとFlowHunt AIの完全統合により、応答時間73%短縮・対応業務82%削減を実現します。"
 keywords: ["SmartWeb", "サービス", "とは", "カスタマーサポート", "LiveAgent", "FlowHunt", "AIチャットボット", "Hugo"]
 category: "getting-started"
+weight: 10
 ---
 ## SmartWebの概要
 

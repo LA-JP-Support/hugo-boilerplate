@@ -1,12 +1,12 @@
 ---
 title: "AI Answer Assistant"
-description: "Leveraging ChatGPT technology, instantly generate and improve customer response drafts. With Improve, Extend, and Simplify functions plus tone adjustment from casual to business, create professional responses efficiently."
+description: "Integrated with FlowHunt or OpenAI, instantly improve and adjust customer response drafts. With Improve, Extend, and Simplify functions plus Custom Instructions, and tone adjustment from casual to business, create professional responses efficiently."
 type: "services"
 
 # Hero Section
 badge: "AI-Powered Writing Support for Agents"
 hero_heading: "AI Polishes Your Words.<br>Your Responses Go Pro"
-hero_description: "Using ChatGPT technology, instantly generate and improve customer responses. Organize information from multiple sources, adjust tone, translate—AI supports every aspect of quality response creation."
+hero_description: "Integrated with FlowHunt or OpenAI, instantly improve and adjust customer responses. Organize information from multiple sources, adjust tone, translate—AI supports every aspect of quality response creation."
 
 # CTAs
 cta_primary:
@@ -14,7 +14,7 @@ cta_primary:
   url: "/en/contact/"
 
 # Introduction
-introduction: "For email inquiries from customers, ChatGPT technology instantly generates polished response drafts. Information copy-pasted from multiple documents is reorganized for readability, and tone adjustment plus translation features help create high-quality responses suited to any customer—efficiently.<br><br>LiveAgent AI Answer Improver is a powerful writing enhancement tool built into the ticket reply editor. It instantly polishes agent-written drafts with three functions—'Improve,' 'Extend,' and 'Simplify'—plus custom instructions for fine-grained adjustments, completing professional responses in minimal time.<br><br>Combined with AI Email Auto-Response (Answer Composer), seamlessly connect auto-generated drafts with polishing—creating more accurate, customer-focused responses efficiently."
+introduction: "For email inquiries from customers, FlowHunt or OpenAI integration instantly improves and adjusts response drafts. Information copy-pasted from multiple documents is reorganized for readability, and tone adjustment plus translation features help create high-quality responses suited to any customer—efficiently.<br><br>LiveAgent AI Answer Improver is a powerful writing enhancement tool built into the ticket reply editor. It instantly polishes agent-written drafts with three functions—'Improve,' 'Extend,' and 'Simplify'—plus custom instructions for fine-grained adjustments, completing professional responses in minimal time.<br><br>Combined with AI Email Auto-Response (Answer Composer), seamlessly connect auto-generated drafts with polishing—creating more accurate, customer-focused responses efficiently. (*Note: AI Answer Composer supports FlowHunt only)"
 
 # Features (4 sections with alternating layout)
 features:
@@ -35,7 +35,7 @@ features:
   
   - label: "Security"
     title: "Multilingual Support with Secure Operations"
-    description: "Translation between Japanese and other languages enables global customer support. Automatically explain technical terms in plain language or adjust for beginner-level expressions—text adaptation to customer level executes automatically.<br><br>AI Answer Assistant operates through FlowHunt or OpenAI integration. With OpenAI integration, use your own API key to prevent confidential information leakage and ensure secure operations.<br><br><small>*AI Answer Assistant requires a separate OpenAI contract. Additional fees apply.</small>"
+    description: "Translation between Japanese and other languages enables global customer support. Automatically explain technical terms in plain language or adjust for beginner-level expressions—text adaptation to customer level executes automatically.<br><br>AI Answer Assistant operates through <strong>FlowHunt or OpenAI</strong> integration. FlowHunt is a product of Quality Unit (LiveAgent's developer), ensuring data safety and priority support. With OpenAI integration, use your own API key to prevent confidential information leakage and ensure secure operations.<br><br><small>*AI Answer Improver supports both FlowHunt and OpenAI. AI Answer Composer supports FlowHunt only. Separate contract required for OpenAI usage.</small>"
     images:
       - src: "/images/services/ai-answer-assistant/feature-security1.jpg"
       - src: "/images/services/ai-answer-assistant/feature-security2.jpg"

@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/ja/docs/</loc>
-    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -16,6 +16,11 @@
                 hreflang="ja"
                 href="http://localhost:1313/ja/docs/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/getting-started/smartweb-about-service/</loc>
+    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/social-media/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
@@ -33,7 +38,7 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/tickets/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -57,26 +62,63 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://localhost:1313/ja/docs/ai-fundamentals/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/getting-started/smartweb-max-features/</loc>
+    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/getting-started/smartweb-reasons/</loc>
+    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/ja/docs/ai-chatbot/</loc>
     <lastmod>2026-01-31T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/docs/ticket-system/</loc>
+    <loc>http://localhost:1313/ja/docs/getting-started/smartweb-setup-benefits/</loc>
+    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/email-composer/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/getting-started/smartweb-company-service/</loc>
     <lastmod>2026-01-31T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/ja/docs/ai-answer-assist/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/docs/email-composer/</loc>
+    <loc>http://localhost:1313/ja/docs/getting-started/interwork-about-company/</loc>
+    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/docs/security/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <loc>http://localhost:1313/ja/docs/ticket-system/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/getting-started/smartweb-free-consultation/</loc>
+    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/getting-started/setup-case-study/</loc>
+    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -85,8 +127,283 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/docs/pricing/</loc>
+    <loc>http://localhost:1313/ja/docs/getting-started/phased-setup/</loc>
     <lastmod>2026-01-31T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/getting-started/setup-training/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/security/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/getting-started/migration/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/getting-started/data-migration/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/getting-started/integration/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1313/ja/docs/ticket-system/social-media/integration/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1313/ja/docs/getting-started/integration/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/pricing/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/getting-started/report-analytics-feature/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/getting-started/mobile-app/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1313/ja/docs/ticket-system/live-chat/mobile-app/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1313/ja/docs/getting-started/mobile-app/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/ticket-system/tickets/multiple-usage/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1313/ja/docs/ticket-system/social-media/multiple-usage/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1313/ja/docs/ticket-system/tickets/multiple-usage/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/getting-started/internal-helpdesk/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/ai-answer-assist/available-plans/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/email-composer/available-plans/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/getting-started/multiple-brand-management/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/getting-started/multiple-handling/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/getting-started/wordpress/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/getting-started/expert-knowledge-required/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/getting-started/customer-support-glossary/</loc>
+    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/getting-started/marketing-sales-glossary/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/security/two-factor-auth/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/security/ip-address-restriction/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/ticket-system/social-media/multiple-account-management/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/ticket-system/tickets/merge/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/ticket-system/tickets/split/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/ticket-system/tickets/create-customer-auto/</loc>
+    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/email-composer/about-email-composer/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/email-composer/vs-chatbot/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/email-composer/improver-integration/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/email-composer/custom-instructions/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/email-composer/knowledge-integration/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/email-composer/results-effectiveness/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/ai-fundamentals/ai-learning/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/ai-fundamentals/ai-provider-setup/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/ai-answer-assist/about-ai-answer-improver/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/ai-answer-assist/multilingual-translation/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/ai-answer-assist/composer-integration/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/ai-answer-assist/adjustment-options/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/ai-answer-assist/security-openai/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/ai-answer-assist/results-effectiveness/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/email-composer/liveagent-integration/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/ai-fundamentals/rag-technology/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1313/ja/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/ai-answer-assist/custom-instructions/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/ai-answer-assist/formality-selection/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/email-composer/context-understanding/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/email-composer/tone-selection/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/email-composer/auto-routing/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/ja/docs/ai-answer-assist/multiple-documents/</loc>
+    <lastmod>2026-02-03T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -215,17 +532,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/docs/security/two-factor-auth/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/ja/docs/ai-chatbot/ai-incorrect-answer/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/docs/ai-chatbot/ai-answer-difference/</loc>
+    <loc>http://localhost:1313/ja/docs/ai-fundamentals/ai-features-overview/</loc>
     <lastmod>2026-01-31T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -240,7 +552,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/docs/ai-chatbot/ai-security-data/</loc>
+    <loc>http://localhost:1313/ja/docs/ai-fundamentals/ai-security-data/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -256,11 +568,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/ja/docs/ai-chatbot/ai-setup-pro/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/ai-chatbot/ai-learning/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -287,16 +594,6 @@
   </url><url>
     <loc>http://localhost:1313/ja/docs/ai-chatbot/ai-setup-required/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/ai-chatbot/ai-usage-restriction/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/ai-chatbot/ai-answer-support/</loc>
-    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -345,7 +642,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/docs/ai-chatbot/flowhunt-about/</loc>
+    <loc>http://localhost:1313/ja/docs/ai-fundamentals/flowhunt-about/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -416,11 +713,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/ja/docs/security/ip-address/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/security/ip-address-restriction/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -585,21 +877,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/</loc>
-    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://localhost:1313/ja/"
-                />
-  </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/social-media/smartweb-plan-feature/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -607,41 +884,6 @@
   </url><url>
     <loc>http://localhost:1313/ja/docs/pricing/smartweb-ai-chatbot/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/smartweb-about-service/</loc>
-    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/smartweb-max-features/</loc>
-    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/smartweb-free-consultation/</loc>
-    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/smartweb-company-service/</loc>
-    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/smartweb-reasons/</loc>
-    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/smartweb-setup-benefits/</loc>
-    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/pricing/social-plan/</loc>
-    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -745,11 +987,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/wordpress/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/social-media/twitter-brand/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -780,11 +1017,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/marketing-sales-glossary/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/tickets/keyboard-shortcut/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -792,11 +1024,6 @@
   </url><url>
     <loc>http://localhost:1313/ja/docs/settings/team-howto/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/interwork-about-company/</loc>
-    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -935,11 +1162,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/data-migration/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/ja/docs/settings/email-template/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1047,11 +1269,6 @@
   </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/customer-portal/customer-portal/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/customer-support-glossary/</loc>
-    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -1165,22 +1382,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/docs/ticket-system/tickets/merge/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/tickets/manual-create/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/tickets/process/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/ticket-system/tickets/split/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1266,11 +1473,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/tickets/create-customer-auto-2/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/ticket-system/tickets/create-customer-auto/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1410,17 +1612,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/docs/ai-chatbot/learning/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/customer-portal/custom-settings/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/pricing/trial-account-edition/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1525,21 +1717,6 @@
                 href="http://localhost:1313/ja/docs/ticket-system/live-chat/mobile-app/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/mobile-app/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://localhost:1313/ja/docs/ticket-system/live-chat/mobile-app/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://localhost:1313/ja/docs/getting-started/mobile-app/"
-                />
-  </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/reports/live-chat/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1585,11 +1762,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/report-analytics-feature/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/reports/items-info-type/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1601,11 +1773,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/levels/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/pricing/plan-contract/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1674,21 +1841,6 @@
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/integration/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://localhost:1313/ja/docs/ticket-system/social-media/integration/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://localhost:1313/ja/docs/getting-started/integration/"
-                />
   </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/customer-portal/wysiwyg-wysiwyg/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
@@ -1780,11 +1932,6 @@
                 href="http://localhost:1313/ja/docs/ticket-system/customer-portal/customer/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/expert-knowledge-required/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/live-chat/max-queue-length/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1850,11 +1997,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/internal-helpdesk/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/social-media/team-operation/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1890,11 +2032,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/migration/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/ja/docs/settings/language-support-feature/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1912,11 +2049,6 @@
   </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/call-center/handling-device-supported/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/phased-setup/</loc>
-    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -2010,16 +2142,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/setup-case-study/</loc>
-    <lastmod>2026-01-31T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/setup-training/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/ja/docs/settings/internal-data-search/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -2080,27 +2202,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/docs/ticket-system/social-media/multiple-account-management/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/customer-portal/multiple-language-faq/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/multiple-handling/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/tickets/multiple-operation/</loc>
-    <lastmod>2026-01-30T00:00:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/ja/docs/getting-started/multiple-brand-management/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2114,6 +2221,16 @@
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1313/ja/docs/ticket-system/tickets/multiple-usage/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="http://localhost:1313/ja/docs/ticket-system/social-media/multiple-usage/"
+                />
   </url><url>
     <loc>http://localhost:1313/ja/docs/ticket-system/reports/analytics-overview/</loc>
     <lastmod>2026-01-30T00:00:00+09:00</lastmod>

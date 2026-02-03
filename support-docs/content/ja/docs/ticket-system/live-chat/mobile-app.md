@@ -56,4 +56,4 @@ function(e){ LiveAgent.createButton('71e8b44f', e); });
 
 <iframe src="https://URL_to_LiveAgent/scripts/inline_chat.php?cwid=widgetID" style="width: 350px;height: 450px;"></iframe>
 
-**"URL_to_LiveAgent"**をLiveAgentの正しいURL（yourdomain.liveagent.jp）に、**"widgetID"**をチャットボタンのIDに置き換えてください。
+**"URL_to_LiveAgent"**&#8203;をLiveAgentの正しいURL（yourdomain.liveagent.jp）に、**"widgetID"**&#8203;をチャットボタンのIDに置き換えてください。

@@ -7,6 +7,7 @@ translationKey: "integration"
 description: "はい、既存サイトにチャットウィジェットを埋め込んだり、FAQページへのリンクを追加するなど、必要な部分だけで導入できます。"
 keywords: ["連携", "ウィジェット", "チャット", "FAQ", "必要"]
 category: "getting-started"
+weight: 70
 ---
 ## チャットウィジェットの柔軟な導入
 

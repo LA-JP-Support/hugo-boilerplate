@@ -7,6 +7,7 @@ translationKey: "interwork-about-company"
 description: "株式会社インターワークは、LiveAgentとFlowHuntの日本正規代理店として、Quality Unit社と連携し、SmartWebサービスを提供している会社です。20年以上の実績があり、ISMSも取得しています。"
 keywords: ["インターワーク", "会社", "とは", "LiveAgent", "FlowHunt", "SmartWeb"]
 category: "getting-started"
+weight: 35
 ---
 ## インターワークの概要
 

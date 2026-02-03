@@ -7,6 +7,7 @@ translationKey: "smartweb-company-service"
 description: "SmartWebは、顧客対応を効率化したい企業、コンテンツマーケティングを強化したい企業、IT担当者が少ない企業に最適です。中小企業から部署単位での利用まで幅広く対応しています。"
 keywords: ["SmartWeb", "サービス", "企業", "向いている", "AIチャットボット", "コンテンツマーケティング"]
 category: "getting-started"
+weight: 30
 ---
 ## SmartWebが最適な企業
 

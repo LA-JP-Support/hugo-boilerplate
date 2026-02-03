@@ -1,12 +1,12 @@
 ---
 title: "AI回答アシスト"
-description: "ChatGPTの技術を活用し、顧客への返信文を瞬時に生成・改善。改善・拡張・簡略化の3機能と、カジュアル〜ビジネスの文体調整で、プロフェッショナルな回答を効率的に作成できます。"
+description: "FlowHuntまたはOpenAIと連携し、顧客への返信文を瞬時に改善・調整。改善・拡張・簡略化の3機能とカスタム指示、カジュアル〜ビジネスの文体調整で、プロフェッショナルな回答を効率的に作成できます。"
 type: "services"
 
 # Hero Section
 badge: "オペレーターの文章作成をAIが支援"
 hero_heading: "AIが文章を磨く。<br>あなたの回答がプロになる"
-hero_description: "ChatGPTの技術を活用して、顧客への返信文を瞬時に生成・改善。複数資料からの情報も読みやすく整理し、文体調整や翻訳まで、高品質な回答作成をAIがサポートします。"
+hero_description: "FlowHuntまたはOpenAIと連携して、顧客への返信文を瞬時に改善・調整。複数資料からの情報も読みやすく整理し、文体調整や翻訳まで、高品質な回答作成をAIがサポートします。"
 
 # CTAs
 cta_primary:
@@ -14,7 +14,7 @@ cta_primary:
   url: "/ja/contact/"
 
 # Introduction
-introduction: "顧客からのメール問い合わせに対して、ChatGPTの技術を活用した洗練された返信文を瞬時に生成。複数の資料からコピー＆ペーストした情報も読みやすく整理し、文体調整や翻訳機能により、あらゆる顧客に適した高品質な回答を効率的に作成できます。<br><br>LiveAgent AI回答アシスト(AI Answer Improver)は、チケット返信エディタに組み込まれた強力な文章改善ツールです。担当者が作成した下書きを、AIが瞬時にブラッシュアップ。「改善」「拡張」「簡略化」の3つの機能と、カスタム指示によるきめ細かな調整で、プロフェッショナルな回答を短時間で完成させます。<br><br>さらに、AIメール自動回答作成機能と組み合わせることで、回答案の自動生成から文章のブラッシュアップまでをシームレスに連携。より高精度で顧客に寄り添った回答を、効率的に作成できます。"
+introduction: "顧客からのメール問い合わせに対して、FlowHuntまたはOpenAIと連携した洗練された返信文の改善・調整を瞬時に実行。複数の資料からコピー＆ペーストした情報も読みやすく整理し、文体調整や翻訳機能により、あらゆる顧客に適した高品質な回答を効率的に作成できます。<br><br>LiveAgent AI回答アシスト(AI Answer Improver)は、チケット返信エディタに組み込まれた強力な文章改善ツールです。担当者が作成した下書きを、AIが瞬時にブラッシュアップ。「改善」「拡張」「簡略化」の3つの機能と、カスタム指示によるきめ細かな調整で、プロフェッショナルな回答を短時間で完成させます。<br><br>さらに、AIメール自動回答作成機能（AI Answer Composer）と組み合わせることで、回答案の自動生成から文章のブラッシュアップまでをシームレスに連携。より高精度で顧客に寄り添った回答を、効率的に作成できます。（※AI Answer ComposerはFlowHuntのみ対応）"
 
 # Features (4 sections with alternating layout)
 features:
@@ -35,7 +35,7 @@ features:
   
   - label: "セキュリティ"
     title: "多言語対応と安全な運用"
-    description: "日本語と多言語間の翻訳機能により、グローバルなお客様への対応が可能です。専門用語を分かりやすく説明したり、初心者向けの表現に変更するなど、顧客のレベルに応じた文章調整も自動で実行できます。<br><br>AI回答アシスタントは、FlowHuntまたはOpenAIと連携して動作します。OpenAI連携の場合は、お客様独自のAPIキーを使用するため、機密情報の外部漏洩を防止し、安全に運用できます。<br><br><small>※AI回答アシスタントのご利用には別途OpenAI社との契約が必要です。別料金がかかります。</small>"
+    description: "日本語と多言語間の翻訳機能により、グローバルなお客様への対応が可能です。専門用語を分かりやすく説明したり、初心者向けの表現に変更するなど、顧客のレベルに応じた文章調整も自動で実行できます。<br><br>AI回答アシストは、<strong>FlowHuntまたはOpenAI</strong>と連携して動作します。FlowHuntはQuality Unit社（LiveAgent開発元）の製品で、データ安全性と優先サポートが保証されます。OpenAI連携の場合は、お客様独自のAPIキーを使用するため、機密情報の外部漏洩を防止し、安全に運用できます。<br><br><small>※AI Answer ImproverはFlowHuntまたはOpenAIと連携可能。AI Answer ComposerはFlowHuntのみ対応です。OpenAI利用時は別途契約が必要です。</small>"
     images:
       - src: "/images/services/ai-answer-assistant/feature-security1.jpg"
       - src: "/images/services/ai-answer-assistant/feature-security2.jpg"

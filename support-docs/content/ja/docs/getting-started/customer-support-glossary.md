@@ -7,6 +7,7 @@ translationKey: "customer-support-glossary"
 description: "カスタマーサポートで使用される主要な用語を解説します。AI技術、サポート機能、システム連携など、SmartWebとLiveAgentの運用に役立つ用語集です。"
 keywords: ["カスタマーサポート", "サポート", "用語集", "AI", "チケット管理"]
 category: "getting-started"
+weight: 200
 ---
 ## カスタマーサポート用語集
 

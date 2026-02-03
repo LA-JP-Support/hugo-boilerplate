@@ -7,6 +7,7 @@ translationKey: "wordpress"
 description: "はい、専用の無料プラグインが提供されており、APIキーを入力するだけで全ページにチャットボタンを自動設置できます。"
 keywords: ["WordPress", "SmartWeb", "プラグイン", "チャット", "サービス"]
 category: "getting-started"
+weight: 100
 ---
 ## WordPressへの簡単な組み込み方法
 

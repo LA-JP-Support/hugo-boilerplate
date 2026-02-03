@@ -1,34 +1,292 @@
 /* Custom styles for SmartWeb Support site */
 
-/* Article title (h1) - increase bottom margin and reduce font size */
-.docs-content h1 {
-    margin-bottom: 2rem !important;
-    font-size: 1.4rem !important; /* Significantly reduced */
-}
+/* ============================================
+   Typography - Font Sizes
+   ============================================ */
 
-/* Subtitle h2 - reduce font size */
-.docs-content h2 {
-    font-size: 1.2rem !important; /* Significantly reduced */
-}
-
-/* Subtitle h3 - reduce font size */
-.docs-content h3 {
-    font-size: 1.05rem !important; /* Significantly reduced */
-}
-
-/* Alternative selectors if above doesn't work */
+/* Article title (h1) */
+.docs-content h1,
+.main-content h1,
+#content h1,
 article h1,
 .content h1 {
     margin-bottom: 2rem !important;
     font-size: 1.4rem !important;
 }
 
+/* Subtitle h2 */
+.docs-content h2,
+.main-content h2,
+#content h2,
 article h2,
 .content h2 {
     font-size: 1.2rem !important;
 }
 
+/* Subtitle h3 */
+.docs-content h3,
+.main-content h3,
+#content h3,
 article h3,
 .content h3 {
     font-size: 1.05rem !important;
+}
+
+/* ============================================
+   Spacing - Sections and Elements
+   ============================================ */
+
+/* H2 sections - more space above */
+.docs-content h2,
+.main-content h2,
+#content h2,
+article h2 {
+    margin-top: 3rem !important;
+    margin-bottom: 1.5rem !important;
+    padding-top: 1.5rem !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* First h2 - no top border */
+.docs-content h2:first-of-type,
+.main-content h2:first-of-type,
+#content h2:first-of-type,
+.main-content > div > h2:first-child,
+#content > div > h2:first-child {
+    margin-top: 1.5rem !important;
+    border-top: none !important;
+    padding-top: 0 !important;
+}
+
+/* H3 subsections */
+.docs-content h3,
+.main-content h3,
+#content h3,
+article h3 {
+    margin-top: 2.5rem !important;
+    margin-bottom: 1.25rem !important;
+}
+
+/* H4 subsections */
+.docs-content h4,
+.main-content h4,
+#content h4,
+article h4 {
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Paragraphs */
+.docs-content p,
+.main-content p,
+#content p,
+article p {
+    margin-bottom: 1.5rem !important;
+    line-height: 1.85 !important;
+}
+
+/* ============================================
+   Lists
+   ============================================ */
+
+/* Unordered and ordered lists */
+.docs-content ul,
+.docs-content ol,
+.main-content ul,
+.main-content ol,
+#content ul,
+#content ol,
+article ul,
+article ol {
+    margin-top: 1rem !important;
+    margin-bottom: 2rem !important;
+    padding-left: 1.5rem !important;
+}
+
+/* List items */
+.docs-content li,
+.main-content li,
+#content li,
+article li {
+    margin-bottom: 0.75rem !important;
+    line-height: 1.75 !important;
+}
+
+/* Nested lists */
+.docs-content li ul,
+.docs-content li ol,
+.main-content li ul,
+.main-content li ol,
+#content li ul,
+#content li ol {
+    margin-top: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+}
+
+/* ============================================
+   Tables
+   ============================================ */
+
+/* Table container */
+.docs-content table,
+.main-content table,
+#content table,
+article table {
+    margin-top: 1.25rem !important;
+    margin-bottom: 2.5rem !important;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Table cells */
+.docs-content th,
+.docs-content td,
+.main-content th,
+.main-content td,
+#content th,
+#content td,
+article th,
+article td {
+    padding: 0.875rem 1rem !important;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Table header */
+.docs-content th,
+.main-content th,
+#content th,
+article th {
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* First column bold styling in tables */
+.docs-content td:first-child,
+.main-content td:first-child,
+#content td:first-child {
+    font-weight: 500;
+}
+
+/* ============================================
+   Code blocks
+   ============================================ */
+
+/* Code blocks */
+.docs-content pre,
+.main-content pre,
+#content pre,
+article pre {
+    margin-top: 1.25rem !important;
+    margin-bottom: 2rem !important;
+    padding: 1.25rem !important;
+    border-radius: 6px;
+}
+
+/* Inline code */
+.docs-content code,
+.main-content code,
+#content code,
+article code {
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+/* ============================================
+   Blockquotes and alerts
+   ============================================ */
+
+.docs-content blockquote,
+.main-content blockquote,
+#content blockquote,
+article blockquote {
+    margin-top: 1.5rem !important;
+    margin-bottom: 2rem !important;
+    padding: 1.25rem 1.5rem !important;
+    border-left: 4px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* ============================================
+   Horizontal rules
+   ============================================ */
+
+.docs-content hr,
+.main-content hr,
+#content hr,
+article hr {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   Strong text (bold)
+   ============================================ */
+
+.docs-content strong,
+.main-content strong,
+#content strong,
+article strong {
+    font-weight: 600;
+}
+
+/* ============================================
+   Links
+   ============================================ */
+
+.docs-content a,
+.main-content a,
+#content a {
+    text-decoration: none;
+}
+
+.docs-content a:hover,
+.main-content a:hover,
+#content a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   Responsive adjustments
+   ============================================ */
+
+@media (max-width: 768px) {
+    .docs-content h2,
+    .main-content h2,
+    #content h2 {
+        margin-top: 2.5rem !important;
+        margin-bottom: 1.25rem !important;
+        padding-top: 1rem !important;
+    }
+    
+    .docs-content h3,
+    .main-content h3,
+    #content h3 {
+        margin-top: 2rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .docs-content p,
+    .main-content p,
+    #content p {
+        margin-bottom: 1.25rem !important;
+    }
+    
+    .docs-content table,
+    .main-content table,
+    #content table {
+        margin-bottom: 2rem !important;
+    }
+    
+    .docs-content ul,
+    .docs-content ol,
+    .main-content ul,
+    .main-content ol,
+    #content ul,
+    #content ol {
+        margin-bottom: 1.5rem !important;
+    }
 }

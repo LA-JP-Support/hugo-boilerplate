@@ -7,6 +7,7 @@ translationKey: "internal-helpdesk"
 description: "はい、社内ヘルプデスクとしても活用いただけます。"
 keywords: ["ヘルプデスク", "ヘルプ", "社内", "ウィジェット", "問い合わせ"]
 category: "getting-started"
+weight: 85
 ---
 ## はじめに
 社内ヘルプデスクとしても活用いただけます。

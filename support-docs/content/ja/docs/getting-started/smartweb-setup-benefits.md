@@ -7,6 +7,7 @@ translationKey: "smartweb-setup-benefits"
 description: "SmartWebを導入する主なメリットは、応答時間73%短縮、対応業務82%削減、記事作成時間70%削減、24時間365日対応、そして初期設定完了状態での納品です。"
 keywords: ["SmartWeb", "メリット", "導入", "効果", "73%短縮", "82%削減"]
 category: "getting-started"
+weight: 25
 ---
 ## SmartWebの主な導入メリット
 

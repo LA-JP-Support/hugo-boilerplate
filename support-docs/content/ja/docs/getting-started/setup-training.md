@@ -7,6 +7,7 @@ translationKey: "setup-training"
 description: "はい、導入時にトレーニングを実施しています。"
 keywords: ["トレーニング", "導入", "チャットボット", "オペレーター", "カスタマイズ"]
 category: "getting-started"
+weight: 55
 ---
 ## トレーニングの概要
 はい、導入時にトレーニングを実施しています。

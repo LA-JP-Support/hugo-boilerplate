@@ -7,6 +7,7 @@ translationKey: "report-analytics-feature"
 description: "チケット数、解決時間、担当者パフォーマンス、顧客満足度（CSAT）などの指標を自動集計し、ダッシュボードで可視化できます。カスタムレポートの作成も可能です。"
 keywords: ["レポート", "について", "機能", "ダッシュボード", "チケット"]
 category: "getting-started"
+weight: 75
 ---
 ## レポート・分析機能の概要
 

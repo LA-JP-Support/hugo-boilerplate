@@ -7,6 +7,7 @@ translationKey: "phased-setup"
 description: "はい、SmartWebは必要な機能から段階的に導入し、徐々に活用範囲を広げることができます。AIチャットボットから始めて、チケットシステムやコンテンツ作成機能を追加していくことが可能です。"
 keywords: ["段階的", "導入", "AIチャットボット", "チケットシステム", "機能"]
 category: "getting-started"
+weight: 50
 ---
 ## 段階的な導入の可能性
 

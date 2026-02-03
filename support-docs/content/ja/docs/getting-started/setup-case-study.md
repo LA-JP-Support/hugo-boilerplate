@@ -7,6 +7,7 @@ translationKey: "setup-case-study"
 description: "はい、LiveAgent、FlowHuntともに国内外で多数の導入実績があります。応答時間73%短縮、対応業務82%削減などの具体的な成果が報告されています。"
 keywords: ["導入", "事例", "LiveAgent", "FlowHunt", "成果", "73%短縮"]
 category: "getting-started"
+weight: 45
 ---
 ## 導入事例の概要
 

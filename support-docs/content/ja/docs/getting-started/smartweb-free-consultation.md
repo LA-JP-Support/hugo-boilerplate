@@ -7,6 +7,7 @@ translationKey: "smartweb-free-consultation"
 description: "SmartWebの導入を検討されている企業様向けに、約20分程度のオンライン相談を無料で提供しています。AIカスタマーサポートやAIコンテンツ作成・Web構築について、お気軽にご相談ください。"
 keywords: ["SmartWeb", "無料", "相談", "AIカスタマーサポート", "LiveAgent", "FlowHunt"]
 category: "getting-started"
+weight: 40
 ---
 ## SmartWebの無料相談概要
 
@@ -38,7 +39,7 @@ SmartWebの導入を検討されている企業様向けに、約20分程度の�
 
 ### お申し込み手順
 
-- **フォーム送信**: 無料相談フォーム（[https://www.smartweb.jp/free-consultation-form/](https://www.smartweb.jp/free-consultation-form/)）から、必要事項をおわかりになる範囲でご入力ください
+- **フォーム送信**: [無料相談フォーム](/ja/contact/)から、必要事項をおわかりになる範囲でご入力ください
 - **日時確定**: 1営業日以内に担当者からメールでご連絡し、日時を確定します（通常2〜3営業日以内に実施可能）
 - **オンライン相談**: 当日、オンライン会議URLにアクセスして相談を実施（約20分）
 - **フォローアップ**: 相談後、必要に応じて詳細資料やお見積りを送付

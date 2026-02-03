@@ -7,6 +7,7 @@ translationKey: "multiple-handling"
 description: "はい、複数の支社・店舗での利用に対応しています。"
 keywords: ["複数", "対応", "デパートメント", "問い合わせ", "営業時間"]
 category: "getting-started"
+weight: 95
 ---
 ## 複数の支社・店舗でのサポート対応
 

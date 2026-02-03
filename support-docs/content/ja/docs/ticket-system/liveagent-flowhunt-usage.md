@@ -9,7 +9,7 @@ keywords: ["LiveAgent", "FlowHunt", "Agent", "SmartWeb", "チャットボット"
 category: "ticket-system"
 ---
 ## はじめに
-**SmartWebの構築サービスを利用せずに、LiveAgentやFlowHuntをご自身でご利用いただくことは技術的には可能です**が、いくつかの重要な点をご理解いただければと思います。
+**SmartWebの構築サービスを利用せずに、LiveAgentやFlowHuntをご自身でご利用いただくことは技術的には可能です**&#8203;が、いくつかの重要な点をご理解いただければと思います。
 
 ## LiveAgentの直接利用
 
@@ -22,7 +22,7 @@ LiveAgentはQuality Unit社が提供するグローバルなヘルプデスク�
 - 基本的なサポートは英語での対応となります
 
 ### インターワーク経由の利用
-- **〈重要〉**こちらのURL（[https://www.liveagent.com/#interworkcorp](https://www.liveagent.com/#interworkcorp)）からお申し込みいただくことで、**弊社による日本語サポートを無料**でご提供できます
+- **〈重要〉**&#8203;こちらのURL（[https://www.liveagent.com/#interworkcorp](https://www.liveagent.com/#interworkcorp)）からお申し込みいただくことで、**弊社による日本語サポートを無料**&#8203;でご提供できます
 - 導入時の設定支援やトレーニングは別途有料サービスとして承ります
 
 ## FlowHuntの直接利用
@@ -30,7 +30,7 @@ LiveAgentはQuality Unit社が提供するグローバルなヘルプデスク�
 ### サービス概要
 FlowHuntもQuality Unit社の製品で、同様に直接ご利用いただけますが：
 
-- **サポートは全て英語での対応**となります
+- **サポートは全て英語での対応**&#8203;となります
 - AIチャットボットの構築には一定の技術的な知識が必要となります
 
 ## インターワークについて

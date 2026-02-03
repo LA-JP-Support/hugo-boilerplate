@@ -4,9 +4,79 @@
 
 The `/support` section uses a custom LotusDocs-inspired layout designed specifically for documentation and knowledge base content. This implementation provides a modern, user-friendly documentation experience without requiring a full theme replacement.
 
-**Version:** 1.0.0  
-**Date:** 2026-01-30  
+**Version:** 1.1.0  
+**Date:** 2026-02-03  
 **Status:** Production Ready
+
+---
+
+## Category Structure & Weight System
+
+### カテゴリー一覧（表示順序）
+
+| 順序 | カテゴリー | フォルダ名 | weight | 説明 |
+|------|-----------|-----------|--------|------|
+| 1 | はじめに | `getting-started/` | 10 | サービス概要、導入方法、用語集 |
+| 2 | AI機能の基礎知識 | `ai-fundamentals/` | 15 | 3つのAI機能の違い、FlowHunt、RAG、セキュリティ |
+| 3 | AIチャットボット | `ai-chatbot/` | 25 | チャットボット専用の設定・運用 |
+| 4 | AIメール回答作成 | `email-composer/` | 30 | AI Answer Composer専用 |
+| 5 | AI回答アシスト | `ai-answer-assist/` | 35 | AI Answer Improver専用 |
+| 6 | AI連携チケットシステム | `ticket-system/` | 40 | LiveAgentチケット管理 |
+| 7 | 設定・カスタマイズ | `settings/` | 50 | システム設定全般 |
+| 8 | セキュリティ | `security/` | 60 | セキュリティ・データ保護 |
+| 9 | 料金・契約 | `pricing/` | 70 | プラン・契約・支払い |
+
+### 重み付けルール
+
+#### カテゴリー（_index.md）の weight
+
+新しいカテゴリーを追加する場合は、上記の表を参考に適切な位置のweightを設定してください。
+
+```yaml
+# カテゴリーの _index.md
+---
+title: "カテゴリー名"
+description: "説明"
+weight: 25  # 表示順序を制御
+---
+```
+
+#### 個別記事の weight
+
+カテゴリー内の記事は、論理的なグループごとに weight を割り当てます。
+
+**推奨パターン:**
+
+| グループ | weight範囲 | 例 |
+|---------|-----------|----|
+| 導入・概要 | 10-30 | サービス紹介、概要説明 |
+| 主要機能 | 40-60 | 機能説明、設定方法 |
+| 応用・活用 | 70-100 | 活用事例、連携方法 |
+| リファレンス | 150-200 | 用語集、FAQ、トラブルシューティング |
+
+**getting-started の例:**
+
+```
+10-35:  サービス紹介（SmartWebとは、特徴、メリット）
+40-55:  導入・契約（無料相談、事例、トレーニング）
+60-75:  移行・連携（他社移行、データ移行、既存サイト連携）
+80-105: 機能・活用（モバイル、マルチブランド）
+200+:   用語集（カスタマーサポート用語、マーケティング用語）
+```
+
+#### 新規ファイル追加時のチェックリスト
+
+1. **カテゴリーを決定** - 内容に最も適したカテゴリーを選択
+2. **weight を設定** - 同カテゴリー内の既存ファイルを確認し、適切な位置を決定
+3. **frontmatter を完成** - 以下の必須項目を設定:
+   - `title`: 記事タイトル
+   - `date` / `lastmod`: 作成日・更新日
+   - `translationKey`: 多言語リンク用のユニークキー
+   - `description`: 記事の説明（SEO用）
+   - `keywords`: 検索キーワード
+   - `category`: カテゴリー名
+   - `weight`: 表示順序
+4. **英語版も考慮** - 後で英語版を作成する場合に備えて `translationKey` を設定
 
 ---
 
@@ -349,6 +419,13 @@ For questions or issues with this implementation:
 ---
 
 ## Changelog
+
+### Version 1.1.0 (2026-02-03)
+- Added Category Structure & Weight System section
+- Documented weight rules for categories and individual articles
+- Added new category: `ai-fundamentals/` (AI機能の基礎知識)
+- Reorganized category weights for logical ordering
+- Added checklist for adding new support documents
 
 ### Version 1.0.0 (2026-01-30)
 - Initial implementation

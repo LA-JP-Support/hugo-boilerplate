@@ -16,7 +16,7 @@ Anthropic社の「Claude Opus 4」や「Cloud Sonnet 4」、OpenAI社の「ChatG
 ## LLMとは？
 
 ### 大規模言語モデルの定義
-**LLM（Large Language Model：大規模言語モデル）**とは、人間のように自然な文章を理解し、作成できるAI技術のことです。
+**LLM（Large Language Model：大規模言語モデル）**&#8203;とは、人間のように自然な文章を理解し、作成できるAI技術のことです。
 
 ### LLMの主な特徴
 **簡単に言うと：**

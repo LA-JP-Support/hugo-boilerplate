@@ -7,6 +7,7 @@ translationKey: "marketing-sales-glossary"
 description: "マーケティング & セールス用語集について解説します。"
 keywords: ["マーケティング", "セールス", "用語集", "Search", "問い合わせ"]
 category: "getting-started"
+weight: 210
 ---
 ## マーケティングの基本戦略
 
