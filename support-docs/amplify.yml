@@ -26,7 +26,7 @@ frontend:
         - hugo --minify --cleanDestinationDir
         - echo "Adding glossary links..."
         - pip3 install beautifulsoup4 pyyaml --quiet
-        - python3 ../scripts/linkbuilding_support_docs.py --linkbuilding-yaml ../data/linkbuilding/ja.yaml --public-dir public
+        - python3 scripts/linkbuilding_support_docs.py --linkbuilding-yaml data/linkbuilding/ja.yaml --public-dir public
   artifacts:
     baseDirectory: public
     files:
