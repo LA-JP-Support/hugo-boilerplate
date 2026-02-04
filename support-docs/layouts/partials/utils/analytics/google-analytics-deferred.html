@@ -1,0 +1,33 @@
+{{/* Google Analytics v4 - Deferred Loading */}}
+{{- $gaID := .Site.Config.Services.GoogleAnalytics.ID -}}
+<script>
+// Load GA after 3 seconds or on user interaction (whichever comes first)
+(function() {
+    var gaLoaded = false;
+    function loadGA() {
+        if (gaLoaded) return;
+        gaLoaded = true;
+        
+        // Create gtag script
+        var script = document.createElement('script');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id={{ $gaID }}';
+        script.async = true;
+        document.head.appendChild(script);
+        
+        // Initialize gtag
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', '{{ $gaID }}');
+    }
+    
+    // Load after 3 seconds
+    setTimeout(loadGA, 3000);
+    
+    // Or load on user interaction
+    ['scroll', 'click', 'touchstart', 'mousemove', 'keydown'].forEach(function(event) {
+        window.addEventListener(event, loadGA, { once: true, passive: true });
+    });
+})();
+</script>

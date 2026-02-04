@@ -1,0 +1,18 @@
+{{ if .Site.Params.google_fonts }}
+    {{ $fonts := slice }}
+    {{ range .Site.Params.google_fonts }}
+        {{ $family := replace (index (.)  0) " " "+" }}
+        {{ $weights := replace (index (.) 1) " " "" }}
+        {{ $string := print $family ":" $weights }}
+        {{ $fonts = $fonts | append $string }}
+    {{ end }}
+    {{ $url_part := (delimit $fonts "|") | safeHTMLAttr }}
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Google Fonts with display=swap for better performance -->
+    <link {{ printf "href=\"https://fonts.googleapis.com/css2?family=%s&display=swap\"" $url_part | safeHTMLAttr }} rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+        <link {{ printf "href=\"https://fonts.googleapis.com/css2?family=%s&display=swap\"" $url_part | safeHTMLAttr }} rel="stylesheet" />
+    </noscript>
+{{ end }}
