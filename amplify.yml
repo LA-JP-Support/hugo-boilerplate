@@ -2,6 +2,15 @@ version: 1
 applications:
   # Main site (hugo-boilerplate) - appRoot: .
   - appRoot: .
+    customHeaders:
+      - pattern: "**/*.html"
+        headers:
+          - key: Content-Type
+            value: text/html; charset=utf-8
+      - pattern: "**/*.xml"
+        headers:
+          - key: Content-Type
+            value: application/xml; charset=utf-8
     frontend:
       phases:
         preBuild:
@@ -28,6 +37,15 @@ applications:
           - resources/**/*
   # Support docs site - appRoot: support-docs
   - appRoot: support-docs
+    customHeaders:
+      - pattern: "**/*.html"
+        headers:
+          - key: Content-Type
+            value: text/html; charset=utf-8
+      - pattern: "**/*.xml"
+        headers:
+          - key: Content-Type
+            value: application/xml; charset=utf-8
     frontend:
       phases:
         preBuild:
@@ -67,13 +85,3 @@ applications:
         paths:
           - resources/**/*
           - .hugo_cache/**/*
-
-customHeaders:
-  - pattern: "**/*.html"
-    headers:
-      - key: Content-Type
-        value: text/html; charset=utf-8
-  - pattern: "**/*.xml"
-    headers:
-      - key: Content-Type
-        value: application/xml; charset=utf-8
