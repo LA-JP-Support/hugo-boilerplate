@@ -1,0 +1,9 @@
+# robots.txt for SmartWeb
+# Allow all crawlers to access the site
+
+User-agent: *
+Allow: /
+
+# Sitemap locations
+Sitemap: https://www.smartweb.jp/ja/sitemap.xml
+Sitemap: https://www.smartweb.jp/en/sitemap.xml
