@@ -1,7 +1,7 @@
 ---
 title: "Unlocking AI Chatbot Value: Why Backend Integration & Logs Are Key to Success"
-date: 2026-02-01
-lastmod: 2026-02-01
+date: 2026-02-02
+lastmod: 2026-02-02
 draft: false
 translationKey: "ai-chatbot-backend-value"
 description: "The true value of AI chatbots isn't just automated responses—it's the 'backend mechanism' that records, analyzes, and improves customer interactions. Learn why backend integration is crucial and how SmartWeb's LiveAgent integration provides the solution."

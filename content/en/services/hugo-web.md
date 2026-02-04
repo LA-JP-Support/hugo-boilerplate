@@ -28,28 +28,30 @@ features:
   - label: "Security"
     title: "No Database, No Vulnerabilities"
     description: "Dynamic CMS platforms like WordPress require databases and PHP processing, exposing them to SQL injection, plugin vulnerabilities, and other security risks. Hugo-generated static sites eliminate these attack vectors entirely.<br><br>With no server-side processing, the burden of regular security updates and patching is minimized. No database backups to manage. All content is version-controlled in Git, making change tracking and recovery straightforward. Ideal for corporate sites and government websites with strict security requirements."
-    image: "/images/services/hugo-web/feature-security.jpg"
+    image: "/images/services/hugo-web/feature-security-e.jpg"
+    no_zoom: true
   
   - label: "Low-Cost Operations"
     title: "Serverless Reduces Maintenance Costs"
-    description: "Hugo sites composed entirely of static files can run on low-cost hosting services like GitHub Pages, Netlify, or AWS S3. Free yourself from server management, database maintenance, and plugin updates.<br><br>CDNs automatically handle scaling during traffic spikes—no server crashes during sudden traffic surges. Minimize ongoing operational costs after initial build while maintaining stable, high performance."
-    image: "/images/services/hugo-web/feature-cost.jpg"
+    description: "Hugo sites composed entirely of static files can run on versatile hosting services like Netlify, Cloudflare Pages, AWS Amplify, and GitHub Pages. Free yourself from server management, database maintenance, and plugin updates.<br><br>CDNs automatically handle scaling during traffic spikes—no server crashes during sudden traffic surges. Minimize ongoing operational costs after initial build while maintaining stable, high performance."
+    image: "/images/services/hugo-web/feature-cost-e.jpg"
+    no_zoom: true
   
   - label: "Case Studies"
     title: "Global Companies Choose Hugo"
-    description: "Hugo powers over 12,900 websites worldwide. In 2017, Smashing Magazine migrated from WordPress to Hugo, proving its viability for large-scale media sites. In 2022, Cloudflare moved their Developer Docs from Gatsby to Hugo, achieving faster builds and better maintainability.<br><br>From Bootstrap's official blog to NebulaGraph, Hugo is adopted across tech companies and enterprises alike. With 85,000+ GitHub stars and an active community driving continuous development, plus abundant themes and documentation, rapid deployment is achievable."
+    description: "Hugo powers over 170,000 websites worldwide (BuiltWith). In 2024, the 'Million Pages Release' overhauled the core for streaming builds of ultra-large sites. Modern development features include LaTeX math support and native Tailwind CSS integration.<br><br>Smashing Magazine (2017), Cloudflare Developer Docs (2022), plus 1Password, Let's Encrypt, and U.S. government's Digital.gov—organizations prioritizing security and performance widely adopt Hugo. With 86,000+ GitHub stars, Hugo maintains one of the largest communities among static site generators."
     image: "/images/services/hugo-web/feature-cases.jpg"
 
 # Stats Section
 stats_heading: "Hugo by the Numbers"
 stats_description: "Why the world's fastest static site generator is the choice of leaders"
 stats:
-  - value: "85,000+"
+  - value: "86,000+"
     label: "GitHub Stars"
-    description: "Hugo is trusted by developers worldwide, with 85,000+ GitHub stars. An active community drives continuous development and provides abundant themes and plugins."
-  - value: "12,900+"
-    label: "Sites Deployed"
-    description: "Over 12,900 websites worldwide are built with Hugo, including Smashing Magazine, Cloudflare, and Bootstrap. From corporate sites to documentation and blogs—Hugo handles it all."
+    description: "Hugo is trusted by developers worldwide, with 86,000+ GitHub stars. An active community drives continuous development and provides abundant themes and plugins.<br><small>*GitHub stars are a way for developers to bookmark favorite projects, serving as an indicator of open-source project popularity.</small>"
+  - value: "170,000+"
+    label: "Live Sites"
+    description: "Over 170,000 websites worldwide run on Hugo (BuiltWith), including 1Password, Let's Encrypt, and U.S. government's Digital.gov. From corporate sites to documentation and blogs—Hugo handles it all."
   - value: "<1ms"
     label: "Page Generation Time"
     description: "Built with Go, Hugo generates each page in under a millisecond. Sites with thousands of pages build in seconds, maximizing both development efficiency and production performance."

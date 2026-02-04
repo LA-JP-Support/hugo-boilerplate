@@ -126,7 +126,7 @@ pillars_content:
       label: "World's Fastest Static Site Generator"
       image: "/images/services/hugo-web/hugo-process-e.jpg"
       url: "/en/services/hugo-web/"
-      description: "Built with Go, Hugo generates pages in milliseconds—the world's fastest static site generator. Eliminate security risks with no database required, and achieve ultra-fast delivery via CDN. Trusted by 12,900+ sites worldwide including Smashing Magazine and Cloudflare."
+      description: "Built with Go, Hugo generates pages in milliseconds—the world's fastest static site generator. Eliminate security risks with no database required, and achieve ultra-fast delivery via CDN. Trusted by 170,000+ sites worldwide including 1Password, Let's Encrypt, and Cloudflare."
       descriptionLogo: "/images/services/hugo-web/hugo-logo-wide.svg"
       descriptionImage: "/images/services/hugo-web/hugo-process-e.jpg"
 

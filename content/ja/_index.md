@@ -149,7 +149,7 @@ pillars_content:
       label: "世界最速の静的サイトジェネレーター"
       image: "/images/services/hugo-web/hugo-process.jpg"
       url: "/ja/services/hugo-web/"
-      description: "Go言語で開発されたHugoは、ミリ秒単位でページを生成する世界最速の静的サイトジェネレーター。データベース不要でセキュリティリスクを排除し、CDN配信による超高速表示を実現。Smashing Magazine、Cloudflareなど世界12,900以上のサイトで採用されています。"
+      description: "Go言語で開発されたHugoは、ミリ秒単位でページを生成する世界最速の静的サイトジェネレーター。データベース不要でセキュリティリスクを排除し、CDN配信による超高速表示を実現。1Password、Let's Encrypt、Cloudflareなど世界17万以上のサイトで稼働しています。"
       descriptionLogo: "/images/services/hugo-web/hugo-logo-wide.svg"
       descriptionImage: "/images/services/hugo-web/hugo-process.jpg"
 

@@ -1,7 +1,7 @@
 ---
 title: "Hugoとは？中小企業のWeb集客に強い静的サイトの作り方"
-date: 2026-02-01
-lastmod: 2026-02-01
+date: 2026-02-02
+lastmod: 2026-02-02
 draft: false
 translationKey: "hugo-static-site-generator-guide"
 description: "静的サイトジェネレーターHugoの特徴、メリット・デメリット、導入方法を詳しく解説。中小企業のWebサイト制作でコスト削減とセキュリティ向上を実現する方法をご紹介します。"

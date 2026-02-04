@@ -1,7 +1,7 @@
 ---
 title: "AIチャットボットの価値は「裏側」にある：記録とバックオフィス運用が成功の鍵"
-date: 2026-02-01
-lastmod: 2026-02-01
+date: 2026-02-02
+lastmod: 2026-02-02
 draft: false
 translationKey: "ai-chatbot-backend-value"
 description: "AIチャットボットの真の価値は自動応答ではなく、顧客とのやり取りを記録・分析・改善につなげる「裏側の仕組み」にあります。バックオフィス統合がなぜ重要なのか、SmartWebのチケットシステムとの統合による解決策を解説します。"

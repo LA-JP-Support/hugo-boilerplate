@@ -1,7 +1,7 @@
 ---
 title: "Beyond Accuracy: Why AI Chatbots Need Integrated Website Design"
-date: 2026-02-01
-lastmod: 2026-02-01
+date: 2026-02-02
+lastmod: 2026-02-02
 draft: false
 translationKey: "ai-chatbot-website-integration"
 description: "To maximize AI chatbot ROI, website integration is just as critical as response accuracy. We explain the pitfalls of multilingual support and SmartWeb's integrated design approach."

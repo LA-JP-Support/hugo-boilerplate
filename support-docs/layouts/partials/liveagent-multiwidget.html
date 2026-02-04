@@ -1,0 +1,287 @@
+{{/* LiveAgent Multi-Widget - サポートドキュメント用 */}}
+{{ if site.Params.liveagent.multiwidget.enable }}
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;800&display=swap');
+
+/* Reset styles for multiwidget */
+.la-multiwidget,
+.la-multiwidget *,
+.la-main-button,
+.la-main-button * {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Button */
+.la-main-button {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #ffbd39 0%, #fa9531 100%);
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  z-index: 9998;
+  transition: all 0.3s ease;
+}
+
+.la-main-button:hover {
+  background: linear-gradient(90deg, #ffbd39 0%, #ffbd39 100%);
+  transform: scale(1.02);
+}
+
+.la-main-button-text {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  white-space: nowrap;
+}
+
+.la-main-button-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Multiwidget Panel */
+.la-multiwidget {
+  position: fixed;
+  right: 20px;
+  bottom: -200px;
+  opacity: 0;
+  width: auto;
+  min-width: 180px;
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  z-index: 9999;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.la-multiwidget.is-open {
+  bottom: 170px;
+  opacity: 1;
+}
+
+/* Close Button */
+.la-multiwidget-close {
+  display: block;
+  text-align: right;
+  padding: 4px 10px 0;
+  font-size: 24px;
+  font-weight: 300;
+  color: #999;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.la-multiwidget-close:hover {
+  color: #333;
+}
+
+/* Menu List */
+.la-multiwidget-list {
+  list-style: none !important;
+  padding: 4px 10px 12px !important;
+  margin: 0 !important;
+}
+
+.la-multiwidget-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 10px;
+  padding: 8px 10px !important;
+  margin: 0 0 4px 0 !important;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  list-style: none !important;
+}
+
+.la-multiwidget-item:last-child {
+  margin-bottom: 0 !important;
+}
+
+.la-multiwidget-item-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.la-multiwidget-item-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+/* Hover Colors */
+.la-multiwidget-item.form:hover {
+  background-color: #e8f4fd;
+}
+
+.la-multiwidget-item.chat:hover {
+  background-color: #fef3e8;
+}
+
+/* Mobile Styles (768px以下) */
+@media (max-width: 768px) {
+  .la-main-button {
+    bottom: 16px;
+    right: 16px;
+    padding: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    justify-content: center;
+  }
+
+  .la-main-button-text {
+    display: none;
+  }
+
+  .la-main-button-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .la-multiwidget {
+    right: 16px;
+    min-width: 160px;
+  }
+
+  .la-multiwidget.is-open {
+    bottom: 76px;
+  }
+
+  .la-multiwidget-close {
+    font-size: 22px;
+    padding: 4px 8px 0;
+  }
+
+  .la-multiwidget-list {
+    padding: 4px 8px 10px !important;
+  }
+
+  .la-multiwidget-item {
+    gap: 8px;
+    padding: 6px 8px !important;
+    margin: 0 0 4px 0 !important;
+  }
+
+  .la-multiwidget-item-text {
+    font-size: 13px;
+  }
+
+  .la-multiwidget-item-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Small Mobile Styles (480px以下) */
+@media (max-width: 480px) {
+  .la-main-button {
+    bottom: 80px;
+    right: 12px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .la-main-button-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .la-multiwidget {
+    right: 12px;
+    min-width: 150px;
+  }
+
+  .la-multiwidget.is-open {
+    bottom: 136px;
+  }
+
+  .la-multiwidget-item-text {
+    font-size: 12px;
+  }
+
+  .la-multiwidget-item-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+</style>
+
+<!-- Multiwidget Panel -->
+<div id="laMultiwidget" class="la-multiwidget">
+  <span class="la-multiwidget-close" onclick="toggleLaMultiwidget();">&times;</span>
+  <ul class="la-multiwidget-list">
+    <li id="laElementForm" class="la-multiwidget-item form" onclick="contactForm.onClick(); toggleLaMultiwidget();">
+      <span class="la-multiwidget-item-text">{{ if eq .Site.Language.Lang "en" }}Contact Us{{ else }}お問い合わせ{{ end }}</span>
+      <img class="la-multiwidget-item-icon" src="https://files.intwk.co.jp/SmartWeb/form.svg" alt="Form" />
+    </li>
+    <li id="laElementChat" class="la-multiwidget-item chat" onclick="botButton.onClick(); toggleLaMultiwidget();">
+      <span class="la-multiwidget-item-text">{{ if eq .Site.Language.Lang "en" }}Chat{{ else }}チャット{{ end }}</span>
+      <img class="la-multiwidget-item-icon" src="https://files.intwk.co.jp/SmartWeb/chat.svg" alt="Chat" />
+    </li>
+  </ul>
+</div>
+
+<!-- Main Button -->
+<div id="laMainButton" class="la-main-button" onclick="toggleLaMultiwidget();">
+  <span class="la-main-button-text">{{ if eq .Site.Language.Lang "en" }}Contact Us{{ else }}お問い合わせ{{ end }}</span>
+  <img class="la-main-button-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkFnGM_CtOsOzloGOge47HQ7-U4gnyhrryn2iA7dmf0A&s" alt="Contact" />
+</div>
+
+<!-- LiveAgent Scripts -->
+<script type="text/javascript">
+var contactForm;
+(function(d, src, c) { var t=d.scripts[d.scripts.length - 1],s=d.createElement('script');s.id='la_x2s6df8d';s.defer=true;s.src=src;s.onload=s.onreadystatechange=function(){var rs=this.readyState;if(rs&&(rs!='complete')&&(rs!='loaded')){return;}c(this);};t.parentElement.insertBefore(s,t.nextSibling);})(document,
+'https://support.intwk.co.jp/scripts/track.js',
+function(e){
+  contactForm = LiveAgent.createButton('s141buj5', e);
+});
+</script>
+
+<script type="text/javascript">
+var botButton;
+(function(d, src, c) { var t=d.scripts[d.scripts.length - 1],s=d.createElement('script');s.id='la_x2s6df8d';s.defer=true;s.src=src;s.onload=s.onreadystatechange=function(){var rs=this.readyState;if(rs&&(rs!='complete')&&(rs!='loaded')){return;}c(this);};t.parentElement.insertBefore(s,t.nextSibling);})(document,
+'https://support.intwk.co.jp/scripts/track.js',
+function(e){
+  botButton = LiveAgent.createButton('tasrn8qe', e);
+});
+</script>
+
+<script>
+var laWidgetOpen = false;
+function toggleLaMultiwidget() {
+  var widget = document.getElementById("laMultiwidget");
+  var button = document.getElementById("laMainButton");
+  
+  if (!laWidgetOpen) {
+    widget.classList.add("is-open");
+    button.style.background = "linear-gradient(90deg, #ffbd39 0%, #ffbd39 100%)";
+    laWidgetOpen = true;
+  } else {
+    widget.classList.remove("is-open");
+    button.style.background = "linear-gradient(90deg, #ffbd39 0%, #fa9531 100%)";
+    laWidgetOpen = false;
+  }
+}
+</script>
+
+{{ end }}

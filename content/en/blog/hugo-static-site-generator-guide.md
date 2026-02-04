@@ -1,7 +1,7 @@
 ---
 title: "What is Hugo? Building Fast Websites for Small Business Marketing"
-date: 2026-02-01
-lastmod: 2026-02-01
+date: 2026-02-02
+lastmod: 2026-02-02
 draft: false
 translationKey: "hugo-static-site-generator-guide"
 description: "A comprehensive guide to Hugo static site generator: features, pros and cons, and implementation. Learn how small businesses can reduce costs and improve security with Hugo websites."

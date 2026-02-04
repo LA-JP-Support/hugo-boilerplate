@@ -29,27 +29,29 @@ features:
     title: "データベース不要で脆弱性リスクを排除"
     description: "WordPressなどの動的CMSは、データベースやPHP処理を必要とし、SQLインジェクションやプラグインの脆弱性など、多くのセキュリティリスクを抱えています。Hugoで生成される静的サイトは、これらの攻撃ベクトルそのものが存在しません。<br><br>サーバーサイド処理がないため、定期的なセキュリティアップデートやパッチ適用の負担も最小限。データベースのバックアップ管理も不要です。コンテンツは全てGitで管理されるため、変更履歴の追跡と復元も容易。企業サイトや官公庁サイトなど、セキュリティ要件の厳しい環境にも最適です。"
     image: "/images/services/hugo-web/feature-security.jpg"
+    no_zoom: true
   
   - label: "低コスト運用"
     title: "サーバーレスで保守コストを削減"
-    description: "静的ファイルのみで構成されるHugoサイトは、GitHub PagesやNetlify、AWS S3など、低コストなホスティングサービスで運用可能。サーバー管理、データベース保守、プラグイン更新といった継続的なメンテナンス作業から解放されます。<br><br>トラフィック増加時のスケーリングも、CDNが自動的に処理。急なアクセス集中でもサーバーダウンの心配がありません。初期構築後の運用コストを最小限に抑えながら、安定した高パフォーマンスを維持できます。"
+    description: "静的ファイルのみで構成されるHugoサイトは、Netlify、Cloudflare Pages、AWS Amplify、GitHub Pagesなど、多彩なホスティングサービスで運用可能。サーバー管理、データベース保守、プラグイン更新といった継続的なメンテナンス作業から解放されます。<br><br>トラフィック増加時のスケーリングも、CDNが自動的に処理。急なアクセス集中でもサーバーダウンの心配がありません。初期構築後の運用コストを最小限に抑えながら、安定した高パフォーマンスを維持できます。"
     image: "/images/services/hugo-web/feature-cost.jpg"
+    no_zoom: true
   
   - label: "導入事例"
     title: "世界の企業がHugoを採用"
-    description: "Hugoは世界中で12,900以上のWebサイトで採用されています。2017年にはSmashing MagazineがWordPressからHugoに移行し、大規模メディアサイトでの実用性を実証。2022年にはCloudflareがDeveloper DocsをGatsbyからHugoに移行し、ビルド速度と保守性の向上を実現しました。<br><br>Bootstrap公式ブログ、NebulaGraphなど、テック企業から一般企業まで幅広く採用されています。GitHubでは85,000以上のスターを獲得し、活発なコミュニティによる継続的な開発が行われています。豊富なテーマとドキュメントにより、短期間での導入が可能です。"
+    description: "Hugoは世界中で17万以上のWebサイトで稼働しています（BuiltWith調べ）。2024年には「ミリオンページ・リリース」でコアを刷新し、超大規模サイトのストリーミングビルドに対応。LaTeX数式サポートやTailwind CSS統合など、モダンな開発体験を提供しています。<br><br>Smashing Magazine（2017年）、Cloudflare Developer Docs（2022年）のほか、1Password、Let's Encrypt、米政府Digital.govなど、セキュリティとパフォーマンスを重視する組織に広く採用されています。GitHubでは86,000以上のスターを獲得し、静的サイトジェネレーターとして世界最大級のコミュニティを維持しています。"
     image: "/images/services/hugo-web/feature-cases.jpg"
 
 # Stats Section
 stats_heading: "Hugoの実績"
 stats_description: "世界最速の静的サイトジェネレーターが選ばれる理由"
 stats:
-  - value: "85,000+"
+  - value: "86,000+"
     label: "GitHubスター数"
-    description: "Hugoは世界中の開発者から支持され、GitHubで85,000以上のスターを獲得。活発なコミュニティによる継続的な開発と、豊富なテーマ・プラグインが提供されています。"
-  - value: "12,900+"
-    label: "導入サイト数"
-    description: "Smashing Magazine、Cloudflare、Bootstrapなど、世界中で12,900以上のWebサイトがHugoで構築されています。企業サイトからドキュメントサイト、ブログまで幅広く活用されています。"
+    description: "Hugoは世界中の開発者から支持され、GitHubで86,000以上のスターを獲得。活発なコミュニティによる継続的な開発と、豊富なテーマ・プラグインが提供されています。<br><small>※GitHubスターは、開発者がプロジェクトを「お気に入り」として保存する機能で、オープンソースプロジェクトの人気度を示す指標です。</small>"
+  - value: "170,000+"
+    label: "稼働サイト数"
+    description: "1Password、Let's Encrypt、米政府Digital.govなど、世界中で17万以上のWebサイトがHugoで稼働しています（BuiltWith調べ）。企業サイトからドキュメントサイト、ブログまで幅広く活用されています。"
   - value: "<1ms"
     label: "ページ生成時間"
     description: "Go言語で開発されたHugoは、1ページあたりミリ秒以下で生成。数千ページのサイトも数秒でビルドでき、開発効率と本番パフォーマンスの両方を最大化します。"

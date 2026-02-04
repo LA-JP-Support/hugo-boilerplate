@@ -20,6 +20,14 @@ disableDefaultLanguageRedirect = true
 [params]
   description = "SmartWeb サポートドキュメント"
   
+  [params.flexsearch]
+    enabled = true
+    tokenize = "full"
+    optimize = true
+    cache = 100
+    minQueryChar = 1
+    maxResult = 10
+  
   [params.docs]
     # ロゴクリック時のリンク先（言語選択ページ）
     logoLinkURL = "/"
@@ -68,3 +76,12 @@ disableDefaultLanguageRedirect = true
   changefreq = "weekly"
   filename = "sitemap.xml"
   priority = 0.5
+
+# Google Analytics 4
+[services]
+  [services.googleAnalytics]
+    ID = "G-P4WY3NT5SD"
+
+# LiveAgent マルチウィジェット
+[params.liveagent.multiwidget]
+  enable = true

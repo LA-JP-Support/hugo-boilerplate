@@ -1,7 +1,7 @@
 ---
 title: "HUGO vs WordPress: A Complete Comparison of Speed, Security, and Cost"
-date: 2026-02-01
-lastmod: 2026-02-01
+date: 2026-02-03
+lastmod: 2026-02-03
 draft: false
 translationKey: "hugo-vs-wordpress-comparison"
 description: "A detailed comparison of HUGO and WordPress covering performance, security, operational costs, and extensibility. Learn the pros and cons of static site generators vs CMS to make the best choice for your project."
