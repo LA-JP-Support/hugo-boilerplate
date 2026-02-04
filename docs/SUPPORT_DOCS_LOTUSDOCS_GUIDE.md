@@ -151,11 +151,76 @@ document.querySelectorAll('link[hreflang]')
 
 ---
 
+## AWS Amplify設定（amplify.yml）
+
+### ⚠️ 重要：モノレポ構造を維持すること
+
+`support-docs/amplify.yml` は**必ずモノレポ形式**（`applications` 配列 + `appRoot`）で記述する必要があります。
+
+**正しい構造:**
+```yaml
+version: 1
+applications:
+  - appRoot: support-docs    # ← 必須！これがないとデプロイエラー
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            # ...
+        build:
+          commands:
+            # ...
+      artifacts:
+        baseDirectory: public
+        files:
+          - "**/*"
+      cache:
+        paths:
+          # ...
+    customHeaders:           # ← customHeadersはapplication内に配置
+      - pattern: "**/*"
+        headers:
+          - key: Content-Type
+            value: text/html; charset=utf-8
+```
+
+**デプロイエラー例:**
+```
+!!! CustomerError: Invalid monorepo spec, no matching appRoot found in build spec
+```
+
+**原因:** `applications` と `appRoot: support-docs` が欠落している
+
+### 編集時の注意
+
+amplify.ymlを編集する際は、**部分編集**を行い、既存の構造を壊さないこと。
+
+❌ **やってはいけない:** ファイル全体を上書きして `applications` / `appRoot` を消す
+✅ **正しい方法:** 必要な部分のみ追加・変更し、モノレポ構造を維持する
+
+### 文字化け対策（charset設定）
+
+FlowHunt等のクローラーで日本語が文字化けする場合、`customHeaders`でcharsetを明示：
+
+```yaml
+    customHeaders:
+      - pattern: "**/*.html"
+        headers:
+          - key: Content-Type
+            value: text/html; charset=utf-8
+      - pattern: "**/*.xml"
+        headers:
+          - key: Content-Type
+            value: application/xml; charset=utf-8
+```
+
+---
+
 ## ファイル構造
 
 ```
 support-docs/
-├── amplify.yml                     # AWS Amplifyビルド設定
+├── amplify.yml                     # AWS Amplifyビルド設定（モノレポ形式必須）
 ├── hugo.toml                       # Hugo設定
 ├── content/
 │   ├── ja/
@@ -182,6 +247,41 @@ support-docs/
 ---
 
 ## トラブルシューティング
+
+### デプロイエラー: Invalid monorepo spec
+
+**エラーメッセージ:**
+```
+!!! CustomerError: Invalid monorepo spec, no matching appRoot found in build spec
+```
+
+**原因:** `support-docs/amplify.yml` がモノレポ形式になっていない
+
+**解決策:**
+1. `amplify.yml` を確認し、`version: 1` の直下に `applications:` 配列があるか確認
+2. `- appRoot: support-docs` が存在するか確認
+3. 上記「AWS Amplify設定」セクションの正しい構造を参照
+
+### FlowHuntクローラーで文字化け
+
+**原因:** HTTPレスポンスヘッダーにcharsetが指定されていない
+
+**解決策:**
+1. `amplify.yml` の `customHeaders` セクションで `Content-Type: text/html; charset=utf-8` を設定
+2. 上記「文字化け対策」セクションを参照
+
+### robots.txtが見つからない（Error getting robots.txt）
+
+**原因:** `static/robots.txt` が存在しない
+
+**解決策:**
+1. `support-docs/static/robots.txt` を作成
+2. 内容例:
+```
+User-agent: *
+Allow: /
+Sitemap: https://support.smartweb.jp/sitemap.xml
+```
 
 ### ルートで言語選択ページが表示されない
 
@@ -211,3 +311,5 @@ support-docs/
 - `static/index.html` デザイン改善
 - `en.yaml` に高頻度キーワードバリエーション追加
 - 本ドキュメント作成
+- **AWS Amplify設定セクション追加**: モノレポ構造（`applications` + `appRoot`）の必須要件を明記
+- **文字化け対策**: `customHeaders`でcharset=utf-8を設定する方法を追加
