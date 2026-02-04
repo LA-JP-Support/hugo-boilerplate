@@ -14,7 +14,7 @@ cta_primary:
   url: "/ja/contact/"
 
 # Introduction
-introduction: "LiveAgentのチケットシステムとFlowHuntを連携したAIメール自動回答作成機能(AI Answer Composer)は、効率的なカスタマーサポートを実現します。<br><br>メールや問い合わせフォームを受信すると、LiveAgentのチケット管理システムが自動的にFlowHunt AIと連携し、質問内容を抽出・分析。AIは事前学習した情報をもとに回答案を作成し、チケット画面上にノートとして表示します。担当者はチケット対応フローの中で、スムーズに回答内容を確認・編集できます。<br><br>さらに、AI回答アシスト機能(AI Answer Improver)を活用すれば、チケット管理画面から離れることなく、文章の成形や専門用語の解説追加が可能。チケットシステムとの一体化により、問い合わせ対応の時間短縮と品質向上を同時に実現します。<br><br><small>※AI Answer ComposerはFlowHuntのみに対応しています（OpenAIには非対応）。</small>"
+introduction: "LiveAgentのチケットシステムとFlowHuntを連携したAIメール自動回答作成機能(AI Answer Composer)は、効率的なカスタマーサポートを実現します。<br><br>メールや問い合わせフォームを受信すると、LiveAgentのチケット管理システムが自動的にFlowHunt AIと連携し、質問内容を抽出・分析。AIは事前学習した情報をもとに回答案を作成し、チケット画面上にノートとして表示します。担当者はチケット対応フローの中で、スムーズに回答内容を確認・編集できます。<br><br>さらに、AI回答アシスト機能(AI Answer Improver)を活用すれば、チケット管理画面から離れることなく、文章の成形や専門用語の解説追加が可能。チケットシステムとの一体化により、問い合わせ対応の時間短縮と品質向上を同時に実現します。"
 
 # Features (4 sections with alternating layout)
 features:

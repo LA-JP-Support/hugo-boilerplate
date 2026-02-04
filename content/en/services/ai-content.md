@@ -71,7 +71,7 @@ related_services:
   - title: "Hugo High-Speed Web Build"
     description: "Build ultra-fast websites with the world's fastest static site generator"
     url: "/en/services/hugo-web/"
-    image: "/images/pillars/hugo-web.jpg"
+    image: "/images/services/ai-content/feature-collaboration.jpg"
   - title: "AI Chatbot"
     description: "24/7 self-learning AI support in 100+ languages"
     url: "/en/services/ai-chatbot/"

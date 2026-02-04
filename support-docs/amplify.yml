@@ -38,3 +38,25 @@ frontend:
     paths:
       - resources/**/*
       - .hugo_cache/**/*
+
+customHeaders:
+  - pattern: "**/*"
+    headers:
+      - key: Content-Type
+        value: text/html; charset=utf-8
+  - pattern: "*.html"
+    headers:
+      - key: Content-Type
+        value: text/html; charset=utf-8
+  - pattern: "**/*.html"
+    headers:
+      - key: Content-Type
+        value: text/html; charset=utf-8
+  - pattern: "*.xml"
+    headers:
+      - key: Content-Type
+        value: application/xml; charset=utf-8
+  - pattern: "**/*.xml"
+    headers:
+      - key: Content-Type
+        value: application/xml; charset=utf-8

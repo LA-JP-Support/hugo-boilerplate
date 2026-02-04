@@ -71,7 +71,7 @@ related_services:
   - title: "Hugo高速Web構築"
     description: "世界最速の静的サイトジェネレーターで超高速Webサイトを構築"
     url: "/ja/services/hugo-web/"
-    image: "/images/pillars/hugo-web.jpg"
+    image: "/images/services/ai-content/feature-collaboration.jpg"
   - title: "AIチャットボット"
     description: "24時間365日、100言語対応の自動学習型AIサポート"
     url: "/ja/services/ai-chatbot/"
