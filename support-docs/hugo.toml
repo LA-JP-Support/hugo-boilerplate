@@ -1,4 +1,4 @@
-baseURL = 'https://main.d2b65nc0n0a17p.amplifyapp.com/'
+baseURL = 'https://support.smartweb.jp/'
 languageCode = 'ja'
 title = 'SmartWeb Support'
 theme = 'lotusdocs'
@@ -19,6 +19,10 @@ disableDefaultLanguageRedirect = true
 
 [params]
   description = "SmartWeb サポートドキュメント"
+  
+  [params.docs]
+    # ロゴクリック時のリンク先（言語選択ページ）
+    logoLinkURL = "/"
   
   # Custom CSS
   [params.assets]
