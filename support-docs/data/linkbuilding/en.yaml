@@ -1,4 +1,105 @@
 keywords:
+# ========================================
+# High-frequency keyword variations for better matching
+# ========================================
+- keyword: AI chatbots
+  url: /en/glossary/ai-chatbot/
+  exact: false
+  priority: 15
+  title: AI Chatbot - Intelligent conversational agents that use artificial intelligence to interact with users.
+- keyword: chatbots
+  url: /en/glossary/chatbot/
+  exact: false
+  priority: 14
+  title: Chatbot - A software application designed to simulate human conversation.
+- keyword: chatbot
+  url: /en/glossary/chatbot/
+  exact: false
+  priority: 14
+  title: Chatbot - A software application designed to simulate human conversation.
+- keyword: knowledge base
+  url: /en/glossary/knowledge-base/
+  exact: false
+  priority: 15
+  title: Knowledge Base - A centralized repository of information used for support and self-service.
+- keyword: knowledge bases
+  url: /en/glossary/knowledge-base/
+  exact: false
+  priority: 15
+  title: Knowledge Base - A centralized repository of information used for support and self-service.
+- keyword: FAQs
+  url: /en/glossary/faq/
+  exact: false
+  priority: 14
+  title: FAQ - Frequently Asked Questions compiled to help users find answers quickly.
+- keyword: customer support
+  url: /en/glossary/customer-support/
+  exact: false
+  priority: 15
+  title: Customer Support - Services provided to assist customers with products or services.
+- keyword: ticket system
+  url: /en/glossary/ticket-management/
+  exact: false
+  priority: 14
+  title: Ticket Management - System for tracking and managing customer support requests.
+- keyword: tickets
+  url: /en/glossary/ticket/
+  exact: false
+  priority: 14
+  title: Ticket - A record of a customer support request or issue.
+- keyword: live chat
+  url: /en/glossary/chatbot/
+  exact: false
+  priority: 14
+  title: Live Chat - Real-time communication channel for customer support.
+- keyword: automation
+  url: /en/glossary/automated-workflows/
+  exact: false
+  priority: 13
+  title: Automated Workflows - Processes that execute automatically based on predefined rules.
+- keyword: integrations
+  url: /en/glossary/integration/
+  exact: false
+  priority: 13
+  title: Integration - Connecting different software systems to work together.
+- keyword: API
+  url: /en/glossary/apis/
+  exact: true
+  priority: 13
+  title: API - Application Programming Interface for software communication.
+- keyword: NLP
+  url: /en/glossary/natural-language-processing/
+  exact: true
+  priority: 13
+  title: NLP - Natural Language Processing technology for understanding human language.
+- keyword: machine learning
+  url: /en/glossary/machine-learning/
+  exact: false
+  priority: 13
+  title: Machine Learning - AI technology that enables systems to learn from data.
+- keyword: RAG
+  url: /en/glossary/rag/
+  exact: true
+  priority: 13
+  title: RAG - Retrieval-Augmented Generation for enhanced AI responses.
+- keyword: SLA
+  url: /en/glossary/knowledge-centered-service--kcs-/
+  exact: true
+  priority: 13
+  title: SLA - Service Level Agreement defining support standards.
+- keyword: CRM
+  url: /en/glossary/crm/
+  exact: true
+  priority: 13
+  title: CRM - Customer Relationship Management system.
+- keyword: GDPR
+  url: /en/glossary/gdpr/
+  exact: true
+  priority: 13
+  title: GDPR - General Data Protection Regulation for data privacy.
+# ========================================
+# Original keywords
+# ========================================
 - keyword: SEO
   url: /en/glossary/search-engine-optimization--seo-/
   exact: true

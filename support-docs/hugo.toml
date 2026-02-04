@@ -5,6 +5,7 @@ theme = 'lotusdocs'
 timeZone = "Asia/Tokyo"
 defaultContentLanguage = "ja"
 defaultContentLanguageInSubdir = true
+disableDefaultLanguageRedirect = true
 
 # LotusDocs Configuration
 [module]

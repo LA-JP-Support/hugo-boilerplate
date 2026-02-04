@@ -126,6 +126,18 @@
 
 - **ガイド**: `docs/LIVEAGENT_MULTIWIDGET_GUIDE.md`
 
+### J. サポートドキュメントサイト（LotusDocs）
+
+- **ガイド**: `docs/SUPPORT_DOCS_LOTUSDOCS_GUIDE.md`
+
+対象: `support-docs/` ディレクトリ全体
+
+主な内容:
+- URL構造とSEO設計（言語選択ページ、hreflang）
+- 内部リンク（用語集リンク）の設定
+- 英語版キーワード追加方法
+- デプロイチェックリスト
+
 設定ファイル:
 - `layouts/partials/components/liveagent-multiwidget.html`（日本語版）
 - `layouts/partials/components/liveagent-multiwidget.en.html`（英語版）

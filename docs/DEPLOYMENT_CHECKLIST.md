@@ -238,10 +238,48 @@ jobs:
 
 ---
 
+## サポートドキュメントサイト（support-docs）のチェックリスト
+
+メインサイトとは別に、サポートドキュメントサイト（LotusDocs）も同様にチェックが必要です。
+
+### デプロイ後確認項目
+
+| ステップ | アクション | 合格基準 |
+|---------|----------|----------|
+| 1 | ルートURL確認 | `https://main.d2b65nc0n0a17p.amplifyapp.com/` で言語選択ページ表示 |
+| 2 | 日本語版確認 | `/ja/docs/` が正しく表示 |
+| 3 | 英語版確認 | `/en/docs/` が正しく表示 |
+| 4 | hreflangタグ確認 | 各ページに hreflang タグが出力 |
+| 5 | 内部リンク確認（JA） | `a[data-lb="1"]` が存在 |
+| 6 | 内部リンク確認（EN） | `a[data-lb="1"]` が存在 |
+
+### ブラウザコンソールでの確認方法
+
+```javascript
+// 内部リンクの数を確認
+document.querySelectorAll('a[data-lb="1"]').length
+
+// hreflangタグを確認
+document.querySelectorAll('link[hreflang]')
+```
+
+### 問題発生時
+
+| 問題 | 確認箇所 | 対処法 |
+|------|---------|--------|
+| ルートで言語選択ページが出ない | `hugo.toml` の `disableDefaultLanguageRedirect` | `true` に設定 |
+| 英語版内部リンクがない | `data/linkbuilding/en.yaml` | キーワードバリエーション追加 |
+| hreflangタグがない | `layouts/partials/head.html` | hreflangコードを確認 |
+
+詳細: [SUPPORT_DOCS_LOTUSDOCS_GUIDE.md](./SUPPORT_DOCS_LOTUSDOCS_GUIDE.md)
+
+---
+
 ## 関連ドキュメント
 
 - [PAGESPEED_OPTIMIZATION.md](./PAGESPEED_OPTIMIZATION.md) - 詳細な最適化手法
 - [IMAGE_OPTIMIZATION.md](./IMAGE_OPTIMIZATION.md) - 画像最適化ガイド
+- [SUPPORT_DOCS_LOTUSDOCS_GUIDE.md](./SUPPORT_DOCS_LOTUSDOCS_GUIDE.md) - サポートドキュメントサイト運用ガイド
 
 ---
 
@@ -249,4 +287,5 @@ jobs:
 
 | 日付 | 内容 |
 |------|------|
+| 2026-02-04 | サポートドキュメントサイトチェックリスト追加 |
 | 2026-01-29 | 初版作成 |
