@@ -52,13 +52,16 @@ applications:
             - export PATH="$PWD/go/bin:$PWD:$PATH"
             - export GOPATH="$PWD/go-workspace"
             - export GOCACHE="$PWD/go-cache"
-            - hugo --minify --cleanDestinationDir
+            - if [ "${AWS_BRANCH}" = "dev" ]; then HUGO_ENV=staging; SUPPORT_BASE_URL="https://${AWS_BRANCH}.${AWS_APP_ID}.amplifyapp.com/"; MAIN_SITE_BASE_URL="https://www.smartweb.jp/"; else HUGO_ENV=production; SUPPORT_BASE_URL="https://support.smartweb.jp/"; MAIN_SITE_BASE_URL="https://www.smartweb.jp/"; fi; export HUGO_ENV SUPPORT_BASE_URL MAIN_SITE_BASE_URL
+            - echo "AWS_BRANCH=${AWS_BRANCH} AWS_APP_ID=${AWS_APP_ID} HUGO_ENV=${HUGO_ENV} SUPPORT_BASE_URL=${SUPPORT_BASE_URL} MAIN_SITE_BASE_URL=${MAIN_SITE_BASE_URL}"
+            - hugo --minify --cleanDestinationDir --environment "$HUGO_ENV" --baseURL "$SUPPORT_BASE_URL"
             - echo "Replacing root index.html with language selector..."
             - cp static/index.html public/index.html
             - echo "Adding glossary links..."
             - pip3 install beautifulsoup4 pyyaml --quiet
-            - python3 scripts/linkbuilding_support_docs.py --linkbuilding-yaml data/linkbuilding/ja.yaml --public-dir public --language ja
-            - python3 scripts/linkbuilding_support_docs.py --linkbuilding-yaml data/linkbuilding/en.yaml --public-dir public --language en
+            - python3 scripts/linkbuilding_support_docs.py --linkbuilding-yaml data/linkbuilding/ja.yaml --public-dir public --language ja --base-url "$MAIN_SITE_BASE_URL"
+            - python3 scripts/linkbuilding_support_docs.py --linkbuilding-yaml data/linkbuilding/en.yaml --public-dir public --language en --base-url "$MAIN_SITE_BASE_URL"
+            - if [ "$HUGO_ENV" != "production" ]; then printf "User-agent: *\nDisallow: /\n" > public/robots.txt; fi
       artifacts:
         baseDirectory: public
         files:
