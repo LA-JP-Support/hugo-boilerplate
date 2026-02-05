@@ -61,7 +61,7 @@ applications:
             - pip3 install beautifulsoup4 pyyaml --quiet
             - python3 scripts/linkbuilding_support_docs.py --linkbuilding-yaml data/linkbuilding/ja.yaml --public-dir public --language ja --base-url "$MAIN_SITE_BASE_URL"
             - python3 scripts/linkbuilding_support_docs.py --linkbuilding-yaml data/linkbuilding/en.yaml --public-dir public --language en --base-url "$MAIN_SITE_BASE_URL"
-            - if [ "$HUGO_ENV" != "production" ]; then { echo "User-agent: *"; echo "Disallow: /"; } > public/robots.txt; fi
+            - 'if [ "$HUGO_ENV" != "production" ]; then echo "User-agent: *" > public/robots.txt; echo "Disallow: /" >> public/robots.txt; fi'
       artifacts:
         baseDirectory: public
         files:
