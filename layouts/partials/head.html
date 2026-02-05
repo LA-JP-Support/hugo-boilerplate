@@ -1,7 +1,7 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta charset="utf-8">
 <meta name="viewport" content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no">
-{{ if .Params.private }}
+{{ if or .Params.private (not hugo.IsProduction) }}
 <meta name="robots" content="noindex, nofollow">
 {{ end }}
 

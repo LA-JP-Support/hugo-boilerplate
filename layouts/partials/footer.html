@@ -9,6 +9,8 @@
 */}}
 
 {{ $isJapanese := eq site.Language.Lang "ja" }}
+{{ $supportPortalBaseURL := (getenv "SUPPORT_PORTAL_BASE_URL") | default "https://support.smartweb.jp/" }}
+{{ $supportPortalBaseURL = strings.TrimSuffix "/" $supportPortalBaseURL }}
 
 {{ if $isJapanese }}
   {{/* 日本語版フッター */}}
@@ -39,7 +41,7 @@
       "column3Links" (slice 
           (dict "text" "ブログ" "url" "/ja/blog/")
           (dict "text" "用語集" "url" "/ja/glossary/")
-          (dict "text" "サポートポータル" "url" "https://support.smartweb.jp/ja/docs/")
+          (dict "text" "サポートポータル" "url" (printf "%s/ja/docs/" $supportPortalBaseURL))
       )
       "column4Title" "会社情報・ポリシー"
       "column4Links" (slice 
@@ -86,7 +88,7 @@
       "column3Links" (slice 
           (dict "text" "Blog" "url" "/en/blog/")
           (dict "text" "Glossary" "url" "/en/glossary/")
-          (dict "text" "Support Portal" "url" "https://support.smartweb.jp/en/docs/")
+          (dict "text" "Support Portal" "url" (printf "%s/en/docs/" $supportPortalBaseURL))
       )
       "column4Title" "Company & Legal"
       "column4Links" (slice 

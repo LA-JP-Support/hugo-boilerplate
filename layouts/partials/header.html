@@ -9,6 +9,8 @@
 */}}
 
 {{ $isJapanese := eq site.Language.Lang "ja" }}
+{{ $supportPortalBaseURL := (getenv "SUPPORT_PORTAL_BASE_URL") | default "https://support.smartweb.jp/" }}
+{{ $supportPortalBaseURL = strings.TrimSuffix "/" $supportPortalBaseURL }}
 
 {{ if $isJapanese }}
   {{/* 日本語版ヘッダー */}}
@@ -24,7 +26,7 @@
       "ctaHoverBgColor" "hover:bg-indigo-500"
       "ctaTextColor" "text-white"
       "loginText" "サポート"
-      "loginUrl" "https://support.smartweb.jp/ja/docs/"
+      "loginUrl" (printf "%s/ja/docs/" $supportPortalBaseURL)
       "menuItems" (slice 
         (dict 
           "title" "AIカスタマーサポート" 
@@ -67,7 +69,7 @@
       "ctaHoverBgColor" "hover:bg-indigo-500"
       "ctaTextColor" "text-white"
       "loginText" "Support"
-      "loginUrl" "https://support.smartweb.jp/en/docs/"
+      "loginUrl" (printf "%s/en/docs/" $supportPortalBaseURL)
       "menuItems" (slice 
         (dict 
           "title" "AI Customer Support" 
