@@ -14,8 +14,8 @@ applications:
             - npm run build
             - export HUGO_CACHEDIR="$(pwd)/.hugo_cache"
             - mkdir -p "$HUGO_CACHEDIR"
-            - if [ "${AWS_BRANCH}" = "dev" ]; then HUGO_ENV=staging; SITE_BASE_URL="https://${AWS_BRANCH}.${AWS_APP_ID}.amplifyapp.com/"; SUPPORT_PORTAL_BASE_URL="https://dev.d2b65nc0n0a17p.amplifyapp.com/"; else HUGO_ENV=production; SITE_BASE_URL="https://www.smartweb.jp/"; SUPPORT_PORTAL_BASE_URL="https://support.smartweb.jp/"; fi; export HUGO_ENV SITE_BASE_URL SUPPORT_PORTAL_BASE_URL
-            - echo "AWS_BRANCH=${AWS_BRANCH} AWS_APP_ID=${AWS_APP_ID} HUGO_ENV=${HUGO_ENV} SITE_BASE_URL=${SITE_BASE_URL} SUPPORT_PORTAL_BASE_URL=${SUPPORT_PORTAL_BASE_URL}"
+            - if [ "${AWS_BRANCH}" = "dev" ]; then HUGO_ENV=staging; SITE_BASE_URL="https://${AWS_BRANCH}.${AWS_APP_ID}.amplifyapp.com/"; HUGO_SUPPORT_PORTAL_BASE_URL="https://dev.d2b65nc0n0a17p.amplifyapp.com/"; else HUGO_ENV=production; SITE_BASE_URL="https://www.smartweb.jp/"; HUGO_SUPPORT_PORTAL_BASE_URL="https://support.smartweb.jp/"; fi; export HUGO_ENV SITE_BASE_URL HUGO_SUPPORT_PORTAL_BASE_URL
+            - echo "AWS_BRANCH=${AWS_BRANCH} AWS_APP_ID=${AWS_APP_ID} HUGO_ENV=${HUGO_ENV} SITE_BASE_URL=${SITE_BASE_URL} HUGO_SUPPORT_PORTAL_BASE_URL=${HUGO_SUPPORT_PORTAL_BASE_URL}"
             - hugo --minify --cacheDir "$HUGO_CACHEDIR" --environment "$HUGO_ENV" --baseURL "$SITE_BASE_URL"
             - python3 scripts/linkbuilding_parallel.py --linkbuilding-dir data/linkbuilding --public-dir public --denylist-dir databases --max-links 9999 --max-keyword 1 --max-url 1
             - 'if [ "$HUGO_ENV" != "production" ]; then echo "User-agent: *" > public/robots.txt; echo "Disallow: /" >> public/robots.txt; fi'

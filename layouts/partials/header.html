@@ -9,7 +9,7 @@
 */}}
 
 {{ $isJapanese := eq site.Language.Lang "ja" }}
-{{ $supportPortalBaseURL := (getenv "SUPPORT_PORTAL_BASE_URL") | default "https://support.smartweb.jp/" }}
+{{ $supportPortalBaseURL := (getenv "HUGO_SUPPORT_PORTAL_BASE_URL") | default "https://support.smartweb.jp/" }}
 {{ $supportPortalBaseURL = strings.TrimSuffix "/" $supportPortalBaseURL }}
 
 {{ if $isJapanese }}
