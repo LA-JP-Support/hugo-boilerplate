@@ -46,6 +46,9 @@
         </div>
 
         <div class="d-flex align-items-center">
+            {{ $smartwebBaseURL := getenv "HUGO_SMARTWEB_BASE_URL" | default "https://www.smartweb.jp" }}
+            {{ $smartwebBaseURL = replaceRE "/$" "" $smartwebBaseURL }}
+            {{ $smartwebLangTopURL := printf "%s/%s/" $smartwebBaseURL site.Language.Lang }}
             <ul class="list-unstyled mb-0">
                 {{ with $.Scratch.Get "social_list" }}
                 {{ range . }}
@@ -78,6 +81,9 @@
                 </span>
             </button>
             {{ end -}}
+            <a href="{{ $smartwebLangTopURL }}" class="btn btn-default ms-2 px-2 py-1" aria-label="SmartWeb">
+                <img src="https://www.smartweb.jp/images/smartweb-logo.png" alt="SmartWeb" style="height: 22px; width: auto; display: block;">
+            </a>
             {{ if hugo.IsMultilingual }}
                 <div class="dropdown">
                     <button class="btn btn-link btn-default dropdown-toggle ps-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">

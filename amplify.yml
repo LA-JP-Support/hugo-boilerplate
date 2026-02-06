@@ -55,8 +55,8 @@ applications:
             - export PATH="$PWD/go/bin:$PWD:$PATH"
             - export GOPATH="$PWD/go-workspace"
             - export GOCACHE="$PWD/go-cache"
-            - if [ "${AWS_BRANCH}" = "dev" ]; then HUGO_ENV=staging; SUPPORT_BASE_URL="https://${AWS_BRANCH}.${AWS_APP_ID}.amplifyapp.com/"; MAIN_SITE_BASE_URL="https://www.smartweb.jp/"; else HUGO_ENV=production; SUPPORT_BASE_URL="https://support.smartweb.jp/"; MAIN_SITE_BASE_URL="https://www.smartweb.jp/"; fi; export HUGO_ENV SUPPORT_BASE_URL MAIN_SITE_BASE_URL
-            - echo "AWS_BRANCH=${AWS_BRANCH} AWS_APP_ID=${AWS_APP_ID} HUGO_ENV=${HUGO_ENV} SUPPORT_BASE_URL=${SUPPORT_BASE_URL} MAIN_SITE_BASE_URL=${MAIN_SITE_BASE_URL}"
+            - if [ "${AWS_BRANCH}" = "dev" ]; then HUGO_ENV=staging; SUPPORT_BASE_URL="https://${AWS_BRANCH}.${AWS_APP_ID}.amplifyapp.com/"; MAIN_SITE_BASE_URL="https://www.smartweb.jp/"; HUGO_SMARTWEB_BASE_URL="https://dev.smartweb.jp"; else HUGO_ENV=production; SUPPORT_BASE_URL="https://support.smartweb.jp/"; MAIN_SITE_BASE_URL="https://www.smartweb.jp/"; HUGO_SMARTWEB_BASE_URL="https://www.smartweb.jp"; fi; export HUGO_ENV SUPPORT_BASE_URL MAIN_SITE_BASE_URL HUGO_SMARTWEB_BASE_URL
+            - echo "AWS_BRANCH=${AWS_BRANCH} AWS_APP_ID=${AWS_APP_ID} HUGO_ENV=${HUGO_ENV} SUPPORT_BASE_URL=${SUPPORT_BASE_URL} MAIN_SITE_BASE_URL=${MAIN_SITE_BASE_URL} HUGO_SMARTWEB_BASE_URL=${HUGO_SMARTWEB_BASE_URL}"
             - hugo --minify --cleanDestinationDir --environment "$HUGO_ENV" --baseURL "$SUPPORT_BASE_URL"
             - echo "Replacing root index.html with language selector..."
             - cp static/index.html public/index.html
