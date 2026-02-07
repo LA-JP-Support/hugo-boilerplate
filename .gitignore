@@ -53,10 +53,6 @@ build/
 # /static/css/
 # /static/js/
 
-# FlowHunt raw articles (before cleanup)
-content-drafts/
-content-drafts/**/*.md
-
 # Temporary / generated artifacts
 tmp_batch_*/
 .local_archive/

@@ -10,7 +10,13 @@ image: "/images/blog/knowledge-base-faq-guide-2025.png"
 
 translationKey: "knowledge-base-faq-guide-2025"
 lastmod: 2026-02-01
-keywords: []
+keywords:
+- knowledge base
+- FAQ
+- customer support
+- AI search
+- business efficiency
+- LiveAgent
 url: "blog/knowledge-base-faq-guide-2025/"
 ---
 ## Definition and Role of Knowledge Base

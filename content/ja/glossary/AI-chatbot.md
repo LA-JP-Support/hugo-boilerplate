@@ -15,6 +15,7 @@ type: glossary
 draft: false
 e-title: AI Chatbot
 term: エーアイチャットボット
+url: "/ja/glossary/ai-chatbot/"
 ---
 
 ## AIチャットボットとは?

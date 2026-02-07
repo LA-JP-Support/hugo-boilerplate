@@ -27,11 +27,11 @@ v2.0.0より、内部リンクシステムは**HTML後処理方式**に統一さ
 ### 1. Hugoサイトをビルド
 
 ```bash
-hugo --contentDir content-clean --destination public --cleanDestinationDir
+hugo --destination public --cleanDestinationDir
 ```
 
 **ポイント**:
-- `content-clean/`: クリーンなMarkdownソース（リンクなし）
+- `content/`: Markdownソース（リンクなし）
 - `public/`: 生成されたHTML（リンク追加前）
 
 ### 2. 内部リンクを追加
@@ -92,7 +92,7 @@ python3 -m http.server 1313 --bind 127.0.0.1 --directory public
 
 ```
 hugo-boilerplate/
-├── content-clean/          # クリーンなMarkdownソース
+├── content/                # Markdownソース
 │   ├── en/
 │   └── ja/
 ├── data/linkbuilding/      # リンク設定ファイル
@@ -119,12 +119,12 @@ hugo-boilerplate/
 ```bash
 # EN
 python3 scripts/extract_automatic_links.py \
-  --content-dir content-clean/en/ \
+  --content-dir content/en/ \
   --output data/linkbuilding/en_automatic.json
 
 # JA
 python3 scripts/extract_automatic_links.py \
-  --content-dir content-clean/ja/ \
+  --content-dir content/ja/ \
   --output data/linkbuilding/ja_automatic.json
 ```
 
@@ -179,7 +179,7 @@ python3 scripts/linkbuilding_parallel.py \
 
 ### 1. Markdownはクリーンに保つ
 
-**✅ 良い例** (`content-clean/`):
+**✅ 良い例** (`content/`):
 ```markdown
 AIチャットボットは自然言語処理を使用します。
 ```
@@ -220,7 +220,7 @@ AIチャットボットは自然言語処理を使用します。
 **解決策**:
 ```bash
 # キーワード辞書を再生成
-python3 scripts/extract_automatic_links.py --content-dir content-clean/ja/ --output data/linkbuilding/ja_automatic.json
+python3 scripts/extract_automatic_links.py --content-dir content/ja/ --output data/linkbuilding/ja_automatic.json
 
 # 統計を確認
 python3 scripts/analyze_keyword_sources.py
@@ -233,7 +233,7 @@ python3 scripts/analyze_keyword_sources.py
 **解決策**:
 ```bash
 # HTMLを再生成
-hugo --contentDir content-clean --destination public --cleanDestinationDir
+hugo --destination public --cleanDestinationDir
 
 # 内部リンクを再追加
 python3 scripts/linkbuilding_parallel.py --linkbuilding-dir data/linkbuilding --public-dir public --denylist-dir databases
@@ -260,7 +260,7 @@ answer = "..."
 **探し方（例）**:
 
 ```bash
-grep -R '^\[faq\]' content-clean/en/blog
+grep -R '^\[faq\]' content/en/blog
 ```
 
 ### ENだけリンクがほとんど増えない
@@ -315,7 +315,7 @@ python3 scripts/linkbuilding_parallel.py \
 
 ```bash
 # 1. Hugoビルド
-hugo --contentDir content-clean --destination public --cleanDestinationDir
+hugo --destination public --cleanDestinationDir
 
 # 2. 内部リンク追加
 python3 scripts/linkbuilding_parallel.py \
@@ -329,7 +329,7 @@ grep -r 'data-lb="1"' public/ | wc -l
 
 ### 重要なポイント
 
-1. **Markdownはクリーン**に保つ（`content-clean/`）
+1. **Markdownはクリーン**に保つ（`content/`）
 2. **HTML後処理**でリンクを追加（`linkbuilding_parallel.py`）
 3. **Denylist**で誤リンクを防止（`databases/danger_terms_*.csv`）
 4. **定期的に更新**（キーワード辞書の再生成）

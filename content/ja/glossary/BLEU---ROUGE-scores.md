@@ -1,9 +1,4 @@
 ---
-url: "/ja/glossary/bleu---rouge-scores/"
-aliases:
-- "/ja/glossary/BLEU---ROUGE-scores/"
----
----
 title: BLEUスコア/ROUGEスコア
 lastmod: '2025-12-19'
 date: '2025-12-19'
@@ -20,7 +15,9 @@ type: glossary
 draft: false
 e-title: BLEU/ROUGE Scores
 term: ブルースコア/ルージュスコア
-url: "/ja/glossary/BLEU---ROUGE-scores/"
+url: "/ja/glossary/bleu---rouge-scores/"
+aliases:
+- "/ja/glossary/BLEU---ROUGE-scores/"
 ---
 ## BLEUスコアとROUGEスコアとは?
 BLEUスコアとROUGEスコアは、自然言語処理(NLP)において、機械生成テキストと人間が作成した参照テキストとの類似性を評価するための確立された指標です。これらの指標は単語やフレーズレベルでの重複を定量化し、生成AIシステムの体系的な比較と品質追跡を可能にします。

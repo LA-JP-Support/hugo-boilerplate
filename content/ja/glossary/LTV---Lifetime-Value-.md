@@ -1,9 +1,4 @@
 ---
-url: "/ja/glossary/ltv---lifetime-value-/"
-aliases:
-- "/ja/glossary/LTV---Lifetime-Value-/"
----
----
 title: LTV(顧客生涯価値)
 lastmod: '2025-12-19'
 date: '2025-12-19'
@@ -20,7 +15,9 @@ type: glossary
 draft: false
 e-title: LTV (Lifetime Value)
 term: エルティーヴィー(こきゃくしょうがいかち)
-url: "/ja/glossary/LTV---Lifetime-Value-/"
+url: "/ja/glossary/ltv---lifetime-value-/"
+aliases:
+- "/ja/glossary/LTV---Lifetime-Value-/"
 ---
 ## LTVとは?
 顧客生涯価値(LTV)は、顧客がビジネスとの関係全体を通じて貢献する総純利益または収益を定量化します。SaaS、自動化、AIチャットボットプラットフォームなど、継続課金モデルが標準的な分野において、LTVはビジネスパフォーマンスの理解、予測、最適化に不可欠な指標です。

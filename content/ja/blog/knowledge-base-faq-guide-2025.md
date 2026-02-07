@@ -10,7 +10,13 @@ image: "/images/blog/knowledge-base-faq-guide-2025.png"
 
 translationKey: "knowledge-base-faq-guide-2025"
 lastmod: 2026-02-01
-keywords: []
+keywords:
+- ナレッジベース
+- FAQ
+- カスタマーサポート
+- AI検索
+- 業務効率化
+- LiveAgent
 
 url: "blog/knowledge-base-faq-guide-2025/"
 

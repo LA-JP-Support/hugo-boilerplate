@@ -3,10 +3,10 @@
 このドキュメントは、このリポジトリで運用している **HTML後処理方式** の内部リンク機能（Hugoビルド後の `public/` HTMLへリンクを付与）を、**別プロジェクトへ移植/導入**するための手順をまとめたものです。
 
 - 標準フロー（本リポジトリ）
-  - `content-clean/` (Markdown) → Hugo → `public/` (HTML)
+  - `content/` (Markdown) → Hugo → `public/` (HTML)
   - `scripts/linkbuilding_parallel.py` / `scripts/linkbuilding.py` で `public/` を後処理して内部リンク付与
 - 重要な原則
-  - Markdown（`content/` や `content-clean/`）に内部リンクを直接挿入しない
+  - Markdown（`content/`）に内部リンクを直接挿入しない
   - `public/` は成果物（Artifact）として都度生成し、Git管理しない
 
 ---
@@ -98,7 +98,7 @@ pip install -r scripts/requirements.txt
 1. クリーンなMarkdownからビルド
 
 ```bash
-hugo --contentDir content-clean --destination public --cleanDestinationDir
+hugo --destination public --cleanDestinationDir
 ```
 
 1. HTML後処理で内部リンク付与
@@ -168,11 +168,11 @@ python3 scripts/linkbuilding_parallel.py \
 
 ```bash
 python3 scripts/extract_automatic_links.py \
-  --content-dir content-clean/en/ \
+  --content-dir content/en/ \
   --output data/linkbuilding/en_automatic.json
 
 python3 scripts/extract_automatic_links.py \
-  --content-dir content-clean/ja/ \
+  --content-dir content/ja/ \
   --output data/linkbuilding/ja_automatic.json
 ```
 

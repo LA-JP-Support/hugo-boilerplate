@@ -10,7 +10,13 @@ image: "/images/blog/ai-customer-support-2025-guide.png"
 
 translationKey: "ai-customer-support-2025-guide"
 lastmod: 2026-02-01
-keywords: []
+keywords:
+- AIカスタマーサポート
+- AI チャットボット
+- 生成AI
+- 多言語対応
+- 顧客体験
+- 業務効率化
 
 url: "blog/ai-customer-support-2025-guide/"
 

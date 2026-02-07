@@ -39,7 +39,7 @@ Hugo静的サイトのブログ記事やグロッサリーページに、関連�
 - **HTML後処理方式**: Hugoビルド後のHTMLファイルに対してリンクを追加
 - **日本語形態素解析**: `Janome` を使用し、複合語の一部（例：「交通信号」内の「通信」）への誤リンクを防止 (v2.1.1)
 - **太字レンダリング修正**: Markdownの太字記法（`**`）が記号と隣接して崩れる問題を自動修正 (v2.1.1)
-- **クリーンなMarkdown**: ソースファイル（`content-clean/`）にリンクを含めず、可読性を維持
+- **クリーンなMarkdown**: ソースファイル（`content/`）にリンクを含めず、可読性を維持
 - **重複除外**: キーワード辞書から自動的に重複を除外
 - **Denylist統合**: 除外語（danger_terms）を自動適用し、誤リンクを防止
 - **glossary URL小文字統一**: `/glossary/` 配下のリンク（既存 `href` を含む）を後処理で小文字に正規化し、ケースセンシティブ環境での404を防止 (v2.1.3)
@@ -54,7 +54,7 @@ Hugo静的サイトのブログ記事やグロッサリーページに、関連�
 └─────────────────────────────────────────────────────────────────────────┘
 
 ┌──────────────────────┐
-│ content-clean/       │  クリーンなMarkdownソース（リンクなし）
+│ content/             │  Markdownソース（リンクなし）
 │  ├── en/blog/        │
 │  ├── en/glossary/    │
 │  ├── ja/blog/        │
@@ -92,9 +92,9 @@ Hugo静的サイトのブログ記事やグロッサリーページに、関連�
            │  │
            ▼  ▼
 ┌──────────────────────────────────────────────────────────────────────────┐
-│  hugo --contentDir content-clean --destination public                    │
+│  hugo --destination public --cleanDestinationDir                         │
 │  ────────────────────────────────────────────────                        │
-│  ・クリーンなMarkdownからHTMLを生成                                         │
+│  ・MarkdownからHTMLを生成                                                │
 │  ・public/ ディレクトリに出力                                              │
 └──────────┬───────────────────────────────────────────────────────────────┘
            │
@@ -620,12 +620,12 @@ python3 scripts/add_internal_links.py \
 # 自動キーワード辞書を再生成（必要に応じて）
 # EN
 python3 scripts/extract_automatic_links.py \
-  --content-dir content-clean/en/ \
+  --content-dir content/en/ \
   --output data/linkbuilding/en_automatic.json
 
 # JA
 python3 scripts/extract_automatic_links.py \
-  --content-dir content-clean/ja/ \
+  --content-dir content/ja/ \
   --output data/linkbuilding/ja_automatic.json
 ```
 
@@ -645,7 +645,7 @@ python3 scripts/generate_danger_terms.py --lang ja
 
 ```bash
 # HugoでHTMLを生成（テスト用ディレクトリに出力）
-hugo --contentDir content-clean --destination public-test --cleanDestinationDir
+hugo --destination public-test --cleanDestinationDir
 
 # HTML後処理で内部リンク追加（プレビュー用）
 python3 scripts/linkbuilding_parallel.py \
@@ -658,7 +658,7 @@ python3 scripts/linkbuilding_parallel.py \
 
 ```bash
 # HugoでHTMLを生成（公開用）
-hugo --contentDir content-clean --destination public --cleanDestinationDir
+hugo --destination public --cleanDestinationDir
 
 # HTML後処理で内部リンク追加（公開用）
 python3 scripts/linkbuilding_parallel.py \
@@ -690,12 +690,12 @@ git push
 
 # EN
 python3 scripts/extract_automatic_links.py \
-  --content-dir content-clean/en/ \
+  --content-dir content/en/ \
   --output data/linkbuilding/en_automatic.json
 
 # JA
 python3 scripts/extract_automatic_links.py \
-  --content-dir content-clean/ja/ \
+  --content-dir content/ja/ \
   --output data/linkbuilding/ja_automatic.json
 
 # ========================================
@@ -703,7 +703,7 @@ python3 scripts/extract_automatic_links.py \
 # ========================================
 
 # 1) Hugoビルド
-hugo --contentDir content-clean --destination public --cleanDestinationDir
+hugo --destination public --cleanDestinationDir
 
 # 2) 内部リンク追加（HTML後処理）
 python3 scripts/linkbuilding_parallel.py \
@@ -879,8 +879,8 @@ self.link_database.sort(key=lambda x: len(x['keyword']), reverse=True)
 
 ```bash
 # 週次または新規グロッサリー追加時
-python3 scripts/extract_automatic_links.py --content-dir content-clean/en/ --output data/linkbuilding/en_automatic.json
-python3 scripts/extract_automatic_links.py --content-dir content-clean/ja/ --output data/linkbuilding/ja_automatic.json
+python3 scripts/extract_automatic_links.py --content-dir content/en/ --output data/linkbuilding/en_automatic.json
+python3 scripts/extract_automatic_links.py --content-dir content/ja/ --output data/linkbuilding/ja_automatic.json
 ```
 
 ### 2. 必ずdry-runで確認
@@ -888,7 +888,7 @@ python3 scripts/extract_automatic_links.py --content-dir content-clean/ja/ --out
 本番実行前に必ずプレビュー：
 
 ```bash
-hugo --contentDir content-clean --destination public-test --cleanDestinationDir
+hugo --destination public-test --cleanDestinationDir
 python3 scripts/linkbuilding_parallel.py --linkbuilding-dir data/linkbuilding --public-dir public-test --denylist-dir databases --dry-run
 ```
 

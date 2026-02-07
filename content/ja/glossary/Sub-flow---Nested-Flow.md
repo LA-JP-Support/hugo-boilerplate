@@ -1,9 +1,4 @@
 ---
-url: "/ja/glossary/sub-flow---nested-flow/"
-aliases:
-- "/ja/glossary/Sub-flow---Nested-Flow/"
----
----
 title: サブフロー / ネストフロー
 translationKey: sub-flow-nested-flow
 description: 自動化におけるサブフロー(ネストフロー)について学びます。ワークフローを他のワークフロー内に埋め込むことで、複雑なロジックを簡素化し、再利用性を高め、メンテナンスを改善します。
@@ -20,7 +15,9 @@ lastmod: '2025-12-19'
 draft: false
 e-title: Sub-flow / Nested Flow
 term: さぶふろー / ねすとふろー
-url: "/ja/glossary/Sub-flow---Nested-Flow/"
+url: "/ja/glossary/sub-flow---nested-flow/"
+aliases:
+- "/ja/glossary/Sub-flow---Nested-Flow/"
 ---
 ## サブフロー / ネストされたフローとは?
 サブフロー(またはネストされたフロー)は、より大きな親ワークフロー内のステップとして呼び出される、自己完結型のワークフローです。このモジュラーパターンにより、複雑なビジネスロジックを分解し、一貫した再利用と簡素化されたメンテナンスが可能になります。サブフローはソフトウェア関数に類似しており、複数のコンテキストで再利用可能な特定のロジックをカプセル化します。

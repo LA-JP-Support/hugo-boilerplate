@@ -1,9 +1,4 @@
 ---
-url: "/ja/glossary/nps---net-promoter-score-/"
-aliases:
-- "/ja/glossary/NPS---Net-Promoter-Score-/"
----
----
 title: ネットプロモータースコア(NPS)
 lastmod: '2025-12-19'
 date: '2025-12-19'
@@ -20,7 +15,9 @@ type: glossary
 draft: false
 e-title: Net Promoter Score (NPS)
 term: ねっとぷろもーたーすこあ(えぬぴーえす)
-url: "/ja/glossary/NPS---Net-Promoter-Score-/"
+url: "/ja/glossary/nps---net-promoter-score-/"
+aliases:
+- "/ja/glossary/NPS---Net-Promoter-Score-/"
 ---
 ## Net Promoter Score (NPS)とは?
 Net Promoter Score(NPS)は、顧客が企業、製品、またはサービスを他者に推奨する可能性を測定することで、顧客ロイヤルティを定量化する指標です。1つのシンプルな調査質問に基づいています:

@@ -1,9 +1,4 @@
 ---
-url: "/ja/glossary/delay---sleep-node/"
-aliases:
-- "/ja/glossary/Delay---Sleep-Node/"
----
----
 title: ディレイ / スリープノード
 translationKey: delay-sleep-node
 description: ディレイ/スリープノードは、AIチャットボットや自動化ワークフローにおいて、設定された期間または条件が満たされるまで実行を一時停止します。APIレート制限やオーケストレーションに不可欠な機能です。
@@ -20,7 +15,9 @@ lastmod: '2025-12-19'
 draft: false
 e-title: Delay / Sleep Node
 term: でぃれい / すりーぷのーど
-url: "/ja/glossary/Delay---Sleep-Node/"
+url: "/ja/glossary/delay---sleep-node/"
+aliases:
+- "/ja/glossary/Delay---Sleep-Node/"
 ---
 ## Delay / Sleep ノードとは？
 Delay または Sleep ノードは、設定可能な期間または条件が満たされるまで実行を一時停止するコンポーネントです。コード（JavaScript/Node.js）では、`sleep`、`delay` などの関数として実装され、Promise と async/await を使用して非ブロッキング方式で実行を一時停止します。ワークフロー自動化ツール（n8n、Make、AWS SSM、Cognigy、Jira）では、特定の時間またはイベントに対して設定可能なビジュアルノード/ブロックとして提供されます。

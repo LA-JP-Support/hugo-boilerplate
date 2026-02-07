@@ -1,9 +1,4 @@
 ---
-url: "/ja/glossary/user-interfaces---ui-/"
-aliases:
-- "/ja/glossary/user-interfaces---UI-/"
----
----
 title: ユーザーインターフェース（UI）
 lastmod: '2025-12-19'
 date: '2025-12-19'
@@ -20,7 +15,9 @@ type: glossary
 draft: false
 e-title: User Interfaces (UI)
 term: ユーザーインターフェース
-url: "/ja/glossary/user-interfaces---UI-/"
+url: "/ja/glossary/user-interfaces---ui-/"
+aliases:
+- "/ja/glossary/user-interfaces---UI-/"
 ---
 ## ユーザーインターフェース(UI)とは?
 

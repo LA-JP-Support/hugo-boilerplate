@@ -1,7 +1,4 @@
 ---
-url: "/ja/glossary/oracle-feedback---ground-truth-labels-/"
----
----
 title: オラクルフィードバック(正解ラベル)
 lastmod: '2025-12-19'
 date: '2025-12-19'

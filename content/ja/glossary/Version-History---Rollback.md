@@ -1,9 +1,4 @@
 ---
-url: "/ja/glossary/version-history---rollback/"
-aliases:
-- "/ja/glossary/Version-History---Rollback/"
----
----
 title: バージョン履歴 / ロールバック
 date: '2025-12-19'
 lastmod: '2025-12-19'
@@ -20,7 +15,9 @@ type: glossary
 draft: false
 e-title: Version History / Rollback
 term: ばーじょんりれき / ろーるばっく
-url: "/ja/glossary/Version-History---Rollback/"
+url: "/ja/glossary/version-history---rollback/"
+aliases:
+- "/ja/glossary/Version-History---Rollback/"
 ---
 ## バージョン履歴とロールバックとは?
 AIチャットボットおよび自動化プラットフォームにおけるバージョン履歴とは、ボットの設定、会話ロジック、スクリプト、または機械学習モデルの以前の反復や状態を体系的に追跡、保存、管理することです。ロールバックとは、最近の変更がエラーを引き起こしたり、パフォーマンスを低下させたり、望ましくない動作につながったりした場合に、システムを以前の安定した状態に戻すプロセスです。このメカニズムにより、ミスや失敗した実験からの迅速な回復が可能になり、多くの場合、完全なトレーサビリティと最小限のサービス中断で実現できます。

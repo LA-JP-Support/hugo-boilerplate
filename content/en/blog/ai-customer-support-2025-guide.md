@@ -10,7 +10,13 @@ image: "/images/blog/ai-customer-support-2025-guide.png"
 
 translationKey: "ai-customer-support-2025-guide"
 lastmod: 2026-02-01
-keywords: []
+keywords:
+- AI customer support
+- AI chatbot
+- generative AI
+- multilingual support
+- customer experience
+- business efficiency
 url: "blog/ai-customer-support-2025-guide/"
 ---
 ## What is AI Customer Support?

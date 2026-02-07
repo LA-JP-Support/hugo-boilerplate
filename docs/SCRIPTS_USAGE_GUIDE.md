@@ -375,7 +375,7 @@ python scripts/fix_term_readings_ja.py --ja-dir content/ja/glossary
 > 📖 **詳細ドキュメント**: `docs/INTERNAL_LINK_SYSTEM_GUIDE.md`
 
 > ⚠️ **重要**: v2.0.0以降、内部リンクは **HTML後処理方式**が標準です（`public/` を対象に処理）。
-> Markdown（`content/` や `content-clean/`）を直接編集してリンクを挿入する方式は非推奨です。
+> Markdown（`content/`）を直接編集してリンクを挿入する方式は非推奨です。
 
 ### （非推奨）CSVデータベースを使用したリンク構築（Markdown直接編集）
 
@@ -696,6 +696,41 @@ rm content/ja/glossary/Risk-Assessment--Customer-.md
 
 ---
 
+## フロントマター検証
+
+### validate_frontmatter.py
+
+**スクリプト**: `scripts/validate_frontmatter.py`
+
+コンテンツタイプ（blog / glossary / services / support / blog-youtube）を自動判定し、必須フィールドの有無・型・値を検証します。
+
+```bash
+# 単一ファイルを検証
+python scripts/validate_frontmatter.py content/ja/blog/my-article.md
+
+# ディレクトリ単位で検証
+python scripts/validate_frontmatter.py content/ja/glossary/
+
+# 全コンテンツを検証
+python scripts/validate_frontmatter.py --all
+
+# translationKey の EN/JA 整合性チェック
+python scripts/validate_frontmatter.py --check-translations
+
+# エラーのみ表示（警告・情報を非表示）
+python scripts/validate_frontmatter.py --errors-only content/ja/blog/
+```
+
+**検証内容**:
+- 必須フィールドの有無（コンテンツタイプ別）
+- フィールドの型チェック（str / list / bool / int）
+- JA glossary 固有フィールド（`e-title`, `term`, `url`）
+- `type` / `layout` の値検証
+- `description` の長さ警告（160文字超）
+- `translationKey` の EN↔JA 整合性
+
+---
+
 ## その他の便利なスクリプト
 
 ### CSVステータス管理
@@ -774,12 +809,7 @@ python scripts/batch_create_from_csv.py --workers 5
 python scripts/optimize_glossary_descriptions.py --lang en --workers 5
 
 # ===============================================
-# 3. content-clean を更新（リンク無しのクリーンMarkdownを作る）
-# ===============================================
-python3 scripts/create_clean_content.py content content-clean
-
-# ===============================================
-# 4. 翻訳（英語→日本語）
+# 3. 翻訳（英語→日本語）
 # ===============================================
 python scripts/translate_glossary_en_to_ja.py --workers 5
 
@@ -794,9 +824,9 @@ python scripts/optimize_glossary_descriptions.py --lang ja --workers 5
 python scripts/fix_term_readings_ja.py --ja-dir content/ja/glossary
 
 # ===============================================
-# 7. Hugoビルド（content-clean → public）
+# 6. Hugoビルド（content → public）
 # ===============================================
-hugo --contentDir content-clean --destination public --cleanDestinationDir
+hugo --destination public --cleanDestinationDir
 
 # ===============================================
 # 8. かなインデックス追加（日本語）
@@ -859,8 +889,8 @@ python scripts/translate_glossary_en_to_ja.py --start 0 --end 100 --workers 5
 python scripts/optimize_glossary_descriptions.py --lang en --workers 5
 python scripts/optimize_glossary_descriptions.py --lang ja --workers 5
 
-# 4. Hugoビルド（content-clean → public）
-hugo --contentDir content-clean --destination public --cleanDestinationDir
+# 4. Hugoビルド（content → public）
+hugo --destination public --cleanDestinationDir
 
 # 5. 内部リンク追加（HTML後処理: public/ を処理）
 python3 scripts/linkbuilding_parallel.py \

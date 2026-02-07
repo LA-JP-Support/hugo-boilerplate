@@ -1,9 +1,4 @@
 ---
-url: "/ja/glossary/iterator---for-each/"
-aliases:
-- "/ja/glossary/Iterator---For-Each/"
----
----
 title: イテレーター / For-Each
 translationKey: iterator-for-each
 description: イテレーターまたはfor-each構造は、リストやコレクション内のアイテムを1つずつ処理し、各要素に対して読み取り、更新、またはタスクの自動化などのアクションを実行できるようにします。
@@ -20,7 +15,9 @@ lastmod: '2025-12-19'
 draft: false
 e-title: Iterator / For-Each
 term: いてれーたー / ふぉーいーち
-url: "/ja/glossary/Iterator---For-Each/"
+url: "/ja/glossary/iterator---for-each/"
+aliases:
+- "/ja/glossary/Iterator---For-Each/"
 ---
 ## イテレータ / For-Eachとは?
 

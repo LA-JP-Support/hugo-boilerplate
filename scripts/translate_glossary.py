@@ -7,7 +7,7 @@ manual translation is still required.
 
 Usage examples:
 
-    python3 scripts/translate_glossary.py content-drafts/en/clean/ --output content-drafts/ja/clean/
+    python3 scripts/translate_glossary.py content/en/glossary/ --output content/ja/glossary/
     python3 scripts/translate_glossary.py content/en/glossary/bot-avatar.md --output content/ja/glossary/
 
 The script intentionally does NOT call any external translation API. It simply

@@ -10,7 +10,13 @@ image: "/images/blog/centralised-social-media-management.png"
 
 translationKey: "centralised-social-media-management"
 lastmod: 2026-02-01
-keywords: []
+keywords:
+- social media management
+- centralized management
+- LiveAgent
+- customer support
+- business efficiency
+- SME
 url: "blog/centralised-social-media-management/"
 ---
 ## Challenges of Decentralized Social Media Management

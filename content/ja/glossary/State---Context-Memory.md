@@ -1,9 +1,4 @@
 ---
-url: "/ja/glossary/state---context-memory/"
-aliases:
-- "/ja/glossary/State---Context-Memory/"
----
----
 title: ステート/コンテキストメモリ
 translationKey: state-context-memory
 description: ステート/コンテキストメモリは、AIチャットボットがセッション間で情報を保持・想起できるようにするストレージメカニズムです。会話の連続性、パーソナライゼーション、効率的なタスク管理を実現します。
@@ -21,7 +16,9 @@ lastmod: '2025-12-19'
 draft: false
 e-title: State / Context Memory
 term: すてーと/こんてきすとめもり
-url: "/ja/glossary/State---Context-Memory/"
+url: "/ja/glossary/state---context-memory/"
+aliases:
+- "/ja/glossary/State---Context-Memory/"
 ---
 ## State / Context Memory とは?
 State / Context Memory(状態/コンテキストメモリ)とは、会話型AIエージェントや自動化システムが、セッション、ワークフロー、さらにはアプリケーションの再起動を跨いで情報を保持、想起、活用できるようにする一連のメカニズムとストレージソリューションです。この概念は、ほとんどのAIモデル(LLMなど)が本質的に持つステートレス性と、継続性、パーソナライゼーション、タスク管理に対するユーザーの期待とのギャップを埋めるものです。

@@ -3,11 +3,18 @@
 title: "「あの問い合わせ、誰が対応してたっけ？」がなくなる日 - 企業のための問い合わせ管理革命"
 date: 2025-10-20
 draft: false
+description: "問い合わせ管理の課題を解決する方法を徹底解説。メール・電話・SNSの一元管理、チケットシステムによる自動振り分け、対応漏れゼロを実現する実践ガイド。"
 image: "/images/blog/inquiry-management-revolution.png"
 
 translationKey: "inquiry-management-revolution"
 lastmod: 2026-02-01
-keywords: []
+keywords:
+- 問い合わせ管理
+- チケットシステム
+- カスタマーサポート
+- 業務効率化
+- 対応漏れ防止
+- LiveAgent
 
 url: "blog/inquiry-management-revolution/"
 

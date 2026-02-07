@@ -10,7 +10,13 @@ image: "/images/blog/centralised-social-media-management.png"
 
 translationKey: "centralised-social-media-management"
 lastmod: 2026-02-01
-keywords: []
+keywords:
+- SNS一元管理
+- ソーシャルメディア管理
+- LiveAgent
+- カスタマーサポート
+- 業務効率化
+- 中小企業
 
 url: "blog/centralised-social-media-management/"
 
