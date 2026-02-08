@@ -1,5 +1,5 @@
 {{/* Mautic Form Shortcode */}}
-{{/* 使用例: {{</* mautic-form id="1" */>}} */}}
+{{/* 使用例: mautic-form id="1" */}}
 {{ if and site.Params.mautic.enable site.Params.mautic.url }}
 {{ $mauticUrl := site.Params.mautic.url | strings.TrimRight "/" }}
 {{ $formId := .Get "id" }}
