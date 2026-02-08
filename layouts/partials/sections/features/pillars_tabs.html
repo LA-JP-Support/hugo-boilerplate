@@ -304,6 +304,27 @@
       display: block;
     }
     
+    .pillars-slideshow {
+      position: relative;
+    }
+    
+    .pillars-slideshow-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+    }
+    
+    .pillars-slideshow-slide:first-child {
+      position: relative;
+    }
+    
+    .pillars-slideshow-slide.active {
+      opacity: 1;
+    }
+    
     /* Decorative Elements */
     .pillars-decor {
       position: absolute;
@@ -438,7 +459,20 @@
           <!-- Image -->
           <div class="pillars-content-image">
             <div class="pillars-image-wrapper">
-              {{ if $item.image }}
+              {{ if $item.images }}
+              <div class="pillars-slideshow" data-interval="4000">
+                {{ range $imgIndex, $img := $item.images }}
+                <div class="pillars-slideshow-slide{{ if eq $imgIndex 0 }} active{{ end }}">
+                  {{ partial "components/media/lazyimg_internal.html" (dict
+                    "src" (partial "functions/get-localized-image.html" $img.src)
+                    "alt" $item.title
+                    "maxWidth" 800
+                    "class" ""
+                  ) }}
+                </div>
+                {{ end }}
+              </div>
+              {{ else if $item.image }}
               {{ partial "components/media/lazyimg_internal.html" (dict
                 "src" (partial "functions/get-localized-image.html" $item.image)
                 "alt" $item.title
@@ -490,6 +524,22 @@ function switchPillarsTab(sectionId, index) {
     }
   }
 }
+
+// Initialize pillars slideshows
+document.addEventListener('DOMContentLoaded', function() {
+  const slideshows = document.querySelectorAll('.pillars-slideshow');
+  slideshows.forEach(function(slideshow) {
+    const slides = slideshow.querySelectorAll('.pillars-slideshow-slide');
+    if (slides.length <= 1) return;
+    const interval = parseInt(slideshow.dataset.interval) || 4000;
+    let currentIndex = 0;
+    setInterval(function() {
+      slides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add('active');
+    }, interval);
+  });
+});
 
 // Initialize tab click handlers
 document.addEventListener('DOMContentLoaded', function() {

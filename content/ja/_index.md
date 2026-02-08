@@ -74,15 +74,18 @@ detailed_features:
       logos:
         - "/images/flowhunt-logo-200.webp"
         - "/images/hugo-logo-wide.svg"
-      # 2つの機能カード
+      # 3つの機能カード
       featureCards:
         - icon: "content"
           title: "AIコンテンツ作成"
-          description: "ブログ・用語集の原稿をAIが自動生成"
+          description: "ブログ記事・動画要約をご自身で作成"
+        - icon: "glossary"
+          title: "用語集・FAQ作成"
+          description: "専門用語集・FAQの制作を当社が受託"
         - icon: "web"
           title: "Hugo高速Web構築"
           description: "世界最速の静的サイトジェネレーター"
-      ctaText: "2つの機能を詳しく見る"
+      ctaText: "3つの機能を詳しく見る"
       ctaUrl: "#content-creation"
       ctaStyle: "bg-indigo-600 hover:bg-indigo-500 text-white"
 
@@ -137,14 +140,22 @@ pillars_content:
   style: "tabs"
   label: "AIが生み出す高品質コンテンツ × 爆速Web構築"
   heading: "作る、届ける、伸ばす"
-  description: "FlowHunt AIで、専門用語集・ブログ記事・動画要約記事の原稿を効率的に自動生成。SEO対策に必要なメタデータや構造化データも自動で付与されるため、検索エンジンに強いコンテンツをスピーディに仕上げられます。さらに、Hugoの静的サイト生成により、圧倒的な表示速度と堅牢なセキュリティを実現。サーバーレス構成で運用コストも抑えながら、継続的なコンテンツマーケティングを支援します。"
+  description: "FlowHunt AIで、ブログ記事・動画要約記事の原稿をお客様ご自身で効率的に作成。専門用語集やFAQの制作は当社が受託します。さらに、Hugoの静的サイト生成により、圧倒的な表示速度と堅牢なセキュリティを実現。サーバーレス構成で運用コストも抑えながら、継続的なコンテンツマーケティングを支援します。"
   items:
     - title: "AIコンテンツ作成"
-      label: "ブログ・用語集をAIが自動生成"
+      label: "ブログ記事・動画要約をご自身で作成"
       image: "/images/services/ai-content/ai-contents.jpg"
       url: "/ja/services/ai-content/"
-      description: "FlowHuntのマルチエージェントAIが、SEO最適化されたブログ記事や専門用語集を自動生成。リサーチから執筆、校正までを自動化し、記事作成時間を70%削減。このサイトでは1,200以上の用語を日英で作成し、検索エンジンからの継続的な集客を実現しています。"
+      description: "FlowHuntのマルチエージェントAIを活用し、SEO最適化されたブログ記事やYouTube動画の要約記事をお客様ご自身で作成。リサーチから執筆、校正までをAIで自動化し、記事作成時間を70%削減。当社がAI活用のサポートを行います。"
       descriptionImage: "/images/services/ai-content/ai-contents.jpg"
+    - title: "用語集・FAQ作成サービス"
+      label: "専門用語集・FAQの制作を当社が受託"
+      image: "/images/services/glossary-faq/feature-glossary3.jpg"
+      url: "/ja/services/glossary-faq/"
+      description: "お客様の業界・専門分野に合わせた用語の抽出から原稿作成まで、当社が受託制作。500語から対応可能。Hugo高速Web構築と併用すれば、SEO内部リンク構築や多言語対応も実現します。"
+      images:
+        - src: "/images/services/glossary-faq/feature-glossary3.jpg"
+        - src: "/images/services/glossary-faq/feature-glossary3-e.jpg"
     - title: "Hugo高速Web構築"
       label: "世界最速の静的サイトジェネレーター"
       image: "/images/services/hugo-web/hugo-process.jpg"

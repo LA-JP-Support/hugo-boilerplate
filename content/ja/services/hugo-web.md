@@ -68,7 +68,7 @@ related_services_heading: "その他のサービス"
 related_services_description: "SmartWebの包括的なソリューション"
 related_services:
   - title: "AIコンテンツ作成"
-    description: "SEO最適化されたブログ記事・用語集をAIが自動生成"
+    description: "ブログ記事・YouTube動画要約をAIで効率的に作成"
     url: "/ja/services/ai-content/"
     image: "/images/pillars/ai-content.jpg"
   - title: "AIチャットボット"

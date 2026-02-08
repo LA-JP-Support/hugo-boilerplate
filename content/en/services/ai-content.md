@@ -68,6 +68,10 @@ cta_section:
 related_services_heading: "Other Services"
 related_services_description: "SmartWeb's comprehensive solutions"
 related_services:
+  - title: "Glossary & FAQ Creation Service"
+    description: "Professional glossary and FAQ production. Leverage as SEO internal links"
+    url: "/en/services/glossary-faq/"
+    image: "/images/services/glossary-faq/feature-glossary3-e.jpg"
   - title: "Hugo High-Speed Web Build"
     description: "Build ultra-fast websites with the world's fastest static site generator"
     url: "/en/services/hugo-web/"

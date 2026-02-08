@@ -22,6 +22,33 @@ hugo server
 # → http://localhost:1313/ja/ と /en/ をブラウザで確認
 ```
 
+### dev（ステージング）ブランチの場合（追加で必須）
+
+dev ブランチは **検索エンジンに載せない** ことが必須要件です。
+
+- `robots.txt` が `Disallow: /` になっている
+- 各ページの `<meta name="robots" content="noindex, nofollow">` が出ている
+- canonical が dev ドメインを指している（本番URLを指さない）
+- ヘッダー/フッターのサポートリンクが dev support-docs を指している（`support.smartweb.jp` を含まない）
+
+`.env`（Git管理しない）に Amplify BasicAuth のID/Pass と dev URL を保存している場合は、`curl` で自動検証できます。
+
+```bash
+set -a; source .env; set +a
+
+# noindex (JA)
+curl -sS -L -u "$AMPLIFY_DEV_USER:$AMPLIFY_DEV_PASS" "$SMARTWEB_DEV_URL/ja/" \
+| grep -niE '<meta[^>]+name="robots"|noindex' | head -n 20
+
+# production support ドメイン混入がないこと
+curl -sS -L -u "$AMPLIFY_DEV_USER:$AMPLIFY_DEV_PASS" "$SMARTWEB_DEV_URL/ja/" \
+| grep -n 'support\.smartweb\.jp' | head -n 20
+
+# dev support-docs を指していること（例）
+curl -sS -L -u "$AMPLIFY_DEV_USER:$AMPLIFY_DEV_PASS" "$SMARTWEB_DEV_URL/ja/" \
+| grep -n 'dev\.d2b65nc0n0a17p\.amplifyapp\.com' | head -n 20
+```
+
 ### デプロイ後（必須）
 
 | ステップ | アクション | 合格基準 |

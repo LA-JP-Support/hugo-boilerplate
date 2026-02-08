@@ -4,11 +4,28 @@
 
 このドキュメントは、SmartWeb サポートドキュメントサイト（LotusDocs ベース）の運用・設定・デプロイに関するガイドです。
 
-**サイトURL**: https://main.d2b65nc0n0a17p.amplifyapp.com/
+**サイトURL**:
+
+- production: `https://support.smartweb.jp/`
+- amplify (main): `https://main.d2b65nc0n0a17p.amplifyapp.com/`
+- amplify (dev): `https://dev.d2b65nc0n0a17p.amplifyapp.com/`
+
 **リポジトリパス**: `/support-docs/`
 **テーマ**: LotusDocs (git submodule)
 
 ---
+
+## dev（ステージング）ブランチの運用
+
+目的:
+
+- `dev` ブランチは **検索エンジンに載せない**（SEO事故防止）
+- `dev` ブランチは dev の amplifyapp.com ドメインを `baseURL` としてビルドし、production への意図しないリダイレクトを避ける
+
+運用上の要点:
+
+- `dev` ブランチでは `public/robots.txt` を `Disallow: /` にする
+- `dev` ブランチの検証は BasicAuth + `curl` で実施する
 
 ## URL構造とSEO設計
 
