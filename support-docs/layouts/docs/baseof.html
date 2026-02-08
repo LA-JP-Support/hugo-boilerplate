@@ -83,6 +83,9 @@
         <!-- LiveAgent Multi-Widget -->
         {{- partial "liveagent-multiwidget.html" . -}}
 
+        <!-- Mautic Tracking -->
+        {{- partial "mautic-tracking.html" . -}}
+
         <!-- Dark Mode Switch JS -->
         {{ if eq .Site.Params.docs.darkMode true -}}
             {{ $darkModeSwitch := resources.Get (printf "/%s/%s" ($.Scratch.Get "pathName") "js/darkmode-switch.js") | js.Build | minify }}

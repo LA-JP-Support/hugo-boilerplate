@@ -85,3 +85,10 @@ disableDefaultLanguageRedirect = true
 # LiveAgent マルチウィジェット
 [params.liveagent.multiwidget]
   enable = true
+
+# ========================================
+# Mautic トラッキング
+# ========================================
+[params.mautic]
+  enable = true
+  url = "https://hello.intwk.co.jp"
