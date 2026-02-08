@@ -38,6 +38,13 @@ ignoreFiles = ['(?i)glossary-backup']
   
   # Google Analytics 4
   gaMeasurementID = "G-P4WY3NT5SD"
+
+  # ========================================
+  # Mautic トラッキング
+  # ========================================
+  [params.mautic]
+    enable = true
+    url = "https://hello.intwk.co.jp"
   dateFormat = "2006年1月2日"
   
   [params.imaging]

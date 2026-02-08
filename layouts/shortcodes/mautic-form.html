@@ -1,0 +1,16 @@
+{{/* Mautic Form Shortcode */}}
+{{/* 使用例: {{</* mautic-form id="1" */>}} */}}
+{{ if and site.Params.mautic.enable site.Params.mautic.url }}
+{{ $mauticUrl := site.Params.mautic.url | strings.TrimRight "/" }}
+{{ $formId := .Get "id" }}
+{{ $width := .Get "width" | default "100%" }}
+{{ $height := .Get "height" | default "600px" }}
+
+{{ if $formId }}
+<div class="mautic-form-wrapper">
+  <script type="text/javascript" src="{{ $mauticUrl }}/form/generate.js?id={{ $formId }}"></script>
+</div>
+{{ else }}
+  <!-- Mautic Form: id パラメータが必要です -->
+{{ end }}
+{{ end }}

@@ -1,0 +1,15 @@
+{{/* Mautic Tracking Script */}}
+{{/* このパーシャルは baseof.html の </body> タグの直前に挿入してください */}}
+{{ if and site.Params.mautic.enable site.Params.mautic.url }}
+{{ $mauticUrl := site.Params.mautic.url | strings.TrimRight "/" }}
+
+<!-- Mautic Tracking Script -->
+<script>
+    (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+        w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+        m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','{{ $mauticUrl }}/mtc.js','mt');
+
+    mt('send', 'pageview');
+</script>
+{{ end }}
