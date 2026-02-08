@@ -40,7 +40,7 @@ features:
   - label: "導入事例"
     title: "世界の企業がHugoを採用"
     description: "Hugoは世界中で17万以上のWebサイトで稼働しています（BuiltWith調べ）。2024年には「ミリオンページ・リリース」でコアを刷新し、超大規模サイトのストリーミングビルドに対応。LaTeX数式サポートやTailwind CSS統合など、モダンな開発体験を提供しています。<br><br>Smashing Magazine（2017年）、Cloudflare Developer Docs（2022年）のほか、1Password、Let's Encrypt、米政府Digital.govなど、セキュリティとパフォーマンスを重視する組織に広く採用されています。GitHubでは86,000以上のスターを獲得し、静的サイトジェネレーターとして世界最大級のコミュニティを維持しています。"
-    image: "/images/services/hugo-web/feature-cases.jpg"
+    image: "/images/services/hugo-web/hugo-logo-wide.svg"
 
 # Stats Section
 stats_heading: "Hugoの実績"

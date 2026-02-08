@@ -98,6 +98,47 @@ python scripts/manage_glossary_status.py --status
 python scripts/manage_glossary_status.py --list-pending
 ```
 
+## 8. 画像参照の存在チェック
+
+フロントマターの `image:` が参照するファイルが `static/` に実在するか確認。
+外部URL（`https://...`）は除外。
+
+```bash
+# フロントマターの image: 参照を確認
+grep -rn 'image:.*"/images/' content/ | while read line; do
+  file=$(echo "$line" | cut -d: -f1)
+  img=$(echo "$line" | grep -o '"/images/[^"]*"' | tr -d '"')
+  if [ -n "$img" ] && [ ! -f "static$img" ]; then
+    echo "MISSING: $file → static$img"
+  fi
+done
+
+# features セクションの src: 参照も確認
+grep -rn 'src:.*"/images/' content/ | while read line; do
+  file=$(echo "$line" | cut -d: -f1)
+  img=$(echo "$line" | grep -o '"/images/[^"]*"' | tr -d '"')
+  if [ -n "$img" ] && [ ! -f "static$img" ]; then
+    echo "MISSING: $file → static$img"
+  fi
+done
+```
+
+## 9. Markdown本文の画像参照チェック
+
+`![alt](/images/...)` 形式の画像参照先を確認。
+
+```bash
+grep -rn '!\[.*\](/images/' content/ | while read line; do
+  file=$(echo "$line" | cut -d: -f1)
+  img=$(echo "$line" | grep -o '(/images/[^)]*' | tr -d '(')
+  if [ -n "$img" ] && [ ! -f "static$img" ]; then
+    echo "MISSING: $file → static$img"
+  fi
+done
+```
+
+出力が空なら問題なし。`MISSING:` 行が出たら、画像ファイルの配置漏れまたはパスの誤り。
+
 ## 推奨: 全体検証フロー
 
 全体を一括検証する場合:
@@ -117,4 +158,13 @@ hugo --minify
 
 # 5. 内部リンク検証（ビルド後のみ）
 python3 scripts/check_internal_links.py --public-dir public --language ja
+
+# 6. 画像参照の存在チェック
+grep -rn 'image:.*"/images/' content/ | while read line; do
+  file=$(echo "$line" | cut -d: -f1)
+  img=$(echo "$line" | grep -o '"/images/[^"]*"' | tr -d '"')
+  if [ -n "$img" ] && [ ! -f "static$img" ]; then
+    echo "MISSING: $file → static$img"
+  fi
+done
 ```

@@ -40,7 +40,7 @@ features:
   - label: "Case Studies"
     title: "Global Companies Choose Hugo"
     description: "Hugo powers over 170,000 websites worldwide (BuiltWith). In 2024, the 'Million Pages Release' overhauled the core for streaming builds of ultra-large sites. Modern development features include LaTeX math support and native Tailwind CSS integration.<br><br>Smashing Magazine (2017), Cloudflare Developer Docs (2022), plus 1Password, Let's Encrypt, and U.S. government's Digital.gov—organizations prioritizing security and performance widely adopt Hugo. With 86,000+ GitHub stars, Hugo maintains one of the largest communities among static site generators."
-    image: "/images/services/hugo-web/feature-cases.jpg"
+    image: "/images/services/hugo-web/hugo-logo-wide.svg"
 
 # Stats Section
 stats_heading: "Hugo by the Numbers"
