@@ -40,7 +40,8 @@ features:
   - label: "導入事例"
     title: "世界の企業がHugoを採用"
     description: "Hugoは世界中で17万以上のWebサイトで稼働しています（BuiltWith調べ）。2024年には「ミリオンページ・リリース」でコアを刷新し、超大規模サイトのストリーミングビルドに対応。LaTeX数式サポートやTailwind CSS統合など、モダンな開発体験を提供しています。<br><br>Smashing Magazine（2017年）、Cloudflare Developer Docs（2022年）のほか、1Password、Let's Encrypt、米政府Digital.govなど、セキュリティとパフォーマンスを重視する組織に広く採用されています。GitHubでは86,000以上のスターを獲得し、静的サイトジェネレーターとして世界最大級のコミュニティを維持しています。"
-    image: "/images/services/hugo-web/hugo-logo-wide.svg"
+    image: "/images/services/hugo-web/feature-hugo-websites.jpg"
+    no_zoom: true
 
 # Stats Section
 stats_heading: "Hugoの実績"
@@ -70,7 +71,7 @@ related_services:
   - title: "AIコンテンツ作成"
     description: "ブログ記事・YouTube動画要約をAIで効率的に作成"
     url: "/ja/services/ai-content/"
-    image: "/images/pillars/ai-content.jpg"
+    image: "/images/services/ai-content/feature-collaboration.jpg"
   - title: "AIチャットボット"
     description: "24時間365日、100言語対応の自動学習型AIサポート"
     url: "/ja/services/ai-chatbot/"

@@ -81,7 +81,7 @@ related_services:
   - title: "AIコンテンツ作成"
     description: "ブログ記事・YouTube動画要約をご自身でAI作成"
     url: "/ja/services/ai-content/"
-    image: "/images/services/ai-content/feature-blog.jpg"
+    image: "/images/services/ai-content/feature-collaboration.jpg"
   - title: "Hugo高速Web構築"
     description: "世界最速の静的サイトジェネレーターで超高速Webサイトを構築"
     url: "/ja/services/hugo-web/"

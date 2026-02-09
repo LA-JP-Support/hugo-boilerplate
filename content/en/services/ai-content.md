@@ -38,6 +38,11 @@ features:
     image: "/images/services/ai-content/feature-showcase.jpg"
     image_size: "full"
   
+  - label: "YouTube Video Summary"
+    title: "Auto-Create Blog Posts from YouTube Videos"
+    description: "FlowHunt's YouTube video-to-article feature lets you simply enter a YouTube video URL to analyze its content and auto-generate an SEO-optimized summary article.<br><br>You can specify the summary length as needed, from short digests to detailed long-form articles. For your own videos, you can pre-train the AI with your product information and service details, resulting in accurate and compelling content.<br><br>Convert long seminars, product demos, and interview videos into readable blog posts. By repurposing video content as text content, you increase search engine traffic and maximize the value of your content.<br><br>We use this feature ourselves to create blog posts from SmartWeb introduction videos, as well as curated YouTube videos in the AI, customer support, and content marketing fields. For those who don't have time to watch videos but want to stay on top of the latest trends, our staff delivers handpicked highlights.<br><br>▶ Example: <a href='/en/blog/using-ai-with-smartweb/' class='text-indigo-600 hover:underline font-semibold'>SmartWeb: How AI-Powered Customer Support Transforms Small Business Operations</a><br><small>*This feature generates articles based on YouTube video subtitle (caption) data. Videos without subtitles are not supported.</small>"
+    image: "/images/services/ai-content/feature-flowhunt-video.jpg"
+
   - label: "AI-Human Collaboration"
     title: "AI Drafts, Humans Refine"
     description: "AI is ultimately an efficient drafting tool. Final article quality and responsibility are ensured by human review and editing. Fact-checking, legal/copyright review, and adding proprietary case studies or customer testimonials are human responsibilities that AI cannot judge.<br><br>SmartWeb provides support from effective prompt creation to operational guidance. Through AI-human collaboration, achieve maximum results with minimal resources. Delegate simple content creation to AI while focusing on strategy and quality control—high-value work only humans can do."
