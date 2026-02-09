@@ -39,7 +39,7 @@ html { scroll-behavior: smooth; }
 body { margin: 0; -webkit-font-smoothing: antialiased; background-color: #fff; color: #1f2937; }
 .antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 /* Header critical styles */
-header.bg-white { position: sticky !important; top: 0; z-index: 50; background-color: #fff; }
+header.bg-white { position: sticky !important; top: 0; z-index: 1000; background-color: #fff; }
 .bg-white { background-color: #fff; }
 .text-white { color: #fff; }
 .text-gray-900 { color: #111827; }
@@ -66,16 +66,31 @@ main.w-full { min-height: 100vh; }
   font-weight: 700;
   color: #fff;
 }
-/* Tailwind critical utilities */
+/* Tailwind critical utilities - layout */
 .relative { position: relative; }
 .absolute { position: absolute; }
 .flex { display: flex; }
 .hidden { display: none; }
 .items-center { align-items: center; }
 .justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
 .text-center { text-align: center; }
 .font-bold { font-weight: 700; }
+.font-semibold { font-weight: 600; }
 .overflow-hidden { overflow: hidden; }
+/* Critical max-width / container - prevents FOUC width flash */
+.max-w-7xl { max-width: 80rem; }
+.max-w-4xl { max-width: 56rem; }
+.max-w-3xl { max-width: 48rem; }
+.max-w-2xl { max-width: 42rem; }
+.max-w-xl { max-width: 36rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.p-6 { padding: 1.5rem; }
+.gap-x-6 { column-gap: 1.5rem; }
+.w-full { width: 100%; }
+@media (min-width: 1024px) { .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; } .lg\:flex-1 { flex: 1 1 0%; } .lg\:flex { display: flex; } .lg\:gap-x-12 { column-gap: 3rem; } }
+nav { display: flex; }
 
 .w-3\.5 { width: 0.875rem; }
 .h-3\.5 { height: 0.875rem; }

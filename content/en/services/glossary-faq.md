@@ -21,7 +21,7 @@ introduction: "A professional glossary serves not only as a knowledge-sharing re
 features:
   - label: "Glossary Production"
     title: "AI-Powered Industry-Specific Glossaries"
-    description: "FlowHunt's multi-agent AI researches industry-relevant terminology and creates accurate, easy-to-understand definitions. We support glossary production starting from 500 terms, with the capability to produce large-scale glossaries of several thousand terms upon request.<br><br>AI rapidly generates first drafts, which are then reviewed and edited by specialists before delivery. This dramatically reduces production time compared to traditional manual methods while maintaining quality. We offer delivery in plain text format as well as fully built Hugo websites."
+    description: "FlowHunt's multi-agent AI researches industry-relevant terminology and creates accurate, easy-to-understand definitions. We support glossary production starting from 500 terms, with the capability to produce large-scale glossaries of several thousand terms upon request.<br><br>Multi-agent AI automatically researches and selects authoritative sources to generate term definitions. A separate AI agent then verifies and enriches the content through a multi-stage process that ensures quality. This dramatically reduces production time compared to traditional manual methods. We offer delivery in plain text format as well as fully built Hugo websites."
     image: "/images/services/glossary-faq/feature-glossary1-e.jpg"
 
   - label: "FAQ Production"
@@ -32,7 +32,7 @@ features:
   - label: "SEO Internal Linking"
     title: "Turn Your Glossary into an SEO Asset"
     description: "Your glossary does more than just share knowledge. Combined with Hugo static site building, glossary keywords become <strong>internal links</strong> connecting blog posts and service pages throughout your site.<br><br>When related pages are naturally connected through glossary keywords, your site's topical authority—how search engines evaluate your expertise in a specific domain—improves significantly. Search engines can properly assess your site's structure and expertise, leading to improved rankings. We've proven this effect on the SmartWeb site with over 1,200 glossary terms."
-    image: "/images/services/glossary-faq/feature-internal-linking .jpg"
+    image: "/images/services/glossary-faq/feature-internal-linking-e.jpg"
 
   - label: "Multilingual Support"
     title: "Production in Japanese, English, and More"

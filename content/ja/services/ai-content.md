@@ -26,14 +26,13 @@ features:
   - label: "FlowHuntの作成画面"
     title: "直感的な操作でAI記事を生成"
     description: "FlowHuntのブログ記事作成画面では、キーワードやトピックを入力するだけで、AIが自動的にリサーチから記事構成、本文執筆までを一気に実行します。<br><br>作成フローは以下の通りです。<br>① <strong>キーワード入力</strong>：ターゲットキーワードやトピックを指定<br>② <strong>AIリサーチ</strong>：競合分析・関連キーワード調査を自動実行<br>③ <strong>記事構成生成</strong>：SEOに最適化された見出し構成を提案<br>④ <strong>本文生成</strong>：マルチエージェントAIが高品質な記事を執筆<br>⑤ <strong>ヒューマナイズ</strong>：自然な文章に仕上げて出力<br><br>SmartWebが操作方法やプロンプトのコツをサポートするので、初めての方でもすぐにご利用いただけます。"
-    # TODO: FlowHuntの実際のブログ記事作成画面のスクリーンショットに差し替え
-    # image: "/images/services/ai-content/feature-flowhunt-blog.jpg"
+    image: "/images/services/ai-content/feature-flowhunt-blog.jpg"
+    image_crop: true
 
   - label: "YouTube動画要約"
     title: "YouTube動画から要約記事を自動作成"
-    description: "FlowHuntのVideo Summary機能を活用すると、YouTube動画のURLを入力するだけで、動画内容を分析し、SEO最適化された要約記事を自動生成します。<br><br>長時間のセミナー動画、製品デモ、インタビュー動画などを、読みやすいブログ記事に変換。動画コンテンツをテキストコンテンツとしても活用することで、検索エンジンからの流入を増やし、コンテンツの価値を最大化します。<br><br>当社でもSmartWeb関連のYouTube動画から要約記事を作成し、ブログコンテンツとして公開しています。動画を見る時間がない方にも情報を届けられる、効果的なコンテンツ活用法です。"
-    # TODO: YouTube動画要約の作成事例スクリーンショットに差し替え
-    # image: "/images/services/ai-content/feature-flowhunt-video.jpg"
+    description: "FlowHuntのYouTube動画の記事化機能を活用すると、YouTube動画のURLを入力するだけで、動画内容を分析し、SEO最適化された要約記事を自動生成します。<br><br>要約の文字数も必要に応じて指定でき、短いダイジェストから詳細な解説記事まで柔軟に対応可能です。さらに、自社の動画であれば、製品情報やサービス内容をあらかじめAIに学習させた上で記事を生成できるため、正確で説得力のあるコンテンツに仕上がります。<br><br>長時間のセミナー動画、製品デモ、インタビュー動画などを、読みやすいブログ記事に変換。動画コンテンツをテキストコンテンツとしても活用することで、検索エンジンからの流入を増やし、コンテンツの価値を最大化します。<br><br>当社ではこの機能を活用し、SmartWebの紹介動画に加え、AI・カスタマーサポート・コンテンツマーケティング分野の優れたYouTube動画を記事化してブログで公開しています。「動画を見る時間はないけれど、最新トレンドは押さえたい」という方に、スタッフが厳選した注目動画の内容をお届けしています。<br><br>▶ 活用事例：<a href='/ja/blog/using-ai-with-smartweb/' class='text-indigo-600 hover:underline font-semibold'>SmartWeb：AI搭載カスタマーサポートが中小企業の業務をどう変えるか</a><br><small>※本機能はYouTube動画の字幕（キャプション）データを基に記事を生成するため、字幕が設定されていない動画には対応できません。</small>"
+    image: "/images/services/ai-content/feature-flowhunt-video.jpg"
 
   - label: "AIと人間の協働"
     title: "AIは下書き、人間が仕上げる"
@@ -72,7 +71,7 @@ related_services:
   - title: "Hugo高速Web構築"
     description: "世界最速の静的サイトジェネレーターで超高速Webサイトを構築"
     url: "/ja/services/hugo-web/"
-    image: "/images/services/ai-content/feature-collaboration.jpg"
+    image: "/images/services/hugo-web/feature-hugo-websites.jpg"
   - title: "AIチャットボット"
     description: "24時間365日、100言語対応の自動学習型AIサポート"
     url: "/ja/services/ai-chatbot/"

@@ -199,6 +199,63 @@
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   }
 
+  /* Cropped Image Container (for tall images) */
+  .feature-image-cropped {
+    position: relative;
+    max-height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: zoom-in;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-image-cropped img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .feature-image-cropped::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.95));
+    pointer-events: none;
+  }
+
+  .dark .feature-image-cropped::after {
+    background: linear-gradient(to bottom, transparent, rgba(17,24,39,0.95));
+  }
+
+  .feature-image-cropped-hint {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    font-size: 0.8rem;
+    color: #6366f1;
+    background: rgba(255,255,255,0.9);
+    padding: 0.25rem 1rem;
+    border-radius: 9999px;
+    pointer-events: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .dark .feature-image-cropped-hint {
+    color: #a5b4fc;
+    background: rgba(31,41,55,0.9);
+  }
+
+  .feature-image-cropped:hover img {
+    filter: brightness(0.95);
+  }
+
   /* Zoomable Image Container */
   .zoomable-image-container {
     position: relative;
@@ -500,6 +557,11 @@
             {{ else if $feature.image }}
             {{ if $feature.no_zoom }}
             <img src="{{ partial "functions/get-localized-image.html" $feature.image }}" alt="{{ $feature.title }}" loading="lazy" class="{{ with $feature.image_size }}size-{{ . }}{{ end }}">
+            {{ else if $feature.image_crop }}
+            <div class="feature-image-cropped" onclick="openLightbox(this.querySelector('img').src)">
+              <img src="{{ partial "functions/get-localized-image.html" $feature.image }}" alt="{{ $feature.title }}" loading="lazy">
+              <span class="feature-image-cropped-hint">{{ i18n "click_to_expand" | default "Click to view full image" }}</span>
+            </div>
             {{ else }}
             <div class="zoomable-image-container" onclick="openLightbox(this.querySelector('img').src)">
               <img src="{{ partial "functions/get-localized-image.html" $feature.image }}" alt="{{ $feature.title }}" loading="lazy" class="{{ with $feature.image_size }}size-{{ . }}{{ end }}">
@@ -557,6 +619,11 @@
             {{ else if $feature.image }}
             {{ if $feature.no_zoom }}
             <img src="{{ partial "functions/get-localized-image.html" $feature.image }}" alt="{{ $feature.title }}" loading="lazy" class="{{ with $feature.image_size }}size-{{ . }}{{ end }}">
+            {{ else if $feature.image_crop }}
+            <div class="feature-image-cropped" onclick="openLightbox(this.querySelector('img').src)">
+              <img src="{{ partial "functions/get-localized-image.html" $feature.image }}" alt="{{ $feature.title }}" loading="lazy">
+              <span class="feature-image-cropped-hint">{{ i18n "click_to_expand" | default "Click to view full image" }}</span>
+            </div>
             {{ else }}
             <div class="zoomable-image-container" onclick="openLightbox(this.querySelector('img').src)">
               <img src="{{ partial "functions/get-localized-image.html" $feature.image }}" alt="{{ $feature.title }}" loading="lazy" class="{{ with $feature.image_size }}size-{{ . }}{{ end }}">
