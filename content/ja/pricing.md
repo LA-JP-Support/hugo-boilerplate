@@ -3,6 +3,7 @@ title: "料金プラン"
 description: "SmartWebのAIカスタマーサポート、AIコンテンツ作成、Hugo高速Web構築の料金プラン。初期設定まで完了した状態で納品します。"
 type: "pricing"
 url: "/ja/pricing/"
+translationKey: "pricing"
 
 # Hero Section
 tagline: "料金プラン"

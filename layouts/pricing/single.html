@@ -1,11 +1,23 @@
 {{ define "main" }}
 
+{{ $isJA := eq .Language.Lang "ja" }}
+{{ $initialCostLabel := cond $isJA "初期費用" "Initial Cost" }}
+{{ $monthlyCostLabel := cond $isJA "月額費用" "Monthly Cost" }}
+{{ $currencySuffix := cond $isJA "円〜" " JPY~" }}
+{{ $taxNote := cond $isJA "(税別)" "(excl. tax)" }}
+{{ $popularLabel := cond $isJA "おすすめ" "Popular" }}
+{{ $defaultCTA := cond $isJA "無料相談を予約" "Book a Free Consultation" }}
+{{ $defaultCTAUrl := cond $isJA "/ja/contact/" "/en/contact/" }}
+{{ $serviceLabel := cond $isJA "サービス" "Service" }}
+{{ $initialCostHeader := cond $isJA "初期費用（税別）" "Initial Cost (excl. tax)" }}
+{{ $monthlyCostHeader := cond $isJA "月額費用（税別）" "Monthly Cost (excl. tax)" }}
+
 {{ if .Params.showBreadcrumbs }}
   {{ partial "breadcrumbs_default.html" . }}
 {{ end }}
 
 <!-- Hero Section - アニメーション背景付き -->
-<div class="relative overflow-visible z-10">
+<div class="relative overflow-visible z-0">
   <div class="pricing-hero-animated-bg absolute inset-0 z-0"></div>
   <div class="pricing-hero-overlay absolute inset-0 z-0"></div>
   <div class="pricing-hero-glow absolute inset-0 z-[5]">
@@ -61,24 +73,24 @@
         <!-- Popular Plan -->
         <div class="relative rounded-3xl bg-indigo-600 p-8 ring-2 ring-indigo-600">
           <div class="absolute -top-4 right-8">
-            <span class="inline-flex items-center rounded-full bg-indigo-500 px-4 py-1 text-xs font-semibold text-white">おすすめ</span>
+            <span class="inline-flex items-center rounded-full bg-indigo-500 px-4 py-1 text-xs font-semibold text-white">{{ $popularLabel }}</span>
           </div>
           <h3 class="text-xl font-semibold text-white">{{ $plan.name | safeHTML }}</h3>
           <p class="mt-4 text-sm text-indigo-200">{{ $plan.description }}</p>
           <div class="mt-6 flex items-baseline gap-x-2">
-            <span class="text-sm font-semibold text-indigo-200">初期費用</span>
+            <span class="text-sm font-semibold text-indigo-200">{{ $initialCostLabel }}</span>
             <span class="text-4xl font-bold tracking-tight text-white">{{ $plan.initial_cost }}</span>
-            <span class="text-sm font-semibold text-indigo-200">円〜</span>
-            <span class="text-xs text-indigo-300">(税別)</span>
+            <span class="text-sm font-semibold text-indigo-200">{{ $currencySuffix }}</span>
+            <span class="text-xs text-indigo-300">{{ $taxNote }}</span>
           </div>
           <div class="mt-2 flex items-baseline gap-x-2">
-            <span class="text-sm font-semibold text-indigo-200">月額費用</span>
+            <span class="text-sm font-semibold text-indigo-200">{{ $monthlyCostLabel }}</span>
             <span class="text-3xl font-bold tracking-tight text-white">{{ $plan.monthly_cost }}</span>
-            <span class="text-sm font-semibold text-indigo-200">円〜</span>
-            <span class="text-xs text-indigo-300">(税別)</span>
+            <span class="text-sm font-semibold text-indigo-200">{{ $currencySuffix }}</span>
+            <span class="text-xs text-indigo-300">{{ $taxNote }}</span>
           </div>
-          <a href="{{ $plan.cta_url | default "/ja/contact/" }}" class="mt-8 block rounded-lg bg-white px-4 py-3 text-center text-sm font-semibold text-indigo-600 hover:bg-indigo-50 transition-colors">
-            {{ $plan.cta_text | default "無料相談を予約" }}
+          <a href="{{ $plan.cta_url | default $defaultCTAUrl }}" class="mt-8 block rounded-lg bg-white px-4 py-3 text-center text-sm font-semibold text-indigo-600 hover:bg-indigo-50 transition-colors">
+            {{ $plan.cta_text | default $defaultCTA }}
           </a>
         </div>
         {{ else }}
@@ -87,19 +99,19 @@
           <h3 class="text-xl font-semibold text-gray-900">{{ $plan.name | safeHTML }}</h3>
           <p class="mt-4 text-sm text-gray-500">{{ $plan.description }}</p>
           <div class="mt-6 flex items-baseline gap-x-2">
-            <span class="text-sm font-semibold text-gray-600">初期費用</span>
+            <span class="text-sm font-semibold text-gray-600">{{ $initialCostLabel }}</span>
             <span class="text-4xl font-bold tracking-tight text-gray-900">{{ $plan.initial_cost }}</span>
-            <span class="text-sm font-semibold text-gray-600">円〜</span>
-            <span class="text-xs text-gray-400">(税別)</span>
+            <span class="text-sm font-semibold text-gray-600">{{ $currencySuffix }}</span>
+            <span class="text-xs text-gray-400">{{ $taxNote }}</span>
           </div>
           <div class="mt-2 flex items-baseline gap-x-2">
-            <span class="text-sm font-semibold text-gray-600">月額費用</span>
+            <span class="text-sm font-semibold text-gray-600">{{ $monthlyCostLabel }}</span>
             <span class="text-3xl font-bold tracking-tight text-indigo-600">{{ $plan.monthly_cost }}</span>
-            <span class="text-sm font-semibold text-gray-600">円〜</span>
-            <span class="text-xs text-gray-400">(税別)</span>
+            <span class="text-sm font-semibold text-gray-600">{{ $currencySuffix }}</span>
+            <span class="text-xs text-gray-400">{{ $taxNote }}</span>
           </div>
-          <a href="{{ $plan.cta_url | default "/ja/contact/" }}" class="mt-8 block rounded-lg bg-indigo-50 px-4 py-3 text-center text-sm font-semibold text-indigo-600 hover:bg-indigo-100 transition-colors">
-            {{ $plan.cta_text | default "無料相談を予約" }}
+          <a href="{{ $plan.cta_url | default $defaultCTAUrl }}" class="mt-8 block rounded-lg bg-indigo-50 px-4 py-3 text-center text-sm font-semibold text-indigo-600 hover:bg-indigo-100 transition-colors">
+            {{ $plan.cta_text | default $defaultCTA }}
           </a>
         </div>
         {{ end }}
@@ -133,16 +145,16 @@
         {{ if .initial_cost }}
         <div class="flex flex-wrap items-baseline gap-6">
           <div class="flex items-baseline gap-x-2">
-            <span class="text-sm font-semibold text-gray-600">初期費用</span>
+            <span class="text-sm font-semibold text-gray-600">{{ $initialCostLabel }}</span>
             <span class="text-3xl font-bold tracking-tight text-gray-900">{{ .initial_cost }}</span>
-            <span class="text-sm font-semibold text-gray-600">円〜</span>
-            <span class="text-xs text-gray-400">(税別)</span>
+            <span class="text-sm font-semibold text-gray-600">{{ $currencySuffix }}</span>
+            <span class="text-xs text-gray-400">{{ $taxNote }}</span>
           </div>
           <div class="flex items-baseline gap-x-2">
-            <span class="text-sm font-semibold text-gray-600">月額費用</span>
+            <span class="text-sm font-semibold text-gray-600">{{ $monthlyCostLabel }}</span>
             <span class="text-3xl font-bold tracking-tight text-emerald-600">{{ .monthly_cost }}</span>
-            <span class="text-sm font-semibold text-gray-600">円〜</span>
-            <span class="text-xs text-gray-400">(税別)</span>
+            <span class="text-sm font-semibold text-gray-600">{{ $currencySuffix }}</span>
+            <span class="text-xs text-gray-400">{{ $taxNote }}</span>
           </div>
         </div>
         {{ else }}
@@ -150,8 +162,8 @@
           <span class="text-2xl font-bold tracking-tight text-gray-900">{{ .price_note }}</span>
         </div>
         {{ end }}
-        <a href="{{ .cta_url | default "/ja/contact/" }}" class="mt-6 inline-block rounded-lg bg-emerald-50 px-6 py-3 text-sm font-semibold text-emerald-600 hover:bg-emerald-100 transition-colors">
-          {{ .cta_text | default "無料相談を予約" }}
+        <a href="{{ .cta_url | default $defaultCTAUrl }}" class="mt-6 inline-block rounded-lg bg-emerald-50 px-6 py-3 text-sm font-semibold text-emerald-600 hover:bg-emerald-100 transition-colors">
+          {{ .cta_text | default $defaultCTA }}
         </a>
       </div>
     </div>
@@ -181,20 +193,20 @@
         <h3 class="text-xl font-semibold text-gray-900 mb-6">{{ .plan_name }}</h3>
         <div class="flex flex-wrap items-baseline gap-6">
           <div class="flex items-baseline gap-x-2">
-            <span class="text-sm font-semibold text-gray-600">初期費用</span>
+            <span class="text-sm font-semibold text-gray-600">{{ $initialCostLabel }}</span>
             <span class="text-4xl font-bold tracking-tight text-gray-900">{{ .initial_cost }}</span>
-            <span class="text-sm font-semibold text-gray-600">円〜</span>
-            <span class="text-xs text-gray-400">(税別)</span>
+            <span class="text-sm font-semibold text-gray-600">{{ $currencySuffix }}</span>
+            <span class="text-xs text-gray-400">{{ $taxNote }}</span>
           </div>
           <div class="flex items-baseline gap-x-2">
-            <span class="text-sm font-semibold text-gray-600">月額費用</span>
+            <span class="text-sm font-semibold text-gray-600">{{ $monthlyCostLabel }}</span>
             <span class="text-3xl font-bold tracking-tight text-amber-500">{{ .monthly_cost }}</span>
-            <span class="text-sm font-semibold text-gray-600">円〜</span>
-            <span class="text-xs text-gray-400">(税別)</span>
+            <span class="text-sm font-semibold text-gray-600">{{ $currencySuffix }}</span>
+            <span class="text-xs text-gray-400">{{ $taxNote }}</span>
           </div>
         </div>
-        <a href="{{ .cta_url | default "/ja/contact/" }}" class="mt-8 inline-block rounded-lg bg-amber-50 px-6 py-3 text-sm font-semibold text-amber-600 hover:bg-amber-100 transition-colors">
-          {{ .cta_text | default "無料相談を予約" }}
+        <a href="{{ .cta_url | default $defaultCTAUrl }}" class="mt-8 inline-block rounded-lg bg-amber-50 px-6 py-3 text-sm font-semibold text-amber-600 hover:bg-amber-100 transition-colors">
+          {{ .cta_text | default $defaultCTA }}
         </a>
       </div>
     </div>
@@ -212,9 +224,9 @@
         <table class="min-w-full divide-y divide-gray-200">
           <thead class="bg-gray-50">
             <tr>
-              <th scope="col" class="px-6 py-4 text-left text-sm font-semibold text-gray-900">サービス</th>
-              <th scope="col" class="px-6 py-4 text-right text-sm font-semibold text-gray-900">初期費用（税別）</th>
-              <th scope="col" class="px-6 py-4 text-right text-sm font-semibold text-gray-900">月額費用（税別）</th>
+              <th scope="col" class="px-6 py-4 text-left text-sm font-semibold text-gray-900">{{ $serviceLabel }}</th>
+              <th scope="col" class="px-6 py-4 text-right text-sm font-semibold text-gray-900">{{ $initialCostHeader }}</th>
+              <th scope="col" class="px-6 py-4 text-right text-sm font-semibold text-gray-900">{{ $monthlyCostHeader }}</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-200">
@@ -228,8 +240,8 @@
               {{ if .price_note }}
               <td class="px-6 py-4 text-sm text-gray-500 text-right" colspan="2">{{ .price_note }}</td>
               {{ else }}
-              <td class="px-6 py-4 text-sm text-gray-900 text-right">{{ .initial_cost }}円〜</td>
-              <td class="px-6 py-4 text-sm text-gray-900 text-right">{{ .monthly_cost }}円〜</td>
+              <td class="px-6 py-4 text-sm text-gray-900 text-right">{{ .initial_cost }}{{ $currencySuffix }}</td>
+              <td class="px-6 py-4 text-sm text-gray-900 text-right">{{ .monthly_cost }}{{ $currencySuffix }}</td>
               {{ end }}
             </tr>
             {{ end }}
