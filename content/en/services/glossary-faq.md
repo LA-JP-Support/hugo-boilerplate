@@ -32,7 +32,7 @@ features:
   - label: "SEO Internal Linking"
     title: "Turn Your Glossary into an SEO Asset"
     description: "Your glossary does more than just share knowledge. Combined with Hugo static site building, glossary keywords become <strong>internal links</strong> connecting blog posts and service pages throughout your site.<br><br>When related pages are naturally connected through glossary keywords, your site's topical authority—how search engines evaluate your expertise in a specific domain—improves significantly. Search engines can properly assess your site's structure and expertise, leading to improved rankings. We've proven this effect on the SmartWeb site with over 1,200 glossary terms."
-    image: "/images/services/glossary-faq/feature-internal-linking .jpg"
+    image: "/images/services/glossary-faq/feature-internal-linking-e.jpg"
 
   - label: "Multilingual Support"
     title: "Production in Japanese, English, and More"

@@ -39,8 +39,8 @@ features:
   
   - label: "Case Studies"
     title: "Global Companies Choose Hugo"
-    description: "Hugo powers over 170,000 websites worldwide (BuiltWith). In 2024, the 'Million Pages Release' overhauled the core for streaming builds of ultra-large sites. Modern development features include LaTeX math support and native Tailwind CSS integration.<br><br>Smashing Magazine (2017), Cloudflare Developer Docs (2022), plus 1Password, Let's Encrypt, and U.S. government's Digital.gov—organizations prioritizing security and performance widely adopt Hugo. With 86,000+ GitHub stars, Hugo maintains one of the largest communities among static site generators."
-    image: "/images/services/hugo-web/hugo-logo-wide.svg"
+    description: "Hugo is trusted by global enterprises and organizations. Kubernetes (Google's container platform), Let's Encrypt (free SSL certificate authority), and 1Password (password manager used by 150,000+ businesses) all built their official sites with Hugo.<br><br>The reason is clear: Hugo delivers enterprise-grade security (no database = no SQL injection), handles massive traffic without server scaling concerns, and maintains sub-second page loads even with thousands of pages. These aren't theoretical benefits—they're proven at scale by some of the world's most demanding web properties.<br><br>SmartWeb leverages this same technology for your business, from corporate sites to knowledge bases."
+    image: "/images/services/hugo-web/feature-hugo-websites.jpg"
 
 # Stats Section
 stats_heading: "Hugo by the Numbers"
@@ -70,7 +70,7 @@ related_services:
   - title: "AI Content Creation"
     description: "AI auto-generates SEO-optimized blog posts and glossaries"
     url: "/en/services/ai-content/"
-    image: "/images/pillars/ai-content.jpg"
+    image: "/images/services/hugo-web/feature-hugo-websites.jpg"
   - title: "AI Chatbot"
     description: "24/7 self-learning AI support in 100+ languages"
     url: "/en/services/ai-chatbot/"
