@@ -16,10 +16,25 @@ SmartWebサイトのデプロイ前後チェック。AWS Amplifyによるdev/mai
 
 ### デプロイ前（必須）
 ```bash
-# 1. ビルドエラーなし確認
+# 1. フロントマター検証
+python scripts/validate_frontmatter.py --all --errors-only
+
+# 2. 翻訳キー整合性
+python scripts/validate_frontmatter.py --check-translations
+
+# 3. 画像参照の存在チェック
+grep -rn 'image:.*"/images/' content/ | while read line; do
+  file=$(echo "$line" | cut -d: -f1)
+  img=$(echo "$line" | grep -o '"/images/[^"]*"' | tr -d '"')
+  if [ -n "$img" ] && [ ! -f "static$img" ]; then
+    echo "MISSING: $file → static$img"
+  fi
+done
+
+# 4. ビルドエラーなし確認
 hugo --minify
 
-# 2. ローカル目視確認
+# 5. ローカル目視確認
 hugo server
 # → /ja/ と /en/ を確認
 ```
@@ -53,26 +68,37 @@ https://pagespeed.web.dev/analysis?url=https://main.d1jtfhinlastnr.amplifyapp.co
 ## デプロイフロー
 
 ```bash
-# 1. ローカルビルド確認
+# 1. コンテンツ品質チェック（コミット前に実行）
+python scripts/validate_frontmatter.py --all --errors-only
+python scripts/validate_frontmatter.py --check-translations
+grep -rn 'image:.*"/images/' content/ | while read line; do
+  file=$(echo "$line" | cut -d: -f1)
+  img=$(echo "$line" | grep -o '"/images/[^"]*"' | tr -d '"')
+  if [ -n "$img" ] && [ ! -f "static$img" ]; then
+    echo "MISSING: $file → static$img"
+  fi
+done
+
+# 2. ローカルビルド確認
 hugo --minify
 
-# 2. ローカルサーバーで目視確認
+# 3. ローカルサーバーで目視確認
 hugo server
 
-# 3. dev ブランチにpush（ステージング）
+# 4. dev ブランチにpush（ステージング）
 git checkout dev
 git merge feature-branch
 git push
 
-# 4. Amplify dev デプロイ確認
+# 5. Amplify dev デプロイ確認
 # → noindex, robots.txt, canonical を検証
 
-# 5. main ブランチにpush（本番）
+# 6. main ブランチにpush（本番）
 git checkout main
 git merge dev
 git push
 
-# 6. PageSpeed Insights 確認（デプロイ後10分以内）
+# 7. PageSpeed Insights 確認（デプロイ後10分以内）
 ```
 
 ## 問題発生時の対応

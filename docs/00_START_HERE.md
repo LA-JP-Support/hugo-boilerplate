@@ -106,6 +106,42 @@ grep -r 'data-lb="1"' public/ | wc -l
 
 ---
 
+## 🤖 Claude Code Agent Skills
+
+Claude Code で使えるカスタムスラッシュコマンド。`.claude/skills/` に定義。
+Windsurf など他のツールには影響しない（`.claude/` は Claude Code 専用）。
+
+### スキル一覧
+
+| コマンド | 内容 | 関連ドキュメント |
+|---------|------|----------------|
+| `/create-content` | Blog/Glossary/YouTube/Support/Service の新規作成 | [CONTENT_CREATION_WORKFLOWS.md](CONTENT_CREATION_WORKFLOWS.md) |
+| `/translate` | EN→JA 翻訳（5大ルール + 165語の用語集を自動適用） | [TRANSLATION_GUIDELINES.md](TRANSLATION_GUIDELINES.md), [TRANSLATION_GLOSSARY.md](TRANSLATION_GLOSSARY.md) |
+| `/internal-linking` | HTML後処理リンクパイプライン（辞書更新→ビルド→リンク→検証） | [INTERNAL_LINKING_QUICK_START.md](INTERNAL_LINKING_QUICK_START.md) |
+| `/validate` | フロントマター/テーブル/翻訳/画像参照の品質チェック | [SCRIPTS_USAGE_GUIDE.md](SCRIPTS_USAGE_GUIDE.md) |
+| `/deploy` | デプロイ前後チェックリスト（品質チェック→ビルド→PageSpeed） | [DEPLOYMENT_CHECKLIST.md](DEPLOYMENT_CHECKLIST.md) |
+| `/glossary-pipeline` | 用語集バッチ作成の10ステップ一括実行（CSV→作成→翻訳→リンク） | [SCRIPTS_USAGE_GUIDE.md](SCRIPTS_USAGE_GUIDE.md) |
+| *(自動参照)* | プロジェクトの5大ルール・禁止事項を全作業で自動適用 | この文書 |
+
+### ディレクトリ構造
+
+```
+.claude/skills/
+├── project-knowledge/SKILL.md   ← 背景知識（自動参照、ユーザー呼び出し不可）
+├── create-content/SKILL.md
+├── translate/SKILL.md
+├── internal-linking/SKILL.md
+├── validate/SKILL.md
+├── deploy/SKILL.md
+└── glossary-pipeline/SKILL.md
+```
+
+### 使い方
+
+Claude Code のプロンプトで `/create-content AIエージェントのブログ記事` のように入力すると、対応するスキルが呼び出される。各スキルは既存の `docs/` ドキュメントを動的に参照するため、ドキュメントを更新すればスキルにも自動反映される。
+
+---
+
 ## AIに作業依頼するときのテンプレ（コピペ用）
 
 ```
