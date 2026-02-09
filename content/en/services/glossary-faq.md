@@ -21,7 +21,7 @@ introduction: "A professional glossary serves not only as a knowledge-sharing re
 features:
   - label: "Glossary Production"
     title: "AI-Powered Industry-Specific Glossaries"
-    description: "FlowHunt's multi-agent AI researches industry-relevant terminology and creates accurate, easy-to-understand definitions. We support glossary production starting from 500 terms, with the capability to produce large-scale glossaries of several thousand terms upon request.<br><br>AI rapidly generates first drafts, which are then reviewed and edited by specialists before delivery. This dramatically reduces production time compared to traditional manual methods while maintaining quality. We offer delivery in plain text format as well as fully built Hugo websites."
+    description: "FlowHunt's multi-agent AI researches industry-relevant terminology and creates accurate, easy-to-understand definitions. We support glossary production starting from 500 terms, with the capability to produce large-scale glossaries of several thousand terms upon request.<br><br>Multi-agent AI automatically researches and selects authoritative sources to generate term definitions. A separate AI agent then verifies and enriches the content through a multi-stage process that ensures quality. This dramatically reduces production time compared to traditional manual methods. We offer delivery in plain text format as well as fully built Hugo websites."
     image: "/images/services/glossary-faq/feature-glossary1-e.jpg"
 
   - label: "FAQ Production"
