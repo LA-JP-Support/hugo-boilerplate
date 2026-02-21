@@ -248,8 +248,35 @@
       <div class="mt-6 flow-root">
         <div class="-my-6 divide-y divide-gray-500/10">
           <div class="space-y-2 py-6">
-            {{- range $menuItems -}}
-              <a href="{{ partial "helpers/get-translated-url.html" (dict "url" .url) }}" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">{{ .title }}</a>
+            {{- range $index, $item := $menuItems -}}
+              {{- if $item.dropdown -}}
+                {{- $submenuId := printf "%s-submenu-%d" $mobileMenuId $index -}}
+                <div class="space-y-1">
+                  <div class="flex items-center justify-between -mx-3 rounded-xl hover:bg-gray-50">
+                    <a href="{{ partial "helpers/get-translated-url.html" (dict "url" $item.url) }}" class="flex-1 px-3 py-2 text-base/7 font-semibold text-gray-900">{{ $item.title }}</a>
+                    <button type="button" class="mobile-submenu-button flex items-center justify-center px-3 py-2 text-gray-700" aria-expanded="false" aria-controls="{{ $submenuId }}">
+                      <span class="sr-only">Toggle submenu</span>
+                      <svg class="size-5 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div id="{{ $submenuId }}" class="mobile-submenu hidden pl-3">
+                    <div class="mt-1 space-y-1">
+                      {{- range $child := $item.menuItems -}}
+                        <a href="{{ partial "helpers/get-translated-url.html" (dict "url" $child.url) }}" class="block rounded-lg px-3 py-2 hover:bg-gray-50">
+                          <div class="text-sm font-semibold text-gray-900">{{ $child.title }}</div>
+                          {{ with $child.description }}
+                            <div class="text-sm text-gray-500">{{ . }}</div>
+                          {{ end }}
+                        </a>
+                      {{- end -}}
+                    </div>
+                  </div>
+                </div>
+              {{- else -}}
+                <a href="{{ partial "helpers/get-translated-url.html" (dict "url" $item.url) }}" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">{{ $item.title }}</a>
+              {{- end -}}
             {{- end -}}
           </div>
           <div class="py-6">
@@ -332,6 +359,34 @@
       mobileMenuContent.addEventListener('click', function(event) {
         event.stopPropagation();
       });
+
+      function closeAllMobileSubmenus() {
+        mobileMenu.querySelectorAll('.mobile-submenu').forEach(el => el.classList.add('hidden'));
+        mobileMenu.querySelectorAll('.mobile-submenu-button').forEach(btn => {
+          btn.setAttribute('aria-expanded', 'false');
+          const icon = btn.querySelector('svg');
+          if (icon) icon.classList.remove('rotate-180');
+        });
+      }
+
+      mobileMenu.querySelectorAll('.mobile-submenu-button').forEach(button => {
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const submenuId = button.getAttribute('aria-controls');
+          const submenu = submenuId ? document.getElementById(submenuId) : null;
+          if (!submenu) return;
+
+          const isOpen = button.getAttribute('aria-expanded') === 'true';
+          closeAllMobileSubmenus();
+          if (!isOpen) {
+            submenu.classList.remove('hidden');
+            button.setAttribute('aria-expanded', 'true');
+            const icon = button.querySelector('svg');
+            if (icon) icon.classList.add('rotate-180');
+          }
+        });
+      });
       
       function openMobileMenu() {
         mobileMenuButton.setAttribute('aria-expanded', 'true');
@@ -342,11 +397,13 @@
         
         mobileMenuContent.classList.remove('translate-x-full');
         document.body.classList.add('overflow-hidden');
+        closeAllMobileSubmenus();
       }
       
       function closeMobileMenu() {
         mobileMenuButton.setAttribute('aria-expanded', 'false');
         mobileMenuContent.classList.add('translate-x-full');
+        closeAllMobileSubmenus();
         
         // Hide after transition completes
         setTimeout(() => {
