@@ -1,0 +1,96 @@
+{{ define "main" }}
+<div class="bg-white">
+  <div class="wrapper py-6 sm:py-8">
+    <div class="mx-auto max-w-3xl">
+      <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{{ .Title }}</h1>
+      {{ with .Params.description }}
+        <p class="mt-3 text-base leading-7 text-gray-600">{{ . }}</p>
+      {{ end }}
+
+      <nav class="mt-6 flex flex-wrap gap-2">
+        <a href="#cta-image" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-gray-900 shadow-sm hover:bg-gray-50">03 CTA + Image</a>
+        <a href="#cta-features" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-gray-900 shadow-sm hover:bg-gray-50">04 CTA + Features</a>
+      </nav>
+
+      {{ with .Content }}
+        <div class="mt-10 prose max-w-none">{{ . }}</div>
+      {{ end }}
+    </div>
+  </div>
+
+  <div id="cta-image" class="scroll-mt-24">
+    <div class="wrapper">
+      <div class="mx-auto max-w-3xl">
+        <div class="flex items-start gap-4">
+          <div class="mt-0.5 inline-flex size-9 items-center justify-center rounded-xl bg-gray-100 text-xs font-bold text-gray-900">03</div>
+          <div>
+            <h2 class="text-xl font-bold tracking-tight text-gray-900">CTA + Image</h2>
+            <p class="mt-1.5 text-sm leading-6 text-gray-600">画像付きの2カラムCTA。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="mx-auto max-w-5xl rounded-2xl border border-gray-200 overflow-hidden">
+        {{ partial "sections/cta/split_with_image.html" (dict
+          "theme" "light"
+          "outerSpacing" "my-0"
+          "contentClass" "relative mx-auto max-w-5xl py-8 sm:py-10 lg:px-8"
+          "innerClass" "px-4 py-4 sm:px-6 sm:py-6 md:ml-auto md:w-2/3 md:pl-10 lg:w-1/2 lg:pr-0 lg:pl-12"
+          "tagline" "無料相談"
+          "taglineClass" "text-xs/6 not-prose font-semibold text-primary-500"
+          "heading" "「AIの導入は気になるけど、FlowHuntの設定やナレッジベースの構築まで手が回らない」"
+          "headingClass" "mt-2 text-xl sm:text-2xl not-prose font-semibold tracking-tight text-heading"
+          "description" "という場合は、<strong>SmartWeb</strong>にご相談ください。LiveAgent + FlowHuntの設計・構築はもちろん、運用開始後のナレッジベースのブラッシュアップや継続的な改善もお手伝いしています。"
+          "descriptionClass" "mt-3 text-sm/6 not-prose text-secondary prose-links"
+          "descriptionSafe" true
+          "cta" (dict "text" "無料相談" "url" "/ja/contact/")
+          "ctaVariant" "primary"
+          "image" (dict "url" "/images/blog/helpdesk-ai-pricing-comparison.png" "alt" "CTA image")
+          "taglineColor" "primary-400"
+        ) }}
+      </div>
+    </div>
+  </div>
+
+  <div id="cta-features" class="scroll-mt-24">
+    <div class="wrapper">
+      <div class="mx-auto max-w-3xl">
+        <div class="flex items-start gap-4">
+          <div class="mt-0.5 inline-flex size-9 items-center justify-center rounded-xl bg-gray-100 text-xs font-bold text-gray-900">04</div>
+          <div>
+            <h2 class="text-xl font-bold tracking-tight text-gray-900">CTA + Features</h2>
+            <p class="mt-1.5 text-sm leading-6 text-gray-600">説明 + 特徴リスト + 画像 のCTA。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper mt-4">
+      <div class="rounded-2xl border border-gray-200 overflow-hidden">
+        {{ partial "sections/cta/two_columns_with_photo_on_dark.html" (dict
+          "outerSpacing" ""
+          "sectionPadding" "py-7 sm:py-9"
+          "panelClass" "mx-auto flex max-w-2xl flex-col gap-8 bg-white/5 px-4 py-6 ring-1 ring-white/10 sm:rounded-none sm:p-6 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-8 xl:gap-x-10 xl:px-10"
+          "imageClass" "h-56 w-full flex-none rounded-xl object-cover shadow-md lg:aspect-square lg:h-auto lg:max-w-[14rem]"
+          "heading" "導入の流れも含めて\u003cbr\u003eまとめて支援します"
+          "headingClass" "text-xl sm:text-2xl font-semibold tracking-tight text-pretty text-white"
+          "description" "無料相談で、要件整理・概算費用・導入スケジュールまで一緒に整理します。"
+          "descriptionClass" "mt-3 text-sm/6 text-pretty text-gray-300"
+          "listClass" "mt-5 grid grid-cols-1 gap-x-6 gap-y-2 text-sm/6 text-white sm:grid-cols-2"
+          "features" (slice
+            "通常1営業日以内にご回答"
+            "初期設定まで完了した状態で納品"
+            "運用の改善まで伴走支援"
+            "日本語での手厚いサポート"
+          )
+          "cta" (dict "text" "無料相談する" "url" "/ja/contact/")
+          "ctaColor" "primary-400"
+          "image" (dict "url" "/images/blog/helpdesk-ai-pricing-comparison.png" "alt" "Feature CTA image")
+        ) }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

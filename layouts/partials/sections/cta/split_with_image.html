@@ -44,7 +44,23 @@
 {{ $image := .image }}
 {{ $taglineColor := .taglineColor | default "primary-400" }}
 
-<div class="{{ $darkClass }} my-24 sm:my-32">
+{{ $headingSafe := .headingSafe | default false }}
+{{ $descriptionSafe := .descriptionSafe | default false }}
+
+{{ $outerSpacing := .outerSpacing | default "my-24 sm:my-32" }}
+{{ $contentClass := .contentClass | default "relative mx-auto max-w-7xl py-24 sm:py-32 lg:px-16 lg:py-40" }}
+{{ $outerWrapperClass := .outerWrapperClass | default "" }}
+
+{{ $innerClass := .innerClass | default "pr-6 pl-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pr-0 lg:pl-24 xl:pl-32" }}
+{{ $taglineClass := .taglineClass | default (printf "text-base/7 not-prose font-semibold text-%s" $taglineColor) }}
+{{ $headingClass := .headingClass | default "mt-2.5 text-4xl not-prose font-semibold tracking-tight text-heading sm:text-5xl" }}
+{{ $descriptionClass := .descriptionClass | default "mt-6 text-base/7 not-prose text-secondary prose-links" }}
+
+{{ $ctaVariant := .ctaVariant | default "secondary" }}
+{{ $ctaSize := .ctaSize | default "" }}
+{{ $ctaClasses := .ctaClasses | default "" }}
+
+<div class="{{ $darkClass }} {{ $outerSpacing }} {{ $outerWrapperClass }}">
   <div class="relative section-bg-light dark:section-bg-dark">
     <div class="relative h-full overflow-hidden bg-primary not-prose md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
       {{ partial "components/media/lazyimg.html" (dict 
@@ -53,24 +69,27 @@
         "class" "size-full object-cover"
       ) }}
     </div>
-    <div class="relative mx-auto max-w-7xl py-24 sm:py-32 lg:px-16 lg:py-40">
-      <div class="pr-6 pl-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pr-0 lg:pl-24 xl:pl-32">
+    <div class="{{ $contentClass }}">
+      <div class="{{ $innerClass }}">
         {{ if $tagline }}
-          <h2 class="text-base/7 not-prose font-semibold text-{{ $taglineColor }}">{{ $tagline }}</h2>
+          <h2 class="{{ $taglineClass }}">{{ $tagline }}</h2>
         {{ end }}
         {{ if $heading }}
-          <p class="mt-2.5 text-4xl not-prose font-semibold tracking-tight text-heading sm:text-5xl">{{ $heading }}</p>
+          <p class="{{ $headingClass }}">{{ cond $headingSafe ($heading | safeHTML) $heading }}</p>
         {{ end }}
         {{ if $description }}
-          <p class="mt-6 text-base/7 not-prose text-secondary prose-links">{{ $description }}</p>
+          <p class="{{ $descriptionClass }}">{{ cond $descriptionSafe ($description | safeHTML) $description }}</p>
         {{ end }}
         {{ if and $cta $cta.text $cta.url }}
           <div class="mt-8">
-            {{ partial "components/buttons/buttons.html" (dict
-              "text" $cta.text
-              "url" $cta.url
-              "variant" "secondary"
-              ) }}
+            {{ $btnParams := dict "text" $cta.text "url" $cta.url "variant" $ctaVariant }}
+            {{ if $ctaSize }}
+              {{ $btnParams = merge $btnParams (dict "size" $ctaSize) }}
+            {{ end }}
+            {{ if $ctaClasses }}
+              {{ $btnParams = merge $btnParams (dict "classes" $ctaClasses) }}
+            {{ end }}
+            {{ partial "components/buttons/buttons.html" $btnParams }}
           </div>
         {{ end }}
       </div>
