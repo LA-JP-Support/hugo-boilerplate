@@ -44,9 +44,22 @@
 {{ $description := .Get "description" }}
 {{ $ctaText := .Get "cta-text" }}
 {{ $ctaUrl := .Get "cta-url" }}
+{{ $ctaVariant := .Get "cta-variant" }}
+{{ $ctaSize := .Get "cta-size" }}
+{{ $ctaClasses := .Get "cta-classes" }}
 {{ $imageUrl := .Get "image-url" }}
 {{ $imageAlt := .Get "image-alt" }}
 {{ $taglineColor := .Get "tagline-color" }}
+{{ $headingSafe := .Get "heading-safe" }}
+{{ $descriptionSafe := .Get "description-safe" }}
+
+{{ $outerSpacing := .Get "outer-spacing" }}
+{{ $outerWrapperClass := .Get "outer-wrapper-class" }}
+{{ $contentClass := .Get "content-class" }}
+{{ $innerClass := .Get "inner-class" }}
+{{ $taglineClass := .Get "tagline-class" }}
+{{ $headingClass := .Get "heading-class" }}
+{{ $descriptionClass := .Get "description-class" }}
 
 {{/* Build parameters dict for the partial */}}
 {{ $params := dict }}
@@ -67,6 +80,14 @@
   {{ $params = merge $params (dict "description" $description) }}
 {{ end }}
 
+{{ if $headingSafe }}
+  {{ $params = merge $params (dict "headingSafe" (eq (lower $headingSafe) "true")) }}
+{{ end }}
+
+{{ if $descriptionSafe }}
+  {{ $params = merge $params (dict "descriptionSafe" (eq (lower $descriptionSafe) "true")) }}
+{{ end }}
+
 {{ if or $ctaText $ctaUrl }}
   {{ $cta := dict }}
   {{ if $ctaText }}
@@ -76,6 +97,18 @@
     {{ $cta = merge $cta (dict "url" $ctaUrl) }}
   {{ end }}
   {{ $params = merge $params (dict "cta" $cta) }}
+{{ end }}
+
+{{ if $ctaVariant }}
+  {{ $params = merge $params (dict "ctaVariant" $ctaVariant) }}
+{{ end }}
+
+{{ if $ctaSize }}
+  {{ $params = merge $params (dict "ctaSize" $ctaSize) }}
+{{ end }}
+
+{{ if $ctaClasses }}
+  {{ $params = merge $params (dict "ctaClasses" $ctaClasses) }}
 {{ end }}
 
 {{ if or $imageUrl $imageAlt }}
@@ -91,6 +124,34 @@
 
 {{ if $taglineColor }}
   {{ $params = merge $params (dict "taglineColor" $taglineColor) }}
+{{ end }}
+
+{{ if $outerSpacing }}
+  {{ $params = merge $params (dict "outerSpacing" $outerSpacing) }}
+{{ end }}
+
+{{ if $outerWrapperClass }}
+  {{ $params = merge $params (dict "outerWrapperClass" $outerWrapperClass) }}
+{{ end }}
+
+{{ if $contentClass }}
+  {{ $params = merge $params (dict "contentClass" $contentClass) }}
+{{ end }}
+
+{{ if $innerClass }}
+  {{ $params = merge $params (dict "innerClass" $innerClass) }}
+{{ end }}
+
+{{ if $taglineClass }}
+  {{ $params = merge $params (dict "taglineClass" $taglineClass) }}
+{{ end }}
+
+{{ if $headingClass }}
+  {{ $params = merge $params (dict "headingClass" $headingClass) }}
+{{ end }}
+
+{{ if $descriptionClass }}
+  {{ $params = merge $params (dict "descriptionClass" $descriptionClass) }}
 {{ end }}
 
 {{/* Render the partial with the parameters */}}

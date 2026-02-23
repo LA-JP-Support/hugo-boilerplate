@@ -124,10 +124,10 @@ nav { display: flex; }
 </style>
 <!-- Main CSS - Async loading to prevent render blocking -->
 <link rel="preload" href="/css/main.css?v={{ partialCached "helpers/build-timestamp.html" . }}" as="style">
-<link rel="stylesheet" href="/css/main.css?v={{ partialCached "helpers/build-timestamp.html" . }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="/css/main.css?v={{ partialCached "helpers/build-timestamp.html" . }}">
 <noscript><link rel="stylesheet" href="/css/main.css?v={{ partialCached "helpers/build-timestamp.html" . }}"></noscript>
 <!-- Custom CSS for code blocks and blockquotes - Async -->
-<link rel="stylesheet" href="/css/custom-code-blockquote.css?v={{ partialCached "helpers/build-timestamp.html" . }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="/css/custom-code-blockquote.css?v={{ partialCached "helpers/build-timestamp.html" . }}">
 <noscript><link rel="stylesheet" href="/css/custom-code-blockquote.css?v={{ partialCached "helpers/build-timestamp.html" . }}"></noscript>
 <!-- KaTeX for math rendering -->
 {{ partial "head/katex.html" . }}

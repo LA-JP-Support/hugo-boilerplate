@@ -56,20 +56,29 @@
 {{ $ctaColor := .ctaColor | default "indigo-400" }}
 {{ $checkIcon := .checkIcon | default "check" }}
 
-<div class="bg-gray-900 py-24 sm:py-32">
+{{ $outerSpacing := .outerSpacing | default "" }}
+{{ $sectionPadding := .sectionPadding | default "py-24 sm:py-32" }}
+{{ $panelClass := .panelClass | default "mx-auto flex max-w-2xl flex-col gap-16 bg-white/5 px-6 py-16 ring-1 ring-white/10 sm:rounded-xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20" }}
+
+{{ $imageClass := .imageClass | default "h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm" }}
+{{ $headingClass := .headingClass | default "text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl" }}
+{{ $descriptionClass := .descriptionClass | default "mt-6 text-lg/8 text-pretty text-gray-300" }}
+{{ $listClass := .listClass | default "mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base/7 text-white sm:grid-cols-2" }}
+
+<div class="bg-gray-900 {{ $sectionPadding }} {{ $outerSpacing }}">
   <div class="relative isolate">
     <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-      <div class="mx-auto flex max-w-2xl flex-col gap-16 bg-white/5 px-6 py-16 ring-1 ring-white/10 sm:rounded-xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
+      <div class="{{ $panelClass }}">
         {{ partial "components/media/lazyimg.html" (dict 
           "src" $image.url 
           "alt" $image.alt 
-          "class" "h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm"
+          "class" $imageClass
           "maxWidth" 600
         ) }}
         <div class="w-full flex-auto">
-          <h2 class="text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl">{{ $heading }}</h2>
-          <p class="mt-6 text-lg/8 text-pretty text-gray-300">{{ $description }}</p>
-          <ul role="list" class="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base/7 text-white sm:grid-cols-2">
+          <h2 class="{{ $headingClass }}">{{ $heading }}</h2>
+          <p class="{{ $descriptionClass }}">{{ $description }}</p>
+          <ul role="list" class="{{ $listClass }}">
             {{ range $features }}
             <li class="flex gap-x-3">
               {{ partial "components/media/icon.html" (dict "icon" $checkIcon) }}
