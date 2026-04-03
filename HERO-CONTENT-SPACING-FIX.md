@@ -124,7 +124,7 @@
 ### ステップ1：サーバーを再起動
 
 ```bash
-cd /Users/TM-MBP1/Documents/GitHub/hugo-boilerplate
+cd /Users/TM-MBP1/Documents/GitHub/smartweb
 hugo server -D
 ```
 

@@ -24,7 +24,7 @@
 
 すべてのスクリプトは`.env`ファイルからAPI Keyを読み込みます。
 
-**ファイルパス**: `/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/.env`
+**ファイルパス**: `/Users/TM-MBP1/Documents/GitHub/smartweb/.env`
 
 **内容**:
 ```bash
@@ -36,7 +36,7 @@ CLAUDE_API_KEY="sk-ant-api03-your-key-here"
 ### 必要なPythonパッケージ
 
 ```bash
-cd /Users/TM-MBP1/Documents/GitHub/hugo-boilerplate
+cd /Users/TM-MBP1/Documents/GitHub/smartweb
 pip install -r scripts/requirements.txt
 
 # または個別インストール
@@ -955,7 +955,7 @@ python scripts/batch_create_from_csv.py --workers 2
 
 ```bash
 # プロジェクトルートから実行
-cd /Users/TM-MBP1/Documents/GitHub/hugo-boilerplate
+cd /Users/TM-MBP1/Documents/GitHub/smartweb
 python scripts/batch_create_from_csv.py
 
 # ディレクトリ作成（存在しない場合）

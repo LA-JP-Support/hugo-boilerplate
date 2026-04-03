@@ -160,7 +160,7 @@ def fix_content(content: str, filename: str) -> tuple[str, list[str]]:
 
 
 def main():
-    blog_dir = Path('/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/content/ja/blog')
+    blog_dir = Path('/Users/TM-MBP1/Documents/GitHub/smartweb/content/ja/blog')
     
     print("=" * 60)
     print("ブログMDファイル一括修正")

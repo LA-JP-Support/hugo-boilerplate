@@ -21,7 +21,7 @@
 ターミナルで以下を実行：
 
 ```bash
-cd /Users/taka/Documents/GitHub/hugo-boilerplate
+cd /Users/taka/Documents/GitHub/smartweb
 npm run build
 ```
 
@@ -218,7 +218,7 @@ console.log(window.particleBackground.config)
 または、コマンドライン：
 
 ```bash
-cd /Users/taka/Documents/GitHub/hugo-boilerplate
+cd /Users/taka/Documents/GitHub/smartweb
 git add assets/css/particles.css assets/js/particles.js
 git add assets/css/main.css assets/js/main.js
 git commit -m "Add particle background effect"

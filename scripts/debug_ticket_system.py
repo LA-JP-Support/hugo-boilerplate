@@ -4,7 +4,7 @@
 from pathlib import Path
 import re
 
-glossary_dir = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/content/en/glossary")
+glossary_dir = Path("/Users/TM-MBP1/Documents/GitHub/smartweb/content/en/glossary")
 
 # Check if Ticket-System.md exists
 ticket_system_file = glossary_dir / "Ticket-System.md"

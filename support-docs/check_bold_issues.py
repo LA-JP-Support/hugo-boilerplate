@@ -51,7 +51,7 @@ def scan_directory(base_path):
     return all_issues
 
 if __name__ == '__main__':
-    base_path = '/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/support-docs/content/ja/docs'
+    base_path = '/Users/TM-MBP1/Documents/GitHub/smartweb/support-docs/content/ja/docs'
     
     print(f"Scanning: {base_path}\n")
     issues = scan_directory(base_path)

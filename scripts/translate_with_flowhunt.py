@@ -18,7 +18,7 @@ Examples:
     python translate_with_flowhunt.py
     
     # With explicit path
-    python translate_with_flowhunt.py --path /Users/username/work/hugo-boilerplate/content
+    python translate_with_flowhunt.py --path /Users/username/work/smartweb/content
     
     # With custom flow and workspace IDs
     python translate_with_flowhunt.py --flow-id "custom-flow-id"

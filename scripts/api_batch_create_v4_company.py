@@ -27,7 +27,7 @@ MODEL = "claude-sonnet-4-5-20250929"  # 英語記事生成
 TRANSLATION_MODEL = "claude-sonnet-4-5-20250929"  # 日本語翻訳
 
 # ディレクトリ設定
-BASE_DIR = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate")
+BASE_DIR = Path("/Users/TM-MBP1/Documents/GitHub/smartweb")
 EN_OUTPUT_DIR = BASE_DIR / "content/en/glossary"
 JA_OUTPUT_DIR = BASE_DIR / "content/ja/glossary"
 

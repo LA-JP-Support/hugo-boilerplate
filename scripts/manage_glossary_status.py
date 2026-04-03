@@ -4,7 +4,7 @@
 import csv
 from pathlib import Path
 
-BASE_DIR = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate")
+BASE_DIR = Path("/Users/TM-MBP1/Documents/GitHub/smartweb")
 CSV_FILE = BASE_DIR / "docs/prioritized_keywords.csv"
 EN_DIR = BASE_DIR / "content/en/glossary"
 JA_DIR = BASE_DIR / "content/ja/glossary"

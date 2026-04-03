@@ -174,7 +174,7 @@ header { position: sticky; top: 0; z-index: 50; background-color: #fff; }
 ### 1. ローカルでビルド
 
 ```bash
-cd /Users/TM-MBP1/Documents/GitHub/hugo-boilerplate
+cd /Users/TM-MBP1/Documents/GitHub/smartweb
 hugo --minify
 ```
 
@@ -207,7 +207,7 @@ https://pagespeed.web.dev/ でデプロイ後のURLをテスト
 
 - [YOUTUBE-IMPLEMENTATION.md](./YOUTUBE-IMPLEMENTATION.md) - YouTube実装詳細
 - [YOUTUBE-ROUNDED-STYLE.md](./YOUTUBE-ROUNDED-STYLE.md) - YouTubeスタイリング
-- [hugo-boilerplate-technical-documentation.md](./hugo-boilerplate-technical-documentation.md) - 全体技術仕様
+- [smartweb-technical-documentation.md](./smartweb-technical-documentation.md) - 全体技術仕様
 
 ---
 

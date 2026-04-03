@@ -132,7 +132,7 @@ Summary:
 ## 📁 ファイル構成
 
 ```
-hugo-boilerplate/
+smartweb/
 ├── scripts/
 │   ├── convert_tooltips_to_links.py      # メインスクリプト (v4)
 │   └── convert_tooltips_to_links_v4.py   # バックアップ

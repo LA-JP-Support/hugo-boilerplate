@@ -91,7 +91,7 @@ python3 -m http.server 1313 --bind 127.0.0.1 --directory public
 ## 📁 ディレクトリ構造
 
 ```
-hugo-boilerplate/
+smartweb/
 ├── content/                # Markdownソース
 │   ├── en/
 │   └── ja/

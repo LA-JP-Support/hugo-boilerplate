@@ -8,9 +8,9 @@ import csv
 from pathlib import Path
 
 # パス設定
-CSV_PATH = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/docs/prioritized_keywords.csv")
-EN_DIR = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/content/en/glossary")
-JA_DIR = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/content/ja/glossary")
+CSV_PATH = Path("/Users/TM-MBP1/Documents/GitHub/smartweb/docs/prioritized_keywords.csv")
+EN_DIR = Path("/Users/TM-MBP1/Documents/GitHub/smartweb/content/en/glossary")
+JA_DIR = Path("/Users/TM-MBP1/Documents/GitHub/smartweb/content/ja/glossary")
 
 def update_csv_status():
     """CSVステータスを実ファイル存在状況に基づいて更新"""

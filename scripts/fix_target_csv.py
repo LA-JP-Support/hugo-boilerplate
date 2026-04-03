@@ -1,7 +1,7 @@
 import csv
 
-source_file = '/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/docs/glossaries_flowhunt.csv'
-target_file = '/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/docs/target_generation.csv'
+source_file = '/Users/TM-MBP1/Documents/GitHub/smartweb/docs/glossaries_flowhunt.csv'
+target_file = '/Users/TM-MBP1/Documents/GitHub/smartweb/docs/target_generation.csv'
 target_filename = 'Natural-Language-Processing--NLP-.md'
 
 print(f"Reading from {source_file}...")

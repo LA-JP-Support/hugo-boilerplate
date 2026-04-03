@@ -232,7 +232,7 @@
 ### 1. サーバーを起動
 
 ```bash
-cd /Users/TM-MBP1/Documents/GitHub/hugo-boilerplate
+cd /Users/TM-MBP1/Documents/GitHub/smartweb
 hugo server -D
 ```
 
@@ -259,7 +259,7 @@ http://localhost:1313/en/glossary/botpress/
 もし元のデザインに戻したい場合：
 
 ```bash
-cd /Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/layouts/glossary
+cd /Users/TM-MBP1/Documents/GitHub/smartweb/layouts/glossary
 mv single.html single-improved.html
 mv single-original-backup.html single.html
 ```

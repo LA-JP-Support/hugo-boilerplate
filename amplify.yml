@@ -1,6 +1,6 @@
 version: 1
 applications:
-  # Main site (hugo-boilerplate) - appRoot: .
+  # Main site (smartweb) - appRoot: .
   - appRoot: .
     frontend:
       phases:

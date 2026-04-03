@@ -7,7 +7,7 @@ Generate batch lists for glossary optimization
 import os
 from pathlib import Path
 
-GLOSSARY_EN = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/content/en/glossary")
+GLOSSARY_EN = Path("/Users/TM-MBP1/Documents/GitHub/smartweb/content/en/glossary")
 
 # 除外するファイル
 EXCLUDE = [

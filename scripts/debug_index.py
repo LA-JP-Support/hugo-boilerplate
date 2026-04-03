@@ -140,5 +140,5 @@ class DebugTooltipConverter:
         return ' '.join(text.lower().strip().split())
 
 # Run debug
-glossary_dir = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/content/en/glossary")
+glossary_dir = Path("/Users/TM-MBP1/Documents/GitHub/smartweb/content/en/glossary")
 converter = DebugTooltipConverter(glossary_dir, lang="en")

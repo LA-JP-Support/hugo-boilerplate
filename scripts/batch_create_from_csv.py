@@ -20,8 +20,8 @@ load_dotenv()
 # 設定
 API_KEY = os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("CLAUDE_API_KEY")
 MODEL = "claude-sonnet-4-5-20250929"
-OUTPUT_DIR = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/content/en/glossary")
-DEFAULT_CSV_PATH = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/docs/prioritized_keywords.csv")
+OUTPUT_DIR = Path("/Users/TM-MBP1/Documents/GitHub/smartweb/content/en/glossary")
+DEFAULT_CSV_PATH = Path("/Users/TM-MBP1/Documents/GitHub/smartweb/docs/prioritized_keywords.csv")
 
 def needs_article(keyword: str) -> bool:
     """冠詞が必要かを判定"""

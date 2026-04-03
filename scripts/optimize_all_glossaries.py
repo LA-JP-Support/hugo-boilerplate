@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-GLOSSARY_EN = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/content/en/glossary")
+GLOSSARY_EN = Path("/Users/TM-MBP1/Documents/GitHub/smartweb/content/en/glossary")
 OPTIMIZATION_PROMPT = """You are optimizing a glossary article for content marketing. Transform this article following these guidelines:
 
 **Target Length:** 2,600-2,800 words

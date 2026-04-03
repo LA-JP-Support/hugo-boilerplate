@@ -30,7 +30,7 @@
 ## ディレクトリ構成
 
 ```
-hugo-boilerplate/
+smartweb/
 ├── content/                    # 本番コンテンツ（リンク付き）
 │   ├── ja/blog/
 │   └── en/blog/
@@ -59,7 +59,7 @@ hugo-boilerplate/
 現在の内部リンク付きMDから、リンクを除去したクリーン版を作成します。
 
 ```bash
-cd /Users/TM-MBP1/Documents/GitHub/hugo-boilerplate
+cd /Users/TM-MBP1/Documents/GitHub/smartweb
 
 # 日本語ブログをクリーン化
 python3 scripts/create_clean_content.py \

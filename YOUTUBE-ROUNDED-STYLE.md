@@ -267,7 +267,7 @@
 ## 📚 関連ドキュメント
 
 - [YOUTUBE-IMPLEMENTATION.md](./YOUTUBE-IMPLEMENTATION.md) - 実装詳細
-- [hugo-boilerplate-technical-documentation.md](./hugo-boilerplate-technical-documentation.md) - 全体技術仕様
+- [smartweb-technical-documentation.md](./smartweb-technical-documentation.md) - 全体技術仕様
 
 ---
 

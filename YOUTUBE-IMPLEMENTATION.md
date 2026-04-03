@@ -201,7 +201,7 @@ YouTubeのサムネイルURLを確認:
 ## 📚 関連ドキュメント
 
 - [YOUTUBE-ROUNDED-STYLE.md](./YOUTUBE-ROUNDED-STYLE.md) - スタイリング詳細
-- [hugo-boilerplate-technical-documentation.md](./hugo-boilerplate-technical-documentation.md) - 全体技術仕様
+- [smartweb-technical-documentation.md](./smartweb-technical-documentation.md) - 全体技術仕様
 
 ---
 

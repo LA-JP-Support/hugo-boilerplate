@@ -119,7 +119,7 @@ hugo --cleanDestinationDir --minify
 
 ## 🔄 メインサイトとの関係
 
-### メインサイト (hugo-boilerplate/)
+### メインサイト (smartweb/)
 - ブログ
 - 用語集
 - サービス紹介

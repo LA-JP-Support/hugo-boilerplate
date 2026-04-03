@@ -7,7 +7,7 @@
       "original_keywords": 4,
       "found_keywords": 4,
       "reduction_percent": 0.0,
-      "output_file": "/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/data/linkbuilding/optimized/ja_optimized.json"
+      "output_file": "/Users/TM-MBP1/Documents/GitHub/smartweb/data/linkbuilding/optimized/ja_optimized.json"
     },
     {
       "language": "en",
@@ -16,7 +16,7 @@
       "original_keywords": 350,
       "found_keywords": 2,
       "reduction_percent": 99.4,
-      "output_file": "/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/data/linkbuilding/optimized/en_optimized.json"
+      "output_file": "/Users/TM-MBP1/Documents/GitHub/smartweb/data/linkbuilding/optimized/en_optimized.json"
     }
   ],
   "summary": {

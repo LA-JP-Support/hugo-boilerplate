@@ -52,8 +52,8 @@ exports.watch = watch;      // ファイル監視
 
 ```bash
 # リポジトリクローン
-git clone https://github.com/LA-JP-Support/hugo-boilerplate.git
-cd hugo-boilerplate
+git clone https://github.com/LA-JP-Support/smartweb.git
+cd smartweb
 
 # 依存関係インストール
 npm install
@@ -92,7 +92,7 @@ hugo --minify
 ### ディレクトリ構造
 
 ```
-hugo-boilerplate/
+smartweb/
 ├── 📁 assets/              # ソースファイル
 │   ├── css/               # CSS ソース
 │   │   ├── main.css      # メインエントリー
@@ -363,8 +363,8 @@ cwebp -version
 |------------|------|
 | README.md | プロジェクト概要 |
 | SCRIPTS_README.md | スクリプト仕様 |
-| hugo-boilerplate-technical-documentation.md | 技術仕様書 |
-| hugo-boilerplate-scripts-documentation.md | スクリプト詳細 |
+| smartweb-technical-documentation.md | 技術仕様書 |
+| smartweb-scripts-documentation.md | スクリプト詳細 |
 | PROJECT-COMPLETION.md | ツールチップシステム完成報告 |
 
 ---
@@ -399,7 +399,7 @@ brew upgrade hugo  # macOS
 
 ### 開発チーム
 - **組織**: SmartWeb/Interwork Corporation
-- **リポジトリ**: https://github.com/LA-JP-Support/hugo-boilerplate
+- **リポジトリ**: https://github.com/LA-JP-Support/smartweb
 - **公開URL**: https://main.d1jtfhinlastnr.amplifyapp.com/
 
 ### 技術スタック バージョン要件

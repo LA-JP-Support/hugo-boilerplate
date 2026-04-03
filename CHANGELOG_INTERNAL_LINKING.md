@@ -293,5 +293,5 @@ python3 scripts/linkbuilding_parallel.py \
 ---
 
 **Maintained by**: Takazumi  
-**Repository**: hugo-boilerplate  
+**Repository**: smartweb  
 **Last Updated**: 2026-01-07

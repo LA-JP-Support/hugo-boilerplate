@@ -19,7 +19,7 @@ load_dotenv()
 # 設定
 API_KEY = os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("CLAUDE_API_KEY")
 MODEL = "claude-sonnet-4-20250514"
-OUTPUT_DIR = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/content/en/glossary")
+OUTPUT_DIR = Path("/Users/TM-MBP1/Documents/GitHub/smartweb/content/en/glossary")
 
 def needs_article(keyword: str) -> bool:
     """冠詞が必要かを判定"""
@@ -306,7 +306,7 @@ def main():
         if args.output_dir:
             output_dir = Path(args.output_dir)
         else:
-            output_dir = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/content/en/glossary-api-test-v3")
+            output_dir = Path("/Users/TM-MBP1/Documents/GitHub/smartweb/content/en/glossary-api-test-v3")
         print(f"🧪 テストモード（文法修正版v3）: {output_dir}")
     else:
         output_dir = OUTPUT_DIR

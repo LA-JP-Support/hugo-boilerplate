@@ -3,7 +3,7 @@
 ## 📍 ファイルの場所
 
 ```
-/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/static/css/custom-code-blockquote.css
+/Users/TM-MBP1/Documents/GitHub/smartweb/static/css/custom-code-blockquote.css
 ```
 
 ---
@@ -263,13 +263,13 @@ pre code {
 ### 1. CSSファイルを編集
 
 ```bash
-nano /Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/static/css/custom-code-blockquote.css
+nano /Users/TM-MBP1/Documents/GitHub/smartweb/static/css/custom-code-blockquote.css
 ```
 
 ### 2. サーバーを再起動
 
 ```bash
-cd /Users/TM-MBP1/Documents/GitHub/hugo-boilerplate
+cd /Users/TM-MBP1/Documents/GitHub/smartweb
 hugo server -D
 ```
 

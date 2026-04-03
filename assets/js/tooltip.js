@@ -1,6 +1,6 @@
 /**
  * Smart Tooltip System - JavaScript
- * hugo-boilerplate用に最適化
+ * smartweb用に最適化
  * Tailwind CSSクラスベースの実装
  */
 

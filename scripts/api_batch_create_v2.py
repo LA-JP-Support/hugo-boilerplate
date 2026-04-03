@@ -18,7 +18,7 @@ load_dotenv()
 # 設定
 API_KEY = os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("CLAUDE_API_KEY")
 MODEL = "claude-sonnet-4-20250514"
-OUTPUT_DIR = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/content/en/glossary")
+OUTPUT_DIR = Path("/Users/TM-MBP1/Documents/GitHub/smartweb/content/en/glossary")
 
 # 改善版プロンプト
 ARTICLE_PROMPT = """You are an expert technical writer creating a comprehensive glossary article.
@@ -255,7 +255,7 @@ def main():
         if args.output_dir:
             output_dir = Path(args.output_dir)
         else:
-            output_dir = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/content/en/glossary-api-test-v2")
+            output_dir = Path("/Users/TM-MBP1/Documents/GitHub/smartweb/content/en/glossary-api-test-v2")
         print(f"🧪 テストモード（改善版）: {output_dir}")
     else:
         output_dir = OUTPUT_DIR

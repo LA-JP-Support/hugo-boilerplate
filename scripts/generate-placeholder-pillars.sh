@@ -3,7 +3,7 @@
 # Generate placeholder images for pillars section
 # Requires ImageMagick to be installed
 
-OUTPUT_DIR="/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/static/images/pillars"
+OUTPUT_DIR="/Users/TM-MBP1/Documents/GitHub/smartweb/static/images/pillars"
 
 # Image dimensions (matches 60% aspect ratio used in CSS)
 WIDTH=1200

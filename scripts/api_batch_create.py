@@ -20,7 +20,7 @@ load_dotenv()
 # 設定
 API_KEY = os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("CLAUDE_API_KEY")
 MODEL = "claude-sonnet-4-5-20250929" # User specified model
-OUTPUT_DIR = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/content/en/glossary")
+OUTPUT_DIR = Path("/Users/TM-MBP1/Documents/GitHub/smartweb/content/en/glossary")
 
 # 記事生成用プロンプトテンプレート
 ARTICLE_PROMPT = """Create a comprehensive glossary article for: {keyword}
@@ -148,7 +148,7 @@ def batch_generate(keywords: list, output_dir: Path, max_workers: int = 5, limit
     output_dir.mkdir(parents=True, exist_ok=True)
     
     # 既存チェック（本番ディレクトリと出力先ディレクトリの両方を確認）
-    production_dir = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/content/en/glossary")
+    production_dir = Path("/Users/TM-MBP1/Documents/GitHub/smartweb/content/en/glossary")
     existing_files = {f.stem.lower() for f in output_dir.glob("*.md")}
     if production_dir.exists():
         existing_files.update(f.stem.lower() for f in production_dir.glob("*.md"))
@@ -249,7 +249,7 @@ def main():
     if args.output_dir:
         output_dir = Path(args.output_dir)
     elif args.test:
-        output_dir = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/content/en/glossary-api-test")
+        output_dir = Path("/Users/TM-MBP1/Documents/GitHub/smartweb/content/en/glossary-api-test")
     else:
         output_dir = OUTPUT_DIR
         

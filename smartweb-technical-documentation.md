@@ -21,7 +21,7 @@
 - **プロジェクト名**: Hugo-Boilerplate Site (SmartWeb/Interwork Corporation)
 - **フレームワーク**: Hugo Static Site Generator
 - **ホスティング**: AWS Amplify
-- **リポジトリ**: LA-JP-Support/hugo-boilerplate (GitHub)
+- **リポジトリ**: LA-JP-Support/smartweb (GitHub)
 - **開発環境**: macOS (複数Mac環境対応)
 - **バージョン管理**: Git/GitHub Desktop
 
@@ -37,7 +37,7 @@
 ## 2. プロジェクト構造
 
 ```
-hugo-boilerplate/
+smartweb/
 ├── archetypes/          # コンテンツテンプレート
 ├── assets/              # 未処理のアセット（CSS/JS）
 │   ├── css/
@@ -799,5 +799,5 @@ rm -rf scripts/.venv
 ## 連絡先
 
 - **開発チーム**: SmartWeb/Interwork Corporation
-- **リポジトリ**: https://github.com/LA-JP-Support/hugo-boilerplate
+- **リポジトリ**: https://github.com/LA-JP-Support/smartweb
 - **公開サイト**: https://main.d1jtfhinlastnr.amplifyapp.com/

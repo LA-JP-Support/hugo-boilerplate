@@ -40,8 +40,8 @@ KEEP_SEPARATE = [
     "Chatbot.md",     # 一般的なチャットボット
 ]
 
-GLOSSARY_EN = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/content/en/glossary")
-GLOSSARY_JA = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/content/ja/glossary")
+GLOSSARY_EN = Path("/Users/TM-MBP1/Documents/GitHub/smartweb/content/en/glossary")
+GLOSSARY_JA = Path("/Users/TM-MBP1/Documents/GitHub/smartweb/content/ja/glossary")
 
 def extract_frontmatter_and_content(filepath):
     """ファイルからfrontmatterと本文を抽出"""

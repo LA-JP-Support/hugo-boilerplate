@@ -174,7 +174,7 @@ This repository contains the following submodules:
 
 ```bash
 # Clone with submodules
-git clone --recursive https://github.com/LA-JP-Support/hugo-boilerplate.git
+git clone --recursive https://github.com/LA-JP-Support/smartweb.git
 
 # Or if already cloned, initialize submodules
 git submodule update --init --recursive
@@ -201,8 +201,8 @@ cd your-hugo-site
 
 # Download the theme
 mkdir -p themes
-curl -L https://github.com/owner/hugo-boilerplate/archive/main.tar.gz | tar -xz -C themes
-mv themes/hugo-boilerplate-main themes/boilerplate
+curl -L https://github.com/owner/smartweb/archive/main.tar.gz | tar -xz -C themes
+mv themes/smartweb-main themes/boilerplate
 
 # Update your Hugo configuration to use the theme
 echo 'theme = "boilerplate"' >> hugo.toml

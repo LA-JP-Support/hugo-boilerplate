@@ -1,6 +1,6 @@
 #!/bin/bash
 # 翻訳バッチ2 - 105件
-cd /Users/TM-MBP1/Documents/GitHub/hugo-boilerplate
+cd /Users/TM-MBP1/Documents/GitHub/smartweb
 
 if [ -z "$ANTHROPIC_API_KEY" ]; then
     echo "❌ ANTHROPIC_API_KEY が設定されていません"
