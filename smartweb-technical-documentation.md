@@ -1,4 +1,4 @@
-# Hugo-Boilerplateプロジェクト 技術仕様書
+# SmartWebプロジェクト 技術仕様書
 
 ## 📋 目次
 
@@ -18,7 +18,7 @@
 ## 1. プロジェクト概要
 
 ### プロジェクト基本情報
-- **プロジェクト名**: Hugo-Boilerplate Site (SmartWeb/Interwork Corporation)
+- **プロジェクト名**: SmartWeb (Interwork Corporation)
 - **フレームワーク**: Hugo Static Site Generator
 - **ホスティング**: AWS Amplify
 - **リポジトリ**: LA-JP-Support/smartweb (GitHub)

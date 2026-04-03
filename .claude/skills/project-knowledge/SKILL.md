@@ -1,10 +1,10 @@
 ---
 name: smartweb-project-knowledge
-description: "SmartWeb Hugo Boilerplateプロジェクトの基本ルール、ディレクトリ構造、禁止事項。全作業の前提知識として自動的に適用される。"
+description: "SmartWebプロジェクトの基本ルール、ディレクトリ構造、禁止事項。全作業の前提知識として自動的に適用される。"
 user-invocable: false
 ---
 
-# SmartWeb Hugo Boilerplate プロジェクト知識
+# SmartWeb プロジェクト知識
 
 ## プロジェクト概要
 

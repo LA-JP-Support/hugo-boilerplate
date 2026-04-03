@@ -1,4 +1,4 @@
-# Hugo-Boilerplate スクリプト詳細仕様書
+# SmartWeb スクリプト詳細仕様書
 
 ## 📋 目次
 

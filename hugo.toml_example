@@ -1,6 +1,6 @@
 baseURL = 'http://localhost:1313/'
 languageCode = 'en-us'
-title = 'Hugo Boilerplate'
+title = 'SmartWeb'
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 theme = 'boilerplate'
@@ -32,7 +32,7 @@ theme = 'boilerplate'
 
 # Site parameters
 [params]
-  description = "A clean Hugo boilerplate"
+  description = "SmartWeb - Interwork Corporation"
   author = "Your Name"
   mainSections = ["blog"]
   dateFormat = "January 2, 2006"

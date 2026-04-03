@@ -1,9 +1,9 @@
-# Hugo-Boilerplateプロジェクト総合ドキュメント
+# SmartWebプロジェクト総合ドキュメント
 
 ## 🌟 プロジェクトサマリー
 
 ### プロジェクト概要
-**Hugo-Boilerplate**は、SmartWeb/Interwork Corporation向けに開発された高性能な静的サイトジェネレーターテンプレートです。Hugo、Tailwind CSS、多言語対応、SEO最適化、自動ビルドシステムを統合した完全なWebサイトソリューションを提供します。
+**SmartWeb**は、Interwork Corporation向けに開発された高性能な静的サイトジェネレーターテンプレートです。Hugo、Tailwind CSS、多言語対応、SEO最適化、自動ビルドシステムを統合した完全なWebサイトソリューションを提供します。
 
 ---
 
