@@ -1,6 +1,7 @@
 ---
 title: システムオブレコード
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: System-of-Record
 description: 特定のデータ要素やビジネスエンティティに対する信頼できる唯一の情報源として機能する、権威あるデータソース。どのシステムがマスターバージョンを保持し、他のすべてのシステムが参照すべきかを確立することで、データの不整合を排除します。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - 単一の情報源
 - マスターデータ
 - データガバナンス
-category: Application & Use-Cases
+category: データ・アナリティクス
 type: glossary
 draft: false
 e-title: System of Record

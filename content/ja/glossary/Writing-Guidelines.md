@@ -9,8 +9,9 @@ keywords:
 - コンテンツ作成
 - テクニカルライティング
 - スタイルガイド
-category: Application & Use-Cases
+category: コンテンツ・マーケティング
 type: glossary
+lastmod: 2026-04-02
 draft: false
 e-title: Writing Guidelines
 url: /ja/glossary/writing-guidelines/

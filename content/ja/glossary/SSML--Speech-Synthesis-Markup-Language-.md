@@ -1,354 +1,98 @@
 ---
 title: SSML(音声合成マークアップ言語)
 translationKey: ssml-speech-synthesis-markup-language
-description: SSMLは、合成音声の出力を制御するためのXMLベースのマークアップ言語で、発音、イントネーション、ペース、感情などを調整でき、主要なTTSプロバイダーで使用されています。
+description: コンピュータが読み上げる音声を、ピッチや速度、言葉の区切りなど細かく制御するための言語です。AIアシスタントやチャットボットが自然な話し方をするために使われます。
 keywords:
 - SSML
 - 音声合成マークアップ言語
 - Text-to-Speech
 - TTS
-- W3C
-- プロソディ
-- 音声学
 - 音声ユーザーインターフェース
 - AIチャットボット
-category: AI Chatbot & Automation / Text-to-Speech / Voice User Interfaces
+- 音声制御
+category: 音声・通信技術
 type: glossary
-date: '2025-12-19'
-lastmod: '2025-12-19'
+date: 2025-12-19
+lastmod: 2026-04-02
 draft: false
 e-title: SSML (Speech Synthesis Markup Language)
-term: エスエスエムエル(おんせいごうせいマークアップげんご)
-url: "/ja/glossary/ssml--speech-synthesis-markup-language-/"
+url: /ja/glossary/ssml--speech-synthesis-markup-language-/
 aliases:
-- "/ja/glossary/SSML--Speech-Synthesis-Markup-Language-/"
+- /ja/glossary/SSML--Speech-Synthesis-Markup-Language-/
+term: エスエスエムエル
 ---
-## SSMLとは?
 
-Speech Synthesis Markup Language(SSML)は、W3Cによって開発・維持されているXMLベースのマークアップ標準であり、開発者、デザイナー、言語学者がテキストを合成音声(機械生成音声)でどのようにレンダリングするかを正確に制御できるようにします。SSMLは、AIチャットボットや音声アシスタントから、アクセシビリティツールやインタラクティブ音声応答システムまで、自然で表現豊かな、文脈に適した音声出力を必要とするアプリケーションに不可欠です。
+## SSML(音声合成マークアップ言語)とは?
 
-SSMLがない場合、テキスト読み上げ(TTS)出力はロボット的で単調になりがちで、発音ミスや不自然なイントネーションが発生しやすくなります。SSMLは、音声アルファベット(IPA、X-SAMPA)を使用した発音の細かい制御、韻律仕様(ピッチ、速度、音量、強調)、自然な間の挿入と文構造、特殊コンテンツ(日付、時刻、頭字語、通貨)の明示的な処理、音声と言語の途中切り替え、音声ファイルの埋め込みを提供することで、これらの問題を解決します。
+**SSMLは、コンピュータが読み上げる音声を細かく制御するための言語です。** Google Assistant、Amazon Alexa、Siriなど、AIアシスタントが「自然な話し方」に聞こえるのは、SSMLを使って音声の速度、ピッチ(高さ)、間の取り方などを調整しているからです。単純に文字を読み上げるだけでは、ロボットのような単調な音になってしまいます。SSMLを使えば、数字を「123」と読むのか「百二十三」と読むのかを指定したり、特定の単語を強く読んだり、文の間に自然な間を入れたりできます。
 
-**業界での採用:** SSMLは、Amazon Alexa Skills Kit、Google Cloud Text-to-Speech、Microsoft Azure Speech Service、IBM Watson Text-to-Speech、Speechifyを含むすべての主要なクラウドTTSプロバイダーで事実上の標準となっています。
+> **ひとことで言うと：** コンピュータに「この文はゆっくり読んで」「この数字は数値として読んで」と指示する。
 
-## 主要機能
+**ポイントまとめ：**
 
-### 韻律制御
+- **何をするものか：** 機械音声を自然に、正確に読み上げるための仕組み
+- **なぜ必要か：** AI アシスタントが人間らしく聞こえるようにするため
+- **誰が使うか：** Google、Amazon、Microsoft など音声サービス企業、アプリ開発者
 
-ピッチ、速度、音量の属性を設定してテキストの読み上げ方を調整し、音声をより人間的で表現豊かにします。微妙な韻律の変化は、自然さとエンゲージメントを劇的に向上させます。
+## なぜ重要か
 
-### 発音管理
+ユーザーがスマートスピーカーに「明日の予定」と聞いた時、デバイスが返す音声が単調でロボット的だと、ユーザーは満足しません。しかし、SSMLで適切に制御すれば、リズムよく、自然な句読点で読み上げることで、人間の秘書と話しているような快適さを実現できます。顧客サービス電話システム(IVR)では、SSMLで正確な発音と聞きやすい速度を確保することが、顧客満足度を大きく左右します。また、複数の言語に対応するアプリでも、言語ごとに異なる発音や文法に SSMLで対応できます。
 
-専門用語、ブランド名、外国語の単語について、音声アルファベットやテキスト置換を使用してデフォルトの発音を上書きします。これにより、プロフェッショナルなアプリケーションでの恥ずかしい発音ミスを防ぎます。
+## 仕組みをわかりやすく解説
 
-### 特殊コンテンツの処理
+SSMLの仕組みはHTMLに似ています。HTMLはブラウザに「このテキストは見出し」「このテキストは段落」と指示するタグ(< >で囲まれたもの)を使いますが、SSMLは音声エンジンに「ここは強く読んで」「ここで間を入れて」と指示するタグを使います。
 
-日付、時刻、略語、数字、メールアドレス、通貨を明示的に読み上げます。SSMLは「12/25」を「12月25日」として、「$19.99」を「19ドル99セント」として読み上げることを保証します。
+例えば、通常のテキスト「2023年6月10日、19.99ドル」をそのまま読み上げると、「にせんにじゅうさんねん ろくがつ とうか、じゅうきゅう てんきゅうじゅうきゅう ぐろっしゅ」のような読み方になってしまいます。しかしSSMLを使うと:
 
-### 表現力とスタイル
-
-属性やベンダー固有の拡張機能を使用して、強調、感情的なニュアンス、スタイルのバリエーションを注入します。Amazon Alexaは興奮や失望の感情をサポートし、Azureはニュース読み上げ、カスタマーサービス、陽気な配信のためのニューラル音声スタイルを提供します。
-
-### アクセシビリティの向上
-
-支援技術に依存するユーザーのために音声出力をより明確で理解しやすくし、視覚障害のあるユーザーの理解を向上させます。
-
-### 音声統合
-
-自然な会話の流れに合った間を挿入したり、サウンドや音楽を埋め込んでユーザー体験を向上させます。バックグラウンドミュージック、効果音、音声キューは音声インタラクションを豊かにします。
-
-## 基本構造
-
-### ルート要素: `<speak>`
-
-すべての有効なSSMLドキュメントは、音声合成コンテンツの境界を定義する`<speak>`ルート要素で始まります。これは、SSMLをサポートするすべてのTTSエンジンで必須です。
-
-```xml
+```
 <speak>
-  Welcome to your AI assistant.
+  <say-as interpret-as="date" format="yyyymmdd">20230610</say-as>、
+  <say-as interpret-as="currency" language="ja-JP">19.99ドル</say-as>
 </speak>
 ```
 
-`<speak>`タグを省略すると、エラーが発生するか、TTSエンジンがプレーンテキストレンダリングにフォールバックします。
+と書くことで、「二〇二三年六月十日、十九ドル九十九セント」と正確に読み上げられます。
 
-## 必須のSSMLタグ
+また`<prosody>`タグを使えば、ピッチや速度を変更できます。例えば:
 
-### `<break>`: 間を挿入
-
-単語やフレーズの間に間を追加したり、境界を制御します。
-
-**属性:**
-- `time`: 正確な間の長さ(例:「500ms」、「2s」)
-- `strength`: 相対的な間(「none」、「x-weak」、「weak」、「medium」、「strong」、「x-strong」)
-
-```xml
-<speak>
-  Please wait.<break time="1s"/>Processing your request.
-</speak>
+```
+<prosody rate="slow">ゆっくり読んでください</prosody>
 ```
 
-### `<prosody>`: ピッチ、速度、音量を制御
+と書くと、その部分がゆっくりしたペースで読み上げられます。
 
-音声の表現力を変更します。
+## 実際の活用シーン
 
-**属性:**
-- `pitch`: 「x-low」、「low」、「medium」、「high」、「x-high」、またはパーセンテージ(「+20%」)
-- `rate`: 「x-slow」、「slow」、「medium」、「fast」、「x-fast」、またはパーセンテージ(「-20%」)
-- `volume`: 「silent」、「x-soft」、「soft」、「medium」、「loud」、「x-loud」、デシベル(「-6dB」)、またはパーセンテージ
+**Googleアシスタントが天気予報を読む**
+「明日の最高気温は25度です」と読み上げる時、SSMLで適切なポーズを入れることで、単調な音声ではなく、聞きやすい自然な読み方になります。
 
-```xml
-<speak>
-  <prosody pitch="high" rate="fast" volume="+20%">
-    This is spoken with higher pitch, faster, and louder.
-  </prosody>
-</speak>
-```
+**銀行の自動音声システム**
+電話での残高照会で、「残高は123,456円です」と読み上げる際、SSMLで数字を適切に分けて読むことで、ユーザーが聞き間違えるのを防ぎます。
 
-**ベストプラクティス:** 極端な値は避けてください。微妙な変化がより自然な音声を生み出します。
+**AI チャットボットがカスタマーサービスに応答**
+「お待たせしました」と言う時に、SSMLで自然な間を入れたり、重要な部分を少し強めに読んだりすることで、ロボット的ではなく親切な印象になります。
 
-### `<emphasis>`: 単語を強調
+## メリットと注意点
 
-特定の単語やフレーズの強調を増減します。
+**メリット：** SSMLを使うことで、機械音声を人間に近い、聞きやすい音声に変換できます。複数言語対応や、複雑な情報(日付、金額、電話番号など)の正確な読み上げが可能になります。ユーザー体験が大幅に向上します。
 
-```xml
-<speak>
-  You must <emphasis level="strong">complete</emphasis> the task.
-</speak>
-```
+**注意点：** SSMLはサービス提供企業(Google、Amazon など)によってサポート内容が異なります。あるサービスで動く指定が、別のサービスでは対応していないこともあります。また、SSMLのタグが多すぎると処理に時間がかかり、応答速度が落ちる可能性があります。
 
-レベル:「strong」、「moderate」、「reduced」
+## 関連用語
 
-### `<say-as>`: コンテンツタイプを解釈
+- **[Text-to-Speech (TTS)](TTS.md)** — テキストを音声に変換する技術全般
+- **[音声ユーザーインターフェース](Voice-User-Interface.md)** — 音声で操作するユーザー界面
+- **[AI アシスタント](AI-Assistant.md)** — 音声やテキストで支援するAI
+- **[自然言語処理](Natural-Language-Processing.md)** — 人間の言葉をコンピュータが理解する技術
+- **[マークアップ言語](Markup-Language.md)** — HTMLのような、コンテンツの指示書き
 
-TTSにテキストを特定のタイプとして読み上げるよう指示します。
+## よくある質問
 
-**一般的なinterpret-as値:**
-- 「cardinal」: 数字(123 → 「123」)
-- 「ordinal」: 序数(1st → 「1番目」)
-- 「characters」: スペルアウト(「SSML」 → 「エス エス エム エル」)
-- 「date」: フォーマット指定付きの日付
-- 「time」: 時刻値
-- 「telephone」: 電話番号
-- 「currency」: 通貨金額
-- 「fraction」: 分数(「3/4」 → 「4分の3」)
-- 「unit」: 測定値
+**Q: SSMLはすべてのAIアシスタントで同じように動くのか?**
+A: いいえ。基本的なタグ(`<break>`、`<prosody>`)はほぼ共通ですが、細かい機能はサービスごとに異なります。Google、Amazon、Microsoft それぞれに独自の拡張タグがあります。開発時には目的のサービスのドキュメントを確認する必要があります。
 
-**例:**
+**Q: SSMLを書くのは難しいか?**
+A: 基本的なタグ(間を入れる、速度を変える)は簡単です。ただし細かい発音制御(音声アルファベット)になると専門知識が必要になります。一般的には、自動生成ツールで SSMLを作ることが多いです。
 
-```xml
-<speak>
-  <say-as interpret-as="characters">SSML</say-as>
-</speak>
-```
-
-```xml
-<speak>
-  <say-as interpret-as="date" format="yyyymmdd">20230610</say-as>
-</speak>
-```
-
-```xml
-<speak>
-  <say-as interpret-as="currency" language="en-US">$19.99</say-as>
-</speak>
-```
-
-### `<phoneme>`: カスタム発音
-
-音声アルファベットを使用して正確な発音を指定します。
-
-**属性:**
-- `alphabet`: 「ipa」、「x-sampa」
-- `ph`: 音声文字列
-
-```xml
-<speak>
-  <phoneme alphabet="ipa" ph="ˈniːʃ">niche</phoneme>
-</speak>
-```
-
-### `<sub>`: テキストを置換
-
-囲まれたテキストの代わりにエイリアス値を読み上げます。
-
-```xml
-<speak>
-  Welcome to the <sub alias="World Wide Web Consortium">W3C</sub>.
-</speak>
-```
-
-**使用例:** ブランド名、頭字語、外国語
-
-### `<audio>`: 音声クリップを挿入
-
-音声出力に録音された音声(効果音、音楽)を埋め込みます。
-
-```xml
-<speak>
-  Please listen to this sound.
-  <audio src="https://www.example.com/sound.mp3">
-    Unable to play audio.
-  </audio>
-</speak>
-```
-
-**プロバイダーの制限:**
-- Google Cloud: フォーマットと時間の制限が適用されます
-- Amazon Alexa: 最大240秒、HTTPS必須、サイズ制限あり
-- Azure: 制限付きでサポート
-
-### `<voice>`: 音声またはペルソナを変更
-
-別の音声、言語、またはペルソナに切り替えます。
-
-```xml
-<speak>
-  <voice name="en-US-Wavenet-D">Hello, I am the default voice.</voice>
-  <voice name="en-GB-Wavenet-B">And I am a British voice.</voice>
-</speak>
-```
-
-### `<p>`と`<s>`: テキストを構造化
-
-段落(`<p>`)と文(`<s>`)を定義して、より良いペーシングとグループ化を実現します。
-
-```xml
-<speak>
-  <p>
-    <s>This is the first sentence.</s>
-    <s>This is the second sentence.</s>
-  </p>
-</speak>
-```
-
-### `<lang>`: 言語を指定
-
-テキストセグメントの言語を指定し、適切な発音とアクセントを可能にします。
-
-```xml
-<speak>
-  Here is a word in French: <lang xml:lang="fr-FR">bonjour</lang>.
-</speak>
-```
-
-## プロバイダー固有の拡張機能
-
-### Amazon Alexa
-
-**`<amazon:emotion>`:** 「excited」または「disappointed」の感情を追加
-
-```xml
-<speak>
-  <amazon:emotion name="excited" intensity="medium">
-    Congratulations on your achievement!
-  </amazon:emotion>
-</speak>
-```
-
-**`<amazon:domain>`:** 配信スタイルを変更(ニュース、音楽、会話)
-
-### Microsoft Azure
-
-**`<mstts:express-as>`:** ニューラル音声スタイルとロール
-
-```xml
-<speak>
-  <mstts:express-as style="cheerful">
-    Welcome to our service!
-  </mstts:express-as>
-</speak>
-```
-
-スタイルには以下が含まれます:cheerful、sad、angry、fearful、friendly、hopeful、newscast、customer-service
-
-### Speechify
-
-**`<speechify:style>`:** 読書体験を向上させるための独自のスタイル制御
-
-## 実用例
-
-```xml
-<speak>
-  Welcome to the demo.
-  <break time="500ms"/>
-  Your appointment is on
-  <say-as interpret-as="date" format="yyyymmdd">20230610</say-as>.
-  The amount due is
-  <say-as interpret-as="currency" language="en-US">$19.99</say-as>.
-  For assistance, call
-  <say-as interpret-as="telephone">18001234567</say-as>.
-  <prosody rate="slow">Thank you for using our service.</prosody>
-</speak>
-```
-
-**期待される出力:** 「Welcome to the demo. [間] Your appointment is on June tenth, twenty twenty-three. The amount due is nineteen dollars and ninety-nine cents. For assistance, call one eight hundred one two three four five six seven. [遅く] Thank you for using our service.」
-
-## 一般的な使用例
-
-### AIチャットボットと仮想アシスタント
-
-自然な響きの応答、適切な間、感情表現で会話型AIを強化
-
-### カスタマーサービスIVRシステム
-
-明確な発音とプロフェッショナルなトーンで発信者をメニューに案内
-
-### アクセシビリティアプリケーション
-
-スクリーンリーダーや支援技術のための高品質な音声出力を提供
-
-### eラーニングプラットフォーム
-
-多様な音声と適切なペーシングで魅力的な教育コンテンツを作成
-
-### オーディオブック制作
-
-キャラクターの音声と感情表現を持つ自然な響きのナレーションを生成
-
-### スマートホームデバイス
-
-適切な文脈と感情で通知と応答を配信
-
-## ベストプラクティス
-
-**微妙な調整:** 小さな韻律の変化は、極端な変更よりも効果的です
-
-**プラットフォーム間でテスト:** ターゲットTTSプロバイダー間でSSMLレンダリングを検証
-
-**音声記号は控えめに使用:** 必要な場合にのみ発音を上書き
-
-**論理的に構造化:** 自然なペーシングのために`<p>`と`<s>`タグを使用
-
-**速度のバランス:** 自然な速度を維持し、過度に速いまたは遅い音声を避ける
-
-**音声品質:** 埋め込み音声ファイルが適切にエンコードされ、ホストされていることを確認
-
-**アクセシビリティ重視:** 支援技術を使用するユーザーを含むすべてのユーザーを考慮
-
-## 実装上の考慮事項
-
-**プラットフォーム互換性:** プロバイダーによってサポートされるタグのサブセットと拡張機能が異なります
-
-**フォールバックコンテンツ:** サポートされていないタグのためのフォールバックテキストを提供
-
-**文字数制限:** プラットフォーム固有のテキスト長制限に注意
-
-**処理オーバーヘッド:** 複雑なSSMLは応答時間を増加させる可能性があります
-
-**コスト管理:** 一部のプロバイダーはマークアップを含む文字数に基づいて課金します
-
-**テストプロトコル:** デバイスとプラットフォーム間で包括的なテストを確立
-
-## 参考文献
-
-- [W3C Speech Synthesis Markup Language (SSML) Version 1.1](https://www.w3.org/TR/speech-synthesis11/)
-- [Amazon Alexa: SSML Reference](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html)
-- [Google Cloud: SSML Documentation](https://cloud.google.com/text-to-speech/docs/ssml)
-- [Microsoft Azure: Speech Synthesis Markup](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup)
-- [IBM Watson: SSML Elements](https://cloud.ibm.com/docs/text-to-speech?topic=text-to-speech-ssml)
-- [Speechify: SSML Features](https://docs.sws.speechify.com/docs/features/ssml)
-- [International Phonetic Alphabet (IPA)](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet)
-- [Azure Speech Voice Gallery](https://speech.microsoft.com/portal/voicegallery)
-- [Google Cloud Supported SSML Elements](https://cloud.google.com/text-to-speech/docs/ssml#supported_ssml)
-- [Microsoft Azure Supported SSML Elements](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-structure#ssml-supported-elements)
-- [Adaptive Cards Designer](https://adaptivecards.io/designer/)
+**Q: 日本語でも SSMLは使えるのか?**
+A: はい。Google、Amazon、Microsoft すべてが日本語対応の[SSML](ssml-speech-synthesis-markup-language.md)をサポートしています。ただし、日本語の数字の読み方(1234を「千二百三十四」か「一二三四」か)など細かい指定も必要な場合があります。

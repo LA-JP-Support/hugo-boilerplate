@@ -1,20 +1,19 @@
 ---
-title: "Legal Contract Analysis"
+title: Legal Contract Analysis
 date: 2025-12-19
-translationKey: legal-contract-analysis
-description: "AI technology that automatically reviews legal contracts, extracts key information, identifies risks, and checks compliance—replacing time-consuming manual review by lawyers."
+lastmod: 2026-04-02
+translationKey: Legal-Contract-Analysis
+description: AI technology that automatically reviews contracts, extracts key information, identifies risks, and ensures compliance—making legal document review faster and more consistent than manual attorney work.
 keywords:
 - legal contract analysis
 - AI contract review
-- contract intelligence
-- legal AI
-- document automation
-- contract management
 - legal tech
-- compliance automation
-category: "Application & Use-Cases"
+- natural language processing
+- contract management
+category: Data & Analytics
 type: glossary
 draft: false
+url: "/en/glossary/Legal-Contract-Analysis/"
 ---
 
 ## What is Legal Contract Analysis?

@@ -1,17 +1,19 @@
 ---
-title: "AI Writing Assistant"
+title: AI Writing Assistant
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: AI-Writing-Assistant
-description: "AI software that helps you write, edit, and improve content by suggesting corrections, generating text, and adjusting tone for your audience."
+description: AI tool that helps writers create and improve content faster, dramatically boosting productivity for blogs, emails, and documents.
 keywords:
 - AI writing assistant
 - automated content creation
 - natural language generation
 - writing automation
 - content optimization
-category: "Application & Use-Cases"
+category: AI & Machine Learning
 type: glossary
 draft: false
+url: /en/glossary/AI-Writing-Assistant/
 ---
 
 ## What is an AI Writing Assistant?

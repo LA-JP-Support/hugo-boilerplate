@@ -1,13 +1,19 @@
 ---
-title: "AI Reporting"
-lastmod: 2025-12-18
-date: 2025-12-18
-translationKey: "ai-reporting"
-description: "AI Reporting is technology that automatically analyzes data from multiple sources and generates clear reports with insights, trend predictions, and recommendations without manual work."
-keywords: ["AI reporting", "artificial intelligence", "machine learning", "data analysis", "automated reports"]
-category: "AI Chatbot & Automation"
-type: "glossary"
+title: AI Reporting
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: ai-reporting
+description: AI technology that automates data analysis and report generation, accelerating business decision-making with automated insights.
+keywords:
+- AI reporting
+- data analysis
+- machine learning
+- automated analysis
+- self-service reporting
+category: Data & Analytics
+type: glossary
 draft: false
+url: /en/glossary/AI-Reporting/
 ---
 
 ## What Is AI Reporting?

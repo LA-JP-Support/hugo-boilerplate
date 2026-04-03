@@ -1,300 +1,93 @@
 ---
-title: "Hugging Face"
-date: 2025-12-18
-lastmod: 2025-12-18
-translationKey: "hugging-face"
-description: "An open-source platform where people can find, share, and use pre-trained AI models and datasets to build applications without starting from scratch."
-keywords: ["hugging face models", "large language models", "transformers library", "model hub", "datasets huggingface"]
-category: "AI Infrastructure & Deployment"
-type: "glossary"
+title: Hugging Face
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: hugging-face
+description: An open-source AI platform and global community that democratizes machine learning by enabling users to share and use models, datasets, and tools for natural language processing, computer vision, and more.
+keywords:
+- Hugging Face models
+- large language models
+- Transformers library
+- model hub
+- open-source AI
+category: AI & Machine Learning
+type: glossary
 draft: false
+url: /en/glossary/hugging-face/
 ---
 
 ## What is Hugging Face?
 
-Hugging Face is an open-source AI platform and global community focused on democratizing machine learning and artificial intelligence. It offers an integrated ecosystem for sharing, discovering, and deploying machine learning models, datasets, and applications across domains such as natural language processing (NLP), computer vision, audio, and multimodal AI.
+**Hugging Face is a platform where machine learning models can be freely shared and used.** Its goal is to make AI accessible not just to specialists but to everyone, providing pre-trained models and datasets that can be obtained with just a few clicks. With over 2 million models registered—from natural language processing to image recognition and speech processing—it has become a community where developers and researchers can publicly release and improve their work.
 
-**Mission:** Make AI accessible and transparent for everyone.
+> **In a nutshell:** A "GitHub" for AI models, making cutting-edge AI easy for anyone to use.
 
-**Approach:** Open-source libraries, collaborative model and dataset sharing, and seamless deployment tools.
+**Key points:**
 
-**Impact:** Supports millions of users, features over 2 million models, 500,000+ datasets, and 1 million+ demo applications ("Spaces"). Resources help researchers, developers, and businesses build and deploy state-of-the-art AI solutions.
+- **What it does:** A platform for sharing, using, and improving AI models and datasets
+- **Why it's needed:** The barrier to building sophisticated AI drops dramatically
+- **Who uses it:** AI researchers, engineers, startups, and AI departments of large companies
 
-Hugging Face functions as a "GitHub for AI," allowing anyone to collaborate, contribute, or leverage pre-trained models and data for advanced AI applications.
+## Basic information
 
-## Key Terminology
+| Item | Details |
+|------|---------|
+| Headquarters | United States (New York) |
+| Founded | 2016 |
+| Parent company/Investors | Independent company (funded by multiple venture capital firms) |
+| Main products | Model Hub, Datasets Hub, Spaces, Transformers |
+| Public listing | Private |
 
-**Model:**  
-Machine learning artifact trained to perform a specific task (text classification, image recognition, speech-to-text). Models may be pre-trained or fine-tuned.
+## Key products and services
 
-**Model Hub:**  
-Centralized repository for storing, sharing, and discovering machine learning models. Supports model cards (documentation), versioning, live demos, and integration with major ML libraries.
+**The Transformers library** is the most popular open-source library. Models like BERT, GPT, and T5 can be used with just a few lines of code, supporting hundreds of model architectures and multiple frameworks (PyTorch, TensorFlow), covering virtually all AI tasks.
 
-**Dataset:**  
-Structured collection of data samples (text, images, audio) for training, evaluating, or benchmarking machine learning models.
+**Model Hub** is a shared repository with over 2 million registered models. Each model includes detailed documentation (model cards) describing what data it was trained on and what limitations exist—information necessary for responsible use.
 
-**Datasets Hub:**  
-Repository for curated datasets, providing dataset cards, versioning, metadata, and programmatic access via Datasets library.
+**Datasets Hub** contains over 500,000 datasets available for training machine learning models and benchmark evaluation. Access is available directly via [API](API.md), and streaming capabilities enable efficient processing of large datasets.
 
-**Transformers:**  
-Neural network architecture based on self-attention, introduced in "Attention is All You Need" paper (Vaswani et al., 2017). Widely used for NLP and increasingly for vision, audio, and multimodal tasks.
+## Competitors and alternatives
 
-**Transformers Library:**  
-Python library providing easy access to transformer-based models (BERT, GPT, T5), utilities for tokenization, training, and inference.
+**TensorFlow Hub** (by Google) and PyTorch Hub (by Meta) offer similar model repositories, but Hugging Face far exceeds them in model quantity and community activity. **AWS SageMaker** and **Azure ML** are commercial AI platforms, but the key difference is that Hugging Face is open-source and free.
 
-**Space:**  
-Hosted web application on Hugging Face for interactive demos, prototypes, and ML-powered applications. Supports Gradio, Streamlit, and custom frameworks.
+## Why it matters
 
-**LLM (Large Language Model):**  
-Transformer-based model with hundreds of millions to billions of parameters, capable of advanced text generation, comprehension, translation, and reasoning.
+A major challenge for companies and developers wanting to use AI has been "good models take time and money to build." Hugging Face has significantly reduced this problem. By leveraging already-trained, high-performance models, anyone can implement AI without being an AI specialist.
 
-**ZeroGPU:**  
-Feature enabling GPU access for Spaces without requiring users to configure or pay for dedicated GPU instances.
+Because it leverages open-source power, researchers worldwide contribute to model improvements. This sometimes results in innovative, high-performing models surpassing commercial systems. Furthermore, to promote responsible AI development, Hugging Face has implemented systems requiring information about bias and safety be included in model cards.
 
-## Core Platform Components
+## Real-world use cases
 
-### Model Hub
+**Text classification tasks**
+When companies want to automatically classify customer comments, they can obtain a sentiment analysis model from Hugging Face and implement it in a few lines of code. There's no need to train a custom model.
 
-Central platform for sharing, discovering, and using machine learning models. Designed to make high-quality models accessible to everyone, accelerating research, development, and production deployment.
+**Building question-answering systems**
+To automate customer support, teams download a [QA](QA.md)-capable model from Model Hub. Fine-tuning it with the company's unique knowledge base creates a fully customized auto-response system.
 
-**Key Features:**
+**Developing image recognition applications**
+When startups develop medical image analysis applications, using Hugging Face vision models can shorten development time by several months.
 
-- Search and filter models by task (text generation, classification), architecture (BERT, GPT), dataset, or language
-- Model Cards: Rich documentation covering intended use, training data, limitations, bias, and licensing
-- Versioning: Every model update tracked, supporting reproducibility, rollback, and collaboration
-- Integration with major ML libraries (Transformers, PyTorch, TensorFlow, Flax, JAX)
-- In-browser model widgets for interactive inference and live demonstrations
-- Download statistics, tags, and metadata for ecosystem insights
+## Benefits and considerations
 
-**Benefits:**
+Hugging Face's biggest benefit is **democratized access.** Previously, only large companies like Google, Meta, and OpenAI could create cutting-edge AI. Now individual developers can use equivalent models. Continuous improvement through community reduces the quality gap.
 
-- Reduce need for training from scratch by leveraging pre-trained models
-- Accelerate prototyping and production deployment
-- Promote responsible and ethical AI via transparent documentation
+However, finding "the optimal model for my task" among countless options is challenging. Using the platform responsibly requires "actually reading" model cards and understanding bias and limitations before using them. There's also concern about increasing platform dependence.
 
-**Popular Models:**  
-BERT, RoBERTa, GPT-2, GPT-3, GPT-4 (NLP), Stable Diffusion, DeepSeek, Z-Image-Turbo (Vision/Multimodal), Whisper (Speech)
+## Related terms
 
-**Example Usage:**
-```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
-model = AutoModelForCausalLM.from_pretrained("gpt2")
-tokenizer = AutoTokenizer.from_pretrained("gpt2")
-```
+- **[Transformers](Transformers.md)** — A Python library from Hugging Face that makes cutting-edge NLP models easy to use
+- **[LLM (Large Language Models)](LLM.md)** — A type of AI model, many of which are registered in Hugging Face's Model Hub
+- **[Fine-tuning](Fine-tuning.md)** — The technique of retraining pre-trained models with custom data, recommended by Hugging Face
+- **[Vector Database](Vector-Database.md)** — Used with Hugging Face models when implementing [RAG](RAG.md)
+- **[Open Source](Open-Source.md)** — Hugging Face is a platform founded on open-source principles
 
-### Datasets Hub
+## Frequently asked questions
 
-Repository of curated datasets for machine learning research and production, designed for accessibility, reproducibility, and compliance.
+**Q: Can models obtained from Hugging Face be used commercially?**
+A: It depends on the model's license. MIT or Apache 2.0 licenses allow commercial use, but always check the model card. Some licenses restrict commercial use.
 
-**Key Features:**
+**Q: Can I improve a model and publish my own version?**
+A: Yes, it's possible. Improved models can be registered as "derived models." Following open-source principles, including a model card describing improvements is recommended.
 
-- Over 500,000 datasets spanning NLP, computer vision, audio, and multimodal domains
-- Dataset Cards: Documentation covering schema, source, intended use, license, and limitations
-- Versioning and metadata for tracking changes and ensuring reproducibility
-- Public and private datasets to meet privacy and regulatory requirements
-- Data Studio: Browser-based, interactive exploration of datasets
-- Streaming and on-the-fly data processing for large-scale ML
-
-**Integration:**  
-Hugging Face Datasets library for fast, programmatic access and efficient data processing. Supports multiple data formats (CSV, JSON, Parquet, image, audio, video).
-
-**Popular Datasets:**  
-Common Crawl, OpenWebText (web-scale LLM training), SQuAD, MNLI, GLUE (NLP benchmarks)
-
-**Example Usage:**
-```python
-from datasets import load_dataset
-dataset = load_dataset("squad")
-print(dataset["train"][0])
-```
-
-### Spaces
-
-Platform for hosting, sharing, and demoing machine learning applications and interactive web apps. Empowers individuals and teams to showcase models and experiments without backend or infrastructure hassles.
-
-**Features:**
-
-- Host interactive apps built with Gradio, Streamlit, static HTML/JS, or Docker
-- Direct integration with models and datasets from the Hub
-- GPU acceleration via ZeroGPU for compute-intensive demos
-- Persistent storage options for apps requiring data retention
-- Spaces Dev Mode for live development and debugging
-- Community engagement through likes, tags, and sharing
-
-**Benefits:**
-
-- Showcase research, demos, and prototypes to a global audience
-- Collect feedback and foster collaboration
-- Build a professional portfolio or share learning resources
-
-### Inference Providers
-
-Enable scalable, serverless deployment of Hugging Face models on managed cloud infrastructure. Abstract complexity of hardware, scaling, and system reliability.
-
-**How It Works:**
-
-- Select a model from the Hub
-- Choose an inference provider (SambaNova, Replicate, Together AI)
-- Deploy and serve model via REST API endpoints with auto-scaling and monitoring
-- Pay-as-you-go pricing or free quotas with Pro subscription
-
-**Example:**
-```python
-from huggingface_hub import InferenceClient
-
-client = InferenceClient()
-result = client.text_generation("Write a poem about open source AI.")
-print(result.generated_text)
-```
-
-### Core Libraries
-
-**Transformers:**  
-Flagship open-source Python package for working with transformer models across domains. Load, fine-tune, and deploy hundreds of model architectures with PyTorch, TensorFlow, and JAX/Flax compatibility.
-
-**Other Notable Libraries:**
-
-- **Datasets** – Fast, memory-efficient data loading and processing
-- **Tokenizers** – Fast, customizable text tokenization
-- **Diffusers** – State-of-the-art diffusion models for generative AI
-- **Safetensors** – Secure, high-performance model weight storage
-- **PEFT** – Parameter-efficient fine-tuning of large language models
-- **Gradio** – Build and share ML-powered UIs in minutes
-- **TRL** – Training reinforcement learning algorithms for language models
-
-## Open Source and Community
-
-**Collaboration:**
-
-- Publish and share models, datasets, and Spaces
-- Pull requests, version control, and discussions for collaborative development
-- Over 50,000 organizations including Meta, Google, Amazon, Microsoft use Hugging Face
-
-**Transparency:**
-
-- Extensive use of model and dataset cards for documentation
-- Version tracking, licensing, and open discussions for responsible use
-
-**Contributions:**
-
-- Anyone can contribute models, datasets, improvements, or tutorials
-- Community forums, Discord, and events foster knowledge sharing and mentorship
-
-## Example Workflows
-
-**Deploying a Pre-Trained Model:**
-```python
-from transformers import pipeline
-
-generator = pipeline("text-generation", model="gpt2")
-result = generator("Hugging Face is", max_length=30)
-print(result[0]['generated_text'])
-```
-
-**Fine-Tuning for Sentiment Analysis:**
-```python
-from transformers import Trainer, TrainingArguments, AutoModelForSequenceClassification, AutoTokenizer
-from datasets import load_dataset
-
-model_name = "distilbert-base-uncased"
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-dataset = load_dataset("imdb")
-
-def tokenize(batch):
-    return tokenizer(batch["text"], padding="max_length", truncation=True)
-
-tokenized_dataset = dataset.map(tokenize, batched=True)
-model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
-
-training_args = TrainingArguments(
-    output_dir="./results",
-    evaluation_strategy="epoch",
-    per_device_train_batch_size=8,
-    num_train_epochs=3,
-)
-
-trainer = Trainer(
-    model=model,
-    args=training_args,
-    train_dataset=tokenized_dataset["train"],
-    eval_dataset=tokenized_dataset["test"],
-)
-trainer.train()
-```
-
-**Building a Demo App:**
-
-- Develop a Gradio or Streamlit app using your model
-- Upload code and requirements to a Space
-- Share application via public URL
-
-## Use Cases
-
-**Research and Development:**  
-Rapid prototyping with pre-trained models. Benchmark on standardized datasets. Collaborate on model improvements.
-
-**Production Deployment:**  
-Serve models via inference endpoints. Integrate into web/mobile/backend systems. Scale with cloud infrastructure.
-
-**Education and Learning:**  
-Access tutorials, courses, and documentation. Experiment with state-of-the-art models. Build portfolio projects.
-
-**Business Applications:**  
-Build AI-powered chatbots, recommendation systems, search engines. Fine-tune models on proprietary data. Deploy securely with private models.
-
-## Getting Started
-
-**Sign Up:**  
-Create free account at huggingface.co/join
-
-**Explore:**
-
-- Browse Model Hub: huggingface.co/models
-- Browse Datasets Hub: huggingface.co/datasets
-- Browse Spaces: huggingface.co/spaces
-
-**Install Libraries:**
-```bash
-pip install transformers datasets gradio
-```
-
-**Run Your First Model:**
-```python
-from transformers import pipeline
-classifier = pipeline("sentiment-analysis")
-result = classifier("Hugging Face is amazing!")
-print(result)
-```
-
-## References
-
-- [Official Hugging Face Site](https://huggingface.co/)
-- [Model Hub Documentation](https://huggingface.co/docs/hub/en/models-the-hub)
-- [Datasets Hub Documentation](https://huggingface.co/docs/hub/en/datasets-overview)
-- [Spaces Overview](https://huggingface.co/docs/hub/en/spaces-overview)
-- [Transformers Library Documentation](https://huggingface.co/docs/transformers/en/index)
-- [Datasets Library Documentation](https://huggingface.co/docs/datasets/index)
-- [Diffusers Documentation](https://huggingface.co/docs/diffusers)
-- [Tokenizers Documentation](https://huggingface.co/docs/tokenizers)
-- [Gradio Documentation](https://gradio.app/docs/)
-- [PEFT Documentation](https://huggingface.co/docs/peft)
-- [Safetensors Documentation](https://huggingface.co/docs/safetensors)
-- [TRL Documentation](https://huggingface.co/docs/trl)
-- [Inference Providers Documentation](https://huggingface.co/docs/hub/en/models-inference)
-- [Explore Inference Models](https://huggingface.co/inference/models)
-- [Model Cards](https://huggingface.co/docs/hub/en/model-cards)
-- [Dataset Cards](https://huggingface.co/docs/hub/en/datasets-cards)
-- [Uploading Models Guide](https://huggingface.co/docs/hub/en/models-uploading)
-- [Model Release Checklist](https://huggingface.co/docs/hub/en/model-release-checklist)
-- [Downloading Models Guide](https://huggingface.co/docs/hub/en/models-downloading)
-- [Model Widgets Documentation](https://huggingface.co/docs/hub/en/models-widgets)
-- [Adding Datasets Guide](https://huggingface.co/docs/hub/en/datasets-adding)
-- [Spaces Dev Mode](https://huggingface.co/docs/hub/en/spaces-dev-mode)
-- [Spaces GPU Upgrades](https://huggingface.co/docs/hub/en/spaces-gpus)
-- [Spaces Storage](https://huggingface.co/docs/hub/en/spaces-storage)
-- [Text Generation Pipeline](https://huggingface.co/docs/transformers/en/main_classes/pipelines#transformers.TextGenerationPipeline)
-- [Trainer API](https://huggingface.co/docs/transformers/en/main_classes/trainer)
-- [Sign Up](https://huggingface.co/join)
-- [Community Guidelines](https://huggingface.co/code-of-conduct)
-- [Content Guidelines](https://huggingface.co/content-guidelines)
-- [Community Forums](https://discuss.huggingface.co/)
+**Q: Can I use Hugging Face models offline?**
+A: Yes, if you download models during internet connection, you can use them offline. During development, you can work locally, reducing cloud usage costs.

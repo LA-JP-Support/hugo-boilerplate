@@ -147,7 +147,7 @@
             {{ range $footerLinks }}
             <a href="{{ partial "helpers/get-translated-url.html" (dict "url" .url) }}" class="flex items-center gap-x-2.5 p-3 px-4 text-sm/6 font-semibold {{ $footerLinkColor }} {{ $footerLinkHoverBgColor }} sm:justify-center sm:px-0">
               {{ if .icon }}
-              {{ partial (printf "icons/%s" .icon) (dict "class" $footerLinkIconColor) }}
+              {{ partial (printf "icons/%s" .icon) $footerLinkIconColor }}
               {{ end }}
               {{ .text }}
             </a>

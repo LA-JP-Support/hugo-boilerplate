@@ -1,6 +1,7 @@
 ---
 title: Tidio
 date: 2026-01-29
+lastmod: 2026-04-02
 translationKey: tidio
 description: Tidioは、ライブチャット、AIチャットボット、メールマーケティングツールを組み合わせた包括的なカスタマーサービスプラットフォームで、顧客エンゲージメントとサポートを強化します。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - ライブチャットソフトウェア
 - AIチャットボット
 - メールマーケティング自動化
-category: Platform/Service
+category: AI・機械学習
 type: glossary
 draft: false
 e-title: Tidio

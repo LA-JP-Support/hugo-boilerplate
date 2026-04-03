@@ -1,219 +1,86 @@
 ---
-title: "Debug Console / Trace"
-translationKey: "debug-console-trace"
-description: "A diagnostic tool that records each step of a process—showing inputs, outputs, errors, and performance—to help troubleshoot and optimize automation flows, chatbots, or API operations."
-keywords: ["Debug Console", "Trace", "Automation Flow", "AI Chatbot", "API Proxy"]
-category: "AI Chatbot & Automation"
-type: "glossary"
-date: 2025-12-18
-lastmod: 2025-12-18
+title: Debug Console / Trace
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: debug-console-trace
+description: Learn how to use debugging tools to diagnose and optimize automated flows, chatbots, and APIs.
+keywords:
+- debug console
+- trace
+- automation flow
+- AI chatbot
+- API proxy
+category: Web Development & Design
+type: glossary
 draft: false
+url: /en/glossary/debug-console---trace/
 ---
 
-## What Is a Debug Console / Trace?
+## What is Debug Console / Trace?
 
-A Debug Console or Trace is a diagnostic interface that provides visibility into the execution of automation flows, AI chatbot pipelines, or API proxy operations. These tools record each step of the process, capturing input and output data, metadata, errors, and performance metrics, to enable monitoring request flows in real time, diagnosing failures and bottlenecks, and validating business logic and data transformations.
+**Debug console and trace tools visualize the behavior of automated flows, chatbots, and APIs.** They enable step-by-step tracking of why complex systems fail and where they slow down. Essential tools for developers and system administrators solving problems.
 
-**Key Definition:** A debug console or trace tool displays the sequence of operations in a flow, highlighting the inputs, outputs, errors, and statuses at each step for monitoring, troubleshooting, and optimization.
+> **In a nutshell:** "Tools that make the inner workings of complex systems visible step-by-step so you can pinpoint problems."
 
-## Why Use a Debug Console or Trace?
+**Key points:**
 
-Debug consoles and trace tools are essential for developers, admins, and automation architects who must maintain, troubleshoot, or optimize complex workflows or conversational AI. They directly address pain points such as:
+- **What it does:** Real-time recording and display of each step of system execution, input/output data, and errors
+- **Why it's needed:** Rapidly discover and fix problems in invisible systems
+- **Who uses it:** Developers, system administrators, automation designers
 
-- Pinpointing the exact step or node where a process fails
-- Tracking variable values and data changes through the flow
-- Identifying sources of latency or performance degradation
-- Interpreting cryptic error messages and resolving silent failures
+## Why it matters
 
-By providing granular, real-time insight, these tools make automation systems more robust, maintainable, and reliable.
+When automated flows or APIs return unexpected results, root cause analysis is difficult. With debug console, you can identify "at step 3 the data changed to XX, and failed at step 5" in minutes instead of the day-plus investigation it might otherwise take.
 
-## How Debug Consoles / Trace Tools Work
+Performance optimization also benefits. When you visualize "which step is slow," improvement targets become clear. For AI chatbots, problems like "low intent recognition accuracy" or "slow search" become easier to pinpoint.
 
-Debug consoles and trace tools instrument the execution path of a flow—whether a business process, a chatbot conversation, or an API transaction—by capturing structured data at each operation.
+## How it works
 
-### Core Functions
+Debug console/trace records system operations as "spans."
 
-**Step-by-Step Execution:** Each node or operation is listed in sequence, often visualized as a flow diagram or timeline.  
-**Input & Output Data Capture:** Shows data transformations at every step.  
-**Error Reporting:** Flags failures, presents contextual error messages and stack traces.  
-**Performance Metrics:** Records execution times per step and overall.  
-**Metadata Display:** Includes contextual information such as user identity, environment, and triggering conditions.
+For example, when a user asks a chatbot a question:
+1. **Input span** - Received user message
+2. **Intent determination span** - Determined what the question is about
+3. **Search span** - Retrieved relevant information from database
+4. **Response generation span** - Generated answer text
+5. **Output span** - Returned response to user
 
-### Anatomy of a Trace
+For each span, "execution time," "input data," and "errors" are recorded, allowing developers to diagnose problems using this information.
 
-A trace typically consists of:
+Practically, you activate test mode on the system and reproduce the problem. Observing the execution while tracing makes the problem visually obvious.
 
-**Root Node/Span:** The entry point of a flow (e.g., an API call, user message).  
-**Child Nodes/Spans:** Each subsequent operation, forming a parent-child hierarchy.  
-**Attributes:** Key-value metadata pairs describing the context (e.g., user ID, HTTP status).  
-**Events:** Timestamped occurrences within a step (e.g., error, data fetch).  
-**Status:** Success/failure indicators for each operation.  
-**Links:** Correlations to other traces or external systems, crucial for distributed tracing.
+## Real-world use cases
 
-## Where Are Debug Consoles / Trace Tools Used?
+**Addressing chatbot misresponses**
+When a chatbot gave an incorrect answer, debug console showed "the intent determination step misclassified it." Adding training data and retesting accelerated the improvement cycle.
 
-Debug consoles and trace tools are standard in:
+**Solving API proxy latency**
+When API responses slowed, tracing revealed "the bottleneck isn't backend connection but data transformation." Logic optimization achieved major speed gains.
 
-**No-code/Low-code Flow Builders:** e.g., Salesforce Flow, Lamatic.ai, Microsoft Power Automate.  
-**AI Chatbot Platforms:** e.g., Leena AI, Dialogflow, Rasa.  
-**API Gateways & Proxies:** e.g., Apigee Edge Trace Tool, Kong, AWS API Gateway.  
-**Distributed Systems:** Using frameworks like OpenTelemetry or Honeycomb.io.
+**Responding to production automation errors**
+When a Salesforce flow failed on specific data, debugging showed "numeric type validation failed." Immediate fix applied.
 
-## Key Use Cases & Examples
+## Benefits and considerations
 
-### 1. AI Chatbot Flow Debugging
+The greatest benefit of debug console/trace is dramatically improved problem-solving speed. Performance optimization hints also emerge.
 
-**Scenario:** The chatbot responds incorrectly or fails a query.  
-**Tool Example:** Leena AI Debug Console  
-**Process:**
-1. Select a bot user
-2. Submit the problematic query
-3. Inspect returned metadata: intent, translation, LLM response, sources, timings
-4. Trace each step for misclassifications or backend issues
-5. Adjust logic and retest
+However, considerations exist. Trace information can contain sensitive data; production use requires caution. Most tools offer "masking features," but setup requires attention. In high-traffic environments, tracing itself can increase system load; sampling (recording only some traffic) should be considered.
 
-**Benefit:** Immediate insight into chatbot decision-making, supporting rapid fixes.
+## Related terms
 
-### 2. Automation Flow Testing and Debugging
+- **[API](API.md)** — Systems frequently requiring trace
+- **[Automation Flow](Automation-Flow.md)** — Common debugging targets
+- **[Error Handling](Error-Handling.md)** — Error processing displayed during traces
+- **[Performance Monitoring](Performance-Monitoring.md)** — Using timing information from traces
+- **[Testing](Testing.md)** — Verification work using debug console
 
-**Scenario:** A Salesforce onboarding workflow fails for some users.  
-**Tool Example:** Salesforce Flow Debug Console & Logs  
-**Process:**
-1. Launch flow in debug mode with sample data
-2. Observe step-by-step execution, variable states, outcomes
-3. Check for errors, inspect debug logs
-4. Apply fixes, retest iteratively
+## Frequently asked questions
 
-**Benefit:** Visual, interactive troubleshooting for complex automations.
+**Q: Can I always enable tracing in production?**
+A: Full enablement increases system load. Recommend enabling only when issues occur or using sampling for reduction.
 
-### 3. API Proxy Troubleshooting and Monitoring
+**Q: How long should trace data be retained?**
+A: Typically days to weeks. Balance storage costs against need for past issue investigation.
 
-**Scenario:** An API proxy returns errors or slow responses.  
-**Tool Example:** Apigee Edge Trace Tool  
-**Process:**
-1. Start a trace session for the API proxy
-2. Send test requests
-3. Visualize the transaction: policies, conditions, backend calls
-4. Drill down into headers, variables, execution times
-5. Identify failed or slow steps
-6. Export trace data for offline analysis
-
-**Benefit:** Pinpoints bottlenecks and errors for rapid resolution.
-
-### 4. Flow Testing with Saved Test Cases
-
-**Scenario:** Regression testing chatbot onboarding flows with edge cases.  
-**Tool Example:** Lamatic Studio Flow Debugging  
-**Process:**
-1. Save multiple test cases with different inputs
-2. Run debug mode on selected test cases
-3. Inspect stepwise execution, errors, token usage
-4. Identify and correct logic errors
-5. Repeat for all test scenarios
-
-**Benefit:** Regression testing and cost optimization for AI-driven flows.
-
-## Feature Breakdown
-
-| Feature | Description |
-|---------|-------------|
-| **Step-by-step execution** | Visualizes flow nodes/elements in order, often as diagrams or timelines |
-| **Input/output inspection** | View data entering and leaving each step, for transformation verification |
-| **Error highlighting** | Flags failed steps, provides error messages and stack traces |
-| **Variable tracking** | Shows variable assignments and states through execution |
-| **Performance metrics** | Measures per-step and overall execution times |
-| **Test case management** | Save, reuse, organize test scenarios for regression |
-| **Filtering & sampling** | Focus on specific requests by filtering headers/parameters; sample errors or slow requests |
-| **Download/export logs** | Export trace/debug sessions in XML, JSON, or text for offline review |
-| **Security/data masking** | Hide sensitive information in traces, crucial for production use |
-| **User context simulation** | Debug as different users or with various permissions |
-
-## Key Concepts and Terms
-
-**Trace:** The complete journey of a request through the system, composed of multiple spans.  
-**Span:** A single operation within a trace (e.g., function call, API request), with timing and metadata.  
-**Root Span/Node:** The starting point of a trace (e.g., initial user request).  
-**Child Span/Node:** Sub-operations forming a parent-child hierarchy.  
-**Attribute (Metadata):** Key-value pairs providing context (e.g., user ID, HTTP method).  
-**Event:** Timestamped occurrence within a span (e.g., error, data fetch).  
-**Status:** Success/failure indicator for each operation.  
-**Error Path/Fault Connector:** Alternate flow for error handling.  
-**Context Propagation:** Linking spans across distributed systems to form a trace.  
-**Trace Exporter:** Component exporting trace data to logs, dashboards, or telemetry backends.  
-**Tracer/Tracer Provider:** Classes responsible for creating and managing spans.  
-**Distributed Tracing:** Tracking a request across multiple services or components.
-
-## Best Practices for Using Debug Consoles / Trace Tools
-
-**1. Test in Safe Environments:** Prefer sandboxes or test systems; when in production, use masking and limit scope.  
-**2. Leverage Fault Paths:** Always connect error handlers or fault connectors to data operations.  
-**3. Iterate Incrementally:** Make small changes, retest after each, and exercise all logic branches.  
-**4. Use Test Cases:** Save and reuse inputs for quick regression and validation.  
-**5. Interpret Methodically:** Begin at the root, follow each step, check actual vs. expected data, and review timing.  
-**6. Filter and Sample:** Isolate problematic requests, especially in high-volume systems.  
-**7. Review Logs/Export Data:** Download logs for offline or team analysis.  
-**8. Monitor Token/Resource Use:** For LLM-based flows, track token counts and associated costs.
-
-## Common Pitfalls and How to Avoid Them
-
-**No Fault Connectors:** Unhandled errors result in silent or cryptic failures. Always connect explicit error paths.  
-**Debugging in Production:** Risks data corruption/user disruption; use sandboxes where possible.  
-**Oversized Flows:** Large, monolithic flows are harder to debug—build/test incrementally.  
-**Relying Only on Debug Mode:** Real-world data may expose new bugs—test with realistic scenarios.  
-**Neglecting to Stop Debug Sessions:** Can exhaust quotas or expose sensitive data.
-
-## Advanced Tips and Techniques
-
-**Distributed Tracing:** Stitch together traces from multiple services for end-to-end visibility.  
-**High-Cardinality Analysis:** Filter traces on unique fields like user ID to isolate rare issues.  
-**Service Maps/Visualizations:** Use waterfall/service maps to visualize dependencies and bottlenecks.  
-**Dynamic Sampling:** Prioritize traces with errors or anomalies for storage/analysis efficiency.
-
-## Example: Debug Console Metadata Fields (Leena AI)
-
-**Intent:** Predicted intent of the user query.  
-**Query Language/Translation:** Original and translated queries.  
-**LLM Response / Sources:** Generated reply, supporting articles.  
-**Pipelines Used:** Document, website, or CSV search.  
-**Time Taken:** Latency per component.  
-**Personalization:** User-specific adjustments.  
-**Debug Data:** Inputs, generated SQL, error messages.
-
-## Example: Transaction Map Icons (Apigee Edge Trace Tool)
-
-**Client App:** Request initiator.  
-**Transitional Endpoints:** Flow transitions (client to proxy/target, etc.).  
-**Flow Segments:** Request/response phases.  
-**Policy Icons:** Policy execution status (success/error).  
-**Timing Bars:** Per-phase execution times.  
-**Error/Skipped Icons:** Visual failure/skipped step indicators.
-
-## Frequently Asked Questions
-
-**Who can access debug consoles or trace tools?**  
-Only users with admin/developer permissions, due to the sensitive nature of captured data.
-
-**Can debug sessions affect production data?**  
-Many tools offer simulation or rollback modes; always check before running on live data.
-
-**What's the difference between traces, logs, and metrics?**
-- **Traces:** Path and details of a single request's journey
-- **Logs:** Discrete events at points in time
-- **Metrics:** Aggregated measurements over time (e.g., average response time)
-
-## References
-
-- [Leena AI: Debug Console in KM](https://docs.leena.ai/docs/debug-console-in-km)
-- [Honeycomb: What Are Traces?](https://www.honeycomb.io/blog/what-are-traces)
-- [NickFrates: How to Debug Salesforce Flows](https://www.nickfrates.com/blog/how-to-debug-salesforce-flows-step-by-step-troubleshooting-guide)
-- [Lamatic: Flow Debugging](https://lamatic.ai/docs/tests/flow-debugging)
-- [Apigee: Using the Trace tool](https://docs.apigee.com/api-platform/debug/using-trace-tool-0)
-- [OpenTelemetry: Glossary](https://opentelemetry.io/docs/concepts/glossary/)
-- [OpenTelemetry: Traces](https://opentelemetry.io/docs/concepts/signals/traces/)
-- [OpenTelemetry: Spans](https://opentelemetry.io/docs/concepts/signals/traces/#spans)
-- [OpenTelemetry: Context Propagation](https://opentelemetry.io/docs/concepts/context-propagation)
-- [OpenTelemetry: Trace Exporters](https://opentelemetry.io/docs/concepts/signals/traces/#trace-exporters)
-- [OpenTelemetry: Tracer Provider](https://opentelemetry.io/docs/concepts/signals/traces/#tracer-provider)
-- [OpenTelemetry: Distributed Tracing](https://opentelemetry.io/docs/concepts/glossary/#distributed-tracing)
-- [OpenTelemetry: Aggregation](https://opentelemetry.io/docs/concepts/glossary/#aggregation)
-- [Neon: The 3 Levels of Debugging With AI](https://neon.com/blog/the-3-levels-of-debugging-with-ai)
+**Q: Can mobile apps be debugged?**
+A: Many frameworks support it, but tools vary. Check your technology stack documentation.

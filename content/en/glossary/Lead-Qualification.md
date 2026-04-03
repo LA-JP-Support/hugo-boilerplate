@@ -1,17 +1,19 @@
 ---
-title: "Lead Qualification"
+title: Lead Qualification
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Lead-Qualification
-description: "Lead Qualification is the process of evaluating potential customers to determine if they are likely to buy and if they match your company's ideal customer. It helps sales teams focus their efforts on the most promising prospects."
+description: Lead Qualification is the process of evaluating potential customers to determine if they're likely to buy and if they match your company's ideal customer profile.
 keywords:
 - lead qualification
 - sales process
 - prospect evaluation
-- BANT methodology
+- BANT framework
 - sales funnel
-category: "Application & Use-Cases"
+category: Content & Marketing
 type: glossary
 draft: false
+url: "/en/glossary/Lead-Qualification/"
 ---
 
 ## What is a Lead Qualification?

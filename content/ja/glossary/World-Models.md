@@ -10,8 +10,9 @@ keywords:
 - シミュレーション
 - AI計画
 - 潜在空間
-category: AI Chatbot & Automation
+category: AI・機械学習
 type: glossary
+lastmod: 2026-04-02
 draft: false
 e-title: World Models
 url: /ja/glossary/world-models/

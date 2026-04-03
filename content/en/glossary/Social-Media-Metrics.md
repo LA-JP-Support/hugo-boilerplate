@@ -1,17 +1,19 @@
 ---
-title: "Social Media Metrics"
+title: Social Media Metrics
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Social-Media-Metrics
-description: "Social media metrics are measurements that track how well your content performs online, including likes, shares, and sales results, helping businesses understand what works and improve their marketing."
+description: Measurements that track how well your content performs online, such as likes, shares, and comments, helping businesses understand what works.
 keywords:
 - social media metrics
 - engagement rate
 - social media analytics
-- digital marketing KPIs
+- digital marketing KPI
 - social media ROI
-category: "Application & Use-Cases"
+category: Data & Analytics
 type: glossary
 draft: false
+url: "/en/glossary/Social-Media-Metrics/"
 ---
 
 ## What is Social Media Metrics?

@@ -1,6 +1,7 @@
 ---
 title: ダークソーシャルシェアリング
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Dark-Social-Sharing
 description: ダークソーシャルシェアリングの包括的ガイド - メッセージングアプリやメールなどのプライベートチャネルを通じた追跡不可能なコンテンツ共有について
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - ソーシャルメディアトラッキング
 - コンテンツアトリビューション
 - デジタルマーケティング測定
-category: Application & Use-Cases
+category: データ・アナリティクス
 type: glossary
 draft: false
 e-title: Dark Social Sharing

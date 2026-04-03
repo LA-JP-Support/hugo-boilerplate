@@ -1,17 +1,19 @@
 ---
-title: "Social Media Automation"
+title: Social Media Automation
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Social-Media-Automation
-description: "Software tools that automatically schedule and manage social media posts, engagement, and analytics across multiple platforms to save time and maintain consistent brand presence."
+description: Software that automatically schedules posts and manages audience interactions across multiple platforms to save time and maintain consistent brand activity.
 keywords:
 - social media automation
 - content scheduling
 - automated posting
 - social media management
 - digital marketing automation
-category: "Application & Use-Cases"
+category: Content & Marketing
 type: glossary
 draft: false
+url: "/en/glossary/Social-Media-Automation/"
 ---
 
 ## What is Social Media Automation?

@@ -8,10 +8,10 @@ keywords:
 - ワークフロー自動化
 - 再利用性
 - モジュラーワークフロー
-category: AI Chatbot & Automation
+lastmod: 2026-04-02
+category: チャットボット・会話AI
 type: glossary
-date: '2025-12-19'
-lastmod: '2025-12-19'
+date: 2025-12-19
 draft: false
 e-title: Sub-flow / Nested Flow
 term: さぶふろー / ねすとふろー

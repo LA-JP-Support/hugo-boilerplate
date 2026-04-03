@@ -9,7 +9,8 @@ keywords:
 - SaaSビジネスモデル
 - サブスクリプション価格設定
 - 顧客維持
-category: Application & Use-Cases
+lastmod: 2026-04-02
+category: ビジネス・戦略
 type: glossary
 draft: false
 e-title: Subscription Model

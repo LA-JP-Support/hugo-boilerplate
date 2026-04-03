@@ -1,6 +1,7 @@
 ---
 title: 統合エージェント体験
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Unified-Agent-Experience
 description: ツール、データ、ワークフローを統合し、シームレスなカスタマーサービス業務を実現する統合エージェント体験プラットフォームの包括的ガイド。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - エージェントデスクトップ統合
 - カスタマーサービステクノロジー
 - オムニチャネルサポート
-category: Application & Use-Cases
+category: コンタクトセンター・CX
 type: glossary
 draft: false
 e-title: Unified Agent Experience

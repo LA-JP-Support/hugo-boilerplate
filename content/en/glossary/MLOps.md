@@ -1,216 +1,75 @@
 ---
-title: "MLOps"
-date: 2025-12-18
-lastmod: 2025-12-18
-translationKey: "mlops"
-description: "A set of practices and tools that automate the process of building, testing, and updating machine learning models in real-world applications."
-keywords: ["MLOps", "machine learning operations", "model deployment", "model monitoring", "feature store"]
-category: "AI Infrastructure & Deployment"
-type: "glossary"
+title: MLOps
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: mlops
+description: MLOps is a methodology and toolkit that automates and streamlines the entire lifecycle of machine learning models from development to production operations.
+keywords:
+- MLOps
+- machine learning operations
+- model deployment
+- CI/CD automation
+- model monitoring
+category: AI & Machine Learning
+type: glossary
 draft: false
+url: /en/glossary/mlops/
 ---
 
 ## What is MLOps?
 
-MLOps (Machine Learning Operations) is an engineering discipline combining machine learning, software engineering, and IT operations to streamline and automate the ML model lifecycle from experimentation through production deployment and ongoing maintenance. MLOps encompasses processes, culture, technology, and tooling enabling scalable, reliable, and compliant operation of machine learning solutions in production environments.
+**MLOps is a set of processes and technologies that automate development, testing, deployment, and operations of machine learning models, ensuring quality throughout their lifecycle.** It applies DevOps principles (software development automation) to machine learning, managing the entire model lifecycle from experimentation to continuous improvement in production environments. By establishing data quality management, model performance monitoring, and automatic retraining mechanisms, AI systems can be operated stably and at scale.
 
-MLOps applies DevOps principles—automation, version control, continuous integration, and continuous delivery—to machine learning pipelines while extending them to address unique ML challenges including data dependencies, experimentation tracking, model drift, and continuous retraining. It treats data, models, and code as versioned, first-class assets ensuring reproducibility, auditability, and compliance.
+> **In a nutshell:** An automated maintenance factory that keeps created AI models running stably and continuously.
 
-The discipline addresses the fundamental gap between ML model development (typically experimental, iterative, data-centric) and production operations (requiring stability, scalability, governance, monitoring). Without MLOps, organizations struggle with low model deployment rates, long time-to-production, unreliable performance, and inability to maintain models at scale.
+**Key points:**
 
-## Why MLOps Matters
+- **What it does:** Automate and manage model development, deployment, monitoring, and retraining consistently
+- **Why it matters:** Models degrade in performance over time, and manual management cannot keep pace
+- **Who uses it:** Enterprises operating multiple AI models in production, digital transformation companies
 
-### Core Challenges
+## Why it matters
 
-**Complex ML Lifecycle:** Machine learning involves specialized components including data pipelines, feature stores, model training, hyperparameter tuning, validation, deployment, monitoring, explainability, and retraining—each requiring coordination and automation.
+Machine learning models degrade in performance as real-world data distributions shift after training ([data drift](Data-Drift.md)). Traditional approaches detect performance degradation after it occurs, requiring manual retraining and deployment, which delays response. With MLOps, you can build pipelines for automatic data quality checks, continuous model performance monitoring, and automatic retraining, preventing problems before they occur and maintaining always-current, accurate models. This is essential in domains where accuracy directly drives revenue, such as finance (fraud detection), healthcare (predictive diagnosis), and retail (demand forecasting).
 
-**Experimentation Management:** ML development is highly iterative with frequent experimentation across data, features, algorithms, and hyperparameters. Without rigorous tracking, teams face "experiment chaos" losing insights and reproducibility.
+## How it works
 
-**Model Decay:** Deployed models degrade due to data drift (changing input distributions) or concept drift (changing relationships between inputs and outputs). Continuous monitoring and retraining are essential for maintaining accuracy.
+MLOps comprises four major phases. **Data preparation** collects raw data from multiple sources, checks quality, performs feature engineering (data preprocessing), and stores it in reusable form. **Model development** experiments with multiple algorithms and parameters, recording all experiments (experiment tracking). **Validation** evaluates performance on test data, checks for bias and fairness, and approves transition to production. **Operations** monitors model performance in production and triggers automatic retraining when degradation occurs.
 
-**Collaboration Gaps:** Effective ML production requires collaboration between data scientists (model development), ML engineers (deployment), DevOps (infrastructure), and business stakeholders (requirements). Without standardized processes, handoffs become error-prone and slow.
+The foundation supporting everything is **version control**, managing code, training data, and models using Git or DVC, enabling complete tracking of "what changed when" and "why these results occurred." This enables regulatory compliance (audit trails) and root cause analysis during incidents.
 
-**Reproducibility Requirements:** Regulatory compliance, debugging, and model governance demand full traceability of model lineage, training data, configuration, and deployment history.
+## Real-world use cases
 
-**Scale Management:** Operating hundreds or thousands of model versions across environments, monitoring performance, managing infrastructure, and coordinating updates is only practical with automation.
+**Automatic updates to recommendation systems**
+E-commerce companies automatically retrain models with new customer behavior data each night, following latest purchasing trends with recommendations. Model performance degradation triggers automatic alerts.
 
-## Core Principles
+**Continuous improvement of fraud detection systems**
+Banks retrain daily with new data through MLOps pipelines to address new fraud patterns, minimizing misclassification (correctly identifying normal transactions as fraudulent).
 
-### Version Control
+**Maintaining accuracy in medical diagnostic AI**
+Hospital AI diagnostic systems automatically adjust local models by region to handle different imaging equipment and patient populations, preventing uniform performance degradation.
 
-Track all changes in code, data, and model artifacts enabling reproducibility, rollback, and auditability. Tools: Git for code, DVC or MLflow for data/models.
+## Benefits and considerations
 
-Every dataset, feature, model configuration, and code change is logged and versioned, supporting traceability and rollback when issues arise.
+**On the benefits side,** MLOps dramatically shortens development-to-production time from months to weeks. Automatic monitoring enables early problem detection, and consistent processes ensure quality. Multiple models can be managed simultaneously, providing excellent scalability.
 
-### Automation
+**As for considerations,** initial setup requires significant investment, and team-wide mastery takes time. Complex pipelines carry high maintenance burden, and specialized expertise is essential. Poor data quality management results in garbage-in-garbage-out, regardless of automation.
 
-Automate data ingestion, preprocessing, feature engineering, model training, validation, deployment, and monitoring. Reduces manual errors, increases repeatability, accelerates release cycles.
+## Related terms
 
-Example: Automated retraining and deployment pipelines triggered by data drift detection or scheduled intervals.
+- **[CI/CD](CI-CD.md)** — Software development automation approaches that MLOps applies
+- **[Machine Learning](Machine-Learning.md)** — The technology MLOps manages
+- **[Model Monitoring](Model-Monitoring.md)** — Continuous performance verification of production models
+- **[Data Quality](Data-Quality.md)** — The reliability foundation of MLOps
+- **[Automation](Automation.md)** — Process efficiency that MLOps enables
 
-### Continuous Integration and Delivery
+## Frequently asked questions
 
-**Continuous Integration (CI):** Automated testing and validation of code, data quality, and model performance upon every change.
+**Q: Do small teams need MLOps?**
+A: Not necessary if managing few models that can be handled manually. However, if planning to manage multiple models simultaneously in the future, early adoption is recommended.
 
-**Continuous Delivery (CD):** Automated deployment of validated models and pipelines to production environments.
+**Q: What is the cost to implement MLOps?**
+A: Tools (AWS SageMaker, etc.), training, and pipeline construction typically cost several million yen and take about six months. Varies by organization size and model count.
 
-**Continuous Training (CT):** Automatic model retraining as new data becomes available or performance degrades.
-
-**Continuous Monitoring (CM):** Real-time tracking of model performance, data quality, and system health with automatic alerting.
-
-### Model Governance
-
-Establish clear ownership, documentation, and audit trails for ML artifacts. Enforce security, compliance, and ethical standards. Control access to models, data, and infrastructure. Implement review and approval processes including fairness and bias checks.
-
-### Experiment Tracking
-
-Record all training runs with configurations, hyperparameters, metrics, datasets, and results. Enable experiment comparison, best model selection, and knowledge sharing across teams.
-
-### Monitoring and Alerting
-
-Track model performance (accuracy, precision, recall, latency), data quality (distribution shifts, schema changes), and resource utilization (CPU, memory, costs) in real-time. Configure alerts for anomalies triggering investigation or automated responses.
-
-## MLOps Lifecycle
-
-### Data Preparation
-
-Gather, clean, and preprocess raw data from diverse sources. Engineer and store features in centralized feature store for reuse and consistency. Validate data quality and schema preventing downstream errors.
-
-### Model Development
-
-Select and engineer features experimenting with algorithms and hyperparameters. Train models tracking experiments with MLflow, Neptune.ai, or Weights & Biases. Log configurations, metrics, and results for each run.
-
-### Validation and Testing
-
-Evaluate performance using holdout datasets and cross-validation. Validate fairness, quality, and business alignment. Conduct segment-wise validation detecting bias and ensuring compliance.
-
-### Deployment
-
-Package and deploy validated models as prediction services (REST APIs, batch jobs, edge deployments). Use automation and Infrastructure as Code ensuring reproducibility across environments.
-
-### Monitoring
-
-Monitor predictions, performance metrics, and input characteristics in production. Detect model or data drift, performance degradation, and anomalies triggering alerts.
-
-### Retraining
-
-Automatically retrain models with new data or improved algorithms. Validate updated models before replacing production versions ensuring improvements without regressions.
-
-### Governance and Audit
-
-Maintain audit trails, document processes, and ensure regulatory compliance. Control and log access to data, code, and models supporting security and accountability.
-
-## Maturity Levels
-
-### Level 0: Manual Process
-
-All steps (data prep, training, deployment) performed manually. Data scientists hand off models to engineers for deployment. No CI/CD or automation. Minimal monitoring. Suitable for experimental projects or small teams with infrequent updates.
-
-### Level 1: ML Pipeline Automation
-
-Key pipeline steps (data validation, training, evaluation, deployment) are automated. Enables continuous training and delivery—models retrain and redeploy as new data arrives. Modular, reusable components. Basic experiment tracking and feature store integration. Suitable for organizations needing frequent model updates as data evolves.
-
-### Level 2: CI/CD Pipeline Automation
-
-Full automation of ML and CI/CD pipelines. Multiple pipelines orchestrated in parallel. Model registry tracks all deployed models and metadata. Automated triggers for retraining, validation, deployment. Supports rapid experimentation at scale (A/B testing, canary deployments). Suitable for enterprises managing many models requiring rapid, reliable deployment.
-
-## MLOps vs. DevOps
-
-| Aspect | DevOps | MLOps |
-|--------|--------|-------|
-| **Focus** | Software code | Models, data, code |
-| **Assets** | Code, configs | Code, data, models, pipelines |
-| **Validation** | Unit/integration tests | Testing code, data, models |
-| **Deployment** | Application services | Model prediction services |
-| **Continuous X** | CI/CD | CI/CD/CT/CM |
-| **Challenges** | Code changes | Data drift, model decay |
-
-Key difference: DevOps automates code delivery; MLOps extends automation to data and models requiring additional validation, monitoring, and retraining for maintaining performance.
-
-## Implementation Best Practices
-
-**Version Everything:** Set up version control for code, data, and models (Git, DVC, MLflow).
-
-**Automate Pipelines:** Automate data validation, training, evaluation, and deployment steps reducing manual intervention.
-
-**Track Experiments:** Record all training runs with metadata (hyperparameters, metrics, datasets) enabling comparison and selection.
-
-**Validate Data:** Implement automated data validation catching schema changes or data drift early.
-
-**Test Models:** Validate offline (test data) and online (A/B or canary testing) before full production deployment.
-
-**Monitor Continuously:** Track performance, drift, and resource utilization in production with automated alerting.
-
-**Use Feature Stores:** Centralize feature engineering for reuse and consistency across training and serving.
-
-**Document Thoroughly:** Maintain audit trails and documentation for compliance and reproducibility.
-
-**Automate Retraining:** Implement automated retraining in response to drift or scheduled intervals.
-
-**Secure Access:** Control access to models, data, and infrastructure with appropriate authentication and authorization.
-
-**Foster Collaboration:** Break down silos between data science, ML engineering, and operations teams.
-
-## Use Cases
-
-### Recommendation Systems
-
-**Scenario:** E-commerce platform providing personalized product recommendations.
-
-**Implementation:** Nightly automated training using latest user interaction data. Best-performing model pushed to production API. Real-time monitoring of click-through rates detecting performance drops. Automatic retraining when performance degrades below threshold.
-
-**Benefits:** Fresh recommendations, automated updates, consistent performance, reduced manual intervention.
-
-### Fraud Detection
-
-**Scenario:** Financial institution detecting fraudulent transactions in real-time.
-
-**Implementation:** Continuous data validation ensuring transaction features match schema. Experiment tracking comparing precision-recall tradeoffs across model variants. Full audit trails of model versions and training data for regulatory compliance.
-
-**Benefits:** Regulatory compliance, explainable decisions, rapid model iteration, comprehensive audit trails.
-
-### Autonomous Systems
-
-**Scenario:** Self-driving vehicle perception models deployed to edge devices.
-
-**Implementation:** Model optimization (compression, quantization) for resource-constrained environments. Automated delivery of updated models to deployed vehicles. Continuous monitoring of inference statistics triggering updates when performance degrades.
-
-**Benefits:** Efficient edge deployment, automated updates, performance monitoring, graceful degradation.
-
-## Platform and Tools
-
-**AWS SageMaker:** Managed MLOps tools for automation, model tracking, and deployment with integrated CI/CD.
-
-**Databricks MLflow:** Experiment tracking, model registry, and deployment orchestration with Delta Lake integration.
-
-**Google Cloud Vertex AI:** End-to-end ML platform with pipelines, monitoring, and CI/CD integration.
-
-**Azure Machine Learning:** Pipeline automation, tracking, and validation with Azure ecosystem integration.
-
-**Neptune.ai:** Experiment tracking and model registry with extensive integration support.
-
-**Hopsworks Feature Store:** Centralized feature engineering and serving platform with versioning.
-
-**NVIDIA Triton:** High-performance model serving and deployment at scale supporting multiple frameworks.
-
-## References
-
-- [AWS: What is MLOps?](https://aws.amazon.com/what-is/mlops/)
-- [Databricks: MLOps Glossary](https://www.databricks.com/glossary/mlops)
-- [NVIDIA: What is MLOps?](https://www.nvidia.com/en-us/glossary/mlops/)
-- [Google Cloud: MLOps Guide](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
-- [Hopsworks: MLOps Dictionary](https://www.hopsworks.ai/mlops-dictionary)
-- [ML-Ops.org: Principles](https://ml-ops.org/content/mlops-principles)
-- [Databricks: Model Monitoring](https://www.databricks.com/product/machine-learning/lakehouse-monitoring)
-- [Databricks: Model Governance](https://www.databricks.com/solutions/model-governance)
-- [Hopsworks: Feature Store](https://www.hopsworks.ai/feature-store)
-- [Hopsworks: CI/CD for MLOps](https://www.hopsworks.ai/dictionary/ci-cd-for-mlops)
-- [MLflow Tracking](https://mlflow.org/docs/latest/tracking.html)
-- [Neptune.ai Platform](https://neptune.ai/)
-- [Weights & Biases](https://wandb.ai/)
-- [NVIDIA Triton Server](https://developer.nvidia.com/nvidia-triton-inference-server)
-- [DVC Data Versioning](https://dvc.org/)
-- [Google: Hidden Technical Debt in ML](https://research.google/pubs/machine-learning-the-high-interest-credit-card-of-technical-debt/)
-- [Neptune.ai: MLOps Best Practices](https://neptune.ai/blog/mlops-best-practices)
-- [Databricks: Big Book of MLOps](https://www.databricks.com/resources/ebook/the-big-book-of-mlops)
-- [Databricks: ML Use Cases](https://www.databricks.com/resources/ebook/big-book-of-machine-learning-use-cases)
+**Q: What is the relationship between MLOps and data science?**
+A: Data scientists create the best models, and MLOps engineers keep them running stably in production. Collaboration between both is essential.

@@ -1,266 +1,89 @@
 ---
-title: 環境変数(シークレット):詳細ガイド
+title: 環境変数（シークレット）
+date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: environment-variables-secrets
-description: アプリケーションの安全な設定のための環境変数(シークレット)について学びます。APIキーやパスワードなどの機密データをコードから分離し、セキュリティと柔軟性を確保します。
+description: APIキーやパスワードなどの機密データをコードの外部に保存し、安全に管理する仕組みです。
 keywords:
 - 環境変数
 - シークレット管理
 - APIキー
-- アプリケーションセキュリティ
+- セキュリティ
 - 設定管理
-category: General
+category: クラウド・インフラ
 type: glossary
-date: '2025-12-19'
-lastmod: '2025-12-19'
 draft: false
-e-title: 'Environment Variables (Secrets): The Deep'
-term: かんきょうへんすう(しーくれっと):しょうさいがいど
+e-title: Environment Variables (Secrets)
 url: "/ja/glossary/environment-variables--secrets-/"
 aliases:
 - "/ja/glossary/Environment-Variables--Secrets-/"
+term: かんきょうへんすう しークレット
 ---
-## 環境変数(シークレット)とは何か?
-環境変数は、外部で定義された名前付きキー・バリューペアで、アプリケーションに実行時設定を提供します。シークレットとして使用される場合、機密データ(APIキー、パスワード、データベース認証情報、トークン)をソースコードの外部に保存し、コードリポジトリやログを通じた偶発的な露出を防ぎます。この分離により、シークレットがバージョン管理、UI表示、またはアプリケーションログに明示的に必要とされない限り表示されないことが保証されます。
 
-環境変数の値は、コード内のプレースホルダーとして機能します。`API_KEY = "secret123"`と記述する代わりに、`API_KEY`を参照します。これは実行環境において実行時にのみ存在します。このアプローチにより、コードコミット、リポジトリアクセス、またはログファイルを通じた認証情報漏洩のリスクが最小化されます。機密値は実行時に注入され、特別に設定されない限り視覚的インターフェースから隔離されたままです。
+## 環境変数（シークレット）とは?
 
-一般的なシークレットタイプには、データベースパスワード、APIトークン、OAuth認証情報、暗号化キー、機能フラグ、環境固有の設定値が含まれます。ウェブ、モバイル、クラウド、IoTなど、すべてのプラットフォームにわたる最新のアプリケーションは、開発、ステージング、本番環境全体で柔軟なデプロイメントを可能にしながらセキュリティを維持するために環境変数に依存しています。
+**環境変数は、コードに直接書かずに、実行時にアプリケーションに渡される設定値です。シークレット（機密情報）として使う場合は、APIキーやパスワード、データベース認証情報をコードの外に保管します。** 例えば、`API_KEY = "abc123"` とコードに書く代わりに、環境変数 `API_KEY` を参照する方法です。
 
-## なぜシークレットに環境変数を使用するのか?
+> **ひとことで言うと：** 家の鍵を玄関に貼り付けるのではなく、別の安全な場所に保管して、必要な人だけが取りに行く、という管理方法をコードに応用したものです。
 
-**コードと設定の分離**  
-機密データをコードベースとバージョン管理から切り離すことで、同じコードが異なる環境で異なる認証情報を使用して実行できるようになります。開発、ステージング、本番環境はそれぞれ、コード変更なしに適切なシークレットを使用します。
+**ポイントまとめ：**
 
-**セキュリティの強化**  
-コードに埋め込まれたシークレットは、リポジトリアクセス、コード共有、または偶発的なコミットを通じて常に露出リスクに直面します。環境変数は、シークレットをコードベースの外部に保持することで、この攻撃ベクトルを排除します。エラーメッセージ、スタックトレース、デバッグ出力での露出を防ぎます。
+- **何をするものか：** APIキーやパスワードをコードの外部に保存・管理。
+- **なぜ必要か：** GitHubなどにシークレットを誤ってアップロードするのを防止。
+- **誰が使うか：** すべての開発者、特にクラウド/インフラを扱う人。
 
-**運用の柔軟性**  
-コードに触れることなくシークレットを更新またはローテーションできます。環境変数を変更してアプリケーションを再起動するだけで、新しい認証情報を実装できます。この俊敏性は、認証情報が漏洩した場合やローテーションが必要な場合の迅速なインシデント対応をサポートします。
+## なぜ重要か
 
-**デプロイメントの一貫性**  
-CI/CDパイプラインは、デプロイメント中に自動的にシークレットを注入し、環境全体で一貫したプロセスを維持します。チームは手動の認証情報管理を回避し、人的エラーを削減します。
+開発者が誤ってAPIキーをコードに含めてGitHubにコミットしてしまうことがあります。するとハッカーはそのキーを発見して悪用でき、データが盗まれたり、攻撃者がサービスを使って料金が発生したりします。環境変数を使えば、コード内にシークレットが存在せず、安全です。
 
-**プロセスレベルの分離**  
-各アプリケーションプロセスは関連するシークレットのみにアクセスし、1つのプロセスが侵害された場合の影響範囲を縮小します。きめ細かいアクセス制御により、権限昇格を防ぎます。
+また、開発環境・テスト環境・本番環境で異なるAPIキーを使い分ける必要があります。環境変数なら、同じコードで環境ごとに異なるキーを自動的に適用できます。
 
-## 環境変数の種類
+## 仕組みをわかりやすく解説
 
-**システムレベル変数**  
-オペレーティングシステムレベルで設定され、すべてのプロセスとユーザーに影響します。例として、Unixシステムの`PATH`ディレクトリやWindowsの環境設定があります。
+環境変数の使い方は3ステップです。
 
-**ユーザースコープ変数**  
-特定のユーザープロファイルに限定されます。そのユーザーによって起動されたプロセスのみがこれらの変数にアクセスでき、ユーザーレベルの分離を提供します。
+**ステップ1：設定ファイルまたはシステムに値を保存**
+ローカル開発では `.env` ファイルに `OPENAI_API_KEY=sk-abc123` と記述します。本番環境ではAWS Secrets ManagerやAzure Key Vaultなどの専門ツールに保管します。
 
-**プロセススコープ変数**  
-個々のプロセスまたはセッションに対してのみ存在します。より広範なシステムに影響を与えることなく、特定のプロセスを起動する際に一時的に設定されます。
+**ステップ2：コードから参照**
+Node.jsなら `process.env.OPENAI_API_KEY` で参照でき、Pythonなら `os.getenv('OPENAI_API_KEY')` です。
 
-**ビルド時とランタイムのシークレット**  
-ビルド時シークレットは、コンパイルと依存関係の取得をサポートします。ランタイムシークレットは、実行中のアプリケーションが本番サービスやデータベースに接続できるようにします。
+**ステップ3：アプリケーション起動時に自動注入**
+アプリケーション起動時に環境変数が読み込まれ、コードに渡されます。
 
-**アプリケーションレベルの管理**  
-`.env`ファイルは、ローカル開発用の変数を保存します。シークレットマネージャー(AWS Secrets Manager、Azure Key Vault、HashiCorp Vault)は、本番環境向けに監査証跡、アクセス制御、自動ローテーション機能を備えた暗号化ストレージを提供します。
+## 実際の活用シーン
 
-## 一般的な使用例
+**API統合** - OpenAI、Stripe、Google Cloudなどの外部サービスを使う時、APIキーを環境変数に保管。
 
-**API統合**  
-外部サービス(OpenAI、Google Cloud、Stripe、決済処理業者)は、ハードコードではなく環境変数を介して渡されるAPIキーを必要とします。
+**データベース接続** - ユーザー名、パスワード、ホストをコードに書かず環境変数で管理。
 
-**データベース接続**  
-ユーザー名、パスワード、ホスト名を含む接続文字列は、安全かつ環境固有のままです。
+**機能フラグ** - 特定機能をオン/オフするしきい値を環境変数で制御。
 
-**認証トークン**  
-JWT署名キー、OAuthクライアントシークレット、Webhook検証トークンは、ソースコードの外部で保護されます。
+## メリットと注意点
 
-**機能管理**  
-機能フラグは、コードデプロイメントなしに環境全体で機能を制御します。
+**セキュリティ向上が最大メリット** - シークレットがコードベースに含まれないため、漏洩リスクが大幅に減少。
 
-**環境識別**  
-`development`、`staging`、`production`などのタグが、アプリケーションの動作を適切に導きます。
+**環境ごとの設定管理が容易** - 同じコードで複数環境に対応。
 
-## 実装アプローチ
+**一方、`.env` ファイルも安全に管理する必要** - ローカルで `.gitignore` に追加しないと、やはり漏洩します。
 
-### .envファイルを使用したローカル開発
+**複雑な構造に弱い** - 階層的な設定には不向きで、設定ファイル（YAML、JSON）の方が向く場合も。
 
-プロジェクトルートに`.env`ファイルを作成します:
+## 関連用語
 
-```
-OPENAI_API_KEY=sk-abc123
-DATABASE_URL=postgres://user:pass@host:5432/db
-MODE=production
-```
+- **[シークレット管理](Secrets-Management.md)** — 環境変数の拡張概念で、自動ローテーション機能など。
+- **[クラウドセキュリティ](Cloud-Security.md)** — シークレット管理はクラウド環境の重要なセキュリティ対策。
+- **[CI/CDパイプライン](CI-CD.md)** — デプロイ時に環境変数を自動注入。
+- **[APIキー](API-Key.md)** — 環境変数で管理される典型的なシークレット。
+- **[YAML設定](YAML.md)** — 複雑な設定管理に使用される形式。
 
-**重要:** バージョン管理へのコミットを防ぐため、必ず`.env`を`.gitignore`に追加してください。
+## よくある質問
 
-### Node.js実装
+**Q: ローカル開発で `.env` ファイルをGitにコミットしてもいいですか?**
+A: いいえ。絶対に `.gitignore` に追加してコミットを避けてください。テンプレート `.env.example` を作成し、チームメンバーが値を埋める方法がおすすめ。
 
-```javascript
-require('dotenv').config();
-const apiKey = process.env.API_KEY;
-const dbUrl = process.env.DATABASE_URL;
-```
+**Q: 本番環境での環境変数管理はどうしますか?**
+A: AWS Secrets Manager、Azure Key Vault、HashiCorp Vaultなど、エンタープライズ向けツールを使用。暗号化、監査ログ、自動ローテーション機能があります。
 
-### Python実装
-
-```python
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-api_key = os.getenv('API_KEY')
-db_url = os.getenv('DATABASE_URL')
-```
-
-### .NET実装
-
-```csharp
-var builder = WebApplication.CreateBuilder(args);
-var apiKey = builder.Configuration["API_KEY"];
-
-// ローカル開発用のUser Secretsを使用
-// dotnet user-secrets init
-// dotnet user-secrets set "Movies:ServiceApiKey" "12345"
-var movieKey = builder.Configuration["Movies:ServiceApiKey"];
-```
-
-### オペレーティングシステムの設定
-
-**Unix/Linux/macOS**
-
-```bash
-# 現在のセッション
-export API_KEY="abc123"
-
-# 単一コマンド
-API_KEY="abc123" python app.py
-
-# 永続的(~/.bashrcまたは~/.zshrcに追加)
-echo 'export API_KEY="abc123"' >> ~/.bashrc
-source ~/.bashrc
-```
-
-**Windows**
-
-```bat
-# コマンドプロンプト
-set API_KEY=abc123
-
-# PowerShell
-$env:API_KEY="abc123"
-
-# 永続的: コントロールパネル → システム → 詳細設定 → 環境変数
-```
-
-## シークレット管理のベストプラクティス
-
-**バージョン管理にシークレットを保存しない**  
-Gitリポジトリは完全な履歴を保持します。コミットされたシークレットは、削除後もアクセス可能なままです。`.gitignore`を厳格に使用してください。
-
-**本番環境のシークレットマネージャー**  
-AWS Secrets Manager、Azure Key Vault、HashiCorp Vaultは、本番環境に不可欠な暗号化、アクセスログ、自動ローテーション、コンプライアンス機能を提供します。
-
-**最小権限アクセス**  
-シークレットへのアクセスを必要最小限の人員とシステムに制限します。ロールベースのアクセス制御を実装します。
-
-**定期的なローテーション**  
-スケジュールまたはインシデント後にシークレットをローテーションします。シークレットマネージャーの機能や自動的に期限切れになる動的シークレットを使用して、可能な限り自動化します。
-
-**包括的な監査ログ**  
-セキュリティ監視とコンプライアンス要件のために、すべてのシークレットアクセスを追跡します。
-
-**クライアント側の分離**  
-ランタイムシークレット(データベースパスワード、APIキー)をブラウザJavaScriptに公開しないでください。外部サービスアクセスにはバックエンドプロキシを使用します。
-
-**自動セキュリティスキャン**  
-CI/CDパイプラインにシークレットスキャンを実装し、偶発的なコミットがリポジトリに到達する前に検出します。
-
-**暗号化要件**  
-ストレージシステムでの保存時およびネットワーク上での転送時にシークレットを暗号化します。
-
-**環境のセグメンテーション**  
-開発、ステージング、本番環境用に個別のシークレットセットを維持し、環境間の汚染を防ぎます。
-
-## 高度なパターン
-
-**複数環境の管理**  
-各環境に対して個別の`.env`ファイル(`.env.development`、`.env.production`)またはシークレットマネージャーの名前空間を使用します。
-
-**シークレットファイルの処理**  
-プラットフォームダッシュボード(Render、Vercel、Netlify)は、秘密鍵や証明書などのシークレットファイル全体のアップロードをサポートしています。
-
-**マイクロサービスのシークレット共有**  
-環境グループまたはシークレットマネージャーにより、セキュリティ境界を維持しながら、関連サービス間で設定を共有できます。
-
-**Kubernetesサイドカーパターン**  
-Vault Agentをサイドカーコンテナとしてデプロイし、実行時にアプリケーションコンテナにシークレットを取得して注入します。
-
-**動的シークレット**  
-アプリケーションはシークレットマネージャーから一時的な認証情報を要求し、時間制限付き露出によってセキュリティを強化する自動期限切れアクセストークンを受け取ります。
-
-## セキュリティ上の考慮事項
-
-**平文の制限**  
-ローカルの`.env`ファイルとOSレベルの変数は、データを暗号化せずに保存します。開発には許容されますが、本番環境には不十分です。
-
-**設定の複雑さ**  
-環境変数は、ネストされた階層的な設定に苦労します。複雑な構造には、暗号化された設定ファイルを検討してください。
-
-**配布の課題**  
-チーム全体での手動のシークレット配布は、エラーとセキュリティギャップを引き起こします。集中型シークレットマネージャーがこの問題を解決します。
-
-**代替ソリューション**  
-構造を必要とする複雑な設定には、プラットフォーム固有のシークレット管理ツールと組み合わせて、暗号化された設定ファイル(バージョン管理から除外)を使用します。
-
-## 本番環境アーキテクチャの例
-
-外部LLM APIアクセスを必要とするAIチャットボットを考えてみましょう:
-
-1. シークレットマネージャーまたはプラットフォームダッシュボードにAPIキーを保存
-2. アプリケーションは起動時に環境から`OPENAI_API_KEY`を読み取る
-3. キーはコード、ログ、ユーザーインターフェースに表示されない
-4. ローテーションには、シークレットマネージャーの値を更新して再デプロイするだけで済む
-5. 開発、ステージング、本番環境で異なるキーを使用
-6. 監査証跡がすべてのAPIキーアクセスを追跡
-
-**Node.js:**
-```javascript
-require('dotenv').config();
-const { OpenAI } = require('openai');
-const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
-});
-```
-
-**Python:**
-```python
-import os
-from openai import OpenAI
-
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-```
-
-**C#:**
-```csharp
-var builder = WebApplication.CreateBuilder(args);
-var apiKey = builder.Configuration["OPENAI_API_KEY"];
-```
-
-## 重要なポイント
-
-環境変数は、コードに機密データを埋め込むことなく、アプリケーションへの安全で柔軟なシークレット注入を提供します。設定を実装から分離し、環境固有の認証情報を使用して環境全体で同一のコードベースを可能にします。ローカル開発では、厳格な`.gitignore`保護を伴う`.env`ファイルを使用します。本番環境のデプロイメントでは、暗号化、アクセス制御、監査ログ、自動ローテーションを提供するシークレットマネージャーまたはプラットフォームダッシュボードを活用します。定期的なシークレットローテーション、包括的なログ、クライアント側の分離により、セキュリティ態勢を維持します。適切な実装により、迅速なデプロイメントとインシデント対応を可能にしながら、認証情報の漏洩を防ぎます。
-
-## 参考文献
-
-- [OWASP: Secrets Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html)
-- [Microsoft Learn: Best Practices for Protecting Secrets](https://learn.microsoft.com/en-us/azure/security/fundamentals/secrets-best-practices)
-- [Microsoft Docs: Safe Storage of App Secrets in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-10.0)
-- [Kinsta: What Is an Environment Variable?](https://kinsta.com/blog/what-is-an-environment-variable/)
-- [DreamHost: Environment Variables Explained](https://www.dreamhost.com/blog/environment-variables/)
-- [Render Docs: Environment Variables and Secrets](https://render.com/docs/configure-environment-variables)
-- [Netlify Docs: Environment Variables](https://docs.netlify.com/configure-builds/environment-variables/)
-- [Vercel Docs: Environment Variables](https://vercel.com/docs/concepts/projects/environment-variables)
-- [AWS Secrets Manager Documentation](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)
-- [Azure Key Vault Documentation](https://learn.microsoft.com/en-us/azure/key-vault/)
-- [HashiCorp Vault Documentation](https://www.vaultproject.io/docs)
-- [GitHub Secret Scanning](https://docs.github.com/en/code-security/secret-security/about-secret-scanning)
-- [Azure DevOps Credential Scanner](https://learn.microsoft.com/en-us/azure/devops/repos/security/github-advanced-security-secret-scanning)
-- [Stack Overflow: Storing API Keys with Gatsby](https://stackoverflow.com/questions/62231572/how-to-store-and-access-api-keys-and-passwords-with-gatsby)
+**Q: 環境変数の値はいつ変更されますか?**
+A: アプリケーション起動時に読み込まれるので、起動後に環境変数を変更しても反映されません。新しい値を使うにはアプリケーションを再起動する必要があります。

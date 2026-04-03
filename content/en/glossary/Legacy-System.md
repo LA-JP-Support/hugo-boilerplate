@@ -1,17 +1,19 @@
 ---
-title: "Legacy System"
+title: Legacy System
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Legacy-System
-description: "An older computer system or software that organizations continue using because replacing it is expensive and risky, even though newer technology exists."
+description: An older computer system that organizations keep using because it still works reliably and replacing it would be too costly and risky, despite newer technology being available.
 keywords:
 - legacy system
-- system modernization
+- system obsolescence
 - technical debt
-- legacy migration
-- system integration
-category: "Application & Use-Cases"
+- migration
+- cloud
+category: Business & Strategy
 type: glossary
 draft: false
+url: "/en/glossary/Legacy-System/"
 ---
 
 ## What is a Legacy System?

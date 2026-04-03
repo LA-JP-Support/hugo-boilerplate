@@ -9,7 +9,8 @@ keywords:
 - ライティング基準
 - デザインドキュメント
 - 編集ガイドライン
-category: Application & Use-Cases
+lastmod: 2026-04-02
+category: コンテンツ・マーケティング
 type: glossary
 draft: false
 e-title: Style Guide

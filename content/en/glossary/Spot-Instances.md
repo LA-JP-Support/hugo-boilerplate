@@ -1,254 +1,78 @@
 ---
-title: "Spot Instances"
-date: 2025-12-18
-lastmod: 2025-12-18
-translationKey: "spot-instances"
-description: "Discounted cloud computing resources that use spare server capacity, often 90% cheaper than regular pricing. They're ideal for flexible tasks like data analysis and machine learning that can handle brief interruptions."
-keywords: ["Spot Instances", "cloud compute", "AWS", "Azure", "GCP"]
-category: "AI Infrastructure & Deployment"
-type: "glossary"
+title: Spot Instances
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: spot-instances
+description: Spot instances are discounted cloud computing resources from AWS, Azure, and GCP that offer up to 90% savings on surplus capacity in exchange for potential termination with short notice.
+keywords:
+- spot instances
+- cloud computing
+- AWS
+- cost savings
+- fault-tolerant workloads
+category: Cloud & Infrastructure
+type: glossary
 draft: false
+url: /en/glossary/Spot-Instances/
 ---
 
 ## What are Spot Instances?
 
-Spot Instances are a purchasing model for cloud compute where users access spare capacity at discounts often reaching up to 90% off on-demand pricing. Major cloud providers offer Spot Instance programs with varying features and pricing mechanisms:
+**Spot instances are computing resources using cloud provider surplus capacity, available at up to 90% discount compared to on-demand pricing.** In exchange, the provider may terminate instances with short notice (AWS: 2 minutes, Azure/GCP: 30 seconds) when capacity is needed. This represents a trade-off: "cheap but potentially unstable" becomes "genuinely inexpensive if shutdown is managed correctly."
 
-**Amazon Web Services (AWS) Spot Instances:** Users specify a maximum price and receive instances if the market price is below this threshold. Spot Instances are reclaimed with 2-minute notice when capacity is needed or price exceeds the maximum bid.
+> **In a nutshell:** Like last-minute airline ticket discounts—very cheap, but "might be cancelled with short notice."
 
-**Microsoft Azure Spot Virtual Machines (VMs):** Users set a maximum price; VMs are evicted when the market price exceeds this limit. Azure provides 30-second eviction notice.
+**Key points:**
 
-**Google Cloud Spot VMs:** Offer similar discounts with fixed and substantial savings. Pricing is stable for up to a month. Google provides 30-second preemption notice.
+- **What it is:** Discounted cloud resources (with termination risk).
+- **Why it's needed:** Cost savings is the top priority for certain workloads (batch processing, testing, ML training).
+- **Who uses it:** Startups, research institutions, scalability-focused companies.
 
-Spot Instances are best suited for flexible, fault-tolerant applications. Providers can reclaim these instances with short notice, so resilience to interruptions is a crucial requirement.
+## Why It Matters
 
-## How Spot Instances Work
+Cloud cost reduction is a critical concern for many organizations. Development and testing environments, batch processing, and machine learning training—workloads where "execution timing is flexible and interruption-tolerant"—previously created substantial cost burdens. Spot instances enable these workloads to run at drastically lower cost, making machine learning and large-scale simulation accessible to general enterprises.
 
-### Pricing Mechanism
+## How It Works
 
-**Dynamic, Supply/Demand Driven:** The spot price for each instance type and region fluctuates based on long-term trends in supply and demand, not real-time bidding.
+Spot instances operate through pricing mechanisms and interruption policies.
 
-**Max Price:** Users can set a maximum price they're willing to pay. As long as the current Spot price is below this, the instance runs.
+**In the pricing mechanism**, spot prices dynamically adjust based on supply and demand for each instance type and region. You set a maximum price; as long as actual price stays below it, you run at a discount.
 
-**No Real-Time Bidding (Modern Model):** Early systems involved live bidding, but now most providers use a set-max-price model for simplicity.
+**In the capacity pool**, unused resources for a given instance type and availability zone are pooled. Pool pricing and interruption risk vary by pool.
 
-**Billing Granularity:** AWS, Azure, and GCP bill per second, after a 1-minute minimum.
+**In the interruption mechanism**, when the provider needs resources for high-priority requests (on-demand or reserved instances), spot instances receive notice (2-30 seconds) and terminate. AWS may issue "rebalance recommendation" warnings.
 
-**Example:** On AWS, an `m5.large` On-Demand instance costs $0.096/hr, while the Spot price could be as low as $0.019/hr (an 80%+ saving).
+**In design requirements**, workloads must be "stateless" or "checkpoint-capable." Otherwise, interruption causes data loss.
 
-### Availability & Interruption
+## Real-World Use Cases
 
-**Capacity Pool:** Each Spot Instance draw comes from a pool defined by instance type and availability zone.
+**Batch Processing and ETL Jobs**
+Running large nightly data processing with 80%+ cost savings via spot instances.
 
-**Interruption Policy:** Providers may terminate or deallocate instances with short notice—2 minutes on AWS, 30 seconds on Azure and GCP—when they need the capacity or the spot price exceeds your max bid.
+**Machine Learning Model Training**
+Running hyperparameter search in parallel across instances, with auto-restart capability if interrupted, achieving low-cost training.
 
-**Interruption Notification:**
-- AWS: 2-minute warning
-- Azure: 30-second notice
-- GCP: 30-second notice
+**CI/CD Pipeline Builds**
+Launching large numbers of parallel build agents for testing, then scaling down immediately after completion.
 
-**Rebalancing:** AWS offers "rebalance recommendations," giving extra early warning that a Spot Instance is at elevated risk of interruption.
+## Benefits and Considerations
 
-**Critical Point:** Applications must be architected to handle interruptions—statelessness, checkpointing, and auto-recovery are essential.
+**Benefits:** Up to 90% cost savings, scalability, ideal for short-term compute needs.
 
-## Comparison: Spot vs On-Demand vs Reserved
+**Considerations:** Interruption risk (no SLA) makes them unsuitable for mission-critical production, and application design complexity increases. Requires fault-tolerant architecture.
 
-| Feature | Spot Instances | On-Demand Instances | Reserved Instances |
-|---------|----------------|---------------------|-------------------|
-| **Pricing** | Variable, up to 90% less | Fixed, highest price | Discounted (up to 72%), fixed |
-| **Availability** | Only if spare capacity exists | Always available | Guaranteed during reservation |
-| **Interruptions** | Can be interrupted (2-min or 30-sec notice) | User decides when to terminate | Not interrupted during term |
-| **Commitment** | No commitment | No commitment | 1 or 3 years required |
-| **Use Cases** | Flexible, fault-tolerant, non-critical | All workloads, especially critical | Predictable, steady-state |
-| **SLA** | No SLA | Standard SLA | Standard SLA |
-| **Billing** | Per second (after 1st minute) | Per second | Per second |
+## Related Terms
 
-## Cross-Cloud Provider Comparison
-
-| Feature | AWS Spot | GCP Spot VMs | Azure Spot VMs |
-|---------|----------|--------------|----------------|
-| **Pricing Model** | Variable, supply/demand driven | Fixed discount (up to 91% off) | Variable, supply/demand driven |
-| **Usage Time Limit** | No fixed limit | Max 24 hours | No fixed limit |
-| **Interruption Notice** | 2 minutes | 30 seconds | 30 seconds |
-| **Billing** | Per second (after 1 min) | Per second | Per second |
-| **SLA** | No SLA | No SLA | No SLA |
-| **Integration Tools** | Spot Fleet, ASG, Kubernetes | MIG, GKE | VM Scale Sets, AKS |
-| **Best Use Cases** | Batch, CI/CD, ML, HPC, stateless | Batch, analytics, dev/test | Batch, stateless apps, CI/CD |
-| **Unique Features** | Spot block (fixed-term interruption) | Sustained use discounts | Eviction policy customization |
-
-## Core Concepts
-
-### Spot Capacity Pool
-
-A group of unused virtual machines of the same instance type in the same availability zone. Each pool operates independently, and capacity/price can vary between pools.
-
-### Spot Instance Request
-
-A user-initiated request to allocate a Spot Instance:
-- **One-time:** Provisioned once if capacity is available
-- **Persistent:** Automatically resubmitted if interrupted (useful for jobs that must eventually finish)
-
-### Rebalance Recommendation (AWS)
-
-AWS issues a rebalance recommendation before the standard interruption notice if a Spot Instance is at increased risk of termination, allowing workloads to proactively migrate or checkpoint.
-
-## Use Cases and Examples
-
-### Ideal Use Cases
-
-**Batch Processing:** Data analytics, video transcoding, rendering, ETL jobs  
-*Example:* Researchers running Monte Carlo simulations for climate data, saving 80%+ on compute.
-
-**Big Data Analytics:** Hadoop/Spark clusters, log/data analysis at scale  
-*Example:* Media businesses processing petabytes of logs nightly on AWS EMR with Spot Instances.
-
-**CI/CD Pipelines:** Short-lived build and test environments  
-*Example:* SaaS providers using Spot Instances as Jenkins build agents for cost-effective, parallelized CI.
-
-**Machine Learning Training:** Deep learning, hyperparameter tuning, checkpointed training on GPUs  
-*Example:* Teams training neural networks on Spot GPU instances with autosave for interruption recovery.
-
-**Containers and Microservices:** Stateless services orchestrated by Kubernetes or Docker Swarm
-
-**Dev/Test Environments:** Non-production workloads where interruption is acceptable
-
-**High-Performance Computing (HPC):** Genomic sequencing, financial modeling, scientific simulations
-
-### Non-Ideal Use Cases
-
-**Mission-Critical Applications:** Where high-availability and minimal downtime are paramount
-
-**Stateful Apps Without Resilience:** Apps that cannot checkpoint state or recover from sudden termination
-
-## Risks and Mitigation Strategies
-
-### Key Risks
-
-**Interruption Risk:** Instances can be terminated with as little as 30 seconds' notice
-
-**Capacity Volatility:** Spot capacity can disappear unpredictably
-
-**Pricing Fluctuations:** Spot prices can spike, especially for popular instance types
-
-**No SLA:** Providers do not guarantee uptime or availability
-
-### Mitigation Strategies
-
-**Automation:**
-- Use orchestration systems (Kubernetes, AWS Auto Scaling) to reschedule and replace interrupted workloads
-- Blend Spot with On-Demand and Reserved Instances for resilience
-- Employ automation platforms that manage lifecycles and fallback
-
-**Application Design:**
-- Architect services as stateless and leverage external storage
-- Implement checkpointing to resume jobs after interruption
-- Use loose coupling to tolerate node failures
-
-**Proactive Monitoring:**
-- Monitor interruption rates by region/type using tools like AWS Spot Instance Advisor
-- Act on rebalance recommendations to migrate workloads early
-
-**Diversification:**
-- Use mix of instance types and regions to avoid "herd" interruptions
-- Set sensible max bids to reduce risk of sudden eviction
-
-## Best Practices
-
-**1. Start with Non-Critical Workloads**  
-Validate your interruption-handling strategies before moving critical workloads.
-
-**2. Diversify**  
-Use multiple instance types and availability zones for higher reliability.
-
-**3. Automate**  
-Employ AWS Spot Fleet, Auto Scaling Groups, or Kubernetes autoscalers.
-
-**4. Monitor Trends**  
-Use AWS Spot Price History and Spot Instance Advisor.
-
-**5. Set Max Prices**  
-Cap your bid at or below the On-Demand price.
-
-**6. Plan for Interruption**  
-Architect for fast recovery and zero data loss.
-
-**7. Leverage Third-Party Tools**  
-Try Cast AI or CloudZero for optimization and automation.
-
-**8. Use Tags**  
-Track usage and savings by team/project.
-
-**9. Regularly Review**  
-Update your mix and strategies based on usage reports.
-
-## Billing and Pricing
-
-**Spot Price:** Set by provider, fluctuates with market demand and supply
-
-**Billing Granularity:** Per second after first minute (AWS, Azure, GCP)
-
-**Termination Billing:** Generally, if AWS interrupts, you are not charged for the last partial hour; if you terminate, you pay for seconds used.
-
-**Savings Tracking:** Use provider dashboards, AWS Spot Fleet savings reports, or third-party tools
-
-**No Overlap with Savings Plans:** Spot usage does not contribute to AWS Savings Plans commitments
-
-## Example Scenario
-
-**Research Team Running Simulations**
-
-A university research group needs to run thousands of Monte Carlo simulations for climate modeling. By using Spot Instances orchestrated by Kubernetes, they cut compute costs by 85% compared to On-Demand pricing. Checkpoints are saved to persistent storage before interruption, so jobs resume without loss.
+- **[Cloud Computing](Cloud-Computing.md)** — The delivery model for spot instances.
+- **[Auto-Scaling](Auto-Scaling.md)** — Efficient spot instance management.
+- **[Cost Optimization](Cost-Optimization.md)** — The primary use case for spot instances.
+- **[Fault Tolerance](Fault-Tolerance.md)** — Essential design pattern for spot instances.
+- **[Kubernetes](Kubernetes.md)** — Automation platform for spot instance orchestration.
 
 ## Frequently Asked Questions
 
-**Q: Can I use Spot Instances for production workloads?**  
-A: Yes, if your application is resilient to interruptions. Many organizations blend Spot with On-Demand or Reserved Instances for critical workloads.
+**Q: Can spot instances be used for production workloads?**
+A: Yes, but use a hybrid approach: spot + on-demand + reserved instances for both reliability and economy.
 
-**Q: How much can I save with Spot Instances?**  
-A: Typically 70–90% compared to On-Demand, depending on region, type, and demand.
-
-**Q: What happens when a Spot Instance is interrupted?**  
-A: You receive a short interruption notice (2 minutes on AWS, 30 seconds on Azure/GCP). The instance is then terminated, stopped, or hibernated.
-
-**Q: How do I request a Spot Instance?**  
-A: Use the cloud provider's console, CLI, or API. Specify instance type, max price, and duration as needed.
-
-**Q: Can Spot Instances be used with Kubernetes?**  
-A: Yes, container orchestrators like Kubernetes can reschedule pods when a Spot Instance is interrupted.
-
-**Q: Is there any SLA for Spot Instances?**  
-A: No. Providers do not guarantee uptime or availability for Spot Instances.
-
-## References
-
-- [AWS Spot Instances Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
-- [AWS EC2 Spot Pricing](https://aws.amazon.com/ec2/spot/pricing/)
-- [AWS Spot Interruptions](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html)
-- [AWS Instance Rebalance Recommendations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html#instance-rebalance-recommendations)
-- [AWS Spot Use Cases](https://aws.amazon.com/ec2/spot/use-cases/)
-- [AWS Spot HPC Use Case](https://aws.amazon.com/ec2/spot/use-cases/hpc/)
-- [AWS Billing & Purchasing Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-purchasing-options.html)
-- [AWS Spot Price History](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances-history.html)
-- [AWS Spot Instance Advisor](https://aws.amazon.com/ec2/spot/instance-advisor/)
-- [AWS EC2 Spot Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Fleets.html)
-- [AWS Spot Requests](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html)
-- [AWS Spot Savings](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-savings.html)
-- [AWS Billing for Interrupted Spot Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-for-interrupted-spot-instances.html)
-- [AWS Spot Best Practices](https://aws.amazon.com/blogs/compute/best-practices-to-optimize-your-amazon-ec2-spot-instances-usage/)
-- [AWS Spot FAQ](https://aws.amazon.com/ec2/spot/faqs/)
-- [Google Cloud Spot VMs](https://cloud.google.com/compute/docs/instances/spot)
-- [Google Cloud Spot Preemption](https://cloud.google.com/compute/docs/instances/spot#preemption)
-- [Google Cloud Pricing](https://cloud.google.com/compute/pricing)
-- [Azure Spot Virtual Machines](https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms)
-- [Azure Spot Pricing](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/spot/)
-- [Spot.io: Azure Spot VMs Guide](https://spot.io/resources/azure-pricing/the-complete-guide/what-are-azure-spot-virtual-machines/)
-- [Spot.io: Spot vs On-Demand](https://spot.io/resources/spot-instances/spot-instances-vs-on-demand-instances-pros-and-cons/)
-- [Spot.io: Provider Comparison](https://spot.io/resources/spot-instances/spot-instances-aws-azure-google-cloud/)
-- [Spot.io: Suitable Use Cases](https://spot.io/resources/spot-instances/spot-instances-aws-azure-google-cloud/#Suitable-Use-Cases-for-Spot-Instances)
-- [Spot.io: Risks & Strategies](https://spot.io/resources/spot-instances/spot-instances-aws-azure-google-cloud/#Strategies-to-Optimize-the-Use-of-Spot-Instances)
-- [Spot.io Ultimate Guide](https://spot.io/resources/spot-instances/spot-instances-aws-azure-google-cloud/)
-- [Spot.io Eco](https://spot.io/products/eco/)
-- [CloudZero Spot Instances Guide](https://www.cloudzero.com/blog/spot-instances/)
-- [Infracost Spot Instances Glossary](https://www.infracost.io/glossary/spot-instances/)
-- [Cast AI Spot Guide](https://cast.ai/blog/reduce-cloud-costs-with-spot-instances/)
-- [Milvus AI Quick Reference: Spot Instances](https://milvus.io/ai-quick-reference/what-are-spot-instances-in-cloud-computing)
+**Q: What's the typical interruption frequency for spot instances?**
+A: Depends on region, instance type, and time of day, but AWS Spot Instance Advisor shows historical data. Generally 1-5% per day interruption rates.

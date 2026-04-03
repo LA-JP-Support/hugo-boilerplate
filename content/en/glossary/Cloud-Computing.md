@@ -1,314 +1,72 @@
 ---
 title: Cloud Computing
-date: 2025-12-18
-lastmod: 2025-12-18
-translationKey: cloud-computing-glossary-comprehensive-guide-for-ai-infrastructure-deployment
-description: "IT resources delivered over the internet on a pay-as-you-go basis, allowing organizations to access computing power, storage, and software without owning physical servers."
-keywords: ["cloud computing", "IaaS", "PaaS", "SaaS", "AI infrastructure"]
-category: Cloud Computing
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: cloud-computing
+description: Cloud computing provides computing power and storage over the internet on-demand, with pay-only-for-what-you-use pricing, eliminating need for expensive physical servers.
+keywords:
+- cloud computing
+- IaaS
+- PaaS
+- SaaS
+- digital transformation
+category: "Enterprise & Platform"
 type: glossary
 draft: false
+url: /en/glossary/cloud-computing/
 ---
 
-## What Is Cloud Computing?
+## What is Cloud Computing?
 
-Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing. Instead of investing in and maintaining physical data centers and servers, organizations and individuals can access shared pools of configurable computing resources—such as servers, storage, databases, networking, analytics, and software—from cloud service providers. These resources are accessed as services over the internet, allowing rapid scaling, cost optimization, and global reach.
+**Cloud computing provides IT resources (servers, storage, databases, etc.) over the internet on-demand.** Rather than purchasing and managing physical servers, enterprises borrow needed resources from cloud providers and pay based on usage. No large upfront investment required; resources scale instantly up/down with demand, making it ideal for startups and highly variable businesses.
 
-Organizations of every size and industry leverage the cloud for a wide variety of use cases: data backup, disaster recovery, email, virtual desktops, development and testing, big data analytics, and customer-facing web applications.
+> **In a nutshell:** Like borrowing books from a library instead of buying them—no replacement/storage worries, just borrow what you need. IT infrastructure works the same: rent needed infrastructure, pay only for usage.
 
-Cloud computing enables organizations to innovate faster, avoid upfront infrastructure costs, and only pay for what they use. Resources are deployed in minutes, supporting experimentation and rapid iteration. Elasticity allows instant scaling to match business demands. The cloud supports global expansion by deploying applications and services close to end users, reducing latency and improving experiences.
+**Key points:**
 
-## How Cloud Computing Works
+- **What it does:** Internet-delivered IT resources (servers, storage, applications, etc.), usage-based pay-per-use
+- **Why it's needed:** Reduce hardware purchase/management costs; technical teams focus on core business; quickly adapt to varying demand
+- **Who uses it:** Startups, small/medium enterprises, large enterprises, government agencies—all organization sizes
 
-Cloud computing is based on the abstraction, pooling, and sharing of physical computing resources—servers, storage, networking—into virtualized environments managed by cloud providers. Users access these resources over the internet, allocating what they need, when they need it.
+## Importance and background
 
-### Architectural Components
+Digital transformation (DX) made cloud infrastructure essential. Traditional on-premise (self-owned) environments demanded huge resources for hardware purchase, operation management, and security handling. Cloud delegates everything to providers. Worldwide data centers automatically select, delivering low latency and global expansion ease. Post-pandemic remote work surge accelerated cloud adoption.
 
-**Front End**  
-The client interface that users interact with—web browsers, APIs, client-side applications. This is how users access and manage cloud resources.
+## Three-layer service model structure
 
-**Back End**  
-The cloud itself, containing servers, storage, databases, security, and management tools. The backend manages resource provisioning, scaling, security, and data storage.
+**IaaS (Infrastructure as a Service)** provides basic infrastructure (servers, storage). Enterprises freely choose OS/applications. **PaaS (Platform as a Service)** provides development/execution environments. Developers create without infrastructure management. **SaaS (Software as a Service)** provides complete applications (Gmail, Salesforce) directly usable from browsers. Enterprises select optimal models for their situations.
 
-**Network**  
-The backbone connecting clients to cloud resources and interlinking components within the cloud. High-speed, redundant networks ensure reliable, low-latency access to services.
+## Representative use cases
 
-**Cloud-based Delivery Platform**  
-The orchestration layer that delivers resources as services on demand.
+**Data backup and disaster recovery** Automatically back up critical data across geographically distributed cloud locations, enabling business continuity during incidents. **Web application development** Startups launch services in days without server construction, auto-scaling with user growth. **Big data analysis** Handle massive data analysis efficiently, extracting business insights rapidly.
 
-### Key Operational Principles
+## Benefits and challenges
 
-**On-Demand Self-Service** - Users can provision resources automatically without human intervention  
-**Broad Network Access** - Resources are accessible via standard protocols and devices  
-**Resource Pooling** - Providers serve multiple tenants with dynamically assigned resources  
-**Rapid Elasticity** - Resources can be scaled up or down quickly, often automatically  
-**Measured Service** - Usage is monitored and billed based on consumption
+Maximum benefit: initial investment reduction and scalability. Security and compliance responsibility delegation to specialists enables enterprise-grade environments for small businesses. However, vendor lock-in (single-company dependence), data privacy concerns, and unexpected cost increases occur. Multi-cloud strategies (parallel multi-provider usage) and open standard adoption are countermeasures. Design considering migration assumption is critical.
 
-### Cloud Computing Architecture
+## Related terms
 
-Cloud architecture is the strategic blueprint for connecting front-end (client) and back-end (provider) elements, networking, and delivery models to create a flexible, scalable, and cost-effective IT environment. The architecture considers workload requirements, operational costs, security, and deployment models (public, private, hybrid, multicloud).
+- **[Virtualization](Virtualization.md)** — Divides physical resources into multiple virtual environments, cloud efficient operation base
+- **[API](API.md)** — Programming interface for cloud resource control
+- **[DevOps](DevOps.md)** — Integrates development/operations in cloud environments; enables continuous delivery
+- **[Containerization](Containerization.md)** — Packages apps into portable units; eases cloud migration
+- **[Edge Computing](Edge-Computing.md)** — Cloud supplement; performs computing near users, reducing latency
 
-**Backend Components:**
-- **Application:** Backend software accessed and coordinated by the front end
-- **Service:** The core functionality—storage, analytics, development environments
-- **Runtime Cloud:** The virtual environment for executing applications and services
-- **Storage:** Persistent data storage, including block, file, and object storage
-- **Infrastructure:** Hardware (CPUs, GPUs, storage devices) and system software
-- **Management:** Middleware and orchestration tools for provisioning, monitoring, and automating resources
-- **Security:** Mechanisms for protecting data, applications, and infrastructure
+## Frequently asked questions
 
-## Key Components of Cloud Computing
+**Q: Is cloud secure?**
+A: Major cloud providers typically exceed self-buildable security. "Shared responsibility model" applies; enterprises share responsibility. Data encryption and access restriction setting are essential.
 
-Cloud infrastructure is the collection of hardware and software resources that make up the cloud and are provided as services.
+**Q: Does it truly reduce costs?**
+A: Initial investment decreases; careless use increases costs unexpectedly. Resource usage monitoring, unnecessary instance deletion, license optimization matter.
 
-### Major Components
-
-**Hardware**  
-The foundational physical resources—servers, CPUs, memory, storage devices, power supplies—deployed in global data centers.
-
-**Virtualization**  
-Software abstraction that decouples computing resources from the underlying hardware, enabling efficient resource pooling and multi-tenancy. Hypervisors (virtual machine monitors) are crucial for dividing and allocating resources among users.
-
-**Storage**  
-Scalable, persistent data repositories accessible over the internet (block, file, and object storage).
-
-**Networking**  
-High-speed network infrastructure (routers, switches, load balancers, cables) connecting users and internal cloud components.
-
-**Servers**  
-Powerful computers providing compute resources for various workloads.
-
-**Management Software**  
-Orchestration, monitoring, and automation tools for resource provisioning, scaling, and lifecycle management.
-
-**Deployment Software**  
-Tools for deploying, integrating, and configuring virtual computing environments.
-
-## Cloud Computing Service Models
-
-Cloud services are delivered through several models, each offering different levels of control, flexibility, and management.
-
-### Infrastructure as a Service (IaaS)
-
-IaaS provides fundamental computing resources—virtual or physical servers, storage, and networking—over the internet. Users manage operating systems, applications, and data; the provider manages the underlying hardware and virtualization.
-
-**Features:**
-- High flexibility; users control OS, storage, and apps
-- Supports migration of traditional workloads
-- Enables custom software stacks
-
-**Business Fit:**  
-Ideal for organizations needing control over their environment, custom configurations, or legacy applications.
-
-**Examples:** Amazon EC2, Google Compute Engine, Azure Virtual Machines
-
-### Platform as a Service (PaaS)
-
-PaaS provides a fully managed environment for developing, running, and managing applications. The provider manages servers, storage, networking, and OS, letting developers focus on application code and deployment.
-
-**Features:**
-- Integrated development and deployment tools
-- Auto-scaling, patching, and maintenance handled by provider
-- Streamlined application lifecycle management
-
-**Business Fit:**  
-Best for developers building cloud-native apps or APIs without infrastructure concerns.
-
-**Examples:** Google App Engine, AWS Elastic Beanstalk, Red Hat OpenShift
-
-### Software as a Service (SaaS)
-
-SaaS delivers fully managed, ready-to-use applications over the internet. The provider handles everything—hardware, software, maintenance, and data security.
-
-**Features:**
-- Accessed via browsers or APIs
-- Automatic updates and patches
-- Subscription-based or usage-based billing
-
-**Business Fit:**  
-Suitable for organizations seeking quick access to business applications without management overhead.
-
-**Examples:** Salesforce CRM, Microsoft 365, Google Workspace
-
-### Serverless Computing (Function as a Service, FaaS)
-
-Serverless computing (or FaaS) allows developers to run code in response to events without managing servers or runtime environments. The provider automatically provisions, scales, and manages the underlying resources.
-
-**Features:**
-- Event-driven, automatic scaling
-- Pay only for compute time used
-- No server management required
-
-**Business Fit:**  
-Ideal for lightweight, event-driven workloads and microservices.
-
-**Examples:** AWS Lambda, Google Cloud Functions, Azure Functions
-
-## Cloud Deployment Models
-
-Cloud deployment models define how cloud resources are provisioned and managed:
-
-### Public Cloud
-
-Operated by third-party providers, public clouds deliver resources (compute, storage, networking) over the internet and are shared among multiple tenants.
-
-**Characteristics:**
-- High scalability, pay-as-you-go pricing, rapid provisioning
-- Lower upfront costs, resources shared across users
-
-**Business Fit:**  
-Startups, SMBs, and enterprises needing rapid scaling and cost efficiency.
-
-**Examples:** AWS, Google Cloud Platform, Microsoft Azure
-
-### Private Cloud
-
-A private cloud is dedicated to a single organization, managed internally or by a third-party provider.
-
-**Characteristics:**
-- Greater control, privacy, and security
-- Customizable for compliance and performance
-- Can be on-premises or hosted externally
-
-**Business Fit:**  
-Organizations with strict regulatory or data sovereignty needs.
-
-**Examples:** VMware vSphere, OpenStack
-
-### Hybrid Cloud
-
-Combines public and private clouds, allowing data and applications to move between them for flexibility and optimized deployment.
-
-**Characteristics:**
-- Balances security and scalability
-- Supports cloud bursting, disaster recovery, and phased migration
-
-**Business Fit:**  
-Enterprises with sensitive workloads alongside public-facing apps.
-
-**Examples:** Azure Arc, AWS Outposts
-
-### Multicloud
-
-Involves using multiple cloud services from different providers for resilience, performance, or best-of-breed features.
-
-**Characteristics:**  
-Avoids vendor lock-in, increases flexibility and resilience.
-
-**Business Fit:**  
-Large organizations with diverse needs.
-
-**Example:** Using AWS for compute, Google Cloud for AI/ML, and Azure for analytics.
-
-## Benefits of Cloud Computing
-
-**Cost-Effectiveness** - Reduces capital expenditure; pay only for what you use  
-**Scalability & Elasticity** - Instantly scale up or down based on demand  
-**Agility** - Rapidly deploy resources for faster innovation  
-**Global Reach** - Deploy worldwide with minimal latency  
-**Reliability & Redundancy** - Built-in backup and disaster recovery  
-**Automatic Updates** - Providers manage patching and maintenance  
-**Collaboration & Accessibility** - Access from anywhere, on any device  
-**Resource Optimization** - Dynamically allocate resources as needed  
-**Security** - Advanced security tools and dedicated teams  
-**Innovation** - Access to AI, ML, IoT, analytics, and more
-
-## Common Use Cases
-
-**Infrastructure Scaling** - Match resources to business growth or traffic spikes  
-**Application Development & Testing** - Build, test, and deploy faster with prebuilt tools  
-**Big Data Analytics** - Process and analyze large datasets without on-premises clusters  
-**Disaster Recovery & Business Continuity** - Store backups and replicate systems for rapid recovery  
-**Remote Collaboration** - Enable teams to access shared tools and data from anywhere  
-**Artificial Intelligence & Machine Learning** - Leverage powerful compute for AI/ML training and inference  
-**Data Storage & Archiving** - Secure, scalable storage for structured and unstructured data
-
-**Industry Examples:**
-- **Healthcare:** Personalized medicine, secure data sharing
-- **Finance:** Real-time fraud detection, transaction processing
-- **Gaming:** Online delivery to global audiences
-- **Manufacturing:** IoT data collection, predictive maintenance
-
-## Integration with Advanced Technologies
-
-Cloud platforms support and accelerate modern technology adoption:
-
-**Artificial Intelligence (AI)** - GPU/TPU instances, managed AI/ML services, and prebuilt APIs  
-**Internet of Things (IoT)** - Aggregation and analysis of distributed sensor/device data  
-**Blockchain** - Managed blockchain and smart contract services  
-**Edge Computing** - Deploy workloads close to data sources for low-latency processing
-
-## Cloud Security and Challenges
-
-Security is a shared responsibility between providers and users.
-
-### Security Considerations
-
-**Shared Responsibility Model** - Providers secure infrastructure; customers secure data, apps, and access  
-**Data Encryption** - Encrypt data at rest, in transit, and in use  
-**Compliance** - Adhere to regulatory requirements (GDPR, HIPAA, PCI DSS)  
-**Identity & Access Management** - Control permissions and monitor resource access
-
-### Common Challenges
-
-**Cost Management** - Monitor usage to avoid unexpected charges  
-**Vendor Lock-In** - Use open standards and multicloud strategies to avoid dependency  
-**Complexity** - Hybrid and multicloud increase management complexity
-
-## How to Get Started with Cloud Computing
-
-1. **Assess Needs** - Identify workloads and cloud goals
-2. **Select Models** - Choose IaaS, PaaS, SaaS; public, private, hybrid, or multicloud
-3. **Evaluate Providers** - Compare AWS, Google Cloud, Azure, etc.
-4. **Plan Migration** - Develop migration and integration strategies
-5. **Implement Security** - Define roles, policies, and monitoring
-6. **Monitor & Optimize** - Use provider tools for performance and cost management
-7. **Pilot & Scale** - Start with pilots; scale successful workloads
+**Q: How do I avoid vendor lock-in?**
+A: Multi-cloud strategy (parallel providers), open standard adoption, cloud-independent design portions are key. Design assuming migration importance.
 
 ## References
 
-- [AWS: What is Cloud Computing?](https://aws.amazon.com/what-is-cloud-computing/)
-- [AWS: Types of Cloud Computing](https://aws.amazon.com/types-of-cloud-computing/)
-- [AWS: What is IaaS?](https://aws.amazon.com/what-is/iaas/)
-- [AWS: What is iPaaS?](https://aws.amazon.com/what-is/ipaas/)
-- [AWS: What is SaaS?](https://aws.amazon.com/what-is/saas/)
-- [AWS Serverless](https://aws.amazon.com/serverless/)
-- [AWS: Case Studies](https://aws.amazon.com/solutions/case-studies/?hp=tile&tile=customerstories)
-- [AWS: What is Cloud Infrastructure?](https://aws.amazon.com/what-is/cloud-infrastructure/)
-- [AWS EC2](https://aws.amazon.com/ec2/)
-- [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
-- [AWS Lambda](https://aws.amazon.com/lambda/)
-- [AWS Outposts](https://aws.amazon.com/outposts/)
-- [Google Cloud: What is Cloud Computing?](https://cloud.google.com/learn/what-is-cloud-computing)
-- [Google Cloud: What is Cloud Architecture?](https://cloud.google.com/learn/what-is-cloud-architecture)
-- [Google Cloud: PaaS vs IaaS vs SaaS](https://cloud.google.com/learn/paas-vs-iaas-vs-saas)
-- [Google Cloud: What is IaaS?](https://cloud.google.com/learn/what-is-iaas)
-- [Google Cloud: What is PaaS?](https://cloud.google.com/learn/what-is-paas)
-- [Google Cloud: What is SaaS?](https://cloud.google.com/learn/what-is-saas)
-- [Google Cloud: What is Public Cloud?](https://cloud.google.com/learn/what-is-public-cloud)
-- [Google Cloud: What is a Private Cloud?](https://cloud.google.com/discover/what-is-a-private-cloud)
-- [Google Cloud: What is Hybrid Cloud?](https://cloud.google.com/learn/what-is-hybrid-cloud)
-- [Google Cloud Serverless](https://cloud.google.com/serverless)
-- [Google Compute Engine](https://cloud.google.com/compute)
-- [Google App Engine](https://cloud.google.com/appengine)
-- [Google Cloud Functions](https://cloud.google.com/functions)
-- [Google Workspace](https://workspace.google.com/)
-- [IBM: What is Cloud Computing?](https://www.ibm.com/think/topics/cloud-computing)
-- [IBM: Cloud Architecture](https://www.ibm.com/think/topics/cloud-architecture)
-- [IBM: IaaS, PaaS, SaaS](https://www.ibm.com/think/topics/iaas-paas-saas)
-- [IBM: What is IaaS?](https://www.ibm.com/think/topics/iaas)
-- [IBM: What is PaaS?](https://www.ibm.com/think/topics/paas)
-- [IBM: What is SaaS?](https://www.ibm.com/think/topics/saas)
-- [IBM: Cloud Security](https://www.ibm.com/think/topics/cloud-security)
-- [Azure Virtual Machines](https://azure.microsoft.com/en-us/services/virtual-machines/)
-- [Azure Functions](https://azure.microsoft.com/en-us/services/functions/)
-- [Azure Arc](https://azure.microsoft.com/en-us/services/azure-arc/)
-- [Microsoft 365](https://www.microsoft.com/en-us/microsoft-365)
-- [Salesforce CRM](https://www.salesforce.com/)
-- [Red Hat OpenShift](https://www.redhat.com/en/technologies/cloud-computing/openshift)
-- [VMware vSphere](https://www.vmware.com/products/vsphere.html)
-- [OpenStack](https://www.openstack.org/)
-- [OpenMetal: What is Cloud Computing?](https://openmetal.io/resources/blog/what-is-cloud-computing/)
-- [GeeksforGeeks: Cloud Computing Architecture](https://www.geeksforgeeks.org/cloud-computing/architecture-of-cloud-computing/)
-- [GeeksforGeeks: Cloud Computing Infrastructure](https://www.geeksforgeeks.org/software-engineering/cloud-computing-infrastructure/)
-- [Spot.io: Cloud Infrastructure Components and Deployment Models](https://spot.io/resources/cloud-optimization/cloud-infrastructure-4-key-components-and-deployment-models/)
+- [AWS Cloud intro](https://aws.amazon.com/jp/)
+- [Google Cloud learning paths](https://cloud.google.com/ja)
+- [Microsoft Azure documentation](https://learn.microsoft.com/ja-jp/azure/)
+- [NIST cloud computing standards](https://www.nist.gov)
+- [Cloud Native Computing Foundation](https://www.cncf.io/)

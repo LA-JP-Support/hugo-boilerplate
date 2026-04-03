@@ -9,7 +9,8 @@ keywords:
 - JSON-LD
 - マイクロデータ
 - リッチスニペット
-category: Application & Use-Cases
+lastmod: 2026-04-02
+category: Web開発・デザイン
 type: glossary
 draft: false
 e-title: Structured Data

@@ -1,21 +1,23 @@
 ---
 title: 教師なし学習
-lastmod: '2025-12-19'
-date: '2025-12-19'
+lastmod: 2026-04-02
+date: 2025-12-19
 translationKey: unsupervised-learning
-description: 教師なし学習に関する包括的な用語集。定義、クラスタリング、アソシエーションルール、次元削減などのアルゴリズム、応用例、利点、課題について解説しています。
+description: 教師なし学習は、ラベルなしデータからパターンを発見する機械学習のアプローチです。クラスタリング、次元削減、相関ルール学習について学びます。
 keywords:
 - 教師なし学習
 - クラスタリング
 - 次元削減
-- アソシエーションルール
-- 機械学習
-category: Machine Learning
+- パターン発見
+- データマイニング
+category: AI・機械学習
 type: glossary
 draft: false
 e-title: Unsupervised Learning
 term: きょうしなしがくしゅう
 url: "/ja/glossary/unsupervised-learning/"
+aliases:
+- "/ja/glossary/Unsupervised-Learning/"
 ---
 ## 教師なし学習とは何か?
 教師なし学習は、アルゴリズムが明示的なラベルや事前定義された目標変数なしにデータを分析・整理する、機械学習の基本的なパラダイムです。入力を既知の出力にマッピングするラベル付き訓練例に依存する教師あり学習とは異なり、教師なし学習はラベルなしデータセット内の隠れたパターン、構造、関係性を自律的に発見します。モデルは独立してデータを探索し、正解についての人間の指導なしに、固有のグループ化、関連性、または簡略化された表現を特定します。

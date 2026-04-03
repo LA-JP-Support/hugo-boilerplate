@@ -1,6 +1,7 @@
 ---
 title: チケット優先度
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Ticket-Priority
 description: ITサービスマネジメントにおけるチケット優先度システムの包括的ガイド。分類方法、ワークフロー、効果的なサポートのためのベストプラクティスを解説します。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - ヘルプデスク優先度
 - インシデント管理
 - サービスレベル契約
-category: Application & Use-Cases
+category: コンタクトセンター・CX
 type: glossary
 draft: false
 e-title: Ticket Priority

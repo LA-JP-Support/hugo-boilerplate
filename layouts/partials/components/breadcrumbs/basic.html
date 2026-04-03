@@ -24,7 +24,7 @@
   <ol role="list" class="flex flex-wrap items-center gap-y-2">
     <li class="flex items-center">
       <a href="{{ partial "helpers/get-translated-url.html" (dict "url" $homeUrl) }}" class="icon-on-gray">
-        {{ partial "icons/home-solid.html" (dict "class" "size-5 block h-5 shrink-0 ") }}
+        {{ partial "icons/home-solid.html" "size-5 block h-5 shrink-0" }}
         <span class="sr-only">Home</span>
       </a>
       {{- if $items -}}

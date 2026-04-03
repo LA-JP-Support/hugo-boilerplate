@@ -1,255 +1,252 @@
 ---
-title: Tacit Knowledge
-lastmod: 2025-12-18
-date: 2025-12-18
-translationKey: tacit-knowledge-deep-glossary-resource-page
-description: 'Explore tacit knowledge: skills and know-how gained through experience,
-  difficult to articulate. Learn its types, importance, and how to capture it for
-  AI chatbots and business.'
+title: "Tacit Knowledge"
+lastmod: 2026-04-02
+date: 2025-12-19
+translationKey: tacit-knowledge
+description: "Tacit knowledge is expertise and know-how acquired through experience that resists easy articulation. Learn about its types, importance, and methods for capturing it."
 keywords:
-- tacit knowledge
-- knowledge management
-- AI chatbots
-- explicit knowledge
-- experiential knowledge
-category: AI Chatbot & Automation
+  - tacit knowledge
+  - knowledge management
+  - experiential knowledge
+  - explicit knowledge
+  - skill transfer
+category: "Knowledge & Collaboration"
 type: glossary
 draft: false
+url: "/en/glossary/tacit-knowledge/"
 ---
 
-## What Is Tacit Knowledge?
+## What is Tacit Knowledge?
 
-Tacit knowledge represents the deeply internalized expertise, skills, and intuitive understanding that individuals develop through direct experience, observation, and repeated practice. Unlike explicit knowledge—which can be readily documented, codified, and transferred through written instructions or formal training—tacit knowledge resists easy articulation and exists primarily in the minds and actions of experienced practitioners.
+Tacit knowledge represents deeply internalized expertise, skills, and intuitive understanding cultivated through direct experience, observation, and repeated practice. Unlike explicit knowledge—which is easily documented, systematized, and transmitted through written instruction or formal training—tacit knowledge resists easy articulation and exists primarily in the minds and actions of experienced practitioners.
 
-This experiential knowledge manifests in the mechanic who diagnoses engine problems by sound, the customer service representative who instinctively de-escalates tense situations, the chef who adjusts seasonings by instinct, or the software developer who "smells" problematic code patterns. These experts often cannot fully explain how they know what they know; their knowledge operates at an unconscious, automatic level developed through years of practice and pattern recognition.
+This experiential knowledge appears in mechanics diagnosing engine problems by sound, customer service representatives instinctively defusing tense situations, chefs intuitively adjusting seasonings, and software developers "smelling" problematic code patterns. These experts often cannot fully explain what and how they know. Their knowledge functions at unconscious, automatic levels developed through years of practice and pattern recognition.
 
-Philosopher Michael Polanyi famously captured tacit knowledge's essence with the observation: "We can know more than we can tell." This insight reveals tacit knowledge's fundamental challenge—it's difficult to transfer, document, or scale because practitioners themselves may not consciously recognize or be able to verbalize what they know.
+Philosopher Michael Polanyi captured the essence of tacit knowledge in his observation: "We know more than we can tell." This insight reveals the fundamental challenge—because practitioners themselves cannot consciously recognize or articulate what they know, transmitting, documenting, and scaling knowledge becomes difficult.
 
-Organizations that effectively capture, transfer, and leverage tacit knowledge gain significant competitive advantages. This knowledge embodies institutional memory, best practices developed through trial and error, subtle customer insights, and problem-solving approaches that formal procedures never capture. When experienced employees leave without transferring their tacit knowledge, organizations lose invaluable capabilities that may take years to rebuild.
+Organizations effectively capturing, transmitting, and leveraging tacit knowledge gain significant competitive advantage. This knowledge embodies organizational memory, best practices developed through trial and error, subtle customer insights, and problem-solving approaches never captured in formal procedures. When experienced employees depart without transmitting tacit knowledge, organizations lose capabilities that may take years to rebuild.
 
 ## Characteristics of Tacit Knowledge
 
-### Experientially Acquired
+### Empirically Acquired
 
-Tacit knowledge develops through hands-on experience rather than theoretical study. Reading manuals about customer service provides explicit knowledge of policies and procedures. Handling thousands of diverse customer interactions develops tacit knowledge of emotional patterns, effective communication approaches, and situation-specific judgment.
+Tacit knowledge develops through practical experience rather than theoretical learning. Reading customer service manuals provides explicit knowledge about policies and procedures. Handling thousands of diverse customer interactions develops tacit knowledge about emotional patterns, effective communication approaches, and situational judgment.
 
-### Contextually Embedded
+### Context Embedded
 
-This knowledge is deeply tied to specific situations, environments, and contexts. An expert's intuition in familiar settings may not transfer directly to unfamiliar contexts. The experienced salesperson reading room dynamics during in-person meetings may struggle adapting these skills to virtual video calls.
+Knowledge is deeply bound to specific situations, environments, and contexts. Expert intuition in familiar environments may not directly transfer to unfamiliar contexts. A salesperson skilled at reading atmosphere during face-to-face meetings might struggle adapting these skills to virtual video calls.
 
 ### Difficult to Articulate
 
-Practitioners often cannot explain their decision-making processes. When asked "how did you know?" responses include "it just felt right," "I've seen this pattern before," or "years of experience." The knowledge operates below conscious awareness.
+Practitioners often cannot explain their decision processes. Asked "how did you know?" responses come: "it just felt right," "I've seen this pattern before," "years of experience." Knowledge functions below conscious awareness.
 
-### Automatically Applied
+### Applied Automatically
 
-Tacit knowledge becomes second nature—applied without deliberate thought. Experienced drivers navigate complex traffic situations through automatic responses developed over thousands of hours behind the wheel, rarely consciously processing each decision.
+Tacit knowledge becomes second nature, applied without deliberate thought. Experienced drivers navigate complex traffic through automatic reactions developed across thousands of hours, processing few decisions consciously.
 
 ### Personally Held
 
-Unlike explicit knowledge stored in databases or documents, tacit knowledge resides in individuals' minds and bodies. This personal nature makes it vulnerable to loss when people leave organizations and resistant to systematic capture.
+Unlike explicit knowledge stored in databases or documents, tacit knowledge exists in individual minds and bodies. This personal nature makes it prone to loss when people leave organizations and resistant to systematic capture.
 
 ## Types of Tacit Knowledge
 
-### Somatic Tacit Knowledge
+### Physical Tacit Knowledge
 
-Physical skills and "muscle memory" internalized through repetition until they become automatic. Examples include riding a bicycle, touch-typing without looking at keyboards, using specialized tools with precision, performing surgical procedures, or playing musical instruments. These skills develop through practice until the body "remembers" appropriate movements without conscious direction.
+Physical skills and "muscle memory" internalized through repetition until automatic. Examples include riding bicycles, touch typing without looking, precisely using professional tools, performing surgery, and playing instruments. These skills develop through practice until the body "remembers" proper movements without conscious instruction.
 
 ### Cognitive Tacit Knowledge
 
-Mental models, intuitive understanding, and pattern recognition developed through experience. This includes recognizing when projects are heading off track before concrete evidence emerges, sensing market shifts before data confirms trends, or identifying promising research directions through "scientific intuition."
+Mental models, intuitive understanding, and pattern recognition developed through experience. This includes recognizing projects are off-track before concrete evidence appears, sensing market changes before data confirms trends, and identifying promising research directions through "scientific intuition."
 
 ### Relational Tacit Knowledge
 
-Social skills and interpersonal understanding acquired through interaction. Building rapport with difficult clients, reading unspoken group dynamics, navigating organizational politics, or interpreting subtle emotional cues all represent relational tacit knowledge. These skills enable effective collaboration, negotiation, and relationship management.
+Social skills and interpersonal understanding acquired through interaction. Building trust with difficult clients, reading unstated group dynamics, navigating organizational politics, and interpreting subtle emotional cues all represent relational tacit knowledge. These skills enable effective collaboration, negotiation, and relationship management.
 
 ### Collective Tacit Knowledge
 
-Shared assumptions, values, and practices embedded in teams, organizations, or cultures. High-performing teams develop shared mental models enabling seamless collaboration without extensive verbal communication. Organizational cultures embody collective tacit knowledge about "how things really work here" that formal policies never capture.
+Shared assumptions, values, and practices embedded in teams, organizations, or cultures. High-performing teams develop shared mental models enabling seamless collaboration without extensive verbal communication. Organizational culture embodies collective tacit knowledge about "how things really work here" never captured in formal policies.
 
-## Tacit vs. Explicit vs. Implicit Knowledge
+## Tacit vs. Explicit vs. Latent Knowledge
 
-| **Dimension** | **Tacit Knowledge** | **Implicit Knowledge** | **Explicit Knowledge** |
-|--------------|---------------------|------------------------|----------------------|
-| **Definition** | Experiential know-how, difficult to articulate | Unconscious knowledge, can be made explicit with effort | Documented, codified, easily shared |
-| **Articulation** | Extremely difficult | Possible through reflection | Straightforward |
-| **Transfer Method** | Observation, mentoring, practice | Discussion, reflection, documentation | Reading, training, databases |
-| **Examples** | Expert intuition, skilled performance | Unspoken assumptions, habitual practices | Manuals, procedures, databases |
-| **Capture Approach** | Shadowing, storytelling, demonstration | Interviews, retrospectives, reflection exercises | Documentation, recording, codification |
+| **Dimension** | **Tacit Knowledge** | **Latent Knowledge** | **Explicit Knowledge** |
+|---|---|---|---|
+| **Definition** | Empirical know-how, difficult to articulate | Unconscious knowledge, articulable through effort | Documented, systematized, easily shared |
+| **Articulation** | Extremely difficult | Possible through introspection | Easy |
+| **Transmission Method** | Observation, mentoring, practice | Discussion, introspection, documentation | Reading, training, databases |
+| **Examples** | Expert intuition, skilled performance | Tacit assumptions, habitual practices | Manuals, procedures, databases |
+| **Capture Approach** | Shadowing, storytelling, demonstration | Interviews, reflection, reflection exercises | Documentation, recording, systematization |
 
-Understanding these distinctions guides knowledge management strategies. Explicit knowledge transfers through documentation. Implicit knowledge requires facilitated reflection to surface and articulate. Tacit knowledge demands experiential learning methods.
+Understanding these distinctions guides knowledge management strategy. Explicit knowledge transmits through documentation. Latent knowledge requires facilitated introspection to surface and articulate. Tacit knowledge demands experiential learning methods.
 
 ## Importance in Organizations
 
 ### Competitive Differentiation
 
-Organizations rich in tacit knowledge respond more adaptively to challenges, innovate more effectively, and outperform competitors relying solely on documented procedures. Expert judgment and accumulated wisdom provide advantages that formal processes cannot replicate.
+Organizations rich in tacit knowledge respond to challenges more adaptively, innovate more effectively, and outperform competitors relying only on documented procedures. Expert judgment and accumulated wisdom provide advantages competitive procedures cannot replicate.
 
 ### Knowledge Retention
 
-Capturing and transferring tacit knowledge prevents critical capability loss when employees retire, leave, or change roles. The "brain drain" of departing experts can cripple organizational capabilities if their tacit knowledge disappears with them.
+Capturing and transmitting tacit knowledge prevents critical capability loss when employees depart, retire, or change roles. The "brain drain" when retiring experts leave can paralyze organizational capabilities if their tacit knowledge departs with them.
 
 ### Accelerated Onboarding
 
-New employees become productive faster when they access experienced practitioners' tacit knowledge. Formal training provides foundational explicit knowledge, but tacit knowledge transfer bridges the gap between theory and effective practice.
+New employees become productive faster with access to experienced practitioners' tacit knowledge. Formal training provides foundational explicit knowledge; tacit knowledge transmission bridges the theory-practice gap.
 
 ### Enhanced Innovation
 
-Innovation often emerges from tacit knowledge—spotting patterns others miss, recognizing unconventional solution approaches, or sensing promising directions. Breakthrough innovations frequently originate from expert intuition rather than systematic analysis.
+Innovation often emerges from tacit knowledge—finding patterns others miss, recognizing unconventional solution approaches, sensing promising directions. Breakthrough innovations frequently spring from expert intuition rather than systematic analysis.
 
 ### Improved Customer Experience
 
-Customer-facing expertise heavily relies on tacit knowledge. Reading customer emotions, adapting communication styles, and resolving ambiguous situations effectively all depend on accumulated experiential learning that training programs alone cannot provide.
+Expertise in customer interactions relies heavily on tacit knowledge: reading customer emotions, adapting communication styles, effectively resolving ambiguous situations. These depend on accumulated experiential learning training programs alone cannot provide.
 
 ### Operational Excellence
 
-Manufacturing excellence, quality control, and process optimization depend substantially on operator tacit knowledge—recognizing subtle equipment variations, anticipating problems before failures, or optimizing processes through experiential adjustments.
+Manufacturing excellence, quality control, and process optimization heavily depend on operator tacit knowledge—recognizing subtle equipment variations, predicting failures before they occur, optimizing processes through experiential adjustments.
 
 ## Strategies for Capturing Tacit Knowledge
 
-### Mentorship and Shadowing Programs
+### Mentoring and Shadowing Programs
 
-Pairing experienced practitioners with less experienced colleagues enables tacit knowledge transfer through observation and guided practice. Novices absorb expert decision-making approaches, situational judgment, and subtle techniques through extended interaction.
+Pairing experienced practitioners with less experienced colleagues enables tacit knowledge transmission through observation and guided practice. Newcomers absorb expert decision-making approaches, situational judgment, and subtle techniques through extended interaction.
 
-**Implementation:** Structure shadowing with reflection sessions where novices ask questions about observed decisions. Rotate novices through multiple mentors to capture diverse tacit knowledge.
+**Implementation:** Structure shadowing with reflection sessions where newcomers question observed decisions. Rotate newcomers among multiple mentors capturing diverse tacit knowledge.
 
 ### Storytelling and Case Studies
 
-Narrative captures contextual richness that procedural documentation misses. Expert stories about challenging situations, unusual problems, or innovative solutions convey tacit knowledge about when standard procedures don't apply and how to adapt.
+Narratives capture contextual richness procedures miss. Experts' stories about difficult situations, unusual problems, and innovative solutions convey tacit knowledge about when standard procedures apply and how to adapt. Standard procedure documents never capture this.
 
-**Implementation:** Record and catalog expert stories. Use storytelling sessions where experienced practitioners share "war stories." Develop case libraries illustrating tacit judgment application.
+**Implementation:** Record and catalog expert stories. Use storytelling sessions where experienced practitioners share "war stories." Develop case libraries demonstrating implicit judgment application.
 
 ### Communities of Practice
 
-Creating spaces where practitioners share experiences, discuss challenges, and collectively problem-solve enables tacit knowledge exchange. These communities develop shared understanding through ongoing interaction.
+Creating spaces where practitioners share experiences, discuss challenges, and collaboratively problem-solve enables tacit knowledge exchange. These communities develop shared understanding through continued interaction.
 
-**Implementation:** Facilitate regular community meetings, online forums, or collaborative problem-solving sessions. Encourage experience sharing rather than just information exchange.
+**Implementation:** Facilitate regular community meetings, online forums, or collaborative problem-solving sessions. Encourage experience sharing, not just information exchange.
 
 ### After-Action Reviews
 
-Systematic reflection after projects, incidents, or significant events surfaces tacit knowledge by examining what worked, what didn't, and why. These reviews make implicit decision-making explicit.
+Systematic introspection following projects, incidents, or significant events surfaces tacit knowledge by examining what succeeded, failed, and why. These reviews make implicit decisions explicit.
 
-**Implementation:** Conduct structured debriefs asking "What did we learn that wasn't in the plan?" and "What expertise made the difference?" Document insights for future reference.
+**Implementation:** Conduct structured debriefings asking "what did we learn beyond the plan?" and "what expertise made the difference?" Document insights for future reference.
 
 ### Video Documentation
 
-Recording expert performance with think-aloud protocols captures both actions and reasoning. Video preserves nuances that written descriptions miss—body language, timing, subtle techniques.
+Recording expert performance using think-aloud protocols captures both behavior and reasoning. Video preserves nuanced details—body language, timing, subtle techniques—written explanations miss.
 
-**Implementation:** Film experts performing complex tasks while explaining their thinking. Annotate videos highlighting key decision points and expert techniques.
+**Implementation:** Film experts executing complex tasks while explaining thinking. Annotate videos highlighting key decision points and expert techniques.
 
 ### Expert Interviews and Cognitive Task Analysis
 
-Systematic questioning techniques help experts articulate their normally unconscious knowledge. Cognitive task analysis specifically uncovers mental models, cues recognized, and decision strategies.
+Systematic questioning helps experts articulate normally unconscious knowledge. Cognitive task analysis particularly reveals mental models, recognized cues, and decision strategies.
 
-**Implementation:** Use structured interview protocols asking experts to reconstruct challenging situations, explaining what they noticed, how they knew what to do, and what alternatives they considered.
+**Implementation:** Use structured interview protocols asking experts to reconstruct difficult situations, explain what they noticed, how they knew what to do, and what alternatives they considered.
 
 ### Apprenticeship Models
 
-Extended learning relationships combining instruction, observation, guided practice, and feedback enable comprehensive tacit knowledge transfer. Apprentices gradually absorb expert knowledge through sustained engagement.
+Extended learning relationships combining instruction, observation, guided practice, and feedback enable comprehensive tacit knowledge transmission. Apprentices gradually absorb expert knowledge through sustained engagement.
 
-**Implementation:** Design multi-year development programs where learners progressively take on more responsibility under expert guidance, with structured checkpoints and skill assessments.
+**Implementation:** Design multi-year development programs where learners assume increasing responsibility under expert guidance, including structured checkpoints and skill assessments.
 
-## Application in AI Chatbot Development
+## Applications in AI Chatbot Development
 
 ### Training Data from Expert Interactions
 
-Capturing expert customer service interactions—including not just responses but decision logic—provides rich training data for chatbots. Analyzing when experts escalate, how they adapt tone, and which information they prioritize informs AI behavior design.
+Capturing expert customer service interactions—including decision logic, not just responses—provides rich training data. Analyzing when experts escalate, how they adapt tone, and what information they prioritize informs AI behavior design.
 
 ### Conversation Flow Design
 
-Experienced support agents possess tacit knowledge about effective conversation structures, when to gather information versus provide solutions, and how to maintain engagement. Translating this into chatbot logic improves user experience.
+Experienced support agents hold tacit knowledge about effective conversation structure, when to gather information versus provide solutions, and how to maintain engagement. Converting this to chatbot logic improves user experience.
 
 ### Edge Case Handling
 
-Experts excel at recognizing and handling unusual situations. Documenting these edge cases and expert responses trains chatbots to recognize similar patterns and respond appropriately rather than defaulting to generic handling.
+Experts excel at recognizing unusual situations. Documenting these edge cases and expert responses trains chatbots to recognize similar patterns and respond appropriately rather than defaulting to generic handling.
 
 ### Tone and Communication Style
 
-Skilled communicators adjust tone based on user emotion, question urgency, and relationship context. Capturing this tacit knowledge through analysis of expert interactions enables more nuanced chatbot communication.
+Skilled communicators adjust tone based on user emotion, question urgency, and relationship context. Capturing this tacit knowledge through dialogue analysis enables more nuanced chatbot communication.
 
 ### Escalation Judgment
 
-Knowing when to escalate versus continue handling independently represents critical tacit knowledge. Expert patterns in escalation decisions—recognizing frustration signals, complexity indicators, or high-stakes situations—inform chatbot escalation logic.
+Knowing when to continue independently versus escalate represents critical tacit knowledge. Analyzing expert escalation patterns—frustration signals, complexity indicators, risky situation recognition—informs chatbot escalation logic.
 
-## Challenges in Managing Tacit Knowledge
+## Challenges in Tacit Knowledge Management
 
 ### Articulation Difficulty
 
-Experts genuinely cannot express much of what they know. "I just know" responses, while accurate, don't transfer knowledge. Specialized elicitation techniques help but cannot fully overcome this limitation.
+Experts truly cannot express much of what they know. "I just know" responses are accurate but don't transmit knowledge. While professional extraction techniques help, they cannot fully overcome this limitation.
 
 ### Context Dependency
 
-Tacit knowledge tied to specific contexts may not transfer to different situations. Manufacturing floor expertise may not apply to different equipment or products. Customer service expertise in one industry may partially transfer to others.
+Tacit knowledge tied to specific contexts often doesn't transfer to different situations. Manufacturing expertise may not apply to different equipment or products. Customer service expertise in one industry only partially transfers to another.
 
 ### Time and Resource Intensity
 
-Capturing tacit knowledge requires significant investment—time for shadowing, facilitation for storytelling sessions, expertise for cognitive task analysis. Organizations must balance these costs against knowledge retention benefits.
+Capturing tacit knowledge requires significant investment—time for shadowing, facilitation of storytelling sessions, expertise for cognitive task analysis. Organizations must balance these costs against knowledge retention benefits.
 
-### Knowledge Loss Through Attrition
+### Knowledge Loss from Turnover
 
-Despite capture efforts, some tacit knowledge inevitably departs with experienced employees. The challenge is minimizing rather than eliminating this loss.
+Despite capture efforts, some tacit knowledge necessarily departs with experienced employees. The challenge is minimizing rather than eliminating this loss.
 
 ### Organizational Culture Barriers
 
-Knowledge sharing requires culture valuing collaboration over competition. If experts see knowledge as personal power source, they resist transfer efforts. Cultural change may be prerequisite for knowledge management initiatives.
+Knowledge sharing requires cultures valuing collaboration over competition. When experts view knowledge as personal power sources, transmission efforts encounter resistance. Cultural change may be prerequisite to knowledge management initiatives.
 
-## Best Practices for Implementation
+## Implementation Best Practices
 
 ### Create Knowledge-Sharing Culture
 
-Recognize and reward knowledge sharing. Make mentoring part of performance evaluation. Celebrate stories of knowledge transfer success. Remove barriers to collaboration.
+Recognize and reward knowledge sharing. Make mentoring part of performance evaluation. Celebrate successful knowledge transfer cases. Remove collaboration barriers.
 
-### Start With Critical Knowledge
+### Start with Critical Knowledge
 
-Prioritize capturing tacit knowledge in high-risk areas: expertise held by few people, knowledge critical for key processes, capabilities difficult to rebuild if lost, or expertise needed for strategic initiatives.
+Prioritize tacit knowledge capture in high-risk areas: expertise held by few people, essential to key processes, difficult to rebuild if lost, or necessary for strategic initiatives.
 
 ### Use Multiple Capture Methods
 
-Different types of tacit knowledge require different approaches. Combine mentoring, storytelling, documentation, and technology-based methods for comprehensive capture.
+Different tacit knowledge types require different approaches. Combine mentoring, storytelling, documentation, and technology-based methods for comprehensive capture.
 
-### Integrate Into Workflows
+### Integrate into Workflows
 
-Embed knowledge capture in regular work rather than treating it as separate activity. After-action reviews, mentoring relationships, and community meetings become standard practice.
+Rather than treating knowledge capture as separate activity, embed in normal work. After-action reviews, mentoring relationships, and community meetings become standard practice.
 
 ### Leverage Technology Appropriately
 
-Knowledge management systems, video platforms, and AI analysis tools support but don't replace human knowledge transfer processes. Technology enables scale but human interaction remains central.
+Knowledge management systems, video platforms, and AI analytical tools support—but don't replace—human knowledge transmission. Technology enables scale, but human interaction remains central.
 
 ### Maintain and Update Knowledge
 
-Captured tacit knowledge requires curation. As practices evolve, update documentation. Remove outdated information. Keep knowledge repositories relevant.
+Captured tacit knowledge requires curation. Update documentation as practices evolve. Remove outdated information. Keep knowledge repositories relevant.
 
 ### Measure Impact
 
-Track knowledge transfer outcomes: time-to-competence for new hires, reduction in critical dependency on key individuals, innovation rates, or problem resolution effectiveness. Demonstrate value to sustain investment.
+Track knowledge transmission outcomes: time to capability for new employees, reduced dependence on key individuals, innovation rates, or problem-solving effectiveness. Demonstrate value maintaining investment.
 
 ## Future Directions
 
 ### AI-Assisted Knowledge Capture
 
-Machine learning analyzes expert behavior patterns, identifies tacit knowledge indicators, and suggests capture opportunities. Natural language processing extracts insights from expert conversations. Computer vision analyzes expert physical techniques.
+Machine learning can analyze expert behavior patterns, identify tacit knowledge indicators, and suggest capture opportunities. Natural language processing extracts insights from expert conversations. Computer vision analyzes expert physical techniques.
 
 ### Virtual Reality Training
 
-Immersive simulation environments enable experiential learning approximating on-the-job tacit knowledge development without requiring years of real-world practice or access to scarce expert mentors.
+Immersive simulation environments enable experiential learning approximating workplace tacit knowledge development without years of real-world practice or rare expert mentor access.
 
 ### Augmented Reality Guidance
 
-AR systems overlay expert guidance onto real-world situations, providing just-in-time access to captured tacit knowledge. Novices receive expert-like support during complex tasks.
+AR systems overlay expert guidance on real-world situations, providing just-in-time access to captured tacit knowledge. Novices receive expert-like support during complex tasks.
 
 ### Social Learning Platforms
 
-Digital platforms facilitate continuous knowledge sharing through micro-learning, expert Q&A, and collaborative problem-solving at scale beyond what physical communities of practice achieve.
+Digital platforms promote continuous knowledge sharing through microlearning, expert Q&A, and collaborative problem-solving at scales physical communities cannot achieve.
 
 ## References
 
-- [Helpjuice: Tacit Knowledge - Definition, Examples, and Importance](https://helpjuice.com/blog/tacit-knowledge)
-- [Commoncog: Why Tacit Knowledge is More Important Than Deliberate Practice](https://commoncog.com/tacit-knowledge-is-a-real-thing/)
-- [Commoncog: The Tacit Knowledge Series](https://commoncog.com/the-tacit-knowledge-series/)
-- [Cambridge Dictionary: Tacit Knowledge](https://dictionary.cambridge.org/us/dictionary/english/tacit-knowledge)
-- [Wikipedia: Tacit Knowledge](https://en.wikipedia.org/wiki/Tacit_knowledge)
-- [ScreenSteps: Tacit Knowledge - Definition, Benefits, and Examples](https://blog.screensteps.com/tacit-knowledge-definition)
-- [Psychology Today: Unpacking Tacit Knowledge](https://www.psychologytoday.com/us/blog/seeing-what-others-dont/202307/unpacking-tacit-knowledge)
-- [Indeed: What Is Tacit Knowledge? Definition, Examples and Importance](https://www.indeed.com/career-advice/career-development/tacit-knowledge-example)
-- [Polanyi, Michael: The Tacit Dimension - University of Chicago Press, 2009](https://press.uchicago.edu/ucp/books/book/chicago/T/bo5952342.html)
-- [Collins, Harry: Tacit and Explicit Knowledge - University of Chicago Press, 2010](https://press.uchicago.edu/ucp/books/book/chicago/T/bo8724932.html)
+- Helpjuice: Tacit Knowledge - Definition, Examples, and Importance
+- Commoncog: Why Tacit Knowledge is More Important Than Deliberate Practice
+- Commoncog: The Tacit Knowledge Series
+- Cambridge Dictionary: Tacit Knowledge
+- Wikipedia: Tacit Knowledge
+- ScreenSteps: Tacit Knowledge - Definition, Benefits, and Examples
+- Psychology Today: Unpacking Tacit Knowledge
+- Indeed: What Is Tacit Knowledge? Definition, Examples and Importance

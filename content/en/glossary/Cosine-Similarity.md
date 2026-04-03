@@ -1,222 +1,88 @@
 ---
-title: "Cosine Similarity"
-date: 2025-12-18
-lastmod: 2025-12-18
-translationKey: "cosine-similarity"
-description: "A metric that measures how similar two sets of data are by comparing their direction rather than size, commonly used to find related documents or recommendations."
-keywords: ["cosine similarity", "machine learning", "natural language processing", "recommendation systems", "vector similarity"]
-category: "AI Infrastructure & Deployment"
-type: "glossary"
+title: Cosine Similarity
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: cosine-similarity
+description: A mathematical metric measuring how close the direction of two vectors are. Ignores magnitude and evaluates similarity by direction alone. Used in text search and recommendation systems.
+category: Data & Analytics
+type: glossary
 draft: false
+url: /en/glossary/cosine-similarity/
+keywords:
+- Cosine similarity
+- Vector
+- Natural language processing
+- Machine learning
+- Text analysis
 ---
 
-## What Is Cosine Similarity?
+## What is Cosine Similarity?
 
-Cosine similarity is a quantitative metric that calculates the cosine of the angle between two non-zero vectors in an inner product space. This metric is widely used in data mining, machine learning, and artificial intelligence to assess how similar two vectors are, based exclusively on their orientation rather than their magnitude. Its fundamental advantage is the focus on direction, making it ideal for high-dimensional representations such as document embeddings or feature vectors.
+**Cosine similarity is a metric quantifying directional proximity between two vectors on a 0-1 scale.** Ignoring magnitude and comparing only direction, it excels in text search and recommendation systems. It judges similarity by "how similarly two arrows point."
 
-**Formula:**  
-\[
-\text{Cosine Similarity} = \cos(\theta) = \frac{\mathbf{A} \cdot \mathbf{B}}{\|\mathbf{A}\| \times \|\mathbf{B}\|}
-\]
+> **In a nutshell:** Convert documents A and B into multi-dimensional arrows and judge similarity by how aligned their directions are.
 
-Where:
-- \(\mathbf{A} \cdot \mathbf{B}\): Dot product of vectors A and B
-- \(\|\mathbf{A}\|\), \(\|\mathbf{B}\|\): Euclidean norm (magnitude) of each vector
-- \(\theta\): Angle between the vectors
+**Key points:**
 
-**Interpretation:**
-- Score of **1**: Vectors point in the same direction (perfect similarity)
-- Score of **0**: Vectors are orthogonal (no similarity)
-- Score of **-1**: Vectors point in opposite directions (maximal dissimilarity)
+- **What it does:** Calculate similarity score (0-1) from vector angle
+- **Why it's needed:** Evaluate meaning similarity between documents of different sizes accurately
+- **Practical examples:** Search engines, AI chatbot recommendations, fraud detection
 
-Most practical applications (text mining, embeddings) use non-negative vectors, so cosine similarity scores typically range from 0 to 1.
+## Importance
 
-## Mathematical Explanation
+Comparing two articles of different lengths prevents judgments by word count. Short summaries and long detailed articles with identical content should both be "similar." Cosine similarity solves this, comparing meaning without volume bias. Better search accuracy improves user satisfaction.
 
-### Step-by-Step Calculation
+## Mechanism
 
-Given two non-zero vectors:
-\[
-\mathbf{A} = [a_1, a_2, \ldots, a_n]
-\]
-\[
-\mathbf{B} = [b_1, b_2, \ldots, b_n]
-\]
-
-**1. Dot Product:**  
-\[
-\mathbf{A} \cdot \mathbf{B} = \sum_{i=1}^{n} a_i b_i
-\]
-
-**2. Magnitude (Euclidean Norm):**  
-\[
-\|\mathbf{A}\| = \sqrt{\sum_{i=1}^{n} a_i^2}
-\]
-\[
-\|\mathbf{B}\| = \sqrt{\sum_{i=1}^{n} b_i^2}
-\]
-
-**3. Cosine Similarity:**  
-\[
-\cos(\theta) = \frac{\mathbf{A} \cdot \mathbf{B}}{\|\mathbf{A}\| \times \|\mathbf{B}\|}
-\]
-
-### Example Calculation
-
-Let \(\mathbf{A} = [3, 2, 0, 5]\), \(\mathbf{B} = [1, 0, 0, 0]\).
-
-- Dot Product: \(3*1 + 2*0 + 0*0 + 5*0 = 3\)
-- Magnitude of A: \(\sqrt{3^2 + 2^2 + 0^2 + 5^2} = \sqrt{38} \approx 6.16\)
-- Magnitude of B: \(\sqrt{1^2 + 0^2 + 0^2 + 0^2} = 1\)
-- Cosine Similarity: \(3 / (6.16 * 1) \approx 0.49\)
-
-**Cosine Dissimilarity:**  
-Often, the dissimilarity is calculated as \(1 - \text{Cosine Similarity}\). For the above example, \(D_C(\mathbf{A}, \mathbf{B}) = 1 - 0.49 = 0.51\).
-
-## Visual Intuition
-
-Imagine two arrows starting from the same origin in a multi-dimensional space:
-
-- **0° (Cosine = 1):** Arrows overlap, indicating identical direction
-- **90° (Cosine = 0):** Arrows are at right angles, showing no relation
-- **180° (Cosine = -1):** Arrows are in opposite directions, indicating total dissimilarity
-
-## Practical Implementation
-
-### Popular Libraries
-
-**NumPy**  
-Efficient for vectorized operations.
-
-**scikit-learn**  
-`sklearn.metrics.pairwise.cosine_similarity` for pairwise similarity matrices.
-
-**TensorFlow**  
-Built-in CosineSimilarity loss.
-
-**PyTorch**  
-`torch.nn.CosineSimilarity`.
-
-**Vector Databases**  
-Extensions like pgvector for PostgreSQL.
-
-### Python Example (NumPy)
-
-```python
-import numpy as np
-
-def cosine_similarity(A, B):
-    return np.dot(A, B) / (np.linalg.norm(A) * np.linalg.norm(B))
-
-A = [1, 2, 3]
-B = [4, 5, 6]
-similarity = cosine_similarity(A, B)
-print("Cosine similarity:", similarity)  # Output: 0.9746318461970762
+**Basic formula:**
+```
+Cosine Similarity = (Vector A · Vector B) / (|A| × |B|)
 ```
 
-## Applications & Use Cases
+Convert documents to vectors (number sequences). Determine elements through word frequency or TF-IDF values. Dividing dot product by vector magnitudes yields angle cosine (0-1).
 
-### 1. Document Similarity and Search Engines
-Documents and queries are transformed into high-dimensional vectors using TF-IDF or neural embeddings. Cosine similarity measures content relevance by comparing vector orientation.
+Score interpretation:
+- **1.0** = perfectly aligned direction (meaning matches)
+- **0.5** = moderately similar
+- **0.0** = completely unrelated
 
-### 2. Recommendation Systems
-User and item preferences are encoded as vectors. Recommendations are made by finding items or users with the highest cosine similarity.
+## Practical examples
 
-### 3. Natural Language Processing (NLP) & Embeddings
-Cosine similarity is crucial in comparing word, sentence, or document embeddings. This quantifies semantic similarity, enabling semantic search, paraphrase detection, and clustering.
+**Search engines:** When users search "iPhone 15 case," vectorize product pages and query, rank by cosine similarity. Different text volumes still place meaning-close pages highly.
 
-### 4. Computer Vision & Pose Estimation
-Keypoint vectors representing body pose or image features are compared using cosine similarity to assess configuration similarity.
+**Chatbots:** Compare user input against past questions. Return highest cosine-similarity question's answer. Text style and length differences don't affect results.
 
-### 5. Fraud Detection and Anomaly Detection
-Multi-dimensional transaction vectors are compared to flag abnormal patterns using cosine similarity.
+**Fraud detection:** Vectorize user behavior patterns (purchase history, etc.). Extremely low cosine similarity to past patterns signals potential fraud.
 
-## Advantages and Disadvantages
+## Benefits and considerations
 
-### Advantages
+**Benefits:** Fast calculation, strong with high-dimensional data, accurate semantic similarity extraction, scalable to large datasets.
 
-**Insensitive to Magnitude**  
-Only direction matters; vectors of different lengths can still be highly similar.
+**Considerations:** Magnitude ignoring makes it unsuitable where "larger scale means more important." Also, preprocessing (text normalization, vectorization method) significantly affects results.
 
-**High-dimensional Robustness**  
-Works well in sparse, high-dimensional datasets (e.g., text analysis, embeddings).
+## Related terms
 
-**Computational Efficiency**  
-Calculation is straightforward and optimized in major machine learning libraries.
+- **[Vector](Vector.md)** — Numbered sequences with direction and magnitude
+- **[TF-IDF](TF-IDF.md)** — Weighting method determining vector element values
+- **[Natural Language Processing](Natural-Language-Processing.md)** — Overall text analysis technology field
+- **[Machine Learning](Machine-Learning.md)** — AI technology leveraging cosine similarity
+- **[Recommendation Engine](Recommendation-Engine.md)** — System suggesting items to users
 
-**Normalization Built-in**  
-No need to explicitly normalize input vectors.
+## Frequently asked questions
 
-### Limitations
+**Q: How does cosine similarity differ from other similarity metrics (like Euclidean distance)?**
+A: Euclidean distance considers all factors including magnitude; cosine similarity focuses only on direction. For text search, direction emphasis is effective. For physical data (coordinates), Euclidean distance is more appropriate.
 
-**Ignores Magnitude**  
-Cannot distinguish between a small and large vector pointing in the same direction.
+**Q: Is accuracy determined at the vectorization stage?**
+A: Yes. Same text produces vastly different results based on word selection, TF-IDF calculation method, dimensionality reduction. Model selection is extremely important.
 
-**Undefined for Zero Vectors**  
-Cosine similarity is not defined if either vector is the zero vector.
+**Q: Can it be used for real-time search?**
+A: Yes. Sparse matrix-compatible libraries (scikit-learn, TensorFlow) enable fast calculation. Datasets under certain size process in milliseconds.
 
-**Symmetry**  
-\(\text{CosineSimilarity}(A, B) = \text{CosineSimilarity}(B, A)\); does not account for directionality of comparison.
+## Reference links
 
-**Sensitive to Sparsity**  
-May perform poorly with extremely sparse data where non-zero elements overlap little.
-
-## Comparison with Other Similarity Metrics
-
-| Metric | Focus | Sensitive to Magnitude | Best For |
-|--------|-------|------------------------|----------|
-| **Cosine Similarity** | Direction | No | Text, embeddings |
-| **Euclidean Distance** | Position | Yes | Numeric, physical data |
-| **Jaccard Similarity** | Overlap/Set | No | Sets, binary attributes |
-
-**Euclidean Distance:** Measures straight-line distance; affected by both direction and magnitude. Useful when absolute differences matter.
-
-**Jaccard Similarity:** Measures overlap between sets; ideal for categorical or binary features (e.g., shared tags).
-
-**Dot Product:** Includes magnitude; can be misleading if scales differ.
-
-## Best Practices and Practical Tips
-
-**1. Normalize Data**  
-Remove zero vectors and ensure all vectors are non-zero to prevent undefined results.
-
-**2. Sparse Data Handling**  
-Use libraries optimized for sparse matrices when working with high-dimensional, sparse data.
-
-**3. Combine Metrics**  
-For richer similarity analysis, combine cosine similarity with other metrics as model features.
-
-**4. Consistent Preprocessing**  
-Ensure that all vectors are generated from the same process/model and have the same dimensionality.
-
-**5. Interpret Carefully**  
-High cosine similarity does not always imply semantic equivalence; context and domain knowledge are essential.
-
-**6. Leverage Robust Libraries**  
-Use built-in functions from NumPy, scikit-learn, TensorFlow, or pgvector.
-
-## References
-
-- [GeeksforGeeks: Cosine Similarity](https://www.geeksforgeeks.org/dbms/cosine-similarity/)
-- [IBM: What is Cosine Similarity](https://www.ibm.com/think/topics/cosine-similarity)
-- [IBM: Natural Language Processing](https://www.ibm.com/think/topics/natural-language-processing)
-- [IBM: Recommendation Engines](https://www.ibm.com/think/topics/recommendation-engine)
-- [IBM: Embedding Techniques](https://www.ibm.com/think/topics/embedding)
-- [IBM: Image Recognition](https://www.ibm.com/think/topics/image-recognition)
-- [IBM: Fraud Detection](https://www.ibm.com/think/topics/fraud-detection)
-- [IBM: Bag of Words (TF-IDF)](https://www.ibm.com/think/topics/bag-of-words)
-- [IBM: Principal Component Analysis](https://www.ibm.com/think/topics/principal-component-analysis)
-- [Wikipedia: Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity)
-- [Wikipedia: Jaccard index](https://en.wikipedia.org/wiki/Jaccard_index)
-- [Built In: Understanding Cosine Similarity](https://builtin.com/machine-learning/cosine-similarity)
-- [Tiger Data: A Guide to Cosine Similarity](https://www.tigerdata.com/learn/understanding-cosine-similarity)
-- [YouTube: Cosine Similarity, StatQuest](https://www.youtube.com/watch?v=e9U0QAFbfLI)
-- [GeeksforGeeks: Python Measure Similarity Between Two Sentences](https://www.geeksforgeeks.org/machine-learning/python-measure-similarity-between-two-sentences-using-cosine-similarity/)
-- [GeeksforGeeks: Euclidean Distance](https://www.geeksforgeeks.org/maths/euclidean-distance/)
-- [scikit-learn: Cosine Similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html)
-- [scikit-learn: Euclidean Distance](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.euclidean_distances.html)
-- [scikit-learn: Sparse Matrices](https://scikit-learn.org/stable/modules/scipy_sparse.html)
-- [NumPy: Linear Algebra (linalg)](https://numpy.org/doc/stable/reference/generated/numpy.linalg.norm.html)
-- [TensorFlow: CosineSimilarity Loss](https://www.tensorflow.org/api_docs/python/tf/keras/losses/CosineSimilarity)
-- [PyTorch: CosineSimilarity](https://pytorch.org/docs/stable/generated/torch.nn.CosineSimilarity.html)
-- [pgvector: PostgreSQL Vector Search](https://github.com/pgvector/pgvector)
+1. [scikit-learn: Cosine Similarity Implementation](https://scikit-learn.org/)
+2. [NumPy: Vector Operations Guide](https://numpy.org/)
+3. [TensorFlow: Embeddings and Similarity](https://tensorflow.org/)
+4. [Wikipedia: Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity)
+5. [Towards Data Science: Similarity Metric Comparison](https://towardsdatascience.com/)

@@ -1,203 +1,92 @@
 ---
-title: "REST API"
+title: REST API
 date: 2025-12-19
-translationKey: REST-API
-description: "A standard way for different software applications to communicate and share data over the internet using simple HTTP requests."
+lastmod: 2026-04-02
+translationKey: rest-api
+description: REST API is a standard architectural style that enables data communication between web applications. Simple, interoperable, and the foundation of modern system development.
 keywords:
 - REST API
 - RESTful services
 - HTTP methods
 - API design
 - Web services
-category: "Application & Use-Cases"
+category: Web Development & Design
 type: glossary
 draft: false
+url: /en/glossary/REST-API/
 ---
 
-## What is a REST API?
+## What is REST API?
 
-REST API (Representational State Transfer Application Programming Interface) is an architectural style for designing networked applications that relies on a stateless, client-server communication protocol. Developed by Roy Fielding in his doctoral dissertation in 2000, REST defines a set of constraints and principles that guide the creation of web services. A REST API enables different software applications to communicate with each other over the internet using standard HTTP methods, making it one of the most widely adopted approaches for building web services and APIs in modern software development.
+**REST API (Representational State Transfer) is a standardized rule set that enables different applications to send and receive data over the internet.** It leverages HTTP, the web protocol everyone knows, to achieve simple and practical data exchange. Mobile apps retrieving information from servers, websites integrating with external services, IoT devices sending data to the cloud—virtually all modern systems operate through REST APIs. By following RESTful design principles, you can build scalable, maintainable, and predictable APIs. The success of REST API lies in its widespread adoption due to "simplicity," "scalability," and "ease of learning."
 
-The fundamental principle of REST lies in treating web resources as entities that can be accessed and manipulated through uniform interfaces. Each resource is identified by a unique URL (Uniform Resource Locator), and clients interact with these resources using standard HTTP methods such as GET, POST, PUT, and DELETE. This approach creates a clear separation between the client and server, allowing them to evolve independently while maintaining a consistent interface. REST APIs are stateless, meaning each request from a client contains all the information necessary for the server to understand and process it, without relying on any stored context from previous requests.
+> **In a nutshell:** Just as browsers load web pages, applications can simply read and write necessary data from other applications using common rules. It's like using an address to find a book in a library—the same mechanism applies.
 
-REST APIs have become the backbone of modern web development, powering everything from simple web applications to complex microservices architectures. They provide a standardized way for different systems to exchange data and functionality, enabling the creation of distributed applications that can scale across multiple servers and platforms. The simplicity and flexibility of REST make it particularly well-suited for web-based applications, mobile apps, and cloud services, where reliable and efficient communication between different components is essential for delivering seamless user experiences.
+**Key points:**
 
-## Core REST Principles
+- **What it does:** Uses HTTP protocol to enable standardized data exchange between applications
+- **Why it's needed:** To seamlessly connect systems built with different technologies and create scalable, maintainable systems
+- **Who uses it:** Backend developers of web and mobile applications, API designers, system integrators
+- **Design principles:** Stateless design, resource-oriented design, standardized operations (GET/POST/PUT/DELETE)
 
-**Stateless Communication** - Each request from client to server must contain all information needed to understand the request. The server does not store any client context between requests, ensuring scalability and reliability.
+## Why it matters
 
-**Client-Server Architecture** - REST enforces a clear separation between client and server responsibilities. Clients handle user interface concerns while servers manage data storage and business logic, promoting modularity and independence.
+Without REST API, application development becomes extremely complex. For example, if a mobile app needs to retrieve member information, without REST API, developers would need to design their own complex communication protocol. However, with REST API as a standard, everyone can follow understandable rules: "This is data retrieval, so use GET" or "This is data update, so use PUT."
 
-**Uniform Interface** - All resources are accessed through a consistent interface using standard HTTP methods. This constraint simplifies the overall system architecture and improves visibility of interactions.
+This standardization enables systems developed by different companies to interact easily. Developers can immediately apply existing knowledge to new projects, increasing development speed and reducing errors. Following RESTful design improves code readability and maintainability, making system scaling easier.
 
-**Resource-Based Design** - Everything in a REST system is treated as a resource, identified by unique URIs. Resources represent entities or concepts that can be accessed and manipulated through the API.
+## How it works
 
-**Representation of Resources** - Resources can have multiple representations (JSON, XML, HTML) and clients can specify their preferred format. The same resource can be presented differently based on client needs.
+REST API's foundation rests on the concept of "resources." All information in a database—users, products, orders—is treated as "resources." Each resource is identified by a unique URL. For example, "/users/123" represents "user ID 123 data." This resource-oriented approach enables intuitive design that makes complex operations understandable.
 
-**Cacheable Responses** - REST responses should be explicitly labeled as cacheable or non-cacheable to improve network efficiency and reduce server load through proper caching mechanisms.
+Communication uses four basic HTTP methods. "GET" retrieves information, "POST" creates new information, "PUT" updates information, and "DELETE" deletes information. For example, "GET /products" means "retrieve all product listings." The "PATCH" method is used for partial updates.
 
-**Layered System** - REST allows for a layered architecture where intermediary servers can be placed between clients and servers for load balancing, security, or caching without affecting the client-server interaction.
+The API server processes each request it receives, handling the requested resource and returning results in JSON format (or XML). Status codes (200 for success, 404 for not found, 500 for server error) communicate the request processing results. This simple exchange binds complex systems together.
 
-## How REST API Works
+An important characteristic of REST API is "stateless design." This means the server doesn't maintain client state, so each request is processed independently, making scaling straightforward. "Cacheability" allows GET request results to be cached, reducing network traffic and server load.
 
-The REST API workflow follows a systematic approach to handle client-server communication:
+## Real-world use cases
 
-1. **Client Request Initiation** - A client application initiates a request to access or manipulate a resource by sending an HTTP request to a specific endpoint URL that identifies the target resource.
+**Web application backends**
 
-2. **HTTP Method Selection** - The client specifies the intended operation using appropriate HTTP methods: GET for retrieval, POST for creation, PUT for updates, DELETE for removal, or PATCH for partial modifications.
+Frontend JavaScript constantly communicates with backend APIs for user authentication, data storage, and real-time information updates. Thanks to REST API, frontend and backend developers can work independently.
 
-3. **Request Header Processing** - The server examines request headers to understand content type, authentication credentials, accepted response formats, and other metadata necessary for processing.
+**Mobile app development**
 
-4. **Resource Identification** - The server parses the URL to identify the specific resource being requested and validates that the resource exists and is accessible to the requesting client.
+iOS and Android apps can efficiently send and receive all needed information—user profiles, messages, files—through REST APIs. You can also minimize battery consumption by selecting only the information you need.
 
-5. **Authentication and Authorization** - The server verifies the client's identity and checks whether the client has permission to perform the requested operation on the specified resource.
+**Microservices architecture**
 
-6. **Business Logic Execution** - The server executes the appropriate business logic, which may involve database operations, calculations, or interactions with other services to fulfill the request.
+Large systems are divided into multiple small services that communicate via REST API, making development and maintenance easier. Each service is independently developed and deployed while seamlessly functioning as a whole.
 
-7. **Response Generation** - The server creates a response containing the requested data or confirmation of the operation, formatted according to the client's preferences (typically JSON or XML).
+## Benefits and considerations
 
-8. **Status Code Assignment** - An appropriate HTTP status code is assigned to indicate the outcome: 200 for success, 404 for not found, 500 for server errors, etc.
+REST API's greatest benefit is "simplicity." It requires no complex specifications, so learning costs are low and implementation completes quickly. Caching functionality accelerates responses to identical requests and reduces server load. Stateless design enables easy horizontal scaling of servers, making it suitable for enterprise-level system construction.
 
-9. **Response Transmission** - The complete response, including headers, status code, and body, is transmitted back to the client over the network.
+Considerations include that REST's strict constraints may make it difficult to handle complex query requirements. For instance, when retrieving information from multiple resources simultaneously, multiple API calls may be necessary (called the "N+1 problem"). Retrieving related data across multiple API calls increases communication volume. In such cases, considering GraphQL has value. However, for many use cases this simplicity becomes an advantage, so REST API will likely remain mainstream.
 
-10. **Client Response Processing** - The client receives and processes the response, updating the user interface or triggering subsequent actions based on the returned data and status.
+## REST API design best practices
 
-**Example Workflow**: A mobile app requests user profile data by sending `GET /api/users/123` with authentication headers. The server validates credentials, retrieves user data from the database, formats it as JSON, and returns it with a 200 status code.
+To design effective REST APIs, observe these principles:
 
-## Key Benefits
+1. **Resource-oriented design** — Design around nouns (resources), not verbs
+2. **Versioning strategy** — Clear version management for API changes
+3. **Error handling** — Provide appropriate status codes and detailed error messages
+4. **Documentation** — Use standard formats like OpenAPI (Swagger) for clear documentation
+5. **Rate limiting** — Prevent API abuse and protect server resources
 
-**Simplicity and Ease of Use** - REST APIs use standard HTTP methods and status codes, making them intuitive for developers to understand and implement without requiring specialized protocols or complex configurations.
+## Related terms
 
-**Platform Independence** - REST APIs work across different programming languages, operating systems, and platforms, enabling seamless integration between diverse technology stacks and legacy systems.
+- **HTTP** — The basic protocol used for communication in REST APIs
+- **API Design** — Best practices for designing effective APIs following REST principles
+- **Authentication and Authorization** — Essential elements for ensuring REST API security
+- **GraphQL** — An alternative to REST for handling complex queries
+- **API Gateway** — A component for unified management of multiple REST APIs
 
-**Scalability** - The stateless nature of REST allows for easy horizontal scaling by distributing requests across multiple servers without worrying about session management or server affinity.
+## Frequently asked questions
 
-**Caching Support** - HTTP caching mechanisms can be leveraged to improve performance and reduce server load, with responses marked as cacheable to enable efficient content delivery networks.
+**Q: What's the difference between REST API and SOAP?**
+A: REST API is simple and easy to learn, leveraging web standards. SOAP is more complex with stricter specifications, designed for enterprise systems. Modern development favors REST API.
 
-**Flexibility in Data Formats** - REST APIs support multiple data formats including JSON, XML, and HTML, allowing clients to request data in their preferred format for optimal processing.
-
-**Loose Coupling** - The separation between client and server promotes loose coupling, enabling independent development, testing, and deployment of different system components.
-
-**Visibility and Monitoring** - HTTP-based communication provides excellent visibility into system behavior, making it easier to monitor, debug, and analyze API usage patterns and performance metrics.
-
-**Cost-Effective Development** - Leveraging existing HTTP infrastructure and standard web technologies reduces development costs and time-to-market for new applications and integrations.
-
-**Wide Tool Support** - Extensive ecosystem of tools, libraries, and frameworks support REST API development, testing, and documentation across all major programming languages and platforms.
-
-**Security Integration** - REST APIs integrate well with standard web security mechanisms including HTTPS, OAuth, JWT tokens, and API keys for comprehensive security implementations.
-
-## Common Use Cases
-
-**Web Application Backends** - Serving data to single-page applications and progressive web apps, handling user authentication, content management, and business logic processing.
-
-**Mobile App Integration** - Providing data synchronization, user management, and feature access for iOS and Android applications requiring server-side functionality.
-
-**Microservices Communication** - Enabling service-to-service communication in distributed architectures where different microservices need to exchange data and coordinate operations.
-
-**Third-Party Integrations** - Facilitating integration with external services, payment processors, social media platforms, and business tools through standardized API interfaces.
-
-**IoT Device Management** - Managing Internet of Things devices, collecting sensor data, sending commands, and monitoring device status through lightweight HTTP-based communication.
-
-**E-commerce Platforms** - Handling product catalogs, shopping carts, order processing, inventory management, and customer data across multiple sales channels.
-
-**Content Management Systems** - Providing headless CMS functionality where content is managed separately from presentation layers and delivered to multiple front-end applications.
-
-**Data Analytics and Reporting** - Exposing analytical data, generating reports, and providing dashboard functionality for business intelligence and monitoring applications.
-
-**Social Media and Collaboration** - Enabling user-generated content, social interactions, messaging, and collaborative features in community-driven applications.
-
-**Financial Services** - Processing transactions, account management, fraud detection, and regulatory compliance in banking and fintech applications requiring high reliability.
-
-## REST vs Other API Architectures
-
-| Aspect | REST | GraphQL | SOAP | gRPC |
-|--------|------|---------|------|------|
-| **Protocol** | HTTP/HTTPS | HTTP/HTTPS | HTTP/HTTPS/SMTP | HTTP/2 |
-| **Data Format** | JSON, XML, HTML | JSON | XML | Protocol Buffers |
-| **Query Flexibility** | Fixed endpoints | Single endpoint, flexible queries | Fixed operations | Defined service methods |
-| **Caching** | Excellent HTTP caching | Complex caching requirements | Limited caching support | Limited caching |
-| **Learning Curve** | Low, uses web standards | Moderate, new concepts | High, complex specifications | Moderate, requires protobuf |
-| **Performance** | Good for simple operations | Efficient for complex queries | Higher overhead | High performance, binary |
-
-## Challenges and Considerations
-
-**Over-fetching and Under-fetching** - REST endpoints may return too much or too little data for specific client needs, leading to inefficient network usage and multiple round trips.
-
-**Versioning Complexity** - Managing API versions while maintaining backward compatibility becomes challenging as APIs evolve, requiring careful planning and migration strategies.
-
-**Security Vulnerabilities** - Improper implementation can expose sensitive data, require robust authentication, authorization, input validation, and protection against common web vulnerabilities.
-
-**Performance Limitations** - Multiple HTTP requests may be needed to gather related data, potentially impacting performance compared to more efficient query-based approaches.
-
-**Stateless Constraints** - The stateless requirement can lead to repetitive data transmission and increased complexity in handling multi-step operations or workflows.
-
-**Inconsistent Implementation** - Different developers may interpret REST principles differently, leading to inconsistent API designs and reduced interoperability across services.
-
-**Error Handling Complexity** - Designing comprehensive error handling that provides meaningful feedback while maintaining security requires careful consideration of status codes and error messages.
-
-**Documentation Maintenance** - Keeping API documentation current and comprehensive requires ongoing effort and coordination between development and documentation teams.
-
-**Rate Limiting Challenges** - Implementing fair and effective rate limiting while preventing abuse requires sophisticated monitoring and throttling mechanisms.
-
-**Testing Complexity** - Comprehensive testing of REST APIs requires consideration of various HTTP methods, status codes, error conditions, and integration scenarios.
-
-## Implementation Best Practices
-
-**Use Meaningful Resource Names** - Design URLs that clearly represent resources using nouns rather than verbs, following consistent naming conventions throughout the API.
-
-**Implement Proper HTTP Status Codes** - Return appropriate status codes for different scenarios: 200 for success, 201 for creation, 400 for client errors, 500 for server errors.
-
-**Version Your APIs** - Implement versioning strategy using URL paths, headers, or query parameters to maintain backward compatibility while enabling evolution.
-
-**Provide Comprehensive Documentation** - Create detailed API documentation including endpoints, parameters, response formats, examples, and authentication requirements.
-
-**Implement Authentication and Authorization** - Secure APIs using appropriate mechanisms like OAuth 2.0, JWT tokens, or API keys with proper scope and permission management.
-
-**Use Consistent Data Formats** - Standardize on JSON for data exchange and maintain consistent field naming conventions across all endpoints and responses.
-
-**Implement Proper Error Handling** - Return structured error responses with meaningful messages, error codes, and guidance for resolution without exposing sensitive information.
-
-**Enable CORS Support** - Configure Cross-Origin Resource Sharing properly to allow legitimate cross-domain requests while maintaining security boundaries.
-
-**Implement Rate Limiting** - Protect APIs from abuse and ensure fair usage through rate limiting mechanisms with clear feedback to clients about limits.
-
-**Monitor and Log API Usage** - Implement comprehensive logging and monitoring to track performance, identify issues, and understand usage patterns for optimization.
-
-## Advanced Techniques
-
-**HATEOAS Implementation** - Hypermedia as the Engine of Application State provides links within responses to guide clients through available actions and resource relationships dynamically.
-
-**Content Negotiation** - Advanced content negotiation allows clients to specify preferred response formats, languages, and encodings through HTTP headers for optimal user experience.
-
-**Conditional Requests** - Implement ETags and conditional headers to enable efficient caching and prevent unnecessary data transfer when resources haven't changed.
-
-**Bulk Operations** - Design endpoints that support batch processing of multiple resources in single requests to reduce network overhead and improve performance.
-
-**Webhook Integration** - Implement webhook mechanisms to enable real-time notifications and event-driven architectures that push updates to interested clients.
-
-**API Gateway Patterns** - Utilize API gateways for cross-cutting concerns like authentication, rate limiting, request routing, and response transformation across multiple services.
-
-## Future Directions
-
-**GraphQL Integration** - Hybrid approaches combining REST for simple operations with GraphQL for complex queries are becoming more common in modern API architectures.
-
-**Serverless REST APIs** - Function-as-a-Service platforms are enabling more cost-effective and scalable REST API implementations with automatic scaling and reduced operational overhead.
-
-**AI-Powered API Management** - Machine learning is being integrated into API management for intelligent rate limiting, anomaly detection, and automated optimization of API performance.
-
-**Enhanced Security Standards** - Evolution of security standards including improved OAuth flows, zero-trust architectures, and advanced threat detection for API protection.
-
-**Real-time Capabilities** - Integration with WebSocket and Server-Sent Events to add real-time features while maintaining REST principles for standard operations.
-
-**Edge Computing Integration** - Deployment of REST APIs at edge locations for reduced latency and improved performance in globally distributed applications.
-
-## References
-
-1. Fielding, R. T. (2000). "Architectural Styles and the Design of Network-based Software Architectures." University of California, Irvine.
-2. Richardson, L., & Ruby, S. (2013). "RESTful Web Services." O'Reilly Media.
-3. Masse, M. (2011). "REST API Design Rulebook." O'Reilly Media.
-4. Mozilla Developer Network. (2024). "HTTP Methods." MDN Web Docs.
-5. OpenAPI Initiative. (2024). "OpenAPI Specification." Linux Foundation.
-6. Postman. (2024). "State of the API Report." Postman, Inc.
-7. RFC 7231. (2014). "Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content." IETF.
-8. Amazon Web Services. (2024). "API Gateway Best Practices." AWS Documentation.
+**Q: How much security does REST API provide?**
+A: REST API itself is not a security protocol but just a communication method. Security is realized through additional layers like HTTPS, OAuth2, and API key authentication. Properly combining these is important.

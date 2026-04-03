@@ -1,17 +1,19 @@
 ---
-title: "ACD (Automatic Call Distribution)"
+title: ACD (Automatic Call Distribution)
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: ACD--Automatic-Call-Distribution-
-description: "A phone system that automatically routes incoming calls to the right available agent or department, improving efficiency and reducing wait times."
+description: A phone system that automatically routes incoming calls to the right available agent, improving efficiency and reducing wait times in contact centers.
 keywords:
 - automatic call distribution
-- call center technology
+- contact center technology
 - queue management
 - agent routing
-- telephony systems
-category: "Application & Use-Cases"
+- telephony system
+category: Contact Center & CX
 type: glossary
 draft: false
+url: /en/glossary/ACD--Automatic-Call-Distribution-/
 ---
 
 ## What is an ACD (Automatic Call Distribution)?

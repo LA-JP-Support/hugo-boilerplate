@@ -1,239 +1,73 @@
 ---
-title: "Autoscaling"
-date: 2025-12-18
-lastmod: 2025-12-18
-translationKey: "autoscaling"
-description: "A cloud feature that automatically adjusts computing resources based on current demand, keeping applications running smoothly while reducing unnecessary costs."
-keywords: ["autoscaling", "cloud computing", "resource allocation", "horizontal scaling", "vertical scaling"]
-category: "AI Infrastructure & Deployment"
-type: "glossary"
+title: Autoscaling
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: autoscaling
+description: Autoscaling automatically increases or decreases computing resources (servers, capacity) according to application load, maintaining performance while achieving cost efficiency.
+keywords:
+- autoscaling
+- cloud computing
+- resource management
+- scalability
+- cloud infrastructure
+category: Business & Strategy
+type: glossary
 draft: false
+url: /en/glossary/autoscaling/
 ---
 
-## What Is Autoscaling?
+## What is Autoscaling?
 
-Autoscaling is a cloud computing capability that automatically allocates or releases computational resources—virtual machines, containers, serverless functions, or storage—based on real-time workload demand and policy-driven rules. This elasticity ensures applications maintain consistent availability and performance while minimizing costs by reducing overprovisioning and underutilization.
+**Autoscaling is a mechanism that automatically adds or removes computing resources such as servers and containers as application load increases or decreases.** In cloud-based systems, it addresses user access volume variations, maintaining consistent system performance while reducing costs during unnecessary hours. Major cloud providers like AWS, Google Cloud, and Azure offer it as a standard feature, making it indispensable for modern business.
 
-Cloud providers (AWS, Azure, Google Cloud, IBM, Oracle) offer autoscaling as a core feature, enabling dynamic resource allocation for compute, memory, and other services.
+> **In a nutshell:** "Just as a telephone switchboard automatically adds or removes lines based on call volume, the cloud adjusts server count based on demand." A Black Friday shopping site instantly increases servers upon detecting access surges.
 
-## How Autoscaling Works
+**Key points:**
 
-**Key Components**
+- **What it does:** Monitor metrics like CPU and memory usage, add servers when thresholds are exceeded, remove them when usage drops
+- **Why it matters:** Prevent peak outages and access delays while minimizing costs during unnecessary hours
+- **Who uses it:** E-commerce, SaaS companies, streaming services—organizations with volatile load patterns
 
-**Launch Configuration**
-- Defines how new resources are provisioned
-- Specifies AMI, instance types, storage, networking, security, IAM roles, bootstrapping scripts
+## How it works
 
-**Auto Scaling Group (ASG)**
-- Logical group of resources managed together
-- Sets minimum, maximum, and desired capacity
+Autoscaling operates through three cyclical steps: monitoring, judgment, execution.
 
-**Scaling Policies**
-- Rules controlling when and how to add/remove resources
-- Types: Target Tracking, Step Scaling, Simple Scaling, Scheduled Scaling
-- Triggered by CPU, memory, network I/O, request count, custom metrics
+In the **Monitoring Phase**, the system continuously collects application metrics—CPU usage, memory, request count, response time, etc. Real-time dashboards aggregate information, displaying overall system "health." In the **Judgment Phase**, judgment proceeds based on configured scaling policy. For example: "if CPU usage exceeds 70% for 5 minutes, add 1 server." Rules can choose from multiple approaches: [Target Tracking](Target-Tracking.md) (auto-adjust based on target value), [Predictive Scaling](Predictive-Scaling.md) (forecast demand via machine learning), [Scheduled Scaling](Scheduled-Scaling.md) (fixed adjustment by time of day). In the **Execution Phase**, based on decisions, new servers are provisioned (created and initialized) and integrated into production within minutes. Monitoring continues until demand drops.
 
-**Health Checks**
-- Continuously monitor instance health using EC2 and ELB checks
-- Automatically terminate and replace unhealthy instances
+This automatic adjustment enables websites to rapidly scale up during 9 AM peak traffic, scaling down during quiet night hours to reduce wasted costs.
 
-**Capacity Settings**
-- Desired Capacity: Target number of instances
-- Minimum Capacity: Lowest number maintained
-- Maximum Capacity: Upper limit preventing over-provisioning
+## Real-world use cases
 
-**Instance Types and Purchase Options**
-- Supports multiple instance types
-- Purchase models: On-Demand, Reserved, Spot Instances
+**E-commerce platform sale preparation**
+Black Friday and Cyber Monday expect 10x+ normal access. Autoscaling enables low-cost normal operation, automatically adding servers before sales, removing them after, handling demand without unnecessary expenses.
 
-**Availability Zones**
-- Distributes instances across multiple AZs for high availability
-- Balances instances across enabled zones
+**SaaS company multi-tenant foundation**
+When multiple client companies share systems, even if specific customers heavily use [CPU](CPU.md) for report generation, other customers remain unaffected. Autoscaling allocates appropriate resources to each workload.
 
-**Elastic Load Balancing Integration**
-- Distributes traffic across healthy ASG instances
-- Types: ALB, NLB, CLB
-- Automatically registers/deregisters instances
+**Streaming service simultaneous broadcast handling**
+Celebrity live broadcasts attract millions of simultaneous connections. Autoscaling instantly responds, maintaining broadcast quality while balancing normal-time low-cost operation.
 
-**Lifecycle Hooks**
-- Execute custom scripts at specific lifecycle points
-- Handle configuration, draining, cleanup tasks
+## Benefits and considerations
 
-**Process**
-1. **Monitoring**: Gather real-time metrics from all resources
-2. **Evaluation**: Compare metrics to scaling policy thresholds
-3. **Decision**: Determine scale out (add) or scale in (remove) actions
-4. **Action**: Provision or terminate instances
-5. **Health Checks & Hooks**: Validate and configure new resources
-6. **Cooldown**: Wait for stabilization before further scaling
-7. **Feedback Loop**: Continuously repeat as workload evolves
+Autoscaling's biggest advantage is **cost efficiency.** No need to maintain excess servers; expense planning matches actual demand. **Performance guarantee** is also important. Server resources automatically increase with traffic, so users never experience slow response times, improving satisfaction. Furthermore, **operational burden reduction** eliminates manual scaling instructions by operators, preventing human errors.
 
-## Types of Autoscaling
+However, important considerations exist. **Scaling delays** sometimes occur. New server startup takes several minutes, so sudden traffic spikes can exceed capacity during that interim. **Unpredictable cost increases** challenge budgets. Loose configuration can trigger massive server additions, causing unexpected high bills. Additionally, **complex configuration** mistakes prevent effectiveness. Wrong metric selection or inappropriate threshold settings risk "scaling hell"—frequent repeated addition and removal cycles.
 
-**Horizontal Scaling (Scale Out/In)**
-- Adjusts number of resource instances
-- Example: Adding web servers during traffic surge
-- Advantages: No downtime, highly scalable, improved fault tolerance
-- Best for: Microservices, web apps, APIs, containers
+## Related terms
 
-**Vertical Scaling (Scale Up/Down)**
-- Changes resource allocation of existing instances
-- Example: Increasing VM from 2 vCPUs/8GB to 8 vCPUs/32GB
-- Advantages: Useful for monolithic or stateful applications
-- Limitations: May require downtime, limited by hardware
-- Best for: Legacy apps, databases, non-distributed workloads
+- **[Load Balancing](Load-Balancing.md)** — Distributes requests evenly across servers, combining with autoscaling for maximum effect
+- **[Cloud Computing](Cloud-Computing.md)** — Infrastructure foundation enabling autoscaling
+- **[Containers](Containers.md)** — Lightweight execution environments scaled via [Orchestration](Orchestration.md) like Kubernetes
+- **[Infrastructure as Code](Infrastructure-as-Code.md)** — Codifying scaling configuration for version control and automation
+- **[SLA (Service Level Agreement)](SLA.md)** — Service quality standards like response time guaranteed by autoscaling
 
-| Aspect | Horizontal | Vertical |
-|--------|-----------|----------|
-| Changes | Number of instances | Size of instance |
-| Downtime | Usually none | Sometimes yes |
-| Scalability | High (unlimited) | Limited by hardware |
-| Best for | Stateless, distributed | Stateful, monolithic |
+## Frequently asked questions
 
-## Scaling Policies
+**Q: Is autoscaling alone sufficient? Is manual scaling unnecessary?**
+A: Autoscaling excels at "steady variations," but combining with manual scaling for foreseeable events (sales, sports tournaments, product launches) is wise. Pre-increasing resources avoids scaling delays.
 
-**Threshold-Based (Reactive)**
-- Triggers when metrics exceed defined thresholds
-- Example: CPU > 80% for 5 minutes
+**Q: How should I configure scaling policies?**
+A: Base decisions on industry benchmarks, past traffic data, and acceptable downtime. Initially configure conservatively, adjusting from operational data. Strengthen monitoring for weeks after configuration.
 
-**Target Tracking**
-- Maintains target value for specific metric
-- Example: Keep average CPU at 60%
-
-**Predictive (Proactive)**
-- Uses historical patterns or ML to forecast demand
-- Scales in advance of anticipated spikes
-
-**Scheduled Scaling**
-- Scales resources at predetermined times
-- Example: Scale up during business hours
-
-**Manual Scaling**
-- Administrator-controlled adjustments
-- Used as fallback or for planned events
-
-## Key Benefits
-
-**Performance Optimization**
-- Maintains application speed during demand spikes
-- Prevents slowdowns or outages
-
-**Cost Efficiency**
-- Eliminates paying for idle resources
-- Reduces cloud waste
-
-**Improved Availability & Reliability**
-- Automatically replaces failed resources
-- Maintains service continuity
-
-**Operational Agility**
-- Responds to dynamic workload changes without manual intervention
-
-**User Experience**
-- Consistent service quality
-- Prevents performance degradation
-
-**Energy Efficiency**
-- Minimizes unnecessary power consumption
-
-## Common Challenges
-
-**Configuration Complexity**
-- Requires expertise to design effective policies
-
-**Delayed Reaction**
-- Provisioning time can cause performance lag during sudden spikes
-
-**Metric Selection**
-- Ineffective choices (e.g., CPU when memory is bottleneck) cause inefficiency
-
-**Cost Surprises**
-- Overly aggressive scaling or misconfiguration leads to unexpected expenses
-
-**Application Design Constraints**
-- Most effective for stateless, horizontally scalable architectures
-
-**Monitoring & Observability**
-- Poor visibility obscures scaling issues
-
-## Real-World Use Cases
-
-**E-Commerce Platforms**
-- Black Friday traffic surges require additional servers
-- Ensures availability and fast checkouts
-
-**Media Streaming Services**
-- Viral events increase concurrent viewers
-- Streaming servers scale for smooth playback
-
-**SaaS Startups**
-- Viral marketing drives sudden user growth
-- Backend scales without overprovisioning
-
-**Big Data & AI/ML Workloads**
-- Model training requires fluctuating compute
-- Clusters scale for parallel processing
-
-**APIs & Microservices**
-- Variable request rates across endpoints
-- Each service autoscales independently
-
-## Best Practices
-
-- **Monitor Key Metrics**: Track CPU, memory, application metrics with robust tools
-- **Define Clear Policies**: Start conservative, test under simulated loads
-- **Implement Cooldowns**: Configure stabilization periods to avoid thrashing
-- **Design Stateless Services**: Store session state externally
-- **Distribute Across AZs**: Increase resilience by spreading resources
-- **Review Regularly**: Analyze scaling actions and adjust policies
-- **Understand Cloud Quotas**: Know provider limits, request increases proactively
-- **Combine Strategies**: Use predictive/scheduled for known patterns, reactive as backup
-- **Set Alerts**: Configure notifications for unexpected events or cost spikes
-
-## Autoscaling vs. Load Balancing
-
-| Aspect | Autoscaling | Load Balancing |
-|--------|------------|----------------|
-| Purpose | Adjusts resource count/size | Distributes traffic |
-| Functionality | Adds/removes instances | Routes requests to servers |
-| Triggered by | Metrics or schedules | Each request |
-| Impact | Changes capacity | Optimizes utilization |
-| Scope | Infrastructure level | Network/application level |
-| Example | Add 5 VMs when CPU > 70% | Route HTTP to least-loaded VM |
-
-Autoscaling provides elastic capacity; load balancing ensures efficient traffic distribution.
-
-## Cloud Provider Features
-
-| Provider | Service | Key Features |
-|----------|---------|--------------|
-| **AWS** | EC2 Auto Scaling, Application Auto Scaling | EC2, ECS, DynamoDB, Aurora; target/predictive/scheduled policies |
-| **Azure** | VM Scale Sets, Azure Autoscale | VMs, App Services; metric-based and scheduled |
-| **GCP** | Managed Instance Groups, GKE Cluster Autoscaler | Compute Engine, Kubernetes; custom metrics, HTTP load |
-| **IBM Cloud** | VPC Auto Scaling, Kubernetes Autoscaler | VMs, Kubernetes clusters |
-| **Oracle Cloud** | Instance Pools & Autoscaling | Compute pools; metric-based and scheduled |
-
-## Frequently Asked Questions
-
-**What's a good autoscaling strategy?**
-Start with target tracking for predictable workloads, combine with predictive for known patterns, use reactive as safety net.
-
-**How much can autoscaling save?**
-Savings vary by workload; typical reductions of 30-50% in infrastructure costs are common.
-
-**Does autoscaling work with containers?**
-Yes; Kubernetes and container orchestration platforms provide robust autoscaling for pods and nodes.
-
-**What metrics should I monitor?**
-CPU, memory, network throughput, application-specific metrics (request count, queue depth, database connections).
-
-## References
-
-- [IBM: What is Auto Scaling?](https://www.ibm.com/think/topics/autoscaling)
-- [AWS Auto Scaling Overview](https://aws.amazon.com/autoscaling/)
-- [DigitalOcean: Cloud Auto Scaling Techniques](https://www.digitalocean.com/community/tutorials/auto-scaling-techniques-guide)
-- [Datadog: Auto-scaling Knowledge Center](https://www.datadoghq.com/knowledge-center/auto-scaling/)
-- [GeeksforGeeks: What is Auto Scaling?](https://www.geeksforgeeks.org/system-design/what-is-auto-scaling/)
-- [Hydrolix: Autoscaling in Cloud Computing](https://hydrolix.io/glossary/autoscaling/)
-- [Middleware: What is Autoscaling?](https://middleware.io/blog/what-is-autoscaling/)
-- [Zesty: Autoscaling Glossary](https://zesty.co/finops-glossary/autoscaling/)
+**Q: How much cost savings does autoscaling enable?**
+A: Systems with large load variations can expect 30–50% cost reduction. However, constantly high-load systems gain limited savings. Analyze your traffic patterns and calculate ROI.

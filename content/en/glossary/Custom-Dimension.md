@@ -1,26 +1,75 @@
 ---
-title: "Custom Dimension"
+title: Custom Dimension
 date: 2025-12-19
-translationKey: Custom-Dimension
-description: "A custom dimension is a user-defined data field that lets you track specific information unique to your business that standard analytics doesn't automatically capture, such as customer membership level or product category."
+lastmod: 2026-04-02
+translationKey: custom-dimension
+description: Analytics platform feature enabling custom data fields for business-specific attributes. Measure unique data points that standard metrics don't capture.
 keywords:
-- custom dimension
-- analytics tracking
-- data segmentation
-- user behavior analysis
-- web analytics
-category: "Application & Use-Cases"
+- Custom dimension
+- Analytics tracking
+- Data segmentation
+- User behavior analysis
+- Web analytics
+category: Data & Analytics
 type: glossary
 draft: false
+url: /en/glossary/custom-dimension/
 ---
 
-## What is a Custom Dimension?
+## What is Custom Dimension?
 
-A custom dimension is a user-defined attribute that extends the default data collection capabilities of analytics platforms, allowing organizations to capture and analyze specific information that is not automatically tracked by standard analytics implementations. Unlike predefined dimensions such as page views, sessions, or geographic location, custom dimensions enable businesses to collect data points that are unique to their specific needs, business model, or user interactions. These dimensions serve as additional layers of context that can be applied to standard metrics, providing deeper insights into user behavior, content performance, and business outcomes.
+**Custom dimension is an analytics platform feature that lets you add business-specific data fields beyond standard metrics.** Page views and geographic data come automatically, but your unique attributes (customer type, product category, promo code) need custom setup.
 
-Custom dimensions function as metadata that can be attached to various analytics events, sessions, or users, depending on the scope and configuration. They operate by extending the data model of analytics platforms, creating new fields that can store custom values ranging from simple text strings to complex categorical data. For example, an e-commerce website might implement custom dimensions to track product categories, membership levels, or promotional campaign codes, while a content publishing platform might use them to categorize article types, author information, or content themes. The flexibility of custom dimensions allows organizations to align their analytics data collection with their specific business objectives and key performance indicators.
+> **In a nutshell:** Like adding your own column to a spreadsheet. Standard info gets collected automatically; you add columns for what matters to your business.
 
-The implementation of custom dimensions requires careful planning and technical integration, as they must be properly configured within the analytics platform and consistently populated with relevant data through website code, mobile applications, or server-side tracking systems. Once established, custom dimensions become powerful tools for segmentation, allowing analysts to filter, group, and analyze data in ways that would not be possible with standard dimensions alone. This enhanced analytical capability enables organizations to uncover patterns, trends, and insights that are directly relevant to their unique business context, ultimately leading to more informed decision-making and improved performance optimization strategies.
+**Key points:**
+
+- **What it does:** Capture business-unique attributes in analytics reports
+- **Why it's needed:** Standard metrics alone don't reflect your specific business
+- **Who uses it:** Marketers, analysts, product teams
+
+## How it works
+
+First, define business requirements: what attributes matter to you? Retail needs "customer type" (new/repeat/VIP). Media needs "article category" and "author." SaaS needs "contract plan."
+
+Next, create dimensions in the platform's admin panel with name, scope (hit/session/user/product level), and data type. Then modify website/app code to send actual data. Finally, test that data arrives correctly in reports.
+
+## Why it matters
+
+Standard dimensions alone don't capture business reality. Retail can't see "which VIPs spend most" without custom customer-type dimension. Media can't identify "which categories drive traffic most" without custom category tracking. Without these, you're blind to your actual business patterns. Custom dimensions reveal which segments matter most.
+
+## Real-world use cases
+
+**E-commerce segment analysis** - Add "customer type" (new/repeat/VIP). Discover VIPs spend 5x more—worth special attention.
+
+**Content media optimization** - Add "article category" and "author." See which themes attract readers, which writers perform best. Guides editorial strategy.
+
+**Marketing campaign evaluation** - Track "campaign code" alongside purchases. Compare which campaigns convert, enabling budget reallocation.
+
+## Benefits and considerations
+
+**Benefits:** Business-relevant deep analysis possible, small datasets work, full data utilization.
+
+**Considerations:** Adds processing overhead—too many dimensions slow reports. Can't backfill historical data—only collects from implementation date forward. Privacy concerns—avoid personal identifiers. Time-series data requires special handling.
+
+## Related terms
+
+- **[Data Segmentation](Data-Segmentation.md)** — Grouping users by dimensions
+- **[User Behavior Analytics](User-Behavior-Analytics.md)** — Understanding user patterns using dimensions
+- **[KPI](KPI.md)** — Key metrics tracked using custom dimensions
+- **[Analytics](Analytics.md)** — Platform for custom dimension analysis
+- **[Data Governance](Data-Governance.md)** — Ensuring custom dimension quality
+
+## Frequently asked questions
+
+**Q: How many custom dimensions can I add?**
+A: Google Analytics allows 20 max per property. Manage carefully—too many create complexity.
+
+**Q: Can I add dimensions retroactively?**
+A: No. Collects only from implementation forward. Early adoption matters.
+
+**Q: Privacy concerns?**
+A: Never put personally identifiable info (names, emails) in custom dimensions. Use "customer type" not "customer name." Comply with GDPR.
 
 ## Core Analytics Components
 

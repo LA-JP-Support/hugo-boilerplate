@@ -1,275 +1,90 @@
 ---
-title: "Conditional Router"
-lastmod: 2025-12-18
-translationKey: "conditional-router"
-description: "A workflow component that automatically directs data to different paths based on matching rules, enabling smart decision-making in automation systems and chatbots."
-keywords: ["Conditional Router", "Workflow automation", "Rule-based branching", "AI chatbots", "Data routing"]
-category: "General"
-type: "glossary"
-date: 2025-12-18
+title: Conditional Router
+lastmod: 2026-04-02
+translationKey: conditional-router
+description: A workflow component that evaluates incoming data against rules and routes it to different paths based on conditions. Essential for automation and AI chatbots.
+keywords:
+- Conditional Router
+- Workflow Automation
+- Rule-Based Branching
+- AI Chatbot
+- Data Routing
+category: AI & Machine Learning
+type: glossary
+date: 2025-12-19
 draft: false
+url: /en/glossary/conditional-router/
 ---
 
-## What Is a Conditional Router?
+## What is a Conditional Router?
 
-A Conditional Router is a workflow component or node that evaluates incoming data against one or more user-defined rules and directs the data to a specific downstream route based on which condition matches. Its purpose is to enable dynamic, rule-based branching in automation pipelines, AI chatbots, business process automation, and software architectures. Each output port corresponds to a possible routed outcome, determined by customizable rules using a variety of operators.
+**A Conditional Router is a workflow component that evaluates incoming data against preset rules (conditions) and automatically routes it to different processing paths based on the evaluation results.** Used in automation platforms (n8n, Zapier) and AI chatbots to automate decisions like "if X, then send to Y." It completely automates work previously done manually, such as automatically routing email to support or sales departments based on content.
 
-**Key Capabilities:**
-- Receives input (text, structured objects, metadata, etc.)
-- Applies user-defined conditions (e.g., `equals`, `contains`, `is_email`, `regex`)
-- Activates exactly one output (route) per evaluation, except in some ETL contexts
-- Supports deterministic, manageable flows in complex automations
+> **In a nutshell:** "Like an automated mail sorter. It reads the address, content, and urgency, then automatically sends mail to the right department's inbox." The same data only goes through one matching route, not multiple routes simultaneously.
 
-## How the Conditional Router Works
+**Key points:**
 
-### Core Logic
+- **What it does:** Automatically branches data flow based on condition evaluation
+- **Why it matters:** Automates manual judgment and routing, reducing human error and increasing processing speed
+- **Who uses it:** Automation engineers, no-code developers, chatbot builders, business process optimization teams
 
-The Conditional Router compares incoming data to specified values or logical expressions using a set of configurable operators. Each condition is linked to a named output. The router checks conditions in order: the first `true` condition determines the output route. If no condition matches, the router triggers a default or fallback route (if configured).
+## Why it matters
 
-**Single-path Routing:** Only one output is activated per evaluation (exclusive routing), except in some ETL frameworks.
+In complex workflows, conditional branching is needed repeatedly based on input data. Doing this manually increases errors, takes time, and limits scalability. By using a conditional router, you set complex branching logic once, then subsequent processing is automated, functioning stably and quickly. This is essential for situations requiring "sorting" of customer service or data processing.
 
-**Configurable Rules:** Conditions are defined with operators and can reference multiple fields, including nested data.
+## How it works
 
-**Extensible:** Supports logical composition, nested conditions, and custom expressions.
+A Conditional Router operates as follows. First, it receives input data—for example, a customer email saying "I want to return something" or JSON data from an API. Second, it evaluates this data against multiple conditions. For example: "contains 'return'" or "status == 'premium_user'". Third, once the first true condition is found, that route is determined. Once a route is selected, data flows only through that route—not through others. Fourth, the data is sent to the selected route (e.g., "return processing department" or "premium support") where next processing happens.
 
-### Evaluation Sequence
+If multiple conditions exist and none match, data typically flows to a default route (like an "other" category).
 
-1. **Input Reception:** Receives data and optional metadata or parameters
-2. **Condition Evaluation:** Sequentially evaluates each defined condition using the configured operators
-3. **Routing Decision:** First condition that evaluates to `true` determines the output
-4. **Default Handling:** If no conditions match, data is sent to a default route (if defined)
-5. **Downstream Processing:** Data is passed to the next component or action
+## Real-world use cases
 
-## Inputs
+**Chatbot intent determination**
 
-Input parameters for Conditional Routers may vary by platform, but typically include:
+When a user enters "I want to know the price," the AI understands the intent and checks if it matches the "price inquiry" condition. If it matches, it automatically routes to the pricing information path; if not, it routes to escalation to a human operator.
 
-| Input Name | Type | Description | Required |
-|-----------|------|-------------|----------|
-| Input Data/Text | String/Object | The primary data to evaluate | Yes |
-| Match Value | String/Object | The value or expression to compare against | No |
-| Operator | String | The comparison operator | Yes |
-| Case Sensitive | Boolean | Enables case-sensitive comparisons | No |
-| Metadata/Params | Object | Additional fields for routing | No |
-| Message Object | Object | Payload to pass along the route | No |
+**Automatic email classification and handling**
 
-## Available Operators
+Large volumes of customer emails are analyzed for content and automatically classified as "billing," "technical support," or "sales inquiry." Based on classification, emails are auto-routed to different department mailboxes.
 
-Conditional Routers support a wide variety of operators for flexible routing:
+**Data pipeline conditional branching**
 
-| Operator | Description | Example Usage |
-|----------|-------------|---------------|
-| `equals` / `$eq` | Value is equal to match | `"status" == "active"` |
-| `not equals`/ `$ne` | Value is not equal to match | `"role" != "admin"` |
-| `contains` | Value contains substring | `"hello@example.com" contains "@"` |
-| `starts with` | Value starts with substring | `"prefix"` starts with "pre" |
-| `ends with` | Value ends with substring | `"file.pdf"` ends with ".pdf" |
-| `is empty` | Value is empty/null/undefined | `""` |
-| `is not empty` | Value is not empty | `"not empty"` |
-| `is_url` | Value matches URL format | `"https://..."` |
-| `is_email` | Value matches email format | `"name@domain.com"` |
-| `is_number` | Value is numeric | `123` |
-| `$in` | Value is in array/list | `tier in ["pro", "enterprise"]` |
-| `$nin` | Value not in array/list | `status not in ["error"]` |
-| `$regex` | Value matches regular expression | `input matches /pattern/` |
-| `$gt`, `$gte` | Greater than / greater or equal | `score >= 0.8` |
-| `$lt`, `$lte` | Less than / less or equal | `temperature < 0.7` |
+After quality checks in an ETL tool (Extract, Transform, Load), data automatically branches to three routes: "passed," "needs review," or "failed." Only passed data flows to the database; problematic data goes to separate processing.
 
-**Logical Operators:** `$and` (all conditions must be true), `$or` (any condition true)
+## Benefits and considerations
 
-## Outputs
+The biggest advantage of conditional routers is that complex decision logic can be set visually and used in no-code environments. Automating frequently-repeated judgments increases impact at scale. However, when conditions become too numerous, settings become complex and maintenance gets difficult. When setting conditions, prioritize simplicity and clarity.
 
-Each Conditional Router node provides multiple output ports:
+## Related terms
 
-| Output Name | Trigger Condition | Output Data Type |
-|-------------|-------------------|------------------|
-| True Route | When condition evaluates to `true` | Message/Object |
-| False Route | When condition evaluates to `false` | Message/Object |
-| Custom Routes | Named outputs for each condition | Message/Object |
-| Default Route | When no condition matches | Message/Object |
+- **Workflow Automation** — The broader context where Conditional Routers are essential
+- **No-Code Development** — The development method of setting Conditional Routers via drag-and-drop
+- **AI Chatbot** — A common application for Conditional Routers
+- **ETL Processing** — Conditional branching in data processing pipelines
+- **Rule Engine** — The theoretical foundation of Conditional Routers
 
-**Named Output Ports:** Each condition links to a named output.  
-**Default Output:** Handles unmatched data.  
-**Data Forwarding:** The original (or transformed) message/data is passed through the activated output.
+## Frequently asked questions
 
-## Advanced Configuration
+**Q: Does condition order matter?**
 
-### Logical Operators
+A: Yes, very much. The first matching condition's route is selected, so place specific conditions first and generic conditions later. For example, if you place "all users" after "VIP users," VIP users won't route correctly.
 
-To define multi-condition logic for a single route, use logical operators:
+**Q: What if multiple conditions match simultaneously?**
 
-```json
-{
-  "query": {
-    "$and": [
-      { "metadata.user_type": { "$eq": "pro" } },
-      { "params.model": { "$eq": "gpt-4" } }
-    ]
-  },
-  "then": "pro_gpt4_target"
-}
-```
+A: In most systems, only the first matching condition applies; subsequent conditions are skipped. For combined condition logic, use boolean operators like AND (all) or OR (any).
 
-Supports `$and`, `$or`, and even nested logical blocks.
+**Q: What if the data field being referenced doesn't exist?**
 
-### Case Sensitivity
+A: That condition evaluates to "false" and evaluation moves to the next condition. If no conditions match, data flows to the default route.
 
-Configure whether string comparisons should be case-sensitive:
-- `case_sensitive: true` for exact match
-- `case_sensitive: false` for case-insensitive
+## Reference materials
 
-## Practical Examples
-
-### Example 1: Simple Text Match
-Route user message to support if it contains the keyword "help", otherwise route to the bot.
-
-```json
-{
-  "input_text": "I need help with my order",
-  "match_text": "help",
-  "operator": "contains",
-  "case_sensitive": false
-}
-```
-
-### Example 2: Parameter-Based Model Selection
-Route requests to different models based on the `model` parameter.
-
-```json
-{
-  "strategy": {
-    "mode": "conditional",
-    "conditions": [
-      {
-        "query": { "params.model": { "$eq": "fastest" } },
-        "then": "fast-model"
-      },
-      {
-        "query": { "params.model": { "$eq": "smartest" } },
-        "then": "smart-model"
-      }
-    ],
-    "default": "balanced-model"
-  }
-}
-```
-
-### Example 3: Data Validation
-Route based on input length:
-
-```python
-routes = [
-  {
-    "condition": "{{ query|length > 10 }}",
-    "output": ["{{ query }}", "{{ query|length }}"],
-    "output_name": ["ok_query", "length"],
-    "output_type": [str, int],
-  },
-  {
-    "condition": "{{ query|length <= 10 }}",
-    "output": ["query too short: {{ query }}", "{{ query|length }}"],
-    "output_name": ["too_short_query", "length"],
-    "output_type": [str, int],
-  },
-]
-```
-
-### Example 4: Combined Metadata and Parameter Routing
-Route enterprise users with high creativity requests to a premium model.
-
-```json
-{
-  "strategy": {
-    "mode": "conditional",
-    "conditions": [
-      {
-        "query": {
-          "$and": [
-            { "metadata.user_tier": { "$eq": "enterprise" } },
-            { "params.temperature": { "$gte": 0.7 } }
-          ]
-        },
-        "then": "creative-premium-target"
-      }
-    ],
-    "default": "standard-target"
-  }
-}
-```
-
-## Typical Use Cases
-
-### 1. Branching Logic
-Direct users to different dialog or process paths based on intent, content, or attributes. Orchestrate automation workflows that diverge depending on event or message data.
-
-### 2. Validation and Filtering
-Enforce input validation (e.g., required fields, correct formats). Detect and filter spam or inappropriate content.
-
-### 3. Personalization and User Segmentation
-Route premium vs. free users to different flows. Implement A/B testing by allocating users to experimental branches.
-
-### 4. Model Selection and Feature Flags
-Select AI models dynamically based on user segment or request properties. Enable/disable features using configuration flags.
-
-### 5. Access Control and Compliance
-Ensure data routing based on region for regulatory compliance. Apply role-based access restrictions using metadata.
-
-## Best Practices
-
-**Order of Conditions**  
-Place specific conditions before generic ones to prevent premature matches.
-
-**Fail-Safe Defaults**  
-Always configure a default output for unmatched data.
-
-**Testing**  
-Validate logic with test data to ensure correct routing; use logging and analytics to monitor routing decisions.
-
-**Documentation**  
-Comment or document complex conditions for maintainability.
-
-**Security**  
-Avoid unsafe template evaluation unless essential and inputs are trusted.
-
-**Performance**  
-Avoid excessive nesting or extremely complex conditions to keep routing fast and maintainable.
-
-**No-Code Accessibility**  
-Use platforms providing graphical or no-code interfaces for broader accessibility.
-
-## Troubleshooting & FAQ
-
-**Q: What happens if multiple conditions match?**  
-A: Only the first matching condition (in order) is selected; subsequent matches are ignored. In some ETL tools, data can be routed to multiple outputs.
-
-**Q: How do I route based on multiple fields?**  
-A: Use logical operators (`$and`, `$or`) to combine conditions on multiple fields.
-
-**Q: What if a referenced field is missing?**  
-A: The condition usually evaluates to `false`, and the router proceeds to the next condition or default.
-
-**Q: Can I use regex or advanced matching?**  
-A: Yes, many routers support `$regex` or pattern-based operators.
-
-**Q: Is this suitable for non-developers?**  
-A: Many platforms offer no-code configuration.
-
-**Q: Can I perform parallel routing?**  
-A: Most routers are exclusive (single-path per evaluation). For parallel actions, use specialized multi-route or branching components.
-
-## References
-
-- [AWS Glue: Conditional Router](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)
-- [FlowHunt: Conditional Router](https://www.flowhunt.io/components/ConditionalRouter/)
-- [Haystack: ConditionalRouter](https://docs.haystack.deepset.ai/docs/conditionalrouter)
-- [Portkey AI: Conditional Routing](https://docs.portkey.ai/docs/product/ai-gateway/conditional-routing)
-- [Portkey AI: Combined Routing with Multiple Conditions](https://docs.portkey.ai/docs/product/ai-gateway/conditional-routing#combined-routing-with-multiple-conditions)
-- [Fluix: Conditional Logic Tutorial](https://fluix.io/help/conditional-logic-tutorial)
-- [Slack: Conditional Branching Workflow Builder](https://slack.com/blog/news/conditional-branching-workflow-builder)
-- [Slack: Guide to Slack Workflow Builder](https://slack.com/help/articles/360035692513-Guide-to-Slack-Workflow-Builder)
-- [Frontline AI: Understanding Conditional Routing in AI Agent Flows](https://help.getfrontline.ai/en/articles/10174140-understanding-conditional-routing-in-ai-agent-flows)
-- [Rapidomize: Conditional Routing](https://rapidomize.com/docs/services/router/)
-- [FlowHunt: Live Demo](https://www.flowhunt.io/demo/)
-- [Conditional Routing in Slack Workflow Builder (YouTube)](https://www.youtube.com/watch?v=3O4c7iYhD5Y)
-- [How to Use Conditional Router in FlowHunt (YouTube)](https://www.youtube.com/watch?v=rgqX7Qj3QAo)
-- [AWS Glue Conditional Router Tutorial (YouTube)](https://www.youtube.com/watch?v=90p4Vq8F9pQ)
+- [AWS Glue Conditional Router](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)
+- [n8n Conditional Branching](https://docs.n8n.io/)
+- [Zapier Paths](https://zapier.com/help/create/basics/create-a-task-with-multiple-paths)
+- [Slack Workflow Builder Branching](https://slack.com/help/articles/360035692513)
+- [Make.com Router Module](https://www.make.com/en/help)
+- [Portkey Conditional Routing](https://docs.portkey.ai/)
+- [Haystack ConditionalRouter Documentation](https://docs.haystack.deepset.ai/)
+- [Integration Best Practices](https://www.enterpriseintegrationpatterns.com/)

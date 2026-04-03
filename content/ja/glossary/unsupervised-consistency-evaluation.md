@@ -1,15 +1,16 @@
 ---
 title: 教師なし一貫性評価
+lastmod: 2026-04-02
 date: 2025-12-19
 translationKey: unsupervised-consistency-evaluation
-description: ラベル付きデータや人間によるアノテーションを必要とせず、モデルの信頼性を評価するための教師なし一貫性評価手法に関する包括的なガイド。
+description: 教師なし一貫性評価は、ラベル付きデータなしでモデルの信頼性と安定性を評価する手法です。AIシステムの品質保証に活用されます。
 keywords:
 - 教師なし評価
-- 一貫性メトリクス
+- 一貫性評価
 - モデル信頼性
-- 自己一貫性
-- 自動評価
-category: Application & Use-Cases
+- 品質保証
+- AI評価
+category: データ・アナリティクス
 type: glossary
 draft: false
 e-title: Unsupervised Consistency Evaluation

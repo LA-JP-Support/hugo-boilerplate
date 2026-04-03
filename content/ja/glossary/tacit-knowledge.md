@@ -1,21 +1,23 @@
 ---
 title: 暗黙知
-lastmod: '2025-12-19'
-date: '2025-12-19'
-translationKey: tacit-knowledge-deep-glossary-resource-page
-description: 暗黙知を探る：経験を通じて獲得されるスキルやノウハウで、言語化が困難なもの。その種類、重要性、そしてAIチャットボットやビジネスのために暗黙知を捉える方法を学びます。
+lastmod: 2026-04-02
+date: 2025-12-19
+translationKey: tacit-knowledge
+description: 暗黙知は、経験を通じて習得される言語化が難しいスキルやノウハウです。その種類、重要性、捉え方について学びます。
 keywords:
 - 暗黙知
 - ナレッジマネジメント
-- AIチャットボット
-- 形式知
 - 経験知
-category: AI Chatbot & Automation
+- 形式知
+- スキル伝達
+category: ナレッジ・コラボレーション
 type: glossary
 draft: false
 e-title: Tacit Knowledge
 term: あんもくち
 url: "/ja/glossary/tacit-knowledge/"
+aliases:
+- "/ja/glossary/Tacit-Knowledge/"
 ---
 ## 暗黙知とは何か?
 暗黙知とは、個人が直接的な経験、観察、反復的な実践を通じて培う、深く内面化された専門知識、スキル、直感的な理解を表します。明示知—文書化、体系化が容易で、書面による指示や正式な訓練を通じて伝達できる知識—とは異なり、暗黙知は容易な言語化に抵抗し、主に経験豊富な実践者の心と行動の中に存在します。

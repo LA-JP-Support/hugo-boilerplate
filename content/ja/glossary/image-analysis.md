@@ -1,6 +1,6 @@
 ---
 title: 画像解析
-lastmod: '2025-12-19'
+lastmod: 2026-04-02
 date: '2025-12-19'
 translationKey: image-analysis
 description: 画像解析は、デジタル画像から意味のある情報を解釈・抽出するAI技術です。そのワークフロー、タスク、応用例、主要なモデルについて学びましょう。
@@ -10,7 +10,7 @@ keywords:
 - コンピュータビジョン
 - 物体検出
 - 画像セグメンテーション
-category: AI Chatbot & Automation
+category: AI・機械学習
 type: glossary
 draft: false
 e-title: Image Analysis

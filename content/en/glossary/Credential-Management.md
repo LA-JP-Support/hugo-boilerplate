@@ -1,26 +1,96 @@
 ---
-title: "Credential Management"
+title: Credential Management
 date: 2025-12-19
-translationKey: Credential-Management
-description: "A system for securely storing and controlling access to passwords, API keys, and other authentication information needed to access digital services and applications."
+lastmod: 2026-04-02
+translationKey: credential-management
+description: A security system that centrally manages passwords, API keys, and certificates—storing, distributing, and rotating them safely. An essential foundation for preventing corporate data breaches.
 keywords:
-- credential management
-- password security
-- identity management
-- access control
-- authentication systems
-category: "Application & Use-Cases"
+- Credential management
+- Password management
+- Security
+- API keys
+- Access control
+category: Security & Compliance
 type: glossary
 draft: false
+url: /en/glossary/credential-management/
 ---
 
 ## What is Credential Management?
 
-Credential management represents a comprehensive approach to securely storing, organizing, and controlling access to digital authentication information across an organization's technology infrastructure. This critical security discipline encompasses the systematic handling of usernames, passwords, API keys, certificates, tokens, and other authentication mechanisms that grant access to systems, applications, and data resources. Modern credential management solutions provide centralized repositories where sensitive authentication data is encrypted, monitored, and distributed according to established security policies and access control frameworks.
+**Credential management is a system that centrally and safely stores secret information like passwords, API keys, and digital certificates, then distributes them to employees and systems.** Rather than managing them in spreadsheets or personal notes, credentials are managed in encrypted vaults.
 
-The evolution of credential management has been driven by the exponential growth of digital services, cloud computing adoption, and the increasing sophistication of cyber threats targeting authentication systems. Traditional approaches of storing credentials in spreadsheets, configuration files, or individual applications have proven inadequate for addressing the scale and complexity of modern IT environments. Contemporary credential management systems integrate advanced encryption technologies, automated rotation capabilities, and comprehensive audit trails to ensure that authentication credentials remain secure throughout their lifecycle while maintaining operational efficiency and regulatory compliance.
+> **In a nutshell:** Gather all company passwords and secrets into a "safe" so only the right people at the right time can take what they need.
 
-Effective credential management serves as a foundational element of enterprise security architecture, directly impacting an organization's ability to prevent unauthorized access, maintain data integrity, and demonstrate compliance with industry regulations. The discipline extends beyond simple password storage to encompass sophisticated workflows for credential provisioning, automated policy enforcement, privileged access management, and integration with identity and access management (IAM) systems. Organizations implementing robust credential management practices typically experience significant reductions in security incidents related to compromised credentials, improved operational efficiency through automation, and enhanced visibility into access patterns across their technology infrastructure.
+**Key points:**
+
+- **What it does:** Centralize secret storage, auto-update, control access
+- **Why it's needed:** Prevent information breaches, manage permissions, ensure compliance
+- **What it covers:** Database passwords, API keys, SSL certificates, SSH keys, etc.
+
+## Why it matters
+
+Most corporate data breaches stem from "leaked passwords." Passwords written on notepads, API keys sent through email, SSH keys held by departing employees—such uncontrolled management invites hacker intrusion.
+
+With credential management systems, you achieve:
+- Even if hackers breach the system, not all passwords are compromised in one place
+- Instantly revoke departing employees' access
+- Automate password updates to prevent "stale password" breaches
+
+## How it works
+
+**Step 1: Discovery and Registration**
+Locate all organizational passwords and API keys, registering them in the vault. Auto-scanning tools prevent oversights.
+
+**Step 2: Encrypted Storage**
+Registered secrets are stored with military-grade encryption. Even database administrators can't see the contents.
+
+**Step 3: Access Control and Logging**
+Complete record of "who saw what when." Automatic detection and alerts for unauthorized access attempts.
+
+**Step 4: Automated Rotation**
+Periodically (e.g., every 90 days) auto-change passwords and distribute new ones to all connected systems while maintaining service continuity.
+
+## Implementation benefits
+
+**Enhanced Security:** Dramatically reduce password breach risk. Rather than discovering leaks after they happen, regular updates minimize damage.
+
+**Operational Efficiency:** Reduces time IT spends on password resets. Employees can self-service retrieve credentials based on their permissions.
+
+**Compliance:** Regulatory requirements like SOX, HIPAA, and GDPR demand "safe credential management." This system easily satisfies those. Audit logs are automatically generated.
+
+## Real-world use cases
+
+**DevOps:** When deploying from development to production, automatically obtain necessary API keys and database passwords. Eliminates hardcoding in source code.
+
+**Microservices:** When hundreds of microservices communicate, each service dynamically retrieves needed credentials.
+
+**Cloud Migration:** Centrally manage API keys across AWS, Azure, GCP. Safely retrieve them from anywhere across different clouds.
+
+## Benefits and challenges
+
+**Benefits:** Enhanced security, operational efficiency, regulatory compliance, scalability.
+
+**Challenges:** Initial implementation costs and time. Legacy system integration can be complex. If team members don't understand credential management importance, they may continue individual practices like spreadsheet management after implementation.
+
+## Related terms
+
+- **[Multi-Factor Authentication (MFA)](Multi-Factor-Authentication.md)** — Password plus phone authentication for multi-layer defense
+- **[Zero Trust](Zero-Trust.md)** — Security philosophy that verifies all access
+- **[Privileged Access Management (PAM)](Privileged-Access-Management.md)** — Strict management of administrator permissions
+- **[Compliance](Compliance.md)** — Regulatory and legal adherence
+- **[Encryption](Encryption.md)** — Converting secrets to unreadable form
+
+## Frequently asked questions
+
+**Q: How do I migrate when multiple systems already manage passwords separately?**
+A: Staged migration is practical. Start with critical production passwords and API keys, gradually expanding.
+
+**Q: Cloud or on-premises version?**
+A: Cloud is simpler for startups and mid-market companies. Enterprise or highly regulated industries might consider on-premises.
+
+**Q: What if some people still keep "personal password lists"?**
+A: Policy development and training are critical. Technology-based blocking of file sharing may be needed.
 
 ## Core Credential Management Components
 

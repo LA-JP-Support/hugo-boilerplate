@@ -1,6 +1,7 @@
 ---
 title: URL構造
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: URL-Structure
 description: Web開発とSEOパフォーマンスのためのURL構造コンポーネント、ベストプラクティス、最適化テクニックに関する包括的なガイド。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - SEO最適化
 - ドメイン階層
 - URLコンポーネント
-category: Application & Use-Cases
+category: Web開発・デザイン
 type: glossary
 draft: false
 e-title: URL Structure

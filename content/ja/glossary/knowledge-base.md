@@ -1,6 +1,6 @@
 ---
 title: ナレッジベース
-lastmod: '2025-12-19'
+lastmod: 2026-04-02
 date: '2025-12-19'
 translationKey: knowledge-base
 description: ナレッジベースとは何かを解説します。顧客、従業員、または自動化システムによる迅速な情報検索とセルフサービスを実現する、一元化された整理された情報の集合体です。
@@ -10,7 +10,7 @@ keywords:
 - カスタマーサポート
 - 情報管理
 - AIチャットボット
-category: AI Chatbot & Automation
+category: ナレッジ・コラボレーション
 type: glossary
 draft: false
 e-title: Knowledge Base

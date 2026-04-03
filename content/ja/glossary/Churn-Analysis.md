@@ -1,15 +1,16 @@
 ---
 title: チャーン分析
 date: 2025-12-19
-translationKey: Churn-Analysis
-description: チャーン分析の包括的ガイド:予測モデリング技術、顧客維持戦略、および離脱を削減するためのデータ駆動型アプローチ。
+lastmod: 2026-04-02
+translationKey: churn-analysis
+description: チャーン分析は、顧客がなぜ離脱するのかを予測モデリングで分析し、離脱を予防する顧客維持戦略です。計算方法とベンチマーク目安を解説。
 keywords:
 - チャーン分析
 - 顧客維持
 - 予測モデリング
 - 離脱予測
-- 顧客生涯価値
-category: Application & Use-Cases
+- 機械学習
+category: データ・アナリティクス
 type: glossary
 draft: false
 e-title: Churn Analysis

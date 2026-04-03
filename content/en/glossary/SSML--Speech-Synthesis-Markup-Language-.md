@@ -1,341 +1,94 @@
 ---
-title: "SSML (Speech Synthesis Markup Language)"
-translationKey: "ssml-speech-synthesis-markup-language"
-description: "A markup language that controls how text sounds when spoken by AI, adjusting pronunciation, speed, pitch, and emotion to make speech sound more natural and human-like."
-keywords: ["SSML", "Speech Synthesis Markup Language", "Text-to-Speech", "TTS", "W3C", "prosody", "phonetics", "voice user interfaces", "AI chatbot"]
-category: "AI Chatbot & Automation / Text-to-Speech / Voice User Interfaces"
-type: "glossary"
-date: 2025-12-18
-lastmod: 2025-12-18
+title: SSML (Speech Synthesis Markup Language)
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: SSML--Speech-Synthesis-Markup-Language-
+description: A language controlling how computers read text aloud—adjusting pitch, speed, pauses—so AI assistants and chatbots speak naturally instead of like robots.
+keywords:
+- SSML
+- Speech Synthesis Markup Language
+- Text-to-Speech
+- TTS
+- Voice user interface
+- AI chatbot
+- Voice control
+category: Voice & Communication
+type: glossary
 draft: false
+url: /en/glossary/SSML--Speech-Synthesis-Markup-Language-/
 ---
 
-## What is SSML?
+## What is SSML (Speech Synthesis Markup Language)?
 
-Speech Synthesis Markup Language (SSML) is an XML-based markup standard developed and maintained by the W3C that enables developers, designers, and linguists to precisely control how text is rendered in synthetic (machine-generated) speech. SSML is essential for applications requiring natural, expressive, and contextually appropriate spoken output—from AI chatbots and voice assistants to accessibility tools and interactive voice response systems.
+**SSML is a language controlling how computers read text aloud—adjusting speed, pitch (height), pauses.** Google Assistant, Amazon Alexa, Siri speak "naturally" because SSML adjusts voice speed, pitch, pause timing. Plain text reading sounds robotic. SSML lets you specify: "Read this number as 'one hundred twenty-three'" or "Speak this section slowly," or "Strong pause here."
 
-Without SSML, text-to-speech (TTS) outputs are often robotic, monotonous, and prone to mispronunciations or awkward intonation. SSML solves these issues by providing fine-grained control over pronunciation using phonetic alphabets (IPA, X-SAMPA), prosody specification (pitch, rate, volume, emphasis), natural pause insertion and sentence structuring, explicit handling of special content (dates, times, acronyms, currency), voice and language switching mid-stream, and audio file embedding.
+> **In a nutshell:** Instructing computers "Read this slowly" or "This number is a value, not digits."
 
-**Industry Adoption:** SSML is the de facto standard for all major cloud TTS providers including Amazon Alexa Skills Kit, Google Cloud Text-to-Speech, Microsoft Azure Speech Service, IBM Watson Text-to-Speech, and Speechify.
+**Key points:**
 
-## Core Capabilities
+- **What it does:** Make machine voice natural and accurate
+- **Why needed:** AI assistants sound human-like
+- **Who uses it:** Google, Amazon, Microsoft, app developers
 
-### Prosody Control
+## Why it matters
 
-Adjust how text is spoken by setting attributes for pitch, rate (speed), and volume, making speech sound more human and expressive. Subtle prosody changes dramatically improve naturalness and engagement.
+When you ask a smart speaker "What's tomorrow's schedule?," if the response sounds monotone and robotic, you're unsatisfied. SSML makes reading rhythmic, naturally-punctuated, achieving secretary-like comfort. Customer service phone systems with SSML gain readable speeds and accurate pronunciations, hugely affecting satisfaction. Multi-language apps also use SSML for language-specific pronunciation and grammar.
 
-### Pronunciation Management
+## How it works
 
-Override default pronunciations for technical terms, brand names, or foreign words using phonetic alphabets or text substitutions. This prevents embarrassing mispronunciations in professional applications.
+SSML resembles HTML. HTML tells browsers "This is a heading," "This is a paragraph" with tags (< >). SSML tells voice engines "Read loudly here," "Pause here" using tags.
 
-### Special Content Handling
+Example: Plain "2023-06-10, 19.99 dollars" reads oddly. SSML:
 
-Direct explicit reading of dates, times, abbreviations, numbers, emails, and currency. SSML ensures "12/25" is read as "December twenty-fifth" and "$19.99" as "nineteen dollars and ninety-nine cents."
-
-### Expressiveness and Style
-
-Inject emphasis, emotional nuance, and stylistic variation using attributes or vendor-specific extensions. Amazon Alexa supports excited and disappointed emotions, while Azure offers neural voice styles for news reading, customer service, and cheerful delivery.
-
-### Accessibility Enhancement
-
-Make speech output clearer and more understandable for users relying on assistive technology, improving comprehension for visually impaired users.
-
-### Audio Integration
-
-Insert pauses matching natural conversational flow or embed sounds and music to enhance user experience. Background music, sound effects, and audio cues enrich voice interactions.
-
-## Basic Structure
-
-### The Root Element: `<speak>`
-
-All valid SSML documents begin with the `<speak>` root element, which defines the boundaries of speech synthesis content. This is required by all TTS engines supporting SSML.
-
-```xml
+```
 <speak>
-  Welcome to your AI assistant.
+  <say-as interpret-as="date" format="yyyymmdd">20230610</say-as>、
+  <say-as interpret-as="currency" language="en-US">19.99 dollars</say-as>
 </speak>
 ```
 
-Omitting the `<speak>` tag results in errors or the TTS engine falling back to plain text rendering.
+reads as "2023, June 10th, 19 dollars 99 cents" correctly.
 
-## Essential SSML Tags
+Use `<prosody>` tags for pitch/speed changes. Example:
 
-### `<break>`: Insert Pauses
-
-Adds a pause or controls the boundary between words or phrases.
-
-**Attributes:**
-- `time`: Exact pause duration (e.g., "500ms", "2s")
-- `strength`: Relative pause ("none", "x-weak", "weak", "medium", "strong", "x-strong")
-
-```xml
-<speak>
-  Please wait.<break time="1s"/>Processing your request.
-</speak>
+```
+<prosody rate="slow">Please read slowly</prosody>
 ```
 
-### `<prosody>`: Control Pitch, Rate, Volume
+reads that section at slow pace.
 
-Changes expressiveness of speech.
+## Real-world use cases
 
-**Attributes:**
-- `pitch`: "x-low", "low", "medium", "high", "x-high", or percentage ("+20%")
-- `rate`: "x-slow", "slow", "medium", "fast", "x-fast", or percentage ("-20%")
-- `volume`: "silent", "x-soft", "soft", "medium", "loud", "x-loud", decibel ("-6dB"), or percentage
+**Google Assistant weather reading**
+"Tomorrow's high is 25 degrees" naturally reads with proper pauses via SSML, not monotone.
 
-```xml
-<speak>
-  <prosody pitch="high" rate="fast" volume="+20%">
-    This is spoken with higher pitch, faster, and louder.
-  </prosody>
-</speak>
-```
+**Bank auto-voice systems**
+"Your balance is 123,456 yen" with SSML reads number-split-properly, preventing hearing mistakes.
 
-**Best Practice:** Avoid extreme values; subtle changes produce more natural speech.
+**AI Chatbot customer service response**
+"Thank you for waiting" with SSML natural pauses and slightly stronger reading sounds caring, not robotic.
 
-### `<emphasis>`: Highlight Words
+## Benefits and considerations
 
-Increases or reduces emphasis on specific words or phrases.
+**Benefits:** SSML makes machine voice human-like and clear. Complex info (dates, amounts, phone numbers) reads accurately. User experience improves significantly.
 
-```xml
-<speak>
-  You must <emphasis level="strong">complete</emphasis> the task.
-</speak>
-```
+**Considerations:** Different providers (Google, Amazon) support different features. Tags working on one service might not work on another. Too many SSML tags can slow processing, reducing response speed.
 
-Levels: "strong", "moderate", "reduced"
+## Related terms
 
-### `<say-as>`: Interpret Content Type
+- **[Text-to-Speech (TTS)](TTS.md)** — Text-to-voice conversion technology overall
+- **[Voice User Interface](Voice-User-Interface.md)** — Voice-operated user interface
+- **[AI Assistant](AI-Assistant.md)** — Voice or text-based supportive AI
+- **[Natural Language Processing](Natural-Language-Processing.md)** — Computer understanding human language
+- **[Markup Language](Markup-Language.md)** — HTML-like content instruction writing
 
-Directs TTS to read text as specific types.
+## Frequently asked questions
 
-**Common interpret-as values:**
-- "cardinal": Numbers (123 → "one hundred twenty-three")
-- "ordinal": Ordinal numbers (1st → "first")
-- "characters": Spell out ("SSML" → "S S M L")
-- "date": Dates with format specification
-- "time": Time values
-- "telephone": Phone numbers
-- "currency": Currency amounts
-- "fraction": Fractions ("3/4" → "three quarters")
-- "unit": Measurements
+**Q: Does SSML work the same on all AI assistants?**
+A: No. Basic tags (`<break>`, `<prosody>`) mostly work, but details differ. Google, Amazon, Microsoft have unique extension tags. Check target service docs during development.
 
-**Examples:**
+**Q: Is SSML hard to write?**
+A: Basic tags (pause insertion, speed change) are easy. Fine pronunciation control needs expertise. Usually auto-generation tools create SSML.
 
-```xml
-<speak>
-  <say-as interpret-as="characters">SSML</say-as>
-</speak>
-```
-
-```xml
-<speak>
-  <say-as interpret-as="date" format="yyyymmdd">20230610</say-as>
-</speak>
-```
-
-```xml
-<speak>
-  <say-as interpret-as="currency" language="en-US">$19.99</say-as>
-</speak>
-```
-
-### `<phoneme>`: Custom Pronunciation
-
-Specifies exact pronunciation using phonetic alphabets.
-
-**Attributes:**
-- `alphabet`: "ipa", "x-sampa"
-- `ph`: Phonetic string
-
-```xml
-<speak>
-  <phoneme alphabet="ipa" ph="ˈniːʃ">niche</phoneme>
-</speak>
-```
-
-### `<sub>`: Substitute Text
-
-Reads the alias value instead of the enclosed text.
-
-```xml
-<speak>
-  Welcome to the <sub alias="World Wide Web Consortium">W3C</sub>.
-</speak>
-```
-
-**Use Cases:** Brand names, acronyms, foreign words
-
-### `<audio>`: Insert Audio Clips
-
-Embeds recorded audio in speech output (sound effects, music).
-
-```xml
-<speak>
-  Please listen to this sound.
-  <audio src="https://www.example.com/sound.mp3">
-    Unable to play audio.
-  </audio>
-</speak>
-```
-
-**Provider Limitations:**
-- Google Cloud: Format and time restrictions apply
-- Amazon Alexa: 240-second max, HTTPS required, size limits
-- Azure: Supported with restrictions
-
-### `<voice>`: Change Voice or Persona
-
-Switches to a different voice, language, or persona.
-
-```xml
-<speak>
-  <voice name="en-US-Wavenet-D">Hello, I am the default voice.</voice>
-  <voice name="en-GB-Wavenet-B">And I am a British voice.</voice>
-</speak>
-```
-
-### `<p>` and `<s>`: Structure Text
-
-Defines paragraphs (`<p>`) and sentences (`<s>`) for better pacing and grouping.
-
-```xml
-<speak>
-  <p>
-    <s>This is the first sentence.</s>
-    <s>This is the second sentence.</s>
-  </p>
-</speak>
-```
-
-### `<lang>`: Specify Language
-
-Specifies language for a text segment, enabling proper pronunciation and accent.
-
-```xml
-<speak>
-  Here is a word in French: <lang xml:lang="fr-FR">bonjour</lang>.
-</speak>
-```
-
-## Provider-Specific Extensions
-
-### Amazon Alexa
-
-**`<amazon:emotion>`:** Adds "excited" or "disappointed" emotion
-
-```xml
-<speak>
-  <amazon:emotion name="excited" intensity="medium">
-    Congratulations on your achievement!
-  </amazon:emotion>
-</speak>
-```
-
-**`<amazon:domain>`:** Changes delivery style (news, music, conversational)
-
-### Microsoft Azure
-
-**`<mstts:express-as>`:** Neural voice styles and roles
-
-```xml
-<speak>
-  <mstts:express-as style="cheerful">
-    Welcome to our service!
-  </mstts:express-as>
-</speak>
-```
-
-Styles include: cheerful, sad, angry, fearful, friendly, hopeful, newscast, customer-service
-
-### Speechify
-
-**`<speechify:style>`:** Proprietary style control for enhanced reading experiences
-
-## Practical Example
-
-```xml
-<speak>
-  Welcome to the demo.
-  <break time="500ms"/>
-  Your appointment is on
-  <say-as interpret-as="date" format="yyyymmdd">20230610</say-as>.
-  The amount due is
-  <say-as interpret-as="currency" language="en-US">$19.99</say-as>.
-  For assistance, call
-  <say-as interpret-as="telephone">18001234567</say-as>.
-  <prosody rate="slow">Thank you for using our service.</prosody>
-</speak>
-```
-
-**Expected Output:** "Welcome to the demo. [pause] Your appointment is on June tenth, twenty twenty-three. The amount due is nineteen dollars and ninety-nine cents. For assistance, call one eight hundred one two three four five six seven. [slower] Thank you for using our service."
-
-## Common Use Cases
-
-### AI Chatbots and Virtual Assistants
-
-Enhance conversational AI with natural-sounding responses, appropriate pauses, and emotional expression
-
-### Customer Service IVR Systems
-
-Guide callers through menus with clear pronunciation and professional tone
-
-### Accessibility Applications
-
-Provide high-quality speech output for screen readers and assistive technologies
-
-### E-Learning Platforms
-
-Create engaging educational content with varied voices and appropriate pacing
-
-### Audiobook Production
-
-Generate natural-sounding narration with character voices and emotional expression
-
-### Smart Home Devices
-
-Deliver notifications and responses with appropriate context and emotion
-
-## Best Practices
-
-**Subtle Adjustments:** Small prosody changes are more effective than extreme modifications
-
-**Test Across Platforms:** Verify SSML rendering across target TTS providers
-
-**Use Phonetic Sparingly:** Only override pronunciation when necessary
-
-**Structure Logically:** Use `<p>` and `<s>` tags for natural pacing
-
-**Balance Speed:** Maintain natural rate; avoid overly fast or slow speech
-
-**Audio Quality:** Ensure embedded audio files are properly encoded and hosted
-
-**Accessibility Focus:** Consider all users, including those with assistive technology
-
-## Implementation Considerations
-
-**Platform Compatibility:** Different providers support different tag subsets and extensions
-
-**Fallback Content:** Provide fallback text for unsupported tags
-
-**Character Limits:** Be aware of platform-specific text length restrictions
-
-**Processing Overhead:** Complex SSML may increase response time
-
-**Cost Management:** Some providers charge based on character count including markup
-
-**Testing Protocol:** Establish comprehensive testing across devices and platforms
-
-## References
-
-- [W3C Speech Synthesis Markup Language (SSML) Version 1.1](https://www.w3.org/TR/speech-synthesis11/)
-- [Amazon Alexa: SSML Reference](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html)
-- [Google Cloud: SSML Documentation](https://cloud.google.com/text-to-speech/docs/ssml)
-- [Microsoft Azure: Speech Synthesis Markup](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup)
-- [IBM Watson: SSML Elements](https://cloud.ibm.com/docs/text-to-speech?topic=text-to-speech-ssml)
-- [Speechify: SSML Features](https://docs.sws.speechify.com/docs/features/ssml)
-- [International Phonetic Alphabet (IPA)](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet)
-- [Azure Speech Voice Gallery](https://speech.microsoft.com/portal/voicegallery)
-- [Google Cloud Supported SSML Elements](https://cloud.google.com/text-to-speech/docs/ssml#supported_ssml)
-- [Microsoft Azure Supported SSML Elements](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-structure#ssml-supported-elements)
-- [Adaptive Cards Designer](https://adaptivecards.io/designer/)
+**Q: Does SSML work in Japanese?**
+A: Yes. Google, Amazon, Microsoft all support Japanese SSML. Number reading methods (1234 as "thousand two-hundred thirty-four" vs. "one-two-three-four") need fine specification.

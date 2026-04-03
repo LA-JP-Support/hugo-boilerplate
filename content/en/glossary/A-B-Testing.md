@@ -1,17 +1,19 @@
 ---
-title: "A/B Testing"
+title: A/B Testing
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: A-B-Testing
-description: "A method of comparing two versions of something (like a website or email) by showing each to different groups of people to see which one works better."
+description: A comprehensive guide to A/B testing methodology, implementation strategies, statistical analysis, and optimization techniques for data-driven decision making.
 keywords:
 - A/B testing
 - split testing
 - conversion optimization
 - statistical significance
 - hypothesis testing
-category: "Application & Use-Cases"
+category: Data & Analytics
 type: glossary
 draft: false
+url: /en/glossary/a-b-testing/
 ---
 
 ## What is an A/B Testing?

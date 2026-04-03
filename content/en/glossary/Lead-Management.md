@@ -1,17 +1,19 @@
 ---
-title: "Lead Management"
+title: Lead Management
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Lead-Management
-description: "A system for tracking and nurturing potential customers from their first interest through to purchase, helping sales teams convert prospects into buyers efficiently."
+description: A system that tracks and nurtures potential customers from their first contact through to purchase, helping sales teams convert prospects into buyers efficiently.
 keywords:
 - lead management
 - lead generation
-- sales funnel
+- CRM
 - customer acquisition
 - marketing automation
-category: "Application & Use-Cases"
+category: Content & Marketing
 type: glossary
 draft: false
+url: "/en/glossary/Lead-Management/"
 ---
 
 ## What is Lead Management?

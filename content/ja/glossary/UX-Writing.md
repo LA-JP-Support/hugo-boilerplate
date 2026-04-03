@@ -1,6 +1,7 @@
 ---
 title: UXライティング
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: UX-Writing
 description: UXライティングの包括的ガイド - デジタルインターフェースとエクスペリエンスを通じてユーザーを導く、ユーザー中心のコピーを作成する実践手法について解説します。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - マイクロコピー
 - インターフェースコピー
 - コンテンツデザイン
-category: Application & Use-Cases
+category: データ・アナリティクス
 type: glossary
 draft: false
 e-title: UX Writing

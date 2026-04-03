@@ -1,262 +1,90 @@
 ---
 title: HTTP Request Node
+date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: http-request-node
-description: "A tool that sends requests to external websites or services within automation workflows, allowing different applications to communicate and share data automatically."
+description: A component in no-code automation tools that calls external APIs and realizes data integration between different systems.
 keywords:
-- HTTP Request Node
-- API integration
-- automation platforms
-- n8n
-- Node-RED
-category: AI Chatbot & Automation
+  - HTTP Request
+  - API Integration
+  - Automation
+  - n8n
+  - Node-RED
+  - Workflow
+category: Data & Analytics
 type: glossary
-date: 2025-12-18
-lastmod: 2025-12-18
 draft: false
+url: /en/glossary/http-request-node/
 ---
 
-## What is an HTTP Request Node?
+## What is HTTP Request Node?
 
-An HTTP Request Node is a central component in automation and integration platforms (n8n, Node-RED, Node.js) that sends HTTP requests (GET, POST, PUT, PATCH, DELETE) to external servers or APIs, processing responses within automation workflows. This node is vital for integrating systems, consuming third-party services, triggering webhooks, and exchanging data between applications.
+**HTTP Request Node is a component in no-code automation platforms ([n8n](n8n.md), [Node-RED](Node-RED.md), etc.) that sends requests to external APIs and web services, retrieving and sending data.** Through drag-and-drop, you can automatically connect multiple web services.
 
-## Core Capabilities
+> **In a nutshell:** Like controlling multiple smart home devices with one remote—call various APIs from one workflow.
 
-**Supported HTTP Methods:**
+**Key points:**
 
-- **GET** – Retrieve data from specified resource
-- **POST** – Send data to create or update resource
-- **PUT** – Replace or update resource
-- **PATCH** – Partially update resource
-- **DELETE** – Remove resource
-- **HEAD** – Retrieve headers without response body
-- **OPTIONS** – Query supported communication options
+- **What it does:** A process unit calling external system APIs from within automation workflows
+- **Why it's needed:** Connect no-code tools with external services, realizing complex integration simply
+- **Who uses it:** No-code developers, business automation engineers, marketers
 
-**Authentication Options:**
+## Why it matters
 
-- No Authentication (open endpoints)
-- Basic Authentication (username/password, Base64-encoded)
-- Digest Authentication (hashed credentials)
-- Bearer Token (JWT in Authorization header)
-- OAuth1 & OAuth2 (delegated, token-based access)
-- Header Auth (custom headers for API keys)
-- Custom Auth (user-defined logic)
-- Query Auth (credentials via query parameters)
+Modern business uses multiple tools ([Slack](Slack.md), [Salesforce](Salesforce.md), [Google Sheets](Google-Sheets.md), etc.). Automatically integrating them requires using each tool's [API](API.md).
 
-**Supported Data Formats:**
+With HTTP Request Node, you can realize this integration without programming knowledge. Eliminating manual work and automating data synchronization dramatically improves efficiency.
 
-- application/json (JSON payloads)
-- application/x-www-form-urlencoded (key/value pairs)
-- multipart/form-data (file uploads, complex data)
-- Raw (arbitrary content with specified content type)
-- Plain Text (unstructured text)
-- Binary (file and binary data transfer)
+## How it works
 
-**Additional Features:**
+HTTP Request Node operates through three steps.
 
-- Custom headers (Content-Type, Authorization)
-- Query parameters (dynamic filtering)
-- Proxy support (HTTP proxies)
-- Timeouts (request and connection control)
-- SSL validation control (ignore certificate errors)
-- Automatic and manual pagination
-- Redirect handling
-- Response handling (JSON, text, binary, file)
-- Batching (parallel or sequential requests)
+**The first is configuration.** Specify the API URL to call, method (GET, POST, etc.), and authentication credentials.
 
-## Configuration by Platform
+**The second is request sending.** When this node executes within the automation workflow, HTTP requests are sent to the configured API.
 
-### n8n HTTP Request Node
+**The third is response handling.** Receive API response and process in subsequent nodes (data extraction, transformation, sending to other systems, etc.).
 
-**Basic Parameters:**
+For example, "receive specific message in [Slack](Slack.md), then record content in [Google Sheets](Google-Sheets.md)" automation is realized by connecting [Slack](Slack.md) API and Google Sheets API using HTTP Request Node.
 
-- **Method** – Select HTTP method (DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT)
-- **URL** – API endpoint (static or dynamic using expressions)
-- **Authentication** – Choose predefined credentials or configure manually
-- **Send Query Parameters** – Define as key/value pairs or JSON
-- **Send Headers** – Specify custom headers
-- **Send Body** – Enable for POST, PUT, PATCH requests
-- **Output Variables** – Map status code, body, headers to workflow variables
+## Real-world use cases
 
-**Advanced Options:**
+**CRM and email delivery system integration**
 
-- Array format in query parameters
-- Batching (items per batch, delay between batches)
-- Ignore SSL issues (trusted endpoints only)
-- Lowercase headers toggle
-- Redirects (enable/disable, max redirects)
-- Response handling (include headers/status, format)
-- Pagination (off, parameter update, next URL)
-- Proxy specification
-- Timeout (request timeout in ms)
+When customer information updates in [Salesforce](Salesforce.md), HTTP Request Node automatically notifies email platform. Customer data stays synchronized.
 
-**Example POST Request:**
-```json
-{
-  "method": "POST",
-  "url": "https://api.example.com/resource",
-  "headers": {
-    "Content-Type": "application/json"
-  },
-  "body": {
-    "name": "John Doe",
-    "email": "john@example.com"
-  }
-}
-```
+**Scheduled report generation**
 
-### Node-RED HTTP Request Node
+A workflow retrieving data from multiple tools, aggregating, creating and sending reports. Automatically runs each morning.
 
-**Configuration:**
+**Chatbot integration**
 
-- **Method** – GET, POST, PUT, DELETE, PATCH
-- **URL** – Static or dynamic using Mustache syntax (`{{variable}}`)
-- **Payload** – Ignore, append to query string, or send as body
-- **Authentication** – None, Basic, Digest, Bearer Token
-- **Proxy** – Route via proxy server if needed
-- **Headers** – Add via node config or `msg.headers`
-- **Output** – Specify response as string, parsed JSON, or binary buffer
-- **Catch Node** – Handle non-2xx HTTP responses
+Customer support chatbots call external knowledge base APIs per question, generating answers.
 
-**Example Dynamic GET Request:**
-```json
-{
-  "method": "GET",
-  "url": "https://api.example.com/users/{{userId}}",
-  "headers": {
-    "Authorization": "Bearer {{token}}"
-  }
-}
-```
+## Benefits and considerations
 
-**Important:** Reset `msg.headers` to `{}` between HTTP nodes to avoid header leakage.
+**Benefits** include no programming (no-code), rapid integration, easily automating multiple system connections. Entire workflow visualization simplifies maintenance.
 
-### Node.js HTTP Requests
+**Considerations** include needing adjustment for API spec changes. Complex transformation logic may require additional script nodes. Watch API rate limits.
 
-**Native HTTP/HTTPS Modules:**  
-Low-level modules for full control over requests with built-in streaming support.
+## Related terms
 
-**Fetch API (Node.js 18+):**  
-Built-in since Node.js 18, returns Promises, supports async/await syntax.
+- **[API](API.md)** — Interface of systems called by HTTP requests
+- **[n8n](n8n.md)** — Automation platform featuring HTTP Request Node
+- **[Node-RED](Node-RED.md)** — Flow-based automation tool
+- **[REST API](REST-API.md)** — API format called by HTTP requests
+- **[Workflow Automation](Workflow-Automation.md)** — Business automation connecting multiple steps
 
-```js
-const response = await fetch('https://api.example.com/data');
-const data = await response.json();
-console.log(data);
-```
+## Frequently asked questions
 
-**axios:**  
-Promise-based HTTP client with interceptors, timeout, automatic JSON handling, request/response transformation.
+**Q: Are credentials safe in HTTP Request Node?**
 
-```js
-const axios = require('axios');
-axios.post('https://api.example.com/resource', {
-  name: 'John Doe',
-  email: 'john@example.com'
-}, {
-  headers: {
-    'Authorization': 'Bearer YOUR_TOKEN'
-  }
-}).then(response => {
-  console.log(response.data);
-});
-```
+A: Trusted platforms encrypt API keys. Regular key rotation is recommended.
 
-## Best Practices
+**Q: What happens if the API goes down?**
 
-**Security:**
+A: Workflows fail. Set retry features and error handling to prepare.
 
-- Use built-in credential managers, never hard-code secrets
-- Always use HTTPS with SSL certificate validation
-- Sanitize all dynamic input (headers, params, body)
-- Rotate, expire, and securely store tokens
+**Q: Can many API requests be sent simultaneously?**
 
-**Error Handling:**
-
-- Always check and handle HTTP status codes
-- Set appropriate timeouts to avoid hanging requests
-- Implement retries for transient failures (network, 5xx errors)
-
-**Content Types and Encoding:**
-
-- Match Content-Type header to body format
-- URL-encode query parameters for special characters
-- Check API docs for required array encoding
-
-**Pagination:**
-
-- Recognize API patterns (page/limit, offset, next URL)
-- Use platform pagination features where possible
-
-**Headers and Response Handling:**
-
-- In Node-RED, reset `msg.headers` between HTTP nodes
-- Check response headers for rate limits, authentication challenges, pagination
-
-**Debugging:**
-
-- Validate configs with built-in test features or tools like Postman
-- Log full responses for troubleshooting
-
-## Common Pitfalls
-
-- Incorrect Content-Type causing API rejections
-- Unencoded query params with special characters
-- Header inheritance in Node-RED (must reset between nodes)
-- Ignoring non-2xx responses without proper error handling
-- Missing authentication for APIs requiring credentials
-
-## Use Cases
-
-**API Integration:**  
-Fetch user info from REST API. Configure GET method, set URL, add Authorization header, map response.
-
-**Sending Data:**  
-Submit form. POST method, Content-Type `application/x-www-form-urlencoded`, enter fields.
-
-**File Upload:**  
-Upload file using `multipart/form-data`. POST/PUT, attach file.
-
-**Webhook Trigger:**  
-Notify external system upon event. POST method, set URL, send JSON body.
-
-**Automation with AI Agents (n8n):**  
-Use HTTP Request Node in LLM workflow. Attach node, configure optimized response extraction.
-
-## Platform-Specific Notes
-
-**n8n:**
-
-- Predefined OAuth2, API Key, generic auth options
-- Drag-and-drop UI, cURL import
-- Body/Headers/Query as fields or direct JSON input
-- Pagination supports parameter increment and next-URL
-- AI Agent Integration optimizes responses for LLMs
-
-**Node-RED:**
-
-- Dynamic config via `msg.method`, `msg.url`, `msg.headers`
-- Mustache syntax for dynamic URLs/headers
-- Auto Content-Type for object payloads
-- Response handling: string, JSON, binary buffer
-
-**Node.js:**
-
-- HTTP/HTTPS: Low-level, full control
-- axios/node-fetch/Fetch API: High-level, Promise-based
-- Native streaming support
-- Proxy via environment or library options
-
-## References
-
-- [n8n HTTP Request Node Documentation](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
-- [Mastering the n8n HTTP Request Node](https://automategeniushub.com/mastering-the-n8n-http-request-node/)
-- [Node-RED HTTP Request Node](https://flowfuse.com/node-red/core-nodes/http-request/)
-- [Node-RED Securing Guide](https://nodered.org/docs/user-guide/runtime/securing-node-red)
-- [Node-RED HTTPS Configuration](https://nodered.org/docs/user-guide/runtime/securing-node-red#enabling-https-access)
-- [Node-RED Proxy Configuration](https://flowfuse.com/node-red/core-nodes/http-proxy/)
-- [Node.js HTTP Module Documentation](https://nodejs.org/api/http.html)
-- [W3Schools: Node.js HTTP Module](https://www.w3schools.com/nodejs/nodejs_http.asp)
-- [Axios Documentation](https://axios-http.com/docs/intro)
-- [Node.js Fetch API Guide](https://oxylabs.io/blog/nodejs-fetch-api)
-- [Stack Overflow: HTTP POST in Node.js](https://stackoverflow.com/questions/6158933/how-is-an-http-post-request-made-in-node-js)
-- [Postman](https://www.postman.com/)
+A: Depends on platform specs and target API rate limits. Large parallel processing requires batch processing or scheduling considerations.

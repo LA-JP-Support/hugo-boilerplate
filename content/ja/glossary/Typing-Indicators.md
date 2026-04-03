@@ -1,7 +1,7 @@
 ---
 title: タイピングインジケーター
 date: '2025-12-19'
-lastmod: '2025-12-19'
+lastmod: 2026-04-02
 translationKey: typing-indicators
 description: タイピングインジケーターは、チャットアプリで誰かがメッセージを作成している際に表示される視覚的な合図です。ユーザーエンゲージメントを高め、不確実性を軽減し、リアルタイムコミュニケーションを改善します。
 keywords:
@@ -10,7 +10,7 @@ keywords:
 - リアルタイムコミュニケーション
 - AIチャットボット
 - ユーザーエンゲージメント
-category: AI Chatbot & Automation
+category: データ・アナリティクス
 type: glossary
 draft: false
 e-title: Typing Indicators

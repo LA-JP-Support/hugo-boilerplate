@@ -1,6 +1,7 @@
 ---
 title: アンダーフィッティング
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Underfitting
 description: 機械学習におけるアンダーフィッティングの包括的ガイド:原因、検出方法、解決策、およびモデルパフォーマンス向上のためのベストプラクティス。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - モデルパフォーマンス
 - バイアスバリアンストレードオフ
 - モデル複雑度
-category: Application & Use-Cases
+category: AI・機械学習
 type: glossary
 draft: false
 e-title: Underfitting

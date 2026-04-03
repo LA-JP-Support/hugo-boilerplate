@@ -1,6 +1,7 @@
 ---
 title: URLスラッグ
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: URL-Slug
 description: URLスラッグの包括的なガイド - ユーザー体験と検索エンジン最適化を向上させる、読みやすくSEOフレンドリーなURLの一部分について解説します。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - Web開発
 - ユーザーフレンドリーURL
 - パーマリンク構造
-category: Application & Use-Cases
+category: Web開発・デザイン
 type: glossary
 draft: false
 e-title: URL Slug

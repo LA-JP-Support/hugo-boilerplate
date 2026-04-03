@@ -1,17 +1,19 @@
 ---
-title: "Social Media Monitoring"
+title: Social Media Monitoring
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Social-Media-Monitoring
-description: "Social media monitoring is the process of tracking what people say about your brand across social platforms to understand customer opinions and market trends."
+description: Tracking and analyzing what people say about your brand online to understand customer opinions and market trends.
 keywords:
 - social media monitoring
 - brand monitoring
 - sentiment analysis
 - social listening
 - reputation management
-category: "Application & Use-Cases"
+category: Data & Analytics
 type: glossary
 draft: false
+url: "/en/glossary/Social-Media-Monitoring/"
 ---
 
 ## What is a Social Media Monitoring?

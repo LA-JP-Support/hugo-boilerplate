@@ -1,7 +1,7 @@
 ---
 title: TCO(総所有コスト)
-lastmod: '2025-12-19'
-date: '2025-12-19'
+lastmod: 2026-04-02
+date: 2025-12-19
 translationKey: tco-total-cost-of-ownership
 description: 総所有コスト(TCO)は、資産のライフサイクルにおけるすべての直接費、間接費、隠れたコストを定量化します。AIチャットボットと自動化において不可欠なTCOは、動的な費用を管理し、情報に基づいた技術的意思決定を支援します。
 keywords:
@@ -10,7 +10,7 @@ keywords:
 - AIチャットボット
 - 自動化コスト
 - ライフサイクルコスト
-category: AI & Automation
+category: ビジネス・戦略
 type: glossary
 draft: false
 e-title: TCO (Total Cost of Ownership)

@@ -1,6 +1,7 @@
 ---
 title: チケットデフレクション
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Ticket-Deflection
 description: チケットデフレクション戦略、実装方法、顧客満足度を向上させながらカスタマーサポート量を削減するためのベストプラクティスに関する包括的なガイド。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - セルフサービスソリューション
 - サポートチケット削減
 - カスタマーサービス最適化
-category: Application & Use-Cases
+category: コンタクトセンター・CX
 type: glossary
 draft: false
 e-title: Ticket Deflection

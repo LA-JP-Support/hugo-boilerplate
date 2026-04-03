@@ -1,13 +1,19 @@
 ---
-title: "Lemmatization"
-translationKey: "lemmatization"
-description: "Lemmatization is a text processing technique that converts different word forms (like 'running,' 'ran,' 'runs') to their base form ('run') so computers can better understand and analyze language."
-keywords: ["lemmatization", "natural language processing", "nlp", "stemming", "text normalization"]
-category: "General"
-type: "glossary"
-date: 2025-12-18
-lastmod: 2025-12-18
+title: Lemmatization
+date: 2026-04-02
+lastmod: 2026-04-02
+translationKey: lemmatization
+description: Lemmatization is a text processing technique that converts different word forms (like running, ran, runs) to their base dictionary form (run) so computers can better understand and analyze language.
+keywords:
+- lemmatization
+- natural language processing
+- NLP
+- text normalization
+- stemming
+category: AI & Machine Learning
+type: glossary
 draft: false
+url: "/en/glossary/Lemmatization/"
 ---
 
 ## What is Lemmatization?

@@ -1,33 +1,112 @@
 ---
-title: "Cron Schedule"
-translationKey: "cron-schedule"
-description: "A cron schedule is a programmable calendar that automatically runs tasks at specific times, eliminating the need for manual execution and reducing errors."
-keywords: ["cron schedule", "cron expression", "task automation", "crontab", "Unix Linux scheduling"]
-category: "AI Chatbot & Automation"
-type: "glossary"
-date: 2025-12-18
-lastmod: 2025-12-18
+title: Cron Schedule
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: cron-schedule
+description: A time-specification method in Unix/Linux for scheduling automatic task execution. Enables precise timing like "backup every day at 2 AM."
+keywords:
+- Cron schedule
+- Task automation
+- Crontab
+- Scheduling
+- Unix/Linux
+category: Cloud & Infrastructure
+type: glossary
 draft: false
+url: /en/glossary/cron-schedule/
 ---
 
-## What Is a Cron Schedule?
+## What is Cron Schedule?
 
-A cron schedule specifies the precise times when a task (like a script or command) should be executed, using a flexible, programmable syntax. It is essentially a programmable calendar for your computer or cloud system, ensuring that recurring tasks run automatically and consistently.
+**Cron schedule is a system for specifying "execute this command at this date and time" on servers and cloud systems.** It automates repetitive tasks like backups, report generation, and data synchronization without manual intervention.
 
-### Key Concepts
+> **In a nutshell:** The Linux version of Windows "Task Scheduler." It supports complex time specifications and is a foundational business automation tool.
 
-**Cron Daemon (`cron` or `crond`)**  
-The background process that reads scheduled jobs from configuration files (crontabs) and executes them at the specified time.
+**Key points:**
 
-**Cron Job**  
-An individual task or command defined in a crontab to be executed on a schedule.
+- **What it does:** Auto-execute scripts and commands at specified times
+- **Why it's needed:** Address labor shortages, eliminate human error, enable 24/7 automated operation
+- **Format:** Five numbers (minute, hour, day, month, day-of-week) plus a command
 
-**Crontab**  
-The configuration file or table where cron schedules and jobs are listed for execution.
+## Why it matters
 
-## How Cron Schedules Are Used
+Daily 2 AM backups, weekly Monday sales reports, monthly first-day invoicing—all routine work can be fully automated, freeing people for other tasks. Compared to manual work, human error like "I forgot" or "wrong time" becomes zero.
 
-Cron schedules automate repetitive and scheduled tasks, freeing humans from manual execution and reducing error. Typical applications include:
+In the cloud era, this is increasingly important. AWS Lambda, Google Cloud Functions, and others offer cron-compatible scheduling, making it enterprise standard.
+
+## How it works
+
+Cron runs a "cron daemon" in the background that checks system time every minute. When the specified time arrives, it automatically executes the command.
+
+**Basic format:**
+```
+minute hour day month day-of-week command
+```
+
+Examples:
+- `0 2 * * *` = Every day at 2 AM (minute: 0, hour: 2, day: all, month: all, day-of-week: all)
+- `0 9 * * 1-5` = Weekdays at 9 AM (day-of-week: 1-5 is Monday-Friday)
+- `*/15 * * * *` = Every 15 minutes
+
+## Practical examples
+
+**Backup script:**
+```
+0 2 * * * /home/user/backup.sh
+```
+Execute backup script daily at 2 AM.
+
+**Report generation:**
+```
+0 8 1 * * /usr/local/bin/generate_report.sh
+```
+Auto-generate sales report first of month at 8 AM.
+
+**Health check:**
+```
+*/5 * * * * /opt/healthcheck.sh
+```
+Run server health check every 5 minutes.
+
+## How to set it up
+
+On Linux/Mac terminal, edit the cron registration file (crontab):
+
+```bash
+crontab -e
+```
+
+A text editor opens where you write commands in the format above. Save and exit to auto-register.
+
+```bash
+crontab -l  # Show registered cron jobs
+crontab -r  # Delete all
+```
+
+## Benefits and considerations
+
+**Benefits:** Complete automation, 24/7 operation, improved staff efficiency.
+
+**Considerations:** Failures don't auto-notify (configure email forwarding for notifications). If the server stops, tasks don't execute. Critical tasks need redundancy and monitoring.
+
+## Related terms
+
+- **[Task Automation](Task-Automation.md)** — General concept of automation including cron
+- **[Script](Script.md)** — The program to execute
+- **[Backup](Backup.md)** — Often auto-executed with cron
+- **[Job Scheduler](Job-Scheduler.md)** — Multi-step task management
+- **[DevOps](DevOps.md)** — System automation with cron is foundational
+
+## Frequently asked questions
+
+**Q: What are the exact ranges for the five numbers?**
+A: Minute (0-59), Hour (0-23), Day (1-31), Month (1-12), Day-of-week (0-6, Sunday=0).
+
+**Q: How do I get notified of failures?**
+A: Crontab results are logged by default only. Configure email sending for failure notifications, or use external cron monitoring tools like Cronitor.
+
+**Q: Does it work with cloud services?**
+A: AWS Lambda, Google Cloud Functions, Azure Functions all support cron-compatible trigger settings.
 
 **System Maintenance:** Backups, log rotation, removing temp files, updating software.  
 **Reporting:** Automated generation and delivery of daily/weekly/monthly reports.  

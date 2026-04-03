@@ -1,6 +1,7 @@
 ---
 title: チケットステータス
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Ticket-Status
 description: ITサービスマネジメント、ヘルプデスク業務、プロジェクト追跡ワークフローにおけるチケットステータスシステムの包括的なガイド。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - ITSMワークフロー
 - インシデント追跡
 - サービスデスク運用
-category: Application & Use-Cases
+category: コンタクトセンター・CX
 type: glossary
 draft: false
 e-title: Ticket Status

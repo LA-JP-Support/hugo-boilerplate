@@ -1,274 +1,84 @@
 ---
 title: 固有表現認識（NER）
+date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: named-entity-recognition-ner
-description: 固有表現認識（NER）は、テキスト内の実世界のエンティティ（人物、組織、場所など）を識別し分類することで、生データを構造化された情報に変換します。
+description: テキスト内の人名、組織名、地名などの重要な情報を自動認識・分類する技術。非構造化データを構造化情報に変換します。
 keywords:
 - 固有表現認識
 - NER
 - 自然言語処理
-- NLP
 - エンティティ抽出
-category: AI Chatbot & Automation
+- テキスト分析
+category: データ・アナリティクス
 type: glossary
-date: '2025-12-19'
-lastmod: '2025-12-19'
 draft: false
 e-title: Named Entity Recognition (NER)
-term: こゆうひょうげんにんしき（エヌイーアール）
-url: "/ja/glossary/named-entity-recognition--ner-/"
+url: /ja/glossary/named-entity-recognition--ner-/
 aliases:
-- "/ja/glossary/Named-Entity-Recognition--NER-/"
+- /ja/glossary/Named-Entity-Recognition--NER-/
+term: こゆうひょうげんにんしき（エヌイーアール）
 ---
-## 固有表現認識(NER)とは?
 
-固有表現認識(NER)は、自然言語処理(NLP)における中核的なタスクであり、非構造化テキスト内の実世界のエンティティを自動的に識別し分類することに焦点を当てています。エンティティには、人名、組織名、場所、日付、数量、金額などが含まれます。NERは、関連する部分文字列(エンティティメンション)を特定し、事前定義されたカテゴリに割り当てることで、生のテキストを構造化された機械可読データに変換します。
+## 固有表現認識（NER）とは？
 
-実用的には、NERモデルはテキストデータを処理して重要な情報を抽出・注釈付けし、検索、質問応答、コンテンツ推薦、文書自動化などの下流アプリケーションを可能にします。
+**NERは、テキストから人名、企業名、地名などの重要な情報を自動認識して分類する技術です。** 「日本銀行がドル相場について声明を出した」という文から、「日本銀行」を組織、「ドル」を通貨として自動抽出します。これにより、テキストを構造化データに変換でき、検索や分析が簡単になります。
 
-**例:**
-「Appleは10億ドルでイギリスのスタートアップの買収を検討している。」
+> **ひとことで言うと：** 「文章の中から『重要な名前』を自動で見つけて、どの種類（人？会社？場所？）かを判定する」という感じです。
 
-NER出力:
-- "Apple" → 組織(ORG)
-- "U.K." → 地政学的エンティティ(GPE)
-- "$1 billion" → 金額(MONEY)
+**ポイントまとめ：**
 
-## NERが重要な理由
+- **何をするものか：** テキストから固有表現を抽出し、カテゴリ分類する
+- **なぜ必要か：** 膨大なテキストから機械が重要情報を理解できるように
+- **誰が使うか：** 検索エンジン企業、[NLP](NLP.md)技術者、コンテンツ分析部門
 
-デジタルコンテンツの大半は非構造化データです—メール、記事、顧客チャット、ソーシャルメディア投稿、医療記録、法的文書など。NERは機械がこのデータから事実的な意味を抽出することを可能にし、幅広いアプリケーションをサポートします:
+## なぜ重要か
 
-**検索:** 固有表現をインデックス化することで結果の関連性を向上させます。
+インターネット上のテキストの大部分は非構造化データです。検索エンジンがテキストを理解し、正確な検索結果を返すには、その中から重要な情報（人名、地名、企業名）を抽出する必要があります。
 
-**推薦:** 認識された人物、場所、製品に基づいてコンテンツを提案します。
+また、ニュース記事から重要な人物や企業を自動抽出して知識ベースを構築したり、契約書から日付や金額を自動抽出したり、医療テキストから病名や治療方法を抽出したりと、多くの実務的な応用があります。[LLM](LLM.md)と組み合わせることで、さらに高度な分析が可能になります。
 
-**自動化:** 請求書、契約書、フォームから構造化データを抽出します。
+## 仕組みをわかりやすく解説
 
-**コンプライアンス:** 個人識別情報(PII)を識別し編集します。
+NERは、複数のステップで動作します。
 
-**ナレッジグラフ:** 分析とAIのために情報を構造化します。
+**テキスト前処理** まず、テキストを単語（トークン）に分割し、文を区切ります。
 
-**曖昧性処理の例:**
-NERモデルは文脈を分析して曖昧な名前を解決します:
-- 「Lincoln」は「Abraham Lincoln」(人物)、「Lincoln Motor Company」(組織)、または「Lincoln, Nebraska」(場所)を指す可能性があります。
+**特徴抽出** 各単語の周辺コンテキストから、それが固有表現かどうかを判定するための情報を抽出します。例えば「Mr.」の後の単語は人名である可能性が高い、といった手がかりを使います。
 
-## 主要概念
+**境界検出と分類** 複数単語からなる固有表現（「東京大学」のように3語）の境界を特定し、全体をカテゴリに分類します。分類には、従来の機械学習モデル（[CRF](CRF.md)など）やディープラーニング（[Transformer](Transformer.md)など）が使われます。
 
-### 固有表現(NE)
+最新のNERシステムは、[BERT](BERT.md)などの[事前学習モデル](Pre-trained-Model.md)をファインチューニングして、高い精度を実現しています。
 
-固有名詞または固定参照によって示される、一意の実世界のオブジェクト。
+## 実際の活用シーン
 
-**例:** 「Michelle Obama」(人物)、「London」(場所)、「Google」(組織)、「$500」(金額)。
+**検索エンジンの結果改善**
+ユーザーが「Apple」で検索した時、企業のAppleなのか、果物のリンゴなのかを自動判定し、適切な検索結果を表示します。
 
-### エンティティタイプ / ラベル / タグ
+**ニュース記事の自動分類**
+ニュースから人物、企業、地政学的エンティティを抽出して、自動でカテゴリ分けや関連記事推薦をします。
 
-エンティティスパンに割り当てられるカテゴリ。PER(人物)、ORG(組織)、LOC(場所)、DATE、MONEYなど。
+**医療記録処理**
+患者の診療記録から病名、治療薬、手術内容などを自動抽出して、構造化データベースに格納し、統計分析を可能にします。
 
-### エンティティ境界検出
+## メリットと注意点
 
-テキスト内のエンティティメンションの開始位置と終了位置を検出するプロセス。複数語の名前や複雑なエンティティにとって重要です。
+**メリット** としては、非構造化テキストを自動で構造化できること、手作業での抽出より高速で正確なこと、大規模データセットでのスケーラビリティです。
 
-**例:** 「The George Washington University Hospital」を単一のエンティティとして正しく抽出する。
+**注意点** としては、文脈に依存すること（「Washington」は人名か地名か、文脈で判断される）、複数言語対応に工夫が必要なこと、ドメイン固有の用語には特別な訓練が必要なことです。また、新しい企業名やスラングなど、訓練データにない表現には対応しにくい傾向があります。
 
-### タグ付けスキーム
+## 関連用語
 
-NERモデルはエンティティ境界をマークするためにタグ付けスキームを使用することがよくあります:
+- **[NLP（自然言語処理）](NLP.md)** — NERはその一部。テキスト分析の総合的な分野
+- **[情報抽出](Information-Extraction.md)** — NERを含むテキストからの情報取得技術
+- **[BERT](BERT.md)** — 固有表現認識に使用される事前学習言語モデル
+- **[Transformer](Transformer.md)** — 最新のNERシステムのベース技術
+- **[知識グラフ](Knowledge-Graph.md)** — NERで抽出したエンティティから構築されるネットワーク
 
-**BIO(Begin、Inside、Outside):** B-ORG、I-ORG、O
+## よくある質問
 
-**IOBES(Inside、Outside、Begin、End、Single):** B-ORG、I-ORG、E-ORG、S-ORG、O
+**Q: NERは完璧に動作しますか？**
+A: いいえ。特に曖昧な表現や新しい固有名詞では誤りが生じます。常に人間による検証が必要な場合があります。
 
-## NERの仕組み
-
-### ワークフロー
-
-**テキスト入力と前処理:** トークン化、文分割、正規化。
-
-**特徴抽出:** 形態素、構文、意味、外部特徴を抽出。
-
-**エンティティ境界検出:** エンティティを表す可能性のある候補スパンを特定。
-
-**エンティティ分類:** ルール、統計モデル、またはディープラーニングを使用して、検出された各候補に最も確率の高いラベルを割り当てる。
-
-**後処理:** 重複/入れ子のエンティティを解決し、曖昧性を解消し、一貫性を強制。
-
-**出力生成:** 注釈付きテキスト、JSON、またはXMLとして構造化結果を返す。
-
-## エンティティタイプ
-
-| ラベル | 説明 | 例 |
-|-------|------|-----|
-| **PER** | 人物 | "Marie Curie"、"Sherlock Holmes" |
-| **ORG** | 組織 | "Google"、"United Nations" |
-| **LOC** | 場所 | "Mount Everest"、"Nile River" |
-| **GPE** | 地政学的エンティティ | "Tokyo"、"United States" |
-| **DATE** | 暦日または期間 | "January 1, 2022"、"19th century" |
-| **TIME** | 特定の時刻または期間 | "5 PM"、"two hours" |
-| **MONEY** | 金額 | "$100"、"€50 million" |
-| **PERCENT** | パーセンテージ | "50%"、"half" |
-| **FAC** | 施設 | "JFK Airport"、"Golden Gate Bridge" |
-| **PRODUCT** | 製品、車両、ソフトウェア | "iPhone"、"Boeing 747" |
-| **EVENT** | 名前付きイベント | "Olympics"、"Hurricane Katrina" |
-| **WORK_OF_ART** | 書籍、映画、絵画 | "Mona Lisa"、"Star Wars" |
-| **LANGUAGE** | 言語 | "English"、"Mandarin" |
-| **LAW** | 法的文書、条約 | "Treaty of Versailles" |
-| **NORP** | 国籍、宗教、政治団体 | "American"、"Democrat" |
-
-## 手法とアプローチ
-
-### ルールベース(パターンベース)
-
-辞書(地名辞典)、正規表現、言語ルールを使用。
-
-**長所:** 高速で解釈可能。
-
-**短所:** 脆弱—新しいエンティティやドメインに対して手動更新が必要。
-
-**使用例:** 固定フォーマット(電話番号、日付、既知のPII)。
-
-### 従来の機械学習
-
-エンジニアリングされた特徴(単語形状、品詞、文脈)を使用して注釈付きデータセットから学習。
-
-**人気のアルゴリズム:** 条件付き確率場(CRF)、隠れマルコフモデル(HMM)、サポートベクターマシン(SVM)、決定木。
-
-**長所:** 未知の例に汎化可能。
-
-**短所:** ラベル付きデータと特徴エンジニアリングが必要。
-
-### ディープラーニングアプローチ
-
-**再帰型ニューラルネットワーク(RNN、LSTM):** 逐次的依存関係を学習。双方向LSTMは両方向から文脈を捉える。
-
-**Transformerベースモデル(BERT、RoBERTa、GPT):**
-- 自己注意機構を使用して文脈内の複雑な依存関係をモデル化
-- 大規模コーパスで事前学習され、ラベル付きNERデータでファインチューニング
-- 曖昧性、文脈、長距離依存関係、サブワード単位、入れ子エンティティを処理
-- 標準ベンチマークで以前のモデルを上回る性能
-
-**大規模言語モデル(LLM):** GPT-4のような汎用LLMは、ゼロショットまたは少数ショットプロンプティングによってNERを実行可能。
-
-**ドメイン適応と転移学習:** カスタムコーパスで事前学習モデルをファインチューニングすることで、ドメイン固有のNERを実現。
-
-## Python実装例
-
-### spaCyの使用
-
-```python
-import spacy
-
-# Load model
-nlp = spacy.load("en_core_web_sm")
-
-# Process text
-text = "Steve Jobs and Steve Wozniak founded Apple on April 1, 1976 in Cupertino, California."
-doc = nlp(text)
-
-# Extract entities
-for ent in doc.ents:
-    print(ent.text, ent.start_char, ent.end_char, ent.label_)
-```
-
-**出力:**
-```
-Steve Jobs 0 10 PERSON
-Steve Wozniak 15 29 PERSON
-Apple 39 44 ORG
-April 1, 1976 48 61 DATE
-Cupertino 65 74 GPE
-California 76 86 GPE
-```
-
-### Transformers(BERT)の使用
-
-```python
-from transformers import pipeline
-
-ner_pipeline = pipeline("ner", model="dbmdz/bert-large-cased-finetuned-conll03-english", aggregation_strategy="simple")
-text = "Apple CEO Tim Cook announced new iPhone models in California yesterday."
-entities = ner_pipeline(text)
-
-for entity in entities:
-    print(entity)
-```
-
-## 課題
-
-**曖昧性と多義性:** 単語は複数のエンティティタイプを持つ可能性(「Amazon」:会社または川)。
-
-**境界検出:** 複数語および入れ子のエンティティ名(「Martin Luther King Jr.」、「University of California, Berkeley」)。
-
-**ドメイン適応:** 専門ドメイン(生物医学、法律)における新規または稀なエンティティ。
-
-**進化する言語:** 新しい用語、ブランド、スラング、略語。
-
-**多言語NER:** コードスイッチング、異なる文字体系、言語固有のエンティティタイプの処理。
-
-**ラベル付きデータの不足:** 大規模コーパスの注釈付けは高コストで時間がかかる。
-
-**入れ子/重複エンティティ:** エンティティ内のエンティティ(特に生物医学または法律テキスト)。
-
-**ノイズと非形式性:** ソーシャルメディア、OCR、音声書き起こしはエラーや非形式的言語を導入。
-
-## 応用例
-
-### 検索と情報検索
-
-NERは記事やコンテンツにタグを付け、「Apple」(会社 vs. 果物)のようなエンティティを区別することで検索関連性を向上させます。
-
-### 推薦エンジン
-
-ストリーミングサービスは抽出されたエンティティ(俳優、ジャンル)に基づいてコンテンツを推薦します。
-
-### 文書自動化とRPA
-
-請求書、契約書、フォームから名前、日付、金額を抽出して自動処理を実現します。
-
-### ナレッジグラフ構築
-
-非構造化文書からエンティティと関係の構造化グラフを作成し、分析とAIを強化します。
-
-### コンプライアンスとプライバシー
-
-GDPR、HIPAAなどの規制コンプライアンスのために、機密文書内のPIIを識別し編集します。
-
-**編集例:**
-「Steve JobsはCupertinoでAppleを設立した。」
-→ 「[PERSON]は[LOCATION]で[ORG]を設立した。」
-
-### 感情分析の強化
-
-特定のエンティティに感情を関連付けます(例:ホテルレビューで「朝食ビュッフェ」は否定的、「部屋」は肯定的)。
-
-### カスタマーサポート自動化
-
-製品名、コース名、苦情の主題を抽出してチケットをルーティングします。
-
-### ドメイン固有NER
-
-生物医学(遺伝子、タンパク質、疾患)、法律(判例、法令)、金融(ティッカー、金融商品)。
-
-## 主要なツールとライブラリ
-
-| ツール/ライブラリ | ハイライト | 言語 |
-|--------------|-----------|------|
-| **spaCy** | 高速、本番環境対応、カスタマイズ可能、事前学習モデル | Python |
-| **NLTK** | 教育的、基本的NER、言語分析 | Python |
-| **Stanford CoreNLP** | 学術的ゴールドスタンダード、RegexNER、多言語サポート | Java、Python |
-| **Tonic Textual** | エンタープライズNER、編集、合成、カスタムモデル | API、Python SDK |
-| **DeepPavlov** | ディープラーニング、事前学習モデル、ドメイン適応 | Python |
-| **Google Cloud NLP** | マネージドサービス、エンティティ分析、感情分析 | API |
-| **AWS Comprehend** | エンティティ抽出、感情、キーフレーズ検出 | API |
-| **Hugging Face Transformers** | BERTベースNER、豊富なモデルライブラリ | Python |
-
-## 参考文献
-
-- [Wikipedia: Named Entity Recognition](https://en.wikipedia.org/wiki/Named-entity_recognition)
-- [IBM: What is Named Entity Recognition?](https://www.ibm.com/think/topics/named-entity-recognition)
-- [Encord: Named Entity Recognition Guide](https://encord.com/blog/named-entity-recognition/)
-- [AltexSoft: Named Entity Recognition Overview](https://www.altexsoft.com/blog/named-entity-recognition/)
-- [GeeksforGeeks: Named Entity Recognition](https://www.geeksforgeeks.org/nlp/named-entity-recognition/)
-- [Stanford NLP: CRFClassifier](https://nlp.stanford.edu/software/CRF-NER.html)
-- [Machine Learning Mastery: How to Do NER with BERT](https://machinelearningmastery.com/how-to-do-named-entity-recognition-ner-with-a-bert-model/)
-- [arXiv: Recent Advances in NER](https://arxiv.org/html/2401.10825v3)
-- [spaCy: Named Entities Documentation](https://spacy.io/usage/linguistic-features#named-entities)
-- [Hugging Face: NER Models](https://huggingface.co/models?pipeline_tag=token-classification)
+**Q: 日本語のNER性能は？**
+A: 日本語は形態論が複雑で、英語より精度がやや低めです。日本語専用のモデル（日本語BERT等）の使用をお勧めします。

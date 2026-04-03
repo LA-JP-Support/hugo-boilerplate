@@ -1,22 +1,23 @@
 ---
-title: FCP (First Contentful Paint)
+title: FCP（ファーストコンテンツフルペイント）
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: FCP--First-Contentful-Paint-
-description: ユーザーがリンクをクリックした後、ウェブページ上にコンテンツが最初に表示されるまでの速度を測定するウェブパフォーマンス指標で、ユーザーの第一印象とエンゲージメントに影響を与えます。
+description: FCP（ファーストコンテンツフルペイント）はWebページの読み込み速度を示す指標。ブラウザがテキストや画像を初めて描画するまでの時間を測定し、SEOやUXに重大な影響があります。
 keywords:
-- First Contentful Paint
-- ウェブパフォーマンス指標
-- ページ読み込み最適化
+- FCP
+- ファーストコンテンツフルペイント
+- Webパフォーマンス
+- ページ読み込み速度
 - Core Web Vitals
-- ユーザーエクスペリエンス測定
-category: Application & Use-Cases
+category: Web開発・デザイン
 type: glossary
 draft: false
 e-title: FCP (First Contentful Paint)
 url: /ja/glossary/fcp--first-contentful-paint-/
 aliases:
 - /ja/glossary/FCP--First-Contentful-Paint-/
-term: エフシーピー (ファースト コンテントフル ペイント)
+term: えふしーぴー
 ---
 
 ## FCP (First Contentful Paint)とは?

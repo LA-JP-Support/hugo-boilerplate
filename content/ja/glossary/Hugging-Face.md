@@ -1,309 +1,97 @@
 ---
 title: Hugging Face
-date: '2025-12-19'
-lastmod: '2025-12-19'
+date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: hugging-face
-description: Hugging Faceは、機械学習を民主化するオープンソースAIプラットフォームおよびグローバルコミュニティです。自然言語処理、コンピュータビジョンなどのモデル、データセット、ツールをご紹介します。
+description: 機械学習を民主化するオープンソースAIプラットフォームおよびグローバルコミュニティです。自然言語処理、コンピュータビジョンなどのモデル、データセット、ツールを共有・利用できます。
 keywords:
 - Hugging Faceモデル
 - 大規模言語モデル
 - Transformersライブラリ
 - モデルハブ
-- Hugging Faceデータセット
-category: AI Infrastructure & Deployment
+- オープンソースAI
+category: AI・機械学習
 type: glossary
 draft: false
 e-title: Hugging Face
-term: ハギング フェイス
-url: "/ja/glossary/hugging-face/"
+url: /ja/glossary/hugging-face/
 aliases:
-- "/ja/glossary/Hugging-Face/"
+- /ja/glossary/Hugging-Face/
+term: ハギング フェイス
 ---
-## Hugging Faceとは?
 
-Hugging Faceは、機械学習と人工知能の民主化に焦点を当てたオープンソースのAIプラットフォームおよびグローバルコミュニティです。自然言語処理(NLP)、コンピュータビジョン、音声、マルチモーダルAIなどの領域にわたって、機械学習モデル、データセット、アプリケーションの共有、発見、デプロイのための統合されたエコシステムを提供しています。
+## Hugging Faceとは
 
-**ミッション:** AIをすべての人にとってアクセス可能で透明性のあるものにする。
+**Hugging Faceは、機械学習モデルを無料で共有・利用できるプラットフォームです。** AIを専門家だけでなく誰もが使えるようにすることが目標で、事前学習済みのモデルやデータセットを数クリックで入手できます。自然言語処理から画像認識、音声処理まで、幅広いAIタスクに対応したモデルが200万以上登録されており、開発者や研究者が自分たちの成果物を公開・改善できるコミュニティとなっています。
 
-**アプローチ:** オープンソースライブラリ、協調的なモデルとデータセットの共有、シームレスなデプロイツール。
+> **ひとことで言うと：** AIモデルの「GitHub」のような存在で、誰もが最先端のAIを簡単に使えるようにしてくれます。
 
-**インパクト:** 数百万人のユーザーをサポートし、200万以上のモデル、50万以上のデータセット、100万以上のデモアプリケーション(「Spaces」)を提供。これらのリソースは、研究者、開発者、企業が最先端のAIソリューションを構築・デプロイするのを支援しています。
+**ポイントまとめ：**
 
-Hugging Faceは「AIのためのGitHub」として機能し、誰もが事前学習済みモデルやデータを協力、貢献、活用して高度なAIアプリケーションを構築できます。
+- **何をするものか：** AIモデルやデータセットの共有・利用・改善ができるプラットフォーム
+- **なぜ必要か：** 高度なAIを構築するハードルが劇的に下がる
+- **誰が使うか：** AI研究者、エンジニア、スタートアップ、大企業のAI部門
 
-## 主要用語
+## 基本情報
 
-**モデル:**  
-特定のタスク(テキスト分類、画像認識、音声テキスト変換)を実行するために訓練された機械学習の成果物。モデルは事前学習済みまたはファインチューニング済みの場合があります。
+| 項目 | 内容 |
+|------|------|
+| 本社 | アメリカ（ニューヨーク） |
+| 設立 | 2016年 |
+| 親会社/株主 | 独立企業（複数ベンチャーキャピタルから出資） |
+| 主力製品 | Model Hub、Datasets Hub、Spaces、Transformers |
+| 上場 | 非上場 |
 
-**Model Hub:**  
-機械学習モデルの保存、共有、発見のための集中リポジトリ。モデルカード(ドキュメント)、バージョン管理、ライブデモ、主要なMLライブラリとの統合をサポートします。
+## 主要製品・サービス
 
-**データセット:**  
-機械学習モデルの訓練、評価、ベンチマークのためのデータサンプル(テキスト、画像、音声)の構造化されたコレクション。
+**Transformersライブラリ** は、最も人気のあるオープンソースライブラリです。BERTやGPT、T5といった最新のAIモデルを数行のコードで利用でき、数百個のモデルアーキテクチャと複数のフレームワーク（PyTorch、TensorFlow）対応により、ほぼすべてのAIタスクをカバーしています。
 
-**Datasets Hub:**  
-キュレーションされたデータセットのリポジトリで、データセットカード、バージョン管理、メタデータ、Datasetsライブラリを介したプログラマティックアクセスを提供します。
+**Model Hub** は、200万以上のモデルが登録されている共有リポジトリです。各モデルには詳細なドキュメント（モデルカード）が付属し、どのデータで学習されたか、どんな制限があるかなど、責任ある利用に必要な情報が記載されています。
 
-**Transformers:**  
-「Attention is All You Need」論文(Vaswani et al., 2017)で導入された、自己注意機構に基づくニューラルネットワークアーキテクチャ。NLPで広く使用され、ビジョン、音声、マルチモーダルタスクでも増加傾向にあります。
+**Datasets Hub** には50万以上のデータセットが登録されており、機械学習モデルの学習やベンチマーク評価に利用できます。[API](API.md)経由でプログラムから直接アクセスでき、大規模データセットも効率的に処理できるようにストリーミング機能を備えています。
 
-**Transformersライブラリ:**  
-Transformerベースのモデル(BERT、GPT、T5)への簡単なアクセス、トークン化、訓練、推論のためのユーティリティを提供するPythonライブラリ。
+## 競合・代替サービス
 
-**Space:**  
-インタラクティブなデモ、プロトタイプ、ML駆動アプリケーションのためのHugging Face上でホストされるWebアプリケーション。Gradio、Streamlit、カスタムフレームワークをサポートします。
+**TensorFlow Hub**（Google製）やPyTorch Hub（Meta製）も同様のモデルリポジトリですが、Hugging Faceはモデル数とコミュニティの活発さで大きく上回っています。**AWS SageMaker**や**Azure ML**は商用AIプラットフォームですが、Hugging Faceはオープンソースで無料という点が大きな違いです。
 
-**LLM(大規模言語モデル):**  
-数億から数十億のパラメータを持つTransformerベースのモデルで、高度なテキスト生成、理解、翻訳、推論が可能です。
+## なぜ重要か
 
-**ZeroGPU:**  
-ユーザーが専用GPUインスタンスを設定または支払う必要なく、SpacesでGPUアクセスを可能にする機能。
+AIを使いたい企業や開発者の大きな課題は「良いモデルを作るのに時間と予算がかかる」ことでした。Hugging Faceの登場で、その課題が大幅に軽減されました。すでに学習済みの高性能モデルを活用すれば、AIの専門家でなくても実装できるようになったのです。
 
-## コアプラットフォームコンポーネント
+また[オープンソース](オープンソース.md)の力を活用しているため、世界中の研究者がモデル改善に貢献しています。その結果、商用システムより革新的で高性能なモデルが生まれることもあります。さらに責任あるAI開発を推進するため、バイアスや安全性に関する情報をモデルカードに記載させる仕組みも整備されています。
 
-### Model Hub
+## 実際の活用シーン
 
-機械学習モデルの共有、発見、使用のための中心的なプラットフォーム。高品質なモデルをすべての人にアクセス可能にし、研究、開発、本番デプロイを加速するように設計されています。
+**テキスト分類タスク**
+企業は顧客のコメントを自動分類したい場合、Hugging Faceから感情分析モデルを入手して数行のコードで実装できます。わざわざ自社でモデルを学習する必要がなくなりました。
 
-**主要機能:**
+**質問応答システムの構築**
+カスタマーサポート業務を自動化するため、モデルHubから[QA](QA.md)対応のモデルをダウンロード。企業の独自知識ベースを使ってファインチューニングすれば、完全オーダーメイドの自動応答システムができます。
 
-- タスク(テキスト生成、分類)、アーキテクチャ(BERT、GPT)、データセット、言語でモデルを検索・フィルタリング
-- モデルカード: 使用目的、訓練データ、制限事項、バイアス、ライセンスをカバーする充実したドキュメント
-- バージョン管理: すべてのモデル更新を追跡し、再現性、ロールバック、コラボレーションをサポート
-- 主要なMLライブラリ(Transformers、PyTorch、TensorFlow、Flax、JAX)との統合
-- インタラクティブな推論とライブデモンストレーションのためのブラウザ内モデルウィジェット
-- エコシステムの洞察のためのダウンロード統計、タグ、メタデータ
+**画像認識アプリケーション開発**
+スタートアップが医療画像解析アプリを開発する場合、Hugging Faceのビジョンモデルを利用することで、開発期間を数ヶ月短縮できます。
 
-**メリット:**
+## メリットと注意点
 
-- 事前学習済みモデルを活用することで、ゼロからの訓練の必要性を削減
-- プロトタイピングと本番デプロイを加速
-- 透明性のあるドキュメントを通じて責任あるAIと倫理的なAIを促進
+Hugging Faceの最大メリットは**アクセスの民主化**です。以前はGoogleやMeta、OpenAIなど大企業のみが最先端AIを作れていたのに対し、今は個人開発者も同等のモデルを使えます。また[コミュニティ](コミュニティ.md)を通じた継続的な改善により、モデルの品質が常に向上しています。
 
-**人気のモデル:**  
-BERT、RoBERTa、GPT-2、GPT-3、GPT-4(NLP)、Stable Diffusion、DeepSeek、Z-Image-Turbo(ビジョン/マルチモーダル)、Whisper(音声)
+一方、無数のモデルの中から「自分のタスクに最適なモデル」を見つけるのが難しいことが課題です。また責任ある利用にはモデルカードを「ちゃんと読む」必要があり、バイアスや制限事項を理解した上での利用が求められます。さらに、プラットフォーム依存度が高まる懸念もあります。
 
-**使用例:**
-```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
-model = AutoModelForCausalLM.from_pretrained("gpt2")
-tokenizer = AutoTokenizer.from_pretrained("gpt2")
-```
+## 関連用語
 
-### Datasets Hub
+- **[Transformers](Transformers.md)** — Hugging Face提供のPythonライブラリで、最新のNLPモデルを簡単に使えます
+- **[LLM（大規模言語モデル）](LLM.md)** — Hugging FaceのModel Hubに多数登録されているAIモデルの一種です
+- **[ファインチューニング](ファインチューニング.md)** — 事前学習済みモデルを自社データで再学習させる手法で、Hugging Faceで推奨されています
+- **[ベクトルデータベース](ベクトルデータベース.md)** — Hugging Faceのモデルと組み合わせ、[RAG](RAG.md)を実装する際に使われます
+- **[オープンソース](オープンソース.md)** — Hugging Faceはオープンソース思想に基づくプラットフォームです
 
-機械学習の研究と本番環境のためのキュレーションされたデータセットのリポジトリで、アクセシビリティ、再現性、コンプライアンスのために設計されています。
+## よくある質問
 
-**主要機能:**
+**Q: Hugging Faceで入手したモデルは商用利用できますか？**
+A: モデルのライセンスによります。MITやApache 2.0ライセンスなら商用利用も可能ですが、モデルカードを必ず確認してください。ライセンスによっては商用利用に制限があります。
 
-- NLP、コンピュータビジョン、音声、マルチモーダル領域にわたる50万以上のデータセット
-- データセットカード: スキーマ、ソース、使用目的、ライセンス、制限事項をカバーするドキュメント
-- 変更の追跡と再現性の確保のためのバージョン管理とメタデータ
-- プライバシーと規制要件を満たすための公開および非公開データセット
-- Data Studio: ブラウザベースのインタラクティブなデータセット探索
-- 大規模MLのためのストリーミングとオンザフライのデータ処理
+**Q: 自分でモデルを改善して公開することはできますか？**
+A: はい、可能です。既存モデルをベースに改善したモデルは「派生モデル」として新たに登録できます。オープンソースの精神に基づき、改善内容を記載したモデルカードをつけることが推奨されています。
 
-**統合:**  
-高速でプログラマティックなアクセスと効率的なデータ処理のためのHugging Face Datasetsライブラリ。複数のデータフォーマット(CSV、JSON、Parquet、画像、音声、動画)をサポートします。
-
-**人気のデータセット:**  
-Common Crawl、OpenWebText(Web規模のLLM訓練)、SQuAD、MNLI、GLUE(NLPベンチマーク)
-
-**使用例:**
-```python
-from datasets import load_dataset
-dataset = load_dataset("squad")
-print(dataset["train"][0])
-```
-
-### Spaces
-
-機械学習アプリケーションとインタラクティブなWebアプリのホスティング、共有、デモのためのプラットフォーム。個人やチームがバックエンドやインフラストラクチャの手間なしにモデルや実験を紹介できるようにします。
-
-**機能:**
-
-- Gradio、Streamlit、静的HTML/JS、Dockerで構築されたインタラクティブなアプリをホスト
-- Hubのモデルとデータセットとの直接統合
-- 計算集約的なデモのためのZeroGPUによるGPUアクセラレーション
-- データ保持が必要なアプリのための永続ストレージオプション
-- ライブ開発とデバッグのためのSpaces Dev Mode
-- いいね、タグ、共有を通じたコミュニティエンゲージメント
-
-**メリット:**
-
-- 研究、デモ、プロトタイプをグローバルな視聴者に紹介
-- フィードバックを収集し、コラボレーションを促進
-- プロフェッショナルなポートフォリオを構築または学習リソースを共有
-
-### Inference Providers
-
-管理されたクラウドインフラストラクチャ上でHugging Faceモデルのスケーラブルでサーバーレスなデプロイを可能にします。ハードウェア、スケーリング、システム信頼性の複雑さを抽象化します。
-
-**仕組み:**
-
-- Hubからモデルを選択
-- 推論プロバイダー(SambaNova、Replicate、Together AI)を選択
-- 自動スケーリングと監視を備えたREST APIエンドポイント経由でモデルをデプロイ・提供
-- 従量課金制の価格設定またはProサブスクリプションでの無料クォータ
-
-**例:**
-```python
-from huggingface_hub import InferenceClient
-
-client = InferenceClient()
-result = client.text_generation("Write a poem about open source AI.")
-print(result.generated_text)
-```
-
-### コアライブラリ
-
-**Transformers:**  
-ドメイン全体でTransformerモデルを扱うためのフラッグシップオープンソースPythonパッケージ。PyTorch、TensorFlow、JAX/Flax互換性を持つ数百のモデルアーキテクチャをロード、ファインチューニング、デプロイします。
-
-**その他の注目すべきライブラリ:**
-
-- **Datasets** – 高速でメモリ効率の良いデータロードと処理
-- **Tokenizers** – 高速でカスタマイズ可能なテキストトークン化
-- **Diffusers** – 生成AIのための最先端の拡散モデル
-- **Safetensors** – 安全で高性能なモデル重みストレージ
-- **PEFT** – 大規模言語モデルのパラメータ効率的なファインチューニング
-- **Gradio** – 数分でML駆動UIを構築・共有
-- **TRL** – 言語モデルのための強化学習アルゴリズムの訓練
-
-## オープンソースとコミュニティ
-
-**コラボレーション:**
-
-- モデル、データセット、Spacesを公開・共有
-- 協調的な開発のためのプルリクエスト、バージョン管理、ディスカッション
-- Meta、Google、Amazon、Microsoftを含む50,000以上の組織がHugging Faceを使用
-
-**透明性:**
-
-- ドキュメントのためのモデルカードとデータセットカードの広範な使用
-- 責任ある使用のためのバージョン追跡、ライセンス、オープンディスカッション
-
-**貢献:**
-
-- 誰でもモデル、データセット、改善、チュートリアルを貢献可能
-- コミュニティフォーラム、Discord、イベントが知識共有とメンターシップを促進
-
-## ワークフロー例
-
-**事前学習済みモデルのデプロイ:**
-```python
-from transformers import pipeline
-
-generator = pipeline("text-generation", model="gpt2")
-result = generator("Hugging Face is", max_length=30)
-print(result[0]['generated_text'])
-```
-
-**感情分析のためのファインチューニング:**
-```python
-from transformers import Trainer, TrainingArguments, AutoModelForSequenceClassification, AutoTokenizer
-from datasets import load_dataset
-
-model_name = "distilbert-base-uncased"
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-dataset = load_dataset("imdb")
-
-def tokenize(batch):
-    return tokenizer(batch["text"], padding="max_length", truncation=True)
-
-tokenized_dataset = dataset.map(tokenize, batched=True)
-model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
-
-training_args = TrainingArguments(
-    output_dir="./results",
-    evaluation_strategy="epoch",
-    per_device_train_batch_size=8,
-    num_train_epochs=3,
-)
-
-trainer = Trainer(
-    model=model,
-    args=training_args,
-    train_dataset=tokenized_dataset["train"],
-    eval_dataset=tokenized_dataset["test"],
-)
-trainer.train()
-```
-
-**デモアプリの構築:**
-
-- モデルを使用してGradioまたはStreamlitアプリを開発
-- コードと要件をSpaceにアップロード
-- 公開URLを介してアプリケーションを共有
-
-## ユースケース
-
-**研究開発:**  
-事前学習済みモデルによる迅速なプロトタイピング。標準化されたデータセットでのベンチマーク。モデル改善での協力。
-
-**本番デプロイ:**  
-推論エンドポイント経由でモデルを提供。Web/モバイル/バックエンドシステムへの統合。クラウドインフラストラクチャでのスケーリング。
-
-**教育と学習:**  
-チュートリアル、コース、ドキュメントへのアクセス。最先端モデルでの実験。ポートフォリオプロジェクトの構築。
-
-**ビジネスアプリケーション:**  
-AI駆動のチャットボット、推薦システム、検索エンジンの構築。独自データでのモデルのファインチューニング。プライベートモデルでの安全なデプロイ。
-
-## はじめに
-
-**サインアップ:**  
-huggingface.co/joinで無料アカウントを作成
-
-**探索:**
-
-- Model Hubを閲覧: huggingface.co/models
-- Datasets Hubを閲覧: huggingface.co/datasets
-- Spacesを閲覧: huggingface.co/spaces
-
-**ライブラリのインストール:**
-```bash
-pip install transformers datasets gradio
-```
-
-**最初のモデルを実行:**
-```python
-from transformers import pipeline
-classifier = pipeline("sentiment-analysis")
-result = classifier("Hugging Face is amazing!")
-print(result)
-```
-
-## 参考資料
-
-- [公式Hugging Faceサイト](https://huggingface.co/)
-- [Model Hubドキュメント](https://huggingface.co/docs/hub/en/models-the-hub)
-- [Datasets Hubドキュメント](https://huggingface.co/docs/hub/en/datasets-overview)
-- [Spaces概要](https://huggingface.co/docs/hub/en/spaces-overview)
-- [Transformersライブラリドキュメント](https://huggingface.co/docs/transformers/en/index)
-- [Datasetsライブラリドキュメント](https://huggingface.co/docs/datasets/index)
-- [Diffusersドキュメント](https://huggingface.co/docs/diffusers)
-- [Tokenizersドキュメント](https://huggingface.co/docs/tokenizers)
-- [Gradioドキュメント](https://gradio.app/docs/)
-- [PEFTドキュメント](https://huggingface.co/docs/peft)
-- [Safetensorsドキュメント](https://huggingface.co/docs/safetensors)
-- [TRLドキュメント](https://huggingface.co/docs/trl)
-- [Inference Providersドキュメント](https://huggingface.co/docs/hub/en/models-inference)
-- [推論モデルを探索](https://huggingface.co/inference/models)
-- [モデルカード](https://huggingface.co/docs/hub/en/model-cards)
-- [データセットカード](https://huggingface.co/docs/hub/en/datasets-cards)
-- [モデルアップロードガイド](https://huggingface.co/docs/hub/en/models-uploading)
-- [モデルリリースチェックリスト](https://huggingface.co/docs/hub/en/model-release-checklist)
-- [モデルダウンロードガイド](https://huggingface.co/docs/hub/en/models-downloading)
-- [モデルウィジェットドキュメント](https://huggingface.co/docs/hub/en/models-widgets)
-- [データセット追加ガイド](https://huggingface.co/docs/hub/en/datasets-adding)
-- [Spaces Dev Mode](https://huggingface.co/docs/hub/en/spaces-dev-mode)
-- [Spaces GPUアップグレード](https://huggingface.co/docs/hub/en/spaces-gpus)
-- [Spacesストレージ](https://huggingface.co/docs/hub/en/spaces-storage)
-- [テキスト生成パイプライン](https://huggingface.co/docs/transformers/en/main_classes/pipelines#transformers.TextGenerationPipeline)
-- [Trainer API](https://huggingface.co/docs/transformers/en/main_classes/trainer)
-- [サインアップ](https://huggingface.co/join)
-- [コミュニティガイドライン](https://huggingface.co/code-of-conduct)
-- [コンテンツガイドライン](https://huggingface.co/content-guidelines)
-- [コミュニティフォーラム](https://discuss.huggingface.co/)
+**Q: オフラインでもHugging Faceのモデルを使えますか？**
+A: はい、インターネット接続時にモデルをダウンロードしておけば、オフラインで使用できます。開発中はローカル環境で作業できるため、クラウド利用料を抑えられます。

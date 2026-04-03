@@ -1,6 +1,7 @@
 ---
 title: トリガーメッセージング
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Triggered-Messaging
 description: トリガーメッセージングシステム、自動化ワークフロー、リアルタイムコミュニケーション戦略、および実装のベストプラクティスに関する包括的なガイド。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - イベント駆動型コミュニケーション
 - マーケティングオートメーション
 - 行動トリガー
-category: Application & Use-Cases
+category: AI・機械学習
 type: glossary
 draft: false
 e-title: Triggered Messaging

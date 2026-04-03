@@ -1,17 +1,19 @@
 ---
-title: "AI Art Generation"
+title: AI Art Generation
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: AI-Art-Generation
-description: "AI technology that creates original images from text descriptions or visual references, making professional-quality artwork accessible to anyone without artistic training."
+description: Technology that automatically generates images from text descriptions, accelerating design and creative work while reducing costs.
 keywords:
 - AI art generation
 - neural networks
 - generative adversarial networks
 - diffusion models
-- digital art creation
-category: "Application & Use-Cases"
+- digital art
+category: AI & Machine Learning
 type: glossary
 draft: false
+url: /en/glossary/AI-Art-Generation/
 ---
 
 ## What is an AI Art Generation?

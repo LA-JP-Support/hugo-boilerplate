@@ -1,6 +1,6 @@
 ---
 title: 敬語サポート
-lastmod: '2025-12-19'
+lastmod: 2026-04-02
 date: '2025-12-19'
 translationKey: honorific-language-support
 description: 日本語の敬語サポート(keigo)について、尊敬語、謙譲語、丁寧語の形式を網羅的に解説します。AI、チャットボット、自動化における文化的背景と応用方法を学びましょう。
@@ -10,7 +10,7 @@ keywords:
 - AIチャットボット
 - 丁寧表現
 - 自動化
-category: AI Chatbot & Automation
+category: AI・機械学習
 type: glossary
 draft: false
 e-title: Honorific Language Support

@@ -1,53 +1,72 @@
 ---
-title: "Utterance"
-date: 2025-12-18
-lastmod: 2025-12-18
-translationKey: "utterance"
-description: "An utterance is any message, question, or command a user sends to a chatbot—whether typed or spoken. It's the basic input that AI systems analyze to understand what the user wants and provide the right response."
-keywords: ["utterance", "conversational AI", "chatbot", "NLU", "NLP"]
-category: "AI Chatbot & Automation"
-type: "glossary"
+title: Utterance
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: Utterance
+description: Text or voice message that users input to chatbots and voice assistants during conversation, serving as the basic unit for natural language understanding.
+keywords:
+- utterance
+- user input
+- chatbot
+- natural language processing
+- conversational AI
+category: AI & Machine Learning
+type: glossary
 draft: false
+url: /en/glossary/Utterance/
 ---
 
-## What is an Utterance in Conversational AI?
+## What is Utterance?
 
-An utterance is any input, phrase, or statement that a user communicates to a chatbot or conversational AI during a conversation, either by typing or speaking. Each message or command—whether a sentence, question, or fragment—represents an utterance. Examples include:
+**An Utterance is a message—typed or spoken—that a user sends to a chatbot or voice assistant.** Examples include "Hello," "What's the weather today?" or "I want to cancel my order." Each message a user sends at once is one utterance. Utterances are the basic unit that AI systems must understand, extracting intent (what the user wants to do) and returning appropriate responses—the fundamental role of conversational AI.
 
-- "What's my account balance?" (utterance)
-- "Cancel my last order." (utterance)
-- "Hi!" (utterance)
+> **In a nutshell:** "What you say to a chatbot is called an 'utterance.'"
 
-Utterances are the fundamental building blocks that conversational AI systems interpret to understand user needs and generate appropriate responses. They are core to systems that rely on natural language understanding (NLU) and natural language processing (NLP), serving as the primary data points for training and evaluating chatbot performance.
+**Key points:**
+- **What it does:** The smallest unit of user input that conversational AI processes
+- **Why it matters:** AI extracts intent from utterances and responds appropriately
+- **Who uses it:** Chatbot developers, natural language processing engineers, conversational AI companies
 
-The quality and diversity of utterances in training data directly determine how well a conversational AI system can handle real-world user interactions. A chatbot trained on limited or homogeneous utterances will struggle with the natural variation in human communication, leading to misunderstandings, fallback responses, and user frustration.
+## Why it matters
 
-## Utterance Examples Across Use Cases
+Utterance quality and diversity directly impact chatbot and AI assistant performance. With numerous utterances expressing the same intent and covering diverse variations (length, formality, slang), AI models recognize intent more accurately. Conversely, limited or biased utterance data prevents the model from handling some user questions, leading to misunderstandings and inappropriate responses. Since real-world users speak with spelling mistakes, abbreviations, and regional phrasings, diverse training utterances are critical.
 
-Utterances vary significantly in complexity, length, and intent depending on the application domain and user context:
+## How it works
 
-| Utterance Example | Possible Intent | Use Case |
-|-------------------|-----------------|----------|
-| "What's the weather like today?" | Weather Inquiry | Virtual assistant |
-| "Book a flight to Paris for next week." | BookFlight | Travel booking |
-| "Help!" | Request Assistance | Customer support |
-| "Show me Italian restaurants nearby." | Restaurant Search | Local services |
-| "I want to change my password." | Account Management | User settings |
-| "Can you tell me a joke?" | Entertainment Request | Casual interaction |
-| "Hi" | Greeting | Conversation opening |
-| "Transfer $100 to savings." | Banking Transaction | Financial services |
-| "Track my order." | Order Status | E-commerce |
-| "I can't log in to my account." | Technical Support | IT help desk |
+When users input an utterance, AI systems process it through multiple steps. First, "text processing" tokenizes the utterance into words and identifies grammatical roles. Next, "intent recognition" determines what the utterance requests (flight booking vs. balance check). Simultaneously, "entity extraction" pulls important information (destination, date, amount) from the utterance. Finally, "response generation" creates appropriate replies based on identified intent and entities. Utterance quality and diversity influence accuracy throughout this entire process.
 
-### Domain-Specific Utterance Patterns
+## Real-world use cases
 
-**Banking Chatbots:**
-- "How do I check my balance?"
-- "Transfer $100 to savings."
-- "When was my last transaction?"
-- "Report a lost card."
+**Bank Chatbot**
+When a user inputs "I want to check my balance," the AI identifies "intent: balance check" and asks "Which account?" The system's ability to understand diverse phrasings like "What's my balance?", "How much do I have?", "Tell me my savings balance?" determines effectiveness.
 
-**E-commerce Bots:**
+**Shopping Site Search**
+From "red size 10 sneakers," the system extracts "color: red," "size: 10," "product: sneakers" and displays matching items. Utterance diversity becomes critical here.
+
+**Customer Support**
+From "The app is crashing," the system recognizes "problem: app crash" and provides troubleshooting guides. Intent recognition accuracy depends on how the utterance is phrased.
+
+## Benefits and considerations
+
+Rich, diverse utterance data improves AI accuracy. Since real-world users don't speak with perfect grammar, including spelling mistakes and informal language creates more robust systems. However, limited utterance data restricts the model's learning scope. Additionally, utterance data must not contain personal or confidential information—privacy protection is important.
+
+## Related terms
+
+- **[Intent Classification](Intent-Classification.md)** — Determining what the user wants to do from their utterance
+- **[Entity Extraction](Entity-Extraction.md)** — Extracting important information from utterances
+- **[Natural Language Processing](Natural-Language-Processing.md)** — Technology for computers processing human language broadly
+- **[Utterance Permutation](Utterance-Permutation.md)** — Generating diverse utterance variations expressing the same intent
+
+## Frequently asked questions
+
+**Q: Is an utterance different from a text message?**
+A: They're nearly synonymous, but "utterance" is more linguistic, referring to the basic unit a chatbot processes. Text message is everyday conversation language.
+
+**Q: Can AI understand utterances with spelling mistakes?**
+A: Yes, if quality training data includes spelling mistake examples. Including common typos is important.
+
+**Q: How many utterances expressing the same intent are needed?**
+A: Generally 10-20 is considered a good starting point. Covering diverse expressions is important.
 - "Track my order."
 - "I want to return these shoes."
 - "Do you have this in size 10?"

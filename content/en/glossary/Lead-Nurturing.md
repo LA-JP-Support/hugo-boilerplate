@@ -1,17 +1,19 @@
 ---
-title: "Lead Nurturing"
+title: Lead Nurturing
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Lead-Nurturing
-description: "A marketing process that keeps potential customers engaged with relevant content and personalized experiences throughout their buying journey, gradually building trust until they're ready to make a purchase."
+description: A marketing strategy that keeps potential customers interested by sending them helpful, personalized content at each stage of their buying journey until they're ready to purchase.
 keywords:
 - lead nurturing
 - marketing automation
-- customer journey
 - email marketing
+- customer journey
 - conversion optimization
-category: "Application & Use-Cases"
+category: Content & Marketing
 type: glossary
 draft: false
+url: "/en/glossary/Lead-Nurturing/"
 ---
 
 ## What is a Lead Nurturing?

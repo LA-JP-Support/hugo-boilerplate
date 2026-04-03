@@ -1,52 +1,90 @@
 ---
-title: "Linked Data"
-date: 2025-12-19
+title: Linked Data
+date: 2026-04-02
 translationKey: Linked-Data
-description: "A method of publishing data on the web so that computers can automatically link and understand information from different sources, making it easier to find and combine related data."
+description: A fundamental semantic web technology that publishes structured data and makes it interconnectable between different data sources using standard web formats.
 keywords:
 - linked data
 - semantic web
 - RDF
-- knowledge graphs
 - data integration
-category: "Application & Use-Cases"
+- knowledge graph
+category: Data & Analytics
 type: glossary
+lastmod: 2026-04-02
 draft: false
+url: /en/glossary/Linked-Data/
 ---
 
-## What is a Linked Data?
+## What is Linked Data?
 
-Linked Data represents a fundamental paradigm shift in how information is structured, published, and consumed on the web. At its core, Linked Data is a method of publishing structured data so that it can be interlinked and become more useful through semantic queries. It builds upon standard web technologies such as HTTP, RDF (Resource Description Framework), and URIs, but rather than linking documents, it enables the linking of data itself. This approach transforms the traditional document-centric web into a global database where individual pieces of information can be directly accessed, referenced, and combined across different sources and domains.
+**Linked Data is a technology standard that publishes structured data and enables it to be interconnectable between different data sources.** Based on web standards including HTTP, RDF, and URIs, computers can process data relationships and follow connections like humans read documents. Libraries, government agencies, and scientific institutions have adopted it to streamline data sharing and discovery.
 
-The concept was formalized by Tim Berners-Lee, who established four fundamental principles that define Linked Data: use URIs as names for things, use HTTP URIs so that people can look up those names, provide useful information using standards like RDF and SPARQL when someone looks up a URI, and include links to other URIs to enable discovery of more things. These principles create a framework where data becomes inherently discoverable and machine-readable, enabling automated systems to traverse relationships between different datasets much like humans navigate hyperlinks between web pages. The result is a web of data that can be processed by machines to answer complex queries that span multiple data sources.
+> **In a nutshell:** A mechanism that connects related data on the internet so computers can automatically understand and use it.
 
-Linked Data serves as the foundation for the Semantic Web vision, where information has well-defined meaning that enables computers and people to work in cooperation. Unlike traditional databases that operate in isolation, Linked Data creates an interconnected ecosystem where datasets can reference and build upon each other. This interconnectedness enables new forms of data analysis, knowledge discovery, and application development that were previously impossible or extremely difficult to achieve. Organizations implementing Linked Data principles can break down data silos, improve data quality through cross-referencing, and create more intelligent applications that leverage the collective knowledge available across the web.
+**Key points:**
 
-## Core Semantic Web Technologies
+- **What it does:** Publishes and interconnects data in standard formats
+- **Why it matters:** Enables integrated information from multiple data sources
+- **Who uses it:** Data managers, semantic web technologists
 
-**Resource Description Framework (RDF)** serves as the foundational data model for Linked Data, representing information as subject-predicate-object triples. RDF provides a standardized way to describe resources and their relationships, enabling consistent data representation across different systems and domains.
+## Why it matters
 
-**Uniform Resource Identifiers (URIs)** act as unique global identifiers for resources in Linked Data, ensuring that every entity, property, and concept has a distinct web address. URIs enable unambiguous reference to resources across different datasets and applications.
+Linked Data breaks down data silos and enables integrated use of multiple information sources. Traditionally, data from Library A and Library B were separate. Using Linked Data, you can cross-link by author information and search a single author's holdings across different libraries simultaneously. It's the foundation for modern information retrieval like [Knowledge Graph](Knowledge-Graph.md). In diverse fields including government statistical data, scientific research data, and corporate product information, it dramatically improves data reusability and discoverability.
 
-**SPARQL Protocol and RDF Query Language** provides a standardized query language for retrieving and manipulating data stored in RDF format. SPARQL enables complex queries across distributed Linked Data sources, supporting federated querying and data integration.
+## How it works
 
-**Web Ontology Language (OWL)** offers a rich vocabulary for defining ontologies and expressing complex relationships between concepts. OWL enables reasoning capabilities and semantic inference, allowing systems to derive new knowledge from existing data.
+Linked Data begins by assigning a unique address (URI) to all information. For example, an author "Takeshi Morioka" receives a unique URI. Following this, relationships are expressed in RDF (Resource Description Framework) format as "subject-predicate-object." For example: "Takeshi Morioka (subject) is the author of (predicate) 'Modern Advertising Strategy' (object)."
 
-**RDF Schema (RDFS)** provides basic vocabulary for describing RDF resources and their relationships. RDFS enables the definition of classes, properties, and hierarchical relationships that form the semantic structure of Linked Data.
+By creating links between different datasets, complex searches become possible. Using SPARQL query language, cross-dataset searches like "books written by Takeshi Morioka that were published after 2015" can be executed directly. Since data is published in standard formats, companies and research institutions can build independent systems while leveraging data worldwide.
 
-**Turtle and JSON-LD Serialization Formats** offer human-readable and machine-processable ways to represent RDF data. These formats facilitate data exchange and integration across different platforms and programming environments.
+## Calculation method
 
-**Linked Data Platform (LDP)** defines a set of rules for HTTP operations on web resources to provide an architecture for read-write Linked Data on the web. LDP enables the creation, modification, and deletion of Linked Data resources using standard web protocols.
+Linked Data effectiveness is measured by data integration cost reduction. Traditionally, integrating data between different systems required custom ETL programs—costing millions of yen and taking months. Linked Data reduces integration work from months to weeks through standard formats. Data discovery time also improves, reducing the time to find target data from hours to minutes.
 
-## How Linked Data Works
+## Benchmarks and targets
 
-The Linked Data workflow begins with **data modeling and URI design**, where organizations identify the entities, relationships, and properties they want to represent, then create a URI scheme that provides unique identifiers for each resource. This foundational step ensures that data elements can be unambiguously referenced across different systems and contexts.
+| Implementation Scale | Integration Time | Cost Savings |
+|---------|--------|---------|
+| Small (5 resources) | 1-2 weeks | 30-50% |
+| Medium (20 resources) | 1-3 months | 50-70% |
+| Large (100+ resources) | 3-6 months | 60-80% |
 
-**RDF triple creation** follows, where data is structured into subject-predicate-object statements that express relationships between resources. Each triple represents a single fact, and collections of triples form comprehensive descriptions of entities and their interconnections.
+Target data quality scores (completeness, accuracy) typically range from 80-95%.
 
-**Vocabulary and ontology selection** involves choosing appropriate schemas and ontologies to describe the data domain, ensuring semantic consistency and enabling interoperability with existing Linked Data sources. This step often involves mapping local data models to widely-adopted vocabularies.
+## Real-world use cases
 
-**Data serialization and publication** transforms the RDF triples into web-accessible formats such as Turtle, RDF/XML, or JSON-LD, then publishes the data at HTTP URIs where it can be accessed by both humans and machines. Content negotiation enables serving different formats based on client preferences.
+**Library catalog integration**
+Different library catalogs are cross-linked as Linked Data, providing unified search experience. Users can search all library holdings simultaneously and immediately see availability.
+
+**Government open data publication**
+Statistical data and administrative records published as Linked Data promote free use by citizens and researchers. Explicit data relationships enable creative analysis by citizens.
+
+**Scientific data sharing**
+Research institutions cross-link experimental data, accelerating interdisciplinary research cooperation. Linking genetics data with clinical data accelerates new medical discoveries.
+
+## Benefits and considerations
+
+Benefits include greatly improved data reusability and discoverability. Challenges include technical complexity in implementation and the need for mapping between different ontologies. Data protection and privacy considerations are also critical. The finer the data granularity, the greater the risk of re-identifying specific personal information, making appropriate anonymization and access controls essential.
+
+## Related terms
+
+- **[Semantic Web](Semantic-Web.md)** — The vision that Linked Data realizes
+- **[RDF](RDF.md)** — The data model underlying Linked Data
+- **[SPARQL](SPARQL.md)** — The language for querying Linked Data
+- **[Knowledge Graph](Knowledge-Graph.md)** — An application of Linked Data
+- **[Ontology](Ontology.md)** — The mechanism for defining relationships between data
+
+## Frequently asked questions
+
+**Q: Why not just use JSON or CSV?**
+A: JSON and CSV are effective within specific systems, but Linked Data's strength is interconnectability between different systems. With Linked Data, you can integrate and cross-search multiple sources without manual mapping work.
+
+**Q: Is implementation complex?**
+A: Initial implementation is complex, but once built, integrating new data sources becomes easy. Long-term investment value increases.
+
+**Q: Which companies use it?**
+A: Google (Knowledge Graph), Amazon, BBC, government statistical agencies, and other organizations handling large-scale data have adopted it.
 
 **Interlinking with external datasets** creates connections between local data and relevant external Linked Data sources, establishing the network effects that make Linked Data powerful. This process involves identifying equivalent or related resources across different datasets.
 
