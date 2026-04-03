@@ -1,0 +1,100 @@
+{{ if .Site.Params.ctaEnabled }}
+<script>
+(function() {
+  var ENDPOINT = '{{ .Site.Params.ctaEndpoint | default "https://dashboard.intwk.co.jp/api/cta/embed" }}';
+  var SITE = '{{ .Site.Params.ctaSiteId }}';
+  var LANG = '{{ .Site.Language.Lang | default "ja" }}';
+  var PATH = window.location.pathname;
+
+  // セッションID管理（同一ブラウザのリクエストを名寄せ）
+  function getSessionId() {
+    var key = 'iw_cta_sid';
+    var sid = null;
+    try { sid = localStorage.getItem(key); } catch(e) {}
+    if (!sid) {
+      sid = 'sid_' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+      try { localStorage.setItem(key, sid); } catch(e) {}
+    }
+    return sid;
+  }
+  var SESSION_ID = getSessionId();
+
+  function isSafeUrl(url) {
+    if (!url) return false;
+    try { var u = new URL(url); return u.protocol === 'https:' || u.protocol === 'http:'; }
+    catch(e) { return false; }
+  }
+
+  function sendEvent(trackingId, ctaId, eventType) {
+    var data = JSON.stringify({
+      tracking_id: trackingId, cta_id: ctaId,
+      event_type: eventType, site: SITE, path: PATH, session_id: SESSION_ID
+    });
+    var blob = new Blob([data], {type: 'application/json'});
+    navigator.sendBeacon(ENDPOINT.replace('/embed', '/event'), blob);
+  }
+
+  function renderCTA(ctas, trackingId) {
+    if (!ctas || !ctas.length) return;
+    var cta = ctas[0];
+    var container = document.querySelector('main') || document.querySelector('article') || document.querySelector('.gdoc-page');
+    if (!container) return;
+
+    var div = document.createElement('div');
+    div.className = 'iw-cta-banner';
+    div.setAttribute('data-cta-id', cta.id);
+    div.style.cssText = 'background:' + (cta.style.bg_color || '#1a365d') +
+      ';color:' + (cta.style.text_color || '#fff') +
+      ';padding:24px;border-radius:8px;margin:32px 0;display:flex;align-items:center;gap:20px;flex-wrap:wrap;';
+
+    var content = document.createElement('div');
+    content.style.cssText = 'flex:1;min-width:200px';
+
+    var h3 = document.createElement('h3');
+    h3.textContent = cta.title;
+    h3.style.cssText = 'margin:0 0 8px;font-size:1.2em';
+    content.appendChild(h3);
+
+    if (cta.description) {
+      var p = document.createElement('p');
+      p.textContent = cta.description;
+      p.style.cssText = 'margin:0 0 12px;opacity:0.9';
+      content.appendChild(p);
+    }
+
+    if (isSafeUrl(cta.action_url)) {
+      var a = document.createElement('a');
+      a.href = cta.action_url;
+      a.textContent = cta.cta_text;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.style.cssText = 'display:inline-block;background:' + (cta.style.btn_color || '#3182ce') +
+        ';color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none;font-weight:bold;';
+      a.addEventListener('click', function() { sendEvent(trackingId, cta.id, 'click'); });
+      content.appendChild(a);
+    }
+
+    div.appendChild(content);
+
+    if (cta.image_url && isSafeUrl(cta.image_url)) {
+      var img = document.createElement('img');
+      img.src = cta.image_url;
+      img.alt = '';
+      img.loading = 'lazy';
+      img.style.cssText = 'max-width:160px;border-radius:4px';
+      div.appendChild(img);
+    }
+
+    container.appendChild(div);
+
+    // Track impression
+    sendEvent(trackingId, cta.id, 'impression');
+  }
+
+  fetch(ENDPOINT + '?site=' + SITE + '&path=' + encodeURIComponent(PATH) + '&lang=' + LANG + '&session_id=' + SESSION_ID)
+    .then(function(r) { if (!r.ok) return null; return r.json(); })
+    .then(function(data) { if (data) renderCTA(data.ctas, data.tracking_id); })
+    .catch(function() {});
+})();
+</script>
+{{ end }}

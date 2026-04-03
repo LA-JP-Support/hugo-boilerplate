@@ -47,6 +47,10 @@ ignoreFiles = ['(?i)glossary-backup']
   [params.mautic]
     enable = true
     url = "https://hello.intwk.co.jp"
+
+  ctaEnabled = true
+  ctaSiteId = "smartweb"
+  ctaEndpoint = "https://dashboard.intwk.co.jp/api/cta/embed"
   
   [params.imaging]
     resampleFilter = "Lanczos"
