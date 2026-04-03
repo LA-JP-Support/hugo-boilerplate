@@ -1,13 +1,12 @@
 {{/*
-  Home News List - ホームページ用お知らせ欄
-  
+  Home News List - 2カラム版（お知らせ + InTech Daily News）
+
   表示内容：
-  - blog セクションの記事 → BLOG タグ
-  - news セクション + category: news → NEWS タグ
-  - news セクション + category: press-release → PRESS RELEASE タグ
-  
+  - 左カラム: blog/news セクションの記事（BLOG / NEWS / PRESS RELEASE タグ）
+  - 右カラム: InTech Daily News（外部RSSフィード）
+
   Parameters:
-  - limit: 表示件数（デフォルト: 5）
+  - limit: お知らせ表示件数（デフォルト: 5）
   - page: ページコンテキスト
 */}}
 
@@ -15,11 +14,9 @@
 {{ $page := .page }}
 {{ $lang := $page.Language.Lang }}
 
-{{/* blog と news の記事を取得 */}}
+{{/* ── お知らせ記事取得（既存ロジック） ── */}}
 {{ $blogPages := where (where $page.Site.RegularPages "Section" "blog") "Language.Lang" $lang }}
 {{ $newsPages := where (where $page.Site.RegularPages "Section" "news") "Language.Lang" $lang }}
-
-{{/* 全記事を結合してスライスを作成 */}}
 {{ $allPages := slice }}
 {{ range $blogPages }}
   {{ $allPages = $allPages | append . }}
@@ -27,70 +24,193 @@
 {{ range $newsPages }}
   {{ $allPages = $allPages | append . }}
 {{ end }}
-
-{{/* 日付順でソートして最新N件を取得 */}}
 {{ $sortedPages := sort $allPages "Date" "desc" }}
 {{ $latestPages := first $limit $sortedPages }}
 
-<section class="bg-white dark:bg-gray-900 py-12 sm:py-16">
-  <div class="mx-auto max-w-5xl px-6 lg:px-8">
-    <!-- セクションヘッダー -->
-    <div class="flex items-center justify-between mb-6">
-      <h2 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-2xl">
-        {{ i18n "news_section_title" | default "お知らせ" }}
-      </h2>
-      <a href="/{{ $lang }}/news/" class="inline-flex items-center text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 transition-colors" aria-label="{{ i18n "view_all_news" | default "すべてのお知らせを見る" }}">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
-      </a>
-    </div>
+{{/* ── InTech Daily News RSS取得（ビルド時） ── */}}
+{{ $rssItems := slice }}
+{{ $rssUrl := "https://intechnews.intwk.co.jp/index.xml" }}
+{{ with try (resources.GetRemote $rssUrl) }}
+  {{ with .Err }}
+    {{ warnf "InTech News RSS fetch failed: %s" . }}
+  {{ else }}
+    {{ with .Value }}
+      {{ $xml := . | transform.Unmarshal }}
+      {{ with $xml.channel }}
+        {{ with .item }}
+          {{ $rssItems = first 4 . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 
-    <!-- お知らせリスト -->
-    <div class="divide-y divide-gray-200 dark:divide-gray-700 border-t border-b border-gray-200 dark:border-gray-700">
-      {{ range $latestPages }}
-        <a href="{{ .RelPermalink }}" class="group flex items-center gap-3 sm:gap-6 py-4 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors -mx-4 px-4">
-          <!-- 日付 -->
-          <time datetime="{{ .Date.Format "2006-01-02" }}" class="flex-shrink-0 text-sm text-gray-500 dark:text-gray-400 w-20 sm:w-24 font-medium">
-            {{ .Date.Format "2006.01.02" }}
-          </time>
-          
-          <!-- カテゴリータグ -->
-          <div class="flex-shrink-0 w-24 sm:w-32">
-            {{ if eq .Section "blog" }}
-              {{/* ブログ記事 */}}
-              <span class="inline-flex items-center rounded-full border border-emerald-600 px-2 sm:px-2.5 py-0.5 text-[10px] sm:text-xs font-medium text-emerald-700 dark:text-emerald-400">
-                BLOG
-              </span>
-            {{ else if eq .Section "news" }}
-              {{ $category := .Params.category | default "news" }}
-              {{ if eq $category "press-release" }}
-                {{/* プレスリリース */}}
-                <span class="inline-flex items-center rounded-full border border-blue-600 px-2 sm:px-2.5 py-0.5 text-[10px] sm:text-xs font-medium text-blue-700 dark:text-blue-400 whitespace-nowrap">
-                  PRESS RELEASE
-                </span>
-              {{ else }}
-                {{/* ニュース */}}
-                <span class="inline-flex items-center rounded-full border border-violet-600 px-2 sm:px-2.5 py-0.5 text-[10px] sm:text-xs font-medium text-violet-700 dark:text-violet-400">
-                  NEWS
-                </span>
-              {{ end }}
-            {{ end }}
-          </div>
-          
-          <!-- タイトル -->
-          <h3 class="flex-1 text-sm sm:text-base font-medium text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors truncate min-w-0">
-            {{ .Title }}
-          </h3>
-          
-          <!-- 矢印 -->
-          <span class="flex-shrink-0 text-gray-400 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<section class="bg-white dark:bg-gray-900 py-12 sm:py-16">
+  <div class="mx-auto max-w-6xl px-6 lg:px-8">
+
+    {{/* ── 2カラムグリッド ── */}}
+    <div class="grid grid-cols-1 gap-x-12 gap-y-10 lg:grid-cols-2">
+
+      {{/* ════════════════════════════════════════ */}}
+      {{/* 左カラム: お知らせ                       */}}
+      {{/* ════════════════════════════════════════ */}}
+      <div>
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-xl font-bold font-mincho tracking-tight text-gray-900 dark:text-white sm:text-2xl">
+            {{ i18n "news_section_title" | default "お知らせ" }}
+          </h2>
+          <a href="/{{ $lang }}/news/" class="inline-flex items-center text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 transition-colors" aria-label="{{ i18n "view_all_news" | default "すべてのお知らせを見る" }}">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
-          </span>
-        </a>
+          </a>
+        </div>
+
+        <div class="divide-y divide-gray-200 dark:divide-gray-700 border-t border-b border-gray-200 dark:border-gray-700">
+          {{ range $latestPages }}
+            <a href="{{ .RelPermalink }}" class="group flex items-start gap-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors -mx-4 px-4">
+              <!-- 日付 -->
+              <time datetime="{{ .Date.Format "2006-01-02" }}" class="flex-shrink-0 text-xs text-gray-500 dark:text-gray-400 font-medium tabular-nums" style="width:72px;padding-top:2px;">
+                {{ .Date.Format "2006.01.02" }}
+              </time>
+
+              <!-- カテゴリータグ -->
+              <div class="flex-shrink-0" style="width:80px;padding-top:1px;">
+                {{ if eq .Section "blog" }}
+                  <span style="font-size:10px;padding:1px 6px;border:1px solid #059669;border-radius:9999px;color:#047857;font-weight:500;white-space:nowrap;">
+                    BLOG
+                  </span>
+                {{ else if eq .Section "news" }}
+                  {{ $category := .Params.category | default "news" }}
+                  {{ if eq $category "press-release" }}
+                    <span style="font-size:10px;padding:1px 6px;border:1px solid #2563eb;border-radius:9999px;color:#1d4ed8;font-weight:500;white-space:nowrap;">
+                      PRESS
+                    </span>
+                  {{ else }}
+                    <span style="font-size:10px;padding:1px 6px;border:1px solid #7c3aed;border-radius:9999px;color:#6d28d9;font-weight:500;white-space:nowrap;">
+                      NEWS
+                    </span>
+                  {{ end }}
+                {{ end }}
+              </div>
+
+              <!-- タイトル -->
+              <h3 class="flex-1 font-medium text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors min-w-0" style="font-size:13px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">
+                {{ .Title }}
+              </h3>
+
+              <!-- 矢印 -->
+              <span class="flex-shrink-0 text-gray-400 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors" style="padding-top:2px;">
+                <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </a>
+          {{ end }}
+        </div>
+      </div>
+
+      {{/* ════════════════════════════════════════ */}}
+      {{/* 右カラム: InTech Daily News              */}}
+      {{/* ════════════════════════════════════════ */}}
+      {{ if gt (len $rssItems) 0 }}
+      <div>
+        {{/* ヘッダー: ロゴ + キャッチコピー + 外部リンク */}}
+        <div class="flex items-end justify-between mb-2" style="min-height:28px;">
+          <div class="flex items-end gap-3">
+            <a href="https://intechnews.intwk.co.jp/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
+              <img src="/images/intechnews-logo.png" alt="InTech News" width="180" height="36" style="height:28px;width:auto;" loading="lazy">
+            </a>
+            <span class="text-xs text-gray-500 dark:text-gray-400 inline-flex items-center gap-1" style="line-height:1;padding-bottom:2px;">
+              AIが届ける最新ITニュース
+              {{/* AIディスクロージャーツールチップ（クリック式） */}}
+              <span class="relative" style="display:inline-flex;">
+                <button type="button" onclick="var t=this.nextElementSibling;t.style.display=t.style.display==='block'?'none':'block';" style="width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;border:none;background:transparent;padding:0;line-height:1;" aria-label="AI生成コンテンツについて">
+                  <svg viewBox="0 0 24 24" fill="#4f46e5" style="width:18px;height:18px;"><circle cx="12" cy="12" r="10" fill="#4f46e5"/><text x="12" y="17" text-anchor="middle" fill="#fff" font-size="14" font-weight="700" font-family="Arial,sans-serif">i</text></svg>
+                </button>
+                <span style="display:none;position:absolute;left:0;top:28px;z-index:50;width:280px;padding:12px 14px;background:#1f2937;color:#fff;font-size:12px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.2);line-height:1.6;text-align:left;">
+                  <strong style="display:block;margin-bottom:6px;font-size:13px;">AI駆動のニュース配信</strong>
+                  InTech Daily News は、7名のAI編集スタッフが運営するニュースプラットフォームです。毎日AI編集長を中心に編集会議を行い、世界中のITニュースソースから記事を収集・分析し、要約・編集・ファクトチェック・品質管理・配信まですべてAIが行っています。
+                  <strong style="display:block;margin-top:8px;margin-bottom:4px;">配信チャネル</strong>
+                  <ul style="margin:0 0 0 16px;padding:0;">
+                    <li>ブログ記事（毎日更新）</li>
+                    <li>ポッドキャスト（音声ニュース）</li>
+                    <li>メールマガジン</li>
+                    <li>X / Facebook</li>
+                  </ul>
+                </span>
+              </span>
+            </span>
+          </div>
+          <a href="https://intechnews.intwk.co.jp/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-medium text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" style="font-size:11px;line-height:1;padding-bottom:2px;white-space:nowrap;">
+            すべてのニュース
+            <svg style="width:10px;height:10px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+
+        {{/* 新聞風の太い下線 */}}
+        <div class="border-b-2 border-gray-900 dark:border-white mb-4"></div>
+
+        {{/* ニュースリスト */}}
+        <div class="border-b border-gray-200 dark:border-gray-700">
+          {{ range $index, $item := $rssItems }}
+            {{ $itemTitle := "" }}
+            {{ $itemLink  := "" }}
+            {{ $itemDate  := "" }}
+            {{ $itemDesc  := "" }}
+            {{ with $item.title }}{{ $itemTitle = . }}{{ end }}
+            {{ with $item.link  }}{{ $itemLink  = . }}{{ end }}
+            {{ with $item.pubDate }}{{ $itemDate = . }}{{ end }}
+            {{ with $item.description }}{{ $itemDesc = . }}{{ end }}
+
+            {{ if eq $index 0 }}
+              {{/* ── ヘッドライン（最新1件）── */}}
+              <a href="{{ $itemLink }}" target="_blank" rel="noopener noreferrer" class="group block py-4 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors -mx-4 px-4">
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <span class="inline-flex items-center rounded-sm bg-indigo-600 px-1.5 py-0.5 text-[10px] font-bold text-white tracking-wide uppercase">
+                    TODAY
+                  </span>
+                  {{ if $itemDate }}
+                  <time class="text-[10px] text-gray-400 dark:text-gray-500 tabular-nums flex-shrink-0">
+                    {{ dateFormat "2006.01.02" $itemDate }}
+                  </time>
+                  {{ end }}
+                </div>
+                <h3 class="text-sm sm:text-base font-bold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-snug mb-2">
+                  {{ $itemTitle }}
+                </h3>
+                {{ if $itemDesc }}
+                <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2">
+                  {{ $itemDesc | plainify | truncate 120 }}
+                </p>
+                {{ end }}
+              </a>
+              <div class="border-b border-gray-200 dark:border-gray-700"></div>
+            {{ else }}
+              {{/* ── 残り3件: 日付 + タイトル ── */}}
+              <a href="{{ $itemLink }}" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors -mx-4 px-4">
+                {{ if $itemDate }}
+                <time class="flex-shrink-0 text-[10px] text-gray-400 dark:text-gray-500 w-20 tabular-nums pt-0.5">
+                  {{ dateFormat "2006.01.02" $itemDate }}
+                </time>
+                {{ end }}
+                <h4 class="flex-1 text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-snug line-clamp-1">
+                  {{ $itemTitle }}
+                </h4>
+                <span class="flex-shrink-0 text-gray-300 dark:text-gray-600 group-hover:text-indigo-500 transition-colors pt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </span>
+              </a>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
       {{ end }}
+
     </div>
   </div>
 </section>

@@ -200,6 +200,14 @@ ignoreFiles = ['(?i)glossary-backup']
       # HTMLタグを許可（iframe、YouTubeなど）
       unsafe = true
 
+# ========================================
+# セキュリティ設定（外部RSS取得許可）
+# ========================================
+[security]
+  [security.http]
+    methods = ['(?i)GET']
+    urls = ['https://intechnews\.intwk\.co\.jp/.*']
+
 [sitemap]
   filename = "sitemap.xml"
 
