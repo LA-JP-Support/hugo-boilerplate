@@ -8,10 +8,10 @@ keywords:
 - IVR
 - VoIP
 - PCI DSS
-category: AI Chatbot & Automation, Telecommunication Systems
+category: 音声・通信技術
 type: glossary
 date: '2025-12-19'
-lastmod: '2025-12-19'
+lastmod: 2026-04-02
 draft: false
 e-title: DTMF (Dual-Tone Multi-Frequency)
 term: ディーティーエムエフ(デュアルトーンたじゅうしゅうはすう)

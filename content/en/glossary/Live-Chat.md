@@ -1,52 +1,80 @@
 ---
-title: "Live Chat"
-date: 2025-12-19
+title: Live Chat
+date: 2026-04-02
 translationKey: Live-Chat
-description: "Live chat is a real-time messaging tool that lets customers instantly connect with support staff or chatbots directly on websites or apps for immediate help."
+description: A real-time messaging system embedded in websites and apps enabling customers to instantly connect with support staff or chatbots for immediate assistance.
 keywords:
 - live chat
 - customer support
 - real-time communication
-- chat software
-- customer service
-category: "Application & Use-Cases"
+- chatbot
+- CX improvement
+category: Contact Center & CX
 type: glossary
+lastmod: 2026-04-02
 draft: false
+url: /en/glossary/Live-Chat/
 ---
 
-## What is a Live Chat?
+## What is Live Chat?
 
-Live chat is a real-time communication technology that enables instant messaging between businesses and their customers through websites, mobile applications, or dedicated platforms. This interactive tool allows customers to engage directly with support representatives, sales teams, or automated chatbots without leaving the digital environment they are currently navigating. Unlike traditional communication methods such as email or phone calls, live chat provides immediate responses and creates a seamless user experience that bridges the gap between digital browsing and human interaction.
+**Live chat is a real-time communication technology enabling instant messaging between customers and support staff on websites and apps.** Without leaving their browser, customers can ask questions and receive answers. By combining AI chatbots with human agents, 24-hour support is achievable.
 
-The technology operates through embedded chat widgets or dedicated messaging interfaces that appear on websites or within applications. When a customer initiates a conversation, their message is instantly transmitted to available agents or automated systems that can provide immediate assistance. Live chat systems typically include features such as file sharing, screen sharing, typing indicators, message history, and integration capabilities with customer relationship management (CRM) systems. These features create a comprehensive communication ecosystem that supports both simple inquiries and complex problem-solving scenarios.
+> **In a nutshell:** A customer service window built into websites that lets you instantly chat with support.
 
-Modern live chat solutions have evolved beyond basic text messaging to incorporate advanced functionalities including artificial intelligence, machine learning algorithms, and omnichannel integration. These systems can automatically route conversations based on customer intent, provide suggested responses to agents, maintain conversation context across multiple sessions, and integrate with various business tools to provide personalized customer experiences. The technology serves as a critical component of digital customer service strategies, enabling businesses to provide immediate support while gathering valuable customer insights and maintaining competitive advantages in increasingly digital marketplaces.
+**Key points:**
 
-## Core Live Chat Technologies
+- **What it does:** Provide real-time customer support
+- **Why it matters:** Reduce cart abandonment and improve satisfaction
+- **Who uses it:** E-commerce, SaaS, service companies
 
-**Real-Time Messaging Protocol** - The foundation of live chat systems relies on protocols like WebSocket, XMPP, or proprietary messaging frameworks that enable instant bidirectional communication between clients and servers. These protocols ensure messages are delivered immediately without requiring page refreshes or polling mechanisms.
+## Why it matters
 
-**Chat Widget Integration** - Embedded JavaScript widgets that seamlessly integrate into websites and applications, providing customizable chat interfaces that match brand aesthetics while maintaining consistent functionality. These widgets can be configured for specific pages, user segments, or behavioral triggers.
+Helping users resolve questions before purchase decisions reduces cart abandonment. Research shows live chat adoption reduces abandonment rates 8-10% average, with sales increases of millions. Immediate response improves customer satisfaction and drives repeat purchases. [Chatbots](Chatbot.md) combined enable 24-hour support. During nights/holidays, chatbots automatically handle user questions, achieving both coverage and satisfaction improvement.
 
-**Agent Dashboard Systems** - Comprehensive interfaces that allow customer service representatives to manage multiple conversations simultaneously, access customer information, utilize canned responses, and collaborate with team members. These dashboards provide real-time analytics and performance metrics.
+## How it works
 
-**Automated Chatbot Engines** - AI-powered systems that can handle initial customer inquiries, qualify leads, provide basic information, and seamlessly transfer complex issues to human agents. These engines utilize natural language processing and machine learning algorithms.
+When users click the live chat widget, they're routed to available agents. Agents confirm customer information while messaging in real-time. Simple questions (hours, shipping costs) AI chatbots handle, complex problems escalate to human agents. All interactions are recorded for follow-up and service improvement.
 
-**Queue Management Systems** - Sophisticated routing mechanisms that distribute incoming chats based on agent availability, expertise, language preferences, and priority levels. These systems ensure optimal resource allocation and minimize customer wait times.
+Chatbot initial response reduces human agent load, allowing focus on complex problems. By handling repeated questions, chatbot performance continuously improves as knowledge accumulates.
 
-**Integration APIs** - Application programming interfaces that connect live chat systems with CRM platforms, help desk software, e-commerce systems, and other business tools to provide agents with comprehensive customer context and streamline workflows.
+## Calculation method
 
-**Analytics and Reporting Engines** - Data collection and analysis systems that track conversation metrics, customer satisfaction scores, agent performance, and business outcomes to enable continuous improvement and strategic decision-making.
+Live chat effectiveness is measured by cart abandonment reduction and customer satisfaction improvement. Example: monthly e-commerce sales ¥10 million with 30% abandonment (¥3 million) reduces to 20% abandonment, yielding ¥1 million sales increase. With monthly live chat cost ¥50,000, one month recovers investment. Satisfaction NPS improving 10 points increases repeat purchase rates 5-10%.
 
-## How Live Chat Works
+## Benchmarks and targets
 
-**Step 1: Widget Initialization** - When a customer visits a website or application, the live chat widget loads and checks for availability, displaying appropriate messaging based on agent status, business hours, and predefined rules.
+| Industry | Expected Effect | Implementation Satisfaction |
+|------|---------|---------|
+| E-commerce | 8-10% cart abandonment reduction | 85-95% |
+| SaaS | 30% onboarding time shortening | 80-90% |
+| Travel/tourism | 15-20% booking rate increase | 90-98% |
+| Finance | Trust improvement, customer retention | 75-85% |
 
-**Step 2: Conversation Initiation** - Customers click the chat widget and may be presented with pre-chat forms to collect basic information such as name, email, and inquiry type, which helps route the conversation appropriately.
+Under-30-second average response time is the target; exceeding this increases user abandonment.
 
-**Step 3: Routing and Assignment** - The system automatically routes the incoming chat to available agents based on predefined criteria including expertise, language, department, or current workload distribution algorithms.
+## Real-world use cases
 
-**Step 4: Agent Notification** - Assigned agents receive immediate notifications through their dashboard, including customer information, conversation context, and any relevant historical data from previous interactions.
+**E-commerce purchase support**
+"What sizes are available for this shirt?" questions answered immediately on-site. Users stay engaged without searching elsewhere.
+
+**SaaS onboarding support**
+New users stuck in setup receive immediate help, preventing setup abandonment and shortening time to product use.
+
+**Sales prospect development**
+Proactive outreach: "Can I help?" transforms visitors into sales prospects through engaging approaches.
+
+## Benefits and considerations
+
+Benefits are satisfaction and [conversion rate](Conversion-Rate.md) improvement, sales efficiency. Challenges include agent training, peak capacity response, complex problem escalation management. Inappropriate chatbot answers damage satisfaction. Monitor chatbot quality regularly, improve unsatisfying interactions.
+
+## Related terms
+
+- **[Chatbot](Chatbot.md)** — Live chat's automation version
+- **[Customer Service](Customer-Service.md)** — Live chat's purpose
+- **[Conversion Rate](Conversion-Rate.md)** — Key improved metric
+- **[Customer Experience](Customer-Experience.md)** — Improved domain
+- **[Omnichannel](Omnichannel.md)** — Integrated communication strategy
 
 **Step 5: Real-Time Communication** - Both parties engage in instant messaging with additional features like file sharing, screen sharing, or co-browsing as needed to resolve inquiries effectively.
 

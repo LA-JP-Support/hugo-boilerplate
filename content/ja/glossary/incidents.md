@@ -1,6 +1,6 @@
 ---
 title: インシデント
-lastmod: '2025-12-19'
+lastmod: 2026-04-02
 date: '2025-12-19'
 translationKey: incidents
 description: ITインシデントに関する包括的な用語集です。インシデントの定義、管理ライフサイクル、ベストプラクティス、そして迅速なサービス復旧を実現する最新ITSMにおける自動化とAIの役割について解説します。
@@ -10,7 +10,7 @@ keywords:
 - インシデント
 - 自動化
 - ITIL
-category: ITSM
+category: AI・機械学習
 type: glossary
 draft: false
 e-title: Incidents

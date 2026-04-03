@@ -1,17 +1,17 @@
 ---
 title: ドキュメントローダー
 translationKey: document-loader
-description: ドキュメントローダーは、生データを自動的に取り込み、LLMパイプラインやベクトルストアのインデックス化などのAIタスク向けに構造化されたDocumentオブジェクトに変換するソフトウェアモジュールです。
+description: ドキュメントローダーは、PDF やテキストファイルなど多様なファイル形式から自動的にデータを抽出し、AI システムで利用できる形に変換するツールです。
 keywords:
 - Document Loader
 - AIパイプライン
 - LLM
 - データ取り込み
 - LangChain
-category: AI Chatbot & Automation
+category: AI・機械学習
 type: glossary
-date: '2025-12-19'
-lastmod: '2025-12-19'
+date: 2025-12-19
+lastmod: 2026-04-02
 draft: false
 e-title: Document Loader
 term: どきゅめんとろーだー
@@ -19,347 +19,58 @@ url: "/ja/glossary/document-loader/"
 aliases:
 - "/ja/glossary/Document-Loader/"
 ---
+
 ## ドキュメントローダーとは?
-ドキュメントローダーは、ファイル、Webページ、クラウドドキュメント、データベースエントリなどの生データの取り込みと変換を自動化するソフトウェアモジュールです。これらのデータをDocument オブジェクトと呼ばれる構造化された形式に変換します。このオブジェクトは、情報検索、LLM(大規模言語モデル)パイプライン、ベクトルストアのインデックス化、ワークフロー自動化などの下流AIタスクに最適化されています。
-
-ドキュメントローダーは、多様な非構造化または半構造化コンテンツソースの処理の複雑さを抽象化します。意味のあるテキストを解析・抽出し、コンテキストメタデータで強化し、元のファイルタイプやデータソースに関係なく、標準化された一貫性のある構造を出力します。この統一性は、AIチャットボット、検索エンジン、データ分析パイプラインなど、予測可能で豊富な入力データを必要とするアプリケーションにとって重要です。
 
-ドキュメントローダーは、生の多様なデータソースと標準化された入力を必要とするAIシステムの間の橋渡しとして機能します。データの抽出、変換、強化という重労働を処理することで、開発者は各データソースに対してカスタム解析コードを書くのではなく、AIアプリケーションの構築に集中できます。
+**ドキュメントローダーは、PDF やテキストファイル、Web ページなどからデータを自動抽出し、大規模言語モデル（[LLM](Document-Loader.md)）で使える形に変換するツールです。**多様なファイル形式を一つの統一された形式に変換するため、開発者がそれぞれのファイル形式に対応するコードを書く手間が減ります。例えば、[RAG システム](Document-Loader.md)（検索拡張生成）では、企業の資料をドキュメントローダーで取り込んで、[ベクトルデータベース](Document-Loader.md)に保存します。
 
-## ドキュメントローダーを使用する理由
+> **ひとことで言うと：** 「異なる種類の書類から情報を読み出す係員」のような機能で、自動的にテキストを取り出して、AI が理解できる形に整える仕組みです。
 
-**標準化**
-- 無数の形式、エンコーディング、レイアウトからデータを統一
-- PDF、HTML、CSV、JSONを一貫したスキーマに変換
-- 各ソースに対するカスタム解析ロジックを排除
+**ポイントまとめ：**
 
-**自動化**
-- 定型的な抽出・解析スクリプトを排除
-- 再利用可能で十分にテストされたツールを提供
-- 開発オーバーヘッドとメンテナンスを最小化
+- **何をするものか：** ファイルからテキストを抽出し、AI 用に構造化する
+- **なぜ必要か：** 毎回カスタムコードを書かずに済み、開発が早い
+- **誰が使うか：** AI 企業、チャットボット開発者、データ分析チーム
 
-**コンテキストの保持**
-- 重要なメタデータ(ソースの場所、ページ番号、タイムスタンプ)を付加
-- トレーサビリティ、コンプライアンス、きめ細かい検索を可能に
-- コンテンツとその起源の関係を保持
+## なぜ重要か
 
-**スケーラビリティ**
-- 大規模な取り込みシナリオに対応
-- バッチ処理とストリーミングをサポート
-- 遅延読み込みによるパフォーマンスとメモリ効率の最適化
+ドキュメントローダーが重要な理由は、現実世界のデータ形式が多様であることにあります。企業には PDF、Word、CSV など様々なファイルがあります。それぞれを AI が理解できる形に変換するのは大変です。ドキュメントローダーはこの変換を自動化します。また、メタデータ（ファイル名、ページ番号など）も保持するため、結果を元のソースにたどれます。[チャットボット](Document-Loader.md)などのシステムでは、正確な情報を提供できるようになります。
 
-**プラグアンドプレイ統合**
-- LangChainなどのフレームワークとシームレスに連携
-- ベクトルデータベース用の標準インターフェースを提供
-- AIパイプライン全体での接続性を確保
+## 仕組みをわかりやすく解説
 
-## Documentオブジェクトの構造
+ドキュメントローダーの仕組みはシンプルな三ステップです。第一段階で、ファイルを開いてテキストを抽出します。PDF なら OCR（光学文字認識）を使うこともあります。第二段階で、抽出したテキストを整理し、メタデータを追加します。第三段階で、統一された形式（Document オブジェクト）で出力します。この形式には、テキスト本体とメタデータが含まれており、AI システムが統一的に処理できます。
 
-ドキュメントローダーがデータソースを処理すると、Documentオブジェクトを生成します。これは、LLMパイプライン、ベクトルストアの取り込み、RAGシステムの基本単位です。
+例えば、3 つの PDF ファイルをローダーで読むと、共通フォーマットで 3 つのドキュメントが得られます。その後、[ベクトル化](Document-Loader.md)して検索に備えます。
 
-**コアフィールド:**
+## 実際の活用シーン
 
-**page_content(文字列)**
-- ソースから抽出された主要なテキストまたはコンテンツ
-- 下流タスク用にクリーニング、デコード、前処理済み
-- 例:PDFページのテキスト、CSVの行データ、HTMLの段落コンテンツ
+**企業 AI チャットボット** 社内資料（マニュアル、FAQ、報告書）を読み込んで、従業員の質問に答えられるシステムを作ります。
 
-**metadata(辞書)**
-- コンテキスト、説明、ソース関連のキーと値のペア
-- 一般的なフィールド:source、page、row、title、filetype、created_at、last_modified、category、section
-- 検索とフィルタリングに必要な情報でコンテンツを強化
+**研究論文分析** 学術論文の大量データセットを取り込み、自動要約や傾向分析を行います。
 
-**id(オプションの文字列)**
-- ドキュメントの一意の識別子
-- 重複排除、相互参照、データベースインデックス化に不可欠
+**法律文書処理** 契約書や規制文書を読み込み、重要条項を自動抽出します。
 
-**Pythonでの例:**
-```python
-from langchain_core.documents import Document
+## メリットと注意点
 
-doc = Document(
-    page_content="This is a page from a PDF.",
-    metadata={
-        "source": "report.pdf",
-        "page": 2,
-        "created_at": "2024-07-21"
-    },
-    id="doc-002"
-)
-```
+**メリット：** 複数のファイル形式を統一的に処理できるため、コード がシンプルになります。スケーラビリティが良く、数百のファイルでも数千のファイルでも同じコードが使えます。エラーハンドリングが組み込まれているため、不正なファイルでもシステムが止まりにくいです。
 
-## ドキュメントローダーの種類
+**注意点：** ファイルが大きいと処理に時間がかかります。PDF のスキャン画像は精度の問題が生じることがあります。文字エンコーディングの問題（特に非 ASCII 文字）が起きる場合があります。
 
-### ファイルタイプ別
+## 関連用語
 
-**PDFローダー**
-- PDFファイルからテキストとメタデータを抽出
-- 複数ページのレイアウトとスキャン画像(OCR使用)に対応
-- 参照用にページ番号を保持
-- 例:PyPDFLoader、PDFPlumberLoader、UnstructuredPDFLoader
+- **[LLM](Document-Loader.md)** — 大規模言語モデル
+- **[RAG](Document-Loader.md)** — 検索拡張生成システム
+- **[ベクトルデータベース](Document-Loader.md)** — テキスト検索に使うデータベース
+- **[チャットボット](Document-Loader.md)** — AI を活用した会話システム
+- **[メタデータ](Dublin-Core.md)** — データについてのデータ
 
-**テキストファイルローダー**
-- プレーンテキスト形式(.txt、.md、.log)を処理
-- ファイル全体を抽出、または行/セクションで分割
-- 例:TextLoader
+## よくある質問
 
-**CSVローダー**
-- 行または列を個別のドキュメントとして抽出
-- ソース、行インデックス、選択された列のメタデータを含む
-- 例:CSVLoader
+**Q: どのファイル形式に対応していますか?**
+A: PDF、Word、テキスト、CSV、JSON などが一般的です。プラットフォームによって異なります。
 
-**JSONローダー**
-- 構造化またはネストされたデータを処理
-- 必要に応じてフィールドをフラット化または抽出
+**Q: 処理時間が長すぎます。高速化できますか?**
+A: 大きなファイルは複数に分割し、並列処理を使うことで高速化できます。
 
-**MS Officeローダー**
-- .docx、.xlsx、.pptxファイルをサポート
-- 段落、表、スライド、セルを抽出
-
-**HTML/Markdownローダー**
-- Webページ、ドキュメント、Wikiを解析
-- 読みやすいテキストを抽出し、構造メタデータを保持
-
-### データソース別
-
-**ローカルファイルシステムローダー**
-- ファイルパスまたはディレクトリパターンを使用してディスクからファイルを読み込み
-
-**Web URLローダー**
-- Webページからコンテンツをスクレイピングまたはダウンロード
-- 例:WebBaseLoader、SitemapLoader、RecursiveURLLoader
-
-**クラウドストレージローダー**
-- AWS S3、Azure Blob、Google Driveからドキュメントを取得
-- 例:S3DirectoryLoader
-
-**API・サードパーティプラットフォーム**
-- YouTube、Wikipedia、Notion、Slack、GitHubなどのサービスからデータを取り込み
-
-**データベースローダー**
-- SQLまたはNoSQLデータベースから行またはレコードを抽出
-
-### 特殊なローダー
-
-**DirectoryLoader:** パターンに一致するすべてのファイルをディレクトリから再帰的に読み込み
-
-**再帰ローダー:** 深いフォルダ構造を走査、またはWebサイト全体をクロール
-
-**カスタムローダー:** 独自または一般的でないデータソース用の拡張可能な基底クラス
-
-## 標準インターフェース
-
-すべてのLangChain互換ドキュメントローダーは`BaseLoader`クラスを拡張し、2つの主要なメソッドを提供します:
-
-**load()**
-- ソースからすべてのドキュメントを一度に読み込み
-- Documentオブジェクトのリストを返す
-- 管理可能なデータセットまたは即時処理のニーズに適している
-
-```python
-documents = loader.load()
-```
-
-**lazy_load()**
-- Documentオブジェクトを一度に1つずつ生成
-- 大きなファイルやディレクトリのコンテンツをストリーミング
-- メモリオーバーロードを回避し、効率的なパイプライン処理を可能に
-
-```python
-for doc in loader.lazy_load():
-    process(doc)
-```
-
-LangChainなどのフレームワークは、完全な互換性のために両方のメソッドを必要とし、バッチとストリーミングのワークフローを可能にします。カスタムローダーは、最適な統合のために両方を実装する必要があります。
-
-## パラメータとカスタマイズ
-
-**ファイルローダー:**
-- `file_path`: ファイルの場所
-- `encoding`: ファイルエンコーディング(例:「utf-8」)
-- `chunk_size`: 大きなドキュメントを分割するサイズ
-- `metadata_columns`: メタデータとして含める列またはフィールド
-
-**Webローダー:**
-- `urls`: 読み込むWebアドレス
-- `depth`: 再帰ローダーのクロール深度
-- `parsing_strategy`: パーサーの選択(BeautifulSoup、Unstructured)
-- `filter_rules`: URLまたはコンテンツの包含/除外パターン
-
-**クラウドローダー:**
-- `bucket_name`: ストレージバケット識別子
-- `authentication`: 認証情報またはトークン
-- `file_patterns`: バッチファイル選択用のGlobパターン
-
-**データベースローダー:**
-- `connection_string`: データベースURI
-- `query`: レコードを抽出するSQLまたはNoSQLクエリ
-- `batch_size`: 抽出中のメモリ使用量を制御
-
-## 実用例
-
-### PDFの読み込み
-```python
-from langchain_community.document_loaders import PyPDFLoader
-
-loader = PyPDFLoader("example.pdf")
-documents = loader.load()
-
-print(documents[0].page_content)  # 最初のページのテキスト
-print(documents[0].metadata)      # {'source': 'example.pdf', 'page': 1}
-```
-
-### CSVファイルの読み込み
-```python
-from langchain_community.document_loaders import CSVLoader
-
-loader = CSVLoader(
-    file_path="data.csv",
-    csv_args={"delimiter": ",", "quotechar": '"'}
-)
-documents = loader.load()
-```
-
-### Webコンテンツの取り込み
-```python
-from langchain_community.document_loaders import WebBaseLoader
-
-loader = WebBaseLoader("https://example.com/article")
-documents = loader.load()
-```
-
-### データベースローダー
-```python
-from langchain_community.document_loaders import SQLDatabaseLoader
-
-loader = SQLDatabaseLoader(
-    query="SELECT * FROM articles",
-    db=database_connection
-)
-documents = loader.load()
-```
-
-### クラウドストレージ
-```python
-from langchain_community.document_loaders import S3DirectoryLoader
-
-loader = S3DirectoryLoader("s3://my-bucket/documents/")
-documents = loader.load()
-```
-
-## ベストプラクティス
-
-**ソースデータの検証**
-- 読み込み前に破損、欠落、サポートされていないファイルをチェック
-- 早期に問題を検出するためのエラーハンドリングを実装
-
-**ローダーの選択**
-- データタイプとソースに合わせたローダーを使用
-- 抽出品質を最適化し、エラーを最小化
-
-**メタデータの保持**
-- メタデータに明確なソース識別子を含める
-- トレーサビリティのためにページまたは行番号を含める
-- 検索と取得に必要なコンテキストを追加
-
-**ファイルのチャンク化**
-- 大きなファイルには組み込みのチャンク化を使用
-- 検索と埋め込みプロセスを最適化
-- チャンクサイズとコンテキスト保持のバランスを取る
-
-**バッチ処理**
-- 大きなディレクトリのファイルをバッチで処理
-- メモリとリソース使用率を効果的に管理
-
-**遅延読み込み**
-- 大規模データセットには`lazy_load()`を使用
-- ストリーミングパイプラインでRAM使用量を最小化
-- 段階的な処理を可能に
-
-**並行処理**
-- 大規模取り込みにはマルチスレッド/マルチプロセッシングを活用
-- クラウドバケットやディレクトリの処理を高速化
-
-**カスタム開発**
-- ローダーを拡張する際は`load()`と`lazy_load()`の両方を実装
-- Document構造への厳密な準拠を維持
-- 既存のフレームワークとの互換性を確保
-
-**エラーハンドリング**
-- 堅牢なエラーハンドリングとロギングを組み込む
-- 抽出または接続の問題を捕捉
-- 十分なメタデータで問題のあるファイルを報告
-
-## 一般的なユースケース
-
-**AIチャットボット**
-- 社内ドキュメント、FAQ、ナレッジベースを取り込み
-- 検索拡張LLMパイプラインを強化
-- コンテキストを考慮した質問応答を可能に
-
-**検索エンジン**
-- 企業ドキュメントと出版物をインデックス化
-- 高速でセマンティックまたはメタデータ駆動の検索を可能に
-- 高度な検索機能をサポート
-
-**エンタープライズ自動化**
-- 契約書やレポートから情報を抽出・構造化
-- ワークフロー自動化とコンプライアンスチェックを可能に
-- 自動レポート作成と分析をサポート
-
-**学術研究**
-- 科学論文を集約・分析
-- 研究論文とデータリポジトリを処理
-- 発見と系統的レビューを可能に
-
-**要約と分析**
-- 自動要約のために大量のコンテンツセットを読み込み
-- トレンド分析と規制チェックを実行
-- コンプライアンス監視をサポート
-
-**コンテンツモデレーション**
-- チャットログ、ソーシャルメディア投稿、メールを取り込み
-- 自動レビューとフィルタリングを可能に
-- コンプライアンス監視をサポート
-
-## トラブルシューティング
-
-**ファイルが読み込まれない**
-- ファイル形式がサポートされているか確認
-- パスまたはURLの有効性をチェック
-- 必要な依存関係がインストールされているか確認
-
-**大きなファイルの処理**
-- 段階的な処理には`lazy_load()`を使用
-- 埋め込み前にコンテンツをチャンクに分割
-- ストリーミングワークフローを実装
-
-**カスタムメタデータ**
-- ローダーパラメータを介して追加のメタデータを注入
-- サブクラス化によってローダーを拡張
-- ドキュメント間でメタデータの一貫性を確保
-
-**カスタムローダーの作成**
-- `BaseLoader`クラスを拡張
-- `load()`と`lazy_load()`の両方を実装
-- 出力がDocumentオブジェクト構造に準拠していることを確認
-
-**認証**
-- 適切な認証情報を持つクラウド固有のローダーを使用
-- 認証トークンまたはAPIキーを設定
-- 安全な認証情報管理を実装
-
-## 参考文献
-
-- [LangChain Document Loaders: Complete Guide to Loading Files + Code Examples - Latenode](https://latenode.com/blog/ai-frameworks-technical-infrastructure/langchain-setup-tools-agents-memory/langchain-document-loaders-complete-guide-to-loading-files-code-examples-2025)
-- [Feeding Your LLM Right: Mastering LangChain's Document Loaders - Medium](https://medium.com/@ashutoshsharmaengg/feeding-your-llm-right-mastering-langchains-document-loaders-64ff06675c7b)
-- [LangChain Document Loaders - Official Docs](https://docs.langchain.com/oss/python/integrations/document_loaders)
-- [PyPDFLoader - LangChain](https://docs.langchain.com/oss/python/integrations/document_loaders/pypdfloader)
-- [PDFPlumberLoader - LangChain](https://docs.langchain.com/oss/python/integrations/document_loaders/pdfplumber)
-- [UnstructuredPDFLoader - LangChain](https://docs.langchain.com/oss/python/integrations/document_loaders/unstructured_file)
-- [TextLoader - LangChain](https://docs.langchain.com/oss/python/integrations/document_loaders/text)
-- [CSVLoader - LangChain](https://docs.langchain.com/oss/python/integrations/document_loaders/csv)
-- [WebBaseLoader - LangChain](https://docs.langchain.com/oss/python/integrations/document_loaders/web_base)
-- [SitemapLoader - LangChain](https://docs.langchain.com/oss/python/integrations/document_loaders/sitemap)
-- [RecursiveURLLoader - LangChain](https://docs.langchain.com/oss/python/integrations/document_loaders/recursive_url)
-- [S3DirectoryLoader - LangChain](https://docs.langchain.com/oss/python/integrations/document_loaders/aws_s3_directory)
+**Q: 機密情報が含まれています。安全ですか?**
+A: ローカル実行またはセキュアなクラウド環境を選択し、データ暗号化を設定してください。

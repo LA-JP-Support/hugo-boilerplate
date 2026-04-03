@@ -9,8 +9,9 @@ keywords:
 - 労働力最適化
 - WFMソフトウェア
 - ワークフォース分析
-category: Application & Use-Cases
+category: コンタクトセンター・CX
 type: glossary
+lastmod: 2026-04-02
 draft: false
 e-title: Workforce Management (WFM)
 url: /ja/glossary/workforce-management--wfm-/

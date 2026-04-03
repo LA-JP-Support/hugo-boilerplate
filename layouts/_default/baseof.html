@@ -34,10 +34,8 @@
   "theme" "dark"
 ) }}
 
-{{/* Back to Top Button - Only for Blog and Glossary sections */}}
-{{ if or (eq .Section "blog") (eq .Section "glossary") (eq .Type "blog") (eq .Type "glossary") }}
-  {{ partial "components/back-to-top.html" . }}
-{{ end }}
+{{/* Back to Top Button - All pages */}}
+{{ partial "components/back-to-top.html" . }}
 
 <!-- App JavaScript - non-critical interactions -->
 <script src="/js/app.js?v={{ partialCached "helpers/build-timestamp.html" . }}"></script>

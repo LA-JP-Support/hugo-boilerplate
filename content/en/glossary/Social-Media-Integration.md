@@ -1,17 +1,19 @@
 ---
-title: "Social Media Integration"
+title: Social Media Integration
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Social-Media-Integration
-description: "A technology that connects your website or app with social media platforms, allowing users to log in with their social accounts and share content directly."
+description: Connecting websites or apps to social media platforms via APIs to enable user authentication, content sharing, and seamless data exchange.
 keywords:
 - social media integration
 - API connectivity
 - social authentication
 - cross-platform sharing
 - social media APIs
-category: "Application & Use-Cases"
+category: Content & Marketing
 type: glossary
 draft: false
+url: "/en/glossary/Social-Media-Integration/"
 ---
 
 ## What is a Social Media Integration?

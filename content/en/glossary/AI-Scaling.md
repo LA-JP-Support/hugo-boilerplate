@@ -1,17 +1,19 @@
 ---
-title: "AI Scaling"
+title: AI Scaling
 date: 2026-01-29
+lastmod: 2026-04-02
 translationKey: ai-scaling
-description: "AI scaling involves increasing model size, computational resources, and training data to enhance artificial intelligence performance and capabilities."
+description: Strategic approach to improving AI performance by increasing model size, data volume, and computational resources.
 keywords:
 - AI scaling
 - model scaling
 - computational scaling
 - neural network scaling
 - large language models
-category: "Technical"
+category: Business & Strategy
 type: glossary
 draft: false
+url: /en/glossary/AI-Scaling/
 ---
 
 ## What is AI Scaling?

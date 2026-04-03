@@ -1,291 +1,90 @@
 ---
-title: コードブロック(Python/JS)
-lastmod: '2025-12-19'
+title: コードブロック(Python/JavaScript)
+lastmod: 2026-04-02
 translationKey: code-block-python-js
-description: コードブロックは、統一された実行のためにプログラミング文をグループ化したもので、Pythonではインデント、JavaScriptでは中括弧によって定義されます。自動化やチャットボットにおいて、カスタムロジックの実装に使用されます。
+description: コードブロックは、プログラミング言語で文をグループ化して実行単位とするもので、Pythonはインデント、JavaScriptは中括弧で定義します。
 keywords:
 - コードブロック
 - Python
 - JavaScript
 - 自動化
-- チャットボット
-category: AI Chatbot & Automation
+- プログラミング
+category: フレームワーク・ツール
 type: glossary
-date: '2025-12-19'
+date: 2025-12-19
 draft: false
 e-title: Code Block (Python/JS)
-term: こーどぶろっく(ぱいそん/じぇいえす)
+term: こーどぶろっく
 url: "/ja/glossary/code-block--python-js-/"
 aliases:
 - "/ja/glossary/Code-Block--Python-JS-/"
 ---
-## コードブロックとは?
 
-プログラミングにおけるコードブロックとは、言語のインタープリタまたはコンパイラが単一の実行可能な単位として扱う、連続したコードのセクションです。コードブロックは、関数、ループ、条件文、クラスなどのロジックをカプセル化し、プログラムを構造化する上で基礎となるものです。
+## コードブロック(Python/JavaScript)とは?
 
-### Python
+**コードブロックは、プログラムを構成する単位のひとつで、言語インタープリタが実行する連続したコード群です。** Pythonではインデント(スペース)でブロック構造を示し、JavaScriptは中括弧{}で囲みます。条件分岐、ループ、関数、クラスなどを定義するときに必要です。
 
-Pythonプログラムはコードブロックから構成されます。各コードブロックは独自の実行フレーム内で実行され、スコープ、デバッグ情報、および完了時の実行フローを管理します。
+> **ひとことで言うと：** 「関連したコードをまとめて、『ここは1つのまとまり』と言語に教える書き方」です。料理のレシピで「①材料を混ぜる→②加熱する」と手順をグループ分けするのに似ています。
 
-Python実行モデルによると:「ブロックとは、単位として実行されるPythonプログラムテキストの一部です。以下がブロックです:モジュール、関数本体、クラス定義。対話的に入力される各コマンドはブロックです。スクリプトファイルはコードブロックです。`-m`引数を使用してコマンドラインからトップレベルスクリプトとして実行されるモジュールもコードブロックです。」
+**ポイントまとめ:**
 
-### JavaScript
+- **何をするものか：** コード内で処理のまとまりを作り、スコープ(変数が有効な範囲)を管理する
+- **なぜ必要か：** ブロック構造がないと、プログラムがどこからどこまで1つの処理なのかコンピュータに理解させられない
+- **誰が使うか：** すべてのプログラマーが日常的に使う基本的な文法要素
 
-JavaScriptでは、ブロック文は0個以上の文をグループ化するために使用され、中括弧`{}`で区切られます。これは「複合文」と呼ばれることもあります。ブロックは、`if`、`for`、`while`、関数宣言などの制御フロー構造において不可欠です。ブロックは、`let`および`const`で宣言された変数のスコープも定義します。
+## なぜ重要か
 
-**例:**
-```javascript
-if (condition) {
-    // code block: statements here are executed if condition is true
-}
-```
+コードブロックは、プログラムの構造と論理を定義するための最も基本的な要素です。ブロックなしでは、複数の文の実行を制御できません。条件によって異なる処理を実行したり、複数回繰り返したりするときに、どのコードが対象なのかを明確にします。また、変数のスコープを管理し、予期しない変数値の変更(バグ)を防ぐ重要な役割も果たします。
 
-## 構文と使用法
+## 仕組みをわかりやすく解説
 
-### Pythonのコードブロック
+プログラムが実行されるとき、インタープリタやコンパイラはコードを順番に読み進めます。ブロック構造により、「この範囲内の文は一体」と認識します。Pythonはインデント(字下げ)でこれを示すため、視覚的に階層構造が明確です。JavaScriptは中括弧で明示的に範囲を示すため、1行だけの処理でも構造が一目瞭然です。
 
-Pythonのブロックは、一貫したインデント(通常はレベルごとに4つのスペース)によって定義されます。インデントは、他の言語の中括弧とは異なり、ブロックの開始と終了を示します。
+スコープ(変数の有効範囲)はブロックごとに作られます。ブロック内で定義した変数は、通常そのブロック内でのみ使用できます。ブロック外では参照できません。これにより、変数名の衝突を避け、コード全体を管理しやすくします。
 
-**正しい構文の例:**
-```python
-if age >= 18:
-    print("Adult")
-    print("Can vote")
-print("Done")  # Outside the block
-```
-
-**誤った構文の例:**
-```python
-if age >= 18:
-print("Adult")  # Raises IndentationError
-```
-
-**重要なポイント:**
-- ブロック内のすべての行は同じ量だけインデントする必要があります
-- タブとスペースを混在させるとエラーが発生します。スペースのみを使用してください
-- 空のブロックは無効です。必要に応じて`pass`をプレースホルダーとして使用してください:
-```python
-if condition:
-    pass  # Do nothing
-```
-
-### JavaScriptのコードブロック
-
-JavaScriptのブロックは中括弧で示されます:
-
-```javascript
-if (age >= 18) {
-    console.log("Adult");
-    console.log("Can vote");
-}
-console.log("Done"); // Outside the block
-```
-
-**誤った構文の例:**
-```javascript
-if (age >= 18)
-    console.log("Adult");
-    console.log("Can vote"); // Not part of the if-block!
-```
-
-**ベストプラクティス:** 単一文のブロックであっても、常に中括弧を使用してください。これにより、ロジックエラーを回避し、可読性が向上します。
-
-## 命名、バインディング、スコープ
-
-### Python
-
-- 名前(変数)は、割り当てられたブロック内でバインドされます
-- ローカル変数は、`global`または`nonlocal`として宣言されない限り、関数またはクラスブロック内で定義されます
-- 自由変数は、ブロック内で参照されますが、その外部で定義されます
-
-### JavaScript
-
-- `let`および`const`で宣言された変数はブロックスコープです
-- `var`で宣言された変数は関数スコープであり、ブロックスコープではありません
-- ブロックスコープは、意図しない変数のリークやシャドーイングを回避するために重要です
-
-**例:**
-```javascript
-var x = 1;
-let y = 1;
-if (true) {
-  var x = 2; // modifies outer x
-  let y = 2; // block-scoped
-}
-console.log(x); // 2
-console.log(y); // 1
-```
-
-## 自動化およびチャットボットプラットフォームでの使用
-
-### コードブロックノード
-
-Contentstack、n8nなどの自動化プラットフォームは、ユーザーがカスタムPythonまたはJavaScriptを埋め込むことができる「コードブロック」ノードを提供しています。
-
-**機能:**
-- **カスタムスクリプティング:** データ変換、検証、または外部API呼び出しのための独自のロジックを記述
-- **入出力マッピング:** 前のノードからデータを渡し、それを操作し、下流のノードに結果を出力
-- **デバッグ:** トラブルシューティングのためのコンソールログとエラーレポート
-- **統合:** 標準的なドラッグアンドドロップノードでは不可能な操作を可能にします
-
-**例: Contentstack**  
-JavaScriptコードを実行するためのCode Blockアクションを設定します。入力は、ユーザーデータやAPIレスポンスなど、前のノードからマッピングできます。`console.log`を使用したインラインデバッグをサポートしています。
-
-**例: n8n**  
-JavaScriptとPython(Pyodide経由)の両方をサポートしています。2つの実行モード:「すべてのアイテムに対して1回実行」または「各アイテムに対して1回実行」。ワークフローデータアクセスのための組み込みメソッドと変数があります。
-
-## 実用的な例
-
-### Python: コードブロックノード(チャットボットの適格性チェック)
-```python
-age = input_data.get('age', 0)
-if age >= 18:
-    result = "Eligible"
-else:
-    result = "Not eligible"
-output = {"eligibility": result}
-```
-`input_data`は受信データペイロードです。出力は次の自動化ノードに渡されます。
-
-### JavaScript: データの抽出
-```javascript
-var idcard = input.IDCard;
-var birthday = idcard.substr(6, 4) + '-' + idcard.substr(10, 2) + '-' + idcard.substr(12, 2);
-var sex = 'Female';
-if (idcard.substr(16, 1) % 2 == 1) {
-    sex = 'Male';
-}
-output = { Birthdate: birthday, Gender: sex };
-```
+## 実際の活用シーン
 
-### ネストされたコードブロック
+**カスタム自動化スクリプト**
+n8nやContentStackなどの自動化プラットフォームでは、JavaScriptまたはPythonのコードブロックを直接埋め込めます。ユーザーはコードブロック内で前のステップからのデータを処理し、次のステップへ渡す値を定義します。
 
-**Python:**
-```python
-x = 10
-if x > 5:
-    print("x is greater than 5")
-    if x % 2 == 0:
-        print("x is even")
-```
+**チャットボットロジック**
+チャットボットが複数の応答パターンを持つとき、条件に応じた異なるブロックが実行されます。ユーザー入力に応じて、サポートへのエスカレーション、自動応答、データベース参照など、異なるコードブロックが動作します。
 
-**JavaScript:**
-```javascript
-let x = 10;
-if (x > 5) {
-    console.log("x is greater than 5");
-    if (x % 2 === 0) {
-        console.log("x is even");
-    }
-}
-```
+**データ変換パイプライン**
+APIから受け取ったデータを変換するとき、複数の変換ステップをコードブロックで段階的に処理します。各ブロックが特定の変換を担当し、結果を次のブロックに渡します。
 
-### ブロックごとの複数の文
+## メリットと注意点
 
-**Python:**
-```python
-for i in range(3):
-    print(i)
-    print(i * 2)
-```
+コードブロックは、コードの構造を明確にし、再利用性を高めます。同じロジックを何度も書く代わりに、関数というブロック内に処理をまとめて呼び出すだけで済みます。ただし、ネストが深くなりすぎると、可読性が低下します。通常、3段階程度までが推奨です。また、インデント(Python)や括弧(JavaScript)を正しく使わないと、予期しないエラーや動作が生じます。
 
-**JavaScript:**
-```javascript
-for (let i = 0; i < 3; i++) {
-    console.log(i);
-    console.log(i * 2);
-}
-```
+## 関連用語
 
-## 一般的な問題とトラブルシューティング
+- **[スコープ](./Scope.md)** — ブロック内で定義した変数の有効範囲を決める仕組み
+- **[インデント](./Indentation.md)** — Pythonでブロック構造を示すための字下げ
+- **[関数](./Function.md)** — コードブロックの一種で、再利用可能な処理をまとめたもの
+- **[条件分岐](./Conditional.md)** — if文のように条件に応じて異なるブロックを実行する
+- **[ループ](./Loop.md)** — 同じブロック内の処理を繰り返し実行する
 
-### Python
+## よくある質問
 
-**IndentationError**  
-一貫性のないインデントによって引き起こされます。常にレベルごとに4つのスペースを使用してください。
+**Q: PythonとJavaScriptでブロックの書き方が異なるのはなぜですか?**
+A: プログラミング言語の設計思想が異なります。Pythonはインデントで構造を示すことで、読みやすさを重視しました。JavaScriptは他の多くの言語と同じ中括弧方式を採用し、一貫性を取りました。どちらが良いわけではなく、言語の特性です。
 
-**タブとスペースの混在**  
-隠れたバグにつながる可能性があります。スペースのみを使用してください。
+**Q: 空のブロックは作れますか?**
+A: Pythonでは空のブロックが許可されていないため、プレースホルダーとして`pass`キーワードを使います。JavaScriptでは空の中括弧{}が許可されます。
 
-**空のブロック**  
-許可されていません。プレースホルダーブロックには`pass`を使用してください。
+**Q: ネストされたブロック(ブロック内のブロック)に制限はありますか?**
+A: 技術的に制限はありませんが、可読性の観点から3段階までが推奨されます。それ以上深くなる場合は、関数に分割するなど、コード構造を見直すとよいでしょう。
 
-### JavaScript
+## 参考資料
 
-**中括弧の欠落**  
-`{}`を省略すると、特に複数の文がある場合にロジックエラーが発生する可能性があります。
-
-**ブロックスコープ**  
-`let`および`const`はブロックスコープです。`var`はそうではありません。変数宣言には注意してください。
-
-### 自動化/チャットボットプラットフォーム
-
-**入出力の処理**  
-コードノードがワークフロー要件に一致するデータを期待し、出力することを確認してください。
-
-**デバッグ**  
-サポートされているプラットフォーム(Contentstack、n8nなど)では、トラブルシューティングに`console.log`を使用してください。
-
-**コードのフォーマット**  
-チャットボット、特にMicrosoft Teamsでは、コードにトリプルバッククォートを使用したMarkdownを使用してください:
-````
-```python
-print("Hello, world!")
-```
-````
-
-**フォーマットの制限**  
-すべてのフォーマットがすべてのプラットフォーム/デバイスでサポートされているわけではありません。徹底的にテストしてください。
-
-## チャットボットでのコードブロックのフォーマット
-
-**Microsoft Teams Botメッセージ:**  
-`TextFormat`プロパティを`markdown`に設定して、コードブロックのフォーマットを有効にします。
-
-**サポートされている機能:** 整形済みテキスト(コードブロック)、太字、斜体、ハイパーリンク。
-
-**注意:** すべてのフォーマットがモバイルクライアントでサポートされているわけではありません。デバイス間でテストしてください。
-
-## ベストプラクティス
-
-### Python
-
-- インデントレベルごとに4つのスペースを使用
-- タブとスペースを決して混在させない
-- 空のブロックには`pass`を使用
-- コードブロックを明確かつ簡潔に保つ
-
-### JavaScript
-
-- 単一文であっても、ブロックには常に中括弧を使用
-- ブロックスコープ変数には`let`/`const`を使用
-- 変数のシャドーイングに注意
-
-### 自動化/チャットボットプラットフォーム
-
-- 入出力オブジェクトの構造を検証
-- サポートされている場合は、デバッグに`console.log`を使用
-- 複雑なスクリプトには明確性のためにコメントを追加
-- ノード構成とサポートされているライブラリについては、プラットフォームのドキュメントに従う
-
-### チャットボットのコードフォーマット
-
-- Microsoft Teamsでは、コードブロックにMarkdownトリプルバッククォートを使用
-- 単一のメッセージでHTMLとMarkdownの両方を使用することを避ける
-- ターゲットクライアント(デスクトップ、iOS、Android)でフォーマットをテスト
-
-## 参考文献
-
-- [Python Execution Model](https://docs.python.org/3/reference/executionmodel.html)
-- [PEP 8: Python Style Guide](https://peps.python.org/pep-0008/)
-- [PEP 8: Indentation](https://peps.python.org/pep-0008/#indentation)
-- [PEP 8: Tabs or Spaces](https://peps.python.org/pep-0008/#tabs-or-spaces)
+- [Python Execution Model - Official Documentation](https://docs.python.org/3/reference/executionmodel.html)
+- [PEP 8 Indentation Guide](https://peps.python.org/pep-0008/#indentation)
 - [MDN: JavaScript Block Statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block)
-- [MDN: Block Statement Examples](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block#examples)
-- [MDN: Block Scoping Rules with var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block#block_scoping_rules_with_var_or_function_declaration_in_non-strict_mode)
-- [MDN: JavaScript Control Flow](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#block_statement)
-- [Contentstack: Code Block Documentation](https://www.contentstack.com/docs/developers/automation-hub-connectors/code-block)
-- [n8n: Code Node Documentation](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code/)
-- [Microsoft Teams: Bot Message Formatting](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/format-your-bot-messages)
-- [Stack Overflow: Python Blocks](https://stackoverflow.com/questions/50083391/what-are-blocks-of-code-in-python-the-definitions-are-all-confusing)
-- [Mimo: Python Glossary - Code Block](https://mimo.org/glossary/python/code-block)
+- [JavaScript Control Flow](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [n8n Code Node Documentation](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code/)
+- [AWS Glue Python Shell Jobs](https://docs.aws.amazon.com/glue/latest/dg/add-job-python.html)
+- [Contentstack Code Block Node](https://www.contentstack.com/docs/developers/automation-hub-connectors/code-block)
+- [JavaScript Scope Best Practices](https://developer.mozilla.org/en-US/docs/Glossary/Scope)
+- [Python Variable Scope Guide](https://www.w3schools.com/python/python_scope.asp)
+- [Indentation in Programming](https://en.wikipedia.org/wiki/Indentation_(typesetting))

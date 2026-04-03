@@ -1,6 +1,7 @@
 ---
 title: チケットルーティング
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Ticket-Routing
 description: チケットルーティングシステム、自動化ワークフロー、インテリジェント割り当てアルゴリズム、およびカスタマーサポート最適化のベストプラクティスに関する包括的なガイド。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - ヘルプデスクワークフロー
 - カスタマーサポート最適化
 - インテリジェントルーティングアルゴリズム
-category: Application & Use-Cases
+category: コンタクトセンター・CX
 type: glossary
 draft: false
 e-title: Ticket Routing

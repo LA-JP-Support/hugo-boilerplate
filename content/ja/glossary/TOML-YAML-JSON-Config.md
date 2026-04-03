@@ -1,6 +1,7 @@
 ---
 title: TOML/YAML/JSON設定
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: TOML-YAML-JSON-Config
 description: アプリケーションの設定をソースコードにハードコーディングすることなく、人間が読みやすい形式で保存する設定ファイルフォーマット。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - JSON設定ファイル
 - 設定管理
 - データシリアライゼーション
-category: Application & Use-Cases
+category: AI・機械学習
 type: glossary
 draft: false
 e-title: TOML/YAML/JSON Config

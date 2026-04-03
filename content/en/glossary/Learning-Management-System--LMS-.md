@@ -1,17 +1,19 @@
 ---
-title: "Learning Management System (LMS)"
+title: Learning Management System (LMS)
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Learning-Management-System--LMS-
-description: "A software platform that lets educators and organizations create, deliver, and track online courses while students access materials, submit assignments, and monitor their learning progress."
+description: A digital platform where teachers upload course materials and assignments, while students access content and track their learning progress in one place.
 keywords:
 - learning management system
-- LMS platform
-- e-learning software
+- LMS
+- e-learning
 - online education
-- digital learning
-category: "Application & Use-Cases"
+- course management
+category: Data & Analytics
 type: glossary
 draft: false
+url: "/en/glossary/Learning-Management-System--LMS-/"
 ---
 
 ## What is Learning Management System (LMS)?

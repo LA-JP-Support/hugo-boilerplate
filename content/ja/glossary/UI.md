@@ -1,6 +1,6 @@
 ---
 title: UI(ユーザーインターフェース)
-lastmod: '2025-12-19'
+lastmod: 2026-04-02
 date: '2025-12-19'
 translationKey: ui-user-interface
 description: ユーザーインターフェース(UI)の定義、種類、デザイン原則、実用的なユースケースを解説します。アプリからAIチャットボットまで、UIが人間とデジタルの相互作用をどのように促進するかを学びましょう。
@@ -10,7 +10,7 @@ keywords:
 - AIチャットボット
 - 会話型UI
 - UX
-category: Technology
+category: Web開発・デザイン
 type: glossary
 draft: false
 e-title: UI (User Interface)

@@ -1,17 +1,19 @@
 ---
-title: "Social Media API"
+title: Social Media API
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Social-Media-API
-description: "A tool that lets developers connect apps to social media platforms to access data, post content, and add social features without building everything from scratch."
+description: A set of tools that lets developers connect their apps to social media platforms to access data, share posts, and add social features.
 keywords:
 - social media API
 - API integration
 - social platform development
 - REST API
 - OAuth authentication
-category: "Application & Use-Cases"
+category: Content & Marketing
 type: glossary
 draft: false
+url: "/en/glossary/Social-Media-API/"
 ---
 
 ## What is a Social Media API?

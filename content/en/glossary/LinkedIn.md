@@ -1,52 +1,79 @@
 ---
-title: "LinkedIn"
-date: 2025-12-19
+title: LinkedIn
+date: 2026-04-02
 translationKey: LinkedIn
-description: "A professional networking platform where people connect with colleagues, find jobs, and share career-related content and insights."
+description: The world's largest professional networking platform where professionals connect, develop careers, and discover business opportunities.
 keywords:
 - LinkedIn
 - professional networking
 - career development
+- recruitment platform
 - business connections
-- social media platform
-category: "Application & Use-Cases"
+category: Content & Marketing
 type: glossary
+lastmod: 2026-04-02
 draft: false
+url: /en/glossary/LinkedIn/
 ---
 
-## What is a LinkedIn?
+## What is LinkedIn?
 
-LinkedIn is the world's largest professional networking platform, serving as a digital hub where professionals, businesses, and organizations connect, share insights, and advance their careers. Launched in 2003 by Reid Hoffman and his team, LinkedIn has evolved from a simple networking tool into a comprehensive professional ecosystem that encompasses recruitment, content marketing, sales prospecting, and industry thought leadership. The platform operates on the fundamental principle that professional relationships are crucial for career advancement and business success, providing users with tools to build, maintain, and leverage their professional networks effectively.
+**LinkedIn is the world's largest professional networking platform with over 950 million users.** It's a unified ecosystem where professionals build careers, companies find talent, and businesses develop relationships. Founded in 2003 and acquired by Microsoft in 2016 for $16.2 billion, LinkedIn combines networking, recruitment, and skill development in one integrated platform.
 
-The platform distinguishes itself from other social media networks by maintaining a strictly professional focus, where users create detailed profiles showcasing their work experience, education, skills, and professional achievements. LinkedIn serves multiple stakeholders including individual professionals seeking career opportunities, recruiters and hiring managers looking for talent, businesses aiming to establish thought leadership and generate leads, and sales professionals prospecting for new clients. The platform's sophisticated algorithm curates content based on professional interests, industry trends, and network connections, ensuring that users receive relevant information that can enhance their professional development and business objectives.
+> **In a nutshell:** A professional SNS where you build work relationships, discover opportunities, and develop your career.
 
-LinkedIn's business model primarily revolves around premium subscriptions, recruitment solutions, marketing solutions, and sales solutions, making it one of the most successful B2B-focused social platforms. The platform has become an indispensable tool for modern professional life, with over 900 million members worldwide across more than 200 countries and territories. Its influence extends beyond individual networking to encompass corporate branding, industry research, professional education through LinkedIn Learning, and even news distribution through LinkedIn News. The platform's data-driven insights provide valuable intelligence about industry trends, salary benchmarks, and skill demands, making it a strategic resource for both individual career planning and organizational talent management.
+**Key points:**
 
-## Core Professional Networking Components
+- **What it does:** Professional networking, job search, and skill development
+- **Why it matters:** Career development and business opportunity creation
+- **Who uses it:** Job seekers, recruiters, sales professionals, and companies
 
-**Profile Optimization** involves creating a comprehensive professional presence that accurately represents an individual's career journey, skills, and aspirations. A well-optimized LinkedIn profile includes a professional headshot, compelling headline, detailed work experience, education background, skills endorsements, and recommendations from colleagues and supervisors.
+## Basic information
 
-**Connection Building** represents the fundamental networking activity on LinkedIn, where users strategically connect with colleagues, industry peers, potential mentors, and business prospects. Quality connections form the foundation of a valuable professional network that can provide career opportunities, business partnerships, and industry insights.
+| Item | Details |
+|------|------|
+| Founded | 2003 |
+| Headquarters | United States (Silicon Valley) |
+| Parent Company | Microsoft (acquired 2016, $16.2 billion) |
+| Users | 950+ million globally |
+| Status | Microsoft subsidiary (non-public) |
 
-**Content Creation and Sharing** enables professionals to establish thought leadership by publishing articles, sharing industry insights, commenting on posts, and engaging in meaningful professional discussions. This component helps build personal brand authority and increases visibility within professional networks.
+LinkedIn was founded in Silicon Valley and has 15+ years of proven track record. The 2016 Microsoft acquisition deepened integration with enterprise IT services, accelerating B2B business opportunity creation.
 
-**Company Pages and Showcase Pages** allow organizations to establish their corporate presence, share company updates, showcase products and services, and attract top talent. These pages serve as digital storefronts for businesses to engage with their professional audience and build brand awareness.
+## Main products and services
 
-**LinkedIn Groups** provide specialized communities where professionals with shared interests, industries, or expertise can engage in focused discussions, share resources, and network with like-minded individuals. Groups facilitate deeper professional relationships and knowledge exchange within specific niches.
+**LinkedIn Profile and Networking**
+Professionals create digital profiles that serve as resumes, connecting with industry colleagues. Recommendations and skill endorsements build credibility. Comprehensive profiles showcasing experience, accomplishments, and skills attract recruiters and business partners.
 
-**Sales Navigator and Recruitment Tools** offer advanced features for sales professionals and recruiters to identify, research, and engage with prospects and candidates more effectively. These premium tools provide enhanced search capabilities, lead recommendations, and relationship mapping features.
+**LinkedIn Jobs**
+Companies discover candidates with ideal qualifications. Job seekers search opportunities based on skills and hear directly from recruiters. Particularly effective for specialized and management roles, with higher hiring success rates than traditional job boards.
 
-**LinkedIn Learning** integrates professional development directly into the platform, offering courses and certifications that help users develop new skills and advance their careers while showcasing their commitment to continuous learning on their profiles.
+**LinkedIn Learning**
+Online courses in business, technology, and creative skills. Completion certificates serve as professional certifications on profiles. Low-cost alternative to business schools for continuous skill development.
 
-## How LinkedIn Works
+## Competitors and alternatives
 
-**Step 1: Profile Creation and Setup** - Users begin by creating a comprehensive profile that serves as their digital professional identity, including personal information, professional headshot, compelling headline, and detailed work history.
+| Service | Key Strengths | Target Audience |
+|---------|-------|-------|
+| LinkedIn | Comprehensive professional networking | Global, all industries |
+| Indeed | Specialized job search | Job seekers |
+| Glassdoor | Company reviews and jobs | Job seekers |
+| XING | European networking | European professionals |
+| AngelList | Startup recruitment | Startup ecosystem |
 
-**Step 2: Network Building** - Users systematically connect with colleagues, classmates, industry peers, and other professionals, gradually building a network that reflects their professional relationships and career aspirations.
+LinkedIn integrates recruitment, networking, and skill development in one platform, more comprehensive than competitors. Especially dominant in executive and skilled hiring.
 
-**Step 3: Content Engagement** - Users actively engage with their network by liking, commenting, and sharing relevant professional content, while also creating original posts and articles to establish thought leadership.
+## Benefits and considerations
 
-**Step 4: Skill Development and Endorsements** - Users add relevant skills to their profiles and seek endorsements from connections, while also endorsing others' skills to strengthen professional relationships.
+LinkedIn networking creates new career opportunities, with recruiters directly scouting interested professionals. Sales professionals find an efficient way to develop leads. However, privacy settings are complex, risking personal information exposure if misconfigured. Spam messages are increasing, requiring strong security awareness.
+
+## Related terms
+
+- **[Professional Networking](Professional-Networking.md)** — LinkedIn's core function
+- **[Recruitment Marketing](Job-Marketing.md)** — Company hiring strategies
+- **[Career Development](Career-Development.md)** — LinkedIn's value for individuals
+- **[B2B Marketing](B2B-Marketing.md)** — Lead generation capabilities
+- **[Thought Leadership](Thought-Leadership.md)** — Building authority through content
 
 **Step 5: Job Search and Opportunities** - Users leverage the platform's job search functionality, set up job alerts, and apply for positions while also making themselves discoverable to recruiters through profile optimization.
 

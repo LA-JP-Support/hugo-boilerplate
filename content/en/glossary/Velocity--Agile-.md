@@ -1,199 +1,99 @@
 ---
 title: "Velocity (Agile)"
 date: 2025-12-19
-translationKey: Velocity--Agile-
-description: "A metric that measures how much work a team completes in each sprint, helping predict future capacity and plan project timelines."
-keywords:
-- agile velocity
-- sprint planning
-- story points
-- team performance
-- scrum metrics
-category: "Application & Use-Cases"
+lastmod: 2026-04-02
+translationKey: "Velocity--Agile-"
+category: "Knowledge & Collaboration"
 type: glossary
 draft: false
+url: /en/glossary/Velocity--Agile-/
+description: "A relative measurement of the amount of work an agile team can complete within a single sprint. A metric enabling sprint planning and predictability."
+keywords:
+  - agile velocity
+  - sprint planning
+  - story points
+  - team performance
+  - scrum metrics
 ---
 
-## What is a Velocity (Agile)?
+## What is Velocity (Agile)?
 
-Velocity in Agile methodology represents a fundamental metric that measures the amount of work a development team can complete during a single sprint or iteration. This quantitative measurement serves as the cornerstone for sprint planning, capacity forecasting, and team performance evaluation within Scrum and other Agile frameworks. Velocity is typically expressed in story points, which are abstract units of measurement that represent the relative effort, complexity, and risk associated with completing user stories or product backlog items.
+### Quick Understanding Zone
 
-The concept of velocity extends beyond simple productivity measurement, functioning as a predictive tool that enables teams to make informed decisions about future sprint commitments and release planning. Unlike traditional project management metrics that focus on time-based estimates, Agile velocity acknowledges the inherent uncertainty in software development by emphasizing relative sizing and historical performance patterns. This approach allows teams to establish a sustainable pace of work while continuously improving their estimation accuracy and delivery predictability over multiple iterations.
+**In a nutshell**
 
-Velocity calculation involves summing the story points of all completed user stories within a sprint, creating a historical record that reveals team capacity trends and performance patterns. The metric becomes increasingly valuable as teams accumulate data across multiple sprints, enabling more accurate forecasting and realistic sprint planning. However, velocity should never be used as a performance comparison tool between different teams, as each team's context, complexity, and story point calibration varies significantly. Instead, velocity serves as an internal compass that guides individual teams toward better self-organization and continuous improvement.
+Velocity is a metric that measures the relative amount of work an agile team can complete in one sprint (typically 1-4 weeks) using story points. It becomes a forecasting tool helping teams make realistic commitments based on past performance.
 
-## Core Agile Velocity Components
+**Key points**
 
-**Story Points** are the fundamental unit of measurement for velocity calculation, representing relative effort rather than absolute time. Teams assign story points to user stories based on complexity, effort, and uncertainty using techniques like Planning Poker or T-shirt sizing.
+- **Measuring relative work volume** - Measured not in hours but in story points (relative complexity and effort)
+- **Team-specific metric** - Don't use for comparing teams; apply it to track the same team's improvement
+- **Basis for forecasting and planning** - Use past velocity to plan future sprints and predict releases
 
-**Sprint Duration** establishes the time boundary for velocity measurement, typically ranging from one to four weeks. Consistent sprint lengths are essential for meaningful velocity tracking and comparison across iterations.
+### Deep Dive Zone
 
-**Definition of Done** provides clear criteria for determining when work items contribute to velocity calculations. Only fully completed stories that meet all acceptance criteria and quality standards should be included in velocity measurements.
+**Why it matters**
 
-**Team Composition** directly impacts velocity calculations, as changes in team size or skill mix affect overall capacity. Stable team composition over multiple sprints enables more accurate velocity trending and forecasting.
+Velocity is a mechanism for teams to objectively understand "what we can realistically accomplish" in the context of software development's inherent uncertainties. Relative sizing (this story is twice as complex as that) more accurately reflects actual team capacity than time-based estimates (this task takes 3 days). Through continuous velocity measurement, teams balance burnout prevention, realistic commitments, and quality maintenance.
 
-**Historical Data** forms the foundation for velocity-based planning, requiring at least three to five sprints of data to establish reliable patterns. Teams use this historical information to calculate average velocity and identify trends.
+**How it works**
 
-**Backlog Refinement** ensures that user stories are properly sized and estimated before sprint planning, enabling accurate velocity calculations. Well-refined backlogs with consistent story point calibration improve velocity reliability.
+The velocity cycle functions through the following flow.
 
-**Sprint Retrospectives** provide opportunities to analyze velocity trends and identify factors affecting team performance. Regular retrospectives help teams understand velocity fluctuations and implement improvements.
+First, in **backlog refinement**, the product owner and development team estimate user stories in story points. Using techniques like planning poker, the team reaches consensus on relative complexity.
 
-## How Velocity (Agile) Works
+Next, in **sprint planning**, the team reviews past velocity history. For example, if the average of the last five sprints is 40 points, they select approximately 40 points worth of stories this sprint.
 
-The velocity measurement process begins with **backlog refinement sessions** where the team collaboratively estimates user stories using story points. During these sessions, team members discuss story complexity, identify dependencies, and reach consensus on relative sizing using techniques like Planning Poker or affinity mapping.
+During **daily standups** within the sprint, progress is confirmed and obstacles addressed to assess whether plans will complete on schedule.
 
-**Sprint planning meetings** utilize historical velocity data to determine how many story points the team can commit to in the upcoming sprint. The team selects user stories from the product backlog until the total story points approximate their average velocity from previous sprints.
+At sprint end, **velocity equals the total points of complete stories meeting the definition of done**. Partially complete or quality-deficient stories don't count.
 
-**Daily stand-up meetings** provide opportunities to track progress toward sprint goals and identify potential impediments that might affect velocity. Team members discuss completed work, planned activities, and obstacles that could impact story completion.
+Finally, in **retrospectives**, performance is analyzed. If velocity drops, identify causes like team composition changes or increased technical debt, then establish improvement strategies.
 
-**Sprint execution** involves completing user stories according to the Definition of Done, with team members collaborating to deliver potentially shippable increments. Only stories that fully meet acceptance criteria contribute to the sprint's velocity calculation.
+Repeating this cycle, teams gain increasingly accurate estimation and stable velocity.
 
-**Sprint review sessions** demonstrate completed functionality to stakeholders and confirm that delivered stories meet quality standards. This validation ensures that velocity calculations reflect genuinely completed work rather than partially finished items.
+**Real-world use cases**
 
-**Velocity calculation** occurs at sprint end by summing story points for all completed user stories. This calculation excludes partially completed work, stories that don't meet the Definition of Done, or items added mid-sprint without proper estimation.
+1. **Sprint planning** - A team with average 40-point velocity selects 38-42 points worth of stories for the next sprint, confidently committing to what they can achieve
 
-**Data recording and analysis** involves documenting the sprint velocity and updating historical records for trend analysis. Teams maintain velocity charts and calculate rolling averages to identify patterns and improve future planning accuracy.
+2. **Release planning** - When 200 points of critical features are needed and team velocity averages 40 points per sprint (2 weeks), estimate 5 sprints (10 weeks) to completion, facilitating coordination with marketing
 
-**Sprint retrospective discussions** examine velocity results in context, identifying factors that contributed to higher or lower performance. Teams analyze whether velocity changes reflect improved efficiency, external factors, or estimation calibration issues.
+3. **Capacity forecasting** - When planning new projects, use velocity actual data to judge "this team can deliver this much in three months"
 
-**Planning adjustment** for subsequent sprints incorporates lessons learned and updated velocity trends. Teams may adjust their sprint commitments based on recent performance patterns and identified improvement opportunities.
+4. **Performance monitoring** - Continuous velocity decline signals problems like increasing technical debt or team member changes, enabling early discovery
 
-**Example Workflow**: A team with an average velocity of 40 story points enters sprint planning with a refined backlog. They select user stories totaling 38 points, complete stories worth 42 points during the sprint, and update their velocity history to show the new data point for future planning cycles.
+**Benefits and considerations**
 
-## Key Benefits
+Benefits
+- **Realistic planning** - Plans based on actual performance, not wishful thinking
+- **Team autonomy improvement** - Members visualize their pace, advancing self-organization
+- **Stakeholder trust building** - Cumulative track record of "delivering on promises" builds executive confidence
+- **Early risk discovery** - Velocity anomalies quickly reveal problems
 
-**Predictable Planning** enables teams to make realistic commitments about future deliverables based on historical performance data. Velocity provides a reliable foundation for release planning and stakeholder communication about delivery timelines.
+Considerations
+- **No team comparison** - Comparing different teams' velocity causes gaming
+- **Estimation calibration is essential** - Inconsistent story point definitions undermine velocity credibility
+- **Vulnerable to team composition changes** - Member turnover requires recalibration periods
+- **External factor fragility** - Technical debt and external dependencies prevent purely measuring team capacity
 
-**Improved Estimation Accuracy** develops over time as teams calibrate their story point assignments against actual delivery capacity. Regular velocity tracking helps teams refine their estimation skills and achieve more consistent sprint outcomes.
+**Related terms**
 
-**Sustainable Pace** emerges when teams use velocity to avoid overcommitment and maintain consistent delivery rhythms. This approach prevents burnout and supports long-term productivity by establishing realistic work expectations.
+- [Sprint](Sprint.md) - The time unit where velocity is measured
+- [Story Points](Story-Points.md) - The basic unit of velocity measurement
+- [Scrum](Scrum.md) - The agile framework leveraging velocity
+- [Product Backlog](Product-Backlog.md) - The list of items measured by velocity
+- [Definition of Done](Definition-of-Done.md) - The judgment standard when counting velocity
 
-**Stakeholder Transparency** increases through clear communication about team capacity and delivery projections. Velocity metrics provide objective data for discussing scope, timeline, and resource allocation decisions with product owners and executives.
+**Frequently asked questions**
 
-**Continuous Improvement** opportunities become visible through velocity trend analysis and retrospective discussions. Teams can identify factors that positively or negatively impact their performance and implement targeted improvements.
+**Q1: Does continuously increasing velocity mean the team is truly growing?**
 
-**Risk Mitigation** occurs when velocity data reveals capacity constraints or performance issues early in the development process. Teams can adjust scope, address impediments, or request additional resources before problems escalate.
+A: Not necessarily. Early stages (first 3-5 sprints) may show increases from improved estimation accuracy. After stabilizing, that's normal. Continuous increases signal "estimation is drifting," "definition of done is loosening," or "gaming is occurring." What matters is "stability."
 
-**Team Empowerment** grows as teams take ownership of their velocity measurements and use data to guide self-organization. This autonomy supports better decision-making and increased accountability for delivery outcomes.
+**Q2: How many sprints until a new team's velocity becomes trustworthy?**
 
-**Resource Optimization** becomes possible when organizations understand team capacity patterns and can allocate work more effectively. Velocity data supports portfolio management and resource planning across multiple teams.
+A: Typically 3-5 sprints are needed. However, unstable member composition means restarting. Treat the first sprint as "calibration," learning from those results is crucial.
 
-**Quality Focus** strengthens when velocity measurements emphasize completed, high-quality work over partially finished items. This approach encourages teams to maintain standards while delivering value consistently.
+**Q3: When velocity suddenly drops, what should we do?**
 
-**Adaptive Planning** capabilities improve as teams use velocity trends to adjust their approaches and respond to changing requirements. Historical data supports more flexible and responsive project management practices.
-
-## Common Use Cases
-
-**Sprint Planning** represents the primary application where teams use historical velocity to determine sprint capacity and select appropriate user stories from the product backlog for upcoming iterations.
-
-**Release Planning** leverages velocity data to forecast delivery timelines for larger features or product increments, helping product owners make informed decisions about scope and market timing.
-
-**Capacity Forecasting** enables teams to predict how much work they can complete over multiple sprints, supporting long-term planning and resource allocation decisions across project portfolios.
-
-**Performance Monitoring** uses velocity trends to identify when teams are improving their delivery capabilities or experiencing challenges that require management attention and support.
-
-**Scope Negotiation** provides objective data for discussions with stakeholders about what can realistically be delivered within specific timeframes, supporting evidence-based decision-making about feature priorities.
-
-**Team Scaling Decisions** inform organizations about when additional resources might be needed or when team composition changes could impact delivery capacity and project timelines.
-
-**Process Improvement** initiatives use velocity analysis to measure the impact of methodology changes, tool implementations, or training programs on team productivity and delivery quality.
-
-**Budget Planning** incorporates velocity projections to estimate development costs and resource requirements for upcoming projects or product releases, supporting financial planning and approval processes.
-
-**Risk Assessment** examines velocity volatility to identify potential delivery risks and develop mitigation strategies for critical project milestones or customer commitments.
-
-**Vendor Management** applies velocity metrics to evaluate external development team performance and ensure contracted resources meet delivery expectations and quality standards.
-
-## Velocity Measurement Approaches Comparison
-
-| Approach | Measurement Unit | Accuracy Level | Planning Horizon | Team Maturity Required | Best Use Case |
-|----------|------------------|----------------|------------------|------------------------|---------------|
-| Story Points | Relative sizing units | High after calibration | Medium to long-term | Intermediate to advanced | Established Agile teams |
-| Ideal Hours | Time-based estimates | Medium | Short to medium-term | Beginner to intermediate | Traditional transition teams |
-| Feature Count | Number of completed items | Low to medium | Short-term | Beginner | Simple feature development |
-| Business Value Points | Value-weighted units | High with stakeholder input | Long-term | Advanced | Product-focused organizations |
-| T-shirt Sizing | Categorical estimates | Medium | Medium-term | Beginner to intermediate | Early estimation phases |
-| Complexity Points | Technical difficulty focus | Medium to high | Medium-term | Intermediate | Technical debt projects |
-
-## Challenges and Considerations
-
-**Velocity Gaming** occurs when teams manipulate story point assignments or completion criteria to artificially inflate their velocity metrics. This behavior undermines the measurement's value and can lead to unrealistic planning and quality compromises.
-
-**Cross-Team Comparisons** create problematic situations when organizations attempt to use velocity as a performance benchmark between different teams. Each team's context, story point calibration, and work complexity varies significantly, making such comparisons meaningless and potentially harmful.
-
-**Estimation Inconsistency** develops when teams lack proper calibration techniques or change their story point assignments over time. Inconsistent estimation practices reduce velocity reliability and complicate long-term planning efforts.
-
-**External Dependencies** can significantly impact velocity measurements when teams cannot control all factors affecting story completion. Dependencies on other teams, third-party services, or external approvals create velocity volatility that doesn't reflect team performance.
-
-**Team Composition Changes** affect velocity calculations when members join or leave the team, requiring recalibration periods before historical data becomes relevant again. Frequent team changes can make velocity-based planning unreliable.
-
-**Scope Creep** within sprints distorts velocity measurements when additional work is added without proper estimation or when story requirements expand during implementation. Uncontrolled scope changes make velocity data less predictive.
-
-**Technical Debt Impact** can cause velocity fluctuations as teams address accumulated technical debt or work with legacy systems. These factors may not be reflected in story point estimates but significantly affect delivery capacity.
-
-**Pressure for Higher Velocity** from management can create counterproductive behaviors where teams sacrifice quality, cut corners, or inflate estimates to meet arbitrary targets rather than focusing on sustainable delivery.
-
-**New Team Calibration** requires several sprints before velocity data becomes reliable for planning purposes. New teams must establish their estimation baseline and work rhythm before velocity measurements provide meaningful insights.
-
-**Story Splitting Inconsistency** affects velocity when teams change their approach to breaking down user stories, potentially making historical data less relevant for future planning and capacity estimation.
-
-## Implementation Best Practices
-
-**Establish Consistent Estimation Practices** by training the entire team on story point concepts and using standardized techniques like Planning Poker to ensure reliable and repeatable estimation processes across all user stories.
-
-**Maintain Stable Team Composition** whenever possible to preserve the validity of historical velocity data and enable accurate trend analysis for future sprint planning and capacity forecasting.
-
-**Focus on Completed Work Only** by including only fully finished user stories that meet the Definition of Done in velocity calculations, avoiding the temptation to count partially completed work or work in progress.
-
-**Track Velocity Trends Rather Than Individual Sprint Results** to identify meaningful patterns and avoid overreacting to single-sprint variations that may result from external factors or normal work fluctuations.
-
-**Use Rolling Averages** calculated over three to five recent sprints to smooth out velocity variations and provide more stable data for sprint planning and capacity estimation purposes.
-
-**Document Velocity Context** by recording factors that influence sprint performance, such as holidays, team changes, major impediments, or external dependencies that affect the team's delivery capacity.
-
-**Avoid Velocity as Performance Metric** by emphasizing that velocity is a planning tool rather than a measure of team productivity or individual performance, preventing gaming behaviors and maintaining measurement integrity.
-
-**Regular Estimation Calibration** through retrospectives and backlog refinement sessions helps teams maintain consistent story point assignments and improve estimation accuracy over time.
-
-**Transparent Communication** about velocity limitations and appropriate uses helps stakeholders understand the metric's value while preventing misinterpretation or misuse for team comparisons.
-
-**Continuous Improvement Focus** uses velocity data to identify improvement opportunities and measure the impact of process changes, tool implementations, or training initiatives on team performance.
-
-## Advanced Techniques
-
-**Velocity Forecasting Models** incorporate statistical analysis and trend projection to predict future team capacity with confidence intervals, enabling more sophisticated release planning and risk assessment for long-term commitments.
-
-**Capacity-Based Velocity Adjustment** accounts for planned absences, holidays, and team availability changes to provide more accurate sprint planning by adjusting historical velocity data for known capacity variations.
-
-**Multi-Team Velocity Aggregation** enables program-level planning by combining individual team velocities while maintaining appropriate context and avoiding inappropriate performance comparisons between teams.
-
-**Velocity Decomposition Analysis** examines the factors contributing to velocity changes, such as story complexity distribution, technical debt impact, or process improvements, providing deeper insights into team performance drivers.
-
-**Predictive Velocity Analytics** uses machine learning algorithms to identify patterns in velocity data and external factors, improving forecasting accuracy and identifying potential performance issues before they impact delivery.
-
-**Value-Weighted Velocity** incorporates business value metrics into velocity calculations, providing a more comprehensive view of team contribution that balances delivery quantity with strategic impact and customer value.
-
-## Future Directions
-
-**AI-Enhanced Estimation** will leverage machine learning algorithms to improve story point accuracy by analyzing historical data patterns, team performance characteristics, and project complexity factors for more reliable velocity predictions.
-
-**Real-Time Velocity Tracking** through advanced project management tools will provide continuous visibility into sprint progress and velocity trends, enabling more responsive planning adjustments and impediment resolution.
-
-**Cross-Organization Velocity Benchmarking** may develop standardized approaches for comparing team performance across similar contexts while maintaining appropriate statistical controls and avoiding harmful competitive dynamics.
-
-**Integrated Value Stream Metrics** will combine velocity measurements with broader value stream indicators, providing holistic views of delivery effectiveness that encompass quality, customer satisfaction, and business impact.
-
-**Automated Velocity Analysis** will use advanced analytics to identify velocity patterns, predict capacity changes, and recommend optimization strategies based on comprehensive data analysis and industry best practices.
-
-**Blockchain-Based Velocity Verification** could provide immutable records of team performance and story completion, supporting more reliable velocity tracking and preventing data manipulation in distributed development environments.
-
-## References
-
-1. Schwaber, K., & Sutherland, J. (2020). The Scrum Guide. Scrum.org.
-2. Cohn, M. (2019). Agile Estimating and Planning. Prentice Hall.
-3. Rubin, K. S. (2012). Essential Scrum: A Practical Guide to the Most Popular Agile Process. Addison-Wesley Professional.
-4. Derby, E., & Larsen, D. (2006). Agile Retrospectives: Making Good Teams Great. Pragmatic Bookshelf.
-5. Leffingwell, D. (2018). SAFe 4.5 Reference Guide: Scaled Agile Framework for Lean Enterprises. Addison-Wesley Professional.
-6. Kniberg, H. (2015). Scrum and XP from the Trenches. InfoQ Enterprise Software Development Series.
-7. Patton, J. (2014). User Story Mapping: Discover the Whole Story, Build the Right Product. O'Reilly Media.
-8. Anderson, D. J. (2010). Kanban: Successful Evolutionary Change for Your Technology Business. Blue Hole Press.
+A: Root cause identification is everything. Consider team composition changes, new technology adoption, increased bug fixes, estimation standard changes, and more. Retrospectives should thoroughly discuss whether it's "temporary variation" or "structural issues."

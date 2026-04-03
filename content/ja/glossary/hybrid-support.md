@@ -1,6 +1,6 @@
 ---
 title: ハイブリッドサポート
-lastmod: '2025-12-19'
+lastmod: 2026-04-02
 date: '2025-12-19'
 translationKey: hybrid-support
 description: ハイブリッドサポートは、AI(チャットボット、自動化)と人間のエージェントを統合した顧客サービスモデルで、効率的で共感性のある、スケーラブルな顧客体験を提供します。
@@ -10,7 +10,7 @@ keywords:
 - AI
 - 人間のエージェント
 - 自動化
-category: Customer Service
+category: チャットボット・会話AI
 type: glossary
 draft: false
 e-title: Hybrid Support

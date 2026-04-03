@@ -1,23 +1,23 @@
 ---
-title: ユーザーインターフェース（UI）
-lastmod: '2025-12-19'
-date: '2025-12-19'
-translationKey: user-interfaces-ui-definition-types-design-guidelines-use-cases-and-strategic-value
-description: ユーザーインターフェース（UI）を探求：定義、種類（GUI、CLI、VUI、タッチ）、デザイン原則、戦略的価値について学びます。UIがユーザビリティ、ビジネス、未来のテクノロジーに与える影響を理解しましょう。
+title: ユーザーインターフェース
+lastmod: 2026-04-02
+date: 2025-12-19
+translationKey: user-interfaces-ui
+description: ユーザーインターフェース(UI)は、人間がデジタルシステムと操作する接点です。GUI、タッチ、音声など、種類とデザイン原則について学びます。
 keywords:
 - ユーザーインターフェース
 - UIデザイン
 - GUI
 - UX
-- アクセシビリティ
-category: User Experience
+- デザイン
+category: Web開発・デザイン
 type: glossary
 draft: false
 e-title: User Interfaces (UI)
 term: ユーザーインターフェース
 url: "/ja/glossary/user-interfaces---ui-/"
 aliases:
-- "/ja/glossary/user-interfaces---UI-/"
+- "/ja/glossary/User-Interfaces-UI/"
 ---
 ## ユーザーインターフェース(UI)とは?
 

@@ -1,6 +1,7 @@
 ---
 title: Unified API
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Unified-API
 description: 複数の異なるAPIやサービスを標準化された一貫性のあるレイヤーに統合する単一のインターフェース。通信プロトコル、データフォーマット、認証メカニズムを正規化することで複雑性を抽象化し、開発者が各APIを個別に学習することなく、さまざまなサードパーティサービスと統合できるようにします。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - 単一インターフェース
 - API抽象化
 - サービス統合
-category: Application & Use-Cases
+category: クラウド・インフラ
 type: glossary
 draft: false
 e-title: Unified API

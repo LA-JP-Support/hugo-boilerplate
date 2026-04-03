@@ -1,242 +1,82 @@
 ---
-title: "Model Serving"
-date: 2025-12-18
-lastmod: 2025-12-18
-translationKey: "model-serving"
-description: "A system that makes trained AI models available as online services so applications can request predictions from them in real-time."
-keywords: ["Model Serving", "Machine Learning", "AI", "Inference", "Model Deployment"]
-category: "AI Infrastructure & Deployment"
-type: "glossary"
+title: Model Serving
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: Model-Serving
+description: Model serving is the technology for providing trained AI models in a usable state to applications and continuously processing prediction requests. It's essential for production operation.
+keywords:
+- Model serving
+- Model deployment
+- Real-time predictions
+- Batch processing
+- API
+category: AI & Machine Learning
+type: glossary
 draft: false
+url: /en/glossary/Model-Serving/
 ---
 
 ## What is Model Serving?
 
-Model serving is the set of operational practices and technologies enabling trained ML models to be used in production, typically as service accessible over network. This involves exposing models to other applications or users via REST or gRPC API so they can process new data and return predictions.
+**Model serving is the process of providing trained AI models in a usable state to applications and continuously processing prediction requests.** It aims to efficiently execute and scale models from development to production.
 
-The process separates model development from deployment and usage, allowing scalable and reliable use of AI in real-world software. Model serving transforms static trained models into dynamic production services that power AI-driven features.
+> **In a nutshell:** Like a kitchen completing dishes and a waiter delivering them to customers—models need an efficient delivery mechanism.
 
-## How Model Serving Works
+**Key points:**
 
-### Typical Workflow
+- **What it does:** Make AI models available for applications to use
+- **Why it's needed:** Integrate model predictions into business systems
+- **Who uses it:** MLOps engineers, backend developers, infrastructure engineers
 
-**Train Model:** Use ML framework (TensorFlow, PyTorch, scikit-learn, XGBoost) to build and train model on historical data.
+## Why it matters
 
-**Package Model:** Serialize or export trained model to portable format (.pkl, .pt, .onnx, .pb).
+Great models become worthless if production can't execute them efficiently. Multi-second predictions frustrate users who abandon applications. Model serving creates fast prediction returns.
 
-**Wrap with API:** Use frameworks like FastAPI, Flask, or specialized tools like TensorFlow Serving, TorchServe, or KServe to expose model as HTTP/gRPC API.
+Scalability is equally important. Peak traffic brings thousands of requests per second. Serving frameworks must handle this efficiently.
 
-**Deploy Infrastructure:** Deploy model and API to server, container, Kubernetes pod, or cloud-managed service.
+## How it works
 
-**Handle Requests:** Incoming data (JSON, images, tabular) sent to serving endpoint, model processes it, result returned.
+Model serving has several approaches:
 
-**Monitor and Scale:** Use monitoring tools to track usage, latency, errors. Autoscale resources as needed and update model version through CI/CD.
+**Real-time APIs** respond immediately to user requests. REST APIs or gRPC implementations demand millisecond-level latency. TensorFlow Serving, KServe, and Seldon are popular frameworks.
 
-### Architecture Pattern
+**Batch processing** handles large data sets together. Useful when immediate responses aren't required (daily sales reports). Simpler to implement with good computational efficiency.
 
-Data Source → Model Serving API → Trained Model → Prediction Output
+**Streaming** processes continuous data streams. Used for real-time analytics, often combined with systems like Kafka.
 
-Monitoring and scaling services surround API ensuring health and performance. Centralized management enables multiple applications to use same model endpoint.
+**Edge serving** runs models on smartphones and IoT devices. TensorFlow Lite and ONNX Runtime are common.
 
-## Why Model Serving is Needed
+Serving frameworks manage multiple model versions, A/B testing, auto-scaling, health checks, and logging.
 
-**Real-Time Inference:** Enables instant decisioning (fraud detection, recommendations, personalization) with strict latency requirements under 100ms.
+## Real-world use cases
 
-**Batch Processing:** Supports efficient scoring of large datasets (nightly churn prediction over millions of records).
+**E-commerce recommendations** — Return recommendations in tens of milliseconds when users view pages. Fast serving is essential.
 
-**Centralized Management:** Decouples model logic from application code; multiple apps can use same model endpoint.
+**Real-time fraud detection** — Return fraud judgments instantly during credit card transactions. Even slight delays matter.
 
-**Versioning and Updates:** Allows safe deployment, A/B testing, rollback, and canary releases of models.
+**Chatbots** — Return answers within seconds. Chains multiple models (text processing, response generation).
 
-**Scalable Infrastructure:** Leverages cloud/serverless autoscaling to handle variable load and optimize costs.
+## Benefits and considerations
 
-## Key Features
+**Benefits** — Fast predictions, scalability, efficient multi-model management, A/B testing support.
 
-| Feature | Description |
-|---------|-------------|
-| **API Access** | Serve models via HTTP/REST, gRPC, or custom protocols |
-| **Scalability** | Autoscale up/down based on demand, including scale-to-zero |
-| **Low Latency** | Sub-100ms response times for real-time applications |
-| **Model Versioning** | Deploy/manage multiple versions, support rollbacks and A/B testing |
-| **Monitoring** | Dashboards for usage, errors, latency, model drift, resource utilization |
-| **Security** | Authentication, authorization, encryption (TLS), compliance |
-| **Integration** | Connect to feature stores, data sources, orchestration tools |
-| **Cost Optimization** | Dynamically allocate resources, pay-per-use billing |
+**Considerations** — Framework selection, setup, and operational costs. Model version management becomes complex.
 
-## Use Cases
+## Related terms
 
-### E-commerce Recommendations
+- **[Model Deployment](Model-Deployment.md)** — Entire process leading to serving
+- **[API Design](API-Design.md)** — Foundation for real-time serving
+- **[Caching](Caching.md)** — Serving performance optimization
+- **[Load Balancing](Load-Balancing.md)** — Scalability realization
+- **[A/B Testing](AB-Testing.md)** — Model comparison in serving environments
 
-Major e-commerce site exposes recommendation model via API enabling website, mobile app, and chatbot to request product suggestions based on user behavior.
+## Frequently asked questions
 
-### Healthcare Diagnostics
+**Q: What's the difference between serving and deployment?**
+A: Deployment asks "how do we get models to production?" Serving asks "how do we efficiently keep them running?" Serving is the main job after deployment.
 
-Hospitals deploy deep learning models for analyzing medical images; radiologists upload scans processed by secure serving endpoint returning diagnostic probabilities.
+**Q: When to use real-time vs. batch?**
+A: Use real-time if users wait (web apps, chatbots). Use batch if they don't (report generation, recommendation emails).
 
-### Financial Fraud Detection
-
-Financial institutions use low-latency model serving to score each transaction for fraud in real time, flagging anomalies within milliseconds.
-
-### Large Language Models
-
-Chatbots and search engines utilize LLMs (GPT-4, Llama) via serving endpoints for semantic search, conversational AI, or document summarization.
-
-### Batch Inference Pipelines
-
-Telecommunications firms use batch model serving to score churn risk for millions of customers overnight leveraging distributed serving infrastructure.
-
-## Serving Architectures
-
-### Monolithic vs. API-Based
-
-**Monolithic:** Model code embedded in application. Updating requires app redeployment; not reusable by other services.
-
-**API-Based (Service-Oriented):** Model is standalone service accessible via API—supports sharing, centralized management, independent updates.
-
-### Batch vs. Real-Time
-
-**Batch:** Processes large datasets on schedule (nightly jobs).
-
-**Real-Time:** Responds to individual requests with low latency (fraud checks, recommendations).
-
-### Deployment Options
-
-**On-Premise:** Full control but high cost and maintenance.
-
-**Cloud/Serverless:** Managed, elastic, scalable, pay-as-you-go.
-
-**Hybrid:** Sensitive models/data on-premise; non-sensitive in cloud.
-
-## Operational Considerations
-
-### Scalability
-
-System must handle 10x+ traffic spikes critical for LLMs and viral apps. Use autoscaling and scale-to-zero features. For LLMs, GPU allocation is often main bottleneck.
-
-### Latency
-
-Real-time apps require sub-100ms inference; batch jobs can tolerate higher latency but must maximize throughput. Optimize for hardware acceleration (GPUs, TPUs), efficient serialization, minimal network hops.
-
-### Cost and Infrastructure
-
-**On-Premise:** High capex (Nvidia A100 GPUs >$10,000 each).
-
-**Cloud:** Opex/pay-per-use (AWS GPU: $1–32/hr).
-
-**Managed Platforms:** Optimize for cost but may restrict deep customization.
-
-### Security and Privacy
-
-Use authentication/authorization, TLS encryption, endpoint access controls. Managed platforms often offer certifications (ISO 27001). On-premise offers full data residency control important for regulated industries.
-
-### Monitoring
-
-Real-time dashboards for latency, error rates, throughput. Model drift detection and data anomaly tracking. Automated alerting for performance degradation.
-
-## Popular Platforms and Frameworks
-
-| Platform | Best For | Key Features |
-|----------|----------|--------------|
-| **TensorFlow Serving** | TensorFlow models | Scalable, production-ready serving |
-| **TorchServe** | PyTorch models | Multi-model, REST/gRPC APIs |
-| **KServe** | Kubernetes-native | Multi-framework, A/B testing |
-| **Amazon SageMaker** | Managed cloud | Training, deployment, endpoints, monitoring |
-| **Azure ML** | Managed cloud | Training, serving, versioning, security |
-| **Databricks Model Serving** | Unified ML platform | Real-time/batch, serverless, monitoring |
-| **Hugging Face Inference** | NLP/LLM models | Fast transformer model deployment |
-
-## Implementation Example
-
-Simple FastAPI-based serving:
-
-```python
-from fastapi import FastAPI
-import pickle
-
-# Load model
-with open("model.pkl", "rb") as f:
-    model = pickle.load(f)
-
-app = FastAPI()
-
-@app.post("/predict")
-def predict(data: dict):
-    features = [data['feature1'], data['feature2']]
-    prediction = model.predict([features])
-    return {"prediction": prediction[0]}
-```
-
-Package with Docker, deploy to Kubernetes, cloud VM, or managed platform.
-
-## Benefits and Drawbacks
-
-### Benefits
-
-**Scalability:** Handle unpredictable or bursty workloads via cloud/serverless autoscaling.
-
-**Cost Efficiency:** Pay for actual usage; avoid upfront hardware investments.
-
-**Reduced DevOps:** Managed platforms simplify infrastructure, security, and monitoring.
-
-**Faster Production:** Shorten time from model development to deployment.
-
-**Centralized Monitoring:** Unified dashboards for all model endpoints.
-
-### Drawbacks
-
-**Data Privacy:** Using external/managed platforms may raise compliance concerns.
-
-**Customization Limits:** Managed services may restrict advanced tuning or hardware options.
-
-**Vendor Lock-in:** Switching platforms can require re-engineering.
-
-**Cost Predictability:** Usage-based pricing can fluctuate with traffic spikes.
-
-**Security Responsibility:** On-premise deployments require in-house hardening and monitoring.
-
-## Model Serving vs. Model Deployment
-
-**Model Deployment:** Act of moving trained model into production environment (uploading, registering, containerizing).
-
-**Model Serving:** Ongoing operation making deployed model available for inference requests (API, batch).
-
-Deployment is how you deliver model to production; serving is how you make it available for real-world use.
-
-## Best Practices
-
-**Framework Compatibility:** Verify ML framework supported (TensorFlow, PyTorch, Hugging Face).
-
-**Inference Mode:** Determine real-time or batch inference requirements.
-
-**Performance Requirements:** Define latency and throughput requirements.
-
-**Data Sensitivity:** Assess privacy and regulatory requirements.
-
-**Priority Balancing:** Decide between cost, flexibility, or speed priorities.
-
-**Update Strategy:** Plan how to monitor and update models in production.
-
-**Vendor Independence:** Consider vendor lock-in implications.
-
-**Testing:** Comprehensive testing before production deployment.
-
-**Documentation:** Maintain documentation for endpoints, versioning, rollback procedures.
-
-## References
-
-- [Databricks: Model Serving Documentation](https://docs.databricks.com/aws/en/machine-learning/model-serving/)
-- [Databricks: Model Serving Tutorial](https://docs.databricks.com/aws/en/machine-learning/model-serving/model-serving-intro)
-- [Backblaze: AI 101 – What Is Model Serving?](https://www.backblaze.com/blog/ai-101-what-is-model-serving/)
-- [Hopsworks: Model Serving Dictionary](https://www.hopsworks.ai/dictionary/model-serving)
-- [Hopsworks: KServe Documentation](https://www.hopsworks.ai/dictionary/kserve)
-- [UbiOps: What Is AI Model Serving?](https://ubiops.com/what-is-ai-model-serving/)
-- [Unify: Model Serving Multi-Layered Landscape](https://unify.ai/blog/cloud-model-serving)
-- [Seldon: ML Model Serving Strategies Guide](https://www.seldon.io/an-essential-guide-to-ml-model-serving-strategies-including-llms/)
-- [TensorFlow: Serving Guide](https://www.tensorflow.org/tfx/guide/serving)
-- [PyTorch: TorchServe Documentation](https://pytorch.org/serve/)
-- [FastAPI Documentation](https://fastapi.tiangolo.com/)
-- [Amazon SageMaker](https://aws.amazon.com/sagemaker/)
-- [Azure Machine Learning](https://azure.microsoft.com/en-us/products/machine-learning)
-- [Hugging Face Inference Endpoints](https://huggingface.co/docs/inference-endpoints/index)
-- [AWS EC2 Pricing](https://aws.amazon.com/ec2/pricing/)
-- [YouTube: Model Serving 101](https://www.youtube.com/watch?v=YAxDyHvLzoE)
+**Q: What's the main bottleneck?**
+A: Usually I/O and networking, not model inference itself. Optimize with caching, batching, and async processing.

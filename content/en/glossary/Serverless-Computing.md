@@ -1,248 +1,76 @@
 ---
-title: "Serverless Computing"
-date: 2025-12-18
-lastmod: 2025-12-18
-translationKey: "serverless-computing"
-description: "A cloud service where you write code without managing servers, paying only for what you use while the provider handles all the technical infrastructure automatically."
-keywords: ["serverless computing", "cloud computing", "FaaS", "BaaS", "AWS Lambda"]
-category: "AI Infrastructure & Deployment"
-type: "glossary"
+title: Serverless Computing
+translationKey: serverless-computing
+description: Serverless computing is an execution model where infrastructure management is delegated to cloud providers, allowing developers to focus on code.
+keywords:
+- serverless computing
+- cloud computing
+- FaaS
+- AWS Lambda
+- event-driven
+category: Cloud & Infrastructure
+type: glossary
+date: 2026-04-02
+lastmod: 2026-04-02
 draft: false
+url: "/en/glossary/Serverless-Computing/"
 ---
 
 ## What is Serverless Computing?
 
-Serverless computing is a cloud execution model in which cloud providers (like AWS, Google Cloud, Azure, IBM Cloud, and others) automatically manage the infrastructure required to run application code. This model enables developers to build and deploy applications without provisioning, operating, or scaling servers themselves. Despite the term, physical servers are always involved; "serverless" refers to the abstraction of server management, shifting operational responsibilities to the vendor. Developers focus exclusively on writing business logic, while the underlying compute, networking, scaling, patching, and fault tolerance are handled by the provider.
+**Serverless computing is a cloud execution model where the cloud provider handles all server management, allowing developers to focus on code execution.** Physical servers exist in the background, but developers don't need to be aware of them. Despite the name, servers don't "not exist"—rather, their management is "invisible."
 
-Serverless computing represents a fundamental shift in how applications are built and deployed, moving from infrastructure management to pure code execution. This paradigm enables rapid development, automatic scaling, and pay-per-use pricing, making it ideal for modern cloud-native applications.
+> **In a nutshell:** Computing where you use only what you need and pay only for what you use, like water or electricity.
 
-**Analogy:** Serverless computing can be compared to using a utility like water or electricity: as a user, you simply turn the tap or flip a switch, consuming only what you need and paying accordingly, with no concern for the underlying infrastructure.
+**Key points:**
 
-## Core Characteristics
+- **What it does:** Executes functions in response to events and automatically scales
+- **Why it's needed:** Eliminates infrastructure management complexity and increases development speed
+- **Who uses it:** Startups to large enterprises, IoT, data processing, and many other use cases
 
-**Infrastructure Abstraction:** Developers never interact directly with compute resources. The cloud provider handles all server lifecycle management and scaling.
+## Why it matters
 
-**Event-Driven Execution:** Code is deployed as functions that are triggered by events (HTTP requests, file uploads, database changes, scheduled tasks).
+Traditional server management is complex and costly. Provisioning, scaling, patching, and backing up servers consumed time beyond development itself. With serverless models, all of this is automated.
 
-**Pay-Per-Use Pricing:** Billing is based solely on execution metrics—such as the number of requests, execution duration, and resources consumed—resulting in no charges for idle or unused capacity.
+Furthermore, pay-as-you-go pricing means you only pay for actual usage. With zero idle costs, unpredictable traffic fluctuations are easier to handle.
 
-**Short-Lived, Stateless Functions:** Serverless functions are typically designed for short, atomic execution. Any state is stored externally, such as in databases or object storage.
+## How it works
 
-**Rapid Deployments:** Deployment involves uploading code to the cloud, with updates requiring only code replacement and redeployment.
+Serverless architecture operates on an event-driven model. When users send requests, those events trigger function execution.
 
-**Automatic Scaling:** Instantly scales from zero to millions of requests, without manual intervention or configuration.
+**Execution flow:** HTTP request arrives → cloud provider automatically starts container → executes function → returns result → unused containers stop
 
-## How Serverless Works
+Multiple [FaaS (Function as a Service)](FaaS.md) platforms exist, such as [AWS Lambda](AWS-Lambda.md) and Google Cloud Functions. These can process millions of requests simultaneously with minimal latency.
 
-Serverless architectures operate on an event-driven model. Functions—discrete, stateless units of logic—are invoked in response to external or internal triggers. The lifecycle of a serverless function typically follows these steps:
+## Real-world use cases
 
-**1. Trigger:** An event, such as an HTTP request, file upload, message queue update, or scheduled timer, initiates the execution of a function.
+**Automated image processing**
+When files are uploaded to S3, functions automatically start to generate and optimize thumbnails.
 
-**2. Provisioning:** The provider allocates necessary compute resources (CPU, memory, networking) within milliseconds, often using containerization technology under the hood.
+**Real-time data processing**
+IoT device data is received via [Kafka](Kafka.md) and real-time analysis is executed by serverless functions.
 
-**3. Execution:** The function runs, processes the event, and returns a result. Execution environments are ephemeral.
+**Web API backend**
+Multiple serverless functions are exposed via API Gateway to build a scalable backend.
 
-**4. Scaling & Termination:** The provider can instantly scale to handle multiple concurrent events by running multiple instances in parallel. When there are no more events, resources are deallocated, and the environment can "scale to zero."
+## Benefits and considerations
 
-**Example:**  
-A user uploads an image to a cloud storage bucket. The upload event triggers a serverless function that resizes the image and stores different variants back into the bucket for use in different contexts (thumbnails, previews, etc.).
+**Benefits:** Low cost, zero operational burden, automatic scaling, and fast deployment.
 
-## Serverless vs. Other Cloud Models
+**Considerations:** "Cold start" latency can occur on first execution. Additionally, vendor lock-in risks exist and execution time limits apply. It's not suitable for long-running or complex workflows.
 
-| Attribute | Serverless | PaaS | Containers | VMs |
-|-----------|-----------|------|-----------|-----|
-| **Admin Burden** | Minimal | Medium | Medium–High | High |
-| **Cost Model** | Pay-per-use | Pay-per-instance | Pay-per-container | Pay-per-VM |
-| **Maintenance** | None | Low | Medium | High |
-| **Scalability** | Automatic, instant | Manual/Auto | Manual/Auto | Manual/Auto |
-| **Statelessness** | Typically stateless | Stateful/stateless | Stateful/stateless | Stateful/stateless |
-| **Provisioning Time** | Milliseconds | Minutes | Minutes | Minutes–Hours |
-| **Idle Cost** | $0 | Incurred | Incurred | Incurred |
+## Related terms
 
-**Serverless** abstracts nearly all infrastructure management and scales seamlessly to demand, billing only for actual usage.
+- **[Cloud Computing](Cloud-Computing.md)** — parent concept of serverless
+- **[FaaS](FaaS.md)** — function-based execution model
+- **[AWS Lambda](AWS-Lambda.md)** — representative serverless platform
+- **[Microservices](Microservices.md)** — often implemented with serverless
+- **[Auto-Scaling](Auto-Scaling.md)** — key feature of serverless
 
-**PaaS** reduces some operational overhead but typically requires manual scaling and incurs costs for running instances, even when idle.
+## Frequently asked questions
 
-**Containers** provide portability and flexibility but require orchestration, scaling, and lifecycle management.
+**Q: Is it really okay to not manage servers?**
+A: Yes. Security patches and scaling are all handled by the provider. You can focus on function code.
 
-**VMs** offer full control but place administrative responsibility and scaling on the user.
-
-## Types of Serverless Architecture
-
-### Function as a Service (FaaS)
-
-FaaS allows developers to deploy individual functions or code snippets that are executed in response to events. The platform handles the orchestration, scaling, and lifecycle of these functions.
-
-**Key characteristics:**
-- Event-driven
-- Stateless
-- Short-lived executions
-- Automatic scaling
-
-**Examples:** AWS Lambda, Google Cloud Functions, Azure Functions, IBM Cloud Code Engine
-
-### Backend as a Service (BaaS)
-
-BaaS offers managed backend services such as databases, authentication, messaging, and storage through APIs, eliminating the need for custom backend code or infrastructure.
-
-**Examples:** Firebase, AWS Amplify, Auth0
-
-### Other Serverless Forms
-
-**Serverless Databases:** Automatically scale database capacity (e.g., Amazon Aurora Serverless)
-
-**Serverless Containers:** Run containers without managing servers (e.g., AWS Fargate, Google Cloud Run)
-
-**Serverless Edge Computing:** Executes functions closer to end-users for lower latency (Cloudflare Workers)
-
-**Serverless Event Streaming:** Managed event pipelines (Azure Event Grid, AWS EventBridge)
-
-## Advantages of Serverless Computing
-
-**Cost Efficiency**  
-Billing is strictly based on actual compute consumption—no costs for idle capacity or pre-provisioned infrastructure. This is particularly cost-effective for variable workloads.
-
-**Operational Efficiency**  
-Cloud providers handle server provisioning, patching, updates, and scaling, freeing developers from infrastructure management and accelerating deployment cycles.
-
-**Automatic & Infinite Scalability**  
-Serverless functions scale seamlessly to accommodate unpredictable or fluctuating workloads, ensuring applications remain responsive regardless of demand spikes.
-
-**Accelerated Development Velocity**  
-Developers focus on business logic and feature development, resulting in faster time-to-market and improved product quality.
-
-**Simplified Backend Code**  
-Serverless architectures promote modular, microservices-oriented design, which enhances maintainability and supports rapid iteration.
-
-**Integrated Ecosystem**  
-Major cloud providers offer integrated services (e.g., databases, AI/machine learning, messaging) that work natively with serverless platforms.
-
-## Disadvantages and Limitations
-
-**Cold Start Latency**  
-Functions may experience additional startup latency, known as "cold starts," when invoked after periods of inactivity. This can impact user experience in latency-sensitive applications.
-
-**Vendor Lock-In**  
-Migrating serverless workloads between cloud providers can be complex, as proprietary APIs, configurations, and runtimes may not be portable.
-
-**Limited Control**  
-Developers have less visibility and fewer customization options for the runtime environment, networking, and security controls compared to traditional models.
-
-**Suitability Constraints**  
-Serverless is less ideal for long-running or stateful applications, as most platforms impose execution time limits and require external state management.
-
-**Debugging and Monitoring Complexity**  
-Abstraction of infrastructure can hinder deep troubleshooting, log aggregation, and system tracing.
-
-**Potential Higher Cost for Long-Running Processes**  
-For compute-intensive, long-duration tasks, serverless pricing may exceed that of reserved or dedicated infrastructure.
-
-**Security Considerations**  
-Each function can be a potential attack entry point, increasing the attack surface if not properly secured.
-
-## Common Use Cases
-
-### API Backends
-
-Build scalable APIs using serverless functions as endpoints. Coca-Cola Freestyle uses AWS Lambda for mobile app backend.
-
-### Real-Time Data Processing and Analytics
-
-Process streaming data from IoT, user activity, or logs for immediate insights. Genentech utilizes AWS Lambda for rapid clinical data analysis.
-
-### Batch Processing
-
-Perform high-volume ETL, data backups, or reporting jobs. Liberty Mutual processes 100 million global financial transactions using serverless workflows.
-
-### Business Process Automation
-
-Automate workflows, data pipelines, and system integrations. Taco Bell delivers real-time menu data to partners using serverless.
-
-### Image and Video Processing
-
-Automatically generate image thumbnails, optimize video streams, or convert file formats upon upload.
-
-### AI Inference & Applications
-
-Host scalable AI endpoints for real-time inference, chatbots, or recommendation engines. Google Cloud Run integrates serverless with AI model deployment.
-
-### IoT and Event-Driven Apps
-
-Respond to unpredictable device events or sensor data.
-
-### DevOps & CI/CD Automation
-
-Automate build, testing, and deployment pipelines using serverless triggers.
-
-### Third-Party Integrations and Scheduled Tasks
-
-Sync data between SaaS tools, generate scheduled reports, or run periodic jobs without dedicated infrastructure.
-
-## Security and Operations
-
-### Shared Responsibility Model
-
-**Cloud Provider Responsibilities:** Secure the infrastructure, virtualization, OS patching, and managed backend services.
-
-**Customer Responsibilities:** Secure application code, manage identity and access (IAM policies), validate inputs, and protect API endpoints.
-
-### Best Practices for Securing Serverless Applications
-
-**Principle of Least Privilege:** Assign minimal permissions to functions and services.
-
-**Input Validation:** Sanitize and validate all incoming data to prevent injection and other attacks.
-
-**Monitoring and Logging:** Use integrated tools (AWS CloudWatch, Google Cloud Monitoring, IBM Log Analysis) for real-time monitoring, anomaly detection, and troubleshooting.
-
-**API Security:** Protect endpoints with authentication, authorization, and rate limiting (e.g., API Gateway).
-
-**Dependency Management:** Regularly update and audit third-party packages to reduce vulnerabilities.
-
-**Network Controls:** Restrict function network access, using VPC integration or firewall rules where available.
-
-## Getting Started
-
-### Try Serverless Services
-
-- AWS Lambda
-- Google Cloud Functions
-- IBM Cloud Code Engine
-- Azure Functions
-- Red Hat OpenShift Serverless
-
-### Tutorials & Hands-On Labs
-
-- IBM Cloud Code Engine "Hello World"
-- AWS Serverless Getting Started
-- Google Cloud Run Quickstart
-
-### Start building your first serverless application today
-
-Sign up for a free AWS account, get Google Cloud credits, or try the IBM Cloud free tier.
-
-## References
-
-- [AWS: What is Serverless Computing?](https://aws.amazon.com/what-is/serverless-computing/)
-- [Google Cloud: What is Serverless Computing?](https://cloud.google.com/discover/what-is-serverless-computing)
-- [Red Hat: What is Serverless?](https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless)
-- [IBM: What is Serverless Computing?](https://www.ibm.com/think/topics/serverless)
-- [Alpacked: Full Guide to Serverless](https://alpacked.io/blog/what-is-serverless-computing/)
-- [TechTarget: Top Benefits and Disadvantages](https://www.techtarget.com/searchcloudcomputing/tip/Top-benefits-and-disadvantages-of-serverless-computing)
-- [Okta: Serverless Computing](https://www.okta.com/identity-101/serverless-computing/)
-- [YouTube: Serverless Essentials by Google Cloud](https://www.youtube.com/watch?v=PBw9vD_BO5A)
-- [Red Hat: What is FaaS?](https://www.redhat.com/en/topics/cloud-native-apps/what-is-faas)
-- [Firebase](https://firebase.google.com/)
-- [AWS Lambda](https://aws.amazon.com/lambda/)
-- [Google Cloud Functions](https://cloud.google.com/functions)
-- [Azure Functions](https://azure.microsoft.com/en-us/products/functions/)
-- [IBM Cloud Code Engine](https://cloud.ibm.com/codeengine)
-- [AWS Amplify](https://aws.amazon.com/amplify/)
-- [Auth0](https://auth0.com/)
-- [Amazon Aurora Serverless](https://aws.amazon.com/rds/aurora/serverless/)
-- [AWS Fargate](https://aws.amazon.com/fargate/)
-- [Google Cloud Run](https://cloud.google.com/run)
-- [Cloudflare Workers](https://workers.cloudflare.com/)
-- [Azure Event Grid](https://azure.microsoft.com/en-us/products/event-grid/)
-- [AWS EventBridge](https://aws.amazon.com/eventbridge/)
-- [Knative: Serverless on Kubernetes](https://knative.dev/)
-- [Red Hat OpenShift Serverless](https://www.redhat.com/en/technologies/cloud-computing/openshift/serverless)
+**Q: Can it be used for all processing?**
+A: It's designed for short-duration processing. Complex image processing or time-consuming tasks are better served by other models.

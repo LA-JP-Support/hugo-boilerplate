@@ -1,285 +1,131 @@
 ---
 title: Telemetry
-date: 2025-12-18
-lastmod: 2025-12-18
+date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: telemetry-glossary-definition-use-cases
-description: Telemetry is the automated process of collecting, transmitting, and analyzing
-  data from remote sources for monitoring, analysis, and decision-making. Learn its
-  types, benefits, and implementation.
-keywords: ["telemetry", "observability", "data collection", "OpenTelemetry", "monitoring"]
-category: AI Infrastructure & Deployment
+description: Telemetry automatically collects and analyzes data from systems for real-time monitoring. It's the foundational technology for system visibility.
+keywords:
+- Telemetry
+- Observability
+- Data Collection
+- OpenTelemetry
+- Monitoring
+category: Data & Analytics
 type: glossary
 draft: false
+url: /en/glossary/telemetry/
 ---
 
 ## What is Telemetry?
 
-Telemetry is the automated process of collecting, transmitting, and analyzing data from remote or distributed sources to a central system for purposes such as monitoring, analysis, optimization, and decision-making. Telemetry allows organizations to observe the health, performance, and usage of physical devices, software applications, infrastructure, and user interactions—often in real time and across highly distributed environments.
+**Telemetry is the process of automatically collecting, transmitting, and analyzing data from distributed systems or devices to a central system.** Derived from Greek words "tele" (remote) and "metron" (measurement), in IT environments it serves as the foundational technology for **real-time monitoring and analysis**. It automatically gathers system metrics like CPU usage, API response times, and user interactions without manual intervention.
 
-**Etymology:** The term "telemetry" derives from the Greek *tele* (remote) and *metron* (measure), literally signifying "remote measurement." Originally developed for industrial automation and scientific research, telemetry is now fundamental to IT, AI infrastructure, cloud operations, and cybersecurity.
+> **In a nutshell:** The mechanism for automatically monitoring system health in real-time to quickly respond to problems.
 
-## How Telemetry Works: Step-by-Step
+### Key points:
+
+- **Automation:** Agents (SDKs) automatically collect data without manual intervention
+- **Real-time:** Monitoring and analysis happen immediately, enabling quick response
+- **Multiple data types:** Supports metrics, logs, events, traces, and other formats
+- **Distributed environment support:** Makes complex dependencies visible in microservices and cloud environments
+- **OpenTelemetry:** Open standards avoid vendor lock-in
+
+## Why it matters
+
+When systems lack telemetry, problems often go undetected until they impact users. Good telemetry provides constant visibility into system health, enabling teams to identify issues before they become critical. In distributed architectures, tracing requests across services becomes nearly impossible without telemetry. It enables data-driven optimization decisions and rapid incident response.
+
+## How it works: Five steps
 
 ### 1. Data Collection
+Software agents (SDKs) or sensors gather metrics like CPU usage, API response time, user interactions. For example, installing @opentelemetry/sdk in a Node.js application automatically records HTTP requests, database queries, and errors.
 
-Sensors (hardware or software agents) gather raw data from endpoints—these can be servers, IoT devices, applications, or network devices. In IT, software-based collectors (agents or SDKs) are deployed within code or as sidecar processes, capturing metrics such as CPU utilization, API response times, and user interactions.
-
-### 2. Data Conversion and Formatting
-
-Raw readings are digitized and structured into standardized formats—commonly JSON, Protocol Buffers (protobuf), or the OpenTelemetry Protocol (OTLP). Metadata is attached, including timestamps, source IDs, environment tags, and context.
+### 2. Data Transformation
+Raw data is standardized into JSON, Protocol Buffers, or OTLP format, adding timestamps and metadata.
 
 ### 3. Data Transmission
+Using protocols like HTTP, gRPC, or OTLP, data is securely sent to central systems. Transmission can be real-time streaming (low latency needed) or batch sending (efficient for large volumes).
 
-Data is securely transmitted to a central system using protocols such as HTTP, gRPC, MQTT (for IoT), SNMP (for network devices), or OTLP for observability pipelines. Transmission modes include real-time streaming or batched intervals, depending on latency and resource requirements.
+### 4. Storage
+Data accumulates in databases, data lakes, or time-series databases (TSDB), with retention policies applied. Technology choices include:
+- Prometheus, InfluxDB: for metrics
+- Elasticsearch: for logs and events
+- Jaeger: for distributed traces
 
-### 4. Data Storage
+### 5. Analysis and Visualization
+Platforms like Grafana, Splunk, Datadog process and aggregate data, displaying it on dashboards.
 
-Received telemetry is ingested into databases, data lakes, or time-series databases (TSDB). Storage infrastructure often enforces data retention policies, applies encryption, and implements tiered storage to balance cost and performance.
+## Data types (MELT model)
 
-### 5. Data Analysis and Visualization
+| Type | Description | Example |
+|------|-------------|---------|
+| **M**etrics | Quantitative time-series data | CPU usage (95%), request count (1000/sec) |
+| **E**vents | Important system changes | User login, deployment completion |
+| **L**ogs | Detailed activity records | Error messages, stack traces |
+| **T**races | Request paths through systems | How a user request flows through microservices |
 
-Analytical tools and observability platforms (such as Grafana, Splunk, New Relic, or Datadog) process, aggregate, and visualize telemetry data. Teams leverage dashboards and alerting systems to identify trends, anomalies, and optimize system behavior.
+## Real-world examples
 
-**Analogy:** Telemetry in IT is akin to a medical patient monitor: vital signs are continuously recorded and displayed in real time, allowing clinicians (engineers or admins) to respond rapidly to changes.
+**SaaS Provider with 800 Microservices:**
+- OpenTelemetry SDK
+- Central observability backend (Grafana)
+- Metrics, traces, logs feeding
+- Real-time dashboards + auto-alerts + root cause analysis
 
-## Types of Telemetry Data
+**Results:**
+- Incident detection: within 1 minute
+- Mean Time to Recovery (MTTR): 50% reduction
+- Minimal user impact
 
-### 1. Metrics
+## Benefits
 
-**Definition:** Quantitative, numeric time-series measurements reflecting system health and performance
+- **Continuous performance monitoring:** 24/7 system health visibility
+- **Predictive maintenance:** Detect trends, predict failures proactively
+- **Security enhancement:** Detect suspicious activity immediately
+- **Data-driven decisions:** Optimize development priorities based on usage data
+- **Cost optimization:** Identify wasted resources, control cloud spending
 
-**Examples:** CPU/memory usage, request latency, error rates, disk I/O, throughput
+## Implementation best practices
 
-**Use Case:** Triggering an alert when memory usage exceeds 90% for a sustained period
+**Clear strategic alignment:** Ensure telemetry implementation supports business goals
 
-### 2. Events
+**Thorough requirements assessment:** Define what to monitor before choosing solutions
 
-**Definition:** Discrete, timestamped occurrences representing significant system state changes or actions
+**Early stakeholder engagement:** Involve key users and decision-makers in planning
 
-**Examples:** User logins, deployments, payment failures, configuration changes
+**Comprehensive training:** Ensure teams understand telemetry implementation and maintenance
 
-**Use Case:** Logging all failed authentication attempts for security analysis
+**Start with pilot programs:** Test in managed environments before full deployment
 
-### 3. Logs
+**Establish strong governance:** Create clear decision structures and communication protocols
 
-**Definition:** Textual or structured records providing a chronological account of system and application activity
+**Monitor progress:** Implement robust tracking to assess progress and identify issues
 
-**Examples:** Application error logs, access logs, system restarts, stack traces
+**Plan continuous improvement:** Build feedback loops and optimization processes
 
-**Use Case:** Investigating an outage by correlating error logs around the incident time
+## Related terms
 
-### 4. Traces
+- **[Observability](observability.md):** Using telemetry as a base to understand system state
+- **[OpenTelemetry](opentelemetry.md):** The standard framework for telemetry
+- **[Log Management](log-management.md):** Functions as part of telemetry
+- **[Metrics](metrics.md):** Primary telemetry data type
+- **[Distributed Tracing](distributed-tracing.md):** Telemetry for microservice environments
 
-**Definition:** End-to-end records of individual transactions or requests as they traverse distributed systems, capturing context and causality
+## Frequently asked questions
 
-**Examples:** Tracing a user request through microservices, database queries, API calls
+**Q: Is telemetry always real-time?**
+A: No. Depending on system requirements, choose between real-time streaming or batch delivery. Real-time is recommended for alerting purposes.
 
-**Use Case:** Diagnosing latency bottlenecks in a multi-service checkout workflow
+**Q: How do you maintain privacy with telemetry?**
+A: Implement data anonymization, minimize sensitive information, encrypt in transit and at rest, and ensure GDPR/CCPA compliance.
 
-### 5. User Telemetry
+**Q: What's the implementation cost?**
+A: OpenTelemetry is free open-source. However, storage and processing costs scale with data volume. Use sampling and retention policies to reduce costs.
 
-**Definition:** Data on user interactions and engagement with digital products
+**Q: Can you add it to existing systems?**
+A: Yes. Use SDK injection or sidecar proxies (OpenTelemetry Collector). Legacy systems may need adapters.
 
-**Examples:** Clicks, navigation flows, feature usage, session durations
+**Q: What's the difference between telemetry and logs?**
+A: Telemetry is continuous automated monitoring overall. Logs are part of telemetry, providing detailed activity records.
 
-**Use Case:** Prioritizing product development based on feature adoption metrics
-
-### 6. Network Telemetry
-
-**Definition:** Data from network devices and traffic flows
-
-**Examples:** Packet loss, bandwidth utilization, port status, device uptime
-
-**Use Case:** Identifying abnormal traffic spikes indicative of potential DDoS attacks
-
-### 7. Security Telemetry
-
-**Definition:** Data focused on the security posture and threat surface of systems
-
-**Examples:** Firewall logs, intrusion detection events, endpoint alerts, authentication attempts
-
-**Use Case:** Real-time threat hunting and incident response
-
-### 8. Application Telemetry
-
-**Definition:** Metrics and events specific to application operations and lifecycle
-
-**Examples:** Deployment events, exception rates, database access metrics, DevOps pipeline status
-
-**Use Case:** Monitoring application health during rollouts to detect regressions early
-
-### 9. Cloud Telemetry
-
-**Definition:** Insights into cloud resources, configurations, and operational performance
-
-**Examples:** VM health, serverless function invocations, storage activity, cost analytics
-
-**Use Case:** Optimizing cloud resource allocation and spend
-
-### 10. IoT Telemetry
-
-**Definition:** Data from Internet of Things devices, often in industrial or environmental settings
-
-**Examples:** Temperature readings, GPS coordinates, device battery status, environmental sensors
-
-**Use Case:** Predictive maintenance of industrial equipment
-
-## Telemetry in IT and AI Infrastructure
-
-### Observability, Monitoring, and Telemetry: How They Differ
-
-**Telemetry** supplies the raw data—metrics, events, logs, traces, and more
-
-**Monitoring** leverages telemetry to assess predefined indicators (e.g., CPU spikes, latency), often with alerting
-
-**Observability** is the overarching practice of inferring system state and diagnosing issues through comprehensive telemetry, even for unknown or novel failure modes
-
-### Key Frameworks and Standards
-
-**OpenTelemetry (OTel):** Open source, vendor-agnostic standard for telemetry data collection, processing, and export. OTel supports traces, metrics, and logs, and enables instrumentation via SDKs in multiple languages.
-
-**OpenTelemetry Protocol (OTLP):** The wire protocol for telemetry data, supporting gRPC and HTTP, with protobuf payloads and configurable compression
-
-**OpenTelemetry Collector:** Proxy for ingesting, processing, and exporting telemetry data
-
-**Prometheus:** Leading open-source metrics collection and alerting toolkit, widely used for infrastructure and application monitoring
-
-**Grafana:** Visualization platform supporting time-series data from multiple sources
-
-**Example:** A SaaS provider uses OpenTelemetry to instrument hundreds of microservices, exporting metrics, traces, and logs to a centralized observability backend (e.g., Grafana or Splunk). This enables real-time dashboards, automated alerting, and rapid root-cause analysis.
-
-## Benefits of Telemetry
-
-**Continuous Performance Monitoring:** Enables always-on visibility into system health, performance, and user experience
-
-**Predictive Maintenance:** Detects trends and anomalies for proactive remediation, reducing downtime (e.g., identifying disks likely to fail)
-
-**Enhanced Security:** Surfaces suspicious activity and compliance gaps (e.g., alerting on repeated failed logins)
-
-**Data-Driven Decisions:** Provides actionable insights on resource utilization, feature adoption, and operational efficiency
-
-**Optimized User Experience:** Highlights friction points for workflow improvements (e.g., slow user journeys)
-
-**Cost Optimization:** Identifies resource waste, informs scaling strategies, and controls cloud spend
-
-### Industry-Specific Examples
-
-**Healthcare:** Remote patient monitoring, early anomaly detection
-
-**Automotive:** Vehicle diagnostics, fleet management
-
-**Finance:** Fraud detection, compliance monitoring
-
-**Retail/E-commerce:** Cart abandonment analytics, personalized recommendations
-
-**Cloud/SaaS:** Resource optimization, uptime guarantees
-
-**AI/ML:** Model drift monitoring, inference latency
-
-## Challenges and Considerations in Telemetry
-
-**Data Privacy & Compliance:** Telemetry may capture sensitive information. Compliance with GDPR, CCPA, HIPAA, and other data protection frameworks is mandatory. Mitigation: Anonymize or pseudonymize data, restrict access, and audit pipelines.
-
-**Data Volume & Scalability:** High-frequency telemetry can overwhelm storage and processing capabilities. Mitigation: Apply sampling, aggregation, retention policies, and discard non-essential data.
-
-**Legacy System Integration:** Older devices/software may lack modern telemetry support. Mitigation: Use adapters or upgrade legacy endpoints incrementally.
-
-**Data Quality & Governance:** Incomplete or noisy data undermines analytics. Mitigation: Enforce schemas, validate inputs, and maintain integrity checks.
-
-**Storage, Bandwidth, and Cost:** Large telemetry datasets can incur significant costs. Mitigation: Use tiered/compressed storage, and tune sampling/intervals.
-
-**Security Risks:** Telemetry may be a target for attackers. Mitigation: Encrypt data in transit and at rest, monitor access, and audit regularly.
-
-## Step-by-Step Implementation: Deploying Telemetry in IT Environments
-
-### 1. Identify Requirements
-
-Define what you aim to achieve (e.g., "Which features are least used?"). Determine required metrics, events, and data sources.
-
-### 2. Instrument Systems
-
-Deploy agents, SDKs, or sensors in applications, infrastructure, or IoT endpoints. Follow best practices for low overhead and privacy compliance.
-
-### 3. Establish Data Pipelines
-
-Configure secure data transmission (e.g., OTLP/gRPC, HTTP, MQTT). Integrate with message queues/streaming if required for scale.
-
-### 4. Set Up Data Storage
-
-Select appropriate storage (time-series DB, data lake, warehouse). Define retention/archival policies.
-
-### 5. Analyze and Visualize
-
-Use dashboards, alerting systems, and analytics platforms for actionable insights. Build custom or prebuilt observability dashboards.
-
-### 6. Iterate and Optimize
-
-Review telemetry, refine collection methods, and address data gaps. Audit for privacy, security, and data quality.
-
-## Practical Tools and Further Reading
-
-### Key Frameworks and Platforms
-
-**OpenTelemetry:** Standardized, open source
-
-**Prometheus:** Metrics and alerting
-
-**Grafana:** Visualization
-
-**Splunk:** Enterprise analytics
-
-**New Relic:** Cloud observability
-
-**Datadog:** Cloud monitoring
-
-## Frequently Asked Questions (FAQs)
-
-**How does telemetry differ from monitoring and logging?**  
-Telemetry encompasses all types of system data collection and transmission. Monitoring utilizes telemetry to track system health and trigger alerts. Logging is a specific telemetry type focused on detailed event records.
-
-**Is telemetry data always real time?**  
-No. Telemetry can be streamed in real time or delivered in batches, based on system needs.
-
-**How is privacy maintained in telemetry?**  
-Through data anonymization, minimization of sensitive data, encryption, and compliance with regulations (GDPR, CCPA).
-
-**Which protocols are typically used for telemetry?**  
-HTTP, gRPC, MQTT (IoT), SNMP (network), and OTLP (OpenTelemetry).
-
-**Is telemetry applicable outside IT/software?**  
-Yes—telemetry is used in healthcare, automotive, energy, logistics, and more.
-
-## Summary Table: Telemetry at a Glance
-
-| Aspect | Details / Examples |
-|--------|-------------------|
-| **Definition** | Automated remote data collection and transmission |
-| **Core Data Types** | Metrics, Events, Logs, Traces (MELT), User, Network, Security |
-| **Key Protocols** | HTTP, gRPC, MQTT, SNMP, OTLP |
-| **Main Tools** | OpenTelemetry, Prometheus, Grafana, Splunk, New Relic |
-| **Benefits** | Real-time monitoring, predictive maintenance, security, UX, cost optimization |
-| **Challenges** | Data privacy, volume, integration, quality, cost, security |
-| **Industries** | IT, AI, Healthcare, Automotive, Finance, Retail, IoT, Cloud |
-
-## References
-
-- [Splunk: What is Telemetry?](https://www.splunk.com/en_us/blog/learn/what-is-telemetry.html)
-- [IBM: What is Telemetry?](https://www.ibm.com/think/topics/telemetry)
-- [TechTarget: What is Telemetry?](https://www.techtarget.com/whatis/definition/telemetry)
-- [Proofpoint: What is Telemetry?](https://www.proofpoint.com/us/threat-reference/telemetry)
-- [OpenTelemetry Documentation](https://opentelemetry.io/docs/)
-- [Edge Delta: What is Telemetry Data?](https://edgedelta.com/company/blog/what-is-telemetry-data)
-- [OpenTelemetry: What is OpenTelemetry?](https://opentelemetry.io/docs/what-is-opentelemetry/)
-- [OpenTelemetry: OTLP Specification](https://opentelemetry.io/docs/specs/otlp/)
-- [OpenTelemetry: Collector](https://opentelemetry.io/docs/collector)
-- [OpenTelemetry: Metrics](https://opentelemetry.io/docs/concepts/signals/metrics/)
-- [OpenTelemetry: Logs](https://opentelemetry.io/docs/concepts/signals/logs/)
-- [OpenTelemetry: Traces](https://opentelemetry.io/docs/concepts/signals/traces/)
-- [OpenTelemetry: Instrumentation](https://opentelemetry.io/docs/concepts/instrumentation/)
-- [Grafana](https://grafana.com/)
-- [Splunk](https://www.splunk.com/)
-- [New Relic](https://newrelic.com/)
-- [Datadog](https://www.datadoghq.com/)
-- [Prometheus](https://prometheus.io/)
-- [Practical OpenTelemetry (Book)](https://www.amazon.com/Practical-OpenTelemetry-Observability-Standards-Organization-ebook/dp/B0BSKT6DZ4)
-- [Learning OpenTelemetry (O'Reilly)](https://www.oreilly.com/library/view/learning-opentelemetry/9781098147174/)
+**Q: How long should you retain data?**
+A: Metrics: 15 days to 1 year; Logs: 30 days to 1 year. Determine based on regulations and cost requirements.

@@ -1,20 +1,19 @@
 ---
 title: User Interfaces (UI)
-lastmod: 2025-12-18
-date: 2025-12-18
-translationKey: user-interfaces-ui-definition-types-design-guidelines-use-cases-and-strategic-value
-description: 'Explore User Interfaces (UI): definition, types (GUI, CLI, VUI, Touch),
-  design principles, and strategic value. Learn how UI impacts usability, business,
-  and future tech.'
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: user-interfaces-ui
+description: "User Interface (UI) is the point of interaction between humans and digital systems. Learn about types like GUI, touch, and voice, along with design principles."
 keywords:
 - User Interface
 - UI Design
 - GUI
 - UX
 - Accessibility
-category: User Experience
+category: Web Development & Design
 type: glossary
 draft: false
+url: /en/glossary/user-interfaces---UI-/
 ---
 
 ## What Is a User Interface (UI)?

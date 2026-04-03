@@ -1,401 +1,121 @@
 ---
 title: Prompts
-lastmod: 2025-12-18
-date: 2025-12-18
+lastmod: 2026-04-02
+date: '2025-12-19'
 translationKey: prompts-comprehensive-glossary-best-practices
-description: "A prompt is an instruction or question you give to an AI system to get a specific response or result. The clearer and more detailed your prompt, the better the AI's answer will be."
+description: Prompts are instructions to AI systems. Prompt quality directly determines AI output quality. Learn effective prompt writing, engineering, and best practices.
 keywords:
-- AI prompts
-- prompt engineering
-- generative AI
-- AI chatbots
-- automation
-category: Artificial Intelligence
+- Prompt
+- Prompt Engineering
+- Generative AI
+- LLM
+- AI Chatbot
+- Instruction Design
+category: AI & Machine Learning
 type: glossary
 draft: false
+url: "/en/glossary/prompts/"
 ---
 
-## What Is a Prompt?
+## What is a Prompt?
 
-A **prompt** is the instruction, question, statement, or input provided to an AI system—most commonly large language models (LLMs) and generative AI platforms—to generate relevant output or perform a specific task. The quality and structure of a prompt directly influence the accuracy, relevance, usefulness, and safety of AI-generated responses. Prompt writing, also known as **prompt engineering**, is the practice of crafting effective instructions that guide AI systems to produce desired outcomes across applications ranging from chatbots and content creation to code generation and data analysis.
+**Prompts** are instruction texts given to AI systems, particularly [LLMs](LLM.md) and generative AI models. By clearly communicating what you want via prompts, AI generates matching answers and outputs. Prompt quality directly affects output quality, spawning "prompt engineering"—a specialized technical field.
 
-Prompts serve as the primary communication channel between humans and AI, translating user intent into actionable instructions the AI can process. They can range from simple single-sentence queries to complex, multi-component instructions incorporating context, examples, role assignments, and formatting specifications. As AI systems become more sophisticated, the art and science of prompt engineering has emerged as a critical skill for maximizing AI effectiveness across industries.
+> **In a nutshell:** "The 'magic words' you say to AI. How you write them determines whether AI uses 100% or 0% of its power."
 
-## Core Components of an Effective Prompt
+**Key points:**
 
-Effective prompts typically include several key elements that work together to produce high-quality AI responses:
+- **What it does:** Translate user intent into AI-understandable instructions, extracting desired results
+- **Why it matters:** Same AI produces 3-5x different quality depending on prompts
+- **Who uses it:** [Chatbot](Chatbot.md) users, content creators, engineers, data analysts, strategists, and students using AI
 
-| Component | Description | Example |
-|-----------|-------------|---------|
-| **Goal/Objective** | Clear statement of desired outcome | "Summarize the key findings" |
-| **Role/Persona** | Assigned perspective or expertise | "Act as a financial advisor" |
-| **Task** | Specific action or output required | "Write a 500-word analysis" |
-| **Context** | Background information and constraints | "For a general audience, avoiding jargon" |
-| **Format** | Structure and presentation style | "Present as a bulleted list" |
-| **Tone/Style** | Communication approach | "Professional and concise" |
-| **Examples** | Sample inputs or outputs | "Here's the format to follow..." |
-| **Constraints** | Boundaries and limitations | "Limit to 300 words, cite 3 sources" |
+## Why It Matters
 
-### Prompt Complexity Spectrum
+As AI rapidly spreads, "proper AI conversation" becomes competitive advantage. Same model, better prompts yield higher-quality results faster; lower prompts require 3-5x iteration.
 
-Prompts exist along a spectrum of complexity:
+Practically, poor prompts drop quality 40-60%, requiring 3-5x trial-and-error. Increased API call costs and labor result. Effective prompts generate one-time usable outputs, sometimes perfect first-try.
 
-- **Simple Prompts:** Direct, single-purpose queries ("What is machine learning?")
-- **Structured Prompts:** Multi-component instructions with clear requirements
-- **Complex Prompts:** Detailed specifications with context, examples, and multiple conditions
-- **Conversational Prompts:** Multi-turn exchanges building on previous responses
+Commercially, prompt quality directly impacts productivity. Effective marketing team prompts reduce multi-day content creation to hours. Sales teams see 10x efficiency gains. Education achieves individual-tutor-quality at scale.
 
-## Why Prompts Matter
+## Effective Prompt Structure
 
-The significance of effective prompting extends across multiple dimensions:
+Strong prompts include multiple elements. First, establish clear **goal/objective** starting with action verbs ("summarize," "create," "analyze").
 
-### Impact on AI Performance
+Next, define **role/persona**: "As a business consultant" or "from an executive perspective" dramatically shifts AI response style.
 
-| Factor | Poor Prompt | Effective Prompt | Result |
-|--------|-------------|------------------|---------|
-| **Accuracy** | Vague, ambiguous | Clear, specific | 40-60% improvement in relevance |
-| **Efficiency** | Multiple iterations needed | Right first time | 3-5x faster task completion |
-| **Consistency** | Variable outputs | Predictable results | Reliable quality across uses |
-| **Creativity** | Generic responses | Novel insights | Enhanced problem-solving |
+Provide rich **context** (background): "This email supports new customers" helps AI select appropriate tone and formality.
 
-### Business Value
+Specify **format**: "bullet points," "table format," "under 500 words" organizes outputs.
 
-- **Productivity Gains:** Well-crafted prompts reduce iteration cycles by 60-80%
-- **Cost Reduction:** Fewer API calls and computational resources required
-- **Quality Improvement:** Higher accuracy reduces manual correction needs
-- **Time Savings:** Accelerates content creation, analysis, and decision-making
-- **Scalability:** Enables consistent AI performance across teams and use cases
+Include concrete **examples** (few-shot prompting): 2-5 examples substantially boost accuracy, helping AI understand expected quality.
 
-### User Experience Benefits
+Finally, state **constraints**: "Avoid jargon," "cite 3 sources," or "exclude negative content" makes outputs more precise.
 
-- **Natural Interaction:** Intuitive communication reduces learning curve
-- **Personalization:** Tailored outputs match individual needs and preferences
-- **Accessibility:** Enables non-technical users to leverage advanced AI capabilities
-- **Confidence:** Predictable, reliable responses build user trust
-- **Empowerment:** Users can customize AI behavior to their specific requirements
+## Prompt Techniques
 
-## Prompt Engineering Strategies
+**Zero-shot prompting** directly instructs without examples. Simple, for straightforward tasks, but precision drops as complexity increases.
 
-### Zero-Shot Prompting
+**Few-shot prompting** provides 2-5 examples teaching patterns. "Example 1: 'Amazing'→positive; Example 2: 'Terrible'→negative. Now 'Okay'?" AI learns precise patterns, excellent for complex or domain-specific rules.
 
-Direct instructions without examples, relying on the AI's pre-trained knowledge:
+**Chain of Thought prompting** requests step-by-step thinking. "Show your thinking process" improves complex math and logic. Particularly effective for code generation.
 
-**Example:**
-```
-Classify the sentiment of this customer review: "The product arrived late but works perfectly."
-```
+**Role-based prompting** assigns specific positions. "You're a 15-year marketing consultant" yields professional-level responses, not beginner.
 
-**Best for:** Simple, well-defined tasks where the AI has sufficient training data.
+**Progressive refinement** skips perfection attempts, using multiple interactions. "Write a blog"→"Make it shorter"→"For business professionals" conversationally tightens requirements.
 
-### Few-Shot Prompting
+## Best Practices
 
-Includes example input-output pairs to guide the AI's response pattern:
+Clarity first—avoid vague instructions. "Good content" is vague; "500 words, professional tone, actionable 3-idea bullet list" is concrete.
 
-**Example:**
-```
-Classify customer sentiment:
+Supply abundant context—"Who reads this?" "What's it for?" "What tone works?" guide precision.
 
-Example 1: "Amazing service!" → Positive
-Example 2: "Completely disappointed." → Negative
-Example 3: "It's okay, nothing special." → Neutral
+Include examples—showing 1-3 reference outputs multiplies quality 2-3x.
 
-Now classify: "The features are great, but setup was confusing."
-```
+Explicitly state constraints—"avoid jargon," "trust only sources," or "exclude negatives" prevents AI errors.
 
-**Best for:** Tasks requiring specific formatting or domain-specific patterns.
+Test-iterate-improve—don't expect perfection first-try. Multiple attempts, adjustments create better outputs.
 
-### Chain-of-Thought Prompting
+Design error handling—"Say 'I don't know' if uncertain" recognizes limits, reducing hallucination.
 
-Encourages the AI to show its reasoning process step-by-step:
+## Practical Applications
 
-**Example:**
-```
-A store offers a 20% discount on a $50 item, then adds 8% sales tax. 
-What's the final price? Show your calculation steps.
-```
+**Content Creation:** "Millennial women's sustainable fashion 1000-word blog. Include 3 actionable ideas. Reference 2+ sources" works.
 
-**Best for:** Complex problem-solving, mathematical reasoning, logical analysis.
+**Customer Support:** "Apologize to upset customer recognizing concern→suggest solution→rebuild trust in 3 steps. Friendly but professional tone" structures responses.
 
-### Role-Based Prompting
+**Code Generation:** "Python3 function email-validating with regex. Include error handling, docstring, 3 test cases" specifies requirements.
 
-Assigns a specific persona or expertise level to the AI:
+**Data Analysis:** "Analyze CSV trends. Top 5 findings in table. Add confidence (high/medium/low) per row" clarifies output.
 
-**Example:**
-```
-You are an experienced cybersecurity analyst. Explain the differences between 
-symmetric and asymmetric encryption to a non-technical manager who needs to 
-make a purchasing decision.
-```
-
-**Best for:** Domain-specific tasks requiring specialized knowledge or perspective.
-
-### Iterative Refinement
-
-Progressive improvement through multi-turn conversation:
-
-**Example:**
-```
-Turn 1: "Write a product description for wireless headphones."
-Turn 2: "Make it more concise and emphasize battery life."
-Turn 3: "Add a call-to-action for business professionals."
-```
-
-**Best for:** Creative tasks, content development, exploratory analysis.
-
-## Best Practices for Writing Effective Prompts
-
-### Do's and Don'ts
-
-| Best Practices (Do) | Common Mistakes (Don't) |
-|---------------------|-------------------------|
-| Be specific and detailed | Use vague or ambiguous language |
-| Provide relevant context | Overload with unnecessary information |
-| Use clear, simple language | Mix conflicting instructions |
-| Include examples when helpful | Assume AI understands unstated intent |
-| Specify desired format | Accept first output without review |
-| Set appropriate constraints | Ignore ethical implications |
-| Test and iterate | Expect perfection on first attempt |
-| Break complex tasks into steps | Create overly complicated single prompts |
-
-### Structural Guidelines
-
-**1. Start with Action Verbs**
-- "Analyze," "Summarize," "Create," "Explain," "Compare," "Generate"
-
-**2. Be Explicit About Requirements**
-- Word counts, formatting, tone, target audience, sources
-
-**3. Provide Necessary Context**
-- Background information, assumptions, relevant constraints
-
-**4. Use Formatting for Clarity**
-- Line breaks, sections, numbering for multi-part instructions
-
-**5. Specify Output Format**
-- Tables, bullet points, paragraphs, code blocks, JSON
-
-### Advanced Techniques
-
-**Prompt Chaining:** Connect multiple prompts in sequence
-```
-Prompt 1: Research topic
-Prompt 2: Analyze findings from Prompt 1
-Prompt 3: Create recommendations based on Prompt 2
-```
-
-**Template-Based Prompting:** Create reusable structures
-```
-Task: [ACTION]
-Context: [BACKGROUND]
-Format: [STRUCTURE]
-Constraints: [LIMITATIONS]
-Examples: [SAMPLES]
-```
-
-**Meta-Prompting:** Ask AI to improve your prompts
-```
-"Review this prompt and suggest improvements: [YOUR PROMPT]"
-```
-
-## Practical Applications by Domain
-
-### Content Creation
-
-| Use Case | Sample Prompt |
-|----------|---------------|
-| Blog Posts | "Write a 1,000-word blog post about sustainable fashion for millennials, including 3 actionable tips and citing 2 recent studies." |
-| Marketing Copy | "Create 5 email subject lines for a product launch, emphasizing urgency and value. Target: small business owners." |
-| Social Media | "Generate 3 LinkedIn posts about AI in healthcare, each under 150 words, professional tone with relevant hashtags." |
-
-### Technical Applications
-
-| Use Case | Sample Prompt |
-|----------|---------------|
-| Code Generation | "Write a Python function that validates email addresses using regex. Include error handling and docstrings." |
-| Debugging | "Explain why this code produces an off-by-one error and provide a corrected version: [CODE]" |
-| Documentation | "Create API documentation for this function, including parameters, return values, and usage examples: [FUNCTION]" |
-
-### Business & Analysis
-
-| Use Case | Sample Prompt |
-|----------|---------------|
-| Data Analysis | "Analyze this sales data [DATA] and identify the top 3 trends. Present findings in a table with supporting metrics." |
-| Strategic Planning | "Act as a business consultant. Analyze these market conditions [CONTEXT] and recommend 3 market entry strategies with pros/cons." |
-| Financial Modeling | "Create a 5-year revenue projection model for a SaaS startup with 20% monthly growth and 5% churn. Show calculations." |
-
-### Education & Training
-
-| Use Case | Sample Prompt |
-|----------|---------------|
-| Lesson Planning | "Design a 45-minute lesson plan on photosynthesis for 8th graders, including learning objectives, activities, and assessment." |
-| Tutoring | "Explain quantum entanglement to a high school student using everyday analogies. Check understanding with 2 questions." |
-| Study Guides | "Create a study guide for the American Civil War covering causes, key battles, and outcomes. Include a 10-question quiz." |
-
-### Customer Service
-
-| Use Case | Sample Prompt |
-|----------|---------------|
-| Response Templates | "Generate 3 empathetic responses for customers whose orders are delayed, offering solutions and maintaining brand voice." |
-| FAQ Creation | "Based on these common customer questions [LIST], create comprehensive FAQ entries with clear, friendly answers." |
-| Escalation Handling | "Draft a response to an angry customer complaint about [ISSUE], acknowledging concerns and offering resolution steps." |
-
-## Common Challenges and Solutions
-
-### Challenge 1: Ambiguous Outputs
-
-**Problem:** AI produces generic or off-target responses
-
-**Solutions:**
-- Add specific examples of desired outputs
-- Include explicit constraints (word count, format, style)
-- Provide background context and target audience
-- Use "negative examples" showing what not to do
-
-### Challenge 2: Inconsistent Results
-
-**Problem:** Similar prompts produce varying quality
-
-**Solutions:**
-- Standardize prompt templates for recurring tasks
-- Set temperature/randomness parameters explicitly
-- Include format specifications in every prompt
-- Create prompt libraries for common use cases
-
-### Challenge 3: Hallucinations
-
-**Problem:** AI generates plausible but incorrect information
-
-**Solutions:**
-- Request citations and sources
-- Ask AI to indicate uncertainty
-- Cross-reference with authoritative sources
-- Use chain-of-thought to reveal reasoning
-
-### Challenge 4: Context Limitations
-
-**Problem:** Long documents exceed AI context windows
-
-**Solutions:**
-- Break content into manageable chunks
-- Use summarization for lengthy inputs
-- Employ retrieval-augmented generation (RAG)
-- Create hierarchical processing workflows
-
-### Challenge 5: Bias and Ethics
-
-**Problem:** Outputs reflect training data biases
-
-**Solutions:**
-- Use inclusive, neutral language in prompts
-- Request diverse perspectives
-- Review outputs critically
-- Implement content filtering
-
-## Prompt Optimization Workflow
-
-### Step 1: Define Clear Objectives
-- What specific outcome do you need?
-- Who is the target audience?
-- What format is most useful?
-
-### Step 2: Draft Initial Prompt
-- Start simple, add complexity as needed
-- Include essential components (task, context, format)
-- Consider using a template
-
-### Step 3: Test and Evaluate
-- Run prompt with representative inputs
-- Assess output against requirements
-- Identify gaps and issues
-
-### Step 4: Refine and Iterate
-- Add missing specifications
-- Clarify ambiguous instructions
-- Include helpful examples
-- Adjust tone and style guidance
-
-### Step 5: Document and Standardize
-- Save effective prompts for reuse
-- Create templates for common tasks
-- Share best practices with team
-- Version control complex prompts
-
-## Measuring Prompt Effectiveness
-
-### Key Performance Indicators
-
-| Metric | Description | Target |
-|--------|-------------|--------|
-| **Relevance Score** | Output matches requirements | >90% |
-| **First-Try Success Rate** | Usable output without iteration | >75% |
-| **Iteration Count** | Refinements needed per task | <3 |
-| **Time to Completion** | End-to-end task duration | -60% vs. manual |
-| **User Satisfaction** | Subjective quality rating | >4/5 |
-| **Error Rate** | Factual inaccuracies or issues | <5% |
-
-### A/B Testing Prompts
-
-Compare variations systematically:
-```
-Version A: "Summarize this article."
-Version B: "Summarize this article in 3 bullet points, highlighting key findings."
-Version C: "Create a 100-word executive summary of this article, focusing on actionable insights."
-
-Measure: Relevance, clarity, completeness, user preference
-```
-
-## Future Trends in Prompt Engineering
-
-### Emerging Developments
-
-- **Multimodal Prompting:** Combining text, images, audio, and video inputs
-- **Automated Prompt Optimization:** AI systems that improve their own prompts
-- **Domain-Specific Prompt Libraries:** Industry-tailored prompt collections
-- **Conversational Prompt Evolution:** Dynamic adjustment based on context
-- **Ethical Prompt Frameworks:** Built-in bias detection and mitigation
-
-### Skills for Prompt Engineers
-
-- **Domain Expertise:** Understanding the subject matter deeply
-- **Communication Skills:** Translating requirements into clear instructions
-- **Critical Thinking:** Evaluating output quality and relevance
-- **Iterative Design:** Refining through systematic testing
-- **Technical Awareness:** Understanding AI capabilities and limitations
+**Strategic Planning:** "SaaS Marketing Officer proposing 2025 budget allocation. 3 initiatives with ROI prediction, resource needs, timeline" specifies needs.
 
 ## Frequently Asked Questions
 
-**Q: How long should a prompt be?**
-A: As detailed as necessary for clarity, but no longer. Simple tasks may need 1-2 sentences; complex tasks might require several paragraphs with examples.
+**Q: How long should prompts be?**
+A: "As necessary." Simple tasks (quick searches) need one line. Complex (multi-requirement planning) need paragraphs. Clarity beats length.
 
-**Q: Should I use technical jargon in prompts?**
-A: Only if it's precise and necessary. Clear, simple language usually works better unless domain-specific terminology is required.
+**Q: Include specialized terms in prompts?**
+A: Simple language works better unless accuracy requires jargon (like [LLM](LLM.md) or API). Prioritize simplicity.
 
-**Q: How many examples should I include?**
-A: For few-shot prompting, 2-5 examples typically work well. More examples can help with complex patterns but increase token usage.
+**Q: How many examples matter?**
+A: 2-5 for few-shot. More wastes tokens; fewer loses impact. Adjust by complexity.
 
-**Q: Can I reuse prompts across different AI systems?**
-A: Often yes, but you may need adjustments based on each system's capabilities and training data.
+**Q: Can I reuse prompts across AI services?**
+A: Mostly yes, though each model's training and capabilities differ, often requiring minor adjustments.
 
-**Q: How do I handle sensitive information in prompts?**
-A: Remove or anonymize sensitive data. Never include passwords, personal identification, or confidential information.
+**Q: Can I include personal information in prompts?**
+A: Avoid PII, passwords, and secrets. Delete or anonymize before inputting.
 
-**Q: What if the AI consistently misinterprets my prompts?**
-A: Break down the task, add explicit examples, provide more context, or try rephrasing the instructions.
+**Q: If AI repeatedly misunderstands?**
+A: Break down tasks, add detailed examples, rephrase differently. If still failing, it's AI capability limits.
 
-**Q: How do I know if my prompt is good enough?**
-A: Test it multiple times, measure against your requirements, and compare results with alternative phrasings.
+**Q: How do I measure prompt quality?**
+A: Track "first-success rate" (usable output without revision %) and revision count. 75%+ is practical baseline.
 
-## References
+## Related Terms
 
-- [TechTarget: What is an AI Prompt? Definition and Guide](https://www.techtarget.com/searchenterpriseai/definition/AI-prompt)
-- [Harvard University: Getting Started with Prompts](https://www.huit.harvard.edu/news/ai-prompts)
-- [Google Cloud: Prompt Engineering for AI Guide](https://cloud.google.com/discover/what-is-prompt-engineering)
-- [Atlassian: Ultimate Guide to Writing Effective AI Prompts](https://www.atlassian.com/blog/artificial-intelligence/ultimate-guide-writing-ai-prompts)
-- [Glean: Complete Guide to AI Prompting](https://glean.com/blog/ai-prompting-guide)
-- [MIT Sloan: Effective Prompts for AI](https://mitsloanedtech.mit.edu/ai/basics/effective-prompts/)
-- [Stack AI: Guide to Prompt Engineering](https://www.stack-ai.com/blog/guide-to-prompt-engineering)
-- [University of Kansas: Prompting AI Chatbots](https://cte.ku.edu/prompting-ai-chatbots)
-- [Google Vertex AI: Introduction to Prompt Design](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/introduction-prompt-design)
-- [YouTube: Tips to Becoming a World-Class Prompt Engineer](https://www.youtube.com/watch?v=RywP7cCYUWE)
-- [OpenAI: Best Practices for Prompt Engineering](https://platform.openai.com/docs/guides/prompt-engineering)
-- [Anthropic: Introduction to Prompt Engineering](https://docs.anthropic.com/claude/docs/introduction-to-prompt-engineering)
+- **[LLM](LLM.md)** — Large language models responding to prompts
+- **[Generative AI](Generative-AI.md)** — AI generating text, images, code
+- **[Chatbot](Chatbot.md)** — Conversation systems based on prompts
+- **[Natural Language Processing](NLP.md)** — AI understanding human language
+- **[Prompt Engineering](Prompt-Engineering.md)** — Specialized prompt design technique

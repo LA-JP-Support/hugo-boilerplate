@@ -1,6 +1,7 @@
 ---
 title: DAM(デジタルアセット管理)
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: DAM--Digital-Asset-Management-
 description: デジタルアセット管理システム、ワークフロー、メリット、および現代組織向けの実装戦略に関する包括的なガイド。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - メディア管理
 - コンテンツ整理
 - ブランド一貫性
-category: Application & Use-Cases
+category: ビジネス・戦略
 type: glossary
 draft: false
 e-title: DAM (Digital Asset Management)

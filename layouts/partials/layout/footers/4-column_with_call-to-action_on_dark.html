@@ -290,12 +290,14 @@
 
     <div class="border-t {{ $borderColor }} pt-8 xl:grid xl:grid-cols-4 xl:gap-8">
       <div class="xl:col-span-1">
-        {{ partial "components/media/lazyimg.html" (dict 
-          "src" $logoUrl 
-          "alt" $logoAlt
-          "class" $logoHeight
-          "maxWidth" 200
-        ) }}
+        <a href="https://www.intwk.co.jp/" target="_blank" rel="noopener noreferrer">
+          {{ partial "components/media/lazyimg.html" (dict
+            "src" $logoUrl
+            "alt" $logoAlt
+            "class" $logoHeight
+            "maxWidth" 200
+          ) }}
+        </a>
         {{ if $companyDescription }}
         <p class="mt-4 text-sm/6 text-gray-400">{{ $companyDescription }}</p>
         {{ end }}

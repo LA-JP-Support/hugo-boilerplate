@@ -9,8 +9,9 @@ keywords:
 - 検索エンジンクローリング
 - ウェブサイトインデックス
 - サイトマッププロトコル
-category: Application & Use-Cases
+category: AI・機械学習
 type: glossary
+lastmod: 2026-04-02
 draft: false
 e-title: XML Sitemap
 url: /ja/glossary/xml-sitemap/

@@ -1,184 +1,85 @@
 ---
-title: "Fairness Metrics"
-date: 2025-12-18
-lastmod: 2025-12-18
-translationKey: "fairness-metrics"
-description: "Fairness Metrics are tools that measure and identify bias in AI systems to ensure they treat all people fairly, regardless of race, gender, age, or other characteristics."
-keywords: ["fairness metrics", "AI bias", "algorithmic bias", "responsible AI", "machine learning fairness"]
-category: "AI Ethics & Safety Mechanisms"
-type: "glossary"
+title: Fairness Metrics
+date: '2025-12-19'
+lastmod: 2026-04-02
+translationKey: fairness-metrics
+description: Fairness Metrics are indicators that quantitatively measure and verify whether AI models treat different groups equally. Essential for bias detection and ensuring fairness.
+keywords:
+- fairness metrics
+- bias detection
+- AI ethics
+- machine learning fairness
+- algorithm evaluation
+category: AI & Machine Learning
+type: glossary
 draft: false
+url: "/en/glossary/fairness-metrics/"
 ---
 
-## What Are Fairness Metrics?
+## What is Fairness Metrics?
 
-Fairness metrics are mathematical and statistical tools designed to quantify, evaluate, and monitor bias in artificial intelligence (AI) and machine learning (ML) systems. These metrics provide structured methodologies to assess whether AI models treat individuals or groups equitably, or if they unfairly disadvantage anyone based on sensitive attributes such as race, gender, age, or socioeconomic status.
+**Fairness Metrics are indicators that quantitatively measure whether AI systems treat demographic groups equally across attributes like gender and race.** In critical decision-making systems like hiring AI, lending systems, and medical diagnosis, fairness metrics detect unintended biases by converting them into numerical values. They serve as a tool that helps companies avoid legal risks while maintaining social responsibility.
 
-As AI systems increasingly influence critical decisions in hiring, healthcare, law enforcement, finance, and education, fairness metrics have become central to responsible AI development. They enable organizations to identify, measure, and mitigate algorithmic bias—essential for building trustworthy AI, ensuring regulatory compliance, and fostering societal acceptance. Without safeguards, AI models can perpetuate or amplify existing biases in training data, unfairly disadvantage certain groups, and create significant reputational, ethical, and legal risks.
+> **In a nutshell:** "A fairness report card that checks whether applicants with the same test score receive different approval outcomes based on gender."
 
-Fairness metrics serve multiple critical functions: quantifying disparate outcomes across demographic groups, identifying algorithmic bias during development and deployment, guiding corrective actions, demonstrating transparency and accountability to stakeholders, and ensuring compliance with regulations including the EU AI Act, Fair Credit Reporting Act, Equal Credit Opportunity Act, Algorithmic Accountability Act, and GDPR.
+**Key points:**
 
-## Implementation Workflow
+- **What they do:** Quantify differences in prediction results between groups to identify unfairness
+- **Why they're needed:** Overlooking bias leads to legal lawsuits and loss of trust
+- **Who uses them:** AI developers, ethics committees, regulators, hiring/finance/healthcare organizations
 
-**Data Collection and Preparation**  
-Collect demographic and sensitive attribute data (gender, race, age) while ensuring representative coverage for all relevant groups. Balance privacy concerns with the need for comprehensive bias assessment.
+## Calculation Methods
 
-**Model Training and Evaluation**  
-Train models on labeled datasets and evaluate outputs across demographic groups using selected fairness metrics. Establish baseline measurements for comparison.
+Representative metrics include the following:
 
-**Bias Assessment**  
-Apply one or more fairness metrics to measure disparities in outcomes. Analyze specific subgroups to identify where unfairness occurs and quantify its severity.
+**Demographic Parity** compares positive decision rates by group. If a hiring AI approves 60% of men and 55% of women, the difference is 5%. **Equalized Odds** restricts comparisons to qualified candidates for more accurate fairness measurement. **Equal Opportunity** checks both true positive rates and false positive rates for multidimensional evaluation.
 
-**Mitigation and Iteration**  
-Use actionable insights from fairness metrics to modify training data, refine algorithms, or adjust decision thresholds. Re-evaluate iteratively until acceptable fairness levels are achieved.
+In implementation, classification predictions for each group are collected from training data, and statistical differences are calculated. In a 1,000-person evaluation (600 men, 400 women) where men's approval rate is 50% and women's is 40%, the difference is 10%.
 
-**Continuous Monitoring**  
-Monitor fairness metrics post-deployment to detect fairness drift as data distributions and populations evolve. Document findings and mitigation efforts for audits and compliance reporting.
+## Benchmarks and Targets
 
-**Lifecycle Integration:**
+Acceptable bias differences are: 5% or less is excellent, 5-10% is warning level, 10-15% is critical level, and 15% or above carries legal risk. If women's pass rate is 15% lower in hiring AI, it constitutes indirect discrimination. Medical diagnosis requires 1% or less, security requires 0.5% or less.
 
-- **Pre-processing** – Address bias in data before training through reweighting, data augmentation, or synthetic data generation
-- **In-processing** – Apply fairness constraints or regularization during model training to optimize for both accuracy and fairness
-- **Post-processing** – Adjust model predictions or decision thresholds after training to achieve fairer outcomes
+## Why it Matters
 
-## Key Fairness Metric Types
+Amazon discovered in 2016 that its hiring AI systematically discriminated against women and shut it down. Facial recognition has 35 times higher error rates for non-white individuals compared to white people; loan approval rates for minorities are 20% lower than for whites. These issues stem from biased training data and encoded unconscious bias. Without fairness metrics to detect these problems, significant [legal risk](Responsible-AI.md) and loss of social trust follow.
 
-**Demographic Parity (Statistical Parity)**  
-Ensures individuals from different groups have equal probability of receiving positive outcomes. Formula: P(Outcome = 1 | Group A) = P(Outcome = 1 | Group B). Used in hiring algorithms and loan approval systems. Limitation: Does not account for qualification differences; strict enforcement may reduce overall utility.
+## How it Works
 
-**Equal Opportunity**  
-Qualified individuals from different groups have equal probability of positive outcomes. Formula: P(Outcome = 1 | Qualified = 1, Group A) = P(Outcome = 1 | Qualified = 1, Group B). Applied in university admissions and promotion decisions. Limitation: Requires accurate, unbiased qualification measurement.
+AI model predictions are broken down by demographic group, and result differences are measured using straightforward mechanisms. Prediction distributions by group are visualized, and statistical tests determine if significant differences exist. When differences are found, improvements are made through training data diversification, reducing weight on specific attributes, and adjusting decision thresholds.
 
-**Equalized Odds**  
-True positive and false positive rates are equal across groups. Formulas: TPR and FPR equality across demographic categories. Used in criminal justice risk assessments and medical diagnosis. Limitation: Difficult to achieve simultaneously; may conflict with other metrics or overall accuracy.
+However, simultaneously satisfying all metrics is difficult, and balance between [business requirements](Business-Strategy.md) and ethics is important. Improving one metric sometimes worsens another.
 
-**Predictive Parity**  
-Precision (positive predictive value) is equal across groups. Formula: P(Actual = 1 | Outcome = 1, Group A) = P(Actual = 1 | Outcome = 1, Group B). Applied in loan default prediction and healthcare treatment recommendations. Limitation: Can conflict with equal opportunity or equalized odds.
+## Real-world Use Cases
 
-**Treatment Equality**  
-Ratio of false positives to false negatives is equal across groups. Used in predictive policing and fraud detection. Limitation: Complex to interpret and implement in practice.
+**Bias testing in hiring AI**
+Companies implement fairness testing on historical data before deployment. Pass rates by gender and race are compared, and if differences exceed 15%, training data is rebalanced before production launch.
 
-**Individual Fairness**  
-Similar individuals should receive similar outcomes. Requires task-specific similarity metrics and consistency analysis. Applied in loan approval and healthcare triage. Limitation: Defining "similarity" is subjective and context-dependent.
+**Loan review system audit**
+Banks audit their AI systems per regulatory requirements. Approval rate differences across demographic groups are quantified to demonstrate the absence of discriminatory outcomes and achieve regulatory compliance.
 
-**Counterfactual Fairness**  
-Model predictions remain unchanged when sensitive attributes are altered while holding all else constant. Used to ensure decisions are not impacted by protected attributes in hiring and lending. Limitation: Requires causal modeling and counterfactual data generation.
+**Fairness assurance in medical diagnosis AI**
+Healthcare institutions test diagnosis AI across multiple racial groups. When accuracy differences are found, additional data for those groups is added to ensure equal accuracy for all.
 
-## Real-World Applications
+## Benefits and Considerations
 
-**Hiring Algorithms**  
-Resume screening tools showing gender or ethnic bias are assessed using demographic parity and equal opportunity metrics. Mitigation involves adjusting training data, applying fairness constraints, and monitoring selection rates.
+Benefits include objective bias evidence that avoids legal risk and builds trust. Bias removal also improves model performance. Considerations include multiple definitions of fairness and trade-offs where improving one metric worsens another. Monitoring multiple metrics in balance is important rather than focusing on a single metric.
 
-**Facial Recognition Systems**  
-Higher error rates for underrepresented groups are identified through equalized odds analysis. Solutions include diversifying training data, retraining models, and conducting regular performance audits across demographic groups.
+## Related Terms
 
-**Loan Approval Systems**  
-Lower approval rates for minority applicants due to historical bias are addressed using predictive parity and counterfactual fairness. Mitigation includes debiasing techniques, threshold adjustments, and regulatory compliance monitoring.
+- **[Algorithm Bias](Algorithm-Bias.md)** — The tendency toward unfair judgment in AI
+- **[Large Language Models (LLM)](LLM.md)** — Subject of fairness evaluation in text generation AI
+- **[Responsible AI](Responsible-AI.md)** — Fairness is a core element
+- **[Machine Learning](Machine-Learning.md)** — The application domain for fairness metrics
+- **[Data Bias](Data-Bias.md)** — The root cause of bias
 
-**Healthcare Diagnosis**  
-Diagnostic tools showing accuracy disparities across demographic groups are evaluated using equalized odds and treatment equality. Improvements involve training data augmentation, continuous fairness monitoring, and domain expert engagement.
+## Frequently Asked Questions
 
-## Tools and Libraries
+**Q: Does completely fair AI exist?**
+A: No. Training data and algorithm design always involve choices, making perfect neutrality impossible. However, keeping it within acceptable ranges is possible.
 
-**Fairlearn**  
-Python library providing fairness metrics, mitigation algorithms, and visualization tools for evaluating and improving model fairness.
+**Q: Which takes priority—fairness or accuracy?**
+A: Case by case. For critical decisions like hiring and lending, prioritize fairness. For medical diagnosis, balance is important.
 
-**AIF360 (AI Fairness 360)**  
-IBM's comprehensive toolkit offering broad fairness metrics and bias mitigation techniques across the model lifecycle.
-
-**Fairness Indicators**  
-Google's tool for evaluating and visualizing fairness metrics, particularly designed for TensorFlow models.
-
-**Additional Tools:**
-
-- **FairComp** – Library for comparing fairness interventions and benchmarking metrics
-- **FairML** – Auditing tool for identifying bias sources
-- **Aequitas** – Analyzing model impact on demographic groups
-- **Themis and Themis-ML** – Libraries focused on individual fairness
-
-## Best Practices
-
-**Comprehensive Approach**  
-Use multiple metrics for holistic fairness assessment, as single metrics rarely capture complete picture. Different metrics can conflict, requiring careful trade-off analysis.
-
-**Contextual Application**  
-Tailor metric selection and interpretation to real-world impact and domain-specific requirements. Consider social, ethical, and legal contexts.
-
-**Stakeholder Engagement**  
-Involve impacted groups, domain experts, and decision makers in fairness assessment and mitigation decisions.
-
-**Regular Auditing**  
-Continuously monitor fairness metrics post-deployment as data, models, and populations evolve. Establish scheduled review cycles.
-
-**Transparent Documentation**  
-Maintain comprehensive records of fairness analyses, decisions, and remediation steps for accountability and compliance.
-
-**Balanced Optimization**  
-Recognize that improving fairness may reduce accuracy. Use multi-objective optimization and make informed trade-offs with stakeholder input.
-
-## Common Pitfalls
-
-**Single Metric Reliance**  
-Depending on one metric provides incomplete fairness assessment. Different metrics capture different fairness dimensions.
-
-**Ignoring Social Context**  
-Interpreting metrics without relevant social, ethical, and historical frameworks leads to misguided conclusions.
-
-**Static Evaluation**  
-Failing to regularly reassess as data distributions, model performance, and demographics shift over time.
-
-**Correlation vs. Causation Confusion**  
-Observed disparities may reflect real-world inequalities rather than solely model bias. Distinguishing these requires careful analysis.
-
-**Insufficient Transparency**  
-Poor documentation leads to compliance issues, stakeholder distrust, and inability to reproduce fairness assessments.
-
-## Regulatory Compliance
-
-**Legal Frameworks:**
-
-- **EU AI Act** – Mandates transparency, accountability, fairness requirements with risk assessments and documentation
-- **Fair Credit Reporting Act (FCRA)** – Governs credit data use, prohibits discrimination in automated credit decisions
-- **Equal Credit Opportunity Act (ECOA)** – Prohibits discrimination in lending decisions
-- **GDPR** – Requires transparency and "right to explanation" for automated decisions in EU
-- **Algorithmic Accountability Act** – Proposed US legislation requiring algorithmic bias assessment and reporting
-
-**Industry Standards:**
-
-- Ethics boards and responsible AI committees providing organizational oversight
-- Model cards and data sheets documenting fairness checks and identified risks
-- Regular fairness audits and third-party assessments
-
-## Key Terms
-
-- **Bias (AI)** – Systematic error in AI outputs caused by prejudiced data, flawed algorithms, or skewed training
-- **Sensitive Attribute** – Demographic feature that may lead to discrimination if used in decision-making
-- **Disparate Impact** – Model predictions disproportionately harming protected groups even without explicit use of sensitive attributes
-- **Transparency** – Degree to which AI decisions and processes can be understood, audited, and explained
-- **Accountability** – Obligation to justify and be answerable for AI system outcomes regarding fairness
-
-## Summary Table: Common Fairness Metrics
-
-| Metric | Measurement | Formula | Use Case |
-|--------|------------|---------|----------|
-| Demographic Parity | Equal positive rates across groups | P(Y=1\|A=a) = P(Y=1\|A=b) | Hiring, Loan Approval |
-| Equal Opportunity | Equal TPR for qualified individuals | P(Y=1\|Y*=1,A=a) = P(Y=1\|Y*=1,A=b) | University Admissions |
-| Equalized Odds | Equal TPR and FPR across groups | TPR_a = TPR_b; FPR_a = FPR_b | Criminal Justice, Healthcare |
-| Predictive Parity | Equal precision across groups | P(Y*=1\|Y=1,A=a) = P(Y*=1\|Y=1,A=b) | Loan Default Prediction |
-| Treatment Equality | Equal FP/FN ratio | FP/FN ratio_a = FP/FN ratio_b | Fraud Detection |
-
-## References
-
-- [Shelf.io: Fairness Metrics in AI](https://shelf.io/blog/fairness-metrics-in-ai/)
-- [Forbes: AI & Fairness Metrics](https://councils.forbes.com/blog/ai-and-fairness-metrics)
-- [Google ML Fairness Guide](https://developers.google.com/machine-learning/crash-course/fairness/evaluating-for-bias)
-- [AI Evaluation Metrics – Bias & Fairness](https://www.francescatabor.com/articles/2025/7/10/ai-evaluation-metrics-bias-amp-fairness)
-- [Fairlearn Documentation](https://fairlearn.org/)
-- [AIF360 Documentation](https://aif360.res.ibm.com/)
-- [EU AI Act Summary](https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence)
-- [Fair Credit Reporting Act](https://www.ftc.gov/legal-library/browse/statutes/fair-credit-reporting-act)
-- [Equal Credit Opportunity Act](https://www.consumerfinance.gov/compliance/compliance-resources/other-applicable-requirements/equal-credit-opportunity-act/)
-- [GDPR](https://gdpr.eu/)
-- [Algorithmic Accountability Act](https://www.congress.gov/bill/117th-congress/house-bill/6580/text)
-- [YouTube: ML Fairness (Google Crash Course)](https://www.youtube.com/watch?v=59bMh59JQDo)
-- [YouTube: Responsible AI—Fairness and Bias](https://www.youtube.com/watch?v=F03lK5q6ohM)
+**Q: What implementation tools exist?**
+A: Major companies have open-sourced tools including Fairlearn (Microsoft), AIF360 (IBM), and Fairness Indicators (Google).

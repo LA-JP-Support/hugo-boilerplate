@@ -1,6 +1,7 @@
 ---
 title: チュートリアルコンテンツ
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Tutorial-Content
 description: 複雑なトピックを管理しやすく、わかりやすいレッスンに分解し、実例と演習を交えながら実践的なスキルを教える段階的な教育ガイド。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - 教育教材
 - 学習リソース
 - コンテンツ作成
-category: Application & Use-Cases
+category: コンテンツ・マーケティング
 type: glossary
 draft: false
 e-title: Tutorial Content

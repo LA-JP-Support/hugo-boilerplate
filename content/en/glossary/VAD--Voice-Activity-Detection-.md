@@ -1,53 +1,72 @@
 ---
-title: "Voice Activity Detection (VAD)"
-date: 2025-12-18
-lastmod: 2025-12-18
-translationKey: "voice-activity-detection-vad"
-description: "A technology that automatically detects when someone is speaking in audio, distinguishing speech from silence and background noise. It helps voice assistants and chatbots know when to listen and respond."
-keywords: ["Voice Activity Detection", "VAD", "Speech Activity Detection", "AI chatbots", "ASR"]
-category: "AI Chatbot & Automation"
-type: "glossary"
+title: Voice Activity Detection (VAD)
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: Voice-Activity-Detection
+description: Technology that automatically detects human speech in audio streams and distinguishes it from silence and noise. Essential for improving accuracy in speech recognition and chatbots.
+keywords:
+- voice activity detection
+- VAD
+- speech detection
+- automatic speech recognition
+- audio processing
+category: Voice & Communication
+type: glossary
 draft: false
+url: /en/glossary/VAD--Voice-Activity-Detection-/
 ---
 
-## What is Voice Activity Detection (VAD)?
+## What is Voice Activity Detection?
 
-Voice Activity Detection (VAD), also called Speech Activity Detection (SAD), is a signal processing method that determines whether an audio signal contains human speech. VAD identifies the temporal boundaries of speech within a continuous audio stream by analyzing short segments (frames) and classifying each as "speech" or "non-speech". This separation is crucial for downstream applications in speech recognition, transcription, real-time communication, and AI chatbots, which must process only relevant spoken segments and ignore silence, noise, or music.
+**Voice Activity Detection (VAD) is technology that automatically detects human speech in audio streams and distinguishes it from silence, background noise, and music.** When a user speaks to a smart speaker, VAD determines when speech starts and stops, sending only that portion to the speech recognition engine. This eliminates unnecessary processing and dramatically improves accuracy and efficiency.
 
-VAD serves as a foundational preprocessing step for almost all speech processing methods. It enables systems to distinguish speech from silence, background noise, music, and non-verbal sounds, allowing efficient allocation of computational resources by ignoring non-speech segments. The technology is referenced in ITU, ETSI, and IEEE standards for telephony, Voice over IP (VoIP), and audio coding, underscoring its critical role in modern communication systems.
+> **In a nutshell:** "Technology that finds 'the part where a human is talking' among background noise."
 
-In the context of conversational AI and voice-enabled chatbots, VAD determines when users are speaking, when they have finished speaking, and when the system should respond. Without accurate VAD, voice interfaces suffer from premature interruptions, delayed responses, excessive false activations, and poor overall user experience. The quality of VAD directly impacts the naturalness and effectiveness of voice interactions.
+**Key points:**
+- **What it does:** Automatically detects human speech in audio streams
+- **Why it matters:** Omitting unnecessary noise improves accuracy and efficiency
+- **Who uses it:** Smart speaker companies, voice assistant developers, speech recognition companies
 
-## How VAD Works: Technical Overview
+## Why it matters
 
-VAD systems process audio in real-time by dividing the audio signal into small overlapping frames, typically 10-30 milliseconds in duration. Each frame is analyzed to extract features that distinguish speech from non-speech. A classifier then labels the frame as containing speech or not, often outputting a probability (speech presence probability) that is thresholded to produce a binary decision. Smoothing and post-processing logic are applied to avoid rapid toggling and improve segment continuity.
+Real-world sound environments are complex. Using a smart speaker in a cafe means contending with conversations, background music, and clinking dishes. Sending all sound to the speech recognition engine introduces noise, reducing recognition accuracy. VAD extracts only the speaker's voice before sending it, significantly improving accuracy. For battery-powered devices, VAD allows processing to skip during silence, reducing power consumption and extending battery life. Additional benefits include bandwidth savings and reduced server processing loads.
 
-### Traditional VAD Approaches
+## How it works
 
-Traditional VAD methods use hand-crafted acoustic features and signal processing heuristics. These approaches are computationally efficient and can run on embedded hardware with limited resources.
+VAD divides audio streams into small frames (10-30 milliseconds) and classifies each as "speech" or "non-speech." Traditional approaches analyzed energy levels (sound volume) and spectral characteristics (frequency components) to classify. Recent approaches use deep learning, training on massive datasets to learn speech patterns. Classification results include a confidence score (0-100%). High-confidence frames aggregate to distinguish "speaking" from "silent" periods. Based on this, speech recognition starts and stops at appropriate times.
 
-**Energy-Based Detection**  
-Measures frame energy and compares it to a threshold. Frames with energy above the threshold are classified as speech. Simple and effective in low-noise conditions, but performance degrades significantly with background noise.
+## Real-world use cases
 
-**Zero-Crossing Rate (ZCR)**  
-Counts the number of times the waveform crosses zero amplitude. Speech has characteristic ZCR patterns that differ from silence and some types of noise.
+**Smart Speakers**
+When a user calls "Alexa," VAD detects the utterance and activates the system. When speech ends, VAD detects the stop and halts processing, saving battery.
 
-**Spectral Features**  
-Analyzes frequency content, as speech occupies distinct spectral bands. Features include spectral flatness, spectral flux, and formant frequencies.
+**Conference Recording Systems**
+When recording long meetings automatically, VAD extracts only participants' speaking portions. Excluding silent periods saves storage and makes transcription more efficient.
 
-**Pitch Detection**  
-Uses the presence of periodicity (pitch) as an indicator of voiced speech. Effective for detecting voiced sounds but misses unvoiced speech segments.
+**Voice Search Apps**
+When users voice search, VAD accurately detects speech intervals, improving recognition accuracy and search result quality.
 
-**Signal-to-Noise Ratio (SNR)**  
-Frames with higher SNR are more likely to contain speech. Requires estimation of background noise characteristics.
+## Benefits and considerations
 
-**Advantages of Traditional Methods:**
-- Fast and computationally efficient
-- Can run on resource-constrained devices
-- Well-understood behavior and tuning
+The greatest benefits are accuracy improvement and efficiency. Excluding noise improves speech recognition accuracy, and skipping unnecessary processing dramatically reduces battery consumption and computational load. However, VAD detection isn't perfect—failures occur like "speech goes undetected" or "noise misidentified as speech." Also, detection accuracy varies with different accents, speech rates, and sound environments, requiring training on diverse data.
 
-**Limitations:**
-- Performance degrades with background noise, music, or variable environments
+## Related terms
+
+- **[Automatic Speech Recognition](Automatic-Speech-Recognition.md)** — Technology converting speech to text
+- **[Endpoint Detection](Endpoint-Detection.md)** — Detecting when users finish speaking
+- **[Speaker Diarization](Speaker-Diarization.md)** — Distinguishing multiple speakers and identifying who spoke when
+- **[Speech Enhancement](Speech-Enhancement.md)** — Reducing noise to improve audio quality
+
+## Frequently asked questions
+
+**Q: What's the difference between VAD and wake word detection?**
+A: VAD determines "is a human talking?" Wake word detection determines "was 'Alexa' (etc.) said?" VAD continuously listens while wake word detection serves as a trigger.
+
+**Q: How accurate is it?**
+A: High-quality models achieve over 90% accuracy, but accuracy varies with environment and accent. Accuracy drops in high-noise environments.
+
+**Q: Is it necessary for all devices?**
+A: It's essential for voice-input devices. Smart speakers, smartphones, meeting systems—virtually all voice-processing devices use it.
 - Cannot learn complex or subtle distinctions between speech and similar sounds
 - Require manual tuning of thresholds and parameters for different conditions
 

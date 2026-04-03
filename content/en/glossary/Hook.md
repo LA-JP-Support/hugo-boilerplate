@@ -1,20 +1,82 @@
 ---
-title: "Hook"
+title: Hook
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Hook
-description: "A mechanism that lets developers insert custom code at specific points in a program's execution without changing the core functionality, enabling flexible customization and automation."
+description: A predefined point in a program where you can insert custom code to extend or modify how it works, without changing the original code.
 keywords:
-- hooks programming
+- hook programming
 - React hooks
 - Git hooks
-- webhooks
+- webhook
 - lifecycle hooks
-category: "Application & Use-Cases"
+category: Data & Analytics
 type: glossary
 draft: false
+url: "/en/glossary/hook/"
 ---
 
-## What is a Hook?
+## What is Hook?
+
+**Hook is a mechanism that lets you insert custom code at specific execution points without changing existing functionality.** Originally meaning "to catch/hang," in programming it means having "places where you can hang code" to insert features later. This is very important in modern software development.
+
+> **In a nutshell:** Existing code can remain untouched, yet you can "insert processing later" through hooks.
+
+**Key points:**
+
+- **What it does:** Automatically executes custom code at specific program timing
+- **Why it's needed:** Protect core features while flexibly adding new functions
+- **Who uses it:** Developers, frameworks, plugin developers, automation tools
+
+## Why it matters
+
+Hooks are essential in modern software development. [Frameworks](Frameworks-and-Tools.md) like React use them for component lifecycle management. State changes automatically trigger processing; component destruction triggers cleanup. This lifecycle management power comes from hooks.
+
+[Git](Git.md) pre-commit hooks automate testing and code quality checks. This prevents low-quality code reaching production. Different services real-time communicate through Webhooks—when orders complete, inventory systems auto-notify. This integration simplification is hooks' power.
+
+## How it works
+
+Hook systems operate through three steps: definition, registration, execution.
+
+First, developers set hookpoints at extension points—"you can insert features here" promise. Next, register processing to that hookpoint (connect hook handler). Finally, when the program reaches that point during execution, all registered handlers execute sequentially.
+
+Like computer motherboard expansion slots—the motherboard ("core features") has "you can insert memory here" slots; users insert memory as needed. Because slots exist, motherboard itself doesn't change but functionality expands.
+
+## Real-world use cases
+
+**Blog automatic publishing**
+After publishing article, automatically post to social media, send newsletters, update cache. Without hooks, all processing would jam into blog system, complicating it immensely.
+
+**Test automation pipeline**
+Developer pushes code to repository, [Git hooks](Hugo-Pipes.md) auto-run tests. Test failure stops next steps. Quality checks happen concurrent with code change, reducing human error.
+
+**E-commerce order flow**
+Order confirmed—inventory system gets notified, shipping company notified, customer confirmation email sent. System linking happens through each system firing webhooks on event occurrence.
+
+## Benefits and considerations
+
+Hook biggest advantage is **loose coupling**. Each module works independently; mutual dependency minimizes. Core features change-free feature addition possible, improving maintainability. Testing single-module becomes easier, improving dev efficiency.
+
+However, excess hooks cause complexity. Which handler executes when becomes hard to track; debugging takes time. Handlers dependent on execution order create unexpected problems.
+
+## Related terms
+
+- **[Lifecycle](Lifecycle.md)** — Object/component generation-to-destruction stages where hooks execute per-stage
+- **[Event Listener](Event-Listener.md)** — Like hooks, specific event occurrence triggers processing
+- **[Webhook](Webhook.md)** — HTTP-based event notification to external services—hook implementation type
+- **[Middleware](Middleware.md)** — Request processing mid-insertion—hook-similar role
+- **[Git Workflow](Git-Workflow.md)** — Git hooks automate development process
+
+## Frequently asked questions
+
+**Q: Hook and callback—what's the difference?**
+A: Similar, but different. Hooks: "call location pre-determined." Callbacks: "later execute results on async completion"—different use cases. Implementation-level callbacks often implement hooks.
+
+**Q: Hook doesn't execute—how to handle?**
+A: First confirm proper registration. Also check naming errors, scope issues. Output logs to check hook actually runs; diagnosis helps.
+
+**Q: Do hooks impact performance?**
+A: Many hooks with heavy-processing handlers impact. Keep handler processing lightweight, limit handlers to necessary minimum.
 
 A hook in programming represents a mechanism that allows developers to intercept, modify, or extend the behavior of software applications at specific points during execution. The concept of hooks provides a way to "hook into" existing code or processes without directly modifying the core functionality, enabling extensibility, customization, and event-driven programming patterns. Hooks serve as predefined entry points where custom code can be executed, making them fundamental building blocks for creating flexible and maintainable software architectures.
 

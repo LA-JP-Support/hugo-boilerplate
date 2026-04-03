@@ -1,7 +1,8 @@
 ---
 title: ソーシャルメディア統合
 date: 2025-12-19
-translationKey: Social-Media-Integration
+lastmod: 2026-04-02
+translationKey: social-media-integration
 description: ソーシャルメディア統合の包括的ガイド:API、認証、データ同期、シームレスなプラットフォーム接続のためのベストプラクティス。
 keywords:
 - ソーシャルメディア統合
@@ -9,7 +10,7 @@ keywords:
 - ソーシャル認証
 - クロスプラットフォーム共有
 - ソーシャルメディアAPI
-category: Application & Use-Cases
+category: コンテンツ・マーケティング
 type: glossary
 draft: false
 e-title: Social Media Integration

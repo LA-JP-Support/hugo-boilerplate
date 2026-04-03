@@ -1,6 +1,7 @@
 ---
 title: Twitter-X
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Twitter-X
 description: Twitter-Xは、2023年にイーロン・マスクによって立ち上げられた、メッセージング、コンテンツ作成、金融サービスを1つのアプリに統合したリブランド後のソーシャルメディアプラットフォームです。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - イーロン・マスク
 - マイクロブログ
 - API統合
-category: Application & Use-Cases
+category: 企業・プラットフォーム
 type: glossary
 draft: false
 e-title: Twitter-X

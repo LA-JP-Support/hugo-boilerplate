@@ -9,8 +9,9 @@ keywords:
 - YouTube収益化
 - 動画マーケティング
 - コンテンツクリエイターツール
-category: Application & Use-Cases
+category: コンテンツ・マーケティング
 type: glossary
+lastmod: 2026-04-02
 draft: false
 e-title: YouTube
 url: /ja/glossary/youtube/

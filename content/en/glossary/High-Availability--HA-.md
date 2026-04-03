@@ -1,18 +1,98 @@
 ---
-title: "High Availability (HA)"
-date: 2025-12-18
-lastmod: 2025-12-18
-translationKey: "high-availability-ha"
-description: "A system design that keeps services running without interruption by eliminating single points of failure and using backup components, ensuring reliability close to 100% of the time."
-keywords: ["High Availability", "HA", "redundancy", "failover", "uptime"]
-category: "AI Infrastructure & Deployment"
-type: "glossary"
+title: High Availability (HA)
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: high-availability-ha
+description: A system design that keeps services running without interruption by using backup components, ensuring reliability close to 100% of the time.
+keywords:
+- high availability
+- HA
+- redundancy
+- failover
+- uptime
+category: Cloud & Infrastructure
+type: glossary
 draft: false
+url: "/en/glossary/high-availability--ha-/"
 ---
 
 ## What is High Availability (HA)?
 
-High Availability (HA) is a system design and operational discipline focused on achieving sustained operational performance—most commonly quantified as "uptime"—over a specified period. HA aims to ensure continuous service even when individual components fail, vital for mission-critical workloads in sectors where outages lead to severe financial, safety, or reputational consequences.
+**High Availability (HA) is a system design approach where the system continues operating through hardware failures or software issues, and services never stop through backup components and auto-failover.** In medical and financial transactions where patient/customer impact is direct, HA is especially important.
+
+> **In a nutshell:** Having multiple smartphones so when one breaks, you continue calling on others—computer systems realize this.
+
+**Key points:**
+
+- **What it does:** Design systems that don't stop even on component failure
+- **Why it's needed:** Prevent business loss and safety degradation
+- **Who uses it:** Financial institutions, medical facilities, telecom operators
+
+## Why it matters
+
+Without [Redundancy](Redundancy.md), single-server failure causes entire-service stop. A 2020 AWS large-scale failure caused several companies' complete service stops. HA systems prevent this by running multiple servers in parallel—when one fails, another takes over. Finance fields see millions in losses per minute downtime, targeting 99.99% uptime (only ~52 minutes annual downtime). Maintaining enterprise trust, brand value, and customer satisfaction requires HA construction.
+
+## How it works
+
+HA implementation has three key elements. First, **redundancy**—have multiple copies of critical components (servers, networks, storage). N+1 redundancy means providing one plus the normal-operation-required number. Second, **health checks**—constantly monitor each component's normal operation. Third, **failover**—when abnormality is detected, automatically switch to backup. Example: placing [Load Balancer](Load-Balancer.md) in front of multiple web servers—when one fails, auto-detect and route its requests to others, users unaffected.
+
+At database layer, [Replication](Replication.md) syncs data across multiple servers, preventing data loss on failure.
+
+## Real-world use cases
+
+**Online banking systems**
+Distribute servers across multiple data centers. Even entire data center stop continues service from other centers. Customers can transfer funds or check balances anytime.
+
+**Medical electronic health records**
+Patient info is most valuable. Beyond normal server, sync backup is placed separately. Main system failure allows emergency patient surgery info instant access; medical quality doesn't decline.
+
+**Mobile carrier networks**
+Base station failures and fiber cuts happen daily. Redundant communication paths let users auto-switch without noticing.
+
+## Calculation method
+
+Availability(%) = ((Total time - Downtime) / Total time) × 100
+
+Example: 1 year(365 days = 525,600 minutes) with 10-minute downtime:
+Availability = ((525,600 - 10) / 525,600) × 100 = 99.998%
+
+Practice uses "five nines"—99.999%, permitting only ~26 seconds annual downtime.
+
+## Benchmark/Reference
+
+Availability and downtime relationship:
+
+| Availability | Annual Downtime | Monthly Downtime | Target Level |
+|------|-------------|---------------|---------|
+| 99% | ~3.6 days | ~7 hours | Basic |
+| 99.9% | ~8 hours | ~43 minutes | Standard(typical SLA) |
+| 99.99% | ~52 minutes | ~4 minutes | High availability |
+| 99.999% | ~26 seconds | ~26 seconds | Ultra-high(finance) |
+
+Benchmark values vary by industry. E-commerce needs 99.9%; financial trading needs 99.99%+.
+
+## Benefits and considerations
+
+HA advantages are clear—business continuity ensures revenue loss minimization. Customer trust maintains, brand value protected. However, high costs—multiple servers, operation, monitoring require investment. Complexity increases, creating design/operation error risks. Also, redundancy doesn't eliminate "complete stop" possibility—simultaneous multiple failures can exceed capacity; understand this limit.
+
+## Related terms
+
+- **[Redundancy](Redundancy.md)** — HA implementation foundation
+- **[Failover](Failover.md)** — Fault detection-triggered backup switch process
+- **[Load Balancing](Load-Balancing.md)** — Multiple server load distribution
+- **[Replication](Replication.md)** — Database redundancy
+- **[Disaster Recovery](Disaster-Recovery.md)** — Large-scale failure recovery also uses HA thinking
+
+## Frequently asked questions
+
+**Q: How do I achieve 99.99% availability?**
+A: Redundant all critical components (servers, network, storage) to N+1+, implement auto-failover, regularly conduct failure recovery drills.
+
+**Q: What's HA vs. disaster recovery (DR) difference?**
+A: HA handles component failure, usually same campus; DR handles entire data center loss, needs geographically distant backup facility.
+
+**Q: Can I add HA features to existing systems later?**
+A: Possible, but entire architecture review required; initial design inclusion is effective and cost-efficient.
 
 A highly available system is engineered to eliminate single points of failure (SPOFs), leverage redundancy at every layer (hardware, network, software, data), and implement rapid failover. HA systems must be accessible and reliable close to 100% of the time, supporting both planned and unplanned downtime scenarios.
 

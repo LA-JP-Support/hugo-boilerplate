@@ -1,7 +1,7 @@
 ---
 title: UX
-lastmod: '2025-12-19'
-date: '2025-12-19'
+lastmod: 2026-04-02
+date: 2025-12-19
 translationKey: ux
 description: ユーザーエクスペリエンス(UX)について、その定義、原則、プロセス、価値を網羅的に解説します。UXとUI、ユーザビリティ、CXの違いを学び、AIチャットボットと自動化の文脈におけるUXに焦点を当てます。
 keywords:
@@ -10,7 +10,7 @@ keywords:
 - UI
 - チャットボットUX
 - ユーザビリティ
-category: AI Chatbot & Automation
+category: Web開発・デザイン
 type: glossary
 draft: false
 e-title: UX

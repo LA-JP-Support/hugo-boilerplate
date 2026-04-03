@@ -1,6 +1,6 @@
 ---
 title: URLレトリーバーとは？
-lastmod: '2025-12-19'
+lastmod: 2026-04-02
 date: '2025-12-19'
 translationKey: what-is-a-url-retriever
 description: URLレトリーバーは、URLからのWebデータ抽出、コンテンツ監視、ワークフローオーケストレーションを自動化するAI搭載のソフトウェアツールまたはエージェントです。ブラウザ拡張機能、クラウドサービス、またはAPIとして動作し、効率的なWeb自動化を実現します。
@@ -10,7 +10,7 @@ keywords:
 - AIエージェント
 - データ抽出
 - ブラウザ拡張機能
-category: AI Chatbot & Automation
+category: Web開発・デザイン
 type: glossary
 draft: false
 e-title: What is a URL Retriever?

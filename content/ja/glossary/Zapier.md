@@ -1,7 +1,7 @@
 ---
 title: Zapier
 date: '2025-12-19'
-lastmod: '2025-12-19'
+lastmod: 2026-04-02
 translationKey: zapier
 description: 8,000以上のアプリを連携するノーコード自動化プラットフォーム、Zapierについて解説します。Zap、AIエージェント、ユースケース、そしてワークフローを効率的に自動化する方法を学びましょう。
 keywords:
@@ -10,7 +10,7 @@ keywords:
 - ノーコード
 - AIエージェント
 - ワークフロー
-category: Automation
+category: AI・機械学習
 type: glossary
 draft: false
 e-title: Zapier

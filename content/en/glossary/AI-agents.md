@@ -1,268 +1,97 @@
 ---
-title: "AI Agents"
-lastmod: 2025-12-18
-date: 2025-12-18
-translationKey: "ai-agents"
-description: "Autonomous software that perceives its environment, makes decisions, and takes actions independently to achieve goals with minimal human intervention."
-keywords: ["AI agents", "autonomous systems", "machine learning", "automation", "LLM"]
-category: "AI Chatbot & Automation"
-type: "glossary"
+title: AI Agents
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: ai-agents
+description: Self-governing AI systems that autonomously complete multi-step business tasks after receiving user instructions.
+keywords:
+- AI Agents
+- Autonomous Systems
+- Machine Learning
+- Automation
+- LLM
+category: AI & Machine Learning
+type: glossary
 draft: false
+url: /en/glossary/ai-agents/
+aliases:
+- /en/glossary/AI-agents/
 ---
 
-## What Are AI Agents?
+## What is an AI Agent?
 
-AI agents are autonomous software systems leveraging artificial intelligence techniques to perceive environments, reason about information, and act upon their surroundings with minimal or no human intervention. These systems transform industries by automating complex workflows, enhancing decision-making, and delivering personalized experiences at scale. AI agents underpin real-world systems in customer service, sales, finance, security, healthcare, and manufacturing.
+**AI Agents are autonomous AI systems that receive user instructions, make independent decisions, and automatically complete multi-step tasks.** For example, when a sales manager instructs "investigate why this month's sales are 20% below target and compile an improvement plan," an AI Agent automatically analyzes data, creates a report, and proposes solutions. A task that traditionally took a data analyst several days is completed by the AI Agent in just hours.
 
-An AI agent is a program capable of autonomous action: it perceives its environment, reasons over inputs, and chooses and executes actions to achieve defined objectives. Unlike traditional software following static instructions, AI agents make context-aware decisions, adapt to new data, and learn from experience.
+> **In a nutshell:** "A capable team member who takes a task to completion, thinking through each step independently and delivering finished results."
 
-**Key Characteristics:**
-- **Autonomy** - Functions independently, making decisions and executing tasks without constant human oversight
-- **Goal Orientation** - Pursues explicit objectives, often optimizing for key metrics (utility functions)
-- **Perception** - Collects data from APIs, sensors, user interactions, or digital systems to build situational awareness
-- **Rationality** - Chooses actions based on logic, evidence, and contextual understanding
-- **Proactivity** - Anticipates needs or events and acts in advance, not just in reaction
-- **Learning** - Improves performance and adapts behavior based on feedback and new data
-- **Adaptability** - Modifies strategies in response to changing goals or environments
-- **Collaboration** - Communicates and coordinates with other agents or humans to achieve shared goals
+**Key points:**
 
-A customer service AI agent autonomously answers queries, consults company databases for accurate information, escalates complex cases to humans when needed, and learns from feedback to refine future responses.
+- **What it does:** Decomposes complex tasks from instructions and automatically executes them to completion
+- **Why it matters:** Automates routine yet complex work, freeing humans to focus on creative and strategic tasks
+- **Who uses it:** Customer service, sales, finance, HR, manufacturing—companies across all industries
 
-## Core Components and Architecture
+## Why it matters
 
-Modern AI agents are built as modular systems with each component contributing to reasoning, memory, learning, and action.
+Modern enterprises increasingly perform complex work by coordinating multiple tools. For example, responding to customer inquiries requires checking customer history in CRM, logging responses in ticketing systems, and sending replies via email. Doing this manually is inefficient.
 
-**Large Language Model (LLM) / Foundation Model**
-- Acts as the agent's cognitive engine, enabling natural language understanding, reasoning, and response generation
-- Orchestrates high-level interactions and complex task decomposition
+AI Agents can execute these multi-step processes automatically. When decisions arise, they make them without human intervention. If problems emerge, they adapt automatically. By automating such complex, repetitive work, organizations dramatically boost productivity.
 
-**Planning Module**
-- Decomposes complex objectives into sequenced subtasks
-- Selects optimal strategies, manages orchestration, and anticipates dependencies
+Crucially, AI Agents learn from experience. As they handle more interactions, they discover better problem-solving approaches and improve over time.
 
-**Memory Module**
-- Short-term memory maintains context for coherent conversations or multi-step tasks
-- Long-term memory stores persistent knowledge, history, and learned experiences
-- Episodic/consensus memory shares state or knowledge across agents in multi-agent systems
+## How it works
 
-**Tool/Action Integration**
-- Interfaces with external APIs, databases, web services, or device controls
-- Enables real-world actions: data retrieval, workflow execution, device manipulation
+AI Agents consist of three main components.
 
-**Reasoning Engine**
-- Applies logic, rules, and domain knowledge for informed decision-making
-- Supports deductive (rule-based) and inductive (learning-based) reasoning
+**First is "intelligence."** This is a [Large Language Model](large-language-models/) (like ChatGPT)—a high-performance AI that understands text, reasons about it, and makes decisions. The Agent asks this AI "what should I do now?" and the AI responds "I should retrieve data from this database."
 
-**Reflection and Learning**
-- Evaluates outcomes, receives feedback, and updates behavior or models
-- Uses reinforcement learning, supervised learning, or heuristics
+**Second is the "toolbox."** Once the AI decides on an action, it needs access to various tools (CRM systems, email functionality, database searches, etc.) to execute that decision. The AI Agent uses these tools to perform actual operations.
 
-**Persona**
-- Maintains consistent communication style and role, tailored by domain (formal for finance, friendly for support)
+**Third is "memory."** Complex tasks require remembering previous decisions and customer information. AI Agents maintain both "short-term memory" (conversation history) and "long-term memory" (past cases and learning), enabling consistent behavior.
 
-**Action Mechanisms**
-- Executes decisions by invoking tools, updating systems, or coordinating with other agents/users
-- Handles multi-step operations, error recovery, and task monitoring
+The actual process follows four stages: "recognize → decide → act → learn." The Agent recognizes the situation, decides what to do, acts based on that decision, and learns from results to improve future decisions.
 
-## How AI Agents Work
+## Real-world use cases
 
-AI agents function through a cyclical, iterative process:
+**Scenario 1: Customer service automation**
 
-**Goal Setting**
-- Receives a goal from a human, system, or another agent (e.g., resolve a customer query)
+An online retailer's customer service center receives thousands of daily inquiries. After AI Agent implementation, simple questions (order status, returns procedures) are auto-handled, while complex issues go to humans. Response time halved, and customer satisfaction improved.
 
-**Planning**
-- Breaks down goals into actionable subtasks, considering dependencies and strategies
+**Scenario 2: Sales assistant**
 
-**Information Acquisition**
-- Gathers data from internal knowledge, databases, APIs, or other sources
+When sales teams follow up with prospects, an AI Agent automatically recognizes "this prospect viewed our demo presentation and 7 days have passed," automatically sends follow-up emails, and recommends the ideal timing for outreach. After meetings, it automatically logs details and suggests next actions.
 
-**Task Execution**
-- Performs the planned actions—making decisions, manipulating data, or controlling systems
+**Scenario 3: Financial report generation**
 
-**Feedback & Evaluation**
-- Monitors outcome, collects feedback from users or self-assessment, and measures success against objectives
+Finance departments once spent days each month extracting data from multiple systems, analyzing it, and creating reports. With AI Agents, month-end triggers automatic data retrieval, analysis, graph generation, and insight writing. Finance staff now spend 3 hours on review instead of 30 hours on creation.
 
-**Learning & Adaptation**
-- Updates its models or strategies based on outcomes, improving future performance
+## Benefits and considerations
 
-This iterative approach enables continual learning, context awareness, and dynamic adaptation.
+The greatest benefit of AI Agents is **automating complex multi-step work.** Tasks that once required multiple people can now be completed by a single Agent end-to-end, allowing humans to concentrate on creative and strategic work.
 
-## Reasoning Paradigms
+Additionally, since AI Agents work 24/7/365, response speed improves and global customer support becomes feasible.
 
-**ReAct (Reasoning and Acting)**
-- Interleaves reasoning steps ("thoughts") with actions (tool calls, queries) in iterative loops
-- Each observation or new input can modify the next step
-- Strengths: Adaptive, dynamic course correction; handles open-ended, multi-step reasoning
-- Best for: Open-ended, multi-step tasks
+However, critical safeguards are needed. **Strict permission controls prevent unauthorized actions.** If database access is misconfigured, an Agent could access sensitive data.
 
-**ReWOO (Reasoning Without Observation)**
-- Plans all actions upfront, based solely on the initial prompt
-- Executes all tool calls in parallel, then synthesizes a final output
-- Strengths: Reduces latency by parallelizing tasks; efficient for predictable workflows
-- Best for: Structured, parallelizable tasks
+**Agents may also make unexpected decisions.** When encountering unfamiliar scenarios, AI might make poor judgments. Critical decisions (large contracts, significant approvals) must be reviewed by humans before execution.
 
-## Types of AI Agents
+## Related terms
 
-**Simple Reflex Agents**
-- Act on current perceptions using fixed rules; no memory or modeling
-- Example: Thermostat activating heat at a set threshold
+- **[Large Language Models](large-language-models/)** — The "brain" of AI Agents, enabling decision-making
+- **[Natural Language Processing](natural-language-processing/)** — Foundation technology for understanding user instructions
+- **[Automation](automation/)** — The business automation concept that AI Agents enable
+- **[Machine Learning](machine-learning/)** — Mechanism enabling Agents to learn from experience
+- **[Generative AI](generative-ai/)** — Foundation technology powering AI Agents
 
-**Model-based Reflex Agents**
-- Combine current input with an internal model (memory) for more nuanced decisions
-- Example: Robotic vacuum mapping a room and avoiding already cleaned areas
+## Frequently asked questions
 
-**Goal-based Agents**
-- Use internal models and explicit goals to plan and select optimal actions
-- Example: GPS navigation evaluating routes for the fastest arrival
+**Q: Is it safe to let AI Agents make all decisions?**
 
-**Utility-based Agents**
-- Seek to maximize a utility function (e.g., efficiency, cost, user satisfaction)
-- Example: Navigation agent optimizing for time, cost, and fuel
+A: Simple, routine decisions are fine. However, important business decisions (major investments, personnel moves) and risk-sensitive determinations require human final review. Think of AI Agents as "capable assistants," not "executive decision-makers."
 
-**Learning Agents**
-- Continuously improve behavior based on feedback and new experiences
-- Example: Predictive maintenance agent learning from equipment sensor data
+**Q: What happens if an AI Agent makes a wrong decision?**
 
-**Hierarchical Agents**
-- Organize agents in tiers; higher-level agents coordinate lower-level agents' actions
-- Example: Manufacturing supervisor agent delegating tasks to assembly and inspection agents
+A: All Agent actions are logged for traceability, so you can pinpoint what went wrong. However, the action may already be executed. For critical work, use an "AI proposes → human approves → execution" workflow.
 
-**Multi-agent Systems**
-- Collections of agents that communicate, cooperate, or compete for distributed problem-solving
-- Example: Autonomous vehicle fleets optimizing traffic flow
+**Q: How long does AI Agent implementation take?**
 
-## AI Agents vs Related Technologies
-
-| Feature | AI Agent | AI Assistant | Chatbot | AI Workflow |
-|---------|----------|--------------|---------|-------------|
-| **Autonomy** | High—operates independently | Moderate—assists, needs human input | Low—responds to triggers | None—fully predefined |
-| **Complexity** | Handles complex, multi-step tasks | Handles moderate complexity, supports users | Limited to simple, scripted tasks | Follows static sequences |
-| **Learning** | Learns and adapts over time | May learn in limited ways | Minimal or no learning | No learning |
-| **Interaction** | Proactive, goal-oriented, collaborates with others | Reactive, supports user requests | Reactive, pattern/keyword matching | No interaction |
-
-## Key Benefits
-
-**Productivity**
-- Automate repetitive or complex tasks, freeing human resources
-
-**Decision Quality**
-- Analyze large data sets for actionable insights
-
-**Cost Efficiency**
-- Reduce labor, error, and process inefficiencies
-
-**Scalability**
-- Handle high interaction volumes with consistent quality
-
-**Availability**
-- Operate 24/7 for continuous support or operations
-
-**Personalization**
-- Tailor outputs based on individual user history
-
-## Common Use Cases
-
-**Customer Service**
-- Handle inquiries, resolve issues, escalate complex cases
-- AI agent manages support tickets, references knowledge base, summarizes context for human agents
-
-**Sales**
-- Analyze CRM data, personalize outreach, schedule meetings for lead qualification
-
-**Marketing**
-- Create briefs, segment audiences, optimize campaigns in real-time
-
-**Human Resources**
-- Screen resumes, coordinate interviews, answer applicant questions
-
-**Finance**
-- Deliver financial advice, analyze portfolios, summarize meetings
-
-**Manufacturing**
-- Monitor equipment, detect anomalies, schedule repairs for predictive maintenance
-
-**Security**
-- Analyze logs, detect incidents, trigger containment for threat detection and response
-
-**Healthcare**
-- Schedule appointments, answer questions, match patients to clinical trials
-
-**Data Analysis**
-- Aggregate, analyze, and report on data for business intelligence insights
-
-## Implementation Best Practices
-
-**Define Clear Objectives**
-- Establish measurable goals for each agent
-
-**Ensure High-Quality Data**
-- Maintain accurate training and operational data
-
-**Select Proper Agent Types**
-- Match sophistication to task needs
-
-**Integrate Seamlessly**
-- Connect to existing systems (CRM, APIs)
-
-**Prioritize User Experience**
-- Design intuitive, responsive interactions
-
-**Monitor & Optimize**
-- Track performance, retrain and refine models
-
-**Maintain Human Oversight**
-- Establish escalation, accountability, and ethical review
-
-**Ensure Security & Compliance**
-- Implement privacy, access control, and ethical safeguards
-
-## Challenges and Considerations
-
-**Data Privacy & Security**
-- Require robust safeguards and compliance
-
-**Ethics**
-- Risk of bias, unintended harm, need for oversight
-
-**Technical Complexity**
-- Advanced agents demand specialized expertise
-
-**Resource Demands**
-- Sophisticated models can be compute-intensive
-
-**Coordination**
-- Multi-agent systems need robust protocols
-
-**Emotional Intelligence**
-- Limited capability for nuanced social interactions
-
-**Accountability**
-- Assigning responsibility for autonomous actions
-
-## References
-
-- [Botpress: Real-World Applications of AI Agents](https://botpress.com/blog/real-world-applications-of-ai-agents)
-- [IBM: Multi-agent Systems in Practice](https://www.ibm.com/think/topics/multiagent-system)
-- [Google Cloud: What are AI agents?](https://cloud.google.com/discover/what-are-ai-agents)
-- [IBM: What Are AI Agents?](https://www.ibm.com/think/topics/ai-agents)
-- [Salesforce: AI Agents – Definition, Types, Examples](https://www.salesforce.com/agentforce/ai-agents/)
-- [IBM: Components of AI Agents](https://www.ibm.com/think/topics/components-of-ai-agents)
-- [Google Cloud: AI agent architecture](https://cloud.google.com/products/agent-builder)
-- [IBM: ReAct Reasoning](https://www.ibm.com/think/topics/react-agent)
-- [Nutrient.io: ReAct vs ReWOO](https://www.nutrient.io/blog/rewoo-vs-react-choosing-right-agent-architecture/)
-- [IBM: AI agents vs AI assistants](https://www.ibm.com/think/topics/ai-agents-vs-ai-assistants)
-- [IBM: Simple Reflex Agent](https://www.ibm.com/think/topics/simple-reflex-agent)
-- [Botpress: Simple Reflex Agents](https://botpress.com/blog/types-of-ai-agents)
-- [IBM: Model-based Reflex Agent](https://www.ibm.com/think/topics/model-based-reflex-agent)
-- [IBM: Goal-based Agent](https://www.ibm.com/think/topics/goal-based-agent)
-- [IBM: Utility-based Agent](https://www.ibm.com/think/topics/utility-based-agent)
-- [IBM: Learning](https://www.ibm.com/think/topics/ai-agent-learning)
-- [IBM: Hierarchical AI Agents](https://www.ibm.com/think/topics/hierarchical-ai-agents)
-- [Sprinklr: Types of AI Agents](https://www.sprinklr.com/blog/types-of-ai-agents/)
-- [IBM: Agentic Workflows](https://www.ibm.com/think/topics/agentic-workflows)
-- [IBM: AI Agent Orchestration](https://www.ibm.com/think/topics/ai-agent-orchestration)
-- [Salesforce: AI in Customer Service](https://www.salesforce.com/agentforce/use-cases/)
-- [IBM: How to Build an AI Agent](https://www.ibm.com/think/topics/how-to-build-an-ai-agent)
-- [AWS: What are AI Agents?](https://aws.amazon.com/what-is/ai-agents/)
-- [YouTube: AI Agents, Clearly Explained](https://www.youtube.com/watch?v=FwOTs4UxQS4)
+A: Simple tasks: weeks. Complex tasks: months. Setup includes system integration, security configuration, and employee training, requiring extensive preparation.

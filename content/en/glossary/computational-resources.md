@@ -1,267 +1,87 @@
 ---
-title: "Computational Resources"
-lastmod: 2025-12-18
-date: 2025-12-18
-translationKey: "computational-resources"
-description: "Computational Resources: The hardware and software infrastructure (processors, memory, storage, networks) needed to run programs and AI models. They power everything from everyday computing to complex data analysis."
-keywords: ["computational resources", "CPU", "GPU", "AI", "cloud computing"]
-category: "Technology"
-type: "glossary"
+title: Computational Resources
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: computational-resources
+description: Computational resources encompass processors like CPU and GPU, memory, and storage—all hardware needed for computing tasks. They're critical for AI development and data analysis.
+keywords:
+- computational resources
+- CPU
+- GPU
+- AI
+- memory
+category: AI & Machine Learning
+type: glossary
 draft: false
+url: /en/glossary/computational-resources/
 ---
 
 ## What are Computational Resources?
 
-Computational resources encompass the comprehensive hardware, software, and networking infrastructure required to execute computational tasks ranging from simple data processing to complex artificial intelligence model training. These resources include processing units (CPUs, GPUs, TPUs, FPGAs, ASICs), memory systems (RAM, cache, ROM), storage devices (HDDs, SSDs, magnetic tape), networking infrastructure (LANs, WANs), and the software components that orchestrate and optimize their use.
+**Computational resources are the hardware needed for computing work: CPUs, GPUs, memory, and storage.** Simple calculations work fine on a typical computer's CPU, but AI training and large-scale data analysis need specialized processors like GPUs or TPUs. Massive memory and storage are also essential. Choosing and optimizing computational resources directly affects business efficiency and cost.
 
-Modern computational resources serve as the foundation for artificial intelligence, data science, scientific computing, enterprise automation, cloud services, and virtually every digital technology. As AI models grow increasingly sophisticated and datasets expand to petabyte scale, understanding how to select, deploy, and optimize computational resources becomes critical for organizations and developers.
+> **In a nutshell:** The "power" needed for computing work. Moving heavy loads requires a big truck; complex calculations require powerful processors.
 
-The field continues evolving rapidly with specialized hardware accelerators for AI workloads, edge computing architectures that bring processing closer to data sources, quantum computing systems for problems intractable to classical computers, and increasingly efficient cloud platforms that democratize access to world-class computational power.
+**Key points:**
 
-## Core Processing Units
+- **What it does:** Powers AI training, data analysis, system operations, and other computing tasks
+- **Why it matters:** Right resource choice determines speed and cost efficiency
+- **Who uses it:** Data scientists, AI developers, IT managers, cloud users
 
-**CPU (Central Processing Unit)**  
-General-purpose processors handling diverse computational tasks, system management, and control flow. Modern CPUs feature multiple cores for parallel processing but are optimized for sequential execution and complex logic operations.
+## Why it matters
 
-- **Architecture**: Few powerful cores with complex instruction sets
-- **Strengths**: Versatility, low-latency single-threaded performance, system management
-- **Applications**: Operating systems, databases, general computing, control tasks
-- **Power Consumption**: 15-350W depending on device class
-- **Cooling**: Active cooling required for sustained workloads
+Computational resources' importance varies with task type. Spreadsheet payroll calculations work on any computer. But training GPT-4-like AI models is completely different. You must process enormous text quantities and update billions of parameters. Regular computers would take years. Thousands of GPUs compress this to weeks.
 
-**GPU (Graphics Processing Unit)**  
-Specialized processors with thousands of smaller cores optimized for parallel operations, particularly matrix and vector calculations fundamental to graphics and machine learning.
+Modern business wins through data utilization speed. That speed depends heavily on computational resources. Cloud proliferation lets organizations rent rather than own hardware. Now "choosing resources correctly" directly impacts business competitiveness.
 
-- **Architecture**: Thousands of simple cores for massive parallelism
-- **Strengths**: High-throughput parallel processing, matrix operations
-- **Applications**: Deep learning training and inference, scientific simulations, graphics rendering, cryptocurrency mining
-- **Power Consumption**: 150-400W for high-performance models
-- **Cooling**: Advanced thermal solutions including liquid cooling for enterprise deployments
+## How it works
 
-**TPU (Tensor Processing Unit)**  
-Google's custom application-specific integrated circuits (ASICs) designed exclusively for neural network computations, particularly tensor operations that dominate deep learning workloads.
+Computational resources split across four layers. Bottom is processors (CPU, GPU, TPU) determining "calculation speed." Next is memory (RAM, cache) determining "how much information you handle at once." Next is storage determining "how much data you permanently hold." Finally, networking determines "how fast data moves between computers."
 
-- **Architecture**: Systolic arrays optimized for matrix multiplication
-- **Strengths**: Extreme efficiency for neural network operations, low latency for inference
-- **Applications**: Large-scale model training (GPT, PaLM), real-time AI inference, Google Cloud AI services
-- **Availability**: Primarily through Google Cloud Platform
-- **Energy Efficiency**: Superior performance per watt compared to GPUs for AI workloads
+CPUs are "generalists"—they do everything reasonably well. GPUs are "specialists"—optimized for one specific calculation type: matrix operations. AI training is constant matrix operations, so GPUs complete in one minute what CPUs need one hour for.
 
-**FPGA (Field Programmable Gate Array)**  
-Reconfigurable hardware allowing custom logic implementation after manufacturing, offering flexibility between general-purpose CPUs and fixed-function ASICs.
+Memory is your "workbench." Large workbenches spread many materials; small workbenches require constant rearranging. Processing tens of gigabytes of AI data needs correspondingly large memory.
 
-- **Architecture**: Programmable logic blocks and interconnects
-- **Strengths**: Hardware-level customization, low latency, algorithm flexibility
-- **Applications**: Edge AI, high-frequency trading, telecommunications, real-time signal processing, industrial automation
-- **Power Consumption**: 10-200W depending on configuration
-- **Development**: Requires hardware description languages (VHDL, Verilog)
+Storage is your "warehouse." CPU and memory are fast but limited, so data lives in storage. [Cloud services](cloud-service.md) make storage speed (HDD vs SSD) critical for system responsiveness.
 
-**ASIC (Application-Specific Integrated Circuit)**  
-Custom-designed chips optimized for specific computational tasks, offering maximum efficiency at the cost of flexibility.
+## Real-world use cases
 
-- **Architecture**: Hardwired logic for specific operations
-- **Strengths**: Highest possible efficiency and performance for target operation
-- **Limitations**: No flexibility post-fabrication, high development costs
-- **Applications**: Cryptocurrency mining, AI inference chips, custom neural processing units
-- **Examples**: Google TPU, Apple Neural Engine, specialized mining chips
+**AI startup development**
 
-## Memory and Storage Systems
+Buying expensive GPU clusters in early stages is foolish. Instead rent GPU time from cloud. One week of training might cost 500,000 yen, but hardware purchase and maintenance cost 50 times more.
 
-**Random Access Memory (RAM)**  
-High-speed volatile memory providing temporary storage for active data and program instructions. RAM capacity and bandwidth critically impact system performance, especially for data-intensive operations requiring rapid access to large datasets.
+**Large-scale data analysis**
 
-- **Types**: DDR4, DDR5, HBM (High Bandwidth Memory) for GPUs
-- **Capacity Range**: 8GB-2TB+ depending on application
-- **Critical For**: Large model training, big data analytics, virtualization, in-memory databases
+Retail analyzing all nationwide stores' daily sales (gigabytes daily) can't use local computers. [Cloud](cloud-based.md) distributed processing frameworks (Apache Spark) let multiple machines process in parallel, delivering results in minutes.
 
-**Cache Memory**  
-Ultra-fast memory positioned close to or on the CPU, storing frequently accessed data to minimize latency and maximize throughput through the memory hierarchy.
+**Edge AI inference**
 
-- **Levels**: L1 (fastest, smallest), L2 (balanced), L3 (larger, shared)
-- **Impact**: Dramatic performance improvements for memory-bound applications
-- **Management**: Handled automatically by hardware and operating systems
+Using smartphone cameras for object recognition shouldn't send every image to cloud and wait. Load lightweight inference models directly on the smartphone processor. Local inference offers better responsiveness.
 
-**Storage Devices**  
-Persistent storage for data, applications, models, and system files. Storage performance significantly impacts data loading, model checkpointing, and overall system responsiveness.
+## Benefits and considerations
 
-- **HDDs (Hard Disk Drives)**: Magnetic storage offering large capacity at low cost; suited for bulk and archival storage
-- **SSDs (Solid State Drives)**: Flash-based storage with dramatically faster access times and lower latency; essential for active datasets and frequently accessed files
-- **NVMe SSDs**: High-performance SSDs using PCIe interface; critical for AI training with large datasets
-- **Magnetic Tape**: Cost-effective archival storage for long-term retention in enterprise and research environments
+Computational resources' biggest benefit: "Proper selection dramatically improves work quality and speed." Introductions of GPU often cut learning time to one-tenth. That's common.
 
-**Networking Infrastructure**  
-Network connectivity enables distributed computing, cloud access, data sharing, and collaborative workflows.
+However, watch for "overspec purchasing waste." Big data processing often doesn't actually need the powerful machines you think. Also, hardware obsolescence is rapid. Renting cloud resources only when needed usually beats buying expensive equipment.
 
-- **LAN (Local Area Network)**: High-speed internal connectivity for on-premise resources, compute clusters
-- **WAN (Wide Area Network)**: Geographic connectivity enabling remote access, distributed teams, hybrid cloud
-- **High-Performance Networking**: InfiniBand, 100GbE for HPC clusters requiring low-latency interconnects
+## Related terms
 
-## Software Components and Orchestration
+- **[Cloud-based](cloud-based.md)** — Computational resources increasingly come from cloud, eliminating on-premises investment
+- **[Cloud service](cloud-service.md)** — AWS, Azure, Google Cloud provide GPU and memory on demand
+- **[AI & Machine Learning](AI-machine-learning.md)** — Large model training absolutely requires strong computational resources
+- **[Data center](data-center.md)** — Facilities concentrating massive computational resources where cloud services run
+- **[GPU](GPU.md)** — Graphics processor optimized for AI training
 
-**Operating Systems**  
-Manage hardware resources, schedule processes, handle memory allocation, enforce security policies, and provide abstraction layers for applications.
+## Frequently asked questions
 
-- **Examples**: Linux (dominant in HPC and cloud), Windows, macOS, specialized RTOS
-- **Role**: Resource allocation, process management, security, hardware abstraction
+**Q: How many resources does AI model training need?**
 
-**Libraries and Frameworks**  
-Optimized code modules enabling efficient development and execution of computational tasks.
+A: Depends on model size and dataset. Small models: 1-2 GPUs for hours. Large models: tens or hundreds of GPUs for weeks. Calculate needs beforehand, then cloud-estimate costs.
 
-- **Machine Learning**: TensorFlow, PyTorch, JAX, scikit-learn
-- **Scientific Computing**: NumPy, SciPy, MATLAB
-- **Big Data**: Apache Spark, Dask, Ray
-- **Linear Algebra**: BLAS, LAPACK, cuBLAS (GPU-accelerated)
+**Q: Better to buy hardware ourselves or rent from cloud?**
 
-**Job Schedulers and Orchestration**  
-Software managing, queuing, and distributing computational workloads across clusters and cloud environments.
-
-- **HPC Schedulers**: SLURM, PBS, LSF for traditional compute clusters
-- **Container Orchestration**: Kubernetes for cloud-native, containerized workloads
-- **Workflow Managers**: Airflow, Prefect for complex data pipelines
-
-## Applications and Use Cases
-
-**Artificial Intelligence and Machine Learning**
-
-*Model Training*
-- **Requirements**: Multi-GPU or TPU clusters, high-capacity RAM, fast storage for large datasets
-- **Scale**: Training foundation models like GPT-4 requires thousands of GPUs, petabytes of storage
-- **Example**: Training a large language model involves coordinated multi-node clusters with specialized networking
+A: Almost always cloud. Hardware maintenance, cooling, and security costs are high. Obsolescence risk is real. Cloud lets you pay-as-you-go.
 
-*AI Inference*
-- **Deployment**: Edge devices with NPUs/ASICs, cloud GPUs, or CPU-based inference for cost optimization
-- **Optimization**: Model quantization, pruning, and specialized inference engines reduce computational demands
-- **Real-Time**: Autonomous vehicles, voice assistants, real-time fraud detection require low-latency inference
+**Q: What's the CPU vs GPU difference?**
 
-**Data Science and Analytics**  
-Large-scale data processing, statistical modeling, and interactive visualization demand substantial compute and memory resources. Distributed frameworks like Apache Spark enable analysis across petabyte-scale datasets using cluster computing.
-
-**Cloud Computing**  
-Cloud platforms democratize access to computational resources through flexible, on-demand infrastructure.
-
-- **Virtual Machines**: Isolated, customizable compute environments
-- **Containers**: Lightweight, portable application environments (Docker, Kubernetes)
-- **Serverless**: Event-driven, auto-scaling compute without infrastructure management
-- **Specialized Instances**: GPU instances for ML, high-memory instances for analytics, burstable instances for variable workloads
-
-**Scientific Research and Simulation**  
-High-performance computing (HPC) clusters power climate modeling, molecular dynamics, astrophysics simulations, and computational biology. These applications require tightly coupled CPU/GPU nodes, high-speed interconnects, and specialized parallel programming frameworks.
-
-**Enterprise Automation**  
-Robotic Process Automation (RPA) tools automate repetitive digital tasks across scalable compute infrastructure. AI assistants and workflow automation systems process natural language, orchestrate business processes, and manage decision-making workflows.
-
-**AI Chatbots and Virtual Assistants**  
-Conversational AI systems require scalable infrastructure supporting natural language processing, real-time response generation, context management, and integration with knowledge bases and business systems. Enterprise deployments use autoscaling cloud resources to handle variable user demand.
-
-## Cloud Computing Models and Providers
-
-**Deployment Models**
-
-*Infrastructure as a Service (IaaS)*
-- Full control over virtual machines, storage, networking
-- User manages operating system, middleware, applications
-- Maximum flexibility and customization
-
-*Platform as a Service (PaaS)*
-- Provider manages infrastructure and runtime environment
-- User focuses on application code and data
-- Simplified deployment and scaling
-
-*Serverless Computing*
-- Fully managed execution environments
-- Automatic scaling based on demand
-- Pay only for actual compute time used
-
-**Leading Cloud Providers**
-- **Amazon Web Services (AWS)**: EC2 for compute, S3 for storage, SageMaker for ML
-- **Microsoft Azure**: Virtual Machines, Azure ML, cognitive services
-- **Google Cloud Platform (GCP)**: Compute Engine, Vertex AI, TPU access
-- **Specialized Platforms**: Lambda Labs, CoreWeave for GPU-focused workloads
-
-## Resource Optimization Strategies
-
-**Code and Algorithm Optimization**
-- **Vectorization**: Leverage SIMD instructions and GPU parallelism
-- **Algorithm Selection**: Choose algorithms with favorable time/space complexity
-- **Profiling**: Identify bottlenecks using profiling tools (cProfile, NVIDIA Nsight)
-- **Parallel Computing**: Use multi-threading, multi-processing, distributed computing frameworks
-
-**Resource Allocation and Management**
-- **Right-Sizing**: Match compute and memory to workload requirements
-- **Spot/Preemptible Instances**: Use interruptible instances for fault-tolerant workloads at reduced costs
-- **Auto-Scaling**: Dynamically adjust resources based on demand
-- **Job Scheduling**: Optimize task distribution across clusters for maximum throughput
-
-**Energy Efficiency and Sustainability**
-- **Hardware Selection**: Choose energy-efficient processors and accelerators
-- **Workload Consolidation**: Increase utilization rates through efficient scheduling
-- **Renewable Energy**: Prefer cloud regions powered by renewable energy
-- **Algorithmic Efficiency**: Reduce unnecessary computation through better algorithms and model optimization
-
-**Monitoring and Observability**
-- **Metrics Collection**: Monitor CPU, GPU, memory, disk I/O, network usage
-- **Dashboards**: Grafana, Prometheus, cloud-native monitoring tools
-- **Alerting**: Automated alerts for resource exhaustion, performance degradation
-- **Cost Tracking**: Monitor spending, identify waste, optimize resource allocation
-
-## On-Premise vs. Cloud vs. Hybrid
-
-**On-Premise Infrastructure**
-- **Characteristics**: Owned hardware, complete control, fixed capacity, capital expenditure
-- **Advantages**: Data sovereignty, regulatory compliance, predictable long-term costs
-- **Limitations**: Limited scalability, maintenance burden, upfront investment
-
-**Cloud Infrastructure**
-- **Characteristics**: Rented resources, elastic scaling, operational expenditure
-- **Advantages**: No upfront investment, global accessibility, managed services, rapid provisioning
-- **Considerations**: Ongoing costs, potential data transfer charges, vendor dependencies
-
-**Hybrid Models**
-- **Approach**: Combine on-premise and cloud resources strategically
-- **Use Cases**: Sensitive data on-premise, scalable workloads in cloud, burst computing during peak demand
-- **Benefits**: Flexibility, compliance, cost optimization
-
-## Emerging Technologies
-
-**Quantum Computing**  
-Quantum computers using quantum bits (qubits) promise exponential speedups for specific problem classes including cryptography, optimization, drug discovery, and materials science. Currently in early stages with limited practical applications.
-
-**Edge Computing**  
-Moving computation closer to data sources (IoT devices, sensors) reduces latency and bandwidth requirements for real-time analytics, autonomous systems, and distributed AI inference.
-
-**Neuromorphic Computing**  
-Hardware architectures mimicking brain structure and function, enabling highly efficient, parallel, adaptive computation for AI, sensory processing, and autonomous control systems.
-
-**Specialized AI Accelerators**  
-Continued development of domain-specific processors (neural processing units, vision processors, language model accelerators) optimized for inference, training, or specific AI modalities.
-
-## Frequently Asked Questions
-
-**What are computational resources?**  
-The hardware, software, and networking infrastructure required to perform computational tasks, including processors, memory, storage, network connectivity, and orchestration software.
-
-**Why are computational resources critical for AI?**  
-Modern AI models require massive computational power for training on large datasets and fast inference for real-time applications. Adequate computational resources determine feasibility, performance, and cost of AI deployments.
-
-**How do I choose the right computational resources?**  
-Assess workload characteristics (data volume, algorithm complexity, real-time requirements), evaluate cost-performance tradeoffs, consider scalability needs, and match resources to specific requirements. Start small, profile performance, scale as needed.
-
-**What is scaling in cloud computing?**  
-Dynamically adjusting computational resources (compute instances, memory, storage) to match workload demands. Horizontal scaling adds more instances; vertical scaling increases capacity of existing instances.
-
-**How can I optimize resource usage?**  
-Profile code to identify bottlenecks, choose efficient algorithms, right-size resource allocation, leverage parallelism, implement auto-scaling, monitor utilization metrics, and eliminate waste through regular audits.
-
-**What is the environmental impact?**  
-Large-scale computing (especially AI training) consumes substantial energy. Optimize algorithms for efficiency, use energy-efficient hardware, choose cloud regions with renewable energy, and implement sustainable practices.
-
-## References
-
-- [PCBONLINE: GPU vs FPGA vs ASIC vs CPU Comparison](https://www.pcbonline.com/blog/gpu-vs-fpga-vs-asic-vs-cpu.html)
-- [Ampheo: Understanding Differences Between Processing Units](https://www.ampheo.com/blog/understand-the-differences-between-cpu-gpu-ipu-npu-tpu-lpu-mcu-mpu-soc-dsp-fpga-asic-gpp-and-ecu)
-- [LinkedIn: CPU vs GPU vs TPU - Ultimate Showdown](https://www.linkedin.com/pulse/cpu-vs-gpu-tpu-dpu-qpu-ultimate-showdown-processing-units-dragutoiu)
-- [Harvard FAS Informatics: Computing Glossary](https://informatics.fas.harvard.edu/resources/glossary/)
-- [K12CS: Computer Science Glossary](https://k12cs.org/glossary/)
-- [Amazon Web Services: EC2 Instances](https://aws.amazon.com/ec2/)
-- [Microsoft Azure: Cloud Computing Overview](https://azure.microsoft.com/en-us/overview/cloud-computing/)
-- [Google Cloud Platform: Compute Engine](https://cloud.google.com/compute)
+A: CPU is versatile generalist. GPU specializes in matrix math. AI training needs GPU hundreds of times faster.

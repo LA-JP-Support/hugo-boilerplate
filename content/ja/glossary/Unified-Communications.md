@@ -1,6 +1,7 @@
 ---
 title: ユニファイドコミュニケーション
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Unified-Communications
 description: ユニファイドコミュニケーション(UC)の包括的ガイド - 現代のビジネス環境における音声、ビデオ、メッセージング、コラボレーションツールの統合について解説します。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - ビジネスコラボレーション
 - VoIP統合
 - コミュニケーションシステム
-category: Application & Use-Cases
+category: ビジネス・戦略
 type: glossary
 draft: false
 e-title: Unified Communications

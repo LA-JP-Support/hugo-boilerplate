@@ -1,181 +1,76 @@
 ---
-title: "Open-Domain Bot"
-translationKey: "open-domain-bot"
-description: "An AI chatbot that can have natural conversations about any topic, unlike specialized bots designed for specific tasks."
-keywords: ["open-domain bot", "AI chatbot", "conversational AI", "transformer models", "dialogue system"]
-category: "AI Chatbot & Automation"
-type: "glossary"
-date: 2025-12-18
-lastmod: 2025-12-18
+title: Open-Domain Bot
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: Open-Domain-Bot
+description: An open-domain bot is an AI conversational agent capable of free-form dialogue on any topic. Unlike closed-domain bots limited to specific tasks, open-domain bots handle wide-ranging subjects.
+keywords:
+- Open-Domain Bot
+- AI Chatbot
+- Conversational AI
+- Transformer Model
+- Dialogue System
+category: AI & Machine Learning
+type: glossary
 draft: false
+url: /en/glossary/Open-Domain-Bot/
 ---
 
 ## What is an Open-Domain Bot?
 
-Open-domain bots are conversational AI systems designed for flexibility, allowing them to converse on nearly any topic. They differ fundamentally from closed-domain bots, which focus on specific, narrowly defined tasks. The ambition behind open-domain bot research is to achieve human-like conversational breadth, supporting unstructured, free-form interactions.
+**An open-domain bot is an AI conversational agent capable of free-form dialogue on virtually any topic.** Unlike closed-domain bots limited to specific task domains, open-domain bots handle diverse themes including news, casual chat, and general Q&A.
 
-## Historical Context
+> **In a nutshell:** An "AI friend you can talk about anything with." Not limited to specific roles; conversations flow naturally across various topics.
 
-### Early Chatbots
+**Key points:**
+- **What it does:** Enables unconstrained dialogue across diverse topics without restrictions.
+- **Why it matters:** Addresses diverse user question and conversation needs with a single bot.
+- **Who uses it:** Web services, SNS, customer support, entertainment companies.
 
-Earliest chatbots, such as ELIZA (1966), used rule-based pattern matching to simulate conversation, typically within very narrow domain (e.g., psychotherapy). Later, ALICE (1995) introduced AIML (Artificial Intelligence Markup Language), but remained fundamentally closed-domain.
+## Why It Matters
 
-### Rise of Open-Domain Dialogue
+Open-domain bots became practical with advances in large language models and transformers. Traditional chatbots were task-limited ("book flights"), but open-domain bots handle diverse needs. Businesswise, this enables customer support, user engagement, and brand awareness improvement. Technologically, conversational AI represents important NLP progress.
 
-With advent of large-scale data and neural network architectures, field shifted toward open-domain conversation. Introduction of sequence-to-sequence (seq2seq) models (Vinyals & Le, 2015) marked major milestone, enabling end-to-end neural dialogue systems trained on massive datasets scraped from public internet sources (e.g., Reddit).
+## How It Works
 
-Subsequent transformer-based models, such as Google's Meena and Facebook's Blender, further advanced field by incorporating attention mechanisms and leveraging billions of conversational parameters. Research competitions, such as Alexa Prize and ConvAI Challenge, have accelerated development and evaluation of open-domain systems.
+Open-domain bots use two main approaches: **retrieval-based** and **generative**.
 
-## Open-Domain vs. Closed-Domain
+The retrieval-based method selects the best pre-existing response from candidates, similar to a librarian finding relevant books. High accuracy but can't handle unexpected questions.
 
-**Open-domain chatbot:** Engages in unconstrained conversation, supporting any subject.
-- Examples: Meena, Blender, Mitsuku
+The generative method creates responses from scratch using neural networks like transformers. Systems like Meena and Blender use this, enabling more natural and diverse responses. However, sometimes generates inaccurate information. Most real-world applications combine both approaches.
 
-**Closed-domain chatbot:** Restricted to specific, predefined tasks or domains (e.g., flight booking, banking).
-- Examples: LegalBot, medical triage bots
+Training requires large-scale conversation datasets. Internet conversations from Reddit, Twitter, and similar sources serve as training data.
 
-| Aspect | Open-Domain Bot | Closed-Domain Bot |
-|--------|----------------|-------------------|
-| **Topic Coverage** | Any topic, unbounded | Specific, predefined domains |
-| **Response Generation** | Data-driven, generative/retrieval | Rule-based, structured templates |
-| **Evaluation** | Coherence, human-likeness, engagement | Task success, accuracy |
-| **Usecase** | Social chat, entertainment, general Q&A | Customer support, task automation |
+## Real-World Use Cases
 
-## Architectures
+**Brand Customer Contact Chat**
+E-commerce customers ask varied questions: "What seasons fit this jacket?" "Return deadline?" "Size comparisons?" One open-domain bot naturally handles all, improving satisfaction.
 
-### Sequence-to-Sequence Models
+**Language Learning App**
+Learners want daily casual practice, not task-limited bot responses. Open-domain bots enable weather, hobby, current event discussions naturally.
 
-Seq2seq models are neural encoder-decoder architectures originally designed for machine translation. Input sentence is encoded into context vector, then decoded into output response. These models, often based on LSTMs, enabled early end-to-end dialogue but tend to generate bland, generic responses.
+**Entertainment Companion**
+Users seek casual conversation beyond information retrieval. Open-domain bots like personal companions improve app lifetime value through sustained engagement.
 
-### Transformer-Based Models
+## Benefits and Considerations
 
-Transformers, introduced by Vaswani et al. (2017), utilize self-attention mechanisms to model long-range dependencies in text, dramatically improving context management and scalability.
+Benefits include handling diverse user needs with one bot and friendly conversation experience. Unexpected question adaptability is stronger. Downsides include generative bots sometimes producing misinformation. For finance, medical, legal domains requiring accuracy, they shouldn't be used alone. Large model training demands enormous compute resources. Bias and harmful language filtering remain challenges.
 
-**Meena:** 2.6B parameters, trained on 40B words from social media conversations.
+## Related Terms
 
-**Blender:** Up to 9.4B parameters, persona-conditioned, trained on Reddit and related corpora.
+- **Closed-Domain Bot** — Task-specific dialogue bot; opposite design philosophy.
+- **Large Language Model** — Text generation foundation of pre-trained neural network.
+- **Transformer** — Deep learning model with self-attention; modern dialogue AI core.
+- **Prompt Engineering** — Techniques for extracting desired AI responses.
+- **Fine-Tuning** — Retraining pre-trained models for specific tasks.
 
-### Retrieval-Based and Generative Approaches
+## Frequently Asked Questions
 
-**Retrieval-based:** Selects best-fit response from predefined set using similarity metrics. Reliable for accuracy but limited to existing data.
+**Q: Why do open-domain bots sometimes give weird answers?**
+A: Generative bots predict next words statistically; sometimes generate plausible-sounding but baseless information. This "hallucination" remains unsolved even in large models. Verify important information with reliable sources.
 
-**Generative models:** Compose responses one word at a time, allowing novel utterances but risking incoherence.
+**Q: Why is accuracy lower than closed-domain bots?**
+A: Handling broad topics makes detailed expertise per topic harder. Task-specific bots follow fixed processes, ensuring accuracy.
 
-## Applications
-
-Open-domain bots are deployed for:
-
-**Social conversation & companionship:** Engaging users in casual, natural dialogue.
-
-**General information seeking:** Open-domain QA for broad topics.
-
-**Customer engagement:** Broad-topic chat for brand interaction.
-
-**AI research and benchmarking:** Testing limits of conversational AI.
-
-**Language practice:** Helping users practice languages through conversation.
-
-## Notable Systems
-
-| System | Description | Features / Benchmarks |
-|--------|-------------|----------------------|
-| **Meena** | Google's transformer-based bot | Sensibleness, specificity |
-| **Blender** | Facebook AI's large-scale persona chatbot | Empathy, knowledge, persona |
-| **Mitsuku** | Rule-based, AIML chatbot, Loebner Prize winner | Pattern-matching, small talk |
-| **DialoGPT** | Microsoft's conversational transformer | Reddit fine-tuning |
-| **BERT-based QA bots** | Open-domain QA using retrieval/transformers | High accuracy on SQuAD |
-
-## Speech Event Taxonomy
-
-Speech events represent categories of conversational activity (Goldsmith & Baxter, 1996):
-
-**Informal/Superficial:** Small talk, gossip, jokes.
-
-**Involving:** Complaints, relationship talk.
-
-**Goal-directed:** Decision making, instructions.
-
-### Empirical Findings
-
-Most open-domain chatbot conversations are "small talk." In Meena's evaluation, 94% of conversations were small talk; broader speech events are rarely achieved. Chatbots struggle with deeper context, persistence, and shared human knowledge.
-
-## Evaluation Frameworks
-
-### Human Likeness and Coherence
-
-**Coherence:** Logical connection and flow of conversation.
-
-**Human-likeness:** Degree to which bot responses are indistinguishable from human.
-
-### Speech Event Evaluation
-
-Categorizes and scores chatbot performance across types of conversational activity. Current bots underperform in involving/goal-directed events.
-
-### ACUTE-Eval
-
-Human judges compare dialogues, rating which bot is more engaging or human-like. Used in Blender's evaluation.
-
-### Quantitative Results
-
-Blender is preferred over Meena in human evaluations, but human-human conversations are still rated best. QA bots achieve 90–94% accuracy on SQuAD, but this does not capture conversational depth.
-
-## Challenges
-
-**Contextual Understanding:** Limited, especially across long or complex exchanges.
-
-**Real-world Grounding:** Referencing live events or user context is unsolved.
-
-**Complex Speech Events:** Persuasion or collaborative planning remain rare.
-
-**Conversational Breadth:** Expanding beyond small talk to cover full range of human conversational events.
-
-**Contextual Memory:** Improving bots' ability to remember, recall, and reference prior exchanges.
-
-**Ethics and Safety:** Developing robust filtering and monitoring for responsible deployment.
-
-## Implementation Considerations
-
-### Real-World Deployment Issues
-
-**Data Requirements:** Training open-domain bots needs massive, diverse conversational data.
-
-**Computation:** Transformers require extensive computing power.
-
-**Safety:** Risk of generating inappropriate, biased, or nonsensical output.
-
-### Rasa and Practical Limitations
-
-**Rasa:** Primarily designed for intent/entity-driven, task-oriented bots.
-
-**Challenges for open-domain in Rasa:**
-- Exhaustive intent/entity design is impractical for unbounded domains
-- Response selection and context tracking do not scale to open-domain needs
-
-## Future Directions
-
-**Conversational Breadth:** Expanding beyond small talk to cover full range of human conversational events.
-
-**Contextual Memory:** Improving bots' ability to remember, recall, and reference prior exchanges.
-
-**Ethics and Safety:** Developing robust filtering and monitoring for responsible deployment.
-
-**Hybrid Models:** Combining retrieval, generation, and human-in-the-loop curation for improved dialogue quality.
-
-## References
-
-- [ACL Anthology: How "open" are conversations with open-domain chatbots?](https://aclanthology.org/2021.sigdial-1.41.pdf)
-- [IJEAT: Research Perspectives in Open-Domain Chatbots](https://www.ijeat.org/wp-content/uploads/papers/v9i4/D8734049420.pdf)
-- [YouTube: Open Domain Q&A AI Chatbot DEMO](https://www.youtube.com/watch?v=UTeErvuadbM)
-- [Wisdomlib: Open-Domain Chatbot Concept](https://www.wisdomlib.org/concept/open-domain-chatbot)
-- [Facebook AI: Blender Project](https://parl.ai/projects/blender/)
-- [Google AI Blog: Meena](https://ai.googleblog.com/2020/01/towards-conversational-agent-that-can.html)
-- [arXiv: ACUTE-Eval](https://arxiv.org/abs/1904.03461)
-- [Symbl.ai: Open Domain vs. Closed Domain](https://symbl.ai/blog/conversation-understanding-open-domain-vs-closed-domain/)
-- [Rasa Forum: Open Domain Chatbot Discussion](https://forum.rasa.com/t/open-domain-chatbot/24319)
-- [Rasa Forum: Deployment and Integration Issues](https://forum.rasa.com/t/rasa-chat-bot-deployment-and-integration-issues/47964)
-- [ParlAI Platform](https://parl.ai/)
-- [OpenAI Research](https://openai.com/research/)
-- [SQuAD: Stanford Question Answering Dataset](https://rajpurkar.github.io/SQuAD-explorer/)
-- [Springer: Chatbot vs. Dialogue System](https://link.springer.com/chapter/10.1007/978-981-15-1384-8_22)
-- [Wikipedia: Transformer (deep learning)](https://en.wikipedia.org/wiki/Transformer_(deep_learning))
-- [DataCamp: How Transformers Work](https://www.datacamp.com/tutorial/how-transformers-work)
+**Q: What's needed for bot training?**
+A: Billions+ conversation turns in datasets, weeks/months training, thousands of GPUs/TPUs for computational resources.

@@ -1,21 +1,23 @@
 ---
 title: チケット管理
-lastmod: '2025-12-19'
-date: '2025-12-19'
+lastmod: 2026-04-02
+date: 2025-12-19
 translationKey: ticket-management
-description: チケット管理について学びましょう。専用ソフトウェアを使用して、顧客からの問い合わせや社内リクエストを体系的に記録、追跡、割り当て、解決するプロセスです。
+description: チケット管理は、顧客の問い合わせや内部リクエストを構造化されたデジタル記録として追跡し、効率的に解決するプロセスです。
 keywords:
 - チケット管理
 - チケッティングシステム
-- ヘルプデスクソフトウェア
+- ヘルプデスク
 - カスタマーサポート
 - SLA管理
-category: AI Chatbot & Automation
+category: コンタクトセンター・CX
 type: glossary
 draft: false
 e-title: Ticket Management
 term: ちけっとかんり
 url: "/ja/glossary/ticket-management/"
+aliases:
+- "/ja/glossary/Ticket-Management/"
 ---
 ## チケット管理とは
 チケット管理とは、顧客からの問い合わせ、サポートリクエスト、社内サービスニーズを「チケット」と呼ばれる構造化されたデジタル記録を通じて、体系的に取得、整理、追跡、割り当て、解決するプロセスです。各チケットは、最初の提出から調査、解決、クローズまでのリクエストの完全なライフサイクルを文書化する包括的なコンテナとして機能し、すべてのコミュニケーション、実行されたアクション、関連するメタデータを含みます。

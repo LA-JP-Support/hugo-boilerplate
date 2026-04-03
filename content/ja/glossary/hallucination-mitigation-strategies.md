@@ -1,21 +1,23 @@
 ---
 title: ハルシネーション緩和戦略
-lastmod: '2025-12-19'
-date: '2025-12-19'
+lastmod: 2026-04-02
+date: 2025-12-19
 translationKey: hallucination-mitigation-strategies
-description: AIシステム、特にLLM（大規模言語モデル）におけるハルシネーション緩和戦略を探求します。RAG、プロンプトエンジニアリング、ファインチューニングなど、虚偽の出力を防ぐための技術について学びます。
+description: AIが虚偽を言わないようにするための戦略。RAG、プロンプト最適化、ガードレール、人間監視を組み合わせて信頼性を高めます。
 keywords:
-- ハルシネーション緩和戦略
-- AIハルシネーション
+- ハルシネーション緩和
+- AIの信頼性
 - 大規模言語モデル
-- 検索拡張生成
+- グラウンディング技術
 - プロンプトエンジニアリング
-category: AI Chatbot & Automation
+category: AI・機械学習
 type: glossary
 draft: false
 e-title: Hallucination Mitigation Strategies
 term: はるしねーしょんかんわせんりゃく
 url: "/ja/glossary/hallucination-mitigation-strategies/"
+aliases:
+- "/ja/glossary/Hallucination-Mitigation-Strategies/"
 ---
 ## ハルシネーション軽減戦略とは?
 ハルシネーション軽減戦略とは、AI システム、特に大規模言語モデル(LLM)が不正確、捏造、または誤解を招く情報を生成するリスクを防止または低減するために設計された技術、技術的プロセス、および運用上のベストプラクティスを包含するものです。AI の「ハルシネーション」とは、もっともらしく見えるものの、事実、トレーニングデータ、または検証可能なソースに基づいていない出力のことです。

@@ -1,150 +1,91 @@
 ---
-title: "AWS"
+title: AWS
 date: 2026-01-29
+lastmod: 2026-04-02
 translationKey: aws
-description: "Amazon Web Services (AWS) - comprehensive cloud computing platform offering scalable infrastructure, application services, and enterprise solutions worldwide."
+description: Amazon Web Services (AWS) is a scalable cloud computing platform providing 200+ services, enabling global enterprises to build and operate IT infrastructure.
 keywords:
 - AWS
 - Amazon Web Services
-- cloud computing
-- cloud infrastructure
-- cloud platform
-category: "Platform/Service"
+- Cloud Computing
+- Cloud Infrastructure
+- Cloud Platform
+category: Enterprise & Platform
 type: glossary
 draft: false
+url: /en/glossary/aws/
+aliases:
+- /en/glossary/AWS/
 ---
 
 ## What is AWS?
 
-Amazon Web Services (AWS) is the world's most comprehensive and broadly adopted cloud computing platform, offering over 200 fully featured services from data centers globally. Launched in 2006 by Amazon, AWS provides on-demand cloud computing platforms and APIs to individuals, companies, and governments on a metered pay-as-you-go basis. The platform enables organizations to access computing power, database storage, content delivery, and other functionality to help businesses scale and grow without the need to invest in physical infrastructure.
+**AWS is Amazon's comprehensive cloud computing platform providing 200+ services—computing, storage, databases, networking, AI/machine learning—used globally by enterprises to build and operate IT infrastructure.** It eliminates on-premises server and data center building/management, enabling on-demand resource use. In 2024, AWS holds approximately 32% of the global cloud infrastructure market, leading the industry.
 
-AWS operates as a subsidiary of Amazon and has become the dominant force in the cloud computing industry, controlling approximately 32% of the global cloud infrastructure market as of 2024. The platform serves millions of customers ranging from startups and enterprises to government agencies and educational institutions across 190 countries worldwide. AWS's infrastructure spans multiple geographic regions, with each region containing multiple isolated locations called Availability Zones, ensuring high availability, fault tolerance, and scalability for applications and services.
+> **In a nutshell:** "Rental service for computing power." Instead of purchasing hardware, rent resources when needed and pay per usage—like paying monthly electricity bills.
 
-The platform's success stems from its ability to democratize access to enterprise-grade computing resources, allowing organizations of all sizes to leverage the same infrastructure that powers Amazon's own e-commerce operations. AWS has fundamentally transformed how businesses approach IT infrastructure, enabling rapid innovation, cost optimization, and global scalability while reducing the complexity and capital expenditure traditionally associated with managing physical data centers and hardware.
+**Key points:**
 
-## Key Features
+- **What it does:** Provides servers, storage, databases, networking, AI features—all IT infrastructure via internet
+- **Why it matters:** Businesses skip capital infrastructure investment, respond rapidly to change, access world-class infrastructure
+- **Who uses it:** Startups through enterprises, governments, educational institutions—all sizes and industries
 
-**Comprehensive Service Portfolio**
-AWS offers an extensive catalog of over 200 services spanning compute, storage, databases, networking, analytics, machine learning, artificial intelligence, Internet of Things (IoT), security, and application development. This breadth allows organizations to build virtually any type of application or workload using AWS services, from simple websites to complex enterprise applications and advanced AI/ML solutions.
+## Why it matters
 
-**Global Infrastructure Network**
-The platform operates across 33 geographic regions with 105 Availability Zones worldwide, providing low-latency access and data residency compliance for customers globally. Each region is completely independent and isolated from other regions, ensuring maximum fault tolerance and stability, while Availability Zones within a region are connected through high-bandwidth, low-latency networking.
+Traditionally, enterprises required massive capital investment in server hardware, network equipment, and security systems, plus ongoing specialist team maintenance. This burden prevented smaller companies from accessing world-class infrastructure.
 
-**Pay-as-You-Go Pricing Model**
-AWS employs a flexible pricing structure where customers only pay for the computing resources they actually consume, without upfront commitments or long-term contracts. This model includes various pricing options such as On-Demand instances, Reserved Instances for predictable workloads, and Spot Instances for fault-tolerant applications that can take advantage of unused EC2 capacity at significantly reduced costs.
+AWS changed this. Netflix, Airbnb, Spotify, Pinterest—all-scale companies use identical infrastructure, leveling competitive ground regardless of size. With pay-per-use pricing, startups run cheaply initially and auto-scale as they grow. Regulatory compliance (HIPAA, PCI-DSS, GDPR) is pre-certified, dramatically reducing individual burden.
 
-**Enterprise-Grade Security and Compliance**
-The platform provides robust security features including identity and access management, encryption at rest and in transit, network security, and comprehensive monitoring and logging capabilities. AWS maintains compliance with numerous industry standards and regulations including SOC, PCI DSS, HIPAA, FedRAMP, and GDPR, making it suitable for organizations with strict regulatory requirements.
+## How it works
 
-**Scalability and Elasticity**
-AWS services are designed to automatically scale up or down based on demand, allowing applications to handle varying workloads without manual intervention. This elasticity ensures optimal performance during peak usage periods while minimizing costs during low-demand periods through features like Auto Scaling groups and elastic load balancing.
+AWS structures as regions (geographic areas) and availability zones (region's independent data centers). Users freely choose application location, data storage location, and backup location, meeting regulatory and latency requirements.
 
-**Developer-Friendly Tools and APIs**
-The platform provides comprehensive software development kits (SDKs), command-line interfaces (CLIs), and RESTful APIs that enable developers to programmatically manage and interact with AWS services. These tools support multiple programming languages and integrate seamlessly with popular development frameworks and CI/CD pipelines.
+Users interact through three interfaces: AWS Management Console (web UI), AWS CLI (command-line), SDKs (language-specific libraries). All operations authenticate and authorize via IAM, strictly limiting user capabilities.
 
-**Managed Services and Serverless Computing**
-AWS offers numerous fully managed services that handle infrastructure management, patching, and maintenance automatically, allowing developers to focus on application logic rather than infrastructure concerns. Serverless computing options like AWS Lambda enable code execution without provisioning or managing servers, with automatic scaling and pay-per-execution pricing.
+Real usage: launching EC2 (virtual server) means specifying instance type and region; automatic orchestration allocates physical servers, configures networking, applies security groups—typically completing in minutes. This contrasts traditional physical server ordering taking weeks/months.
 
-**Advanced Analytics and Machine Learning**
-The platform includes sophisticated analytics services for big data processing, real-time streaming, and business intelligence, along with comprehensive machine learning and artificial intelligence services. These capabilities enable organizations to derive insights from their data and build intelligent applications without requiring deep expertise in data science or machine learning.
+## Real-world use cases
 
-## How AWS Works
+**Large web application operation**
 
-**Infrastructure Foundation**
-AWS operates on a distributed infrastructure model where physical data centers are organized into Availability Zones within geographic regions. Each Availability Zone consists of one or more discrete data centers with redundant power, networking, and connectivity, housed in separate facilities to ensure isolation from failures. When customers launch services, they select specific regions and Availability Zones based on their latency, compliance, and disaster recovery requirements.
+Netflix and Uber Eats handle extreme traffic fluctuations using AWS Auto Scaling, auto-adjusting server counts matching access demand. Peaks run thousands of servers, maintaining stability.
 
-**Service Interaction and Management**
-Users interact with AWS services through multiple interfaces including the web-based AWS Management Console, command-line tools, SDKs, and direct API calls. The AWS Management Console provides a graphical interface for managing resources, while programmatic access through APIs enables automation and integration with existing systems. All interactions are authenticated and authorized through AWS Identity and Access Management (IAM), which controls user permissions and access to specific resources and actions.
+**Data analytics and big data**
 
-**Resource Provisioning and Deployment**
-When customers request computing resources, AWS's orchestration systems automatically provision virtual machines, storage, or other services from available capacity within the selected region. This process involves allocating physical resources, configuring network connectivity, applying security policies, and initializing the requested services. Advanced deployment options include Infrastructure as Code tools like AWS CloudFormation, which enables reproducible and version-controlled infrastructure deployments.
+Airbnb and major banks analyze petabyte-scale customer data with AWS Redshift and EMR, leveraging real-time pricing and fraud detection. AWS Glue automates ETL across data sources.
 
-**Monitoring and Optimization**
-AWS provides comprehensive monitoring through services like CloudWatch, which collects metrics, logs, and events from AWS resources and applications. The platform continuously monitors resource utilization and can automatically adjust capacity based on predefined policies or machine learning algorithms. Cost optimization features analyze usage patterns and provide recommendations for rightsizing instances, utilizing Reserved Instances, or implementing more cost-effective service configurations.
+**Machine learning development**
 
-## Benefits and Advantages
+Healthcare and manufacturing develop diagnostic AI and quality inspection AI via Amazon SageMaker, deploying to production. Pre-trained models eliminate deep ML expertise requirements.
 
-**For Organizations**
-- **Reduced Capital Expenditure**: Eliminates the need for upfront investment in hardware, data centers, and IT infrastructure, converting capital expenses to operational expenses with predictable monthly billing based on actual usage.
-- **Accelerated Time-to-Market**: Enables rapid deployment of applications and services without lengthy procurement and setup processes, allowing organizations to launch new products and features in days rather than months.
-- **Enhanced Disaster Recovery**: Provides built-in redundancy and backup capabilities across multiple geographic locations, ensuring business continuity and data protection with minimal additional investment in disaster recovery infrastructure.
-- **Improved Compliance**: Offers pre-configured compliance frameworks and security controls that help organizations meet regulatory requirements more easily than building and maintaining compliant infrastructure independently.
+**Hybrid workload migration**
 
-**For Development Teams**
-- **Simplified Infrastructure Management**: Abstracts complex infrastructure concerns through managed services, allowing developers to focus on application development rather than server maintenance, patching, and capacity planning.
-- **Rapid Prototyping and Experimentation**: Enables quick deployment of development and testing environments, facilitating agile development practices and reducing the cost and time associated with experimental projects.
-- **Access to Advanced Technologies**: Provides immediate access to cutting-edge technologies like machine learning, artificial intelligence, and big data analytics without requiring specialized hardware or deep technical expertise.
-- **Seamless Integration**: Offers extensive APIs and integration capabilities that work well with existing development tools, CI/CD pipelines, and third-party services, streamlining the development workflow.
+On-premises data center enterprises migrate to AWS via Migration Hub, reducing IT costs and accelerating global expansion.
 
-**For IT Operations**
-- **Automated Scaling and Management**: Reduces operational overhead through automated scaling, patch management, and monitoring capabilities that minimize manual intervention and reduce the risk of human error.
-- **Global Reach with Local Control**: Enables deployment of applications and services worldwide while maintaining centralized management and consistent security policies across all regions.
-- **Comprehensive Monitoring and Analytics**: Provides detailed insights into application performance, resource utilization, and user behavior through integrated monitoring and analytics tools.
+## Benefits and considerations
 
-## Common Use Cases and Examples
+**Benefits:** AWS excels in flexibility, scalability, and reliability. Companies eliminate capital IT spending; usage-based costs optimize naturally. Global regions enable local deployment worldwide.
 
-**Web Application Hosting and Development**
-Organizations use AWS to host websites and web applications ranging from simple static sites using Amazon S3 and CloudFront to complex, multi-tier applications using EC2, RDS, and Elastic Load Balancing. Companies like Netflix leverage AWS's global infrastructure to deliver streaming content to millions of users worldwide, utilizing services like EC2 for compute capacity, S3 for content storage, and CloudFront for content delivery. Startups often begin with simple WordPress hosting on EC2 instances and scale to sophisticated microservices architectures as their user base grows.
+**Considerations:** AWS's vast service catalog creates steep learning curves; proper architecture requires deep expertise. AWS dependency creates "vendor lock-in" risks, complicating migration. Pay-per-use pricing risks unexpected cost spikes if unoptimized.
 
-**Data Analytics and Business Intelligence**
-Enterprises utilize AWS's analytics services to process and analyze large datasets for business insights and decision-making. Amazon Redshift enables organizations to run complex queries on petabyte-scale data warehouses, while services like EMR and Glue facilitate big data processing and ETL operations. Companies like Airbnb use AWS analytics services to process billions of data points daily, enabling real-time pricing optimization and personalized user experiences.
+## Related terms
 
-**Machine Learning and Artificial Intelligence**
-Organizations leverage AWS's ML services to build intelligent applications without requiring extensive machine learning expertise. Amazon SageMaker provides a complete platform for building, training, and deploying machine learning models, while pre-built AI services like Rekognition, Comprehend, and Polly enable developers to add computer vision, natural language processing, and text-to-speech capabilities to applications. Healthcare organizations use these services for medical image analysis, while financial institutions employ them for fraud detection and risk assessment.
+- **[Amazon EC2](EC2.md)** — Virtual server service, AWS's computational foundation
+- **[S3](S3.md)** — Object storage for video, images, documents
+- **[RDS](RDS.md)** — Managed relational databases (PostgreSQL, MySQL, Oracle)
+- **[Cloud Computing](Cloud-Computing.md)** — Internet-delivered computing resources; AWS is flagship example
+- **[API Gateway](API-Gateway.md)** — API endpoint management for microservice and client-server communication
 
-**Enterprise Application Migration**
-Large enterprises use AWS to migrate legacy applications and entire data centers to the cloud through lift-and-shift migrations or application modernization initiatives. The AWS Migration Hub provides tools and services to plan, track, and execute large-scale migrations, while services like Database Migration Service enable seamless database transitions with minimal downtime. Government agencies have successfully migrated critical systems to AWS while maintaining security and compliance requirements.
+## Frequently asked questions
 
-**Backup and Disaster Recovery**
-Organizations implement comprehensive backup and disaster recovery solutions using AWS's geographically distributed infrastructure. Amazon S3 provides durable storage for backup data with multiple storage classes for cost optimization, while services like AWS Backup offer centralized backup management across multiple AWS services. Companies can implement sophisticated disaster recovery strategies with automated failover capabilities, ensuring business continuity with recovery time objectives measured in minutes rather than hours or days.
+**Q: How do I optimize AWS costs?**
 
-**DevOps and Continuous Integration/Deployment**
-Development teams use AWS services to implement modern DevOps practices and CI/CD pipelines that automate application deployment and infrastructure management. AWS CodePipeline, CodeBuild, and CodeDeploy provide integrated tools for source code management, automated testing, and deployment, while Infrastructure as Code tools like CloudFormation enable version-controlled infrastructure deployments. Organizations can implement blue-green deployments, canary releases, and automated rollback capabilities to minimize deployment risks.
+A: Regularly analyze usage via AWS Cost Explorer, use reserved instances for predictable loads, delete unnecessary resources, review auto-scaling settings. AWS Trusted Advisor auto-suggests optimizations.
 
-## Best Practices
+**Q: How trustworthy is AWS security?**
 
-**Security and Access Management**
-Implement the principle of least privilege by creating specific IAM roles and policies that grant only the minimum permissions required for each user or service to perform their functions. Enable multi-factor authentication (MFA) for all user accounts, especially those with administrative privileges, and regularly audit and rotate access keys and credentials. Use AWS CloudTrail to log all API calls and user activities for security monitoring and compliance purposes, and implement network security through Virtual Private Clouds (VPCs) with properly configured security groups and network access control lists.
+A: AWS uses shared responsibility: AWS secures infrastructure, companies secure applications and data. AWS holds multiple certifications (SOC2, FedRAMP, HIPAA); underlying infrastructure is extremely robust.
 
-**Cost Optimization and Resource Management**
-Regularly monitor and analyze AWS costs using tools like Cost Explorer and AWS Budgets to identify optimization opportunities and prevent unexpected charges. Implement tagging strategies for all resources to enable detailed cost allocation and tracking across different projects, departments, or environments. Utilize Reserved Instances for predictable workloads, Spot Instances for fault-tolerant applications, and automated scaling policies to optimize resource utilization and costs based on actual demand patterns.
+**Q: Can I migrate from AWS to another cloud provider?**
 
-**Architecture Design and Reliability**
-Design applications for high availability by distributing resources across multiple Availability Zones and implementing automated failover mechanisms. Use managed services whenever possible to reduce operational overhead and leverage AWS's expertise in infrastructure management, patching, and scaling. Implement proper backup and disaster recovery strategies with regular testing to ensure data protection and business continuity, and design loosely coupled architectures using services like SQS and SNS to improve system resilience.
-
-**Monitoring and Performance Optimization**
-Establish comprehensive monitoring and alerting using CloudWatch metrics, logs, and alarms to proactively identify and address performance issues before they impact users. Implement distributed tracing and application performance monitoring to gain visibility into complex, multi-service applications and identify optimization opportunities. Regularly review and optimize database performance using tools like RDS Performance Insights and implement caching strategies using services like ElastiCache to reduce latency and improve user experience.
-
-**Compliance and Governance**
-Establish clear governance policies for resource provisioning, naming conventions, and security configurations to ensure consistency and compliance across the organization. Use AWS Config to monitor configuration changes and ensure compliance with organizational policies and regulatory requirements. Implement automated compliance checking and remediation using services like AWS Systems Manager and AWS Security Hub to maintain security posture and reduce manual oversight requirements.
-
-## Challenges and Considerations
-
-**Cost Management Complexity**
-AWS's flexible pricing model can lead to unexpected costs if not properly monitored and managed, particularly with services that scale automatically or charge based on usage metrics that may not be immediately apparent. Organizations often struggle with cost allocation across different teams or projects, especially when resources are shared or when complex architectures involve multiple interconnected services. Implementing effective cost controls requires continuous monitoring, proper resource tagging, and regular optimization efforts to prevent budget overruns and ensure cost-effective resource utilization.
-
-**Security and Compliance Responsibilities**
-The AWS shared responsibility model requires customers to understand and properly implement their portion of security controls, which can be complex for organizations without extensive cloud security expertise. While AWS secures the underlying infrastructure, customers are responsible for securing their applications, data, operating systems, and network configurations, which requires ongoing attention to security best practices and compliance requirements. Organizations must also ensure proper data governance and privacy controls, particularly when operating in regulated industries or across multiple jurisdictions with varying data protection laws.
-
-**Vendor Lock-in and Migration Challenges**
-Heavy reliance on AWS-specific services and features can create vendor lock-in situations that make it difficult and expensive to migrate to alternative cloud providers or return to on-premises infrastructure. Organizations must carefully balance the benefits of using proprietary AWS services against the potential risks of reduced flexibility and increased migration complexity. Planning for portability requires additional architectural considerations and may limit the use of some advanced AWS features that could provide competitive advantages.
-
-**Skills Gap and Training Requirements**
-Successfully implementing and managing AWS infrastructure requires specialized knowledge and skills that may not exist within traditional IT teams, necessitating significant investment in training and certification programs. The rapid pace of AWS service development and feature releases requires continuous learning and adaptation, which can strain existing resources and budgets. Organizations may need to hire additional personnel with cloud expertise or invest heavily in upskilling existing team members to effectively leverage AWS capabilities.
-
-**Network Performance and Latency Considerations**
-Applications requiring low latency or high bandwidth may face performance challenges when migrating to cloud infrastructure, particularly if users or data sources are geographically distant from AWS regions. Network connectivity between on-premises systems and AWS services can introduce latency and potential points of failure that must be carefully planned and managed. Organizations with strict performance requirements may need to implement hybrid architectures or edge computing solutions to maintain acceptable user experiences.
-
-**Service Complexity and Integration Challenges**
-The vast array of AWS services and configuration options can be overwhelming for organizations trying to design optimal architectures, leading to over-engineering or suboptimal service selections. Integration between different AWS services and with existing on-premises systems can be complex and may require significant development effort and ongoing maintenance. Organizations must also manage service dependencies and ensure that architectural decisions support long-term scalability and maintainability requirements.
-
-## References
-
-- [AWS Official Documentation - Amazon Web Services](https://docs.aws.amazon.com/)
-- [AWS Global Infrastructure - Amazon Web Services](https://aws.amazon.com/about-aws/global-infrastructure/)
-- [AWS Pricing - Amazon Web Services](https://aws.amazon.com/pricing/)
-- [AWS Security Best Practices - Amazon Web Services](https://aws.amazon.com/security/security-resources/)
-- [AWS Well-Architected Framework - Amazon Web Services](https://aws.amazon.com/architecture/well-architected/)
-- [AWS Case Studies - Amazon Web Services](https://aws.amazon.com/solutions/case-studies/)
-- [AWS Training and Certification - Amazon Web Services](https://aws.amazon.com/training/)
-- [Gartner Magic Quadrant for Cloud Infrastructure and Platform Services - Gartner](https://www.gartner.com/en/research/methodologies/magic-quadrants-research)
+A: Technically possible, but deep AWS dependency complicates migration significantly. Plan cloud-agnostic layers from implementation start if migration is anticipated.

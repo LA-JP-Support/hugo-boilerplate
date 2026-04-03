@@ -1,26 +1,87 @@
 ---
-title: "Cost per Contact"
+title: Cost per Contact
 date: 2025-12-19
-translationKey: Cost-per-Contact
-description: "Cost per Contact is the average amount of money spent to reach one potential customer and obtain their contact information through marketing efforts. It helps businesses measure how efficiently they're spending their marketing budget."
+lastmod: 2026-04-02
+translationKey: cost-per-contact
+description: The average cost to acquire one prospect's contact information (email, phone number, etc.) through marketing activities. A key metric for measuring campaign efficiency.
 keywords:
-- cost per contact
-- marketing metrics
-- campaign efficiency
-- lead generation costs
-- customer acquisition
-category: "Application & Use-Cases"
+- Cost per contact
+- Lead acquisition cost
+- Marketing efficiency
+- Campaign evaluation
+- Customer acquisition
+category: Data & Analytics
 type: glossary
 draft: false
+url: /en/glossary/cost-per-contact/
 ---
 
-## What is a Cost per Contact?
+## What is Cost per Contact?
 
-Cost per Contact (CPC) is a fundamental marketing metric that measures the average expense incurred to reach or engage with a single potential customer through various marketing channels and campaigns. This metric serves as a critical performance indicator for businesses seeking to optimize their marketing spend and evaluate the efficiency of their customer acquisition strategies. Unlike broader metrics such as cost per impression or cost per click, cost per contact specifically focuses on meaningful interactions where actual contact information is obtained or direct communication is established with prospects.
+**Cost per contact is the average cost spent to acquire one prospect's contact information (email address, phone number, etc.).** Calculated by dividing advertising spend by number of contacts acquired, it's a critical metric for assessing marketing efficiency.
 
-The significance of cost per contact extends beyond simple mathematical calculations, as it provides marketers with actionable insights into the effectiveness of their lead generation efforts across different channels, campaigns, and target audiences. By tracking this metric consistently, organizations can identify which marketing activities deliver the most cost-effective results and allocate their budgets accordingly. The metric encompasses various forms of contact acquisition, including email addresses collected through landing pages, phone numbers obtained via lead magnets, social media connections established through targeted campaigns, and direct inquiries generated through advertising efforts.
+> **In a nutshell:** "How much money does it cost on average to build one prospect lead?" Lower is more efficient.
 
-Understanding cost per contact is essential for developing sustainable marketing strategies that balance acquisition costs with potential customer lifetime value. This metric enables businesses to make data-driven decisions about channel selection, budget allocation, and campaign optimization while ensuring that marketing investments generate positive returns. As digital marketing continues to evolve and customer acquisition costs rise across most industries, mastering the calculation and optimization of cost per contact has become increasingly crucial for maintaining competitive advantage and achieving profitable growth in today's marketplace.
+**Key points:**
+
+- **What it does:** Marketing total spend ÷ Number of contacts acquired
+- **Why it's needed:** Compare campaign efficiency, optimize budget allocation
+- **How to calculate:** (Advertising costs + Creative production costs) ÷ Number of contacts acquired
+
+## Why it matters
+
+The same budget yields dramatically different cost-per-contact rates depending on the channel. LinkedIn ads might cost $25-45 per contact, while Facebook might be $8-20. Simply concentrating budget on lower-cost channels can generate 2-3 times more leads with the same budget.
+
+However, there's a tradeoff to consider: "cheap but low quality" contacts. Conversion to purchase varies significantly, so simple comparison is risky.
+
+## How it works
+
+**Step 1: Campaign Setup**
+Define your target, set budget and timeline. Multiple tactics like email, ads, and webinars often run in parallel.
+
+**Step 2: Cost Tracking**
+Manage all related expenses (ad spend, design fees, platform fees, labor) with project codes.
+
+**Step 3: Contact Collection**
+Gather prospect information through landing pages, lead forms, event registration, etc. Remove duplicates and count only legitimate contacts.
+
+**Step 4: Calculate and Analyze**
+Calculate unit price: Total Cost ÷ Valid Contacts. Segment analysis by channel and time period.
+
+## Practical examples and benchmarks
+
+| Channel | Avg. Cost | Quality | Recommended Use |
+|---------|-----------|---------|-----------------|
+| LinkedIn Ads | $25-45 | High | B2B, executives |
+| Google Ads | $15-35 | Medium-High | Search keyword matching |
+| Facebook/Instagram | $8-20 | Medium | B2C, brand awareness |
+| Content Marketing | $5-15 | High | Long-term strategy |
+| Events | $50-150 | Very High | Specific industries, decision-makers |
+
+## Benefits and considerations
+
+**Benefits:** Campaign efficiency visibility, channel comparison, budget optimization. Data-driven decision making becomes possible.
+
+**Considerations:** Judging by cost alone leads to failure. Quality, conversion rate, and customer lifetime value must also be evaluated together.
+
+## Related terms
+
+- **[Lead Generation](Lead-Generation.md)** — Overall prospect information acquisition activities
+- **[Customer Acquisition Cost](Customer-Acquisition-Cost.md)** — Cost to acquire one customer
+- **[Marketing Automation](Marketing-Automation.md)** — Contact management and automated follow-up
+- **[Customer Lifetime Value](Customer-Lifetime-Value.md)** — Value metric to compare against cost per contact
+- **[Attribution Analysis](Attribution-Analysis.md)** — Identify touchpoints that contributed to contact acquisition
+
+## Frequently asked questions
+
+**Q: What's the industry average?**
+A: B2B averages around $15-50, B2C around $5-25, but varies significantly by industry and market environment. Benchmarking against your own past performance is critical.
+
+**Q: Tips for lowering cost per contact?**
+A: Organic search and content marketing have lower costs long-term. Automation and email marketing also tend to be cost-efficient.
+
+**Q: How do you evaluate quality differences?**
+A: Measure by conversion or deal rate 3-6 months later. Higher cost sometimes means 3x better conversion rate, making it more efficient in practice.
 
 ## Core Marketing Measurement Components
 

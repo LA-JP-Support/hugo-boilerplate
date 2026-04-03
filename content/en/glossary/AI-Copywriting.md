@@ -1,17 +1,19 @@
 ---
-title: "AI Copywriting"
+title: AI Copywriting
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: AI-Copywriting
-description: "AI technology that automatically writes marketing content like ads and promotional materials by learning from successful examples to match your brand voice and engage customers."
+description: AI technology that automatically generates advertising copy and marketing materials, streamlining content creation for businesses.
 keywords:
 - AI copywriting
 - automated content creation
 - marketing copy generation
 - natural language processing
 - content optimization
-category: "Application & Use-Cases"
+category: Content & Marketing
 type: glossary
 draft: false
+url: /en/glossary/AI-Copywriting/
 ---
 
 ## What is AI Copywriting?

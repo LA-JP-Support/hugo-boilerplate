@@ -1,238 +1,103 @@
 ---
-title: "AI Copilot"
-translationKey: "ai-copilot"
-description: "An AI assistant that works alongside you in real time to boost productivity and creativity by automating tasks, answering questions, and offering smart suggestions."
-keywords: ["AI Copilot", "Artificial Intelligence", "Large Language Models", "Digital Assistant", "Productivity"]
-category: "General"
-type: "glossary"
-date: 2025-12-18
-lastmod: 2025-12-18
+title: Copilot
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: Copilot
+description: An AI assistant developed and provided by Microsoft. Supports various tasks including document writing, code generation, and answering questions.
+category: AI & Machine Learning
+type: glossary
 draft: false
+url: /en/glossary/copilot/
+keywords:
+- Copilot
+- Microsoft
+- AI assistant
+- Productivity support
+- Large language models
 ---
 
-## What Is an AI Copilot?
+## What is Copilot?
 
-An AI copilot is an advanced artificial intelligence (AI)-powered digital assistant that operates alongside human users to enhance productivity, creativity, and decision-making in real time. Copilots are driven by natural language processing (NLP), large language models (LLMs), and machine learning (ML) to interpret context, automate repetitive workflows, generate actionable insights, and provide creative or analytical assistance across a vast array of business and technical domains.
+**Copilot is Microsoft's AI assistant product line.** Multiple variations exist: code development support for GitHub (GitHub Copilot), Office software integration (Copilot in Word, Excel, PowerPoint), Microsoft 365 business support (Copilot Pro), and browser integration (Copilot in Bing).
 
-Copilots are distinct from traditional chatbots and autonomous agents. Unlike chatbots, which primarily handle scripted, customer-facing queries, and AI agents, which often perform tasks independently, copilots function as collaborative partners—continuously working with humans, surfacing recommendations, and learning from ongoing interaction.
+Common across versions: "When users give instructions, [large language models](LLM.md) (often based on OpenAI's GPT technology) automatically execute tasks like text generation, code generation, and information retrieval."
 
-Copilots are orchestrated entities, composed of workflows (sequences of tasks), actions (discrete operations such as updating records or generating summaries), knowledge (contextual or organizational data), and triggers (events that prompt action). These elements are powered by one or more foundation models (such as GPT-4, Gemini, or Llama), orchestrated by a specialized AI layer that synchronizes data, actions, and outputs.
+> **In a nutshell:** Copilot is like an AI copilot sitting beside you suggesting "how about doing it this way?"
 
-## How Does a Copilot Work?
+**Key points:**
 
-The core workflow of a copilot typically involves:
+- **What it does:** AI assistant supporting user work from the sidelines
+- **Why it's needed:** Automate routine tasks and information retrieval to boost productivity
+- **Who uses it:** Developers, business professionals, content creators, etc.
 
-**1. User Input**  
-The user provides a prompt (e.g., a customer inquiry, business question, or workflow trigger).
+## Basic information
 
-**2. Interpretation**  
-NLP and LLMs analyze the input to determine user intent and extract key entities.
+| Item | Details |
+|------|---------|
+| **Headquarters** | United States (Microsoft HQ in Redmond, Washington) |
+| **Founded** | 2021 (GitHub Copilot), 2023 (Copilot expansion) |
+| **Parent/Shareholders** | Microsoft |
+| **Main products** | GitHub Copilot, Copilot Pro, Copilot in Microsoft 365 |
+| **Listed** | Microsoft on NASDAQ (MSFT) |
 
-**3. Data Retrieval & Processing**  
-The copilot accesses connected data sources—internal databases, CRM records, emails, or external APIs—and gathers relevant context.
+## Main products and services
 
-**4. Response Generation**  
-Using LLMs and domain-specific logic, the copilot drafts responses, proposes next actions, or summarizes content.
+**GitHub Copilot** is an [AI coding assistant](AI-Coding-Assistant.md) for software developers. When writing code, it suggests the next lines or auto-generates function contents. Supporting multiple languages (Python, JavaScript, TypeScript), it greatly boosts development productivity.
 
-**5. Action & Feedback**  
-The user reviews, approves, modifies, or executes the copilot's suggestions. The copilot learns from this feedback for future improvement.
+**Microsoft 365 Copilot** is AI functionality integrated across the entire Office suite (Word, Excel, PowerPoint, Outlook). AI assists with document creation drafts, complex spreadsheet analysis, and presentation creation.
 
-**Example:** Salesforce Copilot can draft emails, summarize sales records, or update CRM entries based on natural language prompts. Microsoft Copilot leverages connectors and plugins to interact with business data and automate workflows across M365.
+**Copilot Pro** provides access to more advanced models (GPT-4 based). Handles complex questions, file analysis, and image generation.
 
-## Types & Classifications of Copilots
+## Competitors and alternatives
 
-### By Access Method
-- **Standalone Applications:** E.g., ChatGPT
-- **Embedded Copilots:** Integrated within suites like Microsoft 365, Google Workspace, or SAP Joule
-- **Browser Extensions/Add-ons:** E.g., Jasper for content creation
-- **Business System Embedded:** Deeply integrated within platforms like Salesforce, ServiceNow, or custom enterprise tools
+Copilot's main competitors include:
 
-### By Data Source
-- **External-data Copilots:** Use public web data and pre-trained LLMs
-- **Internal-data Copilots:** Integrate proprietary, organization-specific data (CRM, ERP, HRIS, support tickets) for contextual, tailored responses
+**ChatGPT (OpenAI)** shares Copilot's technical foundation but operates as an independent general-purpose chatbot. More accessible with larger user base.
 
-### By Domain or Function
-- **General-purpose Copilots:** E.g., Microsoft Copilot, providing broad productivity support
-- **Specialized Copilots:** E.g., GitHub Copilot for coding, ThoughtSpot Spotter for analytics, SAP Joule for enterprise process optimization
+**Google Gemini** is Google's AI assistant integrated with Google Workspace (Gmail, Docs, Sheets), offering better compatibility for Google product users.
 
-### By Role in Automation
-- **Collaborative Copilot:** Works interactively with users, requiring regular feedback
-- **Autonomous Agent (Contrast):** Runs pre-configured workflows with minimal ongoing human interaction
+**Claude (Anthropic)** is known for advanced reasoning and safety. Particularly strong in complex analysis and long-form writing.
 
-## Key Features
+## Real-world use cases
 
-**Real-time assistance**  
-Drafts responses, summarizes conversations, and recommends next steps instantly.
+**Software development efficiency**
 
-**Contextual awareness**  
-Uses conversation history, customer data, and business metrics for highly relevant outputs.
+Programmer teams using GitHub Copilot report average "30-40% code writing time reduction." AI handles repetitive code and standard logic, allowing humans to focus on creative aspects.
 
-**Multimodal integration**  
-Some copilots can process text, voice, images, or structured data.
+**Business report creation**
 
-**Continuous learning**  
-Adapts based on user feedback and organizational needs.
+Sales teams using Copilot in Word created monthly reports; with instructions like "make complex data analysis results clear," AI generated initial drafts in minutes, reducing editing effort 70%.
 
-**Secure, responsible AI**  
-Meets enterprise-grade security, compliance, and privacy standards.
+**Email reply efficiency**
 
-## Copilot vs. Chatbot vs. AI Agent
+Using Copilot in Outlook to auto-generate reply suggestions. With tone specifications like "polite" or "concise," AI presents multiple options for quick selection.
 
-| Feature | Copilot | Chatbot | AI Agent |
-|---------|---------|---------|----------|
-| **Role** | Human collaborator, proactive assistant | Direct user/customer interaction | Autonomous workflow executor |
-| **Human Involvement** | Continuous, collaborative | End-user driven | Minimal after setup |
-| **Complexity** | Handles complex, context-rich tasks | Simple, scripted Q&A | Automates end-to-end process flows |
-| **Interaction Style** | Suggestions, summaries, actionable advice | Scripted responses, FAQs | Runs processes independently |
-| **Integration** | Deep with business systems and data | Often isolated | Deep with systems, background execution |
-| **Example** | Summarizing tickets, drafting emails | "What are your hours?" bot | Automated invoice processing |
+## Benefits and considerations
 
-## How Are Copilots Used?
+Copilot's greatest benefit is **high integration with Microsoft products.** Seamless AI functionality works within familiar Word and Excel without learning new tools.
 
-### 1. Customer Service & Support
-**Drafting responses:** Accurate, brand-aligned replies to customer inquiries.  
-**Summarizing tickets:** Condensing long histories for quick agent review.  
-**Recommending actions:** Escalation, personalized solutions, or next steps.  
-**Performance monitoring:** Tracking and coaching agent metrics.
+Also, enterprise-level security (data processed on Microsoft servers) and increasing organizational IT policy support make corporate adoption easy.
 
-**Example:** A support agent uses a copilot to generate a response to a shipping inquiry, pulling order status and policy from internal systems.
+However, "AI-generated content isn't always accurate," a significant risk. Code generation especially can produce non-functional or security-flawed code requiring human review. Generated content copyright attribution remains unresolved.
 
-### 2. Sales Enablement
-**Composing emails:** Personalized outreach based on CRM insights.  
-**Opportunity management:** Summarizing interactions, suggesting next steps.  
-**Data-driven recommendations:** Surfacing offers or content for each prospect.
+## Related terms
 
-**Example:** A salesperson leverages Microsoft 365 Copilot to draft follow-up emails and presentations, summarizing prior meetings and suggesting talking points.
+- **[Large Language Models (LLM)](LLM.md)** — Copilot's foundation technology; includes GPT-4.
+- **[Generative AI](Generative-AI.md)** — General term for AI generating text and images, including Copilot.
+- **[AI Assistant](AI-Assistant.md)** — General category for AI tools supporting human work, including Copilot.
+- **[Natural Language Processing (NLP)](NLP.md)** — Technology enabling Copilot to understand user instructions.
+- **[Prompt](Prompt.md)** — Text input giving instructions to Copilot.
 
-### 3. IT & HR Operations
-**Automating tasks:** Resetting passwords, processing requests, updating records.  
-**Onboarding assistance:** Guiding new hires through documentation and training.  
-**Knowledge management:** Answering policy or troubleshooting queries.
+## Frequently asked questions
 
-**Case Study:** Moveworks Copilot automates 50% of access-related IT tickets instantly.
+**Q: Is Copilot free?**
 
-### 4. Analytics & Data Exploration
-**Natural language queries:** Turning questions into SQL or BI queries.  
-**Trend analysis:** Summarizing and visualizing key metrics.  
-**Proactive insights:** Surfacing recommendations or alerts from data.
+A: Varies by service. GitHub Copilot costs $12/month (free for students), Copilot in Bing is free, Copilot Pro is $20/month, and Copilot in Microsoft 365 requires enterprise licensing.
 
-**Example:** A marketing analyst uses ThoughtSpot Spotter to generate reports and actionable insights from simple prompts.
+**Q: Can Copilot-generated code be commercially used?**
 
-### 5. Content Creation & Productivity
-**Document drafting:** Proposals, summaries, meeting notes.  
-**Presentations:** Creating slides or charts from raw data.  
-**Task automation:** Scheduling, reporting, or communications.
+A: Depends on Copilot service terms. GitHub Copilot-generated code is usable within permitted scope, but full copyright attribution remains debated. Consult legal teams for important cases.
 
-**Example:** A manager uses Microsoft 365 Copilot to generate a performance summary from internal data sources.
+**Q: Does Copilot use private data for learning?**
 
-## Benefits of Copilots
-
-**Enhanced productivity**  
-Automate repetitive work, free up time for higher-value tasks.
-
-**Improved accuracy**  
-Standardized, data-driven suggestions reduce errors.
-
-**Faster responses**  
-Real-time recommendations speed up decision-making.
-
-**Personalized experiences**  
-Contextual support based on user history and data.
-
-**Scalability**  
-Handle higher interaction volumes without proportionate staffing.
-
-**Continuous learning**  
-Copilots adapt and optimize with ongoing use.
-
-## Risks, Limitations, and Responsible Use
-
-**Bias in responses**  
-Training data may contain biases; requires responsible AI practices and regular audits.
-
-**Data privacy and security**  
-Robust encryption, access controls, and compliance are required.
-
-**Reliability**  
-Human oversight remains essential, especially for sensitive or complex tasks.
-
-**Change management**  
-Successful adoption requires governance, clear policies, and user training.
-
-## Implementation Steps
-
-**1. Identify Use Cases**  
-Pinpoint workflows where copilots can deliver value (support, sales, IT, analytics).
-
-**2. Select a Solution**  
-Evaluate platforms for features, security, integration, compliance (consider Microsoft 365 Copilot, SAP Joule, Salesforce Copilot, etc.).
-
-**3. Pilot and Test**  
-Run small-scale pilots, collect feedback, and measure performance.
-
-**4. Integration**  
-Connect to business systems and data via APIs or connectors.
-
-**5. Training and Configuration**  
-Customize prompts and workflows, train users for effective interaction.
-
-**6. Monitor and Optimize**  
-Track KPIs (response time, accuracy, satisfaction), refine based on analytics.
-
-**7. Governance and Scale**  
-Establish responsible AI policies, expand to more teams as value is proven.
-
-## Real-World Examples
-
-**GitHub Copilot**  
-Assists developers in code completion, function suggestions, and documentation.
-
-**Microsoft 365 Copilot**  
-Embedded in Word, Excel, PowerPoint, and Teams for drafting, data analysis, and meeting summaries.
-
-**SAP Joule**  
-Automates enterprise processes—job postings, analytics summaries, optimization.
-
-**Salesforce Agentforce Copilot**  
-Helps sales/service teams automate communications, summarize records, and recommend actions.
-
-**Moveworks Copilot**  
-Resolves IT and HR requests via chat, integrating with enterprise systems.
-
-## Frequently Asked Questions
-
-**What is the primary difference between a copilot, a chatbot, and an AI agent?**  
-A copilot works interactively with humans, offering real-time suggestions and summaries. A chatbot answers simple, scripted queries. An AI agent runs automated workflows with minimal human oversight.
-
-**Can copilots use my company's internal data?**  
-Yes, with secure and compliant integration, copilots can access internal databases, CRMs, and knowledge bases for context-rich support.
-
-**Are copilots only for customer service?**  
-No. Copilots are prevalent in IT, HR, sales, marketing, analytics, finance, and beyond—anywhere complex, repetitive, or information-heavy workflows exist.
-
-**How do copilots ensure security and compliance?**  
-They incorporate enterprise-grade security controls, encryption, and regulatory compliance (GDPR, HIPAA, etc.).
-
-**Will copilots replace human agents?**  
-No. Copilots augment human capability by automating routine work, surfacing insights, and enabling focus on creative or sensitive tasks.
-
-**How is ROI measured for copilots?**  
-Key metrics: reduced response time, increased resolution rate, customer satisfaction, operational savings, productivity gains.
-
-## References
-
-- [Microsoft: Copilot and AI Agents Overview](https://www.microsoft.com/en-us/microsoft-copilot/copilot-101/copilot-ai-agents)
-- [Microsoft: Getting Started with Copilot](https://www.microsoft.com/en-us/microsoft-copilot/copilot-101/copilot-ai-agents#Getting-started)
-- [Microsoft: Copilot Glossary](https://learn.microsoft.com/en-us/copilot/glossary)
-- [Microsoft: Responsible AI](https://www.microsoft.com/en-us/ai/responsible-ai)
-- [Microsoft: 365 Copilot for Work](https://www.microsoft.com/en-us/microsoft-365/copilot/copilot-for-work)
-- [SAP: What is an AI Copilot?](https://www.sap.com/resources/what-is-ai-copilot)
-- [SAP: AI-generated content is not immune to biases](https://www.sap.com/resources/what-is-ai-bias)
-- [SAP Joule: AI Assistant](https://www.sap.com/products/artificial-intelligence/ai-assistant.html)
-- [Assembled: Guide to AI Copilots in Customer Service](https://www.assembled.com/page/ai-copilots-customer-service)
-- [Moveworks: What does an AI copilot do?](https://www.moveworks.com/us/en/resources/blog/what-does-an-ai-copilot-do)
-- [Salesforce: What is an AI Copilot?](https://www.salesforce.com/agentforce/ai-copilot/)
-- [Salesforce: Agentforce](https://www.salesforce.com/agentforce/ai-copilot/)
-- [ThoughtSpot: Copilots vs. Agents](https://www.thoughtspot.com/data-trends/ai/ai-copilot-and-ai-agent)
-- [ThoughtSpot: Spotter](https://www.thoughtspot.com/product/ai-analyst)
-- [GitHub Copilot](https://github.com/features/copilot)
+A: Microsoft states "user input content isn't used for other users' learning." However, anonymized data may be used for model improvement, so avoid entering confidential information.

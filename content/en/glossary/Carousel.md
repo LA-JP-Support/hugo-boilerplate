@@ -1,164 +1,83 @@
 ---
 title: Carousel (UI Component)
-lastmod: 2025-12-18
+date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: carousel-ui-component
-description: "A rotating display that shows multiple items like images or cards one at a time, letting users browse through them by clicking arrows or swiping."
-keywords: ["carousel", "UI component", "web design", "UX design", "accessibility"]
-category: AI Chatbot & Automation
+description: A carousel is a UI component that displays multiple images or cards in a single view, allowing users to browse by swiping or clicking.
+keywords:
+- carousel
+- UI component
+- web design
+- UX design
+- interaction
+category: Web Development & Design
 type: glossary
-date: 2025-12-18
 draft: false
+url: /en/glossary/carousel/
 ---
 
-## What Is a Carousel?
+## What is a Carousel?
 
-A carousel is an interactive UI component that displays a sequence of content items—images, text cards, featured products, or calls-to-action—within a single viewport. Items arrange horizontally, and users cycle through them by clicking navigation arrows, using swipe gestures, or allowing auto-rotation to advance slides. Also called image sliders, content sliders, or card carousels, these components take their name from amusement rides, reflecting how content rotates in a circular manner.
+**A carousel is a UI component that displays multiple images or cards sequentially in a single area, allowing users to browse through them one by one using arrows or swipes.** Named after the rotating carousel horses at amusement parks, the content appears to rotate. Carousels are used in many scenarios: product galleries on e-commerce sites, header images on news sites, and onboarding on mobile apps. While it has the advantage of displaying multiple pieces of content in limited screen space, many users view little beyond the first slide, which is a known challenge.
 
-In AI chatbots and automation, carousel components surface multiple options or responses in compact conversational UI, helping guide user choices without overwhelming the chat window. While carousels maximize space efficiency by presenting multiple items in a single region, their effectiveness depends heavily on proper design and implementation.
+> **In a nutshell:** A carousel is like flipping through magazine covers one at a time. You can focus on one piece of information at a time, but you easily miss the pages deeper in the stack.
 
-## Core Components and Features
+**Key points:**
 
-**Slides (Items/Cards)**  
-Individual content units—images, cards, messages—displayed in the carousel's viewport. Each slide should be self-contained and actionable.
+- **What it does:** Displays multiple items sequentially in one space with navigation features for browsing
+- **Why it's needed:** To present multiple pieces of information in limited screen space while focusing attention on one item
+- **Who uses it:** E-commerce companies, news sites, mobile app developers
 
-**Navigation Controls**
-- **Arrows/Chevrons:** Enable movement to previous/next slides
-- **Pagination Indicators:** Visualize number of slides and current position—labeled tabs or thumbnails preferred over generic dots for better usability
-- **Swipe Controls:** Enable horizontal navigation on touch devices
+## Why it matters
 
-**Container**  
-Bounding element holding all carousel content and controls, managing overflow and visual boundaries.
+Web page screen space is limited. Displaying many products or news articles in a grid divides user attention more than a carousel showing "one at a time." Animation effects also capture attention. However, usability research shows "the vast majority of users view nothing beyond the first slide," requiring careful design consideration.
 
-**Auto-Rotation (Optional)**  
-Automatically advances slides after set intervals. Should always be user-controllable and pausable for accessibility.
+## How it works
 
-**Looping (Optional)**  
-Allows carousel to wrap from last slide back to first, enabling continuous navigation.
+A carousel contains multiple elements (slides) in a container with the display area restricted to show only one at a time. Clicking arrow buttons or dot pagination, or swiping on mobile, displays the next slide. Optionally, it can rotate automatically, though allowing user control is better for accessibility. Keyboard navigation and screen reader support are also important.
 
-**Accessibility Requirements**  
-All controls must be keyboard-navigable. Carousel state must communicate to assistive technologies. Users must be able to pause auto-rotation. Controls require sufficient size, contrast, and touch-friendly dimensions.
+## Real-world use cases
 
-## Common Use Cases
+**Product gallery** E-commerce sites show products from multiple angles.
 
-**Image Galleries**  
-E-commerce product photos, portfolio artwork, case study showcases. Users swipe through different angles or variations of featured items.
+**News carousel** Homepage headers display rotating images at the top.
 
-**Product Catalogs**  
-Online stores display featured items, best-sellers, or categories. Chatbots suggest products or services in conversational flows.
+**Onboarding** Apps explain features to new users across multiple carousel steps.
 
-**Onboarding and Tutorials**  
-Apps walk new users step-by-step through features. Process walkthroughs break down complex flows into digestible cards.
+**Recommended products corner** Limited smartphone screen space shows recommended products one at a time in sequence.
 
-**Navigation and Dashboards**  
-Home screens categorize content with swipeable cards. Dashboards summarize metrics, alerts, or key updates in rotating panels.
+## Benefits and considerations
 
-**Promotional Banners**  
-Website homepages rotate promotions, announcements, or hero images to showcase multiple messages in limited space.
+Benefits include presenting much information in limited space and capturing attention visually. It also works well for mobile adaptation.
 
-### Critical Engagement Insight
-Usability studies consistently show most users interact only with the first slide—only 1% of users click carousel toggles, and 84% interact only once, rarely making it past the first slide. Critical information should never be hidden in later slides.
+A key consideration is that usability research shows "most users view only the first slide and not the second onward." Hiding important information in later slides misses opportunities. Auto-rotating carousels also suffer from banner blindness (ignored like advertisements).
 
-## Benefits and Limitations
+## Design best practices
 
-### Benefits
-- **Space Efficiency:** Multiple items occupy single UI region, maximizing limited screen space
-- **Visual Engagement:** Animations and transitions capture attention for featured content
-- **Content Variety:** Surfaces range of options in compact module
-- **User Control:** Users browse at own pace with clear, accessible navigation
-- **Storytelling:** Guides users through sequences in ordered fashion
+Three to five slides are ideal. More than that, users won't realize "there's more." Include all important information in the first slide. Arrows and dots must be clear; touch devices require sufficient sizing. User-controlled carousels are preferable to auto-rotating. Pay attention to accessibility (keyboard control, screen reader support).
 
-### Limitations
-- **Low Engagement Beyond First Slide:** Most users ignore or never see slides after the first; vital content placed later is often missed
-- **Distraction and Cognitive Load:** Auto-rotating carousels distract, disrupt reading, and lead to banner blindness
-- **Hidden Content:** Only one or few items visible at a time; users may not realize there's more
-- **Slower Decision-Making:** Users must click/swipe or wait for rotation to view options
-- **Accessibility Issues:** Many carousels are difficult for screen readers and keyboard users unless specifically designed for accessibility
-- **Banner Blindness:** Rotating elements are often ignored, especially when styled like ads
+## Alternative approaches
 
-## Design Best Practices
+Grid display (showing multiple items simultaneously) takes more space but has higher discoverability. Tab format lets you view multiple pages at once and switch quickly. Infinite scroll (more appear as you scroll down) works well for mobile. Depending on the situation, consider alternatives to carousels.
 
-**Limit Slide Count**  
-Optimal: 3-5 slides. Engagement drops sharply after first few. Never place critical information beyond first slide.
+## Frequently asked questions
 
-**Optimize Readability**  
-Use high-resolution images and large, legible fonts. Avoid overloading cards with information; keep text concise and focused.
+**Q: Can carousel negatively impact user experience?**
+A: Yes. Research shows 84% of users don't view slides after the first one. Important information shouldn't be hidden in carousels; displaying multiple items simultaneously is often better.
 
-**Provide Clear Navigation**  
-Use visible, intuitive arrows or swipe prompts. Prefer labeled tabs or thumbnails over generic dots for slide navigation, especially on desktop.
+**Q: Should it auto-rotate?**
+A: Avoid it on mobile. Even on desktop, user-controlled carousels are preferred. If auto-rotating, always include a pause button.
 
-**Manual Over Auto-Rotation**  
-Manual navigation is strongly preferred. If auto-rotation is used, provide pause control and make interval long enough (3-5 seconds minimum). Never auto-rotate on mobile where users scroll quickly.
-
-**Ensure Accessibility**
-- All controls and slides must be focusable via keyboard
-- Provide descriptive alt text for images
-- Use ARIA roles and aria-live regions to announce changes
-- Allow pausing of movement or animations
-- Ensure controls are large, high contrast, and touch-friendly
-
-**Responsive Design**  
-Carousels must adapt seamlessly between desktop and mobile layouts. On mobile, favor swipe gestures over small navigation elements.
-
-**Maintain Consistency**  
-Match carousel style to brand and UI. Ensure all slides are relevant—avoid filler content.
-
-## Implementation Options
-
-### Using Libraries (React)
-- Swiper.js: Full-featured, mobile-first carousel
-- Splide.js: Lightweight, accessible slider
-- Nuka Carousel: React-specific implementation
-- Material-UI Carousel: Material Design integration
-
-### Using Libraries (Vue)
-- PrimeVue Carousel: Enterprise-grade component
-- Vueper Slides: Flexible Vue carousel
-
-### Using Libraries (Vanilla JS)
-- Swiper.js: Framework-agnostic solution
-- Slick Carousel: jQuery-based classic
-
-### Custom Implementation Requirements
-Use semantic HTML with proper ARIA labels. Implement keyboard navigation and focus management. Add event listeners for navigation and swipe gestures. Update aria-hidden and announce changes to assistive tech. Provide pause button for auto-rotation.
-
-## Alternatives to Consider
-
-**Grids**  
-Display many items simultaneously for high discoverability and easy comparison. Requires more screen space but eliminates hidden content issues.
-
-**Tabs**  
-Instant switching between distinct categories or sections with clear overview. Not scalable for many categories.
-
-**Lists**  
-Natural navigation for sequential or scrollable content, especially mobile-friendly. Less compact than carousels but highly skimmable.
-
-**Accordions**  
-Ideal for text-heavy, sectioned information like FAQs or policies. Reduces clutter but not suitable for visual galleries.
-
-## Critical Considerations
-
-Carousels solve specific problems but aren't universally appropriate. They work best for:
-- Showcasing multiple related items in limited space
-- Guided storytelling or onboarding sequences
-- Product galleries where users expect multiple views
-
-Avoid carousels when:
-- Critical information must be immediately visible
-- Content discovery is primary goal
-- Accessibility is paramount concern
-- All items deserve equal visibility
-
-The decision to implement a carousel should balance space constraints against content visibility, user engagement patterns, and accessibility requirements. Well-designed carousels with manual control, clear navigation, and accessible implementation can provide value, while poorly implemented carousels often harm user experience and hide important content.
+**Q: How do I ensure accessibility?**
+A: Allow keyboard navigation with arrow keys and Tab. Add ARIA labels for screen reader support. Image descriptions (alt text) are essential.
 
 ## References
 
-- [NN/g: Designing Effective Carousels](https://www.nngroup.com/articles/designing-effective-carousels/)
-- [W3C: Carousel Accessibility Full Guide](https://www.w3.org/WAI/tutorials/carousels/)
-- [Smart Interface Design Patterns: Better Carousel UX](https://smart-interface-design-patterns.com/articles/better-carousel-ux/)
-- [Erik Runyon: Carousel Interaction Stats](https://erikrunyon.com/2013/01/carousel-interaction-stats/)
-- [NN/g: Banner Blindness Research](https://www.nngroup.com/articles/banner-blindness-old-and-new-findings/)
-- [Swiper.js: React Integration](https://swiperjs.com/react)
-- [Splide.js: React Integration](https://splidejs.com/integration/react/)
-- [PrimeVue Carousel](https://www.primefaces.org/primevue/carousel)
-- [Justinmind: Carousel Examples and Templates](https://www.justinmind.com/ui-design/carousels)
-- [Mobbin: Carousel Design Patterns](https://mobbin.com/browse/ios/patterns/carousel)
+- [Nielsen Norman Group: Carousel Design](https://www.nngroup.com/articles/designing-effective-carousels/)
+- [W3C: Carousel Accessibility](https://www.w3.org/WAI/tutorials/carousels/)
+- [Smashing Magazine: UI Design Patterns](https://www.smashingmagazine.com/)
+- [A List Apart: User Experience](https://alistapart.com/)
+- [UX Collective: Design Patterns](https://uxdesign.cc/)
+- [Interaction Design Foundation: UX](https://www.interaction-design.org/)
+- [Material Design: Carousel Components](https://material.io/)
+- [Ant Design: Component Library](https://ant.design/)

@@ -1,17 +1,19 @@
 ---
-title: "Social Listening"
+title: Social Listening
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Social-Listening
-description: "Social Listening is the practice of monitoring and analyzing what people say about your brand or industry online, then using those insights to improve your business and customer relationships."
+description: Monitoring and analyzing online conversations to understand customer opinions and market trends for business insights and brand protection.
 keywords:
 - social listening
 - brand monitoring
 - social media analytics
 - customer sentiment analysis
 - online reputation management
-category: "Application & Use-Cases"
+category: Knowledge & Collaboration
 type: glossary
 draft: false
+url: "/en/glossary/Social-Listening/"
 ---
 
 ## What is a Social Listening?

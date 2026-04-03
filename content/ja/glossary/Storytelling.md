@@ -9,7 +9,8 @@ keywords:
 - デジタルストーリーテリング
 - ブランドストーリーテリング
 - ストーリーフレームワーク
-category: Application & Use-Cases
+lastmod: 2026-04-02
+category: データ・アナリティクス
 type: glossary
 draft: false
 e-title: Storytelling

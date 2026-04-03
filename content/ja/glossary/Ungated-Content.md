@@ -1,6 +1,7 @@
 ---
 title: アンゲーテッドコンテンツ
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Ungated-Content
 description: デジタルマーケティングとリード獲得の成功のための、アンゲーテッドコンテンツ戦略、実装、ベストプラクティスに関する包括的なガイド。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - リード獲得
 - デジタルマーケティング
 - コンテンツ戦略
-category: Application & Use-Cases
+category: コンテンツ・マーケティング
 type: glossary
 draft: false
 e-title: Ungated Content

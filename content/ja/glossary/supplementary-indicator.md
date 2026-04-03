@@ -1,21 +1,23 @@
 ---
 title: 補助指標
-lastmod: '2025-12-19'
-date: '2025-12-19'
+lastmod: 2026-04-02
+date: 2025-12-19
 translationKey: supplementary-indicator
-description: 補助指標は、AIと自動化における主要な評価指標に対して重要な文脈と検証を提供します。これらは、堅牢なシステムパフォーマンス評価のための詳細な洞察を提供します。
+description: 補助指標は、主要な評価指標を補う文脈と検証を提供し、AIシステムの多面的なパフォーマンス評価を可能にする測定基準です。
 keywords:
 - 補助指標
-- AI
-- 自動化
+- KPI
 - 評価指標
-- 主要指標
-category: AI Chatbot & Automation
+- パフォーマンス測定
+- 品質保証
+category: データ・アナリティクス
 type: glossary
 draft: false
 e-title: Supplementary Indicator
 term: ほじょしひょう
 url: "/ja/glossary/supplementary-indicator/"
+aliases:
+- "/ja/glossary/Supplementary-Indicator/"
 ---
 ## 補助指標とは何か?
 補助指標とは、主要な評価指標と並行して、文脈、検証、または追加の視点を提供するために、パフォーマンス評価フレームワークに統合される補助的な測定基準または定性的な尺度です。主要指標が中核的な目標や成果を直接測定するのに対し、補助指標は主要な結果の理解を説明、限定、支援することで解釈を豊かにします。

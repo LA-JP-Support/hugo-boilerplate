@@ -1,207 +1,81 @@
 ---
-title: "Human-Agent Teaming"
-translationKey: "human-agent-teaming"
-description: "Human-Agent Teaming is a partnership where humans and AI work as equals, sharing control and goals to accomplish tasks more effectively by combining human judgment with AI speed and efficiency."
-keywords: ["Human-Agent Teaming", "AI collaboration", "Human-AI Teaming", "Artificial Intelligence", "Team dynamics"]
-category: "AI Chatbot & Automation"
-type: "glossary"
-date: 2025-12-18
-lastmod: 2025-12-18
+title: Human-Agent Teaming
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: human-agent-teaming
+description: A collaborative framework where humans and AI agents work together as partners toward shared goals, leveraging each party's unique strengths.
+keywords:
+- Human-agent teaming
+- AI collaboration
+- human-AI cooperation
+- team dynamics
+- decision support
+category: AI & Machine Learning
+type: glossary
 draft: false
+url: /en/glossary/human-agent-teaming/
 ---
-## 1. What is Human-Agent Teaming?
 
-**Human-Agent Teaming (HAT)** is a collaborative paradigm wherein humans and autonomous artificial agents—such as AI systems, robots, or software agents—operate as partners aiming for shared goals. Unlike traditional human-machine interactions, which treat machines as tools requiring ongoing direction, HAT frameworks emphasize *synergistic partnerships* that allow for seamless, bidirectional control and complementarity. Humans contribute contextual understanding, ethical reasoning, and adaptivity, while AI agents offer computational efficiency, speed, and persistent monitoring.
+## What is Human-Agent Teaming?
 
-**Core Characteristics:**
-- **Equality:** Team members, including AI, operate on equal footing rather than in a tool-user hierarchy.
-- **Bidirectional Control:** Authority and initiative flexibly transfer based on task needs.
-- **Complementarity:** Each party leverages its strengths to counterbalance the other's limitations.
-- **Shared Goals:** Continuous coordination to accomplish common objectives.
-## 2. Human-Agent Teaming: How is it Used?
+**Human-Agent Teaming (HAT) is a collaborative framework where humans and AI agents work together as partners toward shared goals.** Unlike traditional tool use, HAT features bidirectional control where both parties leverage their strengths. Humans provide contextual understanding and ethical reasoning; AI agents enable fast data processing and repetitive task automation.
 
-### 2.1. Workflow and Control Flow
+> **In a nutshell:** An approach where humans and AI work as equals, mutually complementing each other toward goals.
 
-In HAT, humans and agents function within a unified operational thread, dynamically transferring control and sharing situational awareness. Task division is context-sensitive, often shifting rapidly with changing circumstances or mission requirements.
+**Key points:**
 
-**Example Workflow:**
-1. **Task Initiation:** Either human or agent identifies need for action.
-2. **Shared Awareness:** All parties synchronize on status, objectives, and constraints.
-3. **Negotiation:** Roles and commitments are agreed upon, sometimes through formal protocols.
-4. **Execution:** Both execute their roles, continuously monitoring context.
-5. **Handover:** Control shifts as needed (e.g., escalation of anomalies).
-6. **Debrief/Learning:** Outcomes are reviewed and both agents and humans update strategies.
+- **What it does:** A collaborative framework where humans and AI share bidirectional control and responsibility
+- **Why it's needed:** Complex problem-solving requires both human judgment and AI processing capability
+- **Who uses it:** Professionals across domains—medical diagnosis, customer service, finance, defense
 
-**Illustrative Example:**  
-A multimodal avatar delivers compressed situational updates, using visual, speech, text, and tactile channels, adhering to management-by-exception to reduce distraction.
+## Why it matters
 
-### 2.2. Core Functionalities
+HAT integrates human knowledge and AI processing in complex environments, achieving outcomes impossible alone. Medical diagnosis: physicians interpret AI analysis and make final decisions. Customer service: AI handles routine inquiries while humans address complex cases. This approach improves decision quality while ensuring human ethical oversight. Beyond simple AI use, human-AI complementary function simultaneously achieves risk mitigation and trust improvement.
 
-Key capabilities of effective HAT systems:
+## How it works
 
-- **Shared Situation Awareness:** Mechanisms ensure all parties have up-to-date information.
-- **Explainable AI:** Agents not only act but justify their decisions to build trust.
-- **Interpredictability:** Team members anticipate each other’s behaviors.
-- **Proactive Communication:** Agents initiate communication when contextually necessary.
-- **Directability:** Formal work agreements encode enforceable commitments and prohibitions.
-## 3. Theoretical and Technical Foundations
+HAT operates on dynamic task allocation. First, recognize situations, share goals, determine roles. Subsequently, humans and AI execute with responsibility, transferring control as situations change. For example, an AI medical diagnostic system analyzes medical images and reports findings; physicians combine this with patient information to make final diagnosis.
 
-### 3.1. Foundational Dimensions
+Shared situational awareness is key—both parties need identical information and goals for smooth collaboration. AI must have explainability, showing humans why it reached conclusions. Simultaneously, humans retain authority to critically examine AI results and override them. This process lets human judgment correct AI errors or hallucinations, yielding more trustworthy outputs.
 
-Comprehensive understanding of HAT requires analysis along several axes ([Diggelen et al., 2019](https://www.emergentmind.com/papers/1909.04492)):
+## Real-world use cases
 
-1. **Environment:** Complexity and unpredictability drive the need for shared awareness.
-2. **Mission/Task:** Duration, risk, and urgency dictate information and control needs.
-3. **Team Organization:** Size, authority, skill differentiation, and distribution impact coordination.
-4. **Team Dynamics:** Teams may be ad hoc, standing, or evolving, affecting lifecycle management.
-5. **Communication Infrastructure:** Modalities and reliability are central for sustaining common ground.
+**Medical diagnosis support systems**
 
-### 3.2. Technical Architectures
+Physician and AI diagnostic system collaborate on patient diagnosis. AI detects abnormalities in medical images; physicians integrate this with clinical knowledge and patient history for final diagnosis, substantially improving accuracy. Physicians detect subtle changes AI misses; AI recognizes broad patterns humans overlook.
 
-#### SAIL (Social Artificial Intelligence Layer)
-A modular middleware architecture that enables HAT functionalities:
+**Customer service integration**
 
-- **Component Structure:** Flexible user interfaces for humans, task-oriented AI for execution, and social AI for teaming.
-- **Communication Protocol (HATCL):** Message exchange using `<Performative, Sender, Receiver, Content, ...>`, based on FIPA-ACL.
-- **Ontological Layer:** Dual-layer ontology—generic (Actor, Plan, Goal) and domain-specific.
-- **Implementation Platform:** Built on Akka for distributed, cross-platform modularity.
-- **Semantic Anchoring:** Maps formal agreements to executable agent behaviors.
+Chatbots handle 80% of routine inquiries, referring complex or emotional cases to human agents. Humans leverage customer information and conversation history collected by AI for deeper personal support. This hybrid approach improves both customer satisfaction and processing efficiency.
 
-#### Adaptive Architectures for Real-Time Teaming
+**Financial risk assessment and trading monitoring**
 
-Adaptive agents infer human intent in real-time, eschewing static models in favor of policy libraries and similarity metrics. For example, in the [Team Space Fortress](https://sites.pitt.edu/~cmlewis/pubs/tianwei-pair.pdf) testbed, agents adapt to human teammates by selecting complementary policies from a library, using cross-entropy-based similarity to human actions, and switching strategies in real-time. This approach generalizes to diverse human policies and outperforms static agents in dynamic, real-world scenarios.
-## 4. Human, Organizational, and Socio-Technical Factors
+AI monitors trading automatically and detects anomalies, flagging suspicious transactions. Human analysts verify these, ensuring regulatory compliance while making final judgments. Combined AI high-speed screening and human contextual judgment simultaneously achieve fraud prevention and legitimate transaction facilitation.
 
-### 4.1. Trust Calibration and Transparency
+## Benefits and considerations
 
-Mechanisms for calibrating trust are essential; humans must avoid both over-trusting and under-utilizing AI partners. Explainability and [transparency](/en/glossary/transparency/) are vital, especially in high-stakes fields like healthcare and defense.
+HAT's biggest benefit is combining humans and AI strengths to produce quality outcomes neither achieves alone. Humans provide ethical oversight and complex judgment; AI provides speed and consistency. More accurate and trustworthy results emerge. Accountability is ensured—humans understand AI decisions and can override them when necessary, building organizational trust.
 
-- Trust is dynamic and requires real-time feedback and transparency about agent intent and system limitations.
-- Over-trust can cause complacency; under-trust leads to inefficiencies.
+Key considerations: clear communication standards must be defined between parties. AI explainability is critical. Organizational agreement on final decision-making is essential. Humans must avoid both overdependence on and excessive skepticism toward AI, appropriately calibrating trust.
 
-### 4.2. Emotional Engagement and Moral Agency
+## Related terms
 
-HAT systems in ethically sensitive domains must support emotional engagement and moral reasoning, ensuring humans retain meaningful control and moral agency. Design must prevent reduction of human input to mere parameter-setting.
+- **[Human-in-the-Loop (HITL)](Human-in-the-Loop--HITL-.md)** — Direct human integration into AI workflows
+- **[Human-Approval Node](Human-Approval-Node.md)** — Human approval steps within workflows
+- **[Explainable AI](Explainable-AI.md)** — Systems allowing humans to understand AI reasoning
+- **[Trust Calibration](Trust-Calibration.md)** — Adjusting humans' appropriate AI trust levels
+- **[Hybrid System](Hybrid-System.md)** — Overall systems where humans and AI collaborate
 
-### 4.3. Team Dynamics and Human Factors
+## Frequently asked questions
 
-- **Shared Mental Models:** Both parties must understand goals, roles, and context.
-- **Team Training:** Cross-training enhances interpredictability.
-- **Communication:** Modalities should match context and cognitive load.
-- **Organizational Adaptation:** Implementing HAT may require redefined workflows and culture change.
-## 5. Formalization and Protocols
+**Q: How does Human-Agent Teaming differ from traditional tool use?**
 
-### 5.1. Work Agreements and Deontic Logic
+A: Traditional tool use involves unidirectional human control of AI, while HAT features bidirectional control and shared responsibility. AI proposes, humans judge and sometimes execute automatically based on human decisions—bidirectional interaction characterizes HAT.
 
-Formal agreements use deontic logic to encode obligations and prohibitions, enabling enforceable commitments.
+**Q: What's the biggest challenge implementing HAT?**
 
-**Example:**
-- O(notify(BaseCommander,HostileContact)) ⟺ detect(HostileContact)=true
+A: Trust building and communication standard establishment. Humans must neither trust AI too much nor remain overly skeptical, requiring appropriate trust calibration, and AI must clearly explain decision-making reasoning.
 
-### 5.2. Semantic Anchoring
+**Q: Is HAT effective beyond healthcare?**
 
-Abstract communicative acts in protocols like HATCL are mapped to executable agent behaviors, ensuring systematic expression and enforcement of team intent across heterogeneous architectures.
-
-### 5.3. Ontological Structuring
-
-Layered ontologies enable scalable, cross-domain interpretation of team messages and agreements.
-
-## 6. Examples and Use Cases
-
-### 6.1. Military Surveillance (UAVs and Ground Robots)
-Several UAVs with autonomous navigation and object detection support a human base commander.
-
-- **Shared Awareness:** Updates are event-driven, not constant.
-- **Proactive Communication:** ProCom module modulates information flow.
-- **Dynamic Control:** Control shifts based on mission state.
-- **Human-Interface:** Multimodal avatars minimize distraction.
-### 6.2. Customer Service
-
-AI chatbots handle simple queries, escalating complex or sensitive matters to human agents. AI may continue supporting by providing summaries or retrieving documents.
-
-- **AI as Front-Line Support:** Deflects up to 70–80% of tickets.
-- **Human Escalation Path:** Handles complex, nuanced queries.
-- **Copilot Mode:** AI assists even after handoff.
-- **Continuous Learning:** Feedback improves AI models.
-### 6.3. Healthcare
-
-AI assists with diagnosis, but clinicians provide final judgment and oversight.
-
-- AI identifies patterns (e.g., early disease).
-- Human supplies context and ethical oversight.
-- Audit trails and shared awareness underpin safety.
-
-## 7. Benefits and Outcomes
-
-### 7.1. Operational Efficiency
-
-- **Productivity:** AI handles repetitive work, freeing humans for complex tasks.
-- **Decision Quality:** Human intuition plus AI analytics yields better decisions.
-- **Scalability:** Organizations extend service without proportional labor increases.
-
-### 7.2. Human-Centered Value
-
-- **Job Quality:** Humans focus on creative or strategic work.
-- **Safety:** Human oversight averts catastrophic errors.
-- **Continuous Improvement:** Human corrections feed AI learning.
-
-### 7.3. Organizational Adaptation
-
-- **Cultural Change:** Teams must adapt for optimal human-AI complementarity.
-- **Skill Development:** Training is needed to direct and collaborate with AI.
-
-## 8. Challenges and Research Gaps
-
-### 8.1. Definitional Ambiguity
-
-The field lacks unified terminology: "human-agent teaming," "human-autonomy teaming," and "human-AI collaboration" are used interchangeably, but not always consistently ([Frontiers in AI](https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2023.1250725/full)).
-
-### 8.2. Technical Difficulties
-
-- **Semantic Anchoring:** Mapping agreements across diverse architectures is complex.
-- **Protocol Standardization:** Ensuring clear, interoperable communication between platforms.
-
-### 8.3. Human and Socio-Technical Issues
-
-- **Trust Calibration:** Must avoid both over-trust and under-trust.
-- **Emotional Engagement:** Must preserve human moral agency.
-- **Longitudinal Validation:** Need for long-term studies on trust, learning, and group dynamics.
-
-## 9. Future Directions
-
-Key trajectories for HAT advancement:
-
-- **Enhanced Semantic Anchoring:** Bridging abstract agreements with technical architectures.
-- **Longitudinal Studies:** Capturing HAT efficacy in evolving, adaptive teams.
-- **Advanced Interaction Modalities:** Immersive, multimodal interfaces for naturalistic teaming.
-
-**Open Questions:**
-- How can HAT be validated in complex, ethical domains?
-- What protocols and ontologies support scalable, robust teaming?
-- How can organizations foster necessary cultural and skill adaptation?
-
-## 10. Related Concepts
-
-- **Human-AI Collaboration Systems**
-- **Human-in-the-Loop Agentic Systems**
-- **Human-Centered Automation**
-- **Hybrid Intelligence**
-- **Human-Machine Teaming Fundamentals**
-
-## 11. Further Reading and References
-
-- [Emergent Mind – Human-Agent Teaming Overview](https://www.emergentmind.com/topics/human-agent-teaming)
-- [Frontiers in AI – Defining Human-AI Teaming the Human-Centered Way](https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2023.1250725/full)
-- [Pluggable Social Artificial Intelligence for Enabling Human-Agent Teaming (2019)](https://www.emergentmind.com/papers/1909.04492)
-- [Kommunicate – Human-AI Collaboration in Customer Service](https://www.kommunicate.io/blog/human-ai-collaboration/)
-- [YouTube – Human–AI Teaming Webinar](https://www.youtube.com/watch?v=zQKw47Yn3ys)
-- [Adaptive Agent Architecture for Real-time Human-Agent Teaming (PDF)](https://sites.pitt.edu/~cmlewis/pubs/tianwei-pair.pdf)
-
-## 12. Summary
-
-Human-Agent Teaming transforms automation from tool-based to partnership-driven workflows, integrating human contextual judgment and AI computational power. Key functionalities—shared awareness, explainability, interpredictability, proactive communication, and directability—support robust, adaptive, and human-centered systems across domains like defense, healthcare, and customer service. Research continues on architectures, trust, protocols, and socio-technical adaptation, with an emphasis on transparency, ethical collaboration, and long-term outcomes.
-
-**See Also:**  
-[Human-Machine Teaming](https://www.emergentmind.com/topics/human-machine-teaming) | [Human-AI Collaboration Systems](https://www.emergentmind.com/topics/human-ai-collaboration-systems) | [Hybrid Intelligence](https://www.emergentmind.com/topics/hybrid-intelligence)
-
-For technical deep dives, case studies, and further exploration, see the references and related topics above. 
+A: Yes. Customer service, finance, manufacturing, cybersecurity and many fields benefit from HAT. Any field solving complex problems where both human judgment and rapid processing provide value can adopt it.

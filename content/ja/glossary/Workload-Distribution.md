@@ -9,8 +9,9 @@ keywords:
 - リソース割り当て
 - 分散コンピューティング
 - パフォーマンス最適化
-category: Application & Use-Cases
+category: コンテンツ・マーケティング
 type: glossary
+lastmod: 2026-04-02
 draft: false
 e-title: Workload Distribution
 url: /ja/glossary/workload-distribution/

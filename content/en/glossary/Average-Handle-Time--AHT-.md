@@ -1,199 +1,94 @@
 ---
-title: "Average Handle Time (AHT)"
+title: Average Handle Time (AHT)
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Average-Handle-Time--AHT-
-description: "Average Handle Time (AHT) is the total time an agent spends on a customer interaction, including conversation, hold time, and follow-up work. It measures contact center efficiency and helps manage costs and service quality."
+description: Average Handle Time (AHT) is an important contact center KPI measuring average time spent by operators per customer interaction, from initial contact through post-handling, used for operational efficiency and service quality improvement.
 keywords:
 - average handle time
-- contact center metrics
-- call center performance
-- customer service KPI
-- AHT optimization
-category: "Application & Use-Cases"
+- AHT
+- contact center
+- customer service
+- performance metrics
+category: Contact Center & CX
 type: glossary
 draft: false
+url: /en/glossary/average-handle-time--aht-/
 ---
 
-## What is an Average Handle Time (AHT)?
+## What is Average Handle Time (AHT)?
 
-Average Handle Time (AHT) is a fundamental key performance indicator (KPI) used in contact centers and customer service operations to measure the total time an agent spends handling a customer interaction from start to finish. This metric encompasses not only the actual conversation time with the customer but also includes any hold time during the call and the after-call work (ACW) time required to complete tasks related to that specific interaction. AHT serves as a critical benchmark for operational efficiency, resource planning, and service quality assessment in customer service environments.
+**Average Handle Time (AHT) is the average total time a contact center operator spends handling one customer interaction.** It includes call duration, hold time, and post-call work (note-taking, ticket entry, etc.). This metric is an essential KPI for contact center operational efficiency, workforce optimization, and service quality assessment, serving as an important benchmark for both management and operators.
 
-The calculation of AHT involves dividing the total handle time for all interactions by the number of interactions handled during a specific period. This comprehensive measurement provides managers and analysts with valuable insights into agent productivity, process efficiency, and overall contact center performance. Unlike simple talk time metrics, AHT captures the complete customer service experience, making it an essential tool for understanding the true cost and complexity of customer interactions across various channels including voice calls, chat sessions, email responses, and social media interactions.
+> **In a nutshell:** "Average time per customer interaction—shorter means efficient, longer means attentive care." However, extremely short interactions create complaints while longer ones inflate labor costs, so industry standard balance is crucial.
 
-Understanding and optimizing AHT is crucial for contact center success because it directly impacts both operational costs and customer satisfaction levels. While shorter handle times can indicate efficient problem resolution and lower operational expenses, excessively low AHT may suggest rushed interactions that compromise service quality. Conversely, longer handle times might indicate thorough customer service but could also signal inefficiencies, inadequate training, or complex processes that need streamlining. The key lies in finding the optimal balance that ensures high-quality customer service while maintaining operational efficiency and cost-effectiveness.
+**Key points:**
 
-## Core Contact Center Performance Components
+- **What it does:** Record and aggregate total time from customer call/email receipt through complete closure
+- **Why it matters:** Visualize efficiency and service quality balance, determining improvement priorities
+- **Who uses it:** Contact centers, telecoms, healthcare, finance, retail—all industries with customer support departments
 
-**Talk Time** - The actual duration of active conversation between the agent and customer, representing the primary interaction period where information exchange, problem-solving, and relationship building occur. This component typically forms the largest portion of AHT.
+## Calculation method
 
-**Hold Time** - The cumulative time customers spend on hold during an interaction while agents research information, consult supervisors, or perform system lookups. Minimizing hold time is crucial for maintaining customer satisfaction and reducing overall AHT.
+The AHT formula is simple:
 
-**After-Call Work (ACW)** - The time agents spend completing interaction-related tasks after the customer has disconnected, including updating customer records, scheduling follow-ups, and processing orders. ACW is essential for data accuracy but should be optimized for efficiency.
+```
+AHT = (Total interaction time for period) ÷ (Number of interactions)
+```
 
-**Wrap-Up Time** - A specific subset of ACW that involves categorizing the interaction, updating case status, and preparing for the next customer contact. Proper wrap-up procedures ensure continuity and quality in customer service delivery.
+For example, if an operator works 8 hours handling 24 customer interactions (15 calls, 5 emails, 4 chats) spending total 5 hours on interactions, AHT = 300 minutes ÷ 24 interactions = 12.5 minutes.
 
-**System Response Time** - The delays caused by technology infrastructure, including CRM loading times, database queries, and application switching. These technical factors significantly impact AHT and require ongoing monitoring and optimization.
+### Benchmarks
 
-**Transfer Time** - The duration involved in transferring customers to other departments or specialists, including explanation time and warm transfer procedures. Reducing unnecessary transfers is key to AHT optimization.
+| Interaction Type | Excellent | Good | Average | Needs Improvement |
+|------------------|-----------|------|---------|-------------------|
+| Sales calls | Under 5 min | 5–8 min | 8–12 min | Over 12 min |
+| Technical support | Under 15 min | 15–20 min | 20–25 min | Over 25 min |
+| Medical appointments | Under 3 min | 3–5 min | 5–7 min | Over 7 min |
+| Financial services | Under 8 min | 8–12 min | 12–18 min | Over 18 min |
 
-**Multi-Channel Integration Time** - The additional time required when agents handle interactions across multiple channels simultaneously or need to reference previous interactions from different communication channels.
+These are industry averages requiring adjustment for your customer base and response content.
 
-## How Average Handle Time (AHT) Works
+## How it works
 
-The AHT measurement process begins when a customer interaction is initiated and continues until all related work is completed. Here's the detailed workflow:
+AHT measurement begins the moment a customer initiates contact. The system automatically records timestamps as the operator accepts the call. The operator verifies customer information, listens to inquiry content, presents solutions—all counted in total duration. When operators use hold (consulting managers, searching information systems), that hold time is also included.
 
-1. **Interaction Initiation** - The timer starts when an agent accepts an incoming call, chat, or begins working on an email/ticket, marking the official beginning of the handle time measurement.
+After call termination, the operator updates customer records in the CRM, registers tickets, organizes notes for the next call—this "post-handling time" is crucial to AHT, as insufficient handling reduces quality while excessive handling inflates costs. AHT counting continues until all processing completes and the call is formally closed.
 
-2. **Customer Authentication and Issue Identification** - Agents verify customer identity, access relevant account information, and determine the nature of the customer's inquiry or problem, establishing the foundation for efficient resolution.
+## Main benefits
 
-3. **Active Problem Resolution** - The core interaction phase where agents provide information, troubleshoot issues, process requests, or guide customers through solutions while maintaining professional communication standards.
+**Operational efficiency visualization** clarifies which operators, shifts, and interaction types are efficient. This directly enables **workforce planning optimization**, supporting personnel requirements to management with evidence. Additionally, **efficiency and quality balance assessment** becomes possible. By verifying whether short-AHT operators experience complaint increases and whether long-AHT operators truly deliver high-quality interactions, we can detect problems. Finally, **training needs identification** becomes visible. If AHT is significantly above industry average, specific skill gaps are revealed.
 
-4. **Hold and Research Periods** - When necessary, agents place customers on hold to research complex issues, consult knowledge bases, or seek supervisor assistance, with all hold time contributing to the total AHT calculation.
+## Real-world use cases
 
-5. **Solution Implementation and Verification** - Agents implement solutions, process transactions, or provide final answers while confirming customer understanding and satisfaction with the resolution provided.
+**Contact center staffing structure**
+If 500 calls daily are expected with 8-minute target AHT, required staffing can be calculated. Increasing operators improves AHT but reduces profit margin. AHT helps find this optimal balance.
 
-6. **Interaction Closure** - The conversation concludes with appropriate closing procedures, including summarizing actions taken, setting expectations for follow-up, and ensuring customer satisfaction before disconnection.
+**New operator training effectiveness measurement**
+New employees typically require longer AHT than veterans. Tracking AHT improvement through training toward industry averages quantifies training effectiveness.
 
-7. **After-Call Work Completion** - Agents update customer records, categorize the interaction, schedule follow-up activities, and complete any administrative tasks directly related to the customer interaction.
+**Department-by-department productivity comparison**
+Sales support and technical support departments rightfully have different AHTs. Within-department comparisons identify top performers' best practices for team-wide efficiency improvements.
 
-8. **Quality Assurance Documentation** - Final documentation and case closure activities that ensure proper record-keeping and enable future reference for the customer's interaction history.
+## Benefits and considerations
 
-**Example Workflow**: A technical support call begins at 10:00 AM with customer authentication (2 minutes), problem diagnosis (5 minutes), hold time for research (3 minutes), solution implementation (8 minutes), and after-call work (4 minutes), resulting in a total AHT of 22 minutes.
+AHT's biggest advantage is simplicity—easy to measure. However, **pursuing excessive brevity is dangerous.** Over-emphasizing AHT can pressure operators to rush customers, preventing attentive care. Ironically, callback rates increase, ultimately degrading efficiency. Additionally, **interaction complexity is ignored**—setting identical AHT targets for simple inquiries and complex problems is unfair. Furthermore, **post-handling time reduction pressure** risks incomplete documentation and data entry gaps, degrading quality.
 
-## Key Benefits
+## Related terms
 
-**Operational Efficiency Measurement** - AHT provides quantifiable data for assessing contact center productivity and identifying opportunities for process improvement and resource optimization.
+- **[Customer Satisfaction (CSAT)](CSAT.md)** — Important KPI alongside AHT. Short AHT with low satisfaction indicates quality problems
+- **[First Contact Resolution (FCR)](FCR.md)** — Completing resolution on first contact. Combined with AHT, reveals true efficiency
+- **[Net Promoter Score (NPS)](NPS.md)** — Measures customer loyalty. Low NPS despite short AHT indicates experience improvement needs
+- **[Workforce Management](Workforce-Management.md)** — Using AHT data to create optimal shift planning and staffing
+- **[Quality Assurance (QA)](Quality-Assurance.md)** — Department monitoring AHT and quality balance, pursuing both
 
-**Cost Management and Budgeting** - Accurate AHT data enables precise calculation of interaction costs, supporting budget planning and financial forecasting for contact center operations.
+## Frequently asked questions
 
-**Staffing and Workforce Planning** - AHT metrics inform scheduling decisions, helping managers determine optimal staffing levels and predict capacity requirements for different time periods.
+**Q: Is short AHT good?**
+A: Not necessarily. Short AHT doesn't equal efficiency if problems remain unresolved. AHT must be viewed with "first contact resolution rate," "callback rate," and "customer satisfaction"—never alone.
 
-**Performance Benchmarking** - Organizations can compare AHT across teams, departments, and industry standards to identify best practices and areas requiring improvement.
+**Q: How should AHT targets be set?**
+A: Base on industry standards while adjusting for your customer base, interaction content, and service policy. Targets too low create operator stress and quality decline; too high prevent workforce planning. Regular review is essential.
 
-**Training Needs Identification** - Analysis of individual and team AHT patterns reveals specific training requirements and skill development opportunities for agents.
-
-**Customer Experience Optimization** - Balanced AHT management ensures customers receive thorough service without excessive wait times or rushed interactions.
-
-**Quality Assurance Integration** - AHT data combined with quality scores provides comprehensive performance evaluation and helps maintain service standards.
-
-**Technology ROI Assessment** - Monitoring AHT before and after system implementations demonstrates the impact of technology investments on operational efficiency.
-
-**Predictive Analytics Foundation** - Historical AHT data supports forecasting models for capacity planning and resource allocation decisions.
-
-**Continuous Improvement Framework** - Regular AHT analysis drives ongoing optimization initiatives and supports data-driven decision-making processes.
-
-## Common Use Cases
-
-**Inbound Customer Service Centers** - Managing high-volume customer inquiries while maintaining service quality standards and controlling operational costs through AHT optimization.
-
-**Technical Support Operations** - Balancing thorough problem resolution with efficient resource utilization in complex technical troubleshooting environments.
-
-**Sales Contact Centers** - Optimizing sales conversation duration to maximize conversion rates while ensuring adequate time for relationship building and needs assessment.
-
-**Healthcare Call Centers** - Managing patient inquiries and appointment scheduling while maintaining compliance requirements and quality care standards.
-
-**Financial Services Support** - Handling sensitive financial transactions and inquiries with appropriate security measures while maintaining operational efficiency.
-
-**E-commerce Customer Support** - Managing order inquiries, returns processing, and product support across multiple communication channels.
-
-**Telecommunications Support** - Resolving service issues, processing account changes, and providing technical support for complex telecommunications products.
-
-**Insurance Claims Processing** - Managing claims inquiries and processing while ensuring thorough documentation and regulatory compliance.
-
-**Government Service Centers** - Providing citizen services efficiently while maintaining accuracy and compliance with public service standards.
-
-**Multi-Channel Contact Centers** - Coordinating AHT measurement across voice, chat, email, and social media interactions for comprehensive performance management.
-
-## AHT Performance Comparison Table
-
-| Industry Sector | Average AHT Range | Optimal AHT Target | Primary Factors |
-|-----------------|-------------------|-------------------|-----------------|
-| Technical Support | 12-25 minutes | 15-18 minutes | Complexity, troubleshooting depth |
-| Customer Service | 6-12 minutes | 8-10 minutes | Issue variety, process efficiency |
-| Sales/Telemarketing | 8-15 minutes | 10-12 minutes | Relationship building, conversion focus |
-| Financial Services | 8-18 minutes | 10-14 minutes | Security requirements, compliance |
-| Healthcare | 10-20 minutes | 12-16 minutes | Patient care quality, documentation |
-| E-commerce Support | 5-10 minutes | 6-8 minutes | Order processing, quick resolution |
-
-## Challenges and Considerations
-
-**Quality vs. Efficiency Balance** - Maintaining high service quality while optimizing AHT requires careful monitoring to prevent rushed interactions that compromise customer satisfaction.
-
-**Agent Performance Pressure** - Excessive focus on AHT reduction can create stress and lead to corner-cutting behaviors that negatively impact service quality and employee satisfaction.
-
-**Complex Issue Handling** - Certain customer problems inherently require longer resolution times, making blanket AHT targets inappropriate for all interaction types.
-
-**Multi-Channel Complexity** - Different communication channels have varying AHT characteristics, requiring channel-specific measurement and optimization strategies.
-
-**Technology Dependencies** - System performance issues, outdated software, and integration problems can artificially inflate AHT beyond agent control.
-
-**Training and Onboarding Impact** - New agents typically have higher AHT during learning periods, requiring adjusted expectations and targeted development programs.
-
-**Customer Behavior Variables** - Individual customer communication styles, technical proficiency, and emotional states significantly influence interaction duration.
-
-**Seasonal and Volume Fluctuations** - Peak periods and seasonal variations can impact AHT due to increased complexity and customer stress levels.
-
-**Compliance and Documentation Requirements** - Regulatory requirements in certain industries may necessitate longer interactions for proper documentation and verification.
-
-**Cultural and Language Considerations** - Diverse customer bases may require additional time for clear communication and cultural sensitivity.
-
-## Implementation Best Practices
-
-**Establish Realistic Benchmarks** - Set AHT targets based on historical data, industry standards, and interaction complexity rather than arbitrary goals that may compromise service quality.
-
-**Implement Comprehensive Training Programs** - Provide thorough initial training and ongoing skill development to help agents handle interactions efficiently while maintaining quality standards.
-
-**Optimize Technology Infrastructure** - Invest in reliable systems, integrated platforms, and user-friendly interfaces that minimize technical delays and system-related AHT inflation.
-
-**Develop Clear Process Documentation** - Create standardized procedures and easily accessible knowledge bases that enable agents to resolve issues quickly and consistently.
-
-**Monitor Quality Alongside AHT** - Implement balanced scorecards that consider both efficiency metrics and quality indicators to prevent service degradation.
-
-**Provide Real-Time Coaching** - Use AHT data for immediate feedback and coaching opportunities rather than solely for performance evaluation purposes.
-
-**Segment AHT by Interaction Type** - Establish different AHT targets for various interaction categories to account for complexity differences and appropriate resolution times.
-
-**Regular Performance Reviews** - Conduct frequent analysis of AHT trends and patterns to identify improvement opportunities and address emerging challenges.
-
-**Employee Engagement Focus** - Maintain agent motivation and job satisfaction while pursuing AHT optimization to prevent burnout and turnover.
-
-**Continuous Process Improvement** - Use AHT data to drive systematic process enhancements and eliminate inefficiencies in customer service workflows.
-
-## Advanced Techniques
-
-**Predictive AHT Modeling** - Utilize machine learning algorithms to predict interaction duration based on customer history, issue type, and agent characteristics for improved resource allocation.
-
-**Dynamic AHT Targets** - Implement flexible AHT goals that adjust based on real-time factors such as queue length, customer priority, and interaction complexity.
-
-**Behavioral Analytics Integration** - Combine AHT data with customer behavior analysis to identify patterns and optimize interaction strategies for different customer segments.
-
-**Voice Analytics Enhancement** - Leverage speech analytics to identify conversation patterns that correlate with optimal AHT and service quality outcomes.
-
-**Automated Workflow Optimization** - Deploy intelligent routing and automated processes to reduce manual tasks and streamline interactions for improved AHT performance.
-
-**Cross-Channel AHT Correlation** - Analyze AHT relationships across different communication channels to optimize channel strategy and customer journey management.
-
-## Future Directions
-
-**Artificial Intelligence Integration** - AI-powered assistance will provide real-time guidance to agents, reducing research time and improving first-call resolution rates for optimal AHT.
-
-**Omnichannel AHT Measurement** - Advanced analytics will track customer interactions across all touchpoints, providing comprehensive AHT insights for complete customer journey optimization.
-
-**Emotional Intelligence Metrics** - Future AHT analysis will incorporate emotional context and customer sentiment to balance efficiency with empathetic service delivery.
-
-**Predictive Customer Needs** - Proactive service models will anticipate customer requirements, potentially reducing AHT through preemptive problem resolution and information delivery.
-
-**Automated Quality Assurance** - Real-time quality monitoring will ensure AHT optimization doesn't compromise service standards through continuous automated assessment.
-
-**Personalized Interaction Strategies** - Customer-specific AHT optimization will tailor interaction approaches based on individual preferences and historical patterns for improved efficiency.
-
-## References
-
-1. International Customer Management Institute (ICMI). "Contact Center Management on Fast Forward." 2023.
-2. Call Center Helper. "Average Handling Time - The Complete Guide." Industry Research Report, 2023.
-3. Frost & Sullivan. "Global Contact Center Analytics Market Analysis." Technology Research, 2023.
-4. Customer Contact Week. "Performance Metrics and KPI Benchmarking Study." Annual Industry Survey, 2023.
-5. Society of Workforce Planning Professionals. "Contact Center Workforce Optimization Best Practices." 2023.
-6. Gartner Research. "Customer Service and Support Technologies Market Guide." Technology Analysis, 2023.
-7. Aberdeen Group. "Contact Center Performance Management Strategies." Business Intelligence Report, 2023.
-8. Contact Center Pipeline. "Metrics That Matter: AHT Optimization Strategies." Industry Publication, 2023.
+**Q: Does AHT management change with remote work?**
+A: Measurement methods remain same, but internet connection delays and video system startup time, unlike office environments, impact AHT. Remote-specific target adjustments may be necessary.

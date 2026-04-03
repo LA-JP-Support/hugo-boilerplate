@@ -1,298 +1,95 @@
 ---
-title: "Precision"
-lastmod: 2025-12-18
-date: 2025-12-18
-translationKey: "precision"
-description: "Precision measures how often an AI model's positive predictions are actually correct. It's essential for applications like fraud detection where false alarms are costly."
-keywords: ["precision", "AI", "machine learning", "model evaluation", "false positives"]
-category: "AI Chatbot & Automation"
-type: "glossary"
+title: Precision
+lastmod: 2026-04-02
+date: 2025-12-19
+translationKey: precision
+description: The percentage of positive predictions that were actually correct, measuring how reliable the model's positive judgments are
+category: AI & Machine Learning
+type: glossary
 draft: false
+url: /en/glossary/Precision/
+keywords:
+  - precision
+  - AI
+  - machine learning
+  - model evaluation
+  - false positives
 ---
 
-## What Is Precision in AI?
+## What is Precision?
 
-Precision is a fundamental metric for evaluating the quality of classification models in artificial intelligence (AI), machine learning (ML), chatbots, and automation. Precision measures the proportion of items that the model marked as positive which are actually positive. In other words, it answers the question: when the AI predicts something is important or belongs to a target group, how often is it right?
+**Precision is the percentage of items predicted as positive that were actually positive.** In other words, it's a metric representing the reliability and accuracy of model predictions. It's particularly important in scenarios where false alarms (predicting positive when actually negative) carry significant costs, such as spam detection, fraud detection, or disease diagnosis.
 
-Precision is particularly important in use cases where the cost of a false positive—incorrectly identifying a negative as a positive—is high. In fraud detection, spam filtering, cybersecurity, medical diagnosis, and educational recommendation systems, an AI model with high precision ensures that when it flags something as important, it is usually correct, thus avoiding costly or disruptive mistakes.
+> **In a nutshell:** When a doctor says "this patient has disease," how accurate is that diagnosis? It measures the trustworthiness of positive judgments.
 
-Unlike accuracy, which measures overall correctness of all predictions, precision focuses specifically on the reliability of positive predictions. This distinction becomes critical when classes are imbalanced or when the consequences of different error types vary significantly. A spam filter with high precision rarely sends legitimate emails to the spam folder, even if it occasionally misses actual spam. Conversely, a model optimized for accuracy alone might achieve high scores by simply predicting the majority class, providing little practical value.
+**Key points:**
 
-## Precision: Definition and Calculation
+- **What it does:** Measures how trustworthy a model's positive predictions are
+- **Why it matters:** In systems where false alarms have large costs, prediction reliability is paramount
+- **Who uses it:** Experts in security, healthcare, filtering, marketing, and similar domains
 
-Precision quantifies the proportion of true positive results among all positive predictions made by a model.
+## Why It Matters
 
-### Formula
+With low precision in spam detection, important emails frequently end up in the spam folder. Users may miss bank notifications or critical communications, losing trust. With low precision in medical diagnosis, healthy patients receive false "disease" diagnoses, leading to unnecessary surgery or treatment.
 
-```
-Precision = True Positives / (True Positives + False Positives)
-```
+High precision models provide confidence that "this result is actually positive," which is essential for building user trust in systems.
 
-**Where:**
-- **True Positives (TP):** Items correctly identified as positive
-- **False Positives (FP):** Items incorrectly identified as positive (model marked them as positive, but they are actually negative)
+## How It Works
 
-**Expressed as percentage:**
-```
-Precision = TP / (TP + FP) × 100%
-```
+Precision is calculated with the following formula:
 
-A model with high precision makes few false positive errors; most of its positive predictions are correct.
+> Precision = True Positives (TP) ÷ (True Positives (TP) + False Positives (FP))
 
-### Example Calculation
+Restated in words:
 
-If a spam filter flags 50 emails as spam, and 40 of them are actually spam (TP), while 10 are legitimate (FP):
+> Precision = Items predicted positive that were actually positive ÷ All items predicted positive
 
-```
-Precision = 40 / (40 + 10) = 0.8 or 80%
-```
+**Example:** A spam filter marks 50 emails as spam, with 40 being actual spam and 10 being legitimate emails (false alarms):
 
-This means 80% of the emails flagged as spam were truly spam, while 20% were false alarms.
+> Precision = 40 ÷ 50 = 0.8 (80%)
 
-## How Precision Differs from Accuracy and Recall
+This means 80% of emails marked as spam by this filter are actually spam, while 20% are incorrectly identified.
 
-Precision, accuracy, and recall are related but distinct metrics, each providing unique insights about model performance:
+The key difference from recall is that precision focuses on "what the model predicted" while recall focuses on "the actual situation."
 
-| Metric | What It Measures | Formula | Use When |
-|--------|-----------------|---------|----------|
-| **Accuracy** | Overall correctness (all predictions) | (TP + TN) / (TP + TN + FP + FN) | Classes are balanced; general correctness matters |
-| **Precision** | Correctness of positive predictions | TP / (TP + FP) | Cost of false positives is high |
-| **Recall** | Ability to find all actual positives | TP / (TP + FN) | Cost of false negatives is high |
+## Real-World Use Cases
 
-**Key Differences:**
+**Email Spam Filter**
 
-**Accuracy** measures the proportion of correct predictions, both positive and negative, out of all predictions. It can be misleading when classes are imbalanced.
+Spam filters prioritize precision because incorrectly filtering legitimate emails (important work messages, bank notifications) is worst. Missing some spam in the inbox is more tolerable than losing important messages.
 
-**Precision** focuses on the proportion of true positives among all predicted positives. It ignores false negatives.
+**Bank Fraud Detection**
 
-**Recall** measures the proportion of true positives among all actual positives. It ignores false positives.
+When a credit card company determines "is this fraudulent before approval?", false alarms frustrate customers by preventing legitimate purchases. Maintaining high precision reduces customer frustration from false declines.
 
-**Real-World Analogy:** Precision is like checking how many apples you picked as "red" are actually red. Recall is checking, of all the red apples in the basket, how many you managed to pick. Accuracy is checking what percentage of all your apple classifications (red or green) were correct.
+**Medical Screening**
 
-## Why Precision Matters
+When diagnosing "this patient may have disease?" based on symptoms, false positives (misdiagnosis) cause unnecessary treatment and psychological burden. High precision ensures diagnosis trustworthiness and narrows the need for follow-up testing.
 
-Precision is vital in scenarios where incorrect positive predictions are costly, disruptive, or undesirable:
+## Benefits and Considerations
 
-**Minimizing False Alarms**
+**Benefits:** High-precision models provide trustworthy predictions, minimizing secondary damage from false alarms. This is particularly effective when investigation costs are high or user trust is critical.
 
-In spam filtering, a false positive means a legitimate email is sent to the spam folder, potentially causing missed important communication.
+**Considerations:** Prioritizing precision too heavily decreases recall. For example, a "only predict when certain" strategy increases precision but misses actual positives. In medical diagnosis, missing patients (false negatives) is also serious. Balancing both metrics is important.
 
-**User Trust**
+## Related Terms
 
-In educational AI, high precision ensures recommendations or interventions are reliable, so students and teachers trust the system's judgments.
-
-**Resource Allocation**
-
-In fraud detection, investigating false positives wastes investigator time and resources. High precision reduces unnecessary investigations.
-
-**Regulatory and Ethical Compliance**
-
-In medical AI, a false positive diagnosis can cause unnecessary stress, invasive follow-up procedures, and patient anxiety.
-
-**Business Impact**
-
-In ad targeting, low precision wastes marketing budget by showing ads to uninterested audiences.
-
-Precision is best used as a primary metric when the cost of a false positive significantly outweighs the cost of a false negative. However, precision should rarely be considered in isolation—it must be balanced with recall and other metrics for comprehensive evaluation.
-
-## Concrete Examples
-
-### Spam Email Filter
-
-An AI system reviews 1,000 emails and classifies 50 as spam.
-- **True Positives (TP):** 40 of those 50 flagged emails are actually spam
-- **False Positives (FP):** 10 emails are incorrectly flagged as spam
-
-```
-Precision = 40 / (40 + 10) = 0.8 or 80%
-```
-
-**Interpretation:** 80% of emails flagged as spam were truly spam; 20% were false alarms.
-
-### Fraud Detection in Banking
-
-AI flags 200 transactions as fraudulent.
-- 180 are actually fraudulent (TP)
-- 20 are legitimate but wrongly flagged (FP)
-
-```
-Precision = 180 / (180 + 20) = 0.9 or 90%
-```
-
-**Interpretation:** 90% of flagged transactions were truly fraudulent.
-
-### Education AI Recommendation
-
-An AI suggests 30 students need reading intervention.
-- 24 truly need help (TP)
-- 6 do not (FP)
-
-```
-Precision = 24 / 30 = 0.8 or 80%
-```
-
-**Interpretation:** 80% of intervention recommendations were appropriate.
-
-### Medical Diagnostics
-
-An AI system predicts 100 patients have a rare disease.
-- 90 actually have the disease (TP)
-- 10 do not (FP)
-
-```
-Precision = 90 / 100 = 0.9 or 90%
-```
-
-**Interpretation:** 90% of positive diagnoses were correct.
-
-## Precision in the Confusion Matrix
-
-A confusion matrix is a table summarizing prediction results:
-
-|  | Predicted Positive | Predicted Negative |
-|---|---|---|
-| **Actual Positive** | True Positive (TP) | False Negative (FN) |
-| **Actual Negative** | False Positive (FP) | True Negative (TN) |
-
-Precision focuses on the "Predicted Positive" column: Of all instances predicted as positive, what fraction are truly positive?
-
-## Pros and Cons of Using Precision
-
-### Pros
-
-- Useful for imbalanced datasets where positives are rare
-- Highlights model's ability to avoid false positives
-- Critical when false positives are costly or disruptive
-- Clear and interpretable for stakeholders
-- Directly relates to business costs in many applications
-
-### Cons
-
-- Ignores false negatives (may miss real positives)
-- Can be artificially high if model is very conservative
-- Not sufficient alone; should be complemented with recall
-- Can be gamed by making very few positive predictions
-- Undefined when no positive predictions are made
-
-## Trade-offs: Precision vs. Recall
-
-Precision and recall often have an inverse relationship: improving one may lower the other.
-
-**Raising the threshold** (making the model more conservative):
-- Increases precision (fewer false positives)
-- Decreases recall (more false negatives—missed positives)
-
-**Lowering the threshold** (making the model less conservative):
-- Increases recall (fewer missed positives)
-- Decreases precision (more false positives)
-
-### Choosing the Right Metric
-
-**Use precision when:**
-- False positives are more problematic (spam filters, medical screening)
-- Resources for investigating predictions are limited
-- User trust depends on prediction accuracy
-
-**Use recall when:**
-- Missing positives is more problematic (disease screening, safety alerts)
-- Follow-up processes can filter false positives efficiently
-- Finding all positive cases is critical
-
-**Use F1 Score when:**
-- You need to balance both precision and recall
-- Both error types have consequences
-- A single metric is needed for model comparison
-
-The F1 score is the harmonic mean of precision and recall:
-```
-F1 = 2 × (Precision × Recall) / (Precision + Recall)
-```
-
-## Industry Applications
-
-### Business and Marketing
-
-**Ad Targeting:** High precision ensures targeted ads reach likely buyers, reducing wasted spend and improving ROI.
-
-**Lead Scoring:** High precision ensures "hot" leads flagged by AI are truly likely to convert, improving sales efficiency and team morale.
-
-### Cybersecurity
-
-**Intrusion Detection:** High precision reduces false alarms, minimizing alert fatigue for security teams who would otherwise ignore real threats.
-
-**Malware Detection:** Ensures files flagged as malicious are truly threats, reducing risk of quarantining legitimate files.
-
-**Healthcare Cybersecurity:** AI systems must maintain high precision to avoid falsely flagging legitimate medical activity as security threats.
-
-### Education
-
-**Automated Student Intervention:** High precision means flagged students truly need help, avoiding unnecessary interventions and maintaining trust.
-
-**Adaptive Learning:** AI models recommend learning materials with high precision, ensuring students receive relevant and effective content.
-
-### Healthcare
-
-**Diagnostics:** High precision avoids unnecessary follow-up or treatment, especially in rare disease detection where false positives cause significant patient anxiety.
-
-**Personalized Medicine:** Precision models match patients to effective treatments, minimizing inappropriate or ineffective therapies.
-
-**Drug Development:** AI models with high precision help identify promising compounds, reducing cost and time of clinical trials.
-
-**Patient Monitoring:** AI-powered systems rely on high precision to identify patients needing immediate attention without overwhelming caregivers with false alerts.
-
-### Chatbots and Automation
-
-**Customer Service Bots:** High precision reduces escalation to humans unless truly needed, maintaining service quality and efficiency.
-
-**Automated Moderation:** High precision ensures only genuinely problematic messages are flagged, avoiding censorship of legitimate content.
-
-### Finance and Fraud Detection
-
-**Transaction Monitoring:** High precision minimizes legitimate transactions flagged as fraud, reducing customer friction and investigative workload.
+- **Recall** — Actual positives that were correctly identified; the opposite perspective from precision
+- **F1 Score** — The harmonic mean of precision and recall
+- **Confusion Matrix** — Organizes true/false positives and negatives
+- **Classification** — The machine learning task where precision is used
+- **ROC Curve** — Visualizes model performance across various thresholds
 
 ## Frequently Asked Questions
 
-**Can a model have 100% precision?**
+**Q: Is there a model with 100% precision?**
 
-Yes, if it makes no false positive predictions. However, this typically comes at the cost of very low recall (missing many actual positives). A model that predicts positive only once and gets it right has 100% precision but likely very poor recall.
+A: Theoretically yes. For example, if you mark only one email as spam and it's actually spam, precision is 100%. However, you likely missed 99 other spam emails, making the approach impractical. Achieving both high precision and high recall simultaneously is difficult; there's usually a trade-off.
 
-**Is precision always the most important metric?**
+**Q: What's the difference between when precision matters versus when recall matters?**
 
-No. The choice depends on your use case. Consider the relative costs of false positives versus false negatives in your specific application.
+A: Prioritize precision when false alarms carry large costs; prioritize recall when missed cases carry large costs. Spam detection prioritizes precision because false filtering is destructive. Medical diagnosis prioritizes recall because missing patients threatens life—accepting some false alarms is reasonable.
 
-**How does precision relate to customer satisfaction?**
+**Q: What's the difference between precision and accuracy (Accuracy)?**
 
-High precision in chatbots or automation means users are less likely to encounter errors, which improves trust and satisfaction with the system.
-
-**What is the difference between precision and accuracy?**
-
-Precision focuses on the correctness of positive predictions only. Accuracy considers all predictions (both positive and negative) and their correctness.
-
-**How do you balance precision and recall?**
-
-Use the F1 score for a single balanced metric, adjust the classification threshold based on business requirements, and always consider the practical implications of each error type in your domain.
-
-## Key Takeaways
-
-- Precision measures the reliability of positive predictions
-- Critical when false positives are costly or disruptive
-- Always consider precision alongside recall, especially in imbalanced datasets
-- Use confusion matrix to interpret and improve model performance
-- Choice between precision, recall, and accuracy depends on business goals and real-world impact of error types
-- F1 score provides balanced view when both precision and recall matter
-- Context and domain knowledge are essential for choosing appropriate metrics
-
-## References
-
-- [Evidently AI: Accuracy vs Precision vs Recall in Machine Learning](https://www.evidentlyai.com/classification-metrics/accuracy-precision-recall)
-- [Google Machine Learning Crash Course: Accuracy, Recall, Precision](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall)
-- [FlintK12: AI Precision Definition and Meaning](https://flintk12.com/ai-glossary/ai-precision)
-- [Palo Alto Networks: What Is Precision AI](https://www.paloaltonetworks.com/cyberpedia/what-is-precision-ai)
-- [Iterate.ai: What is Precision](https://www.iterate.ai/ai-glossary/what-is-precision-in-seo)
-- [Tidio: Different Types of Chatbots](https://www.tidio.com/blog/chatbot-types/)
-- [Encord: Accuracy vs Precision vs Recall in Machine Learning](https://encord.com/blog/classification-metrics-accuracy-precision-recall/)
-- [Mage AI: Definitive Guide to Accuracy, Precision, and Recall](https://www.mage.ai/blog/definitive-guide-to-accuracy-precision-recall-for-product-developers)
-- [DelveInsight: Top Applications of Artificial Intelligence in Healthcare](https://www.delveinsight.com/blog/top-applications-of-artificial-intelligence-in-healthcare)
-- [Digital Adoption: 13 AI Examples in Industry](https://www.digital-adoption.com/ai-examples-in-industry/)
-- [GeeksforGeeks: Precision and Recall in Machine Learning](https://www.geeksforgeeks.org/machine-learning/precision-and-recall-in-machine-learning/)
-- [DataCamp: 25 Practical Examples of AI Transforming Industries](https://www.datacamp.com/blog/examples-of-ai)
+A: Precision focuses on accuracy within "items predicted positive." Accuracy measures accuracy across all predictions. With imbalanced data (1% patients, 99% healthy), a model predicting everyone as healthy achieves 99% accuracy but is useless. Precision reveals this practical uselessness.

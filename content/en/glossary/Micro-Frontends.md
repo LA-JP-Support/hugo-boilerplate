@@ -1,232 +1,75 @@
 ---
-title: "Micro-Frontends"
-date: 2025-12-18
-lastmod: 2025-12-18
-translationKey: "micro-frontends"
-description: "An architectural approach that breaks a web application into smaller, independently developed frontend parts managed by different teams, allowing faster development and easier maintenance."
-keywords: ["micro frontends", "frontend development", "micro frontend architecture", "web applications", "independent deployment"]
-category: "AI Infrastructure & Deployment"
-type: "glossary"
+title: Micro-Frontends
+date: 2025-12-19
+lastmod: 2026-04-02
+translationKey: micro-frontends
+description: An architectural approach that breaks down web applications into smaller, independently developed and deployed frontend applications, enabling scalable and autonomous team operations.
+keywords:
+- Micro-Frontends
+- Frontend Development
+- Web Applications
+- Independent Deployment
+- Team Autonomy
+category: Web Development & Design
+type: glossary
 draft: false
+url: /en/glossary/Micro-Frontends/
 ---
 
-## What Are Micro-Frontends?
+## What are Micro-Frontends?
 
-Micro-Frontends is an architectural style where a single web application is decomposed into smaller, independently developed, tested, and deployed frontend applications—each owned by separate teams and composed together to create a seamless user experience. This approach extends the microservices paradigm to the frontend, bringing autonomy, scalability, and technology flexibility to web application development.
+**Micro-frontends are an architectural style that decomposes web applications into independently developed and deployable small frontend applications.** Each frontend can be owned by a different team and implemented using different frameworks or technologies, while still delivering a unified, seamless user experience.
 
-Each micro-frontend can be built with different frameworks, deployed on different schedules, and maintained by different organizational units—enabling teams to work independently while contributing to a unified application. The architecture addresses the challenge of scaling frontend development as applications grow in complexity and team size increases.
+> **In a nutshell:** Micro-frontends are like splitting a large website into multiple independent smaller websites and combining them. While each team moves at its own pace, the overall experience remains unified.
 
-## Historical Context
+**Key points:**
 
-As web applications increased in complexity, frontend codebases evolved into large monoliths that became difficult to scale and maintain. While microservices revolutionized backend development through independent services, frontend development often remained tightly coupled and monolithic.
+- **What it does:** Modularizes frontends and enables independent development and deployment.
+- **Why it matters:** Accelerates parallel development across large teams and increases technological flexibility.
+- **Who uses it:** Enterprises developing large-scale web applications across multiple teams.
 
-The term "micro-frontends" was introduced in the ThoughtWorks Technology Radar in 2016 and subsequently popularized by Martin Fowler. The approach emerged from pain points including difficulty integrating new frameworks, challenges with parallel development for large teams, and high risk in modernizing legacy UIs.
+## Why it matters
 
-As Single-Page Applications became standard, the need for frontend modularization grew, leading to adoption of micro-frontend patterns enabling team scalability and tech stack flexibility.
+Traditional monolithic frontend architectures pack all functionality into a single codebase, causing conflicts when multiple teams work simultaneously. Micro-frontends allow teams to work independently, eliminating deployment synchronization.
 
-## Core Principles
+Teams can also select optimal technologies per unit, enabling gradual migration to new frameworks. Failure impact is limited, improving overall system reliability.
 
-### Domain-Based Decomposition
+## How it works
 
-Micro-frontends typically represent vertical slices of functionality—features or business domains such as "Search," "Cart," or "Profile." Each is developed end-to-end by cross-functional teams responsible for specific business capabilities.
+Micro-frontend implementation has multiple patterns. **Server-side integration** has servers combine HTML fragments from multiple frontends to create the final page. **Build-time integration** publishes each frontend as an npm package, which container applications import during builds. **Runtime integration** dynamically loads each frontend in the browser using iFrame, JavaScript entry points, or Web Components.
 
-### Team Autonomy
+Web Components are recommended as a standard browser technology with high portability. Module Federation enables dynamic code sharing between applications, optimizing bundle sizes.
 
-Each micro-frontend team owns the complete software development lifecycle: development, testing, deployment, and maintenance. This autonomy accelerates delivery, reduces bottlenecks, and enables teams to make technology decisions appropriate for their domain.
+## Real-world use cases
 
-### Independent Technology Choices
+**E-commerce platforms**
+Product search, shopping cart, and checkout were split into independent micro-frontends, allowing feature teams to improve at their own pace.
 
-Teams may select different frameworks, libraries, or even programming languages for their micro-frontends. One team could use React, another Vue.js, and a third Angular—each optimized for specific requirements.
+**SaaS administration dashboards**
+Implementing dashboards, user management, and billing as separate micro-frontends enabled multiple teams to develop features in parallel.
 
-### Loose Coupling
+**Enterprise portals**
+Different business units with different technology stacks integrated their features into a single portal, maintaining consistency while enabling departmental innovation.
 
-Micro-frontends communicate through well-defined APIs and browser events, avoiding shared global state. This reduces accidental dependencies, simplifies integration, and enables independent evolution of components.
+## Benefits and considerations
 
-### Run-Time Composition
+Micro-frontends enable development parallelization, shortened release cycles, and increased technical freedom. However, managing multiple build pipelines increases complexity, and version differences between frameworks can introduce bugs. Style conflicts and global variable collisions require mitigation.
 
-Individual micro-frontends compose into the overall application at runtime, creating seamless user experience. Composition can occur via server-side assembly, client-side integration, or hybrid approaches.
+## Related terms
 
-## Key Benefits
+- **[Microservices](Microservices.md)** — The backend equivalent of micro-frontends.
+- **[Web Components](Web-Components.md)** — Standard technology for micro-frontend integration.
+- **[Module Federation](Module-Federation.md)** — Code sharing mechanism in Webpack 5.
+- **[API Gateway](API-Gateway.md)** — Supporting backend concept.
+- **[DevOps](DevOps.md)** — Independent deployment strategy is important.
 
-**Incremental Modernization:** Enable "strangler fig" pattern—incrementally replacing legacy sections with new micro-frontends, reducing migration risk compared to big-bang rewrites.
+## Frequently asked questions
 
-**Simpler Codebases:** Each micro-frontend is smaller and more focused, reducing cognitive load and error rates for developers. Easier to understand, test, and maintain.
+**Q: Do small teams need micro-frontends?**
+A: With 1-2 teams, the complexity often outweighs benefits. Consider adoption when team size reaches 3+ for serious parallel development.
 
-**Independent Deployment:** Teams deploy micro-frontends independently, enabling faster release cycles and reduced coordination overhead. Fixes or features don't require global redeployment.
+**Q: Doesn't this hurt performance?**
+A: Properly implemented, lazy loading improves initial load times. Bundle size optimization often improves.
 
-**Team Scalability:** Multiple teams develop and ship features in parallel, accelerating delivery and scaling development capacity—vital for large organizations with complex products.
-
-**Technology Flexibility:** Teams can experiment with new frameworks or languages without impacting entire application. Easier to adopt emerging technologies incrementally.
-
-**Improved Resilience:** Failure in one micro-frontend is isolated, minimizing user impact. Lazy loading improves initial load performance by delivering only required components per route.
-
-## Challenges and Trade-offs
-
-**Operational Complexity:** Managing multiple deployment pipelines, versioning, and monitoring introduces overhead. Coordinating cross-team changes can become complex.
-
-**Bundle Size Concerns:** Different library versions can increase bundle size through dependency duplication, resulting in slower load times. Requires careful dependency management.
-
-**Governance Balance:** Too much technology freedom can lead to "framework anarchy," making consistent user experience difficult and increasing maintenance costs. Need governance without excessive constraints.
-
-**CSS and Namespace Management:** Without isolation (CSS modules, Shadow DOM, strict conventions), styles and global variables can leak between micro-frontends causing bugs and visual inconsistencies.
-
-**Communication Complexity:** Defining robust, decoupled communication mechanisms between micro-frontends is non-trivial, especially for complex workflows requiring coordination.
-
-**Testing Requirements:** Ensuring end-to-end quality when application assembles from independently deployed parts requires effective integration and regression testing strategies.
-
-## Integration Patterns
-
-### Server-Side Template Composition
-
-Server assembles final HTML page from fragments served by each micro-frontend.
-
-**Advantages:** Strong isolation, universal rendering, minimal client-side JavaScript.
-
-**Disadvantages:** Limited interactivity, coarse updates, slower for dynamic UIs.
-
-**Example:** Nginx SSI (Server Side Includes).
-
-### Build-Time Integration
-
-Micro-frontends published as libraries (npm packages) and imported by container application at build time.
-
-**Advantages:** Deduplicated dependencies, optimized bundles.
-
-**Disadvantages:** Loses independent deployment, requires coordinated releases.
-
-### Run-Time Integration
-
-**Iframes:** Each micro-frontend loads in iframe, with container managing visibility.
-- Pros: Maximum isolation, security
-- Cons: Clumsy navigation, poor communication, performance overhead
-
-**JavaScript Entry Points:** Each micro-frontend exposes global render function called by container.
-- Pros: Flexible, independent deployments
-- Cons: Namespace collisions, dependency management challenges
-
-**Web Components:** Distributed as custom HTML elements leveraging Shadow DOM for encapsulation.
-- Pros: Strong encapsulation, tech stack agnostic, native browser support
-- Cons: Advanced communication complexity
-
-**Module Federation (Webpack 5+):** Runtime loading and sharing of code between separately built applications.
-- Pros: Dynamic loading, fine-grained sharing
-- Cons: Requires careful configuration and operational discipline
-
-## Implementation Example
-
-### Food Delivery Application Architecture
-
-**Domain Decomposition:**
-- Browse Restaurants: Search and filter functionality
-- Order Page: Menu selection, customization, checkout
-- User Profile: Account settings, order history
-
-**Team Structure:** Each page is a micro-frontend owned by dedicated team.
-
-**Integration:** Container app provides global layout, navigation, shared services. Micro-frontends load dynamically as users navigate.
-
-**Web Components Implementation:**
-
-```javascript
-class BrowseRestaurants extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = '<div>Restaurant browsing interface</div>';
-  }
-}
-window.customElements.define('browse-restaurants', BrowseRestaurants);
-
-class OrderFood extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = '<div>Order management interface</div>';
-  }
-}
-window.customElements.define('order-food', OrderFood);
-```
-
-**Container Composition:**
-
-```html
-<div id="main">
-  <browse-restaurants></browse-restaurants>
-  <!-- Dynamically swap components based on routing -->
-</div>
-```
-
-**Communication:** Use browser-native CustomEvent, local storage, or event bus for cross-micro-frontend interactions maintaining decoupling.
-
-## Best Practices
-
-**Technology Agnosticism:** Enable teams to choose and upgrade stacks independently. Use browser standards (Custom Elements) for integration boundaries.
-
-**Code Isolation:** Avoid shared globals and runtime dependencies. Namespace CSS, events, and storage preventing collisions.
-
-**Robustness:** Support universal/server-side rendering and progressive enhancement for resilience and performance.
-
-**Communication Patterns:** Favor native browser events over custom APIs for decoupled communication between micro-frontends.
-
-**Shared Component Libraries:** Use central libraries for visual consistency, but ensure encapsulation preventing conflicts.
-
-**Framework Governance:** Align on minimal set of frameworks and conventions avoiding fragmentation, while supporting team flexibility.
-
-**Performance Monitoring:** Track bundle sizes, loading times, and runtime performance across micro-frontends identifying optimization opportunities.
-
-## Repository Organization
-
-**Monorepo:** All micro-frontends in single repository.
-- Pros: Easier code sharing, atomic commits, unified CI/CD
-- Cons: Can become unwieldy, risk of coupling, slower builds
-
-**Multirepo:** Each micro-frontend in own repository.
-- Pros: Strong autonomy, independent pipelines
-- Cons: Harder to share code, coordinate cross-repo changes
-
-**Metarepo:** Hybrid approach with multiple repos plus meta-repo for coordination.
-- Pros: Balance of autonomy and shared governance
-- Cons: Requires additional tooling and coordination
-
-## When to Use
-
-**Appropriate Scenarios:**
-- Large, complex web apps with distinct business domains
-- Multiple teams needing independent delivery cycles
-- Incremental migration from legacy monoliths
-- Long-term maintainability and feature evolution requirements
-
-**Inappropriate Scenarios:**
-- Small or single-team applications
-- Unstable or rapidly evolving business domains
-- Organizational overhead outweighs modularity benefits
-- Rapid prototyping or startups with shifting requirements
-
-## Use Cases
-
-**E-Commerce:** Product catalog, cart, and account as separate micro-frontends enabling specialized teams for each domain.
-
-**Food Delivery:** Browsing, ordering, user profile as individual micro-frontends optimized for specific workflows.
-
-**Enterprise Portals:** Dashboard, analytics, admin modules built and deployed independently supporting different release cycles.
-
-**SaaS Platforms:** Integrating independently developed features into single product while maintaining team autonomy.
-
-## Architecture Comparison
-
-| Aspect | Monolithic Frontend | Micro-Frontend Architecture |
-|--------|--------------------|-----------------------------|
-| **Codebase** | Single, large, tightly coupled | Multiple, smaller, decoupled |
-| **Deployment** | All-or-nothing releases | Independent, incremental releases |
-| **Team Structure** | Centralized, cross-team coupling | Decentralized, vertical ownership |
-| **Tech Stack** | One stack for all | Flexible per micro-frontend |
-| **Scaling** | Difficult for teams/features | Teams/features scale independently |
-| **Migration** | High risk, hard | Incremental, low risk |
-
-## References
-
-- [Martin Fowler: Micro Frontends](https://martinfowler.com/articles/micro-frontends.html)
-- [Micro-Frontends.org](https://micro-frontends.org/)
-- [Wikipedia: Micro Frontend](https://en.wikipedia.org/wiki/Micro_frontend)
-- [ThoughtWorks Technology Radar](https://www.thoughtworks.com/radar/techniques/micro-frontends)
-- [Webpack: Module Federation](https://webpack.js.org/concepts/module-federation/)
-- [Google: Custom Elements](https://developers.google.com/web/fundamentals/web-components/customelements)
-- [Nginx SSI Documentation](https://nginx.org/en/docs/http/ngx_http_ssi_module.html)
-- [MDN: CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent)
-- [YouTube: Edge-Side Includes](https://youtu.be/A3n1n5QRmF0?t=442)
+**Q: Can we migrate from existing monolithic apps?**
+A: The Strangler pattern enables gradual replacement with new micro-frontends—lower risk than complete rewrites.

@@ -1,6 +1,7 @@
 ---
 title: UX監査
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: UX-Audit
 description: ウェブサイトやアプリを体系的に評価し、デザイン上の問題点やユーザビリティの課題を特定することで、ユーザーとのインタラクションを改善する手法です。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - ユーザビリティ評価
 - デザイン分析
 - UX手法
-category: Application & Use-Cases
+category: セキュリティ・コンプライアンス
 type: glossary
 draft: false
 e-title: UX Audit

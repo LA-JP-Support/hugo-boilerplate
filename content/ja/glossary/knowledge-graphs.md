@@ -1,6 +1,6 @@
 ---
 title: ナレッジグラフ
-lastmod: '2025-12-19'
+lastmod: 2026-04-02
 date: '2025-12-19'
 translationKey: knowledge-graph
 description: ナレッジグラフは、エンティティとその関係性をグラフとして表現する構造化データモデルであり、情報の効率的な検索、推論、統合を可能にします。
@@ -10,7 +10,7 @@ keywords:
 - オントロジー
 - セマンティックウェブ
 - データ統合
-category: AI Chatbot & Automation
+category: データ・アナリティクス
 type: glossary
 draft: false
 e-title: Knowledge Graph

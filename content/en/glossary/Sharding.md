@@ -1,289 +1,116 @@
 ---
-title: "Sharding"
-date: 2025-12-18
-lastmod: 2025-12-18
-translationKey: "sharding"
-description: "A database technique that splits large datasets into smaller, independent pieces across multiple servers to improve performance and handle more users."
-keywords: ["sharding", "database scaling", "horizontal partitioning", "shard key", "system design"]
-category: "AI Infrastructure & Deployment"
-type: "glossary"
+title: Sharding
+date: '2025-12-19'
+lastmod: 2026-04-02
+translationKey: sharding
+description: Database technique splitting large data across servers for scalability and performance improvements.
+keywords:
+- Sharding
+- Database Scaling
+- Horizontal Partitioning
+- Shard Key
+- System Design
+category: Data & Analytics
+type: glossary
 draft: false
+url: /en/glossary/sharding/
 ---
 
 ## What is Sharding?
 
-Sharding is a database architecture pattern enabling a single, large logical dataset to be split into smaller, independent pieces called **shards**. Each shard is a fully functional database containing a subset of the data, and all shards together comprise the entire dataset. Every shard maintains the same schema as the original database, but stores only part of the data—typically determined by a shard key.
+**Sharding splits large databases into smaller pieces (shards) stored on different servers.** Single servers have data and processing limits. Sharding overcomes these by dividing data. Each shard is independent, and together they form the complete dataset.
 
-Unlike **vertical partitioning** (dividing data by columns), sharding is a form of **horizontal partitioning**: it splits data by rows, distributing distinct records across different databases. This enables **horizontal scaling** (scale-out), as systems can handle increased load by adding more nodes, rather than relying on a single, increasingly powerful server (vertical scaling).
+> **In a nutshell:** Like dividing products into multiple boxes and storing each in a different warehouse.
 
-**Example:**  
-A social media application with millions of users may shard its user table by user ID, so that users with IDs 1–1,000,000 are on shard 1, 1,000,001–2,000,000 on shard 2, and so on. Each shard is a separate database, possibly running on its own server or cluster.
+**Key points:**
 
-## Key Concepts and Terminology
+- **What it does:** Split data across multiple servers to spread processing load
+- **Why it matters:** Scale beyond single-server limits while keeping performance
+- **Who uses it:** Companies handling massive data and high traffic
 
-**Shard:** An individual database or partition holding a distinct subset of the data. Each shard has the same schema as the original database.
+## Why it matters
 
-**Shard Key:** The database field or attribute used to determine which shard a data record belongs to. The choice of shard key is critical for balanced distribution and performance.
+Without sharding, growing users/data becomes impossible. Twitter with hundreds of millions of users can't store all data on one server. Sharding solves this by spreading data. Each shard handles less, so queries are fast. Failure in one shard doesn't crash others.
 
-**Horizontal Partitioning:** Distributing the rows of a table across multiple databases (shards).
+## How it works
 
-**Vertical Partitioning:** Distributing columns of a table across separate tables or databases. For example, separating infrequently used columns into a different table.
+**Shard key selection:** Pick the column (user ID, region, date) that determines which shard data goes to. Must be stable and evenly distributed.
 
-**Shared-Nothing Architecture:** Each shard operates entirely independently, without shared hardware, storage, or state.
+**Data distribution:** Use hash or range rules to assign data to shards based on the shard key.
 
-## How Sharding is Used
+**Query routing:** Application directs each operation to the correct shard.
 
-Sharding is fundamental to designing scalable, high-performance, and fault-tolerant systems. It is used to:
-
-**Scale Horizontally:** Increase capacity by adding more database nodes, with no hard upper limit.
-
-**Improve Performance:** By limiting the amount of data each node manages, query and write latency is reduced.
-
-**Increase Fault Isolation:** If one shard fails, others remain unaffected, thus containing the blast radius of failures.
-
-**Optimize Geographically:** Place shards in different regions for compliance, performance, or latency needs.
-
-Sharding can be handled at two levels:
-
-**Application-Level Sharding:** The application logic determines the shard for each operation; this grants flexibility but increases complexity.
-
-**Database-Level Sharding:** The database management system (DBMS) natively supports sharding and handles routing and storage internally.
+Can work at application level (app decides routing) or database level (DBMS handles it).
 
 ## Sharding vs. Partitioning
 
-**Partitioning** is a broad concept for dividing data into segments, often within a single database instance.
+**Partitioning:** Splits data into segments, usually within one database.
 
-**Sharding** specifically refers to horizontal partitioning, but across separate physical databases on different machines (shared-nothing).
+**Sharding:** Horizontal partitioning specifically—splits rows across separate databases on different machines.
 
-**Vertical Partitioning** splits data by columns, while **horizontal partitioning/sharding** splits by rows.
+Partitioning typically stays in one machine, so it doesn't scale out. Sharding distributes across machines, enabling true scale-out.
 
-Partitioning does not inherently provide horizontal scalability, as it usually resides within a single machine. Sharding distributes both storage and compute across multiple machines, enabling true scale-out.
+## Why use sharding
 
-## Why Use Sharding?
+Single-node limits:
 
-### Scaling Limitations of Single-Node Databases
+**Storage:** Finite disk/memory per server.
 
-**Storage Capacity:** Each server has finite disk and memory limits.
+**Compute:** Limited concurrent queries/writes possible.
 
-**Compute Resources:** Only so many concurrent queries/writes can be handled.
+**Network:** Throughput becomes a bottleneck.
 
-**Network Bandwidth:** Network throughput may become a bottleneck.
+**Geography:** Storing everything at one site causes latency and regulatory issues.
 
-**Geographical Constraints:** Storing all data in one site can cause latency and regulatory issues.
+Sharding overcomes these by spreading data and load across many machines.
 
-### Alternatives and Their Limits
+## When to use sharding
 
-**Vertical Scaling:** Upgrading server hardware; limited by physical constraints and cost.
+**Good scenarios:**
+- Data exceeds single server capacity
+- Write/read throughput needs exceed single server+replicas
+- Multi-tenant: isolate each tenant's data
+- Regulatory: need location-specific data storage
+- Need independent tenant/region/domain scaling
 
-**Replication:** Duplicates data for read scaling and failover, but does not scale writes and can introduce consistency issues.
+**Bad scenarios:**
+- Small/medium data works fine with vertical scaling
+- Simpler optimizations (indexing, caching) suffice
+- Management complexity outweighs benefits
 
-**Caching:** In-memory caches (e.g., Redis, Memcached) speed up reads but do not solve storage or write scaling.
+**Guidance:** Always exhaust vertical scaling, replication, and optimization before sharding.
 
-**Partitioning:** Within a single node, it improves manageability, but not scale-out.
+## Benefits and challenges
 
-Sharding overcomes these by distributing both data and workload across many machines, achieving true horizontal scalability, improved performance, and fault containment.
+**Benefits:** Unlimited scaling potential. Fast queries (smaller datasets). Failure containment (one shard failure doesn't affect others).
 
-## How Sharding Works
+**Challenges:** Complex to manage multiple databases. Poor shard key choices create hot spots (unbalanced traffic). Cross-shard queries are difficult. Changing sharding strategy after launch is very hard.
 
-**1. Choose a Shard Key:**  
-Select a field (e.g., user ID, region, date) that will be used to determine the shard for each record. The shard key should be stable, high cardinality, and well-distributed.
+## Real-world examples
 
-**2. Distribute Data:**  
-Assign data to shards based on the shard key, using a chosen sharding strategy (hash, range, directory, etc.).
+**Social media (Twitter, Facebook)**
+Shard by user ID. Each shard manages a user subset's posts and follows. Scales with user growth.
 
-**3. Route Queries and Writes:**  
-The system (either application code or the DBMS) routes each operation to the correct shard.
+**E-commerce (Amazon)**
+Shard order/product data by customer ID or region. Parallelize workload, improve query speed.
 
-**Implementation Options:**
+**Search engines (Google, Yahoo)**
+Shard global web index by region or query type. Deliver search results quickly worldwide.
 
-- Application-Level Sharding: Custom logic in the application to route queries and writes
-- Database-Level Sharding: Sharding is handled natively by the database system; examples include MongoDB, Cassandra, and some SQL databases with sharding extensions
+## Related terms
 
-## Sharding Strategies
+- **[Database Scaling](Database-Scaling.md)** — Sharding is one scaling method; others include vertical and replication
+- **[Caching](Caching.md)** — Combine with sharding for better performance
+- **[Distributed Systems](Distributed-Systems.md)** — Sharding forms distributed database foundation
+- **[Load Balancing](Load-Balancing.md)** — Distribute requests evenly across shards
 
-The method chosen for sharding impacts data distribution, performance, scalability, and operational complexity.
+## Frequently asked questions
 
-### Key-Based (Hash) Sharding
+**Q: How does sharding differ from replication?**
+A: Sharding splits data for scalability. Replication copies data for availability and read speed.
 
-**How it works:**  
-Applies a hash function to the shard key (e.g., user ID), and the result determines the target shard. For example, `hash(user_id) mod N` where N is the number of shards.
+**Q: Can we reverse sharding after implementing it?**
+A: Very difficult. Massive migration complexity. Plan carefully upfront.
 
-**Advantages:**
-- Even data distribution (if the hash function and key are well-chosen)
-- Algorithmic routing; no lookup table required
-
-**Disadvantages:**
-- Adding/removing shards requires rebalancing (many records may need to move)
-- Can be mitigated with consistent hashing
-
-**Example:**  
-For three shards, a record with key 123 goes to shard `hash(123) mod 3`.
-
-### Range-Based Sharding
-
-**How it works:**  
-Assigns data to shards based on contiguous value ranges of the shard key.
-
-**Advantages:**
-- Simple to implement and understand
-- Efficient for range queries
-
-**Disadvantages:**
-- Uneven distribution ("hotspots") if some ranges are much more active
-
-**Example:**  
-Users with IDs 1–1M on shard 1, 1M–2M on shard 2, etc.
-
-### Directory-Based Sharding
-
-**How it works:**  
-Maintains a lookup table mapping each key (or range) to a specific shard.
-
-**Advantages:**
-- Highly flexible; supports arbitrary mapping and easy rebalancing
-
-**Disadvantages:**
-- The directory can become a single point of failure and performance bottleneck
-
-**Example:**  
-Application asks the directory service which shard holds user ID 1057.
-
-### Vertical Sharding
-
-**How it works:**  
-Splits tables by columns, placing different columns (features) on different machines.
-
-**Use case:**  
-When features are accessed or updated independently.
-
-**Example:**  
-In a social network, user profiles in one shard, user posts in another.
-
-## Benefits of Sharding
-
-| Benefit | Explanation |
-|---------|-------------|
-| **Horizontal Scaling** | Add more nodes as needed, with no hard upper limit |
-| **Query Performance** | Each query hits only a subset, reducing latency |
-| **Fault Isolation** | Outages/failures impact only the affected shard(s) |
-| **Cost Efficiency** | Scale out with cheaper hardware |
-| **Geo Optimization** | Place data near users for latency/compliance |
-
-## Drawbacks and Challenges
-
-**Implementation and Operational Complexity:** Managing multiple databases, routing, backups, monitoring, and schema changes increases complexity.
-
-**Data Hotspots/Uneven Distribution:** Poor shard key choices can overload certain shards, resulting in bottlenecks.
-
-**Rebalancing/Resharding:** Changing the number of shards or correcting skew requires moving large amounts of data, often with downtime or performance impact.
-
-**Cross-Shard Queries:** Queries that span multiple shards are slow and complex to coordinate.
-
-**Consistency and Referential Integrity:** Harder to enforce strong consistency and foreign key constraints across shards.
-
-**"One-Way Door":** Reverting back from a sharded architecture to a monolithic one is difficult.
-
-**Limited Database Support:** Not all databases natively support sharding; custom logic or middleware may be required.
-
-## When to Use Sharding
-
-### Appropriate Scenarios
-
-- The dataset exceeds the storage, compute, or network capacity of a single node
-- Write/read throughput requirements surpass what a single node (and its replicas) can handle
-- Multi-tenancy, where each tenant's data can be isolated on separate shards
-- Regulatory or performance requirements to store data in specific regions
-- Need for independent scaling of tenants, regions, or data domains
-
-### When Not to Use
-
-- Small to moderate datasets easily handled by vertical scaling or replication
-- If simpler optimizations (indexing, query tuning, caching) are sufficient
-- When operational overhead and complexity outweigh scalability benefits
-
-**Decision Guidance:**  
-Always exhaust vertical scaling, replication, and query optimization before sharding. Only shard when other approaches are insufficient for your scaling or isolation needs.
-
-## Best Practices
-
-**Choose a Good Shard Key:**
-- Should be stable (does not change over time)
-- Evenly distributed to avoid hotspots
-- Aligned with the most common query patterns
-
-**Plan for Future Growth:**
-- Anticipate data distribution changes; design for ease of adding/rebalancing shards
-
-**Minimize Cross-Shard Operations:**
-- Design queries and schema to minimize cross-shard joins and transactions
-
-**Replicate Reference Data:**
-- Store static or slow-changing data (like lookup tables) in each shard to avoid cross-shard lookups
-
-**Automate Operations:**
-- Use automation for monitoring, backup, failover, and balancing
-
-**Monitor for Hotspots:**
-- Track per-shard load; rebalance as necessary
-
-**Consider Eventual Consistency:**
-- For operations spanning multiple shards, eventual consistency models may be more practical than strong consistency
-
-## Example Use Cases
-
-### Social Networks
-
-**Problem:** Billions of user profiles, posts, and relationships; high read/write volume.
-
-**Solution:** Shard user data by user ID or region. Each shard manages a subset of users and their content.
-
-**Benefit:** Scales with user growth, isolates failures, and supports global distribution.
-
-### E-commerce Platforms
-
-**Problem:** Large product catalogs and order histories; high concurrency.
-
-**Solution:** Shard order data by order ID range or customer region; product data by category or price range.
-
-**Benefit:** Parallelizes workload, improves query performance, and supports regional regulations.
-
-### SaaS Applications (Multitenancy)
-
-**Problem:** Each tenant has distinct data and usage patterns.
-
-**Solution:** Assign tenants to shards by tenant ID (using lookup or hash strategy).
-
-**Benefit:** Isolates tenant data, scales with customer base, and supports tenant-specific scaling.
-
-### AI Infrastructure
-
-**Problem:** Large datasets for training/inference; distributed computation.
-
-**Solution:** Shard datasets by data source, time range, or data type; distribute across compute nodes.
-
-**Benefit:** Enables parallel processing, faster data access, scalability for model training and serving.
-
-## Alternatives to Sharding
-
-**Vertical Scaling:** Upgrade server hardware (CPU, RAM, disks)
-
-**Replication:** Add read replicas for load balancing and high availability
-
-**Caching:** Use in-memory caches (e.g., Redis, Memcached) to reduce database load
-
-**Partitioning:** Split tables within a single database node
-
-**Content Delivery Networks (CDNs):** Offload static/read-heavy data
-
-Consider these options before committing to sharding.
-
-## References
-
-- [GeeksforGeeks: Database Sharding – System Design](https://www.geeksforgeeks.org/system-design/database-sharding-a-system-design-concept/)
-- [Hello Interview: Sharding in System Design](https://www.hellointerview.com/learn/system-design/core-concepts/sharding)
-- [Medium: Understanding Sharding in System Design](https://medium.com/@hksrise/understanding-sharding-in-system-design-a-key-to-scalability-214ad71784c4)
-- [Microsoft Learn: Sharding Pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding)
-- [MongoDB: Database Sharding Explained](https://www.mongodb.com/resources/products/capabilities/database-sharding-explained)
-- [DigitalOcean: Understanding Database Sharding](https://www.digitalocean.com/community/tutorials/understanding-database-sharding)
-- [Aerospike: What is Sharding?](https://aerospike.com/blog/what-is-sharding/)
-- [YouTube: What is Database Sharding?](https://www.youtube.com/watch?v=hdxdhCpgYo8)
+**Q: Do small companies need sharding?**
+A: Usually no. Sharding's complexity suits large data companies. Small companies use caching and read replicas.

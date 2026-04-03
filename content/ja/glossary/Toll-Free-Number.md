@@ -1,6 +1,7 @@
 ---
 title: フリーダイヤル
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Toll-Free-Number
 description: フリーダイヤルの包括的ガイド:仕組み、メリット、導入方法、ビジネスコミュニケーションのベストプラクティスを解説します。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - カスタマーサービス
 - 電気通信
 - 800番号
-category: Application & Use-Cases
+category: データ・アナリティクス
 type: glossary
 draft: false
 e-title: Toll-Free Number

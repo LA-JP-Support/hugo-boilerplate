@@ -1,6 +1,6 @@
 ---
 title: 機械学習
-lastmod: '2025-12-19'
+lastmod: 2026-04-02
 date: '2025-12-19'
 translationKey: machine-learning
 description: 機械学習(ML)は、アルゴリズムがデータから学習し、予測や意思決定を行うAIの中核領域です。その種類、仕組み、応用例について理解を深めましょう。
@@ -10,7 +10,7 @@ keywords:
 - ディープラーニング
 - 教師あり学習
 - アルゴリズム
-category: AI Chatbot & Automation
+category: AI・機械学習
 type: glossary
 draft: false
 e-title: Machine Learning

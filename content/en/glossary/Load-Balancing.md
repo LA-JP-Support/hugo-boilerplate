@@ -1,53 +1,77 @@
 ---
-title: 'Load Balancing'
-date: 2025-12-18
-lastmod: 2025-12-18
+title: Load Balancing
+date: 2026-04-02
+lastmod: 2026-04-02
 translationKey: load-balancing
-description: 'Learn about load balancing: distributing network traffic across servers
-  to optimize application availability, reliability, and performance. Explore types,
-  algorithms, and benefits for AI infrastructure.'
-keywords: ["load balancing", "load balancer", "network traffic", "server scalability", "application performance"]
-category: AI Infrastructure & Deployment
+description: A technology that distributes network traffic across multiple servers to optimize application availability, reliability, and performance.
+keywords:
+- load balancing
+- load balancer
+- network traffic
+- server scalability
+- application performance
+category: Cloud & Infrastructure
 type: glossary
 draft: false
+url: /en/glossary/Load-Balancing/
 ---
 
-## What Is Load Balancing?
+## What is Load Balancing?
 
-Load balancing is the process of intelligently distributing incoming network or application traffic across multiple backend servers (server farm or pool) to ensure no single server becomes overwhelmed. Load balancers optimize application availability, reliability, and performance by acting as a central gateway that receives client requests and routes each request to the most suitable server using algorithms and real-time server health data.
+**Load balancing distributes incoming network traffic across multiple backend servers equally.** A central [load balancer](Load-Balancer.md) receives client requests and routes them to the optimal server based on algorithm and server health. This prevents single-server overload.
 
-Modern applications—especially AI-powered services, high-traffic websites, and cloud-native workloads—must serve millions of simultaneous requests with minimal latency and maximum uptime. Without load balancing, a single server becomes a bottleneck, leading to slowdowns, failures, and poor user experience. Load balancing ensures graceful scaling, fault tolerance, and consistent performance under varying load conditions.
+> **In a nutshell:** Like a restaurant with multiple servers—the host guides arriving customers to less-busy tables.
 
-## Why Load Balancing Matters
+**Key points:**
+- **What it does:** Distribute traffic across multiple servers
+- **Why it matters:** Prevent downtime, improve response speed
+- **Who uses it:** High-traffic sites, [cloud services](Cloud-Computing.md), API servers
 
-**High Availability:** If a server fails, the load balancer automatically reroutes traffic to healthy servers, maintaining service continuity. Zero-downtime deployments become possible through gradual traffic shifting.
+## Why it matters
 
-**Resilience and Disaster Recovery:** Supports disaster recovery by rerouting traffic across geographic locations in case of regional outages or data center failures.
+Without load balancing, traffic concentration causes server overload and service stoppage. Distributing load across multiple servers means one server failure doesn't stop service—others process requests, achieving **high availability**. Also improves user experience, system reliability, infrastructure efficiency.
 
-**Scalability:** Easily adds or removes servers to match demand, supporting both planned growth and sudden traffic spikes. Horizontal scaling becomes seamless.
+## How it works
 
-**Consistent User Experience:** Minimizes response times and ensures predictable performance regardless of backend server load distribution.
+Load balancing operates in 4 main steps:
 
-**Resource Optimization:** Maximizes utilization of existing infrastructure by distributing workload evenly across available resources.
+First, load balancer **receives client requests**. Next, health checks (monitoring) confirm responsive servers. Then using algorithms like round-robin (rotating sequence) or minimum-connection (choosing least-loaded server), it selects optimal server. Finally, it forwards requests and returns responses to clients.
 
-**Security Enhancement:** Acts as additional security layer, hiding backend infrastructure and enabling SSL/TLS termination at the load balancer.
+Like library receptionists guiding customers to shortest-wait windows, load balancers efficiently distribute requests.
 
-## Core Components and Architecture
+## Real-world use cases
 
-### Hardware vs. Software Load Balancers
+**E-commerce sale traffic spikes**
+During sale periods, traffic surge is distributed across multiple web servers. Load balancers monitor each server's load, automatically controlling traffic, preventing site stoppage.
 
-**Hardware Load Balancers:** Physical network appliances built for high throughput and reliability, typically deployed in on-premises data centers. Offer features like SSL/TLS offloading, advanced health checks, and Layer 4/7 traffic management. Require significant capital investment but provide deterministic performance.
+**Streaming services**
+Worldwide user access is distributed to geographically-dispersed server groups. Serving from nearest server reduces latency and improves playback quality.
 
-**Examples:** F5 BIG-IP, Kemp LoadMaster, Citrix ADC
+**API infrastructure**
+[Microservices](Microservices.md) architecture with multiple API servers uses load balancers for even distribution. Partial server stoppage doesn't stop processing.
 
-**Advantages:** Dedicated hardware, predictable performance, specialized processing
-**Disadvantages:** High upfront cost, limited flexibility, maintenance overhead
+## Benefits and considerations
 
-**Software Load Balancers:** Implemented as software running on commodity hardware, virtual machines, or as cloud-managed services. Provide flexibility, rapid scaling, and deep integration with automation frameworks like Kubernetes and OpenShift.
+**Benefits** include high availability, [performance](Performance.md) improvement, scalability assurance. **Considerations** include load balancer redundancy (preventing single point-of-failure) and complex session management.
 
-**Examples:** NGINX Plus, HAProxy, AWS Elastic Load Balancing, Traefik
+## Related terms
 
-**Advantages:** Cost-effective, flexible deployment, easy updates
+- **[Round-Robin](Round-Robin.md)** — Basic server selection algorithm, rotating order
+- **[Least-Connections](Least-Connections.md)** — Connect-count-based server preference
+- **[Health Check](Health-Check.md)** — Periodic server operation status confirmation
+- **[Failover](Failover.md)** — Automatic server-switching on failure
+- **[Cloud](Cloud-Computing.md)** — Load balancing is cloud's important feature
+
+## Frequently asked questions
+
+**Q: What if load balancer fails?**
+A: Load balancers themselves are usually redundantly configured. Multiple load balancers ensure one failure doesn't cause issues.
+
+**Q: Do all applications need load balancing?**
+A: Small apps with single-server adequate load don't need it, but considering scalability, early adoption is recommended.
+
+**Q: How much load balancing latency?**
+A: Usually under several milliseconds. Modern load balancers are highly optimized; performance impact is negligible.
 **Disadvantages:** Shared resources, potential performance variability
 
 ### Request Routing Process

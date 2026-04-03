@@ -1,6 +1,7 @@
 ---
 title: トークン化
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Tokenization
 description: データセキュリティ、自然言語処理、ブロックチェーンにおけるトークン化の包括的ガイド - 技術、メリット、実装方法、将来のトレンドを解説。
 keywords:
@@ -10,7 +11,7 @@ keywords:
 - ブロックチェーントークン
 - 決済セキュリティ
 - テキスト処理
-category: Application & Use-Cases
+category: AI・機械学習
 type: glossary
 draft: false
 e-title: Tokenization

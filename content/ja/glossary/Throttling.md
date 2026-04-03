@@ -1,7 +1,7 @@
 ---
 title: スロットリング(APIスロットリング)
 date: '2025-12-19'
-lastmod: '2025-12-19'
+lastmod: 2026-04-02
 translationKey: throttling-api-throttling
 description: スロットリング(APIスロットリングとも呼ばれる)は、特定の期間内にAPIやサービスへのリクエストを意図的に制限することです。過負荷を防ぎ、公平なアクセスを保証し、不正利用を抑制し、パフォーマンスを維持します。
 keywords:
@@ -10,7 +10,7 @@ keywords:
 - トークンバケット
 - APIゲートウェイ
 - システム保護
-category: AI Infrastructure & Deployment
+category: データ・アナリティクス
 type: glossary
 draft: false
 e-title: Throttling (API Throttling)

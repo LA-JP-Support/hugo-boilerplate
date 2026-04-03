@@ -1,12 +1,20 @@
 ---
-title: "AGI (Artificial General Intelligence)"
+title: AGI (Artificial General Intelligence)
 date: 2025-01-11
-translationKey: "agi-artificial-general-intelligence"
-description: "AGI refers to AI systems capable of performing any intellectual task a human can do, with the ability to transfer learning across domains and reason abstractly."
-keywords: ["AGI", "Artificial General Intelligence", "strong AI", "human-level AI", "general purpose AI", "AI alignment"]
-category: "AI Chatbot & Automation"
-type: "glossary"
+lastmod: 2026-04-02
+translationKey: agi-artificial-general-intelligence
+description: Theoretical AI systems capable of matching human-level intelligence across any domain, with implications for science, business, and society.
+keywords:
+- AGI
+- artificial general intelligence
+- strong AI
+- human-level AI
+- general-purpose AI
+- AI alignment
+category: AI & Machine Learning
+type: glossary
 draft: false
+url: /en/glossary/AGI/
 ---
 
 ## What Is AGI (Artificial General Intelligence)?

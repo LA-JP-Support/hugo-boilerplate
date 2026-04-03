@@ -1,20 +1,19 @@
 ---
-title: "Lead Scoring"
+title: Lead Scoring
 date: 2025-12-19
-translationKey: lead-scoring
-description: "A system that ranks sales leads by their likelihood to become customers, helping sales teams focus on the most promising prospects."
+lastmod: 2026-04-02
+translationKey: Lead-Scoring
+description: A system that ranks sales leads by their likelihood to become customers, helping sales teams focus on the most promising prospects.
 keywords:
 - lead scoring
-- predictive lead scoring
-- sales automation
-- lead qualification
+- predictive scoring
+- AI
+- prospect evaluation
 - marketing automation
-- conversion optimization
-- sales intelligence
-- customer acquisition
-category: "Application & Use-Cases"
+category: AI & Machine Learning
 type: glossary
 draft: false
+url: "/en/glossary/Lead-Scoring/"
 ---
 
 ## What is Lead Scoring?

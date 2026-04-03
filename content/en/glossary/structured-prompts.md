@@ -1,493 +1,99 @@
 ---
-title: Structured Prompts
-lastmod: 2025-12-18
-date: 2025-12-18
+title: "Structured Prompts"
+date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: structured-prompts
-description: "Clear, organized instructions given to AI systems to get reliable and consistent results, using labeled sections instead of casual conversation."
+description: "Structured prompts are systematically organized instructions given to AI that draw out consistent and accurate output."
 keywords:
-- structured prompts
-- prompt engineering
-- AI instructions
-- prompt design
-- workflow automation
-category: Prompt Engineering
+  - structured prompts
+  - prompt engineering
+  - AI instructions
+  - prompt design
+  - workflow automation
+category: "AI & Machine Learning"
 type: glossary
 draft: false
+url: /en/glossary/structured-prompts/
 ---
 
-## What Are Structured Prompts?
+## What are Structured Prompts?
 
-Structured prompts are organized, format-driven instructions designed to guide AI systems toward producing reliable, consistent, and predictable outputs. Unlike free-form conversational prompts where guidance is implicit and open to interpretation, structured prompts arrange task requirements, context, constraints, and output specifications into explicit, consistently labeled sections. These sections often follow templates, schemas, or machine-readable notations such as JSON, XML, or Markdown.
+**Structured prompts are a method of communicating instructions to AI by clearly organizing elements such as "task," "conditions," "constraints," and "output format."** Unlike traditional free-form instructions (like "summarize this text"), structured prompts define what is needed in detail for each section (such as "summarize this text in Japanese, in 3 sentences or fewer. Format: Markdown").
 
-Structured prompts represent a best practice within prompt engineering—the discipline of designing, testing, and optimizing prompts to control and reliably guide AI model behavior. By making expectations explicit and requirements concrete, structured prompts enable automation, scalability, and integration into enterprise workflows while reducing ambiguity and improving output quality.
+Structured prompts emerged from the background that ChatGPT and other AIs have become sufficiently widespread and enterprises have started using them for automation. For ad-hoc usage, free-form instruction is fine, but for business automation executed thousands of times daily, "consistent" and "uniform" results are necessary. This is where structured prompts became important.
 
-The structured approach transforms ad hoc interactions with AI into repeatable processes suitable for production environments, business automation, and enterprise-scale deployments.
+> **In a nutshell:** A method of writing AI "instructions" with absolute clarity and programmatic precision. Explicitly spell out what you want to do, what format, and what constraints apply.
 
-## Core Characteristics
+**Key Points:**
 
-### Explicit Organization
-Each functional element occupies a clearly labeled section defining its role. Task instructions, context, constraints, output format, and examples are separated and explicitly identified rather than embedded within conversational flow.
+- **What it does:** Makes AI output more accurate and consistent
+- **Why it's needed:** Business automation requires reliability and reproducibility
+- **Who uses it:** Enterprises adopting AI, automation engineers
 
-### Machine Readability
-Structured prompts can be formatted for seamless automation and programmatic manipulation. JSON, XML, and structured text formats enable API integration, bulk processing, and workflow orchestration without manual reformatting.
+## Why It Matters
 
-### Template-Based Reusability
-Standardized templates allow consistent application across similar tasks. A single well-designed template can process thousands of customer inquiries, generate hundreds of product descriptions, or analyze numerous documents with uniform quality.
+When enterprises seriously start using AI, problems emerge. For example, imagine a scenario where "return answers to customer service inquiries using the same prompt each time." With a normal prompt, the same question might receive different answers each time. This degrades customer experience. Also, if you want to automatically judge "is this response appropriate or inappropriate," it's difficult if output formats vary.
 
-### Predictable Outputs
-Explicit constraints and specifications reduce variability in AI responses. Organizations can establish quality baselines, implement automated validation, and maintain consistency across large-scale operations.
+What changes when you use structured prompts? First, results become consistent. The same question returns nearly identical quality answers. Second, it becomes easier to automate. Output format is clearly specified (for example: JSON format), so the program can automatically pass it to the next step. Furthermore, quality control becomes easier. You can establish rules like "answers that fall into the 'inappropriate' category are checked by humans."
 
-### Version Control and Governance
-Structured prompts serve as code-like artifacts that can be versioned, reviewed, tested, and maintained through standard software development practices. This enables collaborative development, change tracking, and compliance auditing.
+As a result, enterprises can trust AI and implement it in earnest.
 
-## Why Structured Prompts Matter
+## How It Works Explained Simply
 
-### Business Benefits
+Structured prompts consist of four main components.
 
-**Reliability and Consistency**  
-Explicit requirements eliminate ambiguity, producing predictable, repeatable outputs essential for business processes. Organizations can depend on consistent AI behavior across thousands of interactions.
+**The first is "task definition."** Clearly state "what do you want to do." For example, "classify customer support tickets" or "create a summary from a web article."
 
-**Precision and Control**  
-Detailed specifications direct AI behavior exactly as needed, reducing hallucinations, errors, and off-topic responses. Quality assurance becomes feasible through testable requirements.
+**The second is "background information (context)."** Provide background information needed for AI to make judgments. For example, "you are an experienced customer service representative" or "classify into the following 4 categories."
 
-**Scalability**  
-Templates enable processing of high volumes—thousands of customer support tickets, automated reports, content generation tasks—with uniform quality. Single prompts scale from prototype to production without degradation.
+**The third is "constraints."** Explicitly state constraints like "in Japanese," "in 3 sentences or fewer," or "avoid negative expressions." This ensures AI stays on track.
 
-**Efficiency**  
-Clear, complete prompts reduce iterative refinement cycles. AI systems understand requirements immediately, decreasing turnaround time and accelerating development cycles.
+**The fourth is "output format."** Specify what format you want the results returned in. "JSON format," "Markdown format," or "tab-separated values" — it's important to specify a format that's easy for programs to process.
 
-**Integration Capability**  
-Machine-friendly formats enable direct embedding in APIs, RPA workflows, CI/CD pipelines, and enterprise systems. Structured prompts become programmable components of larger automation strategies.
+By combining these four elements, AI generates more accurate and consistent output.
 
-**Governance and Compliance**  
-Version-controlled prompts support auditing, compliance verification, and change management. Organizations can track modifications, maintain documentation, and demonstrate adherence to policies and regulations.
+## Real-World Use Cases
 
-### Technical Advantages
+**Automatic Classification of Customer Support**
 
-**Reduced Hallucination Risk**  
-Explicit constraints and examples ground AI responses in specified requirements, significantly reducing fabricated or incorrect information.
+When customer inquiries arrive, structured prompts enable AI to automatically classify them into "complaints," "questions," or "requests." If the output format is JSON (a machine-readable format), the inquiries can be automatically routed to different departments based on classification.
 
-**Improved Testability**  
-Structured prompts with clear specifications enable automated testing, quality metrics, and systematic validation of outputs.
+**News Article Summary Generation**
 
-**Enhanced Maintainability**  
-Organized structure makes prompts easier to understand, modify, and optimize over time. Teams can collaborate effectively on prompt development.
+When a news media company publishes hundreds of articles daily, structured prompts direct the AI to "summarize the article in Japanese, in 100-150 characters." Because formatting is unified, website display becomes predictable.
 
-## Core Components of Structured Prompts
+**Medical Record Data Extraction**
 
-### Directive / Instruction
+When hospitals automatically extract structured data like "patient name, age, diagnosis, medication" from patient examination records, structured prompts are effective. Because the format is extracted precisely, it can be automatically registered in the medical system.
 
-**Purpose:** Defines the primary task, action, or goal for the AI.  
-**Labels:** Task, Instruction, Request, Objective, Goal
+## Benefits and Considerations
 
-**Characteristics:**
-- Uses clear, specific action verbs (analyze, summarize, translate, generate, classify)
-- States exactly what output is required
-- Breaks complex tasks into step-by-step instructions
-- Avoids vague or ambiguous language
+The greatest benefit of structured prompts is scalability. Once a template is complete, a single test can serve automation executed thousands of times. Also, because quality remains consistent, enterprises can trust AI. Additionally, integration with programs is easy. If output is in machine-readable format, you can automate the next steps (sending emails, registering in databases, etc.).
 
-**Example:**
-```markdown
-Task: Summarize the following article in exactly 3 bullet points.
-Instruction: Translate the paragraph below into Spanish while maintaining formal tone.
-Objective: Extract all dates, amounts, and vendor names from the invoice.
-```
+On the other hand, there are considerations. Structured prompt design is time-consuming. You need to test multiple times to confirm "is this prompt right?" Also, you cannot expect output beyond AI's capabilities. It's important to recognize that "even if you request something impossible, AI will fail." Furthermore, the prompt itself becomes a business asset, requiring security and management. Competitively important prompts need to be managed confidentially.
 
-### Role / Persona
+## Related Terms
 
-**Purpose:** Assigns the AI a specific expertise level, professional role, or persona that influences knowledge domain, tone, and approach.  
-**Labels:** Role, Persona, Perspective, Expertise
-
-**Characteristics:**
-- Selects roles relevant to task requirements
-- Establishes appropriate expertise level and knowledge domain
-- Sets tone, style, and communication approach
-- Influences depth and technical level of responses
-
-**Example:**
-```markdown
-Role: You are an experienced customer support agent with expertise in technical troubleshooting.
-Persona: Act as a senior marketing copywriter specializing in B2B SaaS messaging.
-Expertise: Respond as a financial analyst with 10+ years of experience in equity research.
-```
-
-### Context / Background
-
-**Purpose:** Provides essential information, scenarios, or data the AI needs to understand the situation and requirements.  
-**Labels:** Context, Background, Situation, Additional Information, Scenario
-
-**Characteristics:**
-- Supplies all relevant details for informed responses
-- Includes historical information or prior conversation references
-- Describes the current situation or problem state
-- Establishes constraints or special considerations
-
-**Example:**
-```markdown
-Context: The customer has been waiting 3 weeks for a refund after returning a defective product.
-Background: Our company is a B2B SaaS provider specializing in enterprise project management.
-Situation: The quarterly report is due in 48 hours and needs executive-level summary.
-```
-
-### Examples / Few-Shot Demonstrations
-
-**Purpose:** Demonstrates desired output format, style, reasoning, or approach through sample input-output pairs.  
-**Labels:** Examples, Few-Shot, Demonstrations, Sample Input/Output
-
-**Characteristics:**
-- Matches complexity and style of actual task
-- Provides 1-5 representative examples (few-shot learning)
-- Shows both input and desired output
-- Illustrates edge cases or special handling
-
-**Example:**
-```markdown
-Examples:
-Input: "I can't log into my account."
-Output: Category: Authentication Issue | Priority: High | Next Action: Reset credentials
-
-Input: "When will my order arrive?"
-Output: Category: Order Tracking | Priority: Medium | Next Action: Check shipping status
-
-Input: "Your app keeps crashing on startup."
-Output: Category: Technical Bug | Priority: Critical | Next Action: Escalate to engineering
-```
-
-### Output Format Specification
-
-**Purpose:** Explicitly defines the structure, style, and format of the required response.  
-**Labels:** Output Format, Response Format, Formatting Requirements, Structure
-
-**Characteristics:**
-- Specifies exact format (JSON, table, list, prose)
-- Defines field names, data types, and structure
-- Sets length constraints or limits
-- Establishes formatting conventions
-
-**Example:**
-```markdown
-Output Format: Provide response as a JSON object with these fields:
-{
-  "category": "<issue category>",
-  "priority": "<High|Medium|Low>",
-  "next_action": "<recommended action>",
-  "estimated_resolution_time": "<hours>"
-}
-
-Response Format: Create a markdown table with columns: Feature, Benefit, Use Case
-
-Structure: Write 3 paragraphs. First: overview. Second: key challenges. Third: recommendations.
-```
-
-### Constraints / Limitations
-
-**Purpose:** Sets boundaries, restrictions, and requirements that outputs must satisfy.  
-**Labels:** Constraints, Limitations, Requirements, Guardrails, Boundaries
-
-**Characteristics:**
-- Defines what must be included or excluded
-- Sets length limits (words, characters, tokens)
-- Specifies tone, style, or audience requirements
-- Establishes safety or compliance boundaries
-- Defines handling for edge cases or uncertainties
-
-**Example:**
-```markdown
-Constraints:
-- Maximum 150 words
-- Do not mention competitor names
-- Use only information from provided documents
-- Maintain professional, neutral tone
-- If uncertain, state "Information not available" rather than guessing
-
-Limitations:
-- Only extract data from the "Summary" section
-- Default to "Unknown" for missing values
-- Do not perform calculations or inferences
-```
-
-### References / Source Material
-
-**Purpose:** Directs AI to specific information sources, previous conversation turns, or data that should inform the response.  
-**Labels:** References, Sources, Context Documents, Input Data
-
-**Characteristics:**
-- Links to previous conversation elements
-- Identifies specific documents or data sections
-- Establishes information hierarchy or authority
-- Specifies how to handle conflicting information
-
-**Example:**
-```markdown
-References:
-- See customer interaction from 2025-01-15 for background
-- Use company policy document version 3.2 as authoritative source
-- Refer to attached spreadsheet for current pricing information
-
-Source Material: Use only information from the following article: [article text]
-```
-
-## Structured vs. Unstructured Prompting
-
-### Comparison
-
-| Aspect | Structured Prompting | Unstructured Prompting |
-|--------|---------------------|------------------------|
-| **Format** | Organized sections with labels | Free-form conversation |
-| **Clarity** | Explicit, unambiguous | Implicit, interpretive |
-| **Consistency** | High repeatability | Variable outputs |
-| **Scalability** | Production-ready | Limited scalability |
-| **Automation** | API/workflow friendly | Manual intervention required |
-| **Testing** | Testable specifications | Difficult to validate |
-| **Maintenance** | Version-controlled | Ad hoc modifications |
-| **Use Cases** | Business automation, production | Exploration, brainstorming |
-
-### When to Use Each Approach
-
-**Structured Prompting:**
-- Production workflows and business processes
-- Repeated tasks requiring consistency
-- Automated systems and API integration
-- High-stakes applications needing reliability
-- Team collaboration on prompt development
-- Compliance and governance requirements
-- Large-scale content generation
-
-**Unstructured Prompting:**
-- Exploratory conversations and brainstorming
-- One-off questions and casual interactions
-- Rapidly evolving or undefined requirements
-- Creative ideation without constraints
-- Learning and experimentation
-- Personal productivity and assistance
-
-## Frameworks and Notation Systems
-
-### TRACI Framework
-
-TRACI provides a structured template for prompt construction with five core elements:
-
-**T – Task:** General output goal or objective  
-**R – Role:** Persona or expertise level for the responder  
-**A – Audience:** Target recipients of the output  
-**C – Create:** Specific deliverable being produced  
-**I – Intent:** Purpose or desired outcome  
-
-**Example TRACI Prompt:**
-```markdown
-Task: Create product benefit messaging
-Role: Senior B2B marketing copywriter
-Audience: Enterprise procurement managers
-Create: List of 5 key product benefits
-Intent: Drive consideration in competitive evaluation
-```
-
-TRACI is highly modular—elements can be customized, reordered, or extended with additional components like constraints, examples, or format specifications based on specific needs.
-
-### Structured Prompt Notation (SPN)
-
-SPN is an outline-based format for creating complex, reusable prompts convertible to JSON, XML, or other machine-readable formats. Key advantages:
-
-**Format Flexibility:** Author once, deploy in multiple formats  
-**Future-Proofing:** Adapt to new LLM requirements without complete rewrites  
-**Version Control:** Track changes systematically  
-**Collaboration:** Clear structure enables team development  
-
-**Example SPN Structure:**
-```
-# Customer Support Ticket Classifier
-## Role
-- Customer support ticket classifier with expertise in technical and billing issues
-## Task
-- Categorize support tickets into predefined categories
-- Assign priority levels
-- Recommend next actions
-## Input
-- ticket_text: Support ticket content
-## Output Format
-- JSON with fields: category, priority, next_action, confidence
-## Categories
-- Technical Issue, Billing Inquiry, Feature Request, Account Management
-## Constraints
-- Only use defined categories
-- Provide confidence score 0.0-1.0
-- If confidence < 0.7, category = "Needs Review"
-```
-
-## Implementation Best Practices
-
-### Design Principles
-
-**1. Be Explicit and Specific**  
-Leave no room for interpretation. State exactly what is required, how it should be structured, and what constraints apply. Vague prompts produce vague outputs.
-
-**2. Use Clear Section Labels**  
-Organize prompts with consistent, recognizable labels. Standardize terminology across your organization's prompt library.
-
-**3. Provide Representative Examples**  
-Include 1-5 examples demonstrating desired outputs, especially for complex tasks or specific formatting requirements. Examples clarify ambiguous instructions.
-
-**4. Specify Output Structure**  
-Define exact format, field names, data types, and structure. Include schemas for JSON/XML outputs. Specify column headers for tables.
-
-**5. Define Constraints Explicitly**  
-List all requirements, exclusions, length limits, tone requirements, and edge case handling. Don't assume the AI will infer constraints.
-
-**6. Keep Prompts Modular**  
-Design reusable components. Create libraries of common role definitions, constraint sets, and format specifications that can be mixed and matched.
-
-**7. Iterate and Test**  
-Treat prompts as code. Test systematically, gather feedback, measure performance, and refine based on results. Maintain test suites for critical prompts.
-
-**8. Document Thoroughly**  
-Include metadata: purpose, use case, expected inputs, output specifications, version history, and performance benchmarks.
-
-### Governance and Maintenance
-
-**Version Control**  
-Store prompts in version control systems (Git). Track changes, maintain history, enable rollback, and support collaborative development.
-
-**Review and Approval**  
-Establish review processes for production prompts. Include stakeholders from relevant domains (legal, compliance, subject matter experts).
-
-**Testing and Validation**  
-Create test suites with diverse inputs. Measure accuracy, consistency, bias, and edge case handling. Automate testing where possible.
-
-**Performance Monitoring**  
-Track prompt effectiveness through metrics like success rate, user satisfaction, correction frequency, and processing time.
-
-**Documentation Standards**  
-Maintain comprehensive documentation including use cases, input specifications, output schemas, constraints, known limitations, and troubleshooting guidance.
-
-## Enterprise Use Cases
-
-### Customer Support Automation
-
-**Ticket Classification:**
-```markdown
-Role: Customer support ticket classifier
-Task: Categorize support tickets and recommend actions
-Input: Customer message text
-Output Format: JSON with category, priority, sentiment, recommended_action
-Categories: Technical, Billing, Account, Feature Request, Bug Report
-Constraints: If uncertain, flag for human review
-```
-
-**Response Generation:**  
-Structured prompts ensure consistent tone, accurate information, and appropriate escalation across thousands of daily interactions.
-
-### Content Generation
-
-**Product Descriptions:**  
-Templates maintain brand voice and include required elements (features, benefits, specifications) across large product catalogs.
-
-**Marketing Copy:**  
-Structured prompts ensure consistent messaging, appropriate CTAs, and compliance with brand guidelines for ad copy, email campaigns, and landing pages.
-
-### Data Processing and Analysis
-
-**Document Extraction:**  
-Prompts specify exact fields to extract from invoices, contracts, or forms, enabling automated data entry and processing.
-
-**Report Generation:**  
-Templates produce standardized reports with consistent sections, formatting, and analysis depth from raw data inputs.
-
-### Software Development
-
-**Code Generation:**  
-Structured prompts specify language, framework, coding standards, documentation requirements, and test coverage for consistent code quality.
-
-**Test Case Creation:**  
-Templates ensure comprehensive test coverage by systematically generating test cases for defined scenarios, edge cases, and error conditions.
-
-### Education and Training
-
-**Assessment Generation:**  
-Structured prompts create quizzes, exams, and exercises with specified difficulty levels, topics, and question types.
-
-**Feedback Automation:**  
-Templates provide consistent, constructive feedback on student work based on defined rubrics and criteria.
-
-## Measuring Effectiveness
-
-### Quality Metrics
-
-**Accuracy:** Percentage of outputs meeting specifications  
-**Consistency:** Variability across multiple runs with same inputs  
-**Completeness:** Coverage of all required elements  
-**Compliance:** Adherence to constraints and guidelines  
-**Error Rate:** Frequency of hallucinations or incorrect information  
-
-### Performance Metrics
-
-**Processing Time:** Latency from input to output  
-**Success Rate:** Percentage requiring no human intervention  
-**Iteration Count:** Average corrections needed  
-**User Satisfaction:** Ratings from end users or reviewers  
-**Cost Efficiency:** Tokens used per successful output  
-
-### Business Impact
-
-**Automation Rate:** Tasks fully automated vs. requiring human involvement  
-**Cost Savings:** Labor hours saved, reduced error correction costs  
-**Quality Improvement:** Error reduction, consistency gains  
-**Scalability:** Volume of tasks processed with maintained quality  
-**Time to Value:** Speed from development to production deployment  
-
-## Common Challenges and Solutions
-
-### Challenge: Over-Specification
-**Problem:** Prompts become so detailed they constrain creativity or adaptability.  
-**Solution:** Balance specificity with flexibility. Use constraints for critical elements, allow flexibility for less crucial aspects.
-
-### Challenge: Maintenance Burden
-**Problem:** Large prompt libraries require ongoing updates and optimization.  
-**Solution:** Establish ownership, automate testing, use version control, prioritize high-impact prompts, retire outdated templates.
-
-### Challenge: Context Length Limits
-**Problem:** Detailed prompts consume significant context, leaving less room for input data.  
-**Solution:** Use efficient wording, modularize prompts, leverage model-specific features, consider prompt chaining for complex tasks.
-
-### Challenge: Model Variability
-**Problem:** Different LLMs respond differently to same prompts.  
-**Solution:** Test across target models, create model-specific variations, document model dependencies, design for portability.
-
-### Challenge: Measuring ROI
-**Problem:** Difficult to quantify value of prompt engineering investment.  
-**Solution:** Establish baseline metrics, track improvement over time, measure business impact (cost savings, quality improvements), document case studies.
+- **[Prompt Engineering](Prompt-Engineering.md)** — Structured prompts are a best practice in prompt engineering
+- **[Large Language Model](Large-Language-Model.md)** — Structured prompts target large language models
+- **[Natural Language Processing](Natural-Language-Processing.md)** — Structured prompts draw out AI's natural language processing capabilities
+- **[Automation](Automation.md)** — Structured prompts are the foundation of business process automation
+- **[AI Governance](AI-Governance.md)** — Mechanisms are needed to safely manage structured prompts
 
 ## Frequently Asked Questions
 
-**When should I use structured prompts vs. conversational prompts?**  
-Use structured prompts for repeated tasks, production systems, automation, and when consistency is critical. Use conversational prompts for exploration, one-off tasks, brainstorming, and when requirements are fluid.
+**Q: How long does it take to create a structured prompt?**
 
-**How long should a structured prompt be?**  
-As long as necessary to be clear, but as short as possible to preserve context window. Typical production prompts range from 100-500 words. Complex tasks may require longer prompts.
+A: For simple tasks, 1-2 hours; for complex tasks, 1-2 days. Once created and tested in operational use, it becomes complete after repeated adjustments.
 
-**Can structured prompts work with any LLM?**  
-Yes, though different models may interpret instructions differently. Test prompts with your target model and create variations if needed for different platforms.
+**Q: If I use structured prompts, will I get 100% accurate output?**
 
-**How do I start implementing structured prompts in my organization?**  
-Begin with high-value, repeated tasks. Create templates for common use cases. Establish standards and documentation. Build gradually from pilots to production. Train teams on best practices.
+A: No. Due to AI's nature, it sometimes returns unexpected answers. Aiming for 99% accuracy is realistic. For important uses, human final review of AI output is necessary.
 
-**What tools support structured prompt development?**  
-Version control systems (Git), prompt management platforms, testing frameworks, documentation tools, and specialized prompt engineering IDEs all support structured prompt development.
+**Q: Do structured prompts work with every AI model?**
 
-**How often should prompts be updated?**  
-Review high-use prompts quarterly. Update when business requirements change, model upgrades occur, performance degrades, or new capabilities emerge. Maintain change logs.
+A: The level of compatibility varies by model. The latest GPT-4 and Claude 3 handle structured prompts with high precision, but older models might not. Check the documentation of the model you're using.
 
-**Can structured prompts reduce AI hallucinations?**  
-Yes, significantly. Explicit constraints, examples, and source attribution reduce hallucination risk. However, no prompting technique eliminates hallucinations entirely. Always implement validation for critical applications.
+**Q: When I update a structured prompt, is it reflected in all operational implementations immediately?**
 
-## References
-
-- [LearnPrompting.org: Understanding Prompt Structure](https://learnprompting.org/docs/basics/prompt_structure)
-- [StructuredPrompt.com: Prompt Engineering Tool and Framework](https://structuredprompt.com/)
-- [Google Vertex AI: Prompt Design Strategies](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies)
-- [Google Gemini API: Prompting Strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies)
-- [Nielsen Norman Group: Prompt Structure in Generative AI](https://www.nngroup.com/articles/prompt-structure-generative-ai/)
-- [Prompting Guide: General Tips for Designing Prompts](https://promptingguide.ai/)
-- [Hypha: Optimizing AI Results with Structured Prompting](https://www.hypha.co/blog/optimizing-ai-results-with-structured-prompting)
-- [Google Cloud: What is Prompt Engineering?](https://cloud.google.com/discover/what-is-prompt-engineering)
-- [Google Colab: Prompt Design Notebook](https://colab.research.google.com/github/GoogleCloudPlatform/generative-ai/blob/main/gemini/prompts/intro_prompt_design.ipynb)
-- [Structured Prompt Notation Editor (Free Tool)](https://structuredprompt.com/free-structured-prompt-notation-editor/)
+A: No, not immediately. You need to test the updated prompt and ensure quality is guaranteed before deploying it to the production environment. Gradual deployment (canary release) is recommended.

@@ -1,26 +1,88 @@
 ---
-title: "Crawl Budget"
+title: Crawl Budget
 date: 2025-12-19
-translationKey: Crawl-Budget
-description: "The number of web pages that Google will crawl and index on your site within a given time period, which affects how quickly new content gets discovered and ranked."
+lastmod: 2026-04-02
+translationKey: crawl-budget
+description: The maximum number of pages Google indexes on a website within a set timeframe. Efficient allocation accelerates discovery of new content.
 keywords:
-- crawl budget
-- search engine optimization
-- website crawling
+- Crawl budget
+- SEO technical
+- Web crawler
+- Indexing
 - Googlebot
-- technical SEO
-category: "Application & Use-Cases"
+category: Data & Analytics
 type: glossary
 draft: false
+url: /en/glossary/crawl-budget/
 ---
 
-## What is a Crawl Budget?
+## What is Crawl Budget?
 
-Crawl budget represents the number of pages that search engine crawlers, particularly Googlebot, will crawl and index on a website within a specific timeframe. This concept encompasses both the crawl rate limit, which determines how fast a crawler can request pages without overloading the server, and crawl demand, which reflects how much Google wants to crawl a site based on its perceived value and freshness. Understanding crawl budget is crucial for website owners and SEO professionals because it directly impacts how efficiently search engines discover, crawl, and index website content, ultimately affecting search visibility and organic traffic performance.
+**Crawl budget is the maximum number of pages Google's search robot (Googlebot) can access and read on a site per day.** Google automatically controls this to avoid overloading servers. For large websites, effectively utilizing this allocation is critical.
 
-The allocation of crawl budget depends on multiple factors including website authority, content quality, server response times, and overall site health. Search engines like Google use sophisticated algorithms to determine how much crawling resources to allocate to each website, considering factors such as PageRank, content freshness, site structure, and user engagement signals. Websites with higher authority and more valuable content typically receive larger crawl budgets, allowing search engines to discover and index new content more frequently. Conversely, sites with technical issues, duplicate content, or poor user experience may experience reduced crawl budget allocation, limiting their ability to get new pages indexed quickly.
+> **In a nutshell:** Google's search robot's "budget" for how many pages of your site it reads per day. If you don't use that limited allocation wisely on important pages, you'll miss out.
 
-Effective crawl budget management becomes increasingly important for larger websites with thousands or millions of pages, where inefficient crawling can result in important pages being overlooked or updated content remaining unindexed for extended periods. Website owners must strategically optimize their site architecture, eliminate crawl waste, and prioritize high-value pages to ensure search engines focus their limited crawling resources on the most important content. This optimization process involves technical SEO implementations, server performance improvements, and strategic content management to maximize the value derived from each crawler visit and improve overall search engine visibility.
+**Key points:**
+
+- **What it does:** Daily access limit for Googlebot
+- **Why it matters:** Affects how quickly new pages appear in search results and overall site search visibility
+- **How to improve:** Increase server speed, remove low-value pages, optimize internal linking
+
+## Why it matters
+
+When an e-commerce site adds 1,000 new product pages but has limited crawl budget—reading only 100 pages daily—indexing takes 10 days. During that time, new products don't appear in search results. In contrast, a site with sufficient crawl budget gets all pages indexed the same day, so search traffic can start the next day. This difference is significant.
+
+## How it works
+
+Google automatically allocates crawl budget based on two factors:
+
+**Crawl Demand:** Overall site popularity, update frequency, user engagement. Popular, frequently updated sites get marked as "worth crawling more."
+
+**Crawl Capacity:** Server response speed. Slow-loading sites get throttled to avoid overloading servers.
+
+For example, an old site that updates once yearly versus an active site with daily article additions. Even with identical server performance, the active site gets crawled more.
+
+## Optimization tips
+
+**Step 1: Eliminate Low-Value Pages**
+Block pages that waste Googlebot resources—search parameters, duplicate pages, 404 errors—with robots.txt.
+
+**Step 2: Improve Server Speed**
+Enhance page load speed through CDN implementation, caching configuration, and image optimization. This lets Googlebot access more pages.
+
+**Step 3: Strengthen Internal Links to Important Pages**
+Concentrate links to new blog posts or landing pages to guide Googlebot there.
+
+## Practical examples
+
+**E-commerce Company A:** 1-million-page site. Excluding filter URLs (auto-generated by search parameters for color, size, etc.) from robots.txt improved crawl efficiency by 30%. New product pages now appear in search the next day.
+
+**Media Company B:** Posts 50 articles daily. Internal link strategy now gets new articles indexed in 2-3 hours, improving competitiveness in trending searches.
+
+## Benefits and considerations
+
+**Benefits:** Faster indexing of new pages, improved display speed in search results. Effect is most dramatic for large sites.
+
+**Considerations:** Over-aggressive optimization (removing links to non-critical pages) risks leaving necessary content unindexed. Balance is important.
+
+## Related terms
+
+- **[SEO (Search Engine Optimization)](SEO.md)** — Crawl budget utilization is part of SEO
+- **[Index](Search-Index.md)** — Google's database of all web pages
+- **[robots.txt](Robots-Text.md)** — File that controls crawler access
+- **[Sitemap](Sitemap.md)** — How to communicate important pages to crawlers
+- **[Page Speed](Page-Speed.md)** — Affects Googlebot access speed
+
+## Frequently asked questions
+
+**Q: Can I check my site's crawl budget?**
+A: Yes. Google Search Console's "Crawl stats" section shows Googlebot visits, access frequency, and timing.
+
+**Q: How do I increase crawl budget?**
+A: Increase server speed, earn backlinks from reputable sites, and regularly publish quality content. These three actions are effective.
+
+**Q: What's the priority for large sites?**
+A: Prioritize pages directly tied to sales and pages for target SEO keywords. Support pages can be deprioritized.
 
 ## Core Crawl Budget Components
 

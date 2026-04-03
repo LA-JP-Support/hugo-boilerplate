@@ -1,6 +1,7 @@
 ---
 title: 二要素認証（2FA）
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Two-Factor-Authentication--2FA-
 description: 二要素認証（2FA）の包括的ガイド - セキュリティ手法、実装方法、メリット、およびデジタル保護を強化するためのベストプラクティスを解説します。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - 多要素認証
 - 認証方法
 - サイバーセキュリティ保護
-category: Application & Use-Cases
+category: セキュリティ・コンプライアンス
 type: glossary
 draft: false
 e-title: Two-Factor Authentication (2FA)

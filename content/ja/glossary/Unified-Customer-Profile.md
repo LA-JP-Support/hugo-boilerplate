@@ -1,6 +1,7 @@
 ---
 title: 統合顧客プロファイル
 date: 2025-12-19
+lastmod: 2026-04-02
 translationKey: Unified-Customer-Profile
 description: 統合顧客プロファイルの包括的ガイド - 複数のタッチポイントとシステムからデータを統合し、顧客の単一ビューを作成する方法について解説します。
 keywords:
@@ -9,7 +10,7 @@ keywords:
 - 単一顧客ビュー
 - カスタマー360
 - データ統合
-category: Application & Use-Cases
+category: コンタクトセンター・CX
 type: glossary
 draft: false
 e-title: Unified Customer Profile
