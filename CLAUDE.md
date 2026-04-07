@@ -41,4 +41,6 @@ smartweb固有スキル（glossary-pipeline, translate, validate等）は `.clau
 - [smartweb] 変更内容の1行要約
 ```
 
+UI作業時は `DESIGN.md` を参照。色・フォント・スペーシングの判断はDESIGN.mdに従うこと。絵文字は原則禁止。
+
 すべての応答は日本語で行うこと
