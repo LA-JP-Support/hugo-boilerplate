@@ -174,7 +174,7 @@ This repository contains the following submodules:
 
 ```bash
 # Clone with submodules
-git clone --recursive https://github.com/LA-JP-Support/smartweb.git
+git clone --recursive https://github.com/LA-JP-Support/hugo-boilerplate.git
 
 # Or if already cloned, initialize submodules
 git submodule update --init --recursive

@@ -52,7 +52,7 @@ exports.watch = watch;      // ファイル監視
 
 ```bash
 # リポジトリクローン
-git clone https://github.com/LA-JP-Support/smartweb.git
+git clone https://github.com/LA-JP-Support/hugo-boilerplate.git
 cd smartweb
 
 # 依存関係インストール
@@ -399,7 +399,7 @@ brew upgrade hugo  # macOS
 
 ### 開発チーム
 - **組織**: SmartWeb/Interwork Corporation
-- **リポジトリ**: https://github.com/LA-JP-Support/smartweb
+- **リポジトリ**: https://github.com/LA-JP-Support/hugo-boilerplate
 - **公開URL**: https://main.d1jtfhinlastnr.amplifyapp.com/
 
 ### 技術スタック バージョン要件

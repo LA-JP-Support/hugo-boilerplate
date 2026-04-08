@@ -799,5 +799,5 @@ rm -rf scripts/.venv
 ## 連絡先
 
 - **開発チーム**: SmartWeb/Interwork Corporation
-- **リポジトリ**: https://github.com/LA-JP-Support/smartweb
+- **リポジトリ**: https://github.com/LA-JP-Support/hugo-boilerplate
 - **公開サイト**: https://main.d1jtfhinlastnr.amplifyapp.com/
