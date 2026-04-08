@@ -104,8 +104,8 @@ layouts/
 
 | アイコン | URL |
 |---------|-----|
-| お問い合わせ（青） | `https://files.intwk.co.jp/SmartWeb/form.svg` |
-| チャット（オレンジ） | `https://files.intwk.co.jp/SmartWeb/chat.svg` |
+| お問い合わせ（青） | `/images/liveagent/form.svg` |
+| チャット（オレンジ） | `/images/liveagent/chat.svg` |
 
 ### メインボタンアイコン
 
