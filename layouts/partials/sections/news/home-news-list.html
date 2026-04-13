@@ -27,23 +27,7 @@
 {{ $sortedPages := sort $allPages "Date" "desc" }}
 {{ $latestPages := first $limit $sortedPages }}
 
-{{/* ── InTech Daily News RSS取得（ビルド時） ── */}}
-{{ $rssItems := slice }}
-{{ $rssUrl := "https://intechnews.intwk.co.jp/index.xml" }}
-{{ with try (resources.GetRemote $rssUrl) }}
-  {{ with .Err }}
-    {{ warnf "InTech News RSS fetch failed: %s" . }}
-  {{ else }}
-    {{ with .Value }}
-      {{ $xml := . | transform.Unmarshal }}
-      {{ with $xml.channel }}
-        {{ with .item }}
-          {{ $rssItems = first 4 . }}
-        {{ end }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-{{ end }}
+{{/* ── InTech Daily News: クライアントサイドで動的取得 ── */}}
 
 <section class="bg-white dark:bg-gray-900 py-12 sm:py-16">
   <div class="mx-auto max-w-6xl px-6 lg:px-8">
@@ -111,9 +95,8 @@
       </div>
 
       {{/* ════════════════════════════════════════ */}}
-      {{/* 右カラム: InTech Daily News              */}}
+      {{/* 右カラム: InTech Daily News（JS動的取得）  */}}
       {{/* ════════════════════════════════════════ */}}
-      {{ if gt (len $rssItems) 0 }}
       <div>
         {{/* ヘッダー: ロゴ + キャッチコピー + 外部リンク */}}
         <div class="flex items-end justify-between mb-2" style="min-height:28px;">
@@ -123,7 +106,6 @@
             </a>
             <span class="text-xs text-gray-500 dark:text-gray-400 inline-flex items-center gap-1" style="line-height:1;padding-bottom:2px;">
               AIが届ける最新ITニュース
-              {{/* AIディスクロージャーツールチップ（クリック式） */}}
               <span class="relative" style="display:inline-flex;">
                 <button type="button" onclick="var t=this.nextElementSibling;t.style.display=t.style.display==='block'?'none':'block';" style="width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;border:none;background:transparent;padding:0;line-height:1;" aria-label="AI生成コンテンツについて">
                   <svg viewBox="0 0 24 24" fill="#4f46e5" style="width:18px;height:18px;"><circle cx="12" cy="12" r="10" fill="#4f46e5"/><text x="12" y="17" text-anchor="middle" fill="#fff" font-size="14" font-weight="700" font-family="Arial,sans-serif">i</text></svg>
@@ -153,63 +135,61 @@
         {{/* 新聞風の太い下線 */}}
         <div class="border-b-2 border-gray-900 dark:border-white mb-4"></div>
 
-        {{/* ニュースリスト */}}
-        <div class="border-b border-gray-200 dark:border-gray-700">
-          {{ range $index, $item := $rssItems }}
-            {{ $itemTitle := "" }}
-            {{ $itemLink  := "" }}
-            {{ $itemDate  := "" }}
-            {{ $itemDesc  := "" }}
-            {{ with $item.title }}{{ $itemTitle = . }}{{ end }}
-            {{ with $item.link  }}{{ $itemLink  = . }}{{ end }}
-            {{ with $item.pubDate }}{{ $itemDate = . }}{{ end }}
-            {{ with $item.description }}{{ $itemDesc = . }}{{ end }}
-
-            {{ if eq $index 0 }}
-              {{/* ── ヘッドライン（最新1件）── */}}
-              <a href="{{ $itemLink }}" target="_blank" rel="noopener noreferrer" class="group block py-4 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors -mx-4 px-4">
-                <div class="flex items-center justify-between gap-2 mb-2">
-                  <span class="inline-flex items-center rounded-sm bg-indigo-600 px-1.5 py-0.5 text-[10px] font-bold text-white tracking-wide uppercase">
-                    TODAY
-                  </span>
-                  {{ if $itemDate }}
-                  <time class="text-[10px] text-gray-400 dark:text-gray-500 tabular-nums flex-shrink-0">
-                    {{ dateFormat "2006.01.02" $itemDate }}
-                  </time>
-                  {{ end }}
-                </div>
-                <h3 class="text-sm sm:text-base font-bold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-snug mb-2">
-                  {{ $itemTitle }}
-                </h3>
-                {{ if $itemDesc }}
-                <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2">
-                  {{ $itemDesc | plainify | truncate 120 }}
-                </p>
-                {{ end }}
-              </a>
-              <div class="border-b border-gray-200 dark:border-gray-700"></div>
-            {{ else }}
-              {{/* ── 残り3件: 日付 + タイトル ── */}}
-              <a href="{{ $itemLink }}" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors -mx-4 px-4">
-                {{ if $itemDate }}
-                <time class="flex-shrink-0 text-[10px] text-gray-400 dark:text-gray-500 w-20 tabular-nums pt-0.5">
-                  {{ dateFormat "2006.01.02" $itemDate }}
-                </time>
-                {{ end }}
-                <h4 class="flex-1 text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-snug line-clamp-1">
-                  {{ $itemTitle }}
-                </h4>
-                <span class="flex-shrink-0 text-gray-300 dark:text-gray-600 group-hover:text-indigo-500 transition-colors pt-0.5">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </span>
-              </a>
-            {{ end }}
-          {{ end }}
+        {{/* JS で動的に描画されるコンテナ */}}
+        <div id="intechnews-feed" class="border-b border-gray-200 dark:border-gray-700">
+          <div class="py-8 text-center text-sm text-gray-400">読み込み中...</div>
         </div>
       </div>
-      {{ end }}
+
+      <script>
+      (function(){
+        var el=document.getElementById("intechnews-feed");
+        if(!el)return;
+        fetch("https://intechnews.intwk.co.jp/index.xml")
+          .then(function(r){if(!r.ok)throw new Error(r.status);return r.text()})
+          .then(function(xml){
+            var doc=new DOMParser().parseFromString(xml,"text/xml");
+            var items=doc.querySelectorAll("item");
+            if(!items.length){el.innerHTML="";return}
+            var html="";
+            var count=Math.min(items.length,4);
+            for(var i=0;i<count;i++){
+              var title=items[i].querySelector("title");
+              var link=items[i].querySelector("link");
+              var pubDate=items[i].querySelector("pubDate");
+              var desc=items[i].querySelector("description");
+              title=title?title.textContent:"";
+              link=link?link.textContent:"";
+              var dateStr="";
+              if(pubDate){
+                var d=new Date(pubDate.textContent);
+                if(!isNaN(d)){dateStr=d.getFullYear()+"."+("0"+(d.getMonth()+1)).slice(-2)+"."+("0"+d.getDate()).slice(-2)}
+              }
+              var summary=desc?desc.textContent.replace(/<[^>]*>/g,"").replace(/\s+/g," ").trim():"";
+              if(summary.length>120)summary=summary.substring(0,120)+"...";
+              var extIcon='<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>';
+              if(i===0){
+                html+='<a href="'+link+'" target="_blank" rel="noopener noreferrer" class="group block py-4 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors -mx-4 px-4">'
+                  +'<div class="flex items-center justify-between gap-2 mb-2">'
+                  +'<span class="inline-flex items-center rounded-sm bg-indigo-600 px-1.5 py-0.5 text-[10px] font-bold text-white tracking-wide uppercase">TODAY</span>'
+                  +(dateStr?'<time class="text-[10px] text-gray-400 dark:text-gray-500 tabular-nums flex-shrink-0">'+dateStr+'</time>':'')
+                  +'</div>'
+                  +'<h3 class="text-sm sm:text-base font-bold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-snug mb-2">'+title+'</h3>'
+                  +(summary?'<p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2">'+summary+'</p>':'')
+                  +'</a><div class="border-b border-gray-200 dark:border-gray-700"></div>';
+              }else{
+                html+='<a href="'+link+'" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors -mx-4 px-4">'
+                  +(dateStr?'<time class="flex-shrink-0 text-[10px] text-gray-400 dark:text-gray-500 w-20 tabular-nums pt-0.5">'+dateStr+'</time>':'')
+                  +'<h4 class="flex-1 text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-snug line-clamp-1">'+title+'</h4>'
+                  +'<span class="flex-shrink-0 text-gray-300 dark:text-gray-600 group-hover:text-indigo-500 transition-colors pt-0.5">'+extIcon+'</span>'
+                  +'</a>';
+              }
+            }
+            el.innerHTML=html;
+          })
+          .catch(function(){el.innerHTML=""});
+      })();
+      </script>
 
     </div>
   </div>
