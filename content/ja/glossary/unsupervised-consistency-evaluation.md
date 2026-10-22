@@ -16,7 +16,7 @@ draft: false
 e-title: Unsupervised Consistency Evaluation
 url: /ja/glossary/unsupervised-consistency-evaluation/
 aliases:
-- /ja/glossary/Unsupervised-Consistency-Evaluation/
+- /glossary/Unsupervised-Consistency-Evaluation/
 term: きょうしなしいっかんせいひょうか
 ---
 

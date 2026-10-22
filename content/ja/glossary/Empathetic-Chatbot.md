@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/empathetic-chatbot/
 aliases:
-  - /ja/glossary/Empathetic-Chatbot/
+  - /glossary/Empathetic-Chatbot/
 keywords:
   - 共感型チャットボット
   - 感情認識

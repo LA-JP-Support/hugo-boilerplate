@@ -16,7 +16,7 @@ draft: false
 e-title: Brand Monitoring
 url: /ja/glossary/brand-monitoring/
 aliases:
-- /ja/glossary/Brand-Monitoring/
+- /glossary/Brand-Monitoring/
 term: ぶらんどもにたりんぐ
 ---
 

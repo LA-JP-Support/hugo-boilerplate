@@ -16,7 +16,7 @@ draft: false
 e-title: Skyscraper Technique
 url: "/ja/glossary/skyscraper-technique/"
 aliases:
-- "/ja/glossary/Skyscraper-Technique/"
+- "/glossary/Skyscraper-Technique/"
 term: すかいすくれいぱーてくにっく
 ---
 

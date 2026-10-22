@@ -16,7 +16,7 @@ draft: false
 e-title: Sales Forecasting
 url: /ja/glossary/sales-forecasting/
 aliases:
-- /ja/glossary/Sales-Forecasting/
+- /glossary/Sales-Forecasting/
 term: うりあげよそく
 ---
 

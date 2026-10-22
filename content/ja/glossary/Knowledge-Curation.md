@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Curation
 url: "/ja/glossary/knowledge-curation/"
 aliases:
-- "/ja/glossary/Knowledge-Curation/"
+- "/glossary/Knowledge-Curation/"
 term: ナレッジキュレーション
 ---
 

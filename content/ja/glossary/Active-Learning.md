@@ -16,7 +16,7 @@ draft: false
 e-title: Active Learning
 url: /ja/glossary/active-learning/
 aliases:
-- /ja/glossary/Active-Learning/
+- /glossary/Active-Learning/
 term: あくてぃぶらーにんぐ
 ---
 

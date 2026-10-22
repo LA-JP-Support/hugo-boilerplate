@@ -16,7 +16,7 @@ draft: false
 e-title: Instagram
 url: /ja/glossary/instagram/
 aliases:
-- /ja/glossary/Instagram/
+- /glossary/Instagram/
 term: インスタグラム
 ---
 

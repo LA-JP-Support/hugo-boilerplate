@@ -17,7 +17,7 @@ e-title: Personalization
 term: ぱーそならいぜーしょん
 url: "/ja/glossary/personalization/"
 aliases:
-- "/ja/glossary/Personalization/"
+- "/glossary/Personalization/"
 ---
 
 ## パーソナライゼーションとは？

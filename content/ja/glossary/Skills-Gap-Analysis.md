@@ -16,7 +16,7 @@ draft: false
 e-title: Skills Gap Analysis
 url: "/ja/glossary/skills-gap-analysis/"
 aliases:
-- "/ja/glossary/Skills-Gap-Analysis/"
+- "/glossary/Skills-Gap-Analysis/"
 term: すきるぎゃっぷぶんせき
 ---
 

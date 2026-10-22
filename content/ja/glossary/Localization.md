@@ -16,7 +16,7 @@ draft: false
 e-title: Localization
 url: /ja/glossary/localization/
 aliases:
-- /ja/glossary/Localization/
+- /glossary/Localization/
 term: ろーからいぜーしょん
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Competitive Intelligence
 url: /ja/glossary/competitive-intelligence/
 aliases:
-- /ja/glossary/Competitive-Intelligence/
+- /glossary/Competitive-Intelligence/
 term: きょうごうインテリジェンス
 ---
 

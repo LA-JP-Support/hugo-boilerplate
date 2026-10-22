@@ -17,7 +17,7 @@ e-title: Infinite Canvas
 term: インフィニットキャンバス
 url: "/ja/glossary/infinite-canvas/"
 aliases:
-- "/ja/glossary/Infinite-Canvas/"
+- "/glossary/Infinite-Canvas/"
 ---
 
 ## インフィニットキャンバスとは

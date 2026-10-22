@@ -16,7 +16,7 @@ draft: false
 e-title: CRM Analytics
 url: /ja/glossary/crm-analytics/
 aliases:
-- /ja/glossary/CRM-Analytics/
+- /glossary/CRM-Analytics/
 term: シーアールエム ぶんせき
 ---
 

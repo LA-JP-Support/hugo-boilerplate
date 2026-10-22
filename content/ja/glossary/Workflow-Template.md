@@ -16,7 +16,7 @@ draft: false
 e-title: Workflow Template
 url: /ja/glossary/workflow-template/
 aliases:
-- /ja/glossary/Workflow-Template/
+- /glossary/Workflow-Template/
 term: わーくふろーてんぷれーと
 ---
 

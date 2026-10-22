@@ -16,7 +16,7 @@ draft: false
 e-title: Data Lakehouse
 url: /ja/glossary/data-lakehouse/
 aliases:
-- /ja/glossary/Data-Lakehouse/
+- /glossary/Data-Lakehouse/
 term: データレイクハウス
 ---
 

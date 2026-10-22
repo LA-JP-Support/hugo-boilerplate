@@ -16,7 +16,7 @@ draft: false
 e-title: Affective Computing
 url: /ja/glossary/affective-computing/
 aliases:
-- /ja/glossary/Affective-Computing/
+- /glossary/Affective-Computing/
 term: あふぇくてぃぶこんぴゅーてぃんぐ
 ---
 

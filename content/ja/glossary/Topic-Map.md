@@ -16,7 +16,7 @@ draft: false
 e-title: Topic Map
 url: /ja/glossary/topic-map/
 aliases:
-- /ja/glossary/Topic-Map/
+- /glossary/Topic-Map/
 term: とぴっくまっぷ
 ---
 

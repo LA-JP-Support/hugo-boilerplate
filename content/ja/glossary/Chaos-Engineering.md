@@ -16,7 +16,7 @@ draft: false
 e-title: Chaos Engineering
 url: /ja/glossary/chaos-engineering/
 aliases:
-- /ja/glossary/Chaos-Engineering/
+- /glossary/Chaos-Engineering/
 term: かおすえんじにありんぐ
 ---
 

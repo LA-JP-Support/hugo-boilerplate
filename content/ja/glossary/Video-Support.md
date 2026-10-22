@@ -16,7 +16,7 @@ draft: false
 e-title: Video Support
 url: /ja/glossary/video-support/
 aliases:
-- /ja/glossary/Video-Support/
+- /glossary/Video-Support/
 term: びでおさぽーと
 ---
 

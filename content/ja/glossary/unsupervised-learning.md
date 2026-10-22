@@ -17,7 +17,7 @@ e-title: Unsupervised Learning
 term: きょうしなしがくしゅう
 url: "/ja/glossary/unsupervised-learning/"
 aliases:
-- "/ja/glossary/Unsupervised-Learning/"
+- "/glossary/Unsupervised-Learning/"
 ---
 ## 教師なし学習とは何か?
 教師なし学習は、アルゴリズムが明示的なラベルや事前定義された目標変数なしにデータを分析・整理する、機械学習の基本的なパラダイムです。入力を既知の出力にマッピングするラベル付き訓練例に依存する教師あり学習とは異なり、教師なし学習はラベルなしデータセット内の隠れたパターン、構造、関係性を自律的に発見します。モデルは独立してデータを探索し、正解についての人間の指導なしに、固有のグループ化、関連性、または簡略化された表現を特定します。

@@ -16,7 +16,7 @@ draft: false
 e-title: Data Quality
 url: /ja/glossary/data-quality/
 aliases:
-- /ja/glossary/Data-Quality/
+- /glossary/Data-Quality/
 term: データひんしつ
 ---
 

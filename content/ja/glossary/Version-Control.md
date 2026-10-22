@@ -16,7 +16,7 @@ draft: false
 e-title: Version Control
 url: /ja/glossary/version-control/
 aliases:
-- /ja/glossary/Version-Control/
+- /glossary/Version-Control/
 term: ばーじょんかんり
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Conversation Drift
 url: /ja/glossary/conversation-drift/
 aliases:
-- /ja/glossary/Conversation-Drift/
+- /glossary/Conversation-Drift/
 term: どりふと
 ---
 

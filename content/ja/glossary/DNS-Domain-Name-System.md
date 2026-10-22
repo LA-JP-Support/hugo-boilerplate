@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/DNS-Domain-Name-System/
 aliases:
-  - /ja/glossary/dns-domain-name-system/
+  - /glossary/dns-domain-name-system/
 keywords:
   - ドメイン
   - IPアドレス

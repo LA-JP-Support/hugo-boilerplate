@@ -17,7 +17,7 @@ e-title: Self-Service Options
 term: せるふさーびすおぷしょん
 url: "/ja/glossary/self-service-options/"
 aliases:
-- "/ja/glossary/Self-Service-Options/"
+- "/glossary/Self-Service-Options/"
 ---
 
 ## セルフサービスオプションとは?

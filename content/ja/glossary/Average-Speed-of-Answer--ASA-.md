@@ -16,7 +16,7 @@ draft: false
 e-title: Average Speed of Answer (ASA)
 url: /ja/glossary/average-speed-of-answer--asa-/
 aliases:
-- /ja/glossary/Average-Speed-of-Answer--ASA-/
+- /glossary/Average-Speed-of-Answer--ASA-/
 term: へいきんおうとうそくど
 ---
 

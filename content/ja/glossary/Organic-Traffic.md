@@ -16,7 +16,7 @@ draft: false
 e-title: Organic Traffic
 url: /ja/glossary/organic-traffic/
 aliases:
-- /ja/glossary/Organic-Traffic/
+- /glossary/Organic-Traffic/
 term: オーガニックトラフィック
 ---
 

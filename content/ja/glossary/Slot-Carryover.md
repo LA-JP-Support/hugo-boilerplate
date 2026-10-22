@@ -16,7 +16,7 @@ draft: false
 e-title: Slot Carryover
 url: "/ja/glossary/slot-carryover/"
 aliases:
-- "/ja/glossary/Slot-Carryover/"
+- "/glossary/Slot-Carryover/"
 term: スロットキャリーオーバー
 ---
 

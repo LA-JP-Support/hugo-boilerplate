@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/End-to-End-Encryption-E2E/
 aliases:
-  - /ja/glossary/e2e-encryption/
+  - /glossary/e2e-encryption/
 keywords:
   - エンドツーエンド暗号化
   - E2E

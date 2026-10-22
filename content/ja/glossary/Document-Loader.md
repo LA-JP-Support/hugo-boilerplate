@@ -17,7 +17,7 @@ e-title: Document Loader
 term: どきゅめんとろーだー
 url: "/ja/glossary/document-loader/"
 aliases:
-- "/ja/glossary/Document-Loader/"
+- "/glossary/Document-Loader/"
 ---
 
 ## ドキュメントローダーとは?

@@ -17,7 +17,7 @@ e-title: Headless CMS
 term: ヘッドレスシーエムエス
 url: "/ja/glossary/headless-cms/"
 aliases:
-- "/ja/glossary/Headless-CMS/"
+- "/glossary/Headless-CMS/"
 ---
 
 ## ヘッドレスCMSとは？

@@ -17,7 +17,7 @@ e-title: Page Authority
 term: ぺーじおーそりてぃ
 url: "/ja/glossary/page-authority/"
 aliases:
-- "/ja/glossary/Page-Authority/"
+- "/glossary/Page-Authority/"
 ---
 
 ## ページオーソリティとは？

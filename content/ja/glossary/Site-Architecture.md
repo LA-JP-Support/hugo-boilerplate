@@ -16,7 +16,7 @@ draft: false
 e-title: Site Architecture
 url: /ja/glossary/site-architecture/
 aliases:
-- /ja/glossary/Site-Architecture/
+- /glossary/Site-Architecture/
 term: さいとあーきてくちゃ
 ---
 

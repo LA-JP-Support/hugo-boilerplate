@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/GDPR-General-Data-Protection-Regulation/
 aliases:
-  - /ja/glossary/gdpr/
+  - /glossary/gdpr/
 keywords:
   - GDPR
   - データ保護

@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Infrastructure-as-a-Service-IaaS/
 aliases:
-  - /ja/glossary/infrastructure-as-a-service-iaas/
+  - /glossary/infrastructure-as-a-service-iaas/
 keywords:
   - クラウドサービス
   - インフラストラクチャ

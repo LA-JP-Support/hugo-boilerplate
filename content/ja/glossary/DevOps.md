@@ -16,7 +16,7 @@ draft: false
 e-title: DevOps
 url: "/ja/glossary/devops/"
 aliases:
-- "/ja/glossary/DevOps/"
+- "/glossary/DevOps/"
 term: でぶおぷす
 ---
 

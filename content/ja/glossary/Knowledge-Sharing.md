@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Sharing
 url: /ja/glossary/knowledge-sharing/
 aliases:
-- /ja/glossary/Knowledge-Sharing/
+- /glossary/Knowledge-Sharing/
 term: なれっじしぇありんぐ
 ---
 

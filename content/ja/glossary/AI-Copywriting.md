@@ -16,7 +16,7 @@ draft: false
 e-title: AI Copywriting
 url: /ja/glossary/ai-copywriting/
 aliases:
-- /ja/glossary/AI-Copywriting/
+- /glossary/AI-Copywriting/
 term: エーアイコピーライティング
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Community Engagement
 url: /ja/glossary/community-engagement/
 aliases:
-- /ja/glossary/Community-Engagement/
+- /glossary/Community-Engagement/
 term: こみゅにてぃえんげーじめんと
 ---
 

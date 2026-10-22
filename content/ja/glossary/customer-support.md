@@ -17,7 +17,7 @@ e-title: Customer Support
 term: かすたまーさぽーと
 url: "/ja/glossary/customer-support/"
 aliases:
-- "/ja/glossary/Customer-Support/"
+- "/glossary/Customer-Support/"
 ---
 
 <!-- ===== サクッとわかるゾーン（冒頭〜30行） ===== -->

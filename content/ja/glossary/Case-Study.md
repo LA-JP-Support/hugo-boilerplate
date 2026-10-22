@@ -16,7 +16,7 @@ draft: false
 e-title: Case Study
 url: /ja/glossary/case-study/
 aliases:
-- /ja/glossary/Case-Study/
+- /glossary/Case-Study/
 term: けーすすたでぃ
 ---
 

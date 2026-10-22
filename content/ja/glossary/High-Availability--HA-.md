@@ -17,7 +17,7 @@ e-mark: High Availability (HA)
 term: こうかようせい (エイチエー)
 url: "/ja/glossary/high-availability--ha-/"
 aliases:
-- "/ja/glossary/High-Availability--HA-/"
+- "/glossary/High-Availability--HA-/"
 ---
 
 ## 高可用性(HA)とは?

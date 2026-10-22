@@ -16,7 +16,7 @@ draft: false
 e-title: Easy Implementation
 url: /ja/glossary/easy-implementation/
 aliases:
-- /ja/glossary/Easy-Implementation/
+- /glossary/Easy-Implementation/
 term: かんたんなじっそう
 ---
 

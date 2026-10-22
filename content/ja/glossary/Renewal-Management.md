@@ -16,7 +16,7 @@ draft: false
 e-title: Renewal Management
 url: /ja/glossary/renewal-management/
 aliases:
-- /ja/glossary/Renewal-Management/
+- /glossary/Renewal-Management/
 term: こうしんかんり
 ---
 

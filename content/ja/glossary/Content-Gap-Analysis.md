@@ -16,7 +16,7 @@ draft: false
 e-title: Content Gap Analysis
 url: /ja/glossary/content-gap-analysis/
 aliases:
-- /ja/glossary/Content-Gap-Analysis/
+- /glossary/Content-Gap-Analysis/
 term: こんてんつぎゃっぷぶんせき
 ---
 

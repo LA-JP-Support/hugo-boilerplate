@@ -16,7 +16,7 @@ draft: false
 e-title: Word2Vec
 url: /ja/glossary/word2vec/
 aliases:
-- /ja/glossary/Word2Vec/
+- /glossary/Word2Vec/
 term: ワードツーベック
 ---
 

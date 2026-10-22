@@ -18,7 +18,7 @@ e-title: Chroma
 term: クロマ
 url: "/ja/glossary/chroma/"
 aliases:
-- "/ja/glossary/Chroma/"
+- "/glossary/Chroma/"
 ---
 ## Chromaとは？
 

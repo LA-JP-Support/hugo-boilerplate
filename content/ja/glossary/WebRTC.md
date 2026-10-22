@@ -16,7 +16,7 @@ draft: false
 e-title: WebRTC
 url: /ja/glossary/webrtc/
 aliases:
-- /ja/glossary/WebRTC/
+- /glossary/WebRTC/
 term: ウェブアールティーシー
 ---
 

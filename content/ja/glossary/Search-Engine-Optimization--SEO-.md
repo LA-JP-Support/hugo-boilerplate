@@ -16,7 +16,7 @@ draft: false
 e-title: Search Engine Optimization (SEO)
 url: /ja/glossary/search-engine-optimization--seo-/
 aliases:
-- /ja/glossary/Search-Engine-Optimization--SEO-/
+- /glossary/Search-Engine-Optimization--SEO-/
 term: けんさくえんじんさいてきか(えすいーおー)
 ---
 

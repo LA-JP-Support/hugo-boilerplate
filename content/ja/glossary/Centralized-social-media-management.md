@@ -16,7 +16,7 @@ draft: false
 e-title: Centralized Social Media Management
 url: /ja/glossary/centralized-social-media-management/
 aliases:
-- /ja/glossary/Centralized-social-media-management/
+- /glossary/Centralized-social-media-management/
 term: とうごうがたソーシャルメディアかんり
 ---
 

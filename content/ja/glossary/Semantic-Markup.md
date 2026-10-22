@@ -17,7 +17,7 @@ e-title: Semantic Markup
 term: せまんてぃっくまーくあっぷ
 url: "/ja/glossary/semantic-markup/"
 aliases:
-- "/ja/glossary/Semantic-Markup/"
+- "/glossary/Semantic-Markup/"
 ---
 
 ## セマンティックマークアップとは?

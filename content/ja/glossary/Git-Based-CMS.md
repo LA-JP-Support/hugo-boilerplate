@@ -16,7 +16,7 @@ draft: false
 e-title: Git-Based CMS
 url: /ja/glossary/git-based-cms/
 aliases:
-- /ja/glossary/Git-Based-CMS/
+- /glossary/Git-Based-CMS/
 term: ギット ベース シーエムエス
 ---
 

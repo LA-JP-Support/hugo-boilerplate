@@ -16,7 +16,7 @@ draft: false
 e-title: WhatsApp Integration
 url: /ja/glossary/whatsapp-integration/
 aliases:
-- /ja/glossary/WhatsApp-Integration/
+- /glossary/WhatsApp-Integration/
 term: ワッツアップれんけい
 ---
 

@@ -17,7 +17,7 @@ draft: false
 e-title: Predictive Maintenance
 url: /ja/glossary/predictive-maintenance/
 aliases:
-- /ja/glossary/Predictive-Maintenance/
+- /glossary/Predictive-Maintenance/
 term: よちほぜん
 ---
 

@@ -18,7 +18,7 @@ draft: false
 e-title: Usage-Based Pricing
 url: /ja/glossary/usage-based-pricing/
 aliases:
-- /ja/glossary/Usage-Based-Pricing/
+- /glossary/Usage-Based-Pricing/
 term: じゅうりょうかきんせい
 ---
 

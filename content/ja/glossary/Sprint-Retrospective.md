@@ -16,7 +16,7 @@ draft: false
 e-title: Sprint Retrospective
 url: /ja/glossary/sprint-retrospective/
 aliases:
-- /ja/glossary/Sprint-Retrospective/
+- /glossary/Sprint-Retrospective/
 term: すぷりんとれとろすぺくてぃぶ
 ---
 

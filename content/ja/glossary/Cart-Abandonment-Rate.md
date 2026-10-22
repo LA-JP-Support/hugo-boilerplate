@@ -16,7 +16,7 @@ draft: false
 e-title: Cart Abandonment Rate
 url: /ja/glossary/cart-abandonment-rate/
 aliases:
-- /ja/glossary/Cart-Abandonment-Rate/
+- /glossary/Cart-Abandonment-Rate/
 term: かーとほうきりつ
 ---
 

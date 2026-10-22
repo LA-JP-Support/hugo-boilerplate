@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Customer-Experience-CX/
 aliases:
-  - /ja/glossary/customer-experience-cx/
+  - /glossary/customer-experience-cx/
 keywords:
   - CX
   - 顧客体験

@@ -16,7 +16,7 @@ draft: false
 e-title: API Management
 url: /ja/glossary/api-management/
 aliases:
-- /ja/glossary/API-Management/
+- /glossary/API-Management/
 term: エーピーアイかんり
 ---
 

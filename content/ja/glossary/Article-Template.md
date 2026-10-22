@@ -16,7 +16,7 @@ draft: false
 e-title: Article Template
 url: /ja/glossary/article-template/
 aliases:
-- /ja/glossary/Article-Template/
+- /glossary/Article-Template/
 term: きじてんぷれーと
 ---
 

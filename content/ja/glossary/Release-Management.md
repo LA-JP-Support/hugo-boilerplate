@@ -16,7 +16,7 @@ draft: false
 e-title: Release Management
 url: /ja/glossary/release-management/
 aliases:
-- /ja/glossary/Release-Management/
+- /glossary/Release-Management/
 term: りりーすかんり
 ---
 

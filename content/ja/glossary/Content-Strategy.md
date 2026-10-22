@@ -16,7 +16,7 @@ draft: false
 e-title: Content Strategy
 url: /ja/glossary/content-strategy/
 aliases:
-- /ja/glossary/Content-Strategy/
+- /glossary/Content-Strategy/
 term: こんてんつせんりゃく
 ---
 

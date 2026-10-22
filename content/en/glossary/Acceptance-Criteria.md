@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/acceptance-criteria/
 aliases:
-- /en/glossary/Acceptance-Criteria/
+- /glossary/Acceptance-Criteria/
 ---
 
 ## What are Acceptance Criteria?

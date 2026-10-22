@@ -17,7 +17,7 @@ e-title: Self-Service Portal
 term: せるふさーびすぽーたる
 url: "/ja/glossary/self-service-portal/"
 aliases:
-- "/ja/glossary/Self-Service-Portal/"
+- "/glossary/Self-Service-Portal/"
 ---
 
 ## セルフサービスポータルとは?

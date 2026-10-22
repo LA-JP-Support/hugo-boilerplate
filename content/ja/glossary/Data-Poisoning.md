@@ -16,7 +16,7 @@ draft: false
 e-title: Data Poisoning
 url: "/ja/glossary/data-poisoning/"
 aliases:
-- "/ja/glossary/Data-Poisoning/"
+- "/glossary/Data-Poisoning/"
 term: データポイズニング
 ---
 

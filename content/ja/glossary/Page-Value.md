@@ -17,7 +17,7 @@ e-title: Page Value
 term: ぺーじかち
 url: "/ja/glossary/page-value/"
 aliases:
-- "/ja/glossary/Page-Value/"
+- "/glossary/Page-Value/"
 ---
 
 ## ページ価値とは？

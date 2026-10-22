@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Capture
 url: "/ja/glossary/knowledge-capture/"
 aliases:
-- "/ja/glossary/Knowledge-Capture/"
+- "/glossary/Knowledge-Capture/"
 term: ナレッジキャプチャ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Technology Partner
 url: /ja/glossary/technology-partner/
 aliases:
-- /ja/glossary/Technology-Partner/
+- /glossary/Technology-Partner/
 term: てくのろじーぱーとなー
 ---
 

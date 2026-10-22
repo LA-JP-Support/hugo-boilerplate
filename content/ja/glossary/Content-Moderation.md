@@ -16,7 +16,7 @@ draft: false
 e-title: Content Moderation
 url: /ja/glossary/content-moderation/
 aliases:
-- /ja/glossary/Content-Moderation/
+- /glossary/Content-Moderation/
 term: もでれーしょん
 ---
 

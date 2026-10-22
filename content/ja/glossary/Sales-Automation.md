@@ -16,7 +16,7 @@ draft: false
 e-title: Sales Automation
 url: /ja/glossary/sales-automation/
 aliases:
-- /ja/glossary/Sales-Automation/
+- /glossary/Sales-Automation/
 term: せーるすおーとめーしょん
 ---
 

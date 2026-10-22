@@ -16,7 +16,7 @@ draft: false
 e-title: Style Guide
 url: /ja/glossary/style-guide/
 aliases:
-- /ja/glossary/Style-Guide/
+- /glossary/Style-Guide/
 term: すたいるがいど
 ---
 

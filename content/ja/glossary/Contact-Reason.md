@@ -16,7 +16,7 @@ draft: false
 e-title: Contact Reason
 url: /ja/glossary/contact-reason/
 aliases:
-- /ja/glossary/Contact-Reason/
+- /glossary/Contact-Reason/
 term: こんたくとりーずん
 ---
 

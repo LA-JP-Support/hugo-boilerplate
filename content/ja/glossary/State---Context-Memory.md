@@ -16,7 +16,7 @@ draft: false
 e-title: State / Context Memory
 url: /ja/glossary/state---context-memory/
 aliases:
-- /ja/glossary/State---Context-Memory/
+- /glossary/State---Context-Memory/
 term: すてーと・こんてきすとめもり
 ---
 

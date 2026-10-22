@@ -16,7 +16,7 @@ draft: false
 e-title: Integration Patterns
 url: /ja/glossary/integration-patterns/
 aliases:
-- /ja/glossary/Integration-Patterns/
+- /glossary/Integration-Patterns/
 term: インテグレーションパターン
 ---
 

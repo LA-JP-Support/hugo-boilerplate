@@ -17,7 +17,7 @@ e-title: LangFlow
 term: ラングフロー
 url: "/ja/glossary/langflow/"
 aliases:
-- "/ja/glossary/LangFlow/"
+- "/glossary/LangFlow/"
 ---
 
 ## LangFlowとは？

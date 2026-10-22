@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Data-Minimization/
 aliases:
-  - /ja/glossary/data-minimization/
+  - /glossary/data-minimization/
 keywords:
   - データ最小化
   - プライバシー原則

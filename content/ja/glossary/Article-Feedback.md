@@ -16,7 +16,7 @@ draft: false
 e-title: Article Feedback
 url: /ja/glossary/article-feedback/
 aliases:
-- /ja/glossary/Article-Feedback/
+- /glossary/Article-Feedback/
 term: きじフィードバック
 ---
 

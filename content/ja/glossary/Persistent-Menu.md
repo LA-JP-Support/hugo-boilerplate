@@ -16,7 +16,7 @@ draft: false
 e-title: Persistent Menu
 url: /ja/glossary/persistent-menu/
 aliases:
-- /ja/glossary/Persistent-Menu/
+- /glossary/Persistent-Menu/
 term: ぱーしすてんとめにゅー
 ---
 

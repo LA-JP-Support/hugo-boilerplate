@@ -16,7 +16,7 @@ draft: false
 e-title: Top-P Sampling
 url: /ja/glossary/top-p-sampling/
 aliases:
-- /ja/glossary/Top-P-Sampling/
+- /glossary/Top-P-Sampling/
 term: トップピーサンプリング
 ---
 

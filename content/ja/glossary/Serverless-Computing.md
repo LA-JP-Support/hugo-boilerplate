@@ -17,7 +17,7 @@ e-title: Serverless Computing
 term: さーばーれすこんぴゅーてぃんぐ
 url: "/ja/glossary/serverless-computing/"
 aliases:
-- "/ja/glossary/Serverless-Computing/"
+- "/glossary/Serverless-Computing/"
 ---
 
 ## サーバーレスコンピューティングとは?

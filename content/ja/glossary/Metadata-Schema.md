@@ -16,7 +16,7 @@ draft: false
 e-title: Metadata Schema
 url: /ja/glossary/metadata-schema/
 aliases:
-- /ja/glossary/Metadata-Schema/
+- /glossary/Metadata-Schema/
 term: めたでーたすきーま
 ---
 

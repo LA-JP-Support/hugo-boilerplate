@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/A-B-Testing-Design/
 aliases:
-  - /ja/glossary/ab-test-design/
+  - /glossary/ab-test-design/
 keywords:
   - テスト手法
   - UI最適化

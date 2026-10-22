@@ -17,7 +17,7 @@ draft: false
 e-title: AlphaGo
 url: /ja/glossary/alphago/
 aliases:
-- /ja/glossary/AlphaGo/
+- /glossary/AlphaGo/
 term: アルファゴ
 ---
 

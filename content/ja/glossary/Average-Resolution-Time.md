@@ -16,7 +16,7 @@ draft: false
 e-title: Average Resolution Time
 url: /ja/glossary/average-resolution-time/
 aliases:
-- /ja/glossary/Average-Resolution-Time/
+- /glossary/Average-Resolution-Time/
 term: へいきんかいけつじかん
 ---
 

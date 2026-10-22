@@ -17,7 +17,7 @@ draft: false
 e-title: Tokenization
 url: /ja/glossary/tokenization/
 aliases:
-- /ja/glossary/Tokenization/
+- /glossary/Tokenization/
 term: トークンか
 ---
 

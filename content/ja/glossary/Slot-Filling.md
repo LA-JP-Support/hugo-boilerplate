@@ -16,7 +16,7 @@ draft: false
 e-title: Slot Filling
 url: "/ja/glossary/slot-filling/"
 aliases:
-- "/ja/glossary/Slot-Filling/"
+- "/glossary/Slot-Filling/"
 term: すろっとふぃりんぐ
 ---
 

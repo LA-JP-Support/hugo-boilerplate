@@ -16,7 +16,7 @@ draft: false
 e-title: Virtual Events
 url: /ja/glossary/virtual-events/
 aliases:
-- /ja/glossary/Virtual-Events/
+- /glossary/Virtual-Events/
 term: ばーちゃるいべんと
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Service Bus
 url: /ja/glossary/service-bus/
 aliases:
-- /ja/glossary/Service-Bus/
+- /glossary/Service-Bus/
 term: さーびすばす
 ---
 

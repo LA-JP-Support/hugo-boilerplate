@@ -17,7 +17,7 @@ e-title: Confidence Threshold
 term: しんらいどいきち
 url: "/ja/glossary/confidence-threshold/"
 aliases:
-- "/ja/glossary/Confidence-Threshold/"
+- "/glossary/Confidence-Threshold/"
 ---
 
 ## 信頼度閾値とは?

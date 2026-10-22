@@ -17,7 +17,7 @@ e-title: Monolithic Architecture
 term: モノリシックアーキテクチャ
 url: "/ja/glossary/monolithic-architecture/"
 aliases:
-- "/ja/glossary/Monolithic-Architecture/"
+- "/glossary/Monolithic-Architecture/"
 ---
 
 ## モノリシックアーキテクチャとは

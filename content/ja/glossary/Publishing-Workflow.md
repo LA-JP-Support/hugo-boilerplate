@@ -17,7 +17,7 @@ e-title: Publishing Workflow
 term: ぱぶりっしんぐわーくふろー
 url: "/ja/glossary/publishing-workflow/"
 aliases:
-- "/ja/glossary/Publishing-Workflow/"
+- "/glossary/Publishing-Workflow/"
 ---
 
 ## パブリッシングワークフローとは？

@@ -16,7 +16,7 @@ draft: false
 e-title: Approval Workflow
 url: /ja/glossary/approval-workflow/
 aliases:
-- /ja/glossary/Approval-Workflow/
+- /glossary/Approval-Workflow/
 term: しょうにんワークフロー
 ---
 

@@ -17,7 +17,7 @@ e-title: Latency
 term: れいてんし
 url: "/ja/glossary/latency/"
 aliases:
-- "/ja/glossary/Latency/"
+- "/glossary/Latency/"
 ---
 
 <!-- ===== サクッとわかるゾーン（冒頭〜30行） ===== -->

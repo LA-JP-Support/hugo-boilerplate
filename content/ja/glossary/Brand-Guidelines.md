@@ -16,7 +16,7 @@ draft: false
 e-title: Brand Guidelines
 url: /ja/glossary/brand-guidelines/
 aliases:
-- /ja/glossary/Brand-Guidelines/
+- /glossary/Brand-Guidelines/
 term: ぶらんどがいどらいん
 ---
 

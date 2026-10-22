@@ -16,7 +16,7 @@ draft: false
 e-title: Translation Memory
 url: /ja/glossary/translation-memory/
 aliases:
-- /ja/glossary/Translation-Memory/
+- /glossary/Translation-Memory/
 term: ほんやくメモリ
 ---
 

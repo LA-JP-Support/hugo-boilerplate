@@ -16,7 +16,7 @@ draft: false
 e-title: Business Scalability
 url: /ja/glossary/business-scalability/
 aliases:
-- /ja/glossary/Business-Scalability/
+- /glossary/Business-Scalability/
 term: びじねすすけーらびりてぃ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Email Ticketing
 url: /ja/glossary/email-ticketing/
 aliases:
-- /ja/glossary/Email-Ticketing/
+- /glossary/Email-Ticketing/
 term: めーるちけってぃんぐ
 ---
 

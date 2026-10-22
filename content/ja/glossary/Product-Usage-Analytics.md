@@ -16,7 +16,7 @@ draft: false
 e-title: Product Usage Analytics
 url: /ja/glossary/product-usage-analytics/
 aliases:
-- /ja/glossary/Product-Usage-Analytics/
+- /glossary/Product-Usage-Analytics/
 term: ぷろだくと・ゆーざー・あなりてぃくす
 ---
 

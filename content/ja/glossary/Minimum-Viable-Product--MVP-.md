@@ -16,7 +16,7 @@ draft: false
 e-title: Minimum Viable Product (MVP)
 url: /ja/glossary/minimum-viable-product--mvp-/
 aliases:
-- /ja/glossary/Minimum-Viable-Product--MVP-/
+- /glossary/Minimum-Viable-Product--MVP-/
 term: ミニマム・バイアブル・プロダクト（エムブイピー）
 ---
 

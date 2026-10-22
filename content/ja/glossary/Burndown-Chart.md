@@ -16,7 +16,7 @@ draft: false
 e-title: Burndown Chart
 url: /ja/glossary/burndown-chart/
 aliases:
-- /ja/glossary/Burndown-Chart/
+- /glossary/Burndown-Chart/
 term: ばーんだうんちゃーと
 ---
 

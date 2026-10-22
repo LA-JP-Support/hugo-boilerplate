@@ -9,7 +9,7 @@ type: "glossary"
 draft: false
 url: /en/glossary/Agent-Occupancy/
 aliases:
-- /en/glossary/agent-occupancy/
+- /glossary/agent-occupancy/
 keywords:
   - Agent occupancy
   - Contact center metrics

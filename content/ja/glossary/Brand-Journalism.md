@@ -16,7 +16,7 @@ draft: false
 e-title: Brand Journalism
 url: /ja/glossary/brand-journalism/
 aliases:
-- /ja/glossary/Brand-Journalism/
+- /glossary/Brand-Journalism/
 term: ぶらんどじゃーなりずむ
 ---
 

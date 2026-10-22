@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Onboarding
 url: /ja/glossary/customer-onboarding/
 aliases:
-- /ja/glossary/Customer-Onboarding/
+- /glossary/Customer-Onboarding/
 term: カスタマーオンボーディング
 ---
 

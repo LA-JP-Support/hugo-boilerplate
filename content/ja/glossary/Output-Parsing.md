@@ -17,7 +17,7 @@ e-title: Output Parsing
 term: しゅつりょくぱーす
 url: "/ja/glossary/output-parsing/"
 aliases:
-- "/ja/glossary/Output-Parsing/"
+- "/glossary/Output-Parsing/"
 ---
 
 ## 出力パースとは？

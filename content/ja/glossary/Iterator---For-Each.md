@@ -17,7 +17,7 @@ e-title: Iterator / For-Each
 term: いてれーたー / ふぉーいーち
 url: "/ja/glossary/iterator---for-each/"
 aliases:
-- "/ja/glossary/Iterator---For-Each/"
+- "/glossary/Iterator---For-Each/"
 ---
 
 ## イテレーター / For-Eachとは?

@@ -16,7 +16,7 @@ draft: false
 e-title: Utterance Permutation
 url: /ja/glossary/utterance-permutation/
 aliases:
-- /ja/glossary/Utterance-Permutation/
+- /glossary/Utterance-Permutation/
 term: 発話パーミュテーション
 ---
 

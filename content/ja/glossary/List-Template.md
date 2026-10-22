@@ -15,7 +15,7 @@ draft: false
 e-title: List Template
 url: "/ja/glossary/list-template/"
 aliases:
-- "/ja/glossary/List-Template/"
+- "/glossary/List-Template/"
 term: りすとてんぷれーと
 lastmod: 2026-04-02
 ---

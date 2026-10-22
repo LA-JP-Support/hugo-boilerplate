@@ -16,7 +16,7 @@ draft: false
 e-title: Content Analytics
 url: /ja/glossary/content-analytics/
 aliases:
-- /ja/glossary/Content-Analytics/
+- /glossary/Content-Analytics/
 term: あなりてぃくす
 ---
 

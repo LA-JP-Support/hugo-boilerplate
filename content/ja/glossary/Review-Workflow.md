@@ -16,7 +16,7 @@ draft: false
 e-title: Review Workflow
 url: /ja/glossary/review-workflow/
 aliases:
-- /ja/glossary/Review-Workflow/
+- /glossary/Review-Workflow/
 term: れびゅーわーくふろー
 ---
 

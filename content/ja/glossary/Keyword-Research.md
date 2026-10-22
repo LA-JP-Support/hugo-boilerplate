@@ -16,7 +16,7 @@ draft: false
 e-title: Keyword Research
 url: /ja/glossary/keyword-research/
 aliases:
-- /ja/glossary/Keyword-Research/
+- /glossary/Keyword-Research/
 term: キーワードリサーチ
 ---
 

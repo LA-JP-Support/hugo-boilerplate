@@ -16,7 +16,7 @@ draft: false
 e-title: Alignment Problem
 url: /ja/glossary/alignment-problem/
 aliases:
-- /ja/glossary/Alignment-Problem/
+- /glossary/Alignment-Problem/
 term: あらいめんともんだい
 ---
 

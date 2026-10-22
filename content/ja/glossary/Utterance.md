@@ -16,7 +16,7 @@ draft: false
 e-title: Utterance
 url: /ja/glossary/utterance/
 aliases:
-- /ja/glossary/Utterance/
+- /glossary/Utterance/
 term: 発話
 ---
 

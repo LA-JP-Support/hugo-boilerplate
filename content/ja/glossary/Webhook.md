@@ -17,7 +17,7 @@ draft: false
 e-title: Webhook
 url: /ja/glossary/webhook/
 aliases:
-- /ja/glossary/Webhook/
+- /glossary/Webhook/
 term: うぇぶふっく
 ---
 

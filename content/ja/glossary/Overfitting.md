@@ -17,7 +17,7 @@ e-title: Overfitting
 term: かがくしゅう
 url: "/ja/glossary/overfitting/"
 aliases:
-- "/ja/glossary/Overfitting/"
+- "/glossary/Overfitting/"
 ---
 
 ## 過学習とは？

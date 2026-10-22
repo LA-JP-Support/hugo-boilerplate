@@ -17,7 +17,7 @@ e-title: Neural Networks
 term: にゅーらるねっとわーく
 url: "/ja/glossary/neural-networks/"
 aliases:
-- "/ja/glossary/Neural-Networks/"
+- "/glossary/Neural-Networks/"
 ---
 
 ## ニューラルネットワークとは?

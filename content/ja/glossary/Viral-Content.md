@@ -16,7 +16,7 @@ draft: false
 e-title: Viral Content
 url: /ja/glossary/viral-content/
 aliases:
-- /ja/glossary/Viral-Content/
+- /glossary/Viral-Content/
 term: ばいらるこんてんつ
 ---
 

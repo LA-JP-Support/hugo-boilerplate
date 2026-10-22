@@ -17,7 +17,7 @@ e-title: Shadow AI
 term: しゃどーえーあい
 url: "/ja/glossary/shadow-ai/"
 aliases:
-- "/ja/glossary/Shadow-AI/"
+- "/glossary/Shadow-AI/"
 ---
 
 ## シャドーAIとは?

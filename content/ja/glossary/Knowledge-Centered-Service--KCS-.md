@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Centered Service (KCS)
 url: "/ja/glossary/knowledge-centered-service--kcs-/"
 aliases:
-- "/ja/glossary/Knowledge-Centered-Service--KCS-/"
+- "/glossary/Knowledge-Centered-Service--KCS-/"
 term: ナレッジセンタードサービス（KCS）
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Single Sign-On (SSO)
 url: /ja/glossary/single-sign-on--sso-/
 aliases:
-- /ja/glossary/Single-Sign-On--SSO-/
+- /glossary/Single-Sign-On--SSO-/
 term: シングルサインオン(エスエスオー)
 ---
 

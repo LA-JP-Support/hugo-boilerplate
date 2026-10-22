@@ -16,7 +16,7 @@ draft: false
 e-title: ChatGPT
 url: /ja/glossary/chatgpt/
 aliases:
-- /ja/glossary/ChatGPT/
+- /glossary/ChatGPT/
 term: チャットジーピーティー
 ---
 

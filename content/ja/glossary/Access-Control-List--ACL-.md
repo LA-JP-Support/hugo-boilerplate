@@ -16,7 +16,7 @@ draft: false
 e-title: Access Control List (ACL)
 url: /ja/glossary/access-control-list--acl-/
 aliases:
-- /ja/glossary/Access-Control-List--ACL-/
+- /glossary/Access-Control-List--ACL-/
 term: アクセスせいぎょリスト(エーシーエル)
 ---
 

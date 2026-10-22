@@ -16,7 +16,7 @@ draft: false
 e-title: Facebook
 url: /ja/glossary/facebook/
 aliases:
-- /ja/glossary/Facebook/
+- /glossary/Facebook/
 term: フェイスブック
 ---
 

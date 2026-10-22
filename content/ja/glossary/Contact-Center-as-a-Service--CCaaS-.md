@@ -16,7 +16,7 @@ draft: false
 e-title: Contact Center as a Service (CCaaS)
 url: /ja/glossary/contact-center-as-a-service--ccaas-/
 aliases:
-- /ja/glossary/Contact-Center-as-a-Service--CCaaS-/
+- /glossary/Contact-Center-as-a-Service--CCaaS-/
 term: シーシーエーエーエス
 ---
 

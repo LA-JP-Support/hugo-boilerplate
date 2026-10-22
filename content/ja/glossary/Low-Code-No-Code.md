@@ -16,7 +16,7 @@ draft: false
 e-title: Low-Code/No-Code
 url: /ja/glossary/low-code-no-code/
 aliases:
-- /ja/glossary/Low-Code-No-Code/
+- /glossary/Low-Code-No-Code/
 term: ろーこーど/のーこーど
 ---
 

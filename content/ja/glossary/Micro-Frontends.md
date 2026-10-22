@@ -16,7 +16,7 @@ draft: false
 e-title: Micro-Frontends
 url: /ja/glossary/micro-frontends/
 aliases:
-- /ja/glossary/Micro-Frontends/
+- /glossary/Micro-Frontends/
 term: まいくろふろんとえんど
 ---
 

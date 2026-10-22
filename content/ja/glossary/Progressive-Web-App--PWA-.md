@@ -17,7 +17,7 @@ e-title: Progressive Web App (PWA)
 term: プログレッシブウェブアプリ（ピーダブリューエー）
 url: "/ja/glossary/progressive-web-app--pwa-/"
 aliases:
-- "/ja/glossary/Progressive-Web-App--PWA-/"
+- "/glossary/Progressive-Web-App--PWA-/"
 ---
 
 ## プログレッシブウェブアプリ（PWA）とは？

@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Attribution
 url: /ja/glossary/knowledge-attribution/
 aliases:
-- /ja/glossary/Knowledge-Attribution/
+- /glossary/Knowledge-Attribution/
 term: なれっじあとりびゅーしょん
 ---
 

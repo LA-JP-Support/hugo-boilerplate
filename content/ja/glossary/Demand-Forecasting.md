@@ -16,7 +16,7 @@ draft: false
 e-title: Demand Forecasting
 url: "/ja/glossary/demand-forecasting/"
 aliases:
-- "/ja/glossary/Demand-Forecasting/"
+- "/glossary/Demand-Forecasting/"
 term: じゅようよそく
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Base Architecture
 url: /ja/glossary/knowledge-base-architecture/
 aliases:
-- /ja/glossary/Knowledge-Base-Architecture/
+- /glossary/Knowledge-Base-Architecture/
 term: なれっじべーすあーきてくちゃ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Personal Information Protection Law (China)
 url: /ja/glossary/personal-information-protection-law/
 aliases:
-- /ja/glossary/Personal-Information-Protection-Law/
+- /glossary/Personal-Information-Protection-Law/
 term: こじんじょうほうほごほう(ちゅうごく)
 ---
 

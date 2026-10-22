@@ -16,7 +16,7 @@ draft: false
 e-title: Embedding
 url: /ja/glossary/embedding/
 aliases:
-- /ja/glossary/Embedding/
+- /glossary/Embedding/
 term: えんべでぃんぐ
 ---
 

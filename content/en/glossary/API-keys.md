@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/api-keys/
 aliases:
-- /en/glossary/API-keys/
+- /glossary/API-keys/
 ---
 
 ## What are API Keys?

@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/aws/
 aliases:
-- /en/glossary/AWS/
+- /glossary/AWS/
 ---
 
 ## What is AWS?

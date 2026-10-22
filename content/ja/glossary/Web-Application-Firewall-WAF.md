@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/web-application-firewall-waf/
 aliases:
-  - /ja/glossary/Web-Application-Firewall-WAF/
+  - /glossary/Web-Application-Firewall-WAF/
 keywords:
   - WAF
   - ウェブ攻撃対策

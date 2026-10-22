@@ -16,7 +16,7 @@ draft: false
 e-title: Path Analysis
 url: /ja/glossary/path-analysis/
 aliases:
-- /ja/glossary/Path-Analysis/
+- /glossary/Path-Analysis/
 term: ぱすかいせき
 ---
 

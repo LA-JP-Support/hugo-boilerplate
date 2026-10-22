@@ -16,7 +16,7 @@ draft: false
 e-title: Splash Screen
 url: /ja/glossary/splash-screen/
 aliases:
-- /ja/glossary/Splash-Screen/
+- /glossary/Splash-Screen/
 term: すぷらっしゅすくりーん
 ---
 

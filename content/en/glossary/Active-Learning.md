@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/active-learning/
 aliases:
-  - /en/glossary/Active-Learning/
+  - /glossary/Active-Learning/
 ---
 
 ## What is Active Learning?

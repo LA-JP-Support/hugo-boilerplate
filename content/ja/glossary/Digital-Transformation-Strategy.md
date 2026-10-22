@@ -15,7 +15,7 @@ draft: false
 e-title: Digital Transformation Strategy
 url: /ja/glossary/digital-transformation-strategy/
 aliases:
-- /ja/glossary/Digital-Transformation-Strategy/
+- /glossary/Digital-Transformation-Strategy/
 term: でじたるとらんすふぉーめーしょんせんりゃく
 lastmod: 2026-04-02
 ---

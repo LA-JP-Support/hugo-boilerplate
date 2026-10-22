@@ -17,7 +17,7 @@ e-title: Deep Learning
 term: でぃーぷらーにんぐ
 url: /ja/glossary/deep-learning/
 aliases:
-- /ja/glossary/Deep-Learning/
+- /glossary/Deep-Learning/
 ---
 
 ## ディープラーニングとは？

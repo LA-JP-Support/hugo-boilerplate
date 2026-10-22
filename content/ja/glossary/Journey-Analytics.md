@@ -16,7 +16,7 @@ draft: false
 e-title: Journey Analytics
 url: /ja/glossary/journey-analytics/
 aliases:
-- /ja/glossary/Journey-Analytics/
+- /glossary/Journey-Analytics/
 term: じゃーにーあなりてぃくす
 ---
 

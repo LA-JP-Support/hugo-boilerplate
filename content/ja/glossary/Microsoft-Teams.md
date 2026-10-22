@@ -16,7 +16,7 @@ draft: false
 e-title: Microsoft Teams
 url: /ja/glossary/microsoft-teams/
 aliases:
-- /ja/glossary/Microsoft-Teams/
+- /glossary/Microsoft-Teams/
 term: マイクロソフト チームズ
 ---
 

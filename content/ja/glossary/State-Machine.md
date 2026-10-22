@@ -16,7 +16,7 @@ draft: false
 e-title: State Machine
 url: /ja/glossary/state-machine/
 aliases:
-- /ja/glossary/State-Machine/
+- /glossary/State-Machine/
 term: すてーとましん
 ---
 

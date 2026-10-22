@@ -16,7 +16,7 @@ draft: false
 e-title: Social Media Metrics
 url: /ja/glossary/social-media-metrics/
 aliases:
-- /ja/glossary/Social-Media-Metrics/
+- /glossary/Social-Media-Metrics/
 term: そーしゃるめでぃあしひょう
 ---
 

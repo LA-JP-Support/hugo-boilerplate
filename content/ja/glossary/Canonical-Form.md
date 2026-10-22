@@ -16,7 +16,7 @@ draft: false
 e-title: Canonical Form
 url: /ja/glossary/canonical-form/
 aliases:
-- /ja/glossary/Canonical-Form/
+- /glossary/Canonical-Form/
 term: せいきけい
 ---
 

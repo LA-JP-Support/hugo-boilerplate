@@ -16,7 +16,7 @@ draft: false
 e-title: Browser Caching
 url: /ja/glossary/browser-caching/
 aliases:
-- /ja/glossary/Browser-Caching/
+- /glossary/Browser-Caching/
 term: ぶらうざきゃっしんぐ
 ---
 

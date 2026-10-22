@@ -16,7 +16,7 @@ draft: false
 e-title: Search Relevance
 url: /ja/glossary/search-relevance/
 aliases:
-- /ja/glossary/Search-Relevance/
+- /glossary/Search-Relevance/
 term: けんさくかんれんせい
 ---
 

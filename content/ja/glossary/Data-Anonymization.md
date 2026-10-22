@@ -16,7 +16,7 @@ draft: false
 e-title: Data Anonymization
 url: /ja/glossary/data-anonymization/
 aliases:
-- /ja/glossary/Data-Anonymization/
+- /glossary/Data-Anonymization/
 term: データとくめいか
 ---
 

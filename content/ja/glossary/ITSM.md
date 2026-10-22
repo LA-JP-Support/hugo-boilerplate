@@ -17,7 +17,7 @@ e-title: ITSM (IT Service Management)
 term: アイティーエスエム
 url: "/ja/glossary/itsm/"
 aliases:
-- "/ja/glossary/ITSM/"
+- "/glossary/ITSM/"
 ---
 
 ## ITSM（ITサービスマネジメント）とは?

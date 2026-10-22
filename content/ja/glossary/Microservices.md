@@ -16,7 +16,7 @@ draft: false
 e-title: Microservices Architecture
 url: /ja/glossary/microservices/
 aliases:
-- /ja/glossary/Microservices/
+- /glossary/Microservices/
 term: まいくろさーびすあーきてくちゃ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Edge Function
 url: /ja/glossary/edge-function/
 aliases:
-- /ja/glossary/Edge-Function/
+- /glossary/Edge-Function/
 term: えっじふぁんくしょん
 ---
 

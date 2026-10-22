@@ -16,7 +16,7 @@ draft: false
 e-title: Call Barging
 url: /ja/glossary/call-barging/
 aliases:
-- /ja/glossary/Call-Barging/
+- /glossary/Call-Barging/
 term: こーるばーじんぐ
 ---
 

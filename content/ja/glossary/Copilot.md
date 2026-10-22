@@ -16,7 +16,7 @@ draft: false
 e-title: Copilot
 url: /ja/glossary/copilot/
 aliases:
-- /ja/glossary/Copilot/
+- /glossary/Copilot/
 term: こーぱいろっと
 ---
 

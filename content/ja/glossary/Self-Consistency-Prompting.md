@@ -16,7 +16,7 @@ draft: false
 e-title: Self-Consistency Prompting
 url: /ja/glossary/self-consistency-prompting/
 aliases:
-- /ja/glossary/Self-Consistency-Prompting/
+- /glossary/Self-Consistency-Prompting/
 term: せるふこんしすてんしーぷろんぷてぃんぐ
 ---
 

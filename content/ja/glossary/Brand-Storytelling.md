@@ -16,7 +16,7 @@ draft: false
 e-title: Brand Storytelling
 url: /ja/glossary/brand-storytelling/
 aliases:
-- /ja/glossary/Brand-Storytelling/
+- /glossary/Brand-Storytelling/
 term: ぶらんどすとーりーてりんぐ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Call to Action (CTA)
 url: /ja/glossary/call-to-action--cta-/
 aliases:
-- /ja/glossary/Call-to-Action--CTA-/
+- /glossary/Call-to-Action--CTA-/
 term: こーる・とぅ・あくしょん（しーてぃーえー）
 ---
 

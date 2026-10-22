@@ -16,7 +16,7 @@ draft: false
 e-title: Training Effectiveness
 url: /ja/glossary/training-effectiveness/
 aliases:
-- /ja/glossary/Training-Effectiveness/
+- /glossary/Training-Effectiveness/
 term: トレーニングこうかそくてい
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Tongyi-Qianwen
 url: /ja/glossary/tongyi-qianwen/
 aliases:
-- /ja/glossary/Tongyi-Qianwen/
+- /glossary/Tongyi-Qianwen/
 term: トンイー・チェンウェン
 ---
 

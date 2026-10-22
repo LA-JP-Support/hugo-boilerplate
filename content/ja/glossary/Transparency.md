@@ -16,7 +16,7 @@ draft: false
 e-title: Transparency (AI Transparency)
 url: /ja/glossary/transparency/
 aliases:
-- /ja/glossary/Transparency/
+- /glossary/Transparency/
 term: とうめいせい(エーアイとうめいせい)
 ---
 

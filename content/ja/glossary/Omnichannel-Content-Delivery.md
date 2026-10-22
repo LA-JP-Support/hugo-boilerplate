@@ -16,7 +16,7 @@ draft: false
 e-title: Omnichannel Content Delivery
 url: /ja/glossary/omnichannel-content-delivery/
 aliases:
-- /ja/glossary/Omnichannel-Content-Delivery/
+- /glossary/Omnichannel-Content-Delivery/
 term: オムニチャネルコンテンツはいしん
 ---
 

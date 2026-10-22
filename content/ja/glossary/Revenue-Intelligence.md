@@ -16,7 +16,7 @@ draft: false
 e-title: Revenue Intelligence
 url: /ja/glossary/revenue-intelligence/
 aliases:
-- /ja/glossary/Revenue-Intelligence/
+- /glossary/Revenue-Intelligence/
 term: レベニューインテリジェンス
 ---
 

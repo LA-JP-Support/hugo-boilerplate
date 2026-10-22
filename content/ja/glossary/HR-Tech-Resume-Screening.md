@@ -17,7 +17,7 @@ draft: false
 e-title: HR Tech Resume Screening
 url: "/ja/glossary/hr-tech-resume-screening/"
 aliases:
-- "/ja/glossary/HR-Tech-Resume-Screening/"
+- "/glossary/HR-Tech-Resume-Screening/"
 term: りれきしょ すくりーにんぐ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Friction
 url: /ja/glossary/customer-friction/
 aliases:
-- /ja/glossary/Customer-Friction/
+- /glossary/Customer-Friction/
 term: カスタマーフリクション
 ---
 

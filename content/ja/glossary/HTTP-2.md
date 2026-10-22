@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/HTTP-2/
 aliases:
-  - /ja/glossary/http-2/
+  - /glossary/http-2/
 keywords:
   - HTTP/2
   - ウェブパフォーマンス

@@ -16,7 +16,7 @@ draft: false
 e-title: Webchat Widget
 url: /ja/glossary/webchat-widget/
 aliases:
-- /ja/glossary/Webchat-Widget/
+- /glossary/Webchat-Widget/
 term: ウェブチャットウィジェット
 ---
 

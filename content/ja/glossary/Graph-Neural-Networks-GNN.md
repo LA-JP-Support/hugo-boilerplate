@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Graph-Neural-Networks-GNN/
 aliases:
-  - /ja/glossary/graph-neural-networks-gnn/
+  - /glossary/graph-neural-networks-gnn/
 keywords:
   - グラフ学習
   - ニューラルネットワーク

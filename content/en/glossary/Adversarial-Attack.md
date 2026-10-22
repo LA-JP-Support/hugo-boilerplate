@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/adversarial-attack/
 aliases:
-  - /en/glossary/Adversarial-Attack/
+  - /glossary/Adversarial-Attack/
 ---
 
 ## What is Adversarial Attack?

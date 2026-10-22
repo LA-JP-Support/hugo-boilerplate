@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/adaptive-cards/
 aliases:
-  - /en/glossary/Adaptive-Cards/
+  - /glossary/Adaptive-Cards/
 ---
 
 ## What is Adaptive Cards?

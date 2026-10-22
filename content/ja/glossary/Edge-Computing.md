@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Edge-Computing/
 aliases:
-  - /ja/glossary/edge-computing/
+  - /glossary/edge-computing/
 keywords:
   - エッジ処理
   - リアルタイム処理

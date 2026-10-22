@@ -16,7 +16,7 @@ draft: false
 e-title: Employee Engagement Platform
 url: /ja/glossary/employee-engagement-platform/
 aliases:
-- /ja/glossary/Employee-Engagement-Platform/
+- /glossary/Employee-Engagement-Platform/
 term: じゅうぎょういんえんげーじめんとぷらっとふぉーむ
 ---
 

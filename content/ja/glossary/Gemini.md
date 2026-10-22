@@ -16,7 +16,7 @@ draft: false
 e-title: Gemini
 url: /ja/glossary/gemini/
 aliases:
-- /ja/glossary/Gemini/
+- /glossary/Gemini/
 term: ジェミニ
 ---
 

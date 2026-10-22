@@ -15,7 +15,7 @@ draft: false
 e-title: Image Optimization
 url: /ja/glossary/image-optimization/
 aliases:
-- /ja/glossary/Image-Optimization/
+- /glossary/Image-Optimization/
 term: がぞうさいてきか
 lastmod: 2026-04-02
 ---

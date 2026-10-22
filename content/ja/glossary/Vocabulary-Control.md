@@ -16,7 +16,7 @@ draft: false
 e-title: Vocabulary Control
 url: /ja/glossary/vocabulary-control/
 aliases:
-- /ja/glossary/Vocabulary-Control/
+- /glossary/Vocabulary-Control/
 term: ごいとうせい
 ---
 

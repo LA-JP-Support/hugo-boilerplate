@@ -16,7 +16,7 @@ draft: false
 e-title: Loss Function
 url: /ja/glossary/loss-function/
 aliases:
-- /ja/glossary/Loss-Function/
+- /glossary/Loss-Function/
 term: そんしつかんすう
 ---
 

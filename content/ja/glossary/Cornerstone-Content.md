@@ -16,7 +16,7 @@ draft: false
 e-title: Cornerstone Content
 url: /ja/glossary/cornerstone-content/
 aliases:
-- /ja/glossary/Cornerstone-Content/
+- /glossary/Cornerstone-Content/
 term: こーなーすとーんこんてんつ
 ---
 

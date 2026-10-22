@@ -16,7 +16,7 @@ draft: false
 e-title: Stability AI
 url: /ja/glossary/stability-ai/
 aliases:
-- /ja/glossary/Stability-AI/
+- /glossary/Stability-AI/
 term: スタビリティ・エーアイ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Gartner
 url: /ja/glossary/gartner/
 aliases:
-- /ja/glossary/Gartner/
+- /glossary/Gartner/
 term: ガートナー
 ---
 

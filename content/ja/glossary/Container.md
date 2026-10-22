@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Container/
 aliases:
-  - /ja/glossary/container/
+  - /glossary/container/
 keywords:
   - コンテナ
   - Docker

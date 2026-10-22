@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Base Software
 url: "/ja/glossary/knowledge-base-software/"
 aliases:
-- "/ja/glossary/Knowledge-Base-Software/"
+- "/glossary/Knowledge-Base-Software/"
 term: ナレッジベースソフトウェア
 ---
 

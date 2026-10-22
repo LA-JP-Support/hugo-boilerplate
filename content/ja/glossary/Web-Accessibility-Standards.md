@@ -16,7 +16,7 @@ draft: false
 e-title: Web Accessibility Standards
 url: /ja/glossary/web-accessibility-standards/
 aliases:
-- /ja/glossary/Web-Accessibility-Standards/
+- /glossary/Web-Accessibility-Standards/
 term: ウェブアクセシビリティひょうじゅん
 ---
 

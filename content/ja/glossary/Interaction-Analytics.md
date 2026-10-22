@@ -16,7 +16,7 @@ draft: false
 e-title: Interaction Analytics
 url: /ja/glossary/interaction-analytics/
 aliases:
-- /ja/glossary/Interaction-Analytics/
+- /glossary/Interaction-Analytics/
 term: インタラクション分析
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Goal Tracking
 url: /ja/glossary/goal-tracking/
 aliases:
-- /ja/glossary/Goal-Tracking/
+- /glossary/Goal-Tracking/
 term: ごーるとらっきんぐ
 ---
 

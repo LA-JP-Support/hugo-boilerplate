@@ -15,7 +15,7 @@ draft: false
 e-title: LiveAgent
 url: "/ja/glossary/liveagent/"
 aliases:
-- "/ja/glossary/LiveAgent/"
+- "/glossary/LiveAgent/"
 term: ライブエージェント
 lastmod: 2026-04-02
 ---

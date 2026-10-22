@@ -16,7 +16,7 @@ draft: false
 e-title: Lead Management
 url: "/ja/glossary/Lead-Management/"
 aliases:
-- "/ja/glossary/lead-management/"
+- "/glossary/lead-management/"
 term: りーどかんり
 ---
 

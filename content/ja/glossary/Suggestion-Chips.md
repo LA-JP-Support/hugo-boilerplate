@@ -17,7 +17,7 @@ e-title: Suggestion Chips
 term: サジェスチョンチップ
 url: "/ja/glossary/suggestion-chips/"
 aliases:
-- "/ja/glossary/Suggestion-Chips/"
+- "/glossary/Suggestion-Chips/"
 ---
 
 ## サジェスチョンチップとは？

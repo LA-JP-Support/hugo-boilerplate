@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/conversational-search/
 aliases:
-  - /ja/glossary/Conversational-Query/
+  - /glossary/Conversational-Query/
 keywords:
   - 会話型検索
   - 自然言語

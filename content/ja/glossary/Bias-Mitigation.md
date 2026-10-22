@@ -16,7 +16,7 @@ draft: false
 e-title: Bias Mitigation
 url: /ja/glossary/bias-mitigation/
 aliases:
-- /ja/glossary/Bias-Mitigation/
+- /glossary/Bias-Mitigation/
 term: ばいあすかんわ
 ---
 

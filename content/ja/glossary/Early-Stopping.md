@@ -16,7 +16,7 @@ draft: false
 e-title: Early Stopping
 url: /ja/glossary/early-stopping/
 aliases:
-- /ja/glossary/Early-Stopping/
+- /glossary/Early-Stopping/
 term: そうきていし
 ---
 

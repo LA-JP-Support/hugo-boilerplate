@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Usability-Testing/
 aliases:
-  - /ja/glossary/usability-test/
+  - /glossary/usability-test/
 keywords:
   - ユーザーテスト
   - 検証方法

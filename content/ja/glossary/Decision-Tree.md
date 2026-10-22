@@ -16,7 +16,7 @@ draft: false
 e-title: Decision Tree
 url: /ja/glossary/decision-tree/
 aliases:
-- /ja/glossary/Decision-Tree/
+- /glossary/Decision-Tree/
 term: けっていき
 ---
 

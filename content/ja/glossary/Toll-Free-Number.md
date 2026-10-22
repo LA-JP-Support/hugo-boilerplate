@@ -16,7 +16,7 @@ draft: false
 e-title: Toll-Free Number
 url: /ja/glossary/toll-free-number/
 aliases:
-- /ja/glossary/Toll-Free-Number/
+- /glossary/Toll-Free-Number/
 term: ふりーだいやる
 ---
 

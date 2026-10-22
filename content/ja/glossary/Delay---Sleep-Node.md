@@ -16,7 +16,7 @@ draft: false
 e-title: Delay / Sleep Node
 url: "/ja/glossary/delay-sleep-node/"
 aliases:
-- "/ja/glossary/Delay---Sleep-Node/"
+- "/glossary/Delay---Sleep-Node/"
 term: でぃれい・すりーぷのーど
 ---
 

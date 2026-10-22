@@ -16,7 +16,7 @@ draft: false
 e-title: Acceptance Criteria
 url: /ja/glossary/acceptance-criteria/
 aliases:
-- /ja/glossary/Acceptance-Criteria/
+- /glossary/Acceptance-Criteria/
 term: うけいれきじゅん
 ---
 

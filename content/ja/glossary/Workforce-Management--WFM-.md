@@ -16,7 +16,7 @@ draft: false
 e-title: Workforce Management (WFM)
 url: /ja/glossary/workforce-management--wfm-/
 aliases:
-- /ja/glossary/Workforce-Management--WFM-/
+- /glossary/Workforce-Management--WFM-/
 term: わーくふぉーすまねじめんと
 ---
 

@@ -17,7 +17,7 @@ e-title: Consistency Evaluation
 term: いっかんせいひょうか
 url: "/ja/glossary/consistency-evaluation/"
 aliases:
-- "/ja/glossary/Consistency-evaluation/"
+- "/glossary/Consistency-evaluation/"
 ---
 
 ## 一貫性評価とは?

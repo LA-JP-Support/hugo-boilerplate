@@ -16,7 +16,7 @@ draft: false
 e-title: Operational Efficiency
 url: /ja/glossary/operational-efficiency/
 aliases:
-- /ja/glossary/Operational-Efficiency/
+- /glossary/Operational-Efficiency/
 term: ぎょうむこうりつ
 ---
 

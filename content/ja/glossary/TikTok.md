@@ -16,7 +16,7 @@ draft: false
 e-title: TikTok
 url: /ja/glossary/tiktok/
 aliases:
-- /ja/glossary/TikTok/
+- /glossary/TikTok/
 term: ティックトック
 ---
 

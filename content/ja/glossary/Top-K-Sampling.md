@@ -16,7 +16,7 @@ draft: false
 e-title: Top-K Sampling
 url: /ja/glossary/top-k-sampling/
 aliases:
-- /ja/glossary/Top-K-Sampling/
+- /glossary/Top-K-Sampling/
 term: トップケーサンプリング
 ---
 

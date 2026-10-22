@@ -16,7 +16,7 @@ draft: false
 e-title: Error Handler / Try-Catch
 url: "/ja/glossary/error-handler---try-catch/"
 aliases:
-- "/ja/glossary/Error-Handler---Try-Catch/"
+- "/glossary/Error-Handler---Try-Catch/"
 term: えらーはんどらー とらいきゃっち
 ---
 

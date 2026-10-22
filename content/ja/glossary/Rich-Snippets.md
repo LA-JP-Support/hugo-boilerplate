@@ -16,7 +16,7 @@ draft: false
 e-title: Rich Snippets
 url: /ja/glossary/rich-snippets/
 aliases:
-- /ja/glossary/Rich-Snippets/
+- /glossary/Rich-Snippets/
 term: りっちすにぺっと
 ---
 

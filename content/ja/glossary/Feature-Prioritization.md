@@ -16,7 +16,7 @@ draft: false
 e-title: Feature Prioritization
 url: "/ja/glossary/feature-prioritization/"
 aliases:
-- "/ja/glossary/Feature-Prioritization/"
+- "/glossary/Feature-Prioritization/"
 term: きのうゆうせんじゅんいづけ
 ---
 

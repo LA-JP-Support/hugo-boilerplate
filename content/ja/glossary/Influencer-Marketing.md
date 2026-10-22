@@ -16,7 +16,7 @@ draft: false
 e-title: Influencer Marketing
 url: /ja/glossary/influencer-marketing/
 aliases:
-- /ja/glossary/Influencer-Marketing/
+- /glossary/Influencer-Marketing/
 term: いんふるえんさーまーけてぃんぐ
 ---
 

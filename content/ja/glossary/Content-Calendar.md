@@ -16,7 +16,7 @@ draft: false
 e-title: Content Calendar
 url: /ja/glossary/content-calendar/
 aliases:
-- /ja/glossary/Content-Calendar/
+- /glossary/Content-Calendar/
 term: こんてんつかれんだー
 ---
 

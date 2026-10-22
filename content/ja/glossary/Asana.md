@@ -16,7 +16,7 @@ draft: false
 e-title: Asana
 url: /ja/glossary/asana/
 aliases:
-- /ja/glossary/Asana/
+- /glossary/Asana/
 term: アサナ
 ---
 

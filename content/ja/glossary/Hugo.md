@@ -16,7 +16,7 @@ draft: false
 e-title: Hugo
 url: /ja/glossary/hugo/
 aliases:
-- /ja/glossary/Hugo/
+- /glossary/Hugo/
 term: ヒューゴ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Click Map
 url: /ja/glossary/click-map/
 aliases:
-- /ja/glossary/Click-Map/
+- /glossary/Click-Map/
 term: くりっくまっぷ
 ---
 

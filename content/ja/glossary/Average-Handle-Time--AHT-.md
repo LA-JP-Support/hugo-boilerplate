@@ -16,7 +16,7 @@ draft: false
 e-title: Average Handle Time (AHT)
 url: /ja/glossary/average-handle-time--aht-/
 aliases:
-- /ja/glossary/Average-Handle-Time--AHT-/
+- /glossary/Average-Handle-Time--AHT-/
 term: へいきんしょりじかん
 ---
 

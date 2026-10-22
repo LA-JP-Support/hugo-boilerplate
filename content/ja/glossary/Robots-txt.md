@@ -16,7 +16,7 @@ draft: false
 e-title: Robots.txt
 url: /ja/glossary/robots-txt/
 aliases:
-- /ja/glossary/Robots-txt/
+- /glossary/Robots-txt/
 term: ろぼっつ・てきすと
 ---
 

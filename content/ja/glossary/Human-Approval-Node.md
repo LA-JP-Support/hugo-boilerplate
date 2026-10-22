@@ -17,7 +17,7 @@ e-title: Human Approval Node
 term: ヒューマンしょうにんノード
 url: "/ja/glossary/human-approval-node/"
 aliases:
-- "/ja/glossary/Human-Approval-Node/"
+- "/glossary/Human-Approval-Node/"
 ---
 
 ## ヒューマン承認ノードとは?

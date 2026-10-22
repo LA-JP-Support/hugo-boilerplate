@@ -17,7 +17,7 @@ e-title: Logic Node / Conditional Branching
 term: ろじっくのーど / じょうけんぶんき
 url: "/ja/glossary/logic-node---conditional-branching/"
 aliases:
-- "/ja/glossary/Logic-Node---Conditional-Branching/"
+- "/glossary/Logic-Node---Conditional-Branching/"
 ---
 
 ## ロジックノードとは

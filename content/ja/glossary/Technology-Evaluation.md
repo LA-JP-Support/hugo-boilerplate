@@ -16,7 +16,7 @@ draft: false
 e-title: Technology Evaluation
 url: /ja/glossary/technology-evaluation/
 aliases:
-- /ja/glossary/Technology-Evaluation/
+- /glossary/Technology-Evaluation/
 term: てくのろじーひょうか
 ---
 

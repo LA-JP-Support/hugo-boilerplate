@@ -16,7 +16,7 @@ draft: false
 e-title: Sitemap
 url: "/ja/glossary/sitemap/"
 aliases:
-- "/ja/glossary/Sitemap/"
+- "/glossary/Sitemap/"
 term: さいとまっぷ
 ---
 

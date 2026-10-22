@@ -17,7 +17,7 @@ e-title: Reinforcement Learning
 term: きょうかがくしゅう
 url: /ja/glossary/reinforcement-learning/
 aliases:
-  - /ja/glossary/Reinforcement-Learning/
+  - /glossary/Reinforcement-Learning/
 ---
 
 ## 強化学習とは

@@ -16,7 +16,7 @@ draft: false
 e-title: Multichannel Attribution
 url: /ja/glossary/multichannel-attribution/
 aliases:
-- /ja/glossary/Multichannel-Attribution/
+- /glossary/Multichannel-Attribution/
 term: マルチチャネルアトリビューション
 ---
 

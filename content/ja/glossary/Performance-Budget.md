@@ -16,7 +16,7 @@ draft: false
 e-title: Performance Budget
 url: /ja/glossary/performance-budget/
 aliases:
-- /ja/glossary/Performance-Budget/
+- /glossary/Performance-Budget/
 term: ぱふぉーまんすばじぇっと
 ---
 

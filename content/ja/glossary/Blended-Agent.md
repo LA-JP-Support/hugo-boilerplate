@@ -16,7 +16,7 @@ draft: false
 e-title: Blended Agent
 url: /ja/glossary/blended-agent/
 aliases:
-- /ja/glossary/Blended-Agent/
+- /glossary/Blended-Agent/
 term: ぶれんでっどえーじぇんと
 ---
 

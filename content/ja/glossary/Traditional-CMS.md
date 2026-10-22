@@ -17,7 +17,7 @@ draft: false
 e-title: Traditional CMS
 url: /ja/glossary/traditional-cms/
 aliases:
-- /ja/glossary/Traditional-CMS/
+- /glossary/Traditional-CMS/
 term: じゅうらいがたシーエムエス
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Model Inversion
 url: /ja/glossary/Model-Inversion/
 aliases:
-- /ja/glossary/model-inversion/
+- /glossary/model-inversion/
 term: もでるはんてんこうげき
 ---
 

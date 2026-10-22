@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Loyalty Scores
 url: /ja/glossary/customer-loyalty-scores/
 aliases:
-- /ja/glossary/Customer-Loyalty-Scores/
+- /glossary/Customer-Loyalty-Scores/
 term: こきゃくろいやるてぃすこあ
 ---
 

@@ -15,7 +15,7 @@ draft: false
 e-title: In-Context Learning
 url: /ja/glossary/in-context-learning/
 aliases:
-- /ja/glossary/In-Context-Learning/
+- /glossary/In-Context-Learning/
 lastmod: 2026-04-02
 term: ぶんみゃくないがくしゅう
 ---

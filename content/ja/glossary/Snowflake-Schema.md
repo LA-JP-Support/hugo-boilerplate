@@ -16,7 +16,7 @@ draft: false
 e-title: Snowflake Schema
 url: "/ja/glossary/snowflake-schema/"
 aliases:
-- "/ja/glossary/Snowflake-Schema/"
+- "/glossary/Snowflake-Schema/"
 term: すのーふれーくすきーま
 ---
 

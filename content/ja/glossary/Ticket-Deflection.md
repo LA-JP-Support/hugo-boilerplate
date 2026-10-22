@@ -16,7 +16,7 @@ draft: false
 e-title: Ticket Deflection
 url: /ja/glossary/ticket-deflection/
 aliases:
-- /ja/glossary/Ticket-Deflection/
+- /glossary/Ticket-Deflection/
 term: ちけっとでふれくしょん
 ---
 

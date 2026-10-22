@@ -16,7 +16,7 @@ draft: false
 e-title: Employee Portal
 url: /ja/glossary/employee-portal/
 aliases:
-- /ja/glossary/Employee-Portal/
+- /glossary/Employee-Portal/
 term: じゅうぎょういんぽーたる
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Definition of Done
 url: "/ja/glossary/definition-of-done/"
 aliases:
-- "/ja/glossary/Definition-of-Done/"
+- "/glossary/Definition-of-Done/"
 term: かんせいのていぎ
 ---
 

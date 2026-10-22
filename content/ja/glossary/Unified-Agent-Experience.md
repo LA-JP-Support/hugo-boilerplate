@@ -16,7 +16,7 @@ draft: false
 e-title: Unified Agent Experience
 url: /ja/glossary/unified-agent-experience/
 aliases:
-- /ja/glossary/Unified-Agent-Experience/
+- /glossary/Unified-Agent-Experience/
 term: とうごうエージェントたいけん
 ---
 

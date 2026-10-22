@@ -16,7 +16,7 @@ draft: false
 e-title: Voicebot
 url: /ja/glossary/voicebot/
 aliases:
-- /ja/glossary/Voicebot/
+- /glossary/Voicebot/
 term: ぼいすぼっと
 ---
 

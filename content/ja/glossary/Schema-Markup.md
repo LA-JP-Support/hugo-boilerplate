@@ -16,7 +16,7 @@ draft: false
 e-title: Schema Markup
 url: /ja/glossary/schema-markup/
 aliases:
-- /ja/glossary/Schema-Markup/
+- /glossary/Schema-Markup/
 term: すきーままーくあっぷ
 ---
 

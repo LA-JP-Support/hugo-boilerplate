@@ -16,7 +16,7 @@ draft: false
 e-title: Funnel Visualization
 url: /ja/glossary/funnel-visualization/
 aliases:
-- /ja/glossary/Funnel-Visualization/
+- /glossary/Funnel-Visualization/
 term: ふぁねるびじゅあらいぜーしょん
 ---
 

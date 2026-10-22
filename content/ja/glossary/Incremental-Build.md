@@ -15,7 +15,7 @@ draft: false
 e-title: Incremental Build
 url: /ja/glossary/incremental-build/
 aliases:
-- /ja/glossary/Incremental-Build/
+- /glossary/Incremental-Build/
 lastmod: 2026-04-02
 term: いんくりめんたるびるど
 ---

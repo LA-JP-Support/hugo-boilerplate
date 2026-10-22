@@ -16,7 +16,7 @@ draft: false
 e-title: CAG (Cache-Augmented Generation)
 url: /ja/glossary/cag/
 aliases:
-- /ja/glossary/CAG/
+- /glossary/CAG/
 term: キャグ（キャッシュかくちょうせいせい）
 ---
 

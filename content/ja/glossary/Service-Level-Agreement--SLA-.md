@@ -16,7 +16,7 @@ draft: false
 e-title: Service Level Agreement (SLA)
 url: /ja/glossary/service-level-agreement--sla-/
 aliases:
-- /ja/glossary/Service-Level-Agreement--SLA-/
+- /glossary/Service-Level-Agreement--SLA-/
 term: さーびすれべるけいやく(えすえるえー)
 ---
 

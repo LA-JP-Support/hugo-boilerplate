@@ -16,7 +16,7 @@ draft: false
 e-title: Speech-to-Text Node
 url: /ja/glossary/speech-to-text-node/
 aliases:
-- /ja/glossary/Speech-to-Text-Node/
+- /glossary/Speech-to-Text-Node/
 term: すぴーちとぅーてきすとのーど
 ---
 

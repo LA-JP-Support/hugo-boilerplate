@@ -16,7 +16,7 @@ draft: false
 e-title: Agile Development
 url: /ja/glossary/agile-development/
 aliases:
-- /ja/glossary/Agile-Development/
+- /glossary/Agile-Development/
 term: あじゃいるかいはつ
 ---
 

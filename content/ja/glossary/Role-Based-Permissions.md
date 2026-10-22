@@ -16,7 +16,7 @@ draft: false
 e-title: Role-Based Permissions
 url: /ja/glossary/role-based-permissions/
 aliases:
-- /ja/glossary/Role-Based-Permissions/
+- /glossary/Role-Based-Permissions/
 term: ろーるべーすけんげん
 ---
 

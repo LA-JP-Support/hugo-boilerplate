@@ -16,7 +16,7 @@ draft: false
 e-title: Pre-Built Connector
 url: /ja/glossary/pre-built-connector/
 aliases:
-- /ja/glossary/Pre-Built-Connector/
+- /glossary/Pre-Built-Connector/
 term: ぷれびるとこねくた
 ---
 

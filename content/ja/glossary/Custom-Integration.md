@@ -16,7 +16,7 @@ draft: false
 e-title: Custom Integration
 url: /ja/glossary/custom-integration/
 aliases:
-- /ja/glossary/Custom-Integration/
+- /glossary/Custom-Integration/
 term: かすたむいんてぐれーしょん
 ---
 

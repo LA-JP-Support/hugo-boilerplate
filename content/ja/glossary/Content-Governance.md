@@ -16,7 +16,7 @@ draft: false
 e-title: Content Governance
 url: /ja/glossary/content-governance/
 aliases:
-- /ja/glossary/Content-Governance/
+- /glossary/Content-Governance/
 term: こんてんつがばなんす
 ---
 

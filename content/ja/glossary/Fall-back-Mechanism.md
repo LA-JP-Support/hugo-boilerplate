@@ -17,7 +17,7 @@ e-title: Fall-back Mechanism (Fallback Mechanism)
 term: ふぉーるばっくきこう
 url: "/ja/glossary/fall-back-mechanism/"
 aliases:
-- "/ja/glossary/Fall-back-Mechanism/"
+- "/glossary/Fall-back-Mechanism/"
 ---
 
 ## フォールバック機構とは？

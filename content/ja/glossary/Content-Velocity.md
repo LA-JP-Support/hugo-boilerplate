@@ -16,7 +16,7 @@ draft: false
 e-title: Content Velocity
 url: /ja/glossary/content-velocity/
 aliases:
-- /ja/glossary/Content-Velocity/
+- /glossary/Content-Velocity/
 term: べろしてぃ
 ---
 

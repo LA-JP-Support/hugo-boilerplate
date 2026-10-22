@@ -17,7 +17,7 @@ e-title: Student Models
 term: すちゅーでんともでる
 url: /ja/glossary/student-models/
 aliases:
-  - /ja/glossary/Student-Models/
+  - /glossary/Student-Models/
 ---
 
 ## スチューデントモデルとは

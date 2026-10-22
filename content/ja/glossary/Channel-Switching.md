@@ -16,7 +16,7 @@ draft: false
 e-title: Channel Switching
 url: /ja/glossary/channel-switching/
 aliases:
-- /ja/glossary/Channel-Switching/
+- /glossary/Channel-Switching/
 term: ちゃねるすいっちんぐ
 ---
 

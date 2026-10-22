@@ -16,7 +16,7 @@ draft: false
 e-title: Intelligent Routing
 url: /ja/glossary/intelligent-routing/
 aliases:
-- /ja/glossary/Intelligent-Routing/
+- /glossary/Intelligent-Routing/
 term: インテリジェントルーティング
 ---
 

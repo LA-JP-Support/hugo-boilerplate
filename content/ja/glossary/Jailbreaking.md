@@ -17,7 +17,7 @@ e-title: Jailbreaking (AI Jailbreaking)
 term: じぇいるぶれいきんぐ
 url: "/ja/glossary/jailbreaking/"
 aliases:
-- "/ja/glossary/Jailbreaking/"
+- "/glossary/Jailbreaking/"
 ---
 
 ## AIジェイルブレイキングとは?

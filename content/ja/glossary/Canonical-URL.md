@@ -16,7 +16,7 @@ draft: false
 e-title: Canonical URL
 url: /ja/glossary/canonical-url/
 aliases:
-- /ja/glossary/Canonical-URL/
+- /glossary/Canonical-URL/
 term: かのにかるゆーあーるえる
 ---
 

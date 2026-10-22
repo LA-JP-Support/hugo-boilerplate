@@ -16,7 +16,7 @@ draft: false
 e-title: Subject Matter Expert (SME)
 url: /ja/glossary/subject-matter-expert--sme-/
 aliases:
-- /ja/glossary/Subject-Matter-Expert--SME-/
+- /glossary/Subject-Matter-Expert--SME-/
 term: サブジェクト・マター・エキスパート(エスエムイー)
 ---
 

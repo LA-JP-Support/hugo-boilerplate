@@ -16,7 +16,7 @@ draft: false
 e-title: Content Distribution Channels
 url: /ja/glossary/content-distribution-channels/
 aliases:
-- /ja/glossary/Content-Distribution-Channels/
+- /glossary/Content-Distribution-Channels/
 term: こんてんつはいしんちゃねる
 ---
 

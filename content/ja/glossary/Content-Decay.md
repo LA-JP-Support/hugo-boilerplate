@@ -16,7 +16,7 @@ draft: false
 e-title: Content Decay
 url: /ja/glossary/content-decay/
 aliases:
-- /ja/glossary/Content-Decay/
+- /glossary/Content-Decay/
 term: こんてんつげんすい
 ---
 

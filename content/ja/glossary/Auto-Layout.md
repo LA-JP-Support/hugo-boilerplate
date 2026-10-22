@@ -17,7 +17,7 @@ e-title: Auto-Layout
 term: オートレイアウト
 url: "/ja/glossary/auto-layout/"
 aliases:
-- "/ja/glossary/Auto-Layout/"
+- "/glossary/Auto-Layout/"
 ---
 
 ## オートレイアウトとは

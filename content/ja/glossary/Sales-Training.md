@@ -16,7 +16,7 @@ draft: false
 e-title: Sales Training
 url: /ja/glossary/sales-training/
 aliases:
-- /ja/glossary/Sales-Training/
+- /glossary/Sales-Training/
 term: せーるすとれーにんぐ
 ---
 

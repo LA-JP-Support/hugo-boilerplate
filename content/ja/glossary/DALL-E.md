@@ -16,7 +16,7 @@ draft: false
 e-title: DALL-E
 url: /ja/glossary/dall-e/
 aliases:
-- /ja/glossary/DALL-E/
+- /glossary/DALL-E/
 term: ダリー
 ---
 

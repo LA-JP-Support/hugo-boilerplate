@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Infographic/
 aliases:
-  - /ja/glossary/infographic/
+  - /glossary/infographic/
 keywords:
   - インフォグラフィック
   - データビジュアライゼーション

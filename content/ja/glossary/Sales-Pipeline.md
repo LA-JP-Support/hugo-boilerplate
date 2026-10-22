@@ -16,7 +16,7 @@ draft: false
 e-title: Sales Pipeline
 url: /ja/glossary/sales-pipeline/
 aliases:
-- /ja/glossary/Sales-Pipeline/
+- /glossary/Sales-Pipeline/
 term: せーるすぱいぷらいん
 ---
 

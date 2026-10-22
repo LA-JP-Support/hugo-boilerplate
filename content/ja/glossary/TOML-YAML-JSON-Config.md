@@ -16,7 +16,7 @@ draft: false
 e-title: TOML/YAML/JSON Config
 url: /ja/glossary/toml-yaml-json-config/
 aliases:
-- /ja/glossary/TOML-YAML-JSON-Config/
+- /glossary/TOML-YAML-JSON-Config/
 term: トムル/ヤムル/ジェイソンせってい
 ---
 

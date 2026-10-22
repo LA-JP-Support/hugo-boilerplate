@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/task-oriented-dialogue/
 aliases:
-  - /ja/glossary/Task-Oriented-Dialogue/
+  - /glossary/Task-Oriented-Dialogue/
 keywords:
   - タスク指向対話
   - 目標指向対話

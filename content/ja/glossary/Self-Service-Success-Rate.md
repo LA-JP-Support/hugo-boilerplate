@@ -17,7 +17,7 @@ e-title: Self-Service Success Rate
 term: せるふさーびすせいこうりつ
 url: "/ja/glossary/self-service-success-rate/"
 aliases:
-- "/ja/glossary/Self-Service-Success-Rate/"
+- "/glossary/Self-Service-Success-Rate/"
 ---
 
 ## セルフサービス成功率とは?

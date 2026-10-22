@@ -17,7 +17,7 @@ e-title: Cohort Analysis
 term: こほーとぶんせき
 url: "/ja/glossary/cohort-analysis/"
 aliases:
-- "/ja/glossary/Cohort-Analysis/"
+- "/glossary/Cohort-Analysis/"
 ---
 
 ## コホート分析とは?

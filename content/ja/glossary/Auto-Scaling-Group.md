@@ -17,7 +17,7 @@ e-title: Auto-Scaling Group
 term: オートスケーリンググループ
 url: "/ja/glossary/auto-scaling-group/"
 aliases:
-- "/ja/glossary/Auto-Scaling-Group/"
+- "/glossary/Auto-Scaling-Group/"
 ---
 
 ## オートスケーリンググループとは

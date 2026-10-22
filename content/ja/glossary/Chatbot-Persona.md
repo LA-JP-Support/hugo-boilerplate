@@ -16,7 +16,7 @@ draft: false
 e-title: Chatbot Persona
 url: /ja/glossary/chatbot-persona/
 aliases:
-- /ja/glossary/Chatbot-Persona/
+- /glossary/Chatbot-Persona/
 term: ちゃっとぼっとぺるそな
 ---
 

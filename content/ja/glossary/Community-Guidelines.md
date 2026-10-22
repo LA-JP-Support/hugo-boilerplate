@@ -16,7 +16,7 @@ draft: false
 e-title: Community Guidelines
 url: /ja/glossary/community-guidelines/
 aliases:
-- /ja/glossary/Community-Guidelines/
+- /glossary/Community-Guidelines/
 term: こみゅにてぃがいどらいん
 ---
 

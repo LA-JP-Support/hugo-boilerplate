@@ -16,7 +16,7 @@ draft: false
 e-title: Thought Leadership
 url: /ja/glossary/thought-leadership/
 aliases:
-- /ja/glossary/Thought-Leadership/
+- /glossary/Thought-Leadership/
 term: そーとりーだーしっぷ
 ---
 

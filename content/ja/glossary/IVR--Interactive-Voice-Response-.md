@@ -16,7 +16,7 @@ draft: false
 e-title: IVR (Interactive Voice Response)
 url: /ja/glossary/ivr--interactive-voice-response-/
 aliases:
-- /ja/glossary/IVR--Interactive-Voice-Response-/
+- /glossary/IVR--Interactive-Voice-Response-/
 term: アイブイアール
 ---
 

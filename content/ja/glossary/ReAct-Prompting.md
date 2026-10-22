@@ -16,7 +16,7 @@ draft: false
 e-title: ReAct Prompting
 url: /ja/glossary/react-prompting/
 aliases:
-- /ja/glossary/ReAct-Prompting/
+- /glossary/ReAct-Prompting/
 term: リアクトプロンプティング
 ---
 

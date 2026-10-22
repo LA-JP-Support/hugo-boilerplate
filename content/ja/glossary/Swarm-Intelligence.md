@@ -16,7 +16,7 @@ draft: false
 e-title: Swarm Intelligence
 url: /ja/glossary/swarm-intelligence/
 aliases:
-- /ja/glossary/Swarm-Intelligence/
+- /glossary/Swarm-Intelligence/
 term: スウォームインテリジェンス
 ---
 

@@ -17,7 +17,7 @@ e-title: Dify
 term: ディファイ
 url: "/ja/glossary/dify/"
 aliases:
-- "/ja/glossary/Dify/"
+- "/glossary/Dify/"
 ---
 
 ## Difyとは？

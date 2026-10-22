@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Journey Mapping
 url: /ja/glossary/customer-journey-mapping/
 aliases:
-- /ja/glossary/Customer-Journey-Mapping/
+- /glossary/Customer-Journey-Mapping/
 term: カスタマージャーニーマッピング
 ---
 

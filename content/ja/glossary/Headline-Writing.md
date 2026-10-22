@@ -17,7 +17,7 @@ e-title: Headline Writing
 term: みだしライティング
 url: "/ja/glossary/headline-writing/"
 aliases:
-- "/ja/glossary/Headline-Writing/"
+- "/glossary/Headline-Writing/"
 ---
 
 ## 見出しライティングとは？

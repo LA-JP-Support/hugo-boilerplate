@@ -17,7 +17,7 @@ e-title: Cognitive Load
 term: にんちふか
 url: "/ja/glossary/cognitive-load/"
 aliases:
-- "/ja/glossary/Cognitive-Load/"
+- "/glossary/Cognitive-Load/"
 ---
 
 <!-- ===== サクッとわかるゾーン（冒頭〜30行） ===== -->

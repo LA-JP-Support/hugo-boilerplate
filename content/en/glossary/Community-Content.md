@@ -14,7 +14,7 @@ type: glossary
 draft: false
 url: /en/glossary/community-content/
 aliases:
-  - /en/glossary/community-content/
+  - /glossary/community-content/
 ---
 
 ## What is Community Content?

@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Fog-Computing/
 aliases:
-  - /ja/glossary/fog-computing/
+  - /glossary/fog-computing/
 keywords:
   - 分散コンピューティング
   - エッジ処理

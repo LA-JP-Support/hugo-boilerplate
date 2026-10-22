@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/natural-language-generation-nlg/
 aliases:
-  - /ja/glossary/Natural-Language-Generation-NLG/
+  - /glossary/Natural-Language-Generation-NLG/
 keywords:
   - NLG
   - 自然言語生成

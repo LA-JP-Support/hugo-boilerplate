@@ -16,7 +16,7 @@ draft: false
 e-title: Information Architecture (IA)
 url: /ja/glossary/information-architecture--ia-/
 aliases:
-- /ja/glossary/Information-Architecture--IA-/
+- /glossary/Information-Architecture--IA-/
 term: じょうほうアーキテクチャ（アイエー）
 ---
 

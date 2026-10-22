@@ -16,7 +16,7 @@ draft: false
 e-title: SAML (Security Assertion Markup Language)
 url: /ja/glossary/saml--security-assertion-markup-language-/
 aliases:
-- /ja/glossary/SAML--Security-Assertion-Markup-Language-/
+- /glossary/SAML--Security-Assertion-Markup-Language-/
 term: さむる
 ---
 

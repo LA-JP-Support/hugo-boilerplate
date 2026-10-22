@@ -16,7 +16,7 @@ draft: false
 e-title: Cloud AI
 url: /ja/glossary/cloud-ai/
 aliases:
-- /ja/glossary/Cloud-AI/
+- /glossary/Cloud-AI/
 term: くらうどえーあい
 ---
 

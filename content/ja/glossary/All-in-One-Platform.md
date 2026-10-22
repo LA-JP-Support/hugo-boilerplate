@@ -16,7 +16,7 @@ draft: false
 e-title: All-in-One Platform
 url: /ja/glossary/all-in-one-platform/
 aliases:
-- /ja/glossary/All-in-One-Platform/
+- /glossary/All-in-One-Platform/
 term: オールインワンプラットフォーム
 ---
 

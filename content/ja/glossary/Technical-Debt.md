@@ -17,7 +17,7 @@ e-title: Technical Debt
 term: ぎじゅつてきふさい
 url: "/ja/glossary/technical-debt/"
 aliases:
-- "/ja/glossary/Technical-Debt/"
+- "/glossary/Technical-Debt/"
 ---
 
 ## 技術的負債とは?

@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/accessibility--web-/
 aliases:
-  - /en/glossary/Accessibility--Web-/
+  - /glossary/Accessibility--Web-/
 ---
 
 ## What is Accessibility (Web)?

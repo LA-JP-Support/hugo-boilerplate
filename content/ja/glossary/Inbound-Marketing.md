@@ -15,7 +15,7 @@ draft: false
 e-title: Inbound Marketing
 url: /ja/glossary/inbound-marketing/
 aliases:
-- /ja/glossary/Inbound-Marketing/
+- /glossary/Inbound-Marketing/
 lastmod: 2026-04-02
 term: いんばうんどまーけてぃんぐ
 ---

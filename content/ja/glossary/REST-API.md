@@ -16,7 +16,7 @@ draft: false
 e-title: REST API
 url: /ja/glossary/rest-api/
 aliases:
-- /ja/glossary/REST-API/
+- /glossary/REST-API/
 term: レストエーピーアイ
 ---
 

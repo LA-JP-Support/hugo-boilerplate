@@ -16,7 +16,7 @@ draft: false
 e-title: Scrum
 url: /ja/glossary/scrum/
 aliases:
-- /ja/glossary/Scrum/
+- /glossary/Scrum/
 term: すくらむ
 ---
 

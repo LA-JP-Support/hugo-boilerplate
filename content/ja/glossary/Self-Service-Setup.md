@@ -17,7 +17,7 @@ e-title: Self-Service Setup
 term: せるふさーびすせっとあっぷ
 url: "/ja/glossary/self-service-setup/"
 aliases:
-- "/ja/glossary/Self-Service-Setup/"
+- "/glossary/Self-Service-Setup/"
 ---
 
 ## セルフサービスセットアップとは?

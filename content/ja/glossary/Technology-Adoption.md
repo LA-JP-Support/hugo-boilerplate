@@ -16,7 +16,7 @@ draft: false
 e-title: Technology Adoption
 url: /ja/glossary/technology-adoption/
 aliases:
-- /ja/glossary/Technology-Adoption/
+- /glossary/Technology-Adoption/
 term: てくのろじーどうにゅう
 ---
 

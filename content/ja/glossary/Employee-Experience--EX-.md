@@ -16,7 +16,7 @@ draft: false
 e-title: Employee Experience (EX)
 url: /ja/glossary/employee-experience--ex-/
 aliases:
-- /ja/glossary/Employee-Experience--EX-/
+- /glossary/Employee-Experience--EX-/
 term: じゅうぎょういんたいけん(いーえっくす)
 ---
 

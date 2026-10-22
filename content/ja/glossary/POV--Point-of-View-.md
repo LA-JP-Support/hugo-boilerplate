@@ -17,7 +17,7 @@ e-title: POV (Point of View)
 term: ぽいんとおぶびゅー
 url: "/ja/glossary/pov--point-of-view-/"
 aliases:
-- "/ja/glossary/POV--Point-of-View-/"
+- "/glossary/POV--Point-of-View-/"
 ---
 
 ## POV(視点)とは？

@@ -17,7 +17,7 @@ e-title: Data Encryption
 term: データあんごうか
 url: /ja/glossary/data-encryption/
 aliases:
-- /ja/glossary/Data-Encryption/
+- /glossary/Data-Encryption/
 ---
 
 ## データ暗号化とは？

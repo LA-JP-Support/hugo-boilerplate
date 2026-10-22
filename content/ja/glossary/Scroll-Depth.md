@@ -16,7 +16,7 @@ draft: false
 e-title: Scroll Depth
 url: /ja/glossary/scroll-depth/
 aliases:
-- /ja/glossary/Scroll-Depth/
+- /glossary/Scroll-Depth/
 term: すくろーるしんど
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Vendor Comparison
 url: /ja/glossary/vendor-comparison/
 aliases:
-- /ja/glossary/Vendor-Comparison/
+- /glossary/Vendor-Comparison/
 term: べんだーひかく
 ---
 

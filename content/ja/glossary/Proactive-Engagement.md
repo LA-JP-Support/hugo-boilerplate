@@ -16,7 +16,7 @@ draft: false
 e-title: Proactive Engagement
 url: /ja/glossary/proactive-engagement/
 aliases:
-- /ja/glossary/Proactive-Engagement/
+- /glossary/Proactive-Engagement/
 term: ぷろあくてぃぶ・えんげーじめんと
 ---
 

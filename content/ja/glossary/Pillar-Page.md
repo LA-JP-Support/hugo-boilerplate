@@ -16,7 +16,7 @@ draft: false
 e-title: Pillar Page
 url: /ja/glossary/pillar-page/
 aliases:
-- /ja/glossary/Pillar-Page/
+- /glossary/Pillar-Page/
 term: ぴらーぺーじ
 ---
 

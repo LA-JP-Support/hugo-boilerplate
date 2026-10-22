@@ -16,7 +16,7 @@ draft: false
 e-title: Endpoint Security
 url: /ja/glossary/endpoint-security/
 aliases:
-- /ja/glossary/Endpoint-Security/
+- /glossary/Endpoint-Security/
 term: えんどぽいんとせきゅりてぃ
 ---
 

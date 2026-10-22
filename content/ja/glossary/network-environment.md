@@ -17,7 +17,7 @@ e-title: Network Environment
 term: ねっとわーくかんきょう
 url: "/ja/glossary/network-environment/"
 aliases:
-- "/ja/glossary/Network-Environment/"
+- "/glossary/Network-Environment/"
 ---
 
 ## ネットワーク環境とは?

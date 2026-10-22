@@ -16,7 +16,7 @@ draft: false
 e-title: Content Curation
 url: /ja/glossary/content-curation/
 aliases:
-- /ja/glossary/Content-Curation/
+- /glossary/Content-Curation/
 term: こんてんつきゅれーしょん
 ---
 

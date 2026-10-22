@@ -16,7 +16,7 @@ draft: false
 e-title: Social Proof
 url: /ja/glossary/social-proof/
 aliases:
-- /ja/glossary/Social-Proof/
+- /glossary/Social-Proof/
 term: そーしゃるぷるーふ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Agent Schedule Adherence
 url: /ja/glossary/agent-schedule-adherence/
 aliases:
-- /ja/glossary/Agent-Schedule-Adherence/
+- /glossary/Agent-Schedule-Adherence/
 term: えーじぇんとすけじゅーるじゅんしゅりつ
 ---
 

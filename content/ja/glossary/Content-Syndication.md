@@ -16,7 +16,7 @@ draft: false
 e-title: Content Syndication
 url: /ja/glossary/content-syndication/
 aliases:
-- /ja/glossary/Content-Syndication/
+- /glossary/Content-Syndication/
 term: こんてんつはいしん
 ---
 

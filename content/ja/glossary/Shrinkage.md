@@ -16,7 +16,7 @@ draft: false
 e-title: Shrinkage
 url: /ja/glossary/shrinkage/
 aliases:
-- /ja/glossary/Shrinkage/
+- /glossary/Shrinkage/
 term: しゅりんけーじ
 ---
 

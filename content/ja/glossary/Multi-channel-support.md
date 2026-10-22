@@ -17,7 +17,7 @@ e-title: Multi-channel Support
 term: まるちちゃねるさぽーと
 url: "/ja/glossary/multi-channel-support/"
 aliases:
-- "/ja/glossary/Multi-channel-support/"
+- "/glossary/Multi-channel-support/"
 ---
 
 ## マルチチャネルサポートとは

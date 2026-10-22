@@ -17,7 +17,7 @@ e-title: Precision
 term: てきごうりつ（プレシジョン）
 url: "/ja/glossary/precision/"
 aliases:
-- "/ja/glossary/Precision/"
+- "/glossary/Precision/"
 ---
 
 ## 適合率とは？

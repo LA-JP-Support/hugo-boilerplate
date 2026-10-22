@@ -17,7 +17,7 @@ e-title: Multi-Tenancy
 term: マルチテナンシー
 url: "/ja/glossary/multi-tenancy/"
 aliases:
-- "/ja/glossary/Multi-Tenancy/"
+- "/glossary/Multi-Tenancy/"
 ---
 
 ## マルチテナンシーとは

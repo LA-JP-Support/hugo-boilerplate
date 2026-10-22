@@ -16,7 +16,7 @@ draft: false
 e-title: Zoom
 url: /ja/glossary/zoom/
 aliases:
-- /ja/glossary/Zoom/
+- /glossary/Zoom/
 term: ズーム
 ---
 

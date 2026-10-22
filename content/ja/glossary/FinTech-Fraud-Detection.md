@@ -17,7 +17,7 @@ e-title: FinTech Fraud Detection
 term: ふぃんてっくふろーどでぃてくしょん
 url: "/ja/glossary/fintech-fraud-detection/"
 aliases:
-- "/ja/glossary/FinTech-Fraud-Detection/"
+- "/glossary/FinTech-Fraud-Detection/"
 ---
 
 ## FinTech不正検知とは？

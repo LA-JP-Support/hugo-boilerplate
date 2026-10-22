@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Angular/
 aliases:
-  - /ja/glossary/angular/
+  - /glossary/angular/
 keywords:
   - JavaScript
   - フロントエンド

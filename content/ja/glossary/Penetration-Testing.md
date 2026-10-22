@@ -16,7 +16,7 @@ draft: false
 e-title: Penetration Testing
 url: /ja/glossary/penetration-testing/
 aliases:
-- /ja/glossary/Penetration-Testing/
+- /glossary/Penetration-Testing/
 term: ぺねとれーしょんてすと
 ---
 

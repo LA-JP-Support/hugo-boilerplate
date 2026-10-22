@@ -17,7 +17,7 @@ e-title: Authentication
 term: にんしょう
 url: "/ja/glossary/authentication/"
 aliases:
-- "/ja/glossary/Authentication/"
+- "/glossary/Authentication/"
 ---
 
 ## 認証とは

@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Constitutional-AI/
 aliases:
-  - /ja/glossary/constitutional-ai/
+  - /glossary/constitutional-ai/
 keywords:
   - Constitutional AI
   - AI安全性

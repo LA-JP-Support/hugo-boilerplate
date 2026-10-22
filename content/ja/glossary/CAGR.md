@@ -16,7 +16,7 @@ draft: false
 e-title: CAGR (Compound Annual Growth Rate)
 url: /ja/glossary/cagr/
 aliases:
-- /ja/glossary/CAGR/
+- /glossary/CAGR/
 term: シーエージーアールねんへいきんせいちょうりつ
 ---
 

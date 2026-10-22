@@ -16,7 +16,7 @@ draft: false
 e-title: CloudFront
 url: /ja/glossary/cloudfront/
 aliases:
-- /ja/glossary/CloudFront/
+- /glossary/CloudFront/
 term: クラウドフロント
 ---
 

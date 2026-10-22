@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/api-gateway/
 aliases:
-- /en/glossary/API-Gateway/
+- /glossary/API-Gateway/
 ---
 
 ## What is an API Gateway?

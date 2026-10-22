@@ -17,7 +17,7 @@ e-title: Precision and Recall
 term: てきごうりつとさいげんりつ
 url: "/ja/glossary/precision-and-recall/"
 aliases:
-- "/ja/glossary/Precision-and-Recall/"
+- "/glossary/Precision-and-Recall/"
 ---
 
 ## 適合率と再現率とは？

@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Transformer-Architecture/
 aliases:
-  - /ja/glossary/transformer-architecture/
+  - /glossary/transformer-architecture/
 keywords:
   - アーキテクチャ
   - 自己注意機構

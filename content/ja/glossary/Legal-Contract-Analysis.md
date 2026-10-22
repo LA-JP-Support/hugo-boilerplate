@@ -16,7 +16,7 @@ draft: false
 e-title: Legal Contract Analysis
 url: "/ja/glossary/Legal-Contract-Analysis/"
 aliases:
-- "/ja/glossary/legal-contract-analysis/"
+- "/glossary/legal-contract-analysis/"
 term: ほうむけいやくぶんせき
 ---
 

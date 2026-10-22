@@ -15,7 +15,7 @@ draft: false
 e-title: Implementation Partner
 url: /ja/glossary/implementation-partner/
 aliases:
-- /ja/glossary/Implementation-Partner/
+- /glossary/Implementation-Partner/
 lastmod: 2026-04-02
 term: じっそうパートナー
 ---

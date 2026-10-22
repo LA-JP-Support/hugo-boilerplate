@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/lgpd-lei-geral-de-proteção-de-dados/
 aliases:
-  - /ja/glossary/LGPD/
+  - /glossary/LGPD/
 keywords:
   - LGPD
   - ブラジル

@@ -16,7 +16,7 @@ draft: false
 e-title: SEO Metadata
 url: /ja/glossary/seo-metadata/
 aliases:
-- /ja/glossary/SEO-Metadata/
+- /glossary/SEO-Metadata/
 term: えすいーおーめたでーた
 ---
 

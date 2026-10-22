@@ -16,7 +16,7 @@ draft: false
 e-title: Sprint Planning
 url: /ja/glossary/sprint-planning/
 aliases:
-- /ja/glossary/Sprint-Planning/
+- /glossary/Sprint-Planning/
 term: すぷりんとぷらんにんぐ
 ---
 

@@ -17,7 +17,7 @@ e-title: Self-Service Analytics
 term: せるふさーびすぶんせき
 url: "/ja/glossary/self-service-analytics/"
 aliases:
-- "/ja/glossary/Self-Service-Analytics/"
+- "/glossary/Self-Service-Analytics/"
 ---
 
 ## セルフサービス分析とは?

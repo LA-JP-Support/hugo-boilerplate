@@ -17,7 +17,7 @@ draft: false
 e-title: Mistral AI
 url: /ja/glossary/mistral-ai/
 aliases:
-- /ja/glossary/Mistral-AI/
+- /glossary/Mistral-AI/
 term: ミストラル エーアイ
 ---
 

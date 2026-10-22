@@ -16,7 +16,7 @@ draft: false
 e-title: Content Repurposing
 url: /ja/glossary/content-repurposing/
 aliases:
-- /ja/glossary/Content-Repurposing/
+- /glossary/Content-Repurposing/
 term: こんてんつりぱーぱしんぐ
 ---
 

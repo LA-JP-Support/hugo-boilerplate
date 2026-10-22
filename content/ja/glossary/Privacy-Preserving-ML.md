@@ -17,7 +17,7 @@ e-title: Privacy-Preserving Machine Learning (PPML)
 term: プライバシーほごきかいがくしゅう(ピーピーエムエル)
 url: "/ja/glossary/privacy-preserving-ml/"
 aliases:
-- "/ja/glossary/Privacy-Preserving-ML/"
+- "/glossary/Privacy-Preserving-ML/"
 ---
 
 ## プライバシー保護機械学習（PPML）とは？

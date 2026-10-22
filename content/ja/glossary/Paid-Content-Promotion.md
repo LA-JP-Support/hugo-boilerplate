@@ -16,7 +16,7 @@ draft: false
 e-title: Paid Content Promotion
 url: /ja/glossary/paid-content-promotion/
 aliases:
-- /ja/glossary/Paid-Content-Promotion/
+- /glossary/Paid-Content-Promotion/
 term: ゆうりょうこんてんつぷろもーしょん
 ---
 

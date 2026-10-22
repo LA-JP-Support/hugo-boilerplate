@@ -16,7 +16,7 @@ draft: false
 e-title: Member Recognition
 url: /ja/glossary/member-recognition/
 aliases:
-- /ja/glossary/Member-Recognition/
+- /glossary/Member-Recognition/
 term: めんばーにんしき
 ---
 

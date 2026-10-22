@@ -17,7 +17,7 @@ e-title: Hamburger Menu
 term: はんばーがーめにゅー
 url: "/ja/glossary/hamburger-menu/"
 aliases:
-- "/ja/glossary/Hamburger-Menu/"
+- "/glossary/Hamburger-Menu/"
 ---
 
 ## ハンバーガーメニューとは？

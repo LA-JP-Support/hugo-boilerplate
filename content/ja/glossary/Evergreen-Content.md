@@ -16,7 +16,7 @@ draft: false
 e-title: Evergreen Content
 url: /ja/glossary/evergreen-content/
 aliases:
-- /ja/glossary/Evergreen-Content/
+- /glossary/Evergreen-Content/
 term: えばーぐりーんこんてんつ
 ---
 

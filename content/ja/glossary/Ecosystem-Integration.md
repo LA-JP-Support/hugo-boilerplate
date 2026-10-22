@@ -16,7 +16,7 @@ draft: false
 e-title: Ecosystem Integration
 url: /ja/glossary/ecosystem-integration/
 aliases:
-- /ja/glossary/Ecosystem-Integration/
+- /glossary/Ecosystem-Integration/
 term: えこしすてむとうごう
 ---
 

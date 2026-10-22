@@ -16,7 +16,7 @@ draft: false
 e-title: Variational Autoencoder (VAE)
 url: /ja/glossary/variational-autoencoder--vae-/
 aliases:
-- /ja/glossary/Variational-Autoencoder--VAE-/
+- /glossary/Variational-Autoencoder--VAE-/
 term: へんぶんおーとえんこーだー
 ---
 

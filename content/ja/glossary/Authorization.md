@@ -17,7 +17,7 @@ e-title: Authorization
 term: にんか
 url: "/ja/glossary/authorization/"
 aliases:
-- "/ja/glossary/Authorization/"
+- "/glossary/Authorization/"
 ---
 
 ## 認可とは

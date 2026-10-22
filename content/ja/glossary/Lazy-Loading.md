@@ -16,7 +16,7 @@ draft: false
 e-title: Lazy Loading
 url: /ja/glossary/lazy-loading/
 aliases:
-- /ja/glossary/Lazy-Loading/
+- /glossary/Lazy-Loading/
 term: れいじーろーでぃんぐ
 ---
 

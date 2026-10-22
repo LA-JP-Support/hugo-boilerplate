@@ -17,7 +17,7 @@ e-title: Knowledge Base Connector
 term: ナレッジベースコネクタ
 url: "/ja/glossary/knowledge-base-connector/"
 aliases:
-- "/ja/glossary/Knowledge-Base-Connector/"
+- "/glossary/Knowledge-Base-Connector/"
 ---
 
 ## ナレッジベースコネクタとは？

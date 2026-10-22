@@ -17,7 +17,7 @@ e-title: Qdrant
 term: キュードラント
 url: "/ja/glossary/qdrant/"
 aliases:
-- "/ja/glossary/Qdrant/"
+- "/glossary/Qdrant/"
 ---
 
 ## Qdrantとは？

@@ -16,7 +16,7 @@ draft: false
 e-title: Content API
 url: /ja/glossary/content-api/
 aliases:
-- /ja/glossary/Content-API/
+- /glossary/Content-API/
 term: こんてんつえーぴーあい
 ---
 

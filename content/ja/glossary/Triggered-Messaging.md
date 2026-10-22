@@ -16,7 +16,7 @@ draft: false
 e-title: Triggered Messaging
 url: /ja/glossary/triggered-messaging/
 aliases:
-- /ja/glossary/Triggered-Messaging/
+- /glossary/Triggered-Messaging/
 term: とりがーめっせーじんぐ
 ---
 

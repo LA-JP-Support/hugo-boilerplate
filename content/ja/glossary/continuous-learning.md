@@ -17,7 +17,7 @@ e-title: Continuous Learning in AI
 term: けいぞくがくしゅう
 url: "/ja/glossary/continuous-learning/"
 aliases:
-- "/ja/glossary/Continuous-Learning/"
+- "/glossary/Continuous-Learning/"
 ---
 
 <!-- ===== サクッとわかるゾーン（冒頭〜30行） ===== -->

@@ -16,7 +16,7 @@ draft: false
 e-title: Weight Initialization
 url: /ja/glossary/weight-initialization/
 aliases:
-- /ja/glossary/Weight-Initialization/
+- /glossary/Weight-Initialization/
 term: おもみしょきか
 ---
 

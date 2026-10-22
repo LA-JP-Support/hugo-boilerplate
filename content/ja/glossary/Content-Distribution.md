@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Content-Distribution/
 aliases:
-  - /ja/glossary/content-distribution/
+  - /glossary/content-distribution/
 keywords:
   - コンテンツ配信
   - コンテンツ拡散

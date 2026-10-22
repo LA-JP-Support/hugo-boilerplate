@@ -17,7 +17,7 @@ draft: false
 e-title: HealthTech Diagnosis
 url: "/ja/glossary/healthtech-diagnosis/"
 aliases:
-- "/ja/glossary/HealthTech-Diagnosis/"
+- "/glossary/HealthTech-Diagnosis/"
 term: しんだん えーあい
 ---
 

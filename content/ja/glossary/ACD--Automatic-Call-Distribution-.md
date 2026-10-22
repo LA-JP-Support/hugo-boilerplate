@@ -16,7 +16,7 @@ draft: false
 e-title: ACD (Automatic Call Distribution)
 url: /ja/glossary/acd--automatic-call-distribution-/
 aliases:
-- /ja/glossary/ACD--Automatic-Call-Distribution-/
+- /glossary/ACD--Automatic-Call-Distribution-/
 term: エーシーディー(じどうちゃくしんこぶんぱい)
 ---
 

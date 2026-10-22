@@ -16,7 +16,7 @@ draft: false
 e-title: ByteDance
 url: /ja/glossary/bytedance/
 aliases:
-- /ja/glossary/ByteDance/
+- /glossary/ByteDance/
 term: バイトダンス
 ---
 

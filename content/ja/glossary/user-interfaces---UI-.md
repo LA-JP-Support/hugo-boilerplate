@@ -17,7 +17,7 @@ e-title: User Interfaces (UI)
 term: ユーザーインターフェース
 url: "/ja/glossary/user-interfaces---ui-/"
 aliases:
-- "/ja/glossary/User-Interfaces-UI/"
+- "/glossary/User-Interfaces-UI/"
 ---
 ## ユーザーインターフェース(UI)とは?
 

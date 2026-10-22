@@ -17,7 +17,7 @@ e-title: Variable Injection
 term: へんすうインジェクション
 url: "/ja/glossary/variable-injection/"
 aliases:
-- "/ja/glossary/Variable-Injection/"
+- "/glossary/Variable-Injection/"
 ---
 ## 変数インジェクションとは?
 

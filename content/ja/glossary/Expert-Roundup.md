@@ -16,7 +16,7 @@ draft: false
 e-title: Expert Roundup
 url: /ja/glossary/expert-roundup/
 aliases:
-- /ja/glossary/Expert-Roundup/
+- /glossary/Expert-Roundup/
 term: えきすぱーと・らうんどあっぷ
 ---
 

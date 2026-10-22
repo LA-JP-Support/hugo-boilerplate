@@ -18,7 +18,7 @@ draft: false
 e-title: Fraud Detection
 url: /ja/glossary/fraud-detection/
 aliases:
-- /ja/glossary/Fraud-Detection/
+- /glossary/Fraud-Detection/
 term: ふせいけんち
 ---
 

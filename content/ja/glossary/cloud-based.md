@@ -17,7 +17,7 @@ e-title: Cloud-Based
 term: くらうどべーす
 url: "/ja/glossary/cloud-based/"
 aliases:
-- "/ja/glossary/Cloud-Based/"
+- "/glossary/Cloud-Based/"
 ---
 
 <!-- ===== サクッとわかるゾーン（冒頭〜30行） ===== -->

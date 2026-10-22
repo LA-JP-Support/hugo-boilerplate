@@ -16,7 +16,7 @@ draft: false
 e-title: Data Visualization Best Practices
 url: /ja/glossary/data-visualization-best-practices/
 aliases:
-- /ja/glossary/Data-Visualization-Best-Practices/
+- /glossary/Data-Visualization-Best-Practices/
 term: データビジュアライゼーションのベストプラクティス
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Lead Scoring
 url: "/ja/glossary/Lead-Scoring/"
 aliases:
-- "/ja/glossary/lead-scoring/"
+- "/glossary/lead-scoring/"
 term: りーどすこありんぐ
 ---
 

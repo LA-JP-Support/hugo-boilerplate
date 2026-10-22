@@ -16,7 +16,7 @@ draft: false
 e-title: Carousel (UI Component)
 url: /ja/glossary/carousel/
 aliases:
-- /ja/glossary/Carousel/
+- /glossary/Carousel/
 term: かるーせる（ゆーあいこんぽーねんと）
 ---
 

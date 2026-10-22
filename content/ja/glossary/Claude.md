@@ -16,7 +16,7 @@ draft: false
 e-title: Claude
 url: /ja/glossary/claude/
 aliases:
-- /ja/glossary/Claude/
+- /glossary/Claude/
 term: クロード
 ---
 

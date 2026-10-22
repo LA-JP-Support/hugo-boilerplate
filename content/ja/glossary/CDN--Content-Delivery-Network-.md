@@ -16,7 +16,7 @@ draft: false
 e-title: CDN (Content Delivery Network)
 url: /ja/glossary/cdn--content-delivery-network-/
 aliases:
-- /ja/glossary/CDN--Content-Delivery-Network-/
+- /glossary/CDN--Content-Delivery-Network-/
 term: シーディーエヌ
 ---
 

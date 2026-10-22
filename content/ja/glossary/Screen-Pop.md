@@ -16,7 +16,7 @@ draft: false
 e-title: Screen Pop
 url: /ja/glossary/screen-pop/
 aliases:
-- /ja/glossary/Screen-Pop/
+- /glossary/Screen-Pop/
 term: すくりーんぽっぷ
 ---
 

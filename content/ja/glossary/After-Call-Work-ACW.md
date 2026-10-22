@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/After-Call-Work-ACW/
 aliases:
-  - /ja/glossary/after-call-work-acw/
+  - /glossary/after-call-work-acw/
 keywords:
   - 通話後業務
   - ACW

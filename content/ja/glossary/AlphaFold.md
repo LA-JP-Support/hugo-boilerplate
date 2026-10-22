@@ -17,7 +17,7 @@ draft: false
 e-title: AlphaFold
 url: /ja/glossary/alphafold/
 aliases:
-- /ja/glossary/AlphaFold/
+- /glossary/AlphaFold/
 term: アルファフォールド
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Schema
 url: /ja/glossary/schema/
 aliases:
-- /ja/glossary/Schema/
+- /glossary/Schema/
 term: すきーま
 ---
 

@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Next.js/
 aliases:
-  - /ja/glossary/next-js/
+  - /glossary/next-js/
 keywords:
   - React
   - フレームワーク

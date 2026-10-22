@@ -16,7 +16,7 @@ draft: false
 e-title: Small Talk
 url: "/ja/glossary/small-talk/"
 aliases:
-- "/ja/glossary/Small-Talk/"
+- "/glossary/Small-Talk/"
 term: すもーるとーく
 ---
 

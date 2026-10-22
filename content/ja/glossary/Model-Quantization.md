@@ -16,7 +16,7 @@ draft: false
 e-title: Model Quantization
 url: /ja/glossary/Model-Quantization/
 aliases:
-- /ja/glossary/model-quantization/
+- /glossary/model-quantization/
 term: りょうしか
 ---
 

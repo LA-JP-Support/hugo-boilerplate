@@ -16,7 +16,7 @@ draft: false
 e-title: Entity Linking
 url: "/ja/glossary/entity-linking/"
 aliases:
-- "/ja/glossary/Entity-Linking/"
+- "/glossary/Entity-Linking/"
 term: えんてぃてぃりんきんぐ
 ---
 

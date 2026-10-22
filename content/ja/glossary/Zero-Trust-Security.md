@@ -16,7 +16,7 @@ draft: false
 e-title: Zero Trust Security
 url: /ja/glossary/zero-trust-security/
 aliases:
-- /ja/glossary/Zero-Trust-Security/
+- /glossary/Zero-Trust-Security/
 term: ぜろとらすとせきゅりてぃ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Dialogue State Tracking
 url: "/ja/glossary/dialogue-state-tracking/"
 aliases:
-- "/ja/glossary/Dialogue-State-Tracking/"
+- "/glossary/Dialogue-State-Tracking/"
 term: だいあろぐじょうたいついせき
 ---
 

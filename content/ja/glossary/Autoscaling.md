@@ -16,7 +16,7 @@ draft: false
 e-title: Autoscaling
 url: /ja/glossary/autoscaling/
 aliases:
-- /ja/glossary/Autoscaling/
+- /glossary/Autoscaling/
 term: オートスケーリング
 ---
 

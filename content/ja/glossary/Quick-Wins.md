@@ -16,7 +16,7 @@ draft: false
 e-title: Quick Wins
 url: /ja/glossary/quick-wins/
 aliases:
-- /ja/glossary/Quick-Wins/
+- /glossary/Quick-Wins/
 term: くいっくうぃん
 ---
 

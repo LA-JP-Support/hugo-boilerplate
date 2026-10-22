@@ -16,7 +16,7 @@ draft: false
 e-title: Email Management
 url: /ja/glossary/email-management/
 aliases:
-- /ja/glossary/Email-Management/
+- /glossary/Email-Management/
 term: メールかんり
 ---
 

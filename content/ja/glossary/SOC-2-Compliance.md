@@ -16,7 +16,7 @@ draft: false
 e-title: SOC 2 Compliance
 url: /ja/glossary/soc-2-compliance/
 aliases:
-- /ja/glossary/SOC-2-Compliance/
+- /glossary/SOC-2-Compliance/
 term: ソックツーコンプライアンス
 ---
 

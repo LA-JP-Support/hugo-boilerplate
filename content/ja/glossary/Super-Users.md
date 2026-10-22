@@ -16,7 +16,7 @@ draft: false
 e-title: Super Users
 url: /ja/glossary/super-users/
 aliases:
-- /ja/glossary/Super-Users/
+- /glossary/Super-Users/
 term: すーぱーゆーざー
 ---
 

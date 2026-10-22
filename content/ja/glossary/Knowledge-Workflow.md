@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Workflow
 url: /ja/glossary/knowledge-workflow/
 aliases:
-- /ja/glossary/Knowledge-Workflow/
+- /glossary/Knowledge-Workflow/
 term: なれっじわーくふろー
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Dialer (Predictive / Progressive)
 url: "/ja/glossary/dialer-predictive-progressive/"
 aliases:
-- "/ja/glossary/Dialer--Predictive-Progressive-/"
+- "/glossary/Dialer--Predictive-Progressive-/"
 term: だいやらー・ぷれでぃくてぃぶ・ぷろぐれっしぶ
 ---
 

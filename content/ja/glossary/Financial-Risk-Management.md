@@ -16,7 +16,7 @@ draft: false
 e-title: Financial Risk Management
 url: /ja/glossary/financial-risk-management/
 aliases:
-- /ja/glossary/Financial-Risk-Management/
+- /glossary/Financial-Risk-Management/
 term: ざいむりすくかんり
 ---
 

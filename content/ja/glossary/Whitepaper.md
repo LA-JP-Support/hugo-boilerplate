@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Whitepaper/
 aliases:
-  - /ja/glossary/whitepaper/
+  - /glossary/whitepaper/
 keywords:
   - ホワイトペーパー
   - 白書

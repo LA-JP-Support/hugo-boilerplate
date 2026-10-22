@@ -17,7 +17,7 @@ e-title: Human-Agent Teaming
 term: ヒューマン・エージェント・チーミング
 url: "/ja/glossary/human-agent-teaming/"
 aliases:
-- "/ja/glossary/Human-Agent-Teaming/"
+- "/glossary/Human-Agent-Teaming/"
 ---
 
 ## ヒューマン・エージェント・チーミングとは?

@@ -16,7 +16,7 @@ draft: false
 e-title: First Contact Resolution (FCR)
 url: /ja/glossary/first-contact-resolution--fcr-/
 aliases:
-- /ja/glossary/First-Contact-Resolution--FCR-/
+- /glossary/First-Contact-Resolution--FCR-/
 term: しょかいこんたくとかいけつりつ（えふしーあーる）
 ---
 

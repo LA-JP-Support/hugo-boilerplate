@@ -16,7 +16,7 @@ draft: false
 e-title: Base Template
 url: /ja/glossary/base-template/
 aliases:
-- /ja/glossary/Base-Template/
+- /glossary/Base-Template/
 term: べーすてんぷれーと
 ---
 

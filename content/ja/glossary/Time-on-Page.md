@@ -16,7 +16,7 @@ draft: false
 e-title: Time on Page
 url: /ja/glossary/time-on-page/
 aliases:
-- /ja/glossary/Time-on-Page/
+- /glossary/Time-on-Page/
 term: ぺーじたいざいじかん
 ---
 

@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Software-as-a-Service-SaaS/
 aliases:
-  - /ja/glossary/software-as-a-service-saas/
+  - /glossary/software-as-a-service-saas/
 keywords:
   - SaaS
   - クラウドソフトウェア

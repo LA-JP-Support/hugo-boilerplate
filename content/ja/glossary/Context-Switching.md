@@ -16,7 +16,7 @@ draft: false
 e-title: Context Switching
 url: /ja/glossary/context-switching/
 aliases:
-- /ja/glossary/Context-Switching/
+- /glossary/Context-Switching/
 term: すいっちんぐ
 ---
 

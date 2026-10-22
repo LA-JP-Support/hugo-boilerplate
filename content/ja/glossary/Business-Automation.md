@@ -16,7 +16,7 @@ draft: false
 e-title: Business Automation
 url: /ja/glossary/business-automation/
 aliases:
-- /ja/glossary/Business-Automation/
+- /glossary/Business-Automation/
 term: びじねすおーとめーしょん
 ---
 

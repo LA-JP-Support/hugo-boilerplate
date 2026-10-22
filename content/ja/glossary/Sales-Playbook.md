@@ -16,7 +16,7 @@ draft: false
 e-title: Sales Playbook
 url: /ja/glossary/sales-playbook/
 aliases:
-- /ja/glossary/Sales-Playbook/
+- /glossary/Sales-Playbook/
 term: せーるすぷれいぶっく
 ---
 

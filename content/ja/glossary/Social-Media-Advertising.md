@@ -16,7 +16,7 @@ draft: false
 e-title: Social Media Advertising
 url: "/ja/glossary/social-media-advertising/"
 aliases:
-- "/ja/glossary/Social-Media-Advertising/"
+- "/glossary/Social-Media-Advertising/"
 term: そーしゃるめでぃあこうこく
 ---
 

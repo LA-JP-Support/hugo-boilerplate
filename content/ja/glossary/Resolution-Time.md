@@ -16,7 +16,7 @@ draft: false
 e-title: Resolution Time
 url: /ja/glossary/resolution-time/
 aliases:
-- /ja/glossary/Resolution-Time/
+- /glossary/Resolution-Time/
 term: かいけつじかん
 ---
 

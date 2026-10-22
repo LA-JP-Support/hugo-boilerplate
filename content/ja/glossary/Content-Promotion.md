@@ -16,7 +16,7 @@ draft: false
 e-title: Content Promotion
 url: /ja/glossary/content-promotion/
 aliases:
-- /ja/glossary/Content-Promotion/
+- /glossary/Content-Promotion/
 term: けいさい
 ---
 

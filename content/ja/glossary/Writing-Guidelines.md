@@ -16,7 +16,7 @@ draft: false
 e-title: Writing Guidelines
 url: /ja/glossary/writing-guidelines/
 aliases:
-- /ja/glossary/Writing-Guidelines/
+- /glossary/Writing-Guidelines/
 term: らいてぃんぐがいどらいん
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: WordPress
 url: /ja/glossary/wordpress/
 aliases:
-- /ja/glossary/WordPress/
+- /glossary/WordPress/
 term: ワードプレス
 ---
 

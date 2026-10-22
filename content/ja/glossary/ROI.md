@@ -16,7 +16,7 @@ draft: false
 e-title: ROI (Return on Investment)
 url: /ja/glossary/roi/
 aliases:
-- /ja/glossary/ROI/
+- /glossary/ROI/
 term: アールオーアイ
 ---
 

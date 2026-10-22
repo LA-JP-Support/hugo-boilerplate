@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Intent
 url: /ja/glossary/customer-intent/
 aliases:
-- /ja/glossary/Customer-Intent/
+- /glossary/Customer-Intent/
 term: かすたまーいんてんと
 ---
 

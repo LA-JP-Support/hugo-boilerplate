@@ -16,7 +16,7 @@ draft: false
 e-title: Platform Extensibility
 url: /ja/glossary/platform-extensibility/
 aliases:
-- /ja/glossary/Platform-Extensibility/
+- /glossary/Platform-Extensibility/
 term: ぷらっとふぉーむかくちょうせい
 ---
 

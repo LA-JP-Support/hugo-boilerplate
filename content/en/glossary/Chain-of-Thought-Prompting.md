@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/chain-of-thought-prompting/
 aliases:
-- /en/glossary/chain-of-thought-prompting/
+- /glossary/chain-of-thought-prompting/
 ---
 
 ## What is Chain-of-Thought Prompting?

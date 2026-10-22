@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Platform-as-a-Service-PaaS/
 aliases:
-  - /ja/glossary/platform-as-a-service-paas/
+  - /glossary/platform-as-a-service-paas/
 keywords:
   - PaaS
   - クラウドプラットフォーム

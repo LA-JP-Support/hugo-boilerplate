@@ -16,7 +16,7 @@ draft: false
 e-title: Context Preservation
 url: /ja/glossary/context-preservation/
 aliases:
-- /ja/glossary/Context-Preservation/
+- /glossary/Context-Preservation/
 term: ほじ
 ---
 

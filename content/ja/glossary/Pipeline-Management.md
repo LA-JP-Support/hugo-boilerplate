@@ -17,7 +17,7 @@ draft: false
 e-title: Pipeline Management
 url: /ja/glossary/pipeline-management/
 aliases:
-- /ja/glossary/Pipeline-Management/
+- /glossary/Pipeline-Management/
 term: ぱいぷらいんかんり
 ---
 

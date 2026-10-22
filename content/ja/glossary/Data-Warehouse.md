@@ -16,7 +16,7 @@ draft: false
 e-title: Data Warehouse
 url: /ja/glossary/data-warehouse/
 aliases:
-- /ja/glossary/Data-Warehouse/
+- /glossary/Data-Warehouse/
 term: データウェアハウス
 ---
 

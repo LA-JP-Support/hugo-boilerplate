@@ -16,7 +16,7 @@ draft: false
 e-title: Channel Preference
 url: /ja/glossary/channel-preference/
 aliases:
-- /ja/glossary/Channel-Preference/
+- /glossary/Channel-Preference/
 term: ちゃねるぷりふぁれんす
 ---
 

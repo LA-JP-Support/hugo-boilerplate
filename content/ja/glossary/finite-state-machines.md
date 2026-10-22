@@ -17,7 +17,7 @@ e-title: Finite State Machines (FSM)
 term: ゆうげんじょうたいきかい（エフエスエム）
 url: /ja/glossary/finite-state-machines/
 aliases:
-- /ja/glossary/Finite-State-Machines/
+- /glossary/Finite-State-Machines/
 ---
 
 ## 有限状態機械とは？

@@ -16,7 +16,7 @@ draft: false
 e-title: Support Capacity Planning
 url: /ja/glossary/support-capacity-planning/
 aliases:
-- /ja/glossary/Support-Capacity-Planning/
+- /glossary/Support-Capacity-Planning/
 term: サポートようりょうけいかく
 ---
 

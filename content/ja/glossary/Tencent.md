@@ -16,7 +16,7 @@ draft: false
 e-title: Tencent
 url: /ja/glossary/tencent/
 aliases:
-- /ja/glossary/Tencent/
+- /glossary/Tencent/
 term: テンセント
 ---
 

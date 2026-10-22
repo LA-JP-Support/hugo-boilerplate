@@ -16,7 +16,7 @@ draft: false
 e-title: Net Promoter Score (NPS)
 url: /ja/glossary/nps---net-promoter-score-/
 aliases:
-- /ja/glossary/NPS---Net-Promoter-Score-/
+- /glossary/NPS---Net-Promoter-Score-/
 term: ねっとぷろもーたーすこあ（えぬぴーえす）
 ---
 

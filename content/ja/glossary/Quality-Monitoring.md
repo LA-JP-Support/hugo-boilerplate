@@ -16,7 +16,7 @@ draft: false
 e-title: Quality Monitoring
 url: /ja/glossary/quality-monitoring/
 aliases:
-- /ja/glossary/Quality-Monitoring/
+- /glossary/Quality-Monitoring/
 term: ひんしつモニタリング
 ---
 

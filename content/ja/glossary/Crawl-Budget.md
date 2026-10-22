@@ -16,7 +16,7 @@ draft: false
 e-title: Crawl Budget
 url: /ja/glossary/crawl-budget/
 aliases:
-- /ja/glossary/Crawl-Budget/
+- /glossary/Crawl-Budget/
 term: くろーるばじぇっと
 ---
 

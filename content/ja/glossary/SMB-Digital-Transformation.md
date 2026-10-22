@@ -16,7 +16,7 @@ draft: false
 e-title: SMB Digital Transformation
 url: /ja/glossary/smb-digital-transformation/
 aliases:
-- /ja/glossary/SMB-Digital-Transformation/
+- /glossary/SMB-Digital-Transformation/
 term: ちゅうしょうきぎょうのでじたるとらんすふぉーめーしょん
 ---
 

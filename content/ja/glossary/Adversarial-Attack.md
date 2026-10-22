@@ -16,7 +16,7 @@ draft: false
 e-title: Adversarial Attack
 url: /ja/glossary/adversarial-attack/
 aliases:
-- /ja/glossary/Adversarial-Attack/
+- /glossary/Adversarial-Attack/
 term: てきたいてきこうげき
 ---
 

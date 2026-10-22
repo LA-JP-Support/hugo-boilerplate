@@ -16,7 +16,7 @@ draft: false
 e-title: Social Analytics
 url: "/ja/glossary/social-analytics/"
 aliases:
-- "/ja/glossary/Social-Analytics/"
+- "/glossary/Social-Analytics/"
 term: そーしゃるあなりてぃくす
 ---
 

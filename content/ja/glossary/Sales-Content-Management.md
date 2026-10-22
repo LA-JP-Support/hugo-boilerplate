@@ -16,7 +16,7 @@ draft: false
 e-title: Sales Content Management
 url: /ja/glossary/sales-content-management/
 aliases:
-- /ja/glossary/Sales-Content-Management/
+- /glossary/Sales-Content-Management/
 term: せーるすこんてんつかんり
 ---
 

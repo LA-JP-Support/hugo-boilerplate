@@ -16,7 +16,7 @@ draft: false
 e-title: OpenAI
 url: /ja/glossary/openai/
 aliases:
-- /ja/glossary/OpenAI/
+- /glossary/OpenAI/
 term: オープンエーアイ
 ---
 

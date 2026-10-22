@@ -16,7 +16,7 @@ draft: false
 e-title: Conversion Rate Optimization (CRO)
 url: /ja/glossary/conversion-rate-optimization--cro-/
 aliases:
-- /ja/glossary/Conversion-Rate-Optimization--CRO-/
+- /glossary/Conversion-Rate-Optimization--CRO-/
 term: コンバージョンりつさいてきか（シーアールオー）
 ---
 

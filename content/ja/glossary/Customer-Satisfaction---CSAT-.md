@@ -17,7 +17,7 @@ e-title: Customer Satisfaction Score (CSAT)
 term: こきゃくまんぞくどスコア (シーサット)
 url: "/ja/glossary/customer-satisfaction---csat-/"
 aliases:
-- "/ja/glossary/Customer-Satisfaction---CSAT-/"
+- "/glossary/Customer-Satisfaction---CSAT-/"
 ---
 
 ## 顧客満足度スコア(CSAT)とは

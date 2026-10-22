@@ -16,7 +16,7 @@ draft: false
 e-title: Shoppable Posts
 url: /ja/glossary/shoppable-posts/
 aliases:
-- /ja/glossary/Shoppable-Posts/
+- /glossary/Shoppable-Posts/
 term: しょっぱぶるとうこう
 ---
 

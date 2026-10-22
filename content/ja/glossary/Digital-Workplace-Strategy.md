@@ -15,7 +15,7 @@ draft: false
 e-title: Digital Workplace Strategy
 url: /ja/glossary/digital-workplace-strategy/
 aliases:
-- /ja/glossary/Digital-Workplace-Strategy/
+- /glossary/Digital-Workplace-Strategy/
 term: でじたるわーくぷれいすせんりゃく
 lastmod: 2026-04-02
 ---

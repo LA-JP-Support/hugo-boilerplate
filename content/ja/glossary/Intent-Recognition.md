@@ -16,7 +16,7 @@ draft: false
 e-title: Intent Recognition
 url: /ja/glossary/intent-recognition/
 aliases:
-- /ja/glossary/Intent-Recognition/
+- /glossary/Intent-Recognition/
 term: インテント認識
 ---
 

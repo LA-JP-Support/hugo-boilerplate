@@ -16,7 +16,7 @@ draft: false
 e-title: MHaluBench
 url: /ja/glossary/mhalubench/
 aliases:
-- /ja/glossary/MHaluBench/
+- /glossary/MHaluBench/
 term: エムハルベンチ
 ---
 

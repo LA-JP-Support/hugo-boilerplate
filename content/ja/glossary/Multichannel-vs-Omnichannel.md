@@ -16,7 +16,7 @@ draft: false
 e-title: Multichannel vs Omnichannel
 url: /ja/glossary/multichannel-vs-omnichannel/
 aliases:
-- /ja/glossary/Multichannel-vs-Omnichannel/
+- /glossary/Multichannel-vs-Omnichannel/
 term: マルチチャネル たい オムニチャネル
 ---
 

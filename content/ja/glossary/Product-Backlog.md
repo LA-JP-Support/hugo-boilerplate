@@ -16,7 +16,7 @@ draft: false
 e-title: Product Backlog
 url: /ja/glossary/product-backlog/
 aliases:
-- /ja/glossary/Product-Backlog/
+- /glossary/Product-Backlog/
 term: ぷろだくと・ばっくろぐ
 ---
 

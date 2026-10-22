@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Reasoning-Models-o1-class/
 aliases:
-  - /ja/glossary/reasoning-models-o1-class/
+  - /glossary/reasoning-models-o1-class/
 keywords:
   - AI推論
   - o1

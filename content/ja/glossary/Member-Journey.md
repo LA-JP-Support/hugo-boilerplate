@@ -16,7 +16,7 @@ draft: false
 e-title: Member Journey
 url: /ja/glossary/member-journey/
 aliases:
-- /ja/glossary/Member-Journey/
+- /glossary/Member-Journey/
 term: めんばーじゃーにー
 ---
 

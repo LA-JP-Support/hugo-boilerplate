@@ -16,7 +16,7 @@ draft: false
 e-title: Site Speed
 url: /ja/glossary/site-speed/
 aliases:
-- /ja/glossary/Site-Speed/
+- /glossary/Site-Speed/
 term: さいとすぴーど
 ---
 

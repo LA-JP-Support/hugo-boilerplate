@@ -16,7 +16,7 @@ draft: false
 e-title: Data Augmentation
 url: /ja/glossary/data-augmentation/
 aliases:
-- /ja/glossary/Data-Augmentation/
+- /glossary/Data-Augmentation/
 term: データかくちょう
 ---
 

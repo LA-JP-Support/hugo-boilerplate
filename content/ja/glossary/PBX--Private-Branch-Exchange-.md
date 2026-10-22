@@ -17,7 +17,7 @@ e-title: PBX (Private Branch Exchange)
 term: ぴーびーえっくす
 url: "/ja/glossary/pbx--private-branch-exchange-/"
 aliases:
-- "/ja/glossary/PBX--Private-Branch-Exchange-/"
+- "/glossary/PBX--Private-Branch-Exchange-/"
 ---
 
 ## PBX(構内交換機)とは？

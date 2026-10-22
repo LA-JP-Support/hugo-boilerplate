@@ -16,7 +16,7 @@ draft: false
 e-title: Change Management
 url: /ja/glossary/change-management/
 aliases:
-- /ja/glossary/Change-Management/
+- /glossary/Change-Management/
 term: へんこうかんり
 ---
 

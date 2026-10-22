@@ -17,7 +17,7 @@ e-title: Rules Engine
 term: るーるえんじん
 url: /ja/glossary/rules-engine/
 aliases:
-  - /ja/glossary/Rules-Engine/
+  - /glossary/Rules-Engine/
 ---
 
 ## ルールエンジンとは

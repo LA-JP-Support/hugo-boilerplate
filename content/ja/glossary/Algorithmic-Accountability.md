@@ -16,7 +16,7 @@ draft: false
 e-title: Algorithmic Accountability
 url: /ja/glossary/algorithmic-accountability/
 aliases:
-- /ja/glossary/Algorithmic-Accountability/
+- /glossary/Algorithmic-Accountability/
 term: あるごりずみっくあかうんたびりてぃ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Segmentation
 url: /ja/glossary/customer-segmentation/
 aliases:
-- /ja/glossary/Customer-Segmentation/
+- /glossary/Customer-Segmentation/
 term: かすたまーせぐめんてーしょん
 ---
 

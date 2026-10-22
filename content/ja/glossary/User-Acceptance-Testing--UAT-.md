@@ -17,7 +17,7 @@ draft: false
 e-title: User Acceptance Testing (UAT)
 url: /ja/glossary/user-acceptance-testing--uat-/
 aliases:
-- /ja/glossary/User-Acceptance-Testing--UAT-/
+- /glossary/User-Acceptance-Testing--UAT-/
 term: ユーザーうけいれテスト(ユーエーティー)
 ---
 

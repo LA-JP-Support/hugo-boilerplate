@@ -16,7 +16,7 @@ draft: false
 e-title: Data Loss Prevention (DLP)
 url: /ja/glossary/data-loss-prevention--dlp-/
 aliases:
-- /ja/glossary/Data-Loss-Prevention--DLP-/
+- /glossary/Data-Loss-Prevention--DLP-/
 term: データそんしつぼうし(ディーエルピー)
 ---
 

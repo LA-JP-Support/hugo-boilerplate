@@ -16,7 +16,7 @@ draft: false
 e-title: Content Operations (Content Ops)
 url: /ja/glossary/content-operations--content-ops-/
 aliases:
-- /ja/glossary/Content-Operations--Content-Ops-/
+- /glossary/Content-Operations--Content-Ops-/
 term: おぺれーしょん
 ---
 

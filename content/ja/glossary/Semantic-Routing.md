@@ -17,7 +17,7 @@ e-title: Semantic Routing
 term: せまんてぃっくるーてぃんぐ
 url: "/ja/glossary/semantic-routing/"
 aliases:
-- "/ja/glossary/Semantic-Routing/"
+- "/glossary/Semantic-Routing/"
 ---
 
 ## セマンティックルーティングとは?

@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/VPN-Virtual-Private-Network/
 aliases:
-  - /ja/glossary/vpn-virtual-private-network/
+  - /glossary/vpn-virtual-private-network/
 keywords:
   - 暗号化通信
   - プライバシー

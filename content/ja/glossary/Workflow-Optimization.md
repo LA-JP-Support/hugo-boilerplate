@@ -16,7 +16,7 @@ draft: false
 e-title: Workflow Optimization
 url: /ja/glossary/workflow-optimization/
 aliases:
-- /ja/glossary/Workflow-Optimization/
+- /glossary/Workflow-Optimization/
 term: わーくふろーさいてきか
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Churn Analysis
 url: /ja/glossary/churn-analysis/
 aliases:
-- /ja/glossary/Churn-Analysis/
+- /glossary/Churn-Analysis/
 term: ちゃーんぶんせき
 ---
 

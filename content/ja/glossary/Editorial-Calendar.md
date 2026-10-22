@@ -16,7 +16,7 @@ draft: false
 e-title: Editorial Calendar
 url: /ja/glossary/editorial-calendar/
 aliases:
-- /ja/glossary/Editorial-Calendar/
+- /glossary/Editorial-Calendar/
 term: えでぃとりあるかれんだー
 ---
 

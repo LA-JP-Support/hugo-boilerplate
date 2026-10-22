@@ -16,7 +16,7 @@ draft: false
 e-title: Structured Data
 url: /ja/glossary/structured-data/
 aliases:
-- /ja/glossary/Structured-Data/
+- /glossary/Structured-Data/
 term: こうぞうかデータ
 ---
 

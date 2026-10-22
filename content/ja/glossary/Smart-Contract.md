@@ -16,7 +16,7 @@ draft: false
 e-title: Smart Contract
 url: "/ja/glossary/smart-contract/"
 aliases:
-- "/ja/glossary/Smart-Contract/"
+- "/glossary/Smart-Contract/"
 term: すまーとこんとらくと
 ---
 

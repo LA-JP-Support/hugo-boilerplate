@@ -16,7 +16,7 @@ draft: false
 e-title: Guest Blogging
 url: /ja/glossary/guest-blogging/
 aliases:
-  - /ja/glossary/Guest-Blogging/
+  - /glossary/Guest-Blogging/
 term: げすとぶろぐ
 ---
 

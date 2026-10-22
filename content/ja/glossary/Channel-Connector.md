@@ -16,7 +16,7 @@ draft: false
 e-title: Channel Connector
 url: /ja/glossary/channel-connector/
 aliases:
-- /ja/glossary/Channel-Connector/
+- /glossary/Channel-Connector/
 term: ちゃねるこねくたー
 ---
 

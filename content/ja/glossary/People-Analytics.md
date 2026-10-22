@@ -16,7 +16,7 @@ draft: false
 e-title: People Analytics
 url: /ja/glossary/people-analytics/
 aliases:
-- /ja/glossary/People-Analytics/
+- /glossary/People-Analytics/
 term: ぴーぷるあなりてぃくす
 ---
 

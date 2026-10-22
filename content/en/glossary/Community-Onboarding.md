@@ -15,7 +15,7 @@ date: 2025-12-19
 draft: false
 url: /en/glossary/community-onboarding/
 aliases:
-- /en/glossary/Community-Onboarding/
+- /glossary/Community-Onboarding/
 ---
 
 ## What is Community Onboarding?

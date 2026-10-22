@@ -16,7 +16,7 @@ draft: false
 e-title: Context Window
 url: /ja/glossary/context-window/
 aliases:
-- /ja/glossary/Context-Window/
+- /glossary/Context-Window/
 term: ういんどう
 ---
 

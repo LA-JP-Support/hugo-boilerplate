@@ -17,7 +17,7 @@ e-title: Sharding
 term: しゃーでぃんぐ
 url: "/ja/glossary/sharding/"
 aliases:
-- "/ja/glossary/Sharding/"
+- "/glossary/Sharding/"
 ---
 ## シャーディングとは？
 

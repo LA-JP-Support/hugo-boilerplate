@@ -16,7 +16,7 @@ draft: false
 e-title: RAG Benchmarks
 url: /ja/glossary/rag-benchmarks/
 aliases:
-- /ja/glossary/RAG-benchmarks/
+- /glossary/RAG-benchmarks/
 term: ラグベンチマーク
 ---
 

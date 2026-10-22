@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/above-the-fold/
 aliases:
-- /en/glossary/Above-the-Fold/
+- /glossary/Above-the-Fold/
 ---
 
 ## What is Above the Fold?

@@ -16,7 +16,7 @@ draft: false
 e-title: Meta Description
 url: /ja/glossary/meta-description/
 aliases:
-- /ja/glossary/Meta-Description/
+- /glossary/Meta-Description/
 term: めたでぃすくりぷしょん
 ---
 

@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Kubernetes-K8s/
 aliases:
-  - /ja/glossary/kubernetes-k8s/
+  - /glossary/kubernetes-k8s/
 keywords:
   - Kubernetes
   - K8s

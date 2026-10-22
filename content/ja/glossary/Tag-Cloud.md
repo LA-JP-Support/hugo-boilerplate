@@ -16,7 +16,7 @@ draft: false
 e-title: Tag Cloud
 url: /ja/glossary/tag-cloud/
 aliases:
-- /ja/glossary/Tag-Cloud/
+- /glossary/Tag-Cloud/
 term: たぐくらうど
 ---
 

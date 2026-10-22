@@ -16,7 +16,7 @@ draft: false
 e-title: Unified Inbox
 url: /ja/glossary/unified-inbox/
 aliases:
-- /ja/glossary/Unified-Inbox/
+- /glossary/Unified-Inbox/
 term: とうごうインボックス
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Hoarding
 url: "/ja/glossary/knowledge-hoarding/"
 aliases:
-- "/ja/glossary/Knowledge-Hoarding/"
+- "/glossary/Knowledge-Hoarding/"
 term: ナレッジホーディング（知識の囲い込み）
 ---
 

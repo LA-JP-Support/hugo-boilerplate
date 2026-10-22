@@ -16,7 +16,7 @@ draft: false
 e-title: Churn Rate
 url: /ja/glossary/churn-rate/
 aliases:
-- /ja/glossary/Churn-Rate/
+- /glossary/Churn-Rate/
 term: ちゃーんれーと
 ---
 

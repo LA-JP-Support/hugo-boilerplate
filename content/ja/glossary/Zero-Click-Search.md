@@ -16,7 +16,7 @@ draft: false
 e-title: Zero-Click Search
 url: /ja/glossary/zero-click-search/
 aliases:
-- /ja/glossary/Zero-Click-Search/
+- /glossary/Zero-Click-Search/
 term: ぜろくりっくけんさく
 ---
 

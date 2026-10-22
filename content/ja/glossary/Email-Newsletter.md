@@ -16,7 +16,7 @@ draft: false
 e-title: Email Newsletter
 url: /ja/glossary/email-newsletter/
 aliases:
-- /ja/glossary/Email-Newsletter/
+- /glossary/Email-Newsletter/
 term: めーるにゅーすれたー
 ---
 

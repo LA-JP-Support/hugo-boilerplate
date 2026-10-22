@@ -81,6 +81,13 @@ def _split_front_matter(text: str) -> Tuple[bool, str, str, str]:
     return False, '', '', text
 
 
+def _site_relative_alias(url: str) -> str:
+    # Hugo >= 0.155 treats aliases beginning with "/" as site-relative (the language root),
+    # so drop the language prefix that url carries: /ja/glossary/X/ -> /glossary/X/
+    m = re.match(r'^/(ja|en)(/.*)$', url)
+    return m.group(2) if m else url
+
+
 def _format_list_item(value: str, quote: str) -> str:
     if quote in ('"', "'"):
         return f"- {quote}{value}{quote}"
@@ -118,6 +125,7 @@ def _process_file(path: Path) -> Tuple[bool, List[str]]:
         return False, []
 
     changes: List[str] = []
+    alias = _site_relative_alias(original)
 
     lines[url_idx] = f"{url_prefix}{url_quote}{canonical}{url_quote}"
     changes.append(f"url: {original} -> {canonical}")
@@ -137,26 +145,26 @@ def _process_file(path: Path) -> Tuple[bool, List[str]]:
         if not content:
             return False
         items = [x.strip().strip('"\'') for x in content.split(',')]
-        return val in items
+        return val in items or original in items
 
     if aliases_idx is None:
         insert_at = url_idx + 1
         lines.insert(insert_at, 'aliases:')
-        lines.insert(insert_at + 1, _format_list_item(original, url_quote))
-        changes.append(f"aliases: +{original}")
+        lines.insert(insert_at + 1, _format_list_item(alias, url_quote))
+        changes.append(f"aliases: +{alias}")
     else:
         m = alias_key_re.match(lines[aliases_idx])
         rest = (m.group('rest') if m else '').strip()
 
         if rest:
             if rest.startswith('[') and rest.endswith(']'):
-                if not value_present_in_inline(rest, original):
+                if not value_present_in_inline(rest, alias):
                     before = rest[:-1].strip()
                     sep = '' if before.endswith('[') else ', '
-                    add = f"{url_quote}{original}{url_quote}" if url_quote else f"\"{original}\""
+                    add = f"{url_quote}{alias}{url_quote}" if url_quote else f"\"{alias}\""
                     new_rest = before + sep + add + ']'
                     lines[aliases_idx] = 'aliases: ' + new_rest
-                    changes.append(f"aliases: +{original}")
+                    changes.append(f"aliases: +{alias}")
             else:
                 # Unexpected inline form; do nothing
                 pass
@@ -172,9 +180,9 @@ def _process_file(path: Path) -> Tuple[bool, List[str]]:
                     raw = item_m.group('v').strip().strip('"\'')
                     existing.append(raw)
                 j += 1
-            if original not in existing:
-                lines.insert(j, _format_list_item(original, url_quote))
-                changes.append(f"aliases: +{original}")
+            if alias not in existing and original not in existing:
+                lines.insert(j, _format_list_item(alias, url_quote))
+                changes.append(f"aliases: +{alias}")
 
     if changes:
         new_fm = '\n'.join(lines) + '\n'
@@ -222,7 +230,7 @@ def main() -> None:
             original = _ensure_trailing_slash(m.group('v'))
             canonical = _normalize_path_lower(original)
             if canonical and canonical != original:
-                changes = [f"url: {original} -> {canonical}", f"aliases: +{original}"]
+                changes = [f"url: {original} -> {canonical}", f"aliases: +{_site_relative_alias(original)}"]
                 planned.append((md, changes))
 
     if not args.apply:

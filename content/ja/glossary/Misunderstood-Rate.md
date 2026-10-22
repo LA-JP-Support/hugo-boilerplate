@@ -16,7 +16,7 @@ draft: false
 e-title: Misunderstood Rate
 url: /ja/glossary/misunderstood-rate/
 aliases:
-- /ja/glossary/Misunderstood-Rate/
+- /glossary/Misunderstood-Rate/
 term: ごかいりつ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Social Listening
 url: "/ja/glossary/social-listening/"
 aliases:
-- "/ja/glossary/Social-Listening/"
+- "/glossary/Social-Listening/"
 term: そーしゃるりすにんぐ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Tiered Support
 url: /ja/glossary/tiered-support/
 aliases:
-- /ja/glossary/Tiered-Support/
+- /glossary/Tiered-Support/
 term: かいそうがたサポート
 ---
 

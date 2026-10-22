@@ -16,7 +16,7 @@ draft: false
 e-title: Validation Set
 url: /ja/glossary/validation-set/
 aliases:
-- /ja/glossary/Validation-Set/
+- /glossary/Validation-Set/
 term: けんしょうせっと
 ---
 

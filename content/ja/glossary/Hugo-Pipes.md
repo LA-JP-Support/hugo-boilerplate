@@ -16,7 +16,7 @@ draft: false
 e-title: Hugo Pipes
 url: /ja/glossary/hugo-pipes/
 aliases:
-- /ja/glossary/Hugo-Pipes/
+- /glossary/Hugo-Pipes/
 term: ヒューゴ パイプス
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Quarterly Business Review (QBR)
 url: /ja/glossary/quarterly-business-review--qbr-/
 aliases:
-- /ja/glossary/Quarterly-Business-Review--QBR-/
+- /glossary/Quarterly-Business-Review--QBR-/
 term: しはんきビジネスレビュー(キュービーアール)
 ---
 

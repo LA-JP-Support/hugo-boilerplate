@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/after-call-work--acw-/
 aliases:
-  - /en/glossary/After-Call-Work--ACW-/
+  - /glossary/After-Call-Work--ACW-/
 ---
 
 ## What is After-Call Work (ACW)?

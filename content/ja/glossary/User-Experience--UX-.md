@@ -16,7 +16,7 @@ draft: false
 e-title: User Experience (UX)
 url: /ja/glossary/user-experience--ux-/
 aliases:
-- /ja/glossary/User-Experience--UX-/
+- /glossary/User-Experience--UX-/
 term: ユーザーエクスペリエンス
 ---
 

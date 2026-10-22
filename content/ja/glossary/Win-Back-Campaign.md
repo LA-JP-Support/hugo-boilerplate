@@ -16,7 +16,7 @@ draft: false
 e-title: Win-Back Campaign
 url: /ja/glossary/win-back-campaign/
 aliases:
-- /ja/glossary/Win-Back-Campaign/
+- /glossary/Win-Back-Campaign/
 term: ウィンバックキャンペーン
 ---
 

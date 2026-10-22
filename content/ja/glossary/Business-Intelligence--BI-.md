@@ -16,7 +16,7 @@ draft: false
 e-title: Business Intelligence (BI)
 url: /ja/glossary/business-intelligence--bi-/
 aliases:
-- /ja/glossary/Business-Intelligence--BI-/
+- /glossary/Business-Intelligence--BI-/
 term: びじねすいんてりじぇんす（びーあい）
 ---
 

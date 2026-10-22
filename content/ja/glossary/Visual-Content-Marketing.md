@@ -16,7 +16,7 @@ draft: false
 e-title: Visual Content Marketing
 url: /ja/glossary/visual-content-marketing/
 aliases:
-- /ja/glossary/Visual-Content-Marketing/
+- /glossary/Visual-Content-Marketing/
 term: びじゅあるこんてんつまーけてぃんぐ
 ---
 

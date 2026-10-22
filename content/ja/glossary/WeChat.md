@@ -16,7 +16,7 @@ draft: false
 e-title: WeChat
 url: /ja/glossary/wechat/
 aliases:
-- /ja/glossary/WeChat/
+- /glossary/WeChat/
 term: ウィーチャット
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Event Streaming
 url: /ja/glossary/event-streaming/
 aliases:
-- /ja/glossary/Event-Streaming/
+- /glossary/Event-Streaming/
 term: いべんとすとりーみんぐ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Workforce Optimization
 url: /ja/glossary/workforce-optimization/
 aliases:
-- /ja/glossary/Workforce-Optimization/
+- /glossary/Workforce-Optimization/
 term: わーくふぉーすさいてきか
 ---
 

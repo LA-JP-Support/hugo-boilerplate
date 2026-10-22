@@ -16,7 +16,7 @@ draft: false
 e-title: Content Federation
 url: /ja/glossary/content-federation/
 aliases:
-- /ja/glossary/Content-Federation/
+- /glossary/Content-Federation/
 term: こんてんつふぇでれーしょん
 ---
 

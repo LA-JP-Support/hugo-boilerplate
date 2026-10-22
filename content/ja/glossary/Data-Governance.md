@@ -16,7 +16,7 @@ draft: false
 e-title: Data Governance
 url: /ja/glossary/data-governance/
 aliases:
-- /ja/glossary/Data-Governance/
+- /glossary/Data-Governance/
 term: データガバナンス
 ---
 

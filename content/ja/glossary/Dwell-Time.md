@@ -17,7 +17,7 @@ e-title: Dwell Time
 term: たいざいじかん
 url: "/ja/glossary/dwell-time/"
 aliases:
-- "/ja/glossary/Dwell-Time/"
+- "/glossary/Dwell-Time/"
 ---
 
 ## 滞在時間とは?

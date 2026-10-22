@@ -17,7 +17,7 @@ e-title: Node Grouping
 url: /ja/glossary/node-grouping/
 term: ノードグルーピング
 aliases:
-- /ja/glossary/Node-Grouping/
+- /glossary/Node-Grouping/
 ---
 
 ## ノードグルーピングとは？

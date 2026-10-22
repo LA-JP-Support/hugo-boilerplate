@@ -16,7 +16,7 @@ draft: false
 e-title: Slack
 url: "/ja/glossary/slack/"
 aliases:
-- "/ja/glossary/Slack/"
+- "/glossary/Slack/"
 term: スラック
 ---
 

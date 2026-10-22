@@ -17,7 +17,7 @@ draft: false
 e-title: Wake Word
 url: /ja/glossary/wake-word/
 aliases:
-- /ja/glossary/Wake-Word/
+- /glossary/Wake-Word/
 term: うぇいくわーど
 ---
 

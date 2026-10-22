@@ -17,7 +17,7 @@ e-title: False Positive
 term: ぎようせい
 url: "/ja/glossary/false-positive/"
 aliases:
-- "/ja/glossary/False-Positive/"
+- "/glossary/False-Positive/"
 ---
 
 ## 偽陽性とは？

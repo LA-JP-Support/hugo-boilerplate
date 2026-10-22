@@ -16,7 +16,7 @@ draft: false
 e-title: CLS (Cumulative Layout Shift)
 url: /ja/glossary/cls--cumulative-layout-shift-/
 aliases:
-- /ja/glossary/CLS--Cumulative-Layout-Shift-/
+- /glossary/CLS--Cumulative-Layout-Shift-/
 term: シーエルエス
 ---
 

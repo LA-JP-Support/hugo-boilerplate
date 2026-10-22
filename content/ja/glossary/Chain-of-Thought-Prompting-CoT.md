@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Chain-of-Thought-Prompting-CoT/
 aliases:
-  - /ja/glossary/chain-of-thought-prompting-cot/
+  - /glossary/chain-of-thought-prompting-cot/
 keywords:
   - チェーンオブソート
   - CoT

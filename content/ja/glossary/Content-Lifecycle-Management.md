@@ -16,7 +16,7 @@ draft: false
 e-title: Content Lifecycle Management
 url: /ja/glossary/content-lifecycle-management/
 aliases:
-- /ja/glossary/Content-Lifecycle-Management/
+- /glossary/Content-Lifecycle-Management/
 term: こんてんつらいふさいくるかんり
 ---
 

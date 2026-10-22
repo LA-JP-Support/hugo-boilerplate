@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Interaction Management
 url: /ja/glossary/customer-interaction-management/
 aliases:
-- /ja/glossary/Customer-Interaction-Management/
+- /glossary/Customer-Interaction-Management/
 term: カスタマーインタラクションかんり
 ---
 

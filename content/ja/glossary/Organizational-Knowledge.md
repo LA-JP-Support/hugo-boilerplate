@@ -16,7 +16,7 @@ draft: false
 e-title: Organizational Knowledge
 url: /ja/glossary/organizational-knowledge/
 aliases:
-- /ja/glossary/Organizational-Knowledge/
+- /glossary/Organizational-Knowledge/
 term: そしきちしき
 ---
 

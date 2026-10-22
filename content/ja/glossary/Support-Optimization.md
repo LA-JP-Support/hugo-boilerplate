@@ -16,7 +16,7 @@ draft: false
 e-title: Support Optimization
 url: /ja/glossary/support-optimization/
 aliases:
-- /ja/glossary/Support-Optimization/
+- /glossary/Support-Optimization/
 term: サポートさいてきか
 ---
 

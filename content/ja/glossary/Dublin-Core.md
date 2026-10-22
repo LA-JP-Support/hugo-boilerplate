@@ -16,7 +16,7 @@ draft: false
 e-title: Dublin Core
 url: /ja/glossary/dublin-core/
 aliases:
-- /ja/glossary/Dublin-Core/
+- /glossary/Dublin-Core/
 term: ダブリン コア
 ---
 

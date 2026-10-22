@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/aws-amplify/
 aliases:
-- /en/glossary/AWS-Amplify/
+- /glossary/AWS-Amplify/
 ---
 
 ## What is AWS Amplify?

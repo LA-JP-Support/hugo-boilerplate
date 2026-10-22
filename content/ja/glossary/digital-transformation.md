@@ -17,7 +17,7 @@ e-title: Digital Transformation
 term: でじたるとらんすふぉーめーしょん
 url: /ja/glossary/digital-transformation/
 aliases:
-- /ja/glossary/Digital-Transformation/
+- /glossary/Digital-Transformation/
 ---
 
 ## デジタルトランスフォーメーションとは？

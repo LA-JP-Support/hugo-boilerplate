@@ -18,7 +18,7 @@ e-title: Webview
 term: うぇぶびゅー
 url: "/ja/glossary/webview/"
 aliases:
-- "/ja/glossary/Webview/"
+- "/glossary/Webview/"
 ---
 <!-- ===== サクッとわかるゾーン ===== -->
 

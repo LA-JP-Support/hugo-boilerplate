@@ -17,7 +17,7 @@ e-title: Prompt Template
 term: ぷろんぷとてんぷれーと
 url: "/ja/glossary/prompt-template/"
 aliases:
-- "/ja/glossary/Prompt-Template/"
+- "/glossary/Prompt-Template/"
 ---
 
 ## プロンプトテンプレートとは？

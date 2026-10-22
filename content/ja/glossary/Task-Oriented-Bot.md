@@ -17,7 +17,7 @@ e-title: Task-Oriented Bot
 term: たすくしこうがたぼっと
 url: "/ja/glossary/task-oriented-bot/"
 aliases:
-- "/ja/glossary/Task-Oriented-Bot/"
+- "/glossary/Task-Oriented-Bot/"
 ---
 
 ## タスク指向型ボットとは?

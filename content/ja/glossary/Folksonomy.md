@@ -16,7 +16,7 @@ draft: false
 e-title: Folksonomy
 url: /ja/glossary/folksonomy/
 aliases:
-- /ja/glossary/Folksonomy/
+- /glossary/Folksonomy/
 term: ふぉーくそのみー
 ---
 

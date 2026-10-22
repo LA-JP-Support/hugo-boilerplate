@@ -16,7 +16,7 @@ e-title: Professional Blogging
 term: ぷろふぇっしょなるぶろぐ
 url: "/ja/glossary/professional-blogging/"
 aliases:
-- "/ja/glossary/Professional-Blogging/"
+- "/glossary/Professional-Blogging/"
 ---
 
 ## プロフェッショナルブログとは？

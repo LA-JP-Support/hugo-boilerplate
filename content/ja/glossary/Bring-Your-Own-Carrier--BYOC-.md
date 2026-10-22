@@ -16,7 +16,7 @@ draft: false
 e-title: Bring Your Own Carrier (BYOC)
 url: /ja/glossary/bring-your-own-carrier--byoc-/
 aliases:
-- /ja/glossary/Bring-Your-Own-Carrier--BYOC-/
+- /glossary/Bring-Your-Own-Carrier--BYOC-/
 term: ブリング・ユア・オウン・キャリア
 ---
 

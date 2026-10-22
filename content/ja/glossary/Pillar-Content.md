@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Pillar-Content/
 aliases:
-  - /ja/glossary/pillar-content/
+  - /glossary/pillar-content/
 keywords:
   - ピラーコンテンツ
   - トピッククラスター

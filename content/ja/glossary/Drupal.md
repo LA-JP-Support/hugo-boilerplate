@@ -16,7 +16,7 @@ draft: false
 e-title: Drupal
 url: /ja/glossary/drupal/
 aliases:
-- /ja/glossary/Drupal/
+- /glossary/Drupal/
 term: ドルーパル
 ---
 

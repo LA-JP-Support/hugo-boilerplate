@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Data Platform (CDP)
 url: /ja/glossary/customer-data-platform--cdp-/
 aliases:
-- /ja/glossary/Customer-Data-Platform--CDP-/
+- /glossary/Customer-Data-Platform--CDP-/
 term: カスタマーデータプラットフォーム(シーディーピー)
 ---
 

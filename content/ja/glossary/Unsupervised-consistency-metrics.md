@@ -17,7 +17,7 @@ e-title: Unsupervised Consistency Metrics
 term: きょうしなしいっかんせいメトリクス
 url: "/ja/glossary/unsupervised-consistency-metrics/"
 aliases:
-- "/ja/glossary/Unsupervised-consistency-metrics/"
+- "/glossary/Unsupervised-consistency-metrics/"
 ---
 ## サクッとわかるゾーン
 

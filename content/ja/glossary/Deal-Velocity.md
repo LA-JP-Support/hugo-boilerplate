@@ -16,7 +16,7 @@ draft: false
 e-title: Deal Velocity
 url: /ja/glossary/deal-velocity/
 aliases:
-- /ja/glossary/Deal-Velocity/
+- /glossary/Deal-Velocity/
 term: ディールベロシティ
 ---
 

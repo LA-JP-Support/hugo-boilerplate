@@ -16,7 +16,7 @@ draft: false
 e-title: Technical Blog
 url: /ja/glossary/technical-blog/
 aliases:
-- /ja/glossary/Technical-Blog/
+- /glossary/Technical-Blog/
 term: てくにかるぶろぐ
 ---
 

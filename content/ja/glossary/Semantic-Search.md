@@ -16,7 +16,7 @@ draft: false
 e-title: Semantic Search
 url: /ja/glossary/semantic-search/
 aliases:
-- /ja/glossary/Semantic-Search/
+- /glossary/Semantic-Search/
 term: せまんてぃっくけんさく
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Cloudflare
 url: /ja/glossary/cloudflare/
 aliases:
-- /ja/glossary/Cloudflare/
+- /glossary/Cloudflare/
 term: クラウドフレア
 ---
 

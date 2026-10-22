@@ -16,7 +16,7 @@ draft: false
 e-title: Requirements Definition
 url: /ja/glossary/requirements-definition/
 aliases:
-- /ja/glossary/Requirements-Definition/
+- /glossary/Requirements-Definition/
 term: ようけんていぎ
 ---
 

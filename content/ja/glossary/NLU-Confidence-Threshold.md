@@ -16,7 +16,7 @@ draft: false
 e-title: NLU Confidence Threshold
 url: /ja/glossary/nlu-confidence-threshold/
 aliases:
-- /ja/glossary/NLU-Confidence-Threshold/
+- /glossary/NLU-Confidence-Threshold/
 term: エヌエルユーしんらいどいきち
 ---
 

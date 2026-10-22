@@ -16,7 +16,7 @@ draft: false
 e-title: Call Transfer
 url: /ja/glossary/call-transfer/
 aliases:
-- /ja/glossary/Call-Transfer/
+- /glossary/Call-Transfer/
 term: こーるてんそう
 ---
 

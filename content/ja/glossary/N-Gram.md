@@ -16,7 +16,7 @@ draft: false
 e-title: N-Gram
 url: /ja/glossary/n-gram/
 aliases:
-- /ja/glossary/N-Gram/
+- /glossary/N-Gram/
 term: エヌグラム
 ---
 

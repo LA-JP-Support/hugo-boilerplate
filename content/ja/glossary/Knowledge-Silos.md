@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Silos
 url: /ja/glossary/knowledge-silos/
 aliases:
-- /ja/glossary/Knowledge-Silos/
+- /glossary/Knowledge-Silos/
 term: なれっじさいろ
 ---
 

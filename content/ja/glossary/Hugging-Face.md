@@ -16,7 +16,7 @@ draft: false
 e-title: Hugging Face
 url: /ja/glossary/hugging-face/
 aliases:
-- /ja/glossary/Hugging-Face/
+- /glossary/Hugging-Face/
 term: ハギング フェイス
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Data Lineage
 url: /ja/glossary/data-lineage/
 aliases:
-- /ja/glossary/Data-Lineage/
+- /glossary/Data-Lineage/
 term: データリネージ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: FCP (First Contentful Paint)
 url: /ja/glossary/fcp--first-contentful-paint-/
 aliases:
-- /ja/glossary/FCP--First-Contentful-Paint-/
+- /glossary/FCP--First-Contentful-Paint-/
 term: えふしーぴー
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Twitter-X
 url: /ja/glossary/twitter-x/
 aliases:
-- /ja/glossary/Twitter-X/
+- /glossary/Twitter-X/
 term: ツイッター エックス
 ---
 

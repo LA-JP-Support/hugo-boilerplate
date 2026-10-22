@@ -17,7 +17,7 @@ e-title: ITIL – Information Technology Infrastructure Library
 term: アイティーアイエル – インフォメーション テクノロジー インフラストラクチャ ライブラリ
 url: "/ja/glossary/itil/"
 aliases:
-- "/ja/glossary/ITIL/"
+- "/glossary/ITIL/"
 ---
 
 ## ITILとは?

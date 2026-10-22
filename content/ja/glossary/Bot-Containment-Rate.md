@@ -16,7 +16,7 @@ draft: false
 e-title: Bot Containment Rate
 url: /ja/glossary/bot-containment-rate/
 aliases:
-- /ja/glossary/Bot-Containment-Rate/
+- /glossary/Bot-Containment-Rate/
 term: ボットふうじこめりつ
 ---
 

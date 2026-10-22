@@ -16,7 +16,7 @@ draft: false
 e-title: SMS Support
 url: /ja/glossary/sms-support/
 aliases:
-- /ja/glossary/SMS-Support/
+- /glossary/SMS-Support/
 term: エスエムエスサポート
 ---
 

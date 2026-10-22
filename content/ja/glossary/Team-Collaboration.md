@@ -16,7 +16,7 @@ draft: false
 e-title: Team Collaboration
 url: /ja/glossary/team-collaboration/
 aliases:
-- /ja/glossary/Team-Collaboration/
+- /glossary/Team-Collaboration/
 term: ちーむこらぼれーしょん
 ---
 

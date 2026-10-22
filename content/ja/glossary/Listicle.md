@@ -15,7 +15,7 @@ draft: false
 e-title: Listicle
 url: "/ja/glossary/listicle/"
 aliases:
-- "/ja/glossary/Listicle/"
+- "/glossary/Listicle/"
 term: りすてぃくる
 lastmod: 2026-04-02
 ---

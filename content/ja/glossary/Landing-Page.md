@@ -16,7 +16,7 @@ draft: false
 e-title: Landing Page
 url: /ja/glossary/landing-page/
 aliases:
-- /ja/glossary/Landing-Page/
+- /glossary/Landing-Page/
 term: らんでぃんぐぺーじ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: API Rate Limiting
 url: /ja/glossary/api-rate-limiting/
 aliases:
-- /ja/glossary/API-Rate-Limiting/
+- /glossary/API-Rate-Limiting/
 term: エーピーアイレートせいげん
 ---
 

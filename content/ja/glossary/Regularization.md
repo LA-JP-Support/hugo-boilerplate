@@ -16,7 +16,7 @@ draft: false
 e-title: Regularization
 url: /ja/glossary/regularization/
 aliases:
-- /ja/glossary/Regularization/
+- /glossary/Regularization/
 term: せいそくか
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Instruction Tuning
 url: /ja/glossary/instruction-tuning/
 aliases:
-- /ja/glossary/Instruction-Tuning/
+- /glossary/Instruction-Tuning/
 term: インストラクションチューニング
 ---
 

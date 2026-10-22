@@ -16,7 +16,7 @@ draft: false
 e-title: Fine-Tuning
 url: /ja/glossary/fine-tuning/
 aliases:
-- /ja/glossary/Fine-Tuning/
+- /glossary/Fine-Tuning/
 term: ふぁいんちゅーにんぐ
 ---
 

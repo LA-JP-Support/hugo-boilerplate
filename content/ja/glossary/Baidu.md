@@ -16,7 +16,7 @@ draft: false
 e-title: Baidu
 url: /ja/glossary/baidu/
 aliases:
-- /ja/glossary/Baidu/
+- /glossary/Baidu/
 term: バイドゥ
 ---
 

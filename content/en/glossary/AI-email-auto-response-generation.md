@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/ai-email-auto-response-generation/
 aliases:
-- /en/glossary/AI-email-auto-response-generation/
+- /glossary/AI-email-auto-response-generation/
 ---
 
 ## What is AI Email Auto-Response Generation?

@@ -16,7 +16,7 @@ draft: false
 e-title: Product-Market Fit
 url: /ja/glossary/product-market-fit/
 aliases:
-- /ja/glossary/Product-Market-Fit/
+- /glossary/Product-Market-Fit/
 term: ぷろだくと・まーけっと・ふぃっと
 ---
 

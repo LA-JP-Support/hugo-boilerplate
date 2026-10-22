@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/affective-computing/
 aliases:
-  - /en/glossary/Affective-Computing/
+  - /glossary/Affective-Computing/
 ---
 
 ## What is Affective Computing?

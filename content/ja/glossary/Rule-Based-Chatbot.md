@@ -16,7 +16,7 @@ draft: false
 e-title: Rule-Based Chatbot
 url: /ja/glossary/rule-based-chatbot/
 aliases:
-- /ja/glossary/Rule-Based-Chatbot/
+- /glossary/Rule-Based-Chatbot/
 term: るーるべーすちゃっとぼっと
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: TTFB (Time to First Byte)
 url: /ja/glossary/ttfb--time-to-first-byte-/
 aliases:
-- /ja/glossary/TTFB--Time-to-First-Byte-/
+- /glossary/TTFB--Time-to-First-Byte-/
 term: ティーティーエフビー (タイム トゥ ファースト バイト)
 ---
 

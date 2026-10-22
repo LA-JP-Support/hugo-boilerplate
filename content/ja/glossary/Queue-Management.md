@@ -16,7 +16,7 @@ draft: false
 e-title: Queue Management
 url: /ja/glossary/queue-management/
 aliases:
-- /ja/glossary/Queue-Management/
+- /glossary/Queue-Management/
 term: きゅーかんり
 ---
 

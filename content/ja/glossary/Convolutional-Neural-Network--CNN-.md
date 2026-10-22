@@ -16,7 +16,7 @@ draft: false
 e-title: Convolutional Neural Network (CNN)
 url: /ja/glossary/convolutional-neural-network--cnn-/
 aliases:
-- /ja/glossary/Convolutional-Neural-Network--CNN-/
+- /glossary/Convolutional-Neural-Network--CNN-/
 term: たたみこみニューラルネットワーク（シーエヌエヌ）
 ---
 

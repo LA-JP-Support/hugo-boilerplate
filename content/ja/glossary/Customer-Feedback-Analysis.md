@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Feedback Analysis
 url: /ja/glossary/customer-feedback-analysis/
 aliases:
-- /ja/glossary/Customer-Feedback-Analysis/
+- /glossary/Customer-Feedback-Analysis/
 term: カスタマーフィードバックぶんせき
 ---
 

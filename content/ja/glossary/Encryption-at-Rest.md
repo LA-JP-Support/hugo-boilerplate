@@ -16,7 +16,7 @@ draft: false
 e-title: Encryption at Rest
 url: /ja/glossary/encryption-at-rest/
 aliases:
-- /ja/glossary/Encryption-at-Rest/
+- /glossary/Encryption-at-Rest/
 term: ほぞんでーたのあんごうか
 ---
 

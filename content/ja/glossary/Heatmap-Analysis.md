@@ -16,7 +16,7 @@ draft: false
 e-title: Heatmap Analysis
 url: /ja/glossary/heatmap-analysis/
 aliases:
-- /ja/glossary/Heatmap-Analysis/
+- /glossary/Heatmap-Analysis/
 term: ヒートマップぶんせき
 ---
 

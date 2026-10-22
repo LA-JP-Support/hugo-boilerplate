@@ -16,7 +16,7 @@ draft: false
 e-title: Affordable Solutions
 url: /ja/glossary/affordable-solutions/
 aliases:
-- /ja/glossary/Affordable-Solutions/
+- /glossary/Affordable-Solutions/
 term: てごろなかかくのそりゅーしょん
 ---
 

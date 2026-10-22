@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Auto-Scaling/
 aliases:
-  - /ja/glossary/auto-scaling/
+  - /glossary/auto-scaling/
 keywords:
   - スケーリング
   - 負荷分散

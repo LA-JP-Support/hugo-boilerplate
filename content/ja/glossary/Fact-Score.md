@@ -17,7 +17,7 @@ e-title: Fact-Score (FActScore)
 term: ファクトスコア
 url: "/ja/glossary/fact-score/"
 aliases:
-- "/ja/glossary/Fact-Score/"
+- "/glossary/Fact-Score/"
 ---
 
 ## FActScoreとは？

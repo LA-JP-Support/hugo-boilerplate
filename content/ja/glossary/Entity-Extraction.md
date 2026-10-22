@@ -16,7 +16,7 @@ draft: false
 e-title: Entity Extraction (Named Entity Recognition, NER)
 url: "/ja/glossary/entity-extraction/"
 aliases:
-- "/ja/glossary/Entity-Extraction/"
+- "/glossary/Entity-Extraction/"
 term: えんてぃてぃちゅうしゅつ
 
 ---

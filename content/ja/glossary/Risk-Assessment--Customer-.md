@@ -16,7 +16,7 @@ draft: false
 e-title: Risk Assessment (Customer)
 url: /ja/glossary/risk-assessment--customer-/
 aliases:
-- /ja/glossary/Risk-Assessment--Customer-/
+- /glossary/Risk-Assessment--Customer-/
 term: りすくあせすめんと(こきゃく)
 ---
 

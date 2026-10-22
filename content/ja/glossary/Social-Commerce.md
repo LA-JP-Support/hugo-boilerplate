@@ -16,7 +16,7 @@ draft: false
 e-title: Social Commerce
 url: "/ja/glossary/social-commerce/"
 aliases:
-- "/ja/glossary/Social-Commerce/"
+- "/glossary/Social-Commerce/"
 term: そーしゃるこまーす
 ---
 

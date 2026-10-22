@@ -17,7 +17,7 @@ e-title: FinOps for AI
 term: エーアイむけフィンオプス
 url: "/ja/glossary/finops-for-ai/"
 aliases:
-- "/ja/glossary/FinOps-for-AI/"
+- "/glossary/FinOps-for-AI/"
 ---
 
 ## AI向けFinOpsとは？

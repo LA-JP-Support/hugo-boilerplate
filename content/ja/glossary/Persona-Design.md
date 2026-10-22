@@ -16,7 +16,7 @@ draft: false
 e-title: Persona Design
 url: /ja/glossary/persona-design/
 aliases:
-- /ja/glossary/Persona-Design/
+- /glossary/Persona-Design/
 term: ぺるそなでざいん
 ---
 

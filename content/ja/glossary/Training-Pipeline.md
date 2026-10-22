@@ -16,7 +16,7 @@ draft: false
 e-title: Training Pipeline
 url: /ja/glossary/training-pipeline/
 aliases:
-- /ja/glossary/Training-Pipeline/
+- /glossary/Training-Pipeline/
 term: とれーにんぐぱいぷらいん
 ---
 

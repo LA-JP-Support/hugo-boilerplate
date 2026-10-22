@@ -16,7 +16,7 @@ draft: false
 e-title: Response Time
 url: /ja/glossary/response-time/
 aliases:
-- /ja/glossary/Response-Time/
+- /glossary/Response-Time/
 term: れすぽんすたいむ
 ---
 

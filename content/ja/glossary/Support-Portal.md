@@ -17,7 +17,7 @@ e-title: Support Portal
 term: サポートポータル
 url: "/ja/glossary/support-portal/"
 aliases:
-- "/ja/glossary/Support-Portal/"
+- "/glossary/Support-Portal/"
 ---
 
 ## サポートポータルとは？

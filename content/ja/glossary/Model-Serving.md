@@ -16,7 +16,7 @@ draft: false
 e-title: Model Serving
 url: /ja/glossary/Model-Serving/
 aliases:
-- /ja/glossary/model-serving/
+- /glossary/model-serving/
 term: もでるさーびんぐ
 ---
 

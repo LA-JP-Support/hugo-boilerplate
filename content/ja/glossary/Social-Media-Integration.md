@@ -16,7 +16,7 @@ draft: false
 e-title: Social Media Integration
 url: /ja/glossary/social-media-integration/
 aliases:
-- /ja/glossary/Social-Media-Integration/
+- /glossary/Social-Media-Integration/
 term: そーしゃるめでぃあとうごう
 ---
 

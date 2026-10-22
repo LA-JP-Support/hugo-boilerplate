@@ -16,7 +16,7 @@ draft: false
 e-title: IT Budget Planning
 url: /ja/glossary/it-budget-planning/
 aliases:
-- /ja/glossary/IT-Budget-Planning/
+- /glossary/IT-Budget-Planning/
 term: アイティーよさんけいかく
 ---
 

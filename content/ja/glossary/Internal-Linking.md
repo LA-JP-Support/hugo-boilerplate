@@ -16,7 +16,7 @@ draft: false
 e-title: Internal Linking
 url: /ja/glossary/internal-linking/
 aliases:
-- /ja/glossary/Internal-Linking/
+- /glossary/Internal-Linking/
 term: ないぶりんく
 ---
 

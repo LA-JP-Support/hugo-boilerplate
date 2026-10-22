@@ -16,7 +16,7 @@ draft: false
 e-title: Token
 url: /ja/glossary/token/
 aliases:
-- /ja/glossary/Token/
+- /glossary/Token/
 term: とーくん
 ---
 

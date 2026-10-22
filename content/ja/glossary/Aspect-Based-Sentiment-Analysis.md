@@ -16,7 +16,7 @@ draft: false
 e-title: Aspect-Based Sentiment Analysis
 url: /ja/glossary/aspect-based-sentiment-analysis/
 aliases:
-- /ja/glossary/Aspect-Based-Sentiment-Analysis/
+- /glossary/Aspect-Based-Sentiment-Analysis/
 term: アスペクトベースかんじょうぶんせき
 ---
 

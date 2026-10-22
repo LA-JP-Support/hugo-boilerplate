@@ -16,7 +16,7 @@ draft: false
 e-title: Call Recording
 url: /ja/glossary/call-recording/
 aliases:
-- /ja/glossary/Call-Recording/
+- /glossary/Call-Recording/
 term: つうわろくおん
 ---
 

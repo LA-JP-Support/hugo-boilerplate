@@ -16,7 +16,7 @@ draft: false
 e-title: Plugin Architecture
 url: /ja/glossary/plugin-architecture/
 aliases:
-- /ja/glossary/Plugin-Architecture/
+- /glossary/Plugin-Architecture/
 term: ぷらぐいんあーきてくちゃ
 ---
 

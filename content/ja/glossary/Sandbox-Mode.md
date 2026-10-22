@@ -17,7 +17,7 @@ e-title: Sandbox Mode
 term: さんどぼっくすもーど
 url: "/ja/glossary/sandbox-mode/"
 aliases:
-- "/ja/glossary/Sandbox-Mode/"
+- "/glossary/Sandbox-Mode/"
 ---
 
 ## サンドボックスモードとは

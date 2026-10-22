@@ -17,7 +17,7 @@ e-title: GitOps
 term: ギットオプス
 url: "/ja/glossary/gitops/"
 aliases:
-- "/ja/glossary/GitOps/"
+- "/glossary/GitOps/"
 ---
 
 ## GitOps とは?

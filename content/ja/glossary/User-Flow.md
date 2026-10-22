@@ -16,7 +16,7 @@ draft: false
 e-title: User Flow
 url: /ja/glossary/user-flow/
 aliases:
-- /ja/glossary/User-Flow/
+- /glossary/User-Flow/
 term: ユーザーフロー
 ---
 

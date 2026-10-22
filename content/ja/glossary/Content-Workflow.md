@@ -16,7 +16,7 @@ draft: false
 e-title: Content Workflow
 url: /ja/glossary/content-workflow/
 aliases:
-- /ja/glossary/Content-Workflow/
+- /glossary/Content-Workflow/
 term: わーくふろー
 ---
 

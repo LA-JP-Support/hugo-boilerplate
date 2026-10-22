@@ -16,7 +16,7 @@ draft: false
 e-title: Real-Time Analytics
 url: /ja/glossary/real-time-analytics/
 aliases:
-- /ja/glossary/Real-Time-Analytics/
+- /glossary/Real-Time-Analytics/
 term: りあるたいむぶんせき
 ---
 

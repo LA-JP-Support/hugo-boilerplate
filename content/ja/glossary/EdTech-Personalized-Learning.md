@@ -17,7 +17,7 @@ e-title: "EdTech Personalized Learning"
 term: "えどてっくぱーそならいずどらーにんぐ"
 url: "/ja/glossary/edtech-personalized-learning/"
 aliases:
-- "/ja/glossary/EdTech-Personalized-Learning/"
+- "/glossary/EdTech-Personalized-Learning/"
 ---
 
 ## EdTech Personalized Learningとは？

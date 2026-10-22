@@ -16,7 +16,7 @@ draft: false
 e-title: Multilingual Site
 url: /ja/glossary/multilingual-site/
 aliases:
-- /ja/glossary/Multilingual-Site/
+- /glossary/Multilingual-Site/
 term: たげんごサイト
 ---
 

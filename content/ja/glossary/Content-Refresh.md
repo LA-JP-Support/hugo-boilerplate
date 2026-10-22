@@ -16,7 +16,7 @@ draft: false
 e-title: Content Refresh
 url: /ja/glossary/content-refresh/
 aliases:
-- /ja/glossary/Content-Refresh/
+- /glossary/Content-Refresh/
 term: こんてんつりふれっしゅ
 ---
 

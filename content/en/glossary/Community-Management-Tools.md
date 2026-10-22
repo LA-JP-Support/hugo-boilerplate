@@ -15,7 +15,7 @@ date: 2025-12-19
 draft: false
 url: /en/glossary/community-management-tools/
 aliases:
-- /en/glossary/Community-Management-Tools/
+- /glossary/Community-Management-Tools/
 ---
 
 ## What are Community Management Tools?

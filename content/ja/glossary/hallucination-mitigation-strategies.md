@@ -17,7 +17,7 @@ e-title: Hallucination Mitigation Strategies
 term: はるしねーしょんかんわせんりゃく
 url: "/ja/glossary/hallucination-mitigation-strategies/"
 aliases:
-- "/ja/glossary/Hallucination-Mitigation-Strategies/"
+- "/glossary/Hallucination-Mitigation-Strategies/"
 ---
 ## ハルシネーション軽減戦略とは?
 ハルシネーション軽減戦略とは、AI システム、特に大規模言語モデル(LLM)が不正確、捏造、または誤解を招く情報を生成するリスクを防止または低減するために設計された技術、技術的プロセス、および運用上のベストプラクティスを包含するものです。AI の「ハルシネーション」とは、もっともらしく見えるものの、事実、トレーニングデータ、または検証可能なソースに基づいていない出力のことです。

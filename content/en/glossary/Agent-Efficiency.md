@@ -9,7 +9,7 @@ type: "glossary"
 draft: false
 url: /en/glossary/Agent-Efficiency/
 aliases:
-- /en/glossary/agent-efficiency/
+- /glossary/agent-efficiency/
 keywords:
   - Agent efficiency
   - AI performance optimization

@@ -16,7 +16,7 @@ draft: false
 e-title: Session Recording
 url: /ja/glossary/session-recording/
 aliases:
-- /ja/glossary/Session-Recording/
+- /glossary/Session-Recording/
 term: せっしょんれこーでぃんぐ
 ---
 

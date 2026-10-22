@@ -17,7 +17,7 @@ e-title: Sentiment Analysis
 term: せんちめんとぶんせき
 url: "/ja/glossary/sentiment-analysis/"
 aliases:
-- "/ja/glossary/Sentiment-Analysis/"
+- "/glossary/Sentiment-Analysis/"
 ---
 
 ## センチメント分析とは?

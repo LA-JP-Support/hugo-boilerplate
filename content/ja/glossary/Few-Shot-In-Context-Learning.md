@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Few-Shot-In-Context-Learning/
 aliases:
-  - /ja/glossary/few-shot-in-context-learning/
+  - /glossary/few-shot-in-context-learning/
 keywords:
   - 文脈学習
   - プロンプトエンジニアリング

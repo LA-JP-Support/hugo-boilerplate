@@ -16,7 +16,7 @@ draft: false
 e-title: Explainable AI (XAI)
 url: /ja/glossary/explainable-ai--xai-/
 aliases:
-- /ja/glossary/Explainable-AI--XAI-/
+- /glossary/Explainable-AI--XAI-/
 term: せつめいかのうなえーあい
 ---
 

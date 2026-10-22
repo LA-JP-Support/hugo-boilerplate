@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/adversarial-robustness/
 aliases:
-  - /en/glossary/Adversarial-Robustness/
+  - /glossary/Adversarial-Robustness/
 ---
 
 ## What is Adversarial Robustness?

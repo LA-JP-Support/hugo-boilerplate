@@ -17,7 +17,7 @@ draft: false
 e-title: Google Search Console
 url: "/ja/glossary/google-search-console/"
 aliases:
-- "/ja/glossary/Google-Search-Console/"
+- "/glossary/Google-Search-Console/"
 term: グーグル サーチ コンソール
 ---
 

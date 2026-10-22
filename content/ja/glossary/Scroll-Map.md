@@ -16,7 +16,7 @@ draft: false
 e-title: Scroll Map
 url: /ja/glossary/scroll-map/
 aliases:
-- /ja/glossary/Scroll-Map/
+- /glossary/Scroll-Map/
 term: すくろーるまっぷ
 ---
 

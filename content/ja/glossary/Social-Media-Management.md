@@ -16,7 +16,7 @@ draft: false
 e-title: Social Media Management
 url: /ja/glossary/social-media-management/
 aliases:
-- /ja/glossary/Social-Media-Management/
+- /glossary/Social-Media-Management/
 term: そーしゃるめでぃあかんり
 ---
 

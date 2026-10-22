@@ -16,7 +16,7 @@ draft: false
 e-title: Macro
 url: /ja/glossary/macro/
 aliases:
-- /ja/glossary/Macro/
+- /glossary/Macro/
 term: まくろ
 ---
 

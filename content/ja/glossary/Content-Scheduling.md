@@ -16,7 +16,7 @@ draft: false
 e-title: Content Scheduling
 url: /ja/glossary/content-scheduling/
 aliases:
-- /ja/glossary/Content-Scheduling/
+- /glossary/Content-Scheduling/
 term: こんてんつすけじゅーりんぐ
 ---
 

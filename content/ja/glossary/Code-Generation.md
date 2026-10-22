@@ -17,7 +17,7 @@ e-title: Code Generation
 term: こーどじぇねれーしょん
 url: "/ja/glossary/code-generation/"
 aliases:
-- "/ja/glossary/Code-Generation/"
+- "/glossary/Code-Generation/"
 ---
 
 ## コード生成とは?

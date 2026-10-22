@@ -17,7 +17,7 @@ e-title: What is a URL Retriever?
 term: ユーアールエル レトリーバー とは
 url: "/ja/glossary/url-retriever/"
 aliases:
-- "/ja/glossary/URL-Retriever/"
+- "/glossary/URL-Retriever/"
 ---
 ## URL Retrieverとは?
 URL Retrieverは、プログラムによってURLにアクセスし、スケジュールに基づいて情報を更新することで、Webリソースからの情報取得を自動化するように設計されたソフトウェアツール、機能、またはエージェントです。手動のWebブラウジングやコピー&ペースト方式とは異なり、URL Retrieverは高度な自動化フレームワークと、ますます増加しているAI駆動型エージェントを使用して、データ抽出、コンテンツ監視、更新などの反復的なWebタスクを自動化します。

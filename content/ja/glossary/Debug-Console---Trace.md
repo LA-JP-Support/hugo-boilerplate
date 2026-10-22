@@ -16,7 +16,7 @@ draft: false
 e-title: Debug Console / Trace
 url: /ja/glossary/debug-console---trace/
 aliases:
-- /ja/glossary/Debug-Console---Trace/
+- /glossary/Debug-Console---Trace/
 term: でばっぐこんそーる / とれーす
 ---
 

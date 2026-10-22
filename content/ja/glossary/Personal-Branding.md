@@ -16,7 +16,7 @@ draft: false
 e-title: Personal Branding
 url: /ja/glossary/personal-branding/
 aliases:
-- /ja/glossary/Personal-Branding/
+- /glossary/Personal-Branding/
 term: ぱーそなるぶらんでぃんぐ
 ---
 

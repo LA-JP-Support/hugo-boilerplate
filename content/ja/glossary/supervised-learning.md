@@ -17,7 +17,7 @@ e-title: Supervised Learning
 term: きょうしありがくしゅう
 url: "/ja/glossary/supervised-learning/"
 aliases:
-- "/ja/glossary/Supervised-Learning/"
+- "/glossary/Supervised-Learning/"
 ---
 ## 教師あり学習とは?
 

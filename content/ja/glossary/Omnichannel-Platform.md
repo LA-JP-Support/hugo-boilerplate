@@ -16,7 +16,7 @@ draft: false
 e-title: Omnichannel Platform
 url: /ja/glossary/omnichannel-platform/
 aliases:
-- /ja/glossary/Omnichannel-Platform/
+- /glossary/Omnichannel-Platform/
 term: オムニチャネルプラットフォーム
 ---
 

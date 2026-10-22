@@ -16,7 +16,7 @@ draft: false
 e-title: Webinar Marketing
 url: /ja/glossary/webinar-marketing/
 aliases:
-- /ja/glossary/Webinar-Marketing/
+- /glossary/Webinar-Marketing/
 term: うぇびなーまーけてぃんぐ
 ---
 

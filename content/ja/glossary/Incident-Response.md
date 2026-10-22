@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/incident-response/
 aliases:
-  - /ja/glossary/Incident-Management/
+  - /glossary/Incident-Management/
 keywords:
   - インシデント対応
   - セキュリティ侵害

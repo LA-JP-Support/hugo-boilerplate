@@ -16,7 +16,7 @@ draft: false
 e-title: RAG (Retrieval-Augmented Generation)
 url: /ja/glossary/rag/
 aliases:
-- /ja/glossary/RAG/
+- /glossary/RAG/
 term: アールエージー
 ---
 

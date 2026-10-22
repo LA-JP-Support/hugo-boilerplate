@@ -16,7 +16,7 @@ draft: false
 e-title: Model Retraining
 url: /ja/glossary/Model-Retraining/
 aliases:
-- /ja/glossary/model-retraining/
+- /glossary/model-retraining/
 term: もでるさいくんれん
 ---
 

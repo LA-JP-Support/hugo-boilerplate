@@ -16,7 +16,7 @@ draft: false
 e-title: Partial Template
 url: /ja/glossary/partial-template/
 aliases:
-- /ja/glossary/Partial-Template/
+- /glossary/Partial-Template/
 term: ぱーしゃるてんぷれーと
 ---
 

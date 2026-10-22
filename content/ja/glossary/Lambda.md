@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Lambda/
 aliases:
-  - /ja/glossary/lambda/
+  - /glossary/lambda/
 keywords:
   - AWS Lambda
   - サーバーレス

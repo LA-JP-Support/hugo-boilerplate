@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/ai-agents/
 aliases:
-- /en/glossary/AI-agents/
+- /glossary/AI-agents/
 ---
 
 ## What is an AI Agent?

@@ -16,7 +16,7 @@ draft: false
 e-title: Speculative Decoding
 url: /ja/glossary/speculative-decoding/
 aliases:
-- /ja/glossary/Speculative-Decoding/
+- /glossary/Speculative-Decoding/
 term: とうきてきでこーでぃんぐ
 ---
 

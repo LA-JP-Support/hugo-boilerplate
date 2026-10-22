@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Mobile-First-Design/
 aliases:
-  - /ja/glossary/mobile-first/
+  - /glossary/mobile-first/
 keywords:
   - レスポンシブデザイン
   - モバイル

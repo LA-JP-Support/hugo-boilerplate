@@ -16,7 +16,7 @@ draft: false
 e-title: Data Breach Response
 url: /ja/glossary/data-breach-response/
 aliases:
-- /ja/glossary/Data-Breach-Response/
+- /glossary/Data-Breach-Response/
 term: データしんがいたいおう
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: ETL (Extract Transform Load)
 url: /ja/glossary/etl--extract-transform-load-/
 aliases:
-- /ja/glossary/ETL--Extract-Transform-Load-/
+- /glossary/ETL--Extract-Transform-Load-/
 term: イーティーエル(ちゅうしゅつ・へんかん・ろーど)
 ---
 

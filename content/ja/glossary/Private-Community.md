@@ -16,7 +16,7 @@ draft: false
 e-title: Private Community
 url: /ja/glossary/private-community/
 aliases:
-- /ja/glossary/Private-Community/
+- /glossary/Private-Community/
 term: ぷらいべーとこみゅにてぃ
 ---
 

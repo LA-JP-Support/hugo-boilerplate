@@ -16,7 +16,7 @@ draft: false
 e-title: Model Deployment
 url: /ja/glossary/Model-Deployment/
 aliases:
-- /ja/glossary/model-deployment/
+- /glossary/model-deployment/
 term: もでるでぷろいめんと
 ---
 

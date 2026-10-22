@@ -16,7 +16,7 @@ draft: false
 e-title: Video Synthesis
 url: /ja/glossary/video-synthesis/
 aliases:
-- /ja/glossary/Video-Synthesis/
+- /glossary/Video-Synthesis/
 term: びでおごうせい
 ---
 

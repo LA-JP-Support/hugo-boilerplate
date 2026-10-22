@@ -9,7 +9,7 @@ type: "glossary"
 draft: false
 url: /en/glossary/Agent-Burnout/
 aliases:
-- /en/glossary/agent-burnout/
+- /glossary/agent-burnout/
 keywords:
   - Agent burnout
   - AI agent fatigue

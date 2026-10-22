@@ -16,7 +16,7 @@ draft: false
 e-title: Data Mart
 url: "/ja/glossary/data-mart/"
 aliases:
-- "/ja/glossary/Data-Mart/"
+- "/glossary/Data-Mart/"
 term: データマート
 ---
 

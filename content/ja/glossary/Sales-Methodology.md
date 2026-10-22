@@ -16,7 +16,7 @@ draft: false
 e-title: Sales Methodology
 url: /ja/glossary/sales-methodology/
 aliases:
-- /ja/glossary/Sales-Methodology/
+- /glossary/Sales-Methodology/
 term: せーるすほうほうろん
 ---
 

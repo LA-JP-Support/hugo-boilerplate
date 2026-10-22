@@ -17,7 +17,7 @@ e-title: Self-Service
 term: せるふさーびす
 url: /ja/glossary/self-service/
 aliases:
-  - /ja/glossary/Self-Service/
+  - /glossary/Self-Service/
 ---
 
 ## セルフサービスとは

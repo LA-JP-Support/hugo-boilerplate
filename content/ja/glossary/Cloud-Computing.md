@@ -16,7 +16,7 @@ draft: false
 e-title: Cloud Computing
 url: /ja/glossary/cloud-computing/
 aliases:
-- /ja/glossary/Cloud-Computing/
+- /glossary/Cloud-Computing/
 term: くらうどこんぴゅーてぃんぐ
 ---
 

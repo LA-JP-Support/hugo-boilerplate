@@ -16,7 +16,7 @@ draft: false
 e-title: Long-Tail Keyword
 url: /ja/glossary/long-tail-keyword/
 aliases:
-- /ja/glossary/Long-Tail-Keyword/
+- /glossary/Long-Tail-Keyword/
 term: ろんぐてーるきーわーど
 ---
 

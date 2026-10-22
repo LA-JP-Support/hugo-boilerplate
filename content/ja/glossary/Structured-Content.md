@@ -16,7 +16,7 @@ draft: false
 e-title: Structured Content
 url: /ja/glossary/structured-content/
 aliases:
-- /ja/glossary/Structured-Content/
+- /glossary/Structured-Content/
 term: こうぞうかコンテンツ
 ---
 

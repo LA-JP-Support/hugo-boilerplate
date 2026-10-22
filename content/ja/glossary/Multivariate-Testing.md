@@ -16,7 +16,7 @@ draft: false
 e-title: Multivariate Testing
 url: /ja/glossary/multivariate-testing/
 aliases:
-- /ja/glossary/Multivariate-Testing/
+- /glossary/Multivariate-Testing/
 term: たへんりょうてすと
 ---
 

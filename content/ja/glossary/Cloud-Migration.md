@@ -16,7 +16,7 @@ draft: false
 e-title: Cloud Migration
 url: /ja/glossary/cloud-migration/
 aliases:
-- /ja/glossary/Cloud-Migration/
+- /glossary/Cloud-Migration/
 term: くらうどいこう
 ---
 

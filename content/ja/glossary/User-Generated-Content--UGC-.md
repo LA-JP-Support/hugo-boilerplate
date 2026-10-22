@@ -16,7 +16,7 @@ draft: false
 e-title: User-Generated Content (UGC)
 url: /ja/glossary/user-generated-content--ugc-/
 aliases:
-- /ja/glossary/User-Generated-Content--UGC-/
+- /glossary/User-Generated-Content--UGC-/
 term: ユーザーせいせいコンテンツ
 ---
 

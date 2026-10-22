@@ -16,7 +16,7 @@ draft: false
 e-title: Ernie-Bot
 url: /ja/glossary/ernie-bot/
 aliases:
-- /ja/glossary/Ernie-Bot/
+- /glossary/Ernie-Bot/
 term: アーニーボット
 ---
 

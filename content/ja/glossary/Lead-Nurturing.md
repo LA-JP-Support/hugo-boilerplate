@@ -16,7 +16,7 @@ draft: false
 e-title: Lead Nurturing
 url: "/ja/glossary/Lead-Nurturing/"
 aliases:
-- "/ja/glossary/lead-nurturing/"
+- "/glossary/lead-nurturing/"
 term: りーどなーちゃりんぐ
 ---
 

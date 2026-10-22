@@ -16,7 +16,7 @@ draft: false
 e-title: Revenue Funnel
 url: /ja/glossary/revenue-funnel/
 aliases:
-- /ja/glossary/Revenue-Funnel/
+- /glossary/Revenue-Funnel/
 term: レベニューファネル
 ---
 

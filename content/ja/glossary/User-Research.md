@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/User-Research/
 aliases:
-  - /ja/glossary/user-research/
+  - /glossary/user-research/
 keywords:
   - リサーチ
   - ユーザー理解

@@ -16,7 +16,7 @@ draft: false
 e-title: Behavior Flow Analysis
 url: /ja/glossary/behavior-flow-analysis/
 aliases:
-- /ja/glossary/Behavior-Flow-Analysis/
+- /glossary/Behavior-Flow-Analysis/
 term: こうどうフローぶんせき
 ---
 

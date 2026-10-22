@@ -17,7 +17,7 @@ e-title: Pinecone
 term: パインコーン
 url: "/ja/glossary/pinecone/"
 aliases:
-- "/ja/glossary/Pinecone/"
+- "/glossary/Pinecone/"
 ---
 
 ## Pinecone とは？

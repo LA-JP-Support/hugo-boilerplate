@@ -16,7 +16,7 @@ draft: false
 e-title: Employee Feedback
 url: /ja/glossary/employee-feedback/
 aliases:
-- /ja/glossary/Employee-Feedback/
+- /glossary/Employee-Feedback/
 term: じゅうぎょういんフィードバック
 ---
 

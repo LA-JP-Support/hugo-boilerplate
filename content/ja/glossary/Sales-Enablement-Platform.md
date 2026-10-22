@@ -16,7 +16,7 @@ draft: false
 e-title: Sales Enablement Platform
 url: /ja/glossary/sales-enablement-platform/
 aliases:
-- /ja/glossary/Sales-Enablement-Platform/
+- /glossary/Sales-Enablement-Platform/
 term: せーるすいねーぶるめんと
 ---
 

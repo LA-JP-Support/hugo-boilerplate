@@ -16,7 +16,7 @@ draft: false
 e-title: Native Integration
 url: /ja/glossary/native-integration/
 aliases:
-- /ja/glossary/Native-Integration/
+- /glossary/Native-Integration/
 term: ねいてぃぶいんてぐれーしょん
 ---
 

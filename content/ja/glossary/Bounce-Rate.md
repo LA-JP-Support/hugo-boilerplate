@@ -16,7 +16,7 @@ draft: false
 e-title: Bounce Rate
 url: /ja/glossary/bounce-rate/
 aliases:
-- /ja/glossary/Bounce-Rate/
+- /glossary/Bounce-Rate/
 term: ばうんすりつ
 ---
 

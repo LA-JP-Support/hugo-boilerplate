@@ -16,7 +16,7 @@ draft: false
 e-title: Community Moderation
 url: /ja/glossary/community-moderation/
 aliases:
-- /ja/glossary/Community-Moderation/
+- /glossary/Community-Moderation/
 term: こみゅにてぃもでれーしょん
 ---
 

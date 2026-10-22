@@ -16,7 +16,7 @@ draft: false
 e-title: WhatsApp
 url: /ja/glossary/whatsapp/
 aliases:
-- /ja/glossary/WhatsApp/
+- /glossary/WhatsApp/
 term: ワッツアップ
 ---
 

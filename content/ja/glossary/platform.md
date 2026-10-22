@@ -19,7 +19,7 @@ e-title: Platform (Social Media)
 term: ぷらっとふぉーむ
 url: "/ja/glossary/platform/"
 aliases:
-- "/ja/glossary/Platform/"
+- "/glossary/Platform/"
 ---
 
 ## プラットフォームとは?

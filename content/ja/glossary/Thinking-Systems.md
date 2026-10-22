@@ -16,7 +16,7 @@ draft: false
 e-title: Thinking Systems
 url: /ja/glossary/thinking-systems/
 aliases:
-- /ja/glossary/Thinking-Systems/
+- /glossary/Thinking-Systems/
 term: しんきんぐしすてむ
 ---
 

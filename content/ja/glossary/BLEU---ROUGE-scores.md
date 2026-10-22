@@ -16,7 +16,7 @@ draft: false
 e-title: BLEU/ROUGE Scores
 url: /ja/glossary/bleu---rouge-scores/
 aliases:
-- /ja/glossary/BLEU---ROUGE-scores/
+- /glossary/BLEU---ROUGE-scores/
 term: ブルースコア/ルージュスコア
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Attribution Modeling
 url: /ja/glossary/attribution-modeling/
 aliases:
-- /ja/glossary/Attribution-Modeling/
+- /glossary/Attribution-Modeling/
 term: あとりびゅーしょんもでりんぐ
 ---
 

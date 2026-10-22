@@ -16,7 +16,7 @@ draft: false
 e-title: Model Drift
 url: /ja/glossary/Model-Drift/
 aliases:
-- /ja/glossary/model-drift/
+- /glossary/model-drift/
 term: もでるどりふと
 ---
 

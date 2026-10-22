@@ -16,7 +16,7 @@ draft: false
 e-title: Content Types
 url: /ja/glossary/content-types/
 aliases:
-- /ja/glossary/Content-Types/
+- /glossary/Content-Types/
 term: こんてんつけいしき
 ---
 

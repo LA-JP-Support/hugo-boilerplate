@@ -16,7 +16,7 @@ draft: false
 e-title: Warm Transfer
 url: /ja/glossary/warm-transfer/
 aliases:
-- /ja/glossary/Warm-Transfer/
+- /glossary/Warm-Transfer/
 term: うぉーむとらんすふぁー
 ---
 

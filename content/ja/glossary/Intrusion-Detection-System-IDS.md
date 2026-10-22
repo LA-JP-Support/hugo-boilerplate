@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/intrusion-detection-system-ids/
 aliases:
-  - /ja/glossary/IDS/
+  - /glossary/IDS/
 keywords:
   - IDS
   - 侵入検知

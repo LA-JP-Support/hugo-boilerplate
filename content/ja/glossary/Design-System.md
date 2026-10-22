@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Design-System/
 aliases:
-  - /ja/glossary/design-system/
+  - /glossary/design-system/
 keywords:
   - デザインシステム
   - UI/UX

@@ -16,7 +16,7 @@ draft: false
 e-title: Data Catalog
 url: /ja/glossary/data-catalog/
 aliases:
-- /ja/glossary/Data-Catalog/
+- /glossary/Data-Catalog/
 term: データカタログ
 ---
 

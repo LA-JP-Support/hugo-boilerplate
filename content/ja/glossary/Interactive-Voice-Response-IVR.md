@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Interactive-Voice-Response-IVR/
 aliases:
-  - /ja/glossary/interactive-voice-response-ivr/
+  - /glossary/interactive-voice-response-ivr/
 keywords:
   - IVR
   - 自動応答

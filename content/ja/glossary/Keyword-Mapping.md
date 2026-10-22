@@ -16,7 +16,7 @@ draft: false
 e-title: Keyword Mapping
 url: /ja/glossary/keyword-mapping/
 aliases:
-- /ja/glossary/Keyword-Mapping/
+- /glossary/Keyword-Mapping/
 term: キーワードマッピング
 ---
 

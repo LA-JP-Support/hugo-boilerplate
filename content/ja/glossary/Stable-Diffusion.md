@@ -16,7 +16,7 @@ draft: false
 e-title: Stable Diffusion
 url: /ja/glossary/stable-diffusion/
 aliases:
-- /ja/glossary/Stable-Diffusion/
+- /glossary/Stable-Diffusion/
 term: ステーブル・ディフュージョン
 ---
 

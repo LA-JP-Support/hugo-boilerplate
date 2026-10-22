@@ -16,7 +16,7 @@ draft: false
 e-title: SQL Injection
 url: /ja/glossary/sql-injection/
 aliases:
-- /ja/glossary/SQL-Injection/
+- /glossary/SQL-Injection/
 term: エスキューエルインジェクション
 ---
 

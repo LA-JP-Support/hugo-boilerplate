@@ -16,7 +16,7 @@ draft: false
 e-title: GPT
 url: /ja/glossary/gpt/
 aliases:
-- /ja/glossary/GPT/
+- /glossary/GPT/
 term: ジーピーティー
 ---
 

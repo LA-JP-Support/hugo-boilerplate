@@ -16,7 +16,7 @@ draft: false
 e-title: Batch Normalization
 url: /ja/glossary/batch-normalization/
 aliases:
-- /ja/glossary/Batch-Normalization/
+- /glossary/Batch-Normalization/
 term: ばっちせいきか
 ---
 

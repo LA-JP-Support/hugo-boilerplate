@@ -16,7 +16,7 @@ draft: false
 e-title: HR Analytics
 url: "/ja/glossary/hr-analytics/"
 aliases:
-- "/ja/glossary/HR-Analytics/"
+- "/glossary/HR-Analytics/"
 term: エイチアール アナリティクス
 ---
 

@@ -17,7 +17,7 @@ e-title: Security Policies
 term: せきゅりてぃぽりしー
 url: /ja/glossary/security-policies/
 aliases:
-  - /ja/glossary/Security-Policies/
+  - /glossary/Security-Policies/
 ---
 
 ## セキュリティポリシーとは

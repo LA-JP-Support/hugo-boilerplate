@@ -17,7 +17,7 @@ e-title: Telemetry
 term: てれめとりー
 url: "/ja/glossary/telemetry/"
 aliases:
-- "/ja/glossary/Telemetry/"
+- "/glossary/Telemetry/"
 ---
 
 ## サクッとわかるゾーン

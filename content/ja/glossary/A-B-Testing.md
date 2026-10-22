@@ -16,7 +16,7 @@ draft: false
 e-title: A/B Testing
 url: /ja/glossary/a-b-testing/
 aliases:
-- /ja/glossary/A-B-Testing/
+- /glossary/A-B-Testing/
 term: エービーテスト
 ---
 

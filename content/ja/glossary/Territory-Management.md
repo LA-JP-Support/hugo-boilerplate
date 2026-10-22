@@ -16,7 +16,7 @@ draft: false
 e-title: Territory Management
 url: /ja/glossary/territory-management/
 aliases:
-- /ja/glossary/Territory-Management/
+- /glossary/Territory-Management/
 term: てりとりーまねじめんと
 ---
 

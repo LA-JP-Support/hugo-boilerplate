@@ -16,7 +16,7 @@ draft: false
 e-title: Featured Snippet
 url: "/ja/glossary/featured-snippet/"
 aliases:
-- "/ja/glossary/Featured-Snippet/"
+- "/glossary/Featured-Snippet/"
 term: ふぃーちゃーどすにぺっと
 ---
 

@@ -17,7 +17,7 @@ e-title: Natural Language Search (NLS)
 term: しぜんげんごけんさく
 url: "/ja/glossary/natural-language-search/"
 aliases:
-- "/ja/glossary/Natural-Language-Search/"
+- "/glossary/Natural-Language-Search/"
 ---
 
 ## 自然言語検索とは?

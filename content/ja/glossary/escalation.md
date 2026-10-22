@@ -17,7 +17,7 @@ e-title: Escalation
 term: えすかれーしょん
 url: /ja/glossary/escalation/
 aliases:
-- /ja/glossary/Escalation/
+- /glossary/Escalation/
 ---
 
 ## エスカレーションとは？

@@ -16,7 +16,7 @@ draft: false
 e-title: Social Engagement Rate
 url: "/ja/glossary/social-engagement-rate/"
 aliases:
-- "/ja/glossary/Social-Engagement-Rate/"
+- "/glossary/Social-Engagement-Rate/"
 term: そーしゃるえんげーじめんとりつ
 ---
 

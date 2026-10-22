@@ -9,7 +9,7 @@ type: glossary
 draft: false
 url: /en/glossary/chain-of-thought-prompting-cot/
 aliases:
-  - /en/glossary/chain-of-thought-prompting-cot/
+  - /glossary/chain-of-thought-prompting-cot/
 keywords:
   - chain of thought
   - CoT

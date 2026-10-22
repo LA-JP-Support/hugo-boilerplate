@@ -16,7 +16,7 @@ draft: false
 e-title: Synthetic Data
 url: /ja/glossary/synthetic-data/
 aliases:
-- /ja/glossary/Synthetic-Data/
+- /glossary/Synthetic-Data/
 term: 合成データ
 ---
 

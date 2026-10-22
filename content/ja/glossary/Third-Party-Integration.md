@@ -16,7 +16,7 @@ draft: false
 e-title: Third-Party Integration
 url: /ja/glossary/third-party-integration/
 aliases:
-- /ja/glossary/Third-Party-Integration/
+- /glossary/Third-Party-Integration/
 term: さーどぱーてぃとうごう
 ---
 

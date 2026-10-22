@@ -16,7 +16,7 @@ draft: false
 e-title: Agent Productivity
 url: /ja/glossary/agent-productivity/
 aliases:
-- /ja/glossary/Agent-Productivity/
+- /glossary/Agent-Productivity/
 term: えーじぇんとせいさんせい
 ---
 

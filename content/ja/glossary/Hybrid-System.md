@@ -17,7 +17,7 @@ e-title: Hybrid System
 term: ハイブリッドシステム
 url: "/ja/glossary/hybrid-system/"
 aliases:
-- "/ja/glossary/Hybrid-System/"
+- "/glossary/Hybrid-System/"
 ---
 
 ## ハイブリッドシステムとは?

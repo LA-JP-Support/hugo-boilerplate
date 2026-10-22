@@ -15,7 +15,7 @@ draft: false
 e-title: Digital Twin
 url: /ja/glossary/digital-twin/
 aliases:
-- /ja/glossary/Digital-Twin/
+- /glossary/Digital-Twin/
 term: でじたるついん
 lastmod: 2026-04-02
 ---

@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/DPIA-Data-Protection-Impact-Assessment/
 aliases:
-  - /ja/glossary/dpia-impact-assessment/
+  - /glossary/dpia-impact-assessment/
 keywords:
   - DPIA
   - 個人情報影響評価

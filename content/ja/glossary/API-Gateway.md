@@ -16,7 +16,7 @@ draft: false
 e-title: API Gateway
 url: /ja/glossary/api-gateway/
 aliases:
-- /ja/glossary/API-Gateway/
+- /glossary/API-Gateway/
 term: エーピーアイゲートウェイ
 ---
 

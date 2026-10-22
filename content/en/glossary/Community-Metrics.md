@@ -15,7 +15,7 @@ date: 2025-12-19
 draft: false
 url: /en/glossary/community-metrics/
 aliases:
-- /en/glossary/Community-Metrics/
+- /glossary/Community-Metrics/
 ---
 
 ## What are Community Metrics?

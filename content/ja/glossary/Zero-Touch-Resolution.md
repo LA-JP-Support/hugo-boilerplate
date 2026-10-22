@@ -17,7 +17,7 @@ e-title: Zero-Touch Resolution
 term: ぜろたっちかいけつ
 url: /ja/glossary/zero-touch-resolution/
 aliases:
-- /ja/glossary/Zero-Touch-Resolution/
+- /glossary/Zero-Touch-Resolution/
 ---
 
 ## ゼロタッチ解決とは？

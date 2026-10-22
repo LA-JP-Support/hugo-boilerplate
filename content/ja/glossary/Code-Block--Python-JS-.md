@@ -17,7 +17,7 @@ e-title: Code Block (Python/JS)
 term: こーどぶろっく
 url: "/ja/glossary/code-block--python-js-/"
 aliases:
-- "/ja/glossary/Code-Block--Python-JS-/"
+- "/glossary/Code-Block--Python-JS-/"
 ---
 
 ## コードブロック(Python/JavaScript)とは?

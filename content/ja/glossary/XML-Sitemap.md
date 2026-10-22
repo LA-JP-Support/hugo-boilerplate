@@ -16,7 +16,7 @@ draft: false
 e-title: XML Sitemap
 url: /ja/glossary/xml-sitemap/
 aliases:
-- /ja/glossary/XML-Sitemap/
+- /glossary/XML-Sitemap/
 term: エックスエムエルサイトマップ
 ---
 

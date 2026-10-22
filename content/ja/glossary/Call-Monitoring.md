@@ -16,7 +16,7 @@ draft: false
 e-title: Call Monitoring
 url: /ja/glossary/call-monitoring/
 aliases:
-- /ja/glossary/Call-Monitoring/
+- /glossary/Call-Monitoring/
 term: こーるもにたりんぐ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Virtual Queue
 url: /ja/glossary/virtual-queue/
 aliases:
-- /ja/glossary/Virtual-Queue/
+- /glossary/Virtual-Queue/
 term: ばーちゃるきゅー
 ---
 

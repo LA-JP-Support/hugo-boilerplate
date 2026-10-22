@@ -16,7 +16,7 @@ draft: false
 e-title: Minimap
 url: /ja/glossary/minimap/
 aliases:
-- /ja/glossary/Minimap/
+- /glossary/Minimap/
 term: ミニマップ
 ---
 

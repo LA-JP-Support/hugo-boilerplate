@@ -17,7 +17,7 @@ e-title: Cosine Similarity
 term: こさいんるいじど
 url: /ja/glossary/cosine-similarity/
 aliases:
-- /ja/glossary/Cosine-Similarity/
+- /glossary/Cosine-Similarity/
 ---
 
 ## コサイン類似度とは?

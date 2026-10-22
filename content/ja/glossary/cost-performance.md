@@ -17,7 +17,7 @@ e-title: Cost-Performance Ratio (CPI)
 term: こすとぱふぉーまんすひりつ
 url: "/ja/glossary/cost-performance/"
 aliases:
-- "/ja/glossary/Cost-Performance/"
+- "/glossary/Cost-Performance/"
 ---
 
 <!-- ===== サクッとわかるゾーン（冒頭〜30行） ===== -->

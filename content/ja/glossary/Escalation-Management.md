@@ -16,7 +16,7 @@ draft: false
 e-title: Escalation Management
 url: /ja/glossary/escalation-management/
 aliases:
-- /ja/glossary/Escalation-Management/
+- /glossary/Escalation-Management/
 term: えすかれーしょんかんり
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: HNSW (Hierarchical Navigable Small World)
 url: /ja/glossary/hnsw--hierarchical-navigable-small-world-/
 aliases:
-  - /ja/glossary/HNSW--Hierarchical-Navigable-Small-World-/
+  - /glossary/HNSW--Hierarchical-Navigable-Small-World-/
 term: えいちえぬえすだぶりゅー(かいそうてきなびげーとかのうすもーるわーるど)
 ---
 

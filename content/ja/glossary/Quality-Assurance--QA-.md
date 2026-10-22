@@ -16,7 +16,7 @@ draft: false
 e-title: Quality Assurance (QA)
 url: /ja/glossary/quality-assurance--qa-/
 aliases:
-- /ja/glossary/Quality-Assurance--QA-/
+- /glossary/Quality-Assurance--QA-/
 term: ひんしつほしょう(きゅーえー)
 ---
 

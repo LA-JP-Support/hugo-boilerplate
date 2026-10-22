@@ -17,7 +17,7 @@ e-title: PII Redaction
 term: ぴーあいあいへんしゅう
 url: "/ja/glossary/pii-redaction/"
 aliases:
-- "/ja/glossary/PII-Redaction/"
+- "/glossary/PII-Redaction/"
 ---
 
 ## PII編集とは？

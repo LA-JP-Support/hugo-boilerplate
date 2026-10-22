@@ -17,7 +17,7 @@ e-title: Page Bundle
 term: ぺーじばんどる
 url: "/ja/glossary/page-bundle/"
 aliases:
-- "/ja/glossary/Page-Bundle/"
+- "/glossary/Page-Bundle/"
 ---
 
 ## ページバンドルとは？

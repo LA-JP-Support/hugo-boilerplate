@@ -16,7 +16,7 @@ draft: false
 e-title: Retention Strategy
 url: /ja/glossary/retention-strategy/
 aliases:
-- /ja/glossary/Retention-Strategy/
+- /glossary/Retention-Strategy/
 term: りてんしょんせんりゃく
 ---
 

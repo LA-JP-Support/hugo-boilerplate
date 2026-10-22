@@ -17,7 +17,7 @@ e-title: Connector
 term: こねくたー
 url: "/ja/glossary/connector/"
 aliases:
-- "/ja/glossary/Connector/"
+- "/glossary/Connector/"
 ---
 
 ## コネクターとは?

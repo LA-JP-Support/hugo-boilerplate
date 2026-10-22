@@ -16,7 +16,7 @@ draft: false
 e-title: Environment Variables (Secrets)
 url: "/ja/glossary/environment-variables--secrets-/"
 aliases:
-- "/ja/glossary/Environment-Variables--Secrets-/"
+- "/glossary/Environment-Variables--Secrets-/"
 term: かんきょうへんすう しークレット
 ---
 

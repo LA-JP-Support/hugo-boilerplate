@@ -16,7 +16,7 @@ draft: false
 e-title: Social Media Automation
 url: /ja/glossary/social-media-automation/
 aliases:
-- /ja/glossary/Social-Media-Automation/
+- /glossary/Social-Media-Automation/
 term: そーしゃるめでぃあじどうか
 ---
 

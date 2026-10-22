@@ -16,7 +16,7 @@ draft: false
 e-title: Feature Request
 url: "/ja/glossary/feature-request/"
 aliases:
-- "/ja/glossary/Feature-Request/"
+- "/glossary/Feature-Request/"
 term: きのうリクエスト
 ---
 

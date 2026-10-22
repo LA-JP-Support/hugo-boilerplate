@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/turn-taking/
 aliases:
-  - /ja/glossary/Turn-Taking/
+  - /glossary/Turn-Taking/
 keywords:
   - ターンテイキング
   - 話者交代

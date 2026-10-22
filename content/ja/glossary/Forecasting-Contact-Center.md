@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Forecasting-Contact-Center/
 aliases:
-  - /ja/glossary/forecasting-contact-center/
+  - /glossary/forecasting-contact-center/
 keywords:
   - 需要予測
   - フォーキャスティング

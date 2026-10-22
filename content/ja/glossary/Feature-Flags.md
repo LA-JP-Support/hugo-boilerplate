@@ -17,7 +17,7 @@ e-title: Feature Flags
 term: ふぃーちゃーふらぐ
 url: "/ja/glossary/feature-flags/"
 aliases:
-- "/ja/glossary/Feature-Flags/"
+- "/glossary/Feature-Flags/"
 ---
 
 ## フィーチャーフラグとは？

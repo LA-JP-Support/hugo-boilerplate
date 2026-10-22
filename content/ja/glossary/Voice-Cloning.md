@@ -16,7 +16,7 @@ draft: false
 e-title: Voice Cloning
 url: /ja/glossary/voice-cloning/
 aliases:
-- /ja/glossary/Voice-Cloning/
+- /glossary/Voice-Cloning/
 term: ぼいすくろーにんぐ
 ---
 

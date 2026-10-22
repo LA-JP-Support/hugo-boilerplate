@@ -16,7 +16,7 @@ draft: false
 e-title: SMB (Small and Medium Business)
 url: /ja/glossary/smb--small-and-medium-business-/
 aliases:
-- /ja/glossary/SMB--Small-and-Medium-Business-/
+- /glossary/SMB--Small-and-Medium-Business-/
 term: エスエムビー
 ---
 

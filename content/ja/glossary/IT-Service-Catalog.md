@@ -16,7 +16,7 @@ draft: false
 e-title: IT Service Catalog
 url: /ja/glossary/it-service-catalog/
 aliases:
-- /ja/glossary/IT-Service-Catalog/
+- /glossary/IT-Service-Catalog/
 term: アイティーサービスカタログ
 ---
 

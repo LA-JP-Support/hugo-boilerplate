@@ -16,7 +16,7 @@ draft: false
 e-title: Content Archiving
 url: /ja/glossary/content-archiving/
 aliases:
-- /ja/glossary/Content-Archiving/
+- /glossary/Content-Archiving/
 term: こんてんつあーかいびんぐ
 ---
 

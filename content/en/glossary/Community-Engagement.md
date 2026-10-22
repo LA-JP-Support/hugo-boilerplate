@@ -15,7 +15,7 @@ date: 2025-12-19
 draft: false
 url: /en/glossary/community-engagement/
 aliases:
-- /en/glossary/Community-Engagement/
+- /glossary/Community-Engagement/
 ---
 
 ## What is Community Engagement?

@@ -16,7 +16,7 @@ draft: false
 e-title: Managed Services
 url: /ja/glossary/managed-services/
 aliases:
-- /ja/glossary/Managed-Services/
+- /glossary/Managed-Services/
 term: まねーじどさーびす
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Channel Integration
 url: /ja/glossary/channel-integration/
 aliases:
-- /ja/glossary/Channel-Integration/
+- /glossary/Channel-Integration/
 term: ちゃねるとうごう
 ---
 

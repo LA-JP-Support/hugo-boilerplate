@@ -16,7 +16,7 @@ draft: false
 e-title: Softphone
 url: /ja/glossary/softphone/
 aliases:
-- /ja/glossary/Softphone/
+- /glossary/Softphone/
 term: そふとふぉん
 ---
 

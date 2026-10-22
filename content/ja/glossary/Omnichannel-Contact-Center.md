@@ -16,7 +16,7 @@ draft: false
 e-title: Omnichannel Contact Center
 url: /ja/glossary/omnichannel-contact-center/
 aliases:
-- /ja/glossary/Omnichannel-Contact-Center/
+- /glossary/Omnichannel-Contact-Center/
 term: オムニチャネルコンタクトセンター
 ---
 

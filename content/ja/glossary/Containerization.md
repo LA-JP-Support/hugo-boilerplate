@@ -16,7 +16,7 @@ draft: false
 e-title: Containerization
 url: /ja/glossary/containerization/
 aliases:
-- /ja/glossary/Containerization/
+- /glossary/Containerization/
 term: こんてなかか
 ---
 

@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Reinforcement-Learning-from-Human-Feedback-RLHF/
 aliases:
-  - /ja/glossary/reinforcement-learning-from-human-feedback-rlhf/
+  - /glossary/reinforcement-learning-from-human-feedback-rlhf/
 keywords:
   - RLHF
   - 人間フィードバック

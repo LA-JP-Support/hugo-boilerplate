@@ -17,7 +17,7 @@ e-title: Cost Estimation
 term: コストみつもり
 url: /ja/glossary/cost-estimation/
 aliases:
-- /ja/glossary/Cost-Estimation/
+- /glossary/Cost-Estimation/
 ---
 
 ## コスト見積もりとは?

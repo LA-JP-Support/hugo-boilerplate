@@ -16,7 +16,7 @@ draft: false
 e-title: Multi-Author Workflow
 url: /ja/glossary/multi-author-workflow/
 aliases:
-- /ja/glossary/Multi-Author-Workflow/
+- /glossary/Multi-Author-Workflow/
 term: まるちおーさーわーくふろー
 ---
 

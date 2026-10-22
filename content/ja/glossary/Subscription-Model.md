@@ -16,7 +16,7 @@ draft: false
 e-title: Subscription Model
 url: /ja/glossary/subscription-model/
 aliases:
-- /ja/glossary/Subscription-Model/
+- /glossary/Subscription-Model/
 term: さぶすくりぷしょんもでる
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: CCPA (California Consumer Privacy Act)
 url: /ja/glossary/ccpa--california-consumer-privacy-act-/
 aliases:
-- /ja/glossary/CCPA--California-Consumer-Privacy-Act-/
+- /glossary/CCPA--California-Consumer-Privacy-Act-/
 term: シーシーピーエー
 ---
 

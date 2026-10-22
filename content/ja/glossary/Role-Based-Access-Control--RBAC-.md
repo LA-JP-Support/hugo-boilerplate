@@ -16,7 +16,7 @@ draft: false
 e-title: Role-Based Access Control (RBAC)
 url: /ja/glossary/role-based-access-control--rbac-/
 aliases:
-- /ja/glossary/Role-Based-Access-Control--RBAC-/
+- /glossary/Role-Based-Access-Control--RBAC-/
 term: ろーるべーすあくせすせいぎょ
 ---
 

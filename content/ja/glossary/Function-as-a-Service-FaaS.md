@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Function-as-a-Service-FaaS/
 aliases:
-  - /ja/glossary/function-as-a-service-faas/
+  - /glossary/function-as-a-service-faas/
 keywords:
   - FaaS
   - サーバーレス

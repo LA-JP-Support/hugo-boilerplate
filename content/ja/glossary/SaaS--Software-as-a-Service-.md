@@ -16,7 +16,7 @@ draft: false
 e-title: SaaS (Software as a Service)
 url: /ja/glossary/saas--software-as-a-service-/
 aliases:
-- /ja/glossary/SaaS--Software-as-a-Service-/
+- /glossary/SaaS--Software-as-a-Service-/
 term: サース(ソフトウェア アズ ア サービス)
 ---
 

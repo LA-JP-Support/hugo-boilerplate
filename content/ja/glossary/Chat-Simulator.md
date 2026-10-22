@@ -16,7 +16,7 @@ draft: false
 e-title: Chat Simulator
 url: /ja/glossary/chat-simulator/
 aliases:
-- /ja/glossary/Chat-Simulator/
+- /glossary/Chat-Simulator/
 term: ちゃっとしみゅれーたー
 ---
 

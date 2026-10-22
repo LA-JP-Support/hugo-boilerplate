@@ -16,7 +16,7 @@ draft: false
 e-title: Content Migration
 url: /ja/glossary/content-migration/
 aliases:
-- /ja/glossary/Content-Migration/
+- /glossary/Content-Migration/
 term: いこう
 ---
 

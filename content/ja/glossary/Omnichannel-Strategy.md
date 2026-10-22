@@ -16,7 +16,7 @@ draft: false
 e-title: Omnichannel Strategy
 url: /ja/glossary/omnichannel-strategy/
 aliases:
-- /ja/glossary/Omnichannel-Strategy/
+- /glossary/Omnichannel-Strategy/
 term: オムニチャネルせんりゃく
 ---
 

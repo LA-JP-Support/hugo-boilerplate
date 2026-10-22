@@ -16,7 +16,7 @@ draft: false
 e-title: Call Routing
 url: /ja/glossary/call-routing/
 aliases:
-- /ja/glossary/Call-Routing/
+- /glossary/Call-Routing/
 term: こーるるーてぃんぐ
 ---
 

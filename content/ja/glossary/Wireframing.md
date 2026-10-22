@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Wireframing/
 aliases:
-  - /ja/glossary/wireframe/
+  - /glossary/wireframe/
 keywords:
   - 設計手法
   - プロトタイプ

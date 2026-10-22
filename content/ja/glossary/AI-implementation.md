@@ -17,7 +17,7 @@ e-title: AI Implementation
 term: エーアイじっそう
 url: "/ja/glossary/ai-implementation/"
 aliases:
-- "/ja/glossary/AI-implementation/"
+- "/glossary/AI-implementation/"
 ---
 
 ## AI実装とは？

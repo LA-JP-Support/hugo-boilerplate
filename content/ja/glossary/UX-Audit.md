@@ -16,7 +16,7 @@ draft: false
 e-title: UX Audit
 url: /ja/glossary/ux-audit/
 aliases:
-- /ja/glossary/UX-Audit/
+- /glossary/UX-Audit/
 term: ユーエックスかんさ
 ---
 

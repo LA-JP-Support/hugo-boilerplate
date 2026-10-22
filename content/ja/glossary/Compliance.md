@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/compliance/
 aliases:
-  - /ja/glossary/Regulatory-Compliance/
+  - /glossary/Regulatory-Compliance/
 keywords:
   - コンプライアンス
   - 法令準拠

@@ -16,7 +16,7 @@ draft: false
 e-title: Identity and Access Management (IAM)
 url: /ja/glossary/identity-and-access-management--iam-/
 aliases:
-- /ja/glossary/Identity-and-Access-Management--IAM-/
+- /glossary/Identity-and-Access-Management--IAM-/
 term: あいでんてぃてぃあくせすかんり
 ---
 

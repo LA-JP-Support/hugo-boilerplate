@@ -16,7 +16,7 @@ draft: false
 e-title: Remote Work Tools
 url: /ja/glossary/remote-work-tools/
 aliases:
-- /ja/glossary/Remote-Work-Tools/
+- /glossary/Remote-Work-Tools/
 term: りもーとわーくつーる
 ---
 

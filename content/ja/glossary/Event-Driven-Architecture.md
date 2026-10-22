@@ -16,7 +16,7 @@ draft: false
 e-title: Event-Driven Architecture
 url: /ja/glossary/event-driven-architecture/
 aliases:
-- /ja/glossary/Event-Driven-Architecture/
+- /glossary/Event-Driven-Architecture/
 term: いべんとくどうあーきてくちゃ
 ---
 

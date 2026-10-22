@@ -16,7 +16,7 @@ draft: false
 e-title: Support Team Structure
 url: /ja/glossary/support-team-structure/
 aliases:
-- /ja/glossary/Support-Team-Structure/
+- /glossary/Support-Team-Structure/
 term: サポートチームたいせい
 ---
 

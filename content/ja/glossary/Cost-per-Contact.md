@@ -16,7 +16,7 @@ draft: false
 e-title: Cost per Contact
 url: /ja/glossary/cost-per-contact/
 aliases:
-- /ja/glossary/Cost-per-Contact/
+- /glossary/Cost-per-Contact/
 term: コンタクトたんか
 ---
 

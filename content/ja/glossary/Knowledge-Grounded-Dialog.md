@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/knowledge-grounded-dialog/
 aliases:
-  - /ja/glossary/Knowledge-Grounded-Dialog/
+  - /glossary/Knowledge-Grounded-Dialog/
 keywords:
   - 知識ベース対話
   - ナレッジベース

@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Community-Content/
 aliases:
-  - /ja/glossary/community-content/
+  - /glossary/community-content/
 keywords:
   - コミュニティ
   - ユーザー生成コンテンツ

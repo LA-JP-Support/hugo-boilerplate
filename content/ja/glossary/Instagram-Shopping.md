@@ -16,7 +16,7 @@ draft: false
 e-title: Instagram Shopping
 url: /ja/glossary/instagram-shopping/
 aliases:
-- /ja/glossary/Instagram-Shopping/
+- /glossary/Instagram-Shopping/
 ---
 
 ## 基本情報

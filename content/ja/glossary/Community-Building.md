@@ -17,7 +17,7 @@ e-title: Community Building
 term: こみゅにてぃこうちく
 url: "/ja/glossary/community-building/"
 aliases:
-- "/ja/glossary/Community-Building/"
+- "/glossary/Community-Building/"
 ---
 
 ## コミュニティ構築とは?
