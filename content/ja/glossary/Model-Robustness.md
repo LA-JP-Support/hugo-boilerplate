@@ -16,7 +16,7 @@ draft: false
 e-title: Model Robustness
 url: /ja/glossary/Model-Robustness/
 aliases:
-- /ja/glossary/model-robustness/
+- /glossary/model-robustness/
 term: ろばすとねす
 ---
 

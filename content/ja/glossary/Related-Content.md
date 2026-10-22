@@ -16,7 +16,7 @@ draft: false
 e-title: Related Content
 url: /ja/glossary/related-content/
 aliases:
-- /ja/glossary/Related-Content/
+- /glossary/Related-Content/
 term: かんれんこんてんつ
 ---
 

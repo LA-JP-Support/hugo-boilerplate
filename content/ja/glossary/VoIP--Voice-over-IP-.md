@@ -16,7 +16,7 @@ draft: false
 e-title: VoIP (Voice over IP)
 url: /ja/glossary/voip--voice-over-ip-/
 aliases:
-- /ja/glossary/VoIP--Voice-over-IP-/
+- /glossary/VoIP--Voice-over-IP-/
 term: ブイオーアイピー(ボイス オーバー アイピー)
 ---
 

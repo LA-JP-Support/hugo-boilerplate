@@ -16,7 +16,7 @@ draft: false
 e-title: IT Infrastructure
 url: /ja/glossary/it-infrastructure/
 aliases:
-- /ja/glossary/IT-Infrastructure/
+- /glossary/IT-Infrastructure/
 term: アイティーインフラストラクチャ
 ---
 

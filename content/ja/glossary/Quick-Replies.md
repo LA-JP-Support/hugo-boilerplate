@@ -16,7 +16,7 @@ draft: false
 e-title: Quick Replies
 url: /ja/glossary/quick-replies/
 aliases:
-- /ja/glossary/Quick-Replies/
+- /glossary/Quick-Replies/
 term: くいっくりぷらい
 ---
 

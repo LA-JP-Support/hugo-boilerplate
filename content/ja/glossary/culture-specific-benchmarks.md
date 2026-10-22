@@ -17,7 +17,7 @@ e-title: Culture-Specific Benchmarks
 term: ぶんかとくゆうべんちまーく
 url: "/ja/glossary/culture-specific-benchmarks/"
 aliases:
-- "/ja/glossary/Culture-Specific-Benchmarks/"
+- "/glossary/Culture-Specific-Benchmarks/"
 ---
 
 <!-- ===== サクッとわかるゾーン（冒頭〜30行） ===== -->

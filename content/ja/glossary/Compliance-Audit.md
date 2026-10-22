@@ -16,7 +16,7 @@ draft: false
 e-title: Compliance Audit
 url: /ja/glossary/compliance-audit/
 aliases:
-- /ja/glossary/Compliance-Audit/
+- /glossary/Compliance-Audit/
 term: こんぷらいあんすかんさ
 ---
 

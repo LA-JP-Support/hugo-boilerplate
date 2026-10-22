@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/ai-chatbot/
 aliases:
-- /en/glossary/AI-Chatbot/
+- /glossary/AI-Chatbot/
 ---
 
 ## What is an AI Chatbot?

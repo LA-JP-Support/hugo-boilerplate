@@ -16,7 +16,7 @@ draft: false
 e-title: Churn Prediction
 url: /ja/glossary/churn-prediction/
 aliases:
-- /ja/glossary/Churn-Prediction/
+- /glossary/Churn-Prediction/
 term: ちゃーんよそく
 ---
 

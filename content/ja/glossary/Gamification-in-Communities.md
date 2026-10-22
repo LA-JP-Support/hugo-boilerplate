@@ -16,7 +16,7 @@ draft: false
 e-title: Gamification in Communities
 url: /ja/glossary/gamification-in-communities/
 aliases:
-- /ja/glossary/Gamification-in-Communities/
+- /glossary/Gamification-in-Communities/
 term: こみゅにてぃにおけるげーみふぃけーしょん
 ---
 

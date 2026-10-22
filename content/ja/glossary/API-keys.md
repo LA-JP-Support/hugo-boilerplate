@@ -17,7 +17,7 @@ e-title: API Keys
 term: エーピーアイキー
 url: "/ja/glossary/api-keys/"
 aliases:
-- "/ja/glossary/API-keys/"
+- "/glossary/API-keys/"
 ---
 
 ## APIキーとは？

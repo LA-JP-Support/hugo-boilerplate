@@ -17,7 +17,7 @@ e-title: Load Balancing
 term: ろーどばらんしんぐ
 url: "/ja/glossary/load-balancing/"
 aliases:
-- "/ja/glossary/Load-Balancing/"
+- "/glossary/Load-Balancing/"
 ---
 
 ## ロードバランシングとは

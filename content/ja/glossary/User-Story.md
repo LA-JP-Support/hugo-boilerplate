@@ -16,7 +16,7 @@ draft: false
 e-title: User Story
 url: /ja/glossary/user-story/
 aliases:
-- /ja/glossary/User-Story/
+- /glossary/User-Story/
 term: ユーザーストーリー
 ---
 

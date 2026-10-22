@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Gap
 url: "/ja/glossary/knowledge-gap/"
 aliases:
-- "/ja/glossary/Knowledge-Gap/"
+- "/glossary/Knowledge-Gap/"
 term: ナレッジギャップ
 ---
 

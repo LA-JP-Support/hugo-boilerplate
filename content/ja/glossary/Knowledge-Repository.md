@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Repository
 url: /ja/glossary/knowledge-repository/
 aliases:
-- /ja/glossary/Knowledge-Repository/
+- /glossary/Knowledge-Repository/
 term: なれっじりぽじとり
 ---
 

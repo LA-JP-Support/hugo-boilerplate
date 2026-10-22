@@ -16,7 +16,7 @@ draft: false
 e-title: Search Analytics
 url: /ja/glossary/search-analytics/
 aliases:
-- /ja/glossary/Search-Analytics/
+- /glossary/Search-Analytics/
 term: けんさくあなりてぃくす
 ---
 

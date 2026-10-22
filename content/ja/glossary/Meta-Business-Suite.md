@@ -16,7 +16,7 @@ draft: false
 e-title: Meta Business Suite
 url: /ja/glossary/meta-business-suite/
 aliases:
-- /ja/glossary/Meta-Business-Suite/
+- /glossary/Meta-Business-Suite/
 term: めたびじねすすいーと
 ---
 

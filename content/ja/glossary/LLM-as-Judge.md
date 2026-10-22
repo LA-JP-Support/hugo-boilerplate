@@ -17,7 +17,7 @@ e-title: LLM as Judge
 term: エルエルエム アズ ジャッジ
 url: "/ja/glossary/llm-as-judge/"
 aliases:
-- "/ja/glossary/LLM-as-Judge/"
+- "/glossary/LLM-as-Judge/"
 ---
 
 ## LLM as Judgeとは？

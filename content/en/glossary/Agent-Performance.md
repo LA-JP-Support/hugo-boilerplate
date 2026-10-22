@@ -9,7 +9,7 @@ type: "glossary"
 draft: false
 url: /en/glossary/Agent-Performance/
 aliases:
-- /en/glossary/agent-performance/
+- /glossary/agent-performance/
 keywords:
   - Agent performance
   - AI evaluation

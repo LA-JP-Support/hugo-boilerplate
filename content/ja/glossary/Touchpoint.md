@@ -16,7 +16,7 @@ draft: false
 e-title: Touchpoint
 url: /ja/glossary/touchpoint/
 aliases:
-- /ja/glossary/Touchpoint/
+- /glossary/Touchpoint/
 term: たっちぽいんと
 ---
 

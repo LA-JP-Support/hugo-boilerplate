@@ -16,7 +16,7 @@ draft: false
 e-title: Data Lake
 url: /ja/glossary/data-lake/
 aliases:
-- /ja/glossary/Data-Lake/
+- /glossary/Data-Lake/
 term: データレイク
 ---
 

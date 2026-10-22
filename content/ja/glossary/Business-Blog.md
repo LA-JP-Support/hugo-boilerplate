@@ -16,7 +16,7 @@ draft: false
 e-title: Business Blog
 url: /ja/glossary/business-blog/
 aliases:
-- /ja/glossary/Business-Blog/
+- /glossary/Business-Blog/
 term: びじねすぶろぐ
 ---
 

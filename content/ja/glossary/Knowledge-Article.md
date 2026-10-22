@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Article
 url: /ja/glossary/knowledge-article/
 aliases:
-- /ja/glossary/Knowledge-Article/
+- /glossary/Knowledge-Article/
 term: なれっじきじ
 ---
 

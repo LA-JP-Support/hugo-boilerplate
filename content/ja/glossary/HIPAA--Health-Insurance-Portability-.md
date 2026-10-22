@@ -16,7 +16,7 @@ draft: false
 e-title: HIPAA (Health Insurance Portability)
 url: /ja/glossary/hipaa--health-insurance-portability-/
 aliases:
-  - /ja/glossary/HIPAA--Health-Insurance-Portability-/
+  - /glossary/HIPAA--Health-Insurance-Portability-/
 term: ひっぱあ(いりょうほけんのそうごうんようせいとせつめいせきにんにかんするほうりつ)
 ---
 

@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/api-rate-limiting/
 aliases:
-- /en/glossary/API-Rate-Limiting/
+- /glossary/API-Rate-Limiting/
 ---
 
 ## What is API Rate Limiting?

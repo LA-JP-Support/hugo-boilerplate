@@ -16,7 +16,7 @@ draft: false
 e-title: Ungated Content
 url: /ja/glossary/ungated-content/
 aliases:
-- /ja/glossary/Ungated-Content/
+- /glossary/Ungated-Content/
 term: あんげーてっどこんてんつ
 ---
 

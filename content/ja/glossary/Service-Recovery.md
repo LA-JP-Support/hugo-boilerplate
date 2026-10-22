@@ -16,7 +16,7 @@ draft: false
 e-title: Service Recovery
 url: /ja/glossary/service-recovery/
 aliases:
-- /ja/glossary/Service-Recovery/
+- /glossary/Service-Recovery/
 term: さーびすりかばりー
 ---
 

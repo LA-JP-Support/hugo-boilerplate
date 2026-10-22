@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Knowledge-Graph/
 aliases:
-  - /ja/glossary/knowledge-graph/
+  - /glossary/knowledge-graph/
 keywords:
   - セマンティック
   - 知識表現

@@ -16,7 +16,7 @@ draft: false
 e-title: Section
 url: /ja/glossary/section/
 aliases:
-- /ja/glossary/Section/
+- /glossary/Section/
 term: せくしょん
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Call Analytics
 url: /ja/glossary/call-analytics/
 aliases:
-- /ja/glossary/Call-Analytics/
+- /glossary/Call-Analytics/
 term: こーるぶんせき
 ---
 

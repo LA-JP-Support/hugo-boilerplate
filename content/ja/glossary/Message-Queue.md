@@ -16,7 +16,7 @@ draft: false
 e-title: Message Queue
 url: /ja/glossary/message-queue/
 aliases:
-- /ja/glossary/Message-Queue/
+- /glossary/Message-Queue/
 term: めっせーじきゅー
 ---
 

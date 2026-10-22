@@ -16,7 +16,7 @@ draft: false
 e-title: Usage Metrics
 url: /ja/glossary/usage-metrics/
 aliases:
-- /ja/glossary/Usage-Metrics/
+- /glossary/Usage-Metrics/
 term: しようじょうきょうめとりくす
 ---
 

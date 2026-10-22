@@ -16,7 +16,7 @@ draft: false
 e-title: Success Plan
 url: /ja/glossary/success-plan/
 aliases:
-- /ja/glossary/Success-Plan/
+- /glossary/Success-Plan/
 term: さくせすぷらん
 ---
 

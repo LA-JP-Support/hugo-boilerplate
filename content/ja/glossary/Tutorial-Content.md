@@ -16,7 +16,7 @@ draft: false
 e-title: Tutorial Content
 url: /ja/glossary/tutorial-content/
 aliases:
-- /ja/glossary/Tutorial-Content/
+- /glossary/Tutorial-Content/
 term: ちゅーとりあるこんてんつ
 ---
 

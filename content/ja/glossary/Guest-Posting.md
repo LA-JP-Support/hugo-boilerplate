@@ -16,7 +16,7 @@ draft: false
 e-title: Guest Posting
 url: /ja/glossary/guest-posting/
 aliases:
-  - /ja/glossary/Guest-Posting/
+  - /glossary/Guest-Posting/
 term: げすととうこう
 ---
 

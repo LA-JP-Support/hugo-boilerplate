@@ -16,7 +16,7 @@ draft: false
 e-title: Streaming Analytics
 url: /ja/glossary/streaming-analytics/
 aliases:
-- /ja/glossary/Streaming-Analytics/
+- /glossary/Streaming-Analytics/
 term: すとりーみんぐぶんせき
 ---
 

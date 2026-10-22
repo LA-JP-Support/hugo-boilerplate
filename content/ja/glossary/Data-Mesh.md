@@ -16,7 +16,7 @@ draft: false
 e-title: Data Mesh
 url: "/ja/glossary/data-mesh/"
 aliases:
-- "/ja/glossary/Data-Mesh/"
+- "/glossary/Data-Mesh/"
 term: データメッシュ
 ---
 

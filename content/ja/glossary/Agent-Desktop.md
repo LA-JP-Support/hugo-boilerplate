@@ -16,7 +16,7 @@ draft: false
 e-title: Agent Desktop
 url: /ja/glossary/agent-desktop/
 aliases:
-- /ja/glossary/Agent-Desktop/
+- /glossary/Agent-Desktop/
 term: えーじぇんとですくとっぷ
 ---
 

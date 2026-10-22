@@ -16,7 +16,7 @@ draft: false
 e-title: Employee Self-Service
 url: /ja/glossary/employee-self-service/
 aliases:
-- /ja/glossary/Employee-Self-Service/
+- /glossary/Employee-Self-Service/
 term: じゅうぎょういんせるふさーびす
 ---
 

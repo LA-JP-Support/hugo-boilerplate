@@ -16,7 +16,7 @@ draft: false
 e-title: Make (Integromat)
 url: /ja/glossary/make--integromat-/
 aliases:
-- /ja/glossary/Make--Integromat-/
+- /glossary/Make--Integromat-/
 term: メイク
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Call Whisper
 url: /ja/glossary/call-whisper/
 aliases:
-- /ja/glossary/Call-Whisper/
+- /glossary/Call-Whisper/
 term: こーるうぃすぱー
 ---
 

@@ -17,7 +17,7 @@ e-title: Self-Healing Knowledge
 term: せるふひーりんぐ・ないれっじ
 url: "/ja/glossary/self-healing-knowledge/"
 aliases:
-- "/ja/glossary/Self-Healing-Knowledge/"
+- "/glossary/Self-Healing-Knowledge/"
 ---
 
 ## セルフヒーリング・ナレッジとは?

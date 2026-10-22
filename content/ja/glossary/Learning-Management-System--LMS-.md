@@ -16,7 +16,7 @@ draft: false
 e-title: Learning Management System (LMS)
 url: "/ja/glossary/Learning-Management-System--LMS-/"
 aliases:
-- "/ja/glossary/learning-management-system--lms-/"
+- "/glossary/learning-management-system--lms-/"
 term: がくしゅうかんりシステム
 ---
 

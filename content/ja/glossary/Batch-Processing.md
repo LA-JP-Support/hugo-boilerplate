@@ -16,7 +16,7 @@ draft: false
 e-title: Batch Processing
 url: /ja/glossary/batch-processing/
 aliases:
-- /ja/glossary/Batch-Processing/
+- /glossary/Batch-Processing/
 term: ばっちしょり
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: YouTube
 url: /ja/glossary/youtube/
 aliases:
-- /ja/glossary/YouTube/
+- /glossary/YouTube/
 term: ユーチューブ
 ---
 

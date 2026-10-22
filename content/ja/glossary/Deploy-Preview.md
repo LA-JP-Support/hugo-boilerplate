@@ -16,7 +16,7 @@ draft: false
 e-title: Deploy Preview
 url: "/ja/glossary/deploy-preview/"
 aliases:
-- "/ja/glossary/Deploy-Preview/"
+- "/glossary/Deploy-Preview/"
 term: でぷろいぷれびゅー
 ---
 

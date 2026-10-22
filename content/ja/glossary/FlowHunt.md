@@ -17,7 +17,7 @@ e-title: FlowHunt
 term: フローハント
 url: "/ja/glossary/flowhunt/"
 aliases:
-- "/ja/glossary/FlowHunt/"
+- "/glossary/FlowHunt/"
 ---
 
 ## FlowHuntとは？

@@ -16,7 +16,7 @@ draft: false
 e-title: Product Discovery
 url: /ja/glossary/product-discovery/
 aliases:
-- /ja/glossary/Product-Discovery/
+- /glossary/Product-Discovery/
 term: ぷろだくと・でぃすかばりー
 ---
 

@@ -17,7 +17,7 @@ e-title: Multi-Turn Conversation
 term: マルチターンかいわ
 url: "/ja/glossary/multi-turn-conversation/"
 aliases:
-- "/ja/glossary/Multi-turn-Conversation/"
+- "/glossary/Multi-turn-Conversation/"
 ---
 
 ## マルチターン会話とは

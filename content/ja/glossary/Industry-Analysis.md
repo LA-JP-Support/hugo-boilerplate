@@ -16,7 +16,7 @@ draft: false
 e-title: Industry Analysis
 url: /ja/glossary/industry-analysis/
 aliases:
-- /ja/glossary/Industry-Analysis/
+- /glossary/Industry-Analysis/
 term: ぎょうかいぶんせき
 ---
 

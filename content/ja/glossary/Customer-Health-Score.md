@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Health Score
 url: /ja/glossary/customer-health-score/
 aliases:
-- /ja/glossary/Customer-Health-Score/
+- /glossary/Customer-Health-Score/
 term: かすたまーへるすすこあ
 ---
 

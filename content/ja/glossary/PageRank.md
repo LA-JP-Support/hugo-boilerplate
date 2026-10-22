@@ -16,7 +16,7 @@ draft: false
 e-title: PageRank
 url: /ja/glossary/pagerank/
 aliases:
-- /ja/glossary/PageRank/
+- /glossary/PageRank/
 term: ページランク
 ---
 

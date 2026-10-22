@@ -16,7 +16,7 @@ draft: false
 e-title: Dialogue Management
 url: "/ja/glossary/dialogue-management/"
 aliases:
-- "/ja/glossary/Dialogue-Management/"
+- "/glossary/Dialogue-Management/"
 term: だいあろぐかんり
 ---
 

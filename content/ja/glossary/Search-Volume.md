@@ -16,7 +16,7 @@ draft: false
 e-title: Search Volume
 url: /ja/glossary/search-volume/
 aliases:
-- /ja/glossary/Search-Volume/
+- /glossary/Search-Volume/
 term: けんさくぼりゅーむ
 ---
 

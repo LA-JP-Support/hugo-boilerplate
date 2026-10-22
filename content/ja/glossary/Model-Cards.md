@@ -16,7 +16,7 @@ draft: false
 e-title: Model Cards
 url: /ja/glossary/model-cards/
 aliases:
-- /ja/glossary/Model-Cards/
+- /glossary/Model-Cards/
 term: もでるかーど
 ---
 

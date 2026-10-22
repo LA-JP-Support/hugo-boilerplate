@@ -16,7 +16,7 @@ draft: false
 e-title: Backpropagation
 url: /ja/glossary/backpropagation/
 aliases:
-- /ja/glossary/Backpropagation/
+- /glossary/Backpropagation/
 term: ばっくぷろぱげーしょん
 ---
 

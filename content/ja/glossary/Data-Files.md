@@ -16,7 +16,7 @@ draft: false
 e-title: Data Files
 url: /ja/glossary/data-files/
 aliases:
-- /ja/glossary/Data-Files/
+- /glossary/Data-Files/
 term: データファイル
 ---
 

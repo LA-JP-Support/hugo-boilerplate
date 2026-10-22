@@ -16,7 +16,7 @@ draft: false
 e-title: SERP (Search Engine Results Page)
 url: /ja/glossary/serp--search-engine-results-page-/
 aliases:
-- /ja/glossary/SERP--Search-Engine-Results-Page-/
+- /glossary/SERP--Search-Engine-Results-Page-/
 term: さーぷ
 ---
 

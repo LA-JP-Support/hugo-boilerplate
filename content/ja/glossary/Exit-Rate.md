@@ -16,7 +16,7 @@ draft: false
 e-title: Exit Rate
 url: /ja/glossary/exit-rate/
 aliases:
-- /ja/glossary/Exit-Rate/
+- /glossary/Exit-Rate/
 term: りだつりつ
 ---
 

@@ -17,7 +17,7 @@ e-title: Audience Engagement
 term: オーディエンスエンゲージメント
 url: "/ja/glossary/audience-engagement/"
 aliases:
-- "/ja/glossary/Audience-Engagement/"
+- "/glossary/Audience-Engagement/"
 ---
 
 ## オーディエンスエンゲージメントとは

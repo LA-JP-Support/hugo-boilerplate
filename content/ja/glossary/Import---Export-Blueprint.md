@@ -17,7 +17,7 @@ e-title: Import / Export Blueprint
 term: ブループリントのインポート/エクスポート
 url: "/ja/glossary/import---export-blueprint/"
 aliases:
-- "/ja/glossary/Import---Export-Blueprint/"
+- "/glossary/Import---Export-Blueprint/"
 ---
 
 ## ブループリントのインポート/エクスポートとは？

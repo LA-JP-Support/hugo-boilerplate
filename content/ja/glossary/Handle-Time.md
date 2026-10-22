@@ -17,7 +17,7 @@ e-title: Handle Time
 term: はんどるたいむ
 url: "/ja/glossary/handle-time/"
 aliases:
-- "/ja/glossary/Handle-Time/"
+- "/glossary/Handle-Time/"
 ---
 
 ## ハンドルタイムとは？

@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Diffusion-Models/
 aliases:
-  - /ja/glossary/diffusion-models/
+  - /glossary/diffusion-models/
 keywords:
   - 画像生成
   - 生成モデル

@@ -17,7 +17,7 @@ e-title: Edge AI
 term: エッジエーアイ
 url: "/ja/glossary/edge-ai/"
 aliases:
-- "/ja/glossary/Edge-AI/"
+- "/glossary/Edge-AI/"
 ---
 
 ## エッジAIとは？

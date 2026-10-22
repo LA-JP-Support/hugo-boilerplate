@@ -17,7 +17,7 @@ e-title: Outsourcing
 term: あうとそーしんぐ
 url: "/ja/glossary/outsourcing/"
 aliases:
-- "/ja/glossary/Outsourcing/"
+- "/glossary/Outsourcing/"
 ---
 
 ## アウトソーシングとは？

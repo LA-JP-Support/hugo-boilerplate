@@ -16,7 +16,7 @@ draft: false
 e-title: Vendor Selection
 url: /ja/glossary/vendor-selection/
 aliases:
-- /ja/glossary/Vendor-Selection/
+- /glossary/Vendor-Selection/
 term: べんだーせんてい
 ---
 

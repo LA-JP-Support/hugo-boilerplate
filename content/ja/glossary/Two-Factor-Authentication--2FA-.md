@@ -16,7 +16,7 @@ draft: false
 e-title: Two-Factor Authentication (2FA)
 url: /ja/glossary/two-factor-authentication--2fa-/
 aliases:
-- /ja/glossary/Two-Factor-Authentication--2FA-/
+- /glossary/Two-Factor-Authentication--2FA-/
 term: にようそにんしょう（ツーエフエー）
 ---
 

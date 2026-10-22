@@ -17,7 +17,7 @@ e-title: Off-Page SEO
 url: /ja/glossary/off-page-seo/
 term: オフページエスいーおー
 aliases:
-- /ja/glossary/Off-Page-SEO/
+- /glossary/Off-Page-SEO/
 ---
 
 ## オフページSEOとは？

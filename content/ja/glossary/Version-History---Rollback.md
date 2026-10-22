@@ -17,7 +17,7 @@ e-title: Version History / Rollback
 term: ばーじょんりれき / ろーるばっく
 url: "/ja/glossary/version-history---rollback/"
 aliases:
-- "/ja/glossary/Version-History---Rollback/"
+- "/glossary/Version-History---Rollback/"
 ---
 ## バージョン履歴 / ロールバックとは?
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Search Optimization
 url: /ja/glossary/search-optimization/
 aliases:
-- /ja/glossary/Search-Optimization/
+- /glossary/Search-Optimization/
 term: けんさくさいてきか
 ---
 

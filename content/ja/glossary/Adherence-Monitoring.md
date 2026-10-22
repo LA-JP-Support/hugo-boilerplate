@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Adherence-Monitoring/
 aliases:
-  - /ja/glossary/adherence-monitoring/
+  - /glossary/adherence-monitoring/
 keywords:
   - 勤務管理
   - アドヒアランス

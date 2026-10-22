@@ -16,7 +16,7 @@ draft: false
 e-title: Welcome Message
 url: /ja/glossary/welcome-message/
 aliases:
-- /ja/glossary/Welcome-Message/
+- /glossary/Welcome-Message/
 term: うぇるかむめっせーじ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Social Calendar
 url: "/ja/glossary/social-calendar/"
 aliases:
-- "/ja/glossary/Social-Calendar/"
+- "/glossary/Social-Calendar/"
 term: そーしゃるかれんだー
 ---
 

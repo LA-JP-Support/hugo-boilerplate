@@ -16,7 +16,7 @@ draft: false
 e-title: Federated Learning
 url: "/ja/glossary/federated-learning/"
 aliases:
-- "/ja/glossary/Federated-Learning/"
+- "/glossary/Federated-Learning/"
 term: れんごうがくしゅう
 ---
 

@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/PPC-Pay-Per-Click/
 aliases:
-  - /ja/glossary/ppc-pay-per-click/
+  - /glossary/ppc-pay-per-click/
 keywords:
   - PPC
   - クリック課金

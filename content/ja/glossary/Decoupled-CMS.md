@@ -16,7 +16,7 @@ draft: false
 e-title: Decoupled CMS
 url: /ja/glossary/decoupled-cms/
 aliases:
-- /ja/glossary/Decoupled-CMS/
+- /glossary/Decoupled-CMS/
 term: でかっぷるどしーえむえす
 ---
 

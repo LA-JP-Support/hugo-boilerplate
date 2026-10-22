@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Omnichannel-Customer-Service/
 aliases:
-  - /ja/glossary/omnichannel-customer-service/
+  - /glossary/omnichannel-customer-service/
 keywords:
   - カスタマーサービス
   - マルチチャネル

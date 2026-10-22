@@ -16,7 +16,7 @@ draft: false
 e-title: Core Web Vitals
 url: /ja/glossary/core-web-vitals/
 aliases:
-- /ja/glossary/Core-Web-Vitals/
+- /glossary/Core-Web-Vitals/
 term: こあうぇぶばいたるず
 ---
 

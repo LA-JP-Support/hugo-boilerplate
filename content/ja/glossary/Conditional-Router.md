@@ -17,7 +17,7 @@ e-title: Conditional Router
 term: こんでぃしょなるるーたー
 url: "/ja/glossary/conditional-router/"
 aliases:
-- "/ja/glossary/Conditional-Router/"
+- "/glossary/Conditional-Router/"
 ---
 
 ## コンディショナルルーターとは?

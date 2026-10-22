@@ -16,7 +16,7 @@ draft: false
 e-title: Contextual Prompt
 url: /ja/glossary/contextual-prompt/
 aliases:
-- /ja/glossary/Contextual-Prompt/
+- /glossary/Contextual-Prompt/
 term: ぷろんぷと
 ---
 

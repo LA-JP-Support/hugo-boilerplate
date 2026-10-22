@@ -16,7 +16,7 @@ draft: false
 e-title: Milvus
 url: /ja/glossary/milvus/
 aliases:
-- /ja/glossary/Milvus/
+- /glossary/Milvus/
 term: ミルバス
 ---
 

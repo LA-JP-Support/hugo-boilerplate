@@ -16,7 +16,7 @@ draft: false
 e-title: Integration Platform as a Service (iPaaS)
 url: /ja/glossary/integration-platform-as-a-service--ipaas-/
 aliases:
-- /ja/glossary/Integration-Platform-as-a-Service--iPaaS-/
+- /glossary/Integration-Platform-as-a-Service--iPaaS-/
 term: インテグレーション プラットフォーム アズ ア サービス
 ---
 

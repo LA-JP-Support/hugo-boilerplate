@@ -16,7 +16,7 @@ draft: false
 e-title: Content Aging
 url: /ja/glossary/content-aging/
 aliases:
-- /ja/glossary/Content-Aging/
+- /glossary/Content-Aging/
 term: こんてんつえいじんぐ
 ---
 

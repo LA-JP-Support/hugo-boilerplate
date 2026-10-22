@@ -15,7 +15,7 @@ draft: false
 e-title: Live Chat
 url: "/ja/glossary/live-chat/"
 aliases:
-- "/ja/glossary/Live-Chat/"
+- "/glossary/Live-Chat/"
 term: らいぶちゃっと
 lastmod: 2026-04-02
 ---

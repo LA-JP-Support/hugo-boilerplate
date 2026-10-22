@@ -16,7 +16,7 @@ draft: false
 e-title: Canary Release
 url: /ja/glossary/canary-release/
 aliases:
-- /ja/glossary/Canary-Release/
+- /glossary/Canary-Release/
 term: かなりありりーす
 ---
 

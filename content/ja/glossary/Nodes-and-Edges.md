@@ -17,7 +17,7 @@ e-title: Nodes and Edges
 url: /ja/glossary/nodes-and-edges/
 term: ノードとエッジ
 aliases:
-- /ja/glossary/Nodes-and-Edges/
+- /glossary/Nodes-and-Edges/
 ---
 
 ## ノードとエッジとは？

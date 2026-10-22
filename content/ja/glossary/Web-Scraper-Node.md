@@ -17,7 +17,7 @@ e-title: Web Scraper Node
 term: ウェブスクレイパーノード
 url: /ja/glossary/web-scraper-node/
 aliases:
-- /ja/glossary/Web-Scraper-Node/
+- /glossary/Web-Scraper-Node/
 ---
 
 ## Webスクレイパーノードとは？

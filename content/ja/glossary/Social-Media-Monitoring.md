@@ -16,7 +16,7 @@ draft: false
 e-title: Social Media Monitoring
 url: /ja/glossary/social-media-monitoring/
 aliases:
-- /ja/glossary/Social-Media-Monitoring/
+- /glossary/Social-Media-Monitoring/
 term: そーしゃるめでぃあもにたりんぐ
 ---
 

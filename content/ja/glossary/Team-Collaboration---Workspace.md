@@ -17,7 +17,7 @@ e-title: Team Collaboration / Workspace
 term: チームコラボレーション/ワークスペース
 url: "/ja/glossary/team-collaboration-workspace/"
 aliases:
-- "/ja/glossary/Team-Collaboration---Workspace/"
+- "/glossary/Team-Collaboration---Workspace/"
 ---
 
 ## チームコラボレーション/ワークスペースとは?

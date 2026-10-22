@@ -16,7 +16,7 @@ draft: false
 e-title: Content Summarization
 url: /ja/glossary/content-summarization/
 aliases:
-- /ja/glossary/Content-Summarization/
+- /glossary/Content-Summarization/
 term: こんてんつようやく
 ---
 

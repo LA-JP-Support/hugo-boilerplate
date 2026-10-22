@@ -16,7 +16,7 @@ draft: false
 e-title: GraphQL
 url: "/ja/glossary/graphql/"
 aliases:
-- "/ja/glossary/GraphQL/"
+- "/glossary/GraphQL/"
 term: グラフキューエル
 ---
 

@@ -15,7 +15,7 @@ draft: false
 e-title: In-App Messaging
 url: /ja/glossary/in-app-messaging/
 aliases:
-- /ja/glossary/In-App-Messaging/
+- /glossary/In-App-Messaging/
 lastmod: 2026-04-02
 term: あぷりないめっせーじんぐ
 ---

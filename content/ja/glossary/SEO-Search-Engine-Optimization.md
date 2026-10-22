@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/SEO-Search-Engine-Optimization/
 aliases:
-  - /ja/glossary/seo-search-engine-optimization/
+  - /glossary/seo-search-engine-optimization/
 keywords:
   - SEO
   - 検索順位

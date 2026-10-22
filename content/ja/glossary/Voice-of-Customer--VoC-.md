@@ -16,7 +16,7 @@ draft: false
 e-title: Voice of Customer (VoC)
 url: /ja/glossary/voice-of-customer--voc-/
 aliases:
-- /ja/glossary/Voice-of-Customer--VoC-/
+- /glossary/Voice-of-Customer--VoC-/
 term: ぼいす・おぶ・かすたまー
 ---
 

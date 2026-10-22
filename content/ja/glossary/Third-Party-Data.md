@@ -16,7 +16,7 @@ draft: false
 e-title: Third-Party Data
 url: /ja/glossary/third-party-data/
 aliases:
-- /ja/glossary/Third-Party-Data/
+- /glossary/Third-Party-Data/
 term: さーどぱーてぃでーた
 ---
 

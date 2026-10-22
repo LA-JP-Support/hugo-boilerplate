@@ -16,7 +16,7 @@ draft: false
 e-title: Repeat Contact Rate
 url: /ja/glossary/repeat-contact-rate/
 aliases:
-- /ja/glossary/Repeat-Contact-Rate/
+- /glossary/Repeat-Contact-Rate/
 term: りぴーとこんたくとりつ
 ---
 

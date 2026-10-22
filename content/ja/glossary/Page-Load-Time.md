@@ -17,7 +17,7 @@ e-title: Page Load Time
 term: ぺーじよみこみじかん
 url: "/ja/glossary/page-load-time/"
 aliases:
-- "/ja/glossary/Page-Load-Time/"
+- "/glossary/Page-Load-Time/"
 ---
 
 ## ページ読み込み時間とは？

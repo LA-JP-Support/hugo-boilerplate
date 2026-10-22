@@ -16,7 +16,7 @@ draft: false
 e-title: Breadcrumb Navigation
 url: /ja/glossary/breadcrumb-navigation/
 aliases:
-- /ja/glossary/Breadcrumb-Navigation/
+- /glossary/Breadcrumb-Navigation/
 term: ぱんくずなびげーしょん
 ---
 

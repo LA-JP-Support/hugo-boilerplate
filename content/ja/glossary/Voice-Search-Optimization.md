@@ -16,7 +16,7 @@ draft: false
 e-title: Voice Search Optimization
 url: /ja/glossary/voice-search-optimization/
 aliases:
-- /ja/glossary/Voice-Search-Optimization/
+- /glossary/Voice-Search-Optimization/
 term: おんせいけんさくさいてきか
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Lead Generation Content
 url: "/ja/glossary/Lead-Generation-Content/"
 aliases:
-- "/ja/glossary/lead-generation-content/"
+- "/glossary/lead-generation-content/"
 term: りーどじぇねれーしょんこんてんつ
 ---
 

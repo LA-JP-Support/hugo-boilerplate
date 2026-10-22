@@ -16,7 +16,7 @@ draft: false
 e-title: Marketing Automation
 url: /ja/glossary/marketing-automation/
 aliases:
-- /ja/glossary/Marketing-Automation/
+- /glossary/Marketing-Automation/
 term: マーケティングオートメーション
 ---
 

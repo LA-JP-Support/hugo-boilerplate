@@ -16,7 +16,7 @@ draft: false
 e-title: Retail Demand Forecasting
 url: /ja/glossary/retail-demand-forecasting/
 aliases:
-- /ja/glossary/Retail-Demand-Forecasting/
+- /glossary/Retail-Demand-Forecasting/
 term: こうりじゅようよそく
 ---
 

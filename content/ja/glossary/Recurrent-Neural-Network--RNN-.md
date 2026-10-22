@@ -16,7 +16,7 @@ draft: false
 e-title: Recurrent Neural Network (RNN)
 url: /ja/glossary/recurrent-neural-network--rnn-/
 aliases:
-- /ja/glossary/Recurrent-Neural-Network--RNN-/
+- /glossary/Recurrent-Neural-Network--RNN-/
 term: りかれんとにゅーらるねっとわーく
 ---
 

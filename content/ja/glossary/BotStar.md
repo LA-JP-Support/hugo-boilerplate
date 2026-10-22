@@ -16,7 +16,7 @@ draft: false
 e-title: BotStar
 url: /ja/glossary/botstar/
 aliases:
-- /ja/glossary/BotStar/
+- /glossary/BotStar/
 term: ボットスター
 ---
 

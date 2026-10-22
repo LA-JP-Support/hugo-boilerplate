@@ -16,7 +16,7 @@ draft: false
 e-title: Ticket Priority
 url: /ja/glossary/ticket-priority/
 aliases:
-- /ja/glossary/Ticket-Priority/
+- /glossary/Ticket-Priority/
 term: ちけっとゆうせんど
 ---
 

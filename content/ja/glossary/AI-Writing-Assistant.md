@@ -16,7 +16,7 @@ draft: false
 e-title: AI Writing Assistant
 url: /ja/glossary/ai-writing-assistant/
 aliases:
-- /ja/glossary/AI-Writing-Assistant/
+- /glossary/AI-Writing-Assistant/
 term: エーアイライティングアシスタント
 ---
 

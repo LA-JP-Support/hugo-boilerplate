@@ -17,7 +17,7 @@ e-title: Computational Resources
 term: けいさんリソース
 url: "/ja/glossary/computational-resources/"
 aliases:
-- "/ja/glossary/Computational-Resources/"
+- "/glossary/Computational-Resources/"
 ---
 
 <!-- ===== サクッとわかるゾーン（冒頭〜30行） ===== -->

@@ -16,7 +16,7 @@ draft: false
 e-title: Social Media Strategy
 url: /ja/glossary/social-media-strategy/
 aliases:
-- /ja/glossary/Social-Media-Strategy/
+- /glossary/Social-Media-Strategy/
 term: そーしゃるめでぃあせんりゃく
 ---
 

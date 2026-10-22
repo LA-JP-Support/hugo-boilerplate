@@ -16,7 +16,7 @@ draft: false
 e-title: Behavioral Trigger
 url: /ja/glossary/behavioral-trigger/
 aliases:
-- /ja/glossary/Behavioral-Trigger/
+- /glossary/Behavioral-Trigger/
 term: こうどうトリガー
 ---
 

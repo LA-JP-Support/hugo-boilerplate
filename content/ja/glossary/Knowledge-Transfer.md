@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Transfer
 url: /ja/glossary/knowledge-transfer/
 aliases:
-- /ja/glossary/Knowledge-Transfer/
+- /glossary/Knowledge-Transfer/
 term: ちしきいてん
 ---
 

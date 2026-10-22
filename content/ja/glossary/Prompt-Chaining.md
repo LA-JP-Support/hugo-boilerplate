@@ -17,7 +17,7 @@ e-title: Prompt Chaining
 term: ぷろんぷとちぇいにんぐ
 url: "/ja/glossary/prompt-chaining/"
 aliases:
-- "/ja/glossary/Prompt-Chaining/"
+- "/glossary/Prompt-Chaining/"
 ---
 
 ## プロンプトチェイニングとは？

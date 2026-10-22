@@ -16,7 +16,7 @@ draft: false
 e-title: On-Page SEO
 url: /ja/glossary/on-page-seo/
 aliases:
-- /ja/glossary/On-Page-SEO/
+- /glossary/On-Page-SEO/
 term: オンページエスイーオー
 ---
 

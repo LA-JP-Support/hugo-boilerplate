@@ -16,7 +16,7 @@ draft: false
 e-title: Social Media ROI
 url: /ja/glossary/social-media-roi/
 aliases:
-- /ja/glossary/Social-Media-ROI/
+- /glossary/Social-Media-ROI/
 term: ソーシャルメディアアールオーアイ
 ---
 

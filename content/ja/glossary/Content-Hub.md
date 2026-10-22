@@ -16,7 +16,7 @@ draft: false
 e-title: Content Hub
 url: /ja/glossary/content-hub/
 aliases:
-- /ja/glossary/Content-Hub/
+- /glossary/Content-Hub/
 term: こんてんつはぶ
 ---
 

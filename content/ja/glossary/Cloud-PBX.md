@@ -16,7 +16,7 @@ draft: false
 e-title: Cloud PBX
 url: /ja/glossary/cloud-pbx/
 aliases:
-- /ja/glossary/Cloud-PBX/
+- /glossary/Cloud-PBX/
 term: くらうどぴーびーえっくす
 ---
 

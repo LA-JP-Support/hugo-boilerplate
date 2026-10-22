@@ -16,7 +16,7 @@ draft: false
 e-title: Cross-Validation
 url: /ja/glossary/cross-validation/
 aliases:
-- /ja/glossary/Cross-Validation/
+- /glossary/Cross-Validation/
 term: こうさけんしょう
 ---
 

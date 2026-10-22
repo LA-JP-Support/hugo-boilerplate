@@ -16,7 +16,7 @@ draft: false
 e-title: Process Automation
 url: /ja/glossary/process-automation/
 aliases:
-- /ja/glossary/Process-Automation/
+- /glossary/Process-Automation/
 term: ぷろせす・おーとめーしょん
 ---
 

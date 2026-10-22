@@ -16,7 +16,7 @@ draft: false
 e-title: Unified API
 url: /ja/glossary/unified-api/
 aliases:
-- /ja/glossary/Unified-API/
+- /glossary/Unified-API/
 term: ユニファイド エーピーアイ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Content Collection
 url: /ja/glossary/content-collection/
 aliases:
-- /ja/glossary/Content-Collection/
+- /glossary/Content-Collection/
 term: こんてんつしゅうしゅう
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Content Modeling
 url: /ja/glossary/content-modeling/
 aliases:
-- /ja/glossary/Content-Modeling/
+- /glossary/Content-Modeling/
 term: もでりんぐ
 ---
 

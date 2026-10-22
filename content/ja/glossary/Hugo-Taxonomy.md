@@ -16,7 +16,7 @@ draft: false
 e-title: Hugo Taxonomy
 url: /ja/glossary/hugo-taxonomy/
 aliases:
-- /ja/glossary/Hugo-Taxonomy/
+- /glossary/Hugo-Taxonomy/
 term: ヒューゴ タクソノミー
 ---
 

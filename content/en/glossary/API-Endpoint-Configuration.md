@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/api-endpoint-configuration/
 aliases:
-- /en/glossary/API-Endpoint-Configuration/
+- /glossary/API-Endpoint-Configuration/
 ---
 
 ## What is API Endpoint Configuration?

@@ -16,7 +16,7 @@ draft: false
 e-title: Demand Generation
 url: "/ja/glossary/demand-generation/"
 aliases:
-- "/ja/glossary/Demand-Generation/"
+- "/glossary/Demand-Generation/"
 term: でまんどじぇねれーしょん
 ---
 

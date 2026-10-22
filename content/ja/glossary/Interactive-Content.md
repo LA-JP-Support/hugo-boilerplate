@@ -16,7 +16,7 @@ draft: false
 e-title: Interactive Content
 url: /ja/glossary/interactive-content/
 aliases:
-- /ja/glossary/Interactive-Content/
+- /glossary/Interactive-Content/
 term: インタラクティブコンテンツ
 ---
 

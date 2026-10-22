@@ -16,7 +16,7 @@ draft: false
 e-title: Time to Implement
 url: /ja/glossary/time-to-implement/
 aliases:
-- /ja/glossary/Time-to-Implement/
+- /glossary/Time-to-Implement/
 term: じっそうしょようじかん
 ---
 

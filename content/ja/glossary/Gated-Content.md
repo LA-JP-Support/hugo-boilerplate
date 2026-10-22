@@ -16,7 +16,7 @@ draft: false
 e-title: Gated Content
 url: /ja/glossary/gated-content/
 aliases:
-- /ja/glossary/Gated-Content/
+- /glossary/Gated-Content/
 term: ゲートコンテンツ
 ---
 

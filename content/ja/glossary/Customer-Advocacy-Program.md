@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Advocacy Program
 url: /ja/glossary/customer-advocacy-program/
 aliases:
-- /ja/glossary/Customer-Advocacy-Program/
+- /glossary/Customer-Advocacy-Program/
 term: かすたまーあどぼかしーぷろぐらむ
 ---
 

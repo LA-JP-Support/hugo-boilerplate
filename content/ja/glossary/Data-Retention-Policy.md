@@ -16,7 +16,7 @@ draft: false
 e-title: Data Retention Policy
 url: /ja/glossary/data-retention-policy/
 aliases:
-- /ja/glossary/Data-Retention-Policy/
+- /glossary/Data-Retention-Policy/
 term: データほじポリシー
 ---
 

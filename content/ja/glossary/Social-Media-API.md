@@ -16,7 +16,7 @@ draft: false
 e-title: Social Media API
 url: "/ja/glossary/social-media-api/"
 aliases:
-- "/ja/glossary/Social-Media-API/"
+- "/glossary/Social-Media-API/"
 term: ソーシャルメディアエーピーアイ
 ---
 

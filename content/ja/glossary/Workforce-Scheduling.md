@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Workforce-Scheduling/
 aliases:
-  - /ja/glossary/workforce-scheduling/
+  - /glossary/workforce-scheduling/
 keywords:
   - シフト管理
   - 人員配置

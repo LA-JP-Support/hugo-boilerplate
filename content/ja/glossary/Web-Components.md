@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Web-Components/
 aliases:
-  - /ja/glossary/web-components/
+  - /glossary/web-components/
 keywords:
   - Web Components
   - カスタムエレメント

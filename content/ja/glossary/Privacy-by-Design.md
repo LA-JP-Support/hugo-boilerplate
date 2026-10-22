@@ -16,7 +16,7 @@ draft: false
 e-title: Privacy by Design
 url: /ja/glossary/privacy-by-design/
 aliases:
-- /ja/glossary/Privacy-by-Design/
+- /glossary/Privacy-by-Design/
 term: ぷらいばしー・ばい・でざいん
 ---
 

@@ -17,7 +17,7 @@ e-title: Generative AI
 term: せいせいエーアイ
 url: "/ja/glossary/generative-ai/"
 aliases:
-- "/ja/glossary/Generative-AI/"
+- "/glossary/Generative-AI/"
 ---
 
 ## 生成AIとは?

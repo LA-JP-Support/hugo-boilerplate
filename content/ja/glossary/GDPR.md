@@ -17,7 +17,7 @@ e-title: GDPR
 term: ジーディーピーアール
 url: "/ja/glossary/gdpr/"
 aliases:
-- "/ja/glossary/GDPR/"
+- "/glossary/GDPR/"
 ---
 
 ## GDPRとは?

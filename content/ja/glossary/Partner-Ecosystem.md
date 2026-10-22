@@ -16,7 +16,7 @@ draft: false
 e-title: Partner Ecosystem
 url: /ja/glossary/partner-ecosystem/
 aliases:
-- /ja/glossary/Partner-Ecosystem/
+- /glossary/Partner-Ecosystem/
 term: ぱーとなーえこしすてむ
 ---
 

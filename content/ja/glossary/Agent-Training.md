@@ -16,7 +16,7 @@ draft: false
 e-title: Agent Training
 url: /ja/glossary/agent-training/
 aliases:
-- /ja/glossary/Agent-Training/
+- /glossary/Agent-Training/
 term: えーじぇんとくんれん
 ---
 

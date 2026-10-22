@@ -17,7 +17,7 @@ e-title: Docker
 term: ドッカー
 url: "/ja/glossary/docker/"
 aliases:
-- "/ja/glossary/Docker/"
+- "/glossary/Docker/"
 ---
 
 ## Dockerとは?

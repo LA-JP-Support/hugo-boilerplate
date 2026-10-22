@@ -16,7 +16,7 @@ draft: false
 e-title: Recommendation Engine
 url: /ja/glossary/recommendation-engine/
 aliases:
-- /ja/glossary/Recommendation-Engine/
+- /glossary/Recommendation-Engine/
 term: れこめんでーしょんえんじん
 ---
 

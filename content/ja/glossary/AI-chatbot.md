@@ -17,7 +17,7 @@ e-title: AI Chatbot
 term: エーアイチャットボット
 url: "/ja/glossary/ai-chatbot/"
 aliases:
-- "/ja/glossary/AI-Chatbot/"
+- "/glossary/AI-Chatbot/"
 ---
 
 ## AIチャットボットとは？

@@ -17,7 +17,7 @@ e-title: Visual Flow Builder
 term: びじゅあるふろーびるだー
 url: "/ja/glossary/visual-flow-builder/"
 aliases:
-- "/ja/glossary/Visual-Flow-Builder/"
+- "/glossary/Visual-Flow-Builder/"
 ---
 
 ## ビジュアルフロービルダーとは?

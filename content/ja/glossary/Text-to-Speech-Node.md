@@ -16,7 +16,7 @@ draft: false
 e-title: Text-to-Speech Node
 url: /ja/glossary/text-to-speech-node/
 aliases:
-- /ja/glossary/Text-to-Speech-Node/
+- /glossary/Text-to-Speech-Node/
 term: てきすと・とぅ・すぴーちのーど
 ---
 

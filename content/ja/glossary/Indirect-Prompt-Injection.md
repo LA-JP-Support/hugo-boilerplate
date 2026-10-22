@@ -17,7 +17,7 @@ e-title: Indirect Prompt Injection
 term: かんせつてきぷろんぷといんじぇくしょん
 url: "/ja/glossary/indirect-prompt-injection/"
 aliases:
-- "/ja/glossary/Indirect-Prompt-Injection/"
+- "/glossary/Indirect-Prompt-Injection/"
 ---
 
 ## 間接的プロンプトインジェクションとは

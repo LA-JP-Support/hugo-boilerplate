@@ -16,7 +16,7 @@ draft: false
 e-title: Static Site Generator
 url: /ja/glossary/static-site-generator/
 aliases:
-- /ja/glossary/Static-Site-Generator/
+- /glossary/Static-Site-Generator/
 term: せいてきサイトジェネレーター
 ---
 

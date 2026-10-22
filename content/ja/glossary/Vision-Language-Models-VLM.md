@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Vision-Language-Models-VLM/
 aliases:
-  - /ja/glossary/vision-language-models-vlm/
+  - /glossary/vision-language-models-vlm/
 keywords:
   - VLM
   - 画像理解

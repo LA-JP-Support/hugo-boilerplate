@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/api-management/
 aliases:
-- /en/glossary/API-Management/
+- /glossary/API-Management/
 ---
 
 ## What is API Management?

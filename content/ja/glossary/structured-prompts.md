@@ -17,7 +17,7 @@ e-title: Structured Prompts
 term: こうぞうかプロンプト
 url: /ja/glossary/structured-prompts/
 aliases:
-  - /ja/glossary/Structured-Prompts/
+  - /glossary/Structured-Prompts/
 ---
 
 ## 構造化プロンプトとは

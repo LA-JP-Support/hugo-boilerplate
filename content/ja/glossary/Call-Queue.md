@@ -16,7 +16,7 @@ draft: false
 e-title: Call Queue
 url: /ja/glossary/call-queue/
 aliases:
-- /ja/glossary/Call-Queue/
+- /glossary/Call-Queue/
 term: こーるきゅー
 ---
 

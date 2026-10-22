@@ -16,7 +16,7 @@ draft: false
 e-title: Static Site Generation
 url: /ja/glossary/static-site-generation/
 aliases:
-- /ja/glossary/Static-Site-Generation/
+- /glossary/Static-Site-Generation/
 term: せいてきさいとせいせい
 ---
 

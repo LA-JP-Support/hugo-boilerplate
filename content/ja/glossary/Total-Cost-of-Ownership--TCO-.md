@@ -16,7 +16,7 @@ draft: false
 e-title: Total Cost of Ownership (TCO)
 url: /ja/glossary/total-cost-of-ownership--tco-/
 aliases:
-- /ja/glossary/Total-Cost-of-Ownership--TCO-/
+- /glossary/Total-Cost-of-Ownership--TCO-/
 term: そうしょゆうこすと (ティーシーオー)
 ---
 

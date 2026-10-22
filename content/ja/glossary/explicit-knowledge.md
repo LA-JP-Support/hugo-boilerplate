@@ -17,7 +17,7 @@ e-title: Explicit Knowledge
 term: けいしきち
 url: /ja/glossary/explicit-knowledge/
 aliases:
-- /ja/glossary/Explicit-Knowledge/
+- /glossary/Explicit-Knowledge/
 ---
 
 ## 形式知とは？

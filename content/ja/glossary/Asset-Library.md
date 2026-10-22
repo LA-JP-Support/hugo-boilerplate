@@ -16,7 +16,7 @@ draft: false
 e-title: Asset Library
 url: /ja/glossary/asset-library/
 aliases:
-- /ja/glossary/Asset-Library/
+- /glossary/Asset-Library/
 term: あせっとらいぶらり
 ---
 

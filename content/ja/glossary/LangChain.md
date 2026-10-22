@@ -16,7 +16,7 @@ draft: false
 e-title: LangChain
 url: /ja/glossary/langchain/
 aliases:
-- /ja/glossary/LangChain/
+- /glossary/LangChain/
 term: ラングチェーン
 ---
 

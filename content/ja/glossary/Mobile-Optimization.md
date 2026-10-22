@@ -16,7 +16,7 @@ draft: false
 e-title: Mobile Optimization
 url: /ja/glossary/mobile-optimization/
 aliases:
-- /ja/glossary/Mobile-Optimization/
+- /glossary/Mobile-Optimization/
 term: もばいるさいてきか
 ---
 

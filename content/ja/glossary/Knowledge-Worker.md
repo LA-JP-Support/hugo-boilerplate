@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Worker
 url: /ja/glossary/knowledge-worker/
 aliases:
-- /ja/glossary/Knowledge-Worker/
+- /glossary/Knowledge-Worker/
 term: なれっじわーかー
 ---
 

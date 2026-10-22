@@ -17,7 +17,7 @@ e-title: Contact Lens for Amazon Connect
 term: コンタクトレンズ フォー アマゾン コネクト
 url: "/ja/glossary/contact-lens-for-amazon-connect/"
 aliases:
-- "/ja/glossary/Contact-Lens-for-Amazon-Connect/"
+- "/glossary/Contact-Lens-for-Amazon-Connect/"
 ---
 
 ## Contact Lens for Amazon Connectとは?

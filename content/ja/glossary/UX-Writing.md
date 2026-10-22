@@ -16,7 +16,7 @@ draft: false
 e-title: UX Writing
 url: /ja/glossary/ux-writing/
 aliases:
-- /ja/glossary/UX-Writing/
+- /glossary/UX-Writing/
 term: ユーエックスライティング
 ---
 

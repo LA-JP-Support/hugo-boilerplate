@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/pipeda-personal-information-protection-and-electronic-documents-act/
 aliases:
-  - /ja/glossary/PIPEDA/
+  - /glossary/PIPEDA/
 keywords:
   - PIPEDA
   - カナダ

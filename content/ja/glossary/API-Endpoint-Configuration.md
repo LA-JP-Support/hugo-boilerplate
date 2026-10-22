@@ -17,7 +17,7 @@ e-title: API Endpoint Configuration
 term: エーピーアイエンドポイントせってい
 url: "/ja/glossary/api-endpoint-configuration/"
 aliases:
-- "/ja/glossary/API-Endpoint-Configuration/"
+- "/glossary/API-Endpoint-Configuration/"
 ---
 
 ## APIエンドポイント設定とは？

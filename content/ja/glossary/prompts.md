@@ -18,7 +18,7 @@ e-title: Prompts
 term: ぷろんぷと
 url: "/ja/glossary/prompts/"
 aliases:
-- "/ja/glossary/Prompts/"
+- "/glossary/Prompts/"
 ---
 
 ## プロンプトとは?

@@ -16,7 +16,7 @@ draft: false
 e-title: Freemium Model
 url: /ja/glossary/freemium-model/
 aliases:
-- /ja/glossary/Freemium-Model/
+- /glossary/Freemium-Model/
 term: フリーミアムモデル
 ---
 

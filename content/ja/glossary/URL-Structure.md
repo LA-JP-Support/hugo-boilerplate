@@ -16,7 +16,7 @@ draft: false
 e-title: URL Structure
 url: /ja/glossary/url-structure/
 aliases:
-- /ja/glossary/URL-Structure/
+- /glossary/URL-Structure/
 term: ユーアールエルこうぞう
 ---
 

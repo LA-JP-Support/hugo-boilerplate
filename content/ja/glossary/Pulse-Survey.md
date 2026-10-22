@@ -17,7 +17,7 @@ e-title: Pulse Survey
 term: ぱるすさーべい
 url: "/ja/glossary/pulse-survey/"
 aliases:
-- "/ja/glossary/Pulse-Survey/"
+- "/glossary/Pulse-Survey/"
 ---
 
 ## パルスサーベイとは？

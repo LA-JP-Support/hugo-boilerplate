@@ -17,7 +17,7 @@ e-title: JSON Path
 term: ジェイソン パス
 url: "/ja/glossary/json-path/"
 aliases:
-- "/ja/glossary/JSON-Path/"
+- "/glossary/JSON-Path/"
 ---
 
 ## JSON Pathとは?

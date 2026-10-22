@@ -17,7 +17,7 @@ e-title: LTV (Lifetime Value)
 term: エルティーヴィー
 url: "/ja/glossary/ltv-lifetime-value/"
 aliases:
-- "/ja/glossary/LTV---Lifetime-Value-/"
+- "/glossary/LTV---Lifetime-Value-/"
 ---
 
 ## LTVとは？

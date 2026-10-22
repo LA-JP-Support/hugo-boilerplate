@@ -16,7 +16,7 @@ draft: false
 e-title: Dark Social Sharing
 url: /ja/glossary/dark-social-sharing/
 aliases:
-- /ja/glossary/Dark-Social-Sharing/
+- /glossary/Dark-Social-Sharing/
 term: だーくそーしゃるしぇありんぐ
 ---
 

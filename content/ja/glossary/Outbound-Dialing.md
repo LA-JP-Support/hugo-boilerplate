@@ -16,7 +16,7 @@ draft: false
 e-title: Outbound Dialing
 url: /ja/glossary/outbound-dialing/
 aliases:
-- /ja/glossary/Outbound-Dialing/
+- /glossary/Outbound-Dialing/
 term: アウトバウンドダイヤリング
 ---
 

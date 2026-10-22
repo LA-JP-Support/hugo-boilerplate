@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/HTTP-3/
 aliases:
-  - /ja/glossary/http-3/
+  - /glossary/http-3/
 keywords:
   - HTTP/3
   - QUIC

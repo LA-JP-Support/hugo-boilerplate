@@ -17,7 +17,7 @@ e-title: Lemmatization
 term: れんまか
 url: "/ja/glossary/lemmatization/"
 aliases:
-- "/ja/glossary/Lemmatization/"
+- "/glossary/Lemmatization/"
 ---
 
 <!-- ===== サクッとわかるゾーン（冒頭〜30行） ===== -->

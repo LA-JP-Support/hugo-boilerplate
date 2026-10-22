@@ -17,7 +17,7 @@ e-title: Hybrid Chatbot
 term: ハイブリッドチャットボット
 url: "/ja/glossary/hybrid-chatbot/"
 aliases:
-- "/ja/glossary/Hybrid-Chatbot/"
+- "/glossary/Hybrid-Chatbot/"
 ---
 
 ## ハイブリッドチャットボットとは?

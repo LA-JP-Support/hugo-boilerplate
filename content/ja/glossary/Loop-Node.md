@@ -17,7 +17,7 @@ e-title: Loop Node
 term: ループノード
 url: "/ja/glossary/loop-node/"
 aliases:
-- "/ja/glossary/Loop-Node/"
+- "/glossary/Loop-Node/"
 ---
 
 ## ループノードとは

@@ -17,7 +17,7 @@ draft: false
 e-title: AlphaZero
 url: /ja/glossary/alphazero/
 aliases:
-- /ja/glossary/AlphaZero/
+- /glossary/AlphaZero/
 term: アルファゼロ
 ---
 

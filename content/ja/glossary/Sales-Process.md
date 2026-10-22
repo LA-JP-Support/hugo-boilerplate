@@ -16,7 +16,7 @@ draft: false
 e-title: Sales Process
 url: /ja/glossary/sales-process/
 aliases:
-- /ja/glossary/Sales-Process/
+- /glossary/Sales-Process/
 term: せーるすぷろせす
 ---
 

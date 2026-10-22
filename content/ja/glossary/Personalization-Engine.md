@@ -16,7 +16,7 @@ draft: false
 e-title: Personalization Engine
 url: /ja/glossary/personalization-engine/
 aliases:
-- /ja/glossary/Personalization-Engine/
+- /glossary/Personalization-Engine/
 term: ぱーそならいぜーしょんえんじん
 ---
 

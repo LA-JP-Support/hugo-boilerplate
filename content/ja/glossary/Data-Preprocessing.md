@@ -16,7 +16,7 @@ draft: false
 e-title: Data Preprocessing
 url: "/ja/glossary/data-preprocessing/"
 aliases:
-- "/ja/glossary/Data-Preprocessing/"
+- "/glossary/Data-Preprocessing/"
 term: データぜんしょり
 ---
 

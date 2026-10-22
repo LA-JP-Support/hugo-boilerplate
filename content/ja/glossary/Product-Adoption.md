@@ -16,7 +16,7 @@ draft: false
 e-title: Product Adoption
 url: /ja/glossary/product-adoption/
 aliases:
-- /ja/glossary/Product-Adoption/
+- /glossary/Product-Adoption/
 term: ぷろだくと・あだぷしょん
 ---
 

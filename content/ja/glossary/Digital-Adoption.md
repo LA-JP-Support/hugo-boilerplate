@@ -15,7 +15,7 @@ draft: false
 e-title: Digital Adoption
 url: /ja/glossary/digital-adoption/
 aliases:
-- /ja/glossary/Digital-Adoption/
+- /glossary/Digital-Adoption/
 term: でじたるあだぷしょん
 lastmod: 2026-04-02
 ---

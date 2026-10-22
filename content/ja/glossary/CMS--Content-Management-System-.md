@@ -16,7 +16,7 @@ draft: false
 e-title: CMS (Content Management System)
 url: /ja/glossary/cms--content-management-system-/
 aliases:
-- /ja/glossary/CMS--Content-Management-System-/
+- /glossary/CMS--Content-Management-System-/
 term: シーエムエス
 ---
 

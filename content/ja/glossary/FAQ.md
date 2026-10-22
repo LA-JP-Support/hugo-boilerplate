@@ -17,7 +17,7 @@ e-title: FAQ (Frequently Asked Questions)
 term: エフエーキュー(よくあるしつもん)
 url: "/ja/glossary/faq/"
 aliases:
-- "/ja/glossary/FAQ/"
+- "/glossary/FAQ/"
 ---
 
 ## FAQとは？

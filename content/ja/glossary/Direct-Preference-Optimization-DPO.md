@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Direct-Preference-Optimization-DPO/
 aliases:
-  - /ja/glossary/direct-preference-optimization-dpo/
+  - /glossary/direct-preference-optimization-dpo/
 keywords:
   - DPO
   - 直接選好

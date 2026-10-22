@@ -16,7 +16,7 @@ draft: false
 e-title: AI Video Generation
 url: /ja/glossary/ai-video-generation/
 aliases:
-- /ja/glossary/AI-Video-Generation/
+- /glossary/AI-Video-Generation/
 term: エーアイどうがせいせい
 ---
 

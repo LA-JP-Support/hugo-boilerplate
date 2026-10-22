@@ -16,7 +16,7 @@ draft: false
 e-title: Ambient Intelligence (AmI)
 url: /ja/glossary/ambient-intelligence/
 aliases:
-- /ja/glossary/Ambient-Intelligence/
+- /glossary/Ambient-Intelligence/
 term: アンビエント・インテリジェンス
 ---
 

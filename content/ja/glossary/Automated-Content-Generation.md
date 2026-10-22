@@ -17,7 +17,7 @@ e-title: Automated Content Generation
 term: じどうコンテンツせいせい
 url: "/ja/glossary/automated-content-generation/"
 aliases:
-- "/ja/glossary/Automated-Content-Generation/"
+- "/glossary/Automated-Content-Generation/"
 ---
 
 ## 自動コンテンツ生成とは

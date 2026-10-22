@@ -16,7 +16,7 @@ draft: false
 e-title: SMB Technology Stack
 url: /ja/glossary/smb-technology-stack/
 aliases:
-- /ja/glossary/SMB-Technology-Stack/
+- /glossary/SMB-Technology-Stack/
 term: エスエムビーテクノロジースタック
 ---
 

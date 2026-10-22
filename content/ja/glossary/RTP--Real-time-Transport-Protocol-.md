@@ -16,7 +16,7 @@ draft: false
 e-title: RTP (Real-time Transport Protocol)
 url: /ja/glossary/rtp--real-time-transport-protocol-/
 aliases:
-- /ja/glossary/RTP--Real-time-Transport-Protocol-/
+- /glossary/RTP--Real-time-Transport-Protocol-/
 term: アールティーピー
 ---
 

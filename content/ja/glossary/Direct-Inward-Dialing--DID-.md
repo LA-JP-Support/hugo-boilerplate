@@ -15,7 +15,7 @@ draft: false
 e-title: Direct Inward Dialing (DID)
 url: /ja/glossary/direct-inward-dialing--did-/
 aliases:
-- /ja/glossary/Direct-Inward-Dialing--DID-/
+- /glossary/Direct-Inward-Dialing--DID-/
 term: だいれくと・いんわーど・だいやりんぐ
 lastmod: 2026-04-02
 ---

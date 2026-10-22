@@ -15,7 +15,7 @@ draft: false
 e-title: LinkedIn
 url: "/ja/glossary/linkedin/"
 aliases:
-- "/ja/glossary/LinkedIn/"
+- "/glossary/LinkedIn/"
 term: りんくどいん
 lastmod: 2026-04-02
 ---

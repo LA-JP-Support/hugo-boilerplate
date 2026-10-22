@@ -16,7 +16,7 @@ draft: false
 e-title: Product Roadmap
 url: /ja/glossary/product-roadmap/
 aliases:
-- /ja/glossary/Product-Roadmap/
+- /glossary/Product-Roadmap/
 term: ぷろだくと・ろーどまっぷ
 ---
 

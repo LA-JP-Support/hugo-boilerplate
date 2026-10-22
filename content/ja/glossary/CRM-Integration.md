@@ -16,7 +16,7 @@ draft: false
 e-title: CRM Integration
 url: /ja/glossary/crm-integration/
 aliases:
-- /ja/glossary/CRM-Integration/
+- /glossary/CRM-Integration/
 term: シーアールエムれんけい
 ---
 

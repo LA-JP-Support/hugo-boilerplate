@@ -16,7 +16,7 @@ draft: false
 e-title: Duplicate Content
 url: /ja/glossary/duplicate-content/
 aliases:
-- /ja/glossary/Duplicate-Content/
+- /glossary/Duplicate-Content/
 term: ちょうふくこんてんつ
 ---
 

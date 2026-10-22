@@ -17,7 +17,7 @@ e-title: Zero-Shot Chain of Thought
 term: ぜろしょっとしこうれんさ
 url: /ja/glossary/zero-shot-chain-of-thought/
 aliases:
-- /ja/glossary/Zero-Shot-Chain-of-Thought/
+- /glossary/Zero-Shot-Chain-of-Thought/
 ---
 
 ## ゼロショット思考連鎖とは？

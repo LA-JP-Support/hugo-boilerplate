@@ -16,7 +16,7 @@ draft: false
 e-title: Conversational AI
 url: /ja/glossary/conversational-ai/
 aliases:
-- /ja/glossary/Conversational-AI/
+- /glossary/Conversational-AI/
 term: たいわがたエーアイ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Sales Coaching
 url: /ja/glossary/sales-coaching/
 aliases:
-- /ja/glossary/Sales-Coaching/
+- /glossary/Sales-Coaching/
 term: せーるすこーちんぐ
 ---
 

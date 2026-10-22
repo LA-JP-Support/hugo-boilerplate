@@ -16,7 +16,7 @@ draft: false
 e-title: Content Staging
 url: /ja/glossary/content-staging/
 aliases:
-- /ja/glossary/Content-Staging/
+- /glossary/Content-Staging/
 term: こんてんつすてーじんぐ
 ---
 

@@ -17,7 +17,7 @@ e-title: Vector Database
 term: べくとるでーたべーす
 url: "/ja/glossary/vector-database/"
 aliases:
-- "/ja/glossary/Vector-Database/"
+- "/glossary/Vector-Database/"
 ---
 
 ## ベクトルデータベースとは？

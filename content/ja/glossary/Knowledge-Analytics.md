@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Analytics
 url: /ja/glossary/knowledge-analytics/
 aliases:
-- /ja/glossary/Knowledge-Analytics/
+- /glossary/Knowledge-Analytics/
 term: なれっじあなりてぃくす
 ---
 

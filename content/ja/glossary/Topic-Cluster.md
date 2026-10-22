@@ -16,7 +16,7 @@ draft: false
 e-title: Topic Cluster
 url: /ja/glossary/topic-cluster/
 aliases:
-- /ja/glossary/Topic-Cluster/
+- /glossary/Topic-Cluster/
 term: トピッククラスター
 ---
 

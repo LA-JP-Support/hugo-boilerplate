@@ -16,7 +16,7 @@ draft: false
 e-title: Mobile Workforce
 url: /ja/glossary/mobile-workforce/
 aliases:
-- /ja/glossary/Mobile-Workforce/
+- /glossary/Mobile-Workforce/
 term: もばいるわーくふぉーす
 ---
 

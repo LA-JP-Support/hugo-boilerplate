@@ -16,7 +16,7 @@ draft: false
 e-title: Bootstrap
 url: /ja/glossary/bootstrap/
 aliases:
-- /ja/glossary/Bootstrap/
+- /glossary/Bootstrap/
 term: ぶーとすとらっぷ
 ---
 

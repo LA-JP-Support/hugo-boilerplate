@@ -16,7 +16,7 @@ draft: false
 e-title: Adaptive Cards
 url: /ja/glossary/adaptive-cards/
 aliases:
-- /ja/glossary/Adaptive-Cards/
+- /glossary/Adaptive-Cards/
 term: あだぷてぃぶかーど
 ---
 

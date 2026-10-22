@@ -17,7 +17,7 @@ e-title: Next Best Action
 url: /ja/glossary/next-best-action/
 term: ねくすとべすとあくしょん
 aliases:
-- /ja/glossary/Next-Best-Action/
+- /glossary/Next-Best-Action/
 ---
 
 ## ネクストベストアクションとは？

@@ -16,7 +16,7 @@ draft: false
 e-title: Editorial Guidelines
 url: /ja/glossary/editorial-guidelines/
 aliases:
-- /ja/glossary/Editorial-Guidelines/
+- /glossary/Editorial-Guidelines/
 term: へんしゅうがいどらいん
 ---
 

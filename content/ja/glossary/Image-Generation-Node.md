@@ -17,7 +17,7 @@ e-title: Image Generation Node
 term: がぞうせいせいノード
 url: "/ja/glossary/image-generation-node/"
 aliases:
-- "/ja/glossary/Image-Generation-Node/"
+- "/glossary/Image-Generation-Node/"
 ---
 
 ## 画像生成ノードとは?

@@ -16,7 +16,7 @@ draft: false
 e-title: Blogging Platform
 url: /ja/glossary/blogging-platform/
 aliases:
-- /ja/glossary/Blogging-Platform/
+- /glossary/Blogging-Platform/
 term: ぶろぐぷらっとふぉーむ
 ---
 

@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/DynamoDB/
 aliases:
-  - /ja/glossary/dynamodb/
+  - /glossary/dynamodb/
 keywords:
   - NoSQL
   - AWS

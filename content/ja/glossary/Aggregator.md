@@ -16,7 +16,7 @@ draft: false
 e-title: Aggregator
 url: /ja/glossary/aggregator/
 aliases:
-- /ja/glossary/Aggregator/
+- /glossary/Aggregator/
 term: あぐりげーたー
 ---
 

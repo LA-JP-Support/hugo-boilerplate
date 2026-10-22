@@ -16,7 +16,7 @@ draft: false
 e-title: Meta
 url: /ja/glossary/meta/
 aliases:
-- /ja/glossary/Meta/
+- /glossary/Meta/
 term: めた
 ---
 

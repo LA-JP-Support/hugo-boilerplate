@@ -16,7 +16,7 @@ draft: false
 e-title: Agent Performance
 url: /ja/glossary/agent-performance/
 aliases:
-- /ja/glossary/Agent-Performance/
+- /glossary/Agent-Performance/
 term: えーじぇんとぱふぉーまんす
 ---
 

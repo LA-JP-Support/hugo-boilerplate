@@ -16,7 +16,7 @@ draft: false
 e-title: Link Building
 url: "/ja/glossary/link-building/"
 aliases:
-- "/ja/glossary/Link-Building/"
+- "/glossary/Link-Building/"
 term: りんくびるでぃんぐ
 ---
 

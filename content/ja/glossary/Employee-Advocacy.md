@@ -16,7 +16,7 @@ draft: false
 e-title: Employee Advocacy
 url: /ja/glossary/employee-advocacy/
 aliases:
-- /ja/glossary/Employee-Advocacy/
+- /glossary/Employee-Advocacy/
 term: じゅうぎょういんあどぼかしー
 ---
 

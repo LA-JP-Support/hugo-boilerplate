@@ -16,7 +16,7 @@ draft: false
 e-title: Model Compression
 url: /ja/glossary/Model-Compression/
 aliases:
-- /ja/glossary/model-compression/
+- /glossary/model-compression/
 term: もでるあっしゅく
 ---
 

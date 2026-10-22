@@ -16,7 +16,7 @@ draft: false
 e-title: Reverse ETL
 url: /ja/glossary/reverse-etl/
 aliases:
-- /ja/glossary/Reverse-ETL/
+- /glossary/Reverse-ETL/
 term: りばーすいーてぃーえる
 ---
 

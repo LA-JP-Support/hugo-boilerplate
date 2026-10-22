@@ -16,7 +16,7 @@ draft: false
 e-title: Opportunity Management
 url: /ja/glossary/opportunity-management/
 aliases:
-- /ja/glossary/Opportunity-Management/
+- /glossary/Opportunity-Management/
 term: しょうだんかんり
 ---
 

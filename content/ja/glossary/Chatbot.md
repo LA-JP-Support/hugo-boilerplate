@@ -17,7 +17,7 @@ e-title: Chatbot
 term: チャットボット
 url: "/ja/glossary/chatbot/"
 aliases:
-- "/ja/glossary/Chatbot/"
+- "/glossary/Chatbot/"
 ---
 ## チャットボットとは？
 

@@ -17,7 +17,7 @@ e-title: Cron Schedule
 term: クーロンスケジュール
 url: /ja/glossary/cron-schedule/
 aliases:
-- /ja/glossary/Cron-Schedule/
+- /glossary/Cron-Schedule/
 ---
 
 ## Cron スケジュールとは?

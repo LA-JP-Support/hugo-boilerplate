@@ -16,7 +16,7 @@ draft: false
 e-title: Ticket Routing
 url: /ja/glossary/ticket-routing/
 aliases:
-- /ja/glossary/Ticket-Routing/
+- /glossary/Ticket-Routing/
 term: ちけっとるーてぃんぐ
 ---
 

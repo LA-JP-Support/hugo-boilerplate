@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/apis/
 aliases:
-- /en/glossary/APIs/
+- /glossary/APIs/
 ---
 
 ## What are APIs?

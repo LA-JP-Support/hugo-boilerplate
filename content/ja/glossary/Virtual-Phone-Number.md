@@ -16,7 +16,7 @@ draft: false
 e-title: Virtual Phone Number
 url: /ja/glossary/virtual-phone-number/
 aliases:
-- /ja/glossary/Virtual-Phone-Number/
+- /glossary/Virtual-Phone-Number/
 term: バーチャルでんわばんごう
 ---
 

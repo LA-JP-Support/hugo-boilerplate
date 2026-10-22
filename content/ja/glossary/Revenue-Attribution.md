@@ -16,7 +16,7 @@ draft: false
 e-title: Revenue Attribution
 url: /ja/glossary/revenue-attribution/
 aliases:
-- /ja/glossary/Revenue-Attribution/
+- /glossary/Revenue-Attribution/
 term: しゅうえきあとりびゅーしょん
 ---
 

@@ -17,7 +17,7 @@ draft: false
 e-title: Voiceflow
 url: /ja/glossary/voiceflow/
 aliases:
-- /ja/glossary/Voiceflow/
+- /glossary/Voiceflow/
 term: ぼいすふろー
 ---
 

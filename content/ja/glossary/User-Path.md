@@ -16,7 +16,7 @@ draft: false
 e-title: User Path
 url: /ja/glossary/user-path/
 aliases:
-- /ja/glossary/User-Path/
+- /glossary/User-Path/
 term: ユーザーパス
 ---
 

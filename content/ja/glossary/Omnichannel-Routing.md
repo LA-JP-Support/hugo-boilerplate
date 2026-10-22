@@ -16,7 +16,7 @@ draft: false
 e-title: Omnichannel Routing
 url: /ja/glossary/omnichannel-routing/
 aliases:
-- /ja/glossary/Omnichannel-Routing/
+- /glossary/Omnichannel-Routing/
 term: オムニチャネルルーティング
 ---
 

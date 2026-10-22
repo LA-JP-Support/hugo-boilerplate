@@ -9,7 +9,7 @@ type: glossary
 draft: false
 url: /en/glossary/After-Call-Work-ACW/
 aliases:
-  - /en/glossary/after-call-work-acw/
+  - /glossary/after-call-work-acw/
 keywords:
   - After-call work
   - ACW

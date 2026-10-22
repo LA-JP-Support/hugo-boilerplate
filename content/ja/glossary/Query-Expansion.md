@@ -16,7 +16,7 @@ draft: false
 e-title: Query Expansion
 url: /ja/glossary/query-expansion/
 aliases:
-- /ja/glossary/Query-Expansion/
+- /glossary/Query-Expansion/
 term: クエリかくちょう
 ---
 

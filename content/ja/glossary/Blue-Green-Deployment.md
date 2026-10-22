@@ -16,7 +16,7 @@ draft: false
 e-title: Blue-Green Deployment
 url: /ja/glossary/blue-green-deployment/
 aliases:
-- /ja/glossary/Blue-Green-Deployment/
+- /glossary/Blue-Green-Deployment/
 term: ぶるーぐりーんでぷろいめんと
 ---
 

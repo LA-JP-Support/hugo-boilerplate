@@ -16,7 +16,7 @@ draft: false
 e-title: Stack AI
 url: /ja/glossary/stack-ai/
 aliases:
-- /ja/glossary/Stack-AI/
+- /glossary/Stack-AI/
 term: スタック・エーアイ
 ---
 

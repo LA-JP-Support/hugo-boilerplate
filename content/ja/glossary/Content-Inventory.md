@@ -16,7 +16,7 @@ draft: false
 e-title: Content Inventory
 url: /ja/glossary/content-inventory/
 aliases:
-- /ja/glossary/Content-Inventory/
+- /glossary/Content-Inventory/
 term: こんてんついんべんとり
 ---
 

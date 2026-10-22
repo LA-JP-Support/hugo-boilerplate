@@ -16,7 +16,7 @@ draft: false
 e-title: Feature Flag Management
 url: "/ja/glossary/feature-flag-management/"
 aliases:
-- "/ja/glossary/Feature-Flag-Management/"
+- "/glossary/Feature-Flag-Management/"
 term: ふぃーちゃーふらぐかんり
 ---
 

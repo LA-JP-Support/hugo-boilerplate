@@ -16,7 +16,7 @@ draft: false
 e-title: Call Parking
 url: /ja/glossary/call-parking/
 aliases:
-- /ja/glossary/Call-Parking/
+- /glossary/Call-Parking/
 term: こーるぱーきんぐ
 ---
 

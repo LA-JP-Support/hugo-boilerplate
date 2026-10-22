@@ -16,7 +16,7 @@ draft: false
 e-title: Social Media Dashboard
 url: /ja/glossary/social-media-dashboard/
 aliases:
-- /ja/glossary/Social-Media-Dashboard/
+- /glossary/Social-Media-Dashboard/
 term: そーしゃるめでぃあだっしゅぼーど
 ---
 

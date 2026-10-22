@@ -17,7 +17,7 @@ e-title: Pareto's Law (The 80/20 Rule)
 term: パレートのほうそく
 url: "/ja/glossary/pareto's-law/"
 aliases:
-- "/ja/glossary/Pareto's-Law/"
+- "/glossary/Pareto's-Law/"
 ---
 
 ## パレートの法則とは？

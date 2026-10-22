@@ -16,7 +16,7 @@ draft: false
 e-title: Social Selling
 url: /ja/glossary/social-selling/
 aliases:
-- /ja/glossary/Social-Selling/
+- /glossary/Social-Selling/
 term: そーしゃるせりんぐ
 ---
 

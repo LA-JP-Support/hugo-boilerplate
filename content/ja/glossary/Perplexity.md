@@ -16,7 +16,7 @@ draft: false
 e-title: Perplexity
 url: /ja/glossary/perplexity/
 aliases:
-- /ja/glossary/Perplexity/
+- /glossary/Perplexity/
 term: ぱーぷれきしてぃ
 ---
 

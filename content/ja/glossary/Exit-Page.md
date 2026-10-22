@@ -16,7 +16,7 @@ draft: false
 e-title: Exit Page
 url: /ja/glossary/exit-page/
 aliases:
-- /ja/glossary/Exit-Page/
+- /glossary/Exit-Page/
 term: りだつページ
 ---
 

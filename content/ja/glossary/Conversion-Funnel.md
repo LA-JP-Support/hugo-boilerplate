@@ -16,7 +16,7 @@ draft: false
 e-title: Conversion Funnel
 url: /ja/glossary/conversion-funnel/
 aliases:
-- /ja/glossary/Conversion-Funnel/
+- /glossary/Conversion-Funnel/
 term: こんばーじょんふぁねる
 ---
 

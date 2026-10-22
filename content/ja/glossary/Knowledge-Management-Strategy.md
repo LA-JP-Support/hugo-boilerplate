@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Management Strategy
 url: "/ja/glossary/knowledge-management-strategy/"
 aliases:
-- "/ja/glossary/Knowledge-Management-Strategy/"
+- "/glossary/Knowledge-Management-Strategy/"
 term: ナレッジマネジメント戦略
 ---
 

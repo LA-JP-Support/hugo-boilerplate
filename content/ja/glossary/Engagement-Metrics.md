@@ -16,7 +16,7 @@ draft: false
 e-title: Engagement Metrics
 url: /ja/glossary/engagement-metrics/
 aliases:
-- /ja/glossary/Engagement-Metrics/
+- /glossary/Engagement-Metrics/
 term: えんげーじめんとしひょう
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Specification Problem
 url: /ja/glossary/specification-problem/
 aliases:
-- /ja/glossary/Specification-Problem/
+- /glossary/Specification-Problem/
 term: しようもんだい
 ---
 

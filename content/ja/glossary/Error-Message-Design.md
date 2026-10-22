@@ -16,7 +16,7 @@ draft: false
 e-title: Error Message Design
 url: /ja/glossary/error-message-design/
 aliases:
-- /ja/glossary/Error-Message-Design/
+- /glossary/Error-Message-Design/
 term: えらーめっせーじでざいん
 ---
 

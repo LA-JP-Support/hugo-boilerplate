@@ -17,7 +17,7 @@ e-title: CAI Ratio
 term: シーエーアイひりつ
 url: "/ja/glossary/cai-ratio/"
 aliases:
-- "/ja/glossary/CAI-ratio/"
+- "/glossary/CAI-ratio/"
 ---
 
 ## CAI比率とは?

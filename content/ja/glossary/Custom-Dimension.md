@@ -16,7 +16,7 @@ draft: false
 e-title: Custom Dimension
 url: /ja/glossary/custom-dimension/
 aliases:
-- /ja/glossary/Custom-Dimension/
+- /glossary/Custom-Dimension/
 term: かすたむでぃめんしょん
 ---
 

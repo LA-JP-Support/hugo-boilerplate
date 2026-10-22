@@ -16,7 +16,7 @@ draft: false
 e-title: Channel Optimization
 url: /ja/glossary/channel-optimization/
 aliases:
-- /ja/glossary/Channel-Optimization/
+- /glossary/Channel-Optimization/
 term: ちゃねるさいてきか
 ---
 

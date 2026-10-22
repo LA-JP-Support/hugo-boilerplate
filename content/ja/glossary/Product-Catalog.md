@@ -16,7 +16,7 @@ draft: false
 e-title: Product Catalog
 url: /ja/glossary/product-catalog/
 aliases:
-- /ja/glossary/Product-Catalog/
+- /glossary/Product-Catalog/
 term: ぷろだくと・かたろぐ
 ---
 

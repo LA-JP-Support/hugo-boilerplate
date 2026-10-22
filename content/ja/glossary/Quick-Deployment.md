@@ -16,7 +16,7 @@ draft: false
 e-title: Quick Deployment
 url: /ja/glossary/quick-deployment/
 aliases:
-- /ja/glossary/Quick-Deployment/
+- /glossary/Quick-Deployment/
 term: くいっくでぷろいめんと
 ---
 

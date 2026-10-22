@@ -16,7 +16,7 @@ draft: false
 e-title: CRM (Customer Relationship Management)
 url: /ja/glossary/crm/
 aliases:
-- /ja/glossary/CRM/
+- /glossary/CRM/
 term: シーアールエム(こきゃくかんけいかんり)
 ---
 

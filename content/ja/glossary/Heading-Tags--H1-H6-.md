@@ -17,7 +17,7 @@ e-title: Heading Tags (H1-H6)
 term: みだしタグ（エイチワン～エイチシックス）
 url: "/ja/glossary/heading-tags--h1-h6-/"
 aliases:
-- "/ja/glossary/Heading-Tags--H1-H6-/"
+- "/glossary/Heading-Tags--H1-H6-/"
 ---
 
 ## 見出しタグ（H1～H6）とは？

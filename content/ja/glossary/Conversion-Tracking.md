@@ -16,7 +16,7 @@ draft: false
 e-title: Conversion Tracking
 url: /ja/glossary/conversion-tracking/
 aliases:
-- /ja/glossary/Conversion-Tracking/
+- /glossary/Conversion-Tracking/
 term: こんばーじょんとらっきんぐ
 ---
 

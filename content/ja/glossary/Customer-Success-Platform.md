@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Success Platform
 url: /ja/glossary/customer-success-platform/
 aliases:
-- /ja/glossary/Customer-Success-Platform/
+- /glossary/Customer-Success-Platform/
 term: かすたまーさくせすぷらっとふぉーむ
 ---
 

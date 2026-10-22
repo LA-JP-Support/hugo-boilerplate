@@ -16,7 +16,7 @@ draft: false
 e-title: Botpress
 url: /ja/glossary/botpress/
 aliases:
-- /ja/glossary/Botpress/
+- /glossary/Botpress/
 term: ぼっとぷれす
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Retention Rate
 url: /ja/glossary/retention-rate/
 aliases:
-- /ja/glossary/Retention-Rate/
+- /glossary/Retention-Rate/
 term: りてんしょんれーと
 ---
 

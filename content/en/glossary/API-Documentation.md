@@ -14,7 +14,7 @@ type: glossary
 draft: false
 url: /en/glossary/api-documentation/
 aliases:
-- /en/glossary/API-Documentation/
+- /glossary/API-Documentation/
 ---
 
 ## What is API Documentation?

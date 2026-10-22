@@ -17,7 +17,7 @@ draft: false
 e-title: Content ROI
 url: /ja/glossary/content-roi/
 aliases:
-- /ja/glossary/Content-ROI/
+- /glossary/Content-ROI/
 term: あーるおーあい
 ---
 

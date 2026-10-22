@@ -16,7 +16,7 @@ draft: false
 e-title: Data Pipeline
 url: "/ja/glossary/data-pipeline/"
 aliases:
-- "/ja/glossary/Data-Pipeline/"
+- "/glossary/Data-Pipeline/"
 term: データパイプライン
 ---
 

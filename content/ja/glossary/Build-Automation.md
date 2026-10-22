@@ -16,7 +16,7 @@ draft: false
 e-title: Build Automation
 url: /ja/glossary/build-automation/
 aliases:
-- /ja/glossary/Build-Automation/
+- /glossary/Build-Automation/
 term: びるどじどうか
 ---
 

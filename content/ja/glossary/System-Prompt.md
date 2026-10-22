@@ -16,7 +16,7 @@ draft: false
 e-title: System Prompt
 url: /ja/glossary/system-prompt/
 aliases:
-- /ja/glossary/System-Prompt/
+- /glossary/System-Prompt/
 term: システムプロンプト
 ---
 

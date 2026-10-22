@@ -16,7 +16,7 @@ draft: false
 e-title: Encryption in Transit
 url: /ja/glossary/encryption-in-transit/
 aliases:
-- /ja/glossary/Encryption-in-Transit/
+- /glossary/Encryption-in-Transit/
 term: てんそうちゅうのあんごうか
 ---
 

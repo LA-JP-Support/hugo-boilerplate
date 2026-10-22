@@ -16,7 +16,7 @@ draft: false
 e-title: Hugo Module
 url: /ja/glossary/hugo-module/
 aliases:
-- /ja/glossary/Hugo-Module/
+- /glossary/Hugo-Module/
 term: ヒューゴモジュール
 ---
 

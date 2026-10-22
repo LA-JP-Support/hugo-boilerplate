@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/RDS-Relational-Database-Service/
 aliases:
-  - /ja/glossary/rds-relational-database-service/
+  - /glossary/rds-relational-database-service/
 keywords:
   - リレーショナルデータベース
   - AWS

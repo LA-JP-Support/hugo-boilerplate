@@ -16,7 +16,7 @@ draft: false
 e-title: Skills-Based Routing
 url: "/ja/glossary/skills-based-routing/"
 aliases:
-- "/ja/glossary/Skills-Based-Routing/"
+- "/glossary/Skills-Based-Routing/"
 term: すきるべーするーてぃんぐ
 ---
 

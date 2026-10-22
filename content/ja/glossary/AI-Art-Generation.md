@@ -16,7 +16,7 @@ draft: false
 e-title: AI Art Generation
 url: /ja/glossary/ai-art-generation/
 aliases:
-- /ja/glossary/AI-Art-Generation/
+- /glossary/AI-Art-Generation/
 term: エーアイアートせいせい
 ---
 

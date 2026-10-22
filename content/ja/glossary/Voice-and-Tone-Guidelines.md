@@ -16,7 +16,7 @@ draft: false
 e-title: Voice and Tone Guidelines
 url: /ja/glossary/voice-and-tone-guidelines/
 aliases:
-- /ja/glossary/Voice-and-Tone-Guidelines/
+- /glossary/Voice-and-Tone-Guidelines/
 term: ぼいすあんどとーんがいどらいん
 ---
 

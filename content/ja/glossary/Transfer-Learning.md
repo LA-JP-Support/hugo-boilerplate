@@ -16,7 +16,7 @@ draft: false
 e-title: Transfer Learning
 url: /ja/glossary/transfer-learning/
 aliases:
-- /ja/glossary/Transfer-Learning/
+- /glossary/Transfer-Learning/
 term: てんいがくしゅう
 ---
 

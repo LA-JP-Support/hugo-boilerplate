@@ -16,7 +16,7 @@ draft: false
 e-title: User Groups
 url: /ja/glossary/user-groups/
 aliases:
-- /ja/glossary/User-Groups/
+- /glossary/User-Groups/
 term: ゆーざーぐるーぷ
 ---
 

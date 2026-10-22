@@ -16,7 +16,7 @@ draft: false
 e-title: Lead Magnet
 url: "/ja/glossary/Lead-Magnet/"
 aliases:
-- "/ja/glossary/lead-magnet/"
+- "/glossary/lead-magnet/"
 term: りーどまぐねっと
 ---
 

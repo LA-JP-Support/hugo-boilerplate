@@ -16,7 +16,7 @@ draft: false
 e-title: Internal Communications
 url: /ja/glossary/internal-communications/
 aliases:
-- /ja/glossary/Internal-Communications/
+- /glossary/Internal-Communications/
 term: 社内コミュニケーション
 ---
 

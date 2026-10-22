@@ -17,7 +17,7 @@ e-title: Webhook Trigger
 term: ウェブフックトリガー
 url: "/ja/glossary/webhook-trigger/"
 aliases:
-- "/ja/glossary/Webhook-Trigger/"
+- "/glossary/Webhook-Trigger/"
 ---
 <!-- ===== サクッとわかるゾーン ===== -->
 

@@ -17,7 +17,7 @@ e-title: Collaboration Platform
 term: こらぼれーしょんぷらっとふぉーむ
 url: "/ja/glossary/collaboration-platform/"
 aliases:
-- "/ja/glossary/Collaboration-Platform/"
+- "/glossary/Collaboration-Platform/"
 ---
 
 ## コラボレーションプラットフォームとは?

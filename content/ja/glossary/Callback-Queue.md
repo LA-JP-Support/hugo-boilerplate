@@ -16,7 +16,7 @@ draft: false
 e-title: Callback Queue
 url: /ja/glossary/callback-queue/
 aliases:
-- /ja/glossary/Callback-Queue/
+- /glossary/Callback-Queue/
 term: こーるばっくきゅー
 ---
 

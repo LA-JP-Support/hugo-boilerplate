@@ -16,7 +16,7 @@ draft: false
 e-title: Hugo Configuration
 url: /ja/glossary/hugo-configuration/
 aliases:
-- /ja/glossary/Hugo-Configuration/
+- /glossary/Hugo-Configuration/
 term: ヒューゴせってい
 ---
 

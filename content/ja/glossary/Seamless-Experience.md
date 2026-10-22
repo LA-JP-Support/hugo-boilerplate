@@ -16,7 +16,7 @@ draft: false
 e-title: Seamless Experience
 url: /ja/glossary/seamless-experience/
 aliases:
-- /ja/glossary/Seamless-Experience/
+- /glossary/Seamless-Experience/
 term: しーむれすえくすぺりえんす
 ---
 

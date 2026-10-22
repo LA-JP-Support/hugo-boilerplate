@@ -16,7 +16,7 @@ draft: false
 e-title: BERT
 url: /ja/glossary/bert/
 aliases:
-- /ja/glossary/BERT/
+- /glossary/BERT/
 term: バート
 ---
 

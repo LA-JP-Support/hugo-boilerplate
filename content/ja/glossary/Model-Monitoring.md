@@ -16,7 +16,7 @@ draft: false
 e-title: Model Monitoring
 url: /ja/glossary/Model-Monitoring/
 aliases:
-- /ja/glossary/model-monitoring/
+- /glossary/model-monitoring/
 term: もでるもにたりんぐ
 ---
 

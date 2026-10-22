@@ -16,7 +16,7 @@ draft: false
 e-title: Test Set
 url: /ja/glossary/test-set/
 aliases:
-- /ja/glossary/Test-Set/
+- /glossary/Test-Set/
 term: てすとせっと
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Blogging Strategy
 url: /ja/glossary/blogging-strategy/
 aliases:
-- /ja/glossary/Blogging-Strategy/
+- /glossary/Blogging-Strategy/
 term: ぶろぐせんりゃく
 ---
 

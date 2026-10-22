@@ -17,7 +17,7 @@ e-title: Inference Latency
 term: すいろんレイテンシ
 url: "/ja/glossary/inference-latency/"
 aliases:
-- "/ja/glossary/Inference-Latency/"
+- "/glossary/Inference-Latency/"
 ---
 
 ## 推論レイテンシとは

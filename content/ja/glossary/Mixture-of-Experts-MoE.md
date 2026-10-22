@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Mixture-of-Experts-MoE/
 aliases:
-  - /ja/glossary/mixture-of-experts-moe/
+  - /glossary/mixture-of-experts-moe/
 keywords:
   - MoE
   - 専門家混合

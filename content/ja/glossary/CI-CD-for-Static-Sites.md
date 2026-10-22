@@ -16,7 +16,7 @@ draft: false
 e-title: CI/CD for Static Sites
 url: /ja/glossary/ci-cd-for-static-sites/
 aliases:
-- /ja/glossary/CI-CD-for-Static-Sites/
+- /glossary/CI-CD-for-Static-Sites/
 term: せいてきさいとむけしーあいしーでぃー
 ---
 

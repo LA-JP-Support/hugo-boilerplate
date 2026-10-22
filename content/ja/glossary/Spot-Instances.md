@@ -16,7 +16,7 @@ draft: false
 e-title: Spot Instances
 url: /ja/glossary/spot-instances/
 aliases:
-- /ja/glossary/Spot-Instances/
+- /glossary/Spot-Instances/
 term: すぽっといんすたんす
 ---
 

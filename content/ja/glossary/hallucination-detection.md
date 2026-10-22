@@ -17,7 +17,7 @@ e-title: Hallucination Detection
 term: はるしねーしょんけんしゅつ
 url: "/ja/glossary/hallucination-detection/"
 aliases:
-- "/ja/glossary/Hallucination-Detection/"
+- "/glossary/Hallucination-Detection/"
 ---
 ## ハルシネーション検出とは
 

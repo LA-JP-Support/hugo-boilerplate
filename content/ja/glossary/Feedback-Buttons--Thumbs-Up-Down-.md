@@ -17,7 +17,7 @@ e-title: Feedback Buttons (Thumbs Up/Down)
 term: フィードバックボタンサムズアップダウン
 url: "/ja/glossary/feedback-buttons--thumbs-up-down-/"
 aliases:
-- "/ja/glossary/Feedback-Buttons--Thumbs-Up-Down-/"
+- "/glossary/Feedback-Buttons--Thumbs-Up-Down-/"
 ---
 
 ## フィードバックボタン(サムズアップ/ダウン)とは？

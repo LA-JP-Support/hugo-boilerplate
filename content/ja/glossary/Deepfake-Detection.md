@@ -16,7 +16,7 @@ draft: false
 e-title: Deepfake Detection
 url: /ja/glossary/deepfake-detection/
 aliases:
-- /ja/glossary/Deepfake-Detection/
+- /glossary/Deepfake-Detection/
 term: ディープフェイクけんしゅつ
 ---
 

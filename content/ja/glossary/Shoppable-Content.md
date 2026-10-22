@@ -16,7 +16,7 @@ draft: false
 e-title: Shoppable Content
 url: /ja/glossary/shoppable-content/
 aliases:
-- /ja/glossary/Shoppable-Content/
+- /glossary/Shoppable-Content/
 term: しょっぱぶるこんてんつ
 ---
 

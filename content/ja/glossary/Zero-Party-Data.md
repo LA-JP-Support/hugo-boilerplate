@@ -16,7 +16,7 @@ draft: false
 e-title: Zero-Party Data
 url: /ja/glossary/zero-party-data/
 aliases:
-- /ja/glossary/Zero-Party-Data/
+- /glossary/Zero-Party-Data/
 term: ぜろぱーてぃでーた
 ---
 

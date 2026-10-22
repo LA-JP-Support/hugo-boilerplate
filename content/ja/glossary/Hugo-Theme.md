@@ -16,7 +16,7 @@ draft: false
 e-title: Hugo Theme
 url: /ja/glossary/hugo-theme/
 aliases:
-- /ja/glossary/Hugo-Theme/
+- /glossary/Hugo-Theme/
 term: ヒューゴテーマ
 ---
 

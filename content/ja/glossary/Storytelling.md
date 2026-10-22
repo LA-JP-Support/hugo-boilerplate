@@ -16,7 +16,7 @@ draft: false
 e-title: Storytelling
 url: /ja/glossary/storytelling/
 aliases:
-- /ja/glossary/Storytelling/
+- /glossary/Storytelling/
 term: すとーりーてりんぐ
 ---
 

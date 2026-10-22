@@ -16,7 +16,7 @@ draft: false
 e-title: Session Border Controller (SBC)
 url: /ja/glossary/session-border-controller--sbc-/
 aliases:
-- /ja/glossary/Session-Border-Controller--SBC-/
+- /glossary/Session-Border-Controller--SBC-/
 term: せっしょんぼーだーこんとろーらー
 ---
 

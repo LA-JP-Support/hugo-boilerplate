@@ -16,7 +16,7 @@ draft: false
 e-title: Multimodal AI
 url: /ja/glossary/multimodal-ai/
 aliases:
-- /ja/glossary/Multimodal-AI/
+- /glossary/Multimodal-AI/
 term: マルチモーダルエーアイ
 ---
 

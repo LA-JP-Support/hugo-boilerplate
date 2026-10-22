@@ -15,7 +15,7 @@ draft: false
 e-title: Live Commerce
 url: "/ja/glossary/live-commerce/"
 aliases:
-- "/ja/glossary/Live-Commerce/"
+- "/glossary/Live-Commerce/"
 term: らいぶこまーす
 lastmod: 2026-04-02
 ---

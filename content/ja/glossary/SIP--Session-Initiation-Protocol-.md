@@ -16,7 +16,7 @@ draft: false
 e-title: SIP (Session Initiation Protocol)
 url: /ja/glossary/sip--session-initiation-protocol-/
 aliases:
-- /ja/glossary/SIP--Session-Initiation-Protocol-/
+- /glossary/SIP--Session-Initiation-Protocol-/
 term: エスアイピー
 ---
 

@@ -17,7 +17,7 @@ e-title: Newsjacking
 url: /ja/glossary/newsjacking/
 term: にゅーすじゃっきんぐ
 aliases:
-- /ja/glossary/Newsjacking/
+- /glossary/Newsjacking/
 ---
 
 ## ニュースジャッキングとは？

@@ -16,7 +16,7 @@ draft: false
 e-title: HR Service Delivery
 url: "/ja/glossary/hr-service-delivery/"
 aliases:
-- "/ja/glossary/HR-Service-Delivery/"
+- "/glossary/HR-Service-Delivery/"
 term: エイチアール サービス デリバリー
 ---
 

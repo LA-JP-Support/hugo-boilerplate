@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Profile
 url: /ja/glossary/customer-profile/
 aliases:
-- /ja/glossary/Customer-Profile/
+- /glossary/Customer-Profile/
 term: かすたまーぷろふぁいる
 ---
 

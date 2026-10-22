@@ -16,7 +16,7 @@ draft: false
 e-title: RSS Feed
 url: /ja/glossary/rss-feed/
 aliases:
-- /ja/glossary/RSS-Feed/
+- /glossary/RSS-Feed/
 term: アールエスエスフィード
 ---
 

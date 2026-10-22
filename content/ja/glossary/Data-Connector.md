@@ -16,7 +16,7 @@ draft: false
 e-title: Data Connector
 url: /ja/glossary/data-connector/
 aliases:
-- /ja/glossary/Data-Connector/
+- /glossary/Data-Connector/
 term: データコネクタ
 ---
 

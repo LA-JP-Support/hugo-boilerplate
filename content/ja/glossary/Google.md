@@ -17,7 +17,7 @@ draft: false
 e-title: Google
 url: "/ja/glossary/google/"
 aliases:
-- "/ja/glossary/Google/"
+- "/glossary/Google/"
 term: グーグル
 ---
 

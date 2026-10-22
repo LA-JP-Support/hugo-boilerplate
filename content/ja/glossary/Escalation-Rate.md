@@ -16,7 +16,7 @@ draft: false
 e-title: Escalation Rate
 url: /ja/glossary/escalation-rate/
 aliases:
-- /ja/glossary/Escalation-Rate/
+- /glossary/Escalation-Rate/
 term: えすかれーしょんりつ
 ---
 

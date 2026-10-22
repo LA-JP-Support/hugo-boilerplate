@@ -16,7 +16,7 @@ draft: false
 e-title: Real-Time Personalization
 url: /ja/glossary/real-time-personalization/
 aliases:
-- /ja/glossary/Real-Time-Personalization/
+- /glossary/Real-Time-Personalization/
 term: りあるたいむぱーそならいぜーしょん
 ---
 

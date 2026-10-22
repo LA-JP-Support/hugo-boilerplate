@@ -16,7 +16,7 @@ draft: false
 e-title: Accessibility (Web)
 url: /ja/glossary/accessibility--web-/
 aliases:
-- /ja/glossary/Accessibility--Web-/
+- /glossary/Accessibility--Web-/
 term: アクセシビリティ(ウェブ)
 ---
 

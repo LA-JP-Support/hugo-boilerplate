@@ -17,7 +17,7 @@ e-title: APIs (Application Programming Interfaces)
 term: エーピーアイ
 url: "/ja/glossary/apis/"
 aliases:
-- "/ja/glossary/APIs/"
+- "/glossary/APIs/"
 
 ---
 

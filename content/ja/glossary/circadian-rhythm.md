@@ -17,7 +17,7 @@ e-title: Circadian Rhythm
 term: がいじつリズム
 url: "/ja/glossary/circadian-rhythm/"
 aliases:
-- "/ja/glossary/Circadian-Rhythm/"
+- "/glossary/Circadian-Rhythm/"
 ---
 
 <!-- ===== サクッとわかるゾーン（冒頭〜30行） ===== -->

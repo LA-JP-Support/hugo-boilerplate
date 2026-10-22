@@ -16,7 +16,7 @@ draft: false
 e-title: Workflow Automation
 url: /ja/glossary/workflow-automation/
 aliases:
-- /ja/glossary/Workflow-Automation/
+- /glossary/Workflow-Automation/
 term: わーくふろーじどうか
 ---
 

@@ -17,7 +17,7 @@ e-title: Supplementary Indicator
 term: ほじょしひょう
 url: "/ja/glossary/supplementary-indicator/"
 aliases:
-- "/ja/glossary/Supplementary-Indicator/"
+- "/glossary/Supplementary-Indicator/"
 ---
 ## 補助指標とは何か?
 補助指標とは、主要な評価指標と並行して、文脈、検証、または追加の視点を提供するために、パフォーマンス評価フレームワークに統合される補助的な測定基準または定性的な尺度です。主要指標が中核的な目標や成果を直接測定するのに対し、補助指標は主要な結果の理解を説明、限定、支援することで解釈を豊かにします。

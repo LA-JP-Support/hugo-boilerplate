@@ -16,7 +16,7 @@ draft: false
 e-title: Bot Avatar
 url: /ja/glossary/bot-avatar/
 aliases:
-- /ja/glossary/Bot-Avatar/
+- /glossary/Bot-Avatar/
 term: ぼっとあばたー
 ---
 

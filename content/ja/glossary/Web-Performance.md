@@ -16,7 +16,7 @@ draft: false
 e-title: Web Performance
 url: /ja/glossary/web-performance/
 aliases:
-- /ja/glossary/Web-Performance/
+- /glossary/Web-Performance/
 term: ウェブパフォーマンス
 ---
 

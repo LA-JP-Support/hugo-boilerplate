@@ -16,7 +16,7 @@ draft: false
 e-title: Gradient Descent
 url: "/ja/glossary/gradient-descent/"
 aliases:
-- "/ja/glossary/Gradient-Descent/"
+- "/glossary/Gradient-Descent/"
 term: こうばいこうかほう
 ---
 

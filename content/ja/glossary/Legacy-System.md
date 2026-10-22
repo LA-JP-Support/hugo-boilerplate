@@ -16,7 +16,7 @@ draft: false
 e-title: Legacy System
 url: "/ja/glossary/Legacy-System/"
 aliases:
-- "/ja/glossary/legacy-system/"
+- "/glossary/legacy-system/"
 term: レガシーシステム
 ---
 

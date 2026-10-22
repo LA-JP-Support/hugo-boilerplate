@@ -16,7 +16,7 @@ draft: false
 e-title: Win Rate
 url: /ja/glossary/win-rate/
 aliases:
-- /ja/glossary/Win-Rate/
+- /glossary/Win-Rate/
 term: 勝率
 ---
 

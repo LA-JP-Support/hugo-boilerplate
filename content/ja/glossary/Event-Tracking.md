@@ -16,7 +16,7 @@ draft: false
 e-title: Event Tracking
 url: /ja/glossary/event-tracking/
 aliases:
-- /ja/glossary/Event-Tracking/
+- /glossary/Event-Tracking/
 term: いべんととらっきんぐ
 ---
 

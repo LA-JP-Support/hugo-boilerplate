@@ -16,7 +16,7 @@ draft: false
 e-title: Online Community Platform
 url: /ja/glossary/online-community-platform/
 aliases:
-- /ja/glossary/Online-Community-Platform/
+- /glossary/Online-Community-Platform/
 term: おんらいんこみゅにてぃぷらっとふぉーむ
 ---
 

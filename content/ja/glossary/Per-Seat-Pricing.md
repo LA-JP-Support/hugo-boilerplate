@@ -16,7 +16,7 @@ draft: false
 e-title: Per-Seat Pricing
 url: /ja/glossary/per-seat-pricing/
 aliases:
-- /ja/glossary/Per-Seat-Pricing/
+- /glossary/Per-Seat-Pricing/
 term: しーとたんいのかかくせってい
 ---
 

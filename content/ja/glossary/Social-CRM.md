@@ -16,7 +16,7 @@ draft: false
 e-title: Social CRM
 url: "/ja/glossary/social-crm/"
 aliases:
-- "/ja/glossary/Social-CRM/"
+- "/glossary/Social-CRM/"
 term: そーしゃるしーあーるえむ
 ---
 

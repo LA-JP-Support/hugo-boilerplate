@@ -16,7 +16,7 @@ draft: false
 e-title: Quantum Machine Learning
 url: /ja/glossary/quantum-machine-learning/
 aliases:
-- /ja/glossary/Quantum-Machine-Learning/
+- /glossary/Quantum-Machine-Learning/
 term: りょうしきかいがくしゅう
 ---
 

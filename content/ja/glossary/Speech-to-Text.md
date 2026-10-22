@@ -16,7 +16,7 @@ draft: false
 e-title: Speech-to-Text
 url: /ja/glossary/speech-to-text/
 aliases:
-- /ja/glossary/Speech-to-Text/
+- /glossary/Speech-to-Text/
 term: おんせいてきすとへんかん
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Trending Topics
 url: /ja/glossary/trending-topics/
 aliases:
-- /ja/glossary/Trending-Topics/
+- /glossary/Trending-Topics/
 term: とれんでぃんぐとぴっく
 ---
 

@@ -17,7 +17,7 @@ e-title: Number Porting
 url: /ja/glossary/number-porting/
 term: なんばーぽーたびりてぃ
 aliases:
-- /ja/glossary/Number-Porting/
+- /glossary/Number-Porting/
 ---
 
 ## ナンバーポータビリティとは？

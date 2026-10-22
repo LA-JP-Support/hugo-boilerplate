@@ -16,7 +16,7 @@ draft: false
 e-title: Named Entity Recognition (NER)
 url: /ja/glossary/named-entity-recognition--ner-/
 aliases:
-- /ja/glossary/Named-Entity-Recognition--NER-/
+- /glossary/Named-Entity-Recognition--NER-/
 term: こゆうひょうげんにんしき（エヌイーアール）
 ---
 

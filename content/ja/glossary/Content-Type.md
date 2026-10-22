@@ -16,7 +16,7 @@ draft: false
 e-title: Content Type
 url: /ja/glossary/content-type/
 aliases:
-- /ja/glossary/Content-Type/
+- /glossary/Content-Type/
 term: こんてんつたいぷ
 ---
 

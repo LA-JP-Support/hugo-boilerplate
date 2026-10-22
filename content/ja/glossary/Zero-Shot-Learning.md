@@ -16,7 +16,7 @@ draft: false
 e-title: Zero-Shot Learning
 url: /ja/glossary/zero-shot-learning/
 aliases:
-- /ja/glossary/Zero-Shot-Learning/
+- /glossary/Zero-Shot-Learning/
 term: ぜろしょっとがくしゅう
 ---
 

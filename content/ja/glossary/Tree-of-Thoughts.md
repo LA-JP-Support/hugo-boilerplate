@@ -16,7 +16,7 @@ draft: false
 e-title: Tree of Thoughts
 url: /ja/glossary/tree-of-thoughts/
 aliases:
-- /ja/glossary/Tree-of-Thoughts/
+- /glossary/Tree-of-Thoughts/
 term: しこうのき
 ---
 

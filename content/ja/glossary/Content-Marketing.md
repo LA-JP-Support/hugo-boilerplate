@@ -16,7 +16,7 @@ draft: false
 e-title: Content Marketing
 url: /ja/glossary/content-marketing/
 aliases:
-- /ja/glossary/Content-Marketing/
+- /glossary/Content-Marketing/
 term: こんてんつまーけてぃんぐ
 ---
 

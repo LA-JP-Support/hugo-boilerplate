@@ -16,7 +16,7 @@ draft: false
 e-title: Agent Occupancy
 url: /ja/glossary/agent-occupancy/
 aliases:
-- /ja/glossary/Agent-Occupancy/
+- /glossary/Agent-Occupancy/
 term: えーじぇんとせんゆうりつ
 ---
 

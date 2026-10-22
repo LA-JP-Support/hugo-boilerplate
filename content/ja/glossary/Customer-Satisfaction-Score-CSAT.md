@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Customer-Satisfaction-Score-CSAT/
 aliases:
-  - /ja/glossary/customer-satisfaction-score-csat/
+  - /glossary/customer-satisfaction-score-csat/
 keywords:
   - CSAT
   - 顧客満足度

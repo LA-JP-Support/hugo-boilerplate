@@ -15,7 +15,7 @@ draft: false
 e-title: Digital Experience Platform (DXP)
 url: /ja/glossary/digital-experience-platform--dxp-/
 aliases:
-- /ja/glossary/Digital-Experience-Platform--DXP-/
+- /glossary/Digital-Experience-Platform--DXP-/
 term: でじたるえくすぺりえんすぷらっとふぉーむ
 lastmod: 2026-04-02
 ---

@@ -16,7 +16,7 @@ draft: false
 e-title: Agent Burnout
 url: /ja/glossary/agent-burnout/
 aliases:
-- /ja/glossary/Agent-Burnout/
+- /glossary/Agent-Burnout/
 term: えーじぇんとばーんあうと
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Temperature (LLM)
 url: /ja/glossary/temperature--llm-/
 aliases:
-- /ja/glossary/Temperature--LLM-/
+- /glossary/Temperature--LLM-/
 term: てんぱれちゃー(えるえるえむ)
 ---
 

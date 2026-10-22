@@ -16,7 +16,7 @@ draft: false
 e-title: Master Data Management (MDM)
 url: /ja/glossary/master-data-management--mdm-/
 aliases:
-- /ja/glossary/Master-Data-Management--MDM-/
+- /glossary/Master-Data-Management--MDM-/
 term: ますたーでーたまねじめんと
 ---
 

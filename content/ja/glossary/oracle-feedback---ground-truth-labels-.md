@@ -17,7 +17,7 @@ e-title: Oracle Feedback (Ground-Truth Labels)
 term: おらくるふぃーどばっく
 url: "/ja/glossary/oracle-feedback---ground-truth-labels-/"
 aliases:
-- "/ja/glossary/Oracle-Feedback/"
+- "/glossary/Oracle-Feedback/"
 ---
 
 ## オラクルフィードバックとは?

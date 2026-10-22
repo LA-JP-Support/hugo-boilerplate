@@ -16,7 +16,7 @@ draft: false
 e-title: URL Slug
 url: /ja/glossary/url-slug/
 aliases:
-- /ja/glossary/URL-Slug/
+- /glossary/URL-Slug/
 term: ユーアールエル スラッグ
 ---
 

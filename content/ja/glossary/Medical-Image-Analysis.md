@@ -16,7 +16,7 @@ draft: false
 e-title: Medical Image Analysis
 url: /ja/glossary/medical-image-analysis/
 aliases:
-- /ja/glossary/Medical-Image-Analysis/
+- /glossary/Medical-Image-Analysis/
 term: いようがぞうかいせき
 ---
 

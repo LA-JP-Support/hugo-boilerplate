@@ -16,7 +16,7 @@ draft: false
 e-title: Training Resources
 url: /ja/glossary/training-resources/
 aliases:
-- /ja/glossary/Training-Resources/
+- /glossary/Training-Resources/
 term: とれーにんぐりそーす
 ---
 

@@ -17,7 +17,7 @@ draft: false
 e-title: Price Optimization
 url: /ja/glossary/price-optimization/
 aliases:
-- /ja/glossary/Price-Optimization/
+- /glossary/Price-Optimization/
 term: かかくさいてきか
 ---
 

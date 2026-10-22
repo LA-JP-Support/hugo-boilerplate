@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Short-Form-Content/
 aliases:
-  - /ja/glossary/short-form-content/
+  - /glossary/short-form-content/
 keywords:
   - ショートフォームコンテンツ
   - 短尺動画

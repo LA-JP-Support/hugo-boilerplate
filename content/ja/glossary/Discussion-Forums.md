@@ -16,7 +16,7 @@ draft: false
 e-title: Discussion Forums
 url: /ja/glossary/discussion-forums/
 aliases:
-- /ja/glossary/Discussion-Forums/
+- /glossary/Discussion-Forums/
 term: でぃすかっしょんふぉーらむ
 ---
 

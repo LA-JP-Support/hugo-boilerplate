@@ -16,7 +16,7 @@ draft: false
 e-title: Attention Mechanism
 url: /ja/glossary/attention-mechanism/
 aliases:
-- /ja/glossary/Attention-Mechanism/
+- /glossary/Attention-Mechanism/
 term: あてんしょんめかにずむ
 ---
 

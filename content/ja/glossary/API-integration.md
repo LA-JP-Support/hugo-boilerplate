@@ -17,7 +17,7 @@ e-title: API Integration
 term: エーピーアイとうごう
 url: "/ja/glossary/api-integration/"
 aliases:
-- "/ja/glossary/API-integration/"
+- "/glossary/API-integration/"
 ---
 
 ## API統合とは？

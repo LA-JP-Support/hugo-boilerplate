@@ -17,7 +17,7 @@ e-title: Cloud Service
 term: くらうどさーびす
 url: "/ja/glossary/cloud-service/"
 aliases:
-- "/ja/glossary/Cloud-Service/"
+- "/glossary/Cloud-Service/"
 ---
 
 <!-- ===== サクッとわかるゾーン（冒頭〜30行） ===== -->

@@ -16,7 +16,7 @@ draft: false
 e-title: Upsell
 url: /ja/glossary/upsell/
 aliases:
-- /ja/glossary/Upsell/
+- /glossary/Upsell/
 term: あっぷせる
 ---
 

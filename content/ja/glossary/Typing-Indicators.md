@@ -17,7 +17,7 @@ e-title: Typing Indicators
 term: たいぴんぐいんじけーたー
 url: "/ja/glossary/typing-indicators/"
 aliases:
-- "/ja/glossary/Typing-Indicators/"
+- "/glossary/Typing-Indicators/"
 ---
 ## タイピングインジケーターとは?
 タイピングインジケーターは、チャットやメッセージングアプリケーションにおいて、他の参加者がメッセージを作成中であることを示す視覚的またはテキスト的な合図です。典型的な例として、iMessageやFacebook Messengerでおなじみのアニメーション化された「3つの点」(省略記号)があります。AIチャットボットのインターフェースでは、ボットが返信を処理している間にタイピングインジケーターが表示され、ユーザーに応答が来ることを知らせます。

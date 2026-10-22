@@ -16,7 +16,7 @@ draft: false
 e-title: Content Pillar
 url: /ja/glossary/content-pillar/
 aliases:
-- /ja/glossary/Content-Pillar/
+- /glossary/Content-Pillar/
 term: ぴらー
 ---
 

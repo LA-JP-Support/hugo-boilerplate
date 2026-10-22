@@ -16,7 +16,7 @@ draft: false
 e-title: Responsive Design
 url: /ja/glossary/responsive-design/
 aliases:
-- /ja/glossary/Responsive-Design/
+- /glossary/Responsive-Design/
 term: れすぽんしぶでざいん
 ---
 

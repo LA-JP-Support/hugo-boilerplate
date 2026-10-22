@@ -16,7 +16,7 @@ draft: false
 e-title: Hyperparameter Tuning
 url: /ja/glossary/hyperparameter-tuning/
 aliases:
-- /ja/glossary/Hyperparameter-Tuning/
+- /glossary/Hyperparameter-Tuning/
 term: はいぱーぱらめーたちゅーにんぐ
 ---
 

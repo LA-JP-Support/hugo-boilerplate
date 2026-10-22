@@ -16,7 +16,7 @@ draft: false
 e-title: MCP (Model Context Protocol)
 url: /ja/glossary/mcp--model-context-protocol-/
 aliases:
-- /ja/glossary/MCP--Model-Context-Protocol-/
+- /glossary/MCP--Model-Context-Protocol-/
 term: エムシーピー
 ---
 

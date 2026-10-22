@@ -16,7 +16,7 @@ draft: false
 e-title: Top-of-Funnel Content
 url: /ja/glossary/top-of-funnel-content/
 aliases:
-- /ja/glossary/Top-of-Funnel-Content/
+- /glossary/Top-of-Funnel-Content/
 term: とっぷおぶふぁねるこんてんつ
 ---
 

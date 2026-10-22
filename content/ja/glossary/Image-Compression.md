@@ -16,7 +16,7 @@ draft: false
 e-title: Image Compression
 url: /ja/glossary/image-compression/
 aliases:
-- /ja/glossary/Image-Compression/
+- /glossary/Image-Compression/
 term: がぞうあっしゅく
 ---
 

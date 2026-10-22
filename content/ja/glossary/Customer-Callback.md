@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Callback
 url: /ja/glossary/customer-callback/
 aliases:
-- /ja/glossary/Customer-Callback/
+- /glossary/Customer-Callback/
 term: かすたまーこーるばっく
 ---
 

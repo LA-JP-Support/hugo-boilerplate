@@ -16,7 +16,7 @@ draft: false
 e-title: Agent Utilization
 url: /ja/glossary/agent-utilization/
 aliases:
-- /ja/glossary/Agent-Utilization/
+- /glossary/Agent-Utilization/
 term: えーじぇんとかどうりつ
 ---
 

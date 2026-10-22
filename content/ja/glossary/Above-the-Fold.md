@@ -16,7 +16,7 @@ draft: false
 e-title: Above the Fold
 url: /ja/glossary/above-the-fold/
 aliases:
-- /ja/glossary/Above-the-Fold/
+- /glossary/Above-the-Fold/
 term: あばぶ・ざ・ふぉーるど
 ---
 

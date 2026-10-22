@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/ddos-distributed-denial-of-service-attack/
 aliases:
-  - /ja/glossary/DDoS-Attack/
+  - /glossary/DDoS-Attack/
 keywords:
   - DDoS攻撃
   - サービス妨害

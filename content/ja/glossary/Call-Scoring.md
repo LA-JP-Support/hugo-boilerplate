@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Call-Scoring/
 aliases:
-  - /ja/glossary/call-scoring/
+  - /glossary/call-scoring/
 keywords:
   - コール採点
   - エージェント評価

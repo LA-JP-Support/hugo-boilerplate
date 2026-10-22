@@ -16,7 +16,7 @@ draft: false
 e-title: Backlog Grooming
 url: /ja/glossary/backlog-grooming/
 aliases:
-- /ja/glossary/Backlog-Grooming/
+- /glossary/Backlog-Grooming/
 term: ばっくろぐぐるーみんぐ
 ---
 

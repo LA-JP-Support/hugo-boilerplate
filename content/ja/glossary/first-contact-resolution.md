@@ -17,7 +17,7 @@ e-title: First Contact Resolution (FCR)
 term: しょかいコンタクトかいけつりつ（エフシーアール）
 url: /ja/glossary/first-contact-resolution/
 aliases:
-- /ja/glossary/First-Contact-Resolution/
+- /glossary/First-Contact-Resolution/
 ---
 
 ## 初回コンタクト解決率（FCR）とは？

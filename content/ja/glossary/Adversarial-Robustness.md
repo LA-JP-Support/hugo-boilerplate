@@ -16,7 +16,7 @@ draft: false
 e-title: Adversarial Robustness
 url: /ja/glossary/adversarial-robustness/
 aliases:
-- /ja/glossary/Adversarial-Robustness/
+- /glossary/Adversarial-Robustness/
 term: てきたいてきロバストネス
 ---
 

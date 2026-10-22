@@ -17,7 +17,7 @@ e-title: Einstein Service Agent
 term: アインシュタイン サービス エージェント
 url: "/ja/glossary/einstein-service-agent/"
 aliases:
-- "/ja/glossary/Einstein-Service-Agent/"
+- "/glossary/Einstein-Service-Agent/"
 ---
 
 ## Einstein Service Agentとは?

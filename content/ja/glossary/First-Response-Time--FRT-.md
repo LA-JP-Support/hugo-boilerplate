@@ -16,7 +16,7 @@ draft: false
 e-title: First Response Time (FRT)
 url: /ja/glossary/first-response-time--frt-/
 aliases:
-- /ja/glossary/First-Response-Time--FRT-/
+- /glossary/First-Response-Time--FRT-/
 term: しょかいおうとうじかん（エフアールティー）
 ---
 

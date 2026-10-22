@@ -16,7 +16,7 @@ draft: false
 e-title: Site Navigation
 url: /ja/glossary/site-navigation/
 aliases:
-- /ja/glossary/Site-Navigation/
+- /glossary/Site-Navigation/
 term: さいとなびげーしょん
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Security Information and Event Management (SIEM)
 url: /ja/glossary/security-information-and-event-management--siem-/
 aliases:
-- /ja/glossary/Security-Information-and-Event-Management--SIEM-/
+- /glossary/Security-Information-and-Event-Management--SIEM-/
 term: セキュリティじょうほうイベントかんり(サイエム)
 ---
 

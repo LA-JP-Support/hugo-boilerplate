@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Feedback Loop
 url: "/ja/glossary/knowledge-feedback-loop/"
 aliases:
-- "/ja/glossary/Knowledge-Feedback-Loop/"
+- "/glossary/Knowledge-Feedback-Loop/"
 term: ナレッジフィードバックループ
 ---
 

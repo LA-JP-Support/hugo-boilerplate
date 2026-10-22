@@ -16,7 +16,7 @@ draft: false
 e-title: DAM (Digital Asset Management)
 url: /ja/glossary/dam--digital-asset-management-/
 aliases:
-- /ja/glossary/DAM--Digital-Asset-Management-/
+- /glossary/DAM--Digital-Asset-Management-/
 term: ダム(でじたるあせっとかんり)
 ---
 

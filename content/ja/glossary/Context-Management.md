@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/context-management/
 aliases:
-  - /ja/glossary/Context-Management/
+  - /glossary/Context-Management/
 keywords:
   - コンテキスト管理
   - 会話の連続性

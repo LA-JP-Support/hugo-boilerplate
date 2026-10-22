@@ -16,7 +16,7 @@ draft: false
 e-title: Middleware
 url: /ja/glossary/middleware/
 aliases:
-- /ja/glossary/Middleware/
+- /glossary/Middleware/
 term: みどるうぇあ
 ---
 

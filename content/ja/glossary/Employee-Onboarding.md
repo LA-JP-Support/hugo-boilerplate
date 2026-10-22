@@ -16,7 +16,7 @@ draft: false
 e-title: Employee Onboarding
 url: /ja/glossary/employee-onboarding/
 aliases:
-- /ja/glossary/Employee-Onboarding/
+- /glossary/Employee-Onboarding/
 term: じゅうぎょういんおんぼーでぃんぐ
 ---
 

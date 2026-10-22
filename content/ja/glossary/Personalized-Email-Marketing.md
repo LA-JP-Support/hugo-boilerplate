@@ -16,7 +16,7 @@ draft: false
 e-title: Personalized Email Marketing
 url: /ja/glossary/personalized-email-marketing/
 aliases:
-- /ja/glossary/Personalized-Email-Marketing/
+- /glossary/Personalized-Email-Marketing/
 term: パーソナライズド イーメール マーケティング
 ---
 

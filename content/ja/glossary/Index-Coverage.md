@@ -15,7 +15,7 @@ draft: false
 e-title: Index Coverage
 url: /ja/glossary/index-coverage/
 aliases:
-- /ja/glossary/Index-Coverage/
+- /glossary/Index-Coverage/
 lastmod: 2026-04-02
 term: いんでっくすかばれっじ
 ---

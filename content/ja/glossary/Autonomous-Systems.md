@@ -16,7 +16,7 @@ draft: false
 e-title: Autonomous Systems
 url: /ja/glossary/autonomous-systems/
 aliases:
-- /ja/glossary/Autonomous-Systems/
+- /glossary/Autonomous-Systems/
 term: じりつシステム
 ---
 

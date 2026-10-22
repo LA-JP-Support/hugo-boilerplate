@@ -16,7 +16,7 @@ draft: false
 e-title: Pipeline Coverage
 url: /ja/glossary/pipeline-coverage/
 aliases:
-- /ja/glossary/Pipeline-Coverage/
+- /glossary/Pipeline-Coverage/
 term: ぱいぷらいんかばれっじ
 ---
 

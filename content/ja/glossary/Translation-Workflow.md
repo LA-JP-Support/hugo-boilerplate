@@ -16,7 +16,7 @@ draft: false
 e-title: Translation Workflow
 url: /ja/glossary/translation-workflow/
 aliases:
-- /ja/glossary/Translation-Workflow/
+- /glossary/Translation-Workflow/
 term: ほんやくワークフロー
 ---
 

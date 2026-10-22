@@ -17,7 +17,7 @@ e-title: Self-Service Ratio
 term: せるふさーびすりつ
 url: "/ja/glossary/self-service-ratio/"
 aliases:
-- "/ja/glossary/Self-Service-Ratio/"
+- "/glossary/Self-Service-Ratio/"
 ---
 
 ## セルフサービス率とは?

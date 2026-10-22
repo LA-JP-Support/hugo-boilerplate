@@ -17,7 +17,7 @@ e-title: Automated Workflows
 term: じどうかワークフロー
 url: "/ja/glossary/automated-workflows/"
 aliases:
-- "/ja/glossary/Automated-Workflows/"
+- "/glossary/Automated-Workflows/"
 ---
 
 ## 自動化ワークフローとは

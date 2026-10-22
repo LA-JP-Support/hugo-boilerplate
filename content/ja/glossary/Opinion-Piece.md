@@ -16,7 +16,7 @@ draft: false
 e-title: Opinion Piece
 url: /ja/glossary/opinion-piece/
 aliases:
-- /ja/glossary/Opinion-Piece/
+- /glossary/Opinion-Piece/
 term: オピニオンきじ
 ---
 

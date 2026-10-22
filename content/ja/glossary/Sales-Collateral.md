@@ -16,7 +16,7 @@ draft: false
 e-title: Sales Collateral
 url: /ja/glossary/sales-collateral/
 aliases:
-- /ja/glossary/Sales-Collateral/
+- /glossary/Sales-Collateral/
 term: せーるすこらてらる
 ---
 

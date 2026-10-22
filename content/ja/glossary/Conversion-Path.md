@@ -16,7 +16,7 @@ draft: false
 e-title: Conversion Path
 url: /ja/glossary/conversion-path/
 aliases:
-- /ja/glossary/Conversion-Path/
+- /glossary/Conversion-Path/
 term: こんばーじょんぱす
 ---
 

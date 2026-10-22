@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/elt-extract-load-transform/
 aliases:
-  - /ja/glossary/ELT--Extract-Load-Transform-/
+  - /glossary/ELT--Extract-Load-Transform-/
 keywords:
   - ELT
   - データロード

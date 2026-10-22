@@ -16,7 +16,7 @@ draft: false
 e-title: Faceted Navigation
 url: /ja/glossary/faceted-navigation/
 aliases:
-- /ja/glossary/Faceted-Navigation/
+- /glossary/Faceted-Navigation/
 term: ふぁせっとなびげーしょん
 ---
 

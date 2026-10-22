@@ -16,7 +16,7 @@ draft: false
 e-title: Prompt Engineering
 url: /ja/glossary/prompt-engineering/
 aliases:
-- /ja/glossary/Prompt-Engineering/
+- /glossary/Prompt-Engineering/
 term: ぷろんぷとえんじにありんぐ
 ---
 

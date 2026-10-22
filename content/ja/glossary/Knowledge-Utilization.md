@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Utilization
 url: /ja/glossary/knowledge-utilization/
 aliases:
-- /ja/glossary/Knowledge-Utilization/
+- /glossary/Knowledge-Utilization/
 term: ちしきかつよう
 ---
 

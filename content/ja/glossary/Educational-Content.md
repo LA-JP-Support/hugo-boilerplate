@@ -16,7 +16,7 @@ draft: false
 e-title: Educational Content
 url: "/ja/glossary/educational-content/"
 aliases:
-- "/ja/glossary/Educational-Content/"
+- "/glossary/Educational-Content/"
 term: きょういくこんてんつ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: User-Generated Content Rights
 url: /ja/glossary/user-generated-content-rights/
 aliases:
-- /ja/glossary/User-Generated-Content-Rights/
+- /glossary/User-Generated-Content-Rights/
 term: ゆーざーせいせいこんてんつのけんり
 ---
 

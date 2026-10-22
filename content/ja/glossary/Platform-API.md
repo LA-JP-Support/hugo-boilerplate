@@ -16,7 +16,7 @@ draft: false
 e-title: Platform API
 url: /ja/glossary/platform-api/
 aliases:
-- /ja/glossary/Platform-API/
+- /glossary/Platform-API/
 term: ぷらっとふぉーむえーぴーあい
 ---
 

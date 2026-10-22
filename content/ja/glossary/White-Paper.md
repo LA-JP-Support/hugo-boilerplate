@@ -16,7 +16,7 @@ draft: false
 e-title: White Paper
 url: /ja/glossary/white-paper/
 aliases:
-- /ja/glossary/White-Paper/
+- /glossary/White-Paper/
 term: ホワイトペーパー
 ---
 

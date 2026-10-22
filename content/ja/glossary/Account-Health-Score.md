@@ -16,7 +16,7 @@ draft: false
 e-title: Account Health Score
 url: /ja/glossary/account-health-score/
 aliases:
-- /ja/glossary/Account-Health-Score/
+- /glossary/Account-Health-Score/
 term: アカウントヘルススコア
 ---
 

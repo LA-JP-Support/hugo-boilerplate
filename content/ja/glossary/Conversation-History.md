@@ -16,7 +16,7 @@ draft: false
 e-title: Conversation History
 url: /ja/glossary/conversation-history/
 aliases:
-- /ja/glossary/Conversation-History/
+- /glossary/Conversation-History/
 term: りれき
 ---
 

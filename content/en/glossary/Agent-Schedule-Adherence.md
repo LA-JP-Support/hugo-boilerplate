@@ -9,7 +9,7 @@ type: "glossary"
 draft: false
 url: /en/glossary/Agent-Schedule-Adherence/
 aliases:
-- /en/glossary/agent-schedule-adherence/
+- /glossary/agent-schedule-adherence/
 keywords:
   - Schedule adherence
   - Workforce management

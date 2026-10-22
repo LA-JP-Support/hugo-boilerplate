@@ -16,7 +16,7 @@ draft: false
 e-title: Glossary Management
 url: /ja/glossary/glossary-management/
 aliases:
-- /ja/glossary/Glossary-Management/
+- /glossary/Glossary-Management/
 term: ようごしゅうかんり
 ---
 

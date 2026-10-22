@@ -16,7 +16,7 @@ draft: false
 e-title: Workload Distribution
 url: /ja/glossary/workload-distribution/
 aliases:
-- /ja/glossary/Workload-Distribution/
+- /glossary/Workload-Distribution/
 term: わーくろーどぶんさん
 ---
 

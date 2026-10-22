@@ -16,7 +16,7 @@ draft: false
 e-title: Rate Limiting Handler
 url: /ja/glossary/rate-limiting-handler/
 aliases:
-- /ja/glossary/Rate-Limiting-Handler/
+- /glossary/Rate-Limiting-Handler/
 term: レートせいげんハンドラー
 ---
 

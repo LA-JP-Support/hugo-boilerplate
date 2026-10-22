@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Agentic-AI--AI-Agents-v2/
 aliases:
-  - /ja/glossary/agentic-ai-ai-agents-v2/
+  - /glossary/agentic-ai-ai-agents-v2/
 keywords:
   - エージェント型AI
   - 自律型エージェント

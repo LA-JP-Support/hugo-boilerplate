@@ -17,7 +17,7 @@ e-title: AI Email Auto-Response Generation
 term: エーアイメールじどうへんしんせいせい
 url: "/ja/glossary/ai-email-auto-response-generation/"
 aliases:
-- "/ja/glossary/AI-email-auto-response-generation/"
+- "/glossary/AI-email-auto-response-generation/"
 ---
 
 ## AIメール自動返信生成とは？

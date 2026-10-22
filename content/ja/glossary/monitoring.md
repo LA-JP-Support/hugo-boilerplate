@@ -17,7 +17,7 @@ e-title: Monitoring
 term: もにたりんぐ
 url: "/ja/glossary/monitoring/"
 aliases:
-- "/ja/glossary/Monitoring/"
+- "/glossary/Monitoring/"
 ---
 
 ## モニタリングとは?

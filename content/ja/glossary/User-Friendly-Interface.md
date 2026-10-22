@@ -16,7 +16,7 @@ draft: false
 e-title: User-Friendly Interface
 url: /ja/glossary/user-friendly-interface/
 aliases:
-- /ja/glossary/User-Friendly-Interface/
+- /glossary/User-Friendly-Interface/
 term: ユーザーフレンドリーインターフェース
 ---
 

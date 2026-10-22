@@ -16,7 +16,7 @@ draft: false
 e-title: Buyer Persona
 url: /ja/glossary/buyer-persona/
 aliases:
-- /ja/glossary/Buyer-Persona/
+- /glossary/Buyer-Persona/
 term: ばいやーぺるそな
 ---
 

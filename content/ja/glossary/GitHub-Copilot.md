@@ -16,7 +16,7 @@ draft: false
 e-title: GitHub Copilot
 url: /ja/glossary/github-copilot/
 aliases:
-- /ja/glossary/GitHub-Copilot/
+- /glossary/GitHub-Copilot/
 term: ギットハブ・コパイロット
 ---
 

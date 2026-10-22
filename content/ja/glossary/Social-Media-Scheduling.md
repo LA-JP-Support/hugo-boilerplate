@@ -16,7 +16,7 @@ draft: false
 e-title: Social Media Scheduling
 url: /ja/glossary/social-media-scheduling/
 aliases:
-- /ja/glossary/Social-Media-Scheduling/
+- /glossary/Social-Media-Scheduling/
 term: そーしゃるめでぃあすけじゅーりんぐ
 ---
 

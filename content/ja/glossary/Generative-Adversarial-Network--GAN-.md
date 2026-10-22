@@ -16,7 +16,7 @@ draft: false
 e-title: Generative Adversarial Network (GAN)
 url: /ja/glossary/generative-adversarial-network--gan-/
 aliases:
-- /ja/glossary/Generative-Adversarial-Network--GAN-/
+- /glossary/Generative-Adversarial-Network--GAN-/
 term: てきたいてきせいせいネットワーク
 ---
 

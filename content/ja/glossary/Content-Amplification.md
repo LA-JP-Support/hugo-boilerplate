@@ -16,7 +16,7 @@ draft: false
 e-title: Content Amplification
 url: /ja/glossary/content-amplification/
 aliases:
-- /ja/glossary/Content-Amplification/
+- /glossary/Content-Amplification/
 term: あんぷりふぃけーしょん
 ---
 

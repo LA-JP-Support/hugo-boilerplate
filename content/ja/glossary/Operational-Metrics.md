@@ -16,7 +16,7 @@ draft: false
 e-title: Operational Metrics
 url: /ja/glossary/operational-metrics/
 aliases:
-- /ja/glossary/Operational-Metrics/
+- /glossary/Operational-Metrics/
 term: オペレーショナルメトリクス
 ---
 

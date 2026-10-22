@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Quantization/
 aliases:
-  - /ja/glossary/quantization/
+  - /glossary/quantization/
 keywords:
   - モデル圧縮
   - 効率化

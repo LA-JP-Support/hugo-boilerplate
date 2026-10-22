@@ -17,7 +17,7 @@ e-title: AI Answer Assistant
 term: エーアイかいとうアシスタント
 url: "/ja/glossary/ai-answer-assistant/"
 aliases:
-- "/ja/glossary/AI-answer-assistant/"
+- "/glossary/AI-answer-assistant/"
 ---
 
 ## AI回答アシスタントとは

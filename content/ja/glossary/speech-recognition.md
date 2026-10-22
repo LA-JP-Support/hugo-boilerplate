@@ -17,7 +17,7 @@ e-title: Speech Recognition
 term: おんせいにんしき
 url: /ja/glossary/speech-recognition/
 aliases:
-  - /ja/glossary/Speech-Recognition/
+  - /glossary/Speech-Recognition/
 ---
 
 ## 音声認識とは

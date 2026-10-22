@@ -16,7 +16,7 @@ draft: false
 e-title: Data Labeling
 url: /ja/glossary/data-labeling/
 aliases:
-- /ja/glossary/Data-Labeling/
+- /glossary/Data-Labeling/
 term: データラベリング
 ---
 

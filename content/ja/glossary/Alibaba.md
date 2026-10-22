@@ -16,7 +16,7 @@ draft: false
 e-title: Alibaba
 url: /ja/glossary/alibaba/
 aliases:
-- /ja/glossary/Alibaba/
+- /glossary/Alibaba/
 term: ありばば
 ---
 

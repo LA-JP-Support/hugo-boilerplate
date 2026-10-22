@@ -16,7 +16,7 @@ draft: false
 e-title: Microsoft
 url: /ja/glossary/microsoft/
 aliases:
-- /ja/glossary/Microsoft/
+- /glossary/Microsoft/
 term: マイクロソフト
 ---
 

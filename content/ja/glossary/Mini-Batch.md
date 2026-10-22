@@ -16,7 +16,7 @@ draft: false
 e-title: Mini-Batch
 url: /ja/glossary/mini-batch/
 aliases:
-- /ja/glossary/Mini-Batch/
+- /glossary/Mini-Batch/
 term: みにばっち
 ---
 

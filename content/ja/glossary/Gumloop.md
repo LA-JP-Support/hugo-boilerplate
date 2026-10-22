@@ -16,7 +16,7 @@ draft: false
 e-title: Gumloop
 url: /ja/glossary/gumloop/
 aliases:
-  - /ja/glossary/Gumloop/
+  - /glossary/Gumloop/
 term: がむるーぷ
 ---
 

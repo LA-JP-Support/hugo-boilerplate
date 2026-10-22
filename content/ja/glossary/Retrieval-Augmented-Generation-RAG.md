@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Retrieval-Augmented-Generation-RAG/
 aliases:
-  - /ja/glossary/retrieval-augmented-generation-rag/
+  - /glossary/retrieval-augmented-generation-rag/
 keywords:
   - RAG
   - 検索拡張

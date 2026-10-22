@@ -17,7 +17,7 @@ draft: false
 e-title: Wait Time
 url: /ja/glossary/wait-time/
 aliases:
-- /ja/glossary/Wait-Time/
+- /glossary/Wait-Time/
 term: たいきじかん
 ---
 

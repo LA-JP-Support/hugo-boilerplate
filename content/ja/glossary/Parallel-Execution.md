@@ -17,7 +17,7 @@ e-title: Parallel Execution
 term: へいれつじっこう
 url: "/ja/glossary/parallel-execution/"
 aliases:
-- "/ja/glossary/Parallel-Execution/"
+- "/glossary/Parallel-Execution/"
 ---
 
 ## 並列実行とは?

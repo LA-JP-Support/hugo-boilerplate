@@ -16,7 +16,7 @@ draft: false
 e-title: Scalable Pricing
 url: /ja/glossary/scalable-pricing/
 aliases:
-- /ja/glossary/Scalable-Pricing/
+- /glossary/Scalable-Pricing/
 term: すけーらぶるぷらいしんぐ
 ---
 

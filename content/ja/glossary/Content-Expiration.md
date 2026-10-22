@@ -16,7 +16,7 @@ draft: false
 e-title: Content Expiration
 url: /ja/glossary/content-expiration/
 aliases:
-- /ja/glossary/Content-Expiration/
+- /glossary/Content-Expiration/
 term: こんてんつゆうこうきげん
 ---
 

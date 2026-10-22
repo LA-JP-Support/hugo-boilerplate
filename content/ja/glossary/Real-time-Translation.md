@@ -16,7 +16,7 @@ draft: false
 e-title: Real-Time Translation
 url: /ja/glossary/real-time-translation/
 aliases:
-- /ja/glossary/Real-time-Translation/
+- /glossary/Real-time-Translation/
 term: りあるたいむほんやく
 ---
 

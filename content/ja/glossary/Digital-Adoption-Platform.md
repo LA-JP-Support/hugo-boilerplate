@@ -15,7 +15,7 @@ draft: false
 e-title: Digital Adoption Platform
 url: /ja/glossary/digital-adoption-platform/
 aliases:
-- /ja/glossary/Digital-Adoption-Platform/
+- /glossary/Digital-Adoption-Platform/
 term: でじたるあだぷしょんぷらっとふぉーむ
 lastmod: 2026-04-02
 ---

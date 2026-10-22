@@ -16,7 +16,7 @@ draft: false
 e-title: Content Distribution Strategy
 url: /ja/glossary/content-distribution-strategy/
 aliases:
-- /ja/glossary/Content-Distribution-Strategy/
+- /glossary/Content-Distribution-Strategy/
 term: こんてんつはいしんせんりゃく
 ---
 

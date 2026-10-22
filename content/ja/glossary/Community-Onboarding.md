@@ -16,7 +16,7 @@ draft: false
 e-title: Community Onboarding
 url: /ja/glossary/community-onboarding/
 aliases:
-- /ja/glossary/Community-Onboarding/
+- /glossary/Community-Onboarding/
 term: こみゅにてぃおんぼーでぃんぐ
 ---
 

@@ -17,7 +17,7 @@ e-title: Wizard of Oz Testing (WoZ)
 term: ウィザード・オブ・オズ・テスティング
 url: "/ja/glossary/wizard-of-oz-testing--woz-/"
 aliases:
-- "/ja/glossary/Wizard-of-Oz-Testing--WoZ-/"
+- "/glossary/Wizard-of-Oz-Testing--WoZ-/"
 ---
 ## ウィザード・オブ・オズ・テスティング(WoZ)とは?
 

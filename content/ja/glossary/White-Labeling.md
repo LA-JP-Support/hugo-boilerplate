@@ -17,7 +17,7 @@ e-title: White Labeling
 term: ホワイトラベリング
 url: "/ja/glossary/white-labeling/"
 aliases:
-- "/ja/glossary/White-Labeling/"
+- "/glossary/White-Labeling/"
 ---
 
 ## ホワイトラベリングとは?

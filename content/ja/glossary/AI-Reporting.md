@@ -17,7 +17,7 @@ e-title: AI Reporting
 term: エーアイレポーティング
 url: "/ja/glossary/ai-reporting/"
 aliases:
-- "/ja/glossary/AI-Reporting/"
+- "/glossary/AI-Reporting/"
 ---
 
 ## AIレポーティングとは

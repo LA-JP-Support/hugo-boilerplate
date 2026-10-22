@@ -16,7 +16,7 @@ draft: false
 e-title: Free Trial
 url: /ja/glossary/free-trial/
 aliases:
-- /ja/glossary/Free-Trial/
+- /glossary/Free-Trial/
 term: むりょうトライアル
 ---
 

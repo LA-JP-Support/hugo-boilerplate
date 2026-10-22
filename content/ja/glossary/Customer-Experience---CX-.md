@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Experience (CX)
 url: /ja/glossary/customer-experience---cx-/
 aliases:
-- /ja/glossary/Customer-Experience---CX-/
+- /glossary/Customer-Experience---CX-/
 term: かすたまーえくすぺりえんす
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Sales Engagement
 url: /ja/glossary/sales-engagement/
 aliases:
-- /ja/glossary/Sales-Engagement/
+- /glossary/Sales-Engagement/
 term: せーるすえんげーじめんと
 ---
 

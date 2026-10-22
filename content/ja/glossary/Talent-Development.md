@@ -16,7 +16,7 @@ draft: false
 e-title: Talent Development
 url: /ja/glossary/talent-development/
 aliases:
-- /ja/glossary/Talent-Development/
+- /glossary/Talent-Development/
 term: たれんとでぃべろっぷめんと
 ---
 

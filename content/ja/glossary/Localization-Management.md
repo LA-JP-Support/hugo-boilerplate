@@ -16,7 +16,7 @@ draft: false
 e-title: Localization Management
 url: /ja/glossary/localization-management/
 aliases:
-- /ja/glossary/Localization-Management/
+- /glossary/Localization-Management/
 term: ろーからいぜーしょんかんり
 ---
 

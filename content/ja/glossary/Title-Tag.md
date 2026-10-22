@@ -16,7 +16,7 @@ draft: false
 e-title: Title Tag
 url: /ja/glossary/title-tag/
 aliases:
-- /ja/glossary/Title-Tag/
+- /glossary/Title-Tag/
 term: たいとるたぐ
 ---
 

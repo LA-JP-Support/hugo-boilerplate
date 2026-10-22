@@ -17,7 +17,7 @@ e-title: Nofollow Link
 url: /ja/glossary/nofollow-link/
 term: ノーフォローリンク
 aliases:
-- /ja/glossary/Nofollow-Link/
+- /glossary/Nofollow-Link/
 ---
 
 ## Nofollowリンクとは？

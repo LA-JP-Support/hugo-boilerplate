@@ -16,7 +16,7 @@ draft: false
 e-title: Unified Customer View
 url: /ja/glossary/unified-customer-view/
 aliases:
-- /ja/glossary/Unified-Customer-View/
+- /glossary/Unified-Customer-View/
 term: とうごうこきゃくびゅー
 ---
 

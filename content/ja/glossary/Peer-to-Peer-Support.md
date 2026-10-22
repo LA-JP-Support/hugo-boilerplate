@@ -16,7 +16,7 @@ draft: false
 e-title: Peer-to-Peer Support
 url: /ja/glossary/peer-to-peer-support/
 aliases:
-- /ja/glossary/Peer-to-Peer-Support/
+- /glossary/Peer-to-Peer-Support/
 term: ぴあつーぴあさぽーと
 ---
 

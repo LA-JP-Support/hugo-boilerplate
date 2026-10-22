@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/account-health-score/
 aliases:
-  - /en/glossary/Account-Health-Score/
+  - /glossary/Account-Health-Score/
 ---
 
 ## What is Account Health Score?

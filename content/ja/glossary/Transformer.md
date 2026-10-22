@@ -16,7 +16,7 @@ draft: false
 e-title: Transformer
 url: /ja/glossary/transformer/
 aliases:
-- /ja/glossary/Transformer/
+- /glossary/Transformer/
 term: トランスフォーマー
 ---
 

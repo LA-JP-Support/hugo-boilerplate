@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/adherence-monitoring/
 aliases:
-  - /en/glossary/Adherence-Monitoring/
+  - /glossary/Adherence-Monitoring/
 ---
 
 ## What is Adherence Monitoring?

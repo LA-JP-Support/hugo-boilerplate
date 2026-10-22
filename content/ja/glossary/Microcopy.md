@@ -16,7 +16,7 @@ draft: false
 e-title: Microcopy
 url: /ja/glossary/microcopy/
 aliases:
-- /ja/glossary/Microcopy/
+- /glossary/Microcopy/
 term: まいくろこぴー
 ---
 

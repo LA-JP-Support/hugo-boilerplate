@@ -16,7 +16,7 @@ draft: false
 e-title: Breadcrumb
 url: /ja/glossary/breadcrumb/
 aliases:
-- /ja/glossary/Breadcrumb/
+- /glossary/Breadcrumb/
 term: ぶれっどくらむ
 ---
 

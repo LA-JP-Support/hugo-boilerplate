@@ -16,7 +16,7 @@ draft: false
 e-title: Ontology
 url: /ja/glossary/ontology/
 aliases:
-- /ja/glossary/Ontology/
+- /glossary/Ontology/
 term: おんとろじー
 ---
 

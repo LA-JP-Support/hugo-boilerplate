@@ -16,7 +16,7 @@ draft: false
 e-title: AWS Amplify
 url: /ja/glossary/aws-amplify/
 aliases:
-- /ja/glossary/AWS-Amplify/
+- /glossary/AWS-Amplify/
 term: エーダブリューエス アンプリファイ
 ---
 

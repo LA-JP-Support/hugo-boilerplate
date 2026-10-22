@@ -16,7 +16,7 @@ draft: false
 e-title: Content Performance Dashboard
 url: /ja/glossary/content-performance-dashboard/
 aliases:
-- /ja/glossary/Content-Performance-Dashboard/
+- /glossary/Content-Performance-Dashboard/
 term: だっしゅぼーど
 ---
 

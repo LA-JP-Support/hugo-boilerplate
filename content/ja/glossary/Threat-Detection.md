@@ -16,7 +16,7 @@ draft: false
 e-title: Threat Detection
 url: /ja/glossary/threat-detection/
 aliases:
-- /ja/glossary/Threat-Detection/
+- /glossary/Threat-Detection/
 term: きょういけんち
 ---
 

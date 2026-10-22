@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Management
 url: /ja/glossary/knowledge-management/
 aliases:
-- /ja/glossary/Knowledge-Management/
+- /glossary/Knowledge-Management/
 term: なれっじまねじめんと
 ---
 

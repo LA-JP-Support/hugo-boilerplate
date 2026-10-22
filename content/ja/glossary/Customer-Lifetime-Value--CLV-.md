@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Lifetime Value (CLV)
 url: /ja/glossary/customer-lifetime-value--clv-/
 aliases:
-- /ja/glossary/Customer-Lifetime-Value--CLV-/
+- /glossary/Customer-Lifetime-Value--CLV-/
 term: こきゃくしょうがいかち(シーエルブイ)
 ---
 

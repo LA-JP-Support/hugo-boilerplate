@@ -16,7 +16,7 @@ draft: false
 e-title: Messaging Apps
 url: /ja/glossary/messaging-apps/
 aliases:
-- /ja/glossary/Messaging-Apps/
+- /glossary/Messaging-Apps/
 term: めっせーじんぐあぷり
 ---
 

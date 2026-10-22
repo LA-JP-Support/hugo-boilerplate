@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/appi-act-on-protection-of-personal-information/
 aliases:
-- /en/glossary/appi-personal-information/
+- /glossary/appi-personal-information/
 ---
 
 ## What is APPI (Act on Protection of Personal Information)?

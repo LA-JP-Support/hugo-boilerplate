@@ -16,7 +16,7 @@ draft: false
 e-title: Star Schema
 url: /ja/glossary/star-schema/
 aliases:
-- /ja/glossary/Star-Schema/
+- /glossary/Star-Schema/
 term: すたーすきーま
 ---
 

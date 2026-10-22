@@ -17,7 +17,7 @@ e-title: Attribution Window
 term: アトリビューションウィンドウ
 url: "/ja/glossary/attribution-window/"
 aliases:
-- "/ja/glossary/Attribution-Window/"
+- "/glossary/Attribution-Window/"
 ---
 
 ## アトリビューションウィンドウとは

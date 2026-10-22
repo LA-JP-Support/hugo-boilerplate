@@ -16,7 +16,7 @@ draft: false
 e-title: Product Feedback Loop
 url: /ja/glossary/product-feedback-loop/
 aliases:
-- /ja/glossary/Product-Feedback-Loop/
+- /glossary/Product-Feedback-Loop/
 term: ぷろだくと・ふぃーどばっく・るーぷ
 ---
 

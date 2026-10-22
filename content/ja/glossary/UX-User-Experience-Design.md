@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/UX-User-Experience-Design/
 aliases:
-  - /ja/glossary/ux/
+  - /glossary/ux/
 keywords:
   - ユーザー体験
   - デザイン

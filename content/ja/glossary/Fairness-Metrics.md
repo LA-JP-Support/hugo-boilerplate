@@ -17,7 +17,7 @@ e-title: Fairness Metrics
 term: こうへいせいメトリクス
 url: "/ja/glossary/fairness-metrics/"
 aliases:
-- "/ja/glossary/Fairness-Metrics/"
+- "/glossary/Fairness-Metrics/"
 ---
 
 ## 公平性メトリクスとは？

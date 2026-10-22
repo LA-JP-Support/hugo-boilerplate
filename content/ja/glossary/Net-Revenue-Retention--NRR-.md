@@ -16,7 +16,7 @@ draft: false
 e-title: Net Revenue Retention (NRR)
 url: /ja/glossary/net-revenue-retention--nrr-/
 aliases:
-- /ja/glossary/Net-Revenue-Retention--NRR-/
+- /glossary/Net-Revenue-Retention--NRR-/
 term: ネットレベニューリテンション（エヌアールアール）
 ---
 

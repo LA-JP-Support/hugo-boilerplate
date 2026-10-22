@@ -16,7 +16,7 @@ draft: false
 e-title: Multi-Factor Authentication (MFA)
 url: /ja/glossary/multi-factor-authentication--mfa-/
 aliases:
-- /ja/glossary/Multi-Factor-Authentication--MFA-/
+- /glossary/Multi-Factor-Authentication--MFA-/
 term: たようそにんしょう（エムエフエー）
 ---
 

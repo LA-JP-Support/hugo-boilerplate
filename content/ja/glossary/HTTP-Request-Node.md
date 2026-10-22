@@ -17,7 +17,7 @@ draft: false
 e-title: HTTP Request Node
 url: "/ja/glossary/http-request-node/"
 aliases:
-- "/ja/glossary/HTTP-Request-Node/"
+- "/glossary/HTTP-Request-Node/"
 term: えいちてぃーてぃーぴー りくえすと のーど
 ---
 

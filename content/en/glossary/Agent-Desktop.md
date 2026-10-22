@@ -9,7 +9,7 @@ type: "glossary"
 draft: false
 url: /en/glossary/Agent-Desktop/
 aliases:
-- /en/glossary/agent-desktop/
+- /glossary/agent-desktop/
 keywords:
   - Agent Desktop
   - Contact center software

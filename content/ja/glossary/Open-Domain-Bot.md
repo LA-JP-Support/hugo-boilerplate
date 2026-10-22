@@ -17,7 +17,7 @@ e-title: Open-Domain Bot
 term: オープンドメインボット
 url: "/ja/glossary/open-domain-bot/"
 aliases:
-- "/ja/glossary/Open-Domain-Bot/"
+- "/glossary/Open-Domain-Bot/"
 ---
 
 ## オープンドメインボットとは？

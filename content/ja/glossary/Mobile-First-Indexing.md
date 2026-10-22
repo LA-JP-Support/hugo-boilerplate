@@ -16,7 +16,7 @@ draft: false
 e-title: Mobile-First Indexing
 url: /ja/glossary/mobile-first-indexing/
 aliases:
-- /ja/glossary/Mobile-First-Indexing/
+- /glossary/Mobile-First-Indexing/
 term: もばいるふぁーすといんでっくす
 ---
 

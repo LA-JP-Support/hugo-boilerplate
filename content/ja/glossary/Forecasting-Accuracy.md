@@ -16,7 +16,7 @@ draft: false
 e-title: Forecasting Accuracy
 url: /ja/glossary/forecasting-accuracy/
 aliases:
-- /ja/glossary/Forecasting-Accuracy/
+- /glossary/Forecasting-Accuracy/
 term: よそくせいど
 ---
 

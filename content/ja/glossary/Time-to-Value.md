@@ -16,7 +16,7 @@ draft: false
 e-title: Time to Value
 url: /ja/glossary/time-to-value/
 aliases:
-- /ja/glossary/Time-to-Value/
+- /glossary/Time-to-Value/
 term: タイム・トゥ・バリュー(かちじつげんまでのじかん)
 ---
 

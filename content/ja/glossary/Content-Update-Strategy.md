@@ -16,7 +16,7 @@ draft: false
 e-title: Content Update Strategy
 url: /ja/glossary/content-update-strategy/
 aliases:
-- /ja/glossary/Content-Update-Strategy/
+- /glossary/Content-Update-Strategy/
 term: こうしんせんりゃく
 ---
 

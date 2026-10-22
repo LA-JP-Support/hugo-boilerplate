@@ -16,7 +16,7 @@ draft: false
 e-title: Content Front Matter
 url: /ja/glossary/content-front-matter/
 aliases:
-- /ja/glossary/Content-Front-Matter/
+- /glossary/Content-Front-Matter/
 term: こんてんつふろんとまたー
 ---
 

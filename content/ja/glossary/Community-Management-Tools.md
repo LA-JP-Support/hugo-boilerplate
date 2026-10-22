@@ -16,7 +16,7 @@ draft: false
 e-title: Community Management Tools
 url: /ja/glossary/community-management-tools/
 aliases:
-- /ja/glossary/Community-Management-Tools/
+- /glossary/Community-Management-Tools/
 term: こみゅにてぃかんりつーる
 ---
 

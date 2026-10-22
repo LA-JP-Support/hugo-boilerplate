@@ -16,7 +16,7 @@ draft: false
 e-title: Blog Post Structure
 url: /ja/glossary/blog-post-structure/
 aliases:
-- /ja/glossary/Blog-Post-Structure/
+- /glossary/Blog-Post-Structure/
 term: ぶろぐきじのこうせい
 ---
 

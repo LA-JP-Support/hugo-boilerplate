@@ -16,7 +16,7 @@ draft: false
 e-title: Engagement Score
 url: /ja/glossary/engagement-score/
 aliases:
-- /ja/glossary/Engagement-Score/
+- /glossary/Engagement-Score/
 term: えんげーじめんとすこあ
 ---
 

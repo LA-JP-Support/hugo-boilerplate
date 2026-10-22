@@ -16,7 +16,7 @@ draft: false
 e-title: MOS (Mean Opinion Score)
 url: /ja/glossary/mos--mean-opinion-score-/
 aliases:
-- /ja/glossary/MOS--Mean-Opinion-Score-/
+- /glossary/MOS--Mean-Opinion-Score-/
 term: エムオーエス
 ---
 

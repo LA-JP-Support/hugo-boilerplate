@@ -17,7 +17,7 @@ e-title: Zero-Shot Learning
 term: ゼロショットがくしゅう
 url: "/ja/glossary/zero-shot/"
 aliases:
-- "/ja/glossary/Zero-shot/"
+- "/glossary/Zero-shot/"
 ---
 
 ## ゼロショット学習とは？

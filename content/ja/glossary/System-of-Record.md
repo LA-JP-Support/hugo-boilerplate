@@ -16,7 +16,7 @@ draft: false
 e-title: System of Record
 url: /ja/glossary/system-of-record/
 aliases:
-- /ja/glossary/System-of-Record/
+- /glossary/System-of-Record/
 term: システムオブレコード
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Employee Net Promoter Score (eNPS)
 url: /ja/glossary/employee-net-promoter-score--enps-/
 aliases:
-- /ja/glossary/Employee-Net-Promoter-Score--eNPS-/
+- /glossary/Employee-Net-Promoter-Score--eNPS-/
 term: じゅうぎょういんネットプロモータースコア
 ---
 

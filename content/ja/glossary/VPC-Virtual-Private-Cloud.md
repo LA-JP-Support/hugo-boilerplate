@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/VPC-Virtual-Private-Cloud/
 aliases:
-  - /ja/glossary/vpc-virtual-private-cloud/
+  - /glossary/vpc-virtual-private-cloud/
 keywords:
   - 仮想ネットワーク
   - セキュリティ

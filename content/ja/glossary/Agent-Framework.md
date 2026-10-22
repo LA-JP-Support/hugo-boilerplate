@@ -16,7 +16,7 @@ draft: false
 e-title: Agent Framework
 url: /ja/glossary/agent-framework/
 aliases:
-- /ja/glossary/Agent-Framework/
+- /glossary/Agent-Framework/
 term: えーじぇんとふれーむわーく
 ---
 

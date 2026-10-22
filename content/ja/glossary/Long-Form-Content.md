@@ -16,7 +16,7 @@ draft: false
 e-title: Long-Form Content
 url: /ja/glossary/long-form-content/
 aliases:
-- /ja/glossary/Long-Form-Content/
+- /glossary/Long-Form-Content/
 term: ろんぐふぉーむこんてんつ
 ---
 

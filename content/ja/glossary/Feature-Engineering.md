@@ -16,7 +16,7 @@ draft: false
 e-title: Feature Engineering
 url: /ja/glossary/feature-engineering/
 aliases:
-- /ja/glossary/Feature-Engineering/
+- /glossary/Feature-Engineering/
 term: とくちょうりょうえんじにありんぐ
 ---
 

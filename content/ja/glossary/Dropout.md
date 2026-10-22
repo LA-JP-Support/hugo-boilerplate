@@ -16,7 +16,7 @@ draft: false
 e-title: Dropout
 url: /ja/glossary/dropout/
 aliases:
-- /ja/glossary/Dropout/
+- /glossary/Dropout/
 term: どろっぷあうと
 ---
 

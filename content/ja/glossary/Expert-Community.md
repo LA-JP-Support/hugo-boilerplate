@@ -16,7 +16,7 @@ draft: false
 e-title: Expert Community
 url: /ja/glossary/expert-community/
 aliases:
-- /ja/glossary/Expert-Community/
+- /glossary/Expert-Community/
 term: えきすぱーとこみゅにてぃ
 ---
 

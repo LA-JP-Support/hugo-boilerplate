@@ -16,7 +16,7 @@ draft: false
 e-title: Social Bookmarking
 url: "/ja/glossary/social-bookmarking/"
 aliases:
-- "/ja/glossary/Social-Bookmarking/"
+- "/glossary/Social-Bookmarking/"
 term: そーしゃるぶっくまーく
 ---
 

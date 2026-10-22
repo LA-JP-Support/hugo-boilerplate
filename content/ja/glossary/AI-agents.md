@@ -17,7 +17,7 @@ e-title: AI Agents
 term: エーアイエージェント
 url: "/ja/glossary/ai-agents/"
 aliases:
-- "/ja/glossary/AI-agents/"
+- "/glossary/AI-agents/"
 ---
 
 ## AIエージェントとは

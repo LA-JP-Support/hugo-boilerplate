@@ -16,7 +16,7 @@ draft: false
 e-title: Market Basket Analysis
 url: /ja/glossary/market-basket-analysis/
 aliases:
-- /ja/glossary/Market-Basket-Analysis/
+- /glossary/Market-Basket-Analysis/
 term: マーケットバスケットぶんせき
 ---
 

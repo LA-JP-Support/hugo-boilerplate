@@ -16,7 +16,7 @@ draft: false
 e-title: Content Brief
 url: /ja/glossary/content-brief/
 aliases:
-- /ja/glossary/Content-Brief/
+- /glossary/Content-Brief/
 term: こんてんつぶりーふ
 ---
 

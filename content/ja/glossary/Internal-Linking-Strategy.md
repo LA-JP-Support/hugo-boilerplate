@@ -16,7 +16,7 @@ draft: false
 e-title: Internal Linking Strategy
 url: /ja/glossary/internal-linking-strategy/
 aliases:
-- /ja/glossary/Internal-Linking-Strategy/
+- /glossary/Internal-Linking-Strategy/
 term: ないぶりんくせんりゃく
 ---
 

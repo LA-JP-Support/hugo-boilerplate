@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/api-security/
 aliases:
-- /en/glossary/API-Security/
+- /glossary/API-Security/
 ---
 
 ## What is API Security?

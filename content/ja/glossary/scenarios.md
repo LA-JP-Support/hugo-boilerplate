@@ -17,7 +17,7 @@ e-title: Scenarios (Pre-Prepared Conversation Flows)
 term: しなりお（じぜんじゅんびされたかいわふろー）
 url: /ja/glossary/scenarios/
 aliases:
-  - /ja/glossary/Scenarios/
+  - /glossary/Scenarios/
 ---
 
 ## シナリオとは

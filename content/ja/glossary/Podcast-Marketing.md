@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Podcast-Marketing/
 aliases:
-  - /ja/glossary/podcast-marketing/
+  - /glossary/podcast-marketing/
 keywords:
   - ポッドキャスト
   - 音声コンテンツ

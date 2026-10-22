@@ -16,7 +16,7 @@ draft: false
 e-title: Unified Communications
 url: /ja/glossary/unified-communications/
 aliases:
-- /ja/glossary/Unified-Communications/
+- /glossary/Unified-Communications/
 term: ユニファイドコミュニケーション
 ---
 

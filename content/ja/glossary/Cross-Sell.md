@@ -16,7 +16,7 @@ draft: false
 e-title: Cross-Sell
 url: /ja/glossary/cross-sell/
 aliases:
-- /ja/glossary/Cross-Sell/
+- /glossary/Cross-Sell/
 term: くろすせる
 ---
 

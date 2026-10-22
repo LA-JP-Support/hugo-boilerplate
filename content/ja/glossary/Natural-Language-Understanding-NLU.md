@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/natural-language-understanding-nlu/
 aliases:
-  - /ja/glossary/Natural-Language-Understanding-NLU/
+  - /glossary/Natural-Language-Understanding-NLU/
 keywords:
   - NLU
   - 自然言語理解

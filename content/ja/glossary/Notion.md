@@ -17,7 +17,7 @@ e-title: Notion
 url: /ja/glossary/notion/
 term: ノーション
 aliases:
-- /ja/glossary/Notion/
+- /glossary/Notion/
 ---
 
 ## Notionとは？

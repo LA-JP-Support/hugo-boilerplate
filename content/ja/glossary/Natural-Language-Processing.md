@@ -16,7 +16,7 @@ draft: false
 e-title: Natural Language Processing (NLP)
 url: /ja/glossary/natural-language-processing/
 aliases:
-- /ja/glossary/Natural-Language-Processing/
+- /glossary/Natural-Language-Processing/
 term: しぜんげんごしょり（エヌエルピー）
 ---
 

@@ -17,7 +17,7 @@ e-title: Autonomous AI Agents
 term: じりつがたエーアイエージェント
 url: "/ja/glossary/autonomous-ai-agents/"
 aliases:
-- "/ja/glossary/Autonomous-AI-Agents/"
+- "/glossary/Autonomous-AI-Agents/"
 ---
 
 ## 自律型AIエージェントとは

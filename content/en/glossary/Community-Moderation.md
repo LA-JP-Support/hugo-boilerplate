@@ -15,7 +15,7 @@ date: 2025-12-19
 draft: false
 url: /en/glossary/community-moderation/
 aliases:
-- /en/glossary/Community-Moderation/
+- /glossary/Community-Moderation/
 ---
 
 ## What is Community Moderation?

@@ -17,7 +17,7 @@ e-title: Sentiment-Adaptive Tone
 term: せんちめんとてきおうがたとーん
 url: "/ja/glossary/sentiment-adaptive-tone/"
 aliases:
-- "/ja/glossary/Sentiment-Adaptive-Tone/"
+- "/glossary/Sentiment-Adaptive-Tone/"
 ---
 
 ## センチメント適応型トーンとは?

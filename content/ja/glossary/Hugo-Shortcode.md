@@ -16,7 +16,7 @@ draft: false
 e-title: Hugo Shortcode
 url: /ja/glossary/hugo-shortcode/
 aliases:
-- /ja/glossary/Hugo-Shortcode/
+- /glossary/Hugo-Shortcode/
 term: ヒューゴショートコード
 ---
 

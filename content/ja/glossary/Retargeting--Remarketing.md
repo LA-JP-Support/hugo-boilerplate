@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Retargeting--Remarketing/
 aliases:
-  - /ja/glossary/retargeting-remarketing/
+  - /glossary/retargeting-remarketing/
 keywords:
   - リターゲティング
   - リマーケティング

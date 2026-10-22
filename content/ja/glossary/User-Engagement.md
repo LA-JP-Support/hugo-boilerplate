@@ -16,7 +16,7 @@ draft: false
 e-title: User Engagement
 url: /ja/glossary/user-engagement/
 aliases:
-- /ja/glossary/User-Engagement/
+- /glossary/User-Engagement/
 term: ユーザーエンゲージメント
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Content Freshness
 url: /ja/glossary/content-freshness/
 aliases:
-- /ja/glossary/Content-Freshness/
+- /glossary/Content-Freshness/
 term: こんてんつのせんど
 ---
 

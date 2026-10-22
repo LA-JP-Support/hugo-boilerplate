@@ -16,7 +16,7 @@ draft: false
 e-title: App Marketplace
 url: /ja/glossary/app-marketplace/
 aliases:
-- /ja/glossary/App-Marketplace/
+- /glossary/App-Marketplace/
 term: あぷりまーけっとぷれいす
 ---
 

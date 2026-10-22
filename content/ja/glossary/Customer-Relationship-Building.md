@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Relationship Building
 url: /ja/glossary/customer-relationship-building/
 aliases:
-- /ja/glossary/Customer-Relationship-Building/
+- /glossary/Customer-Relationship-Building/
 term: こきゃくかんけいこうちく
 ---
 

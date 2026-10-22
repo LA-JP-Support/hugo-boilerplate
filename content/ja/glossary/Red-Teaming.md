@@ -16,7 +16,7 @@ draft: false
 e-title: Red Teaming
 url: /ja/glossary/red-teaming/
 aliases:
-- /ja/glossary/Red-Teaming/
+- /glossary/Red-Teaming/
 term: れっどちーみんぐ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Long Short-Term Memory (LSTM)
 url: /ja/glossary/long-short-term-memory--lstm-/
 aliases:
-- /ja/glossary/Long-Short-Term-Memory--LSTM-/
+- /glossary/Long-Short-Term-Memory--LSTM-/
 term: ちょうたんききおく
 ---
 

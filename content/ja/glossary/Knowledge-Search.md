@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Search
 url: /ja/glossary/knowledge-search/
 aliases:
-- /ja/glossary/Knowledge-Search/
+- /glossary/Knowledge-Search/
 term: なれっじけんさく
 ---
 

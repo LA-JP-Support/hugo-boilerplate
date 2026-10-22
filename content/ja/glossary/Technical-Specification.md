@@ -16,7 +16,7 @@ draft: false
 e-title: Technical Specification
 url: /ja/glossary/technical-specification/
 aliases:
-- /ja/glossary/Technical-Specification/
+- /glossary/Technical-Specification/
 term: ぎじゅつしようしょ
 ---
 

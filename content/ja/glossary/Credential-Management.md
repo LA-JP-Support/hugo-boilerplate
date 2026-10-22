@@ -16,7 +16,7 @@ draft: false
 e-title: Credential Management
 url: /ja/glossary/credential-management/
 aliases:
-- /ja/glossary/Credential-Management/
+- /glossary/Credential-Management/
 term: にんしょうじょうほうかんり
 ---
 

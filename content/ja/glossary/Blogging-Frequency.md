@@ -16,7 +16,7 @@ draft: false
 e-title: Blogging Frequency
 url: /ja/glossary/blogging-frequency/
 aliases:
-- /ja/glossary/Blogging-Frequency/
+- /glossary/Blogging-Frequency/
 term: ぶろぐとうこうひんど
 ---
 

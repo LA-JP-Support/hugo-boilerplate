@@ -17,7 +17,7 @@ e-title: Prompt Injection
 term: ぷろんぷといんじぇくしょん
 url: "/ja/glossary/prompt-injection/"
 aliases:
-- "/ja/glossary/Prompt-Injection/"
+- "/glossary/Prompt-Injection/"
 ---
 
 ## プロンプトインジェクションとは？

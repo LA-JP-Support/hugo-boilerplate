@@ -17,7 +17,7 @@ e-title: OAuth
 url: /ja/glossary/oauth/
 term: おーおース
 aliases:
-- /ja/glossary/OAuth/
+- /glossary/OAuth/
 ---
 
 ## OAuthとは？

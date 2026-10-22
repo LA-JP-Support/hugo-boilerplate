@@ -17,7 +17,7 @@ draft: false
 e-title: Anthropic
 url: /ja/glossary/anthropic/
 aliases:
-- /ja/glossary/Anthropic/
+- /glossary/Anthropic/
 term: アンソロピック
 ---
 

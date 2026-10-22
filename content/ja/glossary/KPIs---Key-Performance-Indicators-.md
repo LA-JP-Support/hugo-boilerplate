@@ -17,7 +17,7 @@ e-title: KPIs (Key Performance Indicators)
 term: ケーピーアイ
 url: "/ja/glossary/kpis---key-performance-indicators-/"
 aliases:
-- "/ja/glossary/KPIs---Key-Performance-Indicators-/"
+- "/glossary/KPIs---Key-Performance-Indicators-/"
 ---
 
 ## KPIとは?

@@ -17,7 +17,7 @@ e-title: Goal Completion Rate (GCR)
 term: ごーるたっせいりつ
 url: "/ja/glossary/goal-completion-rate--gcr-/"
 aliases:
-- "/ja/glossary/Goal-Completion-Rate--GCR-/"
+- "/glossary/Goal-Completion-Rate--GCR-/"
 ---
 
 ## ゴール達成率（GCR）とは？

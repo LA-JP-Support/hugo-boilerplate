@@ -17,7 +17,7 @@ e-title: Contextual Understanding
 term: こんてきすとりかい
 url: "/ja/glossary/contextual-understanding/"
 aliases:
-- "/ja/glossary/Contextual-Understanding/"
+- "/glossary/Contextual-Understanding/"
 ---
 
 <!-- ===== サクッとわかるゾーン（冒頭〜30行） ===== -->

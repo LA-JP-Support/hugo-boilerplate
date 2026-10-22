@@ -17,7 +17,7 @@ e-title: Codec
 term: こーでっく
 url: "/ja/glossary/codec/"
 aliases:
-- "/ja/glossary/Codec/"
+- "/glossary/Codec/"
 ---
 
 ## コーデックとは?

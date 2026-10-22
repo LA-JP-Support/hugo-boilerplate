@@ -16,7 +16,7 @@ draft: false
 e-title: Few-Shot Learning
 url: "/ja/glossary/few-shot-learning/"
 aliases:
-- "/ja/glossary/Few-Shot-Learning/"
+- "/glossary/Few-Shot-Learning/"
 term: フューショットがくしゅう
 ---
 

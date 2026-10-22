@@ -16,7 +16,7 @@ draft: false
 e-title: Contact Management
 url: /ja/glossary/contact-management/
 aliases:
-- /ja/glossary/Contact-Management/
+- /glossary/Contact-Management/
 term: こんたくとかんり
 ---
 

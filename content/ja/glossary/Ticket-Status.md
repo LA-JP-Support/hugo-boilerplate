@@ -16,7 +16,7 @@ draft: false
 e-title: Ticket Status
 url: /ja/glossary/ticket-status/
 aliases:
-- /ja/glossary/Ticket-Status/
+- /glossary/Ticket-Status/
 term: ちけっとすてーたす
 ---
 

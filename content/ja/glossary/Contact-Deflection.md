@@ -16,7 +16,7 @@ draft: false
 e-title: Contact Deflection
 url: /ja/glossary/contact-deflection/
 aliases:
-- /ja/glossary/Contact-Deflection/
+- /glossary/Contact-Deflection/
 term: こんたくとでふれくしょん
 ---
 

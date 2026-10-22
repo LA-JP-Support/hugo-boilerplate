@@ -16,7 +16,7 @@ draft: false
 e-title: Indexing
 url: /ja/glossary/indexing/
 aliases:
-- /ja/glossary/Indexing/
+- /glossary/Indexing/
 term: いんでっくすさくせい
 ---
 

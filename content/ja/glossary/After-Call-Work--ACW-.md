@@ -16,7 +16,7 @@ draft: false
 e-title: After-Call Work (ACW)
 url: /ja/glossary/after-call-work--acw-/
 aliases:
-- /ja/glossary/After-Call-Work--ACW-/
+- /glossary/After-Call-Work--ACW-/
 term: あふたーこーるわーく
 ---
 

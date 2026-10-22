@@ -16,7 +16,7 @@ draft: false
 e-title: Agent Efficiency
 url: /ja/glossary/agent-efficiency/
 aliases:
-- /ja/glossary/Agent-Efficiency/
+- /glossary/Agent-Efficiency/
 term: えーじぇんとこうりつ
 ---
 

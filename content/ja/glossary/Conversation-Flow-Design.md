@@ -16,7 +16,7 @@ draft: false
 e-title: Conversation Flow Design
 url: /ja/glossary/conversation-flow-design/
 aliases:
-- /ja/glossary/Conversation-Flow-Design/
+- /glossary/Conversation-Flow-Design/
 term: せっけい
 ---
 

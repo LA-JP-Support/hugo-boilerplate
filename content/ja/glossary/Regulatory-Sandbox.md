@@ -16,7 +16,7 @@ draft: false
 e-title: Regulatory Sandbox
 url: /ja/glossary/regulatory-sandbox/
 aliases:
-- /ja/glossary/Regulatory-Sandbox/
+- /glossary/Regulatory-Sandbox/
 term: きせいさんどぼっくす
 ---
 

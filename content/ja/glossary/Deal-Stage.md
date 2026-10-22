@@ -16,7 +16,7 @@ draft: false
 e-title: Deal Stage
 url: /ja/glossary/deal-stage/
 aliases:
-- /ja/glossary/Deal-Stage/
+- /glossary/Deal-Stage/
 term: ディールステージ
 ---
 

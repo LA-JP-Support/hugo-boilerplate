@@ -16,7 +16,7 @@ draft: false
 e-title: Single Template
 url: /ja/glossary/single-template/
 aliases:
-- /ja/glossary/Single-Template/
+- /glossary/Single-Template/
 term: しんぐるてんぷれーと
 ---
 

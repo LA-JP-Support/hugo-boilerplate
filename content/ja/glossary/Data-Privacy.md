@@ -16,7 +16,7 @@ draft: false
 e-title: Data Privacy
 url: "/ja/glossary/data-privacy/"
 aliases:
-- "/ja/glossary/Data-Privacy/"
+- "/glossary/Data-Privacy/"
 term: データプライバシー
 ---
 

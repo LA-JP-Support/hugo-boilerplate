@@ -16,7 +16,7 @@ draft: false
 e-title: Hook
 url: /ja/glossary/hook/
 aliases:
-- /ja/glossary/Hook/
+- /glossary/Hook/
 term: ふっく
 ---
 

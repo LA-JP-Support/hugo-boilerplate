@@ -16,7 +16,7 @@ draft: false
 e-title: Expansion Revenue
 url: /ja/glossary/expansion-revenue/
 aliases:
-- /ja/glossary/Expansion-Revenue/
+- /glossary/Expansion-Revenue/
 term: えくすぱんしょん・ればにゅー
 ---
 

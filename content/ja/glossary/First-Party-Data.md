@@ -16,7 +16,7 @@ draft: false
 e-title: First-Party Data
 url: /ja/glossary/first-party-data/
 aliases:
-- /ja/glossary/First-Party-Data/
+- /glossary/First-Party-Data/
 term: ふぁーすとぱーてぃでーた
 ---
 

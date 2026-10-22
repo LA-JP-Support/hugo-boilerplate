@@ -16,7 +16,7 @@ draft: false
 e-title: Heatmap
 url: /ja/glossary/heatmap/
 aliases:
-- /ja/glossary/Heatmap/
+- /glossary/Heatmap/
 term: ヒートマップ
 ---
 

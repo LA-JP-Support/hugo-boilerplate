@@ -17,7 +17,7 @@ e-title: DTMF (Dual-Tone Multi-Frequency)
 term: ディーティーエムエフ(デュアルトーンたじゅうしゅうはすう)
 url: "/ja/glossary/dtmf--dual-tone-multi-frequency-/"
 aliases:
-- "/ja/glossary/DTMF--Dual-Tone-Multi-Frequency-/"
+- "/glossary/DTMF--Dual-Tone-Multi-Frequency-/"
 ---
 ## DTMFとは?
 

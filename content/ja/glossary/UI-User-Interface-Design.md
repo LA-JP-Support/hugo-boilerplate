@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/UI-User-Interface-Design/
 aliases:
-  - /ja/glossary/ui/
+  - /glossary/ui/
 keywords:
   - インターフェース
   - デザイン

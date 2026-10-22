@@ -17,7 +17,7 @@ e-title: Embed Script
 term: うめこみスクリプト
 url: "/ja/glossary/embed-script/"
 aliases:
-- "/ja/glossary/Embed-Script/"
+- "/glossary/Embed-Script/"
 ---
 
 ## 埋め込みスクリプトとは?

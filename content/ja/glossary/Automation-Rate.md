@@ -17,7 +17,7 @@ e-title: Automation Rate
 term: じどうかりつ
 url: "/ja/glossary/automation-rate/"
 aliases:
-- "/ja/glossary/Automation-Rate/"
+- "/glossary/Automation-Rate/"
 ---
 
 ## 自動化率とは

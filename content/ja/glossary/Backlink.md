@@ -16,7 +16,7 @@ draft: false
 e-title: Backlink
 url: /ja/glossary/backlink/
 aliases:
-- /ja/glossary/Backlink/
+- /glossary/Backlink/
 term: ばっくりんく
 ---
 

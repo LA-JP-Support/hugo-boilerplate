@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Right-to-be-Forgotten/
 aliases:
-  - /ja/glossary/right-to-be-forgotten/
+  - /glossary/right-to-be-forgotten/
 keywords:
   - 削除される権利
   - Right to be Forgotten

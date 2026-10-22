@@ -17,7 +17,7 @@ e-title: Flowise
 term: フローワイズ
 url: "/ja/glossary/flowise/"
 aliases:
-- "/ja/glossary/Flowise/"
+- "/glossary/Flowise/"
 ---
 
 ## Flowiseとは？

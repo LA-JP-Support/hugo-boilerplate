@@ -16,7 +16,7 @@ draft: false
 e-title: Content Tagging
 url: /ja/glossary/content-tagging/
 aliases:
-- /ja/glossary/Content-Tagging/
+- /glossary/Content-Tagging/
 term: こんてんつたぎんぐ
 ---
 

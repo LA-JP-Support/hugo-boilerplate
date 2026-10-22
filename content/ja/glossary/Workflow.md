@@ -17,7 +17,7 @@ e-title: Workflow
 term: わーくふろー
 url: "/ja/glossary/workflow/"
 aliases:
-- "/ja/glossary/Workflow/"
+- "/glossary/Workflow/"
 ---
 
 ## ワークフローとは?

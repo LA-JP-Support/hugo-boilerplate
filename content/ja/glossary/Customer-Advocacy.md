@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Advocacy
 url: /ja/glossary/customer-advocacy/
 aliases:
-- /ja/glossary/Customer-Advocacy/
+- /glossary/Customer-Advocacy/
 term: かすたまーあどぼかしー
 ---
 

@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/api-integration/
 aliases:
-- /en/glossary/API-Integration/
+- /glossary/API-Integration/
 ---
 
 ## What is API Integration?

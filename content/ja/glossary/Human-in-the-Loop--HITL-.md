@@ -16,7 +16,7 @@ draft: false
 e-title: Human-in-the-Loop (HITL)
 url: "/ja/glossary/human-in-the-loop--hitl-/"
 aliases:
-- "/ja/glossary/Human-in-the-Loop--HITL-/"
+- "/glossary/Human-in-the-Loop--HITL-/"
 term: ヒューマン・イン・ザ・ループ
 ---
 

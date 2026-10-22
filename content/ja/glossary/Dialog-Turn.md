@@ -16,7 +16,7 @@ draft: false
 e-title: Dialog Turn
 url: "/ja/glossary/dialog-turn/"
 aliases:
-- "/ja/glossary/Dialog-Turn/"
+- "/glossary/Dialog-Turn/"
 term: だいあろぐたーん
 ---
 

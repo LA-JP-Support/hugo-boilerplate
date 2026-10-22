@@ -16,7 +16,7 @@ draft: false
 e-title: Conversation Script
 url: /ja/glossary/conversation-script/
 aliases:
-- /ja/glossary/Conversation-Script/
+- /glossary/Conversation-Script/
 term: かいわスクリプト
 ---
 

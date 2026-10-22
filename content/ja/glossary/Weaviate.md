@@ -17,7 +17,7 @@ e-title: Weaviate
 term: ウィービエイト
 url: "/ja/glossary/weaviate/"
 aliases:
-- "/ja/glossary/Weaviate/"
+- "/glossary/Weaviate/"
 ---
 
 ## Weaviateとは?

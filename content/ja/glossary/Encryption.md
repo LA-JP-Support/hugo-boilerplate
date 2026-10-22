@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Encryption/
 aliases:
-  - /ja/glossary/encryption/
+  - /glossary/encryption/
 keywords:
   - 暗号化
   - セキュリティ

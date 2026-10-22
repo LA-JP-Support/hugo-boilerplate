@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Reuse
 url: /ja/glossary/knowledge-reuse/
 aliases:
-- /ja/glossary/Knowledge-Reuse/
+- /glossary/Knowledge-Reuse/
 term: なれっじのさいりよう
 ---
 

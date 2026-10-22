@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/voice-bot/
 aliases:
-  - /ja/glossary/Voice-Bot/
+  - /glossary/Voice-Bot/
 keywords:
   - 音声ボット
   - 音声アシスタント

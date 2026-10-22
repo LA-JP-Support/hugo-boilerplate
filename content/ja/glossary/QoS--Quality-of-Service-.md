@@ -17,7 +17,7 @@ e-title: QoS (Quality of Service)
 term: きゅーおーえす
 url: "/ja/glossary/qos/"
 aliases:
-- "/ja/glossary/QoS--Quality-of-Service-/"
+- "/glossary/QoS--Quality-of-Service-/"
 ---
 
 ## QoS（サービス品質）とは？

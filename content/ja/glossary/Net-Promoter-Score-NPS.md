@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Net-Promoter-Score-NPS/
 aliases:
-  - /ja/glossary/net-promoter-score-nps/
+  - /glossary/net-promoter-score-nps/
 keywords:
   - NPS
   - ロイヤルティ

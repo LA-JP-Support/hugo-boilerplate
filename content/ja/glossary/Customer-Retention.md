@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Retention
 url: /ja/glossary/customer-retention/
 aliases:
-- /ja/glossary/Customer-Retention/
+- /glossary/Customer-Retention/
 term: こきゃくいじ
 ---
 

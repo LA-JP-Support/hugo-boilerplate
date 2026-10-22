@@ -16,7 +16,7 @@ draft: false
 e-title: Reproducibility Validation
 url: /ja/glossary/reproducibility-validation/
 aliases:
-- /ja/glossary/Reproducibility-validation/
+- /glossary/Reproducibility-validation/
 term: さいげんせいけんしょう
 ---
 

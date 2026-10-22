@@ -16,7 +16,7 @@ draft: false
 e-title: Linked Data
 url: "/ja/glossary/linked-data/"
 aliases:
-- "/ja/glossary/Linked-Data/"
+- "/glossary/Linked-Data/"
 term: りんくとでーた
 ---
 

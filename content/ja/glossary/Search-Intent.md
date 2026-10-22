@@ -16,7 +16,7 @@ draft: false
 e-title: Search Intent
 url: /ja/glossary/search-intent/
 aliases:
-- /ja/glossary/Search-Intent/
+- /glossary/Search-Intent/
 term: けんさくいと
 ---
 

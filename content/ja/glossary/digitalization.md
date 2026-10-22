@@ -17,7 +17,7 @@ e-title: Digitalization
 term: でじたるか
 url: /ja/glossary/digitalization/
 aliases:
-- /ja/glossary/Digitalization/
+- /glossary/Digitalization/
 ---
 
 ## デジタル化とは？

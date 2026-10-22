@@ -16,7 +16,7 @@ draft: false
 e-title: Attribution Analysis
 url: /ja/glossary/attribution-analysis/
 aliases:
-- /ja/glossary/Attribution-Analysis/
+- /glossary/Attribution-Analysis/
 term: あとりびゅーしょんぶんせき
 ---
 

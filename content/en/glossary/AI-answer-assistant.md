@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/ai-answer-assistant/
 aliases:
-- /en/glossary/AI-answer-assistant/
+- /glossary/AI-answer-assistant/
 ---
 
 ## What is an AI Answer Assistant?

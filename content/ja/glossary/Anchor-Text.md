@@ -16,7 +16,7 @@ draft: false
 e-title: Anchor Text
 url: /ja/glossary/anchor-text/
 aliases:
-- /ja/glossary/Anchor-Text/
+- /glossary/Anchor-Text/
 term: あんかーてきすと
 ---
 

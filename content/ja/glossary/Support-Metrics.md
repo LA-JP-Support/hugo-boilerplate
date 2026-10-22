@@ -16,7 +16,7 @@ draft: false
 e-title: Support Metrics
 url: /ja/glossary/support-metrics/
 aliases:
-- /ja/glossary/Support-Metrics/
+- /glossary/Support-Metrics/
 term: サポートメトリクス
 ---
 

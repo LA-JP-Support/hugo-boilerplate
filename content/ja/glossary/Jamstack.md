@@ -16,7 +16,7 @@ draft: false
 e-title: Jamstack
 url: /ja/glossary/jamstack/
 aliases:
-- /ja/glossary/Jamstack/
+- /glossary/Jamstack/
 term: ジャムスタック
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Press Release
 url: /ja/glossary/press-release/
 aliases:
-- /ja/glossary/Press-Release/
+- /glossary/Press-Release/
 term: ぷれすりりーす
 ---
 

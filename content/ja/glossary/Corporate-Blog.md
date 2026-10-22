@@ -16,7 +16,7 @@ draft: false
 e-title: Corporate Blog
 url: /ja/glossary/corporate-blog/
 aliases:
-- /ja/glossary/Corporate-Blog/
+- /glossary/Corporate-Blog/
 term: こーぽれーとぶろぐ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: MLOps
 url: /ja/glossary/mlops/
 aliases:
-- /ja/glossary/MLOps/
+- /glossary/MLOps/
 term: エムエルオプス
 ---
 

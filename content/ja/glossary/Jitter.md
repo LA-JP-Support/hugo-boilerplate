@@ -16,7 +16,7 @@ draft: false
 e-title: Jitter
 url: /ja/glossary/jitter/
 aliases:
-- /ja/glossary/Jitter/
+- /glossary/Jitter/
 term: じったー
 ---
 

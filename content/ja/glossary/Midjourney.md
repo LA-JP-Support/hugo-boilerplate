@@ -16,7 +16,7 @@ draft: false
 e-title: Midjourney
 url: /ja/glossary/midjourney/
 aliases:
-- /ja/glossary/Midjourney/
+- /glossary/Midjourney/
 term: ミッドジャーニー
 ---
 

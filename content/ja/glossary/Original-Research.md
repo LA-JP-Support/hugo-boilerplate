@@ -16,7 +16,7 @@ draft: false
 e-title: Original Research
 url: /ja/glossary/original-research/
 aliases:
-- /ja/glossary/Original-Research/
+- /glossary/Original-Research/
 term: オリジナルリサーチ
 ---
 

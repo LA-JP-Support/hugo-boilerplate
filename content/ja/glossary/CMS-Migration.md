@@ -16,7 +16,7 @@ draft: false
 e-title: CMS Migration
 url: /ja/glossary/cms-migration/
 aliases:
-- /ja/glossary/CMS-Migration/
+- /glossary/CMS-Migration/
 term: シーエムエス マイグレーション
 ---
 

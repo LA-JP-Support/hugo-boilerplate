@@ -17,7 +17,7 @@ e-title: Spam Filtering
 term: すぱむふぃるたりんぐ
 url: /ja/glossary/spam-filtering/
 aliases:
-  - /ja/glossary/Spam-Filtering/
+  - /glossary/Spam-Filtering/
 ---
 
 ## スパムフィルタリングとは

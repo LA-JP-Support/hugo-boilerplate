@@ -17,7 +17,7 @@ draft: false
 e-title: HR Talent Acquisition
 url: "/ja/glossary/hr-talent-acquisition/"
 aliases:
-- "/ja/glossary/HR-Talent-Acquisition/"
+- "/glossary/HR-Talent-Acquisition/"
 term: じんざい かくとく
 ---
 

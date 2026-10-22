@@ -16,7 +16,7 @@ draft: false
 e-title: Taxonomy
 url: /ja/glossary/taxonomy/
 aliases:
-- /ja/glossary/Taxonomy/
+- /glossary/Taxonomy/
 term: たくそのみー
 ---
 

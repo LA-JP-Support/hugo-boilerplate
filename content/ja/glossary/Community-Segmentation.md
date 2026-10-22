@@ -16,7 +16,7 @@ draft: false
 e-title: Community Segmentation
 url: /ja/glossary/community-segmentation/
 aliases:
-- /ja/glossary/Community-Segmentation/
+- /glossary/Community-Segmentation/
 term: こみゅにてぃせぐめんてーしょん
 ---
 

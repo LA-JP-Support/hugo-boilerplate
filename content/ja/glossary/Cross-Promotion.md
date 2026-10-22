@@ -16,7 +16,7 @@ draft: false
 e-title: Cross-Promotion
 url: /ja/glossary/cross-promotion/
 aliases:
-- /ja/glossary/Cross-Promotion/
+- /glossary/Cross-Promotion/
 term: くろすぷろもーしょん
 ---
 

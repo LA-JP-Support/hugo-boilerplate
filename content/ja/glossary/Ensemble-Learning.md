@@ -16,7 +16,7 @@ draft: false
 e-title: Ensemble Learning
 url: /ja/glossary/ensemble-learning/
 aliases:
-- /ja/glossary/Ensemble-Learning/
+- /glossary/Ensemble-Learning/
 term: あんさんぶるがくしゅう
 ---
 

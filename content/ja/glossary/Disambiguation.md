@@ -15,7 +15,7 @@ draft: false
 e-title: Disambiguation
 url: /ja/glossary/disambiguation/
 aliases:
-- /ja/glossary/Disambiguation/
+- /glossary/Disambiguation/
 term: あいまいせいかいしょう
 lastmod: 2026-04-02
 ---

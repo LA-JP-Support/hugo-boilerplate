@@ -15,7 +15,7 @@ draft: false
 e-title: Implementation Timeline
 url: /ja/glossary/implementation-timeline/
 aliases:
-- /ja/glossary/Implementation-Timeline/
+- /glossary/Implementation-Timeline/
 lastmod: 2026-04-02
 term: じっそうたいむらいん
 ---

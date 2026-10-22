@@ -16,7 +16,7 @@ draft: false
 e-title: GPU Acceleration
 url: /ja/glossary/gpu-acceleration/
 aliases:
-- /ja/glossary/GPU-Acceleration/
+- /glossary/GPU-Acceleration/
 term: ジーピーユーアクセラレーション
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: SIP Trunking
 url: /ja/glossary/sip-trunking/
 aliases:
-- /ja/glossary/SIP-Trunking/
+- /glossary/SIP-Trunking/
 term: エスアイピートランキング
 ---
 

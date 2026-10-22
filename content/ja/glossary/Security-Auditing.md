@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/security-auditing/
 aliases:
-  - /ja/glossary/Security-Audit/
+  - /glossary/Security-Audit/
 keywords:
   - セキュリティ監査
   - 脆弱性評価

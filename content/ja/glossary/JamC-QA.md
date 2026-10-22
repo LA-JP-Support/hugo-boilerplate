@@ -17,7 +17,7 @@ e-title: JamC-QA
 term: ジャムシーキューエー
 url: "/ja/glossary/jamc-qa/"
 aliases:
-- "/ja/glossary/JamC-QA/"
+- "/glossary/JamC-QA/"
 ---
 
 ## JamC-QAとは?

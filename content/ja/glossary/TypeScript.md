@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/TypeScript/
 aliases:
-  - /ja/glossary/typescript/
+  - /glossary/typescript/
 keywords:
   - 型システム
   - プログラミング言語

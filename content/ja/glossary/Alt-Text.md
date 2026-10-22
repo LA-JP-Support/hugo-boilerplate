@@ -16,7 +16,7 @@ draft: false
 e-title: Alt Text
 url: /ja/glossary/alt-text/
 aliases:
-- /ja/glossary/Alt-Text/
+- /glossary/Alt-Text/
 term: だいたいテキスト
 ---
 

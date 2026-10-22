@@ -16,7 +16,7 @@ draft: false
 e-title: Content Audit
 url: /ja/glossary/content-audit/
 aliases:
-- /ja/glossary/Content-Audit/
+- /glossary/Content-Audit/
 term: こんてんつかんさ
 ---
 

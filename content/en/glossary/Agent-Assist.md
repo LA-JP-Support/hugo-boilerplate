@@ -9,7 +9,7 @@ type: "glossary"
 draft: false
 url: /en/glossary/Agent-Assist/
 aliases:
-- /en/glossary/agent-assist/
+- /glossary/agent-assist/
 keywords:
   - Agent Assist
   - AI customer service

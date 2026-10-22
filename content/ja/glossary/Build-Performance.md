@@ -16,7 +16,7 @@ draft: false
 e-title: Build Performance
 url: /ja/glossary/build-performance/
 aliases:
-- /ja/glossary/Build-Performance/
+- /glossary/Build-Performance/
 term: びるどぱふぉーまんす
 ---
 

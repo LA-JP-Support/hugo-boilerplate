@@ -16,7 +16,7 @@ draft: false
 e-title: Quality Score
 url: /ja/glossary/quality-score/
 aliases:
-- /ja/glossary/Quality-Score/
+- /glossary/Quality-Score/
 term: ひんしつスコア
 ---
 

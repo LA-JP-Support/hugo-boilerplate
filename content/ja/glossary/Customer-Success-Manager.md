@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Success Manager
 url: /ja/glossary/customer-success-manager/
 aliases:
-- /ja/glossary/Customer-Success-Manager/
+- /glossary/Customer-Success-Manager/
 term: かすたまーさくせすまねーじゃー
 ---
 

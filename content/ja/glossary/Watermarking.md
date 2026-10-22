@@ -17,7 +17,7 @@ e-title: Watermarking
 term: うぉーたーまーきんぐ
 url: "/ja/glossary/watermarking/"
 aliases:
-- "/ja/glossary/Watermarking/"
+- "/glossary/Watermarking/"
 ---
 
 ## ウォーターマーキングとは?

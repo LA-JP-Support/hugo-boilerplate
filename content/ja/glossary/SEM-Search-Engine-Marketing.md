@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/SEM-Search-Engine-Marketing/
 aliases:
-  - /ja/glossary/sem-search-engine-marketing/
+  - /glossary/sem-search-engine-marketing/
 keywords:
   - SEM
   - 検索マーケティング

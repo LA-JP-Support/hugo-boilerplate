@@ -16,7 +16,7 @@ draft: false
 e-title: E-E-A-T
 url: /ja/glossary/e-e-a-t/
 aliases:
-- /ja/glossary/E-E-A-T/
+- /glossary/E-E-A-T/
 term: イーイーエーティー
 ---
 

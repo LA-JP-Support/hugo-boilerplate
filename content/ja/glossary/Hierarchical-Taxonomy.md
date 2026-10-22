@@ -16,7 +16,7 @@ draft: false
 e-title: Hierarchical Taxonomy
 url: /ja/glossary/hierarchical-taxonomy/
 aliases:
-- /ja/glossary/Hierarchical-Taxonomy/
+- /glossary/Hierarchical-Taxonomy/
 term: かいそうがたタクソノミー
 ---
 

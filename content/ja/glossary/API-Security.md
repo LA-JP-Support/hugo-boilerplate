@@ -16,7 +16,7 @@ draft: false
 e-title: API Security
 url: /ja/glossary/api-security/
 aliases:
-- /ja/glossary/API-Security/
+- /glossary/API-Security/
 term: エーピーアイセキュリティ
 ---
 

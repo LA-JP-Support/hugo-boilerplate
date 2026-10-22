@@ -16,7 +16,7 @@ draft: false
 e-title: Startup Pricing
 url: /ja/glossary/startup-pricing/
 aliases:
-- /ja/glossary/Startup-Pricing/
+- /glossary/Startup-Pricing/
 term: すたーとあっぷかかくせってい
 ---
 

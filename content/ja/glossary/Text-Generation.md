@@ -16,7 +16,7 @@ draft: false
 e-title: Text Generation
 url: /ja/glossary/text-generation/
 aliases:
-- /ja/glossary/Text-Generation/
+- /glossary/Text-Generation/
 term: てきすとせいせい
 ---
 

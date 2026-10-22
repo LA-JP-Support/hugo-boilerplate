@@ -16,7 +16,7 @@ draft: false
 e-title: Time to Interactive (TTI)
 url: /ja/glossary/time-to-interactive--tti-/
 aliases:
-- /ja/glossary/Time-to-Interactive--TTI-/
+- /glossary/Time-to-Interactive--TTI-/
 term: タイム・トゥ・インタラクティブ
 ---
 

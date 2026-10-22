@@ -16,7 +16,7 @@ draft: false
 e-title: Data Classification
 url: /ja/glossary/data-classification/
 aliases:
-- /ja/glossary/Data-Classification/
+- /glossary/Data-Classification/
 term: データぶんるい
 ---
 

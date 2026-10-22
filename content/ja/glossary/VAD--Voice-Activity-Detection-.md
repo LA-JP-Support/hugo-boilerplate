@@ -16,7 +16,7 @@ draft: false
 e-title: Voice Activity Detection (VAD)
 url: /ja/glossary/voice-activity-detection/
 aliases:
-- /ja/glossary/VAD--Voice-Activity-Detection-/
+- /glossary/VAD--Voice-Activity-Detection-/
 term: 音声アクティビティ検出(ブイエーディー)
 ---
 

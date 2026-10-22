@@ -16,7 +16,7 @@ draft: false
 e-title: Template Variable
 url: /ja/glossary/template-variable/
 aliases:
-- /ja/glossary/Template-Variable/
+- /glossary/Template-Variable/
 term: てんぷれーとへんすう
 ---
 

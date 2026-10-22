@@ -16,7 +16,7 @@ draft: false
 e-title: Metadata Management
 url: /ja/glossary/metadata-management/
 aliases:
-- /ja/glossary/Metadata-Management/
+- /glossary/Metadata-Management/
 term: めたでーたかんり
 ---
 

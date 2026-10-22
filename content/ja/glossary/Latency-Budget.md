@@ -17,7 +17,7 @@ e-title: Latency Budget
 term: れいてんしばじぇっと
 url: "/ja/glossary/latency-budget/"
 aliases:
-- "/ja/glossary/Latency-Budget-/"
+- "/glossary/Latency-Budget-/"
 ---
 
 ## レイテンシバジェットとは？

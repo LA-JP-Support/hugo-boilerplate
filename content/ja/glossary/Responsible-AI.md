@@ -16,7 +16,7 @@ draft: false
 e-title: Responsible AI
 url: /ja/glossary/responsible-ai/
 aliases:
-- /ja/glossary/Responsible-AI/
+- /glossary/Responsible-AI/
 term: せきにんあるえーあい
 ---
 

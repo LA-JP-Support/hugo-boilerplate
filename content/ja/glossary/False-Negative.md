@@ -17,7 +17,7 @@ e-title: False Negative
 term: ぎいんせい
 url: "/ja/glossary/false-negative/"
 aliases:
-- "/ja/glossary/False-Negative/"
+- "/glossary/False-Negative/"
 ---
 
 ## 偽陰性とは？

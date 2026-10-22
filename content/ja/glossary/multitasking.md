@@ -17,7 +17,7 @@ e-title: Multitasking
 term: マルチタスキング
 url: "/ja/glossary/multitasking/"
 aliases:
-- "/ja/glossary/Multitasking/"
+- "/glossary/Multitasking/"
 ---
 
 ## マルチタスキングとは?

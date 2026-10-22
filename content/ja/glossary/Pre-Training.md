@@ -16,7 +16,7 @@ draft: false
 e-title: Pre-Training
 url: /ja/glossary/pre-training/
 aliases:
-- /ja/glossary/Pre-Training/
+- /glossary/Pre-Training/
 term: じぜんがくしゅう
 ---
 

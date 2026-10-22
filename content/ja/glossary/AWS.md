@@ -16,7 +16,7 @@ draft: false
 e-title: AWS
 url: /ja/glossary/aws/
 aliases:
-- /ja/glossary/AWS/
+- /glossary/AWS/
 term: エーダブリューエス
 ---
 

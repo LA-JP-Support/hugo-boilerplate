@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Context
 url: /ja/glossary/customer-context/
 aliases:
-- /ja/glossary/Customer-Context/
+- /glossary/Customer-Context/
 term: かすたまーこんてきすと
 ---
 

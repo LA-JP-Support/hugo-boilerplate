@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Hallucination-AI/
 aliases:
-  - /ja/glossary/hallucination-ai/
+  - /glossary/hallucination-ai/
 keywords:
   - ハルシネーション
   - 幻覚

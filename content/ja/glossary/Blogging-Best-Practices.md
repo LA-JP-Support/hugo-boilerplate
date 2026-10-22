@@ -16,7 +16,7 @@ draft: false
 e-title: Blogging Best Practices
 url: /ja/glossary/blogging-best-practices/
 aliases:
-- /ja/glossary/Blogging-Best-Practices/
+- /glossary/Blogging-Best-Practices/
 term: ぶろぐのべすとぷらくてぃす
 ---
 

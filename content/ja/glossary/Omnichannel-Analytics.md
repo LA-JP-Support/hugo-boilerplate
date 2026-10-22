@@ -16,7 +16,7 @@ draft: false
 e-title: Omnichannel Analytics
 url: /ja/glossary/omnichannel-analytics/
 aliases:
-- /ja/glossary/Omnichannel-Analytics/
+- /glossary/Omnichannel-Analytics/
 term: オムニチャネルぶんせき
 ---
 

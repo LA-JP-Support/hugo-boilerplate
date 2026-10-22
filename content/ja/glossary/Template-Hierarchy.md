@@ -19,7 +19,7 @@ draft: false
 e-title: Template Hierarchy
 url: /ja/glossary/template-hierarchy/
 aliases:
-- /ja/glossary/Template-Hierarchy/
+- /glossary/Template-Hierarchy/
 term: てんぷれーとかいそう
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Safety Guardrails
 url: /ja/glossary/safety-guardrails/
 aliases:
-- /ja/glossary/Safety-Guardrails/
+- /glossary/Safety-Guardrails/
 term: せーふてぃがーどれーる
 ---
 

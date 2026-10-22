@@ -16,7 +16,7 @@ draft: false
 e-title: Knowledge Maintenance
 url: "/ja/glossary/knowledge-maintenance/"
 aliases:
-- "/ja/glossary/Knowledge-Maintenance/"
+- "/glossary/Knowledge-Maintenance/"
 term: ナレッジメンテナンス
 ---
 

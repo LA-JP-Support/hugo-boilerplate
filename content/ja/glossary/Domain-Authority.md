@@ -16,7 +16,7 @@ draft: false
 e-title: Domain Authority
 url: /ja/glossary/domain-authority/
 aliases:
-- /ja/glossary/Domain-Authority/
+- /glossary/Domain-Authority/
 term: どめいんおーそりてぃ
 ---
 

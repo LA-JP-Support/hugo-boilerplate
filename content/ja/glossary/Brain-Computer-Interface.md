@@ -16,7 +16,7 @@ draft: false
 e-title: Brain-Computer Interface
 url: /ja/glossary/brain-computer-interface/
 aliases:
-- /ja/glossary/Brain-Computer-Interface/
+- /glossary/Brain-Computer-Interface/
 term: びーしーあい
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Omnichannel Customer Experience
 url: /ja/glossary/omnichannel-customer-experience/
 aliases:
-- /ja/glossary/Omnichannel-Customer-Experience/
+- /glossary/Omnichannel-Customer-Experience/
 term: おむにちゃねる・かすたまーえくすぺりえんす
 ---
 

@@ -9,7 +9,7 @@ type: "glossary"
 draft: false
 url: /en/glossary/Agent-Productivity/
 aliases:
-- /en/glossary/agent-productivity/
+- /glossary/agent-productivity/
 keywords:
   - Agent productivity
   - Efficiency measurement

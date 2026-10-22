@@ -16,7 +16,7 @@ draft: false
 e-title: Markdown
 url: /ja/glossary/markdown/
 aliases:
-- /ja/glossary/Markdown/
+- /glossary/Markdown/
 term: マークダウン
 ---
 

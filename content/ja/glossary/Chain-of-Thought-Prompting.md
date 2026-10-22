@@ -16,7 +16,7 @@ draft: false
 e-title: Chain-of-Thought Prompting
 url: /ja/glossary/chain-of-thought-prompting/
 aliases:
-- /ja/glossary/Chain-of-Thought-Prompting/
+- /glossary/Chain-of-Thought-Prompting/
 term: チェーン・オブ・ソート・プロンプティング
 ---
 

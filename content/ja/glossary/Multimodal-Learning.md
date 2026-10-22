@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Multimodal-Learning/
 aliases:
-  - /ja/glossary/multimodal-learning/
+  - /glossary/multimodal-learning/
 keywords:
   - マルチモーダル
   - 複数の情報源

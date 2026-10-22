@@ -16,7 +16,7 @@ draft: false
 e-title: Remote Support
 url: /ja/glossary/remote-support/
 aliases:
-- /ja/glossary/Remote-Support/
+- /glossary/Remote-Support/
 term: りもーとさぽーと
 ---
 

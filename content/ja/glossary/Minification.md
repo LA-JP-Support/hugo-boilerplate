@@ -16,7 +16,7 @@ draft: false
 e-title: Minification
 url: /ja/glossary/minification/
 aliases:
-- /ja/glossary/Minification/
+- /glossary/Minification/
 term: ミニフィケーション
 ---
 

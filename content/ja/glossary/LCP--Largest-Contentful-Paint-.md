@@ -16,7 +16,7 @@ draft: false
 e-title: LCP (Largest Contentful Paint)
 url: /ja/glossary/lcp--largest-contentful-paint-/
 aliases:
-- /ja/glossary/LCP--Largest-Contentful-Paint-/
+- /glossary/LCP--Largest-Contentful-Paint-/
 term: エルシーピー
 ---
 

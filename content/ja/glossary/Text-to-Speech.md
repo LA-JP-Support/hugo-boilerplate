@@ -16,7 +16,7 @@ draft: false
 e-title: Text-to-Speech
 url: /ja/glossary/text-to-speech/
 aliases:
-- /ja/glossary/Text-to-Speech/
+- /glossary/Text-to-Speech/
 term: てきすと・とぅ・すぴーち(おんせいごうせい)
 ---
 

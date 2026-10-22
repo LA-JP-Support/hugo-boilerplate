@@ -16,7 +16,7 @@ draft: false
 e-title: Underfitting
 url: /ja/glossary/underfitting/
 aliases:
-- /ja/glossary/Underfitting/
+- /glossary/Underfitting/
 term: あんだーふぃってぃんぐ
 ---
 

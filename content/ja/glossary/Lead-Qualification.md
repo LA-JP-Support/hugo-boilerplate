@@ -16,7 +16,7 @@ draft: false
 e-title: Lead Qualification
 url: "/ja/glossary/Lead-Qualification/"
 aliases:
-- "/ja/glossary/lead-qualification/"
+- "/glossary/lead-qualification/"
 term: りーどせんべつ
 ---
 

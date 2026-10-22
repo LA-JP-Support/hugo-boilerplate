@@ -17,7 +17,7 @@ e-title: Security Requirements
 term: せきゅりてぃようけん
 url: /ja/glossary/security-requirements/
 aliases:
-  - /ja/glossary/Security-Requirements/
+  - /glossary/Security-Requirements/
 ---
 
 ## セキュリティ要件とは

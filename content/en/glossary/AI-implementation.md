@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/ai-implementation/
 aliases:
-- /en/glossary/AI-implementation/
+- /glossary/AI-implementation/
 ---
 
 ## What is AI Implementation?

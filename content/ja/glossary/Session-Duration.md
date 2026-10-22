@@ -16,7 +16,7 @@ draft: false
 e-title: Session Duration
 url: /ja/glossary/session-duration/
 aliases:
-- /ja/glossary/Session-Duration/
+- /glossary/Session-Duration/
 term: せっしょんけいぞくじかん
 ---
 

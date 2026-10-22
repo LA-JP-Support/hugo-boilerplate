@@ -17,7 +17,7 @@ e-title: Global Variables
 term: ぐろーばるへんすう
 url: "/ja/glossary/global-variables/"
 aliases:
-- "/ja/glossary/Global-Variables/"
+- "/glossary/Global-Variables/"
 ---
 
 ## グローバル変数とは?

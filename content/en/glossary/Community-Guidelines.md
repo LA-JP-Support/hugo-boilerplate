@@ -15,7 +15,7 @@ date: 2025-12-19
 draft: false
 url: /en/glossary/community-guidelines/
 aliases:
-- /en/glossary/Community-Guidelines/
+- /glossary/Community-Guidelines/
 ---
 
 ## What are Community Guidelines?

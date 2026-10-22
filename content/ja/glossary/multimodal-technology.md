@@ -17,7 +17,7 @@ e-title: Multimodal Technology
 term: マルチモーダルぎじゅつ
 url: "/ja/glossary/multimodal-technology/"
 aliases:
-- "/ja/glossary/Multimodal-Technology/"
+- "/glossary/Multimodal-Technology/"
 ---
 
 ## マルチモーダル技術とは?

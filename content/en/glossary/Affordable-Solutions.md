@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/affordable-solutions/
 aliases:
-  - /en/glossary/Affordable-Solutions/
+  - /glossary/Affordable-Solutions/
 ---
 
 ## What is Affordable Solutions?

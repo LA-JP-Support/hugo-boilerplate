@@ -16,7 +16,7 @@ draft: false
 e-title: Content Funnel
 url: /ja/glossary/content-funnel/
 aliases:
-- /ja/glossary/Content-Funnel/
+- /glossary/Content-Funnel/
 term: こんてんつふぁねる
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Social Media Publishing
 url: /ja/glossary/social-media-publishing/
 aliases:
-- /ja/glossary/Social-Media-Publishing/
+- /glossary/Social-Media-Publishing/
 term: そーしゃるめでぃあぱぶりっしんぐ
 ---
 

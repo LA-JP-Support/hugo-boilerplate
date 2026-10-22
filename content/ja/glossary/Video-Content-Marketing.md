@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Video-Content-Marketing/
 aliases:
-  - /ja/glossary/video-content-marketing/
+  - /glossary/video-content-marketing/
 keywords:
   - ビデオマーケティング
   - 動画コンテンツ

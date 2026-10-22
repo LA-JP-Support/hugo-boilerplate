@@ -16,7 +16,7 @@ draft: false
 e-title: Call Center CRM Integration
 url: /ja/glossary/call-center-crm-integration/
 aliases:
-- /ja/glossary/Call-Center-CRM-Integration/
+- /glossary/Call-Center-CRM-Integration/
 term: こーるせんたーしーあーるえむとうごう
 ---
 

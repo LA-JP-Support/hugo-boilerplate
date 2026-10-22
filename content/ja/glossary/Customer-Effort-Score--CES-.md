@@ -16,7 +16,7 @@ draft: false
 e-title: Customer Effort Score (CES)
 url: /ja/glossary/customer-effort-score--ces-/
 aliases:
-- /ja/glossary/Customer-Effort-Score--CES-/
+- /glossary/Customer-Effort-Score--CES-/
 term: カスタマーエフォートスコア(シーイーエス)
 ---
 

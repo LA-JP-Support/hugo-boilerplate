@@ -16,7 +16,7 @@ draft: false
 e-title: F1 Score
 url: /ja/glossary/f1-score/
 aliases:
-- /ja/glossary/F1-score/
+- /glossary/F1-score/
 term: えふわんすこあ
 ---
 

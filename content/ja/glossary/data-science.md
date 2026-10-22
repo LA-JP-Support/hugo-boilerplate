@@ -17,7 +17,7 @@ e-title: Data Science
 term: データサイエンス
 url: /ja/glossary/data-science/
 aliases:
-- /ja/glossary/Data-Science/
+- /glossary/Data-Science/
 ---
 
 ## データサイエンスとは？

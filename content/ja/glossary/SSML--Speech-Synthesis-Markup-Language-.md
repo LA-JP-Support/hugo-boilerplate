@@ -18,7 +18,7 @@ draft: false
 e-title: SSML (Speech Synthesis Markup Language)
 url: /ja/glossary/ssml--speech-synthesis-markup-language-/
 aliases:
-- /ja/glossary/SSML--Speech-Synthesis-Markup-Language-/
+- /glossary/SSML--Speech-Synthesis-Markup-Language-/
 term: エスエスエムエル
 ---
 

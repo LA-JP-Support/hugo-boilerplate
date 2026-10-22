@@ -16,7 +16,7 @@ draft: false
 e-title: Landing Page Optimization
 url: /ja/glossary/landing-page-optimization/
 aliases:
-- /ja/glossary/Landing-Page-Optimization/
+- /glossary/Landing-Page-Optimization/
 term: ランディングページさいてきか
 ---
 

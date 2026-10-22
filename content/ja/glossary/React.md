@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/React/
 aliases:
-  - /ja/glossary/react/
+  - /glossary/react/
 keywords:
   - JavaScript
   - フロントエンド

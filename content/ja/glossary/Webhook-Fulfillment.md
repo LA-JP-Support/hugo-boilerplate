@@ -17,7 +17,7 @@ e-title: Webhook Fulfillment
 term: ウェブフック フルフィルメント
 url: "/ja/glossary/webhook-fulfillment/"
 aliases:
-- "/ja/glossary/Webhook-Fulfillment/"
+- "/glossary/Webhook-Fulfillment/"
 ---
 <!-- ===== サクッとわかるゾーン ===== -->
 

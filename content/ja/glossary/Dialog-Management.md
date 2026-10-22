@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/dialog-management/
 aliases:
-  - /ja/glossary/Conversation-Management/
+  - /glossary/Conversation-Management/
 keywords:
   - ダイアログマネジメント
   - 対話管理

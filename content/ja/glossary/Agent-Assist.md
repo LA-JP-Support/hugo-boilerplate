@@ -16,7 +16,7 @@ draft: false
 e-title: Agent Assist
 url: /ja/glossary/agent-assist/
 aliases:
-- /ja/glossary/Agent-Assist/
+- /glossary/Agent-Assist/
 term: えーじぇんとあしすと
 ---
 

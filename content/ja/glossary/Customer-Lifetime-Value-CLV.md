@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Customer-Lifetime-Value-CLV/
 aliases:
-  - /ja/glossary/customer-lifetime-value-clv/
+  - /glossary/customer-lifetime-value-clv/
 keywords:
   - CLV
   - 顧客生涯価値

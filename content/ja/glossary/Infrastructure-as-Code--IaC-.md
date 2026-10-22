@@ -17,7 +17,7 @@ e-title: Infrastructure as Code (IaC)
 term: インフラストラクチャー アズ コード
 url: "/ja/glossary/infrastructure-as-code--iac-/"
 aliases:
-- "/ja/glossary/Infrastructure-as-Code--IaC-/"
+- "/glossary/Infrastructure-as-Code--IaC-/"
 ---
 
 ## Infrastructure as Code（IaC）とは

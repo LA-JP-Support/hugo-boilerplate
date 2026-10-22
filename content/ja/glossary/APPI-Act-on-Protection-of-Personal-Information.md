@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/APPI-Act-on-Protection-of-Personal-Information/
 aliases:
-  - /ja/glossary/appi-personal-information/
+  - /glossary/appi-personal-information/
 keywords:
   - 個人情報保護法
   - APPI

@@ -16,7 +16,7 @@ draft: false
 e-title: Rich Media Cards
 url: /ja/glossary/rich-media-cards/
 aliases:
-- /ja/glossary/Rich-Media-Cards/
+- /glossary/Rich-Media-Cards/
 term: りっちめでぃあかーど
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Learning Rate
 url: "/ja/glossary/Learning-Rate/"
 aliases:
-- "/ja/glossary/learning-rate/"
+- "/glossary/learning-rate/"
 term: がくしゅうりつ
 ---
 

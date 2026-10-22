@@ -15,7 +15,7 @@ draft: false
 e-title: Digital Maturity
 url: /ja/glossary/digital-maturity/
 aliases:
-- /ja/glossary/Digital-Maturity/
+- /glossary/Digital-Maturity/
 term: でじたるせいじゅくど
 lastmod: 2026-04-02
 ---

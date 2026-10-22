@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Vue.js/
 aliases:
-  - /ja/glossary/vue-js/
+  - /glossary/vue-js/
 keywords:
   - JavaScript
   - フロントエンド

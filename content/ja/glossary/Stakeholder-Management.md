@@ -16,7 +16,7 @@ draft: false
 e-title: Stakeholder Management
 url: /ja/glossary/stakeholder-management/
 aliases:
-- /ja/glossary/Stakeholder-Management/
+- /glossary/Stakeholder-Management/
 term: すてーくほるだー・まねじめんと
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Social Customer Service
 url: "/ja/glossary/social-customer-service/"
 aliases:
-- "/ja/glossary/Social-Customer-Service/"
+- "/glossary/Social-Customer-Service/"
 term: そーしゃるかすたまーさーびす
 ---
 

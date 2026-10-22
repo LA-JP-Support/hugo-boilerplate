@@ -17,7 +17,7 @@ e-title: PagedAttention
 term: ページドアテンション
 url: "/ja/glossary/pagedattention/"
 aliases:
-- "/ja/glossary/PagedAttention/"
+- "/glossary/PagedAttention/"
 ---
 
 ## PagedAttentionとは?

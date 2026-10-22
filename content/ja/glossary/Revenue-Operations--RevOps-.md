@@ -16,7 +16,7 @@ draft: false
 e-title: Revenue Operations (RevOps)
 url: /ja/glossary/revenue-operations--revops-/
 aliases:
-- /ja/glossary/Revenue-Operations--RevOps-/
+- /glossary/Revenue-Operations--RevOps-/
 term: レベニューオペレーション
 ---
 

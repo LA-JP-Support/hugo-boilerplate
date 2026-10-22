@@ -16,7 +16,7 @@ draft: false
 e-title: Community Metrics
 url: /ja/glossary/community-metrics/
 aliases:
-- /ja/glossary/Community-Metrics/
+- /glossary/Community-Metrics/
 term: こみゅにてぃめとりくす
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Kanban Board
 url: /ja/glossary/kanban-board/
 aliases:
-- /ja/glossary/Kanban-Board/
+- /glossary/Kanban-Board/
 term: かんばんぼーど
 ---
 

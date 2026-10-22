@@ -9,7 +9,7 @@ type: "glossary"
 draft: false
 url: /en/glossary/Agent-Framework/
 aliases:
-- /en/glossary/agent-framework/
+- /glossary/agent-framework/
 keywords:
   - Agent framework
   - Autonomous agents

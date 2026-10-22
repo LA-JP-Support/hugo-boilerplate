@@ -16,7 +16,7 @@ draft: false
 e-title: Pagination
 url: /ja/glossary/pagination/
 aliases:
-- /ja/glossary/Pagination/
+- /glossary/Pagination/
 term: ぺーじねーしょん
 ---
 

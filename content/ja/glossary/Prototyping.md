@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Prototyping/
 aliases:
-  - /ja/glossary/prototype/
+  - /glossary/prototype/
 keywords:
   - 試作
   - ユーザーテスト

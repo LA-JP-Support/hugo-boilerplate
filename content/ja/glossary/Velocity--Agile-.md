@@ -16,7 +16,7 @@ draft: false
 e-title: Velocity (Agile)
 url: /ja/glossary/velocity--agile-/
 aliases:
-- /ja/glossary/Velocity--Agile-/
+- /glossary/Velocity--Agile-/
 term: べろしてぃ(あじゃいる)
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Model Evaluation
 url: /ja/glossary/Model-Evaluation/
 aliases:
-- /ja/glossary/model-evaluation/
+- /glossary/model-evaluation/
 term: もでるひょうか
 ---
 

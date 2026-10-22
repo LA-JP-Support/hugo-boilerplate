@@ -16,7 +16,7 @@ draft: false
 e-title: Keyword Density
 url: /ja/glossary/keyword-density/
 aliases:
-- /ja/glossary/Keyword-Density/
+- /glossary/Keyword-Density/
 term: キーワードみつど
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Rule-Based
 url: /ja/glossary/rule-based/
 aliases:
-- /ja/glossary/Rule-based/
+- /glossary/Rule-based/
 term: るーるべーす
 ---
 

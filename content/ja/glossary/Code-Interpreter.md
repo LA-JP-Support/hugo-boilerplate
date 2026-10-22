@@ -17,7 +17,7 @@ e-title: Code Interpreter
 term: こーどいんたーぷりたー
 url: "/ja/glossary/code-interpreter/"
 aliases:
-- "/ja/glossary/Code-Interpreter/"
+- "/glossary/Code-Interpreter/"
 ---
 
 ## コードインタープリターとは?

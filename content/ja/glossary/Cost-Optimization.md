@@ -16,7 +16,7 @@ draft: false
 e-title: Cost Optimization
 url: /ja/glossary/cost-optimization/
 aliases:
-- /ja/glossary/Cost-Optimization/
+- /glossary/Cost-Optimization/
 term: コストさいてきか
 ---
 

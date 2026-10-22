@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/etl-extract-transform-load/
 aliases:
-  - /ja/glossary/ETL-Extract-Transform-Load/
+  - /glossary/ETL-Extract-Transform-Load/
 keywords:
   - ETL
   - データ統合

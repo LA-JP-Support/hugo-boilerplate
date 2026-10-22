@@ -17,7 +17,7 @@ e-title: KV Cache
 term: ケーブイキャッシュ
 url: "/ja/glossary/kv-cache/"
 aliases:
-- "/ja/glossary/KV-Cache/"
+- "/glossary/KV-Cache/"
 ---
 
 ## KVキャッシュとは?

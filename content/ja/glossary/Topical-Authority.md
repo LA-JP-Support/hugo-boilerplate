@@ -16,7 +16,7 @@ draft: false
 e-title: Topical Authority
 url: /ja/glossary/topical-authority/
 aliases:
-- /ja/glossary/Topical-Authority/
+- /glossary/Topical-Authority/
 term: トピカルおーそりてぃ
 ---
 

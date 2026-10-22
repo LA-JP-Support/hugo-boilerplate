@@ -16,7 +16,7 @@ draft: false
 e-title: Social Sharing
 url: /ja/glossary/social-sharing/
 aliases:
-- /ja/glossary/Social-Sharing/
+- /glossary/Social-Sharing/
 term: そーしゃるしぇありんぐ
 ---
 

@@ -16,7 +16,7 @@ draft: false
 e-title: Unified Customer Profile
 url: /ja/glossary/unified-customer-profile/
 aliases:
-- /ja/glossary/Unified-Customer-Profile/
+- /glossary/Unified-Customer-Profile/
 term: とうごうこきゃくプロファイル
 ---
 

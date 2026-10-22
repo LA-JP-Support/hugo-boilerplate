@@ -17,7 +17,7 @@ e-title: Dashboard
 term: だっしゅぼーど
 url: /ja/glossary/dashboard/
 aliases:
-- /ja/glossary/Dashboard/
+- /glossary/Dashboard/
 ---
 
 ## ダッシュボードとは？

@@ -16,7 +16,7 @@ draft: false
 e-title: Hreflang
 url: /ja/glossary/hreflang/
 aliases:
-- /ja/glossary/Hreflang/
+- /glossary/Hreflang/
 term: エイチレフラング
 ---
 

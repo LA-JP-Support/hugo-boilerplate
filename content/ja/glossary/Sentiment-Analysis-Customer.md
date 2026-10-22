@@ -11,7 +11,7 @@ type: glossary
 draft: false
 url: /ja/glossary/Sentiment-Analysis-Customer/
 aliases:
-  - /ja/glossary/sentiment-analysis-customer/
+  - /glossary/sentiment-analysis-customer/
 keywords:
   - 感情分析
   - センチメント

@@ -15,7 +15,7 @@ type: glossary
 draft: false
 url: /en/glossary/access-control-list--acl-/
 aliases:
-- /en/glossary/Access-Control-List--ACL-/
+- /glossary/Access-Control-List--ACL-/
 ---
 
 ## What is Access Control List (ACL)?

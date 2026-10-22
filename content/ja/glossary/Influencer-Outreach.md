@@ -16,7 +16,7 @@ draft: false
 e-title: Influencer Outreach
 url: /ja/glossary/influencer-outreach/
 aliases:
-- /ja/glossary/Influencer-Outreach/
+- /glossary/Influencer-Outreach/
 term: インフルエンサーアウトリーチ
 ---
 

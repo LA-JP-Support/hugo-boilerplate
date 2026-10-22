@@ -16,7 +16,7 @@ draft: false
 e-title: User Review Management
 url: /ja/glossary/user-review-management/
 aliases:
-- /ja/glossary/User-Review-Management/
+- /glossary/User-Review-Management/
 term: ユーザーレビューかんり
 ---
 

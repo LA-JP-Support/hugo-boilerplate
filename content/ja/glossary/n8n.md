@@ -17,7 +17,7 @@ e-title: n8n
 term: エヌエイトエヌ
 url: "/ja/glossary/n8n/"
 aliases:
-- "/ja/glossary/N8n/"
+- "/glossary/N8n/"
 ---
 
 ## n8nとは?

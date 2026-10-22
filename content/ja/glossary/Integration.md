@@ -16,7 +16,7 @@ draft: false
 e-title: Integration
 url: /ja/glossary/integration/
 aliases:
-- /ja/glossary/Integration/
+- /glossary/Integration/
 term: インテグレーション
 ---
 

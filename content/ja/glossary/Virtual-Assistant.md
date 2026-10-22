@@ -17,7 +17,7 @@ e-title: Virtual Assistant
 term: ばーちゃるあしすたんと
 url: "/ja/glossary/virtual-assistant/"
 aliases:
-- "/ja/glossary/Virtual-Assistant/"
+- "/glossary/Virtual-Assistant/"
 ---
 ## バーチャルアシスタントとは?
 

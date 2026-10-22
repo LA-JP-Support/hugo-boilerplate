@@ -16,7 +16,7 @@ draft: false
 e-title: Technical SEO
 url: /ja/glossary/technical-seo/
 aliases:
-- /ja/glossary/Technical-SEO/
+- /glossary/Technical-SEO/
 term: てくにかるえすいーおー
 ---
 

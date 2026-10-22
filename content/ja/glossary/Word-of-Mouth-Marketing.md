@@ -16,7 +16,7 @@ draft: false
 e-title: Word-of-Mouth Marketing
 url: /ja/glossary/word-of-mouth-marketing/
 aliases:
-- /ja/glossary/Word-of-Mouth-Marketing/
+- /glossary/Word-of-Mouth-Marketing/
 term: くちこみマーケティング
 ---
 ## 口コミマーケティングとは?

@@ -16,7 +16,7 @@ draft: false
 e-title: WhatsApp Business
 url: /ja/glossary/whatsapp-business/
 aliases:
-- /ja/glossary/WhatsApp-Business/
+- /glossary/WhatsApp-Business/
 term: ワッツアップ ビジネス
 ---
 
