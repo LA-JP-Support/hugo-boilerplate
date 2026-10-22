@@ -20,4 +20,6 @@
 {{ end }}
 
 {{/* Return the folder data or empty dict */}}
-{{ return $folderData | default (dict) }}
+{{/* Hugo 0.168 では return をパイプラインの先頭に置けないので、いったん変数に入れてから返す */}}
+{{ $result := $folderData | default (dict) }}
+{{ return $result }}

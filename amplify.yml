@@ -9,9 +9,15 @@ applications:
             - npm ci || npm install
             - python3 -m pip install --upgrade pip
             - pip3 install beautifulsoup4 lxml pyyaml janome
+            - wget -q https://github.com/gohugoio/hugo/releases/download/v0.168.0/hugo_extended_0.168.0_linux-amd64.tar.gz
+            - echo "787f100057328824f38c6ad7c87ff10d6451ae0a7bc39cedaad0dd2bcde17e53  hugo_extended_0.168.0_linux-amd64.tar.gz" | sha256sum -c -
+            - mkdir -p .hugo-bin && tar -xzf hugo_extended_0.168.0_linux-amd64.tar.gz -C .hugo-bin hugo
+            - .hugo-bin/hugo version
         build:
           commands:
             - npm run build
+            - export PATH="$PWD/.hugo-bin:$PATH"
+            - hugo version
             - export HUGO_CACHEDIR="$(pwd)/.hugo_cache"
             - mkdir -p "$HUGO_CACHEDIR"
             - if [ "${AWS_BRANCH}" = "dev" ]; then HUGO_ENV=staging; SITE_BASE_URL="https://${AWS_BRANCH}.${AWS_APP_ID}.amplifyapp.com/"; HUGO_SUPPORT_PORTAL_BASE_URL="https://dev.d2b65nc0n0a17p.amplifyapp.com/"; else HUGO_ENV=production; SITE_BASE_URL="https://www.smartweb.jp/"; HUGO_SUPPORT_PORTAL_BASE_URL="https://support.smartweb.jp/"; fi; export HUGO_ENV SITE_BASE_URL HUGO_SUPPORT_PORTAL_BASE_URL
@@ -44,8 +50,9 @@ applications:
             - mkdir -p "$GOPATH" "$GOCACHE"
             - go version
             - echo "Installing Hugo Extended..."
-            - wget https://github.com/gohugoio/hugo/releases/download/v0.152.2/hugo_extended_0.152.2_Linux-64bit.tar.gz
-            - tar -xzf hugo_extended_0.152.2_Linux-64bit.tar.gz
+            - wget https://github.com/gohugoio/hugo/releases/download/v0.168.0/hugo_extended_0.168.0_linux-amd64.tar.gz
+            - echo "787f100057328824f38c6ad7c87ff10d6451ae0a7bc39cedaad0dd2bcde17e53  hugo_extended_0.168.0_linux-amd64.tar.gz" | sha256sum -c -
+            - tar -xzf hugo_extended_0.168.0_linux-amd64.tar.gz
             - chmod +x hugo
             - export PATH="$PWD:$PATH"
             - hugo version
